@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: chartmaker
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    healthCheckPath: /login
+    envVars:
+      - key: APP_PASSWORD
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: VIEWS_STORE
+        value: browser
+      - key: PYTHON_VERSION
+        value: 3.12.7

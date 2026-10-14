@@ -27,3 +27,10 @@ Themes set background, title/text/label/gridline/axis/watermark colors and apply
 Saved views: "Save view" stores mode, tickers, names, range/dates, metric, period, chart type, title, colors, theme, watermark. Pick from "Saved views" to load + re-render with fresh data;
 Update overwrites the selected view; Rename/Delete; Export/Import as JSON (import merges by name). Stored server-side in `views.json` next to server.py (GET/POST `/api/views`).
 views.json is never shipped in the zip, so updates don't overwrite saved views. Re-run theme samples: `python3 shoot_themes.py`.
+
+## Hosting / password (v4)
+Env vars: `APP_PASSWORD` (if set, every route incl. /api requires login; login page at /login, logout at /logout),
+`SECRET_KEY` (HMAC key for the session cookie; random per start if unset), `VIEWS_STORE=browser` (saved views live in browser localStorage
+instead of views.json; use Export/Import as backup), `PORT` (overrides CLI port; binds 0.0.0.0).
+Session cookie: `cm_session`, signed HMAC-SHA256, HttpOnly, Secure, SameSite=Lax, 30 days. Login throttling: after 5 failures per IP, lockout 30s doubling up to 15 min.
+With no APP_PASSWORD (local PC) behavior is unchanged. Render: `render.yaml` Blueprint (free plan, `python server.py`).

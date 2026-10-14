@@ -232,13 +232,16 @@ function fdownload(){if(!flast)return;const url=chart.getDataURL({type:'png',pix
 $('fgo').onclick=frender;$('fdl').onclick=fdownload;$('fcsv').onclick=fcsv;
 ['fmetric','fperiod','ftype','fcolor','fwm'].forEach(id=>$(id).onchange=frender);
 
-// ---------- Themes + saved views (server-side views.json via /api/views) ----------
+// ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
 const VFIELDS=['tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}return{name,mode:MODE,fields:f,saved:new Date().toISOString()}}
-async function vput(){const r=await fetch('/api/views',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(VIEWS)});
+let VSTORE='server';const VLS='chartmaker_views';
+async function vput(){if(VSTORE==='browser'){localStorage.setItem(VLS,JSON.stringify(VIEWS));vlist();return}
+  const r=await fetch('/api/views',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(VIEWS)});
   if(!r.ok)throw Error('save failed: '+r.status);VIEWS=await r.json();vlist()}
-async function vload(){try{VIEWS=await (await fetch('/api/views')).json()}catch(e){VIEWS=[]}vlist()}
+async function vload(){try{VSTORE=(await (await fetch('/api/config')).json()).viewsStore||'server'}catch(e){}
+  try{VIEWS=VSTORE==='browser'?JSON.parse(localStorage.getItem(VLS)||'[]'):await (await fetch('/api/views')).json();if(!Array.isArray(VIEWS))VIEWS=[]}catch(e){VIEWS=[]}vlist()}
 function vlist(sel){const v=$('views'),cur=sel??v.value;v.innerHTML='<option value="">— pick a view —</option>'+VIEWS.map((x,i)=>`<option value="${i}">${x.name.replace(/</g,'&lt;')}</option>`).join('');
   if(cur!==''&&VIEWS[cur])v.value=cur}
 function vapply(x){for(const [id,val] of Object.entries(x.fields||{})){const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
