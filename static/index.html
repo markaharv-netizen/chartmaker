@@ -1,0 +1,266 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Chartmaker</title>
+<script src="echarts.min.js"></script>
+<style>
+body{font-family:Inter,Arial,sans-serif;margin:0;background:#f4f4f5;color:#111}
+#ctl{display:flex;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end}
+#ctl label{font-size:12px;display:flex;flex-direction:column;gap:3px}
+input,select,button{font-size:14px;padding:6px}
+button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
+#wrap{padding:16px}#chart{width:1600px;height:900px;background:#fff;transform-origin:0 0}
+#mode button{background:#e5e7eb;color:#111;margin-right:4px}#mode button.on{background:#111;color:#fff}
+#ftable{margin:0 16px 30px;border-collapse:collapse;font-size:15px;background:#fff}#ftable td,#ftable th{border:1px solid #e5e7eb;padding:4px 10px;text-align:right}#ftable th:first-child,#ftable td:first-child{text-align:left}
+#fnote{margin:0 16px 8px;font-size:14px;color:#374151}
+#status{padding:4px 12px;font-size:13px}#status.err{color:#EF4444;font-weight:bold}
+</style></head><body>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button></div>
+<div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
+<label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
+<span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
+<span style="margin-left:16px">Saved views</span><select id="views" style="min-width:180px"><option value="">— pick a view —</option></select>
+<button id="vsave">Save view</button><button id="vupd">Update</button><button id="vren">Rename</button><button id="vdel">Delete</button>
+<button id="vexp">Export</button><button id="vimp">Import</button><input id="vfile" type="file" accept=".json,application/json" style="display:none">
+</div>
+<div id="fctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
+<label>Tickers (comma)<input id="ftickers" value="NVDA,AMD,INTC" size="22"></label>
+<label>Display names (comma, optional)<input id="fnames" size="18"></label>
+<label>Metric<select id="fmetric">
+<option value="revenue">Revenue</option><option value="gross_profit">Gross profit</option><option value="operating_income">Operating income</option><option value="net_income">Net income</option><option value="eps_diluted">EPS (diluted)</option><option value="ocf">Operating cash flow</option><option value="capex">Capex</option><option value="fcf">Free cash flow</option><option value="cash">Cash</option><option value="total_debt">Total debt</option><option value="shares">Shares outstanding</option><option value="rnd">R&amp;D</option><option value="gross_margin">Gross margin %</option><option value="operating_margin">Operating margin %</option><option value="net_margin">Net margin %</option></select></label>
+<label>Period<select id="fperiod"><option value="quarterly">Quarterly</option><option value="annual">Annual</option><option value="ttm">TTM</option></select></label>
+<label>From year<input id="fy1" type="number" value="2019" style="width:80px"></label><label>To year<input id="fy2" type="number" placeholder="latest" style="width:80px"></label>
+<label>Chart<select id="ftype"><option value="line">Line over time</option><option value="bars">Grouped bars over time</option><option value="rank">Latest-period ranking</option></select></label>
+<label>Title<input id="ftitle" size="30" placeholder="auto"></label>
+<label>Color (1 ticker)<select id="fcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
+<label><span>Watermark</span><input id="fwm" type="checkbox" checked></label>
+<button id="fgo">Render</button><button id="fdl">Download PNG</button><button id="fcsv">Download CSV</button>
+</div>
+<div id="ctl">
+<label>Tickers (comma)<input id="tickers" value="NBIS,CRWV" size="22"></label>
+<label>Display names (comma, optional)<input id="names" size="22"></label>
+<label>Range<select id="range"><option>1D</option><option>5D</option><option selected>YTD</option><option>1M</option><option>6M</option><option>1Y</option><option>5Y</option><option>Max</option><option>Custom</option></select></label>
+<label>Start<input id="start" type="date"></label><label>End<input id="end" type="date"></label>
+<label>Type<select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="bar">Bar ranking % return</option><option value="ratio">Ratio A priced in B</option></select></label>
+<label>Title<input id="title" size="34" placeholder="auto"></label>
+<label>Line color<select id="color"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
+<label><span>Watermark</span><input id="wm" type="checkbox" checked></label>
+<button id="go">Render</button><button id="dl">Download PNG</button>
+</div>
+<div id="status"></div>
+<div id="wrap"><div id="chart"></div></div>
+<div id="fnote"></div><table id="ftable"></table>
+<script>
+const $=id=>document.getElementById(id);
+const chart=echarts.init($('chart'),null,{renderer:'canvas'});
+const PALETTE=['#F7931A','#8B5CF6','#0EA5E9','#22C55E','#EF4444','#111827','#EC4899','#14B8A6'];
+const DAY=86400;
+const THEMES={
+ white:{name:'White',bg:'#FFFFFF',title:'#111111',text:'#374151',src:'#6B7280',wm:'#9CA3AF',grid:'#EEEEEE',axis:'#999999',dark:0},
+ cream:{name:'Off-white / cream',bg:'#FAF7F2',title:'#1F1A14',text:'#4B4237',src:'#7A6F62',wm:'#A89D8F',grid:'#ECE6DC',axis:'#B5AB9C',dark:0},
+ gray:{name:'Light gray',bg:'#F5F6F8',title:'#111827',text:'#374151',src:'#6B7280',wm:'#9CA3AF',grid:'#E3E6EB',axis:'#A3A9B3',dark:0},
+ dark:{name:'Dark',bg:'#0F1115',title:'#F3F4F6',text:'#C9CED6',src:'#8B93A1',wm:'#6B7280',grid:'#232730',axis:'#3A404C',dark:1},
+ navy:{name:'Navy',bg:'#0B1A2E',title:'#F1F5F9',text:'#C3CEDD',src:'#8798B0',wm:'#5F7392',grid:'#1A2C46',axis:'#33496A',dark:1},
+ black:{name:'Black (X dark)',bg:'#000000',title:'#E7E9EA',text:'#C4C9CE',src:'#8B98A5',wm:'#5B6670',grid:'#1C1F23',axis:'#333639',dark:1}};
+const BRIGHT={'#F7931A':'#FFA033','#8B5CF6':'#A78BFA','#22C55E':'#34D671','#EF4444':'#F87171','#0EA5E9':'#38BDF8','#111827':'#E5E7EB','#EC4899':'#F472B6','#14B8A6':'#2DD4BF'};
+let T=THEMES.white;
+function bc(c){return T.dark&&BRIGHT[c]?BRIGHT[c]:c}
+function applyTheme(){T=THEMES[$('theme').value]||THEMES.white;axLabel={fontSize:16,color:T.text};split={lineStyle:{color:T.grid}};
+  $('chart').style.background=T.bg;$('tprev').style.background=T.bg;$('tprev').style.color=T.title;
+  $('tprev').innerHTML=`Aa <b style="color:${bc('#F7931A')}">■</b><b style="color:${bc('#8B5CF6')}">■</b><b style="color:${bc('#22C55E')}">■</b><b style="color:${bc('#EF4444')}">■</b>`}
+function rerender(){return MODE==='fin'?frender():render()}
+
+function rangeParams(){
+  const r=$('range').value, now=Math.floor(Date.now()/1000), d=new Date();
+  let p1, p2=now, iv='1d';
+  if(r==='1D'){p1=now-DAY;iv='5m'} else if(r==='5D'){p1=now-5*DAY;iv='30m'}
+  else if(r==='YTD'){p1=Date.UTC(d.getUTCFullYear()-1,11,31)/1000}
+  else if(r==='1M'){p1=now-31*DAY} else if(r==='6M'){p1=now-183*DAY}
+  else if(r==='1Y'){p1=now-366*DAY} else if(r==='5Y'){p1=now-5*366*DAY;iv='1wk'}
+  else if(r==='Max'){p1=0;iv='1mo'}
+  else {p1=Date.parse($('start').value)/1000; p2=$('end').value?Date.parse($('end').value)/1000+DAY:now;
+        if(isNaN(p1))throw Error('Pick a custom start date'); if((p2-p1)>3*366*DAY)iv='1wk'}
+  return {p1,p2,iv,r};
+}
+async function fetchSym(s,p){
+  const res=await fetch(`/api/chart?symbol=${encodeURIComponent(s)}&period1=${p.p1}&period2=${p.p2}&interval=${p.iv}`);
+  const j=await res.json(); if(!res.ok||j.error)throw Error(`${s}: ${j.error||res.status}`); return j;
+}
+// YTD baseline = last close of prior year: keep the last point dated before Jan 1, drop earlier ones
+function trimYTD(pts,r){if(r!=='YTD')return pts;const jan1=Date.UTC(new Date().getUTCFullYear(),0,1);
+  const i=pts.findIndex(p=>p[0]>=jan1);return i>0?pts.slice(i-1):pts}
+function fmtNum(v){const a=Math.abs(v);return a>=1000?v.toLocaleString(undefined,{maximumFractionDigits:0}):a>=1?v.toFixed(2):v.toPrecision(3)}
+function pct(v){return (v>=0?'+':'')+v.toFixed(1)+'%'}
+let last=null;
+async function render(){
+  const st=$('status'); st.className=''; st.textContent='Loading…';
+  try{
+    const syms=$('tickers').value.split(',').map(s=>s.trim().toUpperCase()).filter(Boolean);
+    const names=$('names').value.split(',').map(s=>s.trim());
+    if(!syms.length)throw Error('Enter at least one ticker');
+    const type=$('type').value, p=rangeParams();
+    if(type==='ratio'&&syms.length!==2)throw Error('Ratio needs exactly two tickers: A,B');
+    const data=await Promise.all(syms.map(s=>fetchSym(s,p)));
+    data.forEach((d,i)=>{d.label=names[i]||d.symbol.replace('-USD','');d.points=trimYTD(d.points,p.r)});
+    const asOf=Math.max(...data.map(d=>d.lastTime||0));
+    st.textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv;
+    const titleAuto={line:data.map(d=>d.label).join(' vs ')+' price',pct:data.map(d=>d.label).join(' vs ')+' % change',
+      bar:'Return, '+(p.r==='Custom'?'custom range':p.r),ratio:`${data[0].label} priced in ${data[1]?.label}`}[type];
+    last={opt:buildOpt(type,data,$('title').value||titleAuto,p),asOf};
+    chart.setOption(last.opt,true);
+  }catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear()}
+}
+function base(title,src,wmId){
+  const wm=$(wmId||'wm').checked;
+  return {backgroundColor:T.bg,animation:false,textStyle:{fontFamily:'Inter, Arial, sans-serif',fontSize:16},
+    title:{text:title,left:60,top:30,textStyle:{fontSize:36,fontWeight:'bold',color:T.title}},
+    graphic:[{type:'text',left:60,bottom:24,style:{text:src||'Source: Yahoo Finance',fontSize:16,fill:T.src}},
+      ...(wm?[{type:'text',right:50,top:40,style:{text:'@thepowerfulHRV',fontSize:18,fill:T.wm}}]:[])],
+    grid:{left:90,right:190,top:120,bottom:80}};
+}
+let axLabel, split;
+function lineOpt(o,series,fmt,intraday){
+  o.xAxis={type:'time',axisLabel:{...axLabel,hideOverlap:true},axisLine:{lineStyle:{color:T.axis}},splitLine:{show:false}};
+  o.yAxis={type:'value',scale:true,axisLabel:{...axLabel,formatter:fmt},splitLine:split};
+  o.series=series.map((s,i)=>({type:'line',name:s.label,data:s.data,showSymbol:false,smooth:false,
+    lineStyle:{width:3,color:bc(s.color)},itemStyle:{color:bc(s.color)},
+    endLabel:{show:true,fontSize:17,fontWeight:'bold',color:bc(s.color),formatter:q=>`${s.label} ${fmt(q.value[1])}`},
+    labelLayout:{moveOverlap:'shiftY'}}));
+  return o;
+}
+function colors(n){return n===1?[$('color').value]:PALETTE}
+function buildOpt(type,data,title,p){
+  const o=base(title), c=colors(data.length);
+  if(type==='line')return lineOpt(o,data.map((d,i)=>({label:d.label,color:c[i%c.length],data:d.points})),fmtNum);
+  if(type==='pct'){const s=data.map((d,i)=>{const b=d.points[0][1];return{label:d.label,color:c[i%c.length],data:d.points.map(q=>[q[0],(q[1]/b-1)*100])}});
+    const o2=lineOpt(o,s,v=>pct(v)); o2.yAxis.scale=false; return o2}
+  if(type==='ratio'){const [a,b]=data; // align on timestamp (nearest prior B value; crypto has weekend bars)
+    const bp=b.points; let j=0; const out=[];
+    for(const q of a.points){while(j+1<bp.length&&bp[j+1][0]<=q[0])j++; if(bp[j]&&bp[j][0]<=q[0]+DAY*1000/2)out.push([q[0],q[1]/bp[j][1]])}
+    if(!out.length)throw Error('No overlapping dates for ratio');
+    return lineOpt(o,[{label:`${a.label}/${b.label}`,color:$('color').value,data:out}],v=>v.toPrecision(4))}
+  // bar ranking
+  const rows=data.map(d=>({label:d.label,v:(d.points.at(-1)[1]/d.points[0][1]-1)*100})).sort((x,y)=>y.v-x.v);
+  o.grid={left:90,right:60,top:130,bottom:90};
+  o.xAxis={type:'category',data:rows.map(r=>r.label),axisLabel:{...axLabel,fontSize:18,fontWeight:'bold',interval:0},axisTick:{show:false},axisLine:{lineStyle:{color:T.axis}}};
+  o.yAxis={type:'value',axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split};
+  o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:+r.v.toFixed(2),itemStyle:{color:bc(r.v>=0?'#22C55E':'#EF4444')},
+    label:{show:true,position:r.v>=0?'top':'bottom',fontSize:18,fontWeight:'bold',color:T.title,formatter:q=>pct(q.value)}}))}];
+  return o;
+}
+function download(){if(!last)return;
+  const url=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});
+  const a=document.createElement('a');a.href=url;a.download=(($('title').value||'chart').replace(/[^\w]+/g,'_'))+'.png';a.click()}
+$('go').onclick=render;$('dl').onclick=download;
+['range','type','color','wm'].forEach(id=>$(id).onchange=render);
+
+// ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------
+let MODE='prices', flast=null;
+function setMode(m){MODE=m;$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');
+  $('ctl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';
+  $('ftable').innerHTML='';$('fnote').textContent='';chart.clear();$('status').textContent='';
+  if(m==='prices')render();else frender()}
+$('mPrices').onclick=()=>setMode('prices');$('mFin').onclick=()=>setMode('fin');
+const MUNIT={eps_diluted:'eps',shares:'sh',gross_margin:'%',operating_margin:'%',net_margin:'%'};
+function fmtFin(v,u,cur){if(v==null||isNaN(v))return '';const a=Math.abs(v),sg=v<0?'-':'';
+  if(u==='%')return v.toFixed(1)+'%'; if(u==='eps')return sg+'$'+a.toFixed(2);
+  const sym=u==='sh'?'':(cur&&cur!=='USD'?cur+' ':'$');
+  const t=a>=1e12?(a/1e12).toFixed(2)+'T':a>=1e9?(a/1e9).toFixed(a>=1e11?0:1)+'B':a>=1e6?(a/1e6).toFixed(a>=1e8?0:1)+'M':a>=1e3?(a/1e3).toFixed(0)+'K':a.toFixed(0);
+  return sg+sym+t}
+async function fetchFin(s,q){const r=await fetch(`/api/fin?symbol=${encodeURIComponent(s)}&metric=${q.m}&period=${q.p}&y1=${q.y1}&y2=${q.y2}`);
+  const j=await r.json(); if(!r.ok||j.error)throw Error(j.error||`${s}: HTTP ${r.status}`); return j}
+async function frender(){
+  const st=$('status'); st.className=''; st.textContent='Loading SEC filings…';
+  try{
+    const syms=$('ftickers').value.split(',').map(s=>s.trim().toUpperCase()).filter(Boolean), names=$('fnames').value.split(',').map(s=>s.trim());
+    if(!syms.length)throw Error('Enter at least one ticker');
+    const q={m:$('fmetric').value,p:$('fperiod').value,y1:$('fy1').value,y2:$('fy2').value}, type=$('ftype').value, u=MUNIT[q.m]||'$';
+    const res=await Promise.allSettled(syms.map(s=>fetchFin(s,q)));
+    const errs=res.filter(r=>r.status==='rejected').map(r=>r.reason.message);
+    const data=res.filter(r=>r.status==='fulfilled').map(r=>r.value);
+    data.forEach(d=>{d.label=names[syms.indexOf(d.ticker)]||d.ticker});
+    const msgs=[...errs,...data.filter(d=>d.message).map(d=>d.message)];
+    const ok=data.filter(d=>d.rows.length);
+    if(!ok.length)throw Error(msgs.join(' · ')||'No data');
+    const curs=[...new Set(ok.map(d=>d.currency))];
+    const mLabel=$('fmetric').selectedOptions[0].text, pLabel={quarterly:'quarterly',annual:'annual',ttm:'trailing 12 months'}[q.p];
+    const have=[...new Set(ok.flatMap(d=>d.rows.map(r=>r.label)))].sort(), cats=[];
+    { // continuous axis so missing periods show as visible gaps, never interpolated
+      const idx=l=>l.length===4?+l:(+l.slice(0,4))*4+(+l.slice(6)-1), lab=i=>q.p==='annual'?String(i):`${Math.floor(i/4)} Q${i%4+1}`;
+      for(let i=idx(have[0]);i<=idx(have.at(-1));i++)cats.push(lab(i)); }
+    const foreign=ok.some(d=>d.foreign);
+    const src='Source: SEC filings (10-K/10-Q'+(foreign?', 20-F':'')+')'+(ok.some(d=>d.rows.some(r=>(r.derived||'').includes('weighted-avg')))?' · weighted-avg basic shares':'');
+    const titleAuto=type==='rank'?`${mLabel}, ${pLabel} (latest)`:(ok.length>1?ok.map(d=>d.label).join(' vs ')+' ':ok[0].label+' ')+mLabel.toLowerCase().replace('r&d','R&D').replace('eps','EPS')+', '+pLabel;
+    const o=base($('ftitle').value||titleAuto,src,'fwm'), c=ok.length===1?[$('fcolor').value]:PALETTE, cur=curs.length===1?curs[0]:'USD';
+    const F=v=>fmtFin(v,u,cur);
+    if(type==='rank'){
+      const rows=ok.map(d=>({label:d.label,r:d.rows.at(-1)})).sort((a,b)=>b.r.value-a.r.value);
+      o.grid={left:110,right:60,top:130,bottom:115};
+      o.xAxis={type:'category',data:rows.map(x=>x.label+'\n'+x.r.label),axisLabel:{...axLabel,fontSize:18,fontWeight:'bold',interval:0,lineHeight:24},axisTick:{show:false},axisLine:{lineStyle:{color:T.axis}}};
+      o.yAxis={type:'value',axisLabel:{...axLabel,formatter:F},splitLine:split};
+      o.series=[{type:'bar',barMaxWidth:120,data:rows.map(x=>({value:x.r.value,itemStyle:{color:bc(x.r.value>=0?$('fcolor').value:'#EF4444')},
+        label:{show:true,position:x.r.value>=0?'top':'bottom',fontSize:18,fontWeight:'bold',color:T.title,formatter:p=>F(p.value)}}))}];
+    }else{
+      const ser=ok.map((d,i)=>{const m=Object.fromEntries(d.rows.map(r=>[r.label,r.value]));return{label:d.label,color:c[i%c.length],data:cats.map(k=>k in m?m[k]:null)}});
+      o.xAxis={type:'category',data:cats,axisLabel:{...axLabel,hideOverlap:true},axisLine:{lineStyle:{color:T.axis}},axisTick:{show:false}};
+      o.yAxis={type:'value',axisLabel:{...axLabel,formatter:F},splitLine:split};
+      if(type==='line'){o.series=ser.map(s=>({type:'line',name:s.label,data:s.data,connectNulls:false,showSymbol:cats.length<=24||s.data.includes(null),symbolSize:7,
+          lineStyle:{width:3,color:bc(s.color)},itemStyle:{color:bc(s.color)},
+          endLabel:{show:true,fontSize:17,fontWeight:'bold',color:bc(s.color),formatter:p=>`${ok.length>1?s.label+' ':''}${F(p.value)}`},labelLayout:{moveOverlap:'shiftY'}}));}
+      else{o.grid.right=60;if(ok.length>1)o.legend={top:80,left:60,textStyle:{fontSize:17,color:T.text},itemWidth:18,itemHeight:12};o.grid.top=ok.length>1?130:120;
+        o.series=ser.map((s,i)=>({type:'bar',name:s.label,data:s.data,itemStyle:{color:bc(s.color)},barMaxWidth:60,
+          label:{show:cats.length*ok.length<=16,position:'top',fontSize:15,color:T.title,formatter:p=>F(p.value)}}));}
+    }
+    chart.setOption(o,true);
+    flast={ok,q,u,cur,cats,title:$('ftitle').value||titleAuto,mLabel};
+    ftable(); 
+    const gaps=ok.reduce((n,d)=>n+cats.length-d.rows.length,0);
+    $('fnote').textContent=[...new Set(ok.map(d=>d.note).filter(Boolean))].join(' · ')+(curs.length>1?' · WARNING: mixed currencies '+curs.join('/')+' — not comparable':'')+
+      (gaps&&type!=='rank'?` · ${gaps} blank cell(s) = not reported or not derivable from filings (left blank, not estimated)`:'');
+    st.className=msgs.length?'err':''; st.textContent=(msgs.length?msgs.join(' · ')+' · ':'')+'SEC data, latest period end '+ok.map(d=>d.label+' '+d.rows.at(-1).end).join(', ')+' · * = derived (hover table)';
+  }catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();$('ftable').innerHTML='';flast=null}
+}
+function ftable(){const {ok,cats,u,cur}=flast;
+  const M=ok.map(d=>Object.fromEntries(d.rows.map(r=>[r.label,r])));
+  let h='<tr><th>Period</th>'+ok.map(d=>`<th>${d.label}</th>`).join('')+'</tr>';
+  for(const k of [...cats].reverse())h+=`<tr><td>${k}</td>`+M.map(m=>{const r=m[k];return r?`<td title="${r.start||''} → ${r.end} · ${r.form} · ${r.tag}${r.derived?' · '+r.derived:''}">${fmtFin(r.value,u,cur)}${r.derived?'*':''}</td>`:'<td style="color:#9CA3AF">—</td>'}).join('')+'</tr>';
+  $('ftable').innerHTML=h}
+function fcsv(){if(!flast)return;const {ok,cats,q}=flast;
+  const lines=[['ticker','company','metric','period_type','period','start','end','value','currency_or_unit','form','xbrl_tag','derived'].join(',')];
+  for(const d of ok)for(const k of cats){const r=d.rows.find(x=>x.label===k);
+    lines.push([d.ticker,d.name,q.m,q.p,k,r?.start||'',r?.end||'',r?r.value:'',r?.cur||'',r?.form||'',r?.tag||'',r?(r.derived||''):'not reported'].map(v=>`"${String(v).replace(/"/g,'""')}"`).join(','))}
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([lines.join('\n')],{type:'text/csv'}));a.download=flast.title.replace(/[^\w]+/g,'_')+'.csv';a.click()}
+function fdownload(){if(!flast)return;const url=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});
+  const a=document.createElement('a');a.href=url;a.download=flast.title.replace(/[^\w]+/g,'_')+'.png';a.click()}
+$('fgo').onclick=frender;$('fdl').onclick=fdownload;$('fcsv').onclick=fcsv;
+['fmetric','fperiod','ftype','fcolor','fwm'].forEach(id=>$(id).onchange=frender);
+
+// ---------- Themes + saved views (server-side views.json via /api/views) ----------
+const VFIELDS=['tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme'];
+let VIEWS=[];
+function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}return{name,mode:MODE,fields:f,saved:new Date().toISOString()}}
+async function vput(){const r=await fetch('/api/views',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(VIEWS)});
+  if(!r.ok)throw Error('save failed: '+r.status);VIEWS=await r.json();vlist()}
+async function vload(){try{VIEWS=await (await fetch('/api/views')).json()}catch(e){VIEWS=[]}vlist()}
+function vlist(sel){const v=$('views'),cur=sel??v.value;v.innerHTML='<option value="">— pick a view —</option>'+VIEWS.map((x,i)=>`<option value="${i}">${x.name.replace(/</g,'&lt;')}</option>`).join('');
+  if(cur!==''&&VIEWS[cur])v.value=cur}
+function vapply(x){for(const [id,val] of Object.entries(x.fields||{})){const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
+  applyTheme();setMode(x.mode==='fin'?'fin':'prices')}
+const vmsg=t=>{$('status').className='';$('status').textContent=t};
+$('views').onchange=()=>{const x=VIEWS[$('views').value];if(x)vapply(x)};
+$('vsave').onclick=async()=>{const n=(prompt('Name for this view:')||'').trim();if(!n)return;
+  const i=VIEWS.findIndex(v=>v.name===n);if(i>=0&&!confirm(`Overwrite "${n}"?`))return;
+  if(i>=0)VIEWS[i]=snap(n);else VIEWS.push(snap(n));await vput();vlist(String(VIEWS.findIndex(v=>v.name===n)));vmsg('Saved view "'+n+'"')};
+$('vupd').onclick=async()=>{const i=$('views').value;if(i===''){alert('Pick a saved view first');return}
+  VIEWS[i]=snap(VIEWS[i].name);await vput();vlist(i);vmsg('Updated view "'+VIEWS[i].name+'"')};
+$('vren').onclick=async()=>{const i=$('views').value;if(i===''){alert('Pick a saved view first');return}
+  const n=(prompt('New name:',VIEWS[i].name)||'').trim();if(!n)return;VIEWS[i].name=n;await vput();vlist(i)};
+$('vdel').onclick=async()=>{const i=$('views').value;if(i===''){alert('Pick a saved view first');return}
+  if(!confirm(`Delete "${VIEWS[i].name}"?`))return;VIEWS.splice(i,1);await vput();vlist('')};
+$('vexp').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(VIEWS,null,2)],{type:'application/json'}));a.download='chartmaker_views.json';a.click()};
+$('vimp').onclick=()=>$('vfile').click();
+$('vfile').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{let arr=JSON.parse(await f.text());if(!Array.isArray(arr))arr=[arr];
+  let n=0;for(const x of arr){if(!x||!x.name||!x.fields)continue;const i=VIEWS.findIndex(v=>v.name===x.name);if(i>=0)VIEWS[i]=x;else VIEWS.push(x);n++}
+  await vput();vmsg(`Imported ${n} view(s)`)}catch(err){alert('Import failed: '+err.message)}e.target.value=''};
+$('theme').onchange=()=>{applyTheme();rerender()};
+window.__vapply=vapply;window.__snap=snap;
+applyTheme();vload();
+window.__render=render; window.__frender=frender; window.__setMode=setMode; render();
+</script></body></html>
