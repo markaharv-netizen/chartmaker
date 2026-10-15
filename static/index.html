@@ -38,7 +38,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Display names (comma, optional)<input id="names" size="22"></label>
 <label>Range<select id="range"><option>1D</option><option>5D</option><option selected>YTD</option><option>1M</option><option>6M</option><option>1Y</option><option>5Y</option><option>Max</option><option>Custom</option></select></label>
 <label>Start<input id="start" type="date"></label><label>End<input id="end" type="date"></label>
-<label>Type<select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="bar">Bar ranking % return</option><option value="ratio">Ratio A priced in B</option><option value="drawdown">Drawdown from peak</option></select></label>
+<label>Type<select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="bar">Bar ranking % return</option><option value="bardd">Bar ranking % drawdown</option><option value="ratio">Ratio A priced in B</option><option value="drawdown">Drawdown from peak</option></select></label>
 <label id="ddbox" title="Drawdown = % below the running high of daily closes">Peak from<select id="ddbase"><option value="range">Start of range</option><option value="ath">All-time high (full history)</option></select></label>
 <label>Title<input id="title" size="34" placeholder="auto"></label>
 <label>Line color<select id="color"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
@@ -48,7 +48,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label style="flex-direction:row;gap:2px"><input id="sma100" type="checkbox">100</label><label style="flex-direction:row;gap:2px"><input id="sma200" type="checkbox">200</label>
 <label style="flex-direction:row;gap:2px"><input id="sma200w" type="checkbox">200W</label>
 <input id="smac" type="number" min="2" max="1000" placeholder="custom" style="width:70px;padding:4px"></span></label>
-<button id="go">Render</button><button id="dl">Download PNG</button>
+<button id="go">Render</button><button id="refresh" title="Fetch fresh prices, bypassing the cache">Refresh</button><button id="dl">Download PNG</button>
 </div>
 <div id="status"></div>
 <div id="wrap"><div id="chart"></div></div>
@@ -76,17 +76,20 @@ function rerender(){return MODE==='fin'?frender():render()}
 function rangeParams(){
   const r=$('range').value, now=Math.floor(Date.now()/1000), d=new Date();
   let p1, p2=now, iv='1d';
-  if(r==='1D'){p1=now-DAY;iv='5m'} else if(r==='5D'){p1=now-5*DAY;iv='30m'}
+  let rng='';
+  if(r==='1D'){p1=now-DAY;iv='1m';rng='1d'} else if(r==='5D'){p1=now-5*DAY;iv='1m';rng='5d'}
   else if(r==='YTD'){p1=Date.UTC(d.getUTCFullYear()-1,11,31)/1000}
   else if(r==='1M'){p1=now-31*DAY} else if(r==='6M'){p1=now-183*DAY}
   else if(r==='1Y'){p1=now-366*DAY} else if(r==='5Y'){p1=now-5*366*DAY;iv='1wk'}
   else if(r==='Max'){p1=0;iv='1mo'}
   else {p1=Date.parse($('start').value)/1000; p2=$('end').value?Date.parse($('end').value)/1000+DAY:now;
         if(isNaN(p1))throw Error('Pick a custom start date'); if((p2-p1)>3*366*DAY)iv='1wk'}
-  return {p1,p2,iv,r};
+  return {p1,p2,iv,r,rng};
 }
+let FRESH=false;
 async function fetchSym(s,p){
-  const res=await fetch(`/api/chart?symbol=${encodeURIComponent(s)}&period1=${p.p1}&period2=${p.p2}&interval=${p.iv}`);
+  const ex=p.rng?`&range=${p.rng}&prepost=1`:'';
+  const res=await fetch(`/api/chart?symbol=${encodeURIComponent(s)}&period1=${p.p1}&period2=${p.p2}&interval=${p.iv}${ex}${FRESH?'&fresh=1':''}`,{cache:'no-store'});
   const j=await res.json(); if(!res.ok||j.error)throw Error(`${s}: ${j.error||res.status}`); return j;
 }
 // YTD baseline = last close of prior year: keep the last point dated before Jan 1, drop earlier ones
@@ -124,8 +127,12 @@ async function render(){
     if(!syms.length)throw Error('Enter at least one ticker');
     const type=$('type').value, p=rangeParams();
     if(type==='ratio'&&syms.length!==2)throw Error('Ratio needs exactly two tickers: A,B');
-    const dd=type==='drawdown', ath=dd&&$('ddbase').value==='ath', intra=['1D','5D'].includes(p.r);
-    $('ddbox').style.opacity=dd?1:0.4;
+    const dd=type==='drawdown', intra=['1D','5D'].includes(p.r), ath=(dd||type==='bardd')&&$('ddbase').value==='ath';
+    $('ddbox').style.opacity=dd||type==='bardd'?1:0.4;
+    if(type==='bardd'){p.ath=ath;const data=await Promise.all(syms.map(s=>fetchSym(s,p)));
+      if(ath){const full=await Promise.all(syms.map(s=>fetchSym(s,{p1:0,p2:p.p2,iv:'1mo',r:'Max'})));data.forEach((d,i)=>d.athHigh=Math.max(...full[i].highs.map(h=>h[1])))}
+      data.forEach((d,i)=>d.label=names[i]||d.symbol.replace('-USD',''));
+      if(my!==RSEQ)return; return finish(type,data,p,'Drawdown from '+(ath?'all-time high':(p.r==='1D'?"today's high":p.r+' high')))}
     if(dd&&!intra)p.iv='1d'; // drawdowns use daily closes so peaks/troughs aren't smoothed away by weekly/monthly bars
     const data=await Promise.all(syms.map(s=>fetchSym(s,ath&&!intra?{...p,p1:0}:p)));
     data.forEach((d,i)=>{d.label=names[i]||d.symbol.replace('-USD','');if(!(ath&&!intra))d.points=trimYTD(d.points,p.r)});
@@ -135,16 +142,23 @@ async function render(){
     if(sl.length){p.vis=data[0].points[0][0];
       const ss=await Promise.all(data.map(d=>smaSeries(d.symbol,{...p,vis:d.points[0][0]},sl)));data.forEach((d,i)=>d.smas=ss[i])}
     if(my!==RSEQ)return; // a newer render started while this one was fetching; don't overwrite it
-    const asOf=Math.max(...data.map(d=>d.lastTime||0));
-    st.textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv;
     const titleAuto={line:data.map(d=>d.label).join(' vs ')+' price',pct:data.map(d=>d.label).join(' vs ')+' % change',
       bar:'Return, '+(p.r==='Custom'?'custom range':p.r),ratio:`${data[0].label} priced in ${data[1]?.label}`,
       drawdown:data.map(d=>d.label).join(' vs ')+(ath?' drawdown from all-time high':' drawdown from peak')}[type];
-    p.ath=ath;
-    last={opt:buildOpt(type,data,$('title').value||titleAuto,p),asOf};
-    chart.setOption(last.opt,true);
+    p.ath=ath; finish(type,data,p,titleAuto);
   }catch(e){if(my!==RSEQ)return;st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear()}
 }
+function finish(type,data,p,titleAuto){
+  const asOf=Math.max(...data.map(d=>Math.max(d.lastTime||0,d.lastBarTime||0)));
+  $('status').textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv+(p.rng?' · incl. pre/after-hours bars':'');
+  p.asOf=asOf; last={opt:buildOpt(type,data,$('title').value||titleAuto,p),asOf}; chart.setOption(last.opt,true)}
+const etTime=t=>new Date(t*1000).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})+' ET';
+// 1D: change vs previous regular-session close, latest regular-market price (matches Yahoo/FactSet day change)
+function ret(d,p){if(p.r==='1D'&&d.chartPreviousClose&&d.lastPrice)return(d.lastPrice/(d.prevClose||d.chartPreviousClose)-1)*100;
+  return(d.points.at(-1)[1]/d.points[0][1]-1)*100}
+function ddNow(d,p){const px=d.lastPrice||d.points.at(-1)[1];
+  let hi=p.r==='1D'&&d.dayHigh?d.dayHigh:Math.max(...d.highs.map(h=>h[1]));
+  if(d.athHigh)hi=Math.max(hi,d.athHigh);hi=Math.max(hi,px);return(px/hi-1)*100}
 function base(title,src,wmId){
   const wm=$(wmId||'wm').checked;
   return {backgroundColor:T.bg,animation:false,textStyle:{fontFamily:'Inter, Arial, sans-serif',fontSize:16},
@@ -193,7 +207,7 @@ function colors(n){return n===1?[$('color').value]:PALETTE}
 function buildOpt(type,data,title,p){
   const o=base(title), c=colors(data.length);
   if(type==='line')return lineOpt(o,data.map((d,i)=>({label:d.label,color:c[i%c.length],data:d.points,smas:d.smas})),fmtNum);
-  if(type==='pct'){const s=data.map((d,i)=>{const b=d.points[0][1];return{label:d.label,color:c[i%c.length],data:d.points.map(q=>[q[0],(q[1]/b-1)*100])}});
+  if(type==='pct'){const s=data.map((d,i)=>{const b=p.r==='1D'&&d.chartPreviousClose?(d.prevClose||d.chartPreviousClose):d.points[0][1];return{label:d.label,color:c[i%c.length],data:d.points.map(q=>[q[0],(q[1]/b-1)*100])}});
     const o2=lineOpt(o,s,v=>pct(v)); o2.yAxis.scale=false; return o2}
   if(type==='drawdown')return ddOpt(o,data,c,p);
   if(type==='ratio'){const [a,b]=data; // align on timestamp (nearest prior B value; crypto has weekend bars)
@@ -201,19 +215,26 @@ function buildOpt(type,data,title,p){
     for(const q of a.points){while(j+1<bp.length&&bp[j+1][0]<=q[0])j++; if(bp[j]&&bp[j][0]<=q[0]+DAY*1000/2)out.push([q[0],q[1]/bp[j][1]])}
     if(!out.length)throw Error('No overlapping dates for ratio');
     return lineOpt(o,[{label:`${a.label}/${b.label}`,color:$('color').value,data:out}],v=>v.toPrecision(4))}
-  // bar ranking
-  const rows=data.map(d=>({label:d.label,v:(d.points.at(-1)[1]/d.points[0][1]-1)*100})).sort((x,y)=>y.v-x.v);
-  o.grid={left:90,right:60,top:130,bottom:90};
-  o.xAxis={type:'category',data:rows.map(r=>r.label),axisLabel:{...axLabel,fontSize:18,fontWeight:'bold',interval:0},axisTick:{show:false},axisLine:{lineStyle:{color:T.axis}}};
-  o.yAxis={type:'value',axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split};
-  o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:+r.v.toFixed(2),itemStyle:{color:bc(r.v>=0?'#22C55E':'#EF4444')},
+  // bar ranking (% return or % drawdown); deepest/lowest on the right
+  const isdd=type==='bardd';
+  const rows=data.map(d=>({label:d.label,v:isdd?ddNow(d,p):ret(d,p)})).sort((x,y)=>y.v-x.v);
+  o.grid={left:90,right:60,top:130,bottom:110};
+  // labels pinned to the bottom of the grid: with all-negative bars the zero line is at the top and labels used to vanish
+  o.xAxis={type:'category',position:'bottom',data:rows.map(r=>r.label),axisLabel:{...axLabel,fontSize:18,fontWeight:'bold',color:T.title,interval:0,margin:14},axisTick:{show:false},axisLine:{onZero:false,show:true,lineStyle:{color:T.axis}}};
+  if(isdd){o.yAxis={type:'value',max:0,axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split}}
+  const base1D=p.r==='1D'?(isdd?"latest vs today's high":'vs previous close'):'';
+  o.graphic[0].style.text=`Source: Yahoo Finance · as of ${etTime(p.asOf)}`+(isdd?` · % below ${p.ath?'all-time high':p.r==='1D'?"today's high":'range high'}`:base1D?' · change vs previous close':'');
+  if(!isdd)o.yAxis={type:'value',axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split};
+  o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:+r.v.toFixed(2),itemStyle:{color:bc(r.v>=0&&!isdd?'#22C55E':'#EF4444')},
     label:{show:true,position:r.v>=0?'top':'bottom',fontSize:18,fontWeight:'bold',color:T.title,formatter:q=>pct(q.value)}}))}];
   return o;
 }
 function download(){if(!last)return;
   const url=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});
   const a=document.createElement('a');a.href=url;a.download=(($('title').value||'chart').replace(/[^\w]+/g,'_'))+'.png';a.click()}
-$('go').onclick=render;$('dl').onclick=download;
+$('go').onclick=render;
+['tickers','names','title','start','end','smac'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();render()}}));
+['ftickers','fnames','ftitle','fy1','fy2'].forEach(id=>$(id)&&$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();frender()}}));$('refresh').onclick=async()=>{FRESH=true;try{await render()}finally{FRESH=false}};$('dl').onclick=download;
 ['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'].forEach(id=>$(id).onchange=render);
 
 // ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------

@@ -41,26 +41,34 @@ def views_write(v):
     tmp = VIEWS + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f: json.dump(v, f, indent=1)
     os.replace(tmp, VIEWS); return v
-def yahoo(sym, p1, p2, interval):
-    key = (sym, p1, p2, interval)
-    if key in CACHE and time.time() - CACHE[key][0] < 60: return CACHE[key][1]
-    q = urllib.parse.urlencode({"period1": p1, "period2": p2, "interval": interval, "includePrePost": "false"})
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?{q}"
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+INTRA = {"1m", "2m", "5m", "15m", "30m", "60m", "90m", "1h"}
+def yahoo(sym, p1, p2, interval, rng=None, prepost=False, fresh=False):
+    """rng (e.g. '1d','5d') asks Yahoo for its own session window; intraday cache TTL 20s, daily 60s; fresh bypasses cache."""
+    key = (sym, None if rng else p1, None if rng else p2, interval, rng, prepost)
+    ttl = 20 if (interval in INTRA or rng) else 60
+    if not fresh and key in CACHE and time.time() - CACHE[key][0] < ttl: return CACHE[key][1]
+    prm = {"interval": interval, "includePrePost": "true" if prepost else "false"}
+    if rng: prm["range"] = rng
+    else: prm.update(period1=p1, period2=p2)
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?{urllib.parse.urlencode(prm)}&_={int(time.time())}"
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Cache-Control": "no-cache"})
     with urllib.request.urlopen(req, timeout=20) as r: d = json.load(r)
     res = (d.get("chart") or {}).get("result")
     if not res: raise ValueError(f"No data for {sym}: {(d.get('chart') or {}).get('error')}")
     r0 = res[0]; ts = r0.get("timestamp") or []
     q0 = r0["indicators"]["quote"][0]
-    adj = (r0["indicators"].get("adjclose") or [{}])[0].get("adjclose")
-    closes = q0.get("close") or []
+    closes = q0.get("close") or []; highs = q0.get("high") or [None] * len(ts)
     pts = [[t * 1000, c] for t, c in zip(ts, closes) if c is not None]
     if not pts: raise ValueError(f"No price points for {sym} in range")
     m = r0["meta"]
     out = {"symbol": m.get("symbol", sym), "name": m.get("shortName") or m.get("longName") or sym,
            "currency": m.get("currency"), "points": pts, "lastTime": m.get("regularMarketTime"),
-           "lastPrice": m.get("regularMarketPrice"), "interval": interval}
-    # Use live regular-market price as final point for daily bars if newer
+           "lastBarTime": pts[-1][0] // 1000, "lastPrice": m.get("regularMarketPrice"), "interval": interval,
+           "highs": [[t * 1000, h] for t, h in zip(ts, highs) if h is not None],
+           "prevClose": m.get("regularMarketPreviousClose") or m.get("previousClose") or (m.get("chartPreviousClose") if rng == "1d" else None),
+           "chartPreviousClose": m.get("chartPreviousClose"), "dayHigh": m.get("regularMarketDayHigh"),
+           "fiftyTwoWeekHigh": m.get("fiftyTwoWeekHigh"), "instrumentType": m.get("instrumentType"),
+           "fetchedAt": int(time.time())}
     CACHE[key] = (time.time(), out); return out
 class H(SimpleHTTPRequestHandler):
     def __init__(s, *a, **k): super().__init__(*a, directory=ROOT, **k)
@@ -129,10 +137,11 @@ class H(SimpleHTTPRequestHandler):
             sym = qs["symbol"][0].strip().upper()
             p1 = int(qs.get("period1", [0])[0]); p2 = int(qs.get("period2", [int(time.time())])[0])
             iv = qs.get("interval", ["1d"])[0]
-            body, code = json.dumps(yahoo(sym, p1, p2, iv)), 200
+            g = lambda k: qs.get(k, [""])[0]
+            body, code = json.dumps(yahoo(sym, p1, p2, iv, g("range") or None, g("prepost") == "1", g("fresh") == "1")), 200
         except Exception as e:
             body, code = json.dumps({"error": str(e)}), 502
         b = body.encode(); s.send_response(code)
-        s.send_header("Content-Type", "application/json"); s.send_header("Content-Length", len(b)); s.end_headers(); s.wfile.write(b)
+        s.send_header("Content-Type", "application/json"); s.send_header("Cache-Control", "no-store"); s.send_header("Content-Length", len(b)); s.end_headers(); s.wfile.write(b)
 if __name__ == "__main__":
     print(f"Chartmaker on http://localhost:{PORT} (password {'on' if PASSWORD else 'off'}, views: {VIEWS_STORE})", flush=True); ThreadingHTTPServer(("0.0.0.0", PORT), H).serve_forever()
