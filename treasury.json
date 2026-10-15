@@ -1,0 +1,14 @@
+{
+  "_note": "Edit me. Amounts in the stated currency (major units, millions for debt/pref). Leave a field null if unknown; it is flagged, never guessed. compiled = date these figures were gathered for the tab-88 amplification chart.",
+  "compiled": "2026-10-15",
+  "companies": [
+    {"ticker": "MSTR", "name": "Strategy", "btc": 848250, "debt_m": 6714, "debt_cur": "USD", "pref_m": 13748, "pref_cur": "USD",
+     "debt_note": "convertible notes", "source": "strategy.com/credit"},
+    {"ticker": "ASST", "name": "Strive", "btc": 35595, "debt_m": 0, "debt_cur": "USD", "pref_m": 1403.0, "pref_cur": "USD",
+     "debt_note": "pref = SATA", "source": "strive.com/treasury, SEC 8-Ks"},
+    {"ticker": "3350.T", "name": "Metaplanet", "btc": 44000, "debt_m": 700.83, "debt_cur": "USD", "pref_m": 149.20, "pref_cur": "USD",
+     "debt_note": "pref = MERCURY", "source": "analytics.metaplanet.jp"},
+    {"ticker": "SWC.L", "name": "Smarter Web", "btc": 2830, "debt_m": 19.0, "debt_cur": "GBP", "pref_m": 11.11, "pref_cur": "GBP",
+     "debt_note": "Coinbase loan; pref = 111,112 MORE x GBP 100 issued (unsold ATM excluded)", "source": "RNS announcements"}
+  ]
+}

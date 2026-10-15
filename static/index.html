@@ -12,7 +12,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #fnote{margin:0 16px 8px;font-size:14px;color:#374151}
 #status{padding:4px 12px;font-size:13px}#status.err{color:#EF4444;font-weight:bold}
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -42,6 +42,14 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Title<input id="htitle" size="30" placeholder="auto"></label>
 <label><span>Watermark</span><input id="hwm" type="checkbox" checked></label>
 <button id="hgo">Render</button><button id="hrefresh" title="Fetch fresh quotes, bypassing the cache">Refresh</button><button id="hdl">Download PNG</button><button class="xexp" title="1600×900 (16:9) PNG on white, sized for X">Export for X</button>
+</div>
+<div id="tctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
+<label>Tickers (comma; blank = all in treasury.json)<input id="ttickers" value="MSTR,ASST,3350.T,SWC.L" size="30"></label>
+<label>Metric<select id="tmetric"><option value="mnav">mNAV (market cap / BTC NAV)</option><option value="amp">Amplification ((debt+pref) / BTC NAV)</option><option value="bps">BTC per share</option><option value="bpk">BTC per 1,000 shares</option></select></label>
+<label>Title<input id="ttitle" size="30" placeholder="auto"></label>
+<label>Bar color<select id="tcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
+<label><span>Watermark</span><input id="twm" type="checkbox" checked></label>
+<button id="tgo">Render</button><button id="trefresh" title="Fresh quotes">Refresh</button><button id="tdl">Download PNG</button><button class="xexp" title="1600×900 (16:9) PNG on white, sized for X">Export for X</button>
 </div>
 <div id="ctl">
 <label>Tickers (comma)<input id="tickers" value="NBIS,CRWV" size="22"></label>
@@ -81,7 +89,7 @@ function bc(c){return T.dark&&BRIGHT[c]?BRIGHT[c]:c}
 function applyTheme(){T=THEMES[$('theme').value]||THEMES.white;axLabel={fontSize:16,color:T.text};split={lineStyle:{color:T.grid}};
   $('chart').style.background=T.bg;$('tprev').style.background=T.bg;$('tprev').style.color=T.title;
   $('tprev').innerHTML=`Aa <b style="color:${bc('#F7931A')}">■</b><b style="color:${bc('#8B5CF6')}">■</b><b style="color:${bc('#22C55E')}">■</b><b style="color:${bc('#EF4444')}">■</b>`}
-function rerender(){return MODE==='fin'?frender():MODE==='heat'?hrender():render()}
+function rerender(){return MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
 
 function rangeParams(){
   const r=$('range').value, now=Math.floor(Date.now()/1000), d=new Date();
@@ -293,11 +301,11 @@ $('go').onclick=render;
 
 // ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------
 let MODE='prices', flast=null;
-function setMode(m){MODE=m;$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');
+function setMode(m){MODE=m;$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');
   $('ctl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
   $('ftable').innerHTML='';$('fnote').textContent='';chart.clear();$('status').textContent='';
-  if(m==='prices')render();else if(m==='heat')hrender();else frender()}
-$('mPrices').onclick=()=>setMode('prices');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');
+  if(m==='prices')render();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
+$('mPrices').onclick=()=>setMode('prices');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');
 const MUNIT={eps_diluted:'eps',shares:'sh',gross_margin:'%',operating_margin:'%',net_margin:'%'};
 function fmtFin(v,u,cur){if(v==null||isNaN(v))return '';const a=Math.abs(v),sg=v<0?'-':'';
   if(u==='%')return v.toFixed(1)+'%'; if(u==='eps')return sg+'$'+a.toFixed(2);
@@ -435,13 +443,44 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
   const miss=(j.notes&&j.notes.length?' · skipped: '+j.notes.join('; '):j.missing.length?' · no quote: '+j.missing.join(', '):'')+(j.est&&j.est.length?' · mcap = price × shares: '+j.est.join(', '):''),nolog=j.rows.filter(d=>!d.logo).map(d=>d.symbol);
   const shs=j.rows.filter(d=>d.since);$('status').className='';$('status').textContent=(shs.length?'⚠ short history: '+shs.map(d=>d.symbol+' starts '+fmtD(d.since*1000)).join(', ')+' · ':'')+`${j.rows.length} tiles · data as of ${etTime(j.asOf)}${miss}${nolog.length?' · no logo: '+nolog.join(', '):''}`}
 // Export for X: exactly 1600x900 (the chart canvas size) at pixelRatio 1, forced White theme, then restore the user's theme
-async function exportX(){if(!last&&!hlast&&!flast)return;const th=$('theme').value,sw=th!=='white';
+async function exportX(){if(!last&&!hlast&&!flast&&!tlast)return;const th=$('theme').value,sw=th!=='white';
   if(sw){$('theme').value='white';applyTheme();await rerender()}
   try{const url=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:'#FFFFFF'});
-    const nm=(MODE==='heat'?$('htitle').value||'heatmap':MODE==='fin'?(flast&&flast.title)||'chart':$('title').value||'chart').replace(/[^\w]+/g,'_');
+    const nm=(MODE==='tre'?$('ttitle').value||'treasury':MODE==='heat'?$('htitle').value||'heatmap':MODE==='fin'?(flast&&flast.title)||'chart':$('title').value||'chart').replace(/[^\w]+/g,'_');
     const a=document.createElement('a');a.href=url;a.download=nm+'_X_1600x900.png';a.click()}
   finally{if(sw){$('theme').value=th;applyTheme();await rerender()}}}
 document.querySelectorAll('.xexp').forEach(b=>b.onclick=exportX);
+// ---------- Treasury mode: /api/treasury (treasury.json holdings + live Yahoo market cap/shares/BTC-USD) ----------
+let tlast=null,TFRESH=false;
+const TMET={mnav:{t:'mNAV',f:r=>r.mnav,fmt:v=>v.toFixed(2)+'x',ax:v=>v+'x',d:'mNAV = market cap / (BTC held × BTC price)'},
+  amp:{t:'Amplification',f:r=>r.amp==null?null:r.amp*100,fmt:v=>v.toFixed(1)+'%',ax:v=>v+'%',d:'amplification = (debt + preferred) / BTC NAV'},
+  bps:{t:'BTC per share',f:r=>r.btcPerShare,fmt:v=>v<0.001?v.toExponential(2):v.toFixed(5),ax:v=>v<0.001&&v?v.toExponential(1):v,d:'BTC per share = BTC held / Yahoo shares outstanding'},
+  bpk:{t:'BTC per 1,000 shares',f:r=>r.btcPerShare==null?null:r.btcPerShare*1000,fmt:v=>v.toFixed(v<0.1?4:3),ax:v=>v,d:'BTC per 1,000 shares = 1,000 × BTC held / Yahoo shares outstanding'}};
+async function trender(){const st=$('status');st.className='';st.textContent='Loading…';
+  try{const r=await fetch('/api/treasury?tickers='+encodeURIComponent($('ttickers').value)+(TFRESH?'&fresh=1':''),{cache:'no-store'});
+    const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);tlast=j;tdraw()}
+  catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();tlast=null}}
+function tdraw(){const j=tlast,M=TMET[$('tmetric').value],col=$('tcolor').value;
+  const ok=j.rows.filter(r=>M.f(r)!=null),skip=j.rows.filter(r=>M.f(r)==null).map(r=>r.symbol);
+  if(!ok.length)throw Error('No company has the data for this metric');
+  const rows=ok.map(r=>({label:barLabel({symbol:r.symbol,name:r.name},SHORT[r.symbol]||r.name),v:M.f(r)})).sort((a,b)=>b.v-a.v);
+  const o=base($('ttitle').value||`BTC treasury companies: ${M.t}`,'','twm');
+  o.grid={left:90,right:60,top:130,bottom:110};
+  const AX=barAxisLayout(rows.map(r=>r.label),chart.getWidth()-o.grid.left-o.grid.right);o.grid.bottom=AX.bottom+20;
+  o.xAxis={type:'category',data:AX.data,axisLabel:{...axLabel,fontSize:AX.fontSize,fontWeight:'bold',color:T.title,interval:0,margin:14,lineHeight:AX.lineHeight,rotate:AX.rotate,align:AX.rotate?'right':'center'},axisTick:{show:false},axisLine:{lineStyle:{color:T.axis}}};
+  o.yAxis={type:'value',axisLabel:{...axLabel,formatter:M.ax},splitLine:split};
+  const one=$('tmetric').value==='mnav'?[{yAxis:1,lineStyle:{color:T.axis,type:'dashed'},label:{show:true,formatter:'1.0x',color:T.src,fontSize:15},symbol:'none'}]:[];
+  o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:r.v,itemStyle:{color:bc(col)}})),markLine:one.length?{silent:true,data:one}:undefined,
+    label:{show:true,position:'top',fontSize:Math.max(15,Math.min(20,AX.fontSize+2)),fontWeight:'bold',color:T.title,formatter:q=>M.fmt(q.value)}}];
+  const srcs=[...new Set(ok.map(r=>r.source).filter(Boolean))].join('; ');
+  o.graphic[0].style.text=`${M.d} · BTC $${Math.round(j.btcPrice).toLocaleString('en-US')} & market caps: Yahoo Finance, as of ${etTime(j.asOf)}`;
+  o.graphic.push({type:'text',left:60,bottom:4,style:{text:`Holdings/debt/pref compiled ${j.compiled}: ${srcs}`+(skip.length?` · excluded (missing data): ${skip.join(', ')}`:''),fontSize:15,fill:T.src}});
+  o.graphic[0].bottom=26;
+  chart.setOption(o,true);last={opt:o,asOf:j.asOf};
+  $('status').textContent=`${rows.length} companies · BTC $${Math.round(j.btcPrice).toLocaleString('en-US')} · as of ${etTime(j.asOf)}`+(j.flags.length?' · ⚠ '+j.flags.join('; '):'')}
+$('tgo').onclick=trender;$('tmetric').onchange=()=>tlast&&tdraw();$('tcolor').onchange=()=>tlast&&tdraw();
+$('trefresh').onclick=async()=>{TFRESH=true;try{await trender()}finally{TFRESH=false}};
+$('tdl').onclick=()=>{if(!tlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});a.download=($('ttitle').value||'treasury').replace(/[^\w]+/g,'_')+'.png';a.click()};
 $('hgo').onclick=hrender;$('hrefresh').onclick=async()=>{HFRESH=true;try{await hrender()}finally{HFRESH=false}};
 $('hdl').onclick=()=>{if(!hlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});a.download=($('htitle').value||'heatmap').replace(/[^\w]+/g,'_')+'.png';a.click()};
 $('htickers').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();$('huni').value='custom';hrender()}});
@@ -450,7 +489,7 @@ $('htitle').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault(
 window.__hrender=hrender;
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
+const VFIELDS=['ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}return{name,mode:MODE,fields:f,saved:new Date().toISOString()}}
 let VSTORE='server';const VLS='chartmaker_views';
