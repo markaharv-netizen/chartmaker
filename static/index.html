@@ -160,14 +160,33 @@ async function render(){
   }catch(e){if(my!==RSEQ)return;st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear()}
 }
 // bar axis labels: "Company (TICKER)"; Display names override the name part; crypto pairs show the name only
-function shortName(n,sym){n=(n||sym).replace(/\s+/g,' ').trim();
+const SHORT={MARA:'MARA',MSTR:'Strategy',DJT:'Trump Media',XXI:'Twenty One',NAKA:'Nakamoto',ABTC:'American Bitcoin',ASST:'Strive','SWC.L':'Smarter Web',SMLR:'Semler',GME:'GameStop',TSLA:'Tesla',COIN:'Coinbase',HOOD:'Robinhood',BLSH:'Bullish','3350.T':'Metaplanet','ALCPB.PA':'Capital B','OBTC3.SA':'OranjeBTC',HOGPF:'H100 Group'};
+const KEEPUP=/^(BTC|ETH|USA|US|UK|AI|ADR|ETF|AMD|IBM|DDC|MARA|NVR|BNY|HSBC|UBS|ING|BP|AT&T|ON)$/;
+function titleCase(n){if(/[a-z]/.test(n))return n; // only fix ALL-CAPS names
+  return n.split(' ').map(w=>KEEPUP.test(w)||/\d/.test(w)||w.length<=2?w:(w[0]+w.slice(1).toLowerCase()).replace(/btc$/i,'BTC').replace(/^Mc(.)/,(m,c)=>'Mc'+c.toUpperCase())).join(' ')}
+function shortName(n,sym){if(SHORT[sym])return SHORT[sym];n=(n||sym).replace(/\s+/g,' ').trim();
   if(/-USD$/.test(sym))n=n.replace(/\s+USD$/i,'');
-  const suf=/[\s,]+(Inc\.?|Incorporated|Corp\.?|Corporation|Holdings?|Ltd\.?|Limited|plc|PLC|N\.V\.|S\.A\.|AG|SE|Group|Co\.?|Company|Class [A-C]|Platforms|Technologies|L\.P\.)\.?$/i;
-  let prev;do{prev=n;n=n.replace(suf,'').replace(/[\s,.]+$/,'')}while(n!==prev);
-  if(n.length>16){const w=n.split(' ');while(w.length>1&&w.join(' ').length>16)w.pop();n=w.join(' ')}
-  return n}
+  n=titleCase(n).replace(/^The\s+/i,'');
+  const suf=/[\s,]+(Inc\.?|Incorporated|Corp\.?|Corporation|Group Holdings|Holdings?|Ltd\.?|Limited|plc|N\.?V\.?|S\.?A\.?|AB|ASA|AG|SE|Group|Co\.?|Company|Class [A-C]|Platforms|Technologies|L\.?P\.?|ON|PN|NM|Unit|Units|Ord|Shs|ADR)\.?$/i;
+  let prev;do{prev=n;n=n.replace(suf,'').replace(/[\s,.]+$/,'')}while(n!==prev&&n.includes(' '));
+  if(n.length>24){const w=n.split(' ');while(w.length>1&&w.join(' ').length>21)w.pop();n=w.join(' ');if(n.length>24)n=n.slice(0,21)+'…'}
+  return n||sym}
 function barLabel(d,disp){const tk=d.symbol.replace(/-USD$/,''), nm=disp||shortName(d.name,d.symbol);
-  if(/-USD$/.test(d.symbol))return nm; return nm.toUpperCase()===tk?tk:`${nm} (${tk})`}
+  if(/-USD$/.test(d.symbol))return nm; return nm.toUpperCase()===tk.toUpperCase()?tk:`${nm} (${tk})`}
+// smart category-axis layout: wrap name to <=2 lines + ticker line; shrink font with bar count; fall back to ticker-only, then rotated
+const MCTX=document.createElement('canvas').getContext('2d');
+function tw(t,f){MCTX.font=`bold ${f}px Inter, Arial, sans-serif`;return MCTX.measureText(t).width}
+function wrapLines(t,f,w){const out=[];let cur='';for(const x of t.split(' ')){const c=cur?cur+' '+x:x;if(tw(c,f)<=w||!cur)cur=c;else{out.push(cur);cur=x}}if(cur)out.push(cur);return out}
+function barAxisLayout(labels,gridW){const n=Math.max(1,labels.length),slot=gridW/n,w=slot-10;
+  const parts=labels.map(l=>{const m=/^(.*) \(([^)]+)\)$/.exec(l);return m?{nm:m[1],tk:'('+m[2]+')'}:{nm:l,tk:''}});
+  const fit=f=>{const L=parts.map(p=>{const nl=wrapLines(p.nm,f,w);return nl.length<=2&&nl.every(x=>tw(x,f)<=w)&&(!p.tk||tw(p.tk,f)<=w)?[...nl,...(p.tk?[p.tk]:[])]:null});return L.every(Boolean)?L:null};
+  for(let f=Math.min(18,Math.max(11,20-n*0.4));f>=11&&n<=18;f-=0.5){const L=fit(f);
+    if(L){const lines=Math.max(...L.map(x=>x.length));return{data:L.map(x=>x.join('\n')),fontSize:f,lineHeight:Math.round(f*1.3),rotate:0,bottom:72+lines*Math.round(f*1.3)}}}
+  // too tight: ticker-only if every ticker fits, else rotated single-line labels
+  const tks=parts.map(p=>p.tk?p.tk.slice(1,-1):p.nm);
+  for(let f=15;f>=11;f--)if(tks.every(t=>tw(t,f)<=w)&&n>24)return{data:tks,fontSize:f,lineHeight:f+4,rotate:0,bottom:80};
+  const f=Math.max(11,Math.min(15,slot*0.6)),full=labels.map(l=>tw(l,f)>200?l.replace(/ \(.*/,''):l);
+  const mx=Math.max(...full.map(l=>tw(l,f)));return{data:full,fontSize:f,lineHeight:f+4,rotate:40,bottom:Math.min(300,50+mx*Math.sin(40*Math.PI/180)+f)}}
 function finish(type,data,p,titleAuto){
   const asOf=Math.max(...data.map(d=>Math.max(d.lastTime||0,d.lastBarTime||0)));
   $('status').textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv+(p.rng?' · incl. pre/after-hours bars':'');
@@ -239,17 +258,15 @@ function buildOpt(type,data,title,p){
   const isdd=type==='bardd';
   const rows=data.map(d=>({label:d.barLabel||d.label,v:isdd?ddNow(d,p):ret(d,p)})).sort((x,y)=>y.v-x.v);
   o.grid={left:90,right:60,top:130,bottom:110};
-  // crowded? wrap "Name (TICK)" onto two lines instead of rotating
-  const slot=(chart.getWidth()-150)/Math.max(1,rows.length), wrap=rows.some(r=>r.label.length*11.5>slot-8);
-  if(wrap){rows.forEach(r=>r.label=r.label.replace(/ \(/,'\n('));o.grid.bottom=135}
+  const AX=barAxisLayout(rows.map(r=>r.label),chart.getWidth()-o.grid.left-o.grid.right);o.grid.bottom=AX.bottom;
   // labels pinned to the bottom of the grid: with all-negative bars the zero line is at the top and labels used to vanish
-  o.xAxis={type:'category',position:'bottom',data:rows.map(r=>r.label),axisLabel:{...axLabel,fontSize:18,fontWeight:'bold',color:T.title,interval:0,margin:14,lineHeight:24,align:'center'},axisTick:{show:false},axisLine:{onZero:false,show:true,lineStyle:{color:T.axis}}};
+  o.xAxis={type:'category',position:'bottom',data:AX.data,axisLabel:{...axLabel,fontSize:AX.fontSize,fontWeight:'bold',color:T.title,interval:0,margin:14,lineHeight:AX.lineHeight,rotate:AX.rotate,align:AX.rotate?'right':'center',verticalAlign:AX.rotate?'top':undefined},axisTick:{show:false},axisLine:{onZero:false,show:true,lineStyle:{color:T.axis}}};
   if(isdd){o.yAxis={type:'value',max:0,axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split}}
   const base1D=p.r==='1D'?(isdd?"latest vs today's high":'vs previous close'):'';
   o.graphic[0].style.text=`Source: Yahoo Finance · as of ${etTime(p.asOf)}`+(isdd?` · % below ${p.ath?'all-time high':p.r==='1D'?"today's high":'range high'}`:base1D?' · change vs previous close':'');
   if(!isdd)o.yAxis={type:'value',axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split};
   o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:+r.v.toFixed(2),itemStyle:{color:bc(r.v>=0&&!isdd?'#22C55E':'#EF4444')},
-    label:{show:true,position:r.v>=0?'top':'bottom',fontSize:18,fontWeight:'bold',color:T.title,formatter:q=>pct(q.value)}}))}];
+    label:{show:true,position:r.v>=0?'top':'bottom',fontSize:Math.max(11,Math.min(18,AX.fontSize+1)),fontWeight:'bold',color:T.title,formatter:q=>pct(q.value)}}))}];
   return o;
 }
 function download(){if(!last)return;
