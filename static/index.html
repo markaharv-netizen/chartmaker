@@ -34,9 +34,10 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <button id="fgo">Render</button><button id="fdl">Download PNG</button><button id="fcsv">Download CSV</button>
 </div>
 <div id="hctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
-<label>Universe<select id="huni"><option value="sp100">S&amp;P 500 top 100</option><option value="mag7">Magnificent 7</option><option value="custom">Custom tickers</option></select></label>
+<label>Universe<select id="huni"><option value="sp100">S&amp;P 500 top 100</option><option value="mag7">Magnificent 7</option><option value="crypto50">Crypto top 50</option><option value="crypto100">Crypto top 100</option><option value="custom">Custom tickers</option></select></label>
 <label>Tickers (custom, comma)<input id="htickers" value="MSTR,COIN,HOOD,IREN,CRWV,NBIS,CIFR,WULF,APLD" size="30"></label>
-<label>Range<select id="hrange"><option>1D</option><option>5D</option><option>1M</option><option>6M</option><option>YTD</option><option>1Y</option><option>5Y</option></select></label>
+<label>Range<select id="hrange"><option>1D</option><option>5D</option><option>7D</option><option>1M</option><option>6M</option><option>YTD</option><option>1Y</option><option>5Y</option></select></label>
+<label title="Crypto universes: include stablecoins and wrapped/staked duplicates (WBTC, stETH…)"><span>Incl. stablecoins</span><input id="hstable" type="checkbox"></label>
 <label title="Nest tiles inside sector boxes"><span>Group by sector</span><input id="hsector" type="checkbox"></label>
 <label>Title<input id="htitle" size="30" placeholder="auto"></label>
 <label><span>Watermark</span><input id="hwm" type="checkbox" checked></label>
@@ -365,15 +366,15 @@ function pct2(v){return (v>=0?'+':'−')+Math.abs(v).toFixed(2)+'%'}
 async function hrender(){
   const st=$('status'),my=++HSEQ;st.className='';st.textContent='Loading quotes…';
   try{const rng=$('hrange').value,uni=$('huni').value;
-    const r=await fetch(`/api/heatmap?universe=${uni}&range=${rng}&tickers=${encodeURIComponent($('htickers').value)}${HFRESH?'&fresh=1':''}`,{cache:'no-store'});
+    const r=await fetch(`/api/heatmap?universe=${uni}&range=${rng}&tickers=${encodeURIComponent($('htickers').value)}${HFRESH?'&fresh=1':''}${$('hstable').checked?'&stables=1':''}`,{cache:'no-store'});
     const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);if(!j.rows.length)throw Error('No quotes returned');
-    await Promise.all(j.rows.map(async d=>d.logo=await circLogo(d.symbol)));
+    await Promise.all(j.rows.map(async d=>d.logo=await circLogo(d.logoKey||d.symbol)));
     if(my!==HSEQ)return;hlast=j;hdraw()}
   catch(e){if(my!==HSEQ)return;st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();hlast=null}}
 function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YTD:25,'1Y':30,'5Y':60}[rng]||3;
-  const uniName={sp100:'S&P 500 top 100',mag7:'Magnificent 7',custom:'Heatmap'}[$('huni').value];
-  const title=$('htitle').value||`${uniName}, ${rng==='1D'?'today':rng}`;
-  const o=base(title,'','hwm'),grp=$('hsector').checked&&$('huni').value!=='mag7';delete o.grid;
+  const uniName={sp100:'S&P 500 top 100',mag7:'Magnificent 7',crypto50:'Crypto top 50',crypto100:'Crypto top 100',custom:'Heatmap'}[$('huni').value];
+  const title=$('htitle').value||`${uniName}, ${rng==='1D'?($('huni').value.startsWith('crypto')?'24h':'today'):rng}`;
+  const o=base(title,'','hwm'),grp=$('hsector').checked&&!['mag7','crypto50','crypto100'].includes($('huni').value);delete o.grid;
   const leaf=d=>({name:d.symbol,value:d.marketCap,d,itemStyle:{color:hcolor(d.chg,cap)}});
   let data=j.rows.map(leaf);
   if(grp){const by={};j.rows.forEach(d=>(by[d.sector]=by[d.sector]||[]).push(leaf(d)));
@@ -384,7 +385,7 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
     levels:grp?[{itemStyle:{borderColor:T.bg,borderWidth:0,gapWidth:4}},{itemStyle:{borderColor:T.bg,borderWidth:1,gapWidth:1}}]:[{itemStyle:{borderColor:T.bg,borderWidth:1,gapWidth:1}}],
     tooltip:{formatter:q=>q.data.d?`${q.data.d.shortName||q.name}<br>${pct2(q.data.d.chg)} · mcap $${(q.data.d.marketCap/1e9).toFixed(0)}B`:q.name}}];
   o.tooltip={};
-  o.graphic[0].style.text=`Source: Yahoo Finance · as of ${etTime(j.asOf)} · size = market cap · ${rng==='1D'?'change vs previous close':rng+' % change'}`;
+  o.graphic[0].style.text=`Source: ${j.source||'Yahoo Finance'} · as of ${etTime(j.asOf)} · size = market cap · ${rng==='1D'?(j.source==='CoinGecko'?'change over 24h':j.cryptoMixed?'stocks vs previous close, crypto over 24h':'change vs previous close'):rng+' % change'}`;
   if(grp)o.series[0].upperLabel.formatter=q=>q.name;
   chart.setOption(o,true);
   // pass 2: size labels/logos from the actual tile layout
@@ -393,16 +394,16 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
   const fix=a=>a.forEach(x=>x.children?fix(x.children):(x.label=lab[x.name]||{show:false}));fix(data);
   chart.setOption(o,true);last={opt:o,asOf:j.asOf};
   const miss=j.missing.length?' · no quote: '+j.missing.join(', '):'',nolog=j.rows.filter(d=>!d.logo).map(d=>d.symbol);
-  $('status').className='';$('status').textContent=`${j.rows.length} stocks · data as of ${etTime(j.asOf)}${miss}${nolog.length?' · no logo: '+nolog.join(', '):''}`}
+  $('status').className='';$('status').textContent=`${j.rows.length} tiles · data as of ${etTime(j.asOf)}${miss}${nolog.length?' · no logo: '+nolog.join(', '):''}`}
 $('hgo').onclick=hrender;$('hrefresh').onclick=async()=>{HFRESH=true;try{await hrender()}finally{HFRESH=false}};
 $('hdl').onclick=()=>{if(!hlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});a.download=($('htitle').value||'heatmap').replace(/[^\w]+/g,'_')+'.png';a.click()};
 $('htickers').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();$('huni').value='custom';hrender()}});
 $('htitle').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();hlast?hdraw():hrender()}});
-['huni','hrange'].forEach(id=>$(id).onchange=hrender);['hsector','hwm'].forEach(id=>$(id).onchange=()=>hlast?hdraw():hrender());
+['huni','hrange','hstable'].forEach(id=>$(id).onchange=hrender);['hsector','hwm'].forEach(id=>$(id).onchange=()=>hlast?hdraw():hrender());
 window.__hrender=hrender;
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
+const VFIELDS=['tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}return{name,mode:MODE,fields:f,saved:new Date().toISOString()}}
 let VSTORE='server';const VLS='chartmaker_views';

@@ -145,13 +145,13 @@ class H(SimpleHTTPRequestHandler):
         if u.path == "/api/logo":
             b = heat.logo(qs.get("symbol", [""])[0])
             if not b: return s.send_json({"error": "no logo"}, 404)
-            s.send_response(200); s.send_header("Content-Type", "image/png"); s.send_header("Cache-Control", "public, max-age=604800")
+            s.send_response(200); s.send_header("Content-Type", "image/webp" if b[:4] == b"RIFF" else "image/jpeg" if b[:2] == b"\xff\xd8" else "image/png"); s.send_header("Cache-Control", "public, max-age=604800")
             s.send_header("Content-Length", len(b)); s.end_headers(); s.wfile.write(b); return
         if u.path not in ("/api/chart", "/api/fin", "/api/heatmap"): return super().do_GET()
         try:
           if u.path == "/api/heatmap":
             g = lambda k, d="": qs.get(k, [d])[0]
-            body, code = json.dumps(heat.heatmap(g("universe", "sp100"), g("tickers"), g("range", "1D"), g("fresh") == "1")), 200
+            body, code = json.dumps(heat.heatmap(g("universe", "sp100"), g("tickers"), g("range", "1D"), g("fresh") == "1", g("stables") == "1")), 200
           elif u.path == "/api/fin":
             y = lambda k: int(qs[k][0]) if qs.get(k, [""])[0] else None
             body, code = json.dumps(fin.series(qs["symbol"][0].strip(), qs["metric"][0], qs.get("period", ["quarterly"])[0], y("y1"), y("y2"))), 200

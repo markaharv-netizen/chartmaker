@@ -57,12 +57,56 @@ def range_ret(sym, rng, fresh=False):
     m = r0["meta"]; b = m.get("chartPreviousClose") if rng in ("5D", "1M", "6M", "1Y", "YTD") else None
     b = b or cl[0]; last = m.get("regularMarketPrice") or cl[-1]
     v = (last / b - 1) * 100; RCACHE[key] = (time.time(), v); return v
-def heatmap(universe, tickers, rng, fresh=False):
+GECKO, CIMG = [0, []], {}
+STABLE = set("USDT USDC DAI USDE USDS FDUSD TUSD PYUSD USDD USD1 RLUSD USDTB BUSD GUSD USDP FRAX LUSD EURC EURS USDX USDG USDF USYC BUIDL USTB OUSG SUSDE SUSDS USD0 USDB USDL XAUT PAXG FIGR_HELOC USDY EURSAFO SYRUPUSDC USDAI USR".split())
+WRAP = set("WBTC WETH STETH WSTETH WEETH CBBTC RETH METH WBETH LBTC SOLVBTC BTCB JITOSOL BNSOL MSOL EZETH RSETH CBETH SAVAX OSETH TBTC CLBTC LSETH UNIBTC WBNB BSC-USD SWETH".split())
+def gecko(fresh=False):
+    """CoinGecko /coins/markets top 250 (one request, no key), cached 120s; stale copy reused on error."""
+    if fresh and time.time() - GECKO[0] < 20: fresh = False  # free tier: ~30 req/min
+    if GECKO[1] and not fresh and time.time() - GECKO[0] < 120: return GECKO[1]
+    u = "https://api.coingecko.com/api/v3/coins/markets?" + urllib.parse.urlencode({"vs_currency": "usd", "order": "market_cap_desc", "per_page": 250, "page": 1, "price_change_percentage": "24h,7d,30d,1y"})
+    try:
+        with urllib.request.urlopen(urllib.request.Request(u, headers={**UA, "Accept": "application/json"}), timeout=20) as r: GECKO[:] = [time.time(), json.load(r)]
+    except Exception:
+        if not GECKO[1]: raise
+    for c in GECKO[1]: CIMG.setdefault(c["symbol"].upper(), c.get("image"))
+    return GECKO[1]
+GK = {"1D": "price_change_percentage_24h_in_currency", "7D": "price_change_percentage_7d_in_currency", "1M": "price_change_percentage_30d_in_currency", "1Y": "price_change_percentage_1y_in_currency"}
+def is_stable(c):
+    s = c["symbol"].upper()
+    return s in STABLE or s in WRAP or ((c.get("current_price") or 0) > 0.97 and (c.get("current_price") or 0) < 1.03 and any(k in (c.get("name") or "").lower() for k in ("usd", "dollar", "stable")))
+def crow(c, rng, fresh):
+    s = c["symbol"].upper()
+    d = {"symbol": s, "shortName": c.get("name"), "marketCap": c.get("market_cap"), "regularMarketPrice": c.get("current_price"),
+         "regularMarketTime": int(time.time()), "crypto": True, "logoKey": "c:" + s, "sector": "Crypto"}
+    if rng in GK: d["chg"] = c.get(GK[rng]) if rng != "1D" else (c.get(GK[rng]) if c.get(GK[rng]) is not None else c.get("price_change_percentage_24h"))
+    else: d["chg"] = _safe(range_ret, s + "-USD", "5D" if rng == "7D" else rng, fresh)
+    return d
+def heatmap(universe, tickers, rng, fresh=False, stables=False):
+    if universe in ("crypto50", "crypto100"):
+        cs = [c for c in gecko(fresh) if c.get("market_cap") and (stables or not is_stable(c))][:50 if universe == "crypto50" else 100]
+        if rng in GK: rows = [crow(c, rng, fresh) for c in cs]
+        else:
+            with ThreadPoolExecutor(8) as ex: rows = list(ex.map(lambda c: crow(c, rng, fresh), cs))
+        ok = [d for d in rows if d.get("chg") is not None]
+        return {"rows": ok, "missing": [d["symbol"] for d in rows if d.get("chg") is None], "asOf": int(GECKO[0]), "range": rng,
+                "source": "CoinGecko" + ("" if rng in GK else " · Yahoo Finance daily closes")}
+    return _heatmap(universe, tickers, rng, fresh)
+def _heatmap(universe, tickers, rng, fresh=False):
+    crypto = []
     if universe == "mag7": syms = MAG7
-    elif universe == "custom": syms = [s.strip().upper() for s in tickers.split(",") if s.strip()][:200]
+    elif universe == "custom":
+        syms = [s.strip().upper() for s in tickers.split(",") if s.strip()][:200]
+        # crypto symbols: "BTC-USD" always; bare "BTC"/"ETH" when it is a top-100 coin by market cap (wins over a same-named stock/ETF)
+        try: top = {c["symbol"].upper(): c for c in gecko(fresh)[:100]}; allc = {c["symbol"].upper(): c for c in gecko()}
+        except Exception: top, allc = {}, {}
+        for x in list(syms):
+            b = x[:-4] if x.endswith("-USD") else x
+            c = allc.get(b) if x.endswith("-USD") else top.get(b)
+            if c: crypto.append(crow(c, rng, fresh)); syms.remove(x)
     else: syms = list(SECTOR)
-    if not syms: raise ValueError("Enter tickers")
-    q = quotes(syms, fresh)
+    if not syms and not crypto: raise ValueError("Enter tickers")
+    q = quotes(syms, fresh) if syms else {}
     rows = [d for s in syms if (d := q.get(s)) and d.get("marketCap")]
     rows.sort(key=lambda d: -d["marketCap"])
     if universe == "sp100": rows = rows[:100]
@@ -75,12 +119,34 @@ def heatmap(universe, tickers, rng, fresh=False):
         with ThreadPoolExecutor(8) as ex: res = list(ex.map(lambda d: _safe(range_ret, d["symbol"], rng, fresh), rows))
         for d, v in zip(rows, res): d["chg"] = v
     for d in rows: d["sector"] = SECTOR.get(d["symbol"], "Other")
-    return {"rows": [d for d in rows if d.get("chg") is not None], "missing": errs + [d["symbol"] for d in rows if d.get("chg") is None],
+    rows = sorted(rows + crypto, key=lambda d: -(d.get("marketCap") or 0))
+    src = "Yahoo Finance" if not crypto else ("CoinGecko" if not syms else "Yahoo Finance, CoinGecko")
+    return {"source": src, "cryptoMixed": bool(crypto and syms), "rows": [d for d in rows if d.get("chg") is not None], "missing": errs + [d["symbol"] for d in rows if d.get("chg") is None],
             "asOf": max([d.get("regularMarketTime") or 0 for d in rows] or [0]), "range": rng}
 def _safe(f, *a):
     try: return f(*a)
     except Exception: return None
 def logo(sym):
+    if sym.startswith("c:"): return clogo(sym[2:])
+    return slogo(sym)
+def clogo(sym):
+    sym = "".join(c for c in sym.upper() if c.isalnum())[:15]; key = "c_" + sym
+    c = LOGOS.get(key)
+    if c and (c[1] or time.time() - c[0] < 3600): return c[1]
+    p = os.path.join(LOGO_DIR, key + ".png")
+    if os.path.exists(p): b = open(p, "rb").read(); LOGOS[key] = (time.time(), b); return b
+    if sym not in CIMG: _safe(gecko)
+    b = None; u = CIMG.get(sym)
+    if u:
+        try:
+            with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=10) as r:
+                if (r.headers.get("Content-Type") or "").startswith("image/"): b = r.read()
+        except Exception: pass
+    if b:
+        try: os.makedirs(LOGO_DIR, exist_ok=True); open(p, "wb").write(b)
+        except OSError: pass
+    LOGOS[key] = (time.time(), b); return b
+def slogo(sym):
     """PNG bytes or None. Sources: financialmodelingprep image-stock, then parqet. Memory + disk cache (negative cached 1 day)."""
     sym = "".join(c for c in sym.upper() if c.isalnum() or c in "-.")[:12]
     c = LOGOS.get(sym)
