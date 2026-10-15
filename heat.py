@@ -56,7 +56,13 @@ def range_ret(sym, rng, fresh=False):
     cl = [x for x in r0["indicators"]["quote"][0]["close"] if x is not None]
     m = r0["meta"]; b = m.get("chartPreviousClose") if rng in ("5D", "1M", "6M", "1Y", "YTD") else None
     b = b or cl[0]; last = m.get("regularMarketPrice") or cl[-1]
-    v = (last / b - 1) * 100; RCACHE[key] = (time.time(), v); return v
+    v = (last / b - 1) * 100; RCACHE[key] = (time.time(), v)
+    # short history: first bar well after the window start -> remember its date so the UI can footnote it
+    ts = r0.get("timestamp") or []; now = time.time(); lt = time.gmtime(now)
+    exp = {"YTD": time.mktime((lt.tm_year, 1, 1, 0, 0, 0, 0, 0, 0)), "5D": now - 7 * 86400, "1M": now - 31 * 86400, "6M": now - 183 * 86400, "1Y": now - 365 * 86400, "5Y": now - 1826 * 86400}.get(rng)
+    SINCE[key] = ts[0] if ts and exp and ts[0] > exp + 6 * 86400 else None
+    return v
+SINCE = {}
 GECKO, CIMG = [0, []], {}
 STABLE = set("USDT USDC DAI USDE USDS FDUSD TUSD PYUSD USDD USD1 RLUSD USDTB BUSD GUSD USDP FRAX LUSD EURC EURS USDX USDG USDF USYC BUIDL USTB OUSG SUSDE SUSDS USD0 USDB USDL XAUT PAXG FIGR_HELOC USDY EURSAFO SYRUPUSDC USDAI USR".split())
 WRAP = set("WBTC WETH STETH WSTETH WEETH CBBTC RETH METH WBETH LBTC SOLVBTC BTCB JITOSOL BNSOL MSOL EZETH RSETH CBETH SAVAX OSETH TBTC CLBTC LSETH UNIBTC WBNB BSC-USD SWETH".split())
@@ -80,7 +86,7 @@ def crow(c, rng, fresh):
     d = {"symbol": s, "shortName": c.get("name"), "marketCap": c.get("market_cap"), "regularMarketPrice": c.get("current_price"),
          "regularMarketTime": int(time.time()), "crypto": True, "logoKey": "c:" + s, "sector": "Crypto"}
     if rng in GK: d["chg"] = c.get(GK[rng]) if rng != "1D" else (c.get(GK[rng]) if c.get(GK[rng]) is not None else c.get("price_change_percentage_24h"))
-    else: d["chg"] = _safe(range_ret, s + "-USD", "5D" if rng == "7D" else rng, fresh)
+    else: d["chg"] = _safe(range_ret, s + "-USD", "5D" if rng == "7D" else rng, fresh); d["since"] = SINCE.get((s + "-USD", "5D" if rng == "7D" else rng))
     return d
 def heatmap(universe, tickers, rng, fresh=False, stables=False):
     if universe in ("crypto50", "crypto100"):
@@ -117,7 +123,7 @@ def _heatmap(universe, tickers, rng, fresh=False):
             d["chg"] = (px / pc - 1) * 100 if pc and px else d.get("regularMarketChangePercent")
     else:
         with ThreadPoolExecutor(8) as ex: res = list(ex.map(lambda d: _safe(range_ret, d["symbol"], rng, fresh), rows))
-        for d, v in zip(rows, res): d["chg"] = v
+        for d, v in zip(rows, res): d["chg"] = v; d["since"] = SINCE.get((d["symbol"], rng))
     for d in rows: d["sector"] = SECTOR.get(d["symbol"], "Other")
     rows = sorted(rows + crypto, key=lambda d: -(d.get("marketCap") or 0))
     src = "Yahoo Finance" if not crypto else ("CoinGecko" if not syms else "Yahoo Finance, CoinGecko")

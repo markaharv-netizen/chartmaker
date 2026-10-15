@@ -187,10 +187,22 @@ function barAxisLayout(labels,gridW){const n=Math.max(1,labels.length),slot=grid
   for(let f=15;f>=11;f--)if(tks.every(t=>tw(t,f)<=w)&&n>24)return{data:tks,fontSize:f,lineHeight:f+4,rotate:0,bottom:80};
   const f=Math.max(11,Math.min(15,slot*0.6)),full=labels.map(l=>tw(l,f)>200?l.replace(/ \(.*/,''):l);
   const mx=Math.max(...full.map(l=>tw(l,f)));return{data:full,fontSize:f,lineHeight:f+4,rotate:40,bottom:Math.min(300,50+mx*Math.sin(40*Math.PI/180)+f)}}
+// short history: series whose first point is >6 calendar days after the expected base date (YTD base = last close of prior year)
+const fmtD=t=>new Date(t).toLocaleDateString('en-US',{timeZone:'UTC',month:'short',day:'numeric',year:'numeric'});
+function shortNote(list){if(!list.length)return'';const by={};list.forEach(x=>(by[x.date]=by[x.date]||[]).push(x.sym));const ks=Object.keys(by);
+  if(list.length===1)return` · * since ${ks[0]} (no earlier Yahoo data)`;
+  return' · * no earlier Yahoo data: '+ks.map(k=>by[k].join(', ')+' since '+k).join('; ')}
+function star(lbl){return /\)$/.test(lbl)&&lbl.includes(' (')?lbl.replace(/ \(/,'* ('):lbl+'*'}
 function finish(type,data,p,titleAuto){
+  const intra=['1D','5D'].includes(p.r)&&p.iv!=='1d', exp=p.r==='YTD'?Date.UTC(new Date().getUTCFullYear(),0,1)-DAY*1000:p.p1*1000, flagged=[];
+  if(!intra&&p.r!=='Max')data.forEach(d=>{const f=d.points[0]?.[0];
+    if(f&&f>exp+6*DAY*1000){d.since=f;flagged.push({sym:d.symbol,date:fmtD(f)});d.label=star(d.label);if(d.barLabel)d.barLabel=star(d.barLabel)}});
+  p.flagged=flagged;
   const asOf=Math.max(...data.map(d=>Math.max(d.lastTime||0,d.lastBarTime||0)));
   $('status').textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv+(p.rng?' · incl. pre/after-hours bars':'');
-  p.asOf=asOf; last={opt:buildOpt(type,data,$('title').value||titleAuto,p),asOf}; chart.setOption(last.opt,true)}
+  p.asOf=asOf; last={opt:buildOpt(type,data,$('title').value||titleAuto,p),asOf};
+  if(flagged.length){last.opt.graphic[0].style.text+=shortNote(flagged);$('status').textContent+=' · ⚠ short history: '+flagged.map(x=>x.sym+' starts '+x.date).join(', ')+' (measured from first available day)'}
+  chart.setOption(last.opt,true)}
 const etTime=t=>new Date(t*1000).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})+' ET';
 // 1D: change vs previous regular-session close, latest regular-market price (matches Yahoo/FactSet day change)
 function ret(d,p){if(p.r==='1D'&&d.chartPreviousClose&&d.lastPrice)return(d.lastPrice/(d.prevClose||d.chartPreviousClose)-1)*100;
@@ -256,7 +268,7 @@ function buildOpt(type,data,title,p){
     return lineOpt(o,[{label:`${a.label}/${b.label}`,color:$('color').value,data:out}],v=>v.toPrecision(4))}
   // bar ranking (% return or % drawdown); deepest/lowest on the right
   const isdd=type==='bardd';
-  const rows=data.map(d=>({label:d.barLabel||d.label,v:isdd?ddNow(d,p):ret(d,p)})).sort((x,y)=>y.v-x.v);
+  const rows=data.map(d=>({label:d.barLabel||d.label,v:isdd?ddNow(d,p):ret(d,p),st:!!d.since})).sort((x,y)=>y.v-x.v);
   o.grid={left:90,right:60,top:130,bottom:110};
   const AX=barAxisLayout(rows.map(r=>r.label),chart.getWidth()-o.grid.left-o.grid.right);o.grid.bottom=AX.bottom;
   // labels pinned to the bottom of the grid: with all-negative bars the zero line is at the top and labels used to vanish
@@ -266,7 +278,7 @@ function buildOpt(type,data,title,p){
   o.graphic[0].style.text=`Source: Yahoo Finance · as of ${etTime(p.asOf)}`+(isdd?` · % below ${p.ath?'all-time high':p.r==='1D'?"today's high":'range high'}`:base1D?' · change vs previous close':'');
   if(!isdd)o.yAxis={type:'value',axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split};
   o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:+r.v.toFixed(2),itemStyle:{color:bc(r.v>=0&&!isdd?'#22C55E':'#EF4444')},
-    label:{show:true,position:r.v>=0?'top':'bottom',fontSize:Math.max(11,Math.min(18,AX.fontSize+1)),fontWeight:'bold',color:T.title,formatter:q=>pct(q.value)}}))}];
+    label:{show:true,position:r.v>=0?'top':'bottom',fontSize:Math.max(11,Math.min(18,AX.fontSize+1)),fontWeight:'bold',color:T.title,formatter:q=>pct(q.value)+(r.st?'*':'')}}))}];
   return o;
 }
 function download(){if(!last)return;
@@ -370,7 +382,7 @@ function circLogo(sym){if(sym in LOGO)return LOGO[sym];return LOGO[sym]=new Prom
     const pad=N*0.17,k=Math.min((N-2*pad)/im.width,(N-2*pad)/im.height),w=im.width*k,h=im.height*k;
     g.drawImage(im,(N-w)/2,(N-h)/2,w,h);res(c.toDataURL('image/png'))};
   im.onerror=()=>res(null);im.src='/api/logo?symbol='+encodeURIComponent(sym)})}
-function hlabel(d,w,h){const s=Math.min(w,h),tk=d.symbol.replace(/-USD$/,''),pc=pct2(d.chg);
+function hlabel(d,w,h){const s=Math.min(w,h),tk=d.symbol.replace(/-USD$/,''),pc=pct2(d.chg)+(d.since?'*':'');
   if(s<24||w<30)return{show:false};
   let f=Math.max(9,Math.min(48,s*0.15,w*0.9/(0.62*Math.max(tk.length,pc.length))));
   const lg=d.logo&&s>=58?Math.min(110,s*0.34):0, two=h>f*2.6+lg;
@@ -402,7 +414,7 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
     levels:grp?[{itemStyle:{borderColor:T.bg,borderWidth:0,gapWidth:4}},{itemStyle:{borderColor:T.bg,borderWidth:1,gapWidth:1}}]:[{itemStyle:{borderColor:T.bg,borderWidth:1,gapWidth:1}}],
     tooltip:{formatter:q=>q.data.d?`${q.data.d.shortName||q.name}<br>${pct2(q.data.d.chg)} · mcap $${(q.data.d.marketCap/1e9).toFixed(0)}B`:q.name}}];
   o.tooltip={};
-  o.graphic[0].style.text=`Source: ${j.source||'Yahoo Finance'} · as of ${etTime(j.asOf)} · size = market cap · ${rng==='1D'?(j.source==='CoinGecko'?'change over 24h':j.cryptoMixed?'stocks vs previous close, crypto over 24h':'change vs previous close'):rng+' % change'}`;
+  o.graphic[0].style.text=`Source: ${j.source||'Yahoo Finance'} · as of ${etTime(j.asOf)} · size = market cap · ${rng==='1D'?(j.source==='CoinGecko'?'change over 24h':j.cryptoMixed?'stocks vs previous close, crypto over 24h':'change vs previous close'):rng+' % change'}`+shortNote(j.rows.filter(d=>d.since).map(d=>({sym:d.symbol,date:fmtD(d.since*1000)})));
   if(grp)o.series[0].upperLabel.formatter=q=>q.name;
   chart.setOption(o,true);
   // pass 2: size labels/logos from the actual tile layout
@@ -411,7 +423,7 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
   const fix=a=>a.forEach(x=>x.children?fix(x.children):(x.label=lab[x.name]||{show:false}));fix(data);
   chart.setOption(o,true);last={opt:o,asOf:j.asOf};
   const miss=j.missing.length?' · no quote: '+j.missing.join(', '):'',nolog=j.rows.filter(d=>!d.logo).map(d=>d.symbol);
-  $('status').className='';$('status').textContent=`${j.rows.length} tiles · data as of ${etTime(j.asOf)}${miss}${nolog.length?' · no logo: '+nolog.join(', '):''}`}
+  const shs=j.rows.filter(d=>d.since);$('status').className='';$('status').textContent=(shs.length?'⚠ short history: '+shs.map(d=>d.symbol+' starts '+fmtD(d.since*1000)).join(', ')+' · ':'')+`${j.rows.length} tiles · data as of ${etTime(j.asOf)}${miss}${nolog.length?' · no logo: '+nolog.join(', '):''}`}
 $('hgo').onclick=hrender;$('hrefresh').onclick=async()=>{HFRESH=true;try{await hrender()}finally{HFRESH=false}};
 $('hdl').onclick=()=>{if(!hlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});a.download=($('htitle').value||'heatmap').replace(/[^\w]+/g,'_')+'.png';a.click()};
 $('htickers').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();$('huni').value='custom';hrender()}});
