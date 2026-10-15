@@ -1,5 +1,5 @@
 """Chartmaker backend: stdlib-only proxy for Yahoo Finance chart API + static frontend."""
-import fin, json, os, sys, time, hmac, hashlib, secrets, threading, html, urllib.request, urllib.parse
+import fin, heat, json, os, sys, time, hmac, hashlib, secrets, threading, html, urllib.request, urllib.parse
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
 PORT = int(os.environ.get("PORT", sys.argv[1] if len(sys.argv) > 1 else 8791))
@@ -141,10 +141,18 @@ class H(SimpleHTTPRequestHandler):
         if not s.gate(u.path): return
         if u.path == "/api/config": return s.send_json({"viewsStore": VIEWS_STORE, "auth": bool(PASSWORD)})
         if u.path == "/api/views": return s.send_json([] if VIEWS_STORE == "browser" else views_read())
-        if u.path not in ("/api/chart", "/api/fin"): return super().do_GET()
         qs = urllib.parse.parse_qs(u.query)
+        if u.path == "/api/logo":
+            b = heat.logo(qs.get("symbol", [""])[0])
+            if not b: return s.send_json({"error": "no logo"}, 404)
+            s.send_response(200); s.send_header("Content-Type", "image/png"); s.send_header("Cache-Control", "public, max-age=604800")
+            s.send_header("Content-Length", len(b)); s.end_headers(); s.wfile.write(b); return
+        if u.path not in ("/api/chart", "/api/fin", "/api/heatmap"): return super().do_GET()
         try:
-          if u.path == "/api/fin":
+          if u.path == "/api/heatmap":
+            g = lambda k, d="": qs.get(k, [d])[0]
+            body, code = json.dumps(heat.heatmap(g("universe", "sp100"), g("tickers"), g("range", "1D"), g("fresh") == "1")), 200
+          elif u.path == "/api/fin":
             y = lambda k: int(qs[k][0]) if qs.get(k, [""])[0] else None
             body, code = json.dumps(fin.series(qs["symbol"][0].strip(), qs["metric"][0], qs.get("period", ["quarterly"])[0], y("y1"), y("y2"))), 200
           else:
