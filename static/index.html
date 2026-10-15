@@ -31,7 +31,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Title<input id="ftitle" size="30" placeholder="auto"></label>
 <label>Color (1 ticker)<select id="fcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="fwm" type="checkbox" checked></label>
-<button id="fgo">Render</button><button id="fdl">Download PNG</button><button id="fcsv">Download CSV</button>
+<button id="fgo">Render</button><button id="fdl">Download PNG</button><button class="xexp" title="1600×900 (16:9) PNG on white, sized for X">Export for X</button><button id="fcsv">Download CSV</button>
 </div>
 <div id="hctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
 <label>Universe<select id="huni"><option value="sp100">S&amp;P 500 top 100</option><option value="mag7">Magnificent 7</option><option value="crypto50">Crypto top 50</option><option value="crypto100">Crypto top 100</option><option value="custom">Custom tickers</option></select></label>
@@ -41,7 +41,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label title="Nest tiles inside sector boxes"><span>Group by sector</span><input id="hsector" type="checkbox"></label>
 <label>Title<input id="htitle" size="30" placeholder="auto"></label>
 <label><span>Watermark</span><input id="hwm" type="checkbox" checked></label>
-<button id="hgo">Render</button><button id="hrefresh" title="Fetch fresh quotes, bypassing the cache">Refresh</button><button id="hdl">Download PNG</button>
+<button id="hgo">Render</button><button id="hrefresh" title="Fetch fresh quotes, bypassing the cache">Refresh</button><button id="hdl">Download PNG</button><button class="xexp" title="1600×900 (16:9) PNG on white, sized for X">Export for X</button>
 </div>
 <div id="ctl">
 <label>Tickers (comma)<input id="tickers" value="NBIS,CRWV" size="22"></label>
@@ -58,7 +58,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label style="flex-direction:row;gap:2px"><input id="sma100" type="checkbox">100</label><label style="flex-direction:row;gap:2px"><input id="sma200" type="checkbox">200</label>
 <label style="flex-direction:row;gap:2px"><input id="sma200w" type="checkbox">200W</label>
 <input id="smac" type="number" min="2" max="1000" placeholder="custom" style="width:70px;padding:4px"></span></label>
-<button id="go">Render</button><button id="refresh" title="Fetch fresh prices, bypassing the cache">Refresh</button><button id="dl">Download PNG</button>
+<button id="go">Render</button><button id="refresh" title="Fetch fresh prices, bypassing the cache">Refresh</button><button id="dl">Download PNG</button><button class="xexp" title="1600×900 (16:9) PNG on white, sized for X">Export for X</button>
 </div>
 <div id="status"></div>
 <div id="wrap"><div id="chart"></div></div>
@@ -192,6 +192,8 @@ const fmtD=t=>new Date(t).toLocaleDateString('en-US',{timeZone:'UTC',month:'shor
 function shortNote(list){if(!list.length)return'';const by={};list.forEach(x=>(by[x.date]=by[x.date]||[]).push(x.sym));const ks=Object.keys(by);
   if(list.length===1)return` · * since ${ks[0]} (no earlier Yahoo data)`;
   return' · * no earlier Yahoo data: '+ks.map(k=>by[k].join(', ')+' since '+k).join('; ')}
+function stitchNote(list){const parts=[];list.forEach(d=>(d.stitched||[]).forEach(x=>parts.push(`${d.symbol} before ${fmtD(x.until*1000)} = ${x.from}`)));
+  return parts.length?' · spliced earlier listing: '+[...new Set(parts)].join('; '):''}
 function star(lbl){return /\)$/.test(lbl)&&lbl.includes(' (')?lbl.replace(/ \(/,'* ('):lbl+'*'}
 function finish(type,data,p,titleAuto){
   const intra=['1D','5D'].includes(p.r)&&p.iv!=='1d', exp=p.r==='YTD'?Date.UTC(new Date().getUTCFullYear(),0,1)-DAY*1000:p.p1*1000, flagged=[];
@@ -201,7 +203,7 @@ function finish(type,data,p,titleAuto){
   const asOf=Math.max(...data.map(d=>Math.max(d.lastTime||0,d.lastBarTime||0)));
   $('status').textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv+(p.rng?' · incl. pre/after-hours bars':'');
   p.asOf=asOf; last={opt:buildOpt(type,data,$('title').value||titleAuto,p),asOf};
-  if(flagged.length){last.opt.graphic[0].style.text+=shortNote(flagged);$('status').textContent+=' · ⚠ short history: '+flagged.map(x=>x.sym+' starts '+x.date).join(', ')+' (measured from first available day)'}
+  last.opt.graphic[0].style.text+=stitchNote(data);if(flagged.length){last.opt.graphic[0].style.text+=shortNote(flagged);$('status').textContent+=' · ⚠ short history: '+flagged.map(x=>x.sym+' starts '+x.date).join(', ')+' (measured from first available day)'}
   chart.setOption(last.opt,true)}
 const etTime=t=>new Date(t*1000).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})+' ET';
 // 1D: change vs previous regular-session close, latest regular-market price (matches Yahoo/FactSet day change)
@@ -378,16 +380,24 @@ function hcolor(v,cap){const x=Math.max(-1,Math.min(1,v/cap));let i=0;while(i<HS
 // circular white-backed logo as a same-origin data URL (keeps canvas untainted so PNG export works)
 function circLogo(sym){if(sym in LOGO)return LOGO[sym];return LOGO[sym]=new Promise(res=>{const im=new Image();
   im.onload=()=>{const N=160,c=document.createElement('canvas');c.width=c.height=N;const g=c.getContext('2d');
-    g.beginPath();g.arc(N/2,N/2,N/2,0,7);g.fillStyle='#fff';g.fill();g.clip();
     const pad=N*0.17,k=Math.min((N-2*pad)/im.width,(N-2*pad)/im.height),w=im.width*k,h=im.height*k;
-    g.drawImage(im,(N-w)/2,(N-h)/2,w,h);res(c.toDataURL('image/png'))};
+    // light/white logo (e.g. MARA, IREN) would vanish on white: measure luminance of its opaque pixels, use a dark circle if light
+    const t=document.createElement('canvas');t.width=t.height=N;const tg=t.getContext('2d');tg.drawImage(im,(N-w)/2,(N-h)/2,w,h);
+    let L=0,n=0,edge=0,en=0;try{const px=tg.getImageData(0,0,N,N).data;for(let i=0;i<px.length;i+=4){const a=px[i+3];if(a<128)continue;
+      const y=(0.299*px[i]+0.587*px[i+1]+0.114*px[i+2])/255;L+=y;n++;const p=i/4,x=p%N,yy=(p/N)|0;if(x<(N-w)/2+3||x>(N+w)/2-4||yy<(N-h)/2+3||yy>(N+h)/2-4){edge+=y;en++}}}catch(e){}
+    // opaque square logos with their own dark background are fine; flag only when the drawn mark is mostly light and not a filled light square
+    const light=n>0&&L/n>0.82&&!(en>0&&n>0.9*w*h&&edge/en>0.82&&L/n<0.97);
+    g.beginPath();g.arc(N/2,N/2,N/2,0,7);g.fillStyle=light?'#1F2937':'#fff';g.fill();g.clip();
+    g.drawImage(t,0,0);res(c.toDataURL('image/png'))};
   im.onerror=()=>res(null);im.src='/api/logo?symbol='+encodeURIComponent(sym)})}
 function hlabel(d,w,h){const s=Math.min(w,h),tk=d.symbol.replace(/-USD$/,''),pc=pct2(d.chg)+(d.since?'*':'');
-  if(s<24||w<30)return{show:false};
-  let f=Math.max(9,Math.min(48,s*0.15,w*0.9/(0.62*Math.max(tk.length,pc.length))));
+  const fitT=Math.min(h*0.8,(w-4)/(0.62*tk.length));  // largest font where the ticker alone fits the tile
+  if(fitT<7)return{show:false};
+  let f=Math.max(7,Math.min(48,s*0.15,w*0.9/(0.62*Math.max(tk.length,pc.length))));
   const lg=d.logo&&s>=58?Math.min(110,s*0.34):0, two=h>f*2.6+lg;
   const C={position:'inside',align:'center',verticalAlign:'middle'};
-  if(f<11&&!lg)return{...C,show:true,formatter:tk+(h>=34&&w>=40?'\n'+pc:''),fontSize:9,lineHeight:12,color:'#fff',fontWeight:'bold'};
+  if(f<11&&!lg){const fs=Math.max(7,Math.min(11,fitT)),both=h>=fs*2.6&&(w-4)>=0.62*fs*pc.length;
+    return{...C,show:true,overflow:'none',formatter:tk+(both?'\n'+pc:''),fontSize:fs,lineHeight:Math.round(fs*1.25),color:'#fff',fontWeight:'bold'}}
   const rich={t:{align:'center',fontSize:f,fontWeight:'bold',color:'#fff',lineHeight:f*1.25},p:{align:'center',fontSize:f*0.9,color:'#fff',lineHeight:f*1.2}};
   if(lg)rich.l={align:'center',width:lg,height:lg,backgroundColor:{image:d.logo},lineHeight:lg+f*0.6};
   return{...C,show:true,rich,formatter:(lg?'{l|}\n':'')+'{t|'+tk+'}'+(two?'\n{p|'+pc+'}':'')}}
@@ -414,7 +424,7 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
     levels:grp?[{itemStyle:{borderColor:T.bg,borderWidth:0,gapWidth:4}},{itemStyle:{borderColor:T.bg,borderWidth:1,gapWidth:1}}]:[{itemStyle:{borderColor:T.bg,borderWidth:1,gapWidth:1}}],
     tooltip:{formatter:q=>q.data.d?`${q.data.d.shortName||q.name}<br>${pct2(q.data.d.chg)} · mcap $${(q.data.d.marketCap/1e9).toFixed(0)}B`:q.name}}];
   o.tooltip={};
-  o.graphic[0].style.text=`Source: ${j.source||'Yahoo Finance'} · as of ${etTime(j.asOf)} · size = market cap (USD) · ${rng==='1D'?(j.source==='CoinGecko'?'change over 24h':j.cryptoMixed?'stocks vs previous close, crypto over 24h':'change vs previous close'):rng+' % change'}`+shortNote(j.rows.filter(d=>d.since).map(d=>({sym:d.symbol,date:fmtD(d.since*1000)})));
+  o.graphic[0].style.text=`Source: ${j.source||'Yahoo Finance'} · as of ${etTime(j.asOf)} · size = market cap (USD) · ${rng==='1D'?(j.source==='CoinGecko'?'change over 24h':j.cryptoMixed?'stocks vs previous close, crypto over 24h':'change vs previous close'):rng+' % change'}`+shortNote(j.rows.filter(d=>d.since).map(d=>({sym:d.symbol,date:fmtD(d.since*1000)})))+stitchNote(j.rows);
   if(grp)o.series[0].upperLabel.formatter=q=>q.name;
   chart.setOption(o,true);
   // pass 2: size labels/logos from the actual tile layout
@@ -424,6 +434,14 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
   chart.setOption(o,true);last={opt:o,asOf:j.asOf};
   const miss=(j.notes&&j.notes.length?' · skipped: '+j.notes.join('; '):j.missing.length?' · no quote: '+j.missing.join(', '):'')+(j.est&&j.est.length?' · mcap = price × shares: '+j.est.join(', '):''),nolog=j.rows.filter(d=>!d.logo).map(d=>d.symbol);
   const shs=j.rows.filter(d=>d.since);$('status').className='';$('status').textContent=(shs.length?'⚠ short history: '+shs.map(d=>d.symbol+' starts '+fmtD(d.since*1000)).join(', ')+' · ':'')+`${j.rows.length} tiles · data as of ${etTime(j.asOf)}${miss}${nolog.length?' · no logo: '+nolog.join(', '):''}`}
+// Export for X: exactly 1600x900 (the chart canvas size) at pixelRatio 1, forced White theme, then restore the user's theme
+async function exportX(){if(!last&&!hlast&&!flast)return;const th=$('theme').value,sw=th!=='white';
+  if(sw){$('theme').value='white';applyTheme();await rerender()}
+  try{const url=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:'#FFFFFF'});
+    const nm=(MODE==='heat'?$('htitle').value||'heatmap':MODE==='fin'?(flast&&flast.title)||'chart':$('title').value||'chart').replace(/[^\w]+/g,'_');
+    const a=document.createElement('a');a.href=url;a.download=nm+'_X_1600x900.png';a.click()}
+  finally{if(sw){$('theme').value=th;applyTheme();await rerender()}}}
+document.querySelectorAll('.xexp').forEach(b=>b.onclick=exportX);
 $('hgo').onclick=hrender;$('hrefresh').onclick=async()=>{HFRESH=true;try{await hrender()}finally{HFRESH=false}};
 $('hdl').onclick=()=>{if(!hlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});a.download=($('htitle').value||'heatmap').replace(/[^\w]+/g,'_')+'.png';a.click()};
 $('htickers').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();$('huni').value='custom';hrender()}});

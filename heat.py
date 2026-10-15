@@ -73,6 +73,7 @@ def range_ret(sym, rng, fresh=False):
     with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=20) as r: r0 = json.load(r)["chart"]["result"][0]
     pts = [(t, x) for t, x in zip(r0.get("timestamp") or [], r0["indicators"]["quote"][0]["close"]) if x is not None]
     if not pts: raise ValueError("no points")
+    if rng != "5D" and sym in ALT: pts, STITCH[key] = extend(sym, pts, prm, prm["period1"])
     if rng == "YTD":
         i = next((k for k, (t, _) in enumerate(pts) if t >= jan1), None)
         if i: pts = pts[i - 1:]
@@ -81,6 +82,54 @@ def range_ret(sym, rng, fresh=False):
     SINCE[key] = pts[0][0] if exp and pts[0][0] > exp + 6 * D else None
     return v
 SINCE = {}
+# Predecessor / alternate Yahoo listings of the SAME company, used only to extend short daily history backwards.
+# Earlier closes are ratio-spliced at the first common day (scaled so the series is continuous); real Yahoo data only.
+ALT = {"SWC.L": ["3M8.F"], "TSWCF": ["SWC.L", "3M8.F"]}
+STITCH = {}
+def splice(pts, alt):
+    """pts/alt: [(t, close)] ascending. Prepend alt closes before pts[0], scaled by pts[0]/alt close on the same or
+    nearest earlier day (within 4 days). Returns (pts, join_ts) or (pts, None) if no overlap."""
+    if not pts or not alt: return pts, None
+    t0 = pts[0][0]; ref = [x for x in alt if x[0] <= t0 + 43200]
+    if not ref or t0 - ref[-1][0] > 4 * 86400: return pts, None
+    k = pts[0][1] / ref[-1][1]; pre = [(t, c * k) for t, c in alt if t < t0 - 43200]
+    return (pre + pts, t0) if pre else (pts, None)
+def alt_closes(sym, prm):
+    u = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?" + urllib.parse.urlencode(prm)
+    with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=20) as r: r0 = json.load(r)["chart"]["result"][0]
+    return [(t, x) for t, x in zip(r0.get("timestamp") or [], r0["indicators"]["quote"][0]["close"]) if x is not None]
+def extend(sym, pts, prm, p1):
+    """Stitch earlier history from ALT listings when pts starts >6 days after p1. Returns (pts, [{from, until}])."""
+    used = []
+    for a in ALT.get(sym, []):
+        if not pts or pts[0][0] <= p1 + 6 * 86400: break
+        try: new, j = splice(pts, alt_closes(a, prm))
+        except Exception: continue
+        if j: pts = new; used.append({"from": a, "until": j})
+    return pts, used
+SHARES = {}
+def alt_shares(sym, name):
+    """Shares outstanding when the v7 quote has none: quoteSummary (sharesOutstanding/implied), then another Yahoo
+    listing of the same company (search by name, same longName). Returns (shares, source) or (None, None). Cached 1 day."""
+    c = SHARES.get(sym)
+    if c and time.time() - c[0] < 86400: return c[1]
+    out = (None, None)
+    try:
+        u = f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{urllib.parse.quote(sym)}?" + urllib.parse.urlencode({"modules": "defaultKeyStatistics", "crumb": crumb()})
+        with _op.open(urllib.request.Request(u, headers=UA), timeout=15) as r: ks = json.load(r)["quoteSummary"]["result"][0]["defaultKeyStatistics"]
+        for k in ("sharesOutstanding", "impliedSharesOutstanding"):
+            v = (ks.get(k) or {}).get("raw")
+            if v: out = (v, f"Yahoo {k}"); break
+    except Exception: pass
+    if not out[0] and name:
+        try:
+            u = "https://query2.finance.yahoo.com/v1/finance/search?" + urllib.parse.urlencode({"q": name, "quotesCount": 10, "newsCount": 0})
+            with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=15) as r: cands = [x["symbol"] for x in json.load(r).get("quotes", []) if x.get("symbol") and x["symbol"] != sym and x.get("quoteType") == "EQUITY"]
+            norm = lambda s: "".join(ch for ch in (s or "").lower() if ch.isalnum()).replace("publ", "")
+            for s2, q2 in quotes(cands[:8]).items():
+                if q2.get("sharesOutstanding") and norm(q2.get("longName")) == norm(name): out = (q2["sharesOutstanding"], s2); break
+        except Exception: pass
+    SHARES[sym] = (time.time(), out); return out
 GECKO, CIMG = [0, []], {}
 STABLE = set("USDT USDC DAI USDE USDS FDUSD TUSD PYUSD USDD USD1 RLUSD USDTB BUSD GUSD USDP FRAX LUSD EURC EURS USDX USDG USDF USYC BUIDL USTB OUSG SUSDE SUSDS USD0 USDB USDL XAUT PAXG FIGR_HELOC USDY EURSAFO SYRUPUSDC USDAI USR".split())
 WRAP = set("WBTC WETH STETH WSTETH WEETH CBBTC RETH METH WBETH LBTC SOLVBTC BTCB JITOSOL BNSOL MSOL EZETH RSETH CBETH SAVAX OSETH TBTC CLBTC LSETH UNIBTC WBNB BSC-USD SWETH".split())
@@ -137,6 +186,9 @@ def _heatmap(universe, tickers, rng, fresh=False):
         d = q.get(s)
         if not d: continue
         cur = d.get("currency") or "USD"; maj, k = MINOR.get(cur, (cur, 1)); r = fx.get(maj)
+        if not d.get("marketCap") and not d.get("sharesOutstanding") and d.get("regularMarketPrice"):
+            n, src = alt_shares(s, d.get("longName") or d.get("shortName"))
+            if n: d["sharesOutstanding"] = n; d["sharesSrc"] = src
         if not d.get("marketCap") and d.get("sharesOutstanding") and d.get("regularMarketPrice"):
             d["marketCapLocal"] = d["regularMarketPrice"] * k * d["sharesOutstanding"]; d["mcapEst"] = True  # price x shares, major units
         elif d.get("marketCap"): d["marketCapLocal"] = d["marketCap"]  # Yahoo reports mcap in major units (GBP for GBp quotes)
@@ -153,11 +205,11 @@ def _heatmap(universe, tickers, rng, fresh=False):
             d["chg"] = (px / pc - 1) * 100 if pc and px else d.get("regularMarketChangePercent")
     else:
         with ThreadPoolExecutor(8) as ex: res = list(ex.map(lambda d: _safe(range_ret, d["symbol"], rng, fresh), rows))
-        for d, v in zip(rows, res): d["chg"] = v; d["since"] = SINCE.get((d["symbol"], rng))
+        for d, v in zip(rows, res): d["chg"] = v; d["since"] = SINCE.get((d["symbol"], rng)); d["stitched"] = STITCH.get((d["symbol"], rng)) or None
     for d in rows: d["sector"] = SECTOR.get(d["symbol"], "Other")
     rows = sorted(rows + crypto, key=lambda d: -(d.get("marketCap") or 0))
     src = "Yahoo Finance" if not crypto else ("CoinGecko" if not syms else "Yahoo Finance, CoinGecko")
-    return {"notes": notes, "est": [d["symbol"] for d in rows if d.get("mcapEst")], "source": src, "cryptoMixed": bool(crypto and syms), "rows": [d for d in rows if d.get("chg") is not None], "missing": errs + [d["symbol"] for d in rows if d.get("chg") is None],
+    return {"notes": notes, "est": [d["symbol"] + (f" (shares via {d['sharesSrc']})" if d.get("sharesSrc") else "") for d in rows if d.get("mcapEst")], "source": src, "cryptoMixed": bool(crypto and syms), "rows": [d for d in rows if d.get("chg") is not None], "missing": errs + [d["symbol"] for d in rows if d.get("chg") is None],
             "asOf": max([d.get("regularMarketTime") or 0 for d in rows] or [0]), "range": rng}
 def _safe(f, *a):
     try: return f(*a)

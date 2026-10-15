@@ -74,6 +74,10 @@ def yahoo(sym, p1, p2, interval, rng=None, prepost=False, fresh=False):
     closes = q0.get("close") or []; highs = q0.get("high") or [None] * len(ts)
     pts = [[t * 1000, c] for t, c in zip(ts, closes) if c is not None]
     if not pts: raise ValueError(f"No price points for {sym} in range")
+    stitched = []
+    if not rng and interval in ("1d", "1wk", "1mo") and sym.upper() in heat.ALT:
+        sp, stitched = heat.extend(sym.upper(), [(t // 1000, c) for t, c in pts], {"period1": p1, "period2": p2, "interval": interval, "includePrePost": "false"}, p1)
+        if stitched: pts = [[t * 1000, c] for t, c in sp]
     m = r0["meta"]
     out = {"symbol": m.get("symbol", sym), "name": company_name(sym, m),
            "currency": m.get("currency"), "points": pts, "lastTime": m.get("regularMarketTime"),
@@ -82,7 +86,7 @@ def yahoo(sym, p1, p2, interval, rng=None, prepost=False, fresh=False):
            "prevClose": m.get("regularMarketPreviousClose") or m.get("previousClose") or (m.get("chartPreviousClose") if rng == "1d" else None),
            "chartPreviousClose": m.get("chartPreviousClose"), "dayHigh": m.get("regularMarketDayHigh"),
            "fiftyTwoWeekHigh": m.get("fiftyTwoWeekHigh"), "instrumentType": m.get("instrumentType"),
-           "fetchedAt": int(time.time())}
+           "fetchedAt": int(time.time()), "stitched": stitched}
     CACHE[key] = (time.time(), out); return out
 class H(SimpleHTTPRequestHandler):
     def __init__(s, *a, **k): super().__init__(*a, directory=ROOT, **k)
