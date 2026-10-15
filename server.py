@@ -42,6 +42,20 @@ def views_write(v):
     with open(tmp, "w", encoding="utf-8") as f: json.dump(v, f, indent=1)
     os.replace(tmp, VIEWS); return v
 INTRA = {"1m", "2m", "5m", "15m", "30m", "60m", "90m", "1h"}
+NAMES = {}
+def company_name(sym, m=None):
+    """Company name from chart meta (shortName/longName), else Yahoo search; cached per symbol."""
+    if sym in NAMES: return NAMES[sym]
+    n = (m or {}).get("shortName") or (m or {}).get("longName")
+    if not n:
+        try:
+            u = "https://query1.finance.yahoo.com/v1/finance/search?" + urllib.parse.urlencode({"q": sym, "quotesCount": 5, "newsCount": 0})
+            with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=10) as r:
+                for q in json.load(r).get("quotes", []):
+                    if q.get("symbol", "").upper() == sym.upper(): n = q.get("shortname") or q.get("longname"); break
+        except Exception: pass
+    if n: NAMES[sym] = n
+    return n or sym
 def yahoo(sym, p1, p2, interval, rng=None, prepost=False, fresh=False):
     """rng (e.g. '1d','5d') asks Yahoo for its own session window; intraday cache TTL 20s, daily 60s; fresh bypasses cache."""
     key = (sym, None if rng else p1, None if rng else p2, interval, rng, prepost)
@@ -61,7 +75,7 @@ def yahoo(sym, p1, p2, interval, rng=None, prepost=False, fresh=False):
     pts = [[t * 1000, c] for t, c in zip(ts, closes) if c is not None]
     if not pts: raise ValueError(f"No price points for {sym} in range")
     m = r0["meta"]
-    out = {"symbol": m.get("symbol", sym), "name": m.get("shortName") or m.get("longName") or sym,
+    out = {"symbol": m.get("symbol", sym), "name": company_name(sym, m),
            "currency": m.get("currency"), "points": pts, "lastTime": m.get("regularMarketTime"),
            "lastBarTime": pts[-1][0] // 1000, "lastPrice": m.get("regularMarketPrice"), "interval": interval,
            "highs": [[t * 1000, h] for t, h in zip(ts, highs) if h is not None],

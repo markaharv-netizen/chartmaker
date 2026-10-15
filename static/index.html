@@ -131,11 +131,12 @@ async function render(){
     $('ddbox').style.opacity=dd||type==='bardd'?1:0.4;
     if(type==='bardd'){p.ath=ath;const data=await Promise.all(syms.map(s=>fetchSym(s,p)));
       if(ath){const full=await Promise.all(syms.map(s=>fetchSym(s,{p1:0,p2:p.p2,iv:'1mo',r:'Max'})));data.forEach((d,i)=>d.athHigh=Math.max(...full[i].highs.map(h=>h[1])))}
-      data.forEach((d,i)=>d.label=names[i]||d.symbol.replace('-USD',''));
+      data.forEach((d,i)=>d.label=barLabel(d,names[i]));
       if(my!==RSEQ)return; return finish(type,data,p,'Drawdown from '+(ath?'all-time high':(p.r==='1D'?"today's high":p.r+' high')))}
     if(dd&&!intra)p.iv='1d'; // drawdowns use daily closes so peaks/troughs aren't smoothed away by weekly/monthly bars
     const data=await Promise.all(syms.map(s=>fetchSym(s,ath&&!intra?{...p,p1:0}:p)));
     data.forEach((d,i)=>{d.label=names[i]||d.symbol.replace('-USD','');if(!(ath&&!intra))d.points=trimYTD(d.points,p.r)});
+    if(type==='bar')data.forEach((d,i)=>d.barLabel=barLabel(d,names[i]));
     if(dd)data.forEach(d=>ddCalc(d,ath&&!intra?(p.r==='YTD'?trimYTD(d.points,'YTD')[0][0]:p.p1*1000):-Infinity));
     const smaOn=type==='line'&&p.iv!=='5m'&&p.iv!=='15m'&&p.iv!=='1h'&&!['1D','5D'].includes(p.r), sl=smaOn?smaList():[];
     $('smabox').style.opacity=type==='line'&&!['1D','5D'].includes(p.r)?1:0.4;
@@ -148,6 +149,15 @@ async function render(){
     p.ath=ath; finish(type,data,p,titleAuto);
   }catch(e){if(my!==RSEQ)return;st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear()}
 }
+// bar axis labels: "Company (TICKER)"; Display names override the name part; crypto pairs show the name only
+function shortName(n,sym){n=(n||sym).replace(/\s+/g,' ').trim();
+  if(/-USD$/.test(sym))n=n.replace(/\s+USD$/i,'');
+  const suf=/[\s,]+(Inc\.?|Incorporated|Corp\.?|Corporation|Holdings?|Ltd\.?|Limited|plc|PLC|N\.V\.|S\.A\.|AG|SE|Group|Co\.?|Company|Class [A-C]|Platforms|Technologies|L\.P\.)\.?$/i;
+  let prev;do{prev=n;n=n.replace(suf,'').replace(/[\s,.]+$/,'')}while(n!==prev);
+  if(n.length>16){const w=n.split(' ');while(w.length>1&&w.join(' ').length>16)w.pop();n=w.join(' ')}
+  return n}
+function barLabel(d,disp){const tk=d.symbol.replace(/-USD$/,''), nm=disp||shortName(d.name,d.symbol);
+  if(/-USD$/.test(d.symbol))return nm; return nm.toUpperCase()===tk?tk:`${nm} (${tk})`}
 function finish(type,data,p,titleAuto){
   const asOf=Math.max(...data.map(d=>Math.max(d.lastTime||0,d.lastBarTime||0)));
   $('status').textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv+(p.rng?' · incl. pre/after-hours bars':'');
@@ -217,10 +227,13 @@ function buildOpt(type,data,title,p){
     return lineOpt(o,[{label:`${a.label}/${b.label}`,color:$('color').value,data:out}],v=>v.toPrecision(4))}
   // bar ranking (% return or % drawdown); deepest/lowest on the right
   const isdd=type==='bardd';
-  const rows=data.map(d=>({label:d.label,v:isdd?ddNow(d,p):ret(d,p)})).sort((x,y)=>y.v-x.v);
+  const rows=data.map(d=>({label:d.barLabel||d.label,v:isdd?ddNow(d,p):ret(d,p)})).sort((x,y)=>y.v-x.v);
   o.grid={left:90,right:60,top:130,bottom:110};
+  // crowded? wrap "Name (TICK)" onto two lines instead of rotating
+  const slot=(chart.getWidth()-150)/Math.max(1,rows.length), wrap=rows.some(r=>r.label.length*11.5>slot-8);
+  if(wrap){rows.forEach(r=>r.label=r.label.replace(/ \(/,'\n('));o.grid.bottom=135}
   // labels pinned to the bottom of the grid: with all-negative bars the zero line is at the top and labels used to vanish
-  o.xAxis={type:'category',position:'bottom',data:rows.map(r=>r.label),axisLabel:{...axLabel,fontSize:18,fontWeight:'bold',color:T.title,interval:0,margin:14},axisTick:{show:false},axisLine:{onZero:false,show:true,lineStyle:{color:T.axis}}};
+  o.xAxis={type:'category',position:'bottom',data:rows.map(r=>r.label),axisLabel:{...axLabel,fontSize:18,fontWeight:'bold',color:T.title,interval:0,margin:14,lineHeight:24,align:'center'},axisTick:{show:false},axisLine:{onZero:false,show:true,lineStyle:{color:T.axis}}};
   if(isdd){o.yAxis={type:'value',max:0,axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split}}
   const base1D=p.r==='1D'?(isdd?"latest vs today's high":'vs previous close'):'';
   o.graphic[0].style.text=`Source: Yahoo Finance · as of ${etTime(p.asOf)}`+(isdd?` · % below ${p.ath?'all-time high':p.r==='1D'?"today's high":'range high'}`:base1D?' · change vs previous close':'');
