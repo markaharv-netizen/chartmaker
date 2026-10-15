@@ -42,25 +42,43 @@ def quotes(syms, fresh=False):
             except Exception:
                 if attempt: raise
         for q in res:
-            d = {k: q.get(k) for k in ("symbol", "shortName", "longName", "marketCap", "regularMarketPrice", "regularMarketPreviousClose", "regularMarketChangePercent", "regularMarketTime", "currency", "quoteType")}
+            d = {k: q.get(k) for k in ("symbol", "shortName", "longName", "marketCap", "regularMarketPrice", "regularMarketPreviousClose", "regularMarketChangePercent", "regularMarketTime", "currency", "quoteType", "sharesOutstanding", "financialCurrency")}
             QCACHE[q["symbol"]] = (now, d); out[q["symbol"]] = d
     return out
+MINOR = {"GBp": ("GBP", 0.01), "GBX": ("GBP", 0.01), "ILA": ("ILS", 0.01), "ZAc": ("ZAR", 0.01), "ZAC": ("ZAR", 0.01)}
+def fx_to_usd(curs, fresh=False):
+    """{currency: USD per 1 unit of the MAJOR currency} via Yahoo XXXUSD=X (batched, 30s quote cache)."""
+    maj = {MINOR.get(c, (c, 1))[0] for c in curs if c}
+    need = [c for c in maj if c != "USD"]
+    q = quotes([f"{c}USD=X" for c in need], fresh) if need else {}
+    out = {"USD": 1.0}
+    for c in need:
+        px = (q.get(f"{c}USD=X") or {}).get("regularMarketPrice")
+        if px: out[c] = px
+    return out
 def range_ret(sym, rng, fresh=False):
-    """% change over a Yahoo range from daily closes (5d uses 1d closes; base = close before window). Cached 5 min."""
+    """% change over a range using the SAME base as the bar chart: daily closes from period1 (YTD: keep only the
+    last close before Jan 1 UTC as base; 1M/6M/1Y: first close on/after now-31/183/366d; 5Y weekly; 5D 1m bars incl.
+    pre/post via range=5d). Last = last bar close. Cached 5 min."""
     key = (sym, rng)
     c = RCACHE.get(key)
     if c and not fresh and time.time() - c[0] < 300: return c[1]
-    yr = {"5D": "5d", "1M": "1mo", "6M": "6mo", "1Y": "1y", "5Y": "5y", "YTD": "ytd", "Max": "max"}[rng]
-    u = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?" + urllib.parse.urlencode({"range": yr, "interval": "1d" if rng not in ("5Y", "Max") else "1wk"})
+    now = int(time.time()); lt = time.gmtime(now); D = 86400
+    jan1 = int(time.mktime((lt.tm_year, 1, 1, 0, 0, 0, 0, 0, 0)) - time.timezone)
+    if rng == "5D": prm = {"range": "5d", "interval": "1m", "includePrePost": "true"}
+    else:
+        p1 = {"YTD": jan1 - D, "1M": now - 31 * D, "6M": now - 183 * D, "1Y": now - 366 * D, "5Y": now - 5 * 366 * D, "Max": 0}[rng]
+        prm = {"period1": p1, "period2": now, "interval": "1wk" if rng == "5Y" else "1mo" if rng == "Max" else "1d", "includePrePost": "false"}
+    u = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?" + urllib.parse.urlencode(prm)
     with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=20) as r: r0 = json.load(r)["chart"]["result"][0]
-    cl = [x for x in r0["indicators"]["quote"][0]["close"] if x is not None]
-    m = r0["meta"]; b = m.get("chartPreviousClose") if rng in ("5D", "1M", "6M", "1Y", "YTD") else None
-    b = b or cl[0]; last = m.get("regularMarketPrice") or cl[-1]
-    v = (last / b - 1) * 100; RCACHE[key] = (time.time(), v)
-    # short history: first bar well after the window start -> remember its date so the UI can footnote it
-    ts = r0.get("timestamp") or []; now = time.time(); lt = time.gmtime(now)
-    exp = {"YTD": time.mktime((lt.tm_year, 1, 1, 0, 0, 0, 0, 0, 0)), "5D": now - 7 * 86400, "1M": now - 31 * 86400, "6M": now - 183 * 86400, "1Y": now - 365 * 86400, "5Y": now - 1826 * 86400}.get(rng)
-    SINCE[key] = ts[0] if ts and exp and ts[0] > exp + 6 * 86400 else None
+    pts = [(t, x) for t, x in zip(r0.get("timestamp") or [], r0["indicators"]["quote"][0]["close"]) if x is not None]
+    if not pts: raise ValueError("no points")
+    if rng == "YTD":
+        i = next((k for k, (t, _) in enumerate(pts) if t >= jan1), None)
+        if i: pts = pts[i - 1:]
+    v = (pts[-1][1] / pts[0][1] - 1) * 100; RCACHE[key] = (time.time(), v)
+    exp = {"YTD": jan1 - D, "5D": now - 7 * D, "1M": now - 31 * D, "6M": now - 183 * D, "1Y": now - 366 * D, "5Y": now - 5 * 366 * D}.get(rng)
+    SINCE[key] = pts[0][0] if exp and pts[0][0] > exp + 6 * D else None
     return v
 SINCE = {}
 GECKO, CIMG = [0, []], {}
@@ -113,10 +131,22 @@ def _heatmap(universe, tickers, rng, fresh=False):
     else: syms = list(SECTOR)
     if not syms and not crypto: raise ValueError("Enter tickers")
     q = quotes(syms, fresh) if syms else {}
-    rows = [d for s in syms if (d := q.get(s)) and d.get("marketCap")]
+    fx = fx_to_usd([d.get("currency") for d in q.values()], fresh)
+    notes, errs = [], [s for s in syms if s not in q]
+    for s in syms:
+        d = q.get(s)
+        if not d: continue
+        cur = d.get("currency") or "USD"; maj, k = MINOR.get(cur, (cur, 1)); r = fx.get(maj)
+        if not d.get("marketCap") and d.get("sharesOutstanding") and d.get("regularMarketPrice"):
+            d["marketCapLocal"] = d["regularMarketPrice"] * k * d["sharesOutstanding"]; d["mcapEst"] = True  # price x shares, major units
+        elif d.get("marketCap"): d["marketCapLocal"] = d["marketCap"]  # Yahoo reports mcap in major units (GBP for GBp quotes)
+        if d.get("marketCapLocal") and r: d["marketCapUSD"] = d["marketCapLocal"] * r
+        elif d.get("marketCapLocal"): notes.append(f"{s}: no {maj}/USD rate")
+        else: notes.append(f"{s}: no market cap on Yahoo")
+    rows = [dict(q[s], marketCap=q[s]["marketCapUSD"]) for s in syms if s in q and q[s].get("marketCapUSD")]
     rows.sort(key=lambda d: -d["marketCap"])
     if universe == "sp100": rows = rows[:100]
-    errs = [s for s in syms if s not in q or not q[s].get("marketCap")]
+    errs += [n.split(":")[0] for n in notes]
     if rng == "1D":
         for d in rows:
             pc, px = d.get("regularMarketPreviousClose"), d.get("regularMarketPrice")
@@ -127,7 +157,7 @@ def _heatmap(universe, tickers, rng, fresh=False):
     for d in rows: d["sector"] = SECTOR.get(d["symbol"], "Other")
     rows = sorted(rows + crypto, key=lambda d: -(d.get("marketCap") or 0))
     src = "Yahoo Finance" if not crypto else ("CoinGecko" if not syms else "Yahoo Finance, CoinGecko")
-    return {"source": src, "cryptoMixed": bool(crypto and syms), "rows": [d for d in rows if d.get("chg") is not None], "missing": errs + [d["symbol"] for d in rows if d.get("chg") is None],
+    return {"notes": notes, "est": [d["symbol"] for d in rows if d.get("mcapEst")], "source": src, "cryptoMixed": bool(crypto and syms), "rows": [d for d in rows if d.get("chg") is not None], "missing": errs + [d["symbol"] for d in rows if d.get("chg") is None],
             "asOf": max([d.get("regularMarketTime") or 0 for d in rows] or [0]), "range": rng}
 def _safe(f, *a):
     try: return f(*a)
