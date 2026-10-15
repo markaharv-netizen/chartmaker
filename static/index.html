@@ -38,7 +38,8 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Display names (comma, optional)<input id="names" size="22"></label>
 <label>Range<select id="range"><option>1D</option><option>5D</option><option selected>YTD</option><option>1M</option><option>6M</option><option>1Y</option><option>5Y</option><option>Max</option><option>Custom</option></select></label>
 <label>Start<input id="start" type="date"></label><label>End<input id="end" type="date"></label>
-<label>Type<select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="bar">Bar ranking % return</option><option value="ratio">Ratio A priced in B</option></select></label>
+<label>Type<select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="bar">Bar ranking % return</option><option value="ratio">Ratio A priced in B</option><option value="drawdown">Drawdown from peak</option></select></label>
+<label id="ddbox" title="Drawdown = % below the running high of daily closes">Peak from<select id="ddbase"><option value="range">Start of range</option><option value="ath">All-time high (full history)</option></select></label>
 <label>Title<input id="title" size="34" placeholder="auto"></label>
 <label>Line color<select id="color"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="wm" type="checkbox" checked></label>
@@ -114,28 +115,35 @@ async function smaSeries(sym,p,list){
   const pts=d.points,vals=pts.map(q=>q[1]);
   return list.map(x=>{const a=x.w?smaWeekly(pts,x.n):smaArr(vals,x.n);
     return{key:x.key,data:pts.map((q,i)=>[q[0],a[i]]).filter((q,i)=>q[0]>=p.vis&&q[1]!=null)}})}
-let last=null;
+let last=null,RSEQ=0;
 async function render(){
-  const st=$('status'); st.className=''; st.textContent='Loading…';
+  const st=$('status'), my=++RSEQ; st.className=''; st.textContent='Loading…';
   try{
     const syms=$('tickers').value.split(',').map(s=>s.trim().toUpperCase()).filter(Boolean);
     const names=$('names').value.split(',').map(s=>s.trim());
     if(!syms.length)throw Error('Enter at least one ticker');
     const type=$('type').value, p=rangeParams();
     if(type==='ratio'&&syms.length!==2)throw Error('Ratio needs exactly two tickers: A,B');
-    const data=await Promise.all(syms.map(s=>fetchSym(s,p)));
-    data.forEach((d,i)=>{d.label=names[i]||d.symbol.replace('-USD','');d.points=trimYTD(d.points,p.r)});
+    const dd=type==='drawdown', ath=dd&&$('ddbase').value==='ath', intra=['1D','5D'].includes(p.r);
+    $('ddbox').style.opacity=dd?1:0.4;
+    if(dd&&!intra)p.iv='1d'; // drawdowns use daily closes so peaks/troughs aren't smoothed away by weekly/monthly bars
+    const data=await Promise.all(syms.map(s=>fetchSym(s,ath&&!intra?{...p,p1:0}:p)));
+    data.forEach((d,i)=>{d.label=names[i]||d.symbol.replace('-USD','');if(!(ath&&!intra))d.points=trimYTD(d.points,p.r)});
+    if(dd)data.forEach(d=>ddCalc(d,ath&&!intra?(p.r==='YTD'?trimYTD(d.points,'YTD')[0][0]:p.p1*1000):-Infinity));
     const smaOn=type==='line'&&p.iv!=='5m'&&p.iv!=='15m'&&p.iv!=='1h'&&!['1D','5D'].includes(p.r), sl=smaOn?smaList():[];
     $('smabox').style.opacity=type==='line'&&!['1D','5D'].includes(p.r)?1:0.4;
     if(sl.length){p.vis=data[0].points[0][0];
       const ss=await Promise.all(data.map(d=>smaSeries(d.symbol,{...p,vis:d.points[0][0]},sl)));data.forEach((d,i)=>d.smas=ss[i])}
+    if(my!==RSEQ)return; // a newer render started while this one was fetching; don't overwrite it
     const asOf=Math.max(...data.map(d=>d.lastTime||0));
     st.textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv;
     const titleAuto={line:data.map(d=>d.label).join(' vs ')+' price',pct:data.map(d=>d.label).join(' vs ')+' % change',
-      bar:'Return, '+(p.r==='Custom'?'custom range':p.r),ratio:`${data[0].label} priced in ${data[1]?.label}`}[type];
+      bar:'Return, '+(p.r==='Custom'?'custom range':p.r),ratio:`${data[0].label} priced in ${data[1]?.label}`,
+      drawdown:data.map(d=>d.label).join(' vs ')+(ath?' drawdown from all-time high':' drawdown from peak')}[type];
+    p.ath=ath;
     last={opt:buildOpt(type,data,$('title').value||titleAuto,p),asOf};
     chart.setOption(last.opt,true);
-  }catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear()}
+  }catch(e){if(my!==RSEQ)return;st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear()}
 }
 function base(title,src,wmId){
   const wm=$(wmId||'wm').checked;
@@ -161,12 +169,33 @@ function lineOpt(o,series,fmt,intraday){
   if(extra.length){o.legend={top:80,left:60,icon:'roundRect',itemWidth:18,itemHeight:3,textStyle:{fontSize:14,color:T.text}};o.grid.top=130}
   return o;
 }
+// ---------- Drawdown: % below running max of closes. vis = first visible timestamp (history before it only feeds the peak) ----------
+function ddCalc(d,vis){let pk=-Infinity;const out=[];
+  for(const [t,c] of d.points){if(c>pk)pk=c;if(t>=vis)out.push([t,(c/pk-1)*100])}
+  if(!out.length)throw Error(d.symbol+': no data in range');
+  d.points=out;d.maxdd=out.reduce((m,q)=>q[1]<m[1]?q:m,out[0])}
+function ddOpt(o,data,c,p){
+  const multi=data.length>1, f=v=>v.toFixed(1)+'%';
+  const s=data.map((d,i)=>({label:d.label,color:c[i%c.length],data:d.points}));
+  lineOpt(o,s,f);
+  const lo=Math.min(...data.map(d=>d.maxdd[1]));
+  o.yAxis={...o.yAxis,scale:false,max:0,min:Math.min(-10,Math.floor((lo-2)/10)*10),interval:10,axisLabel:{...axLabel,formatter:v=>v+'%'}};
+  o.series.forEach((x,i)=>{const col=bc(s[i].color);
+    x.lineStyle.width=multi?2.5:2;
+    x.endLabel={show:true,fontSize:17,fontWeight:'bold',color:'#fff',backgroundColor:col,padding:[5,9],borderRadius:6,
+      formatter:q=>`${multi?s[i].label+' ':''}${f(q.value[1])}`};
+    if(!multi){x.areaStyle={color:col,opacity:T.dark?0.18:0.1,origin:'auto'};
+      x.markLine={symbol:'none',silent:true,lineStyle:{color:col,width:1.5,type:'solid'},
+        label:{position:'insideStartTop',fontSize:16,color:T.title,formatter:`${s[i].label} ${f(data[0].maxdd[1])}`},data:[{yAxis:+data[0].maxdd[1].toFixed(2)}]}}});
+  o.graphic[0].style.text='Source: Yahoo Finance · daily closes · % below running high '+(p.ath?'(all-time high, full history)':'since start of range');
+  return o}
 function colors(n){return n===1?[$('color').value]:PALETTE}
 function buildOpt(type,data,title,p){
   const o=base(title), c=colors(data.length);
   if(type==='line')return lineOpt(o,data.map((d,i)=>({label:d.label,color:c[i%c.length],data:d.points,smas:d.smas})),fmtNum);
   if(type==='pct'){const s=data.map((d,i)=>{const b=d.points[0][1];return{label:d.label,color:c[i%c.length],data:d.points.map(q=>[q[0],(q[1]/b-1)*100])}});
     const o2=lineOpt(o,s,v=>pct(v)); o2.yAxis.scale=false; return o2}
+  if(type==='drawdown')return ddOpt(o,data,c,p);
   if(type==='ratio'){const [a,b]=data; // align on timestamp (nearest prior B value; crypto has weekend bars)
     const bp=b.points; let j=0; const out=[];
     for(const q of a.points){while(j+1<bp.length&&bp[j+1][0]<=q[0])j++; if(bp[j]&&bp[j][0]<=q[0]+DAY*1000/2)out.push([q[0],q[1]/bp[j][1]])}
@@ -185,7 +214,7 @@ function download(){if(!last)return;
   const url=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});
   const a=document.createElement('a');a.href=url;a.download=(($('title').value||'chart').replace(/[^\w]+/g,'_'))+'.png';a.click()}
 $('go').onclick=render;$('dl').onclick=download;
-['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac'].forEach(id=>$(id).onchange=render);
+['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'].forEach(id=>$(id).onchange=render);
 
 // ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------
 let MODE='prices', flast=null;
@@ -269,7 +298,7 @@ $('fgo').onclick=frender;$('fdl').onclick=fdownload;$('fcsv').onclick=fcsv;
 ['fmetric','fperiod','ftype','fcolor','fwm'].forEach(id=>$(id).onchange=frender);
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','sma20','sma50','sma100','sma200','sma200w','smac'];
+const VFIELDS=['tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}return{name,mode:MODE,fields:f,saved:new Date().toISOString()}}
 let VSTORE='server';const VLS='chartmaker_views';
@@ -280,7 +309,7 @@ async function vload(){try{VSTORE=(await (await fetch('/api/config')).json()).vi
   try{VIEWS=VSTORE==='browser'?JSON.parse(localStorage.getItem(VLS)||'[]'):await (await fetch('/api/views')).json();if(!Array.isArray(VIEWS))VIEWS=[]}catch(e){VIEWS=[]}vlist()}
 function vlist(sel){const v=$('views'),cur=sel??v.value;v.innerHTML='<option value="">— pick a view —</option>'+VIEWS.map((x,i)=>`<option value="${i}">${x.name.replace(/</g,'&lt;')}</option>`).join('');
   if(cur!==''&&VIEWS[cur])v.value=cur}
-function vapply(x){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';for(const [id,val] of Object.entries(x.fields||{})){const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
+function vapply(x){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';$('ddbase').value='range';for(const [id,val] of Object.entries(x.fields||{})){const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
   applyTheme();setMode(x.mode==='fin'?'fin':'prices')}
 const vmsg=t=>{$('status').className='';$('status').textContent=t};
 $('views').onchange=()=>{const x=VIEWS[$('views').value];if(x)vapply(x)};
