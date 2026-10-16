@@ -1,5 +1,5 @@
 """Heatmap backend: Yahoo v7 quote (crumb) for market cap + live 1D change; chart API for other ranges; logo proxy."""
-import json, os, time, threading, urllib.request, urllib.parse, http.cookiejar
+import json, os, time, threading, urllib.request, urllib.error, urllib.parse, http.cookiejar
 from concurrent.futures import ThreadPoolExecutor
 UA = {"User-Agent": "Mozilla/5.0"}
 _cj = http.cookiejar.CookieJar(); _op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(_cj))
@@ -25,25 +25,72 @@ def crumb(force=False):
             except Exception: pass
             _crumb[0] = _op.open(urllib.request.Request("https://query1.finance.yahoo.com/v1/test/getcrumb", headers=UA), timeout=10).read().decode().strip(); _crumb[1] = time.time()
         return _crumb[0]
-def quotes(syms, fresh=False):
-    """Batched v7 quote (50/request); cached 30s per symbol."""
+QDISK = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache", "quotes.json")
+QSTALE = []  # symbols served from the disk cache on the last call (set per request by callers via quotes())
+def _v7(chunk, attempt):
+    if os.environ.get("CM_FORCE_V7_FAIL"): raise urllib.error.HTTPError("v7", 429, "Too Many Requests (simulated)", None, None)
+    u = "https://query1.finance.yahoo.com/v7/finance/quote?" + urllib.parse.urlencode({"symbols": ",".join(chunk), "crumb": crumb(attempt == 1)})
+    with _op.open(urllib.request.Request(u, headers=UA), timeout=15) as r: return json.load(r)["quoteResponse"]["result"]
+def chart_quote(sym):
+    """v8 chart API meta (works where v7 quote/getcrumb are rate-limited). No marketCap/shares here."""
+    if os.environ.get("CM_FORCE_V8_FAIL"): raise ValueError("v8 failure (simulated)")
+    u = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?range=5d&interval=1d"
+    with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=15) as r: m = json.load(r)["chart"]["result"][0]["meta"]
+    if m.get("regularMarketPrice") is None: raise ValueError("no price")
+    return {"symbol": sym, "shortName": m.get("shortName"), "longName": m.get("longName"), "marketCap": None, "regularMarketPrice": m.get("regularMarketPrice"),
+            "regularMarketPreviousClose": m.get("regularMarketPreviousClose") or m.get("previousClose"), "regularMarketChangePercent": None,
+            "regularMarketTime": m.get("regularMarketTime"), "currency": m.get("currency"), "quoteType": m.get("instrumentType"),
+            "sharesOutstanding": None, "financialCurrency": None, "via": "v8"}
+def _disk_load():
+    try:
+        with open(QDISK) as f: return json.load(f)
+    except Exception: return {}
+def _disk_save(new):
+    try:
+        d = _disk_load(); d.update({s: [t, q] for s, (t, q) in new.items()}); os.makedirs(os.path.dirname(QDISK), exist_ok=True)
+        with open(QDISK + ".tmp", "w") as f: json.dump(d, f)
+        os.replace(QDISK + ".tmp", QDISK)
+    except Exception: pass
+def quotes(syms, fresh=False, stale=None):
+    """Live quotes: v7 batch (50/request, needs crumb) -> per-symbol v8 chart meta if v7 fails (e.g. 429 on cloud IPs)
+    -> last good copy from disk (any age; symbol appended to `stale`). Memory cache 30s; disk cache treated fresh for 10 min."""
     now, out, need = time.time(), {}, []
+    disk = None
     for s in syms:
         c = QCACHE.get(s)
-        if c and not fresh and now - c[0] < 30: out[s] = c[1]
-        else: need.append(s)
+        if c and not fresh and now - c[0] < 30: out[s] = c[1]; continue
+        if not fresh:
+            disk = disk if disk is not None else _disk_load(); e = disk.get(s)
+            if e and now - e[0] < 600 and (e[1].get("via") != "v8" or e[1].get("sharesOutstanding")): QCACHE[s] = (e[0], e[1]); out[s] = e[1]; continue
+        need.append(s)
+    got = {}
     for i in range(0, len(need), 50):
-        chunk = need[i:i + 50]
+        chunk = need[i:i + 50]; res = None
         for attempt in (0, 1):
-            try:
-                u = "https://query1.finance.yahoo.com/v7/finance/quote?" + urllib.parse.urlencode({"symbols": ",".join(chunk), "crumb": crumb(attempt == 1)})
-                with _op.open(urllib.request.Request(u, headers=UA), timeout=15) as r: res = json.load(r)["quoteResponse"]["result"]
-                break
-            except Exception:
-                if attempt: raise
-        for q in res:
-            d = {k: q.get(k) for k in ("symbol", "shortName", "longName", "marketCap", "regularMarketPrice", "regularMarketPreviousClose", "regularMarketChangePercent", "regularMarketTime", "currency", "quoteType", "sharesOutstanding", "financialCurrency")}
-            QCACHE[q["symbol"]] = (now, d); out[q["symbol"]] = d
+            try: res = _v7(chunk, attempt); break
+            except Exception: pass
+        if res is not None:
+            for q in res:
+                d = {k: q.get(k) for k in ("symbol", "shortName", "longName", "marketCap", "regularMarketPrice", "regularMarketPreviousClose", "regularMarketChangePercent", "regularMarketTime", "currency", "quoteType", "sharesOutstanding", "financialCurrency")}
+                got[q["symbol"]] = d
+        miss = [s for s in chunk if s not in got]
+        if miss:
+            with ThreadPoolExecutor(8) as ex: rs = list(ex.map(lambda s: _safe(chart_quote, s), miss))
+            disk = _disk_load()
+            for s, r in zip(miss, rs):
+                if not r: continue
+                e = disk.get(s)  # keep share count from an earlier good v7 quote so price x shares still works
+                if e and e[1].get("sharesOutstanding"): r["sharesOutstanding"] = e[1]["sharesOutstanding"]; r["sharesFrom"] = e[0]
+                got[s] = r
+    for s, d in got.items(): QCACHE[s] = (now, d); out[s] = d
+    if got: _disk_save({s: (now, d) for s, d in got.items()})
+    left = [s for s in need if s not in got]
+    if left:
+        disk = _disk_load()
+        for s in left:
+            e = disk.get(s)
+            if e: out[s] = dict(e[1], staleAt=e[0]); stale is not None and stale.append(s)
+    if need and not got and not any(s in out for s in need): raise ValueError("Yahoo quote unavailable (v7 and v8 failed, no cached copy)")
     return out
 MINOR = {"GBp": ("GBP", 0.01), "GBX": ("GBP", 0.01), "ILA": ("ILS", 0.01), "ZAc": ("ZAR", 0.01), "ZAC": ("ZAR", 0.01)}
 def fx_to_usd(curs, fresh=False):

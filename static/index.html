@@ -414,7 +414,7 @@ async function hrender(){
   const st=$('status'),my=++HSEQ;st.className='';st.textContent='Loading quotes…';
   try{const rng=$('hrange').value,uni=$('huni').value;
     const r=await fetch(`/api/heatmap?universe=${uni}&range=${rng}&tickers=${encodeURIComponent($('htickers').value)}${HFRESH?'&fresh=1':''}${$('hstable').checked?'&stables=1':''}`,{cache:'no-store'});
-    const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);if(!j.rows.length)throw Error('No quotes returned');
+    const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);if(!j.rows.length)throw Error(j.notes&&j.notes.length?'No market caps available (Yahoo quote endpoint may be rate-limited): '+j.notes.join('; '):'No quotes returned');
     await Promise.all(j.rows.map(async d=>d.logo=await circLogo(d.logoKey||d.symbol)));
     if(my!==HSEQ)return;hlast=j;hdraw()}
   catch(e){if(my!==HSEQ)return;st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();hlast=null}}
@@ -473,8 +473,8 @@ function tdraw(){const j=tlast,M=TMET[$('tmetric').value],col=$('tcolor').value;
   o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:r.v,itemStyle:{color:bc(col)}})),markLine:one.length?{silent:true,data:one}:undefined,
     label:{show:true,position:'top',fontSize:Math.max(15,Math.min(20,AX.fontSize+2)),fontWeight:'bold',color:T.title,formatter:q=>M.fmt(q.value)}}];
   const srcs=[...new Set(ok.map(r=>r.source).filter(Boolean))].join('; ');
-  o.graphic[0].style.text=`${M.d} · BTC $${Math.round(j.btcPrice).toLocaleString('en-US')} & market caps: Yahoo Finance, as of ${etTime(j.asOf)}`;
-  o.graphic.push({type:'text',left:60,bottom:4,style:{text:`Holdings/debt/pref compiled ${j.compiled}: ${srcs}`+(skip.length?` · excluded (missing data): ${skip.join(', ')}`:''),fontSize:15,fill:T.src}});
+  o.graphic[0].style.text=`${M.d} · BTC $${Math.round(j.btcPrice).toLocaleString('en-US')} & prices: Yahoo Finance, as of ${etTime(j.asOf)} · market cap = ${(j.mcapSrc||[]).join(' / ')||'n/a'}`+(j.stale&&j.stale.length?` · ⚠ cached quote (Yahoo unavailable): ${j.stale.join(', ')}`:'');
+  o.graphic.push({type:'text',left:60,bottom:4,style:{text:`Holdings/debt/pref compiled ${j.compiled}: ${srcs}`+(ok.some(r=>r.sharesSrc&&r.sharesSrc.startsWith('treasury'))?` · shares: Yahoo sharesOutstanding as of ${[...new Set(ok.filter(r=>r.sharesSrc&&r.sharesSrc.startsWith('treasury')).map(r=>r.sharesSrc.match(/(\d{4}-\d\d-\d\d)/)?.[1]))].join(', ')}`:'')+(skip.length?` · excluded (missing data): ${skip.join(', ')}`:''),fontSize:15,fill:T.src}});
   o.graphic[0].bottom=26;
   chart.setOption(o,true);last={opt:o,asOf:j.asOf};
   $('status').textContent=`${rows.length} companies · BTC $${Math.round(j.btcPrice).toLocaleString('en-US')} · as of ${etTime(j.asOf)}`+(j.flags.length?' · ⚠ '+j.flags.join('; '):'')}
