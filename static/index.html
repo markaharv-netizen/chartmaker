@@ -38,7 +38,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Tickers (custom, comma)<input id="htickers" value="MSTR,COIN,HOOD,IREN,CRWV,NBIS,CIFR,WULF,APLD" size="30"></label>
 <label>Range<select id="hrange"><option>1D</option><option>5D</option><option>7D</option><option>1M</option><option>6M</option><option>YTD</option><option>1Y</option><option>5Y</option></select></label>
 <label title="Crypto universes: include stablecoins and wrapped/staked duplicates (WBTC, stETH…)"><span>Incl. stablecoins</span><input id="hstable" type="checkbox"></label>
-<label title="Tile area: true market cap, or compressed so small caps stay readable">Tile size<select id="hsize"><option value="mcap">Market cap</option><option value="sqrt">√ market cap (small caps readable)</option><option value="eq">Equal</option></select></label>
+<label title="Filter tiles by % change (unchanged tiles appear only in All)">Show<select id="hshow"><option value="all">All</option><option value="up">Gainers only</option><option value="down">Decliners only</option></select></label><label title="Tile area: true market cap, or compressed so small caps stay readable">Tile size<select id="hsize"><option value="mcap">Market cap</option><option value="sqrt">√ market cap (small caps readable)</option><option value="eq">Equal</option></select></label>
 <label title="Nest tiles inside sector boxes"><span>Group by sector</span><input id="hsector" type="checkbox"></label>
 <label>Title<input id="htitle" size="30" placeholder="auto"></label>
 <label><span>Watermark</span><input id="hwm" type="checkbox" checked></label>
@@ -460,11 +460,13 @@ async function hrender(){
   catch(e){if(my!==HSEQ)return;st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();hlast=null}}
 function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YTD:25,'1Y':30,'5Y':60}[rng]||3;
   const uniName={sp100:'S&P 500 top 100',mag7:'Magnificent 7',btctreas:'BTC treasuries',miners:'BTC miners & AI compute',crypto50:'Crypto top 50',crypto100:'Crypto top 100',custom:'Heatmap'}[$('huni').value];
-  const title=$('htitle').value||`${uniName}, ${rng==='1D'?($('huni').value.startsWith('crypto')?'24h':'today'):rng}`;
+  const SH=$('hshow').value,rows=SH==='up'?j.rows.filter(d=>d.chg>0):SH==='down'?j.rows.filter(d=>d.chg<0):j.rows,shN=SH==='up'?'gainers':SH==='down'?'decliners':'';
+  if(!rows.length){chart.clear();last=null;$('status').className='err';$('status').textContent=`No ${shN} in this view (${j.rows.length} tiles loaded) — switch Show to All.`;return}
+  const title=$('htitle').value||`${uniName}${shN?' '+shN:''}, ${rng==='1D'?($('huni').value.startsWith('crypto')?'24h':'today'):rng}`;
   const o=base(title,'','hwm'),grp=$('hsector').checked&&!['mag7','btctreas','miners','crypto50','crypto100'].includes($('huni').value);delete o.grid;
   const SZ=$('hsize').value,leaf=d=>({name:d.symbol,value:SZ==='eq'?1:SZ==='sqrt'?Math.sqrt(d.marketCap):d.marketCap,d,itemStyle:{color:hcolor(d.chg,cap)}});
-  let data=j.rows.map(leaf);
-  if(grp){const by={};j.rows.forEach(d=>(by[d.sector]=by[d.sector]||[]).push(leaf(d)));
+  let data=rows.map(leaf);
+  if(grp){const by={};rows.forEach(d=>(by[d.sector]=by[d.sector]||[]).push(leaf(d)));
     data=Object.entries(by).map(([k,c])=>({name:k,value:c.reduce((a,x)=>a+x.value,0),children:c})).sort((a,b)=>b.value-a.value)}
   o.series=[{type:'treemap',left:60,right:60,top:100,bottom:60,roam:false,nodeClick:false,breadcrumb:{show:false},data,animation:false,
     squareRatio:1.2,label:{show:true},
@@ -472,7 +474,7 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
     levels:grp?[{itemStyle:{borderColor:T.bg,borderWidth:0,gapWidth:4}},{itemStyle:{borderColor:T.bg,borderWidth:1,gapWidth:1}}]:[{itemStyle:{borderColor:T.bg,borderWidth:1,gapWidth:1}}],
     tooltip:{formatter:q=>q.data.d?`${q.data.d.shortName||q.name}<br>${pct2(q.data.d.chg)} · mcap $${(q.data.d.marketCap/1e9).toFixed(0)}B`:q.name}}];
   o.tooltip={};
-  o.graphic[0].style.text=`Source: ${j.source||'Yahoo Finance'} · as of ${etTime(j.asOf)} · size = ${SZ==='eq'?'equal':SZ==='sqrt'?'√ market cap (USD)':'market cap (USD)'}${j.eq&&j.eq.length?' ('+j.eq.join(', ')+' equal-size: no share count)':''} · ${rng==='1D'?(/^Coin/.test(j.source)?'change over 24h':j.cryptoMixed?'stocks vs previous close, crypto over 24h':'change vs previous close'):rng+' % change'}`+shortNote(j.rows.filter(d=>d.since).map(d=>({sym:d.symbol,date:fmtD(d.since*1000)})))+stitchNote(j.rows);
+  o.graphic[0].style.text=`Source: ${j.source||'Yahoo Finance'} · as of ${etTime(j.asOf)} · size = ${SZ==='eq'?'equal':SZ==='sqrt'?'√ market cap (USD)':'market cap (USD)'}${j.eq&&j.eq.length?' ('+j.eq.join(', ')+' equal-size: no share count)':''} · ${rng==='1D'?(/^Coin/.test(j.source)?'change over 24h':j.cryptoMixed?'stocks vs previous close, crypto over 24h':'change vs previous close'):rng+' % change'}${shN?` · ${shN} only (${rows.length} of ${j.rows.length})`:''}`+shortNote(j.rows.filter(d=>d.since).map(d=>({sym:d.symbol,date:fmtD(d.since*1000)})))+stitchNote(j.rows);
   if(grp)o.series[0].upperLabel.formatter=q=>q.name;
   chart.setOption(o,true);
   // pass 2: size labels/logos from the actual tile layout
@@ -481,7 +483,7 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
   const fix=a=>a.forEach(x=>x.children?fix(x.children):(x.label=lab[x.name]||{show:false}));fix(data);
   chart.setOption(o,true);last={opt:o,asOf:j.asOf};
   const nts=(j.notes||[]).filter(n=>!/equal-size/.test(n)),miss=(nts.length?' · skipped: '+nts.join('; '):'')+(j.missing.length?' · no quote: '+j.missing.join(', '):'')+(j.eq&&j.eq.length?' · equal-size (no share count): '+j.eq.join(', '):'')+(j.est&&j.est.length?(j.est.length>8?` · mcap = price × shares for ${j.est.length} tickers`+(j.sharesAsOf&&j.sharesAsOf.length?` (shares as of ${j.sharesAsOf.join(', ')})`:''):' · mcap = price × shares: '+j.est.join(', ')):''),nolog=j.rows.filter(d=>!d.logo).map(d=>d.symbol);
-  const shs=j.rows.filter(d=>d.since);$('status').className='';$('status').textContent=(shs.length?'⚠ short history: '+shs.map(d=>d.symbol+' starts '+fmtD(d.since*1000)).join(', ')+' · ':'')+`${j.rows.length} tiles · data as of ${etTime(j.asOf)}${miss}${nolog.length?' · no logo: '+nolog.join(', '):''}`}
+  const shs=j.rows.filter(d=>d.since);$('status').className='';$('status').textContent=(shs.length?'⚠ short history: '+shs.map(d=>d.symbol+' starts '+fmtD(d.since*1000)).join(', ')+' · ':'')+`${rows.length}${shN?' '+shN+' of '+j.rows.length:''} tiles · data as of ${etTime(j.asOf)}${miss}${nolog.length?' · no logo: '+nolog.join(', '):''}`}
 // ---------- Treasury mode: /api/treasury (treasury.json holdings + live Yahoo market cap/shares/BTC-USD) ----------
 let tlast=null,TFRESH=false;
 const TMET={mnav:{t:'mNAV',f:r=>r.mnav,fmt:v=>v.toFixed(2)+'x',ax:v=>v+'x',d:'mNAV = market cap / (BTC held × BTC price)'},
@@ -570,7 +572,7 @@ function vdraw(){const j=vlast,m=j.metric,col=$('vcolor').value,asc=$('vsort').v
 $('vgo').onclick=vrender;$('vview').onchange=()=>{vsync();vrender()};$('vrange').onchange=vrender;$('vcsv').onclick=vcsv;vsync();$('vmetric').onchange=vrender;['vsort','vcolor','vnames'].forEach(id=>$(id).onchange=()=>$('vview').value==='time'?vhlast&&vhdraw():vlast&&vdraw());
 $('vrefresh').onclick=async()=>{VFRESH=true;try{await vrender()}finally{VFRESH=false}};
 $('vdl').onclick=()=>{if(!vlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('vtitle').value||'valuation').replace(/[^\w]+/g,'_')+'.png';a.click()};
-$('hgo').onclick=hrender;$('hsize').onchange=()=>hlast&&hdraw();$('hrefresh').onclick=async()=>{HFRESH=true;try{await hrender()}finally{HFRESH=false}};
+$('hgo').onclick=hrender;$('hsize').onchange=$('hshow').onchange=()=>hlast&&hdraw();$('hrefresh').onclick=async()=>{HFRESH=true;try{await hrender()}finally{HFRESH=false}};
 $('hdl').onclick=()=>{if(!hlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('htitle').value||'heatmap').replace(/[^\w]+/g,'_')+'.png';a.click()};
 $('htickers').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();$('huni').value='custom';hrender()}});
 $('htitle').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();hlast?hdraw():hrender()}});
@@ -578,7 +580,7 @@ $('htitle').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault(
 window.__hrender=hrender;
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['hsize','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
+const VFIELDS=['hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}return{name,mode:MODE,fields:f,saved:new Date().toISOString()}}
 let VSTORE='server';const VLS='chartmaker_views';
