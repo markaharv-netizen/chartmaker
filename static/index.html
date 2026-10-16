@@ -12,7 +12,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #fnote{margin:0 16px 8px;font-size:14px;color:#374151}
 #status{padding:4px 12px;font-size:13px}#status.err{color:#EF4444;font-weight:bold}
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mVal">Valuation</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -50,6 +50,16 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Bar color<select id="tcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="twm" type="checkbox" checked></label>
 <button id="tgo">Render</button><button id="trefresh" title="Fresh quotes">Refresh</button><button id="tdl">Download PNG</button><button class="xexp" title="1600×900 (16:9) PNG on white, sized for X">Export for X</button>
+</div>
+<div id="vctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
+<label>Tickers (comma)<input id="vtickers" value="NVDA,AAPL,TSLA,MSTR,MSFT,GOOGL" size="30"></label>
+<label>Metric<select id="vmetric"><option value="pe">Trailing P/E</option><option value="fpe">Forward P/E</option><option value="ps">Price/Sales TTM</option><option value="evebitda">EV/EBITDA</option><option value="evrev">EV/Revenue</option><option value="pb">Price/Book</option><option value="peg">PEG</option><option value="mcap">Market cap USD</option><option value="dy">Dividend yield</option></select></label>
+<label>Sort<select id="vsort"><option value="desc">High to low</option><option value="asc">Low to high</option></select></label>
+<label>Display names (comma, optional)<input id="vnames" size="18"></label>
+<label>Title<input id="vtitle" size="30" placeholder="auto"></label>
+<label>Bar color<select id="vcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
+<label><span>Watermark</span><input id="vwm" type="checkbox" checked></label>
+<button id="vgo">Render</button><button id="vrefresh" title="Bypass the 6h fundamentals cache">Refresh</button><button id="vdl">Download PNG</button><button class="xexp" title="1600×900 (16:9) PNG on white, sized for X">Export for X</button>
 </div>
 <div id="ctl">
 <label>Tickers (comma)<input id="tickers" value="NBIS,CRWV" size="22"></label>
@@ -89,7 +99,7 @@ function bc(c){return T.dark&&BRIGHT[c]?BRIGHT[c]:c}
 function applyTheme(){T=THEMES[$('theme').value]||THEMES.white;axLabel={fontSize:16,color:T.text};split={lineStyle:{color:T.grid}};
   $('chart').style.background=T.bg;$('tprev').style.background=T.bg;$('tprev').style.color=T.title;
   $('tprev').innerHTML=`Aa <b style="color:${bc('#F7931A')}">■</b><b style="color:${bc('#8B5CF6')}">■</b><b style="color:${bc('#22C55E')}">■</b><b style="color:${bc('#EF4444')}">■</b>`}
-function rerender(){return MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
+function rerender(){return MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
 
 function rangeParams(){
   const r=$('range').value, now=Math.floor(Date.now()/1000), d=new Date();
@@ -301,11 +311,11 @@ $('go').onclick=render;
 
 // ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------
 let MODE='prices', flast=null;
-function setMode(m){MODE=m;$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');
+function setMode(m){MODE=m;$('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');
   $('ctl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
   $('ftable').innerHTML='';$('fnote').textContent='';chart.clear();$('status').textContent='';
-  if(m==='prices')render();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
-$('mPrices').onclick=()=>setMode('prices');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');
+  if(m==='prices')render();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
+$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');
 const MUNIT={eps_diluted:'eps',shares:'sh',gross_margin:'%',operating_margin:'%',net_margin:'%'};
 function fmtFin(v,u,cur){if(v==null||isNaN(v))return '';const a=Math.abs(v),sg=v<0?'-':'';
   if(u==='%')return v.toFixed(1)+'%'; if(u==='eps')return sg+'$'+a.toFixed(2);
@@ -443,10 +453,10 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
   const miss=(j.notes&&j.notes.length?' · skipped: '+j.notes.join('; '):j.missing.length?' · no quote: '+j.missing.join(', '):'')+(j.est&&j.est.length?' · mcap = price × shares: '+j.est.join(', '):''),nolog=j.rows.filter(d=>!d.logo).map(d=>d.symbol);
   const shs=j.rows.filter(d=>d.since);$('status').className='';$('status').textContent=(shs.length?'⚠ short history: '+shs.map(d=>d.symbol+' starts '+fmtD(d.since*1000)).join(', ')+' · ':'')+`${j.rows.length} tiles · data as of ${etTime(j.asOf)}${miss}${nolog.length?' · no logo: '+nolog.join(', '):''}`}
 // Export for X: exactly 1600x900 (the chart canvas size) at pixelRatio 1, forced White theme, then restore the user's theme
-async function exportX(){if(!last&&!hlast&&!flast&&!tlast)return;const th=$('theme').value,sw=th!=='white';
+async function exportX(){if(!last&&!hlast&&!flast&&!tlast&&!vlast)return;const th=$('theme').value,sw=th!=='white';
   if(sw){$('theme').value='white';applyTheme();await rerender()}
   try{const url=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:'#FFFFFF'});
-    const nm=(MODE==='tre'?$('ttitle').value||'treasury':MODE==='heat'?$('htitle').value||'heatmap':MODE==='fin'?(flast&&flast.title)||'chart':$('title').value||'chart').replace(/[^\w]+/g,'_');
+    const nm=(MODE==='val'?$('vtitle').value||'valuation':MODE==='tre'?$('ttitle').value||'treasury':MODE==='heat'?$('htitle').value||'heatmap':MODE==='fin'?(flast&&flast.title)||'chart':$('title').value||'chart').replace(/[^\w]+/g,'_');
     const a=document.createElement('a');a.href=url;a.download=nm+'_X_1600x900.png';a.click()}
   finally{if(sw){$('theme').value=th;applyTheme();await rerender()}}}
 document.querySelectorAll('.xexp').forEach(b=>b.onclick=exportX);
@@ -481,6 +491,32 @@ function tdraw(){const j=tlast,M=TMET[$('tmetric').value],col=$('tcolor').value;
 $('tgo').onclick=trender;$('tmetric').onchange=()=>tlast&&tdraw();$('tcolor').onchange=()=>tlast&&tdraw();
 $('trefresh').onclick=async()=>{TFRESH=true;try{await trender()}finally{TFRESH=false}};
 $('tdl').onclick=()=>{if(!tlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});a.download=($('ttitle').value||'treasury').replace(/[^\w]+/g,'_')+'.png';a.click()};
+// ---------- Valuation mode: /api/valuation (Yahoo quoteSummary, 6h disk cache; stale / SEC-derived fallback) ----------
+let vlast=null,VFRESH=false;
+const vfmt=(m,v)=>m==='mcap'?(v>=1e12?'$'+(v/1e12).toFixed(2)+'T':v>=1e9?'$'+(v/1e9).toFixed(1)+'B':'$'+(v/1e6).toFixed(0)+'M'):m==='dy'?(v*100).toFixed(2)+'%':v.toFixed(v>=100?0:v>=10?1:2)+(m==='peg'?'':'x');
+async function vrender(){const st=$('status');st.className='';st.textContent='Loading fundamentals…';
+  try{const r=await fetch(`/api/valuation?tickers=${encodeURIComponent($('vtickers').value)}&metric=${$('vmetric').value}${VFRESH?'&fresh=1':''}`,{cache:'no-store'});
+    const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);vlast=j;vdraw()}
+  catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();vlast=null}}
+function vdraw(){const j=vlast,m=j.metric,col=$('vcolor').value,asc=$('vsort').value==='asc';
+  const syms=$('vtickers').value.split(',').map(x=>x.trim().toUpperCase()).filter(Boolean),nms=$('vnames').value.split(',').map(x=>x.trim());
+  const disp=s=>{const i=syms.indexOf(s);return i>=0&&nms[i]?nms[i]:SHORT[s]};
+  if(!j.rows.length){chart.clear();$('status').className='err';$('status').textContent=`No ${j.label} values (n/m: ${j.nm.map(x=>x.symbol).join(', ')})`+(j.errors.length?' · '+j.errors.join('; '):'');return}
+  const rows=j.rows.map(r=>({label:barLabel({symbol:r.symbol,name:r.name},disp(r.symbol)),v:r.value,r})).sort((a,b)=>asc?a.v-b.v:b.v-a.v);
+  const o=base($('vtitle').value||j.label,'','vwm');o.grid={left:110,right:60,top:130,bottom:110};
+  const AX=barAxisLayout(rows.map(r=>r.label),chart.getWidth()-o.grid.left-o.grid.right);o.grid.bottom=AX.bottom+20;
+  o.xAxis={type:'category',data:AX.data,axisLabel:{...axLabel,fontSize:AX.fontSize,fontWeight:'bold',color:T.title,interval:0,margin:14,lineHeight:AX.lineHeight,rotate:AX.rotate,align:AX.rotate?'right':'center'},axisTick:{show:false},axisLine:{lineStyle:{color:T.axis}}};
+  o.yAxis={type:'value',axisLabel:{...axLabel,formatter:v=>m==='mcap'||m==='dy'?vfmt(m,v):(+v.toFixed(2))+(m==='peg'?'':'x')},splitLine:split};
+  o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:r.v,itemStyle:{color:bc(col)}})),
+    label:{show:true,position:'top',fontSize:Math.max(15,Math.min(20,AX.fontSize+2)),fontWeight:'bold',color:T.title,formatter:q=>vfmt(m,q.value)}}];
+  const secs=j.rows.filter(r=>r.secThrough).map(r=>r.secThrough).sort(),srcs=[...new Set(j.rows.map(r=>r.src))].join(' / ')+(secs.length?` (filings through ${secs[0]}${secs.at(-1)!==secs[0]?'–'+secs.at(-1):''})`:''),oldest=Math.min(...j.rows.map(r=>r.t)),stale=j.rows.filter(r=>r.stale).map(r=>r.symbol);
+  o.graphic[0].style.text=`${j.label} = ${j.def} · Source: ${srcs} · as of ${etTime(oldest)}`+(stale.length?` · cached copy (Yahoo unavailable): ${stale.join(', ')}`:'');o.graphic[0].bottom=26;
+  if(j.nm.length)o.graphic.push({type:'text',left:60,bottom:4,style:{text:'n/m (negative or not available, excluded): '+j.nm.map(x=>x.symbol).join(', '),fontSize:15,fill:T.src}});
+  chart.setOption(o,true);last={opt:o,asOf:oldest/1000};
+  $('status').className='';$('status').textContent=`${rows.length} ranked · ${srcs} · as of ${etTime(oldest)}`+(j.nm.length?' · n/m: '+j.nm.map(x=>x.symbol+' ('+x.why+')').join(', '):'')+(j.errors.length?' · ⚠ '+j.errors.join('; '):'')}
+$('vgo').onclick=vrender;$('vmetric').onchange=vrender;['vsort','vcolor','vnames'].forEach(id=>$(id).onchange=()=>vlast&&vdraw());
+$('vrefresh').onclick=async()=>{VFRESH=true;try{await vrender()}finally{VFRESH=false}};
+$('vdl').onclick=()=>{if(!vlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});a.download=($('vtitle').value||'valuation').replace(/[^\w]+/g,'_')+'.png';a.click()};
 $('hgo').onclick=hrender;$('hrefresh').onclick=async()=>{HFRESH=true;try{await hrender()}finally{HFRESH=false}};
 $('hdl').onclick=()=>{if(!hlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});a.download=($('htitle').value||'heatmap').replace(/[^\w]+/g,'_')+'.png';a.click()};
 $('htickers').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();$('huni').value='custom';hrender()}});
@@ -489,7 +525,7 @@ $('htitle').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault(
 window.__hrender=hrender;
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
+const VFIELDS=['vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}return{name,mode:MODE,fields:f,saved:new Date().toISOString()}}
 let VSTORE='server';const VLS='chartmaker_views';
@@ -501,7 +537,7 @@ async function vload(){try{VSTORE=(await (await fetch('/api/config')).json()).vi
 function vlist(sel){const v=$('views'),cur=sel??v.value;v.innerHTML='<option value="">— pick a view —</option>'+VIEWS.map((x,i)=>`<option value="${i}">${x.name.replace(/</g,'&lt;')}</option>`).join('');
   if(cur!==''&&VIEWS[cur])v.value=cur}
 function vapply(x){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';$('ddbase').value='range';for(const [id,val] of Object.entries(x.fields||{})){const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
-  applyTheme();setMode(['fin','heat'].includes(x.mode)?x.mode:'prices')}
+  applyTheme();setMode(['fin','heat','tre','val'].includes(x.mode)?x.mode:'prices')}
 const vmsg=t=>{$('status').className='';$('status').textContent=t};
 $('views').onchange=()=>{const x=VIEWS[$('views').value];if(x)vapply(x)};
 $('vsave').onclick=async()=>{const n=(prompt('Name for this view:')||'').trim();if(!n)return;

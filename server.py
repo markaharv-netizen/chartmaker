@@ -1,5 +1,5 @@
 """Chartmaker backend: stdlib-only proxy for Yahoo Finance chart API + static frontend."""
-import fin, heat, treasury, json, os, sys, time, hmac, hashlib, secrets, threading, html, urllib.request, urllib.parse
+import fin, heat, treasury, valuation, json, os, sys, time, hmac, hashlib, secrets, threading, html, urllib.request, urllib.parse
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
 PORT = int(os.environ.get("PORT", sys.argv[1] if len(sys.argv) > 1 else 8791))
@@ -151,9 +151,12 @@ class H(SimpleHTTPRequestHandler):
             if not b: return s.send_json({"error": "no logo"}, 404)
             s.send_response(200); s.send_header("Content-Type", "image/webp" if b[:4] == b"RIFF" else "image/jpeg" if b[:2] == b"\xff\xd8" else "image/png"); s.send_header("Cache-Control", "public, max-age=604800")
             s.send_header("Content-Length", len(b)); s.end_headers(); s.wfile.write(b); return
-        if u.path not in ("/api/chart", "/api/fin", "/api/heatmap", "/api/treasury"): return super().do_GET()
+        if u.path not in ("/api/chart", "/api/fin", "/api/heatmap", "/api/treasury", "/api/valuation"): return super().do_GET()
         try:
-          if u.path == "/api/treasury":
+          if u.path == "/api/valuation":
+            g = lambda k, d="": qs.get(k, [d])[0]
+            body, code = json.dumps(valuation.compute(g("tickers"), g("metric", "pe"), g("fresh") == "1")), 200
+          elif u.path == "/api/treasury":
             body, code = json.dumps(treasury.compute(qs.get("tickers", [""])[0], qs.get("fresh", [""])[0] == "1")), 200
           elif u.path == "/api/heatmap":
             g = lambda k, d="": qs.get(k, [d])[0]
