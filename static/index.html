@@ -31,7 +31,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Title<input id="ftitle" size="30" placeholder="auto"></label>
 <label>Color (1 ticker)<select id="fcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="fwm" type="checkbox" checked></label>
-<button id="fgo">Render</button><button id="fdl">Download PNG</button><button class="xexp" title="1600×900 (16:9) PNG on white, sized for X">Export for X</button><button id="fcsv">Download CSV</button>
+<button id="fgo">Render</button><button id="fdl">Download PNG</button><button id="fcsv">Download CSV</button>
 </div>
 <div id="hctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
 <label>Universe<select id="huni"><option value="sp100">S&amp;P 500 top 100</option><option value="mag7">Magnificent 7</option><option value="crypto50">Crypto top 50</option><option value="crypto100">Crypto top 100</option><option value="custom">Custom tickers</option></select></label>
@@ -41,7 +41,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label title="Nest tiles inside sector boxes"><span>Group by sector</span><input id="hsector" type="checkbox"></label>
 <label>Title<input id="htitle" size="30" placeholder="auto"></label>
 <label><span>Watermark</span><input id="hwm" type="checkbox" checked></label>
-<button id="hgo">Render</button><button id="hrefresh" title="Fetch fresh quotes, bypassing the cache">Refresh</button><button id="hdl">Download PNG</button><button class="xexp" title="1600×900 (16:9) PNG on white, sized for X">Export for X</button>
+<button id="hgo">Render</button><button id="hrefresh" title="Fetch fresh quotes, bypassing the cache">Refresh</button><button id="hdl">Download PNG</button>
 </div>
 <div id="tctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
 <label>Tickers (comma; blank = all in treasury.json)<input id="ttickers" value="MSTR,ASST,3350.T,SWC.L" size="30"></label>
@@ -49,7 +49,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Title<input id="ttitle" size="30" placeholder="auto"></label>
 <label>Bar color<select id="tcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="twm" type="checkbox" checked></label>
-<button id="tgo">Render</button><button id="trefresh" title="Fresh quotes">Refresh</button><button id="tdl">Download PNG</button><button class="xexp" title="1600×900 (16:9) PNG on white, sized for X">Export for X</button>
+<button id="tgo">Render</button><button id="trefresh" title="Fresh quotes">Refresh</button><button id="tdl">Download PNG</button>
 </div>
 <div id="vctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
 <label>Tickers (comma)<input id="vtickers" value="NVDA,AAPL,TSLA,MSTR,MSFT,GOOGL" size="30"></label>
@@ -59,7 +59,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Title<input id="vtitle" size="30" placeholder="auto"></label>
 <label>Bar color<select id="vcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="vwm" type="checkbox" checked></label>
-<button id="vgo">Render</button><button id="vrefresh" title="Bypass the 6h fundamentals cache">Refresh</button><button id="vdl">Download PNG</button><button class="xexp" title="1600×900 (16:9) PNG on white, sized for X">Export for X</button>
+<button id="vgo">Render</button><button id="vrefresh" title="Bypass the 6h fundamentals cache">Refresh</button><button id="vdl">Download PNG</button>
 </div>
 <div id="ctl">
 <label>Tickers (comma)<input id="tickers" value="NBIS,CRWV" size="22"></label>
@@ -76,7 +76,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label style="flex-direction:row;gap:2px"><input id="sma100" type="checkbox">100</label><label style="flex-direction:row;gap:2px"><input id="sma200" type="checkbox">200</label>
 <label style="flex-direction:row;gap:2px"><input id="sma200w" type="checkbox">200W</label>
 <input id="smac" type="number" min="2" max="1000" placeholder="custom" style="width:70px;padding:4px"></span></label>
-<button id="go">Render</button><button id="refresh" title="Fetch fresh prices, bypassing the cache">Refresh</button><button id="dl">Download PNG</button><button class="xexp" title="1600×900 (16:9) PNG on white, sized for X">Export for X</button>
+<button id="go">Render</button><button id="refresh" title="Fetch fresh prices, bypassing the cache">Refresh</button><button id="dl">Download PNG</button>
 </div>
 <div id="status"></div>
 <div id="wrap"><div id="chart"></div></div>
@@ -302,7 +302,7 @@ function buildOpt(type,data,title,p){
   return o;
 }
 function download(){if(!last)return;
-  const url=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});
+  const url=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});
   const a=document.createElement('a');a.href=url;a.download=(($('title').value||'chart').replace(/[^\w]+/g,'_'))+'.png';a.click()}
 $('go').onclick=render;
 ['tickers','names','title','start','end','smac'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();render()}}));
@@ -385,7 +385,7 @@ function fcsv(){if(!flast)return;const {ok,cats,q}=flast;
   for(const d of ok)for(const k of cats){const r=d.rows.find(x=>x.label===k);
     lines.push([d.ticker,d.name,q.m,q.p,k,r?.start||'',r?.end||'',r?r.value:'',r?.cur||'',r?.form||'',r?.tag||'',r?(r.derived||''):'not reported'].map(v=>`"${String(v).replace(/"/g,'""')}"`).join(','))}
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([lines.join('\n')],{type:'text/csv'}));a.download=flast.title.replace(/[^\w]+/g,'_')+'.csv';a.click()}
-function fdownload(){if(!flast)return;const url=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});
+function fdownload(){if(!flast)return;const url=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});
   const a=document.createElement('a');a.href=url;a.download=flast.title.replace(/[^\w]+/g,'_')+'.png';a.click()}
 $('fgo').onclick=frender;$('fdl').onclick=fdownload;$('fcsv').onclick=fcsv;
 ['fmetric','fperiod','ftype','fcolor','fwm'].forEach(id=>$(id).onchange=frender);
@@ -452,14 +452,6 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
   chart.setOption(o,true);last={opt:o,asOf:j.asOf};
   const miss=(j.notes&&j.notes.length?' · skipped: '+j.notes.join('; '):j.missing.length?' · no quote: '+j.missing.join(', '):'')+(j.est&&j.est.length?' · mcap = price × shares: '+j.est.join(', '):''),nolog=j.rows.filter(d=>!d.logo).map(d=>d.symbol);
   const shs=j.rows.filter(d=>d.since);$('status').className='';$('status').textContent=(shs.length?'⚠ short history: '+shs.map(d=>d.symbol+' starts '+fmtD(d.since*1000)).join(', ')+' · ':'')+`${j.rows.length} tiles · data as of ${etTime(j.asOf)}${miss}${nolog.length?' · no logo: '+nolog.join(', '):''}`}
-// Export for X: exactly 1600x900 (the chart canvas size) at pixelRatio 1, forced White theme, then restore the user's theme
-async function exportX(){if(!last&&!hlast&&!flast&&!tlast&&!vlast)return;const th=$('theme').value,sw=th!=='white';
-  if(sw){$('theme').value='white';applyTheme();await rerender()}
-  try{const url=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:'#FFFFFF'});
-    const nm=(MODE==='val'?$('vtitle').value||'valuation':MODE==='tre'?$('ttitle').value||'treasury':MODE==='heat'?$('htitle').value||'heatmap':MODE==='fin'?(flast&&flast.title)||'chart':$('title').value||'chart').replace(/[^\w]+/g,'_');
-    const a=document.createElement('a');a.href=url;a.download=nm+'_X_1600x900.png';a.click()}
-  finally{if(sw){$('theme').value=th;applyTheme();await rerender()}}}
-document.querySelectorAll('.xexp').forEach(b=>b.onclick=exportX);
 // ---------- Treasury mode: /api/treasury (treasury.json holdings + live Yahoo market cap/shares/BTC-USD) ----------
 let tlast=null,TFRESH=false;
 const TMET={mnav:{t:'mNAV',f:r=>r.mnav,fmt:v=>v.toFixed(2)+'x',ax:v=>v+'x',d:'mNAV = market cap / (BTC held × BTC price)'},
@@ -490,7 +482,7 @@ function tdraw(){const j=tlast,M=TMET[$('tmetric').value],col=$('tcolor').value;
   $('status').textContent=`${rows.length} companies · BTC $${Math.round(j.btcPrice).toLocaleString('en-US')} · as of ${etTime(j.asOf)}`+(j.flags.length?' · ⚠ '+j.flags.join('; '):'')}
 $('tgo').onclick=trender;$('tmetric').onchange=()=>tlast&&tdraw();$('tcolor').onchange=()=>tlast&&tdraw();
 $('trefresh').onclick=async()=>{TFRESH=true;try{await trender()}finally{TFRESH=false}};
-$('tdl').onclick=()=>{if(!tlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});a.download=($('ttitle').value||'treasury').replace(/[^\w]+/g,'_')+'.png';a.click()};
+$('tdl').onclick=()=>{if(!tlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('ttitle').value||'treasury').replace(/[^\w]+/g,'_')+'.png';a.click()};
 // ---------- Valuation mode: /api/valuation (Yahoo quoteSummary, 6h disk cache; stale / SEC-derived fallback) ----------
 let vlast=null,VFRESH=false;
 const vfmt=(m,v)=>m==='mcap'?(v>=1e12?'$'+(v/1e12).toFixed(2)+'T':v>=1e9?'$'+(v/1e9).toFixed(1)+'B':'$'+(v/1e6).toFixed(0)+'M'):m==='dy'?(v*100).toFixed(2)+'%':v.toFixed(v>=100?0:v>=10?1:2)+(m==='peg'?'':'x');
@@ -516,9 +508,9 @@ function vdraw(){const j=vlast,m=j.metric,col=$('vcolor').value,asc=$('vsort').v
   $('status').className='';$('status').textContent=`${rows.length} ranked · ${srcs} · as of ${etTime(oldest)}`+(j.nm.length?' · n/m: '+j.nm.map(x=>x.symbol+' ('+x.why+')').join(', '):'')+(j.errors.length?' · ⚠ '+j.errors.join('; '):'')}
 $('vgo').onclick=vrender;$('vmetric').onchange=vrender;['vsort','vcolor','vnames'].forEach(id=>$(id).onchange=()=>vlast&&vdraw());
 $('vrefresh').onclick=async()=>{VFRESH=true;try{await vrender()}finally{VFRESH=false}};
-$('vdl').onclick=()=>{if(!vlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});a.download=($('vtitle').value||'valuation').replace(/[^\w]+/g,'_')+'.png';a.click()};
+$('vdl').onclick=()=>{if(!vlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('vtitle').value||'valuation').replace(/[^\w]+/g,'_')+'.png';a.click()};
 $('hgo').onclick=hrender;$('hrefresh').onclick=async()=>{HFRESH=true;try{await hrender()}finally{HFRESH=false}};
-$('hdl').onclick=()=>{if(!hlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg});a.download=($('htitle').value||'heatmap').replace(/[^\w]+/g,'_')+'.png';a.click()};
+$('hdl').onclick=()=>{if(!hlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('htitle').value||'heatmap').replace(/[^\w]+/g,'_')+'.png';a.click()};
 $('htickers').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();$('huni').value='custom';hrender()}});
 $('htitle').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();hlast?hdraw():hrender()}});
 ['huni','hrange','hstable'].forEach(id=>$(id).onchange=hrender);['hsector','hwm'].forEach(id=>$(id).onchange=()=>hlast?hdraw():hrender());
