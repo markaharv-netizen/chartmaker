@@ -12,7 +12,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #fnote{margin:0 16px 8px;font-size:14px;color:#374151}
 #status{padding:4px 12px;font-size:13px}#status.err{color:#EF4444;font-weight:bold}
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mVal">Valuation</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mVal">Valuation</button><button id="mWatch">Watchlist</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -64,6 +64,14 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label><span>Watermark</span><input id="vwm" type="checkbox" checked></label>
 <button id="vgo">Render</button><button id="vrefresh" title="Bypass the 6h fundamentals cache">Refresh</button><button id="vdl">Download PNG</button><button id="vcsv" style="display:none">Download CSV</button>
 </div>
+<div id="wctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
+<label>Add tickers (comma)<input id="wadd" size="18" placeholder="e.g. AAPL, ETH"></label><button id="waddb">Add</button>
+<div id="wchips" style="display:flex;flex-wrap:wrap;gap:4px;max-width:720px;font-size:13px"></div>
+<button id="wreset" title="Restore the default list" style="background:#6B7280">Reset list</button>
+<label>Title<input id="wtitle" size="24" placeholder="Watchlist"></label>
+<label><span>Watermark</span><input id="wwm" type="checkbox" checked></label>
+<button id="wrefresh" title="Fetch fresh quotes for every ticker (the only time data updates)">Refresh</button><button id="wdl">Download PNG</button>
+</div>
 <div id="ctl">
 <label>Tickers (comma)<input id="tickers" value="NBIS,CRWV" size="22"></label>
 <label>Display names (comma, optional)<input id="names" size="22"></label>
@@ -104,7 +112,7 @@ function bc(c){return T.dark&&BRIGHT[c]?BRIGHT[c]:c}
 function applyTheme(){T=THEMES[$('theme').value]||THEMES.white;axLabel={fontSize:16,color:T.text};split={lineStyle:{color:T.grid}};
   $('chart').style.background=T.bg;$('tprev').style.background=T.bg;$('tprev').style.color=T.title;
   $('tprev').innerHTML=`Aa <b style="color:${bc('#F7931A')}">■</b><b style="color:${bc('#8B5CF6')}">■</b><b style="color:${bc('#22C55E')}">■</b><b style="color:${bc('#EF4444')}">■</b>`}
-function rerender(){return MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
+function rerender(){return MODE==='watch'?wdraw():MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
 
 function rangeParams(){
   const r=$('range').value, now=Math.floor(Date.now()/1000), d=new Date();
@@ -341,11 +349,11 @@ $('go').onclick=render;
 
 // ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------
 let MODE='prices', flast=null;
-function setMode(m){MODE=m;$('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');
+function setMode(m){MODE=m;$('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';
   $('ctl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
   $('ftable').innerHTML='';$('fnote').textContent='';chart.clear();$('status').textContent='';
-  if(m==='prices')render();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
-$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');
+  if(m==='prices')render();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
+$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');
 const MUNIT={eps_diluted:'eps',shares:'sh',gross_margin:'%',operating_margin:'%',net_margin:'%'};
 function fmtFin(v,u,cur){if(v==null||isNaN(v))return '';const a=Math.abs(v),sg=v<0?'-':'';
   if(u==='%')return v.toFixed(1)+'%'; if(u==='eps')return sg+'$'+a.toFixed(2);
@@ -579,8 +587,61 @@ $('htitle').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault(
 ['huni','hrange','hstable'].forEach(id=>$(id).onchange=hrender);['hsector','hwm'].forEach(id=>$(id).onchange=()=>hlast?hdraw():hrender());
 window.__hrender=hrender;
 
+// ---------- Watchlist mode: /api/watch (one batched call); data updates only on Refresh (plus once on first open / new tickers) ----------
+const WDEF=['MSTR','BTC-USD','TSLA','NVDA','COIN','SPY'],WLS='chartmaker_watchlist';
+let WL=(()=>{try{const a=JSON.parse(localStorage.getItem(WLS));if(Array.isArray(a)&&a.length)return a}catch(e){}return WDEF.slice()})();
+let WROWS={},WAT=0,WSRC='Yahoo Finance',WSORT={k:null,d:-1},WBUSY=false;
+const wsave=()=>{localStorage.setItem(WLS,JSON.stringify(WL));wchips()};
+function wchips(){const esc=x=>x.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  $('wchips').innerHTML=WL.map((t,i)=>`<span style="background:#e5e7eb;border-radius:4px;padding:3px 4px;display:inline-flex;gap:3px;align-items:center"><a href="#" data-mv="${i},-1" title="Move left" style="color:#6B7280;text-decoration:none">‹</a><b>${esc(t)}</b><a href="#" data-mv="${i},1" title="Move right" style="color:#6B7280;text-decoration:none">›</a><a href="#" data-rm="${i}" title="Remove" style="color:#EF4444;text-decoration:none;margin-left:2px">×</a></span>`).join('')}
+$('wchips').onclick=e=>{const a=e.target.closest('a');if(!a)return;e.preventDefault();
+  if(a.dataset.rm!=null)WL.splice(+a.dataset.rm,1);else{const [i,d]=a.dataset.mv.split(',').map(Number),j=i+d;if(j<0||j>=WL.length)return;[WL[i],WL[j]]=[WL[j],WL[i]]}
+  wsave();if(MODE==='watch')wdraw()};
+async function wfetch(list,fresh){const st=$('status');st.className='';st.textContent='Loading '+list.length+' ticker'+(list.length>1?'s':'')+'…';WBUSY=true;
+  try{const r=await fetch(`/api/watch?tickers=${encodeURIComponent(list.join(','))}${fresh?'&fresh=1':''}`,{cache:'no-store'});const j=await r.json();
+    if(j.error)throw Error(j.error);j.rows.forEach(x=>WROWS[x.symbol]=x);WAT=j.asOf;WSRC=j.source||WSRC}
+  catch(e){st.className='err';st.textContent='Error: '+e.message+' — showing last data, nothing invented.';WBUSY=false;wdraw(true);return}
+  WBUSY=false;wdraw()}
+function wenter(){wchips();const need=WL.filter(t=>!WROWS[t]);if(need.length&&!WBUSY)wfetch(need,false);else wdraw()}
+async function wadd(){const add=$('wadd').value.split(/[\s,]+/).map(x=>x.trim().toUpperCase()).filter(x=>x&&!WL.includes(x));$('wadd').value='';
+  if(!add.length)return;WL.push(...[...new Set(add)]);wsave();wdraw();wfetch(add.filter(t=>!WROWS[t]),false)}
+const wTime=t=>new Date(t*1000).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'})+' ET';
+const CSYM={USD:'$',EUR:'€',GBP:'£',JPY:'¥',CAD:'C$',AUD:'A$',HKD:'HK$',CHF:'CHF ',BRL:'R$',INR:'₹',KRW:'₩',CNY:'¥'};
+function wpx(v,c){if(v==null)return'—';if(c==='GBp')return fmtNum(v)+'p';return (CSYM[c]??(c?c+' ':''))+(Math.abs(v)>=1000?v.toLocaleString('en-US',{maximumFractionDigits:0}):Math.abs(v)>=1?v.toFixed(2):v.toPrecision(3))}
+function wcap(v){if(!v)return'—';const a=Math.abs(v);return '$'+(a>=1e12?(v/1e12).toFixed(2)+'T':a>=1e9?(v/1e9).toFixed(1)+'B':a>=1e6?(v/1e6).toFixed(0)+'M':v.toFixed(0))}
+const WCOLS=[{k:'name',h:'Name',x:60,a:'left'},{k:'symbol',h:'Ticker',x:500,a:'left'},{k:'price',h:'Price',x:820,a:'right'},{k:'r1d',h:'1D',x:960,a:'right'},
+  {k:'r5d',h:'5D',x:1100,a:'right'},{k:'r1m',h:'1M',x:1240,a:'right'},{k:'rytd',h:'YTD',x:1380,a:'right'},{k:'mcap',h:'Market cap',x:1540,a:'right'}];
+function wopen(sym){$('tickers').value=sym;$('names').value='';$('type').value='line';setMode('prices')}
+function wdraw(keepStatus){if(MODE!=='watch')return;
+  let rows=WL.map((t,i)=>({...(WROWS[t]||{symbol:t,pending:true}),_i:i}));
+  if(WSORT.k){const k=WSORT.k,d=WSORT.d;rows.sort((a,b)=>{let x=k==='name'?shortName(a.name,a.symbol):a[k],y=k==='name'?shortName(b.name,b.symbol):b[k];
+    if(x==null&&y==null)return a._i-b._i;if(x==null)return 1;if(y==null)return -1;return (typeof x==='string'?x.localeCompare(y):x-y)*d})}
+  const n=Math.max(1,rows.length),top=130,bot=90,rh=Math.max(22,Math.min(56,(900-top-bot)/(n+1))),fs=Math.round(Math.max(12,Math.min(21,rh*0.42)));
+  const G=[],up=bc('#22C55E'),dn=bc('#EF4444');
+  WCOLS.forEach(c=>{const on=WSORT.k===c.k;G.push({type:'text',x:c.x,y:top+rh/2,cursor:'pointer',onclick:()=>{WSORT=WSORT.k!==c.k?{k:c.k,d:c.k==='name'||c.k==='symbol'?1:-1}:WSORT.d===(c.k==='name'||c.k==='symbol'?1:-1)?{k:c.k,d:-WSORT.d}:{k:null,d:-1};wdraw(true)},
+    style:{text:c.h+(on?(WSORT.d>0?' ▲':' ▼'):''),fontSize:fs-2,fontWeight:'bold',fill:T.src,textAlign:c.a,textVerticalAlign:'middle'}})});
+  G.push({type:'line',shape:{x1:60,y1:top+rh,x2:1540,y2:top+rh},style:{stroke:T.axis,lineWidth:1}});
+  rows.forEach((r,i)=>{const y=top+rh*(i+1.5),cell=(c,text,fill,extra)=>G.push({type:'text',x:c.x,y,style:{text,fontSize:fs,fill:fill||T.text,textAlign:c.a,textVerticalAlign:'middle',...(extra||{})}});
+    if(i<n-1)G.push({type:'line',shape:{x1:60,y1:y+rh/2,x2:1540,y2:y+rh/2},style:{stroke:T.grid,lineWidth:1}});
+    const nm=r.name?shortName(r.name,r.symbol):r.symbol,tk=r.symbol;
+    G.push({type:'text',x:60,y,cursor:'pointer',onclick:()=>wopen(tk),style:{text:nm,fontSize:fs,fontWeight:'bold',fill:T.title,textAlign:'left',textVerticalAlign:'middle',width:420,overflow:'truncate'}});
+    G.push({type:'text',x:500,y,cursor:'pointer',onclick:()=>wopen(tk),style:{text:tk,fontSize:fs,fill:T.text,textAlign:'left',textVerticalAlign:'middle'}});
+    if(r.error||r.pending){cell(WCOLS[2],r.pending?'press Refresh':'no data',T.src);return}
+    cell(WCOLS[2],wpx(r.price,r.currency));
+    ['r1d','r5d','r1m','rytd'].forEach((k,j)=>{const v=r[k];cell(WCOLS[3+j],v==null?'—':pct2(v),v==null?T.src:v>0?up:v<0?dn:T.text,{fontWeight:'bold'})});
+    cell(WCOLS[7],wcap(r.mcap)+(r.mcapEst?'*':''))});
+  const bad=WL.filter(t=>WROWS[t]&&WROWS[t].error),est=WL.some(t=>WROWS[t]&&WROWS[t].mcapEst),cr=WL.some(t=>WROWS[t]&&WROWS[t].crypto);
+  const src='Source: '+WSRC+(WAT?' · As of '+wTime(WAT):'')+' · 1D vs previous close'+(cr?' (crypto: 24h)':'')+(est?' · *mkt cap = price × shares':'');
+  const o=base($('wtitle').value||'Watchlist',src,'wwm');o.graphic.push(...G);chart.clear();chart.setOption(o,true);
+  if(!keepStatus){const st=$('status');st.className=bad.length?'err':'';st.textContent=(WAT?'Last updated '+wTime(WAT)+' · ':'')+'Data updates only when you press Refresh. Click a column header to sort, a name/ticker to chart it.'+(bad.length?' No data for: '+bad.join(', '):'')}}
+$('waddb').onclick=wadd;$('wadd').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();wadd()}});
+$('wreset').onclick=()=>{if(!confirm('Reset the watchlist to '+WDEF.join(', ')+'?'))return;WL=WDEF.slice();wsave();wenter()};
+$('wrefresh').onclick=()=>{if(!WBUSY&&WL.length)wfetch(WL,true)};$('wtitle').oninput=$('wwm').onchange=()=>wdraw(true);
+$('wdl').onclick=()=>{if(MODE!=='watch')return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('wtitle').value||'watchlist').replace(/[^\w]+/g,'_')+'.png';a.click()};
+window.__wdraw=wdraw;window.__wl=()=>WL;
+
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
+const VFIELDS=['wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}return{name,mode:MODE,fields:f,saved:new Date().toISOString()}}
 let VSTORE='server';const VLS='chartmaker_views';
@@ -592,7 +653,7 @@ async function vload(){try{VSTORE=(await (await fetch('/api/config')).json()).vi
 function vlist(sel){const v=$('views'),cur=sel??v.value;v.innerHTML='<option value="">— pick a view —</option>'+VIEWS.map((x,i)=>`<option value="${i}">${x.name.replace(/</g,'&lt;')}</option>`).join('');
   if(cur!==''&&VIEWS[cur])v.value=cur}
 function vapply(x){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';$('ddbase').value='range';for(const [id,val] of Object.entries(x.fields||{})){const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
-  applyTheme();vsync();setMode(['fin','heat','tre','val'].includes(x.mode)?x.mode:'prices')}
+  applyTheme();vsync();setMode(['fin','heat','tre','val','watch'].includes(x.mode)?x.mode:'prices')}
 const vmsg=t=>{$('status').className='';$('status').textContent=t};
 $('views').onchange=()=>{const x=VIEWS[$('views').value];if(x)vapply(x)};
 $('vsave').onclick=async()=>{const n=(prompt('Name for this view:')||'').trim();if(!n)return;
