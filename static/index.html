@@ -233,6 +233,14 @@ function ret(d,p){if(p.r==='1D'&&d.chartPreviousClose&&d.lastPrice)return(d.last
 function ddNow(d,p){const px=d.lastPrice||d.points.at(-1)[1];
   let hi=p.r==='1D'&&d.dayHigh?d.dayHigh:Math.max(...d.highs.map(h=>h[1]));
   if(d.athHigh)hi=Math.max(hi,d.athHigh);hi=Math.max(hi,px);return(px/hi-1)*100}
+// bar value-axis headroom: extend past the data extremes by ~12% of the span (rounded to a nice tick) so value labels
+// above/below the tallest bars never touch the plot edge, the axis line or the category labels
+function niceStep(x){const p=Math.pow(10,Math.floor(Math.log10(x))),f=x/p;return (f<=1?1:f<=2?2:f<=2.5?2.5:f<=5?5:10)*p}
+function headroom(vals,pad=0.12){vals=vals.filter(v=>v!=null&&isFinite(v));if(!vals.length)return{};
+  const lo=Math.min(0,...vals),hi=Math.max(0,...vals),span=(hi-lo)||Math.abs(hi)||1,st=niceStep(span/5),p=span*pad,o={};
+  if(lo<0)o.min=Math.floor((lo-p)/st)*st;else o.min=0;
+  if(hi>0)o.max=Math.ceil((hi+p)/st)*st;else o.max=0;
+  o.interval=st;return o}
 function base(title,src,wmId){
   const wm=$(wmId||'wm').checked;
   return {backgroundColor:T.bg,animation:false,textStyle:{fontFamily:'Inter, Arial, sans-serif',fontSize:16},
@@ -296,10 +304,10 @@ function buildOpt(type,data,title,p){
   const AX=barAxisLayout(rows.map(r=>r.label),chart.getWidth()-o.grid.left-o.grid.right);o.grid.bottom=AX.bottom;
   // labels pinned to the bottom of the grid: with all-negative bars the zero line is at the top and labels used to vanish
   o.xAxis={type:'category',position:'bottom',data:AX.data,axisLabel:{...axLabel,fontSize:AX.fontSize,fontWeight:'bold',color:T.title,interval:0,margin:14,lineHeight:AX.lineHeight,rotate:AX.rotate,align:AX.rotate?'right':'center',verticalAlign:AX.rotate?'top':undefined},axisTick:{show:false},axisLine:{onZero:false,show:true,lineStyle:{color:T.axis}}};
-  if(isdd){o.yAxis={type:'value',max:0,axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split}}
+  if(isdd){o.yAxis={type:'value',...headroom(rows.map(r=>r.v)),max:0,axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split}}
   const base1D=p.r==='1D'?(isdd?"latest vs today's high":'vs previous close'):'';
   o.graphic[0].style.text=`Source: Yahoo Finance · as of ${etTime(p.asOf)}`+(isdd?` · % below ${p.ath?'all-time high':p.r==='1D'?"today's high":'range high'}`:base1D?' · change vs previous close':'');
-  if(!isdd)o.yAxis={type:'value',axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split};
+  if(!isdd)o.yAxis={type:'value',...headroom(rows.map(r=>r.v)),axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split};
   o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:+r.v.toFixed(2),itemStyle:{color:bc(r.v>=0&&!isdd?'#22C55E':'#EF4444')},
     label:{show:true,position:r.v>=0?'top':'bottom',fontSize:Math.max(11,Math.min(18,AX.fontSize+1)),fontWeight:'bold',color:T.title,formatter:q=>pct(q.value)+(r.st?'*':'')}}))}];
   return o;
@@ -354,8 +362,8 @@ async function frender(){
     if(type==='rank'){
       const rows=ok.map(d=>({label:d.label,r:d.rows.at(-1)})).sort((a,b)=>b.r.value-a.r.value);
       o.grid={left:110,right:60,top:130,bottom:115};
-      o.xAxis={type:'category',data:rows.map(x=>x.label+'\n'+x.r.label),axisLabel:{...axLabel,fontSize:18,fontWeight:'bold',interval:0,lineHeight:24},axisTick:{show:false},axisLine:{lineStyle:{color:T.axis}}};
-      o.yAxis={type:'value',axisLabel:{...axLabel,formatter:F},splitLine:split};
+      o.xAxis={type:'category',data:rows.map(x=>x.label+'\n'+x.r.label),axisLabel:{...axLabel,fontSize:18,fontWeight:'bold',interval:0,lineHeight:24},axisTick:{show:false},axisLine:{onZero:false,lineStyle:{color:T.axis}},axisLabel:{...axLabel,fontSize:18,fontWeight:'bold',interval:0,lineHeight:24,margin:14}};
+      o.yAxis={type:'value',...headroom(rows.map(x=>x.r.value)),axisLabel:{...axLabel,formatter:F},splitLine:split};
       o.series=[{type:'bar',barMaxWidth:120,data:rows.map(x=>({value:x.r.value,itemStyle:{color:bc(x.r.value>=0?$('fcolor').value:'#EF4444')},
         label:{show:true,position:x.r.value>=0?'top':'bottom',fontSize:18,fontWeight:'bold',color:T.title,formatter:p=>F(p.value)}}))}];
     }else{
@@ -365,7 +373,7 @@ async function frender(){
       if(type==='line'){o.series=ser.map(s=>({type:'line',name:s.label,data:s.data,connectNulls:false,showSymbol:cats.length<=24||s.data.includes(null),symbolSize:7,
           lineStyle:{width:3,color:bc(s.color)},itemStyle:{color:bc(s.color)},
           endLabel:{show:true,fontSize:17,fontWeight:'bold',color:bc(s.color),formatter:p=>`${ok.length>1?s.label+' ':''}${F(p.value)}`},labelLayout:{moveOverlap:'shiftY'}}));}
-      else{o.grid.right=60;if(ok.length>1)o.legend={top:80,left:60,textStyle:{fontSize:17,color:T.text},itemWidth:18,itemHeight:12};o.grid.top=ok.length>1?130:120;
+      else{Object.assign(o.yAxis,headroom(ser.flatMap(s=>s.data)));o.xAxis.axisLine={onZero:false,lineStyle:{color:T.axis}};o.grid.right=60;if(ok.length>1)o.legend={top:80,left:60,textStyle:{fontSize:17,color:T.text},itemWidth:18,itemHeight:12};o.grid.top=ok.length>1?130:120;
         o.series=ser.map((s,i)=>({type:'bar',name:s.label,data:s.data,itemStyle:{color:bc(s.color)},barMaxWidth:60,
           label:{show:cats.length*ok.length<=16,position:'top',fontSize:15,color:T.title,formatter:p=>F(p.value)}}));}
     }
@@ -473,7 +481,7 @@ function tdraw(){const j=tlast,M=TMET[$('tmetric').value],col=$('tcolor').value;
   o.grid={left:90,right:60,top:130,bottom:110};
   const AX=barAxisLayout(rows.map(r=>r.label),chart.getWidth()-o.grid.left-o.grid.right);o.grid.bottom=AX.bottom+20;
   o.xAxis={type:'category',data:AX.data,axisLabel:{...axLabel,fontSize:AX.fontSize,fontWeight:'bold',color:T.title,interval:0,margin:14,lineHeight:AX.lineHeight,rotate:AX.rotate,align:AX.rotate?'right':'center'},axisTick:{show:false},axisLine:{lineStyle:{color:T.axis}}};
-  o.yAxis={type:'value',axisLabel:{...axLabel,formatter:M.ax},splitLine:split};
+  o.yAxis={type:'value',...headroom(rows.map(r=>r.v)),axisLabel:{...axLabel,formatter:M.ax},splitLine:split};
   const one=$('tmetric').value==='mnav'?[{yAxis:1,lineStyle:{color:T.axis,type:'dashed'},label:{show:true,formatter:'1.0x',color:T.src,fontSize:15},symbol:'none'}]:[];
   o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:r.v,itemStyle:{color:bc(col)}})),markLine:one.length?{silent:true,data:one}:undefined,
     label:{show:true,position:'top',fontSize:Math.max(15,Math.min(20,AX.fontSize+2)),fontWeight:'bold',color:T.title,formatter:q=>M.fmt(q.value)}}];
@@ -532,7 +540,7 @@ function vdraw(){const j=vlast,m=j.metric,col=$('vcolor').value,asc=$('vsort').v
   const o=base($('vtitle').value||j.label,'','vwm');o.grid={left:110,right:60,top:130,bottom:110};
   const AX=barAxisLayout(rows.map(r=>r.label),chart.getWidth()-o.grid.left-o.grid.right);o.grid.bottom=AX.bottom+20;
   o.xAxis={type:'category',data:AX.data,axisLabel:{...axLabel,fontSize:AX.fontSize,fontWeight:'bold',color:T.title,interval:0,margin:14,lineHeight:AX.lineHeight,rotate:AX.rotate,align:AX.rotate?'right':'center'},axisTick:{show:false},axisLine:{lineStyle:{color:T.axis}}};
-  o.yAxis={type:'value',axisLabel:{...axLabel,formatter:v=>m==='mcap'||m==='dy'?vfmt(m,v):(+v.toFixed(2))+(m==='peg'?'':'x')},splitLine:split};
+  o.yAxis={type:'value',...headroom(rows.map(r=>r.v)),axisLabel:{...axLabel,formatter:v=>m==='mcap'||m==='dy'?vfmt(m,v):(+v.toFixed(2))+(m==='peg'?'':'x')},splitLine:split};
   o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:r.v,itemStyle:{color:bc(col)}})),
     label:{show:true,position:'top',fontSize:Math.max(15,Math.min(20,AX.fontSize+2)),fontWeight:'bold',color:T.title,formatter:q=>vfmt(m,q.value)}}];
   const secs=j.rows.filter(r=>r.secThrough).map(r=>r.secThrough).sort(),srcs=[...new Set(j.rows.map(r=>r.src))].join(' / ')+(secs.length?` (filings through ${secs[0]}${secs.at(-1)!==secs[0]?'–'+secs.at(-1):''})`:''),oldest=Math.min(...j.rows.map(r=>r.t)),stale=j.rows.filter(r=>r.stale).map(r=>r.symbol);
