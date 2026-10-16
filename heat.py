@@ -18,6 +18,8 @@ SP = {"Technology": "AAPL MSFT NVDA AVGO ORCL CRM AMD CSCO ADBE ACN IBM NOW INTU
  "Utilities": "NEE SO DUK CEG VST", "Real Estate": "PLD AMT WELL EQIX", "Materials": "LIN SHW APD"}
 SECTOR = {s: k for k, v in SP.items() for s in v.split()}
 MAG7 = "AAPL MSFT NVDA AMZN GOOGL META TSLA".split()
+PRESETS = {"btctreas": "MSTR ASST 3350.T SWC.L XXI NAKA GME DJT HOGPF ALCPB.PA OBTC3.SA ABTC COIN HOOD GLXY BLSH".split(),
+           "miners": "MARA RIOT CLSK HUT CIFR WULF IREN CORZ BTDR HIVE APLD ABTC GLXY CRWV NBIS".split()}
 def crumb(force=False):
     with _lock:
         if force or not _crumb[0] or time.time() - _crumb[1] > 3600:
@@ -25,6 +27,34 @@ def crumb(force=False):
             except Exception: pass
             _crumb[0] = _op.open(urllib.request.Request("https://query1.finance.yahoo.com/v1/test/getcrumb", headers=UA), timeout=10).read().decode().strip(); _crumb[1] = time.time()
         return _crumb[0]
+SHARES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "shares.json")
+SHARES_LIVE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache", "shares_live.json")
+_SH = [None]
+def shares_db():
+    """{sym: [shares, asof, source]}: committed shares.json, overlaid by counts seen in successful v7 quotes (cache/shares_live.json)."""
+    if _SH[0] is None:
+        db = {}
+        for p in (SHARES_FILE, SHARES_LIVE):
+            try:
+                with open(p) as f: db.update(json.load(f).get("shares", {}))
+            except Exception: pass
+        _SH[0] = db
+    return _SH[0]
+def _shares_learn(got):
+    db = shares_db(); day = time.strftime("%Y-%m-%d"); new = {}
+    for s, d in got.items():
+        n = d.get("sharesOutstanding")
+        if n and d.get("via") != "v8" and (s not in db or db[s][0] != n): new[s] = [n, day, "Yahoo quote"]
+    if not new: return
+    db.update(new)
+    try:
+        try:
+            with open(SHARES_LIVE) as f: live = json.load(f)
+        except Exception: live = {"shares": {}}
+        live["shares"].update(new); os.makedirs(os.path.dirname(SHARES_LIVE), exist_ok=True)
+        with open(SHARES_LIVE + ".tmp", "w") as f: json.dump(live, f)
+        os.replace(SHARES_LIVE + ".tmp", SHARES_LIVE)
+    except Exception: pass
 QDISK = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache", "quotes.json")
 QSTALE = []  # symbols served from the disk cache on the last call (set per request by callers via quotes())
 def _v7(chunk, attempt):
@@ -34,11 +64,11 @@ def _v7(chunk, attempt):
 def chart_quote(sym):
     """v8 chart API meta (works where v7 quote/getcrumb are rate-limited). No marketCap/shares here."""
     if os.environ.get("CM_FORCE_V8_FAIL"): raise ValueError("v8 failure (simulated)")
-    u = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?range=5d&interval=1d"
-    with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=15) as r: m = json.load(r)["chart"]["result"][0]["meta"]
+    u = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?range=1d&interval=1d"  # range=1d: chartPreviousClose = previous regular close
+    with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=8) as r: m = json.load(r)["chart"]["result"][0]["meta"]
     if m.get("regularMarketPrice") is None: raise ValueError("no price")
     return {"symbol": sym, "shortName": m.get("shortName"), "longName": m.get("longName"), "marketCap": None, "regularMarketPrice": m.get("regularMarketPrice"),
-            "regularMarketPreviousClose": m.get("regularMarketPreviousClose") or m.get("previousClose"), "regularMarketChangePercent": None,
+            "regularMarketPreviousClose": m.get("regularMarketPreviousClose") or m.get("previousClose") or m.get("chartPreviousClose"), "regularMarketChangePercent": None,
             "regularMarketTime": m.get("regularMarketTime"), "currency": m.get("currency"), "quoteType": m.get("instrumentType"),
             "sharesOutstanding": None, "financialCurrency": None, "via": "v8"}
 def _disk_load():
@@ -75,15 +105,16 @@ def quotes(syms, fresh=False, stale=None):
                 got[q["symbol"]] = d
         miss = [s for s in chunk if s not in got]
         if miss:
-            with ThreadPoolExecutor(8) as ex: rs = list(ex.map(lambda s: _safe(chart_quote, s), miss))
+            with ThreadPoolExecutor(16) as ex: rs = list(ex.map(lambda s: _safe(chart_quote, s), miss))
             disk = _disk_load()
             for s, r in zip(miss, rs):
                 if not r: continue
                 e = disk.get(s)  # keep share count from an earlier good v7 quote so price x shares still works
                 if e and e[1].get("sharesOutstanding"): r["sharesOutstanding"] = e[1]["sharesOutstanding"]; r["sharesFrom"] = e[0]
+                elif s in shares_db(): r["sharesOutstanding"], r["sharesAsOf"] = shares_db()[s][0], shares_db()[s][1]
                 got[s] = r
     for s, d in got.items(): QCACHE[s] = (now, d); out[s] = d
-    if got: _disk_save({s: (now, d) for s, d in got.items()})
+    if got: _disk_save({s: (now, d) for s, d in got.items()}); _shares_learn(got)
     left = [s for s in need if s not in got]
     if left:
         disk = _disk_load()
@@ -162,6 +193,7 @@ def alt_shares(sym, name):
     if c and time.time() - c[0] < 86400: return c[1]
     out = (None, None)
     try:
+        if os.environ.get("CM_FORCE_V7_FAIL"): raise RuntimeError("429 (simulated)")
         u = f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{urllib.parse.quote(sym)}?" + urllib.parse.urlencode({"modules": "defaultKeyStatistics", "crumb": crumb()})
         with _op.open(urllib.request.Request(u, headers=UA), timeout=15) as r: ks = json.load(r)["quoteSummary"]["result"][0]["defaultKeyStatistics"]
         for k in ("sharesOutstanding", "impliedSharesOutstanding"):
@@ -176,6 +208,13 @@ def alt_shares(sym, name):
             for s2, q2 in quotes(cands[:8]).items():
                 if q2.get("sharesOutstanding") and norm(q2.get("longName")) == norm(name): out = (q2["sharesOutstanding"], s2); break
         except Exception: pass
+    if not out[0]:
+        try:
+            import fin
+            cik, _ = fin.cik_of(sym); f = fin.facts(cik)
+            d = sorted(f["facts"].get("dei", {}).get("EntityCommonStockSharesOutstanding", {}).get("units", {}).get("shares", []), key=lambda x: (x["end"], x.get("filed", "")))
+            if d: out = (d[-1]["val"], f"SEC cover page {d[-1]['end']}")
+        except Exception: pass
     SHARES[sym] = (time.time(), out); return out
 GECKO, CIMG = [0, []], {}
 STABLE = set("USDT USDC DAI USDE USDS FDUSD TUSD PYUSD USDD USD1 RLUSD USDTB BUSD GUSD USDP FRAX LUSD EURC EURS USDX USDG USDF USYC BUIDL USTB OUSG SUSDE SUSDS USD0 USDB USDL XAUT PAXG FIGR_HELOC USDY EURSAFO SYRUPUSDC USDAI USR".split())
@@ -186,11 +225,27 @@ def gecko(fresh=False):
     if GECKO[1] and not fresh and time.time() - GECKO[0] < 120: return GECKO[1]
     u = "https://api.coingecko.com/api/v3/coins/markets?" + urllib.parse.urlencode({"vs_currency": "usd", "order": "market_cap_desc", "per_page": 250, "page": 1, "price_change_percentage": "24h,7d,30d,1y"})
     try:
+        if os.environ.get("CM_FORCE_GECKO_FAIL"): raise urllib.error.HTTPError(u, 429, "Too Many Requests (simulated)", None, None)
         with urllib.request.urlopen(urllib.request.Request(u, headers={**UA, "Accept": "application/json"}), timeout=20) as r: GECKO[:] = [time.time(), json.load(r)]
+        GECKO_SRC[0] = "CoinGecko"
     except Exception:
-        if not GECKO[1]: raise
+        # CoinGecko rate-limits shared cloud IPs (429 on Render): fall back to CoinPaprika (no key), mapped to the same shape
+        try: GECKO[:] = [time.time(), paprika()]; GECKO_SRC[0] = "CoinPaprika"
+        except Exception:
+            if not GECKO[1]: raise
     for c in GECKO[1]: CIMG.setdefault(c["symbol"].upper(), c.get("image"))
     return GECKO[1]
+GECKO_SRC = ["CoinGecko"]
+def paprika():
+    with urllib.request.urlopen(urllib.request.Request("https://api.coinpaprika.com/v1/tickers?limit=250", headers=UA), timeout=20) as r: d = json.load(r)
+    out = []
+    for c in sorted(d, key=lambda x: x.get("rank") or 1e9):
+        q = (c.get("quotes") or {}).get("USD") or {}
+        if not q.get("market_cap"): continue
+        out.append({"id": c["id"], "symbol": c["symbol"].lower(), "name": c["name"], "market_cap": q["market_cap"], "current_price": q.get("price"),
+                    "image": f"https://static.coinpaprika.com/coin/{c['id']}/logo.png", "paprika": True,
+                    "price_change_percentage_24h_in_currency": q.get("percent_change_24h"), "price_change_percentage_7d_in_currency": q.get("percent_change_7d")})
+    return out
 GK = {"1D": "price_change_percentage_24h_in_currency", "7D": "price_change_percentage_7d_in_currency", "1M": "price_change_percentage_30d_in_currency", "1Y": "price_change_percentage_1y_in_currency"}
 def is_stable(c):
     s = c["symbol"].upper()
@@ -199,22 +254,23 @@ def crow(c, rng, fresh):
     s = c["symbol"].upper()
     d = {"symbol": s, "shortName": c.get("name"), "marketCap": c.get("market_cap"), "regularMarketPrice": c.get("current_price"),
          "regularMarketTime": int(time.time()), "crypto": True, "logoKey": "c:" + s, "sector": "Crypto"}
-    if rng in GK: d["chg"] = c.get(GK[rng]) if rng != "1D" else (c.get(GK[rng]) if c.get(GK[rng]) is not None else c.get("price_change_percentage_24h"))
+    if rng in GK and not (c.get("paprika") and rng in ("1M", "1Y")): d["chg"] = c.get(GK[rng]) if rng != "1D" else (c.get(GK[rng]) if c.get(GK[rng]) is not None else c.get("price_change_percentage_24h"))
     else: d["chg"] = _safe(range_ret, s + "-USD", "5D" if rng == "7D" else rng, fresh); d["since"] = SINCE.get((s + "-USD", "5D" if rng == "7D" else rng))
     return d
 def heatmap(universe, tickers, rng, fresh=False, stables=False):
     if universe in ("crypto50", "crypto100"):
         cs = [c for c in gecko(fresh) if c.get("market_cap") and (stables or not is_stable(c))][:50 if universe == "crypto50" else 100]
-        if rng in GK: rows = [crow(c, rng, fresh) for c in cs]
+        if rng in GK and not (cs and cs[0].get("paprika") and rng in ("1M", "1Y")): rows = [crow(c, rng, fresh) for c in cs]
         else:
             with ThreadPoolExecutor(8) as ex: rows = list(ex.map(lambda c: crow(c, rng, fresh), cs))
         ok = [d for d in rows if d.get("chg") is not None]
         return {"rows": ok, "missing": [d["symbol"] for d in rows if d.get("chg") is None], "asOf": int(GECKO[0]), "range": rng,
-                "source": "CoinGecko" + ("" if rng in GK else " · Yahoo Finance daily closes")}
+                "source": GECKO_SRC[0] + ("" if rng in GK and not (cs and cs[0].get("paprika") and rng in ("1M", "1Y")) else " · Yahoo Finance daily closes")}
     return _heatmap(universe, tickers, rng, fresh)
 def _heatmap(universe, tickers, rng, fresh=False):
     crypto = []
     if universe == "mag7": syms = MAG7
+    elif universe in PRESETS: syms = list(PRESETS[universe])
     elif universe == "custom":
         syms = [s.strip().upper() for s in tickers.split(",") if s.strip()][:200]
         # crypto symbols: "BTC-USD" always; bare "BTC"/"ETH" when it is a top-100 coin by market cap (wins over a same-named stock/ETF)
@@ -241,11 +297,14 @@ def _heatmap(universe, tickers, rng, fresh=False):
         elif d.get("marketCap"): d["marketCapLocal"] = d["marketCap"]  # Yahoo reports mcap in major units (GBP for GBp quotes)
         if d.get("marketCapLocal") and r: d["marketCapUSD"] = d["marketCapLocal"] * r
         elif d.get("marketCapLocal"): notes.append(f"{s}: no {maj}/USD rate")
+        elif d.get("regularMarketPrice"): d["eqSize"] = True; notes.append(f"{s}: no share count, equal-size tile")
         else: notes.append(f"{s}: no market cap on Yahoo")
-    rows = [dict(q[s], marketCap=q[s]["marketCapUSD"]) for s in syms if s in q and q[s].get("marketCapUSD")]
+    known = sorted(q[s]["marketCapUSD"] for s in syms if s in q and q[s].get("marketCapUSD"))
+    med = known[len(known) // 2] if known else 1e9
+    rows = [dict(q[s], marketCap=q[s].get("marketCapUSD") or med) for s in syms if s in q and (q[s].get("marketCapUSD") or q[s].get("eqSize"))]
     rows.sort(key=lambda d: -d["marketCap"])
     if universe == "sp100": rows = rows[:100]
-    errs += [n.split(":")[0] for n in notes]
+    errs += [n.split(":")[0] for n in notes if "equal-size" not in n]
     if rng == "1D":
         for d in rows:
             pc, px = d.get("regularMarketPreviousClose"), d.get("regularMarketPrice")
@@ -256,7 +315,7 @@ def _heatmap(universe, tickers, rng, fresh=False):
     for d in rows: d["sector"] = SECTOR.get(d["symbol"], "Other")
     rows = sorted(rows + crypto, key=lambda d: -(d.get("marketCap") or 0))
     src = "Yahoo Finance" if not crypto else ("CoinGecko" if not syms else "Yahoo Finance, CoinGecko")
-    return {"notes": notes, "est": [d["symbol"] + (f" (shares via {d['sharesSrc']})" if d.get("sharesSrc") else "") for d in rows if d.get("mcapEst")], "source": src, "cryptoMixed": bool(crypto and syms), "rows": [d for d in rows if d.get("chg") is not None], "missing": errs + [d["symbol"] for d in rows if d.get("chg") is None],
+    return {"notes": notes, "eq": [d["symbol"] for d in rows if d.get("eqSize")], "sharesAsOf": sorted({d["sharesAsOf"] for d in rows if d.get("sharesAsOf")}), "est": [d["symbol"] + (f" (shares via {d['sharesSrc']})" if d.get("sharesSrc") else "") for d in rows if d.get("mcapEst")], "source": src, "cryptoMixed": bool(crypto and syms), "rows": [d for d in rows if d.get("chg") is not None], "missing": errs + [d["symbol"] for d in rows if d.get("chg") is None],
             "asOf": max([d.get("regularMarketTime") or 0 for d in rows] or [0]), "range": rng}
 def _safe(f, *a):
     try: return f(*a)
