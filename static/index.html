@@ -87,6 +87,8 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <script>
 const $=id=>document.getElementById(id);
 const chart=echarts.init($('chart'),null,{renderer:'canvas'});
+// PNG export never includes the hover crosshair/tooltip: hide them before snapshotting
+{const g=chart.getDataURL.bind(chart);chart.getDataURL=o=>{try{chart.dispatchAction({type:'hideTip'});chart.dispatchAction({type:'updateAxisPointer',currTrigger:'leave'})}catch(e){}return g(o)}}
 const PALETTE=['#F7931A','#8B5CF6','#0EA5E9','#22C55E','#EF4444','#111827','#EC4899','#14B8A6'];
 const DAY=86400;
 const THEMES={
@@ -249,6 +251,22 @@ function base(title,src,wmId){
       ...(wm?[{type:'text',right:50,top:40,style:{text:'@thepowerfulHRV',fontSize:18,fill:T.wm}}]:[])],
     grid:{left:90,right:190,top:120,bottom:80}};
 }
+// hover tooltip for line charts: vertical crosshair at nearest date, date + each series' value (same formatter as end labels)
+function hoverTip(fmt,time,intra){const esc=x=>String(x).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  return{trigger:'axis',confine:true,transitionDuration:0,backgroundColor:T.dark?'rgba(23,26,32,0.95)':'rgba(255,255,255,0.97)',borderColor:T.axis,
+    textStyle:{color:T.text,fontSize:14},extraCssText:'box-shadow:0 2px 10px rgba(0,0,0,.25);border-radius:6px',
+    axisPointer:{type:'line',lineStyle:{color:T.axis,width:1,type:'dashed'},label:{show:false}},
+    formatter:ps=>{ps=[].concat(ps);if(!ps.length)return'';
+      if(time){const t=ps[0].axisValue,gap=intra?3*3600e3:4*86400e3;
+        // every series' nearest point to the hovered date (stocks/crypto timestamps differ, so ECharts' own pick can drop series)
+        ps=(chart.getOption().series||[]).filter(x=>x.type==='line'&&Array.isArray(x.data)&&x.data.length).map(x=>{const D=x.data;let lo=0,hi=D.length-1;
+          while(hi-lo>1){const m=(lo+hi)>>1;if(D[m][0]<t)lo=m;else hi=m}const q=Math.abs(D[lo][0]-t)<=Math.abs(D[hi][0]-t)?D[lo]:D[hi];
+          return Math.abs(q[0]-t)<=gap?{seriesName:x.name,value:q,color:(x.itemStyle||{}).color||(x.lineStyle||{}).color}:null}).filter(Boolean)}
+      ps=ps.filter(q=>{const v=Array.isArray(q.value)?q.value[1]:q.value;return v!=null&&!isNaN(v)});if(!ps.length)return'';
+      const t0=Array.isArray(ps[0].value)?ps[0].value[0]:ps[0].axisValue;
+      const d=time?new Date(t0).toLocaleString('en-US',{timeZone:'UTC',month:'short',day:'numeric',year:'numeric',...(intra?{hour:'numeric',minute:'2-digit',timeZone:'America/New_York'}:{})})+(intra?' ET':''):ps[0].axisValueLabel;
+      return`<div style="font-weight:600;color:${T.title};margin-bottom:4px">${esc(d)}</div>`+ps.map(q=>{const v=Array.isArray(q.value)?q.value[1]:q.value;
+        return`<div style="display:flex;align-items:center;gap:8px;line-height:1.5"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${q.color}"></span><span style="flex:1">${esc(q.seriesName)}</span><b style="color:${T.title};margin-left:12px">${esc((typeof fmt==='function'?fmt:fmt[q.seriesName])(v))}</b></div>`}).join('')}}}
 let axLabel, split;
 function lineOpt(o,series,fmt,intraday){
   const multi=series.length>1, extra=[];
@@ -262,6 +280,7 @@ function lineOpt(o,series,fmt,intraday){
     lineStyle:{width:3,color:bc(s.color)},itemStyle:{color:bc(s.color)},
     endLabel:{show:true,fontSize:17,fontWeight:'bold',color:bc(s.color),formatter:q=>`${s.label} ${fmt(q.value[1])}`},
     labelLayout:{moveOverlap:'shiftY'}})).concat(extra);
+  const d0=series[0]&&series[0].data;o.tooltip=hoverTip(fmt,true,!!(d0&&d0.length>1&&d0[1][0]-d0[0][0]<20*3600e3));
   if(extra.length){o.legend={top:80,left:60,icon:'roundRect',itemWidth:18,itemHeight:3,textStyle:{fontSize:14,color:T.text}};o.grid.top=130}
   return o;
 }
@@ -372,7 +391,7 @@ async function frender(){
       o.yAxis={type:'value',axisLabel:{...axLabel,formatter:F},splitLine:split};
       if(type==='line'){o.series=ser.map(s=>({type:'line',name:s.label,data:s.data,connectNulls:false,showSymbol:cats.length<=24||s.data.includes(null),symbolSize:7,
           lineStyle:{width:3,color:bc(s.color)},itemStyle:{color:bc(s.color)},
-          endLabel:{show:true,fontSize:17,fontWeight:'bold',color:bc(s.color),formatter:p=>`${ok.length>1?s.label+' ':''}${F(p.value)}`},labelLayout:{moveOverlap:'shiftY'}}));}
+          endLabel:{show:true,fontSize:17,fontWeight:'bold',color:bc(s.color),formatter:p=>`${ok.length>1?s.label+' ':''}${F(p.value)}`},labelLayout:{moveOverlap:'shiftY'}}));o.tooltip=hoverTip(F,false);}
       else{Object.assign(o.yAxis,headroom(ser.flatMap(s=>s.data)));o.xAxis.axisLine={onZero:false,lineStyle:{color:T.axis}};o.grid.right=60;if(ok.length>1)o.legend={top:80,left:60,textStyle:{fontSize:17,color:T.text},itemWidth:18,itemHeight:12};o.grid.top=ok.length>1?130:120;
         o.series=ser.map((s,i)=>({type:'bar',name:s.label,data:s.data,itemStyle:{color:bc(s.color)},barMaxWidth:60,
           label:{show:cats.length*ok.length<=16,position:'top',fontSize:15,color:T.title,formatter:p=>F(p.value)}}));}
