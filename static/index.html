@@ -52,14 +52,16 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <button id="tgo">Render</button><button id="trefresh" title="Fresh quotes">Refresh</button><button id="tdl">Download PNG</button>
 </div>
 <div id="vctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
+<label>View<select id="vview"><option value="snap">Snapshot</option><option value="time">Over time</option></select></label>
 <label>Tickers (comma)<input id="vtickers" value="NVDA,AAPL,TSLA,MSTR,MSFT,GOOGL" size="30"></label>
-<label>Metric<select id="vmetric"><option value="pe">Trailing P/E</option><option value="fpe">Forward P/E</option><option value="ps">Price/Sales TTM</option><option value="evebitda">EV/EBITDA</option><option value="evrev">EV/Revenue</option><option value="pb">Price/Book</option><option value="peg">PEG</option><option value="mcap">Market cap USD</option><option value="dy">Dividend yield</option></select></label>
+<label>Metric<select id="vmetric"><option value="pe">Trailing P/E</option><option value="fpe">Forward P/E</option><option value="ps">Price/Sales TTM</option><option value="evebitda">EV/EBITDA</option><option value="evrev">EV/Revenue</option><option value="pb">Price/Book</option><option value="peg">PEG</option><option value="mcap">Market cap USD</option><option value="dy">Dividend yield</option><option value="mnav">mNAV (Over time, SEC BTC holdings)</option></select></label>
+<label id="vrangebox" style="display:none">Range<select id="vrange"><option>1Y</option><option>3Y</option><option selected>5Y</option><option>10Y</option><option>Max</option></select></label>
 <label>Sort<select id="vsort"><option value="desc">High to low</option><option value="asc">Low to high</option></select></label>
 <label>Display names (comma, optional)<input id="vnames" size="18"></label>
 <label>Title<input id="vtitle" size="30" placeholder="auto"></label>
 <label>Bar color<select id="vcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="vwm" type="checkbox" checked></label>
-<button id="vgo">Render</button><button id="vrefresh" title="Bypass the 6h fundamentals cache">Refresh</button><button id="vdl">Download PNG</button>
+<button id="vgo">Render</button><button id="vrefresh" title="Bypass the 6h fundamentals cache">Refresh</button><button id="vdl">Download PNG</button><button id="vcsv" style="display:none">Download CSV</button>
 </div>
 <div id="ctl">
 <label>Tickers (comma)<input id="tickers" value="NBIS,CRWV" size="22"></label>
@@ -486,7 +488,38 @@ $('tdl').onclick=()=>{if(!tlast)return;const a=document.createElement('a');a.hre
 // ---------- Valuation mode: /api/valuation (Yahoo quoteSummary, 6h disk cache; stale / SEC-derived fallback) ----------
 let vlast=null,VFRESH=false;
 const vfmt=(m,v)=>m==='mcap'?(v>=1e12?'$'+(v/1e12).toFixed(2)+'T':v>=1e9?'$'+(v/1e9).toFixed(1)+'B':'$'+(v/1e6).toFixed(0)+'M'):m==='dy'?(v*100).toFixed(2)+'%':v.toFixed(v>=100?0:v>=10?1:2)+(m==='peg'?'':'x');
-async function vrender(){const st=$('status');st.className='';st.textContent='Loading fundamentals…';
+const VTIME=new Set(['pe','ps','evrev','evebitda','mcap','mnav']);
+function vsync(){const t=$('vview').value==='time';$('vrangebox').style.display=t?'':'none';$('vcsv').style.display=t?'':'none';$('vsort').parentElement.style.display=t?'none':'';
+  [...$('vmetric').options].forEach(o=>o.disabled=t?!VTIME.has(o.value):o.value==='mnav');
+  if($('vmetric').selectedOptions[0].disabled)$('vmetric').value=t?'pe':'pe'}
+let vhlast=null;
+async function vhrender(){const st=$('status');st.className='';st.textContent='Loading price history × SEC filings…';
+  try{const r=await fetch(`/api/valhist?tickers=${encodeURIComponent($('vtickers').value)}&metric=${$('vmetric').value}&range=${$('vrange').value}${VFRESH?'&fresh=1':''}`,{cache:'no-store'});
+    const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);vhlast=j;vhdraw()}
+  catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();vhlast=null}}
+function vhdraw(){const j=vhlast,m=j.metric;
+  const syms=$('vtickers').value.split(',').map(x=>x.trim().toUpperCase()).filter(Boolean),nms=$('vnames').value.split(',').map(x=>x.trim());
+  const ok=j.series.filter(s=>s.points.some(p=>p[1]!=null)),nm=j.series.filter(s=>!s.points.some(p=>p[1]!=null));
+  if(!ok.length){chart.clear();$('status').className='err';$('status').textContent='n/m for all: '+nm.map(s=>s.symbol+' ('+s.nm+')').join('; ');vlast=null;return}
+  const pal=ok.length===1?[$('vcolor').value]:PALETTE;
+  const lab=s=>{const i=syms.indexOf(s.symbol);return i>=0&&nms[i]?nms[i]:SHORT[s.symbol]||s.symbol};
+  const fmt=v=>v==null?'':m==='mcap'?vfmt('mcap',v):(+v.toFixed(v>=100?0:v>=10?1:2))+'x';
+  const series=ok.map((s,i)=>({label:lab(s),color:pal[i%pal.length],data:s.points.slice(s.points.findIndex(p=>p[1]!=null))}));
+  const o=base($('vtitle').value||`${j.label}, ${j.range}`,'','vwm');lineOpt(o,series,fmt);
+  o.series.forEach(x=>{x.connectNulls=false;x.endLabel.formatter=q=>`${q.seriesName} ${fmt(q.value[1])}`});
+  const late=ok.filter(s=>s.firstValid&&s.firstValid>s.points[0][0]+30*DAY*1000).map(s=>`${s.symbol} from ${fmtD(s.firstValid)}`);
+  const ssrc=[...new Set(ok.map(s=>s.sharesSrc).filter(Boolean))];
+  o.graphic[0].style.text=`${j.label} = ${j.def} · Source: Yahoo Finance closes × SEC XBRL, each value used from its filing date (no lookahead)`+(ssrc.length?' · SEC shares':'');o.graphic[0].bottom=26;
+  const foot=[nm.length?'n/m: '+nm.map(s=>s.symbol+' ('+(s.nm||'').split(' (')[0]+')').join('; '):'',late.length?'data starts: '+late.join(', '):'',m==='pe'||m==='evebitda'?'gaps = negative or missing earnings':''].filter(Boolean).join(' · ');
+  if(foot)o.graphic.push({type:'text',left:60,bottom:4,style:{text:foot,fontSize:15,fill:T.src}});
+  chart.setOption(o,true);last={opt:o,asOf:Date.now()/1000};vlast=j;
+  $('status').className='';$('status').textContent=`${ok.length} series · ${j.range}`+(nm.length?' · n/m: '+nm.map(s=>s.symbol).join(', '):'')+(j.series.some(s=>s.cached)?' · from 6h cache':'')}
+function vcsv(){if(!vhlast)return;const j=vhlast,ss=j.series.filter(s=>s.points.length),D2=t=>new Date(t).toISOString().slice(0,10);
+  const mp=ss.map(s=>{const m=new Map();s.points.forEach(p=>{if(p[1]!=null||!m.has(D2(p[0])))m.set(D2(p[0]),p[1])});return m});
+  const ds=[...new Set(mp.flatMap(m=>[...m.keys()]))].sort(),lines=['date,'+ss.map(s=>s.symbol+' '+j.label.replace(/,/g,'')).join(',')];
+  ds.forEach(d=>lines.push(d+','+mp.map(m=>{const v=m.get(d);return v==null?'':+v.toPrecision(6)}).join(',')));
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([lines.join('\n')],{type:'text/csv'}));a.download=($('vtitle').value||j.label+'_'+j.range).replace(/[^\w]+/g,'_')+'.csv';a.click()}
+async function vrender(){if($('vview').value==='time')return vhrender();const st=$('status');st.className='';st.textContent='Loading fundamentals…';
   try{const r=await fetch(`/api/valuation?tickers=${encodeURIComponent($('vtickers').value)}&metric=${$('vmetric').value}${VFRESH?'&fresh=1':''}`,{cache:'no-store'});
     const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);vlast=j;vdraw()}
   catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();vlast=null}}
@@ -506,7 +539,7 @@ function vdraw(){const j=vlast,m=j.metric,col=$('vcolor').value,asc=$('vsort').v
   if(j.nm.length)o.graphic.push({type:'text',left:60,bottom:4,style:{text:'n/m (negative or not available, excluded): '+j.nm.map(x=>x.symbol).join(', '),fontSize:15,fill:T.src}});
   chart.setOption(o,true);last={opt:o,asOf:oldest/1000};
   $('status').className='';$('status').textContent=`${rows.length} ranked · ${srcs} · as of ${etTime(oldest)}`+(j.nm.length?' · n/m: '+j.nm.map(x=>x.symbol+' ('+x.why+')').join(', '):'')+(j.errors.length?' · ⚠ '+j.errors.join('; '):'')}
-$('vgo').onclick=vrender;$('vmetric').onchange=vrender;['vsort','vcolor','vnames'].forEach(id=>$(id).onchange=()=>vlast&&vdraw());
+$('vgo').onclick=vrender;$('vview').onchange=()=>{vsync();vrender()};$('vrange').onchange=vrender;$('vcsv').onclick=vcsv;vsync();$('vmetric').onchange=vrender;['vsort','vcolor','vnames'].forEach(id=>$(id).onchange=()=>$('vview').value==='time'?vhlast&&vhdraw():vlast&&vdraw());
 $('vrefresh').onclick=async()=>{VFRESH=true;try{await vrender()}finally{VFRESH=false}};
 $('vdl').onclick=()=>{if(!vlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('vtitle').value||'valuation').replace(/[^\w]+/g,'_')+'.png';a.click()};
 $('hgo').onclick=hrender;$('hrefresh').onclick=async()=>{HFRESH=true;try{await hrender()}finally{HFRESH=false}};
@@ -517,7 +550,7 @@ $('htitle').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault(
 window.__hrender=hrender;
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
+const VFIELDS=['vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}return{name,mode:MODE,fields:f,saved:new Date().toISOString()}}
 let VSTORE='server';const VLS='chartmaker_views';
@@ -529,7 +562,7 @@ async function vload(){try{VSTORE=(await (await fetch('/api/config')).json()).vi
 function vlist(sel){const v=$('views'),cur=sel??v.value;v.innerHTML='<option value="">— pick a view —</option>'+VIEWS.map((x,i)=>`<option value="${i}">${x.name.replace(/</g,'&lt;')}</option>`).join('');
   if(cur!==''&&VIEWS[cur])v.value=cur}
 function vapply(x){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';$('ddbase').value='range';for(const [id,val] of Object.entries(x.fields||{})){const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
-  applyTheme();setMode(['fin','heat','tre','val'].includes(x.mode)?x.mode:'prices')}
+  applyTheme();vsync();setMode(['fin','heat','tre','val'].includes(x.mode)?x.mode:'prices')}
 const vmsg=t=>{$('status').className='';$('status').textContent=t};
 $('views').onchange=()=>{const x=VIEWS[$('views').value];if(x)vapply(x)};
 $('vsave').onclick=async()=>{const n=(prompt('Name for this view:')||'').trim();if(!n)return;
