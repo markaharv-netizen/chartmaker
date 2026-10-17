@@ -15,8 +15,10 @@ def _hsave(new):
         with open(HDISK + ".tmp", "w") as f: json.dump(d, f)
         os.replace(HDISK + ".tmp", HDISK)
     except Exception: pass
+VMETA = {}
 def daily(sym, fresh=False):
-    """[(ts, close)] daily regular-session closes since ~Dec 1 of last year (>= 45 days)."""
+    """[(ts, close, volume)] daily regular-session bars since ~Dec 1 of last year (>= 45 days). volume may be None
+    (old disk-cache entries are 2-tuples -> no volume). VMETA[sym] = current regular trading period (start, end)."""
     c = HMEM.get(sym)
     if c and not fresh and time.time() - c[0] < 300: return c[1]
     now = int(time.time()); y = datetime.datetime.utcnow().year
@@ -24,13 +26,31 @@ def daily(sym, fresh=False):
     u = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?" + urllib.parse.urlencode({"period1": p1, "period2": now, "interval": "1d", "includePrePost": "false"})
     try:
         with urllib.request.urlopen(urllib.request.Request(u, headers=heat.UA), timeout=15) as r: r0 = json.load(r)["chart"]["result"][0]
-        pts = [(t, x) for t, x in zip(r0.get("timestamp") or [], r0["indicators"]["quote"][0]["close"]) if x is not None]
+        q = r0["indicators"]["quote"][0]; vols = q.get("volume") or []
+        pts = [(t, x, vols[i] if i < len(vols) else None) for i, (t, x) in enumerate(zip(r0.get("timestamp") or [], q["close"])) if x is not None]
         if not pts: raise ValueError("no points")
+        try: reg = r0["meta"]["currentTradingPeriod"]["regular"]; VMETA[sym] = (reg["start"], reg["end"])
+        except Exception: pass
         HMEM[sym] = (time.time(), pts); _hsave({sym: pts}); return pts
     except Exception:
         d = _hdisk().get(sym)
         if d: return [tuple(p) for p in d]
         raise
+def relvol(sym, pts, crypto, n=30):
+    """%Vol = latest session volume / average daily volume of the n sessions before it (latest excluded).
+    Stocks: latest bar (flagged volPartial while that session is still trading). Crypto: Yahoo's current UTC-day bar is
+    partial, so use the last complete UTC day (a full 24h) vs the n days before it. Needs >= 20 valid prior days, else nothing."""
+    pts = [p for p in pts if len(p) > 2]
+    if crypto and pts and time.time() - pts[-1][0] < 86400: pts = pts[:-1]
+    if len(pts) < 21: return {}
+    t, _, v = pts[-1]
+    if not v or v <= 0: return {}
+    prior = [p[2] for p in pts[-1 - n:-1] if p[2] and p[2] > 0]
+    if len(prior) < 20: return {}
+    avg = sum(prior) / len(prior); now = time.time(); m = VMETA.get(sym)
+    out = {"vol": v, "volAvg": avg, "volDays": len(prior), "rvol": v / avg * 100, "volTs": t}
+    if not crypto and m and m[0] <= now < m[1] and t >= m[0] - 43200: out["volPartial"] = True
+    return out
 def rets(pts, px, crypto):
     """5D: vs close 5 sessions before the latest bar; 1M: last close on/before latest bar date - 1 calendar month; YTD: last close of prior year."""
     if px is None: px = pts[-1][1]
@@ -40,10 +60,10 @@ def rets(pts, px, crypto):
     m, y = (lt.month - 1, lt.year) if lt.month > 1 else (12, lt.year - 1)
     try: tgt = lt.replace(year=y, month=m)
     except ValueError: tgt = lt.replace(year=y, month=m, day=28)
-    b = [c for t, c in pts if t <= tgt.timestamp() + 43200]
+    b = [p[1] for p in pts if p[0] <= tgt.timestamp() + 43200]
     if b: out["r1m"] = (px / b[-1] - 1) * 100
     jan1 = datetime.datetime(lt.year, 1, 1, tzinfo=datetime.timezone.utc).timestamp()
-    b = [c for t, c in pts if t < jan1]
+    b = [p[1] for p in pts if p[0] < jan1]
     if b: out["rytd"] = (px / b[-1] - 1) * 100
     return out
 def compute(tickers, fresh=False):
@@ -78,7 +98,7 @@ def compute(tickers, fresh=False):
     def hist(r):
         if r.get("error"): return
         hs = r["symbol"] if not r.get("crypto") or r["symbol"].endswith("-USD") else r["symbol"] + "-USD"
-        try: r.update(rets(daily(hs, fresh), r.get("price"), r.get("crypto")))
+        try: pts = daily(hs, fresh); r.update(rets(pts, r.get("price"), r.get("crypto"))); r.update(relvol(hs, pts, r.get("crypto")))
         except Exception as e: r["histError"] = str(e)[:80]
     with ThreadPoolExecutor(8) as ex: list(ex.map(hist, rows))
     src = "Yahoo Finance" + (", " + heat.GECKO_SRC[0] if any(r.get("crypto") for r in rows) else "")

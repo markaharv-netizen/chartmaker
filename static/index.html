@@ -173,7 +173,7 @@ async function render(){
     if(type==='bardd'){p.ath=ath;const data=await Promise.all(syms.map(s=>fetchSym(s,p)));
       if(ath){const full=await Promise.all(syms.map(s=>fetchSym(s,{p1:0,p2:p.p2,iv:'1mo',r:'Max'})));data.forEach((d,i)=>d.athHigh=Math.max(...full[i].highs.map(h=>h[1])))}
       data.forEach((d,i)=>d.label=barLabel(d,names[i]));
-      if(my!==RSEQ)return; return finish(type,data,p,'Drawdown from '+(ath?'all-time high':(p.r==='1D'?"today's high":p.r+' high')))}
+      if(my!==RSEQ||MODE!=='prices')return; return finish(type,data,p,'Drawdown from '+(ath?'all-time high':(p.r==='1D'?"today's high":p.r+' high')))}
     if(dd&&!intra)p.iv='1d'; // drawdowns use daily closes so peaks/troughs aren't smoothed away by weekly/monthly bars
     const data=await Promise.all(syms.map(s=>fetchSym(s,ath&&!intra?{...p,p1:0}:p)));
     data.forEach((d,i)=>{d.label=names[i]||d.symbol.replace('-USD','');if(!(ath&&!intra))d.points=trimYTD(d.points,p.r)});
@@ -183,7 +183,7 @@ async function render(){
     $('smabox').style.opacity=type==='line'&&!['1D','5D'].includes(p.r)?1:0.4;
     if(sl.length){p.vis=data[0].points[0][0];
       const ss=await Promise.all(data.map(d=>smaSeries(d.symbol,{...p,vis:d.points[0][0]},sl)));data.forEach((d,i)=>d.smas=ss[i])}
-    if(my!==RSEQ)return; // a newer render started while this one was fetching; don't overwrite it
+    if(my!==RSEQ||MODE!=='prices')return; // a newer render started while this one was fetching; don't overwrite it
     const titleAuto={line:data.map(d=>d.label).join(' vs ')+' price',pct:data.map(d=>d.label).join(' vs ')+' % change',
       bar:'Return, '+(p.r==='Custom'?'custom range':p.r),ratio:`${data[0].label} priced in ${data[1]?.label}`,
       drawdown:data.map(d=>d.label).join(' vs ')+(ath?' drawdown from all-time high':' drawdown from peak')}[type];
@@ -349,7 +349,7 @@ $('go').onclick=render;
 
 // ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------
 let MODE='prices', flast=null;
-function setMode(m){MODE=m;$('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';
+function setMode(m){MODE=m;wtipHide();$('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';
   $('ctl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
   $('ftable').innerHTML='';$('fnote').textContent='';chart.clear();$('status').textContent='';
   if(m==='prices')render();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
@@ -609,10 +609,31 @@ const wTime=t=>new Date(t*1000).toLocaleString('en-US',{timeZone:'America/New_Yo
 const CSYM={USD:'$',EUR:'€',GBP:'£',JPY:'¥',CAD:'C$',AUD:'A$',HKD:'HK$',CHF:'CHF ',BRL:'R$',INR:'₹',KRW:'₩',CNY:'¥'};
 function wpx(v,c){if(v==null)return'—';if(c==='GBp')return fmtNum(v)+'p';return (CSYM[c]??(c?c+' ':''))+(Math.abs(v)>=1000?v.toLocaleString('en-US',{maximumFractionDigits:0}):Math.abs(v)>=1?v.toFixed(2):v.toPrecision(3))}
 function wcap(v){if(!v)return'—';const a=Math.abs(v);return '$'+(a>=1e12?(v/1e12).toFixed(2)+'T':a>=1e9?(v/1e9).toFixed(1)+'B':a>=1e6?(v/1e6).toFixed(0)+'M':v.toFixed(0))}
-const WCOLS=[{k:'name',h:'Name',x:60,a:'left'},{k:'symbol',h:'Ticker',x:500,a:'left'},{k:'price',h:'Price',x:820,a:'right'},{k:'r1d',h:'1D',x:960,a:'right'},
-  {k:'r5d',h:'5D',x:1100,a:'right'},{k:'r1m',h:'1M',x:1240,a:'right'},{k:'rytd',h:'YTD',x:1380,a:'right'},{k:'mcap',h:'Market cap',x:1540,a:'right'}];
+const WCOLS=[{k:'name',h:'Name',x:60,a:'left'},{k:'symbol',h:'Ticker',x:400,a:'left'},{k:'rvol',h:'%Vol',x:560,a:'left'},{k:'price',h:'Price',x:900,a:'right'},{k:'r1d',h:'1D',x:1030,a:'right'},
+  {k:'r5d',h:'5D',x:1160,a:'right'},{k:'r1m',h:'1M',x:1290,a:'right'},{k:'rytd',h:'YTD',x:1415,a:'right'},{k:'mcap',h:'Market cap',x:1540,a:'right'}];
+// %Vol cell: latest session volume vs 30-day average (latest excluded). Bar track spans 0-200%, tick at 100% (= average), capped with ▶ above 200%.
+const WV={x:560,w:140,max:200,tx:772};
+function wvfmt(v,usd){const a=Math.abs(v),p=usd?'$':'';return p+(a>=1e12?(v/1e12).toFixed(2)+'T':a>=1e9?(v/1e9).toFixed(1)+'B':a>=1e6?(v/1e6).toFixed(1)+'M':a>=1e3?(v/1e3).toFixed(1)+'K':v.toFixed(0))}
+function wvtip(r){const d=new Date(r.volTs*1000).toLocaleDateString('en-US',{timeZone:r.crypto?'UTC':'America/New_York',month:'short',day:'numeric'});
+  return `<b>${r.symbol}</b> · ${r.crypto?d+' (UTC, 24h)':d+(r.volPartial?' (so far)':'')}<br>Vol ${wvfmt(r.vol,r.crypto)} vs ${r.volDays}D avg ${wvfmt(r.volAvg,r.crypto)} (${Math.round(r.rvol)}%)`}
+let WTIP=null;
+function wtipShow(e,html){if(!WTIP){WTIP=document.createElement('div');WTIP.style.cssText='position:fixed;pointer-events:none;z-index:50;padding:6px 9px;border-radius:4px;font:13px/1.4 Inter,Arial,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.25);display:none';document.body.appendChild(WTIP)}
+  WTIP.style.background=T.dark?'#1F2329':'#FFFFFF';WTIP.style.color=T.dark?'#E5E7EB':'#111827';WTIP.style.border='1px solid '+(T.dark?'#3A404C':'#D1D5DB');
+  WTIP.innerHTML=html;WTIP.style.display='block';const ev=e.event||e;WTIP.style.left=(ev.clientX+14)+'px';WTIP.style.top=(ev.clientY+14)+'px'}
+function wtipHide(){if(WTIP)WTIP.style.display='none'}
+function wvcell(G,r,y,rh,fs){const h=Math.max(8,Math.round(rh*0.4)),y0=Math.round(y-h/2),x0=WV.x,w=WV.w;
+  const track=T.dark?'#262B33':'#E5E7EB',div=T.dark?'#3A404C':'#C9CDD3',tick=T.dark?'#FFFFFF':'#111827',yel=T.dark?'#F5C518':'#E8B600';
+  if(r.rvol==null){G.push({type:'text',x:x0,y,style:{text:'—',fontSize:fs,fill:T.src,textAlign:'left',textVerticalAlign:'middle'}});return}
+  const f=Math.min(r.rvol,WV.max)/WV.max,over=r.rvol>WV.max;
+  G.push({type:'rect',shape:{x:x0,y:y0,width:w,height:h},style:{fill:track,stroke:div,lineWidth:1},silent:true});
+  if(f>0)G.push({type:'rect',shape:{x:x0,y:y0+1,width:Math.max(1.5,w*f),height:h-2},style:{fill:yel},silent:true});
+  [0.25,0.75].forEach(q=>G.push({type:'line',shape:{x1:x0+w*q,y1:y0,x2:x0+w*q,y2:y0+h},style:{stroke:div,lineWidth:1},silent:true}));
+  G.push({type:'line',shape:{x1:x0+w/2,y1:y0-3,x2:x0+w/2,y2:y0+h+3},style:{stroke:tick,lineWidth:2},silent:true});
+  if(over)G.push({type:'polygon',shape:{points:[[x0+w+3,y0-1],[x0+w+3,y0+h+1],[x0+w+3+h*0.6,y]]},style:{fill:yel},silent:true});
+  G.push({type:'text',x:WV.tx,y,silent:true,style:{text:Math.round(r.rvol)+'%',fontSize:fs-3,fill:r.volPartial?T.src:T.text,textAlign:'right',textVerticalAlign:'middle'}});
+  const html=wvtip(r);G.push({type:'rect',shape:{x:x0-4,y:y-rh/2,width:WV.tx-x0+8,height:rh},style:{fill:'rgba(0,0,0,0)'},z:200,onmousemove:e=>wtipShow(e,html),onmouseout:wtipHide})}
 function wopen(sym){$('tickers').value=sym;$('names').value='';$('type').value='line';setMode('prices')}
-function wdraw(keepStatus){if(MODE!=='watch')return;
+function wdraw(keepStatus){wtipHide();if(MODE!=='watch')return;
   let rows=WL.map((t,i)=>({...(WROWS[t]||{symbol:t,pending:true}),_i:i}));
   if(WSORT.k){const k=WSORT.k,d=WSORT.d;rows.sort((a,b)=>{let x=k==='name'?shortName(a.name,a.symbol):a[k],y=k==='name'?shortName(b.name,b.symbol):b[k];
     if(x==null&&y==null)return a._i-b._i;if(x==null)return 1;if(y==null)return -1;return (typeof x==='string'?x.localeCompare(y):x-y)*d})}
@@ -624,14 +645,15 @@ function wdraw(keepStatus){if(MODE!=='watch')return;
   rows.forEach((r,i)=>{const y=top+rh*(i+1.5),cell=(c,text,fill,extra)=>G.push({type:'text',x:c.x,y,style:{text,fontSize:fs,fill:fill||T.text,textAlign:c.a,textVerticalAlign:'middle',...(extra||{})}});
     if(i<n-1)G.push({type:'line',shape:{x1:60,y1:y+rh/2,x2:1540,y2:y+rh/2},style:{stroke:T.grid,lineWidth:1}});
     const nm=r.name?shortName(r.name,r.symbol):r.symbol,tk=r.symbol;
-    G.push({type:'text',x:60,y,cursor:'pointer',onclick:()=>wopen(tk),style:{text:nm,fontSize:fs,fontWeight:'bold',fill:T.title,textAlign:'left',textVerticalAlign:'middle',width:420,overflow:'truncate'}});
-    G.push({type:'text',x:500,y,cursor:'pointer',onclick:()=>wopen(tk),style:{text:tk,fontSize:fs,fill:T.text,textAlign:'left',textVerticalAlign:'middle'}});
-    if(r.error||r.pending){cell(WCOLS[2],r.pending?'press Refresh':'no data',T.src);return}
-    cell(WCOLS[2],wpx(r.price,r.currency));
-    ['r1d','r5d','r1m','rytd'].forEach((k,j)=>{const v=r[k];cell(WCOLS[3+j],v==null?'—':pct2(v),v==null?T.src:v>0?up:v<0?dn:T.text,{fontWeight:'bold'})});
-    cell(WCOLS[7],wcap(r.mcap)+(r.mcapEst?'*':''))});
+    G.push({type:'text',x:60,y,cursor:'pointer',onclick:()=>wopen(tk),style:{text:nm,fontSize:fs,fontWeight:'bold',fill:T.title,textAlign:'left',textVerticalAlign:'middle',width:320,overflow:'truncate'}});
+    G.push({type:'text',x:400,y,cursor:'pointer',onclick:()=>wopen(tk),style:{text:tk,fontSize:fs,fill:T.text,textAlign:'left',textVerticalAlign:'middle'}});
+    if(r.error||r.pending){cell(WCOLS[3],r.pending?'press Refresh':'no data',T.src);return}
+    wvcell(G,r,y,rh,fs);
+    cell(WCOLS[3],wpx(r.price,r.currency));
+    ['r1d','r5d','r1m','rytd'].forEach((k,j)=>{const v=r[k];cell(WCOLS[4+j],v==null?'—':pct2(v),v==null?T.src:v>0?up:v<0?dn:T.text,{fontWeight:'bold'})});
+    cell(WCOLS[8],wcap(r.mcap)+(r.mcapEst?'*':''))});
   const bad=WL.filter(t=>WROWS[t]&&WROWS[t].error),est=WL.some(t=>WROWS[t]&&WROWS[t].mcapEst),cr=WL.some(t=>WROWS[t]&&WROWS[t].crypto);
-  const src='Source: '+WSRC+(WAT?' · As of '+wTime(WAT):'')+' · 1D vs previous close'+(cr?' (crypto: 24h)':'')+(est?' · *mkt cap = price × shares':'');
+  const src='Source: '+WSRC+(WAT?' · As of '+wTime(WAT):'')+' · 1D vs previous close'+(cr?' (crypto: 24h)':'')+' · %Vol = volume ÷ 30D avg (tick = 100%)'+(est?' · *mkt cap = price × shares':'');
   const o=base($('wtitle').value||'Watchlist',src,'wwm');o.graphic.push(...G);chart.clear();chart.setOption(o,true);
   if(!keepStatus){const st=$('status');st.className=bad.length?'err':'';st.textContent=(WAT?'Last updated '+wTime(WAT)+' · ':'')+'Data updates only when you press Refresh. Click a column header to sort, a name/ticker to chart it.'+(bad.length?' No data for: '+bad.join(', '):'')}}
 $('waddb').onclick=wadd;$('wadd').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();wadd()}});
