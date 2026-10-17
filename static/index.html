@@ -672,8 +672,9 @@ const VMODES=['prices','fin','heat','tre','val','watch'];
 const vmode=x=>VMODES.includes(x&&x.mode)?x.mode:'prices';
 // Fields each tab owns; applying a view only touches its own tab's fields (+ theme), so other tabs are left alone.
 const VOWN={watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase)$/};
-let VLASTM={};try{VLASTM=JSON.parse(localStorage.getItem(VLAST)||'{}')||{}}catch(e){VLASTM={}}
-function vremember(name){if(name)VLASTM[MODE]=name;else delete VLASTM[MODE];try{localStorage.setItem(VLAST,JSON.stringify(VLASTM))}catch(e){}}
+// Session-only memory of each tab's selected view: a page load/refresh always starts every tab at "— pick a view —".
+const VLASTM={};try{localStorage.removeItem(VLAST)}catch(e){}
+function vremember(name){if(name)VLASTM[MODE]=name;else delete VLASTM[MODE]}
 const vfind=(n,m=MODE)=>VIEWS.findIndex(v=>v.name===n&&vmode(v)===m);
 async function vput(){if(VSTORE==='browser'){localStorage.setItem(VLS,JSON.stringify(VIEWS));vlist();return}
   const r=await fetch('/api/views',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(VIEWS)});
