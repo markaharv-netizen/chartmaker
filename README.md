@@ -25,7 +25,7 @@ Re-run samples: `python3 shoot_fin.py`.
 Theme dropdown (top bar, with swatch preview): White (default), Off-white/cream #FAF7F2, Light gray #F5F6F8, Dark #0F1115, Navy #0B1A2E, Black #000000.
 Themes set background, title/text/label/gridline/axis/watermark colors and apply to the PNG export; brand colors (orange, violet, green/red bars) are brightened slightly on dark themes.
 Saved views: "Save view" stores mode, tickers, names, range/dates, metric, period, chart type, title, colors, theme, watermark. Pick from "Saved views" to load + re-render with fresh data;
-Update overwrites the selected view; Rename/Delete; Export/Import as JSON (import merges by name). Stored server-side in `views.json` next to server.py (GET/POST `/api/views`).
+With a view selected, Save view overwrites it right away (no prompt; status shows Saved “name”); with "— pick a view —" selected it asks for a name and saves a new view. Views are per tab. Rename/Delete; Export/Import as JSON (import merges by name). Stored server-side in `views.json` next to server.py (GET/POST `/api/views`).
 views.json is never shipped in the zip, so updates don't overwrite saved views. Re-run theme samples: `python3 shoot_themes.py`.
 
 ## Hosting / password (v4)

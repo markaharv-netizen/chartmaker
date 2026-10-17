@@ -30,7 +30,7 @@ async def main():
     await pg.select_option("#views",label="Test FCF navy"); await pg.wait_for_timeout(4000)
     print("reloaded mode/theme/metric:",await pg.evaluate("[MODE,$('theme').value,$('fmetric').value,T.bg]"), await pg.inner_text("#status"))
     await pg.select_option("#fperiod","annual"); await pg.select_option("#theme","black"); await pg.wait_for_timeout(2500)
-    await pg.click("#vupd"); await pg.wait_for_timeout(800)
+    await pg.click("#vsave"); await pg.wait_for_timeout(800)
     print("updated:",[(x['name'],x['fields']['theme'],x['fields']['fperiod']) for x in V()])
     pg._ans="Renamed view"; await pg.click("#vren"); await pg.wait_for_timeout(800); print("renamed:",[x['name'] for x in V()])
     await pg.click("#vdel"); await pg.wait_for_timeout(800); print("deleted:",V())

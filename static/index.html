@@ -17,7 +17,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
 <span style="margin-left:16px">Saved views</span><select id="views" style="min-width:180px"><option value="">— pick a view —</option></select>
-<button id="vsave">Save view</button><button id="vupd">Update</button><button id="vren">Rename</button><button id="vdel">Delete</button>
+<button id="vsave" title="Overwrites the selected view. To save a new view, pick “— pick a view —” first.">Save view</button><button id="vren">Rename</button><button id="vdel">Delete</button>
 <button id="vexp">Export</button><button id="vimp">Import</button><input id="vfile" type="file" accept=".json,application/json" style="display:none">
 </div>
 <div id="fctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
@@ -691,13 +691,15 @@ function vapply(x){const m=vmode(x),own=VOWN[m];if(m==='prices'){for(const id of
   for(const [id,val] of Object.entries(x.fields||{})){if(id!=='theme'&&!own.test(id))continue;const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
   applyTheme();vsync();setMode(m)}
 const vmsg=t=>{$('status').className='';$('status').textContent=t};
+const vflash=t=>{vmsg(t);setTimeout(()=>{if($('status').textContent===t)$('status').textContent=''},2500)};
 const vsel=()=>{const i=$('views').value;return i!==''&&VIEWS[i]&&vmode(VIEWS[i])===MODE?i:''};
 $('views').onchange=()=>{const i=vsel();if(i===''){vremember('');return}const x=VIEWS[i];vremember(x.name);vapply(x)};
-$('vsave').onclick=async()=>{const n=(prompt('Name for this view:')||'').trim();if(!n)return;
-  const i=vfind(n);if(i>=0&&!confirm(`Overwrite "${n}"?`))return;
-  if(i>=0)VIEWS[i]=snap(n);else VIEWS.push(snap(n));vremember(n);await vput();vmsg('Saved view "'+n+'"')};
-$('vupd').onclick=async()=>{const i=vsel();if(i===''){alert('Pick a saved view first');return}
-  VIEWS[i]=snap(VIEWS[i].name);vremember(VIEWS[i].name);await vput();vmsg('Updated view "'+VIEWS[i].name+'"')};
+$('vsave').onclick=async()=>{const i=vsel();
+  // a view is selected in this tab: overwrite it right away with the current settings
+  if(i!==''){const n=VIEWS[i].name;VIEWS[i]=snap(n);vremember(n);await vput();vflash('Saved “'+n+'”');return}
+  const n=(prompt('Name for this view:')||'').trim();if(!n)return;
+  const j=vfind(n);if(j>=0&&!confirm(`Overwrite "${n}"?`))return;
+  if(j>=0)VIEWS[j]=snap(n);else VIEWS.push(snap(n));vremember(n);await vput();vflash('Saved “'+n+'”')};
 $('vren').onclick=async()=>{const i=vsel();if(i===''){alert('Pick a saved view first');return}
   const n=(prompt('New name:',VIEWS[i].name)||'').trim();if(!n||n===VIEWS[i].name)return;if(vfind(n)>=0){alert(`A view named "${n}" already exists in this tab`);return}
   VIEWS[i].name=n;vremember(n);await vput()};
