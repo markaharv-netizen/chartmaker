@@ -34,3 +34,28 @@ Env vars: `APP_PASSWORD` (if set, every route incl. /api requires login; login p
 instead of views.json; use Export/Import as backup), `PORT` (overrides CLI port; binds 0.0.0.0).
 Session cookie: `cm_session`, signed HMAC-SHA256, HttpOnly, Secure, SameSite=Lax, 30 days. Login throttling: after 5 failures per IP, lockout 30s doubling up to 15 min.
 With no APP_PASSWORD (local PC) behavior is unchanged. Render: `render.yaml` Blueprint (free plan, `python server.py`).
+
+## Sentiment tab
+
+Ranked bull-vs-bear board (like the "analyst sentiment" boards on X). The app only reads the static
+`sentiment.json` (served at `/api/sentiment`); nothing is scraped on Render.
+
+**Data pipeline (daily refresh)**
+1. An agent with the X connector collects the last 7 days per ticker (≈3 calls/ticker):
+   `search_posts_all` "`<T> -is:retweet -is:reply lang:en`" (relevancy, 25), a second call adding
+   `(bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop`,
+   and `search_news` "`<company> stock`" (168h, 5). Note: X search strips `$`, so cashtags are plain tickers.
+2. It labels each post/story **bull / bear / neutral** (spam, giveaways, generic lists and pattern-tutorial posts are neutral)
+   and writes short, neutral-worded bull and bear headlines (no invented quotes) into
+   `tools/sentiment_input/<YYYY-MM-DD>.json` (same shape as the 2026-10-18 file).
+3. `python3 tools/build_sentiment.py tools/sentiment_input/<date>.json` does the math and writes
+   `sentiment.json` + appends `sentiment_history.json`; commit both.
+
+**Method**
+- Weight per item: posts `1 + ln(1 + likes + 2·reposts + replies + 2·quotes)`, news stories `3`.
+- Bull share = Σw(bull) ÷ Σw(bull + bear). Neutral items count toward "posts scanned" only.
+- Band = 95% Wilson interval on the Kish effective sample size `(Σw)² / Σw²` (drawn hatched around the split).
+- σ = (bull share − mean) ÷ stdev across the tickers in that run (cross-sectional), until a ticker has
+  20 days in `sentiment_history.json`; then it switches to a z-score vs its own history (`sigma_basis: "own"`).
+- Bear headline is null (shows "No dominant bearish consensus…") when there are fewer than 2 bear items or the bear share is under 15%.
+- Rows are sorted by σ, descending. The ticker box filters the dataset; it can't add tickers that aren't in the json.

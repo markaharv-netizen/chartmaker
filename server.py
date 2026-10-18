@@ -151,6 +151,12 @@ class H(SimpleHTTPRequestHandler):
             if not b: return s.send_json({"error": "no logo"}, 404)
             s.send_response(200); s.send_header("Content-Type", "image/webp" if b[:4] == b"RIFF" else "image/jpeg" if b[:2] == b"\xff\xd8" else "image/png"); s.send_header("Cache-Control", "public, max-age=604800")
             s.send_header("Content-Length", len(b)); s.end_headers(); s.wfile.write(b); return
+        if u.path == "/api/sentiment":
+            try:
+                with open(os.path.join(os.path.dirname(ROOT), "sentiment.json"), "rb") as f: b = f.read()
+            except OSError: return s.send_json({"error": "sentiment.json not found"}, 404)
+            s.send_response(200); s.send_header("Content-Type", "application/json"); s.send_header("Cache-Control", "no-store")
+            s.send_header("Content-Length", len(b)); s.end_headers(); s.wfile.write(b); return
         if u.path not in ("/api/chart", "/api/fin", "/api/heatmap", "/api/treasury", "/api/valuation", "/api/valhist", "/api/watch"): return super().do_GET()
         try:
           if u.path == "/api/watch":

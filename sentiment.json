@@ -1,0 +1,415 @@
+{
+ "asOf": "2026-10-18T12:30-04:00",
+ "window": {
+  "start": "2026-10-11T16:00:00Z",
+  "end": "2026-10-18T16:30:00Z"
+ },
+ "method": "engagement-weighted bull/(bull+bear) of classified X posts (w=1+ln(1+likes+2*reposts+replies+2*quotes)) and news (w=3); band = 95% Wilson on Kish effective n; sigma = cross-sectional z until 20 days of own history",
+ "source": "X posts & news",
+ "tickers": [
+  {
+   "symbol": "AVGO",
+   "name": "Broadcom",
+   "bull": 1.0,
+   "lo": 0.6482,
+   "hi": 1.0,
+   "bull_headline": "AI networking leader; selloff seen as a buying opportunity",
+   "bear_headline": null,
+   "posts": 46,
+   "news": 5,
+   "classified": 8,
+   "n_bull": 8,
+   "n_bear": 0,
+   "n_eff": 7.1,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "InvestingVisual",
+     "url": "https://x.com/InvestingVisual/status/2109363403865084150"
+    },
+    {
+     "label": "bull",
+     "user": "FinancePotentia",
+     "url": "https://x.com/FinancePotentia/status/2111525148050199029"
+    }
+   ],
+   "sigma": 1.57,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "AMZN",
+   "name": "Amazon",
+   "bull": 0.9082,
+   "lo": 0.4665,
+   "hi": 0.9911,
+   "bull_headline": "AWS compute sold out; Q3 earnings seen as catalyst",
+   "bear_headline": null,
+   "posts": 49,
+   "news": 5,
+   "classified": 6,
+   "n_bull": 5,
+   "n_bear": 1,
+   "n_eff": 4.9,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "TheUKInvestorDD",
+     "url": "https://x.com/TheUKInvestorDD/status/2111428441665097891"
+    },
+    {
+     "label": "bull",
+     "user": "ElliottForecast",
+     "url": "https://x.com/ElliottForecast/status/2111307265718338032"
+    },
+    {
+     "label": "bear",
+     "user": "kapualabs",
+     "url": "https://x.com/kapualabs/status/2111394619703386383"
+    }
+   ],
+   "sigma": 1.06,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "GOOGL",
+   "name": "Alphabet",
+   "bull": 0.9027,
+   "lo": 0.5162,
+   "hi": 0.9877,
+   "bull_headline": "Cloud, Gemini and TPU demand drive relative strength",
+   "bear_headline": null,
+   "posts": 49,
+   "news": 5,
+   "classified": 8,
+   "n_bull": 7,
+   "n_bear": 1,
+   "n_eff": 6.4,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "RedDogT3",
+     "url": "https://x.com/RedDogT3/status/2110355918558724170"
+    },
+    {
+     "label": "bull",
+     "user": "DavidMPontes",
+     "url": "https://x.com/DavidMPontes/status/2110842333033836613"
+    },
+    {
+     "label": "bear",
+     "user": "Finora_EN",
+     "url": "https://x.com/Finora_EN/status/2111096434753724638"
+    }
+   ],
+   "sigma": 1.03,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "META",
+   "name": "Meta",
+   "bull": 0.8402,
+   "lo": 0.5385,
+   "hi": 0.9595,
+   "bull_headline": "Muse AI traction drives price-target raises",
+   "bear_headline": "Heavy AI spending and put buying signal caution",
+   "posts": 49,
+   "news": 5,
+   "classified": 14,
+   "n_bull": 12,
+   "n_bear": 2,
+   "n_eff": 10.5,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "danielisdizzy",
+     "url": "https://x.com/danielisdizzy/status/2109324204268978233"
+    },
+    {
+     "label": "bull",
+     "user": "RedDogT3",
+     "url": "https://x.com/RedDogT3/status/2110355918558724170"
+    },
+    {
+     "label": "bear",
+     "user": "RockyTSTH",
+     "url": "https://x.com/RockyTSTH/status/2110045091637387484"
+    }
+   ],
+   "sigma": 0.68,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "NVDA",
+   "name": "NVIDIA",
+   "bull": 0.7798,
+   "lo": 0.5113,
+   "hi": 0.923,
+   "bull_headline": "Valuation at multiyear lows; heavy bullish options flow",
+   "bear_headline": "Fading momentum and doubts over AI spending",
+   "posts": 50,
+   "news": 5,
+   "classified": 17,
+   "n_bull": 12,
+   "n_bear": 5,
+   "n_eff": 13.3,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "ProblemSniper",
+     "url": "https://x.com/ProblemSniper/status/2109330268561506401"
+    },
+    {
+     "label": "bull",
+     "user": "WealthCoachMak",
+     "url": "https://x.com/WealthCoachMak/status/2111833681103085616"
+    },
+    {
+     "label": "bear",
+     "user": "R_and_Invest",
+     "url": "https://x.com/R_and_Invest/status/2109341145042231588"
+    },
+    {
+     "label": "bear",
+     "user": "NunezAlfred",
+     "url": "https://x.com/NunezAlfred/status/2109392242121265655"
+    }
+   ],
+   "sigma": 0.35,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "TSLA",
+   "name": "Tesla",
+   "bull": 0.7227,
+   "lo": 0.4492,
+   "hi": 0.8928,
+   "bull_headline": "Robotaxi, Optimus and SpaceX merger talk drive upside",
+   "bear_headline": "Losing $375 support could extend pullback before Q3 results",
+   "posts": 50,
+   "news": 5,
+   "classified": 17,
+   "n_bull": 10,
+   "n_bear": 7,
+   "n_eff": 12.7,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "DanBTC916",
+     "url": "https://x.com/DanBTC916/status/2109338330345459766"
+    },
+    {
+     "label": "bull",
+     "user": "EliteOptions2",
+     "url": "https://x.com/EliteOptions2/status/2109422570634199313"
+    },
+    {
+     "label": "bear",
+     "user": "wickedstocks",
+     "url": "https://x.com/wickedstocks/status/2110348220983374293"
+    },
+    {
+     "label": "bear",
+     "user": "xentrixcatalyst",
+     "url": "https://x.com/xentrixcatalyst/status/2109331909604208731"
+    }
+   ],
+   "sigma": 0.03,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "COIN",
+   "name": "Coinbase",
+   "bull": 0.6825,
+   "lo": 0.3122,
+   "hi": 0.9105,
+   "bull_headline": "Analyst target raises; Deribit and stablecoin deals",
+   "bear_headline": "Taiwan block adds regulatory friction; stock down YTD",
+   "posts": 48,
+   "news": 5,
+   "classified": 7,
+   "n_bull": 5,
+   "n_bear": 2,
+   "n_eff": 6.0,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "donaldjdean",
+     "url": "https://x.com/donaldjdean/status/2111203030909829341"
+    },
+    {
+     "label": "bull",
+     "user": "bullishchart",
+     "url": "https://x.com/bullishchart/status/2109378316708807096"
+    },
+    {
+     "label": "bear",
+     "user": "S_NewsRoomCOM",
+     "url": "https://x.com/S_NewsRoomCOM/status/2110848773182181811"
+    },
+    {
+     "label": "bear",
+     "user": "PiEDawg_",
+     "url": "https://x.com/PiEDawg_/status/2110565100415316469"
+    }
+   ],
+   "sigma": -0.19,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "MSTR",
+   "name": "Strategy",
+   "bull": 0.6154,
+   "lo": 0.3974,
+   "hi": 0.7952,
+   "bull_headline": "Discount to bitcoin holdings seen as a buying opportunity",
+   "bear_headline": "MSCI index removal could force passive selling",
+   "posts": 46,
+   "news": 5,
+   "classified": 25,
+   "n_bull": 14,
+   "n_bear": 11,
+   "n_eff": 19.4,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "chad_ventures",
+     "url": "https://x.com/chad_ventures/status/2111462337420943785"
+    },
+    {
+     "label": "bull",
+     "user": "mstrinvestor",
+     "url": "https://x.com/mstrinvestor/status/2109354771530596544"
+    },
+    {
+     "label": "bear",
+     "user": "Jake__Wujastyk",
+     "url": "https://x.com/Jake__Wujastyk/status/2109426864645394729"
+    },
+    {
+     "label": "bear",
+     "user": "Errecck",
+     "url": "https://x.com/Errecck/status/2109495119225221490"
+    }
+   ],
+   "sigma": -0.56,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "AAPL",
+   "name": "Apple",
+   "bull": 0.5341,
+   "lo": 0.2516,
+   "hi": 0.7963,
+   "bull_headline": "$5T market cap; iPhone Duo preorders sell out",
+   "bear_headline": "Softer iPhone lead times; valuation seen as stretched",
+   "posts": 49,
+   "news": 5,
+   "classified": 11,
+   "n_bull": 7,
+   "n_bear": 4,
+   "n_eff": 9.1,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "_investedgrowth",
+     "url": "https://x.com/_investedgrowth/status/2109328653368922314"
+    },
+    {
+     "label": "bull",
+     "user": "XfactsmatterX",
+     "url": "https://x.com/XfactsmatterX/status/2109376191212003519"
+    },
+    {
+     "label": "bear",
+     "user": "pequityresearch",
+     "url": "https://x.com/pequityresearch/status/2109377748263387545"
+    },
+    {
+     "label": "bear",
+     "user": "xentrixcatalyst",
+     "url": "https://x.com/xentrixcatalyst/status/2109328631277539802"
+    }
+   ],
+   "sigma": -1.01,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "INTC",
+   "name": "Intel",
+   "bull": 0.4887,
+   "lo": 0.2025,
+   "hi": 0.7824,
+   "bull_headline": "CPU price hikes and foundry turnaround support rerating",
+   "bear_headline": "Rally fading; bearish chart patterns and put buying",
+   "posts": 45,
+   "news": 5,
+   "classified": 10,
+   "n_bull": 4,
+   "n_bear": 6,
+   "n_eff": 7.6,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "diamhanz",
+     "url": "https://x.com/diamhanz/status/2109411164958679373"
+    },
+    {
+     "label": "bull",
+     "user": "bullwallstreet2",
+     "url": "https://x.com/bullwallstreet2/status/2111481651884650880"
+    },
+    {
+     "label": "bear",
+     "user": "panicsellweekly",
+     "url": "https://x.com/panicsellweekly/status/2110741033814303018"
+    },
+    {
+     "label": "bear",
+     "user": "panicsellweekly",
+     "url": "https://x.com/panicsellweekly/status/2109672539693965453"
+    }
+   ],
+   "sigma": -1.26,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "MSFT",
+   "name": "Microsoft",
+   "bull": 0.4141,
+   "lo": 0.1734,
+   "hi": 0.7042,
+   "bull_headline": "AI and cloud growth; back at a $4T market cap",
+   "bear_headline": "Rejected at resistance; chartists flag a possible top",
+   "posts": 48,
+   "news": 5,
+   "classified": 13,
+   "n_bull": 7,
+   "n_bear": 6,
+   "n_eff": 9.5,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "LukeBruni17",
+     "url": "https://x.com/LukeBruni17/status/2111521955048308754"
+    },
+    {
+     "label": "bull",
+     "user": "Liathetrader04",
+     "url": "https://x.com/Liathetrader04/status/2111250820649955566"
+    },
+    {
+     "label": "bear",
+     "user": "kpak82",
+     "url": "https://x.com/kpak82/status/2110536922406027284"
+    },
+    {
+     "label": "bear",
+     "user": "alphacharts365",
+     "url": "https://x.com/alphacharts365/status/2111527161245114720"
+    }
+   ],
+   "sigma": -1.68,
+   "sigma_basis": "cross"
+  }
+ ]
+}

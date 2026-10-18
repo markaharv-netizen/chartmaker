@@ -12,7 +12,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #fnote{margin:0 16px 8px;font-size:14px;color:#374151}
 #status{padding:4px 12px;font-size:13px}#status.err{color:#EF4444;font-weight:bold}
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mVal">Valuation</button><button id="mWatch">Watchlist</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mVal">Valuation</button><button id="mWatch">Watchlist</button><button id="mSent">Sentiment</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -72,6 +72,12 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label><span>Watermark</span><input id="wwm" type="checkbox" checked></label>
 <button id="wrefresh" title="Fetch fresh quotes for every ticker (the only time data updates)">Refresh</button><button id="wdl">Download PNG</button>
 </div>
+<div id="sctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
+<label>Tickers (comma, blank = all in sentiment.json)<input id="stickers" size="30" placeholder="all"></label>
+<label>Title<input id="stitle" size="28" placeholder="Bull vs bear sentiment"></label>
+<label><span>Watermark</span><input id="swm" type="checkbox" checked></label>
+<button id="sgo">Render</button><button id="sreload" title="Re-read sentiment.json from the server">Reload data</button><button id="sdl">Download PNG</button>
+</div>
 <div id="ctl">
 <label>Tickers (comma)<input id="tickers" value="NBIS,CRWV" size="22"></label>
 <label>Display names (comma, optional)<input id="names" size="22"></label>
@@ -112,7 +118,7 @@ function bc(c){return T.dark&&BRIGHT[c]?BRIGHT[c]:c}
 function applyTheme(){T=THEMES[$('theme').value]||THEMES.white;axLabel={fontSize:16,color:T.text};split={lineStyle:{color:T.grid}};
   $('chart').style.background=T.bg;$('tprev').style.background=T.bg;$('tprev').style.color=T.title;
   $('tprev').innerHTML=`Aa <b style="color:${bc('#F7931A')}">■</b><b style="color:${bc('#8B5CF6')}">■</b><b style="color:${bc('#22C55E')}">■</b><b style="color:${bc('#EF4444')}">■</b>`}
-function rerender(){return MODE==='watch'?wdraw():MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
+function rerender(){return MODE==='sent'?sdraw():MODE==='watch'?wdraw():MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
 
 function rangeParams(){
   const r=$('range').value, now=Math.floor(Date.now()/1000), d=new Date();
@@ -349,11 +355,11 @@ $('go').onclick=render;
 
 // ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------
 let MODE='prices', flast=null;
-function setMode(m){MODE=m;wtipHide();if(typeof vlist==='function')try{vlist()}catch(e){}$('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';
+function setMode(m){MODE=m;wtipHide();if(typeof vlist==='function')try{vlist()}catch(e){}$('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';$('mSent').classList.toggle('on',m==='sent');$('sctl').style.display=m==='sent'?'flex':'none';
   $('ctl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
   $('ftable').innerHTML='';$('fnote').textContent='';chart.clear();$('status').textContent='';
-  if(m==='prices')render();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
-$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');
+  if(m==='prices')render();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
+$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');
 const MUNIT={eps_diluted:'eps',shares:'sh',gross_margin:'%',operating_margin:'%',net_margin:'%'};
 function fmtFin(v,u,cur){if(v==null||isNaN(v))return '';const a=Math.abs(v),sg=v<0?'-':'';
   if(u==='%')return v.toFixed(1)+'%'; if(u==='eps')return sg+'$'+a.toFixed(2);
@@ -662,16 +668,61 @@ $('wrefresh').onclick=()=>{if(!WBUSY&&WL.length)wfetch(WL,true)};$('wtitle').oni
 $('wdl').onclick=()=>{if(MODE!=='watch')return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('wtitle').value||'watchlist').replace(/[^\w]+/g,'_')+'.png';a.click()};
 window.__wdraw=wdraw;window.__wl=()=>WL;
 
+// ---------- Sentiment mode: static sentiment.json via /api/sentiment (built offline by tools/build_sentiment.py; no live scraping) ----------
+let SDATA=null,SBUSY=false,SSEQ=0,SHATCH={};
+async function sfetch(){SBUSY=true;const st=$('status');st.className='';st.textContent='Loading sentiment…';
+  try{const r=await fetch('/api/sentiment',{cache:'no-store'});const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);SDATA=j}
+  catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing invented.'}SBUSY=false;sdraw()}
+function senter(){if(!SDATA&&!SBUSY)sfetch();else sdraw()}
+function shatch(col){if(SHATCH[col+T.bg])return SHATCH[col+T.bg];const c=document.createElement('canvas');c.width=c.height=8;const g=c.getContext('2d');
+  g.strokeStyle=col;g.lineWidth=2;g.beginPath();g.moveTo(0,8);g.lineTo(8,0);g.moveTo(-2,2);g.lineTo(2,-2);g.moveTo(6,10);g.lineTo(10,6);g.stroke();return SHATCH[col+T.bg]=c}
+const sDate=t=>{const d=new Date(t);return isNaN(d)?String(t||''):d.toLocaleDateString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',year:'numeric'})};
+const sesc=x=>String(x??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+async function sdraw(){wtipHide();if(MODE!=='sent')return;const seq=++SSEQ;
+  if(!SDATA){chart.clear();return}
+  const all=SDATA.tickers||[],want=$('stickers').value.split(/[\s,]+/).map(x=>x.trim().toUpperCase()).filter(Boolean);
+  const rows=want.length?all.filter(r=>want.includes(r.symbol)):all.slice(),miss=want.filter(t=>!all.some(r=>r.symbol===t));
+  const logos={};await Promise.all(rows.map(async r=>{try{logos[r.symbol]=await circLogo(r.symbol)}catch(e){}}));if(seq!==SSEQ||MODE!=='sent')return;
+  const n=Math.max(1,rows.length),top=110,bot=70,rh=Math.min(110,(900-top-bot)/n),G=[],up=bc('#22C55E'),dn=bc('#EF4444');
+  const X0=440,X1=1540,BW=X1-X0,fs=Math.round(Math.max(11,Math.min(20,rh*0.24))),bh=Math.max(6,Math.round(rh*0.11)),lg=Math.round(Math.min(40,rh*0.42));
+  rows.forEach((r,i)=>{const y0=top+i*rh,ym=y0+rh*0.5,pos=r.sigma>=0,lc=pos?up:dn;
+    if(i<n-1)G.push({type:'line',shape:{x1:60,y1:y0+rh,x2:X1,y2:y0+rh},style:{stroke:T.grid,lineWidth:1}});
+    G.push({type:'text',x:60,y:ym-rh*0.12,style:{text:String(i+1),fontSize:fs,fill:T.src,textAlign:'left',textVerticalAlign:'middle'}});
+    if(logos[r.symbol])G.push({type:'image',style:{image:logos[r.symbol],x:92,y:ym-rh*0.12-lg/2,width:lg,height:lg}});
+    const tx=92+lg+12;
+    G.push({type:'text',x:tx,y:ym-rh*0.22,style:{text:r.symbol,fontSize:fs+2,fontWeight:'bold',fill:T.title,textAlign:'left',textVerticalAlign:'middle'}});
+    G.push({type:'text',x:tx,y:ym+rh*0.02,style:{text:shortName(r.name,r.symbol),fontSize:fs-4,fill:T.src,textAlign:'left',textVerticalAlign:'middle',width:X0-tx-20,overflow:'truncate'}});
+    G.push({type:'text',x:tx,y:ym+rh*0.24,style:{text:(r.sigma>0?'+':r.sigma<0?'−':'')+Math.abs(r.sigma).toFixed(1)+'σ '+(pos?'Bullish':'Bearish'),fontSize:fs-3,fill:lc,textAlign:'left',textVerticalAlign:'middle'}});
+    const sx=X0+BW*(1-r.bull),by=y0+rh*0.72;  // red (bear) on the left, green (bull) on the right; split at bear share
+    G.push({type:'rect',shape:{x:X0,y:by,width:Math.max(0,sx-X0),height:bh},style:{fill:dn}});
+    G.push({type:'rect',shape:{x:sx,y:by,width:Math.max(0,X1-sx),height:bh},style:{fill:up}});
+    const hx0=X0+BW*(1-r.hi),hx1=X0+BW*(1-r.lo);  // uncertainty band around the split, hatched
+    if(hx1-hx0>1)G.push({type:'rect',shape:{x:hx0,y:by,width:hx1-hx0,height:bh},style:{fill:{image:shatch(T.dark?'rgba(255,255,255,.75)':'rgba(255,255,255,.85)'),repeat:'repeat'}}});
+    // headlines sit around the split; anchor clamped so both sides keep room; dominant side bolder + larger
+    const minW=360,ax=Math.max(X0+minW,Math.min(X1-minW,sx)),bullDom=r.bull>=0.5,big=fs,small=fs-4,ty=by-5;
+    const bearTxt=r.bear_headline||'No dominant bearish consensus — analysts hold a range of individual views.';
+    G.push({type:'text',x:ax-8,y:ty,style:{text:bearTxt,fontSize:r.bear_headline&&!bullDom?big:small,fontWeight:r.bear_headline&&!bullDom?'bold':'normal',fill:dn,textAlign:'right',textVerticalAlign:'bottom',width:ax-8-X0,overflow:'break',lineHeight:Math.round(small*1.25)}});
+    G.push({type:'text',x:ax+8,y:ty,style:{text:r.bull_headline||'No dominant bullish consensus',fontSize:bullDom?big:small,fontWeight:bullDom?'bold':'normal',fill:up,textAlign:'left',textVerticalAlign:'bottom',width:X1-ax-8,overflow:'break',lineHeight:Math.round(small*1.25)}});
+    const tip=`<b>${sesc(r.symbol)}</b> · ${sesc(r.name)}<br>Bull ${(r.bull*100).toFixed(1)}% · bear ${((1-r.bull)*100).toFixed(1)}%<br>95% band: ${(r.lo*100).toFixed(0)}–${(r.hi*100).toFixed(0)}% bull<br>${r.posts} posts + ${r.news} news scanned · ${r.classified} classified (${r.n_bull} bull / ${r.n_bear} bear)<br>Score ${r.sigma>=0?'+':''}${r.sigma.toFixed(2)}σ (${r.sigma_basis==='own'?'vs own history':'vs other tickers'})`;
+    G.push({type:'rect',shape:{x:X0,y:by-8,width:BW,height:bh+16},style:{fill:'rgba(0,0,0,0)'},z:200,onmousemove:e=>wtipShow(e,tip),onmouseout:wtipHide})});
+  const src='Source: '+(SDATA.source||'X posts & news')+', '+sDate(SDATA.asOf)+' · bar = engagement-weighted bull share, hatched = 95% band · σ vs '+(rows.some(r=>r.sigma_basis==='own')?'own history':'cross-section');
+  const o=base($('stitle').value||'Bull vs bear sentiment',src,'swm');o.graphic.push(...G);chart.clear();chart.setOption(o,true);
+  const st=$('status');st.className=miss.length?'err':'';st.textContent='Data as of '+sDate(SDATA.asOf)+' ('+all.length+' tickers in sentiment.json). Hover a bar for exact numbers.'+(miss.length?' Not in dataset: '+miss.join(', '):'')}
+$('sgo').onclick=()=>sdraw();$('sreload').onclick=()=>{if(!SBUSY)sfetch()};$('stitle').oninput=$('swm').onchange=()=>sdraw();
+$('stickers').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();sdraw()}});
+$('sdl').onclick=()=>{if(MODE!=='sent')return;wtipHide();const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('stitle').value||'sentiment').replace(/[^\w]+/g,'_')+'.png';a.click()};
+window.__sdraw=sdraw;
+
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
+const VFIELDS=['stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}return{name,mode:MODE,fields:f,saved:new Date().toISOString()}}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
 // Saved views are per tab: each view carries .mode and only shows/saves/loads in that tab.
-const VMODES=['prices','fin','heat','tre','val','watch'];
+const VMODES=['prices','fin','heat','tre','val','watch','sent'];
 const vmode=x=>VMODES.includes(x&&x.mode)?x.mode:'prices';
 // Fields each tab owns; applying a view only touches its own tab's fields (+ theme), so other tabs are left alone.
-const VOWN={watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase)$/};
+const VOWN={sent:/^(stickers|stitle|swm)$/,watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase)$/};
 // Session-only memory of each tab's selected view: a page load/refresh always starts every tab at "— pick a view —".
 const VLASTM={};try{localStorage.removeItem(VLAST)}catch(e){}
 function vremember(name){if(name)VLASTM[MODE]=name;else delete VLASTM[MODE]}
