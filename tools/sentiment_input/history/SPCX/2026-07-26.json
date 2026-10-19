@@ -1,0 +1,418 @@
+{
+ "symbol": "SPCX",
+ "start": "2026-07-19T16:00:00Z",
+ "end": "2026-07-26T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "SPCX SpaceX -pump -memecoin -is:retweet -is:reply lang:en",
+  "SPCX (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -pump -memecoin -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "thenextbrief",
+   "url": "https://x.com/thenextbrief/status/2079208498588795155",
+   "date": "2026-07-20",
+   "text": "🚀 SpaceX ($SPCX) is one of the most talked-about stocks on the market.\n\nAre you buying the dip or waiting for more downside?\n\n🟢 Buying more\n🟡 Holding my position\n🔴 Waiting for lower prices\n⚪ Not investing in SpaceX\n\n👇 What’s your 12-month price target for $SPCX?\n\n#SpaceX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "gemini_edge",
+   "url": "https://x.com/gemini_edge/status/2080002753510748527",
+   "date": "2026-07-22",
+   "text": "$SPCX $120 Calls See $4.74 Million Whale Bullish Inflow\n\nMajor options flow alert! A large buyer just loaded $4.74 million into SPCX $120 Call options expiring October 16, 2026.\nTrade Details:\nSignificant premium deployed\nAggressive sweeps and high capital concentration https://t.co/rmu59CvND0"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "marketsday",
+   "url": "https://x.com/marketsday/status/2079152587740266706",
+   "date": "2026-07-20",
+   "text": "Foxconn — Major AI Server Contract with SpaceX\n\n🚀 Contract Win — Foxconn has secured its first order to manufacture AI servers for SpaceX, marking a significant expansion into high‑performance computing infrastructure.\n\n🔹 Scale of Deployment — SpaceX plans to build over 13,000"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ExitDesk",
+   "url": "https://x.com/ExitDesk/status/2080355148673462572",
+   "date": "2026-07-23",
+   "text": "🚨 JUST IN: Google has disclosed it owns approximately $94.1 BILLION worth of SpaceX (SPCX) stock—equal to roughly a 6% ownership stake in Elon Musk's aerospace company.\n\nThat's one of the largest known corporate holdings in SpaceX.\n\nWould you buy SpaceX (SPCX) at today's price,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "caihawk_signals",
+   "url": "https://x.com/caihawk_signals/status/2079298588123824168",
+   "date": "2026-07-20",
+   "text": "July 23: SpaceX Starship test after last-minute abort. SPCX shares now at $120, 11% below IPO, reflecting market reaction.\n\n#SpaceX #Starship #SPCX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TrackSPCX",
+   "url": "https://x.com/TrackSPCX/status/2079559541738406072",
+   "date": "2026-07-21",
+   "text": "🔔 OPENING BELL — $SPCX\n\n@SpaceX opens flat at $122.71, ▬ +$0.00 (0.00%) against yesterday's $122.71 close.\n\n→ Live price, charts &amp; history at https://t.co/ATpFGFpx4S\n\n#SpaceX #SPCX #StockMarket #Stocks https://t.co/9AWD4vmQAg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2080661420165697708",
+   "date": "2026-07-24",
+   "text": "JUST IN: Elon Musk's SpaceX $SPCX hits post - #IPO low, falling under $115.\n\n#Markets #MarketUpdate #StockMarket #trading #USA #US #stocks #crypto #Bullish #TRUMP #America #tariffwar #tariffdeal #Dollar #FederalReserve #DonaldTrump #Tariffs #rates #TradeDeal #Powell #Fed #Trump https://t.co/m3bXc12ZM1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "MartynInvestor",
+   "url": "https://x.com/MartynInvestor/status/2080358684715098587",
+   "date": "2026-07-23",
+   "text": "$SPCX\n\n🚨 SpaceX Starship Flight 13 LIVE:\n\nI'm ALL IN With $1,000,000 Invested! | Martyn Lucas Investor\n\nLIVE FLIGHT - LIVE TRADES\nLIVE Now on YouTube\n\nhttps://t.co/e2V6kBxQVJ\n\n#SPCX #SpaceX #MartynLucasINVESTOR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TrackSPCX",
+   "url": "https://x.com/TrackSPCX/status/2079921921433460772",
+   "date": "2026-07-22",
+   "text": "🔔 OPENING BELL — $SPCX\n\n@SpaceX opens flat at $122.94, ▬ +$0.00 (0.00%) against yesterday's $122.94 close.\n\n→ Live price, charts &amp; history at https://t.co/ATpFGFpx4S\n\n#SpaceX #SPCX #StockMarket #Stocks https://t.co/fOP2coFtrZ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "cryptosmart07",
+   "url": "https://x.com/cryptosmart07/status/2080033926064529468",
+   "date": "2026-07-22",
+   "text": "🚨 UPDATE: SpaceX ($SPCX) is now trading below $120 per share.\n\nEven more interesting? Insiders still haven't been able to sell their shares. 👀\n\nThe market is watching closely. 🚀\n\n#SpaceX #SPCX #Stocks #Investing https://t.co/OJwAYkOG06"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "EsmailMobarak",
+   "url": "https://x.com/EsmailMobarak/status/2079478659287601305",
+   "date": "2026-07-21",
+   "text": "$SPCX (SpaceX) Lock-Up Cycle Analysis + 2027 Projection Thread (Jul 21, 2026) #SPCX #SpaceX #LockUp #UnlockSchedule #IPOAnalysis #Investing #Aerospace #Starlink #ElonMusk #StockProjection #Finance https://t.co/eaSkNjl6lV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TrackSPCX",
+   "url": "https://x.com/TrackSPCX/status/2080646699375014045",
+   "date": "2026-07-24",
+   "text": "🔔 OPENING BELL — $SPCX\n\n@SpaceX opens flat at $117.61, ▬ +$0.00 (0.00%) against yesterday's $117.61 close.\n\n→ Live price, charts &amp; history at https://t.co/ATpFGFpx4S\n\n#SpaceX #SPCX #StockMarket #Stocks https://t.co/AkXtgEQoX4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "MartynInvestor",
+   "url": "https://x.com/MartynInvestor/status/2080693660614574433",
+   "date": "2026-07-24",
+   "text": "$SPCX\n\n🚨 SpaceX Starship Flight 13 LIVE:\nI'm ALL IN With $1,000,000 Invested!\n\nMartyn Lucas Investor\nLIVE TRADING - LIVE NEWS\n\nLIVE Now on YouTube\n\nhttps://t.co/UQUBFXUoSB\n\n#SPCX #SpaceX #MartynLucasINVESTOR"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 11,
+   "user": "followfinance_",
+   "url": "https://x.com/followfinance_/status/2080097714268672111",
+   "date": "2026-07-23",
+   "text": "Elon Musk’s net worth falling to around $750B says everything about SPCX. When SpaceX peaked at $225.64, the hype looked unstoppable. Now the stock crash has erased hundreds of billions from his fortune. Great company, brutal valuation lesson.\n#spcx #spacex #elonmusk #stocks #ipo https://t.co/EzUrtw93n1"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "GautamK00679688",
+   "url": "https://x.com/GautamK00679688/status/2080638064725311755",
+   "date": "2026-07-24",
+   "text": "🚀 SpaceX (SPCX) up +2.6% today to $118.24!Volume is strong as the stock rebounds from recent lows. Market cap: $1.56T.Key dates: Earnings Aug 4 | Lock-up expires Aug 20.Rebound or more pain ahead? #SpaceX #SPCX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "marketsday",
+   "url": "https://x.com/marketsday/status/2079531081385259067",
+   "date": "2026-07-21",
+   "text": "Cathie Wood’s ARK — Latest Buys (Reported July 20, 2026)\n\n🔹 SpaceX $SPCX — ARK purchased ~$21M worth of SpaceX shares. This continues an aggressive accumulation since the IPO, even as SPCX has pulled back from post‑IPO highs amid volatility and test flight scrubs. SPCX is now a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "GoatCharts",
+   "url": "https://x.com/GoatCharts/status/2079623621967073731",
+   "date": "2026-07-21",
+   "text": "SpaceX \n\nCrab Harmonic complete with a developing Shark Harmonic. \n\n0.382 Fib - T1\n\n$SPCX \n#spcx #spaceX #stock https://t.co/SnjB0NHwKV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Sharesify",
+   "url": "https://x.com/Sharesify/status/2080230432637956380",
+   "date": "2026-07-23",
+   "text": "Tesla Q2 2026: Musk keeps SpaceX merger hopes alive — but cash burn clouds the story \n\nMusk cagey on deal but investors worry about rapidly increasing capital requirements… #Tesla #TSLA $TSLA #SpaceX #SPCX $SPCX #Robotics #Optimus #Energy #TopAIStocks #BestAIStocks #AI https://t.co/7WKcIaPok0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BABYCATEMORGAN",
+   "url": "https://x.com/BABYCATEMORGAN/status/2079434310357029282",
+   "date": "2026-07-21",
+   "text": "BREAKING: SpaceX (SPCX) has closed below $120 for the first time since its IPO amid concerns about its lofty valuation and heavy AI spending.\n\nThe stock has plunged more than 46% from its peak of $225.64, wiping out nearly $1.38 trillion in market capitalization.\n#SPCX #spaceX https://t.co/iMfW37zli3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DeltixOfficial",
+   "url": "https://x.com/DeltixOfficial/status/2080359201805906238",
+   "date": "2026-07-23",
+   "text": "News 📰 🚨 JUST IN: Elon Musk's SpaceX $SPCX hits post-IPO low, falling under $115\n#elonmusk #spacex \n\n$SPCX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "robot2trade1",
+   "url": "https://x.com/robot2trade1/status/2079930085163913568",
+   "date": "2026-07-22",
+   "text": "$SPCX $120 Calls See $2.1 Million Whale Bullish Inflow\n\nMajor options flow alert! A large buyer just loaded $2.1 million into SPCX $120 Call options expiring October 16, 2026.\n\nTrade Details:\nSignificant premium deployed\nAggressive sweeps and high concentration\nDirectional https://t.co/CzOi5tiHEl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "MartynInvestor",
+   "url": "https://x.com/MartynInvestor/status/2080278143688998958",
+   "date": "2026-07-23",
+   "text": "$SPCX\n\nALL IN on SpaceX! $1M, 100% Margin\nI Believe the Bears Are Completely Wrong\n\nI'LL PROVE IT - Every AI Investor is WRONG!\n\nThis is an attack on STUPID &amp; HATE\n\nMartyn Lucas Investor\n\nLIVE Now on YouTube\n\nhttps://t.co/lS6JjuxYo7\n\n#SPCX #SpaceX #MartynLucasINVESTOR https://t.co/rcnRiq4D1z"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ssydscarborough",
+   "url": "https://x.com/ssydscarborough/status/2079205369969332536",
+   "date": "2026-07-20",
+   "text": "$SPCX  SpaceX Update 🚀\n\nSpaceX-related shares are under pressure today.\n\nCurrent price: ~$121\nIntraday move: -2.4%\n\nAfter a major pullback from the $225+ high, SPCX is testing an important support zone.\n\nKey levels:\n\n🟢 Bullish recovery:\nHold $120.5 support\nReclaim $130 https://t.co/UFfIj5TZOF https://t.co/6g6TATn6rh"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 51,
+   "user": "kpak82",
+   "url": "https://x.com/kpak82/status/2080064069621473473",
+   "date": "2026-07-22",
+   "text": "$SPCX closed at new all time lows.\nBullish patterns can break down bearishly.\nJust like how bearish  ascending wedges fail all the time and lead to further upside during bull market rallies.\n\nThat's not fair? \nYou ever play a game that was too easy and fair where they paid the https://t.co/oCzW8aVxbl https://t.co/hChhcxZXOy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "EssamAbdulrhman",
+   "url": "https://x.com/EssamAbdulrhman/status/2079530836836151797",
+   "date": "2026-07-21",
+   "text": "DOCS\n\n$DOCS Technical Outlook\n\nLong-term target remains at $46.00.\n\nKey levels:\n🟢 Support: $21.05\n🔴 Resistance 1: $22.90\n🔴 Resistance 2: $23.80\n🔴 Resistance 3: $24.00\n\nA confirmed breakout above $24.00 could open the way toward:\n🎯 $25.60\n🎯 $26.50\n\nThis is a technical"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2079975989711458451",
+   "date": "2026-07-22",
+   "text": "🐳 $SPCX is down 17% post-IPO and Wall Street is calling it overvalued. A $24.9M put buyer just said: it gets worse.\n\nTHE THESIS\n\nSpaceX went public, joined the Nasdaq-100 on July 7, and has done nothing but fall. Down 17% in its first ten days as an index name. Down 45% from its https://t.co/E5NgUGbnWp"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "briefing_block_",
+   "url": "https://x.com/briefing_block_/status/2079718070797377759",
+   "date": "2026-07-22",
+   "text": "32% of $SPCX ’s float is short. The next move won’t be normal.\n\nS3’s latest estimate puts short interest at roughly 206 million shares, up from about 40 million a month ago, with around $25 billion of bearish exposure now sitting in the trade.\n\nThat is not just a verdict on https://t.co/zGsIcdaW5Y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "gemini_edge",
+   "url": "https://x.com/gemini_edge/status/2080313121516744929",
+   "date": "2026-07-23",
+   "text": "$SPCX Technical Analysis &amp; Trading Ideas for Tomorrow\n\nSpace Exploration Technologies ($SPCX) closed at 112.68, down 2.24% on heavy volume.\n\nKey Technical Levels:\nResistance: R1 123 | R2 128 | R3 140-148\nSupport: S1 107-110 | S2 100 | S3 90-95\nPivot Point (PP): ~113\nATR: ~12-15 https://t.co/kkWfSr1Qwy"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "TMA_MarketIntel",
+   "url": "https://x.com/TMA_MarketIntel/status/2079989626018914430",
+   "date": "2026-07-22",
+   "text": "🟢 Bullish\n\n$SNDK\nStrongest bullish setup. Multiple multi-million-dollar sweeps appeared at the 1600 strike. That level must hold as support.\n$KLAC\nClean long-dated bullish setup with strong opening buy volume. Reclaiming 218 confirms flow is leading price.\n$NVDA\nDeep ITM bullish"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 73,
+   "user": "JOBhakdi",
+   "url": "https://x.com/JOBhakdi/status/2079267697544835395",
+   "date": "2026-07-20",
+   "text": "Good question.\n\nAnd I actually do think that \n\n1. People don’t fully recognize how extraordinarily weird markets are right now. We have never seen anything like this : the largest companies in the world exploding upwards with unprecedented levels of cash and more incoming, while https://t.co/AgAwtCKTlg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "cnfinancewatch",
+   "url": "https://x.com/cnfinancewatch/status/2079795143465652447",
+   "date": "2026-07-22",
+   "text": "━━━━━━━━━━━━━ \n\n【US Listed Stocks Implied Catalyst Brief】🔍 ━━━━━━━━━━━━━  \n\n📅 Date: July 22, 2026 (Wednesday) 🌍 Market: US Equities (NYSE + NASDAQ)  【Executive Summary】 Late July brings a dense calendar of macro data and earnings season for US"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2080020732633874915",
+   "date": "2026-07-22",
+   "text": "The single largest options ticket today was a $357M bet that $NVDA keeps ripping into 2026. The tape underneath tells a different story.\n\nMARKET-CLOSE SYNTHESIS — JULY 22, 2026\n\nTHE HEADLINE VS THE TAPE\n\n$1.08B in tracked premium across 153 prints, and two-thirds of it lived in https://t.co/IzxL9O7tFD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ScalpingX",
+   "url": "https://x.com/ScalpingX/status/2079861348666855608",
+   "date": "2026-07-22",
+   "text": "$SPCX – Liquidation Map (7D) – Current Price ~125\n\n📍 Price is currently around 125, sitting in a transition zone with relatively thin near-price liquidity. Short-liq begins appearing immediately above from 125.6, while the notable long-liq clusters below are positioned further https://t.co/fbVmQStHCI"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 78,
+   "user": "Dgillberry_",
+   "url": "https://x.com/Dgillberry_/status/2080827358081143004",
+   "date": "2026-07-25",
+   "text": "Here are my thoughts on $TSLA \n\nThere is no doubt that there are concerns about the company’s fundamentals and bloated P/E. \n\nYou can’t say you are bullish with a straight face. \n\nWith that said, there are some things to consider. While more downside needs to be accounted for, we https://t.co/CTp9bqpkLR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2080308066176639298",
+   "date": "2026-07-23",
+   "text": "🐳 $SPCX ripped to $112 on SpaceX hype. A whale just SOLD $7.7M of 2028 $200 calls into it.\n\nTHE THESIS\n\nSPCX has become the retail vehicle for SpaceX exposure, and the tape has gone parabolic — shares at $112.50. But the biggest option print of the session isn't a buyer chasing. https://t.co/7EXBRoh6pd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AndrewAaronSkyz",
+   "url": "https://x.com/AndrewAaronSkyz/status/2081135449834238436",
+   "date": "2026-07-25",
+   "text": "$SPCX\n\"The Bull Case for a Major Bounce:\nIf management delivers a blockbuster report on August 4 ~ highlighting accelerated Starlink enterprise growth or stronger-than-expected cash generation ~ short sellers caught off guard could trigger a massive short-covering stampede, https://t.co/SHiFbi8zQK"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 105,
+   "user": "Kaizen_Investor",
+   "url": "https://x.com/Kaizen_Investor/status/2079509853756645781",
+   "date": "2026-07-21",
+   "text": "The stock prices for my space companies: $PL, $RKLB, and Filtronic are now within 10% of my price targets. I would not mind adding a lot to my space companies. I'm also looking into a new space company but it is a micro-cap so will have to see how I'll handle that. \n\nThe space https://t.co/TlQy2MJU45"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "oxnagus",
+   "url": "https://x.com/oxnagus/status/2080642377681862756",
+   "date": "2026-07-24",
+   "text": "Markets don't move on facts alone—they move on emotions.\n\nWhen SPCX drops, the timeline fills with opinions:\n\n💬 \"Sell.\"\n💬 \"It's over.\"\n💬 \"Buy the dip.\"\n💬 \"Wait.\"\nBut the loudest voices aren't always the most informed.\nInstead of reacting to the noise, ask yourself:\nWhat does https://t.co/DV9ZEFg5O5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "R6RiderF",
+   "url": "https://x.com/R6RiderF/status/2080505949060575616",
+   "date": "2026-07-24",
+   "text": "Market Update – S&amp;P 500 &amp; Nasdaq\n\nWe are currently seeing a clear rise in volatility. Individual stocks are losing significant momentum, breaking down sharply at times before recovering relatively strongly. This points to a restless phase in which neither buyers nor sellers are https://t.co/zf82KfZE4V"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "KellyHardy53868",
+   "url": "https://x.com/KellyHardy53868/status/2078960274351239442",
+   "date": "2026-07-19",
+   "text": "Tomorrow's Market Game Plan\n\n$SKHY:\nThe chart is looking very similar to SPCX. Friday's close around 145 likely wasn't the final bottom, but if it trades near 155 tomorrow, it could offer a good short-term entry for a bounce. My upside targets are 160, 165, and 175, where I'd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2080715809651880351",
+   "date": "2026-07-24",
+   "text": "🐳 Washington is talking about nationalizing SpaceX. A $6.95M put just bet the market is underpricing that risk.\n\nTHE THESIS\n\nThe biggest option print on $SPCX today is not a bull chasing the post-IPO rally. It is someone paying $6.95M in premium to hedge the one tail risk Wall https://t.co/PoYvqVw1F4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2079088736982429750",
+   "date": "2026-07-20",
+   "text": "AST SpaceMobile $ASTS: The Market Has Never Been More Divided\n\nFew growth stocks are as controversial as AST SpaceMobile $ASTS right now.\n\nBulls believe the recent selloff has created a rare buying opportunity. Bears argue the risks remain too high. Both sides have valid points, https://t.co/Dz97UT0Ju6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "robot2trade1",
+   "url": "https://x.com/robot2trade1/status/2079244939980923123",
+   "date": "2026-07-20",
+   "text": "$SPCX $90 Puts See $1.09 Million Whale Acquisition\n\nMajor bearish options flow alert! A large buyer just loaded $1.09 million into SPCX $90 Put options expiring August 21, 2026.\n\nTrade Details:\nSignificant volume with aggressive sweeps\nHigh capital concentration\nNotable premium https://t.co/NX2GxMpNrh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "CifrOracle",
+   "url": "https://x.com/CifrOracle/status/2079938611508650207",
+   "date": "2026-07-22",
+   "text": "SpaceXAI is laying the groundwork to build at least one new large-scale data center in Texas. \n\nWhile I still believe the IPO was massively overvalued SpaceX is undoubtedly going to be one of the top 5 companies in the world in our lifetime. V bullish $SPCX https://t.co/x3dhszI7ib"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "jtaimoor879",
+   "url": "https://x.com/jtaimoor879/status/2079758708419199459",
+   "date": "2026-07-22",
+   "text": "$SPCX Next Move\n\n✅ Above 132.70 → Watch 154.24.\n\n❌ Lose 116.05 → Downside toward 111.15 becomes more likely.\n\nCurrent View: \nWAIT / Bearish Bias — don't confuse an oversold bounce with a trend reversal. https://t.co/MZTun6dILC"
+  }
+ ]
+}

@@ -1,0 +1,454 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-05-10T16:00:00Z",
+ "end": "2026-05-17T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "BTC Bitcoin -is:retweet -is:reply lang:en",
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "godfred_xcuz",
+   "url": "https://x.com/godfred_xcuz/status/2054615611481718831",
+   "date": "2026-05-13",
+   "text": "Self-custodial Bitcoin Staking for BTC Yield for Bitcoin holders for onchain Bitcoin economy\n\n✅No bridge. No wrapper. No custodian. \n\n✅BTC stays on Bitcoin; only you control your Bitcoin for the full term.\n\n✅3% Proposed Fix APY paid in BTC.\n\n✅No one else can move your https://t.co/FydY4dkw2c https://t.co/XvvmJhX01s"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BitBriefDaily",
+   "url": "https://x.com/BitBriefDaily/status/2054239240746324054",
+   "date": "2026-05-12",
+   "text": "⚡ BITBRIEF DAILY — MAY 12, 2026\n\nBITCOIN HOLDS $81K AS DOMINANCE HITS 60%\n\n◆ CME Launches Bitcoin VIX, Reshaping Wall St\n◆ Saylor and Mow Slam Ray Dalio BTC Criticism\n◆ Arthur Hayes: $126K Bitcoin Now Inevitable\n◆ Strategy Buys 535 BTC for $43M After Pivot\n\nBTC: $81,452 ▲"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "HypedLaunches",
+   "url": "https://x.com/HypedLaunches/status/2054654915356811298",
+   "date": "2026-05-13",
+   "text": "🚨 Who really controls the most Bitcoin? 🟠\n\nThe top Bitcoin holders continue to accumulate at an incredible pace.\n\nHere are the current leaders:\n\nSatoshi Nakamoto — ~1,096,000 BTC\nCoinbase — ~976,000 BTC\nStrategy (formerly MicroStrategy) — 815,061 BTC\nBlackRock (IBIT ETF) — https://t.co/vwtcqsFIzl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 78,
+   "user": "godfred_xcuz",
+   "url": "https://x.com/godfred_xcuz/status/2055029403600531775",
+   "date": "2026-05-14",
+   "text": "Before you stake BTC on Stacks, here's what you need to understand.\n\nBitcoin staking on Stacks is currently the only BTC-denominated, self-custodial yield in the entire Bitcoin ecosystem.\nNo wrap. No bridge. No counterparty.\nYour keys, your Bitcoin.\n\nThe Protocol Bond: BTC + STX https://t.co/dzgz5mw5gJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 158,
+   "user": "AdamBLiv",
+   "url": "https://x.com/AdamBLiv/status/2054203431863091438",
+   "date": "2026-05-12",
+   "text": "🔥STRATEGY TO $1 TRILLION - QUICKLY!🔥\n\nStrategy has multiple paths to $1 TRILLION in Bitcoin NAV, and the bears are still staring at mNAV like medieval peasants trying to understand a Bloomberg terminal.\n\nCurrent stack: 818,869 BTC\nCurrent BTC NAV: ~$66B\nCurrent BTC price: https://t.co/jMgpGTyFGk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "MacroWhaleX",
+   "url": "https://x.com/MacroWhaleX/status/2053808766005530974",
+   "date": "2026-05-11",
+   "text": "🚨 STRATEGY BUYS MORE BITCOIN 🚨\n\n$MSTR has acquired another 535 $BTC for ~$43M at ~$80,340 per BTC. 👀\n\nLet that sink in. 👇\n\nThe company continues adding to its Bitcoin position, now holding:\n\n➡️ 818,869 $BTC total\n\nAnother accumulation move from one of the most aggressive https://t.co/gSO1hSWPGO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DeWoNews",
+   "url": "https://x.com/DeWoNews/status/2054315273075753340",
+   "date": "2026-05-12",
+   "text": "Strategy @MicroStrategy has acquired 535 Bitcoin for ~$43.0 million dollars at ~$80,340 per bitcoin and has achieved BTC Yield of 9.4% YTD 2026. \n\nStrategy HODL 818,869 Bitcoin $BTC acquired for ~$61.86 billion at ~$75,540 per bitcoin. $MSTR $STRC\n\n#Bitcoin #BTC #Strategy #Crypto https://t.co/YTO5uJxF06"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2054471713094803940",
+   "date": "2026-05-13",
+   "text": "“Global Digital Oil Reserve” is the idea that countries and companies may start holding Bitcoin like nations once stored oil reserves. The reason? Many believe BTC could become a strategic digital asset in the future. (https://t.co/ywJAfXFngh)\n\n🛢️ Old world:\nCountries stored oil https://t.co/pZOWOOXc0t"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2054467933955588356",
+   "date": "2026-05-13",
+   "text": "#Bitcoin $BTC\n\nBitcoin dominance has climbed back above 58%, showing that traders are moving more money into BTC while many altcoins slow down. This usually happens during uncertain or consolidation phases in the crypto market.\n\n🟠 “Bitcoin dominance” = how much of the total https://t.co/Nt1zc5PT13"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AgentHmo",
+   "url": "https://x.com/AgentHmo/status/2054082607961219507",
+   "date": "2026-05-12",
+   "text": "🌅 Bitcoin Morning Brief — 12.05.2026 | 08:11 MEZ (06:11 UTC)\n\n💰 BTC: $81,227 | RSI(14): 50.06 | Fear &amp; Greed: 49 (Neutral)\n📈 24h: +$294 (+0.36%) | Range: $80,418 — $82,090\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n📰 MORNING HEADLINES:\n\n✅ Bitcoin mining pools"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "LiveBTCNews",
+   "url": "https://x.com/LiveBTCNews/status/2054116871155093715",
+   "date": "2026-05-12",
+   "text": "Strategy Acquires 535 BTC as 2026 Bitcoin Yield Reaches 9.4%\n\n• Strategy buys 535 Bitcoin for $43M at an average price of $80,340 💰📊\n• Total holdings rise to 818,869 BTC as 2026 BTC Yield reaches 9.4% 🚀🔗\n\nRead More:\nhttps://t.co/Dv7lckqSgY\n\n#Bitcoin #BTC #Strategy https://t.co/USQl0kt23d"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "0xCoins_xyz",
+   "url": "https://x.com/0xCoins_xyz/status/2055623578226135274",
+   "date": "2026-05-16",
+   "text": "Bitcoin #Bitcoin BTC #BTC $BTC https://t.co/64X00aUd4i https://t.co/ws1DpyeNLe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "godfred_xcuz",
+   "url": "https://x.com/godfred_xcuz/status/2054850808584286409",
+   "date": "2026-05-14",
+   "text": "It's BTC in BTC out thing.\n\nStake BTC on Bitcoin mainnet, Earn BTC. PERIOD•\n\nNo shenanigans. Just Bitcoin self-custodial staking on @Stacks. https://t.co/ZDdU6mxFqY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 140,
+   "user": "YukanL",
+   "url": "https://x.com/YukanL/status/2054862169246994933",
+   "date": "2026-05-14",
+   "text": "The Stacks Bitcoin Staking whitepaper just dropped. What's actually different vs existing Bitcoin yield protocols? Let me break it down.\n\nBTC is locked self-custodial on L1 via P2WSH + OP_CLTV. Your keys, your coin. No wrapping, no bridging.\n\nEvery Bitcoin yield protocol today"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "anilsingta",
+   "url": "https://x.com/anilsingta/status/2055888411198620154",
+   "date": "2026-05-17",
+   "text": "Bitcoin striking 74% of Bitcoin addresses hold less than 0.01 BTC, based on Grayscale Research's analysis. \n\nOwning 0.1 BTC places you ahead of 90% of all Bitcoin users, with over 30 million wallets holding between 0.01–0.1 BTC, and over 200 million wallets containing at least https://t.co/WWUG8Y0l7q"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "LoveIsBitcoin21",
+   "url": "https://x.com/LoveIsBitcoin21/status/2055349055874613295",
+   "date": "2026-05-15",
+   "text": "🎤 Meet the Bitcoin Legends Speaking at BTC Prague 2026\n\nMeet Michael Saylor, Jack Mallers, Natalie Brunell, Adam Back, Jeff Booth, Peter McCormack, and 250+ more Bitcoin legends at BTC Prague 2026. Use code LOVEISBITCOIN for discount tickets at https://t.co/LZSHIaWHDE The post https://t.co/Nk6fOtMO4U"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 46,
+   "user": "93bitmap",
+   "url": "https://x.com/93bitmap/status/2055111276645495166",
+   "date": "2026-05-15",
+   "text": "Bitcoin miners are getting paid less with every halving.\n2016: 25 BTC per block 2020: 12.5 BTC 2024: 3.125 BTC 2028: 1.5625 BTC\nTransaction fees this week: 0.59% of miner revenue.\nThe math is simple: miners need a second income source — or Bitcoin's security weakens with every https://t.co/871zWAspQT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BitBriefDaily",
+   "url": "https://x.com/BitBriefDaily/status/2053961483214848504",
+   "date": "2026-05-11",
+   "text": "⚡ BITBRIEF DAILY — MAY 11, 2026\n\nBITCOIN STEADIES AT $80K AS CLARITY ACT NEARS\n\n◆ Strategy buys 535 BTC for $43M after Saylor sale remarks\n◆ CLARITY Act nears finish line — 52% public support\n◆ a16z crypto raises $2.2B for fifth venture fund\n◆ 2013 Bitcoin whale moves 500"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "SmartMoneyFlowx",
+   "url": "https://x.com/SmartMoneyFlowx/status/2054629932924641569",
+   "date": "2026-05-13",
+   "text": "💡 The world's biggest Bitcoin exchange started as a Magic: The Gathering card site.\n\nMt. Gox once handled 70% of all BTC transactions. Then hackers quietly drained 850,000 BTC over years without anyone noticing.\n\nIt nearly killed Bitcoin. 🃏\n\n#Bitcoin #CryptoHistory #BTC #Crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "godfred_xcuz",
+   "url": "https://x.com/godfred_xcuz/status/2054619203341070408",
+   "date": "2026-05-13",
+   "text": "Self-custodial Bitcoin Staking for BTC Yield for Bitcoin holders for onchain Bitcoin economy\n\n✅No bridge. No wrapper. No custodian. \n\n✅BTC stays on Bitcoin; only you control your Bitcoin for the full term.\n\n✅3% Proposed Fixed APY paid in BTC.\n\n✅No one else can move your https://t.co/z1AczdwD6D https://t.co/XvvmJhX01s"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "btc_board",
+   "url": "https://x.com/btc_board/status/2055028376814153806",
+   "date": "2026-05-14",
+   "text": "Bitcoin capital flows in May are not clean, but they are still directional.\n\nPrivate BTCFi rounds are quiet so far this month.\nThe more interesting signal is coming from public-market wrappers around Bitcoin.\n\n@MicroStrategy  added 535 BTC and now holds 818,869 BTC.\n\n@Strive https://t.co/1u7OUbEMSV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "CoinedgeNews",
+   "url": "https://x.com/CoinedgeNews/status/2054351057195581538",
+   "date": "2026-05-13",
+   "text": "📊 UPDATE: Bitcoin Holds Support at $80,481 as Market Participants Neutralize Risk Exposure\n\n📊 BTC: $80,481 (-1.52%)\n\nThe digital asset market is currently navigating a period of healthy consolidation as Bitcoin (BTC) hovers at $80,481...\n\nRead more ↓\nhttps://t.co/e72piXULes"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "FlashSwapTech",
+   "url": "https://x.com/FlashSwapTech/status/2054095731456102404",
+   "date": "2026-05-12",
+   "text": "Did you know you can swap ANY EVM token directly to ₿ Bitcoin?\n\n✅ ETH → BTC\n✅ BNB → BTC\n✅ USDC → BTC\n✅ Any EVM token → BTC\n\nhttps://t.co/4fhXGZef20 handles the cross-chain routing — Solana too — and settles straight to the Bitcoin network.\n\nNon-custodial. No wrapping. https://t.co/y802dtjKeP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "CwhaleInsights",
+   "url": "https://x.com/CwhaleInsights/status/2055524145375457473",
+   "date": "2026-05-16",
+   "text": "[Burn] BTC - 9.60053584 tokens burned on Bitcoin\n\nBitcoin (BTC) on Bitcoin | Burned: 9.60053584 ($733164) | 19.05% of supply | Burn of 19.05% supply could increase price by ~1.1% if demand remains stable\n\nhttps://t.co/x4WSh36Pfa\n\n#Crypto #WhaleTracker #BTC #ETH #SOL #DeFi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Samduriq",
+   "url": "https://x.com/Samduriq/status/2056033630795808970",
+   "date": "2026-05-17",
+   "text": "Michael Saylor says Strategy treats every Bitcoin sale as temporary.\nFor every 1 $BTC sold, the company plans to buy back 10 to 20 BTC.\n\nStrategy now holds 818,334 BTC worth over $66B, while JPMorgan estimates another $30B in BTC purchases could come in 2026 if the pace https://t.co/i6NJTk75Ff"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 15,
+   "user": "CryptoWaveV",
+   "url": "https://x.com/CryptoWaveV/status/2054430311807627315",
+   "date": "2026-05-13",
+   "text": "$BTC\n\nBitcoin update:\n\nFor me, the signals are still clearly bearish overall. In this current top formation, you can definitely see that the upside momentum is slowly fading. My final resistance, which also lines up with the projected Wave 5 target zone, sits around $83.8k on the https://t.co/M8g0F09HZ3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MacroWhaleX",
+   "url": "https://x.com/MacroWhaleX/status/2054140889455300642",
+   "date": "2026-05-12",
+   "text": "🚨 $BTC JUST FLASHED A MAJOR SIGNAL 🚨\n\nCryptoQuant’s Bull-Bear Cycle Indicator just turned GREEN for the first time since March 2023. 👀\nLet that sink in. 👇\n\nSimilar signals appeared:\n\n➡️ in 2019 — before a major recovery\n➡️ in early 2023 — before Bitcoin’s strong rally\n\nThis https://t.co/MVFlYjoRA3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "Glory2GloryX",
+   "url": "https://x.com/Glory2GloryX/status/2054303855429767173",
+   "date": "2026-05-12",
+   "text": "$BITCOIN Today :\n\nBitcoin  is currently trading around $80,500–$81,000, down roughly 1–1.5% over the past 24 hours. \n\nRecent Price Action Daily range: BTC opened near $81,700+ but pulled back, with intraday lows around $79,900–$80,000. Highs recently tested ~$82,000–$82,400. https://t.co/KN8eK4t5bw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "XYZCryptos",
+   "url": "https://x.com/XYZCryptos/status/2053532100553560462",
+   "date": "2026-05-10",
+   "text": "📊 XYZ CRYPTO 𝗪𝗘𝗘𝗞𝗟𝗬 𝗠𝗔𝗥𝗞𝗘𝗧 𝗨𝗣𝗗𝗔𝗧𝗘\n\n📌 𝘔𝘢𝘺 10, 2026\n\nCrypto is holding up surprisingly well \n𝗕𝗨𝗧 𝗗𝗢𝗡’𝗧 𝗖𝗢𝗡𝗙𝗨𝗦𝗘 𝗦𝗧𝗥𝗘𝗡𝗚𝗧𝗛 𝗪𝗜𝗧𝗛 𝗦𝗔𝗙𝗘𝗧𝗬.\n\nBitcoin → ~$80K\nMajor resistance ahead.\n\nMeanwhile:\n𝗜𝗿𝗮𝗻 𝘀𝗶𝘁𝘂𝗮𝘁𝗶𝗼𝗻 = https://t.co/HAbe6WFQmn"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2054318045443867119",
+   "date": "2026-05-12",
+   "text": "📊【XWIN TREND INDEX | May 13, 2026】\nOverall Score: 68 / 100\n ・80–100 = Strong Uptrend\n ・60–79 = Moderately Bullish\n ・40–59 = Neutral / Sideways\n ・20–39 = Moderately Bearish\n ・0–19 = Strong Downtrend\nCurrent Bias: “Moderately Bullish”\n“Macro conditions remain difficult, but https://t.co/Z8rYzbCiH4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "TradePro16",
+   "url": "https://x.com/TradePro16/status/2054407129394708845",
+   "date": "2026-05-13",
+   "text": "Not a ton to update with Bitcoin but it is still in the same bullish ltf uptrend until the marked level is lost then we have to consider the daily bearish structure has started to follow through to the downside. Unless that happens though I'm still assuming more upside action. https://t.co/MiaLyyxlUd"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "ChainReactionTA",
+   "url": "https://x.com/ChainReactionTA/status/2053845714501873922",
+   "date": "2026-05-11",
+   "text": "Momentum still leans constructive above veewop, but multiple bearish divergences across MACD, MACD Histogram, RSI, Stochastic, Momentum, OBV, VW MACD, Chaikin Money Flow, and CCI suggest some of that recent strength may already be fading. The key area remains whether Bitcoin can https://t.co/Ra6hi5SuTY"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 9,
+   "user": "tradingdiff",
+   "url": "https://x.com/tradingdiff/status/2054351788505960520",
+   "date": "2026-05-13",
+   "text": "BTC on #Hyperliquid 15m Chart 📊\n\nBitcoin has dropped 1.5% during today's session and is currently trading around 80,429 USD. 📉\n\nTo the upside, 81,515 USD is the most relevant liquidity pool. The price closed in during the last bullish impulse but lacked the strength to reach https://t.co/jHHc9aofZg"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 10,
+   "user": "tradingdiff",
+   "url": "https://x.com/tradingdiff/status/2054004317581963450",
+   "date": "2026-05-12",
+   "text": "BTC on #Hyperliquid 15m Chart 📊\n\nThe price is trading around 81,570 USD, retracing over the last few hours. 📉\n\nTo the upside, 83,125 USD is the most relevant liquidity pool; this is the natural target to be swept if the bullish momentum continues. 🎯\n\nTo the downside, 80,435 https://t.co/DJ5nS7w2Oq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AIWoofun",
+   "url": "https://x.com/AIWoofun/status/2055961826538713443",
+   "date": "2026-05-17",
+   "text": "Polymarket Odds for Bitcoin Hitting $75,000 in May Surge to 54% Amid Price Decline\n\nData compiled by Woofun AI indicates that betting markets are pricing in a significant downside risk for Bitcoin as the asset retreats below the $79,000 threshold. On Polymarket, the likelihood of"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 14,
+   "user": "10xResearch",
+   "url": "https://x.com/10xResearch/status/2053774033804460319",
+   "date": "2026-05-11",
+   "text": "10x Volatility Edge: Bitcoin, the Four-Month Overhang Is Lifting\n\nBitcoin traders appear too complacent. Their put options are underperforming, leaving them stuck waiting for expiry before they can book losses, but once those positions roll off (May 29 and June 26), the negative https://t.co/yZQsqlow78"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "markus10x",
+   "url": "https://x.com/markus10x/status/2053774148552314964",
+   "date": "2026-05-11",
+   "text": "10x Volatility Edge: Bitcoin, the Four-Month Overhang Is Lifting\n\nBitcoin traders appear too complacent. Their put options are underperforming, leaving them stuck waiting for expiry before they can book losses, but once those positions roll off (May 29 and June 26), the negative https://t.co/RMfLWncjru"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Enkhmanal",
+   "url": "https://x.com/Enkhmanal/status/2054587838180794865",
+   "date": "2026-05-13",
+   "text": "Gold Just Fell $50 On An Iran Strike Headline — The 'Pure Safe Haven' Reaction Function Is Officially Dead And It Tells You Something About The Bull Case\n\nA noted gold analyst (the Quoth The Raven piece anchored this report) flagged a striking market behavior pattern this week."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Pet22263",
+   "url": "https://x.com/Pet22263/status/2054486423277908399",
+   "date": "2026-05-13",
+   "text": "📈BITCOIN FLASHES ITS FIRST “EARLY BULL” SIGNAL SINCE MARCH 2023  \n\nCryptoQuant’s $BTC Bull-Bear Cycle Indicator turns green, signaling early market recovery.\n\nSimilar signals appeared in 2019 and early 2023 AFTER deep bearish phases, BEFORE stronger bullish trends followed."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "JKsTrades",
+   "url": "https://x.com/JKsTrades/status/2055484063733960899",
+   "date": "2026-05-16",
+   "text": "My bull/bear bias for Bitcoin is stupidly simple… but it works for me.\nWeekly MA bear = I stay bearish \nBreak + close multiple weeks above it + bull signal = bullish confirmation\nNo fancy indicators. \nNo overcomplicating.\nRight now we’re testing this MA again. \nSo far it https://t.co/fTU8slmmR8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "ChmielDk",
+   "url": "https://x.com/ChmielDk/status/2054495451366277204",
+   "date": "2026-05-13",
+   "text": "📊 Bitcoin is stuck.\n\n$81,400 on Wednesday, May 13, 2026. Trapped in a 2% range between the broken consolidation top at $80,500 and the 200-day EMA at $82,000.\n\nThat blue line is the only thing separating the current bear trend from a recovery.\n\n🎯 The setup:\n🟢 Bull trigger:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "abzabat",
+   "url": "https://x.com/abzabat/status/2054137131472199696",
+   "date": "2026-05-12",
+   "text": "📈 BITCOIN FLASHES ITS FIRST “EARLY BULL” SIGNAL SINCE MARCH 2023\nCryptoQuant’s $BTC Bull-Bear Cycle Indicator turns green, signaling early market recovery.\nSimilar signals appeared in 2019 and early 2023 AFTER deep bearish phases, BEFORE stronger bullish trends followed. https://t.co/IJnAT8Kayj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Ladyfoxx_LDFX",
+   "url": "https://x.com/Ladyfoxx_LDFX/status/2053770085437989179",
+   "date": "2026-05-11",
+   "text": "A bull market convinces people\nthey understand risk.\nA bear market introduces them to it properly.\n\n#Ladyfoxx #LDFX #trending #bullmarket #bearmarket #bullish #bearish #bitcoin #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cryptproft",
+   "url": "https://x.com/cryptproft/status/2054490441391788095",
+   "date": "2026-05-13",
+   "text": "📊The Bull-Bear Cycle indicator from the CryptoQuant analytical platform generated an early bull market signal for Bitcoin for the first time since March 2023, experts said. The indicator has left the bearish zone and entered the early bullish cycle area. Historically, such sig…"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Crypto_Alice5",
+   "url": "https://x.com/Crypto_Alice5/status/2054137760785551503",
+   "date": "2026-05-12",
+   "text": "📈 BITCOIN FLASHES ITS FIRST “EARLY BULL” SIGNAL SINCE MARCH 2023\n\nCryptoQuant’s $BTC Bull-Bear Cycle Indicator turns green, signaling early market recovery.\n\nSimilar signals appeared in 2019 and early 2023 AFTER deep bearish phases, BEFORE stronger bullish trends followed.\n\nBut https://t.co/oMYyeKSxAC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "getmemori_app",
+   "url": "https://x.com/getmemori_app/status/2054140743707410605",
+   "date": "2026-05-12",
+   "text": "🚨 #BITCOIN FLASHES ITS FIRST “EARLY BULL” SIGNAL SINCE MARCH 2023\n\nCryptoQuant’s $BTC Bull-Bear Cycle Indicator turns green, signaling early market recovery. Similar signals appeared in 2019 and early 2023 AFTER deep #bearish phases, BEFORE stronger #bullish trends followed. But https://t.co/ygY2alsmBH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 455,
+   "user": "coinbureau",
+   "url": "https://x.com/coinbureau/status/2054129453379338588",
+   "date": "2026-05-12",
+   "text": "📈 BITCOIN FLASHES ITS FIRST “EARLY BULL” SIGNAL SINCE MARCH 2023\n\nCryptoQuant’s bitcoin:native Bull-Bear Cycle Indicator turns green, signaling early market recovery.\n\nSimilar signals appeared in 2019 and early 2023 AFTER deep bearish phases, BEFORE stronger bullish trends https://t.co/W9dcGQFNKg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "DeBetong",
+   "url": "https://x.com/DeBetong/status/2054184308424761850",
+   "date": "2026-05-12",
+   "text": "Annie of @tradetravelchil  reviews Bitcoin price action on the weekly, daily, and lower time frames ahead of the Clarity Act mini hearing. She argues the current rally is a weak bear-market rally: volume is declining, open interest is rising, and the move resembles a prior cycle"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "cryptonewsweb",
+   "url": "https://x.com/cryptonewsweb/status/2054641273840034218",
+   "date": "2026-05-13",
+   "text": "🔥 CryptoQuant flips BTC into early bull territory—the first since March 2023. The Bull-Bear Market Cycle Indicator went bullish on May 12, signaling a budding upside phase. Are BTC bulls waking up? #crypto #cryptonews #Bitcoin #BTC #BullRun #DeFi 🚀 https://t.co/HeAn4IT3yE"
+  }
+ ]
+}

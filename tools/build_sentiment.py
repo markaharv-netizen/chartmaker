@@ -9,7 +9,7 @@ deterministic and needs no network access (Render never scrapes).
 import json, math, os, sys, statistics, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT, HIST = os.path.join(ROOT, "sentiment.json"), os.path.join(ROOT, "sentiment_history.json")
-NEWS_W, Z, OWN_MIN = 3.0, 1.96, 20  # news weight; 95% Wilson; days of own history before switching sigma to own z-score
+NEWS_W, Z, OWN_MIN = 3.0, 1.96, 20  # news weight; 95% Wilson; history points needed before sigma switches to own z-score
 
 def weight(it): return NEWS_W if it["kind"] == "news" else 1 + math.log1p(max(0, it.get("eng", 0)))
 
@@ -30,7 +30,9 @@ def score(t):
 def main(path, asof=None):
     B = json.load(open(path)); date = os.path.basename(path).split(".")[0]
     asof = asof or datetime.datetime.now(datetime.timezone.utc).astimezone().isoformat(timespec="minutes")
-    hist = json.load(open(HIST)) if os.path.exists(HIST) else {}
+    H = json.load(open(HIST)) if os.path.exists(HIST) else {}
+    if "daily" not in H and "series" not in H: H = {"daily": H}  # migrate the old flat {date:{SYM:bull}} file
+    hist, series = H.setdefault("daily", {}), H.get("series", {})
     rows = []
     for sym, t in B["tickers"].items():
         p, lo, hi, nb, nr, neff = score(t)
@@ -46,15 +48,17 @@ def main(path, asof=None):
     hist[date] = {r["symbol"]: r["bull"] for r in rows}
     ps = [r["bull"] for r in rows]; mu, sd = statistics.mean(ps), statistics.pstdev(ps) or 1
     for r in rows:
-        own = [h[r["symbol"]] for d, h in sorted(hist.items()) if r["symbol"] in h]
+        # own-history sigma: latest point of the ticker's X-only history series (same rules labeler throughout)
+        # against its earlier points, so the z-score never mixes hand-labeled and rules-labeled levels
+        s = series.get(r["symbol"], []); own = [x["bull"] for x in s[:-1]]
         if len(own) >= OWN_MIN and statistics.pstdev(own) > 0:
-            r["sigma"], r["sigma_basis"] = round((r["bull"] - statistics.mean(own)) / statistics.pstdev(own), 2), "own"
+            r["sigma"], r["sigma_basis"] = round((s[-1]["bull"] - statistics.mean(own)) / statistics.pstdev(own), 2), "own"
         else:
             r["sigma"], r["sigma_basis"] = round((r["bull"] - mu) / sd, 2), "cross"
     rows.sort(key=lambda r: -r["sigma"])
-    out = {"asOf": asof, "window": B.get("window"), "method": "engagement-weighted bull/(bull+bear) of classified X posts (w=1+ln(1+likes+2*reposts+replies+2*quotes)) and news (w=3); band = 95%% Wilson on Kish effective n; sigma = cross-sectional z until %d days of own history" % OWN_MIN,
+    out = {"asOf": asof, "window": B.get("window"), "method": "engagement-weighted bull/(bull+bear) of classified X posts (w=1+ln(1+likes+2*reposts+replies+2*quotes)) and news (w=3); band = 95%% Wilson on Kish effective n; sigma = z-score of the latest X-only history point vs that ticker's own history once it has %d points (sigma_basis own), else cross-sectional z across the board" % OWN_MIN,
            "source": "X posts & news", "tickers": rows}
-    json.dump(out, open(OUT, "w"), indent=1); json.dump(hist, open(HIST, "w"), indent=1)
+    json.dump(out, open(OUT, "w"), indent=1); json.dump(H, open(HIST, "w"), indent=1)
     for r in rows: print(f'{r["symbol"]:6} {r["sigma"]:+.2f}σ bull {r["bull"]:.0%} [{r["lo"]:.0%}-{r["hi"]:.0%}] {r["n_bull"]}/{r["n_bear"]}')
 
 if __name__ == "__main__":

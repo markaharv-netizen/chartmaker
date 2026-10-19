@@ -1,0 +1,454 @@
+{
+ "symbol": "STRC",
+ "start": "2026-06-07T16:00:00Z",
+ "end": "2026-06-14T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "STRC -is:retweet -is:reply lang:en",
+  "STRC (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ModestusOkoye",
+   "url": "https://x.com/ModestusOkoye/status/2064225986023973147",
+   "date": "2026-06-09",
+   "text": "For the first time, @saturn_credit briefly flipped @HyperliquidX in daily fees.\n\nSaturn recorded roughly $3.28 million in fees over 24 hours, marking a new high on the chart.\n\nBut the interesting part is what happened behind the scenes.\n\nSaturn is a dual-token Bitcoin-backed https://t.co/YTbwDyr2nF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Global_future1",
+   "url": "https://x.com/Global_future1/status/2064628511000637556",
+   "date": "2026-06-10",
+   "text": "STRC dropped below $100, Strategy could raise the dividend to attract buyers back. That is why STRC stayed stable for months.\n\nNow the system is cracking and STRC just dropped to $94.84.  https://t.co/jMPt6iaLUH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 41,
+   "user": "Kiojame_",
+   "url": "https://x.com/Kiojame_/status/2064003224957239765",
+   "date": "2026-06-08",
+   "text": "Did MicroStrategy’s STRC kill DeFi? Simple answer is no.\n\nIt created a new asset class and expanded the scope of what onchain credit can be built on. \n\nYes, DeFi TVL is down since last August, but that move mostly mirrors price action across the board rather than capital fleeing https://t.co/R1a9KCQK0J https://t.co/W6TVZGnfmH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 106,
+   "user": "Nick_Researcher",
+   "url": "https://x.com/Nick_Researcher/status/2064586352449253695",
+   "date": "2026-06-10",
+   "text": "➥ $STRC Yield Farming Eco [Pt.1]\n\nICYMI, STRC =\n- @Strategy's high-yield preferred stock paying ~11.5% cash dividends\n- tokenized onchain for real BTC-linked yield in DeFi\n\nThe listed ones are the core players:\n\n[1] @apyx_fi: Wraps STRC into apxUSD / apyUSD for dividend-backed https://t.co/CPY0lvaUtf https://t.co/0mPVHzjL9U"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2065460388620116256",
+   "date": "2026-06-12",
+   "text": "$STRC-secured $MSTR put selling is still a viable strategy as long as you don't use 100% of STRC as collateral.\n\nUsing 50% of STRC as collateral is much safer and would allow you to survive a 50% STRC drawdown."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "dadrabbot",
+   "url": "https://x.com/dadrabbot/status/2064028564937232849",
+   "date": "2026-06-08",
+   "text": "$MSTR mnav is going to scream higher imo\n\n$STRC is driving significant bitcoin purchases. Strategy is not paying 11.5% to STRC shareholders, MSTR common are paying 11.5% to STRC shareholders per year. On this next moving through previous ATH into price discovery, that will start"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "SemperVigilant1",
+   "url": "https://x.com/SemperVigilant1/status/2065247912628486595",
+   "date": "2026-06-12",
+   "text": "Lmao! I was barely aware that there are a bunch of shitcoins buying $STRC before this. \n\nThe point I have been making about how liquidity will dry up for $STRC is now in turbo mode. \n\n$STRC https://t.co/h2sRPOtQD5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 185,
+   "user": "thedefivillain",
+   "url": "https://x.com/thedefivillain/status/2064287172811690145",
+   "date": "2026-06-09",
+   "text": "STRC is back at $97, two days after ticking around $90.5\n\nThird time this happens during a significant BTC drawdown.\n\nThe MAIN factor that is moving STRC price is BTC price, by at least an order of magnitude.\n\nBasically STRC holders start panicking when BTC goes down too much, https://t.co/6bSqYJ7jj7 https://t.co/haWgkLuy2D"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 419,
+   "user": "TheOtherParker_",
+   "url": "https://x.com/TheOtherParker_/status/2064088325594415445",
+   "date": "2026-06-08",
+   "text": "So wtf happened, why did $STRC depeg?!\n\nIt's a small flaw in the design that has been halfway fixed and completely fixed by $SATA.\n\nSTRC pays dividends once a month. You only need to hold STRC one day of the month to get the dividend though, so there's the other ~20 trading days"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "bearnsterns",
+   "url": "https://x.com/bearnsterns/status/2064034155625627985",
+   "date": "2026-06-08",
+   "text": "It's pretty simple.\n\nSTRC pays you every other week. They have cash reserves, if low, they sell some bitcoin. Over time, STRC will gain trust and inflows will stabilize and grow.\n\nSaylor will grab the money raised from selling STRC and add to reserves, and buy more Bitcoin. \n\nThe https://t.co/D1YAQPo0Px"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BustyHumor",
+   "url": "https://x.com/BustyHumor/status/2063993323824554166",
+   "date": "2026-06-08",
+   "text": "CONGRATULATIONS! 🔥🥳\n\nStrategy Inc (Nasdaq: STRF/STRC/STRK/STRD/MSTR; LuxSE: STRE) (“Strategy”) today announced that, based on preliminary results, stockholders approved Proposal 5 at its 2026 Annual Meeting of Stockholders, held virtually on June 8, 2026, amending the terms of https://t.co/4cPHZJ7RBJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AbdulMuhin73",
+   "url": "https://x.com/AbdulMuhin73/status/2064160268641304883",
+   "date": "2026-06-09",
+   "text": "Everyone was talking about Saylor's 32 $BTC sale\n\nNobody was talking about what happened today.\n\n$STRC shareholders just approved semi-monthly dividends.\n\nWhat it means:\n• Investors get paid twice a month\n• More reinvestment opportunities\n• More liquidity\n• More demand for"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "Taylor_stxBTC",
+   "url": "https://x.com/Taylor_stxBTC/status/2065667599183274117",
+   "date": "2026-06-13",
+   "text": "STRC has never recovered back to its $100 par price since Saylor raided the cookie jar meant for STRC dividends and repaid $1.38B of convertible notes ( 61.3% of the $2.25B USD reserve). \nIMO this action caused more harm then the 32 BTC sale. If that's the case raising the https://t.co/tQo6nVNs3n"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 76,
+   "user": "BitcoinForCorps",
+   "url": "https://x.com/BitcoinForCorps/status/2063990783691100497",
+   "date": "2026-06-08",
+   "text": "JUST IN: $STRC / $MSTR shareholders have approved moving STRC dividends from monthly to semi-monthly.\n\n✌️ Dividends paid 2x/month\n📅 First record date: June 30\n💵 First payment date: July 15\n\nA move designed to increase liquidity, reduce cyclicality, and accelerate dividend https://t.co/YW7V3TKcrG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 77,
+   "user": "AAStack",
+   "url": "https://x.com/AAStack/status/2064000984754376707",
+   "date": "2026-06-08",
+   "text": "Saylor just announced $STRC shareholders approved semi-monthly dividends.\n\nEveryone is asking: is this bullish or bearish?\n\nHere's the complete honest answer.\n\n1/ What actually changed:\n\nSTRC dividends move from monthly to semi-monthly.\n\nSame 11.5% annual rate.\nSame $1.2B annual https://t.co/3pgFWJGInV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "CRNBTC",
+   "url": "https://x.com/CRNBTC/status/2064204440421150975",
+   "date": "2026-06-09",
+   "text": "🚨 STRATEGY APPROVES TWICE-MONTHLY $STRC DIVIDENDS\n\n$MSTR and $STRC holders approved a change that will see $STRC dividends paid twice per month instead of monthly.\n\nThe annual yield remains unchanged, with payments now scheduled for the 15th and month-end.\n\n#MSTR #STRC #BTC https://t.co/YyzbG9k2QX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "gascope",
+   "url": "https://x.com/gascope/status/2064006586956161333",
+   "date": "2026-06-08",
+   "text": "Strategy shareholders approved semi-monthly dividends on STRC preferred stock, shifting from monthly payouts to the 15th and last day of each month, starting this month. STRC has traded below its $100 par. Not financial advice.  #STRC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "bowtiedcrake",
+   "url": "https://x.com/bowtiedcrake/status/2064597966879588505",
+   "date": "2026-06-10",
+   "text": "How AI benefits $STRC: Billions of bad credit in listed companies now disrupted irreparably by AI\n\nHow AI hurts $STRC: Instead of flowing into $STRC the institutions may move into AI supply chain buildouts instead, and the growth story is real. TradFi also allocating to AI over"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 243,
+   "user": "BTCtreasuries",
+   "url": "https://x.com/BTCtreasuries/status/2065517743793721788",
+   "date": "2026-06-12",
+   "text": "JUST IN: Strategy's Michael Saylor just said, \"We will raise a lot of capital with $STRC at or above par, but we won't sell $STRC even a penny below par.\"\n\nStrategy is committed to filtering out the volatility of $STRC.🔥🙌 https://t.co/cWdbwGpkIw"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "NathanpartPrice",
+   "url": "https://x.com/NathanpartPrice/status/2063839427080708519",
+   "date": "2026-06-08",
+   "text": "I’m SHORT term bullish on MSTR\nLast week:\n• BTC weakness\n• STRC below par\n• “Flywheel broken”\n\nThis week:\n• STRC vote likely passes\n• Semi-monthly dividends\n• Faith restored in prefs\nAnd STRC back to par by ex div\n• ATM viability restored\n• BTC buying resumes\n\nBears may"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "charleschong_",
+   "url": "https://x.com/charleschong_/status/2065579508233535651",
+   "date": "2026-06-12",
+   "text": "Crazy to see $STRC fall so much while $MSTR is up. Retail selling $STRC to get into $SPCX ?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 90,
+   "user": "phtevenstrong",
+   "url": "https://x.com/phtevenstrong/status/2065471020010533245",
+   "date": "2026-06-12",
+   "text": "The current NAV for @apyx_fi's apxUSD is 1.8% higher than STRC.\n\nThat has been, and continues to be, the selling point for me on apyx. \n\nI.E., that apyUSD is a way to get a better yield than holding STRC while also getting less direct exposure to de-parring events for STRC. https://t.co/SHCMLHvyfG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Zarrar_404",
+   "url": "https://x.com/Zarrar_404/status/2065671391131611223",
+   "date": "2026-06-13",
+   "text": "Strategy’s STRC remains below par, limiting Bitcoin fundraising\n\nStrategy’s STRC preferred stock closed at $94.80 on Friday, completing an entire dividend cycle without returning to its $100 par value.\n\nThat matters because Michael Saylor previously said Strategy would not issue https://t.co/PW9x0yvCTc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "CryptoYieldGuy",
+   "url": "https://x.com/CryptoYieldGuy/status/2064337215287628187",
+   "date": "2026-06-09",
+   "text": "Nice trade @ZynxBTC!\n\n$STRC depegged from $100 &gt; $93\n\nArbitragers who bought STRC at $93 shall earn a 11.86% yield + 7.5% profit (repeg)\n\nIf you buy STRC now at $96.85,  you will earn 11.87% + 3.25% profit (repeg), assuming $MSTR doesn't rug pull\n\nNote: I'm not buying $STRC here https://t.co/x7JEhAkiZ5 https://t.co/DK5dbxZCwR"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "keithmac273",
+   "url": "https://x.com/keithmac273/status/2065482635649147301",
+   "date": "2026-06-12",
+   "text": "🔥 Discount buying chance for STRC\nSTRC trades below par at\n$96\n11.5% dividend supports rebound back to par\nBuy 100 shares from $5k, turn $10k into $50k\nNo junk stock picks\nBonus: Expert talks NVDA new RTX Spark PC chip\nI share market insights for free\n#STRC #NVDA #Stocks https://t.co/VFEd4KlrVN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "PinguStacks",
+   "url": "https://x.com/PinguStacks/status/2064626307300774255",
+   "date": "2026-06-10",
+   "text": "If you think you are safe in gold and the equity market right now, you're not.\n\n$BTC often moves faster and harder than the wider market, just be careful out there if you think your gold or AI positions are always going to go up.\n\nI'm a perma-bull, but there is a lot of https://t.co/9dTjs8YBuj"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 69,
+   "user": "HighYieldHustle",
+   "url": "https://x.com/HighYieldHustle/status/2065973034192887883",
+   "date": "2026-06-14",
+   "text": "$STRC is a waste of time when you can just buy $BLOX and outperform Bitcoin with a 36% dividend yield. \n\nLook on the left at the total return difference in a BTC bull. \n\nNow look at the right at the difference in a BTC bear. \n\nIf STRC can’t beat it in either scenario… it’s not https://t.co/CP2OmlDxv2 https://t.co/M8dMEcgpDt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "benvhodl",
+   "url": "https://x.com/benvhodl/status/2064000049667776847",
+   "date": "2026-06-08",
+   "text": "If you're in $STRC (11.5% variable), now might be worth evaluating a switch to $STRK, which offers ~11.8% effective yield (8% fixed on $100 par, trading ~$65-68) + each share converts to 0.1 $MSTR shares.\n\nYou keep strong yield backed by Strategy's Bitcoin treasury, but gain https://t.co/T6wh1JK9Pj"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 37,
+   "user": "coinfoin_",
+   "url": "https://x.com/coinfoin_/status/2065148707088322901",
+   "date": "2026-06-11",
+   "text": "Back to farming APYX S2.\n\nI am still bullish on @apyx_fi \n\nFor S2, I am using YT and looping strategies, but not with full capital like in S1. This time, I’m diversifying into other projects as well.\n\nI was quite lucky to have closed all my looping strategies right after S1 https://t.co/Bm4h4wKiGM"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 16,
+   "user": "Fibonacci69",
+   "url": "https://x.com/Fibonacci69/status/2065643578466930894",
+   "date": "2026-06-13",
+   "text": "RyQuant thinks $STRK is a better long term hold than $MSTR\n\nPio: \"I could see myself at the top of a bull run, wanting to dump those into one of the prefs. Stretch $STRC is obviously interesting, but I'm limiting my upside with that. If I dumped it into something like Strike https://t.co/hWWOLwmCK1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "CapitalShipyard",
+   "url": "https://x.com/CapitalShipyard/status/2064070452969197595",
+   "date": "2026-06-08",
+   "text": "$STRC really shouldn't hang out in the 90s. Either it's a cash substitute and hugs par, or else holders realize that it's a structurally vulnerable security in an upside down capital stack. Having seriously depegged, it should just trade at a 20%+ yield, i.e. around $50 https://t.co/VmiaU771sA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 306,
+   "user": "ZynxBTC",
+   "url": "https://x.com/ZynxBTC/status/2065432700433940713",
+   "date": "2026-06-12",
+   "text": "Today is the last trading day before the ex-dividend date for both $STRC and $SATA.\n\nAs you can see, $SATA is faring much better and that's primarily due to the higher yield.\n\nI am confident that we will see a raise for $STRC this time around.\n\nAlthough not at par, these two new https://t.co/BqEgv5tjNE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "MrPappagorgio02",
+   "url": "https://x.com/MrPappagorgio02/status/2065849652222496951",
+   "date": "2026-06-13",
+   "text": "I’ve decided I’m bullish $MSTR &amp; $ASST\n\nIt seems like it’s easier to explain the bull thesis than it is the bear thesis.\n\nThe numbers make more sense as to how they succeed than they fail.\n\nIf you don’t believe Bitcoin can go up 30%+, then I wouldn’t recommend them.\n\n$MSTR and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "fuckzimbabwe",
+   "url": "https://x.com/fuckzimbabwe/status/2064416694932832340",
+   "date": "2026-06-09",
+   "text": "This guys a perma bear because his own bitcoin fund was a bad idea. Every post seems to be shitting on innovation around bitcoin, mostly because his failed. The founders @kevinlhr88 are doing something unprecedented and ur gonna end up eating a shit sandwhich on comparing apples https://t.co/JF1wecoyuU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 93,
+   "user": "yourfriendSOMMI",
+   "url": "https://x.com/yourfriendSOMMI/status/2064103320948793354",
+   "date": "2026-06-08",
+   "text": "❤️💛💚💙\n\n🧃 Juicy News #1410 \n\n🟢 Bitcoin $63,000\n🟢 Ethereum $1700\n🟢 ETH-BTC = 0.026\n\n🔻 Oil $90\n\n🇮🇷 Iran says it has fully closed Bab al-Mandab Strait, following Israeli strikes.\n12% of world trade passes through it.\n\n🇺🇸 Michael Strategy bought 1,550 BTC for $101m\n👉🏼 Now https://t.co/Bij41Z6vZv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 69,
+   "user": "Jonasoeth",
+   "url": "https://x.com/Jonasoeth/status/2066065681637134432",
+   "date": "2026-06-14",
+   "text": "The opportunity most people are missing during STRC's depeg\n\nWhen an asset depegs, the market's first reaction is usually concern.\n\n- The price falls.\n- TVL slows down.\n- Positions come under pressure.\n\nBut sometimes, the most important thing is not how much the price drops. https://t.co/LWKnv2qjgO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "10xResearch",
+   "url": "https://x.com/10xResearch/status/2065257240391778585",
+   "date": "2026-06-12",
+   "text": "Crypto One Liners - Crypto Equities\n\nMSTR (-8.9%) — CEO share sale spooked the market at $60K BTC, but a 1,550 BTC buyback restored confidence; STRC trading below par signals preferred-equity stress. \n\n3350.T (-9.8%) — Metaplanet cut its warrant floor from ¥298 to ¥187 as mNAV https://t.co/aRnbgTYtGP"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "chasepalmieri",
+   "url": "https://x.com/chasepalmieri/status/2065481716987306468",
+   "date": "2026-06-12",
+   "text": "X is full of bitcoiners who think MSTR will either blow up or become the most valuable equity in the world. Most agree that the outcome is highly asymmetric - either significant downside or extraordinary upside.\n\nSo what if you could capture 70% of MSTR’s upside with full https://t.co/13RVJnMjoJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "CoinCrafty",
+   "url": "https://x.com/CoinCrafty/status/2063954235629212132",
+   "date": "2026-06-08",
+   "text": "Michael Saylor may be preparing to buy more bitcoin. Strategy’s bitcoin stack is sitting roughly $11–12 billion below cost basis.\n\n@Saylor posted “A good time to add more dots” on June 7 — his familiar signal that another Strategy bitcoin purchase may be coming. But this time the https://t.co/xedZy56NM6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "safetyth1rd",
+   "url": "https://x.com/safetyth1rd/status/2063970288761799074",
+   "date": "2026-06-08",
+   "text": "Bitcoin: mildly bullish - he’s not selling at these levels*\n\nSTRC: bullish - he’s showing he’s prioritizing dividends by raising cash \n\nMSTR: bearish imo because of ATM(although it could be argued BTC per share still increasing) https://t.co/7Z0vR2KHnR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ScargsStuff",
+   "url": "https://x.com/ScargsStuff/status/2065494877048127631",
+   "date": "2026-06-12",
+   "text": "I don't know what's ultimately going to happen with $STRC . I get that there are people with compelling bullish and bearish mathematical cases. For me, the ad below is what makes me skeptical. I just get daytime TV commercial for payday loans kind of vibes... https://t.co/aypimrWtKI"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 25,
+   "user": "TheOtherParker_",
+   "url": "https://x.com/TheOtherParker_/status/2064783461244895435",
+   "date": "2026-06-10",
+   "text": "So true. People bearish $MSTR or even $STRC are essentially decades long $BTC bears. There's just no other way to rationalize being a bear. https://t.co/CIMRaeI3sX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 96,
+   "user": "0xTindorr",
+   "url": "https://x.com/0xTindorr/status/2065168190540259762",
+   "date": "2026-06-11",
+   "text": "This Bitcoin Line of Credit is making user experience seamless on @roxom.\n\nSince they have $SATA and $STRC listed directly on their exchange, the carry trade (borrow stable and earn higher yield on SATA/STRC) is already built in.\n\nYou can also use stables to access equities or https://t.co/gpqek4GFau"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Trader_9Al",
+   "url": "https://x.com/Trader_9Al/status/2063970378305720340",
+   "date": "2026-06-08",
+   "text": "Market Overview — June 8, 2026\n\nMarkets are starting the week in a challenging environment: high oil prices, rising rate expectations, escalating tensions between the U.S., Iran, and Israel, a downturn in AI and semiconductors, and ongoing outflows from crypto ETFs. The start of https://t.co/mQAQpyStPn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 180,
+   "user": "TheOtherParker_",
+   "url": "https://x.com/TheOtherParker_/status/2065531471847424393",
+   "date": "2026-06-12",
+   "text": "Strange things afoot in $STRC land. Two possibilities:\n\n1. Retail investors finally throwing in the towel. Ex dividend on Monday likely means a drop in price of ~1% at least (although the dividend receivable covers that).\n\n2. Someone is going bigly short here, trying to shake out https://t.co/sGG1cCb1ig"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1276,
+   "user": "AdamBLiv",
+   "url": "https://x.com/AdamBLiv/status/2064112540943044666",
+   "date": "2026-06-08",
+   "text": "Literally could not be more bullish on Bitcoin.\n\n- SATA about to start daily dividends\n- STRC about to start semi-monthly dividends\n- MSTR volume sucking up Bitcoin\n- CLARITY Act on the way\n- Oversold according to almost every indicator\n- ETF plumbing keeps expanding\n- Metaplanet"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 56,
+   "user": "thebtcpharaoh",
+   "url": "https://x.com/thebtcpharaoh/status/2063681878180376895",
+   "date": "2026-06-07",
+   "text": "The Holy Grail Is a Coupon, Not an Instrument\n\nEveryone’s calling perpetual preferred equities the holy grail for Bitcoin treasury companies.\n\nThey’re only half right though. And the half they’re wrong about is going through its first major stress test.\n\nHere’s the actual"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ScalperSilly",
+   "url": "https://x.com/ScalperSilly/status/2064631900887765323",
+   "date": "2026-06-10",
+   "text": "Passive income , nodes, staking, yield farming, always a different name, always the same result come the bear. It’s going to get ugly for the Saylor cult who ignored risk management. Sorry, I don’t make the rules. $BTC $MSTR $STRC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 20,
+   "user": "yichuan_drive",
+   "url": "https://x.com/yichuan_drive/status/2065701810669543919",
+   "date": "2026-06-13",
+   "text": "Been vibing around bout @saturn_credit n this's my top $STRC RWA product I'm bullish about 🟠\n\n📂 Saturn's straight up solving the actual problem:\n&gt; turning that $BTC backed digital credit layer into:\n &gt;&gt; onchain USDat (clean liquidity) + sUSDat (actual yield printer) \n &gt;&gt;&gt; https://t.co/X1qEOCixjy"
+  }
+ ]
+}

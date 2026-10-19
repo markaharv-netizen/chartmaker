@@ -1,0 +1,445 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-07-12T16:00:00Z",
+ "end": "2026-07-19T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "BTC Bitcoin -is:retweet -is:reply lang:en",
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "cryptonewsz_",
+   "url": "https://x.com/cryptonewsz_/status/2077253818333753718",
+   "date": "2026-07-15",
+   "text": "🇸🇬 Canaan expands its Bitcoin treasury with another BTC purchase.\n\n@Canaan has added 49 $BTC to its corporate treasury, bringing its total Bitcoin holdings to 1,915 BTC.\n\n• Canaan acquired an additional 49 BTC.\n• The company's total Bitcoin treasury now stands at 1,915 BTC.\n• https://t.co/kERWaBcfYE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 98,
+   "user": "godfred_xcuz",
+   "url": "https://x.com/godfred_xcuz/status/2078054152672879051",
+   "date": "2026-07-17",
+   "text": "Stacks continues to make steady progress by successfully integrating with the software needed for institutional onchain Bitcoin economy.\n\nBitGo integration with sBTC bridge is another clear win for Stacks, following Fireblocks integration.\n\n471,000 BTC in @BitGo custody by May https://t.co/4a8N0FqtC1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "rajas2704",
+   "url": "https://x.com/rajas2704/status/2077993229052768461",
+   "date": "2026-07-17",
+   "text": "🚨 Canaan expands its Bitcoin treasury.\n\nThe company added 49 BTC, bringing its total Bitcoin holdings to 1,915 BTC. ₿📈\n\n#Bitcoin #BTC #Crypto https://t.co/1MpE5U6QDQ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 16,
+   "user": "trhonbtc",
+   "url": "https://x.com/trhonbtc/status/2078382064995545152",
+   "date": "2026-07-18",
+   "text": "=&gt; List of the 7 public companies holding the largest amount of Bitcoin in the world today\n\nThe corporate adoption of Bitcoin as a strategic reserve asset (Bitcoin Treasury Strategy) has experienced explosive growth, driving the total accumulated holdings of public companies https://t.co/ItmUmdTG7g"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 61,
+   "user": "BTCNewsGlobal",
+   "url": "https://x.com/BTCNewsGlobal/status/2076621799937241109",
+   "date": "2026-07-13",
+   "text": "🚨 ERIC TRUMP'S BITCOIN COMPANY HAS LOST OVER 95% OF ITS VALUE FROM THE PEAK.\n\nAmerican Bitcoin has erased more than $600 million from the market value of Eric Trump's stake, according to Bloomberg estimates.\n\nWhile several Bitcoin miners pivoted toward AI infrastructure, https://t.co/Fzv5IvNDlY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "Grokcardano",
+   "url": "https://x.com/Grokcardano/status/2077927651051024664",
+   "date": "2026-07-17",
+   "text": "🌟 Introducing BTC Karma – The Future of Bitcoin Staking is Here!\n\nStake $BTC → Earn $KARMA → Ascend Your Level.\n\nInnovation. Alignment. Enlightenment.\n\nThis revolutionary platform rewards long-term Bitcoin holders with sustainable yields while keeping everything decentralized, https://t.co/UtaU98vVLg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Sports_1438",
+   "url": "https://x.com/Sports_1438/status/2078148601008865387",
+   "date": "2026-07-17",
+   "text": "₿ Top 10 Largest Bitcoin Holders (2026)\n\n1️⃣ Satoshi Nakamoto — ~1.10M BTC\n\n2️⃣ Coinbase — ~980K BTC\n\n3️⃣ Strategy (MicroStrategy) — ~844K BTC\n\n4️⃣ BlackRock (IBIT) — ~732K BTC\n\n5️⃣ Binance — ~675K BTC\n\n6️⃣ Fidelity — ~426K BTC\n\n7️⃣ U.S. Government — ~325K BTC\n\n8️⃣ Grayscale (GBTC) —"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "crynetio",
+   "url": "https://x.com/crynetio/status/2077141233827258782",
+   "date": "2026-07-14",
+   "text": "🟠 Canaan Inc $CAN Adds 48 $BTC to Treasury\n\nSingapore-listed Bitcoin miner Canaan Inc increased its Bitcoin holdings by 48 BTC, bringing its total stash to 1,915 BTC, per company data. The firm now ranks 33rd globally for corporate Bitcoin holdings."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 9,
+   "user": "tradingdiff",
+   "url": "https://x.com/tradingdiff/status/2077767367115837706",
+   "date": "2026-07-16",
+   "text": "📈 #BTC Spot #ETF: Daily Flow\n\nBitcoin ETFs closed the day with net inflows of 1,663 BTC.\n\nBreakdown:\n\n#IBIT: +1,248 BTC\n#FBTC: +261 BTC\n#BTC (Grayscale Mini): +154 BTC\n\n🚀 Positive flows across IBIT, FBTC, and Grayscale Mini BTC pushed spot Bitcoin ETFs to another day of net https://t.co/PNWKwKkqJy"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "tradingdiff",
+   "url": "https://x.com/tradingdiff/status/2077432580463350059",
+   "date": "2026-07-15",
+   "text": "📈 #BTC Spot #ETF: Daily Flow\n\nBitcoin ETFs closed the day with net inflows of 2,905 BTC.\n\nBreakdown:\n\n#IBIT: +2,228 BTC\n#FBTC: -338 BTC\n#ARKB: +58 BTC\n#BITB: +56 BTC\n#MSBT: +119 BTC\n#BTC (Grayscale Mini): +106 BTC\n\n🚀 Strong inflows into BlackRock's IBIT more than offset the https://t.co/efHp8yE9Gn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "TimesOfBlockC_",
+   "url": "https://x.com/TimesOfBlockC_/status/2076940222131245411",
+   "date": "2026-07-14",
+   "text": "🟠 Michael Saylor hints at another Bitcoin purchase. 👀\n\n@saylor ($MSTR) has once again fueled speculation of another $BTC acquisition after posting:\n\n\"Orange dots tell only part of the story.\" 🟠\n\n• Saylor's \"orange dots\" posts have frequently preceded Strategy's Bitcoin https://t.co/pmAsojFKRG"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "ChainFolk_",
+   "url": "https://x.com/ChainFolk_/status/2077387293418287568",
+   "date": "2026-07-15",
+   "text": "₿ Institutional Bitcoin accumulation continues.\n\nSeveral companies and investment funds have expanded their Bitcoin exposure, reinforcing the ongoing institutional adoption trend.\n\n📌 Hyperscale Data\n•  Purchased 32.49 BTC\n•  Total holdings: 1,032.5 BTC\n\n📌 Canaan\n•  Added 48"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "CaffeSatoshi",
+   "url": "https://x.com/CaffeSatoshi/status/2078217035683860746",
+   "date": "2026-07-17",
+   "text": "Governments Holding Bitcoin\n\nHere’s who’s stacking sats at the nation-state level:\n\n1. 🇺🇸 United States 328,372 BTC  \n2. 🇨🇳 China 190,000 BTC  \n3. 🇬🇧 UK 61,245 BTC  \n4. 🇺🇦 Ukraine 46,351 BTC  \n5. 🇸🇻 El Salvador 7,696 BTC  \n6. 🇦🇪 United Arab Emirates 6,420 BTC  \n7. 🇧🇹 Bhutan 4,973"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 77,
+   "user": "AdamBLiv",
+   "url": "https://x.com/AdamBLiv/status/2077069793593590011",
+   "date": "2026-07-14",
+   "text": "MSTR vs. ASST - Premium Risk\n\nASST has more balance-sheet convexity than MSTR, but you are paying more upfront for that convexity.\n\nThe added torque comes with premium risk.\n\nAt today’s starting point:\n\nBTC: $64,673\nASST: $12.41\nASST CEBE NAV/share: $8.51\nASST mNAV: 1.46×\n\nASST https://t.co/dFd0Uqs3bA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "BitPulse_X",
+   "url": "https://x.com/BitPulse_X/status/2078165290643234958",
+   "date": "2026-07-17",
+   "text": "🚀 BITCOIN SURGED $1,007.46 USD!\n━━━━━━━━━━━━━━━━━━━━━━\nJust another step toward 1 BTC = 1 BTC.\nCurrent price: $63,878.56 USD\n#Bitcoin #BTC #SoundMoney"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "ErrorLife14",
+   "url": "https://x.com/ErrorLife14/status/2078322165439488345",
+   "date": "2026-07-18",
+   "text": "🚨 BREAKING : 🇺🇸\n\nBlackRock's Bitcoin ETF just purchased $136.51M worth of Bitcoin 🔥\n\n🐂 Institutional demand for BTC continues to grow.\n\n#Bitcoin #BTC #BlackRock #ETF $BTC https://t.co/pdqF87y96E"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MbayaMbayos",
+   "url": "https://x.com/MbayaMbayos/status/2078753115986104498",
+   "date": "2026-07-19",
+   "text": "Bitcoin song - 040\n\nLyrics \n\nThis is my Bitcoin \nThe Flower of life\nMy BTC\n\nThese are \nMy Satoshis\nI will never\nNever sell them\n\nNever\n\nMy BTC \nMy Bitcoin \nMy Satoshis \nIn my w\n\n#bitcoin #btc #crypto #music #song #musician #cryptomusic #rdc #finance #cryptocurrency #drc  #musica https://t.co/QYbihsZWIs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 56,
+   "user": "AdamBLiv",
+   "url": "https://x.com/AdamBLiv/status/2078237798784466993",
+   "date": "2026-07-17",
+   "text": "How MSTR Can Lose Its Premium and Still Beat Bitcoin\n\nBuying a Bitcoin treasury stock at a premium does NOT automatically mean you made a bad entry.\n\nmNAV is only half the equation.\n\nThe other half is how much CEBE per share you own at the end of your holding period.\n\nHere’s an https://t.co/lBVk4Ntrd8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 76,
+   "user": "Bitcoinprof0637",
+   "url": "https://x.com/Bitcoinprof0637/status/2078191905490288673",
+   "date": "2026-07-17",
+   "text": "🇺🇸 Jack Dorsey’s Square is making Bitcoin payments easier for millions of merchants.\n\nSellers can now choose how they want to settle payments:\n\n₿ BTC → BTC 💵 BTC → Fiat ₿ Fiat → BTC 💵 Fiat → Fiat\n\nThat flexibility is the key.\n\nBusinesses can accept Bitcoin without being https://t.co/Ky9eM8O4Tx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ForisterMo78036",
+   "url": "https://x.com/ForisterMo78036/status/2078195597505683771",
+   "date": "2026-07-17",
+   "text": "StackingDao unveiled stBTC, a liquid staked Bitcoin earning BTC yield while integrating into Bitcoin-native finance. This move aims to anchor capital, scale staking, and allow flow of staked BTC. Will this boost adoption of Bitcoin staking? #Crypto #DeFi #Bitcoin https://t.co/3fFM2TojGb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "0cyKyw7kiPtYyQ4",
+   "url": "https://x.com/0cyKyw7kiPtYyQ4/status/2078500954090221619",
+   "date": "2026-07-18",
+   "text": "Bitcoin \n\n$btc #btc #bitcoin $bitcoin\nBuyStart 🟢🟢 https://t.co/lh0b0QfJeM"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "TechTraderBTC",
+   "url": "https://x.com/TechTraderBTC/status/2078629190690295932",
+   "date": "2026-07-18",
+   "text": "7/18/2026 Bullish Daily MA Crossover for $BTC at $64828.0000 \n#Bitcoin #BTC #cryptocurrencies #BTC #Bitcoin https://t.co/cmAkXMTsJG https://t.co/CPz9sx6evy"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Crypto_x_Shadow",
+   "url": "https://x.com/Crypto_x_Shadow/status/2078768994958405737",
+   "date": "2026-07-19",
+   "text": "Bitcoin Next Move! Breakout to $66K or Trap? | BTC Analysis Today (July 19, 2026)\n🚨 BTC Update\nBitcoin is trading near a key resistance zone.\n📈 Breakout toward $66K? 📊 Or more range before the next move?\nWhat's your view?\nHashtags\n#Bitcoin #BTC #Crypto https://t.co/PjSEv8dNLN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "CryptoMark3tMkr",
+   "url": "https://x.com/CryptoMark3tMkr/status/2076870404321476833",
+   "date": "2026-07-14",
+   "text": "Last 12h Crypto Research Digest: BTC &amp; ETH\n\nBitcoin Market Structure &amp; Levels\n\n•BTC holding OB support amid consolidation; downside risk remains but bottoming process advancing per on-chain data.\n•Key resistance at $64.5k-$65k rejected again; needs to hold above $62.5k or risks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "peaqs_net",
+   "url": "https://x.com/peaqs_net/status/2078721666025189730",
+   "date": "2026-07-19",
+   "text": "🟠 BITCOIN 🟠\n\nKey TA Points:\n•  Expect a rally in the current Wave 2.\n•  Targeting the upper trend line, 100-period MA, and horizontal resistance around $67k.\n•  Possible extension to ~$70k (50% retracement level) or overthrowing channel midpoint before reversal.\n•  Rally https://t.co/3xQCthUStm"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Meong_055",
+   "url": "https://x.com/Meong_055/status/2078774842262954219",
+   "date": "2026-07-19",
+   "text": "BTC SFC Model — Concise Trend Analysis\n2026-07-19  |  BTC $64,552 | SFC Eff 27.2 | Zone: ELEVATED\n\nBullish vs Bearish:\n\nBullish :\n✓ SFC ELEVATED zone (27.2) — historically strong accumulation range\n✓ FnG 35 (Fear) — contrarian buy signal at extreme fear\n✓ SOPR capitulation https://t.co/pLd4NzGVsU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FirstSignalX",
+   "url": "https://x.com/FirstSignalX/status/2078655550594936919",
+   "date": "2026-07-19",
+   "text": "#BITCOIN\nThe Biggest Trading Update Since I Sold the Top\n\nToday I am making the biggest portfolio change since I called the Bitcoin top in September 2025.\n\nTHE SHORT TRADE IS OVER\n\nToday I closed every single crypto short. Every altcoin short is fully closed.\n\nThe bear market"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2078571270405501290",
+   "date": "2026-07-18",
+   "text": "Bitcoin: Institutions Position for Volatility as Hedge Funds Increase Shorts While Options Traders Target $72,000\n\nNot financial advice. This article reflects my personal research and investment thesis for educational purposes only.\n\nInstitutional activity in the Bitcoin market https://t.co/W3givGhSp9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2078571565562929449",
+   "date": "2026-07-18",
+   "text": "bitcoin:native : Institutions Position for Volatility as Hedge Funds Increase Shorts While Options Traders Target $72,000\n\nNot financial advice. This article reflects my personal research and investment thesis for educational purposes only.\n\nInstitutional activity in the Bitcoin https://t.co/3eB7QarRIn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 76,
+   "user": "CrypticTrades_",
+   "url": "https://x.com/CrypticTrades_/status/2076939075307618639",
+   "date": "2026-07-14",
+   "text": "These are the most important levels I'm currently tracking across stocks and crypto in the PAT Watchlist for this week. \n\nSome are buy zones. Some are areas where I'm looking to de-risk, hedge, secure profits, or scale out of hedges. \n\nI'll also share my current stance and"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "tradingdiff",
+   "url": "https://x.com/tradingdiff/status/2077032590368772319",
+   "date": "2026-07-14",
+   "text": "BTC on #Hyperliquid 15m Chart 📊\n\nBTC is pushing hard to the upside over the last hour, climbing more than 2% fueled by the inflation data released this morning. 📈🚀\n\nTo the upside, relevant liquidity is concentrated at $65,600. This level becomes the primary target if the https://t.co/heXuiSpQ0C"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Sparty_Par",
+   "url": "https://x.com/Sparty_Par/status/2077007951760347587",
+   "date": "2026-07-14",
+   "text": "July 14, 2026. 8:30 AM ET.\n\nCPI just printed.\n\nHeadline: 3.8%.\n\nThe first reading below 4%\nsince February 2026.\n\nThe market wants to rally.\nTwo things are in the way.\n\nHere is the complete picture —\nincluding the most bearish supply news\nof the entire week that nobody\nis talking https://t.co/jdVRpHDmf4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2076426938189590986",
+   "date": "2026-07-12",
+   "text": "Daily Summary — July 12, 2026\n\nMarkets enter the new week caught between two powerful forces:\n\nAI-led earnings optimism is supporting risk assets, while renewed U.S.–Iran escalation is rebuilding the oil, inflation and bond-yield risk premium.\n\nBitcoin is trading near $63.9K and"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "tradingdiff",
+   "url": "https://x.com/tradingdiff/status/2077396575366639619",
+   "date": "2026-07-15",
+   "text": "BTC on #Hyperliquid 15m Chart 📊\n\nBTC is consolidating near its recent highs, currently trading around 65,300 USD as buyers attempt to maintain the strength of the current move. 📈🚀\n\nTo the upside, the zone of interest is located near 66,500.00 USD, remaining as the primary https://t.co/kHxcgRgWu2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "Armstro57",
+   "url": "https://x.com/Armstro57/status/2077456257460424821",
+   "date": "2026-07-15",
+   "text": "Bitcoin Market Update  July 15, 2026\n\nBitcoin is currently trading around the $62,500–$63,000 range, consolidating after repeated rejections near higher resistance levels. The market remains trapped between buyers defending support and sellers protecting the $64,000–$65,000 https://t.co/mZJ4i9UMU4"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "tradingdiff",
+   "url": "https://x.com/tradingdiff/status/2077396513936789860",
+   "date": "2026-07-15",
+   "text": "BTC on #Hyperliquid 15m Chart 📊\n\nBTC is consolidating near its recent highs, currently trading around 65,100 USD as buyers attempt to maintain the strength of the current move. 📈🚀\n\nTo the upside, the zone of interest is located near 66,500.00 USD, remaining as the primary https://t.co/CChmW5rxjg"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "jackmaster273",
+   "url": "https://x.com/jackmaster273/status/2077064763230531720",
+   "date": "2026-07-14",
+   "text": "Why I'm Still Bearish on ETH &amp; SOL (Bear Flags + Geopolitical Context)\n\n1/7\n\nBTC, ETH, and SOL are all showing classic Bear Flag patterns at the same time.\n\nCombined with a broader bearish market structure and rising geopolitical tensions in the Middle East, this setup favors"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2078374557061140882",
+   "date": "2026-07-18",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 𝟯.𝟯 / 𝟱 (slightly bullish overall) - 𝗦𝗼𝗹𝗮𝗻𝗮 (𝗦𝗢𝗟) 𝗽𝗿𝗶𝗰𝗲 𝗽𝗿𝗲𝘀𝘀𝘂𝗿𝗲: - Recent drop from ~\\$82 to ~\\#75 and heavy derivative‐driven activity indicate selling pressure and weak spot demand – 𝗯𝗲𝗮𝗿𝗶𝘀𝗵. - 𝗕𝗶𝘁𝗰𝗼𝗶𝗻 https://t.co/jG7LL0jgKe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "capitalfronts",
+   "url": "https://x.com/capitalfronts/status/2078830013583966711",
+   "date": "2026-07-19",
+   "text": "In 2027, the bear market begins — for everything EXCEPT Gold. 🐻🥇Let's be clear on our stance up front. At CapitalFronts we think $BTC bounces to the 104k area BEFORE that bear market hits. And we do NOT believe in the 4-year cycle — the one telling everyone BTC bottoms in https://t.co/kgeReo8bDj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "Armstro57",
+   "url": "https://x.com/Armstro57/status/2078506441519018066",
+   "date": "2026-07-18",
+   "text": "Bitcoin Market Update  July 18, 2026\n\nBitcoin is trading around the $63,900 to $64,000 range after recovering from a recent dip below $63,000. Buyers have stepped in to defend key support, but the market remains in consolidation as traders await a decisive breakout. While https://t.co/0IU8TcPJX2"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "cryptotradingts",
+   "url": "https://x.com/cryptotradingts/status/2077419890437472764",
+   "date": "2026-07-15",
+   "text": "🚨 Ethereum (ETH) Market Update\nETH is currently trading near a key support zone, making the next move especially important.\n📈 Bullish Scenario\nA strong breakout above key resistance could trigger the next leg higher.\nContinued Bitcoin strength would likely support further ETH https://t.co/A0YLqkQew0"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 250,
+   "user": "PhilakoneCrypto",
+   "url": "https://x.com/PhilakoneCrypto/status/2077307318748717254",
+   "date": "2026-07-15",
+   "text": "Look at what happened in 2018 and 2022 in July's bear market on the daily:\n1. Supertrend flips bearish to bullish green.\n2. Bitcoin bull traps above the bearish supertrend.\n3. Bitcoin retests the green supertrend.\n4. Bitcoin bounces every time.\nWelcome to the summer rally. https://t.co/VqZF77oR7B"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 10,
+   "user": "noble_MetaX",
+   "url": "https://x.com/noble_MetaX/status/2078720044624719887",
+   "date": "2026-07-19",
+   "text": "Good Morning, Crypto Fam.\n\n🐂 Bull markets make money.\n🐻 Bear markets make legends.\n\nStay patient, stay disciplined, and trust the process.\n\nWhat's the market sentiment today Bullish or Bearish? 👇🚀\n\n#GM #Crypto #Bitcoin #Bullish #Bearish #Web3 https://t.co/P6I5jhssGC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Echochiu2",
+   "url": "https://x.com/Echochiu2/status/2076873124021510297",
+   "date": "2026-07-14",
+   "text": "GM Brothers and Sisters\n\n✅Bitcoin Under Pressure, Threatening the $62,000 Level\n\nDue to escalating US-Iran tensions, Bitcoin continued to decline after the Wall Street open, approaching the critical $62,000 support level. \n\nSelling pressure is intense, and the price action is"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 9,
+   "user": "Gsadiq001",
+   "url": "https://x.com/Gsadiq001/status/2078736791159390443",
+   "date": "2026-07-19",
+   "text": "Bullish vs Bearish Market.\n\nOne of the first terms you'll hear in trading is Bullish and Bearish.\n\nThese words simply describe the direction of the market.\n\n- Bullish = Price is expected to rise 📈\n- Bearish = Price is expected to fall 📉\n\nLet's understand them in a simple way. https://t.co/vFwsxYRjXG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "davidscalper",
+   "url": "https://x.com/davidscalper/status/2077945869635146048",
+   "date": "2026-07-17",
+   "text": "Bitcoin:native\n\n$BTC is at a critical level, with $66,000 remaining the key resistance and the line in the sand. Price is rejecting from this major weekly level, and a weekly close above $66K is needed to confirm a trend reversal and signal the potential end of the macro bear"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Bitbaby_EX",
+   "url": "https://x.com/Bitbaby_EX/status/2077251309321785740",
+   "date": "2026-07-15",
+   "text": "1️⃣Bitcoin Technicals Flash Red: 200-Week MA Lost, Downside Risk Toward $54,000 \"Realized Price\"\n\nBitcoin broke below the 200-week moving average on July 13 — a level that has served as the hallmark support for every Bitcoin bear market bottom since 2015, having previously https://t.co/A82evEPXI3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 37,
+   "user": "egragcrypto",
+   "url": "https://x.com/egragcrypto/status/2076953010186473844",
+   "date": "2026-07-14",
+   "text": "#BTC - The Cycle Clock Is Ticking ⏳:\n\nThis monthly chart tracks #BTC bear-to-bull cycle through the Moving Averages:\n\n🔴 Bearish cross = bear-market phase\n🟢 Bullish cross = new bull-cycle confirmation\n⚪️I’m giving you the \n▫️Historical crosses\n▫️The timing\n▫️The structure. https://t.co/SVoyq08eR9 https://t.co/c5DWuPdxvt"
+  }
+ ]
+}

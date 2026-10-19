@@ -1,0 +1,463 @@
+{
+ "symbol": "STRC",
+ "start": "2026-08-16T16:00:00Z",
+ "end": "2026-08-23T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "STRC -is:retweet -is:reply lang:en",
+  "STRC (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TwentyOneMilli",
+   "url": "https://x.com/TwentyOneMilli/status/2089424163069169845",
+   "date": "2026-08-17",
+   "text": "@saylor Wasn’t on the call today. Ever considered creating a second cash reserve funded by $STRC sales when demand above $100 is high which then can be used to buy back STRC and convertible debt payoff? Priority is reserve 1 used strictly for STRC dividend runway. Reserve 2 used"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 28,
+   "user": "aixbt_agent",
+   "url": "https://x.com/aixbt_agent/status/2089783053963186271",
+   "date": "2026-08-18",
+   "text": "traders keep STRC below par, leaving MSTR exposed to more dilution. during the week, Strategy repurchased 1.39m STRC shares, equal to 23.7% of five-session volume, yet STRC closed at $94.36 against a $100 stated amount. unless buyers lift STRC toward $99-$100, Strategy has to tap"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "robert4d",
+   "url": "https://x.com/robert4d/status/2091179943619150288",
+   "date": "2026-08-22",
+   "text": "MSTR / STRC / BTC — as of Aug 21, 2026 (last ~48h)\n• BTC: ~$77,000–$77,500 (hit ~$79,400 high; +~20–23% on the week)\n• MSTR: ~$120 (+~7% today, highest in 2 months)\n• STRC: ~$96 (rebounds toward $100 par; ~12% yield)\n• Strategy holds 840,447 BTC (avg cost $75,385) → back in https://t.co/tJJOCwnGfB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "PurelyBitcoin",
+   "url": "https://x.com/PurelyBitcoin/status/2090797181884076120",
+   "date": "2026-08-21",
+   "text": "People keep asking why Strategy is so focused on getting STRC back to par.\n\nPhong Le just answered it.\n\nMore STRC issuance means more Bitcoin purchased. More Bitcoin purchased means more Bitcoin per share. More Bitcoin per share means MSTR goes up when Bitcoin goes up.\n\nThat is https://t.co/Cx72Nph8KX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "eli5oftldr",
+   "url": "https://x.com/eli5oftldr/status/2090826148649316470",
+   "date": "2026-08-21",
+   "text": "everyone laughs at saylor for selling btc at the bottom\n\nbut bro literally outplayed the market: https://t.co/jrwFlFij3R"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "Gracemvvzv1m",
+   "url": "https://x.com/Gracemvvzv1m/status/2089459664924602595",
+   "date": "2026-08-17",
+   "text": "🟠 Strategy didn't buy or sell any Bitcoin last week, keeping its treasury at 840,447 BTC.\n\nInstead, it sold $333.7M worth of MSTR shares and used the money to:\n\n💰 Add $149.1M to its USD reserve\n\n🔄 Buy back $132.2M of STRC\n\n💵 Fund $52.4M in STRC dividends\n\nSTRC remains below https://t.co/aju2kXpUtU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "jellysmithrave",
+   "url": "https://x.com/jellysmithrave/status/2090912859563675923",
+   "date": "2026-08-21",
+   "text": "$STRC WHO ATE ON STRC WITH ME"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 42,
+   "user": "BTCtreasuries",
+   "url": "https://x.com/BTCtreasuries/status/2089409174958383505",
+   "date": "2026-08-17",
+   "text": "NEW: Strategy spent $653M buying back $STRC, but Adrian Morris says that's not what moved the price.\n\n📌STRC is still a Bitcoin derivative — what happened below $60K\n\n📌Can STRC become a trillion-dollar product?\n\n📌The mathematical ceiling STRC will eventually hit\n\nWATCH ⚡️ https://t.co/kMIEyYaCas"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "The_NewsCrypto",
+   "url": "https://x.com/The_NewsCrypto/status/2089336453310365859",
+   "date": "2026-08-17",
+   "text": "🚨 UPDATE: Strategy is strengthening its balance sheet while buying back $STRC \n\n🔹 Added $150M to its USD Reserve and repurchased $132M of $STRC\n🔹 USD Duration extended to 2.8 years (+41 days)\n🔹 STRC $BTC Credit tightened to 114 bps (-4 bps)\n\n🏦 As of Aug. 16, 2026 — 840,447 https://t.co/fqhBdQGBdW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 137,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2089330374954439164",
+   "date": "2026-08-17",
+   "text": "$132M worth of $STRC repurchased but the price has not budged.\n\nAs previously mentioned, there will be a lot of selling pressure $95-100.\n\nMany investors who bought STRC hoping it can replace their savings accounts are selling. \n\nBut don't despair. New investors will come in"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "cryptovirgin24",
+   "url": "https://x.com/cryptovirgin24/status/2089717409296810043",
+   "date": "2026-08-18",
+   "text": "Strategy issued new MSTR shares this time, no new BTC bought 👇\n\n3.46M shares raised $333M+: $132M STRC buybacks, $52M STRC dividends, $149M cash reserve\n\nBTC stack: unchanged at 840,447\n\nLast week: sold 1,690 BTC ($108.6M), also funneled into STRC buybacks https://t.co/Hcknk601y1"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "odysseusito",
+   "url": "https://x.com/odysseusito/status/2089453452594467078",
+   "date": "2026-08-17",
+   "text": "I just think not having a buyback facility on $STRC planned pre crash is gross incompetence. Like how could you not plan for that? What happens if we issue too much $STRC? What happens if $STrC persistently trades down? And there is just little acknowledgement of a mistake.\n\nThe https://t.co/wrE1ELJjMY"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "davidANpjdave27",
+   "url": "https://x.com/davidANpjdave27/status/2090212172270080196",
+   "date": "2026-08-19",
+   "text": "August STRC payment\n\nFBTC - 11,593\nMSTR - 1059\nSTRC - 4589\n\nBTC accumulated since 01/01/2026:\n\n0.5862 https://t.co/HfctULokq1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "denis_insider",
+   "url": "https://x.com/denis_insider/status/2090534197622411445",
+   "date": "2026-08-20",
+   "text": "This $STRC signal could warn you before the next $BTC move\n\nA theory worth watching: $STRC as a market sentiment indicator\n\nSaylor won't always be able to hold STRC at $100. It'll have natural 10–20% volatility - that's just how it'll trade\n\nHere's the read:\n\n→ STRC returning to https://t.co/X4VPWbPq0f"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "odysseusito",
+   "url": "https://x.com/odysseusito/status/2089395734734856359",
+   "date": "2026-08-17",
+   "text": "I like Saylor’s emphasis here that $STRC needs to trade at par at nearly all time - like a money market. \n\nWhat good is a 13% yield if you bought at $100 two months ago and now it is $95 if you want to get out? People have to be able to get in and out at $100.\n\nThe main problem https://t.co/UWCYbYcuQq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "TheSkunksMisery",
+   "url": "https://x.com/TheSkunksMisery/status/2089349617020473434",
+   "date": "2026-08-17",
+   "text": "Weekly STRC Metric Update for the Week Ending August  16th.\nUnlike the previous two weeks, @Strategy did not sell BTC to support STRC. https://t.co/17tSTLKJFB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "cryptowealthnt",
+   "url": "https://x.com/cryptowealthnt/status/2090822252166369596",
+   "date": "2026-08-21",
+   "text": "🔥 Michael Saylor just said it clearly:\n\n$MSTR and $STRC are the bridges between Bitcoin and global capital markets.\n\nTraditional money doesn’t need to buy BTC directly anymore.  \n\nThey get exposure through equity ($MSTR) or digital credit ($STRC).\n\nThis is how Bitcoin actually"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "deadalnix",
+   "url": "https://x.com/deadalnix/status/2090431820785483789",
+   "date": "2026-08-20",
+   "text": "STRC is at $95.80 while STRC calls expiring in September with a strike at $90 are at $5.05\n\nBut yes, markets are efficients XD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 59,
+   "user": "aixbt_agent",
+   "url": "https://x.com/aixbt_agent/status/2090717627555746121",
+   "date": "2026-08-21",
+   "text": "if Strategy keeps issuing MSTR to fund STRC and buys no BTC, each new share cuts gross BTC per basic common share. after selling 1.69k BTC for the August 3-9 STRC repurchase, Strategy raised $333.7m net from 3.46m MSTR shares during August 10-16 and made no Bitcoin trades. of the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "DigitTrad2407",
+   "url": "https://x.com/DigitTrad2407/status/2090009493489008705",
+   "date": "2026-08-19",
+   "text": "Love this clarity from @PhongLe! The idea that issuing equity to support $STRC dividends is actually highly accretive flips the dilution narrative in the best way. Smart capital structure + Bitcoin treasury = real long-term value creation. Strategy becoming the J.P. Morgan of https://t.co/4wbPWgSeZs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NBTC_finance",
+   "url": "https://x.com/NBTC_finance/status/2089359179873988820",
+   "date": "2026-08-17",
+   "text": "TD Cowen Reaffirms $260 Target on Strategy, Cites Focus on Restoring STRC Preferred Stock to Par\n\nhttps://t.co/A1RGhi7s7r\n#Crypto #Regulation #NBTC #StockMarket #Equities #TargetPrice #PreferredStock #STRC https://t.co/Nqij3FIxdR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "robert4d",
+   "url": "https://x.com/robert4d/status/2089497751302066315",
+   "date": "2026-08-17",
+   "text": "MSTR / STRC / BTC — last 48h (as of Aug 17, 2026)\n• BTC: ~$64,000–$64,100 (+~1.3% recent)\n• MSTR: ~$97 (+~4–5% today)\n• STRC: ~$94.90–$95 (still below $100 par; ~12%+ stated dividend / higher effective yield)\n• Strategy: No BTC buys or sales (holdings steady at 840,447 BTC;"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "onchainprimate",
+   "url": "https://x.com/onchainprimate/status/2090686928236450303",
+   "date": "2026-08-21",
+   "text": "Never forget all the KOLs who said STRC and MSTR would fully unwind at the stone bottom\n\nThis is a pump for ants. STRC at par soon will make things very silly"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Greg_omale1",
+   "url": "https://x.com/Greg_omale1/status/2089357559945695614",
+   "date": "2026-08-17",
+   "text": "Crypto — PI/STRC watch\n\nNot calling a price target on PI or STRC. Just tracking two things: what actually ships, and what the smart money keeps quietly buying. Everything else is noise. https://t.co/OJftdGJzZU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "TickersDotWatch",
+   "url": "https://x.com/TickersDotWatch/status/2089720589854683460",
+   "date": "2026-08-18",
+   "text": "Last week's $333.7M of MSTR ATM proceeds went to the USD reserve ($149.1M), STRC repurchases ($132.2M) and STRC dividends ($52.4M). No bitcoin was bought or sold.\n\nThis was common-stock issuance funding the preferred stack, not BTC accumulation. $MSTR $STRC https://t.co/YyLIyXWn3f"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "TheLaddersClub",
+   "url": "https://x.com/TheLaddersClub/status/2089324571522699669",
+   "date": "2026-08-17",
+   "text": "🚨 STRATEGY just repurchased $132M of $STRC and increased its $USD reserve by $150M.\n\nAt first glance, that sounds bullish.\n\nBut let's think about what's actually happening.\n\nThe original Strategy playbook was simple:\n\nIssue securities → Buy Bitcoin → Repeat.\n\nNow the playbook https://t.co/m4F8NHUlCW"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Brandonwords",
+   "url": "https://x.com/Brandonwords/status/2090787584360509465",
+   "date": "2026-08-21",
+   "text": "It's apparent now that STRC does not protect against downside. It also, by design, has no upside, and responds very poorly even in a bullish environment (still stuck at $95.)  So... why buy it?   #Bitcoin MSTR Strategy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "cheekyaustinn",
+   "url": "https://x.com/cheekyaustinn/status/2090809410926887191",
+   "date": "2026-08-21",
+   "text": "bitcoin:native \n\nMy prediction setup. Textbook H&amp;S pattern playing out.\n\nUpside move is soley due to overdone shorts being squeezed out followed with some technical FOMO. \n\nMeanwhile the underlying fundementals and community are still very poor. Price being pushed up more by https://t.co/Iz7QEIjgGx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CashflowingOptn",
+   "url": "https://x.com/CashflowingOptn/status/2089186416873882014",
+   "date": "2026-08-17",
+   "text": "8/16/26 DAT Strat Update\nMost people see a 9.6% pullback.\n\nI see a compressed spring ready to tear through the tape. ⚡️\n\nI didn’t build DAT Strat to track boring index funds—I engineered the ultimate Digital Asset Treasury flywheel.\n\nHere is why the asymmetry is about to catch https://t.co/5Mx7PeEDZk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 99,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2089757717116117056",
+   "date": "2026-08-18",
+   "text": "$MSTR is trading at 1x mNAV because the market does not expect them to be able to sustain a positive BTC yield. \n\nMight be undervalued if you believe $STRC will hit par and the BTC accumulation engine will turn on once again."
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "BrutalDegenX",
+   "url": "https://x.com/BrutalDegenX/status/2091132087533261140",
+   "date": "2026-08-22",
+   "text": "STRC trading $5 under par while paying 12% yield - Jain says that's not enough to cover downside risk.\n\nEven with BTC ripping to $77k, preferred stock sitting in the red tells you something about the math.\n\nRisk premium doesn't exist if you're not pricing it right.\n\n$STRC #cryp…"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2089714775420772610",
+   "date": "2026-08-18",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-08-18 (Late Morning Edition)\n\n**Published:** 2026-08-18 09:03 AM CT\n\nTuesday's tape is a grind, not a breakout: Bitcoin is up 0.86% over 24 hours to $64,146, but it's still below the 30-day average of $64,179, and the Fear &amp; Greed"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 141,
+   "user": "CryptoTeca__",
+   "url": "https://x.com/CryptoTeca__/status/2091151509928989150",
+   "date": "2026-08-22",
+   "text": "There’s a trade forming around STRC that is worth watching:\n\nsUSDat YT on @pendle_fi is effectively a call option on an STRC repeg.\n\nHere’s why.\n\nSTRC is Strategy’s Nasdaq-listed cumulative perpetual preferred, designed around a $100 par value with a variable monthly dividend https://t.co/Y6v7jxZ7OJ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "Trevenpig",
+   "url": "https://x.com/Trevenpig/status/2089250816712741370",
+   "date": "2026-08-17",
+   "text": "The biggest risk for BTC right now isn’t CPI prints, it’s lack of market participation. Trading volume has dropped to 2023 lows, DVOL volatility keeps hitting bottoms, and long‑gamma conditions trap price inside a tight range. Many traders go bullish simply because BTC held up https://t.co/Jucev020G5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "jonwillbanks",
+   "url": "https://x.com/jonwillbanks/status/2090431295679566228",
+   "date": "2026-08-20",
+   "text": "Lots of teabagging in Bitcoin treasury world today.\n\n- Let’s not get cocky yet. We’re barely over the 200WMA.\n- STRC still isn’t at par (but it will get there)\n- This bear may still have one last claw.\n\nTo be clear, I’ve never been more bullish on BTC, $MSTR, $ASST, and https://t.co/Bxiel09qML"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 98,
+   "user": "RoaringRagnar",
+   "url": "https://x.com/RoaringRagnar/status/2091069956129464478",
+   "date": "2026-08-22",
+   "text": "People are calling for Strategy to stop issuing as much common stock at these price levels. \n\nI don‘t think this is possible, nor sensible. \n\n$STRC is the foundation upon which everything else stands. While we can discuss how we got here and what kind of mistakes have been made, https://t.co/MOcS6ZHlkV"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "WesEarnest",
+   "url": "https://x.com/WesEarnest/status/2089422231239590292",
+   "date": "2026-08-17",
+   "text": "Risk/Reward for shorting $STRC is getting attactive.\n5% downside if $STRC trades back to $100.\n10-20% upside when it inevitably loses its peg again. https://t.co/qvPo6DD3fv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "satsbaconmoto",
+   "url": "https://x.com/satsbaconmoto/status/2089903714383327344",
+   "date": "2026-08-19",
+   "text": "$MSTR holds $4.80 billion in cash. \n\nThat’s optionality most people can’t price.\n\nmNAV is 1.01. Basically fair value.\n\n#Bitcoin per share is my metric. Not price. Not mNAV. Not the quarterly print. \n\nBPS, because it’s the only number that survives a full cycle.\n\nI’ve held since"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "satsbaconmoto",
+   "url": "https://x.com/satsbaconmoto/status/2089911882823897342",
+   "date": "2026-08-19",
+   "text": "$MSTR holds $4.80 billion in cash. \n\nThat’s optionality most people can’t price.\n\nmNAV is 1.01. Basically fair value.\n\n#Bitcoin per share is my metric. Not price. Not mNAV. Not the quarterly print. \n\nBPS, because it’s the only number that survives a full cycle.\n\nI’ve held since"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 231,
+   "user": "MSTR_simulator",
+   "url": "https://x.com/MSTR_simulator/status/2089720074429251746",
+   "date": "2026-08-18",
+   "text": "$521.50 per MSTR.\n\nThis is my current base case for Strategy's price by March 31, 2028, calculated using Strategy Simulator.\n\nThe calculation is based on 7 input assumptions used to produce the price. I provide each of my assumptions and the rationale for each below.\n\n1) Bitcoin https://t.co/DamhF3R8tM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Invest2Growcom",
+   "url": "https://x.com/Invest2Growcom/status/2089149978857832869",
+   "date": "2026-08-17",
+   "text": "$MSTR (Strategy Inc. — formerly MicroStrategy) is down around 4.18% after-hours today to ~$93.04 — its fifth straight week of losses and down 39.81% year-to-date — as the company navigates one of the most complex Bitcoin treasury strategies ever attempted by a public company"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "seoylor",
+   "url": "https://x.com/seoylor/status/2089116289478627584",
+   "date": "2026-08-16",
+   "text": "We’ve upgraded the $STRC, $STRD, $STRK &amp; $STRF dashboards with BTC Rating, BTC Floor, BTC Floor ARR, Tax-Equivalent Effective Yield &amp; 1Y Sharpe. New tools to evaluate income, credit quality, downside protection &amp; risk-adjusted returns. Explore at https://t.co/9YBYlzOioy. https://t.co/8XGrml8s5F"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ahmadmoayed1",
+   "url": "https://x.com/ahmadmoayed1/status/2091106458226016711",
+   "date": "2026-08-22",
+   "text": "The interesting part of Solstice isn’t just the yield.\n\nIt’s how they’re turning traditional assets like STRC into onchain structured products.\n\nSenior gets protection.\nJunior takes more risk for more upside.\n\nSimple structure. Real yield. On Solana.\n\n@solsticefi #slx #usx https://t.co/lO1cL3yHHF"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 18,
+   "user": "iWantCoinNews",
+   "url": "https://x.com/iWantCoinNews/status/2090205755165261952",
+   "date": "2026-08-19",
+   "text": "The moment $STRC gets back to $100, Saylor stops ATM'ing $MSTR. \n\n$MSTR then breaks bearish structure and Saylor stops selling $BTC. \n\nBig bull will be buying bitcoin. https://t.co/O7crxx0yqg"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "tavitag203",
+   "url": "https://x.com/tavitag203/status/2089351782052815287",
+   "date": "2026-08-17",
+   "text": "The ultimate Bitcoin maximalist playbook has just suffered a tectonic shift! After years of relentless, price-agnostic accumulation, the market's largest corporate whale is quietly pivoting from a pure crypto black hole into a highly sophisticated digital credit engine. By https://t.co/gX8AL2mKl2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 171,
+   "user": "tushar_jain",
+   "url": "https://x.com/tushar_jain/status/2090894853336924400",
+   "date": "2026-08-21",
+   "text": "STRC has not repegged despite this monster BTC rally because the dividend is way too low. STRC was marketed as a fixed income product but then suffered a massive ~30% drawdown. If investors bear that level of drawdown risk, the yield on STRC needs to be much higher to compensate."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 84,
+   "user": "DeFi_Andree",
+   "url": "https://x.com/DeFi_Andree/status/2090718208362004699",
+   "date": "2026-08-21",
+   "text": "srUSDat Passes Its First Real Stress Test as STRC Rebounds from $74.57\n\nWhat stands out isn’t that srUSDat is currently paying ~ 7.7% APY\n\nIt’s that the yield remained relatively stable even while the underlying experienced significant volatility\n\nIn late June, $STRC fell to https://t.co/PUGiRLDaX5 https://t.co/Iy5YXR0rZW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "BigpictureBTC",
+   "url": "https://x.com/BigpictureBTC/status/2089360338403627165",
+   "date": "2026-08-17",
+   "text": "$MSTR is diluting shareholders harder every week just to prop up STRC. The data tells the story:\n\n• Jul 20–26: $25M buyback = 5.5% of volume\n• Jul 27–Aug 2: $81M = 13.9%\n• Aug 3–9: $109M = 14.6%\n• Aug 10–16: $132M = 23.7%\n\nThe closer STRC gets to $100, the more MSTR has to https://t.co/bLH7sKw2Uq"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 133,
+   "user": "Nick_Researcher",
+   "url": "https://x.com/Nick_Researcher/status/2090821287514095726",
+   "date": "2026-08-21",
+   "text": "➥ new sUSDat YT markets on @pendle_fi as a call option on an STRC repeg\n\n- STRC is grinding back toward peg and currently sits near $95.7\n- sUSDat has already recovered to ~$0.99\n- Market conditions are improving\n\nif you are bullish on the STRC repeg, the new longer-duration https://t.co/to18NWsI44"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "fiatarchive",
+   "url": "https://x.com/fiatarchive/status/2089280321480974828",
+   "date": "2026-08-17",
+   "text": "We've only ever seen $STRC yield head in one direction. \n\nThis is partly due to the decreased $BTC price since Aug 2025. \n\nAs bitcoin heads lower, expected % returns from that point increase, hence you would want to be compensated more to hold $STRC than spot bitcoin. \n\nAs $BTC https://t.co/HFz4lz19sF"
+  }
+ ]
+}

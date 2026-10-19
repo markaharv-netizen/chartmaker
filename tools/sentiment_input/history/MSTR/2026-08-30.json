@@ -1,0 +1,445 @@
+{
+ "symbol": "MSTR",
+ "start": "2026-08-23T16:00:00Z",
+ "end": "2026-08-30T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "MSTR -is:retweet -is:reply lang:en",
+  "MSTR (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR mNAV) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "DammamEvents",
+   "url": "https://x.com/DammamEvents/status/2092294148736909387",
+   "date": "2026-08-25",
+   "text": "Since $HOLO  owns 140,268 shares of  $MSTR  :    MSTR position: ~$15.76M  MSTR up: +5%  HOLO unrealized gain: ~$788K  New position value: ~$16.55M    \n\n So with MSTR up 5% today, HOLO's MSTR position has gained roughly $0.8 million on paper wow $BTC \n\nMSTR position: ~$16.55M\nHOLO https://t.co/2UsMFeYXhF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 177,
+   "user": "AdamBLiv",
+   "url": "https://x.com/AdamBLiv/status/2092604575555452945",
+   "date": "2026-08-26",
+   "text": "Since January 12, 2024:\n\nMSTR: +161.2%\nIBIT: +79.1%\nMSTR outperformance: +82.1 percentage points\n\nPut another way, $10,000 in MSTR became ~$26,124 versus ~$17,909 in IBIT.\n\nSo the MSTR investment finished with ~45.9% more value than the same starting investment in IBIT.\n\nNow https://t.co/2RSFareaqU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "LoveFireMoney",
+   "url": "https://x.com/LoveFireMoney/status/2093043906791252477",
+   "date": "2026-08-27",
+   "text": "Part#2 of 3 - $MSTR bitcoin:native\n\nThe next thing I looked at is what happens when BTC spikes up first followed by a 10%+ MSTR spike:\n$MSTR bitcoin:native https://t.co/vfOfinerOS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Henry8cj",
+   "url": "https://x.com/Henry8cj/status/2092960933383737665",
+   "date": "2026-08-27",
+   "text": "$BTC $MSTR $ETH $COIN $BMNR 📊\n\nMicroStrategy (MSTR) trades near $123.19, pulling back alongside Bitcoin's recent consolidation. Acting as a leveraged proxy for digital assets, the stock is highly volatile, fluctuating within a massive 52-week range of $81.81 to $365.21.\n\nRecent https://t.co/YYgYqxOtGp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "KRYPTOCEAN_",
+   "url": "https://x.com/KRYPTOCEAN_/status/2093342736980095231",
+   "date": "2026-08-28",
+   "text": "📈 Proxy Read $MSTR\n\nStock MSTR -4.12% at $132\nTape BTC $78,870 (-1.05% 24h)\nMacro DXY 99.38 (+0.22%)\n\nMSTR bleeding faster than spot. Equity proxy owns the downside."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "KRYPTOCEAN_",
+   "url": "https://x.com/KRYPTOCEAN_/status/2093030250149986554",
+   "date": "2026-08-27",
+   "text": "📈 Proxy Read $MSTR\n\nStock MSTR +12.53% at $139\nTape BTC $80,646 (+2.68% 24h)\nMacro DXY 99.13 (-0.04%)\n\nMSTR ripping harder than BTC. Proxy is leading the bid."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "tradfinews",
+   "url": "https://x.com/tradfinews/status/2091858260299067503",
+   "date": "2026-08-24",
+   "text": "&gt; STRATEGY ADDS $1.59B USD CASH POOL USD RESERVE STANDS AT $5.10B: SEC FILING\n&gt; STRATEGY RAISES $2.01B THROUGH 18.3M MSTR SHARES AND REPURCHASES $136.4M OF STRC: SEC FILING\n&gt; $MSTR\n\n#MSTR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "oexcapital101",
+   "url": "https://x.com/oexcapital101/status/2093068381859488187",
+   "date": "2026-08-27",
+   "text": "Mic drop panties drop! Ask ya mothaz! \n$nvda 225 1.70 to 6.00+\n$arm 255 2.75 to 12.00+\n$mstr 128 2.80 to 12.00+\n$mstr 135 1.54 to 6.00+\n$mstr 9/11 130 4.90 to 14.00+\n$mstr 9/11 135 3.60 to 11.00+\n$mstr 9/18 135 5.50 to 13.00+\n$mstr 9/18 145 3.80 to 8.50+\n$coin 9/18 210 3.30 to"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "TaylorSugar",
+   "url": "https://x.com/TaylorSugar/status/2094006358496489843",
+   "date": "2026-08-30",
+   "text": "$MSTR Premium Guidelines \n\nAccumulate &lt;1.2 mNAV\nFair value 1.2-1.3 mNAV\nHarvest Premium &gt;1.3 mNAV\n\nmNAV Premium / Annual BTC Yield = \npremium recovery period\n\n$MSTR Time Guidelines \n\nAccumulate MSTR 2H 2026\nSell MSTR 2028 2029\nAccumulate MSTR 2H 2030\nSell MSTR 2032-2033"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "amaccharts",
+   "url": "https://x.com/amaccharts/status/2093504275603399017",
+   "date": "2026-08-29",
+   "text": "I like to look at price in more of a historical relative “risk” type of way to take advantage of the over or undervalued deviations from long term trends and understand what to expect based on where on a scale of 0-100  “risk” currently is. It also helps you see the long term https://t.co/6FJt6xZESm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "RockyTSTH",
+   "url": "https://x.com/RockyTSTH/status/2093049327342301239",
+   "date": "2026-08-27",
+   "text": "🚨 $MSTR UNUSUAL OPTIONS FLOW 🚨\n\n🐂 BIG CALL BUYING hitting Strategy\n\n💰 $1.1M — 9/18 $135C SWEEP at ASK\n🔥 $873K — 9/18 $140C SWEEP at ASK\n⚡ Multiple aggressive CALL orders hitting the ASK\n\n🟢 Heavy premium flowing into upside calls\n🐳 Large traders positioning for a potential https://t.co/da4b9T52Pz"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 206,
+   "user": "JesseOlson",
+   "url": "https://x.com/JesseOlson/status/2093007379927543911",
+   "date": "2026-08-27",
+   "text": "$MSTR now has a pending buy signal on the weekly chart and this daily chart has flipped ultra bullish. \n\nThree things that keep happening:\n1. MSTR leads bear market for Bitcoin (canary)\n2. MSTR drops &amp; pumps harder\n3. MSTR lags Bitcoin in bull run (at first)\n\nRetest blue line? https://t.co/2y253TK0Ii https://t.co/c3vy3aCjhe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2092218538001846686",
+   "date": "2026-08-25",
+   "text": "$MSTR Strategy: The Bitcoin flywheel is changing\n\nStrategy ($MSTR) just made a very interesting move. Bitcoin jumped about 13% last week and moved back above $78,000, but Strategy didn’t buy any Bitcoin. Instead, it sold 18.26M MSTR shares, raising about $2B.\n\nThe money was split https://t.co/j55CHTZcpr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Jorksum",
+   "url": "https://x.com/Jorksum/status/2092555264129966081",
+   "date": "2026-08-26",
+   "text": "MSTR market cap: ~$48 billion\nHodling BTC worth: ~$66.4 billion\nMSTR/BTC value: ~0.72×\n\n#MSTR #₿itcoin #BTC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 133,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2093755806135070830",
+   "date": "2026-08-29",
+   "text": "$NVDA beat $MSTR 2x since Strategy adopted the Bitcoin treasury. \n\nBut over the next decade MSTR will likely outperform NVDA 3-5x. \n\nI just don’t see NVDA becoming a $50 trillion company anytime soon. \n\nBut I can see MSTR becoming a $1-1.5 trillion dollar company eventually."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "Kaiz_294",
+   "url": "https://x.com/Kaiz_294/status/2092208381629210849",
+   "date": "2026-08-25",
+   "text": "MSTR is amplified Bitcoin, and the time horizon matters\n\nSaylor frames the choice around time horizon and risk.\n\n\"If your time horizon is less than four months, you probably should own a money market.\"\n\n\"If you're holding the equity, then you need a time horizon minimal of four https://t.co/mLBzC6YQhs"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2092294657564921906",
+   "date": "2026-08-25",
+   "text": "$MSTR — the key details investors should know\n\nStrategy is becoming interesting again because Bitcoin’s rally is bringing its entire Bitcoin “flywheel” back to life.\n\nCanaccord: Buy rating, price target raised from $130 → $175.\nBitcoin holdings: roughly 840,000+ BTC.\nAverage BTC https://t.co/aBRfqW7S0n"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 163,
+   "user": "StrategyMaxi",
+   "url": "https://x.com/StrategyMaxi/status/2093434416228172217",
+   "date": "2026-08-28",
+   "text": "$MSTR +7% this week.\n\nOne red Friday, bears show their butts. Get back in your hole! You’re all getting smoked.\n\n$MSTR definitely raised billions to buy $BTC this week.\n\nRemember, I’m the only guy on X with real skin in the game. I’m ALL-IN $MSTR.\n\nYou talk. I play! https://t.co/qcvguC8MkS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "timepricetravel",
+   "url": "https://x.com/timepricetravel/status/2093095463360888995",
+   "date": "2026-08-27",
+   "text": "$MSTR \n\nMSTR looking to complete the move into $149 by Friday, and can it make it to $178 and the August highs in Week 5. Is it giving hints on what Bitcoin is going to do?\n\n#MSTR #strategy https://t.co/sXD0NWd2h8 https://t.co/8sfUqtBoeQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "spideyinvests",
+   "url": "https://x.com/spideyinvests/status/2092998930741211196",
+   "date": "2026-08-27",
+   "text": "$STRC just touched 98, $MSTR mnav is only 1.1 (up 8% today) and #Bitcoin is only 80k. $MSTR is still extremely cheap!\n\n@grok what will be $MSTR price at 100k BTC price and 1.5 mnav without any additional Btc buys? https://t.co/7MD2ScVUon"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "strikescan",
+   "url": "https://x.com/strikescan/status/2092941948780761388",
+   "date": "2026-08-27",
+   "text": "Top crypto tickers by relative premium right now:\n\n$BMNR — 3.17%\n$MSTR — 2.93%\n$COIN — 2.35%\n$ETHA — 2.06%\n$IBIT — 0.98%\n\nAll showing IV below average across the board.\n\nAdding $ETHA and $MSTR to the watchlist. Would like to see MSTR dip into the low $100s to trade. https://t.co/TrScK6c5ZM"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "HarshSh57654972",
+   "url": "https://x.com/HarshSh57654972/status/2093433479241580797",
+   "date": "2026-08-28",
+   "text": "Don’t worry about today’s BTC &amp; $MSTR dip. 📉\n\nBTC momentum can flip fast—and when it does, $MSTR can move FAST. 🚀\n\nMonday could be explosive. 👀🔥\n\n$BTC $MSTR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptoPete11",
+   "url": "https://x.com/CryptoPete11/status/2092375075609866291",
+   "date": "2026-08-25",
+   "text": "This is why $Bitcoin investors diversify into $MSTR for Bitcoin amplification and growth. \nToday:  \n$MSTR amplification. \n$MSTR = up 3.4%\n$FBTC =  up 0.23%\n\n$MSTR Amplification is in full gear and visible for all to see. \nThanks to @saylor and @phongle for stepping up."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "TradeleaksAI",
+   "url": "https://x.com/TradeleaksAI/status/2092701193005129902",
+   "date": "2026-08-26",
+   "text": "🟢 $MSTR — $730k CALL BUYER\nStrike: $123 | Expiry: Aug. 28\nSpot: $123.98 | 0.8% ITM\nVolume: 12,063 | OI: 19,494\nExecution: 100% at ask\nTradeLeaks read: This is 0.8% ITM with 2d to expiry. [BULL · conv 30] MSTR (crypto): MSTR - CANACCORD BOOSTS STRATEGY TARGET TO $175 Canaccord"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "LoveFireMoney",
+   "url": "https://x.com/LoveFireMoney/status/2093041919924305933",
+   "date": "2026-08-27",
+   "text": "$MSTR is up huge today. I have been watching the relationship between MSTR and BTC over the years. Whenever $MSTR spikes bitcoin:native usually follow. I had ChatGPT run the data on the daily bitcoin:native  prices and $MSTR. This is what it found: https://t.co/p8QtQhq89a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BomhofMike",
+   "url": "https://x.com/BomhofMike/status/2092997008877658360",
+   "date": "2026-08-27",
+   "text": "$MSTR is gathering \"ammo\" for the next BTC market rally!\n\nMicroStrategy's latest moves are worth watching:\n\n💰 USD reserves boosted to approx. $5.1B\n💵 Cash pool increased by approx. $1.59B\n₿ Holdings of approx. 840,447 BTC\n🔄 Repurchase of approx. $136M in convertible preferred"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "KevinAggies",
+   "url": "https://x.com/KevinAggies/status/2093169488481173839",
+   "date": "2026-08-28",
+   "text": "1/🧵Bitcoin is back at $81K. But most people don't realize you can actually acquire BTC cheaper for a limited time.\n\nAfter ~10 months of bear market pressure, many treasury companies have been compressed. \nExcessive selling = hidden-gem alpha👇\n\n2/ Market Cap ÷ CEBE mNAV https://t.co/6cL5t36kdb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "KevinAggies",
+   "url": "https://x.com/KevinAggies/status/2093171438425681984",
+   "date": "2026-08-28",
+   "text": "1/🧵Bitcoin is back at $81K. But most people don't realize you can actually acquire BTC cheaper for a limited time.\n\nAfter ~10 months of bear market pressure, many treasury companies have been compressed. \nExcessive selling = hidden-gem alpha👇\n\n2/ Market Cap ÷ CEBE mNAV https://t.co/6gMFlKKtdP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Edcci_23",
+   "url": "https://x.com/Edcci_23/status/2093196992084062617",
+   "date": "2026-08-28",
+   "text": "8/27 BTC thoughts:\n- Recent $BTC rally seems like a bull trap, driven primarily by 2.7B in short liquidation rather than real demand returning.\n- $BTC is still vulnerable to rates changes and geopolitics. Looks like Iran is holding out until midterms at the very minimum. +"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2091961686169125081",
+   "date": "2026-08-24",
+   "text": "🚨 CRYPTO STOCKS — MIXED SESSION DESPITE BITCOIN STRENGTH\n\nCrypto-linked equities are diverging today, with Strategy $MSTR outperforming while Coinbase and Robinhood trade lower.\n\n📊 TODAY’S CRYPTO STOCK SNAPSHOT\n\n🔴 $COIN (Coinbase) — $180.77\n-3.07%\n🔴 $HOOD (Robinhood) — https://t.co/EaZkvdkain"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 317,
+   "user": "AdamBLiv",
+   "url": "https://x.com/AdamBLiv/status/2091581725734228397",
+   "date": "2026-08-23",
+   "text": "🔥RETIRE EARLY: MSTR VS. STRK. VS. 70% MSTR / 30% STRD🔥\n\nIf I genuinely believe MSTR can go from roughly $119 → $1,000 over 4 years, when does it actually make sense to abandon some of that upside for Strategy preferred stock?\n\nSo I modeled three $100,000 portfolios.\n\nAnd the https://t.co/pdG4YU8Vdu"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "pepperonisoft",
+   "url": "https://x.com/pepperonisoft/status/2092303488567108021",
+   "date": "2026-08-25",
+   "text": "Thoughts on price action:\n• Price action looks like steady accumulation from Feb-Aug in the 60-80k range.\n• Normally I would expect a serious bottom within the mid-Oct through early-Nov range, from indicators I use, not the typical 1 year from last top most claim. However, the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "tonycarrera",
+   "url": "https://x.com/tonycarrera/status/2091884886432891249",
+   "date": "2026-08-24",
+   "text": ".@grok Strategy just sold more $MSTR shares to build a $6.7B cash pile and buy back $STRC (no new Bitcoin).\n\nHow long for retail guy Rob (from @natbrunell’s recent investor Q&amp;A) to get back to his $325 entry?\n\nWhat bitcoin:native price gets him there at 1x / 1.25x / 1.5x mNAV? https://t.co/pFXN5X9hqg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JaredLKnudson",
+   "url": "https://x.com/JaredLKnudson/status/2093193243068662151",
+   "date": "2026-08-28",
+   "text": "Which BTC Treasury model wins the next cycle?\n\n​Here is the breakdown between institutional scale vs. high-beta speculative upside:\n\n​1. Strategy $MSTR — The Institutional Compounding Engine\n\n​Market Cap: Mega-cap ($70B+)\n​Engine: Low-coupon convertible debt + equity ATMs to"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "JaredLKnudson",
+   "url": "https://x.com/JaredLKnudson/status/2093196186257908211",
+   "date": "2026-08-28",
+   "text": "Which BTC Treasury model wins the next cycle?\n\n​Here is the breakdown between institutional scale vs. high-beta speculative upside:\n\n​1. Strategy $MSTR — The Institutional Compounding Engine\n\n​Market Cap: Mega-cap ($70B+)\n​Engine: Low-coupon convertible debt + equity ATMs to"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JaredLKnudson",
+   "url": "https://x.com/JaredLKnudson/status/2093195322646528197",
+   "date": "2026-08-28",
+   "text": "Which BTC Treasury model wins the next cycle?\n\n​Here is the breakdown between institutional scale vs. high-beta speculative upside:\n\n​1. Strategy $MSTR — The Institutional Compounding Engine\n\n​Market Cap: Mega-cap ($70B+)\n​Engine: Low-coupon convertible debt + equity ATMs to"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "fundspec",
+   "url": "https://x.com/fundspec/status/2091953697588720046",
+   "date": "2026-08-24",
+   "text": "🚀 Our AI Trading model just locked in a 1.22% win for a BEARISH trade on $MSTR!\nEntry: $123.34 at 01:20 PM EDT\nExit: $121.84 at 01:26 PM EDT\n\nStress test revenue, margin and WACC to see the real upside and downside.\nDownload FundSpec on the Apple App Store or Google Play."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JaredLKnudson",
+   "url": "https://x.com/JaredLKnudson/status/2093195864835870864",
+   "date": "2026-08-28",
+   "text": "Which BTC Treasury model wins the next cycle?\n\n​Here is the breakdown between institutional scale vs. high-beta speculative upside:\n\n​1. Strategy $MSTR — The Institutional Compounding Engine\n\n​Market Cap: Mega-cap ($70B+)\n​Engine: Low-coupon convertible debt + equity ATMs to"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 33,
+   "user": "Errecck",
+   "url": "https://x.com/Errecck/status/2093140595887780244",
+   "date": "2026-08-28",
+   "text": "bitcoin:native $ETH $MSTR\n\nAre you a crypto trader? -- Then this is a must read\n\nThis is why you should follow me\n\nI have timestamped proof of me calling every top and bottom of  bitcoin:native since the beginning of 2025.  Many after the fact FURU's dilute the airwaves with https://t.co/cKnvKZmmL0 https://t.co/KJ6TNQoFbJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "hodlonaminute",
+   "url": "https://x.com/hodlonaminute/status/2093019243126354382",
+   "date": "2026-08-27",
+   "text": "I’ll be the first to admit the bears got to me this cycle.\n\nFull transparency: I sold all my $MSTR at exactly $100 (average cost was $102, so I lost) to buy pure Bitcoin. In hindsight it felt like the “safer” option while we were in that unknown stretch of the bear market.\n\nEvery"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Invest2Growcom",
+   "url": "https://x.com/Invest2Growcom/status/2091883366182170890",
+   "date": "2026-08-24",
+   "text": "$ASST (Strive, Inc.) is down around 4.12% today to ~$18.98 — as the entire high-beta digital asset complex pulls back ahead of NVDA earnings on August 26, Bitcoin consolidates below $80K after last week's $77K surge, TD Cowen trimmed its target to $28 from $32, and investors"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "coinscopecs",
+   "url": "https://x.com/coinscopecs/status/2093073229422465063",
+   "date": "2026-08-27",
+   "text": "Peter Schiff says MSTR's rally is just a short squeeze — and the \"death spiral\" is still coming.\n\nStrategy (MSTR) is up ~50% from its June low. Bitcoin is above $80,000. But Schiff isn't buying it.\n\n📊 The numbers behind Schiff's warning:\n\nStrategy's Bitcoin holdings: 840,447 BTC https://t.co/F8CtscnbIz"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 19,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2092990015668433347",
+   "date": "2026-08-27",
+   "text": "CEBE mNAV\n- $MSTR 1.01x\n- $ASST 1.85x\n- $MPJPY 0.87x\n\nBased on CEBE mNAV MPJPY is trading at a discount while ASST is trading at a massive premium.\n\nBut I still don't think ASST is overvalued. \n\nCEBE mNAV shrinks when BTC goes up and liabilities go down."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JOKAHTrading",
+   "url": "https://x.com/JOKAHTrading/status/2093135397408911585",
+   "date": "2026-08-28",
+   "text": "$MSTR reported an $8.62B net loss to common in Q2. The software business did $122M of revenue.\n\nThat ratio is the entire thesis, bull or bear 🧵👇\n\n1/ What actually happened.\n$8.32B of the charge is an unrealised loss on bitcoin — 94% of the total. It's non-cash, driven by https://t.co/VCpdBtEptc https://t.co/HKm9od8QDI"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 117,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2092566048788640029",
+   "date": "2026-08-26",
+   "text": "DCA stops at $MSTR above 1.5x mNAV or Bitcoin above $100K. \n\nMSTR is unlikely to increase BTC per share by 50%+ in the next few years so anything above 1.5x mNAV is overvalued.\n\nIf Bitcoin 3x from the cycle low that puts us at $174K. Considering a 40% drawdown, we might see $100K"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 123,
+   "user": "ChrisMMillas",
+   "url": "https://x.com/ChrisMMillas/status/2092945557484405175",
+   "date": "2026-08-27",
+   "text": "There’s one important thing to keep in mind with $STRC.\n\nFor the past 10 months or so, we have been in a $BTC bear market but still in a rising global liquidity environment.\n\nWhen global liquidity eventually begins to fall, Strategy’s options for supporting $STRC and returning it"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "shomethemoneyOG",
+   "url": "https://x.com/shomethemoneyOG/status/2093907946921169114",
+   "date": "2026-08-30",
+   "text": "MSTR\n\nWe’re at an interesting crossroads in the structure right now. We have a lot of evidence that the bottom is in and the new bull market has begun.\n\nBy my count, macro Wave 1 has completed, unless we get an impulsive move above 143 (Friday overnight high).\n\nOne thing about https://t.co/xhbt1tQw5X"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "BitMasterK",
+   "url": "https://x.com/BitMasterK/status/2094091170540380256",
+   "date": "2026-08-30",
+   "text": "Why have I been investing in $ETH &amp; $SOL?\n\nI am already super in on $BTC &amp; $MSTR &amp; am very Bullish on BTC having a really nice Bull cycle.\n\nWhich will lead to an alt-coin season as investors start looking for upside."
+  }
+ ]
+}

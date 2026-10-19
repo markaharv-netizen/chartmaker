@@ -1,0 +1,391 @@
+{
+ "symbol": "TSLA",
+ "start": "2026-08-23T16:00:00Z",
+ "end": "2026-08-30T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "TSLA -is:retweet -is:reply lang:en",
+  "TSLA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "edgeplatsllc",
+   "url": "https://x.com/edgeplatsllc/status/2093088668827398409",
+   "date": "2026-08-27",
+   "text": "SweepraEdge Closes\n#197 TSLA TSLA 317.5C 2026-08-12 (bull) ✅ +12.2%\n#198 AMD AMD 495C 2026-08-14 (bull) ❌\n#203 TSLA TSLA 317.5C 2026-08-12 (bull) ✅ +12.2%\n#204 AMD AMD 495C 2026-08-14 (bull) ❌\n#205 QQQ QQQ 719P 2026-08-11 (bear) ❌\n\nVerified by BAB — Better Agents Bureau"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "ZieskaS",
+   "url": "https://x.com/ZieskaS/status/2093008784159543536",
+   "date": "2026-08-27",
+   "text": "Why $TSLA? 🚀\n\nTokenized $TSLA combines Tesla’s growth narrative with the RWA trend.\n\n• Access to Tesla through crypto\n• Strong EV, energy &amp; AI narratives\n• Growing demand for tokenized stocks\n\nFor me, $TSLA is an interesting bridge between TradFi and DeFi.\n\n#TSLA #DeFi https://t.co/8mhkC0hyPQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MaximillionTrdz",
+   "url": "https://x.com/MaximillionTrdz/status/2091932973767762087",
+   "date": "2026-08-24",
+   "text": "818% ON $GOOGL   🚨 \n\nWe've been CRUSHING IT inside VIP 👇 \n\n$TSLA: 2,100% 🚀🚀🚀🚀🚀🚀🔥🔥🔥🔥\n$SPX: +1,700% 🚀🚀🚀🚀🚀🔥🔥🔥\n$TSLA +1,000% 🚀🚀🚀🚀🚀🔥🔥🔥\n$GOOGL +818% 🚀🚀🚀🚀🔥🔥\n$TSLA +750% 🚀🚀🚀🚀🔥🔥\n$NVDA +330% 🚀🚀 🚀🔥🔥\n$AMZN +300% 🚀🚀🚀🔥\n$TSLA +266%: 🚀🚀🔥 \n$TSLA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "themuskuniverse",
+   "url": "https://x.com/themuskuniverse/status/2091853558761005267",
+   "date": "2026-08-24",
+   "text": "$TSLA $SPCX pre market , $TSLA dailies are looking weak, but you never know and that is $TSLA for us. https://t.co/8rw2fzWlvf"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 23,
+   "user": "cryptoceo_",
+   "url": "https://x.com/cryptoceo_/status/2093276140865470902",
+   "date": "2026-08-28",
+   "text": "first TSLA pair on @longdotxyz starting to wake up and still looks ridiculously cheap\n\npretty clean loop here. bid $OPTIMUS at ~$100k → upside if it catches anything close to the $AI move → meanwhile the pair gives exposure to TSLA itself ahead of Optimus moving towards https://t.co/Pwq2dzeOJ0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "TokenaxisHQ",
+   "url": "https://x.com/TokenaxisHQ/status/2092343681214800095",
+   "date": "2026-08-25",
+   "text": "🔥 TODAY’S RECAP\n\nSome of today’s moves:\n\n$NDXP +40.0% 🚀\n$TSLA +37.5% 🚀\n$TSLA +30.9% 🚀\n$TSLA +22.0% 🎯\n$QQQ +17.4%\n$NFLX +8.1%\n$LULU +5.1%\n\n$BOX -11.5%….not every trade wins.\n\nAnd we still have open positions running. 👀\n\nMore updates in the TokenAxis community:\n\n📲 https://t.co/wBMiFFV5rv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "letsripitup",
+   "url": "https://x.com/letsripitup/status/2092980987449807325",
+   "date": "2026-08-27",
+   "text": "$tsla @elonmusk  Even CRM and software stocks are close to ATH, and tsla is 🗑️..  5 years and tsla stock price is still the same.."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Kentngu16759136",
+   "url": "https://x.com/Kentngu16759136/status/2091773786341450236",
+   "date": "2026-08-24",
+   "text": "Fun hypothetical calculation time 🚀  \nAssumptions (based on your scenario):  \nToday (late Aug 2026): TSLA ≈ $363/share, SPCX ≈ $137/share  \nBy end of 2027: TSLA trades around $700/share  \nSPCX acquires/merges with TSLA and pays a 40% premium to TSLA shareholders  \nDeal value"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "KK12349999",
+   "url": "https://x.com/KK12349999/status/2092634345370530184",
+   "date": "2026-08-26",
+   "text": "The robo-taxi war just went international, $GOOGL's Waymo said Tuesday it will start mapping Munich in coming weeks to launch commercial ride-hailing by end of 2027, its first EU market after 11 U.S. cities and testing in London and Tokyo. \n\n$TSLA launched its own service last"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "RichWalloTrades",
+   "url": "https://x.com/RichWalloTrades/status/2092283520748077290",
+   "date": "2026-08-25",
+   "text": "🚨 $TSLA #TSLA Play of the Week.🚨\n\nTSLA $400 call 9/4 avg .81\n\n$SPY $QQQ $NVDA https://t.co/4DEVSmyHZk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "IsTSLANewHigh",
+   "url": "https://x.com/IsTSLANewHigh/status/2092002249442721991",
+   "date": "2026-08-24",
+   "text": "No. TSLA high price previous record: $498.83, TSLA high price today: $363.24"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "loatheofbread6",
+   "url": "https://x.com/loatheofbread6/status/2093886265909555343",
+   "date": "2026-08-30",
+   "text": "How do TSLA fanboys think TSLA tests or trains their real world model gen?\n\nbLacK BoX sTasiTicS?\n\nThe only way to validate the world model is using interpretable / qualitative heuristics, which TSLA builds manually.. https://t.co/F11VuutGEU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "InsiderFinancex",
+   "url": "https://x.com/InsiderFinancex/status/2093367204133658771",
+   "date": "2026-08-28",
+   "text": "$NVDA, #MSFT, and TSLA are vacuuming up $140.3M in sweep premium. But the tape is split, with MSFT the cleanest of the three.\n\n➡️ Sweep concentration: NVDA $49.1M, MSFT $47.7M, TSLA $43.5M = $140.3M combined\n↘️ Put flow: NVDA 34%, TSLA 37%, META 31%\n↗️ Relative tone: MSFT 6% puts https://t.co/wwyt2aV131"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "stocktalkforu",
+   "url": "https://x.com/stocktalkforu/status/2093721411307114573",
+   "date": "2026-08-29",
+   "text": "Tesla (TSLA) will hold an invite-only Cybercab launch event in Austin, Texas, on Thursday September 3rd. \n\nReports indicate riders may be able to request the Cybercab through Tesla's existing Robotaxi app in Austin. \n\n The success of this event will help Tesla break 50 SMA this https://t.co/F1Fph7fFsM"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "HKIStrategies",
+   "url": "https://x.com/HKIStrategies/status/2092290250395549986",
+   "date": "2026-08-25",
+   "text": "$TSLA\n\nonly accumulating?\n\nPrice got rejected by the 50 EMA, pulling back slightly.\n\nThe overall trend remains strong.\n\nI expect $TSLA to break above the 50 EMA.\n\nIf not, we could see a minor pullback, providing the opportunity to accumulate more.\n\n$TSLA pt $498.\n\nThis is not https://t.co/t1JaK4Ot1U https://t.co/6bFG2ovyNh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ChrisHuRocks",
+   "url": "https://x.com/ChrisHuRocks/status/2092317961071526265",
+   "date": "2026-08-25",
+   "text": "$TSLA \n2:27PM\n\nOverview tsla.\n\nLooks like there is a down coming. https://t.co/uRUU5jG3LN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "nishkidoonoo",
+   "url": "https://x.com/nishkidoonoo/status/2092385074297573532",
+   "date": "2026-08-25",
+   "text": "buying $TSLA 2020      buying $TSLA 2026 https://t.co/oCJHV9MP39"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "KRYPTOCEAN_",
+   "url": "https://x.com/KRYPTOCEAN_/status/2091960506173047086",
+   "date": "2026-08-24",
+   "text": "📈 Proxy Read $TSLA\n\nStock TSLA -3.00% at $352\nTape BTC $79,016 (+2.21% 24h)\nMacro DXY 99.02 (+0.22%)\n\nBTC leading while TSLA lags. Spot is ahead of the proxy."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "trader_gv",
+   "url": "https://x.com/trader_gv/status/2094045656159547748",
+   "date": "2026-08-30",
+   "text": "$TSLA $25K vehicle that can earn money while you sleep ?😜\n\nCan individual buyers make money? \n\n$SPY $QQQ $TSLA $SPCX $UBER $GOOGL https://t.co/90eQrshsBZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 91,
+   "user": "wickedstocks",
+   "url": "https://x.com/wickedstocks/status/2092957449934254188",
+   "date": "2026-08-27",
+   "text": "📺 $TSLA STILL NEEDS A CLOSE ABOVE $349.59 TO GO HIGHER\n\nPlease ❤️like and 🔁share with fellow @Tesla traders/investors\n\n#Tesla closed yesterday at $345.82, below the key pivot level.\n\nWith the broader market potentially getting a lift following $NVDA earnings, #TSLA could get https://t.co/6OfyMYJkTo"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 113,
+   "user": "wickedstocks",
+   "url": "https://x.com/wickedstocks/status/2093323066893856956",
+   "date": "2026-08-28",
+   "text": "📺 $TSLA CLEARED THE TRIGGER — $363 NEXT, THEN $383?\n\nPlease ❤️like and 🔁share with fellow @Tesla traders/investors\n\n#Tesla closed yesterday at $354.81, successfully clearing the $349.59 level we were watching. So, the near-term setup has strengthened — but there are still https://t.co/uEdgHqN07P"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "KevinJagiah",
+   "url": "https://x.com/KevinJagiah/status/2091606330502942721",
+   "date": "2026-08-23",
+   "text": "👑 MONDAY'S KING NODES ARE READY\n\nAll 12 option chains are mapped for tomorrow:\n$SPY • $QQQ • $TSLA • $NVDA\n$AAPL • $AMD • $AMZN • $META\n$MSFT • $MU • $PLTR • $SPCX\n\nA few battles immediately stand out:\n🎯 $SPY 765–767\n🚗 $TSLA 360\n⚔️ $PLTR 180\n💾 $MU 950–970\n🖥️ $AMD"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 17,
+   "user": "RAFA_AI",
+   "url": "https://x.com/RAFA_AI/status/2091924145575547195",
+   "date": "2026-08-24",
+   "text": "Unusual Options Activity Detected On #0DTE\n\nThe Single-Stock Volatility Explosion: $TSLA \n\nTesla saw frantic, heavy-premium institutional flow in opposite directions within the first hour of trading:\n\nThe Bearish Opening Salvo ($360 Puts): Just 4 minutes after the opening bell"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "spxsignals1",
+   "url": "https://x.com/spxsignals1/status/2092960032019345728",
+   "date": "2026-08-27",
+   "text": "📊 S&amp;P 500 — KEY LEVELS TO WATCH\n\n🎯 RESISTANCE\n⚪ Minor → 7,699.04\n🟡 Major → 7,740.68\n\n🛡️ SUPPORT\n⚪ Minor → 7,664.47\n🟡 Major → 7,630.13\n🟡 Major → 7,598.77\n\n🚨 MARK THESE LEVELS!\nPrice is sitting between key zones — the next breakout or breakdown could set the tone for https://t.co/yqxKtSN0aA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "mikalche",
+   "url": "https://x.com/mikalche/status/2091880731408519303",
+   "date": "2026-08-24",
+   "text": "FUTURES UPDATE  $NQ $ES $RTY  $GC \nThe market is leaning defensive, but institutions are not positioned for a guaranteed crash.\n\n🔴 $NQ  BEARISH/DEFENSIVE Nasdaq rallies are being sold, which can limit the upside. The better approach is to sell failed bounces unless $NQ reclaims"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "TradingbitAi",
+   "url": "https://x.com/TradingbitAi/status/2092114332356345987",
+   "date": "2026-08-25",
+   "text": "📊 Daily Brief 🟢🟢\n━━━━━━━━━━━━\n[Overall Verdict]\nBULLISH. Dual engines aligned: technical strong_bull (78% confidence, score 1.595) + macro BTC Bull regime. Confidence: high. Price $80,311.6 broke decisively above prior consolidation; momentum, trend and https://t.co/2PjZpcgI43"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 85,
+   "user": "wickedstocks",
+   "url": "https://x.com/wickedstocks/status/2092243742249865460",
+   "date": "2026-08-25",
+   "text": "📺 $TSLA COUNTER-TREND RALLY REMAINS HEALTHY ABOVE $345.32\n\nPlease ❤️like and 🔁share with fellow @Tesla traders/investors\n\n#Tesla closed Monday at $348.95, down almost 4%. That puts the stock very close to the key level that could determine whether the current counter-trend https://t.co/4kTid7RZiA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2091979601912250669",
+   "date": "2026-08-24",
+   "text": "The loudest tape today wasn't NVDA into earnings. It was a chipmaker nobody was talking about — $MCHP.\n\nTHE TRADE OF THE DAY\n\nAt 11:30 ET, someone sold 118,920 MCHP December $65 calls in a single print and collected $153.4 million. That is the story. They are not betting MCHP https://t.co/mqeq1rkEpT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ravagelaserbeak",
+   "url": "https://x.com/ravagelaserbeak/status/2093026849509282264",
+   "date": "2026-08-27",
+   "text": "The $NVDA Valuation Paradox: Why Nvidia Is Quantifiably The Cheapest Growth Engine On Earth\n\nNvidia ($NVDA) just delivered another blowout quarter: $96.2B in revenue (+106% YoY), $2.22 EPS, and 75% gross margins, while guiding Q3 revenue to $108B. \n\nYet the stock remains anchored https://t.co/BmB9XzZUy7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 104,
+   "user": "wickedstocks",
+   "url": "https://x.com/wickedstocks/status/2091880532552429688",
+   "date": "2026-08-24",
+   "text": "📺 $TSLA TO TEST $366 — $383 IS THE NEXT TARGET\n\nPlease ❤️like and 🔁share with fellow @Tesla traders/investors\n\nAfter last week’s follow-through, #Tesla near-term setup remains constructive, but the stock is now approaching an important decision point.\n\nThe level to watch is https://t.co/arsuNIj2yg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 82,
+   "user": "wickedstocks",
+   "url": "https://x.com/wickedstocks/status/2092607094142685299",
+   "date": "2026-08-26",
+   "text": "📺 $TSLA BELOW $348.16 PUTS $328.78 BACK IN PLAY\n\nPlease ❤️like and 🔁share with fellow @Tesla traders/investors\n\n#Tesla closed yesterday at $350.25 and is trading today below the key $348.16 support level, putting the stock under immediate pressure.\n\n*\n\nAbout five to six weeks https://t.co/2gb6oMVeDP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "VulcanMK5",
+   "url": "https://x.com/VulcanMK5/status/2093073532527759546",
+   "date": "2026-08-27",
+   "text": "🐢 Turtle System Day 2\n\nLIVE stance LONG\n2 stocks | 2 long units | ~1.5% initial heat\n\nNEW TRADE\n\n$NVDA triggered a fresh 20-day Turtle breakout at $227.92 today.\n\nEntry $227.92\nStop ~$214.89\nNext add ~$231.18\n38 shares per $100K Turtle equity due to post-earnings HIGH risk\n\n$CCJ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "TradingAssistAI",
+   "url": "https://x.com/TradingAssistAI/status/2092026661852139528",
+   "date": "2026-08-24",
+   "text": "$TSLA  🎯  Setup for 2026-08-25\n\nBull 2 / Bear 8  —  Bearish\n\nNot financial advice. For educational purposes only. Do your own research. https://t.co/zEWH34m9FP"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2093429129785835555",
+   "date": "2026-08-28",
+   "text": "Someone just paid $91.7M for the right to be bullish Microsoft into November. That was the tape today.\n\nTHE TRADE\n\nAt 11:06 ET someone bought 17,000 MSFT November 20 $480 calls in a burst of prints, paying $91.7M in premium. That is the story of the session. It is a directional, https://t.co/saOWhW97hr"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2091877134596018394",
+   "date": "2026-08-24",
+   "text": "🚨 BURAKTHESCALPER LLC — 6 AM PT PREMARKET BATTLE PLAN\nMONDAY • AUGUST 24, 2026\n\n⚔️ BIAS: CAUTIOUS BEARISH / TECH UNDER PRESSURE. Fresh premarket benchmarks: SPY -0.23% • QQQ -0.69% • IWM -0.01%. Nasdaq futures are clearly underperforming as Treasury yields remain elevated and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ROR_Traders",
+   "url": "https://x.com/ROR_Traders/status/2093330781049335855",
+   "date": "2026-08-28",
+   "text": "$NVDA got within a hair of 230 yesterday, then bled. Now the puts are stepping in.\n\nHere's the full board for 08/28 and how I am reading the shift 👇\n\n$NVDA: 230 still holds the most OI and it almost tagged it yesterday. But today it bled, and 220, 225, and 222.5P all built. The"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Benzinga",
+   "url": "https://x.com/Benzinga/status/2091869130756329869",
+   "date": "2026-08-24",
+   "text": "Elon Musk (@elonmusk) saw his net worth rebound to more than $851 billion as shares of Tesla ($TSLA) and SpaceX ($SPCX) recovered from recent lows.\n\nMusk added more than $22 billion to his fortune on Friday alone. If Tesla and SpaceX continue climbing, he could potentially regain https://t.co/nOs0lH5gIY"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 125,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2093161141761724654",
+   "date": "2026-08-28",
+   "text": "BTC is pushing toward major resistance near 81,400 to 82,850 after closing higher, but I remain cautious because RSI is deeply overbought. ETHUSDT looks bullish on higher timeframes, although its late breakout may signal exhaustion, while dominance suggests altcoin rotation is https://t.co/7LVswbi3nS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "au_xbt",
+   "url": "https://x.com/au_xbt/status/2092759636827103506",
+   "date": "2026-08-26",
+   "text": "Big move higher. The 980 target for $MU and 260 target for $MRVL mentioned above were based on large bullish options trades seen late in the session two days ago. $QQQ also did in fact bottom around 709. Too easy. The CPO names in the portfolio, such as $LITE , are absolutely https://t.co/5YJlJEhR9j https://t.co/cKPZCOxP3N"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AkinAdemGokhan",
+   "url": "https://x.com/AkinAdemGokhan/status/2092924802524692973",
+   "date": "2026-08-27",
+   "text": "$TSLA Buyers keep stacking upside bets while the ceiling quietly slips lower — 347.5 was rejected, and nothing firm sits beneath.\n\nTwo forces are pulling against each other. The bullish chain keeps building: buyers continue to accumulate upside exposure, and that positioning https://t.co/dKWJhaP868"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "AkinAdemGokhan",
+   "url": "https://x.com/AkinAdemGokhan/status/2092539908216807797",
+   "date": "2026-08-26",
+   "text": "The 10-day bias holds BULLISH at 1.00, but flow velocity at -0.50 is sliding from bull to bear.\n\nAcross the tape 87 of 115 names sit at LAST STOP — breadth is exhausted. TITAN still opened four CALLs, while the biggest directional bet is $TSLA PUT $267M. STATION confirmed 3 of 5. https://t.co/SfO7kCp8sz"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "nightglasstrade",
+   "url": "https://x.com/nightglasstrade/status/2091866531168968916",
+   "date": "2026-08-24",
+   "text": "$TSLA looks constructive here. Would favor buying dips into the $350–$352.42 area, with $385.39 as the upside target.\n\nTesla cratered roughly 20% following earnings—but the flow told a different story. Institutions stepped in and bought the dip, shown by the bullish flow markers https://t.co/9XyaCwSyl1 https://t.co/wVGl2mpjuc"
+  }
+ ]
+}

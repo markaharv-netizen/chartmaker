@@ -1,0 +1,436 @@
+{
+ "symbol": "SPCX",
+ "start": "2026-08-23T16:00:00Z",
+ "end": "2026-08-30T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "SPCX SpaceX -pump -memecoin -is:retweet -is:reply lang:en",
+  "SPCX (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -pump -memecoin -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "EverIntrigued",
+   "url": "https://x.com/EverIntrigued/status/2093825849586008472",
+   "date": "2026-08-29",
+   "text": "TESLA IS THE BACKDOOR INTO SPACEX\n\nMusk controls SpaceX. He does not control Tesla. If they merge, SpaceX pays Tesla extra to get the vote.\n\n$10,000 $TSLA ≈ 29 shares  \n$10,000 $SPCX ≈ 71 shares\n\nNo extra: 29 Tesla → 71 SpaceX  \n20% extra: 29 Tesla → 85 SpaceX\n\nSame $10,000."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "MartynInvestor",
+   "url": "https://x.com/MartynInvestor/status/2091558918497484918",
+   "date": "2026-08-23",
+   "text": "$XRP\n$SPCX\nXRP Is SUCKING the Life Out of SpaceX…\n\nBut the Big Money Is Buying | Martyn Lucas Investor\n10 FACTS for XRP and SpaceX\n\nWhere the money goes NEXT?\n\nLIVE Now on YouTube\n\nhttps://t.co/jMGJFsu9cZ\n\n#SPCX #SpaceX #XRP #BTC #Crypto #MartynLucasINVESTOR https://t.co/tNqz1ybucq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Kyrexcapital",
+   "url": "https://x.com/Kyrexcapital/status/2092572099483422955",
+   "date": "2026-08-26",
+   "text": "Trump posted about Space Force.\n\nSPCX rose 2.79%.\n\nEasy conclusion: Trump moved SpaceX stock.\n\nOne problem: SPCX was already up 1%+ in pre-market, hours before the post.\n\nThe headline is Trump.\n\nBut 370M insider shares approaching their September unlock may matter more.\n\n#SpaceX https://t.co/KwTrViYe9o"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "MartynInvestor",
+   "url": "https://x.com/MartynInvestor/status/2091558964668338447",
+   "date": "2026-08-23",
+   "text": "$XRP\n$SPCX\nXRP Is SUCKING the Life Out of SpaceX…\n\nBut the Big Money Is Buying | Martyn Lucas Investor\n10 FACTS for XRP and SpaceX\nWhere the money goes NEXT?\n\nLIVE Now on YouTube\n\nhttps://t.co/jMGJFsu9cZ\n\n#SPCX #SpaceX #XRP #BTC #Crypto #MartynLucasINVESTOR"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "corp_nick14",
+   "url": "https://x.com/corp_nick14/status/2092309773752660450",
+   "date": "2026-08-25",
+   "text": "$SPCX Bottom Recovery Is Building Momentum 🚀\n\n$SPCX closed at $138.49 (+2.59%) today as buyers continue to defend the recovery zone.\n\nMarket data:\n📌 Open: $137.00\n📌 High: $139.74\n📌 Low: $136.11\n📊 Volume: 38.09M shares\nAfter falling from the $225.64 high to the $104.83 low, https://t.co/E66g1BTuB6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TrackSPCX",
+   "url": "https://x.com/TrackSPCX/status/2093330270283771949",
+   "date": "2026-08-28",
+   "text": "🔔 OPENING BELL — $SPCX\n\n@SpaceX opens flat at $140.16, ▬ +$0.00 (0.00%) against yesterday's $140.16 close.\n\n→ Live price, charts &amp; history at https://t.co/xwhak9oRei\n\n#SpaceX #SPCX #StockMarket #Stocks https://t.co/gwjzhRARJz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TrackSPCX",
+   "url": "https://x.com/TrackSPCX/status/2092243108108849456",
+   "date": "2026-08-25",
+   "text": "🔔 OPENING BELL — $SPCX\n\n@SpaceX opens flat at $135.00, ▬ +$0.00 (0.00%) against yesterday's $135.00 close.\n\n→ Live price, charts &amp; history at https://t.co/xwhak9oRei\n\n#SpaceX #SPCX #StockMarket #Stocks https://t.co/mFSqlTAVlv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TrackSPCX",
+   "url": "https://x.com/TrackSPCX/status/2092605494359728449",
+   "date": "2026-08-26",
+   "text": "🔔 OPENING BELL — $SPCX\n\n@SpaceX opens flat at $136.55, ▬ +$0.00 (0.00%) against yesterday's $136.55 close.\n\n→ Live price, charts &amp; history at https://t.co/xwhak9oRei\n\n#SpaceX #SPCX #StockMarket #Stocks https://t.co/KUy5BEU2GA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "FundedDave",
+   "url": "https://x.com/FundedDave/status/2092274265043370274",
+   "date": "2026-08-25",
+   "text": "SpaceX is setting up for another major catalyst.\n\nStarlink launch today + Nvidia-powered AI satellites planned for 2027.\n\nWatching $SPCX closely today.\n\n🚀📡🤖\n\n#SPCX #SpaceX #Starlink #NVIDIA #AI https://t.co/CbI8INSPHC"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "MartynInvestor",
+   "url": "https://x.com/MartynInvestor/status/2093413572520951881",
+   "date": "2026-08-28",
+   "text": "$RKLB\n$SPCX\n\n🚨 SpaceX Goes to WAR With Rocket Lab!\nRKLB Stock CRASHES 6% | Martyn Lucas Investor\n\nWHAT DID I DO?\nLIVE Now on YouTube\nhttps://t.co/BINbPnBBDw\n\n#RKLB #RocketLAB #SPCX #SpaceX #MartynLucasINVESTOR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TrackSPCX",
+   "url": "https://x.com/TrackSPCX/status/2093013185808793748",
+   "date": "2026-08-27",
+   "text": "🕛 MIDDAY UPDATE — $SPCX\n\n@SpaceX is holding gains at $140.82, ▲ +$0.86 (+0.61%) so far on the session.\n\n→ Live price, charts &amp; history at https://t.co/xwhak9oRei\n\n#SpaceX #SPCX #StockMarket #Stocks https://t.co/78qi3SSnFr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TrackSPCX",
+   "url": "https://x.com/TrackSPCX/status/2092650793597907228",
+   "date": "2026-08-26",
+   "text": "🕛 MIDDAY UPDATE — $SPCX\n\n@SpaceX is under pressure at $136.66, ▼ -$0.30 (-0.22%) so far on the session.\n\n→ Live price, charts &amp; history at https://t.co/xwhak9oRei\n\n#SpaceX #SPCX #StockMarket #Stocks https://t.co/jxuIEDnvJJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 181,
+   "user": "TraderGillx",
+   "url": "https://x.com/TraderGillx/status/2091680273351983125",
+   "date": "2026-08-24",
+   "text": "Cathie wood offloaded $27.2M worth of Palantir for $27.5M worth of $SPCX last Friday.\n\nHer conviction for $SPCX is truly unmatched!\n\nShe knows @SpaceX is the way forward.\n\n#SpaceX https://t.co/FVZESAQ3zD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 28,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2093312925737828695",
+   "date": "2026-08-28",
+   "text": "JUST IN: Elon Musk predicts SpaceX $SPCX will reach $3.5 trillion in revenue by 2033.\n\n#Markets #MarketUpdate #StockMarket #trading #USA #US #stocks #crypto #Bullish #TRUMP #America #tariffwar #tariffdeal #Dollar #FederalReserve #DonaldTrump #Tariffs #rates #TradeDeal #Powell https://t.co/yRZl51DCeJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TrackSPCX",
+   "url": "https://x.com/TrackSPCX/status/2091978866390601904",
+   "date": "2026-08-24",
+   "text": "🔔 CLOSING BELL — $SPCX\n\n@SpaceX finishes higher at $135.00, ▲ +$0.71 (+0.52%) on the day.\nSession range — Open $134.30 · High $138.33 · Low $133.12\n\n→ Live price, charts &amp; history at https://t.co/xwhak9oRei\n\n#SpaceX #SPCX #StockMarket #Stocks https://t.co/3r4DwHGUlf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TrackSPCX",
+   "url": "https://x.com/TrackSPCX/status/2092288411230998981",
+   "date": "2026-08-25",
+   "text": "🕛 MIDDAY UPDATE — $SPCX\n\n@SpaceX is holding gains at $138.26, ▲ +$1.20 (+0.88%) so far on the session.\n\n→ Live price, charts &amp; history at https://t.co/xwhak9oRei\n\n#SpaceX #SPCX #StockMarket #Stocks https://t.co/1M84PNnDTU"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 22,
+   "user": "epictrades1",
+   "url": "https://x.com/epictrades1/status/2092572778054479966",
+   "date": "2026-08-26",
+   "text": "$SPCX Morgan Stanley says SpaceX plan implies potentially far more aggressive launches, The firm keeps an Overweight rating and $300 price target on SpaceX shares.\n$SPCX Wolfe views Spaceport Louisiana as 'bullish indicator' for SpaceX, The firm keeps an Outperform rating on the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "slinkyhammer",
+   "url": "https://x.com/slinkyhammer/status/2093740385348575603",
+   "date": "2026-08-29",
+   "text": "🚨 $SPCX + $TSLA — WHAT IF?\n\nThe Tesla × SpaceX merger speculation is getting harder to ignore.\n\nElon Musk was directly asked about combining the companies and didn’t shut the idea down. Instead, he pointed to the “more and more overlap” between Tesla and SpaceX — including"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TrackSPCX",
+   "url": "https://x.com/TrackSPCX/status/2092967882732736930",
+   "date": "2026-08-27",
+   "text": "🔔 OPENING BELL — $SPCX\n\n@SpaceX opens flat at $140.38, ▬ +$0.00 (0.00%) against yesterday's $140.38 close.\n\n→ Live price, charts &amp; history at https://t.co/xwhak9oRei\n\n#SpaceX #SPCX #StockMarket #Stocks https://t.co/LwoUAd3uDh"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Vegas_OnYT",
+   "url": "https://x.com/Vegas_OnYT/status/2093007426027172081",
+   "date": "2026-08-27",
+   "text": "🚀 $SPCX Morning Update | SpaceX\n\nSpaceX continues to build momentum both fundamentally and on the chart.\n\n📈 $SPCX: ~$140.5 premarket\n• 3-session trend: $135 → $137.95 → $139.63\n• RSI ~59 — bullish without being heavily overbought\n• MACD remains positive\n• $140–145 is https://t.co/Hsea3iXxoV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TrackSPCX",
+   "url": "https://x.com/TrackSPCX/status/2091926016675434749",
+   "date": "2026-08-24",
+   "text": "🕛 MIDDAY UPDATE — $SPCX\n\n@SpaceX is holding gains at $136.75, ▲ +$2.46 (+1.83%) so far on the session.\n\n→ Live price, charts &amp; history at https://t.co/ATpFGFpx4S\n\n#SpaceX #SPCX #StockMarket #Stocks https://t.co/P3agkG3muQ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "sandytoesincml",
+   "url": "https://x.com/sandytoesincml/status/2092769718071640159",
+   "date": "2026-08-27",
+   "text": "Today I asked GROK to give me bullet points on (SPCX) SpaceX stock, its business growth outlook as well as revenue outlook and 1, 3 &amp; 5 year price targets. This was my reply:\n\n*No, that did not happen.** SpaceX (Space Exploration Technologies) remains a privately held company. It"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TrackSPCX",
+   "url": "https://x.com/TrackSPCX/status/2093375569568137315",
+   "date": "2026-08-28",
+   "text": "🕛 MIDDAY UPDATE — $SPCX\n\n@SpaceX is under pressure at $138.53, ▼ -$1.28 (-0.92%) so far on the session.\n\n→ Live price, charts &amp; history at https://t.co/xwhak9oRei\n\n#SpaceX #SPCX #StockMarket #Stocks https://t.co/NpVGUO2sav"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "XzillaRugNews",
+   "url": "https://x.com/XzillaRugNews/status/2091841920892805332",
+   "date": "2026-08-24",
+   "text": "Repeat Offender Strikes Again: SpaceX (SPCX) Vanishes After Hours\n\nThe creator behind SpaceX (SPCX) is no rookie. Just weeks ago the same wallet ripped off investors on the Amazon token, pulling $323,923. That pattern repeats here, with the new launch collapsing after about 6.5hr https://t.co/Rdv2SQUXwJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2092341907422605563",
+   "date": "2026-08-25",
+   "text": "Someone just spent $31.5M betting Brazil rips before Thanksgiving — and it's the biggest trade on the tape.\n\nTHE TAPE\n\n$207M of abnormal premium crossed today across 103 prints, and one trade ate 15% of it by itself. At 13:31 ET someone bought 500,000 EWZ November-20 $43 calls https://t.co/ztfzIR0QgT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "KevinJagiah",
+   "url": "https://x.com/KevinJagiah/status/2091606330502942721",
+   "date": "2026-08-23",
+   "text": "👑 MONDAY'S KING NODES ARE READY\n\nAll 12 option chains are mapped for tomorrow:\n$SPY • $QQQ • $TSLA • $NVDA\n$AAPL • $AMD • $AMZN • $META\n$MSFT • $MU • $PLTR • $SPCX\n\nA few battles immediately stand out:\n🎯 $SPY 765–767\n🚗 $TSLA 360\n⚔️ $PLTR 180\n💾 $MU 950–970\n🖥️ $AMD"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 351,
+   "user": "thenexus_team",
+   "url": "https://x.com/thenexus_team/status/2092770316988870770",
+   "date": "2026-08-27",
+   "text": "Good morning traders.\n🚀SPCX Market Update | Short-Term Setup\n\nSPCX is trading around $140.04, up about 1.70% in 24H.\n\nThe 1M chart shows price pulling back after rejecting the $140.82 high. Price is now below the MA25 ($140.26) and MA99 ($140.39), while MACD remains slightly https://t.co/twFQEZN0HY"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 34,
+   "user": "ATAFIN",
+   "url": "https://x.com/ATAFIN/status/2093252512555889028",
+   "date": "2026-08-28",
+   "text": "#SpaceX #Stocks Bullish &amp; Mega Bullish Outlook @MorganStanley $300 Base Target $600 Super Bull Case after #Cursor @cursor_ai Deal\n\n@SpaceX INTRADAY MATRIX\n\nBulls Bears Fight in $140\nafter\nLast Test $130\n-\nEarlier Bearish M-$150-Activated \n\n$SPCX &gt; $140 (140.30) 28.08.26-overnight https://t.co/E3MMVh0pIJ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 13,
+   "user": "OptionKing33996",
+   "url": "https://x.com/OptionKing33996/status/2092062247875195386",
+   "date": "2026-08-25",
+   "text": "$SPCX looks bullish 📈\n\nBull needs to hold above $137. If it holds, possible upside toward $140 → $145 → $150 in the coming days. 🚀\n\nTrade safe and manage risk. https://t.co/OhzQsvVbNv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2092243478461739506",
+   "date": "2026-08-25",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• A Billion-Dollar Solana Inflow Is Real Money; A Bitcoin Custody Move Is Not, Yet\n• Stock Futures Climb as Investors Eye Nvidia (NVDA) Earnings and Fed’s Jackson Hole Event\n• BTC Price Reclaims $81,000 as Gold Rally, https://t.co/4uleXfGEjc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Benzinga",
+   "url": "https://x.com/Benzinga/status/2091869130756329869",
+   "date": "2026-08-24",
+   "text": "Elon Musk (@elonmusk) saw his net worth rebound to more than $851 billion as shares of Tesla ($TSLA) and SpaceX ($SPCX) recovered from recent lows.\n\nMusk added more than $22 billion to his fortune on Friday alone. If Tesla and SpaceX continue climbing, he could potentially regain https://t.co/nOs0lH5gIY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "disperxo_inv",
+   "url": "https://x.com/disperxo_inv/status/2093602172394983705",
+   "date": "2026-08-29",
+   "text": "Here’s a snapshot of the latest available data as of Friday, August 28, 2026 (U.S. market hours / late session). Prices move quickly—treat these as approximate late-day levels. Broader market backdrop: S&amp;P 500 around 7,731 (+0.7%), Nasdaq 100 around 29,642 (+1.4%).\n\n### Quick"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "amil0x",
+   "url": "https://x.com/amil0x/status/2092254350290633151",
+   "date": "2026-08-25",
+   "text": "There is something I dislike about today's IPO's\n\nThe valuations leave no room left\n\nCompanies used to go public at a few billion. Now they list near $2T. Either money is worthless in 20 years, or the math doesn't work\n\n$GOOG IPO'd in 2004 at ~$23B, Split-adjusted, the shares are"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 36,
+   "user": "growthrapidly",
+   "url": "https://x.com/growthrapidly/status/2092304599524761760",
+   "date": "2026-08-25",
+   "text": "10 stocks top fund managers have been buying over the past few months: \n\n1) $TSM \n2) $DASH\n3) $LLY \n4) $SPCX \n5) $MU \n6) $AMD \n7) $GOOG \n8) $KLAC \n9) $WDC\n10) $NVDA\n\nThey’re buying despite continued uncertainty around inflation, interest rates, oil prices, tariffs, and"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "CryptoBankz_65",
+   "url": "https://x.com/CryptoBankz_65/status/2093687240580837804",
+   "date": "2026-08-29",
+   "text": "Still doubting Elon?\n\nGood luck.\n\nIf Elon Musk ever decides to bring $SPCX, $TSLA and some of his other privately held companies under one umbrella, I can only imagine what that could become.\n\nPeople can argue that Tesla and SpaceX are already overvalued today.\n\nPersonally, I https://t.co/3yooutAZ7m"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2091742837977358847",
+   "date": "2026-08-24",
+   "text": "🚀 $SPCX + $TSLA: Elon Musk Moves Closer to $1 Trillion Again\n\nElon Musk’s net worth reportedly jumped more than $22B in one day, taking him above $851B as $TSLA and $SPCX recovered from their August lows. If both stocks continue rising, Musk could move closer to the $1T https://t.co/1N23DTtqMj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "disperxo_inv",
+   "url": "https://x.com/disperxo_inv/status/2091792403648622980",
+   "date": "2026-08-24",
+   "text": "**Latest updates as of market close Friday, August 21, 2026 (stocks; markets closed over the weekend) and real-time/live data for Bitcoin as of ~August 23, 2026.** Prices, changes, and stats primarily from Yahoo Finance and related sources; Bitcoin from recent market data. Note:"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 37,
+   "user": "SilverTradeTeam",
+   "url": "https://x.com/SilverTradeTeam/status/2094066609803452613",
+   "date": "2026-08-30",
+   "text": "Should you BUY $meta?  Or Stay Away?\n\nOver the Last Year-  (Meta -23%) (AMZN +15%) (AAPL +37%)  ?\n\nim bullish for the Next 2 Weeks Atleast\n\nI see At least an  8% Move this Week\nMaybe 13% or more over the Next 2\n\nMarkets Have been beaten down from the hardware sell off and then https://t.co/YfoT31gJnT"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 11,
+   "user": "RockyTSTH",
+   "url": "https://x.com/RockyTSTH/status/2091926804236054642",
+   "date": "2026-08-24",
+   "text": "🐻 Another One Joining the $SPCX Put Flow\n\nMore short-dated bearish flow just hit $SPCX.\n\n🎯 $136 PUTS | 8/28 EXP\n• 8,163 contracts traded\n• Only 1,747 open interest\n• ~$3.05M total premium\n• 3,889 contracts hit the ASK in a single 5-min candle\n• ~$1.39M premium in that https://t.co/nLueCzeywA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "_charan_04",
+   "url": "https://x.com/_charan_04/status/2092831725101432973",
+   "date": "2026-08-27",
+   "text": "Tomm watchlist \n\nUpside $SPCX $PLTR \nDownside $GOOGL"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "teshen8lin",
+   "url": "https://x.com/teshen8lin/status/2091579370729001045",
+   "date": "2026-08-23",
+   "text": "DZ Bank analyst Markus Leistner initiated coverage on $SPCX with a rare Sell rating and a $100 price target, warning of a significant \"crash risk in the valuation orbit\". This bearish call implies a 25% downside from its recent $134 closing price.\n\nDZ Bank? 🤔😄 https://t.co/d071HbxUE8"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "trader_gv",
+   "url": "https://x.com/trader_gv/status/2093809724470751649",
+   "date": "2026-08-29",
+   "text": "$AMD (Weekly) 👀\n\n📉 500 zone + 50MA clearly acting as resistance\n🔻 Rounded bearish top taking shape\n⚠️ Tough to get downside follow-through in this choppy tape\n🎯 GAP 402 → 359 still remains open 🤞\n👀 $DELL results on 11/01 worth keeping on watch as well\n\nFree Discord for https://t.co/uuZxj12Igw"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "ShahzadMughe",
+   "url": "https://x.com/ShahzadMughe/status/2092548544095801542",
+   "date": "2026-08-26",
+   "text": "🚀 $SPCX looks seriously undervalued, and the upside potential could be massive! If it clears the 150 level, momentum could accelerate quickly. Don’t chase blindly—manage risk and watch the breakout closely. The Mars mission narrative is only getting bigger! 🚀🌕"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 97,
+   "user": "JesseOlson",
+   "url": "https://x.com/JesseOlson/status/2091959430581805082",
+   "date": "2026-08-24",
+   "text": "$SPCX is currently the same price as what you could've bought pre-IPO.\n\nTarget to the downside, target to the upside. ✅\n\nTrending dots have flipped red. Lower or higher? https://t.co/6RBUV1TiqW https://t.co/1ktBDYlbvi"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 18,
+   "user": "clickoptions_ai",
+   "url": "https://x.com/clickoptions_ai/status/2093296600206508269",
+   "date": "2026-08-28",
+   "text": "Vol dispersion is wide open this past week. ⚡\n\nXRP screens 45 vols below realized, thus becoming the cheapest optionality on the board.\n\nSOL, ETH and BTC show an upside call bid, while SPCX sits at a +66-vol premium with downside protection still bid.\n\nRead the full report here https://t.co/zlXvpzaRwy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2092629337048559999",
+   "date": "2026-08-26",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• Wintermute Short Pozisyonlarını Azaltıyor: İşte Portföyü!\n• Ripple adds Stablerail to global payments stack for faster cross-border settlement\n• Bitcoin Enters Early Stage of New Bull Cycle, Says CryptoQuant\n• Bitcoin https://t.co/AVkCo3GxlY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TradeCycles",
+   "url": "https://x.com/TradeCycles/status/2093463630490571107",
+   "date": "2026-08-28",
+   "text": "$SPCX is up .45% today while $ASTS is down -5.5%.\n\nThere is one pretty simple explanation:\n\n$ASTS has bearish structure while $SPCX has bullish."
+  }
+ ]
+}

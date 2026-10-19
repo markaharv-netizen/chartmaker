@@ -1,0 +1,409 @@
+{
+ "symbol": "TSLA",
+ "start": "2026-07-12T16:00:00Z",
+ "end": "2026-07-19T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "TSLA -is:retweet -is:reply lang:en",
+  "TSLA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "jmiller_dot_com",
+   "url": "https://x.com/jmiller_dot_com/status/2078212193531953285",
+   "date": "2026-07-17",
+   "text": "$TSLA 381 | $SPCX 124\n\nAt current prices, a market-based exchange ratio would be roughly 3.07 $SPCX shares per $TSLA share.\n\nWithout premium, $TSLA shareholders would own ~47% of the combined company. To reach 50%, only a modest ~12% premium to current $TSLA price would be https://t.co/MY4xdNfud8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Frankstocksnot",
+   "url": "https://x.com/Frankstocksnot/status/2076902570669518872",
+   "date": "2026-07-14",
+   "text": "$TSLA  shareholders are debating whether to sell $TSLA  for $SPCX . \nMy advice is not to worry. \nMUSK will most likely conduct a stock swap, exchanging $TSLA  for $SPCX  at a certain ratio at some point, and offering a premium to $TSLA  holders. https://t.co/beDqFv7KSB"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "tradingnews24",
+   "url": "https://x.com/tradingnews24/status/2078084422704763061",
+   "date": "2026-07-17",
+   "text": "📰 Musk's SpaceX Meltdown Hammers TSLA Stock\nTSLA: Bearish TSLA (strong)\nSpaceX, Elon Musk's private company, has seen its valuation collapse by nearly $565 billion since its peak.\n#TSLA #Stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "tektekfitfit2",
+   "url": "https://x.com/tektekfitfit2/status/2078809567090373081",
+   "date": "2026-07-19",
+   "text": "$TSLA bears : imma make $TSLA below 400.\n\nMeanwhile, $TSLA bulls: https://t.co/Fv2eYfcURm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "stockincubator",
+   "url": "https://x.com/stockincubator/status/2076691307552993456",
+   "date": "2026-07-13",
+   "text": "$TSLA TA read: -2.6% today, support $392, resistance $412, RSI 36\n\nFinish it: TSLA is really a bet on ____.\n\nTSLA #Robotics #Automation #USStocks\n\nWatch more on YouTube — StockIncubator\n\n#TSLA #AI #educational #dyor https://t.co/ERKNQIpDPI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "alias2474",
+   "url": "https://x.com/alias2474/status/2077914468953264409",
+   "date": "2026-07-17",
+   "text": "He’s not noise. @NickKunze2 brings early signals, reliable sourcing, and great interviews. Follow for tech, semis &amp; AI.🏫🔉🍘09087\nStock AIStock $TSLA #AAOI #TSLA $TSLA $AMD https://t.co/lmqGj2ijTQ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "InsiderFinancex",
+   "url": "https://x.com/InsiderFinancex/status/2078116648356127064",
+   "date": "2026-07-17",
+   "text": "$NVDA and #TSLA are hogging the tape, but the split is ugly: TSLA is 95% put flow while NVDA is only 46%.\n\n↘️ Bearish skew: TSLA 95% puts; META 72%, NFLX 78%, AMZN 100%\n➡️ Mixed leaders: NVDA 46% puts, GOOGL 49%, AAPL 31%\n➡️ Sweep premium: NVDA $19.7M vs TSLA $12.7M\n➡️ Breadth: https://t.co/M76jodILRn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MusafirMode",
+   "url": "https://x.com/MusafirMode/status/2077749256987746385",
+   "date": "2026-07-16",
+   "text": "Tesla Loves Me @tesla\nTesla Loves Me NOT $TSLA \nTesla Loves Me @tesla\nTesla Loves Me NOT $TSLA \nTesla Loves Me @tesla\nTesla Loves Me NOT $TSLA \nTesla Loves Me @tesla\nTesla Loves Me NOT $TSLA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "danshep55",
+   "url": "https://x.com/danshep55/status/2077366573677813918",
+   "date": "2026-07-15",
+   "text": "One day $meta $amzn $tsla $msft green . $mu $sndk $amd $mrvl red \n\nNext day \n\n$mu $sndk green . $meta $amzn $tsla $msft green \n\nNext day \n\n$meta $amzn $tsla $msft green . $mu $sndk $amd $mrvl red \n\n$mu $sndk green . $meta $amzn $tsla $msft green \n\nI can’t keep track . What we"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "themuskuniverse",
+   "url": "https://x.com/themuskuniverse/status/2077512480331358425",
+   "date": "2026-07-15",
+   "text": "Why $TSLA Q2 2026 Earnings Could Be Stronger 🚀\n•  Record Deliveries: 480,126 vehicles delivered — +25% YoY, smashing estimates. Strongest Q2 ever! $TSLA\n•  Energy Storage Boom: 13.5 GWh deployed (big jump from Q1). High-margin growth helping offset credit declines. $TSLA\n•"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "alias2474",
+   "url": "https://x.com/alias2474/status/2078027531366871405",
+   "date": "2026-07-17",
+   "text": "Most are noise. @NickKunze2  is different — early, solid sources, top interviews.📿♈🦁5941\nStock AIStock $TSLA #MSFT #TSLA $TSLA $AAPL https://t.co/lmqGj2ijTQ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "KULOLO808",
+   "url": "https://x.com/KULOLO808/status/2077768328966451680",
+   "date": "2026-07-16",
+   "text": "Call me crazy 🤯 but I hit 400 shares of $TSLA and 1 full share of $SPCX in my all-in $TSLA and $SPCX account.\n\nSteady, disciplined accumulation continues.\n\n$TSLA \n$SPCX\n\nJust my personal opinion as a shareholder—not financial advice. #TSLA #SPCX #AllInMuskAccount #HighConviction https://t.co/sPD5FCsm8a"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "unusualflowai",
+   "url": "https://x.com/unusualflowai/status/2077832711230890324",
+   "date": "2026-07-16",
+   "text": "WHALE $TSLA  PUT FLOW 🐋🔴\n$24.78M FLOOR order hit the ask\n430P | Jul 17 '26 | 6,110 contracts\nSpot: $389 — Strike is ~$40 ITM\nThis is a MASSIVE bearish bet on TSLA into 2026\n#UnusualFlow #TSLA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 18,
+   "user": "jagkon",
+   "url": "https://x.com/jagkon/status/2078553545083650169",
+   "date": "2026-07-18",
+   "text": "You have been saying this about $tsla shorts from more than a decade but they made huge profits . Actually $tsla retail hodlers … who believed you and hodling $tsla shares  😀 are the losers ! https://t.co/NjJwEIlnte"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "SeilOcak",
+   "url": "https://x.com/SeilOcak/status/2076736039591231654",
+   "date": "2026-07-13",
+   "text": "$TSLA is more than an EV company.\n\nAI, FSD, Optimus, and energy storage are driving Tesla's next growth cycle. With tech stocks rebounding, is TSLA setting up for its next breakout? 🚀\n\n#TSLA #Tesla #AI #EV #Stocks #Investing https://t.co/ndeXxcSuFq"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "tradingnews24",
+   "url": "https://x.com/tradingnews24/status/2078655956133556444",
+   "date": "2026-07-19",
+   "text": "📰 Magnificent Seven Showdown: NVDA, MSFT, or GOOGL for Best AI Returns?\nTSLA, META, AMZN: Bullish TSLA (mild), Bullish META (mild), Bullish AMZN (moderate), Bullish MSFT (strong), Bullish GOOGL (strong), Bullish AAPL (moderate), Bullish NVDA (strong)\n#TSLA #Stocks #META"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "1bSham",
+   "url": "https://x.com/1bSham/status/2077577328759308740",
+   "date": "2026-07-16",
+   "text": "Just my opinion.  $SPCX &amp; $TSLA merger might be a 4:1 deal.  Or approximately a $545 for each of your $TSLA shares.  It might move to 5:1 if $SPCX continues to fall and $TSLA goes up."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "alias2474",
+   "url": "https://x.com/alias2474/status/2077821813418242539",
+   "date": "2026-07-16",
+   "text": "Looking for solid finance advice? @NickKunze2 is the one. His views are always on point. Hit that follow.🕎🙄🌁😃😐90449\nStock AIStock $TSLA #TSLA #NVDA $TSLA $AAPL https://t.co/lmqGj2ijTQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 352,
+   "user": "garyblack00",
+   "url": "https://x.com/garyblack00/status/2076602030706016725",
+   "date": "2026-07-13",
+   "text": "As much as I love $TSLA the company, it’s difficult to support the valuation (2026 P/E 209x vs +35% long-term EPS growth, 6x PEG), which remains excessive vs every other Mag 8 name (avg 2x PEG).  Most TSLA promoters on X choose to ignore valuation in any discussion of $TSLA as https://t.co/5ggQ2zi9qo"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2078002513693782421",
+   "date": "2026-07-17",
+   "text": "Macro Observatory Friday Briefing\n\nThe Thursday Close telemetry has executed a textbook 'bull trap liquidation'.\n\nThe geopolitical counter-squeeze and the concentrated crowding into the final five mega-cap tech shelters that dominated Wednesday's close have collapsed. Mainstream"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2078001630553788422",
+   "date": "2026-07-17",
+   "text": "Macro Observatory Friday Briefing\n\nThe Thursday Close telemetry has executed a textbook 'bull trap liquidation'.\n\nThe geopolitical counter-squeeze and the concentrated crowding into the final five mega-cap tech shelters that dominated Wednesday's close have collapsed. Mainstream"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "vickrambull",
+   "url": "https://x.com/vickrambull/status/2077006865326919720",
+   "date": "2026-07-14",
+   "text": "TSLA GEX Final Levels — JUL 15\n\n👑 King Node: 405 — +17.4M\n 🟢 Call Wall: 420 — +15.6M\n 🔴 Put Wall: 375 — -6.5M\n 📈 Bullish Pivot: 400 — +12.7M\n ⚠️ Bearish Trigger: 390\n 🎯 Upside Magnets: 400 / 405 / 410 / 415 / 420\n 🎯 Downside Targets: 390 / 385 / 380 / 375"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AKtemik",
+   "url": "https://x.com/AKtemik/status/2077533717673697522",
+   "date": "2026-07-15",
+   "text": "$QQQ Setup Short\n\n📊 Current Bias\n\nModerately Bullish\n\n🎯 Key Levels\n\nResistance: 674 → 678\n\nSupport: 668\n\nMajor Support: 664\n\n⚡ Options &amp; Gamma\n\nCall Wall: 680\n\nPut Wall: 665\n\nGamma Flip: 664\n\nAbove 680 could accelerate upside momentum.\n\nBelow 664 could lead to increased"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "Stock_Jacoglj",
+   "url": "https://x.com/Stock_Jacoglj/status/2077418968055169414",
+   "date": "2026-07-15",
+   "text": "7-15 Stock Watchlist\n$QQQ\n$AAPL\n$TSLA\n$ORCL\n$QQQ is pushing toward the top of the wedge after a solid recovery. Bigger picture stays bullish, but for today the key resistance levels are $726 and $723. If it gets rejected there, I’ll be watching for a pullback toward the range low"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 83,
+   "user": "wickedstocks",
+   "url": "https://x.com/wickedstocks/status/2077005123583095086",
+   "date": "2026-07-14",
+   "text": "📺 $TSLA MUST HOLD $387.80 OR THE SELLING ISN'T OVER\n\nPlease ❤️like and 🔁share with fellow @Tesla traders/investors\n\n#Tesla remains trapped inside a large wedge pattern, with neither bulls nor bears in full control, making the next breakout or breakdown especially significant. https://t.co/fpEAOSXrSq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "AKtemik",
+   "url": "https://x.com/AKtemik/status/2076601275454504964",
+   "date": "2026-07-13",
+   "text": "📊 $SPCX Setup\n\n💰 Current Snapshot\n\nCurrent Price: $143.95\n\nTrend: 🔴 Short-term bearish, 🟢 long-term bullish.\n\nThe stock is trading below the key $145 support, putting sellers in control unless buyers quickly reclaim that level.\n\n📈 Technical Levels\n\n🟢 Support: $140, then"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 33,
+   "user": "septinvesting66",
+   "url": "https://x.com/septinvesting66/status/2077345600455037184",
+   "date": "2026-07-15",
+   "text": "7-15 stock watchlist $QQQ $AAPL $TSLA $ORCL\n QQQ is pushing toward the top of the wedge after a solid recovery. The bigger picture remains bullish, but for today the key resistance levels are $726 and $723. If price gets rejected there, I’ll watch whether it pulls back toward the https://t.co/eByCQrhSjZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Tesla_Optimus_K",
+   "url": "https://x.com/Tesla_Optimus_K/status/2078093959923155401",
+   "date": "2026-07-17",
+   "text": "Motley Fool: SpaceX more likely near $100 than $200 by end of 2026\n\nWhat this means\nA Motley Fool column argues SpaceX is doing what most IPOs do — underperform early — and predicts the stock finishes 2026 closer to $100 than $200. Shares are already down more than 7% since the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 76,
+   "user": "CrypticTrades_",
+   "url": "https://x.com/CrypticTrades_/status/2076939075307618639",
+   "date": "2026-07-14",
+   "text": "These are the most important levels I'm currently tracking across stocks and crypto in the PAT Watchlist for this week. \n\nSome are buy zones. Some are areas where I'm looking to de-risk, hedge, secure profits, or scale out of hedges. \n\nI'll also share my current stance and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 129,
+   "user": "wickedstocks",
+   "url": "https://x.com/wickedstocks/status/2078100805870039310",
+   "date": "2026-07-17",
+   "text": "📺 $TSLA BEARS TAKE CONTROL BELOW $387.80\n\nPlease ❤️like and 🔁share with fellow @Tesla traders/investors\n\n#Tesla has entered a more vulnerable technical position after breaking below one of its most important near-term support levels at $387.80.\n\n*\n\nA sustained close below https://t.co/5yEO62lNwm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AKtemik",
+   "url": "https://x.com/AKtemik/status/2077534511785459770",
+   "date": "2026-07-15",
+   "text": "🍎 Notable Options Flow — $AAPL\n\nCurrent Bias: Bullish\n\nCurrent Price: ~$327.50 (new all-time closing high)\n\nPut/Call Open Interest Ratio: ~0.71, favoring calls.\n\nInstitutional Read: Institutions continue accumulating into Apple's AI and China catalysts rather than aggressively"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 91,
+   "user": "wickedstocks",
+   "url": "https://x.com/wickedstocks/status/2077746208697696452",
+   "date": "2026-07-16",
+   "text": "📺 $TSLA BULLS MUST DEFEND $387 WHILE BEARS NEED ONE MORE BREAKDOWN\n\nPlease ❤️like and 🔁share with fellow @Tesla traders/investors\n\n#Tesla remains stuck in a broad consolidation, making this a trader's market rather than a trend investor's market.\n\nThe stock closed Wednesday at https://t.co/DnLzcpajaM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AKtemik",
+   "url": "https://x.com/AKtemik/status/2077531992195821901",
+   "date": "2026-07-15",
+   "text": "$SPY Setup\n...remains constructive above its major support zone. Buyers are still in control unless sellers can establish acceptance below support. The path of least resistance remains higher, but volatility could expand quickly if key gamma levels fail.\n\nTechnical Levels:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MaracotResearch",
+   "url": "https://x.com/MaracotResearch/status/2078540266429182270",
+   "date": "2026-07-18",
+   "text": "Weekly Note — Tech &amp; AI: week of Jul 13–17 and setup for Jul 20–24\n\nBottom line: Last week was a positioning flush, not a thesis break. The market has shifted from paying for growth to demanding proof of ROI, and next week (Alphabet + Tesla on Wednesday, Intel on Thursday) is the"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 42,
+   "user": "WealthCoachMak",
+   "url": "https://x.com/WealthCoachMak/status/2076671055385821360",
+   "date": "2026-07-13",
+   "text": "$TSLA Technical Analysis 👇\n\nTesla has reversed sharply from Dec highs at $500 and now consolidating in the $400–$430 band after an 18% correction showing deteriorating technicals\n\nThe 20/50 EMA bearish crossover combined with lower lows and RSI declining from overbought extremes https://t.co/wP7v3HNBzi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AssetsCardave",
+   "url": "https://x.com/AssetsCardave/status/2077380743773233408",
+   "date": "2026-07-15",
+   "text": "🟢 Bullish Scenario\nCurrent price: $399.03\nMajor resistance: $400.58\nTarget 1: $402.36\nTarget 2: $405.52\nTarget 3: $410.75\nRunner targets:$413.32\n$415.59\n$419.64\n\nIf TSLA can reclaim and hold above $400.58, the chart opens up for a move toward the $410-$420 area.\n🔴 Bearish https://t.co/oXNIVubEt9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "syrenor",
+   "url": "https://x.com/syrenor/status/2077385151667941516",
+   "date": "2026-07-15",
+   "text": "$QQQ \nbias bullish as long as we stay above PDH\n\nsetups to the upside I am watching today would be $GOOGL, $NVDA, &amp; $PLTR above their PDH \n\nto the downside watching $TSLA below its PDL"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "PUMPKlNPARTY",
+   "url": "https://x.com/PUMPKlNPARTY/status/2078098849118523495",
+   "date": "2026-07-17",
+   "text": "📊 $TSLA Pre-Market Analysis 🚀\n\nTesla remains one of the most closely watched AI and mobility stocks as investors evaluate its next growth phase beyond electric vehicles.\n\nThe stock is facing short-term pressure as the market focuses on earnings expectations, valuation concerns,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2078208782765543907",
+   "date": "2026-07-17",
+   "text": "The AI trade cracked today — and the biggest option ticket of the day was someone quietly selling $NVDA downside into the panic.\n\nTHE SETUP\nNvidia dropped nearly 5% Friday after Chinese startup Moonshot AI unveiled a model that meaningfully narrows the gap with top U.S. systems. https://t.co/M8TWYhpKmL"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "ProfitRajatrade",
+   "url": "https://x.com/ProfitRajatrade/status/2077384933782208853",
+   "date": "2026-07-15",
+   "text": "📈 Market Watch Newsletter\n\n#Market Outlook\n\nOverall, the market remains mixed. While the **S&amp;P 500 (SPX)** and **Nasdaq 100 (QQQ)** are showing signs of weakness, several individual stocks continue to present strong bullish opportunities.\n\n### 🍎 Apple (AAPL)\n\n* AAPL looks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2077484004706582953",
+   "date": "2026-07-15",
+   "text": "The tape's biggest bet today wasn't on AI — it was a $45M vote that CRM has already found its floor.\n\nMARKET-CLOSE SYNTHESIS — JULY 15\n\nToday's tape ran $543.8M in premium across 130 tracked trades, and the story wasn't the AI mega-caps everyone was watching. It was the quiet https://t.co/DI2CWrlEZs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "holantei",
+   "url": "https://x.com/holantei/status/2076477968637940051",
+   "date": "2026-07-13",
+   "text": "The Wheel strategy works perfectly in flat, slightly bullish, or moderately bearish markets. It struggles heavily during sustained, structural bear market downtrends. Recognize macro market environments before scaling up short put exposure.\n\n#CashSecuredPuts #PassiveIncome #MSFT"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "zedryaz",
+   "url": "https://x.com/zedryaz/status/2077124698035339760",
+   "date": "2026-07-14",
+   "text": "$AAOI GEX Update:\nVerdict: Bullish. $125 is the support, $140 is the max gamma target this Friday's expiry if it holds. \nLose $125 and $120 becomes the next level to watch.\nNFA.\n\nAnalysis:\nPrice at $126.70, up a huge 13.25% today. $125 sits just below as immediate support. Above https://t.co/gSwSBIyxLG"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "TradingAssistAI",
+   "url": "https://x.com/TradingAssistAI/status/2076805547571982653",
+   "date": "2026-07-13",
+   "text": "$TSLA  🎯  Setup for 2026-07-14\n\nBull 3 / Bear 8  —  Bearish\n\nNot financial advice. For educational purposes only. Do your own research. https://t.co/NfiuSCW1aw"
+  }
+ ]
+}

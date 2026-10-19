@@ -1,0 +1,436 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-20T16:00:00Z",
+ "end": "2026-09-27T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "BTC Bitcoin -is:retweet -is:reply lang:en",
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2104198573193887909",
+   "date": "2026-09-27",
+   "text": "🚨 BITCOIN PRICE PREDICTION THIS WEEK | BTC WEEKLY ANALYSIS\n\nBitcoin (bitcoin:native ) could be preparing for a major move this week. Here’s my BTC price prediction, Bitcoin technical analysis, key support &amp; resistance levels, and the 2 BTC scenarios I’m watching. 👇\n\n📉 BTC https://t.co/3SN9OTGmRv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 176,
+   "user": "chirag_nftt",
+   "url": "https://x.com/chirag_nftt/status/2104130786496823795",
+   "date": "2026-09-27",
+   "text": "I’ve always wondered how useful BTC can become without wrapping it or moving it away from Bitcoin 🤔\n\nSo instead of just reading about @ZestProtocol,\n\nI actually tried their Bitcoin Collateral Vault myself...\n\nI connected my Bitcoin + Ethereum wallets and deposited BTC into a https://t.co/gAl8hcGwlp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "KaioS54783",
+   "url": "https://x.com/KaioS54783/status/2103733919413916049",
+   "date": "2026-09-26",
+   "text": "🚨 Bitdeer Sells 288.4 BTC — Keeps Zero BTC Exposure\n\nBitdeer reportedly mined 288.1 BTC and sold 288.4 BTC for the week ended Sept. 25.\n\nThat leaves its Bitcoin holdings essentially unchanged at ~0 BTC.\n\nWhy it matters:\n\n• 🏭 Mining output is being monetized rather than https://t.co/GnVwYILwi8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "Ricardo_Pual",
+   "url": "https://x.com/Ricardo_Pual/status/2103724130982150328",
+   "date": "2026-09-26",
+   "text": "🟠 Bitcoin — The Bigger Picture\n\nBitcoin is more than a number on a chart.\n\nIt is a global monetary network built around transparent rules: a 21 million BTC maximum supply, predictable halvings, Proof-of-Work mining, and decentralized verification.\n\nThe 2024 halving reduced new https://t.co/UOjvSSCpi6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1215,
+   "user": "dotkrueger",
+   "url": "https://x.com/dotkrueger/status/2104183139556078039",
+   "date": "2026-09-27",
+   "text": "A simplified Bitcoin flow model:\n\nIt takes roughly 300,000 BTC of net buying to double the price.\n\nSymmetrically, roughly 300,000 BTC of net selling cuts the price in half.\n\nThat’s the model.\n\nBull market:\n\nBitcoin went from roughly $30K when the ETF was announced to about $120K"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 117,
+   "user": "Atlantis_Ex",
+   "url": "https://x.com/Atlantis_Ex/status/2104154122911936734",
+   "date": "2026-09-27",
+   "text": "📣 Breaking: Advanced Bitcoin Center Expands Bitcoin (BTC) to ARC, BSC, and Robinhood Chains and NOW LIVE for SWAP on Uniswap 🇺🇸🌎🔥🚀\n\n        @aBTC_Center @Uniswap @MetaMask @AtlantisWallet\n        @coingecko @CoinMarketCap @DEXToolsApp\n        @arc @USDC @RobinhoodCrypto https://t.co/F7BU5SgVw2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "WhistlinWhale",
+   "url": "https://x.com/WhistlinWhale/status/2104194564299112829",
+   "date": "2026-09-27",
+   "text": "Bitcoin Forecast   \n\nChart =  Weekly\n\nRisk Wisely - DYOR - NFA\n\n$BTC #BTC $Bitcoin #Bitcoin base:0xe4b20925d9e9a62f1e492e15a81dc0de62804dd4 #BTCUSD $BTCUSDT #BTCUSDT https://t.co/PdmE149tGz"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Inaya_247",
+   "url": "https://x.com/Inaya_247/status/2103727203729215719",
+   "date": "2026-09-26",
+   "text": "BITCOIN | PRIVACY\nBitcoin could soon support shielded BTC transfers through a parallel privacy layer—without changing its base rules.\nBullish for BTC adoption or too early?\n\nhttps://t.co/H5tSmgzwYZ\n\n#Bitcoin #BTC #BTCUSD #Crypto #CryptoTrading https://t.co/8jjOXKJTPd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BillyCarvelli",
+   "url": "https://x.com/BillyCarvelli/status/2104185641546526834",
+   "date": "2026-09-27",
+   "text": "Bitcoin rises above $84,900\nBitcoin (BTC) is trading at $84,955.20, up $955.29 or 1.14% from the previous close of $83,999.91.  #Bitcoin #BTC #Crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "Paula_talks",
+   "url": "https://x.com/Paula_talks/status/2104090372171280707",
+   "date": "2026-09-27",
+   "text": "🇬🇧🚨 THE UK IS SECRETLY HOLDING A HUGE AMOUNT OF BITCOIN. 👀\n\n61,000 $BTC WAS SEIZED IN A MAJOR UK CRYPTO CASE. 🤯\n\nTHAT MAKES THE UK’S BITCOIN STORY MUCH BIGGER THAN MOST PEOPLE REALIZE. 🔥\n\nBUT WHO REALLY CONTROLS THOSE BTC? 👀\n\n#Bitcoin #BTC #Crypto #UK https://t.co/7EjmAGCyfZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 82,
+   "user": "BlockSulta",
+   "url": "https://x.com/BlockSulta/status/2103939152249057610",
+   "date": "2026-09-26",
+   "text": "Bitcoin is the FATHER of CORE.\n\nLet me explain:\n\nBitcoin gave birth to CORE.\n\nBTC = The Father (Security, PoW, Store of value)\nCORE = The Son (Smart contracts, DeFi, Yield for BTC)\n\nCORE runs on Satoshi Plus:\n50% Bitcoin mining power secures CORE chain.\n\nWithout Bitcoin, there is https://t.co/vxIsWrgkTO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "0x_Agency",
+   "url": "https://x.com/0x_Agency/status/2104089398815948827",
+   "date": "2026-09-27",
+   "text": "🚨 Bitcoin Sentiment Is Turning the Whole Feed Risk-On: Why Traders Are Reading the Market Through BTC\n\nBitcoin sentiment is the most important macro cue in crypto right now because BTC is rising while the broader market remains large and liquid, which keeps traders focused on"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "analyticsinme",
+   "url": "https://x.com/analyticsinme/status/2103892358530220488",
+   "date": "2026-09-26",
+   "text": "𝐁𝐢𝐭𝐝𝐞𝐞𝐫 𝐒𝐞𝐥𝐥𝐬 𝐌𝐢𝐧𝐞𝐝 𝐁𝐢𝐭𝐜𝐨𝐢𝐧 𝐚𝐬 𝐁𝐓𝐂 𝐓𝐞𝐬𝐭𝐬 𝐔𝐒𝐃 85𝐊 𝐌𝐢𝐧𝐢𝐧𝐠 𝐂𝐨𝐬𝐭\n \nBitdeer Bitcoin mining produced 288.1 BTC but sold 288.4 BTC, leaving holdings at zero as Bitcoin traded near JPMorgan’s estimated USD 85,000 production cost. Miner https://t.co/EuystMk5JM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BitDecoder",
+   "url": "https://x.com/BitDecoder/status/2103761592303357968",
+   "date": "2026-09-26",
+   "text": "Top Bitcoin holders · 26 Sep 2026\n\n1. Satoshi (est.) — $92.1B (1,096,354 BTC)\n2. Strategy (MSTR) — $71.1B (846,000 BTC)\n3. iShares (IBIT) — $67.0B (796,799 BTC) +10,145 BTC\n4. United States — $27.6B (328,372 BTC)\n5. China — $16.0B (190,000 BTC)\n\n#Bitcoin #BTC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Web3Mints",
+   "url": "https://x.com/Web3Mints/status/2103814888208609557",
+   "date": "2026-09-26",
+   "text": "Bitcoin’s September Green Run &amp; Strategy’s 950 BTC Purchase\n\nBitcoin made green moves again this September, continuing the price-increase chapter we witnessed in August. The momentum became particularly visible through the two large green candles on September 18 and September 21. https://t.co/8o889JtYP5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 478,
+   "user": "cryptob28811588",
+   "url": "https://x.com/cryptob28811588/status/2103816870566519069",
+   "date": "2026-09-26",
+   "text": "What is BTCFi and how does @Starknet bring it into the ecosystem?\n\nBitcoin has always been powerful, but much of it still sits idle.\n\n$strkBTC brings BTC into Starknet, turning Bitcoin into a productive asset for DeFi.\n\nUsers can bridge BTC directly from Bitcoin through Garden https://t.co/EOaRyTVASR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 44,
+   "user": "Ruqhayyerh",
+   "url": "https://x.com/Ruqhayyerh/status/2103813048133673426",
+   "date": "2026-09-26",
+   "text": "Bitcoin has always been easy to hold.\n\nPutting it to work without changing how institutions custody it is a different story.\n\nThat’s why the latest @Anchorage × @Stacks announcement caught my attention.\n\nAnchorage is building support for institutional Bitcoin Staking on Stacks, https://t.co/MXWf1ZFBUL"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "XHodlerX",
+   "url": "https://x.com/XHodlerX/status/2104138665916084710",
+   "date": "2026-09-27",
+   "text": "📊 WEEK 3 — KASPA vs BITCOIN | 27/09/2026\n🟢 KAS: $0.0484 | +24.80%\n🟠 BTC: $84,667 | +5.44%\nKaspa outperformed Bitcoin (Sunday to Sunday) by 19.36 percentage points this week. 🔥\nThat makes it 3 weekly snapshots in a row with KAS outperforming BTC. 👀\nSunday morning 1W snapshot https://t.co/vDFkYHHkpk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "ChartsBtc",
+   "url": "https://x.com/ChartsBtc/status/2104130202666406165",
+   "date": "2026-09-27",
+   "text": "#Bitcoin supply by halving epoch:\nEpoch 0: 2.40M BTC\nEpoch 1: 1.13M BTC\nEpoch 2: 2.00M BTC\nEpoch 3: 3.66M BTC\nEpoch 4: 10.90M BTC\nData as of 2026-09-24\n#Bitcoin $BTC #HODL #Halving #BitcoinChartBot https://t.co/aUnQywToHh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 41,
+   "user": "Umairorkz",
+   "url": "https://x.com/Umairorkz/status/2101763760839155950",
+   "date": "2026-09-20",
+   "text": "$MACRO\n\n13M+ BTC IS CLASSIFIED AS ILLIQUID. \n\nGlassnode currently classifies roughly: 13.03M BTC as illiquid 3.05M BTC as liquid 4.00M BTC as highly liquid \n\nThat means the majority of circulating BTC sits with entities that historically move their coins far less frequently. https://t.co/U6vxGCwppi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "TradeSignals_24",
+   "url": "https://x.com/TradeSignals_24/status/2104227157123969417",
+   "date": "2026-09-27",
+   "text": "🟠 SAYLOR: “Even more orange.” 👀\n\nIs Michael Saylor hinting at another Bitcoin buy?\n\nThe Bitcoin community is watching closely. 👀\n\nAre they buying more $BTC? 🤔\n\n#Bitcoin #BTC #Saylor https://t.co/xFpl7FrfQa"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 39,
+   "user": "real_khanzunlah",
+   "url": "https://x.com/real_khanzunlah/status/2101787987877204470",
+   "date": "2026-09-20",
+   "text": "Had it been this man knew about Bitcoin in 2009, he for use that ₦20,000 buy Bitcoin instead. 😂\n\nIn 2009, the average exchange rate was around ₦150 to $1. (National Bureau of Statistics)\n\nAnd when Bitcoin got its first recorded dollar exchange rate on October 5, 2009, $1 was https://t.co/xMMkTlY9SV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RoboexNews",
+   "url": "https://x.com/RoboexNews/status/2101810095814275523",
+   "date": "2026-09-20",
+   "text": "Now I have solid fresh data for a BTC-focused tweet.\n\nBTC ETFs now hold 6.29% of all Bitcoin in circulation - roughly 1 in 16 coins locked away in cold storage, no staking, no spending, just institutional conviction. That's $102.5B parked by funds like IBIT. Meanwhile ZEC and XMR"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 127,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2102602836748214499",
+   "date": "2026-09-23",
+   "text": "Crypto pumps won't stop until the market finally delivers the pullback I expect. BTC closed red, but it remains above TBO resistance with the slow line curling higher, so I still see the beginning of a strong bullish uptrend. I am taking partial profits into strength, keeping https://t.co/gDgbH5aWJR"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "ChainInsightLab",
+   "url": "https://x.com/ChainInsightLab/status/2103107185865871414",
+   "date": "2026-09-24",
+   "text": "Bitcoin Bottom Signal Emerges, Bullish Target Set at $126,000\n\nCrypto trader Killa (@KillaXBT) posted that he believes the Bitcoin bottom has been confirmed. He expects that during the push toward $126K in this bull cycle, the maximum pullback will be around 10–15%. Should BTC https://t.co/X3vwGZFWrc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2104044053755031693",
+   "date": "2026-09-27",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟮.𝟳 / 𝟱 (𝗺𝗼𝗱𝗲𝗿𝗮𝘁𝗲𝗹𝘆 𝗯𝘂𝗹𝗹𝗶𝘀𝗵, 𝗯𝘂𝘁 𝘁𝗲𝗺𝗽𝗲𝗿𝗲𝗱 𝗯𝘆 𝘀𝗶𝗴𝗻𝗶𝗳𝗶𝗰𝗮𝗻𝘁 𝗯𝗲𝗮𝗿𝗶𝘀𝗵 𝘀𝗶𝗴𝗻𝗮𝗹𝘀) - 𝗕𝘂𝗹𝗹‐𝗺𝗮𝗿𝗸𝗲𝘁 𝗼𝗽𝘁𝗶𝗺𝗶𝘀𝗺 - Multiple posts claim the bear market is over; Fidelity’s Jurrien Timmer https://t.co/CE2s0zx2zZ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "AlphaLensCrypto",
+   "url": "https://x.com/AlphaLensCrypto/status/2102936599612809486",
+   "date": "2026-09-24",
+   "text": "📊 THE CRYPTO EDGE | DAILY MARKET BRIEF\n📅 September 23, 2026\n\n🚨 DAILY BEARISH DIVERGENCE VS. SHORT SQUEEZE: IS $93K NEXT? 🚨\nBitcoin is printing a daily RSI bearish divergence at range highs, but negative funding rates signal a potential massive short squeeze ahead. Here is https://t.co/SKbY3Kw5fm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "apedintocrypto",
+   "url": "https://x.com/apedintocrypto/status/2101979602390503706",
+   "date": "2026-09-21",
+   "text": "Quick update: Bitcoin pumped to take the long-term liquidity in the 83-86k zone. We said earlier this might happen, and greedy MMs didn't disappoint. Now there is 10x liquidity to the downside, so bears have the opportunity to fulfill their destiny.\n\n88k is still possible to https://t.co/n5IfzfiThK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 90,
+   "user": "TonySeverinoCMT",
+   "url": "https://x.com/TonySeverinoCMT/status/2102145146103926911",
+   "date": "2026-09-21",
+   "text": "Mario is one of my favorite people on X – always tells it like it is. very objective\n\nI am glad he brought this up (he knows this isn't an attack, so don't assume that's what it is)\n\nIt appears I am the last bear standing – good\n\nIf you recall, I actually said we'd go to between https://t.co/f7CYrGQBsn"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2102939582153060703",
+   "date": "2026-09-24",
+   "text": "🚨 $BTC ALERT: Bitcoin Stalls Near $84,000 as $18B Options Expiry Meets Rising Yields\n\n🟢 Bullish: 55%\n• Spot ETF net inflows neared $1 billion in a single day, with strong institutional buying\n• ETF inflows provide downside support for BTC price\n\n🔴 Bearish: 45%\n• Rising"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2102633662810337382",
+   "date": "2026-09-23",
+   "text": "Macro Observatory Mid-Week 39 Briefing\n\nTuesday's telemetry delivered a critical systemic resolution with the speculative chimney beginning to fracture. Microsoft suffered a Flash Flush, Nvidia is targetting Macro Bear Resumption, and the 6-anchor trapdoor has decayed to historic"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2103549396818235667",
+   "date": "2026-09-25",
+   "text": "🚨 Institutional Technical Watch — BTC gets a materially different Q4 downside scenario\n\nRegistered CMT AG Thorson published a fresh 25 September, 17:06 GMT weekly-cycle analysis that is worth flagging because it directly challenges the bullish higher-timeframe BTC framework from https://t.co/U0bw4UEE4B"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "Bitcoin_Clarity",
+   "url": "https://x.com/Bitcoin_Clarity/status/2103087513917083664",
+   "date": "2026-09-24",
+   "text": "Bitcoin just pulled back ~3%.\n\nNow the question is: where does it go from here?\n\nHere are the levels I’m watching:\n\n$83.5K → immediate support\n\n$82K → recent breakout area\n\n$80K → major psychological + technical level\n\n$77K → major support\n\n$72K → next downside target if"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "SignalxBinance",
+   "url": "https://x.com/SignalxBinance/status/2104152268962771015",
+   "date": "2026-09-27",
+   "text": "My personal dive into the recent ETH market structure on the 4H chart. 🧐 The broader crypto sentiment sees some positive undertones, notably with Riot Platforms strengthening its financial position and expanding data-center operations. While this is Bitcoin-centric, robust https://t.co/ADAwziKknt"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 27,
+   "user": "cryptodailyuk",
+   "url": "https://x.com/cryptodailyuk/status/2102701296650260532",
+   "date": "2026-09-23",
+   "text": "Bitcoin Approaches Key Higher High: Can It Break the Bear Market?\n\nThe Bitcoin price is only a matter of $1,000 or so from surpassing a key macro high that would be a huge step towards changing the macro trend from bearish to bullish. Could the price explode to the upside once"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 114,
+   "user": "CryptoKid",
+   "url": "https://x.com/CryptoKid/status/2104140721305624976",
+   "date": "2026-09-27",
+   "text": "Bitcoin is going higher over the next few months.\n\nDon’t fight it.\n\nBeing a bear during a bear market is logical, but the part most get wrong is abandoning their bearish biases when technical conditions are met to declare the beginning of a bull.\n\nIt’s not too late to be bullish!"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "CryptoKid",
+   "url": "https://x.com/CryptoKid/status/2104140575805239477",
+   "date": "2026-09-27",
+   "text": "Bitcoin is going higher over the next few months.\n\nDon’t fight it.\n\nBeing a bear during a bear market is logical, but the part most get wrong is abandoning the bearish bias when technical conditions are met to declare the start of a bull.\n\nIt’s not too late to be bullish."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "DimethyLink",
+   "url": "https://x.com/DimethyLink/status/2102675545578226019",
+   "date": "2026-09-23",
+   "text": "Likely outcomes for Chainlink $link over the next week (roughly Sep 23–30, 2026) lean mildly bullish to range-bound, with potential for a push toward or modestly above the recent high near $13.68, though crypto volatility and macro risks keep downside open. \n\nOverall, the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2103681555159797839",
+   "date": "2026-09-26",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 (𝗕𝘂𝗹𝗹𝗶𝘀𝗵) 𝗪𝗵𝘆 𝘁𝗵𝗲 𝘀𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗹𝗲𝗮𝗻𝘀 𝘀𝘁𝗿𝗼𝗻𝗴𝗹𝘆 𝗯𝘂𝗹𝗹𝗶𝘀𝗵: - Multiple posts 𝗱𝗲𝗰𝗹𝗮𝗿𝗲 𝗮 𝗰𝗿𝘆𝗽𝘁𝗼 𝗯𝘂𝗹𝗹 𝗺𝗮𝗿𝗸𝗲𝘁 𝗶𝘀 𝗰𝗼𝗻𝗳𝗶𝗿𝗺𝗲𝗱 𝗼𝗿 𝗶𝗺𝗺𝗶𝗻𝗲𝗻𝘁, citing headlines like “CRYPTO https://t.co/OiyqvkqXVp"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2103516392616264079",
+   "date": "2026-09-25",
+   "text": "🚨 BURAKTHESCALPER LLC — FRIDAY 9/25 BATTLE PLAN\n\n⚔️ MARKET BIAS: NEUTRAL → BULLISH ABOVE CONFIRMATION\n\nYesterday’s heavy yield pressure is cooling this morning. Buyers are attempting a bounce, but I’m NOT chasing the opening candle.\n\n🔥 $ES_F\nFriday reference: ~7,734 open area"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "Jon_sens",
+   "url": "https://x.com/Jon_sens/status/2102482091917422961",
+   "date": "2026-09-22",
+   "text": "🚨🔥 $BTC IS LOADING FOR A BIG MOVE! 🔥🚨\n\nBitcoin is currently trading around $86,422 after a strong recovery from the $85,114 low. The bounce is real, but BTC is now facing a serious battle around the $86,500 resistance zone. 👀\n\nBulls have pushed price back above $86K, https://t.co/Av4mGvFqeS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Bitnarium",
+   "url": "https://x.com/Bitnarium/status/2101929643439755711",
+   "date": "2026-09-21",
+   "text": "Bitcoin has reclaimed its 50-week moving average, a historical marker that may signal the end of bear markets. However, analysts caution that one weekly close is not enough to confirm a new bull run. #btc Bullish or bearish?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 452,
+   "user": "rektcapital",
+   "url": "https://x.com/rektcapital/status/2102712273592541312",
+   "date": "2026-09-23",
+   "text": "#BTC \n\nBitcoin has successfully post-breakout retested its Macro Downtrend into new support\n\nIn doing so, it is technically transitioning from Downtrend into new Macro Uptrend\n\nAll Bitcoin needs to do going forward is to stay above the Downtrend and/or retest it as support if any https://t.co/8c02GpGuky https://t.co/r4m81nsg68"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 128,
+   "user": "CryptoGirlNova",
+   "url": "https://x.com/CryptoGirlNova/status/2101954812220731588",
+   "date": "2026-09-21",
+   "text": "Said this before that Ethereum is leading the proof of the bull market.\n\nDespite all the signs and indications that Bitcoin has already changed trend from bear to bull, it has yet to make a higher high at $83k.\n\nWhich right now is looking to happen ANY MOMENT.\n       \nThis will https://t.co/LZeCnQYiZ7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2103484260178915704",
+   "date": "2026-09-25",
+   "text": "$CDE \n\n$CDE has no actionable long setup this week. Price has been pulling back over the last few weeks following the breakout above descending resistance, but importantly, we remain above the moving averages and appear to be developing a potential bull flag. \n\nThe pullback https://t.co/or28CEAV3Q"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JagannathB_",
+   "url": "https://x.com/JagannathB_/status/2102108974254621101",
+   "date": "2026-09-21",
+   "text": "I asked Nvile a simple question:\n\n“Where will Bitcoin be on Dec 31, 2026 and what evidence supports that view?”\n\nIt didn't just ask an LLM for a prediction.\n\nIt:\n→ collected 56 external sources\n→ prioritized primary/market data\n→ extracted and verified evidence\n→ tested"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 184,
+   "user": "frankshielded",
+   "url": "https://x.com/frankshielded/status/2102470964596662738",
+   "date": "2026-09-22",
+   "text": "Grayscale, with approximately $35 billion in assets under management, believes the next bull cycle will be centered around privacy and, specifically, $ZEC. \n\nGemini, the crypto exchange founded by the Winklevoss twins, trades an average of $40M per day and believes the next bull https://t.co/fjWTdioF3C"
+  }
+ ]
+}

@@ -1,0 +1,409 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-07-26T16:00:00Z",
+ "end": "2026-08-02T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "BTC Bitcoin -is:retweet -is:reply lang:en",
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BigOShow",
+   "url": "https://x.com/BigOShow/status/2082863825137570037",
+   "date": "2026-07-30",
+   "text": "You need #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC #Bitcoin $BTC https://t.co/quMyOlraB6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 51,
+   "user": "cryptowalax",
+   "url": "https://x.com/cryptowalax/status/2081699892787867842",
+   "date": "2026-07-27",
+   "text": "0.1 BTC is a lot of Bitcoin.\n\n​0.3 BTC is a lot of Bitcoin.\n\n​0.5 BTC is a lot of Bitcoin.\n\n​0.7 BTC is a lot of Bitcoin.\n\n​0.9 BTC is a lot of Bitcoin.\n\n​1 BTC is a lot of Bitcoin.\n\n​1.5 BTC is a lot of Bitcoin.\n\n​Don't let the fiat-brained convince you otherwise. https://t.co/UKCI1UW8KS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "NIKOLA00046",
+   "url": "https://x.com/NIKOLA00046/status/2083254021348024334",
+   "date": "2026-07-31",
+   "text": "I was just learning more about “Bitcoin staking” and found something interesting 👀. Let me break it down simply👇\n\n🟠 1. Native Bitcoin Staking\nProjects like Babylon let you deploy your BTC to secure other blockchains.\nYour BTC stays on the Bitcoin network, and you earn extra https://t.co/PZzpIQSbGU"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 34,
+   "user": "Oak_crypt1",
+   "url": "https://x.com/Oak_crypt1/status/2082753892681498652",
+   "date": "2026-07-30",
+   "text": "PoX-5 is one of the biggest upgrades to Stacks yet. 🟧\n\nIt upgrades Proof of Transfer (PoX), the consensus mechanism that connects Stacks to Bitcoin by having miners commit BTC to secure the network while STX stackers earn BTC rewards.\n\nFor Stackers, PoX-5 brings a smoother https://t.co/iju1ASmpqJ https://t.co/Jxhp1sORHG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "FXOwlHarmonic",
+   "url": "https://x.com/FXOwlHarmonic/status/2083327407587795378",
+   "date": "2026-07-31",
+   "text": "🔀 Ethereum / Bitcoin / Nasdaq 2026-08-01: ETH $1859.98 | BTC $62898.95 | Nasdaq 25122.18: Ethereum (ETH-USD) $1859.98, Bitcoin (BTC-USD) $62898.95, Nasdaq 25122.18. 60-day correlations: ETH/BTC 0.81, ETH/Nasdaq 0.22, BTC/Nasdaq 0.34. (Market… #Ethereum #Bitcoin #CryptoMarket https://t.co/WNno5rYbQt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2082922550003138986",
+   "date": "2026-07-30",
+   "text": "🚨 $MSTR  (Strategy Inc) Q2 2026 Earnings  \nSoftware steady…  \nbut Bitcoin Treasury strategy + 843,775 BTC are the real story 👀  \n\n📊 KEY METRICS (Q2 2026)  \n🔹 Total Revenue: $122.4M → +6.9% YoY 🟢  \n🔹 Gross Profit: $81.6M (66.6% margin)  \n🔹 Operating Loss: $8.33B (driven"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FXOwlHarmonic",
+   "url": "https://x.com/FXOwlHarmonic/status/2082240684481036739",
+   "date": "2026-07-28",
+   "text": "🔀 Ethereum / Bitcoin / Nasdaq 2026-07-29: ETH $1911.76 | BTC $63124.51 | Nasdaq 24932.08: Ethereum (ETH-USD) $1911.76, Bitcoin (BTC-USD) $63124.51, Nasdaq 24932.08. 60-day correlations: ETH/BTC 0.82, ETH/Nasdaq 0.07, BTC/Nasdaq 0.17. (Market… #Ethereum #Bitcoin #CryptoMarket https://t.co/FgxaxDPoDO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "IbraheemImJ",
+   "url": "https://x.com/IbraheemImJ/status/2081445876845707389",
+   "date": "2026-07-26",
+   "text": "BITCOIN IS FINALLY COMING TO SUI. HERE'S HOW YOU CAN TRY HASHI TESTNET TODAY🟠🌊\n\nFor years, Bitcoin has been the largest crypto asset by market cap...\n\nBut using BTC in DeFi hasn't been straightforward.\n\nMost solutions rely on wrapped assets or centralized bridges.\n\nHashi is https://t.co/6x1tcDeSJa"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "IbraheemImJ",
+   "url": "https://x.com/IbraheemImJ/status/2081443528261894475",
+   "date": "2026-07-26",
+   "text": "BITCOIN IS FINALLY COMING TO SUI. HERE'S HOW YOU CAN TRY HASHI TESTNET TODAY🟠🌊\n\nFor years, Bitcoin has been the largest crypto asset by market cap...\n\nBut using BTC in DeFi hasn't been straightforward.\n\nMost solutions rely on wrapped assets or centralized bridges.\n\nHashi is https://t.co/HW8RImHofS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "KiraHODL",
+   "url": "https://x.com/KiraHODL/status/2081795048958738732",
+   "date": "2026-07-27",
+   "text": "🔥Hashi Testnet is now LIVE on @SuiNetwork\n\nNative Bitcoin on Sui is here. 🟠⚡\n\nWith Hashi Protocol, you can bridge Bitcoin into the Sui ecosystem and use BTC as collateral.\n\nHere's a quick walkthrough 👇\n\n🟢 1. Set Up Your Wallets\n✅ Install Slush Wallet\n✅ Install UniSat https://t.co/UBu4fiZXpd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ASTX_World",
+   "url": "https://x.com/ASTX_World/status/2083424941211574472",
+   "date": "2026-08-01",
+   "text": "ASTX Exchange News Flash | August 1\n\n📈 Morgan Stanley Adds 114.64 BTC, Holdings Surpass 6,200 BTC\nAccording to Arkham, Morgan Stanley added approximately 114.64 BTC, worth around $7.21 million. Its total Bitcoin holdings have now reached 6,231 BTC, valued at over $390 million. https://t.co/Ep4VXiAdFs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 701,
+   "user": "MandoCT",
+   "url": "https://x.com/MandoCT/status/2083136314489131129",
+   "date": "2026-07-31",
+   "text": "One thing about Bitcoin doesn't get talked about enough.\n\nThe biggest hidden cost isn't volatility, it's idleness.\n\nBitcoin is one of the hardest assets to earn more of. Yet a huge amount of BTC still sits idle.\n\nFor years, the alternatives came with trade-offs. You either https://t.co/GJWJKxMQsT"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Digitalsiyal375",
+   "url": "https://x.com/Digitalsiyal375/status/2081797572352786689",
+   "date": "2026-07-27",
+   "text": "🚀 #Bitcoin $BTC remains the king of crypto.\n\n✅ Strong adoption\n✅ Limited supply\n✅ Long-term growth potential\n\nAccumulate with patience, manage risk, and think long term Bitcoin $BTC $XRP $ETH \n\n#BTC #Crypto #Bitcoin #HODL #Web3"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 44,
+   "user": "King0ftheCharts",
+   "url": "https://x.com/King0ftheCharts/status/2083298803684405671",
+   "date": "2026-07-31",
+   "text": ".\nA BITCOIN EMERGENCY!!!  VIDEO BELOW\nWATCH IMMEDIATELY!!!\n\nThe 2nd Leg Down of the Bitcoin Bear Market CRASH is Likely Resuming - \n\nMore BTC Sell Signals are Triggering Today\n\nBTC Emergency Video Here\nhttps://t.co/XDTxhsFTjM\n\n.\n$BTC #BTC $IBIT #Bitcoin $BTCUSD #BTCUSD #BTCNews https://t.co/gXnUfmdEBH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "luhtala1",
+   "url": "https://x.com/luhtala1/status/2083422736974479665",
+   "date": "2026-08-01",
+   "text": "$BTC \n\nSaylor \n\n- never sell your bitcoin !  MSTR we sold bitcoin \n\n- Everything else is credit except bitcoin.  MSTR We are building USD cash reserves, selling btc   \n\nWhat else ? BTC at 350k by 2026 (Saylor)"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "wensontrading",
+   "url": "https://x.com/wensontrading/status/2082924866840477901",
+   "date": "2026-07-30",
+   "text": "₿ $MSTR  Strategy Q2 2026 — WORLD'S LARGEST BITCOIN HOLDER 🤯👑🔥\n\n📊 Bitcoin Holdings — THE MAIN EVENT:\n\n🔵843,775 BTC — LARGEST INSTITUTIONAL BITCOIN HOLDER IN THE WORLD 🏆\n🔵+25% BTC growth YTD 🔥 — added 11% to 846,000 BTC in Q2 alone\n🔵BTC Yield: +4.5% YTD ✅ — growing BTC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ChartsBtc",
+   "url": "https://x.com/ChartsBtc/status/2082934289302516099",
+   "date": "2026-07-30",
+   "text": "#Bitcoin supply by halving epoch (stacked):\nEpoch 0: 2.41M BTC\nEpoch 1: 1.14M BTC\nEpoch 2: 2.04M BTC\nEpoch 3: 3.85M BTC\nEpoch 4: 10.63M BTC\nData as of 2026-07-30\n#Bitcoin $BTC #HODL #Halving #BitcoinChartBot https://t.co/HrS9vkCgDU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 118,
+   "user": "simplykashif",
+   "url": "https://x.com/simplykashif/status/2083091825062244749",
+   "date": "2026-07-31",
+   "text": "Biggest Bitcoin Buyer is preparing to sell More BTC in future.\n\nMichale saylor is changing how Strategy manages Bitcoin.\n\nStrategy says it will:\n-&gt; Stop allocating all future capital raises to Bitcoin.\n-&gt; Maintain a Strategic USD reserve.\n-&gt; Strategy can sell limited BTC when it https://t.co/RfagawZjKG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "akshoydasss",
+   "url": "https://x.com/akshoydasss/status/2083944091201806820",
+   "date": "2026-08-02",
+   "text": "🇺🇸 US SPOT CRYPTO ETFs FLOWS REPORT (27 July - 31 July)\n\nUS Crypto Spot ETFs Saw ~$30.72 Million Net OutFlows Last Week\n\n➔ BlackRock ETF BOUGHT ~1,395 Bitcoin And 30,179 Ethereum\n➔ Fidelity ETF SOLD ~1,321 Bitcoin And 10,890 Ethereum\n➔ Bitwise ETF BOUGHT ~49 Bitcoin And SOLD https://t.co/HKqw3V778b"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "ChartsBtc",
+   "url": "https://x.com/ChartsBtc/status/2082956934240665981",
+   "date": "2026-07-30",
+   "text": "#Bitcoin supply by halving epoch:\nEpoch 0: 2.41M BTC\nEpoch 1: 1.14M BTC\nEpoch 2: 2.04M BTC\nEpoch 3: 3.85M BTC\nEpoch 4: 10.63M BTC\nData as of 2026-07-30\n#Bitcoin $BTC #HODL #Halving #BitcoinChartBot https://t.co/luWWmRuJou"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "criptoFMS",
+   "url": "https://x.com/criptoFMS/status/2081541281528807479",
+   "date": "2026-07-27",
+   "text": "BTC Camino a los 64 k .\n\n#bitcoin #btc #bitcoin esta semana #análisis bitcoin #criptomonedas impacto bitcoin #Bitcoin #Criptomonedas #BTC #criptofms #trading #clarity act #ley Clarity #regulacion crypto #ondo #datos on chain #datos en cadena #inflación #cpi #cpi julio 2026 https://t.co/EctHQZIotG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Disingam_pamei",
+   "url": "https://x.com/Disingam_pamei/status/2083175845083160691",
+   "date": "2026-07-31",
+   "text": "Ray Dalio holds about 1.0 percent of his portfolio in Bitcoin, calling it money that cannot be printed. He groups BTC with gold as a key hedge against cash printing. See BTC now. Does Bitcoin belong beside gold? #BTC #Bitcoin"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AdarnsBLiv",
+   "url": "https://x.com/AdarnsBLiv/status/2082472289237352524",
+   "date": "2026-07-29",
+   "text": "On October 6, 2025, Bitcoin reached $124,728.\n\nStrategy owned 640,031 BTC.\n\nTreasury value: $79.83 BILLION.\n\nStrategy now owns 843,775 BTC... an additional 203,744 BTC accumulated since that ATH.\n\nWhen Bitcoin merely returns to $124,728:\n\nMSTR Bitcoin treasury: $105.24 BILLION https://t.co/hlOdBeM0b8"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "CryptoDad_DDC",
+   "url": "https://x.com/CryptoDad_DDC/status/2082102883684913525",
+   "date": "2026-07-28",
+   "text": "BTCUSDT, 1H / 15M / 1D – Chart Review\n\nBearish structure remains intact, but short-term downside is becoming crowded.\n\nSummary for Non-Traders\n\nThe higher-timeframe trend is still bearish. Price is making lower highs and lower lows, and the latest 15m/1h breakdown confirms https://t.co/6LuzVrme6o"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 903,
+   "user": "RAFAELA_RIGO_",
+   "url": "https://x.com/RAFAELA_RIGO_/status/2083345568814760392",
+   "date": "2026-08-01",
+   "text": ".\nCRYPTO MONTHLY REPORT\n\n❇️Basic info:\nDaily flipped bearish 6 days ago\n2D flipped bearish tonight\n3D &amp; 5D should follow\nWeekly &amp; 2W are bearish\nMonthly, 2M &amp; 3M are bearish\n**LTFs can turn bullish \n\n❇️Cycle Analysis:\nNow Let’s Start with a deep analyse on all the $BTC cycles https://t.co/2mzQ9Mw1UZ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2081409638243979541",
+   "date": "2026-07-26",
+   "text": "#btc #bitcoin bitcoin:native \n\nBias: Bearish unless BTC reclaims the trendline with strength.\n\nKey Resistance\n\n64,900–65,000 (current rejection area)\n65,300 (orange resistance)\n65,700–66,000 (major resistance)\n67,263 (breakout confirmation level)\n\nKey Support\n\n63,645\n63,408 https://t.co/EoXZdz731L"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "themetashark",
+   "url": "https://x.com/themetashark/status/2081480940736618841",
+   "date": "2026-07-26",
+   "text": "📈Daily #CryptoAsset Analysis for Futures Trading \n\nBitcoin (bitcoin:native ) — Higher TF Analysis \n64,604.00 | 24h: 🟢 +0.53%\n\nMarket Structure \nBTC is in a short-term corrective phase below key moving averages (SMA20 at 67,610 and SMA50 at 72,023). Momentum shows early bullish https://t.co/UyYJex44HZ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2082360869447405947",
+   "date": "2026-07-29",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 𝟮.𝟱 / 𝟱 (leaning mildly bearish) - 𝗘𝗧𝗙 𝗳𝗹𝗼𝘄𝘀: - Bitcoin &amp; Solana spot ETFs recorded net outflows → bearish pressure on those assets. - Ethereum ETF recorded net inflows → modest bullish support for ETH. - 𝗠𝗮𝗿𝗸𝗲𝘁‐𝘄𝗶𝗱𝗲 𝗳𝗲𝗮𝗿 https://t.co/tVVKs6zoC9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "SedarZan52448",
+   "url": "https://x.com/SedarZan52448/status/2081511784226161015",
+   "date": "2026-07-26",
+   "text": "BTC Daily Analysis\nwith DTR INTELIGENCE AI\n\nBitcoin continues to trade around the key 64.700 S/R level following a strong recovery from recent lows.\n\nHigher timeframe structure remains constructive, but price is approaching an important decision point where buyers must prove https://t.co/lC9bdH36hd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "MattypipsFx",
+   "url": "https://x.com/MattypipsFx/status/2082627405055758506",
+   "date": "2026-07-30",
+   "text": "Strategy: I trade key support and resistance, then wait for confirmation. I react to price—not predictions.\n\nBTC is at a key level.\n\n🟢 Above 64.3K = bullish continuation.\n🔴 Below 63.8K = bearish pressure.\n\nBull or Bear? 👇\n\n#BTC #Bitcoin #Crypto #PriceAction https://t.co/en84YJVMzI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Anatolii_Volf",
+   "url": "https://x.com/Anatolii_Volf/status/2082174382362018290",
+   "date": "2026-07-28",
+   "text": "🌙 Tuesday Night Market Update 📊\n#AKT &amp; #TAO\nTuesday is coming to an end with two very different setups. AKT remains under heavy pressure after losing key support, while TAO is attempting a recovery but still has an important resistance to overcome.\n#AKT (4H)\nAKT continues https://t.co/aNqNnGwPe5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Anatolii_Volf",
+   "url": "https://x.com/Anatolii_Volf/status/2082574036345966675",
+   "date": "2026-07-29",
+   "text": "☀️ Thursday Morning Market Update\n📊 $IO &amp; $PUMP AI Review\nThe market woke up to another wave of selling after a volatile macro session. The Fed left rates unchanged as expected, while headlines around AI discovering new cryptographic weaknesses added even more uncertainty to an https://t.co/or3ALXd3CX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "MSTR_simulator",
+   "url": "https://x.com/MSTR_simulator/status/2082556054169358833",
+   "date": "2026-07-29",
+   "text": "MSTR is a better buy than IBIT right now.\n\nMy favorite thing about MSTR is that we can tell exactly how undervalued or overvalued it is at a given time by looking at the mNAV.\n\nAt 1.0 mNAV, it is trading at exactly the price of the assets already on its books, after accounting https://t.co/tDKubbLI5Z"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "LORD_BTC_13",
+   "url": "https://x.com/LORD_BTC_13/status/2083523460752408970",
+   "date": "2026-08-01",
+   "text": "BTC Higher Timeframe Reality Check 📊⏳\n\nA lot of people believe the HTF bottom has already formed in the $50K–$60K range.  \n\nI disagree.\n\nLooking at previous bear markets, Bitcoin has almost always corrected more than 70%.📉\n\nOn the monthly chart, the current bear market is https://t.co/CsV2ECgoT4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 48,
+   "user": "crico41",
+   "url": "https://x.com/crico41/status/2083842012143329285",
+   "date": "2026-08-02",
+   "text": "BTC &amp; SOL Market Analysis | 4H Timeframe🟧\n\nBitcoin continues to weaken after losing the mid-range support, while Solana is testing a critical demand zone. Both charts suggest the market is at an important decision point.\n\n🟠 Bitcoin ($BTC)\n\nCurrent Price: ~$63.2K\n\nBTC has broken https://t.co/7hG5k4P9gs https://t.co/KnWPhyG5A2"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "CryptoJobsLab",
+   "url": "https://x.com/CryptoJobsLab/status/2083101925289926866",
+   "date": "2026-07-31",
+   "text": "Bitcoin global update ⚠️📉\n\nMonthly: bullish cycle intact above 36k.\nWeekly: strong bear trend, monthly bearish correction ongoing.\nDaily: sideways between 58,000-60,000 and 67,000.\n\nBull case: break above → 71,000, 74,000, 78,000, 88,000.\n\nBear case: break below → 54,000, https://t.co/HgmJdjy4B7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "HalisIndicators",
+   "url": "https://x.com/HalisIndicators/status/2082702699682840864",
+   "date": "2026-07-30",
+   "text": "Everyone seems to be calling the start of a new Bull Cycle today. Our reading isn't fully aligned yet. Patience usually pays better than being early.\n\nFor now, our system suggests XAUT may outperform BTC, while BTC and ETH still remain in a bearish trend. Our Bull/Bear Transition https://t.co/n0nXz6RvAz"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 11,
+   "user": "CryptoJedi47",
+   "url": "https://x.com/CryptoJedi47/status/2083603848992575781",
+   "date": "2026-08-01",
+   "text": "🚨 Is USDT Dominance about to flip the script?\n\nUSDT.D has respected bullish flag structures throughout this move.\n\n📈 The first bullish flag broke to the upside.\n📈 The second bullish flag also continued higher.\n\nNow we’re forming what appears to be a bearish flag.\n\nIf this https://t.co/DBw69sg11T"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Livermore_LM",
+   "url": "https://x.com/Livermore_LM/status/2081515887010738289",
+   "date": "2026-07-26",
+   "text": "There is only one argument bears keep repeating against Monad.\n\n\"The major token unlocks begin in November.\"\n\nThey parrot this point over and over, trying to paint Monad as some kind of scam.\n\nFrankly, it's absurd.\n\nWhat they fail to recognize is obvious.\n\nNearly every Layer 1"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Livermore_LM",
+   "url": "https://x.com/Livermore_LM/status/2081515487897452878",
+   "date": "2026-07-26",
+   "text": "There is only one argument bears keep repeating against Monad.\n\n\"The major token unlocks begin in November.\"\n\nThey parrot this point over and over, trying to paint Monad as some kind of scam.\n\nFrankly, it's absurd.\n\nWhat they fail to recognize is obvious.\n\nNearly every Layer 1"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 85,
+   "user": "Livermore_LM",
+   "url": "https://x.com/Livermore_LM/status/2081516937742569873",
+   "date": "2026-07-26",
+   "text": "There is only one argument bears keep repeating against Monad.\n\n\"The major token unlocks begin in November.\"\n\nThey parrot this point over and over, trying to paint Monad as some kind of scam.\n\nFrankly, it's absurd.\n\nWhat they fail to recognize is obvious.\n\nNearly every Layer 1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "schandra_100",
+   "url": "https://x.com/schandra_100/status/2082657527054131294",
+   "date": "2026-07-30",
+   "text": "We were reviewing Ethereum's performance this month, and it has been nothing short of outstanding! Ethereum has been surging after the launch of Robinhood Chain.\nBut what we found underneath was even more interesting and worrying.\n\nTrading volume has fallen by more than 25% https://t.co/jb7J1j5qNj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AlphaAllegro",
+   "url": "https://x.com/AlphaAllegro/status/2083920908217987192",
+   "date": "2026-08-02",
+   "text": "𝐃𝐓𝐀 𝐒𝐭𝐫𝐚𝐭𝐞𝐠𝐢𝐜 𝐌𝐚𝐫𝐤𝐞𝐭 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐜𝐞 𝐑𝐞𝐩𝐨𝐫𝐭\n\n𝐖𝐞𝐞𝐤𝐥𝐲 𝐎𝐮𝐭𝐥𝐨𝐨𝐤 &amp; 𝐌𝐚𝐜𝐫𝐨 𝐅𝐫𝐚𝐦𝐢𝐧𝐠 — 𝐖𝐞𝐞𝐤 𝐨𝐟 𝐀𝐮𝐠𝐮𝐬𝐭 𝟑–𝟕, 𝟐𝟎𝟐𝟔\n\n𝐄𝐱𝐞𝐜𝐮𝐭𝐢𝐯𝐞 𝐌𝐚𝐧𝐝𝐚𝐭𝐞: 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧 𝐓𝐚𝐜𝐭𝐢𝐜𝐚𝐥 𝐍𝐞𝐮𝐭𝐫𝐚𝐥𝐢𝐭𝐲 / https://t.co/EIE12QJ8lV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AlphaAllegro",
+   "url": "https://x.com/AlphaAllegro/status/2083921535622910293",
+   "date": "2026-08-02",
+   "text": "𝐃𝐓𝐀 𝐒𝐭𝐫𝐚𝐭𝐞𝐠𝐢𝐜 𝐌𝐚𝐫𝐤𝐞𝐭 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐜𝐞 𝐑𝐞𝐩𝐨𝐫𝐭\n\n𝐖𝐞𝐞𝐤𝐥𝐲 𝐎𝐮𝐭𝐥𝐨𝐨𝐤 &amp; 𝐌𝐚𝐜𝐫𝐨 𝐅𝐫𝐚𝐦𝐢𝐧𝐠 — 𝐖𝐞𝐞𝐤 𝐨𝐟 𝐀𝐮𝐠𝐮𝐬𝐭 𝟑–𝟕, 𝟐𝟎𝟐𝟔\n\n𝐄𝐱𝐞𝐜𝐮𝐭𝐢𝐯𝐞 𝐌𝐚𝐧𝐝𝐚𝐭𝐞: 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧 𝐓𝐚𝐜𝐭𝐢𝐜𝐚𝐥 𝐍𝐞𝐮𝐭𝐫𝐚𝐥𝐢𝐭𝐲 / https://t.co/Kuw8PSHIVx"
+  }
+ ]
+}

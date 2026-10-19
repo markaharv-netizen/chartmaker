@@ -1,0 +1,454 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-08-30T16:00:00Z",
+ "end": "2026-09-06T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "BTC Bitcoin -is:retweet -is:reply lang:en",
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "fiatarchive",
+   "url": "https://x.com/fiatarchive/status/2094645373163946279",
+   "date": "2026-09-01",
+   "text": "TOTAL ETF INFLOWS: +2,790\n\n✅ $IBIT BlackRock's Bitcoin ETF +2,650 BTC\n\n✅ $FBTC Fidelity's Bitcoin ETF +88 BTC\n\n✅ $BTC Grayscale's Mini Bitcoin ETF +121 BTC\n\n✅ $MSBT Morgan Stanley's Bitcoin ETF +46 BTC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 285,
+   "user": "thenexus_team",
+   "url": "https://x.com/thenexus_team/status/2095294447940710833",
+   "date": "2026-09-02",
+   "text": "🚨GM BTC NEWS\n\nCorporate Bitcoin accumulation is heating up again.\n\nStrategy just bought 4,603 BTC for $369.7M, its first Bitcoin purchase since June, pushing its total holdings to 845,050 BTC. \n\nAt the same time, Strive added another 1,800 BTC for $143M, bringing its holdings to https://t.co/iAo5gDRz4M"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Mhotashim",
+   "url": "https://x.com/Mhotashim/status/2096589373139739004",
+   "date": "2026-09-06",
+   "text": "Bitcoin has always been great at preserving value.\n\nBut what if your BTC could also become productive capital without leaving Bitcoin?\n\nThat’s the idea behind Stacks’ Genesis Bond. 👇\n\nBTC is timelocked directly on Bitcoin L1 under your own keys, paired with STX on Stacks.\n\nNo https://t.co/wog9kF4trR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ericaaxrose",
+   "url": "https://x.com/ericaaxrose/status/2096292897729741052",
+   "date": "2026-09-05",
+   "text": "$ASST is becoming one of the most aggressive Bitcoin treasury plays in the market.\n\nBitcoin → Capital → BTC Holdings → BTC/Share → NAV\n\n23,156 BTC and counting.\n\nThe strategy is simple:\n\nRaise Capital → Buy Bitcoin → Increase BTC/Share → Compound\n\nBut here’s what really https://t.co/glwj2yAhmu"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "iiam_Akshay",
+   "url": "https://x.com/iiam_Akshay/status/2095102302357279016",
+   "date": "2026-09-02",
+   "text": "🚨 ANOTHER COMPANY JUST BOUGHT MORE BITCOIN\n\n🇬🇧 The Smarter Web Company added 35 BTC, taking its total Bitcoin holdings to 2,747 BTC.\n\nThe company is now ranked among the top 30 publicly listed Bitcoin holders globally.\n\nCorporate BTC accumulation isn’t slowing down. 👀\n\n#Bitcoin"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "AnaCryptoverse",
+   "url": "https://x.com/AnaCryptoverse/status/2095863161052332327",
+   "date": "2026-09-04",
+   "text": "Strategy is back to accumulating Bitcoin.\n\nFormerly known as MicroStrategy, Strategy has resumed its Bitcoin buying strategy with the acquisition of 4,603 BTC for approximately $369.7 million.\n\nThe purchase was made at an average price of $80,318 per Bitcoin, bringing Strategy’s https://t.co/jXTmH6XRub"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "jonathan_agozie",
+   "url": "https://x.com/jonathan_agozie/status/2095405782573416480",
+   "date": "2026-09-03",
+   "text": "U.S. Bitcoin ETFs can affect the price Nigerians see for Bitcoin.\n\nWhen ETFs buy large amounts of BTC, they add more demand for a limited supply. That can push the global Bitcoin price higher.\n\nWhen ETFs sell large amounts, they put more Bitcoin up for sale. That can put downward"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 260,
+   "user": "thenexus_team",
+   "url": "https://x.com/thenexus_team/status/2094914004032602470",
+   "date": "2026-09-01",
+   "text": "🚨 BITCOIN MORNING NEWS\n\nU.S. spot Bitcoin ETFs pulled in $216.7M as September trading opened, reversing the previous session’s outflow. \n\nBitcoin also finished August up roughly 25%, its best August since 2017. Now BTC is hovering around $77K, with September bringing fresh macro https://t.co/DNfFeQG21U"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 29,
+   "user": "lite_saylor",
+   "url": "https://x.com/lite_saylor/status/2095337749003763875",
+   "date": "2026-09-03",
+   "text": "🚨 BITCOIN AT $1,000,000 COULD BE LITECOIN’S BIGGEST OPPORTUNITY 🥈⚡\n\nAs Bitcoin grows, what happens if demand for its limited block space pushes on-chain fees higher?\n\n📅 BTC vs LTC — HYPOTHETICAL FEE SCENARIO\n\n2026\n₿ BTC: $0.50–$10+\nŁ LTC: $0.001–$0.05\n\n2030\n₿ BTC: $3–$25+\nŁ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "dustinwatchman",
+   "url": "https://x.com/dustinwatchman/status/2094860232807891447",
+   "date": "2026-09-01",
+   "text": "Bitcoin magazine isn't 100% bitcoin\nBitcoin .com isn't btc bitcoin\nBitcoin movie isn't truthful btc bitcoin movie\n\nSad to see the bitcoin name used on non bitcoin things but such is life https://t.co/It37iIxn5O"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Invest2Growcom",
+   "url": "https://x.com/Invest2Growcom/status/2094510821409722549",
+   "date": "2026-08-31",
+   "text": "$ASST (Strive, Inc.) is up around 11.41% today to ~$24.20 — surging as the corporate Bitcoin treasury space receives its most powerful sentiment signal in 10 weeks: Strategy (MSTR) just ended its 10-week Bitcoin purchase pause with a $370 million buy, announced this morning,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "rizwana90537380",
+   "url": "https://x.com/rizwana90537380/status/2096087455032377644",
+   "date": "2026-09-05",
+   "text": "BITCOIN JUST HIT $82K… WHAT HAPPENS NEXT? 👀\n\nBitcoin is back in the spotlight! BTC recently pushed above the $82K area, but strong U.S. jobs data is bringing fresh interest-rate uncertainty to the crypto market.\nIs this the beginning of the next Bitcoin breakout… or a https://t.co/RVwngtXQ9d"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "TIMSONLABS",
+   "url": "https://x.com/TIMSONLABS/status/2096570794935480705",
+   "date": "2026-09-06",
+   "text": "🇸🇻 ₿ 5 years ago today, El Salvador made history.\n\nOn September 6, 2021, the country bought its first Bitcoin:\n\n→ 400 BTC at around $52,700/BTC\n→ 2022: 410 BTC at $36,585\n→ 500 BTC at $30,744\n→ 80 BTC at just $19,000\n→ Since Nov. 2022: “1 Bitcoin a day” strategy\n\nToday, 5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "algotradingdesk",
+   "url": "https://x.com/algotradingdesk/status/2094746434662977569",
+   "date": "2026-09-01",
+   "text": "Brutal Truth on $MSTR / Strategy 🇺🇸₿📊\n\nStrategy is effectively turning its balance sheet into a leveraged Bitcoin vehicle.\n\n• Bitcoin holdings: ~632,457 BTC\n• BTC cost basis: ~$46.2B\n• Average BTC purchase price: ~$73,000\n• Bitcoin NAV: ~$68B at ~$108K/BTC\n• Q2 2026"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Saatdimensi_",
+   "url": "https://x.com/Saatdimensi_/status/2095824059535851960",
+   "date": "2026-09-04",
+   "text": "Standard Chartered launching institutional BTC and ETH spot trading in the UAE is another sign that Bitcoin is becoming part of mainstream financial infrastructure.\n\nThe next step will not just be about buying and trading BTC. It will be about using Bitcoin as a productive https://t.co/cLDdGLjTPA https://t.co/amdIYwlCsK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "algotradingdesk",
+   "url": "https://x.com/algotradingdesk/status/2094952407189139525",
+   "date": "2026-09-02",
+   "text": "Brutal Truth on $MSTR / Strategy 🇺🇸₿📈\n\nStrategy has transformed itself into the world's most aggressive publicly traded Bitcoin treasury.\n\n• Bitcoin holdings: ~632,000 BTC\n• BTC cost basis: ~$46B\n• Average purchase price: ~$73K/BTC\n• Bitcoin NAV: ~$68B at ~$108K BTC\n•"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "Brainybtc",
+   "url": "https://x.com/Brainybtc/status/2094666192438898913",
+   "date": "2026-09-01",
+   "text": "Happy New Month guys \n\nEveryone keeps asking what the best beta play to $BTC is.\n\nThe answer has been $STX for years.\n\n$STX is reminding the market of something Bitcoin natives have known for years:\n\nIt is one of the clearest high-beta plays on $BTC.\n\nWhen Bitcoin moves, STX has https://t.co/Y2h9wVB5cK"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 195,
+   "user": "thenexus_team",
+   "url": "https://x.com/thenexus_team/status/2094472559572275253",
+   "date": "2026-08-31",
+   "text": "Good Night \n🚨  BREAKING: Strategy Is Buying Bitcoin Again\n\nStrategy just acquired 4,603 BTC for $369.7M, ending its buying pause.\n\nIts total Bitcoin holdings now stand at 845,050 BTC.\n\nBig institutions are still accumulating while BTC trades near $78K. \n\nIs $80K the next target? https://t.co/9GHLGpeuMF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "HistoryPiNews",
+   "url": "https://x.com/HistoryPiNews/status/2094418101848920374",
+   "date": "2026-08-31",
+   "text": "🚨 Strategy Is Back Buying Bitcoin\n\nStrategy has purchased 4,603 BTC for approximately $369.7 million, marking its first Bitcoin acquisition since June.\n\nThe company bought the BTC at an average price of $80,318 and now holds 845,050 BTC.\n\nThe move comes after Strategy had https://t.co/xgvGlHZqI3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 129,
+   "user": "WhaleFactor",
+   "url": "https://x.com/WhaleFactor/status/2095741665436729803",
+   "date": "2026-09-04",
+   "text": "🐋 WHALE WATCH : The US government alone owns almost three times more Bitcoin than all the other countries on this list except China combined.\n\nThe top Bitcoin holding countries as of August 2026 are:\n\n=&gt; United States: 328372 $BTC (approximately $19.8 billion to $25.5 billion) https://t.co/QJESy0vxYN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 58,
+   "user": "Bitcoinprof0637",
+   "url": "https://x.com/Bitcoinprof0637/status/2095216555936133554",
+   "date": "2026-09-02",
+   "text": "🇯🇵 Japan’s Remixpoint just made a major treasury decision.\n\nThe company sold its entire ETH, SOL, XRP and DOGE holdings — and now holds only Bitcoin.\n\n₿ 1,506 BTC\n💰 ~$115M in BTC\n📈 ~¥117.8M profit from the altcoin sales\n\nThis isn’t an exit from crypto.\n\nIt’s a clear bet on https://t.co/j23Hdk8q2i"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cryptobeasttcb",
+   "url": "https://x.com/cryptobeasttcb/status/2095314116978315497",
+   "date": "2026-09-03",
+   "text": "🇯🇵 JAPANESE COMPANY GOES BITCOIN-ONLY\n\nRemixpoint reportedly sold its XRP, ETH, SOL and DOGE holdings and shifted its crypto treasury toward Bitcoin.\n\nIts reported BTC holdings now stand around 1,506 BTC.\n\nOne interesting trend:\n\nSome corporate treasuries are becoming more"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 96,
+   "user": "BitcoinNewsCom",
+   "url": "https://x.com/BitcoinNewsCom/status/2094399060262219813",
+   "date": "2026-08-31",
+   "text": "STRATEGY RETURNS TO BUYING BITCOIN AFTER 10-WEEK PAUSE\n\nStrategy announced today they bought 4,603 BTC for $370 million at an average price of $80,318, its first Bitcoin purchase since June 22.\n\nFollowing that June 22 purchase, Strategy sold Bitcoin four times:\n\nJune 30: Sold https://t.co/F6kjIE4Si0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "SOL__WHALE",
+   "url": "https://x.com/SOL__WHALE/status/2095078321541324932",
+   "date": "2026-09-02",
+   "text": "🇸🇻 EL SALVADOR IS STILL STACKING #BITCOIN!\n\nPresident Nayib Bukele’s government has added another 1 BTC to its Strategic Bitcoin Reserve.\n\n₿ Total holdings: 7,762 BTC\n\nEl Salvador keeps buying. 🔥\n\n#Bitcoin #BTC https://t.co/HzxpmD5poE"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "anilsingta",
+   "url": "https://x.com/anilsingta/status/2095512980020728135",
+   "date": "2026-09-03",
+   "text": "🚨 THE GREAT BITCOIN DUMP OF 2026?\n\nStrategy sold BTC.\nBhutan sold BTC.\nA BlackRock client sold BTC.\nGermany sold BTC.\n1,000 BTC linked to a “scam” is on the move.\n\nEveryone seems to be exiting. 📉\n\nBUT HERE’S THE THING:\n\nBitcoin has faced massive criticism, panic, and selling https://t.co/VACAumlTNY"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 912,
+   "user": "IvanOnTech",
+   "url": "https://x.com/IvanOnTech/status/2095375312825528500",
+   "date": "2026-09-03",
+   "text": "REMINDER: THIS IS THE TIME TO BE BULLISH!!!!\n\nUPSIDE FOR BITCOIN IS SO BIG\nDOWNSIDE SMALL\nDIP ARE FOR BUYING\n\nSTFU AND BUY BUY BUY BUY \n\n(I was mega bear since October 2025, since early July 2026 bull)"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "IvanOnTech",
+   "url": "https://x.com/IvanOnTech/status/2095375169816568043",
+   "date": "2026-09-03",
+   "text": "REMINDER: THIS IS THE TIME TO HE BULLISH!!!!\n\nUPSIDE FOR BITCOIN IS SO BIG\nDOWNSIDE SMALL\nDIP ARE FOR BUYING\n\nSTFU AND BUY BUY BUY BUY \n\n(I was mega bear since October 2025, since early July 2026 bull)"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 146,
+   "user": "CryptoGirlNova",
+   "url": "https://x.com/CryptoGirlNova/status/2095570095007277442",
+   "date": "2026-09-03",
+   "text": "Mentioned before that despite me thinking that a part of this move will eventually (bullish) retrace.\n\nReal moves and pumps have the tendency to go higher than we think first.\n\nThe market barely dipping and holding the entire pump was already a first clue.\n\nMost people calling it https://t.co/yHluAYTbGw"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TU_Crypto_News",
+   "url": "https://x.com/TU_Crypto_News/status/2095377781441839140",
+   "date": "2026-09-03",
+   "text": "Ivan Liljeqvist says Bitcoin now has more upside than downside and the risk-reward is decisively bullish. He urges investors to buy dips, noting he turned from bearish in Oct. 2025 to bullish in July 2026 as Ether and smaller tokens gain momentum."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "sifatXcripto",
+   "url": "https://x.com/sifatXcripto/status/2095109541012832281",
+   "date": "2026-09-02",
+   "text": "BTC MARKET UPDATE — SEPTEMBER 2 📊\n\nBitcoin is currently trading around $77K–$78K, after facing rejection below the key $80K area.\n\n🔹 Short-term bias: Slightly bearish / cautious\n🔹 Key support: $76K–$77K\n🔹 Major resistance: $78K–$80K\n🔹 A clean reclaim of $80K could bring https://t.co/LVP4eF31lH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "sifatXcripto",
+   "url": "https://x.com/sifatXcripto/status/2095109397198598324",
+   "date": "2026-09-02",
+   "text": "Here’s an English X post based on today’s BTC market setup:\n\nBTC MARKET UPDATE — SEPTEMBER 2 📊\n\nBitcoin is currently trading around $77K–$78K, after facing rejection below the key $80K area.\n\n🔹 Short-term bias: Slightly bearish / cautious\n🔹 Key support: $76K–$77K\n🔹 Major https://t.co/jpqINNYcM1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "marketowleu",
+   "url": "https://x.com/marketowleu/status/2095098827095069011",
+   "date": "2026-09-02",
+   "text": "📊 NEW on MarketOwl: Live Chart Analysis\n\nMarketOwl is not just about receiving signals.\n\nNow you can select the market you want to analyze and instantly access its live analysis charts.\n\n🔎 Simply use the filter/search section.\n\nType the pair you want to analyze — for example: https://t.co/Adlnep4OQm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "unlovabledivine",
+   "url": "https://x.com/unlovabledivine/status/2094178758504948053",
+   "date": "2026-08-30",
+   "text": "🧵 BTC UPDATE \nThe next move could be bigger than it looks.\n\nBitcoin just went through a powerful rebound, pushing above $80K before facing rejection.\n\nNow the question isn't “bull or bear?”\n\nIt's:\n\n👉 Is this consolidation before the next leg up?\n\nHere's my read 👇\n\n1/ 📊 MARKET https://t.co/mtR7dtJX5r"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "marneen",
+   "url": "https://x.com/marneen/status/2096017878982054361",
+   "date": "2026-09-04",
+   "text": "BTC is trading around $79,600 as of early afternoon ET, after a volatile day that saw it spike above $81,200 overnight before pulling back. It's still up big on the week — roughly +27% over the past month.\nThe story right now: fresh spot ETF inflows (~$3.3B over 30 days) and"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 63,
+   "user": "sergio_tesla_",
+   "url": "https://x.com/sergio_tesla_/status/2095479677078921682",
+   "date": "2026-09-03",
+   "text": "Two weeks ago, Bitcoin printed a bullish weekly candle body of +23.7% (so from open to close). This is top 1% in since 2019.\n\nIs a green dildo like that usually a bullish or a bearish sign?\n\nFirst, let's define what a green dildo is. I decided to look at only weekly candles with https://t.co/5UvjfWqtbf https://t.co/0WXIBTT0xG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "risenfit",
+   "url": "https://x.com/risenfit/status/2095247822719422776",
+   "date": "2026-09-02",
+   "text": "$SBET $PURR $BMNR $ASST $FWDI $DFDV $XXI \n$BTC $ETH $SOL $HYPE \n🔸BITCOIN is  Momentum Cooling 👇\n\n🔸 MACD: \n• Bear-crossed the signal line with its first red histogram bar.\n\n🔸 TSI: \n• Testing the signal line to the downside;  another potential bearish momentum cross.\n\n🔸 DMI: https://t.co/7nWe32S9nm"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "sergio_tesla_",
+   "url": "https://x.com/sergio_tesla_/status/2095478658026631618",
+   "date": "2026-09-03",
+   "text": "bitcoin:native\n\nTwo weeks ago, Bitcoin printed a bullish weekly candle body of +20% (so from open to close). This is top 1% in since 2019.\n\nIs a green dildo like that usually a bullish or a bearish sign?\n\nFirst, let's define what a green dildo is. I decided to look at only weekly https://t.co/XeHRboFEZm https://t.co/0WXIBTT0xG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2094550853982335059",
+   "date": "2026-08-31",
+   "text": "📊【XWIN CAPITAL INDEX｜September 1, 2026】\nOverall Score: 70 / 100\n・80–100 = Strong Bullish Environment\n ・60–79 = Bullish Bias\n ・40–59 = Neutral / No Clear Direction\n ・20–39 = Bearish Bias\n ・0–19 = Strong Bearish Environment\n7-Day Moving Average: 73.14 ↓\n14-Day Moving https://t.co/NcNf5v65N8"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 17,
+   "user": "lukasz_wydra",
+   "url": "https://x.com/lukasz_wydra/status/2095593930364690754",
+   "date": "2026-09-03",
+   "text": "Bitcoin (bitcoin:native) Update 📊\n\nThis is the real test of the boundary between a bull and a bear market.\n\nBitcoin is currently testing the 350-day moving average from below, while at the same time we're seeing a bearish divergence on the RSI.\n\nTrend Precognition by @MI_Algos https://t.co/1KZ7B19nof"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "NoyonKhondnsto",
+   "url": "https://x.com/NoyonKhondnsto/status/2095539950351794344",
+   "date": "2026-09-03",
+   "text": "Bitcoin Rejected at $81K — But Is $50K Really Next?\n\nBTC pushed as high as $81,265 before facing rejection around the 50-week MA near $81,085, then slipped back below $80K. \n\nBut does one rejection automatically mean $50K is coming?\n\nNot necessarily. \n\n Bearish scenarios\n• Citi: https://t.co/pl4vnzsKr5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2094403036441432293",
+   "date": "2026-08-31",
+   "text": "Institutional Technical Watch — BTC structure at a decision point\n\nBitcoin — Vishal Dixit / FXStreet — Daily — Aug. 31\n\nA fresh daily technical update identifies $76,706–$77,489 as the immediate structural support zone after BTC’s retreat from the recent $82,850 high. BTC remains https://t.co/CoQWliO0Rz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "risenfit",
+   "url": "https://x.com/risenfit/status/2095250169029915068",
+   "date": "2026-09-02",
+   "text": "$SBET $PURR $BMNR $ASST $FWDI $DFDV $XXI \n$BTC $ETH $SOL $HYPE \n🔸 ETHEREUM in a Momentum Cool + advancing / leading BITCOIN \n\n🔸 MACD: \n• Bear-crossed the signal line with red histogram bars now expanding;  bearish momentum is developing.\n\n🔸 TSI: \n• Has already crossed below https://t.co/Oy7PcIQfYA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "LDNCryptoClub",
+   "url": "https://x.com/LDNCryptoClub/status/2095523464236937330",
+   "date": "2026-09-03",
+   "text": "There’s no one better or more experienced in trading options than @options_insight \n\nLike me, he’s a long term Bitcoin bull but he uses options to structure hedges which limit the downside, whilst capturing most of the upside\n\nCertainly he seems more relaxed than me when we walk https://t.co/nIos8yAFEH"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "WadiCryptoX",
+   "url": "https://x.com/WadiCryptoX/status/2095710744402657412",
+   "date": "2026-09-04",
+   "text": "BITCOIN JUST TURNED MORE BULLISH\n\nBitcoin’s on-chain picture is improving, and the balance of signals is starting to favor the bulls.\n\nI’m currently tracking 10 major Bitcoin indicators:\n\n6 BULLISH\n4 BEARISH\n\nThe bullish side is being supported by improving cycle momentum, https://t.co/P1D7NnYrNd"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2094529784617275439",
+   "date": "2026-08-31",
+   "text": "𝐆𝐨𝐥𝐝𝐞𝐧👁️ - 𝐁𝐮𝐥𝐥𝐢𝐬𝐡 𝐑𝐞𝐝 𝐓𝐡𝐫𝐞𝐞 𝐆𝐚𝐩𝐬\n\nThe Bullish Red Three Gaps is a rare bullish reversal pattern that develops after an extended downtrend. \n\nIt begins with at least four consecutive bearish candles that each open lower, creating three downside gaps. https://t.co/20YHqpgAhj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2094320168360923266",
+   "date": "2026-08-31",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 𝟯 / 𝟱 (𝘀𝗹𝗶𝗴𝗵𝘁𝗹𝘆 𝗯𝘂𝗹𝗹𝗶𝘀𝗵) - 𝗥𝗼𝗯𝗶𝗻𝗵𝗼𝗼𝗱 𝗖𝗵𝗮𝗶𝗻 𝗵𝘆𝗽𝗲 – traders see rising activity, potential “memecoin season” that could outpace Solana’s previous cycle. - 𝗧𝗼𝗸𝗲𝗻𝗶𝘇𝗲𝗱‐𝘀𝘁𝗼𝗰𝗸 𝗹𝗶𝗾𝘂𝗶𝗱𝗶𝘁𝘆 𝗽𝗼𝗼𝗹𝘀 – https://t.co/ManYu1iIGT"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "OffGridWithAI",
+   "url": "https://x.com/OffGridWithAI/status/2095198379592613914",
+   "date": "2026-09-02",
+   "text": "$BTC three-voice cut — Ivan on Tech (@ivanontech) bullish DCA / cycle restart, 100XClub (@FefeDemeny) dump targets, Discover Crypto (@DiscoverCrypto_) Clarity + levels. OffGridWithAI multi-creator cut. A quick preview of the key points for your convenience.\n\nWhat’s inside for https://t.co/hawc8pkAI5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 207,
+   "user": "Kebbi_kingjr",
+   "url": "https://x.com/Kebbi_kingjr/status/2096238342060843331",
+   "date": "2026-09-05",
+   "text": "BITCOIN MARKET OUTLOOK\n\nI’m not too concerned about timing the exact pullback.\n\nI’m already heavily positioned and have taken significant profits from this move. At this stage, I’m more focused on managing the position and watching how $BTC reacts at the key levels.\n\nThe move https://t.co/xYveUlDCTw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Mariyagnd",
+   "url": "https://x.com/Mariyagnd/status/2095750320161010084",
+   "date": "2026-09-04",
+   "text": "Real moves and pumps have the tendency to go higher than we think first.\n\nThe market barely dipping and holding the entire pump was already a first clue.\n\nMost people calling it a fake pump might have been a second.\n\nDo I know where we'll exactly retrace? No, pretty pointless to https://t.co/yyw5ij7WuM"
+  }
+ ]
+}

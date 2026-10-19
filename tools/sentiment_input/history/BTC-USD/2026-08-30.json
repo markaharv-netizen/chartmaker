@@ -1,0 +1,427 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-08-23T16:00:00Z",
+ "end": "2026-08-30T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "BTC Bitcoin -is:retweet -is:reply lang:en",
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 54,
+   "user": "Oak_crypt1",
+   "url": "https://x.com/Oak_crypt1/status/2092864901437891060",
+   "date": "2026-08-27",
+   "text": "Most Bitcoin $BTC yield still asks you to wrap it, bridge it, or hand it to someone else.\n\n@Stacks is doing the opposite.\n\n- Lock BTC on Bitcoin L1.\n- Keep the keys.\n- Earn BTC.\n\nThe Genesis Bond opens at Bitcoin block 966,350 around Sept 10.\n\nThis isn’t another yield farm.\n\nIt’s https://t.co/PW3Zktw8u5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "BitFinAi",
+   "url": "https://x.com/BitFinAi/status/2093388802559742315",
+   "date": "2026-08-28",
+   "text": "MASSIVE BITCOIN SELL-OFF:\n\nCoinbase sold 22,118 BTC\nTrade Republic sold 11,500 BTC\nBinance sold 5,676 BTC\nKraken sold 5,383 BTC\nWhales sold 17,394 BTC\n\nThat’s 62,071 BTC sold in total.\n\nBitcoin has dropped to $77,600 in the past few hours.\n\n#Bitcoin #BTC #Crypto #CryptoNews"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 25,
+   "user": "BSVandPXLDev",
+   "url": "https://x.com/BSVandPXLDev/status/2092738322955456804",
+   "date": "2026-08-26",
+   "text": "The reasons why you should buy Bitcoin SV: 1) BSV = Bitcoin, BTC = Gold Ponzi Coin. 2) BSV = scalable, BTC = no scale. 3) BSV = Bitcoin (meant to be used, smart contracts, micropayments, teranode, BSV21). 4) BSV = Real Bitcoin, BTC = high fees, bad security - LN. 5) BTC = Altcoin https://t.co/3xf2SSkapW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BriefByDF",
+   "url": "https://x.com/BriefByDF/status/2093300988119753080",
+   "date": "2026-08-28",
+   "text": "BITCOIN: Strive bought 429 BTC for $50M, pushing its total Bitcoin holdings above 21,000 BTC.\n\nThe purchase highlights growing corporate demand for BTC.\n\n#Bitcoin #BTC #Crypto #Strive #Markets"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "Gsadiq001",
+   "url": "https://x.com/Gsadiq001/status/2092507563094868101",
+   "date": "2026-08-26",
+   "text": "Bitcoin Dominance.\n\nBitcoin dominance (BTC.D) is the percentage of the total cryptocurrency market capitalization that belongs to Bitcoin.\n\nIn simple terms:\nBTC dominance tells us how much of the crypto market's total value is concentrated in Bitcoin.\n\nThe basic calculation is:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "StitchWeb3Joy",
+   "url": "https://x.com/StitchWeb3Joy/status/2093125264574501327",
+   "date": "2026-08-27",
+   "text": "Bitcoin is pumping.\n\nBitcoin treasury companies are dying.\n\nRead that again.\n\nBTC is back near $80K.\n\nYet the top 50 corporate Bitcoin holders have lost more than $80 BILLION in market value since last year.\n\n35 of them are down more than 50%.\n\nAnd the craziest part?\n\nEven"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "nooroozi55mh",
+   "url": "https://x.com/nooroozi55mh/status/2092528617259516149",
+   "date": "2026-08-26",
+   "text": "Is BlackRock changing the Bitcoin game?\n\nMore than $5 BILLION in BTC has reportedly moved directly into ETF structures through in-kind transactions. \n\nLarge holders can deliver BTC and receive $IBIT shares  without necessarily selling BTC for cash first.\n\nAnd the bigger shift? https://t.co/OIAP4RtoaZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Asirais",
+   "url": "https://x.com/Asirais/status/2093059175391867384",
+   "date": "2026-08-27",
+   "text": "$ASST JUST KEEPS STACKING BTC. ₿🔥\n\nStrive just bought 1,110 Bitcoin for ~$81.5M, pushing its total treasury to 21,356 BTC. The average purchase price was about $73,409 per BTC.\n\nThat’s the headline — but the bigger story is the strategy:\n\n₿ 21,356 BTC in treasury\n💰 ~$81.5M"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 85,
+   "user": "Idan_core",
+   "url": "https://x.com/Idan_core/status/2092668743734227401",
+   "date": "2026-08-26",
+   "text": "1. First Mover : \nStacks 95% | Core 75%.\nStacks came earlier with its Bitcoin smart-contract vision. Core arrived later with a broader Bitcoin-focused ecosystem.\n\n2. Bitcoin Alignment :\n Stacks 95% | Core 95%\nBoth are strongly built around Bitcoin. Stacks focuses heavily on https://t.co/e9Dc4epmgQ https://t.co/CAJLZUlJmU"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2092294657564921906",
+   "date": "2026-08-25",
+   "text": "$MSTR — the key details investors should know\n\nStrategy is becoming interesting again because Bitcoin’s rally is bringing its entire Bitcoin “flywheel” back to life.\n\nCanaccord: Buy rating, price target raised from $130 → $175.\nBitcoin holdings: roughly 840,000+ BTC.\nAverage BTC https://t.co/aBRfqW7S0n"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "Psnetwork4all",
+   "url": "https://x.com/Psnetwork4all/status/2091714828448796690",
+   "date": "2026-08-24",
+   "text": "₿ BTC ETF — Bitcoin Investment Made Simpler\n\nBefore understanding a Bitcoin ETF, first understand what an ETF is.\n\n📌 ETF = Exchange-Traded Fund\n\nAn ETF is an investment product that trades on a stock exchange like a regular share. It can give investors exposure to an underlying https://t.co/GLuVJanfSl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BTCMarketDaily",
+   "url": "https://x.com/BTCMarketDaily/status/2093390558173483179",
+   "date": "2026-08-28",
+   "text": "₿ BTC Market Update — August 28, 2026\n\nBitcoin is holding near $80K.\n\nBTC is consolidating after briefly pushing above $81K, with profit-taking meeting continued institutional demand.\n\nWhat’s moving Bitcoin today:\n\n• ETF demand continues: U.S. spot Bitcoin ETFs recorded"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Cryip_co",
+   "url": "https://x.com/Cryip_co/status/2093309751157235821",
+   "date": "2026-08-28",
+   "text": "Capital B Raises €21M to Buy More Bitcoin as Treasury Rivals Retreat\n\nParis-listed Bitcoin treasury firm Capital B is raising €21M through a private placement to expand its BTC holdings. \n\nThe company currently holds 3,145 BTC and plans to use the net proceeds to acquire up to https://t.co/5uFxITbuWd"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 372,
+   "user": "AdamBLiv",
+   "url": "https://x.com/AdamBLiv/status/2091677197136265424",
+   "date": "2026-08-24",
+   "text": "This is why I'm buying ASST - it has MAJOR upside Bitcoin beta.\n\nASST has a major beta differential to the upside versus the downside. Check this out.\n\nI matched every completed ASST/BTC week available since SATA launched on November 10, 2025.\n\nWHEN BITCOIN IS GREEN: 19 weeks https://t.co/ZoUC826QqS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 93,
+   "user": "CoreInvestor001",
+   "url": "https://x.com/CoreInvestor001/status/2092691764016480660",
+   "date": "2026-08-26",
+   "text": "🔥 BITCOIN + CORE = BOOSTED YIELD 🚀\n\nDid you know staking $CORE alongside Bitcoin can boost the CORE rewards you earn on @Coredao_Org? 🔶₿\n\nWith Dual Staking, Bitcoin stakers can move beyond the base tier by locking $CORE alongside their BTC. The more favorable your CORE-to-BTC https://t.co/bk7lW0S66f"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BTCWithBen",
+   "url": "https://x.com/BTCWithBen/status/2092189714455380438",
+   "date": "2026-08-25",
+   "text": "₿ BITCOIN MARKET UPDATE\nBitcoin is making another strong move today, with BTC trading around the $79.9K level. 📈\n🔥 The market is moving — keep your eyes on BTC!\n💬 Comment your BTC price prediction below.\n➕ Follow for more Bitcoin &amp; crypto updates. #Bitcoin #CryptoInvesting https://t.co/pTYMKqIBEH"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 41,
+   "user": "theonlyposted",
+   "url": "https://x.com/theonlyposted/status/2092018992726606151",
+   "date": "2026-08-24",
+   "text": "Today at Bitcoin Magazine 📰 \n\n- Bitcoin ETFs +1.92B last week\n- Cardone +350 BTC\n- Strive +1110 BTC\n- $79K Bitcoin\n- Polymarket Odds\n- Ionic Digital up to 2,882 BTC\n- Bitcoin ETFs worth almost $100B\n- Webullish CEO on CNBC\n- BTC's 3rd best August EVER\n- FOX Business on Bitcoin https://t.co/Aj0tylMJQs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "hoste_10",
+   "url": "https://x.com/hoste_10/status/2093957812602745065",
+   "date": "2026-08-30",
+   "text": "YOU DON’T NEED 1 BITCOIN\n\nMaybe it’s time to look at Bitcoin differently.\n\nMost people hear “1 Bitcoin” and immediately think:\n\n“I could never afford that.”\n\nBut that’s the wrong question.\n\nYou don’t need to own 1 BTC.\n\nBitcoin can be divided into 100 million smaller units.\n\nSo https://t.co/HVVCLytLvb"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "DavidCryptoSec",
+   "url": "https://x.com/DavidCryptoSec/status/2093152222096081023",
+   "date": "2026-08-28",
+   "text": "🔥 Bitcoin treasury momentum is accelerating.\n\n$SATA reportedly raised enough funds to acquire 429 BTC in a single day, with trading volume reaching nearly $50M.\n\nIn just 4 days, SATA accumulated 1,084 BTC — showing the growing demand for Bitcoin exposure from strategic https://t.co/Vq9A7r3gWz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TradeSignals_24",
+   "url": "https://x.com/TradeSignals_24/status/2092620598849810932",
+   "date": "2026-08-26",
+   "text": "🚨 THINK OWNING 1 $BTC IS COMMON? THINK AGAIN. 👀\n\nOnly around 1 in 10,000 people may own a whole Bitcoin.\n\nRiver estimates roughly 825,000 people globally hold 1+ $BTC. 🐋\n\nWith only 21 million BTC ever set to exist, owning a full Bitcoin could become increasingly rare as https://t.co/4kVlgDVu9y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "invader_stx",
+   "url": "https://x.com/invader_stx/status/2092631153014432087",
+   "date": "2026-08-26",
+   "text": "Stacks is building the rails for a thriving onchain Bitcoin economy.\n\nNot another L2 chasing TVL theater. Not wrapped BTC. Real Bitcoin native infrastructure that keeps BTC under your keys, settles to Bitcoin, and turns idle capital into productive capital.\n\nHere’s how the pieces https://t.co/lzhw7UcrZO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2092287297035362693",
+   "date": "2026-08-25",
+   "text": "$GPUS: Bitcoin Holdings Update\n\nHyperscale Data ($GPUS) reported that it held 278.03 BTC as of August 23, worth approximately $21.6M at a Bitcoin price of $77,755.\n\nThe company did not buy or sell any Bitcoin during the week.\n\nFor $GPUS, the important part is that it combines AI https://t.co/UJkIrNeYIp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BitcoinWorldN",
+   "url": "https://x.com/BitcoinWorldN/status/2092836241482113059",
+   "date": "2026-08-27",
+   "text": "🔥 NOW: Grant Cardone says Cardone Capital is increasing its Bitcoin allocation for its Fort Lauderdale real estate project from 350 BTC to 900 BTC. ₿🏗️\n\nThat’s an additional 550 BTC, signaling a much larger bet on Bitcoin within the project.\n\n#Bitcoin #BTC #GrantCardone https://t.co/jqHSuT9QZt"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 12,
+   "user": "TradingParrot",
+   "url": "https://x.com/TradingParrot/status/2091849029999079465",
+   "date": "2026-08-24",
+   "text": "Bitcoin's $85K Wall: The Biggest Short Liquidation Setup of the Bear Market\n\nWatch now 👉 https://t.co/Ey5oisb6RS\n\nBitcoin's breakout targets $85K, but a massive liquidation wall and bearish divergence signal danger. The Trading Parrot breaks down the 1-hour and 4-hour setups, https://t.co/EAeBERiGsA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2092369800244994379",
+   "date": "2026-08-25",
+   "text": "📊【XWIN CAPITAL INDEX | August 26, 2026】\nOverall Score: 86 / 100\n・80–100 = Strong Bullish Environment\n・60–79 = Bullish Bias\n・40–59 = Neutral / No Clear Direction\n・20–39 = Bearish Bias\n・0–19 = Strong Bearish Environment\n7-Day Moving Average: 84.00 ↑\n14-Day Moving Average: https://t.co/ChCEaWnmQV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2092145838826877145",
+   "date": "2026-08-25",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 (𝗕𝘂𝗹𝗹𝗶𝘀𝗵, 𝘄𝗶𝘁𝗵 𝗰𝗮𝘂𝘁𝗶𝗼𝗻) - 𝗕𝗶𝘁𝗰𝗼𝗶𝗻 𝗯𝗿𝗲𝗮𝗸𝘁𝗵𝗿𝗼𝘂𝗴𝗵: $80k+ level (first since May) signals strong upward momentum. - 𝗦𝗼𝗹𝗮𝗻𝗮 𝗿𝗮𝗹𝗹𝘆: Back above #100, triggering &gt;#16 M in short liquidations (largest https://t.co/uwS1ajOGLb"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 14,
+   "user": "Greg_TheDuck",
+   "url": "https://x.com/Greg_TheDuck/status/2092138019583127863",
+   "date": "2026-08-25",
+   "text": "B:\nBag / Bagholder — Tokens you still hold, often after a big drop. A bagholder is stuck with them.\n•  Bear market / Bearish — Falling prices, bad mood, people expect more downside.\n•  Bitcoin (BTC) — The first cryptocurrency (2009). Digital gold, proof-of-work, fixed 21"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Greg_TheDuck",
+   "url": "https://x.com/Greg_TheDuck/status/2092137808081080523",
+   "date": "2026-08-25",
+   "text": "Bag / Bagholder — Tokens you still hold, often after a big drop. A bagholder is stuck with them.\n•  Bear market / Bearish — Falling prices, bad mood, people expect more downside.\n•  Bitcoin (BTC) — The first cryptocurrency (2009). Digital gold, proof-of-work, fixed 21 million"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TerpsTrader1",
+   "url": "https://x.com/TerpsTrader1/status/2092333139603407278",
+   "date": "2026-08-25",
+   "text": "Bitcoin Two must watch short term levels \n$82k breaks we are bullish \n$78k break we are bearish \n\nBig levels for ah into tomorrow \n92-95k upside \n68-72k downside \nbitcoin:native #bitcoin #BitcoinRecovery https://t.co/AI0qOnzYML"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "Versatile_IND",
+   "url": "https://x.com/Versatile_IND/status/2094005801535123813",
+   "date": "2026-08-30",
+   "text": "$BTC : The Next 24H Setup 📊\n\n#Bitcoin is currently sitting at a critical decision zone around $78K.\n\n🔴 Bearish case — 45%\n$78K → $77K breakdown → $76K → $75–75.5K\n\n🟡 Range — 30%\n$77K–$80K consolidation before the next major move.\n\n🟢 Bullish case — 25%\n$80K reclaim &amp; hold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2092360140452176364",
+   "date": "2026-08-25",
+   "text": "🚨 Institutional Technical Watch — Ostium Market Outlook #90: BTC and ETH higher-timeframe trend shift\n\nA meaningful new multi-asset technical outlook from Ostium Insights identifies a potentially important higher-timeframe regime change in both Bitcoin and Ethereum. The analysis https://t.co/utEvGFS0dq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "PressLiberland",
+   "url": "https://x.com/PressLiberland/status/2092697801578737868",
+   "date": "2026-08-26",
+   "text": "Bitcoin and Crypto Market Report (Week of August 20–26, 2026) Short-Term Forecast:\nCurrent Snapshot (as of August 26, 2026)+++\n\nBitcoin (BTC) is trading around $78,500–$79,500, after briefly breaking above $81,000 on August 25 (its highest level since May 2026). \nIt is up roughly https://t.co/eQXUroRdcX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "siratlaa",
+   "url": "https://x.com/siratlaa/status/2091880946454700092",
+   "date": "2026-08-24",
+   "text": "the market was clearly signaling undervalued levels across multiple metrics and valuation frameworks.\n\nthe bottom had rarely been this evident. saylor sold consistently week after week while bitcoin held comfortably above 60k. i had flagged this exact dynamic earlier: watch how https://t.co/3Vj36lQh75"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "cryptoissimple",
+   "url": "https://x.com/cryptoissimple/status/2091649824273879125",
+   "date": "2026-08-23",
+   "text": "⏰️ 🚨 $BTC  liquidation heatmap\n\nBitcoin liquidation heatmap shows where large clusters of leveraged positions are likely to be liquidated. \n\n🚨 Explanation of this chart:\n\nPrice is currently around 77,600–77,800 (far right of the chart).\n\nPrice has just rallied into a large https://t.co/cjzAK9TbRW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "macroleverageTP",
+   "url": "https://x.com/macroleverageTP/status/2092999549082288245",
+   "date": "2026-08-27",
+   "text": "Bitcoin treasury companies have finally begun rising again with Bitcoin.\n\nNow comes the more interesting test: do their mNAV premiums return?\n\nI think the best ones deserve a premium.\n\nTheir equity amplifies Bitcoin's moves through leverage. And as Bitcoin rises, stronger balance"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2093552963188879812",
+   "date": "2026-08-29",
+   "text": "Institutional Technical Watch — Peter Brandt remains long BTC after a major bearish-to-bullish reversal\n\nPeter Brandt / Factor Research — Bitcoin — Daily / swing\n\nThis qualifies because Brandt has made a genuine technical regime change. Earlier in August he favored further"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2032,
+   "user": "ColeMacro",
+   "url": "https://x.com/ColeMacro/status/2091678987605225745",
+   "date": "2026-08-24",
+   "text": "Bitcoin priced in gold is reinforcing my view that the next Bitcoin cycle will be the strongest we have ever seen. The dollar thesis I wrote about below and the growing hunt for scarcity in an AI-driven world of abundance both point toward a powerful structural tailwind for https://t.co/4Y5WZhpANP https://t.co/ZbGsWawGCw"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "claustrumexe",
+   "url": "https://x.com/claustrumexe/status/2091967310240297139",
+   "date": "2026-08-24",
+   "text": "This bitcoin bear market feels different.\n\n​People get bearish in a bear and bullish in a bull, I get it. But the memes and crypto-bro chatter feel genuinely stale this time. It’s either \"it's so over\" or \"we are so back\"."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "CryptoMan393",
+   "url": "https://x.com/CryptoMan393/status/2093749374425723014",
+   "date": "2026-08-29",
+   "text": "BITCOIN ALERT\n\nBitcoin has been moving quietly… but the next major move could surprise a lot of people.\n\nThe real question is:\nAre you prepared before the move happens?\n\nBullish or bearish on BTC right now?\nComment: BULL  or BEAR https://t.co/MGmbIlBkqO"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2092616060080214061",
+   "date": "2026-08-26",
+   "text": "🚨 IREN $IREN heads into earnings with a major disconnect: bearish technicals, but increasingly bullish fundamentals.\n\n$IREN reports fiscal Q4 results Thursday, Aug. 27, and this could be a major volatility event.\n\nWall Street expects:\n\n📉 Adjusted EPS: -$0.55\n💰 Revenue: $132M https://t.co/uTd2lo3yBu"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "TradingbitAi",
+   "url": "https://x.com/TradingbitAi/status/2092114332356345987",
+   "date": "2026-08-25",
+   "text": "📊 Daily Brief 🟢🟢\n━━━━━━━━━━━━\n[Overall Verdict]\nBULLISH. Dual engines aligned: technical strong_bull (78% confidence, score 1.595) + macro BTC Bull regime. Confidence: high. Price $80,311.6 broke decisively above prior consolidation; momentum, trend and https://t.co/2PjZpcgI43"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Udjat1102",
+   "url": "https://x.com/Udjat1102/status/2092414050902978698",
+   "date": "2026-08-26",
+   "text": "$BTC Daily Update | 26 Aug\nBitcoin remains bullish on the higher timeframes,\nbut the short-term structure is now entering an H8 correction:\n- W1 / D1 → Bull Wave\n- H8 and below → Bear Wave\nI’m treating the current move as an H8 correction within the broader bullish structure — https://t.co/vYaYuCMhY4"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2093957852326924320",
+   "date": "2026-08-30",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟯 / 𝟱 (neutral‐to‐slightly bullish) - 𝗚𝗼𝘃𝗲𝗿𝗻𝗮𝗻𝗰𝗲 𝗻𝗲𝘄𝘀 (𝗦𝗼𝗹𝗮𝗻𝗮) – Validators just passed a proposal to accelerate the decline of SOL inflation, but it cleared by a very thin margin and won’t take effect for another ~4.5 months. https://t.co/ykWS9clglJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "GoldXpertise",
+   "url": "https://x.com/GoldXpertise/status/2093957470737838117",
+   "date": "2026-08-30",
+   "text": "₿ BTC/USD — WEEKLY ANALYSIS | Aug 31–Sep 4\nBitcoin is entering the new week at a critical decision point. After pushing toward 81,455, BTC faced rejection and pulled back sharply into the 76,920–78,234 range shown on the chart.\n\nI’m not interested in chasing the move in either https://t.co/kC6BzI4Eni"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 280,
+   "user": "raintures",
+   "url": "https://x.com/raintures/status/2093680551232262432",
+   "date": "2026-08-29",
+   "text": "bitcoin:native may have received one of its clearest macro signals since the 2023 recovery.\n\nCryptoQuant’s Bull/Bear Market Cycle Indicator moved back above zero for the first time since October 2025, reaching 0.042 on Aug. 26.\n\nThe significance comes from what sits underneath https://t.co/9TxZVNodx5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 270,
+   "user": "damskotrades",
+   "url": "https://x.com/damskotrades/status/2091674554863173751",
+   "date": "2026-08-23",
+   "text": "You probably feel overwhelmed\n\nEveryone is shilling something else.\n\nHere's how I handle it &amp; what sectors/tokens I like. \n\n1. Allocate your portfolio. \n\nKeep it simple\n\nA large part of my portfolio is and will be slowly deployed into Bitcoin and a few high-conviction tokens. https://t.co/geG3394LDm"
+  }
+ ]
+}

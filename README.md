@@ -55,9 +55,75 @@ Ranked bull-vs-bear board (like the "analyst sentiment" boards on X). The app on
 - Weight per item: posts `1 + ln(1 + likes + 2·reposts + replies + 2·quotes)`, news stories `3`.
 - Bull share = Σw(bull) ÷ Σw(bull + bear). Neutral items count toward "posts scanned" only.
 - Band = 95% Wilson interval on the Kish effective sample size `(Σw)² / Σw²` (drawn hatched around the split).
-- σ = (bull share − mean) ÷ stdev across the tickers in that run (cross-sectional), until a ticker has
-  20 days in `sentiment_history.json`; then it switches to a z-score vs its own history (`sigma_basis: "own"`).
+- σ = (bull share − mean) ÷ stdev across the tickers in that run (cross-sectional), unless the ticker has an
+  "Over time" history series with ≥ 20 earlier points; then σ = z-score of its **latest history point** vs its own earlier
+  points (`sigma_basis: "own"`). Both sides of that z-score come from the same X-only rules-labeled series, so hand-labeled
+  board levels and rules-labeled history levels are never mixed. Today MSTR, TSLA and BTC use "own"; the other 15 board names are cross-sectional.
 - Bear headline is null (shows "No dominant bearish consensus…") when there are fewer than 2 bear items or the bear share is under 15%.
 - Rows are sorted by σ, descending. The ticker box filters the dataset; it can't add tickers that aren't in the json.
 - Crypto rows: give the input ticker `display`, `logoKey` (e.g. `"c:BTC"`, same crypto logo path as the heatmap) and `kind: "crypto"`;
   they pass through to `sentiment.json`. With more than 12 rows the board switches to a compact layout (no company-name line, short no-bear text) so 18+ rows fit the 1600×900 PNG.
+
+### Over time (history) view
+
+Sentiment tab → **View: Over time**. Weekly bull share (0–100%) per ticker with its 95% band shaded, a dashed 50% line,
+and an optional dashed price line on a right axis (weekly closes from the normal `/api/chart` path with its usual fallbacks:
+`$` for one ticker, % from start when several are picked). The picker lists only tickers that have history:
+**MSTR, TSLA, SPCX, SATA, STRC, BTC-USD**. Hover shows window dates, bull %, band, bull/bear counts, posts and the close.
+Hollow dots = thin week (< 8 bull+bear posts). Download PNG is 1600×900; view, picker and price toggle are saved per tab in views.
+Data: `sentiment_history.json` → `series` (served at `/api/sentiment_history`); the board's own daily snapshots sit under `daily`.
+
+**History is X-only and labeled by rules, not by hand.** It differs from the board on purpose:
+- No news (the X news search can't be windowed to past weeks), so every history point is X posts only.
+- 2 searches per ticker-window (the plain and opinion queries below), ≤ 25 posts each, deduped, relevancy-sorted.
+- Posts are labeled by `tools/sentiment_lexicon.py` (opinion keywords with negation handling; price-move reports, TA level sheets,
+  ticker lists, polls like "bullish or bearish?" and spam are neutral). Check against the 867 hand-labeled posts of
+  2026-10-18 (`python3 tools/sentiment_lexicon.py`): 72% 3-way agreement, 84% agreement on bull vs bear when both call it
+  polar, but per-ticker level only loosely tracks the hand labels (r ≈ 0.5, mean gap ≈ 20 pts). Read the lines for **direction and
+  turns within a ticker**, not as levels comparable to the board bars or across tickers.
+- Same weights, bull-share formula and Wilson/Kish band as the board (`build_sentiment.score`).
+- Windows: 7 days ending Sunday 16:00 UTC (noon ET); a point is plotted at its window end date. Backfill: 26 weeks
+  (windows ending 2026-04-19 … 2026-10-11) plus the Oct 11–18 week (MSTR/TSLA/BTC re-label the board snapshot's posts; SPCX/SATA/STRC used the 2 searches).
+- SPCX listed on Nasdaq on Jun 12 2026 (pre-IPO posts were mostly perps/tokens), so its history starts with the window ending Jun 14 (19 points).
+- SATA is **Strive's** (ASST) variable-rate preferred, not Strategy's; STRC is Strategy's.
+
+Per-ticker queries (X strips `$`; times are `start_time`/`end_time` in UTC; `max_results` 25, `sort_order` relevancy,
+`post.fields` public_metrics,created_at, `expansions` author_id, `user.fields` username):
+
+| Ticker | plain query | opinion query |
+|---|---|---|
+| MSTR | `MSTR -is:retweet -is:reply lang:en` | `MSTR (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR mNAV) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
+| TSLA | `TSLA -is:retweet -is:reply lang:en` | `TSLA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
+| BTC-USD | `BTC Bitcoin -is:retweet -is:reply lang:en` | `Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
+| STRC | `STRC -is:retweet -is:reply lang:en` | `STRC (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
+| SATA | `SATA (Strive OR ASST OR preferred OR dividend) -is:retweet -is:reply lang:en` | `SATA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
+| SPCX | `SPCX SpaceX -pump -memecoin -is:retweet -is:reply lang:en` | `SPCX (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -pump -memecoin -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
+
+(The very first SATA window, ending Apr 19, used `SATA Strategy -is:retweet -is:reply lang:en` for the plain query.)
+
+### Daily refresh routine (7:30 AM ET) — exact steps
+
+Do both parts every morning. Budget ≈ 12 X calls for the history + ≈ 3 per board ticker; stay under 30 calls/minute.
+
+**A. History points for the 6 history tickers** (MSTR, TSLA, SPCX, SATA, STRC, BTC-USD):
+1. Let `END` = now rounded down to the hour in UTC (e.g. `2026-10-19T11:00:00Z`) and `START` = `END` − 7 days.
+2. For each ticker run the 2 searches from the table above with `start_time=START`, `end_time=END`, saving each result to a file
+   (connector `write_to_file`). No news.
+3. For each ticker:
+   `python3 tools/sentiment_history.py ingest <TICKER> <START> <file_plain> <file_opinion> --end <END> --src x-rolling7 --q "<plain query>" --q "<opinion query>"`
+   This writes `tools/sentiment_input/history/<TICKER>/<END date>.json` (rules-labeled posts; re-running the same day overwrites that day's file).
+   Never hand-edit labels in history files: the series must stay one consistent labeler.
+4. `python3 tools/sentiment_history.py build` → rewrites `series` in `sentiment_history.json` from every saved file.
+
+**B. Board snapshot** (the 18 names, unchanged): steps 1–3 of "Data pipeline" above, then
+`python3 tools/build_sentiment.py tools/sentiment_input/<YYYY-MM-DD>.json` **after** A.4 (so MSTR/TSLA/BTC σ uses today's history point).
+It writes `sentiment.json` and adds `daily[<date>]` to `sentiment_history.json` without touching `series`.
+
+**C.** Commit `sentiment.json`, `sentiment_history.json`, `tools/sentiment_input/<date>.json` and `tools/sentiment_input/history/` together.
+
+**How daily points mix with the weekly backfill:** both are 7-day windows with the same 2 queries, labeler and math, so they are one
+series: the backfill gives one point per week (windows ending Sundays, `src: "x-weekly"`), and from Oct 19 the routine adds one
+overlapping rolling-7-day point per day (`src: "x-rolling7"`, plotted at its end date). Consecutive daily points share 6 of 7 days,
+so they move smoothly; don't read day-to-day wiggles as new information. The weekly points are left as they are (never
+recomputed from daily files). σ "own" compares the newest point with all earlier points (weekly + daily).
+If a search errors or returns nothing, skip that ticker for the day (no point is better than an invented one) and note it in the commit message.

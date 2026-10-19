@@ -1,0 +1,436 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-08-02T16:00:00Z",
+ "end": "2026-08-09T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "BTC Bitcoin -is:retweet -is:reply lang:en",
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "dailyviralstory",
+   "url": "https://x.com/dailyviralstory/status/2086042266083230061",
+   "date": "2026-08-08",
+   "text": "🚨 CleanSpark Adds More Bitcoin to Its Treasury! ₿🔥\n\nCleanSpark just added 7 BTC, bringing its total Bitcoin holdings to an impressive 13,931 BTC — keeping the company among the world’s largest corporate Bitcoin holders.\nhttps://t.co/mbbEFU3UxS\n\n📈 13,931 BTC now held\n⛏️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "dailyviralstory",
+   "url": "https://x.com/dailyviralstory/status/2086042329035518217",
+   "date": "2026-08-08",
+   "text": "🚨 CleanSpark Adds More Bitcoin to Its Treasury! ₿🔥\n\nCleanSpark just added 7 BTC, bringing its total Bitcoin holdings to an impressive 13,931 BTC — keeping the company among the world’s largest corporate Bitcoin holders.\n\n📈 13,931 BTC now held\n⛏️ Bitcoin accumulated through"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 44,
+   "user": "BTCTimescom",
+   "url": "https://x.com/BTCTimescom/status/2085714435683897603",
+   "date": "2026-08-07",
+   "text": "Bullish #Bitcoin developments this week (8/3–8/7):\n\n• 📈 @Strategy sold 1,638 BTC, raised $290.6M through MSTR, expanded its USD Reserve to $4B, and repurchased $81.2M of STRC.\n• 🇺🇸 Strategy joined the Invest America Business Pledge, matching $1,000 Trump Accounts for employee"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 53,
+   "user": "King0ftheCharts",
+   "url": "https://x.com/King0ftheCharts/status/2084007154084941827",
+   "date": "2026-08-02",
+   "text": ".\n♞🚨How to Make a lot of Money Trading Bitcoin\nBTC Video Below \n\nMy Winning Cycle-Proven BTC Macro Strategy Revealed\n\nThe Secret to Success Linked Below \nBTC Video Here\nhttps://t.co/slmWEstuP8\n\n.\n$BTC #BTC $IBIT #Bitcoin $BTCUSD #BTCUSD #BTCNews $ETH $HODL $SOL #crypto https://t.co/4vhgCiIDSx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Btc_Janta_Party",
+   "url": "https://x.com/Btc_Janta_Party/status/2084401184899465226",
+   "date": "2026-08-03",
+   "text": "American Bitcoin Mines 932 BTC in Q2, Reserve Hits 8,300 BTC\n\nAmerican Bitcoin reported a record 932 BTC mined in Q2, growing its reserve to ~8,300 BTC. Mining revenue rose 8% to $67M, while cost per BTC mined remained flat at $36,500. #Bitcoin #Mining #Institutional https://t.co/ZVHdVxA92j"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "jr8448574",
+   "url": "https://x.com/jr8448574/status/2083990816259744008",
+   "date": "2026-08-02",
+   "text": "🚀 Earning free BTC with BTCKong!\n\nClaim free Bitcoin from the faucet and complete simple tasks to earn more BTC.\n\n🌐 https://t.co/W8OM5joJ2v\n\n#BTCKong #Bitcoin #BTC #Crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "fininvai",
+   "url": "https://x.com/fininvai/status/2086460050181439513",
+   "date": "2026-08-09",
+   "text": "Why do many coins move with Bitcoin?\n\nIn crypto, many coins often appear to move in a similar direction as BTC.\n\nWhen Bitcoin rises, many altcoins may rise too.\n\nWhen Bitcoin drops sharply, many altcoins often fall even harder.\n\nThis does not mean every coin is the same.\n\nIt https://t.co/3H59oXMFjv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptoCoverageX",
+   "url": "https://x.com/CryptoCoverageX/status/2084006332718616838",
+   "date": "2026-08-02",
+   "text": "843,775 BTC held. 5 weeks of silence. Then Saylor drops \"Bitcoin Drive engaged.\" $63.69B in BTC + 12% STRC rate — something big is coming. 👀 #Bitcoin #BTC $BTC Read more: https://t.co/ljBhdPAMk0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "0xAshutosh",
+   "url": "https://x.com/0xAshutosh/status/2086047958790021548",
+   "date": "2026-08-08",
+   "text": "Who is Satoshi Nakamoto?\n\n2008 — Satoshi publishes the Bitcoin white paper.\n\n2009 — Bitcoin launches. Satoshi mines the Genesis Block and sends 10 BTC to Hal Finney.\n\n2010 — Bitcoin gets exchanges, a market price, and its first famous purchase: 10,000 BTC for two pizzas.\n\n2011 —"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "passion__rain",
+   "url": "https://x.com/passion__rain/status/2083998471166865778",
+   "date": "2026-08-02",
+   "text": "On 6th Of May SHORTED PUTS of #BITCOIN $BTC around $60418.00 ( #BTC )\n\n#Holding_PUTS_short of \n$BTC ( BITCOIN ) 👉 $56000 PUT option 1000 QUANTITIES  for 28th AUGUST (28 AUGUST 2026) expiry  \n\n➡️ 1000 QUANTITIES \nSHORTED ➡️ $BTC 56000 P\n\nShort average price: $3259.81 https://t.co/GBeiRsVjTX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TheICTTrader42",
+   "url": "https://x.com/TheICTTrader42/status/2086355557145833974",
+   "date": "2026-08-09",
+   "text": "🚨 BLOCK ADDS MORE BITCOIN! ₿\n\n🇺🇸 Block has reportedly added 234 BTC, worth approximately $15.1 million.\n\nTheir Bitcoin treasury now stands at 9,117 BTC. 👀🚀\n\nInstitutional Bitcoin accumulation continues to be a major trend to watch.\n\n#BTC #Bitcoin #Block #Crypto https://t.co/8405Rm3xGi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 489,
+   "user": "rektcapital",
+   "url": "https://x.com/rektcapital/status/2085735508366200970",
+   "date": "2026-08-07",
+   "text": "#BTC \n\nBitcoin continues to try to press into the July highs and the 50-Month EMA\n\nThis is exactly what Bitcoin did in August 2022\n\nUntil Bitcoin clearly reclaims the 50 EMA as support, BTC is technically positioned to repeat 2022 history\n\n$BTC #Crypto #Bitcoin https://t.co/yTVme90EMm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TimesOfBlockC_",
+   "url": "https://x.com/TimesOfBlockC_/status/2084612816489549917",
+   "date": "2026-08-04",
+   "text": "🚨 Coinbase increased its Bitcoin holdings by 1,922 $BTC in the first half of 2026.\n\nThe crypto exchange has expanded its Bitcoin treasury, bringing its total holdings to 17,311 $BTC as institutional exposure to the leading digital asset continues to grow.\n\nKey highlights:\n\n🟠 https://t.co/ZW0qNvFNY9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 77,
+   "user": "King0ftheCharts",
+   "url": "https://x.com/King0ftheCharts/status/2085803046907650073",
+   "date": "2026-08-07",
+   "text": ".\nURGENT Bitcoin Warning  Video Below - WATCH IMMEDIATELY!!!\n\nA Scary August Bitcoin CRASH is About to Happen\n If You Think BTC has Bottomed at 57k, You're Wrong\n\nBTC Emergency Video Here\nhttps://t.co/CclDYZiiEG\n\n.\n$BTC #BTC $IBIT #Bitcoin $BTCUSD #BTCUSD #BTCNews $ETH $HODL $SOL https://t.co/35PLBPV56o"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TradeSignals_24",
+   "url": "https://x.com/TradeSignals_24/status/2084140884279623763",
+   "date": "2026-08-03",
+   "text": "🚨 Coinbase Continues Bitcoin Accumulation\n\n• Coinbase has added 2,763 BTC to its holdings since January 1.\n• Its total Bitcoin accumulation has now surpassed 5,535 BTC since last August.\n• The continued accumulation highlights growing institutional interest in Bitcoin.\n\n📈 https://t.co/mQU5yHcQYh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DCABitcoinToday",
+   "url": "https://x.com/DCABitcoinToday/status/2084001313868664941",
+   "date": "2026-08-02",
+   "text": "Should you buy/DCA Bitcoin today?\n\nBTC price: $63,254\n\nA little buying here still looks justified.\n\n#Bitcoin #BTC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "CollaTilli43944",
+   "url": "https://x.com/CollaTilli43944/status/2083971096777474129",
+   "date": "2026-08-02",
+   "text": "Michael Saylor hints that Strategy may be preparing another Bitcoin purchase after posting Bitcoin Drive engaged The message renews focus on corporate BTC accumulation and potential demand Watch for filing or news Is a BTC buy near #Bitcoin #Crypto https://t.co/rDhpBaiVsv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 91,
+   "user": "aremu_ibrah1m",
+   "url": "https://x.com/aremu_ibrah1m/status/2086352245373776368",
+   "date": "2026-08-09",
+   "text": "guys i think i finally understand women.\n\nthey want you to have money.\n\nbut apparently saying “i have 0.4 btc” isn't enough.\n\nanyway 😭\n\nbitcoin has always been great at being bitcoin.\n\nbut what happens when you can actually put that btc to work beyond the bitcoin network? https://t.co/4rwWn2b0LE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TimesOfBlockC_",
+   "url": "https://x.com/TimesOfBlockC_/status/2084239705831514118",
+   "date": "2026-08-03",
+   "text": "🏦 American Bitcoin posts a $57.2 million Q2 loss as its Bitcoin holdings continue to grow.\n\nThe Bitcoin mining company, co-founded by Eric Trump, expanded its treasury despite reporting a sizable quarterly loss driven by digital asset valuations.\n\nKey highlights:\n• 📉 Q2 net https://t.co/PxOjfbhlaC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "bob7ak",
+   "url": "https://x.com/bob7ak/status/2083987763980828702",
+   "date": "2026-08-02",
+   "text": "Trump Media sold 2,627 $BTC worth approximately $165 million over the past 24 hours.\n\n📊 Bitcoin Exchange Flows:\n🟢 Inflow: 11.55K BTC (~$1.37B)\n🔴 Outflow: 7.29K BTC (~$545M)\n\nDespite the large sale, exchange inflows continue to outpace outflows.\n\n#Bitcoin #Crypto #Blockchain https://t.co/8UHJ3wGuLd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "VnInvestBlogger",
+   "url": "https://x.com/VnInvestBlogger/status/2084217289046720600",
+   "date": "2026-08-03",
+   "text": "🚨 BREAKING: Michael Saylor just flashed another Bitcoin buy signal. 👀\n🟠 Saylor posted his weekly BTC tracker with the message \"Bitcoin mode activated,\" fueling speculation that Strategy Strategy could announce a new BTC purchase after a 5-week pause.\n\n📊 Key facts for traders: https://t.co/y3J6MF9raw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 57,
+   "user": "godfred_xcuz",
+   "url": "https://x.com/godfred_xcuz/status/2084667587690951042",
+   "date": "2026-08-04",
+   "text": "Why stBTC?\n\nStacks will launch Bitcoin staking which requires a staker to pair BTC to STX to earn a targeted 3% APY in BTC.\n\nBitcoin holders who want to participate in Bitcoin staking with only BTC can do so with stBTC.\n\nstBTC is a representation of BTC staked on Stacks, which https://t.co/LZ6idRojPV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "4EVRink",
+   "url": "https://x.com/4EVRink/status/2084011049767104852",
+   "date": "2026-08-02",
+   "text": "\"A world of BTC And within every BTC A world of financial struggle...\"\n\n🟧 Block 960,762 on Bitcoin\n\n#Bitcoin #4EVR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ainotesus",
+   "url": "https://x.com/ainotesus/status/2085063255978905699",
+   "date": "2026-08-05",
+   "text": "BITCOIN: BANANA ZONE COMING (yes)!!!! 🚨🚨🚨\n\nBitcoin is holding the 200-week moving average while the market shifts toward a potential crypto banana zone. Bitcoin is in a buy zone near its 200-week moving average, where slowly dollar-cost averaging is recommended despite the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CashflowingOptn",
+   "url": "https://x.com/CashflowingOptn/status/2084373290676875608",
+   "date": "2026-08-03",
+   "text": "Bitcoin may have already put in its sentiment low back in November.\n\nSince then, Alphractal’s Tactical Bull-Bear Sentiment Index (365D) has been slowly climbing off the bottom — a classic sign that panic is fading and the market may be transitioning from fear to recovery.\n\nEven https://t.co/U0UL2dcOwJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "dingding_TW666",
+   "url": "https://x.com/dingding_TW666/status/2085918717712691649",
+   "date": "2026-08-08",
+   "text": "DingDing Cross-Market Technical Analysis (2026/08/08 10:06 UTC+8) #BTCUSDT #ADAUSDT\n\n【⭐ DingDing Today’s Trading Highlights Quick Summary ⭐】\nToday’s key takeaway:\nMajor coins are rebuilding from depressed levels, but altcoins remain highly selective. Buy only where support"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2085830948625781199",
+   "date": "2026-08-07",
+   "text": "📊【XWIN CAPITAL INDEX｜August 8, 2026】\n\nOverall Score: 48 / 100\n\n・80–100 = Strong Uptrend\n\n・60–79 = Moderate Uptrend\n\n・40–59 = Neutral / No Clear Direction\n\n・20–39 = Moderate Downtrend\n\n・0–19 = Strong Downtrend\n\n7-Day Moving Average: 28.57 ↑\n\n14-Day Moving Average: 39.79 https://t.co/AqinhXuJ6g"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "WizenlabsX",
+   "url": "https://x.com/WizenlabsX/status/2084942639938650252",
+   "date": "2026-08-05",
+   "text": "Short-Term (1–4 Weeks)\nBullish: +15% to +35%\nNeutral: Sideways within ±10%\nBearish: -20% to -35%\nMid-Term (1–3 Months)\nIf Bitcoin remains bullish and the altcoin market strengthens, AVI could see 40%–80% upside.\nIf market sentiment weakens, expect 20%–40% downside... https://t.co/yVZR1jQtLN"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 27,
+   "user": "akarlin",
+   "url": "https://x.com/akarlin/status/2084009392845033691",
+   "date": "2026-08-02",
+   "text": "Two major bullish and three major bearish catalysts for legit cryptocurrencies in the near AGI age.\n\n🐻\n* Most protocols and wallets that aren't perfectly airtight will be drained. Growing climate of fear.\n* Liquidity going into endless maw of AI (ongoing! and a big part of the https://t.co/tPuCo73sgD"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 37,
+   "user": "Hamzatheinsider",
+   "url": "https://x.com/Hamzatheinsider/status/2086428844421251538",
+   "date": "2026-08-09",
+   "text": "🚨 $BTC UPDATE 🚨\n\nAs i mentioned in my previous $BTC update 65K &amp; 67K were possible upside targets.\n65K has now been hit exactly as expected. 🎯✅\n\nCurrently $BTC has formed a 4H bearish Order Block so I’m expecting some short-term downside from the current price.\n\nHowever my https://t.co/mKrtVzxa3S https://t.co/1k6UvO0KZW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "danishcryptoBTC",
+   "url": "https://x.com/danishcryptoBTC/status/2084597644559785996",
+   "date": "2026-08-04",
+   "text": "$BTC 1year Liquidity Heatmap\n\nUpside\nExtremely - $77,171\nVery High - $67,389\nHigh - $84,826\n\nDownside\nExtremely - $56,756\nVery High - $61,011\nHigh - $51,655\n\n#Bitcoin #BTC #Crypto #Liquidity #Cryptocurrency #liquidation \n#BTCUSDT #BitcoinPrice #bull #Bear #CryptoTrading #RANADANI https://t.co/rcI7fvd4dv"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 11,
+   "user": "Anatolii_Volf",
+   "url": "https://x.com/Anatolii_Volf/status/2084182073628114982",
+   "date": "2026-08-03",
+   "text": "🌤 Monday Midday | Top Gainer &amp; Top Loser Update 📊\n🚀 $ICNT &amp; 📉 $VIC\nThe market is anything but quiet this Monday afternoon. While ICNT is attracting aggressive buyers after a powerful breakout, VIC continues to break lower as sellers remain fully in control.\n🚀 $ICNT (4H) — https://t.co/4gPZlTVS3L"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TU_Crypto_News",
+   "url": "https://x.com/TU_Crypto_News/status/2085324025664803116",
+   "date": "2026-08-06",
+   "text": "Ivan Liljeqvist says Bitcoin could enter a fresh bull run after the halving, arguing the bear-market phase is ending and bullish momentum is building. He has also called BTC undervalued below its 200-week moving average, while warning many altcoins remain down as much as 99%."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 51,
+   "user": "xbtsdex",
+   "url": "https://x.com/xbtsdex/status/2085360068715794536",
+   "date": "2026-08-06",
+   "text": "BTC at $64,160 - bulls and bears in a stalemate.\n\n🐂Bullish signals:\n\n📈 BTC rallied 4% from Aug 3 low ($62,300) on US-Iran talks optimism — oil dropped 4.5-7%, easing inflation fears\n\n📈 SuperTrend indicator flipped bullish near $64,700 - last time this happened (July 3), BTC https://t.co/hBMOxRGsLC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CoinateExchange",
+   "url": "https://x.com/CoinateExchange/status/2084653836807848312",
+   "date": "2026-08-04",
+   "text": "Bear or bull?\n\nThe market always gives you more than one story.\nWhat matters is how you read it—and how you manage the risk that comes with your view.\n\nChoose your side.\nStay flexible.\nTrade with discipline. ∞\n\nWhat do you see?\n🐻 Bearish\n🐂 Bullish\n#Coinate #Bitcoin #Crypto https://t.co/3n3TRmW6Ly"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TheCryptoJonny",
+   "url": "https://x.com/TheCryptoJonny/status/2084228224809316415",
+   "date": "2026-08-03",
+   "text": "BITCOIN MONTHLY ANALYSIS\n\nBitcoin closed July +7.32%, holding above the Monthly MA50 ($60,763).  \n\nThe chart still follows its typical 1-year bear cycle, with 3–4 months of sideways movement possible before the next bull run.  \n\nKey Levels \n- Support: $57,748 \n- Resistance: https://t.co/addtiIhCiv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 37,
+   "user": "CryptoThena1",
+   "url": "https://x.com/CryptoThena1/status/2084248042744717320",
+   "date": "2026-08-03",
+   "text": "BITCOIN MONTHLY ANALYSIS\n\nBitcoin closed July +7.32%, holding above the Monthly MA50 ($60,763).  \n\nThe chart still follows its typical 1-year bear cycle, with 3–4 months of sideways movement possible before the next bull run.  \n\nKey Levels \n- Support: $57,748 \n- Resistance: https://t.co/KUirRWhhVd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "FernandoBtc2021",
+   "url": "https://x.com/FernandoBtc2021/status/2085933186895221032",
+   "date": "2026-08-08",
+   "text": "EXPOSING THE MYTHS OF BITCOIN, ALTCOIN, MARKET “ANALYSTS”  &amp; YOUTUBERS\n\nPART 1\n\nI keep seeing YouTubers and “analysts” on X claiming:“ALTSEASON IS COMING!!! BTC IS GOING TO EXPLODE WHEN THE CLARITY ACT IS APPROVED!!!”But which one is it?BTC EXPLODES — OR WE GET ALTSEASON?Let’s be https://t.co/zaHRXNdgeb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 991,
+   "user": "AshCrypto",
+   "url": "https://x.com/AshCrypto/status/2084226830567960742",
+   "date": "2026-08-03",
+   "text": "BITCOIN MONTHLY ANALYSIS\n\nBitcoin closed July +7.32%, holding above the Monthly MA50 ($60,763).  \n\nThe chart still follows its typical 1-year bear cycle, with 3–4 months of sideways movement possible before the next bull run.  \n\nKey Levels \n- Support: $57,748 \n- Resistance: https://t.co/FASBJhUlOx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FernandoBtc2021",
+   "url": "https://x.com/FernandoBtc2021/status/2085933045207507254",
+   "date": "2026-08-08",
+   "text": "EXPOSING THE MYTHS OF BITCOIN, ALTCOIN, MARKET “ANALYSTS”  &amp; YOUTUBERS\n\nPART 1\n\nI keep seeing YouTubers and “analysts” on X claiming:“ALTSEASON IS COMING!!! BTC IS GOING TO EXPLODE WHEN THE CLARITY ACT IS APPROVED!!!”But which one is it?BTC EXPLODES — OR WE GET ALTSEASON?Let’s be https://t.co/W6Seb5Lueu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2084173014011101652",
+   "date": "2026-08-03",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 𝟮 / 𝟱 (𝗹𝗲𝗮𝗻𝗶𝗻𝗴 𝗯𝗲𝗮𝗿𝗶𝘀𝗵) - Market described as “quiet, low‐sentiment bear phase” – patience emphasized, reminiscent of 2022 downturn. - Bitcoin ETFs posted a $61.5 M net outflow, ending a three‐week inflow streak; BTC selling pressure https://t.co/7IuLlJFXC9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "jaydasalpha",
+   "url": "https://x.com/jaydasalpha/status/2084895278398837105",
+   "date": "2026-08-05",
+   "text": "This Is My Own Observations. https://t.co/3GvyVPBqzC"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 14,
+   "user": "nnewera3",
+   "url": "https://x.com/nnewera3/status/2083976492564828598",
+   "date": "2026-08-02",
+   "text": "@liquidtrading \n\ndo you agree with the current market BTC view?\n\nWhy I disagree:\nThe prevailing cautious/bearish lean treats the post-peak decline as a structural reset that should keep prices suppressed or grinding lower for longer. That underweights Bitcoin’s historical https://t.co/BavuoNs6F8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2084897705554317658",
+   "date": "2026-08-05",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟯 / 𝟱 (𝗺𝗼𝗱𝗲𝗿𝗮𝘁𝗲𝗹𝘆 𝗯𝘂𝗹𝗹𝗶𝘀𝗵) - 𝗦𝗼𝗹𝗮𝗻𝗮 𝗴𝗼𝘃𝗲𝗿𝗻𝗮𝗻𝗰𝗲 𝗽𝗿𝗼𝗽𝗼𝘀𝗮𝗹 – Raising daily SOL burns dramatically (≈650 → 7,500‐9,000) and doubling the disinflation rate is viewed as a positive supply‐side catalyst that https://t.co/Qg77Z2vUXy"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 126,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2084096796352217373",
+   "date": "2026-08-03",
+   "text": "BTC remains below the TBO cloud after the weekend rebound failed to reclaim it, while the slow line has started turning down and nearby support has already broken. The next downside references are 61,303 and the sub-60K zone, with the weekly bearish engulfing candle reinforcing https://t.co/l8eKkYmHza"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 17,
+   "user": "swarmister",
+   "url": "https://x.com/swarmister/status/2084973031693091252",
+   "date": "2026-08-05",
+   "text": "While we were at a restaurant having a bite to eat, I checked the charts and, to be honest, got a little upset.\n\nAfter a false breakout to the downside, $SPY broke out of its consolidation range to the upside and hit a new ATH.\n\nIt’s moments like these that really drive home just https://t.co/JEzbevC6EL"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "SmCrypto_bro",
+   "url": "https://x.com/SmCrypto_bro/status/2084336058943299840",
+   "date": "2026-08-03",
+   "text": "Bitcoin didn't pump today because of a single bullish headline.\n\nIt was a chain reaction.\n\nOver the past few sessions, the market became heavily positioned to the downside. Traders expected more weakness after ETF outflows, Fed uncertainty, and geopolitical risks. But when BTC https://t.co/2iYgOD4Thj"
+  }
+ ]
+}
