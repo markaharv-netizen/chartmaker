@@ -41,6 +41,7 @@ def main(path, asof=None):
             "bull_headline": t.get("bull_headline"), "bear_headline": bear,
             "posts": sum(i["kind"] == "post" for i in t["items"]), "news": sum(i["kind"] == "news" for i in t["items"]),
             "classified": len(lab), "n_bull": nb, "n_bear": nr, "n_eff": round(neff, 1),
+            **{k: t[k] for k in ("display", "logoKey", "kind") if k in t},
             "sources": [{"label": i["label"], "user": i.get("user"), "url": i["url"]} for i in top("bull") + top("bear")]})
     hist[date] = {r["symbol"]: r["bull"] for r in rows}
     ps = [r["bull"] for r in rows]; mu, sd = statistics.mean(ps), statistics.pstdev(ps) or 1

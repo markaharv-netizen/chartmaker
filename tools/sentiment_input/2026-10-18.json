@@ -6,7 +6,8 @@
  "queries": {
   "posts_a": "<T> -is:retweet -is:reply lang:en (relevancy, 25)",
   "posts_b": "<T> (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en (relevancy, 25)",
-  "news": "<company> stock, max_age_hours=168, 5 results"
+  "news": "<company> stock, max_age_hours=168, 5 results",
+  "note_btc": "BTC: posts_a 'BTC Bitcoin ...', posts_b 'Bitcoin (bullish OR ...)', news 'Bitcoin price'"
  },
  "tickers": {
   "MSTR": {
@@ -5174,6 +5175,3310 @@
      "label": "neutral",
      "title": "Coinbase CEO Urges Businesses to Adopt Stablecoin Strategies",
      "url": "https://x.com/i/trending/2110048872362135976"
+    }
+   ]
+  },
+  "BTC-USD": {
+   "name": "Bitcoin",
+   "bull_headline": "Weekly structure and bull-flag setup point to a rebound",
+   "bear_headline": "Rejected at $84K; bearish weekly candle and ETF outflows",
+   "items": [
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "DeWoNews",
+     "url": "https://x.com/DeWoNews/status/2111973725922845121",
+     "date": "2026-10-19",
+     "text": "\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n  \u269c\ufe0f  Bitcoin  is  Pumping  \u269c\ufe0f\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n Bitcoin   @    $    82.000   \u2b06\ufe0f \n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n  \u2b06\ufe0f  $BTC    \ud83c\udd99  + 2,00 %  \u2b06\ufe0f \n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014 \n#Bitcoin #BTC #ETH #Crypto https://t.co/ytS8bPXWHK"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "DeWoNews",
+     "url": "https://x.com/DeWoNews/status/2111973804490498453",
+     "date": "2026-10-19",
+     "text": "\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n  \u269c\ufe0f  Bitcoin  is  Pumping  \u269c\ufe0f\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n Bitcoin   @    $    82.000    \u2b06\ufe0f \n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n  \u2b06\ufe0f  $BTC    \ud83c\udd99  + 2,00 %  \u2b06\ufe0f \n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014 \n#Bitcoin #BTC #ETH #Crypto https://t.co/bDsXuphnAF"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Crypto_TSP",
+     "url": "https://x.com/Crypto_TSP/status/2111977368042807614",
+     "date": "2026-10-19",
+     "text": "\ud83d\udea8 CRYPTO MARKET UPDATE | OCT 19\n\n\u20bf BITCOIN: THE NEXT MOVE MATTERS.\n\nBTC is trading around $81.6K, with $80.6K\u2013$82.2K defining the recent 24H range.\n\n\ud83d\udcc8 Above $82.2K: Watch for breakout confirmation.\n\ud83d\udcc9 Below $80.6K: Watch for renewed selling pressure.\n\n\u26a1 Altcoin radar: NEAR, https:"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "CoinPost_Alert",
+     "url": "https://x.com/CoinPost_Alert/status/2111971383492456460",
+     "date": "2026-10-19",
+     "text": "Bitcoin - Buy vs Sell  (10/19 09:03 JST)\nPrice: $82,078\n\nSpot Vol (1h)\n  Buy: $34.3M\n  Sell: $23.0M\n\nDerivs Vol (1h)\n  Buy: $330.7M\n  Sell: $250.9M\n\n#BTC #Bitcoin https://t.co/e67sBOZ7PM"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "JamesRaymond012",
+     "url": "https://x.com/JamesRaymond012/status/2111973181296869594",
+     "date": "2026-10-19",
+     "text": "Bull Run on #Bitcoin  ?\n\n#BTC  #cryptocurrencies https://t.co/5lSUT1IaoL"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "UnspendableBTC",
+     "url": "https://x.com/UnspendableBTC/status/2111970965047398842",
+     "date": "2026-10-19",
+     "text": "Provably unspendable $BTC \u00b7 Bitcoin Core\n\nTotal: 230.12847671 BTC\nShare of 21M BTC: 0.001095850%\n\n\u0394 since previous snapshot:\n+20,987 sats (+0.000091197%)\n\nSnapshot: 19 Oct 2026, 00:01 UTC\nBlock #972077 \u00b7 0000000000\u20264574e217"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "cexscan",
+     "url": "https://x.com/cexscan/status/2111973191832768688",
+     "date": "2026-10-19",
+     "text": "Last 60m - #Binance Futures (USDT Trades)\n\n\ud83d\udcc8 Top 3 Gainers:\n$4 (4) : \u219110.53%\n$ARIA (AriaAI) : \u219110.01%\n$CSOPSKHYNIX2L (CSOP SK Hynix Daily Max (2x) Leveraged Product (Derivatives)) : \u21919.87%\n\n\ud83d\udcc9 Top 3 Losers:\n$SKDD (GraniteShares 2x Short SK Hynix Daily ETF(Derivatives)) :"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Cypher_Citadel",
+     "url": "https://x.com/Cypher_Citadel/status/2111980077260898622",
+     "date": "2026-10-19",
+     "text": "\ud83d\udc0b Whale Alert: 20,448.53 BTC moved\n\nUnknown (bc1qx2...pd9l) \u2192 Unknown (bc1qx2...pd9l)\n$1,678,988,307\n\n#Bitcoin #WhaleAlert #OnChain https://t.co/2L2wmK7UqG"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 1,
+     "user": "HecTheProtector",
+     "url": "https://x.com/HecTheProtector/status/2111980753693167784",
+     "date": "2026-10-19",
+     "text": "Sunday night energy hit different! \ud83d\ude80\n$BTC pushing strong past $82K to close out the weekend. The chart is speaking, and the movement is real. \ud83d\udcc8\u26a1\n\u200b#BTC #Bitcoin #Crypto #Ky https://t.co/22S8331F2J"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 6,
+     "user": "EdEdward_trump",
+     "url": "https://x.com/EdEdward_trump/status/2111974371879534942",
+     "date": "2026-10-19",
+     "text": "I said that if $BTC dumps to $80,000, I\u2019d give away $20,000 in Bitcoin to 15 people.\n\nWell, we made it.\n\nAs promised, I\u2019m giving away $20,000 in $BTC to 15 lucky winners today.\n\nTo enter:\n\u2705 Like\n\u2705 Retweet\n\u2705 Comment \u201cBTC\u201d \ud83d\udd14\n\nEntries close in 24 hours. Good luck! https://t.co/oZmng"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 4,
+     "user": "linbo_tang",
+     "url": "https://x.com/linbo_tang/status/2111980186833178798",
+     "date": "2026-10-19",
+     "text": "Bitcoin $BTC shares many of the qualities that make gold valuable.\n\nScarcity.\nDurability.\nDivisibility.\nHard to counterfeit.\n\nAnd Bitcoin is even easier to store, carry, and transfer across borders.\n\nSo why can\u2019t Bitcoin become a store of value like gold?"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "DeWoNews",
+     "url": "https://x.com/DeWoNews/status/2111973381952450812",
+     "date": "2026-10-19",
+     "text": "\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n  \u269c\ufe0f  Bitcoin  is  Pumping  \u269c\ufe0f\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n Bitcoin   @    $    82.000   \u2b06\ufe0f \n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n  \u2b06\ufe0f  $BTC    \ud83c\udd99  + 8,15 %  \u2b06\ufe0f \n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014 \n#Bitcoin #BTC #ETH #Crypto https://t.co/Qtw1265kvL"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 44,
+     "user": "Morecryptoonl",
+     "url": "https://x.com/Morecryptoonl/status/2111975060974215507",
+     "date": "2026-10-19",
+     "text": "$BTC is forming a descending wedge\nBounce this week?\n#Bitcoin https://t.co/tWugipSb88"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 5,
+     "user": "WarriorCry45",
+     "url": "https://x.com/WarriorCry45/status/2111977361415492016",
+     "date": "2026-10-19",
+     "text": "\ud83d\udea8 BITCOIN TO $100,000? IS THE BEAR MARKET FINALLY OVER? \u20bf\ud83d\udd25\n\nThe crypto market could be approaching a major turning point, and Bitcoin bulls are watching closely for signs of a powerful recovery. \n\n#Bitcoin #BTC #100KBitcoin https://t.co/UqYXh3rBXf"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "javedahmedhere",
+     "url": "https://x.com/javedahmedhere/status/2111985085662818362",
+     "date": "2026-10-19",
+     "text": "\ud83e\uddff 4H Crypto Snapshot\n\n\ud83d\udfe1 BTC $82,286 \u2b06\ufe0f0.9%\n\ud83d\udfe3 ETH $2,413 \u2b06\ufe0f0.3%\n\ud83d\udfe0 BNB $724.29 \u2b06\ufe0f0.8%\n\ud83d\udfe2 SOL $104.19 \u2b06\ufe0f0.7%\n\n\ud83d\ude28 Fear &amp; Greed: 59 (Greed)\n\u27a1\ufe0f BTC leads +0.9%\nMarket slightly green... cautious optimism \ud83d\udcca\n\n#Bitcoin #Crypto #Web3"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 4,
+     "user": "TonyT19611230",
+     "url": "https://x.com/TonyT19611230/status/2111971033750315405",
+     "date": "2026-10-19",
+     "text": "#bitcoin $btc 19th Oct 2026 Monday UTC 0000 weekly and daily candles open at $82,100\n\nTotal crypto market cap now at $2.78T (-1.4%) with #btc dominance at 59 2% and #eth at 10.6%. \n\nCrypto Greed Index today at 59 (Greed) https://t.co/qdTEpelkgZ"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "krown_chakra",
+     "url": "https://x.com/krown_chakra/status/2111981727736586577",
+     "date": "2026-10-19",
+     "text": "Day 40 of 100 reps til $100K BTC. #proofofwork\n#bitcoin\n#100repsaday\n#fitshit https://t.co/BoJbF1KYGC"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "feargreedlive",
+     "url": "https://x.com/feargreedlive/status/2111985762812223911",
+     "date": "2026-10-19",
+     "text": "\ud83e\ude99 Crypto Fear &amp; Greed Index: 59 (Greed)\n\n\ud83d\udcb0 Current prices:\n- Bitcoin (BTC): $82,221.99 (+0.26%)\n- Ethereum (ETH): $2,411.24 (+0.12%)\n- Solana (SOL): $104.22 (+0.19%)\n\n#Crypto #Bitcoin #Ethereum #Solana https://t.co/oh9unq0CvV"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "cryptlogis",
+     "url": "https://x.com/cryptlogis/status/2111972130350850362",
+     "date": "2026-10-19",
+     "text": "No more surprises now \ud83d\ude02\n\n\ud83e\udd1e\n\n#BITCOIN $BTC #BTC #BINANCE https://t.co/BV7zvWs2Ll"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "SHRJ91",
+     "url": "https://x.com/SHRJ91/status/2111983281403281533",
+     "date": "2026-10-19",
+     "text": "Live BTC prediction terminal \u2014 @trend_btc_app\n\nUP/DOWN rounds \u00b7 farm $TREND \u00b7 earn $SOL\n\nFree to start \u2193\n\nhttps://t.co/11CJ5Pn2J3\n\n#Bitcoin #BTC #TrendBTC"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "BeelalTrade",
+     "url": "https://x.com/BeelalTrade/status/2111974864252784789",
+     "date": "2026-10-19",
+     "text": "\ud83d\udea8 CRYPTO MARKET UPDATE\n\nBitcoin is fighting to hold $80K, Ethereum is facing ETF outflows, and macroeconomic uncertainty is putting pressure on the market.\n\nBut remember: volatility creates opportunities, not guarantees.\n\n\ud83d\udc40 Watch BTC support levels, ETF flows, and Fed"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Suleimanbala51",
+     "url": "https://x.com/Suleimanbala51/status/2111982944680358191",
+     "date": "2026-10-19",
+     "text": "Writing\n\n\ud83d\udea8 **Bitcoin\u2019s Quantum Security Debate Is Heating Up! \u20bf**\n\u26a1 Coinbase is urging Bitcoin developers to prepare for quantum-resistant security, warning that upgrading the network could take years.\n\n@1096361BTC\n#Bitcoin #BTC #Crypto #QuantumComputing"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "NexuAlpha",
+     "url": "https://x.com/NexuAlpha/status/2111971447069639084",
+     "date": "2026-10-19",
+     "text": "Longs and shorts liquidated\nObserved liquidations:\n1h long $0.14M / short $19.11M\n24h long $421.87M / short $228.52M\n\n#Liquidations #BTC #Bitcoin"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 3,
+     "user": "I888Quant",
+     "url": "https://x.com/I888Quant/status/2111974207617679663",
+     "date": "2026-10-19",
+     "text": "[i888 SYSTEM CORE // DATA FEED: $BTC/USDT]\u25aa\ufe0f HTF Metrics (1W): Macro weekly close confirmed above historical structures. Primary bullish vector intact.\u25aa\ufe0f LTF Grid (H4): Price vector accelerating toward the upper range boundary.#Bitcoin #BTC #Crypto $BTC[Data Feed \ud83d\udc47] https://t.co/"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 0,
+     "user": "CryptoAIgoat",
+     "url": "https://x.com/CryptoAIgoat/status/2111977607281463570",
+     "date": "2026-10-19",
+     "text": "BTC holders stopped sending coins to exchanges.\n\nOnly 4.4% of moved BTC bought 6-12 months ago went to exchanges, down from 40.4% in June. Less sell pressure, but no fresh demand yet. via CryptoQuant #Bitcoin https://t.co/Vq8dMSXmB8"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 151,
+     "user": "DoctorCatX",
+     "url": "https://x.com/DoctorCatX/status/2110341361123680302",
+     "date": "2026-10-14",
+     "text": "$BTC Bitcoin - Update\n\nThe price is struggling too bad on the daily, the last bullish TK cross never got validated and now there is a bearish one.\n\nOf course, $ETH looks even worse and no surprise as it also looked worse weeks ago, as posted previously.\n\nFor this reason, in the h"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 355,
+     "user": "thebtcfrontierX",
+     "url": "https://x.com/thebtcfrontierX/status/2111401199614218720",
+     "date": "2026-10-17",
+     "text": "#ShortTermSaturday - Episode 4 (10/17/26)\n\n\u2712\ufe0fMy dear followers,\n\nbang, bang y'all - we again nailed it! Good to see you here around kicking off your weekend with a great workout for your plebeian Bitcoin mind. It's going to be a lot of male astrology today, so make sure to lean h"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 3,
+     "user": "Howling__Husky",
+     "url": "https://x.com/Howling__Husky/status/2111673947401920913",
+     "date": "2026-10-18",
+     "text": "GOOD FUCKING MORNING, FRIENDS! \u2615\ud83d\udc3a\ud83d\udd25\n\nSUNDAY IS HERE.\n\nCOFFEE IS HOT.\nBITCOIN IS AT $81.8K.\nAND THE HUSKY HAS BEEN DIGGING THROUGH THE CHARTS! \ud83d\udcca\nTIME FOR A PROPER $BTC DEEP DIVE! \ud83d\udc47\n\n1\ufe0f\u20e3 THE BIG PICTURE\n\nBitcoin is trading around $81,820.\n\nLook at the historical chart.\n\nWe've https:"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 4,
+     "user": "BearXMachine",
+     "url": "https://x.com/BearXMachine/status/2111199105577857444",
+     "date": "2026-10-16",
+     "text": "Bitcoin\u2019s volatility has collapsed to levels seen in major equities\u2014but altcoin liquidity never came back. If crypto can\u2019t rebuild participation at $80K+, the market may need a far deeper reset before the next true cycle can begin. https://t.co/pylsb46KBB"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "KEVINWEB3TRADER",
+     "url": "https://x.com/KEVINWEB3TRADER/status/2110302383784001650",
+     "date": "2026-10-14",
+     "text": "October 14 Market Outlook | CPI Could Trigger a Short Squeeze, but I Remain Bearish on US Stocks and BTC\nUS stock market trading volume remains relatively weak, while capital continues rotating between AI stocks and defensive sectors. With significant short positions and hedging "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "BhomeshPanbqpf",
+     "url": "https://x.com/BhomeshPanbqpf/status/2109542581663121765",
+     "date": "2026-10-12",
+     "text": "\ud83c\udfe6 Hawkish Fed Signals: Could push yields higher, strengthen the dollar, and pressure risk assets.\n\ud83d\udc02 Bullish Scenario: Cooling inflation + dovish Fed commentary = potential upside momentum across BTC and altcoins.\n\ud83d\udc3b Bearish Scenario: Sticky inflation + hawkish messaging = https://"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "btc_hipe",
+     "url": "https://x.com/btc_hipe/status/2110568561764921428",
+     "date": "2026-10-15",
+     "text": "\ud83d\udea8 BITCOIN MARKET UPDATE: BULLS vs BEARS! \u20bf\n\nBitcoin is trading near $81,750 as traders watch a critical resistance zone that could determine BTC\u2019s next move. \ud83d\udc40\n\n\ud83d\udcca BTC SUPPORT &amp; RESISTANCE\n\n\ud83d\udcb0 Current Price: ~$81,750\n\n\ud83d\udfe2 SUPPORT ZONES\n\u2022 $80,700 \u2014 Immediate support\n\u2022 $79,560"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "0xSorynn",
+     "url": "https://x.com/0xSorynn/status/2110999675713286177",
+     "date": "2026-10-16",
+     "text": "bitcoin:native Update: Where are We in the Wave?\n\nBack in June, the $57K zone stood out as a major confluence support. That area held and became the base for the current move.\n\nSo where exactly is bitcoin:native in this bull cycle?\n\nAccording to Elliott Wave patterns, https://t.c"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "Bossmustee00",
+     "url": "https://x.com/Bossmustee00/status/2110658126634516484",
+     "date": "2026-10-15",
+     "text": "\ud83d\udcca \u20bf BTC/USDT \u2014 MARKET ANALYSIS\n\nBitcoin traders, keep your eyes on the charts! \ud83d\udc40\ud83d\udd25\n\n\ud83c\udfaf MY BTC TRADING PLAN:\n\n\ud83d\udcc8 BULLISH SCENARIO:\nIf BTC breaks above resistance and holds it as support, we could see further upside.\n\n\ud83d\udcc9 BEARISH SCENARIO:\nIf BTC gets rejected at resistance and https://"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 54,
+     "user": "0xPepesso",
+     "url": "https://x.com/0xPepesso/status/2111160998744740307",
+     "date": "2026-10-16",
+     "text": "\ud83d\udea8 BITCOIN IS PRINTING MASSIVE BULLISH FLAG PATTERN\n\nThis week, sellers threw hot CPI, PPI, and Fed hike panic at the chart\n\nHowever, those three bearish macro catalysts failed to break the $80k Bitcoin support\n\nPrice absorbed the volume and currently compresses inside a 12-hour h"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 1,
+     "user": "PredatorVauLt",
+     "url": "https://x.com/PredatorVauLt/status/2110640463304880420",
+     "date": "2026-10-15",
+     "text": "$BTC/USDT, 4H UPDATE \n\nBitcoin got rejected from the $84K resistance and pulled back into our anticipated $81K\u2013$80K demand zone...\n\n\ud83d\udcc9 Bearish Outlook: A confirmed 4H candle close below $80K could accelerate the downside toward $76K\u2013$74.7K.\n\n\ud83d\udcc8 Bullish Outlook: Reclaiming $84.5K ht"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 12,
+     "user": "Riven_coin60086",
+     "url": "https://x.com/Riven_coin60086/status/2111295164224250007",
+     "date": "2026-10-17",
+     "text": "\ud83d\udea8 \u20bf BITCOIN AT A CRITICAL TURNING POINT! \ud83d\udd25\ud83d\udc02\ud83d\udc3b\n\nBitcoin is battling to regain momentum after a recent sell-off! BTC/USDT is trading at $81,458.67, down 1.14% over the last 24 hours. Will buyers step in, or will sellers push BTC lower? \ud83d\udc40\u2694\ufe0f\n\n\ud83d\udcca \ud83d\udcc8 BTC MARKET SNAPSHOT\n\ud83d\udcb0 Current https://"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 3,
+     "user": "AndyJackCrypto",
+     "url": "https://x.com/AndyJackCrypto/status/2110483002077966610",
+     "date": "2026-10-14",
+     "text": "BITCOIN VS DXY\n- Green Vertical: Dollar Index peaks = Bitcoin Bull run/Upside momentum \n\n- Red Vertical: Dollar Index bottoms = Bitcoin Bear market/ Downside momentum\n\nAfter the DXY drop in 2025, seems like it Bottomed/Ranged many months and it is trying to create a new uptrend.."
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 5,
+     "user": "KEVINWEB3TRADER",
+     "url": "https://x.com/KEVINWEB3TRADER/status/2109819702025638174",
+     "date": "2026-10-13",
+     "text": "\ud83d\udcca October 13 Market Outlook\n\nBTC Rebound Continues | Medium-Term Bearish, Long-Term Bullish\nOver the past few days, I've consistently highlighted opportunities to short the market on rallies. One of my trading accounts is now showing $10,000 in unrealized profits.\n\nHowever, https"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 88,
+     "user": "PeacePrinc29959",
+     "url": "https://x.com/PeacePrinc29959/status/2109525095777468677",
+     "date": "2026-10-12",
+     "text": "Bitcoin is approaching a critical level.\n\n$BTC is trading around the $81K to $83K zone, but the relief rally is losing bullish momentum.\n\nBulls are looking for a continuation toward $100K, while bears could capitalize on weakening price action.\n\nI'm watching whether BTC can https"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 2,
+     "user": "QuantAlphaTrend",
+     "url": "https://x.com/QuantAlphaTrend/status/2111377058097959191",
+     "date": "2026-10-17",
+     "text": "$BTC \u2014 Trend remains NEGATIVE. \ud83d\udd34\n\nBitcoin is trading around $81.6K, and my system continues to signal a bearish trend.\n\nThe latest order flow suggests that sellers remain in control, despite some signs of stabilization.\n\nHere\u2019s what I\u2019m watching:\n\n\ud83d\udd34 Open Interest: OI remains http"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "FinancializeTAM",
+     "url": "https://x.com/FinancializeTAM/status/2110149332695650394",
+     "date": "2026-10-13",
+     "text": "The Shooting Star - A Bearish Reversal at Resistance\nhttps://t.co/VedCElrDgV\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 164,
+     "user": "stacy_muur",
+     "url": "https://x.com/stacy_muur/status/2111094316777218187",
+     "date": "2026-10-16",
+     "text": "Perps exploded in the last 2 years.\n\nThe top 10 perp DEXs processed $6.7T in trading volume in 2025 ($2.9T by Hyperliquid alone)\n\nThe next trillion-dollar opportunity is markets accessible beyond active traders.\n\n@ensembleio is already testing this with leveraged strategy tokens,"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "FinancializeTAM",
+     "url": "https://x.com/FinancializeTAM/status/2110022757216084359",
+     "date": "2026-10-13",
+     "text": "Belt-Hold Bullish - A Potential Bullish Trend Change\nhttps://t.co/UbMWz3OD3s\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 10,
+     "user": "sty_defi",
+     "url": "https://x.com/sty_defi/status/2109350821833920582",
+     "date": "2026-10-11",
+     "text": "Greeny sets realistic Bitcoin targets and explains why diminishing returns make high predictions unlikely this cycle:\n\nGreeny: \"Naturally, there is more money required for it to go higher, right? There is not enough liquidity coming into this asset, so I kind of agree with you, h"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "NASNMEDIA",
+     "url": "https://x.com/NASNMEDIA/status/2111204445245579391",
+     "date": "2026-10-16",
+     "text": "\u20bf $MSTR  ~$136 \u25bc~10%\n\nNews: BTC proxy hit by inflation + MSCI index eligibility risk for digital asset treasuries.\n\nSentiment: Bearish today.\n\nCatalysts: BTC price, potential index decisions, earnings.\n\nVolume/Options: Very active options (bullish call flow noted).\n\nPT: ~$200+"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 3,
+     "user": "Cryptotradrle1",
+     "url": "https://x.com/Cryptotradrle1/status/2109740418384466171",
+     "date": "2026-10-12",
+     "text": "BITCOIN WEEKLY STRUCTURE IS TURNING BULLISH.\n\nBitcoin is showing two major bullish signals on the weekly chart.\n\n1. Weekly MA 50: Historically, when BTC closes back above this average, a major bull trend has followed. Bitcoin could retest this level near $76,580, which has often "
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 4,
+     "user": "Engr_Silas05",
+     "url": "https://x.com/Engr_Silas05/status/2109765916506628154",
+     "date": "2026-10-12",
+     "text": "BITCOIN WEEKLY STRUCTURE IS TURNING BULLISH.\n\nBitcoin is showing two major bullish signals on the weekly chart.\n\n1. Weekly MA 50: Historically, when BTC closes back above this average, a major bull trend has followed. Bitcoin could retest this level near $76,580, which has often "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "FinancializeTAM",
+     "url": "https://x.com/FinancializeTAM/status/2110862029099589832",
+     "date": "2026-10-15",
+     "text": "Bullish Breakaway Gap   Breaking Away From A Downtrend\nhttps://t.co/iA8iYPGtD9\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Sharmapraeep",
+     "url": "https://x.com/Sharmapraeep/status/2111662224188076082",
+     "date": "2026-10-18",
+     "text": "\ud83d\ude80 Solana (SOL) Market Update\n\nDate: October 18, 2026\n\n\ud83d\udcca 1. SOL Market Overview\n\nSolana is a major cryptocurrency known for its fast transactions and relatively low network fees.\n\nReference price: Approximately $103\u2013$104\n\nMarket trend: Short-term bearish\n\nKey support: $100\n\nKey"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Bitcoin Holds Near $81,000 After Pullback from $87,000 Peak",
+     "url": "https://x.com/i/trending/2111691648103268859"
+    },
+    {
+     "kind": "news",
+     "label": "bear",
+     "title": "Crypto Traders Warn of Bitcoin and Solana Downside Risks",
+     "url": "https://x.com/i/trending/2111950429038735740"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Tech Stocks Plunge as Oil Surges and Tensions Rise",
+     "url": "https://x.com/i/trending/2110822119743410229"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Bitcoin Dominance Dips as Ethereum Draws Whale Capital",
+     "url": "https://x.com/i/trending/2109516401954238516"
+    },
+    {
+     "kind": "news",
+     "label": "bear",
+     "title": "Bitcoin Holds Near $81,500 Amid ETF Outflows and Market Pressures",
+     "url": "https://x.com/i/trending/2111455133020164449"
+    }
+   ],
+   "display": "BTC",
+   "logoKey": "c:BTC",
+   "kind": "crypto"
+  },
+  "CRWV": {
+   "name": "CoreWeave",
+   "bull_headline": "~30% drop seen as a discount to its growth outlook",
+   "bear_headline": "$35B+ debt and rising financing costs weigh on shares",
+   "items": [
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 26,
+     "user": "HKIStrategies",
+     "url": "https://x.com/HKIStrategies/status/2109313079276380392",
+     "date": "2026-10-11",
+     "text": "$CRWV\n\nfalling resistance above,\n\n0.618 fib support from below.\n\nA break above will send $CRWV towards the pt.\n\nA break below will send $CRWV to the $50's.\n\nI expect a break above.\n\n$CRWV pt $337.\n\nThis is not investment advice.\nhttps://t.co/dHRSKi9IiX https://t.co/p3siPhzjoZ"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 1,
+     "user": "eduinvestingin",
+     "url": "https://x.com/eduinvestingin/status/2109394575911702569",
+     "date": "2026-10-11",
+     "text": "An officer and director at CoreWeave, Inc. Class A (CRWV) has filed notice to sell $5.8M of stock. A Form 144 is filed before the sale, not after.\n\nLink in comments\n$CRWV"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "5dtrader",
+     "url": "https://x.com/5dtrader/status/2109388604065579037",
+     "date": "2026-10-11",
+     "text": "\ud83d\udea8 \ud83e\udd81 STILL OPEN \u2014 POSITIONS TO WATCH \ud83e\udd81 \ud83d\udea8\n\n$ORCL 2026-10-30 C $155 \u2014 OI 11,318 \u00b7 24,774 traded\n$NVDA 2026-10-23 C $240 \u2014 OI 9,783 \u00b7 48,198 traded\n$CRWV 2026-10-30 P $70 \u2014 OI 2,372 \u00b7 5,831 traded\n$CRWV 2026-10-30 P $75 \u2014 OI 1,943 \u00b7 5,627 traded"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "DickyLeung12",
+     "url": "https://x.com/DickyLeung12/status/2109396384432492651",
+     "date": "2026-10-11",
+     "text": "10 charts dropping today. All free.\n\n$APP\n\n$CRWV\n\n$ONDS \n\n$SNDK\n\n$ASTS \n\n$COIN \n\n$RKLB\n\n$IREN \n\nWhich ones are you watching?"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 39,
+     "user": "davidhudspeth21",
+     "url": "https://x.com/davidhudspeth21/status/2109426113521111282",
+     "date": "2026-10-11",
+     "text": "$NVDA will never.\n$TSM will never.\n$AVGO will never.\n$AMD will never.\n$ASML will never.\n$SMCI will never.\n$ARM will never.\nAI agents will never.\nRobotics stocks will never.\n\n$CRWV will never. \u2b05\ufe0fYou are here\nNext-gen AI chips will never.\nHumanoid stocks will never.\nData center htt"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "belbeleggers",
+     "url": "https://x.com/belbeleggers/status/2109371457105285587",
+     "date": "2026-10-11",
+     "text": "You can copy one buyer\u2019s latest move:\n\nA) NVIDIA buying $CRWV at $87\nB) An $ASTS director buying at $57\nC) Berkshire tripling $GOOGL\nD) Ackman buying $V and $MA"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "RestuNakBbkn",
+     "url": "https://x.com/RestuNakBbkn/status/2109365308616253729",
+     "date": "2026-10-11",
+     "text": "in. $CRWV, common \ud83d\ude80"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "AmozaRashida",
+     "url": "https://x.com/AmozaRashida/status/2109342522732335252",
+     "date": "2026-10-11",
+     "text": "Got\nearly access in, $CRWV"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 2,
+     "user": "bullwallstreet2",
+     "url": "https://x.com/bullwallstreet2/status/2109335378545324380",
+     "date": "2026-10-11",
+     "text": "@itsCblast  $CRWV ITS GOING TO BLAST OF THIS WEEK"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "James366986",
+     "url": "https://x.com/James366986/status/2109655618294612307",
+     "date": "2026-10-12",
+     "text": "A WhatsApp group exclusively for $ODFL $DHI  $CRWV holders is now live!\n\nWe invite all $ODFL $DHI $CRWV investors to join this dedicated community to discuss market trends and stay updated with the latest news.\n\nClick this link to join: https://t.co/4ppv0EU2zY\n#Trading #Stocks ht"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "zedryaz",
+     "url": "https://x.com/zedryaz/status/2109326648315183458",
+     "date": "2026-10-11",
+     "text": "$CRWV Weekend technical analysis\n\nAnother week, another rejection around the 200D SMA...that level keeps acting as solid resistance for $CRWV \n\nafter the rejection, price landed right at the $78 to $81 S/R zone, which has acted as a bounce area before...if it bounces again, $88 h"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "t4kingoff",
+     "url": "https://x.com/t4kingoff/status/2109432045072265256",
+     "date": "2026-10-11",
+     "text": "Daily access to 6+ powerful trading signals \ud83d\udcc8\n\nJoin my WhatsApp for alerts &amp; stock picks with potential 150% gains in 3 days!\n\n\ud83d\udc49https://t.co/SQ6UCLM5v9\n\n Join us. Reply \"Hot Stocks Recommendations\" \ud83d\udcb8\n\nWatchlist: $CRWV $SOFI $PDD $HD $CCL https://t.co/jPGR6Hta0Y"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 16,
+     "user": "DatSalad",
+     "url": "https://x.com/DatSalad/status/2109415966186623169",
+     "date": "2026-10-11",
+     "text": "You asked for it. My 10x potential watchlist \u2764\ufe0f\n\n$AKAM - edge computing\n$TGT - turnaround play\n$AAPL - wierd iPhone Duo edge\n$IONQ - quantum\n$HOOD - fintech run\n$CVNA - comeback kid\n$ORCL - AI cloud\n$CRWV - AI infra\n\nDid I miss anything? https://t.co/EuGr5HiKr1 https://t.co/QmSn2"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Wilbur_Stein11",
+     "url": "https://x.com/Wilbur_Stein11/status/2109395291015426223",
+     "date": "2026-10-11",
+     "text": "Congratulations! \ud83c\udf89\n\nMy WhatsApp alert subscribers have earned between $8500 and $76,000 this week! \ud83d\udcb5\ud83d\udcb5\n\nStock returns exceeding 100% \ud83d\udcaf\n\nFollow  stocks: $FUTU $USB $CRWV $ONDS $SDGR\nWhatsApp Profit Party:\n\n\ud83d\udcf2 https://t.co/qVqV0TZFSx\nAdd me and send \"Hot Stocks\" \ud83d\udcb0 https://t.co/HmGipX"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "t4kingoff",
+     "url": "https://x.com/t4kingoff/status/2109323364229873933",
+     "date": "2026-10-11",
+     "text": "\ud83d\udcc8 Getting ready for Monday\u2019s U.S. market open.\n\nHigh-potential stock setups are shared exclusively on my WhatsApp.\n\n\ud83d\udc49 Full details: https://t.co/SQ6UCLM5v9\n\nPrecise plans + real-time entry updates. DM me after joining.\n\n$COIN $CRWV $SQ $RUM $WW\n\n#Stocks #StockMarket #Investing ht"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "fr33d3r",
+     "url": "https://x.com/fr33d3r/status/2109359327744241718",
+     "date": "2026-10-11",
+     "text": "This forecast is huge. If it plays out, we could finally see a dot-com-style bubble unless Trump prevents it. Data center stocks could finally get the hype (and rich multiples) they\u2019ve been missing (except $NBIS). Fears of AI overinvestment would largely disappear. $CRWV $CBRS ht"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "jacobiinvest",
+     "url": "https://x.com/jacobiinvest/status/2109411421905993953",
+     "date": "2026-10-11",
+     "text": "AMD reportedly bought World Labs for ~$8B \u2014 copying Google's DeepMind + TPU playbook.\n\nChips + models, one house. $NVDA's circling Reflection AI the same way.\n\nQuestion: when chipmakers own the whole stack, what happens to independent compute? Do $NBIS and $CRWV ride it or get"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "AsyaYayo",
+     "url": "https://x.com/AsyaYayo/status/2109350236821069874",
+     "date": "2026-10-11",
+     "text": "My WhatsApp stock group is a platform for global stock enthusiasts to exchange ideas\n\n\ud83d\udcc8 I share stocks with short-term profit potential of 70-120% daily for discussion and research\n\nJoin my private stock group\n\n\u2705https://t.co/v81Izmum8y\n\n $PDD $CMG $SNAP $CRWV $GOTU https://t.co/7"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 10,
+     "user": "CifrOracle",
+     "url": "https://x.com/CifrOracle/status/2109343936334729371",
+     "date": "2026-10-11",
+     "text": "The data center trade literally hasn\u2019t even started, we\u2019re so early here. $NBIS $CRWV https://t.co/dxjeboW607"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Djhottowns",
+     "url": "https://x.com/Djhottowns/status/2109322633934487573",
+     "date": "2026-10-11",
+     "text": "The Big Banks Are Sitting on Massive Hidden Losses | Bagholder | $SPY $QQQ bitcoin:native $XLF $BAC $WFC $CRWV $GDX $SILJ $XLE \nhttps://t.co/0BFrRwG7rQ https://t.co/8SPyvieoES"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 65,
+     "user": "CGInvesting10",
+     "url": "https://x.com/CGInvesting10/status/2109390785242341479",
+     "date": "2026-10-11",
+     "text": "$CRWV at $82 is a huge discount in my eyes\n\nAnalysts are projecting some big numbers for the next 12 months \n\nThis is real attractive https://t.co/Ip71cs47RY"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Plasencia09",
+     "url": "https://x.com/Plasencia09/status/2109348471555916030",
+     "date": "2026-10-11",
+     "text": "\ud83d\ude80 Market Watchlist Update\n\nTracking:\n$CRWV $UAL $GM $LULU $TTRX\n\n\ud83d\udcc8 Stock insights  \n\ud83d\udcca Market trends  \n\ud83d\udd25 Research updates  \n\nWhatsApp:\nhttps://t.co/cWshqDK7bN\n\nReply \"Hot Stocks\" https://t.co/NAwe8Ii9sW"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "MaharajTrading",
+     "url": "https://x.com/MaharajTrading/status/2110005461046972521",
+     "date": "2026-10-13",
+     "text": "$CRWV \nBias: Bearish\nBullish: Look for price action to reclaim $82 and test $85. Upside price target is $85.\nBearish: Look for price action to lose $80 and fail to reclaim it. Then working its way to $70. Downside price targets are $75 and $70."
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 3,
+     "user": "MaharajTrading",
+     "url": "https://x.com/MaharajTrading/status/2109644230196932976",
+     "date": "2026-10-12",
+     "text": "TRADE WATCHLIST \u2014 OCTOBER 12, 2026\n$DELL\nUpside: Hold above $595 \u2192 targets $600, $610, $615.\nDownside: Lose $585 and fail to reclaim \u2192 targets $580, $570, $560.\n\n$NOK\nUpside: Hold above $11 \u2192 targets $11.50, $12, $13.\nDownside: Lose $10 and fail to reclaim \u2192 targets $9.50,"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "EssKayOne",
+     "url": "https://x.com/EssKayOne/status/2110552185293644104",
+     "date": "2026-10-15",
+     "text": "\ud83d\udfe0 Market Signal is still CAUTIOUSLY BULLISH only technically. It flips to RISK OFF with one more day. Longer-term breadth is near extremes but not extreme yet. // The theme has changed. Good AI earnings no longer work unless they beat high expectations. Future big-company AI"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "TTradDashboard",
+     "url": "https://x.com/TTradDashboard/status/2111068869582364722",
+     "date": "2026-10-16",
+     "text": "Premarket read: flow vs the gap \ud83d\udcca\n\n$TSLA +3.2% (374) on 3.4x volume, against -$7.2M bearish flow. Weak catalyst. Fade toward 365 if 372-375 fails after the open.\n\n$CRWV -5.0% (66.2) despite +$29.1M bullish flow. Sellers winning on credit worry (2032 bonds ~11%). Downside below ht"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "MaharajTrading",
+     "url": "https://x.com/MaharajTrading/status/2110344318472863958",
+     "date": "2026-10-14",
+     "text": "WATCHLIST UPDATE \u2014 OCTOBER 14, 2026\n\nWatching support, reclaims and retests before taking entries.\n\n$META \u2014 Bullish watch\n$750 is the key support to hold. Above it, watching continuation toward $800. Losing $750 would weaken the setup.\n\n$DELL \u2014 Rebound watch\n$560 is the support h"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "MaharajTrading",
+     "url": "https://x.com/MaharajTrading/status/2110711285008543937",
+     "date": "2026-10-15",
+     "text": "Thu Oct 15 Levels\n\n$ORCL  - Trading at $130.55 after reclaiming $130. The gamma/put wall sits at $130, with the call wall overhead at $140 across both near-term and swing expirations. Watching how price behaves around $130, with a hold keeping the $130\u2013$140 range in play. The"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 92,
+     "user": "MoodyWriter13",
+     "url": "https://x.com/MoodyWriter13/status/2110729501231415530",
+     "date": "2026-10-15",
+     "text": "There\u2019s a lot of debate on X right now about whether $CRWV could collapse and what that would mean for the entire neocloud sector.\n\nI raised this question 8 weeks ago, when the $PANW CEO predicted that many neocloud providers could be available at significantly lower prices in ht"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "MaharajTrading",
+     "url": "https://x.com/MaharajTrading/status/2110059863728427020",
+     "date": "2026-10-13",
+     "text": "\ud83d\udc51 Maharaj Swing Analysis \ud83d\udc51\n\n$CRWV\nThis week:\nBullish: Look for price action to test $80 and hold. Then working its way to $82. Upside price targets are $82, $85 and $90.\n\nSwing:\nBullish: Look for price action to test $80 and hold. Then working its way to $85. Upside price"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "Finora_EN",
+     "url": "https://x.com/Finora_EN/status/2110348562399658392",
+     "date": "2026-10-14",
+     "text": "\u26a0\ufe0f $CRWV dips 2.8% in 15m on 2.2x volume \u2014 is this weak hands capitulating or just noise?\n\n- my bias is bearish here: the 1h structure is firmly bearish, with lower highs and lower lows, and both the daily and BTC are also bearish for full downside alignment \ud83d\udea8\n- the recent 2.2x h"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "TradeWarriors99",
+     "url": "https://x.com/TradeWarriors99/status/2111173115707355613",
+     "date": "2026-10-16",
+     "text": "**Market update \u2014 1:30pm CT**\nAfternoon tape: $QQQ -2.5% ~$710.13, $SPY -1.2% ~$762.21, $DIA -0.6% ~$518.23 \u2014 Nasdaq on pace for worst week since June (4%+ loss) while Dow holds a weekly gain; $VIX 21.41 at 4-month high (via @DeItaone)\n$CRWV -12.8% ~$60.79 \u2014 renewed pressure on"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 161,
+     "user": "LeifInvests",
+     "url": "https://x.com/LeifInvests/status/2110443962142253370",
+     "date": "2026-10-14",
+     "text": "$CRWV IS DOWN ~30% IN JUST 7 TRADING DAYS! \ud83d\udcc9\n\nBut here\u2019s what makes this interesting\u2026\n\n\u2022 $NVDA invested $2B at $87.20 on January 23rd\n\u2022 2028 Projected Revenue: ~$43 BILLION\n\u2022 Current Market Cap: ~$36 BILLION\n\u2022 Share Price: ~$65\n\u2022 AI Compute Constraint: \n(Thesis remains https://t."
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "viral_stocks",
+     "url": "https://x.com/viral_stocks/status/2110526766175633661",
+     "date": "2026-10-15",
+     "text": "The tickers X are buzzing about right now:\n\n1. Morgan Stanley MS is up 0.3% after falling 2.7% in the regular session\n\n\ud83d\udfe2 Sentiment: 24% bullish, 2% bearish, 74% neutral\n\nMorgan Stanley reported Q3 earnings on Oct 14, beating revenue expectations at $20.34B and EPS at $3.03. https"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "optionwhalesio",
+     "url": "https://x.com/optionwhalesio/status/2110461288388129139",
+     "date": "2026-10-14",
+     "text": "The biggest tape in $CRWV today was unsignable \u2014 and that's the story, not the direction.\n\nTHE TRADE EVERYONE WANTS TO READ\n\nCoreWeave got crushed 14.4% today after Chamath flagged the company's bond yield running at 15%, up from 9% in summer, against $35B of debt. Hot CPI at htt"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "DennisDong15",
+     "url": "https://x.com/DennisDong15/status/2111230498278178910",
+     "date": "2026-10-16",
+     "text": "\ud83d\udcca October 19, 2026 Watchlist\n\n\ud83d\udd25 Top Catalysts\n\n$IAM \u2014 AI-driven biotech IPO gained ~26% Friday. Strong debut momentum, but already extended. Watch for consolidation and renewed buying volume.\n\n$CTY \u2014 RNAi biotech IPO jumped ~24% after pricing at $18. Fresh listing momentum, but"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "RichardHallfc",
+     "url": "https://x.com/RichardHallfc/status/2110364700647252076",
+     "date": "2026-10-14",
+     "text": "$CRWV: A 25%+ pullback doesn\u2019t automatically make a stock cheap.\n\nCoreWeave is a pure-play AI infrastructure story, but the market is pricing more than AI demand. It is also pricing financing costs, execution risk, and the ability to turn massive infrastructure spending into http"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "EssKayOne",
+     "url": "https://x.com/EssKayOne/status/2111004266764943489",
+     "date": "2026-10-16",
+     "text": "\ud83d\udd34 Market Signal flipped to RISK OFF. // Yesterday saw hard gap downs followed by oversold bounces from deep levels. Indices reclaimed their 50MA. Software, which held up very well during the current pullback, produced some nice range expansions. VIX pulled back but stays"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 44,
+     "user": "Funmentalist",
+     "url": "https://x.com/Funmentalist/status/2109561519335752057",
+     "date": "2026-10-12",
+     "text": "$IREN X Anthropic\n\nI\u2019ll provide a completely unbiased assessment of this deal because this $IREN / $NBIS / $CRWV community just can\u2019t stop either perma bull-posting or bear-posting every single headline that is related to these 3 leaders in the space.\n\nFirst of all, we have no"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 4,
+     "user": "unnatural78",
+     "url": "https://x.com/unnatural78/status/2110438973437042876",
+     "date": "2026-10-14",
+     "text": "Been saying $CRWV and $IREN are absolute junk. And $NBIS way overvalued. This bearish market will kill these. Also overvalued space junk like $ASTS $LUNR and $RKLB.\nStick with companies that have profits"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 1,
+     "user": "Finora_EN",
+     "url": "https://x.com/Finora_EN/status/2110710017821188125",
+     "date": "2026-10-15",
+     "text": "\u2696\ufe0f $CRWV shows a 2.6% bounce on 2.6x volume\u2014relief rally or just a counter-trend blip?\n\n- my bias is cautiously bullish for a relief move here after the 2.6x volume anomaly and sharp 15m +2.6% spike, but this is a counter-trend play against the clear 1h/daily/benchmark bearish ht"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 98,
+     "user": "BeenThereCap",
+     "url": "https://x.com/BeenThereCap/status/2111190538221240777",
+     "date": "2026-10-16",
+     "text": "It is only a slight exaggeration and twist to say that my primary AI bull thesis is: Most* AI bears whose comments I see - among smart professional investors - have garbage, theses-destroying levels of factual knowledge and make garbage logical inferences based on the true facts "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "EssKayOne",
+     "url": "https://x.com/EssKayOne/status/2111426718754131978",
+     "date": "2026-10-17",
+     "text": "\ud83d\udd34 Market Signal remains RISK OFF. // Yesterday\u2019s bounce failed with a hard selloff. Many names closed at the lows on breakdown candles. The 9-million scan showed under 50 stocks, so this is not a broad exit signal but recent leaders were hit hard over recent days. // NAAIM is at"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "wsagentai",
+     "url": "https://x.com/wsagentai/status/2109781359589724326",
+     "date": "2026-10-12",
+     "text": "10/12/2026 Market Daily Summary\n\nMixed tape: Dow +0.38% and S&amp;P 500 -0.06% masked a violent rotation \u2014 chips dumped, energy jumped on Middle East escalation, while mega-cap platforms carried the index.\n\n\ud83d\udcbe Movers\n\u2022 BMBL +49.6% \u2014 in advanced talks to go private with Ithaca"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "baalhadid",
+     "url": "https://x.com/baalhadid/status/2110015218126385588",
+     "date": "2026-10-13",
+     "text": "$CRWV LEVELS\n\u2015\u2015\u2015\u2015\n\u25b8 Setup: BEARISH | Spot: $77.49\n\u25b8 Entry: $77 \u2013 $75\n\u25b8 Target 1: $75 (3.2%)\n\u25b8 Target 2: $72 (7.2%)\n\u25b8 Stop: $80 (3.2%)\n\u25b8 Timeframe: 1-2 weeks\n\u25b8 Conviction: HIGH \u2014 Strong volume signals a significant downside. https://t.co/ppc9EpRvv3"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 8,
+     "user": "TheMuggZone",
+     "url": "https://x.com/TheMuggZone/status/2109408577538465866",
+     "date": "2026-10-11",
+     "text": "STOCKS I WILL BE ON THE WATCH FOR BULLISH MOMEMTUM THIS WEEK:\n\n$MRVL $IONQ $PYPL $RKLB $CRWV $COIN $AMAT  $SOFI \n\nPossibly $INTC if $TSM has bad earnings.\n\nBEARISH on $DDOG $CVX \n\n**NFA** https://t.co/pupq2ln1nf"
+    },
+    {
+     "kind": "news",
+     "label": "bear",
+     "title": "CoreWeave Stock Drops 15% as Debt Worries Hit AI Sector",
+     "url": "https://x.com/i/trending/2110038326308909507"
+    },
+    {
+     "kind": "news",
+     "label": "bear",
+     "title": "CoreWeave Shares Plunge 20% Amid Debt Worries and AI Selloff",
+     "url": "https://x.com/i/trending/2110763160596566188"
+    },
+    {
+     "kind": "news",
+     "label": "bear",
+     "title": "Cracks Emerge in America's $10 Trillion AI Data Center Boom",
+     "url": "https://x.com/i/trending/2111954927555915827"
+    },
+    {
+     "kind": "news",
+     "label": "bear",
+     "title": "Altimeter Capital Sells Entire CoreWeave Stake Amid AI Overheating Concerns",
+     "url": "https://x.com/i/trending/2110818144113541173"
+    },
+    {
+     "kind": "news",
+     "label": "bear",
+     "title": "AI Bubble Warnings Echo Dot-Com Era Debates",
+     "url": "https://x.com/i/trending/2111982503808417833"
+    }
+   ]
+  },
+  "NBIS": {
+   "name": "Nebius",
+   "bull_headline": "Large backlog and asymmetric risk/reward after selloff",
+   "bear_headline": "Breakdown below support on heavy volume",
+   "items": [
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 1,
+     "user": "jeremymjacquin",
+     "url": "https://x.com/jeremymjacquin/status/2109426388218617952",
+     "date": "2026-10-11",
+     "text": "NOT $NBIS like I\u2019ve been telling investors for months \u26a0\ufe0f \n\nBuy $NBIZ  \ud83d\udcc8\n\nSell $NBIS \ud83d\udcc9 https://t.co/UCcwDa2qUs"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "WealthBranch",
+     "url": "https://x.com/WealthBranch/status/2109378063356002731",
+     "date": "2026-10-11",
+     "text": "$NBIS Nebius Group N.V. is stealing the show today. Review our LEAF insights and AI swing trading forecast. More tickers? Try our app! #NBIS https://t.co/lIx3DKycB5"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "bigliu",
+     "url": "https://x.com/bigliu/status/2109332101363597424",
+     "date": "2026-10-11",
+     "text": "$nvda is under investing and supporting $nbis. I believe Jensen will make a move to correct this. $nbis earning is mid November."
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 0,
+     "user": "AlgoTradeAlert",
+     "url": "https://x.com/AlgoTradeAlert/status/2109386878910628115",
+     "date": "2026-10-11",
+     "text": "$NBIS just bought Inferize to fix one of the biggest bottlenecks in AI inference \u2014 GPU idle time.\n\nMost people still think AI is all about training. The real money and efficiency war is happening in *inference*.\n\nNebius is quietly building the infrastructure layer for that.\n\nDo h"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "fe0099de486a493",
+     "url": "https://x.com/fe0099de486a493/status/2109319864951402509",
+     "date": "2026-10-11",
+     "text": "Nbis"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Philip97285391",
+     "url": "https://x.com/Philip97285391/status/2109418062986527046",
+     "date": "2026-10-11",
+     "text": "If I\u2019m reading it correctly, only SpaceX, $NBIS, and $CRWV have so far managed to charge $40M per MW or more annualized on their short-term compute deals.\n\nIt all started with SpaceX selling metal to Anthropic at what I\u2019d call an Anthropic desperation premium. Then $NBIS followed"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 35,
+     "user": "TedHZhang",
+     "url": "https://x.com/TedHZhang/status/2109418062307094814",
+     "date": "2026-10-11",
+     "text": "Bullish $SPCX $NBIS $IREN if open-weight models continue to gain momentum https://t.co/dGLbeZsQn4"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 0,
+     "user": "quantforceone",
+     "url": "https://x.com/quantforceone/status/2109331394832842783",
+     "date": "2026-10-11",
+     "text": "This will start the next wave for $NBIS https://t.co/zPwwWw7sXh"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "CyberCabDavid",
+     "url": "https://x.com/CyberCabDavid/status/2109364168172220548",
+     "date": "2026-10-11",
+     "text": "There are two wolves within me $NBIS https://t.co/GDi8UMYwPE https://t.co/GgTsG4bEHR"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 44,
+     "user": "ant_trading1",
+     "url": "https://x.com/ant_trading1/status/2109339425675321557",
+     "date": "2026-10-11",
+     "text": "$NBIS moving on @liquidtrading \n\n223 \ud83e\udd1d https://t.co/4AHifbXrt4"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 20,
+     "user": "Bcalls_",
+     "url": "https://x.com/Bcalls_/status/2109424264223007105",
+     "date": "2026-10-11",
+     "text": "Huge for $NBIS https://t.co/2bwmLavnbi"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 1,
+     "user": "walteryhooper",
+     "url": "https://x.com/walteryhooper/status/2109375814173184379",
+     "date": "2026-10-11",
+     "text": "Looks great! $NBIS https://t.co/0RT2YM1TQq"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 163,
+     "user": "TechnoGoddy",
+     "url": "https://x.com/TechnoGoddy/status/2109345484837880291",
+     "date": "2026-10-11",
+     "text": "$NBIS Fucking HUGE https://t.co/MmvEcnc9c6"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 210,
+     "user": "ren_stocks",
+     "url": "https://x.com/ren_stocks/status/2109320173995880876",
+     "date": "2026-10-11",
+     "text": "$NBIS\n\nNot all neoclouds are created the same way not all neocloud capacity is worth the same, and this chart shows it.\n\nEvery gigawatt Nebius signs away in a long-term hosting deal brings in roughly $20-25B. \n\nThe same gigawatt sold short-term on its own platform brings in https"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 3,
+     "user": "itmeig",
+     "url": "https://x.com/itmeig/status/2109426320623178213",
+     "date": "2026-10-11",
+     "text": "Back in September I started a little experiment: a small swing trading account.\n\nToday it goes public.\n\n$11,545. Four positions:\n$NBIS 38%\n$SNDK 27%\n$WDC 17% (my only red one, \u2212$207)\n$AAOI 17%\n\nThursday's selloff: $AAOI fell 13.6%, so I bought it near the low and added to $NBIS. "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "AlgoTradeAlert",
+     "url": "https://x.com/AlgoTradeAlert/status/2109386634877702524",
+     "date": "2026-10-11",
+     "text": "$NBIS just bought Inferize to fix one of the biggest bottlenecks in AI inference \u2014 GPU idle time.\n\nMost people still think AI is all about training. The real money and efficiency war is happening in *inference*.\n\nNebius is quietly building the infrastructure layer for that.\n\nDo"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 3,
+     "user": "claudiamillpas1",
+     "url": "https://x.com/claudiamillpas1/status/2109397715788710310",
+     "date": "2026-10-11",
+     "text": "People asking what my best long term convictions are\n\n$ONDS \n\n$OSCR\n\n$HIMS \n\n$NBIS\n\n$RKLB \n\n$ZETA\n\nThe Big 6"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 0,
+     "user": "1WNGEDAngel",
+     "url": "https://x.com/1WNGEDAngel/status/2109432977067491602",
+     "date": "2026-10-11",
+     "text": "If I\u2019m buying a speculative AI company, I\u2019m only buying one and that\u2019s $NBIS"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 12,
+     "user": "PebbySandhu",
+     "url": "https://x.com/PebbySandhu/status/2109402494216667453",
+     "date": "2026-10-11",
+     "text": "$NBIS Does anything happened to your life better than this?\n\n18/25 https://t.co/mPpN9P532r"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "BagHoldPremium",
+     "url": "https://x.com/BagHoldPremium/status/2109354879583912007",
+     "date": "2026-10-11",
+     "text": "Can't go wrong with this set of stocks.\n\n$SEZL $NBIS $GCT $ZETA https://t.co/PBvLgO2fKy"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "neonaveed",
+     "url": "https://x.com/neonaveed/status/2109355631064801470",
+     "date": "2026-10-11",
+     "text": "$NBIS $IREN $PLTR\n$OUST $MRVL $LLY\n$HOOD $SNDK $LITE \n$KTOS $SPCX\n#AI REVOLUTION \ud83d\udc95 https://t.co/G7D68MSCqY"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "WheelOfOptions",
+     "url": "https://x.com/WheelOfOptions/status/2109363211359396237",
+     "date": "2026-10-11",
+     "text": "It\u2019s Selection Sunday again! Make your pick!\n$NBIS looked great for my last pick but down as of today with 3 weeks to go.\nThese are all Earnings plays, so added risk means added pay.\n1) $AEHR : buying low in 70/80\u2019s and selling at $100+ has been a solid play. Semi testing is http"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "WheelOfOptions",
+     "url": "https://x.com/WheelOfOptions/status/2109347108847575275",
+     "date": "2026-10-11",
+     "text": "It\u2019s pretty nuts to see the performance difference since I bought both $IREN and $NBIS a few days apart Sept 2025. Neoclouds were breaking out and I didnt know too much about them then but took a bite of both. The 6 bil IREN ATM dilution and Nebius\u2019 overall execution were https:/"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "Finora_EN",
+     "url": "https://x.com/Finora_EN/status/2111570991721689552",
+     "date": "2026-10-17",
+     "text": "\ud83d\udcc9 NBIS sinks 6.2% in 15m on 37.6x volume spike\u2014selling pressure confirms bearish trend\n\n- my bias is bearish here: the 1h trend is confirmed bearish with lower highs/lows, and the daily trend is also bearish, so the structure is aligned to the downside \ud83d\udcc9\n- the recent -6.2% https:"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 9,
+     "user": "JarvisFlow",
+     "url": "https://x.com/JarvisFlow/status/2110421003075486181",
+     "date": "2026-10-14",
+     "text": "With all the carnage today in AI names.\n\nThe flow is still Bullish for many AI names ::\n\nBullish leaders (net): $INTC +$5.2M, $NVDA +$2.7M, $MU +$2.0M, $CRM +$3.2M, $LRCX +$2.3M, $SNDK +$2.0M, $TSM +$1.5M, $NBIS +$1.3M, $ORCL +$1.2M\n\nBearish leaders (net): $NET \u2212$5.6M"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 9,
+     "user": "gabz_investing",
+     "url": "https://x.com/gabz_investing/status/2109728685549052219",
+     "date": "2026-10-12",
+     "text": "$NBIS  Analysts see +36% upside over the next 12 months.\n\nAverage target: $283.60\n\nBull case: $410\nBear case: $84\n\nThe market may be volatile, but Wall Street\u2019s consensus is still firmly bullish.\nThe real question: is this a genuine long-term opportunity\u2014or are analysts simply ht"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 20,
+     "user": "KGInvests_",
+     "url": "https://x.com/KGInvests_/status/2109665900907602369",
+     "date": "2026-10-12",
+     "text": "$IREN will be a $222 stock in 2030\n\nThat\u2019s about 550% upside from now onwards. \n\nIt just has to hit \n\n\u25b6\ufe0f analysts estimated revenue to reach\n$24 billion and net margins to reach 15% \nin FY30.\n\n\u25b6\ufe0f 40x PE which is very cheap for that amount of growth\n\nThese are very very https://t."
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 13,
+     "user": "Sebagyeong",
+     "url": "https://x.com/Sebagyeong/status/2110029100366852604",
+     "date": "2026-10-13",
+     "text": "$NUAI\n\nStill Bullish, or Are We Underestimating the Risks?\n\nI\u2019ve noticed quite a few investors and influencers on X who remain extremely bullish on $NUAI\n\nAnd honestly, I can see why\n\n1. A 20-year, 207MW PPA with Vistra\n\n2. Access to power, one of the biggest bottlenecks in AI ht"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 92,
+     "user": "MoodyWriter13",
+     "url": "https://x.com/MoodyWriter13/status/2110729501231415530",
+     "date": "2026-10-15",
+     "text": "There\u2019s a lot of debate on X right now about whether $CRWV could collapse and what that would mean for the entire neocloud sector.\n\nI raised this question 8 weeks ago, when the $PANW CEO predicted that many neocloud providers could be available at significantly lower prices in ht"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "MaharajTrading",
+     "url": "https://x.com/MaharajTrading/status/2110034822991069489",
+     "date": "2026-10-13",
+     "text": "$NBIS\nBias: Bearish\nBearish: Look for price action to test $200 and fail to hold. Then working its way down to $190. Downside price targets are $200, $195 and $190.\n\nIf it reclaims $200, upside resistance builds at $210 and $220.\n\nNote: the whole chain here is sitting in heavy"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "MaharajTrading",
+     "url": "https://x.com/MaharajTrading/status/2110034734583599319",
+     "date": "2026-10-13",
+     "text": "$NBIS\nBias: Bearish\nBearish: Look for price action to test $200 and fail to hold. Then working its way down to $190. Downside price targets are $200, $195 and $190.\n\nIf it reclaims $200, upside resistance builds at $210 and $220.\n\nNote: the whole chain here is sitting in heavy"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 3,
+     "user": "Shu14r",
+     "url": "https://x.com/Shu14r/status/2110828505550516228",
+     "date": "2026-10-15",
+     "text": "$NBIS\nNebius remains under pressure, with short-term technical momentum still bearish.\n\n\u2022 Support: $175\u2013180\n\u2022 Resistance: $186\u2013190\nA breakout above $190 with strong volume could signal a recovery, while losing support may trigger further downside.\n Cautious short term, bullish"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 18,
+     "user": "vivekrajan1380",
+     "url": "https://x.com/vivekrajan1380/status/2110395382467567784",
+     "date": "2026-10-14",
+     "text": "\ud83d\udea8 $NBIS Technical Breakdown: \n\nNBIS just plunged 9.35% to $187.51, breaking below multiple short-term support levels on heavy selling volume.\n\n\ud83d\udcc9 1-Month Technical Outlook:\n\n\u2022 Trend: Bearish \u2014 lower highs and lower lows signal strong selling pressure.\n\u2022 Support: $184\u2013188 is"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 9,
+     "user": "Gammaoptions99",
+     "url": "https://x.com/Gammaoptions99/status/2109734120389767221",
+     "date": "2026-10-12",
+     "text": "$NBIS flow leans bearish while the structure leans bullish, so the two disagree and the page's call to defer to the chart stands. \n\nToday's $49.4M premium is 55% calls, but directional premium is 44% bullish with net flow -$10.6M and price down 3.9%, so money and price agree on"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "ryanbakshCC",
+     "url": "https://x.com/ryanbakshCC/status/2109625128497864990",
+     "date": "2026-10-12",
+     "text": "It pays to be bullish...but I'm really struggling to do so here. \n\nGood periods don't start in insanely extended groups like cyber just continuing to go upwards. Fresh stuff is needed. \n\nUntil I see multiple groups with fresh bases and leaders hold, my bias is chop/downside."
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "notjust_anybody",
+     "url": "https://x.com/notjust_anybody/status/2110797934325571756",
+     "date": "2026-10-15",
+     "text": "$NBIS\nbull trap played out. \u274c Price rejected inside our Bearish Smart Money Zone and is now down 35%.  In today\u2019s video, I break down the setup, what invalidated the bullish case, and what I would need to see before considering a long position.  Watch Now https://t.co/8ZGFvf9ly9"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 2,
+     "user": "Finora_EN",
+     "url": "https://x.com/Finora_EN/status/2110728045992595962",
+     "date": "2026-10-15",
+     "text": "\u26a0\ufe0f $NBIS : 2.4x volume spike fuels a 3.2% 15m drop\u2014real pressure or just noise?\n\n- my bias remains firmly bearish here: the 1h structure is in a clear downtrend, with both recent swings making lower lows and lower highs, and price accelerating to the downside with a strong volume"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 334,
+     "user": "pdicarlotrader",
+     "url": "https://x.com/pdicarlotrader/status/2110792067555475645",
+     "date": "2026-10-15",
+     "text": "$NBIS bull trap played out. \u274c\n\nPrice rejected inside our Bearish Smart Money Zone and is now down 35%.\n\nIn today\u2019s video, I break down the setup, what invalidated the bullish case, and what I would need to see before considering a long position.\n\nWatch Now \ud83d\udc47 https://t.co/vCzm1h3k"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 4,
+     "user": "TradeStockData",
+     "url": "https://x.com/TradeStockData/status/2109646431858344255",
+     "date": "2026-10-12",
+     "text": "$NBIS  (1h, 90-day) has broken down from a months-long symmetrical triangle, bounded by the descending trendline from the $299.86 high and the rising trendline off the $145.80 low. Price has slipped below that rising support and is trading near $212. It now sits below the entire "
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 733,
+     "user": "babyfolio",
+     "url": "https://x.com/babyfolio/status/2111236065591771230",
+     "date": "2026-10-16",
+     "text": "$NBIS has incredible R/R at these levels.\n\nI have no idea how much lower we can go, but I believe the upside is massively asymmetric to the downside.\n\nYou're buying a much stronger business than you were before July, with significant improvements and considerably less risk.\n\nI"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "EmmanuelInvest",
+     "url": "https://x.com/EmmanuelInvest/status/2111480011026821292",
+     "date": "2026-10-17",
+     "text": "AI INFRASTRUCTURE \u2014 $NBIS vs $IREN vs $CIFR\nBULL VS BEAR | EMMANUELINVEST \u2014 PART 1\nAI DEMAND IS BOOMING. BUT WHO ACTUALLY MAKES MONEY FOR SHAREHOLDERS?\nThe AI infrastructure trade is entering a more demanding phase.\nFor much of the buildout, investors rewarded companies securing "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "laaureen0",
+     "url": "https://x.com/laaureen0/status/2111854859800694888",
+     "date": "2026-10-18",
+     "text": "$NBIS is approaching a critical technical level. Here\u2019s what I\u2019m watching.\n\n\ud83d\udc02 BULL CASE\n\u2022 Hold $160\u2013$165\n\u2022 Reclaim $180\u2013$185 with stronger volume\n\u2022 Break $200 to improve the recovery outlook\n\ud83d\udc3b BEAR CASE\n\u2022 Lose $160 on a closing basis\n\u2022 Fail to recover $165\n\u2022 Risk a deeper https:/"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "DennisDong15",
+     "url": "https://x.com/DennisDong15/status/2111230498278178910",
+     "date": "2026-10-16",
+     "text": "\ud83d\udcca October 19, 2026 Watchlist\n\n\ud83d\udd25 Top Catalysts\n\n$IAM \u2014 AI-driven biotech IPO gained ~26% Friday. Strong debut momentum, but already extended. Watch for consolidation and renewed buying volume.\n\n$CTY \u2014 RNAi biotech IPO jumped ~24% after pricing at $18. Fresh listing momentum, but"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 54,
+     "user": "KGInvests_",
+     "url": "https://x.com/KGInvests_/status/2110104537428324679",
+     "date": "2026-10-13",
+     "text": "When good companies go on sale, I will not hesitate to buy them.\n\nI avoided $SOFI at $30 because it was overvalued.\n\nI\u2019m now stacking up on $SOFI at $15 because it\u2019s undervalued now\n\nI avoided $ONDS at $13 because it had made a huge run \n\nI have been buying lots of $ONDS at $7 ht"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 4,
+     "user": "unnatural78",
+     "url": "https://x.com/unnatural78/status/2110438973437042876",
+     "date": "2026-10-14",
+     "text": "Been saying $CRWV and $IREN are absolute junk. And $NBIS way overvalued. This bearish market will kill these. Also overvalued space junk like $ASTS $LUNR and $RKLB.\nStick with companies that have profits"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 44,
+     "user": "Funmentalist",
+     "url": "https://x.com/Funmentalist/status/2109561519335752057",
+     "date": "2026-10-12",
+     "text": "$IREN X Anthropic\n\nI\u2019ll provide a completely unbiased assessment of this deal because this $IREN / $NBIS / $CRWV community just can\u2019t stop either perma bull-posting or bear-posting every single headline that is related to these 3 leaders in the space.\n\nFirst of all, we have no"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Nebius Stock Drops 30% Amid AI Sector Pressure, Draws Buyer Interest",
+     "url": "https://x.com/i/trending/2111352393543623007"
+    },
+    {
+     "kind": "news",
+     "label": "bear",
+     "title": "Nebius Group Shares Drop Sharply Below Key Support Levels",
+     "url": "https://x.com/i/trending/2109659762157621343"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Nebius Shares Drop 12% Amid AI Debt Worries, Draws Investor Interest",
+     "url": "https://x.com/i/trending/2111241114900717845"
+    },
+    {
+     "kind": "news",
+     "label": "bull",
+     "title": "Nebius Shares Drop 25% Weekly as Director Buys In",
+     "url": "https://x.com/i/trending/2110766895637131589"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Nike Shares Jump 5% as Investors Shift from Tech to Consumer Stocks",
+     "url": "https://x.com/i/trending/2110750044383052058"
+    }
+   ]
+  },
+  "IREN": {
+   "name": "IREN",
+   "bull_headline": "Reported Anthropic cloud deal adds a major customer",
+   "bear_headline": "52-week lows on debt fears; chartists see more downside",
+   "items": [
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 1490,
+     "user": "Sam_Badawi",
+     "url": "https://x.com/Sam_Badawi/status/2109415855029432525",
+     "date": "2026-10-11",
+     "text": "BREAKING: $IREN DEAL WITH ANTHROPIC\n\nAnthropic has reportedly signed a multiyear cloud computing agreement with IREN $IREN, according to The Information. The previously unannounced deal expands Anthropic\u2019s AI infrastructure network as its compute commitments approach $530B.\n\nThe "
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 19,
+     "user": "ilzmcfly",
+     "url": "https://x.com/ilzmcfly/status/2109411782255411331",
+     "date": "2026-10-11",
+     "text": "$IREN \n\nGreat find by Agrippa. \n\nIt seems Anthropic is the one who signed with Iren. \n\nAlthough Iren has not reported their total TCV yet on these contracts, I would imagine it now stands between $19-$22B. \n\nThe market cap is $13.8B. https://t.co/QeBH8gR31F https://t.co/08gEushSo"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 130,
+     "user": "DudeWhoInvests",
+     "url": "https://x.com/DudeWhoInvests/status/2109418406080561517",
+     "date": "2026-10-11",
+     "text": "Potential Iren $IREN deal with Anthropic boys\u2026\n\nIren has a price target of $70+ for most analysts and AI compute is still very much needed. It is just the execution that has held this company down.\n\nWill that change now? https://t.co/SFb55GuXl4"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 94,
+     "user": "ilzmcfly",
+     "url": "https://x.com/ilzmcfly/status/2109419730083975516",
+     "date": "2026-10-11",
+     "text": "$IREN \n\nGreat find by Agrippa. \n\nIt seems Anthropic is the one who signed with Iren. \n\nAlthough Iren has not reported their TCV yet on these contracts, I would imagine their total TCV now stands between $19-$22B. \n\nThe market cap is $13.8B. https://t.co/NgnLFuWXFZ https://t.co/08"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 4,
+     "user": "ELIatCanada",
+     "url": "https://x.com/ELIatCanada/status/2109391578427232258",
+     "date": "2026-10-11",
+     "text": "$IREN is down significantly from its highs, but the long-term AI story is still alive.\n\nThe bull case:\n\n1.Growing AI cloud revenue\n2.Strong demand for AI infrastructure\n3.Valuable power and data center capacity\n\nThe risks:\n\n1.Execution and data center delays\n2.High capital"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 15,
+     "user": "AverySullivan77",
+     "url": "https://x.com/AverySullivan77/status/2109423283590332922",
+     "date": "2026-10-11",
+     "text": "Breaking! Anthropic Quietly Signs Multi-Year Cloud Deal with $IREN!\ud83d\udd25\nAccording to the latest report from The Information, Anthropic \u2014 the company behind Claude \u2014 has signed an undisclosed multi-year cloud services agreement with former Bitcoin miner IREN, joining its massive http"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "FishForCapital",
+     "url": "https://x.com/FishForCapital/status/2109346939305439563",
+     "date": "2026-10-11",
+     "text": "Best thing you can do as an $IREN shareholder is ignore the opinions of bulls on here. Management has changed their guidance and strategy so many times this year the bulls are also in the blind. If you want to make money off $IREN start a subscription service to talk about $IREN"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 416,
+     "user": "AIStockSavvy",
+     "url": "https://x.com/AIStockSavvy/status/2109413695268827619",
+     "date": "2026-10-11",
+     "text": "$IREN | Anthropic, IREN deal leaked? \ud83d\udc40\ud83d\udc40 https://t.co/GYhDHYtd8b"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 40,
+     "user": "aganstwallst",
+     "url": "https://x.com/aganstwallst/status/2109420970390020240",
+     "date": "2026-10-11",
+     "text": "\ud83d\udea8 $IREN \u2014 THIS COULD BE HUGE\n\nAnthropic has reportedly signed an undisclosed multi-year cloud deal with IREN\n\nIf confirmed, this could be another major step in IREN\n\nImportant: This is NOT an official announcement from IREN or Anthropic. The report cites The Information, and the "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 35,
+     "user": "Colosteve2000",
+     "url": "https://x.com/Colosteve2000/status/2109351820162183209",
+     "date": "2026-10-11",
+     "text": "\ud835\udddc\ud835\udde5\ud835\uddd8\ud835\udde1 \ud835\udde3\ud835\udde2\ud835\uddea\ud835\uddd8\ud835\udde5 \ud835\uddd4\ud835\udde1\ud835\uddd7 \ud835\uddd6\ud835\uddd4\ud835\udde7\ud835\uddd4\ud835\udddf\ud835\uddec\ud835\udde6\ud835\udde7 \ud835\udde5\ud835\uddd8\ud835\udde3\ud835\udde2\ud835\udde5\ud835\udde7\nOctober 11, 2026\n\n\ud835\udde0\ud835\uddec \ud835\udde5\ud835\uddd8\ud835\uddd4\ud835\uddd7\n\n$IREN is sitting on a gold mine of power. Yes there are costs to develop. Its nowhere near what it will pay off after leased.\n\nIREN has already turned having power into major contracts. Next https://t.co/qI7lLDLh2w"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "allday_stocks",
+     "url": "https://x.com/allday_stocks/status/2109417122866626822",
+     "date": "2026-10-11",
+     "text": "$IREN IREN: Unconfirmed X Speculation Points to Potential Multi-Year Cloud Deal With Anthropic\n\u2800\n\u2022 Traders are circulating a post citing The Information as saying Anthropic recently signed a cloud deal with IREN.\n\u2022 No official announcement from IREN or Anthropic has been made,"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 145,
+     "user": "LeifInvests",
+     "url": "https://x.com/LeifInvests/status/2109423759941853335",
+     "date": "2026-10-11",
+     "text": "$IREN \u00d7 ANTHROPIC! \ud83d\udea8\ud83d\udd25\n\n$IREN reportedly signs a new multi year AI cloud deal with Anthropic! \n\n$IREN IS SURGING ON LIQUID! \ud83d\ude80\n\nThe opportunity was right there \ud83d\udc47 https://t.co/MQYEkZS5tT https://t.co/7MJHbq6xlF"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 70,
+     "user": "RocketTerminal",
+     "url": "https://x.com/RocketTerminal/status/2109423802019143728",
+     "date": "2026-10-11",
+     "text": "ANTHROPIC REPORTEDLY SIGNS MULTIYEAR DEAL WITH $IREN\n\nAnthropic has reportedly signed a previously unannounced multiyear cloud computing agreement with IREN $IREN, according to The Information.\n\nThe deal expands Anthropic\u2019s AI infrastructure network as its compute commitments htt"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "Bcalls_",
+     "url": "https://x.com/Bcalls_/status/2109422951678480569",
+     "date": "2026-10-11",
+     "text": "This is a significant news for $IREN.\n\nThe Information reports that Anthropic has quietly signed a multiyear cloud agreement with IREN. https://t.co/aEr9OwCv6M"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 150,
+     "user": "datacentrebull",
+     "url": "https://x.com/datacentrebull/status/2109347241576255636",
+     "date": "2026-10-11",
+     "text": "JPMorgan models $IREN at 2,065 MW by 2030: \n\n~$24B revenue, 65% EBITDA margins.\n\nJPMorgan thinks $IREN is a $24B revenue business in 3 Years !\n\nThey\u2019re modeling $13M per MW. IREN  management is talking $25M.\n\nSame 2,065 MW at $25M = $50B+.\n\nWall Street\u2019s \u201cbull case\u201d is still the"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 67,
+     "user": "SixSigmaCapital",
+     "url": "https://x.com/SixSigmaCapital/status/2109433607181746417",
+     "date": "2026-10-11",
+     "text": "\"I bought a bunch of 40 strike $IREN calls\"\n\nFintwit probably for the next 24 hours if IREN manages to pop on this ANthropic news (not confirmed yet)"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 180,
+     "user": "DustinHuntwn",
+     "url": "https://x.com/DustinHuntwn/status/2109315173781737718",
+     "date": "2026-10-11",
+     "text": "I don't give a FUCK \u2014 the receipts speak for themselves:\n\nLeopold Aschenbrenner called $IREN at $6 (2000% gains) and $BE at $20 (1600% gains).\n\nHe's now betting on these 10x stocks:\n\n1) $IREN https://t.co/YrzlhIrWsA"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 17,
+     "user": "JohnSmithb1ds",
+     "url": "https://x.com/JohnSmithb1ds/status/2109378525866205478",
+     "date": "2026-10-11",
+     "text": "$160 a share is when Ghosty and all the people shitting on IREN saying \u201cI\u2019ll buy IREN at $20 a share\u201d will be buying IREN. Fucking retards https://t.co/kCBQlpMjra"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 45,
+     "user": "steady_profits",
+     "url": "https://x.com/steady_profits/status/2109432358294409624",
+     "date": "2026-10-11",
+     "text": "$IREN badly needs a positive catalyst to get the share price moving upwards again, and the news that Anthropic have reportedly signed a cloud deal with IREN could be it. \ud83d\udc40 https://t.co/65sBNSvMtB"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "Jack3tone",
+     "url": "https://x.com/Jack3tone/status/2109381074107174913",
+     "date": "2026-10-11",
+     "text": "Seen a lot of good news on $IREN, bought last week at $35.53.\n\nPortfolio is currently $IREN and $UBER.\nBought $UBER  and up about 2% on it, might be looking to sell soon."
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "wiseyang11",
+     "url": "https://x.com/wiseyang11/status/2109322410982043823",
+     "date": "2026-10-11",
+     "text": "\"Since May, $Iren has racked up massive wins: Sweetwater 1 power-up, Nvidia DGX certification &amp; deals, Microsoft Horizon 1 delivery, and Sweetwater 2 power contract confirmed. On track for $4.4B ARR by the end of the year\u2014Iren is just getting started!\""
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "TheZTrades",
+     "url": "https://x.com/TheZTrades/status/2109431309840056820",
+     "date": "2026-10-11",
+     "text": "$ASTS\n$IREN\n\nAdded heavy last week. ASTS our largest position by far, but IREN is a top\nholding now as well. \n\nIREN just linked Anthropic deal. ASTS being compared to early stage Nvidia.\n\nLT couldn\u2019t be more bullish."
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "justrehen",
+     "url": "https://x.com/justrehen/status/2109396850675741180",
+     "date": "2026-10-11",
+     "text": "Anthropic quietly signed a multiyear cloud deal with IREN, a company that used to mine Bitcoin. The Information broke it today. IREN told investors back in August it had landed an unnamed frontier AI customer and now we know who.\n\nIREN has not confirmed the name yet. But it is ht"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 4,
+     "user": "cryptoalphagg",
+     "url": "https://x.com/cryptoalphagg/status/2109320672610500730",
+     "date": "2026-10-11",
+     "text": "Man feels like finx only got eyes for $IREN guys iren trade is not over but most of the gains are. It was covered extensively last year you had months of not years to buy under 10 you are late\nThere are equally good stocks now out there if not better\nLook at $btdr literally same"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 1,
+     "user": "x10Collin",
+     "url": "https://x.com/x10Collin/status/2109313428330250691",
+     "date": "2026-10-11",
+     "text": "\u201cPanic selling creates new Opportunities \u201d \ud83e\udde0\ud83d\udc8e\n\nHere are some stocks that look OVERSOLD right now! \ud83d\udc40\ud83d\udc47\n\n$IREN (IREN Limited) \u26a1\n\u2022 Next-Gen Data Centers &amp; Bitcoin Mining Infrastructure \ud83d\udda5\ufe0f\u26a1\n\u2022 RSI 33.90\n\u2022 8.4x fwd EV/EBITDA"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 1,
+     "user": "MaharajTrading",
+     "url": "https://x.com/MaharajTrading/status/2110005373747048553",
+     "date": "2026-10-13",
+     "text": "$IREN \nBias: Bearish\nBullish: Look for price action to reclaim $36 and test $38.50. Upside price target is $40.\nBearish: Look for price action to lose $35 and fail to reclaim it. Then working its way to $30. Downside price targets are $32 and $30."
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 3,
+     "user": "MaharajTrading",
+     "url": "https://x.com/MaharajTrading/status/2109644230196932976",
+     "date": "2026-10-12",
+     "text": "TRADE WATCHLIST \u2014 OCTOBER 12, 2026\n$DELL\nUpside: Hold above $595 \u2192 targets $600, $610, $615.\nDownside: Lose $585 and fail to reclaim \u2192 targets $580, $570, $560.\n\n$NOK\nUpside: Hold above $11 \u2192 targets $11.50, $12, $13.\nDownside: Lose $10 and fail to reclaim \u2192 targets $9.50,"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "MaharajTrading",
+     "url": "https://x.com/MaharajTrading/status/2110344318472863958",
+     "date": "2026-10-14",
+     "text": "WATCHLIST UPDATE \u2014 OCTOBER 14, 2026\n\nWatching support, reclaims and retests before taking entries.\n\n$META \u2014 Bullish watch\n$750 is the key support to hold. Above it, watching continuation toward $800. Losing $750 would weaken the setup.\n\n$DELL \u2014 Rebound watch\n$560 is the support h"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "allimcmahonn",
+     "url": "https://x.com/allimcmahonn/status/2109983475352891657",
+     "date": "2026-10-13",
+     "text": "$IREN remains one of the higher-beta AI infrastructure names, offering upside potential but also carrying significant volatility.\n\ud83d\udc02 Bull Case:\n\u2705 AI cloud demand continues expanding\n\u2705 Data center capacity growth accelerates\n\u2705 Break above $42 could trigger momentum buyers\n\ud83d\udc3b https:/"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 13,
+     "user": "Kendallde_",
+     "url": "https://x.com/Kendallde_/status/2110021058996892101",
+     "date": "2026-10-13",
+     "text": "$IREN\nremains one of the higher-beta AI infrastructure names, offering upside potential but also carrying significant volatility. \n\ud83d\udc02 Bull Case: \n\ud83d\udcf7 AI cloud demand continues expanding \n\ud83d\udcf7 Break above $42 could trigger momentum buyers \ud83d\udcf7 Bear Case: \n\ud83d\udcf7 Resistance rejection https://t.c"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 20,
+     "user": "KGInvests_",
+     "url": "https://x.com/KGInvests_/status/2109665900907602369",
+     "date": "2026-10-12",
+     "text": "$IREN will be a $222 stock in 2030\n\nThat\u2019s about 550% upside from now onwards. \n\nIt just has to hit \n\n\u25b6\ufe0f analysts estimated revenue to reach\n$24 billion and net margins to reach 15% \nin FY30.\n\n\u25b6\ufe0f 40x PE which is very cheap for that amount of growth\n\nThese are very very https://t."
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 13,
+     "user": "Sebagyeong",
+     "url": "https://x.com/Sebagyeong/status/2110029100366852604",
+     "date": "2026-10-13",
+     "text": "$NUAI\n\nStill Bullish, or Are We Underestimating the Risks?\n\nI\u2019ve noticed quite a few investors and influencers on X who remain extremely bullish on $NUAI\n\nAnd honestly, I can see why\n\n1. A 20-year, 207MW PPA with Vistra\n\n2. Access to power, one of the biggest bottlenecks in AI ht"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 18,
+     "user": "gabz_investing",
+     "url": "https://x.com/gabz_investing/status/2111113016041222638",
+     "date": "2026-10-16",
+     "text": "$IREN: Is a Reversal Near? \n\nIREN is down over 7% today, but our daily chart printed a liquidity sweep, and the descending trendline remains intact.\n\n\ud83d\udd39 Support: $28.75\u201332.48\n\ud83d\udd39 Next downside level: $24.29 (200W EMA)\n\ud83d\udd39 RSI: 38.4 weekly / 23.3 daily\n\ud83d\udd39 Flow: Strong Outflow\n\nA https:/"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "moby_tick",
+     "url": "https://x.com/moby_tick/status/2109573881959010647",
+     "date": "2026-10-12",
+     "text": "IREN &amp; INTC Stock Day Trade Setups | Is Smart Money Buying IREN? More Downside for Intel?\n\nIn today's premarket &amp; day trade breakdown, we analyze key price levels and institutional dark pool activity for $IREN and $INTC.\nWhat We Cover:\n\u2022 IREN Stock: Analyzing volume flow "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 31,
+     "user": "gainzalgo",
+     "url": "https://x.com/gainzalgo/status/2111317530157388000",
+     "date": "2026-10-17",
+     "text": "$IREN is testing a key weekly support level near its 200 EMA at $24.28. Bullish bounce incoming or more downside?\n@grok, is this a buying opportunity or a bull trap? https://t.co/IhGZcAvy3P"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 1,
+     "user": "Finora_EN",
+     "url": "https://x.com/Finora_EN/status/2110365819997675626",
+     "date": "2026-10-14",
+     "text": "\ud83d\udcca $IREN volume spikes 4.9x but price drops 4.3%\u2014panic selling, not strength, on full display today\n\n- this 4.9x volume spike on IREN #IRENUSDT.P with a -4.3% drop in 15 minutes is classic high-volume sell-off behavior, signaling strong distribution and potentially panic selling, "
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "leohuynh139",
+     "url": "https://x.com/leohuynh139/status/2111969019976962060",
+     "date": "2026-10-18",
+     "text": "\ud83d\udea8 $IREN ALERT: Shares Hit 52-Week Low Near $27 on Gartner Neocloud Warning and Debt Fears\n\n\ud83d\udcc9 Trade Futures: https://t.co/FJ5LEXcie6\n\n\ud83d\udfe2 Bullish: 40%\n\u2022 Avg analyst PT $79 implies 190% upside; Moderate Buy consensus holds\n\u2022 Dan Ives calls the dip a \u201cclear buying opportunity\u201d as"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "EmmanuelInvest",
+     "url": "https://x.com/EmmanuelInvest/status/2111480011026821292",
+     "date": "2026-10-17",
+     "text": "AI INFRASTRUCTURE \u2014 $NBIS vs $IREN vs $CIFR\nBULL VS BEAR | EMMANUELINVEST \u2014 PART 1\nAI DEMAND IS BOOMING. BUT WHO ACTUALLY MAKES MONEY FOR SHAREHOLDERS?\nThe AI infrastructure trade is entering a more demanding phase.\nFor much of the buildout, investors rewarded companies securing "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 5,
+     "user": "Annthraxx1",
+     "url": "https://x.com/Annthraxx1/status/2110042479068102690",
+     "date": "2026-10-13",
+     "text": "$IREN\n\nremains one of the higher-beta AI infrastructure names, offering upside potential but also carrying significant volatility.  \ud83d\udc02 Bull Case:  \ud83d\udcf7 AI cloud demand continues expanding  \ud83d\udcf7 Bear Case:  \ud83d\udcf7 Resistance rejection continues \ud83d\udcf7\ud83d\udcf7 \ud83d\udcf7\u26a0\ufe0f\u26a0\ufe0f https://t.co/oAWS8ouccU"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 54,
+     "user": "KGInvests_",
+     "url": "https://x.com/KGInvests_/status/2110104537428324679",
+     "date": "2026-10-13",
+     "text": "When good companies go on sale, I will not hesitate to buy them.\n\nI avoided $SOFI at $30 because it was overvalued.\n\nI\u2019m now stacking up on $SOFI at $15 because it\u2019s undervalued now\n\nI avoided $ONDS at $13 because it had made a huge run \n\nI have been buying lots of $ONDS at $7 ht"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 132,
+     "user": "xenomecha",
+     "url": "https://x.com/xenomecha/status/2111196750446743748",
+     "date": "2026-10-16",
+     "text": "$IREN - Weekly Chart Update\nOctober 16th, 2026\n\nI'm going to say some stuff, so like, take a deep breath, alright?\n\nI cover both the upside and the downside. \n\nThis is the lowest close for $IREN since September of '25.\n\nIt fell through the 0.786 log fib with high volume. This is "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "DennisDong15",
+     "url": "https://x.com/DennisDong15/status/2111230498278178910",
+     "date": "2026-10-16",
+     "text": "\ud83d\udcca October 19, 2026 Watchlist\n\n\ud83d\udd25 Top Catalysts\n\n$IAM \u2014 AI-driven biotech IPO gained ~26% Friday. Strong debut momentum, but already extended. Watch for consolidation and renewed buying volume.\n\n$CTY \u2014 RNAi biotech IPO jumped ~24% after pricing at $18. Fresh listing momentum, but"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "NASNMEDIA",
+     "url": "https://x.com/NASNMEDIA/status/2111204328103121276",
+     "date": "2026-10-16",
+     "text": "\ud83c\udfd7\ufe0f $IREN  ~$27 \u25bc~12%\n\nNews: AI data center financing concerns + inflation/crypto selloff. Microsoft/NVIDIA exposure.\n\nSentiment: Cautious despite deals.\n\nCatalysts: More hyperscale contracts, capacity ramp.\n\nVolume/Options: Heavy options activity.\n\nPT: ~$80 consensus (very high"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 4,
+     "user": "unnatural78",
+     "url": "https://x.com/unnatural78/status/2110438973437042876",
+     "date": "2026-10-14",
+     "text": "Been saying $CRWV and $IREN are absolute junk. And $NBIS way overvalued. This bearish market will kill these. Also overvalued space junk like $ASTS $LUNR and $RKLB.\nStick with companies that have profits"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "SimplerTrades_",
+     "url": "https://x.com/SimplerTrades_/status/2109626849823224020",
+     "date": "2026-10-12",
+     "text": "\u26a1 Happy Monday \u2014 here's your full recap of the last 24 hours \u26a1\n\n\ud83d\udea8 Major Headlines &amp; Market Moves \ud83d\udea8\n\n\u2022 Friday's close: Dow +0.8% (51,654.95), S&amp;P 500 +0.6% (7,811.54 \u2014 second-highest close ever), Nasdaq +0.6%; weekly: Dow +0.9%, S&amp;P +1.2%, Nasdaq +0.6% (4th straight we"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 44,
+     "user": "Funmentalist",
+     "url": "https://x.com/Funmentalist/status/2109561519335752057",
+     "date": "2026-10-12",
+     "text": "$IREN X Anthropic\n\nI\u2019ll provide a completely unbiased assessment of this deal because this $IREN / $NBIS / $CRWV community just can\u2019t stop either perma bull-posting or bear-posting every single headline that is related to these 3 leaders in the space.\n\nFirst of all, we have no"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 4,
+     "user": "eagletradesX",
+     "url": "https://x.com/eagletradesX/status/2109777478847803536",
+     "date": "2026-10-12",
+     "text": "$IREN \u2014 Everyone is watching the selloff. I\u2019m watching what happens AFTER it. \ud83d\udc40\ud83e\udd85\n\nThis could be setting up for a much bigger reversal, but there are a few levels buyers absolutely need to defend.\n\n$IREN flushed to $34.64 on the 4H before recovering to close at $35.14. Buyers http"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "RanjitAlpha",
+     "url": "https://x.com/RanjitAlpha/status/2109611436389384465",
+     "date": "2026-10-12",
+     "text": "\ud83c\udf0e MARKET FORECAST \u2014 MONDAY, OCTOBER 12, 2026\n\n\ud83d\udcf0 Overnight News Update\n\n\u2022 \ud83c\udde8\ud83c\uddf3 China / Memory: CXMT reported progress on next-generation 4F\u00b2 DRAM technology and plans advanced DDR5 server-memory modules by year-end. Commercial success remains unproven, but the development adds"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 371,
+     "user": "MMatters22596",
+     "url": "https://x.com/MMatters22596/status/2111134323063554262",
+     "date": "2026-10-16",
+     "text": "$IREN | MORE DOWNSIDE AHEAD\n\nThe stock has broken below its most recent low at $28.93.\nAs a result, I'm turning bearish and now expect further downside toward my $24\u2013$15 target zone.\n\nAt current levels, $IREN is not a buy for me.\n\nThis correction could take considerably more time"
+    },
+    {
+     "kind": "news",
+     "label": "bull",
+     "title": "Anthropic Signs Multi-Year Cloud Deal with Bitcoin Miner IREN",
+     "url": "https://x.com/i/trending/2109420332063084871"
+    },
+    {
+     "kind": "news",
+     "label": "bull",
+     "title": "IREN Shares Recover from Intraday Drop Amid AI Optimism",
+     "url": "https://x.com/i/trending/2110174789122007274"
+    },
+    {
+     "kind": "news",
+     "label": "bear",
+     "title": "Nebius and IREN Shares Drop Sharply Amid AI Cloud Worries",
+     "url": "https://x.com/i/trending/2111135172938568182"
+    },
+    {
+     "kind": "news",
+     "label": "bull",
+     "title": "Retail Investors Buy IREN Dip as Stock Recovers from Lows",
+     "url": "https://x.com/i/trending/2110107094678712408"
+    },
+    {
+     "kind": "news",
+     "label": "bear",
+     "title": "IREN Stock Plunges to $30 Amid AI Infrastructure Selloff",
+     "url": "https://x.com/i/trending/2110388521257353293"
+    }
+   ]
+  },
+  "APLD": {
+   "name": "Applied Digital",
+   "bull_headline": "$36B contracted revenue; selloff seen as an entry point",
+   "bear_headline": "Bear-flag breakdown; options flow leans bearish",
+   "items": [
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "longinvestority",
+     "url": "https://x.com/longinvestority/status/2111492012595970292",
+     "date": "2026-10-17",
+     "text": "\ud83d\udea8This is huge ! \n\n$NVDA $AMD $IREN $NBIS $CRWV $APLD $MU $GOOGL $MSFT $AMZN $ORCL https://t.co/CdsWsXucNZ"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "LIMSPACEX",
+     "url": "https://x.com/LIMSPACEX/status/2111361142551712178",
+     "date": "2026-10-17",
+     "text": "\ud83d\ude80 Week 03 | Space Stocks\n$SPCX $162.56 \u2192 $146.03 (-10.17%)\n$RKLB $68.21 \u2192 $50.84 (-25.46%)\n$APLD $23.68 \u2192 $18.05 (-23.77%)\n3 week of tracking \ud83d\ude80\n10.16.2026 \ud83c\uddfa\ud83c\uddf8\n\n#SPCX #RKLB #APLD"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 40,
+     "user": "Fun_Paleo",
+     "url": "https://x.com/Fun_Paleo/status/2111544729850773858",
+     "date": "2026-10-17",
+     "text": "Does everyone feel a bounce monday? Or will datacenters offer even bigger discounts?\n$WULF $CIFR $HUT $APLD $NBIS $IREN"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 0,
+     "user": "ReidThorntytjp",
+     "url": "https://x.com/ReidThorntytjp/status/2109412004821971246",
+     "date": "2026-10-11",
+     "text": "$APLD \nSecures massive 810MW hyperscale cloud leasing contracts! $APLD delivers explosive earnings results beating expectations; Wall Street sets bullish price targets of $55\u2013$64. \ud83e\uddf5\ud83d\udcc8\ud83d\ude80\n\nThe company has signed three long-term lease agreements with an investment-grade North"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "CapitalCenturio",
+     "url": "https://x.com/CapitalCenturio/status/2111541308967772170",
+     "date": "2026-10-17",
+     "text": "$APLD, $CORZ, $HUT, $WULF \u2014 median short interest 22% of float. The insightThe AI data center landlord complex is down 33% on average since July TeraWulf is the most shorted at 34.9%The debt-funded buildout model is being repriced in real time #APLD   #ShortSell #DataCenters"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "StockTickerZone",
+     "url": "https://x.com/StockTickerZone/status/2111131190275318035",
+     "date": "2026-10-16",
+     "text": "Top Losers - Stock Screener - Overview volume\n$APLD\n\nTicker      Price      Volume\n-----------------------------\n$APLD    18.92     10.8M https://t.co/Nud3kIRUdR"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "deskscale",
+     "url": "https://x.com/deskscale/status/2111532476355260864",
+     "date": "2026-10-17",
+     "text": "Markets in the past week have basically traded AI stocks for defensive stocks. \n\nYour sector exposure shaped your week.\n\nWhat are you watching next: a rebound in chips or continued strength in defensives? $MU $SNDK $CRWV $NBIS $APLD $NVDA https://t.co/gk2J2DuBq2"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "steadyTape_io",
+     "url": "https://x.com/steadyTape_io/status/2111514440042758559",
+     "date": "2026-10-17",
+     "text": "\ud83d\udcca SteadyTape weekly recap \u2014 Oct 12\u201316\n\nFlagship folio (simulated): 13 entries, 0 exits.\nBiggest booked wins (sim): $NBIS +93.2% (pead); MRVL +70.8% (big_move_followthrough); APLD +45.7% (relative_strength).\nTrack record since 2015: $300K \u2192 $29.5M \u2014 +9,736% \u00b7 87% win rate \u00b7 https:"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 3,
+     "user": "ScottAWolfe",
+     "url": "https://x.com/ScottAWolfe/status/2111249792936395258",
+     "date": "2026-10-17",
+     "text": "If you believe that use of AI will continue to increase, and along with it a demand for compute, these seem like very tempting buys right now. I\u2019m nibbling on $IREN $APLD $CIFR as long term holds in my RRSP alongside my $FBTC. https://t.co/N7bLAYBeJO"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "EBUYUKARSLAN",
+     "url": "https://x.com/EBUYUKARSLAN/status/2110025263266357672",
+     "date": "2026-10-13",
+     "text": "$CIFR already huge green here same with $ENPH\n\n$APLD lagging now .. added apld"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 30,
+     "user": "Fllw_the_light",
+     "url": "https://x.com/Fllw_the_light/status/2109363225448030406",
+     "date": "2026-10-11",
+     "text": "Going through and updating what I anticipate in the next two quarters from $APLD.\n\nI will wait for next site updates from APLD which should likely be out this week to get a better feel for DF1 progress, but should all be lining up nicely that very shortly after PF1 and PF2 are ht"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "WealthBranch",
+     "url": "https://x.com/WealthBranch/status/2111099364240212060",
+     "date": "2026-10-16",
+     "text": "$APLD Applied Digital Corp. is trending today. Full focus. Discover our LEAF breakdown and AI outlook for swing traders. More ticker ideas? Try our app. #APLD https://t.co/rLgTJATAno"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "CatalystPit",
+     "url": "https://x.com/CatalystPit/status/2109367989137014806",
+     "date": "2026-10-11",
+     "text": "$APLD: Applied Digital reports $36 billion in contracted revenue"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 11,
+     "user": "PebbySandhu",
+     "url": "https://x.com/PebbySandhu/status/2109359185926459397",
+     "date": "2026-10-11",
+     "text": "$APLD AS i said, \"$23.32 was key level\" \n\n8/25 https://t.co/vI0cxoSBSK https://t.co/uuFpyqenjK"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "HeavyDiligence",
+     "url": "https://x.com/HeavyDiligence/status/2111186254368825365",
+     "date": "2026-10-16",
+     "text": "Beaten-down stocks getting beaten down some more! \ud83d\udcc9\n\nThe stocks in this week's Heavy Diligence Community TA poll took another beating today, with $APLD getting hit especially hard, down 11.5%.\n\nSo the question is: How low could APLD go?\n\nLooking at the daily chart, we're https://"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Nebvo",
+     "url": "https://x.com/Nebvo/status/2111109938210590978",
+     "date": "2026-10-16",
+     "text": "APLD thoughts? Big buy in? I have a feeling this will spike, but how low will it go first\u2026 wait or buy now? #APLD #stocks #trading212 https://t.co/kvn1AO6yGd"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "danjkelley1966",
+     "url": "https://x.com/danjkelley1966/status/2109386980375355422",
+     "date": "2026-10-11",
+     "text": "\ud83d\udea8Even market giants are adjusting their positions! How should retail investors respond?\n\nMust-read before Monday's market opens: Emergency market trend analysis!\n\nhttps:https://t.co/JKkzY27MIU\n\nReply \"stocks\" to join the group for free, last chance!\n\n$APLD $APLD $SOFI $WFC $ACVA "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Randy_SwingEdge",
+     "url": "https://x.com/Randy_SwingEdge/status/2109944923374104964",
+     "date": "2026-10-13",
+     "text": "$APLD  LITE CEO Michael Hurlston stated that AI optical components are sold out through early 2029. Following this, LITE\u2019s stock price climbed even higher.\nAPLD CEO Wes Cummins said demand remains extremely robust, with everything for 2027 fairly contracted and moving into 2028 h"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Quang190895Minh",
+     "url": "https://x.com/Quang190895Minh/status/2109337386727711222",
+     "date": "2026-10-11",
+     "text": "my @stoxacoin early access card: $APLD (Uncommon) https://t.co/uXbu8FdIOv"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Jonburleson2",
+     "url": "https://x.com/Jonburleson2/status/2111836862176485535",
+     "date": "2026-10-18",
+     "text": "A dedicated WhatsApp group for $APLD holders is now online!\n\nAll investors holding $APLD stock are welcome to join this exclusive group to discuss the stock and get the latest information\n\ngroup:https://t.co/bZuo89ydan\n\nClick this link or the link on my homepage to join\n\n#Stocks"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 3,
+     "user": "K23720King",
+     "url": "https://x.com/K23720King/status/2109421575804182905",
+     "date": "2026-10-11",
+     "text": "You know $APLD wont be under 50 for much longer, right? https://t.co/i8v6JnQajo"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 13,
+     "user": "InvestifyDaily",
+     "url": "https://x.com/InvestifyDaily/status/2110884947208601995",
+     "date": "2026-10-16",
+     "text": "$APLD 4hr chart. I tracked resistance zone around $24.50 up and today $APLD bounced all the way down to $18.50 then ended today above $20 which is promising. \n\nThe $19-$18 range hasn't been touched in over a year. But hopefully the shakeout will reset and $APLD can start moving h"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 3,
+     "user": "Bblythe_Gr",
+     "url": "https://x.com/Bblythe_Gr/status/2109329326768615647",
+     "date": "2026-10-11",
+     "text": "$CIFR significant upside \u2026.massive opportunity \n\n$WULF $APLD $META $NBIS https://t.co/10IWTR7kCw"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Levi2v2y",
+     "url": "https://x.com/Levi2v2y/status/2111277537368080631",
+     "date": "2026-10-17",
+     "text": "A dedicated WhatsApp group for \n$APLD\n holders is now online!  \nAll investors holding \n$APLD\n stock are welcome to join this exclusive group to discuss the stock and get the latest information.\nClick this link and send \"6\" to join the group:https://https://t.co/7nh0MqiWqJ https:/"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 0,
+     "user": "GunardiSaputra",
+     "url": "https://x.com/GunardiSaputra/status/2109390475950248095",
+     "date": "2026-10-11",
+     "text": "$APLD weekly\nIt is still in the uptrend.\nBetter revenue.\nI do not add or reduce any position.\nPromising price target. https://t.co/u00uOED36B"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "KylaDion_",
+     "url": "https://x.com/KylaDion_/status/2110727122897731858",
+     "date": "2026-10-15",
+     "text": "Is $APLD an AI infrastructure opportunity\u2014or a high-risk capital-intensive bet? \n Revenue growth: +322% YoY\n Expanding AI data center capacity\n Significant losses and financing risks\nThe bull case is compelling. The execution challenge is real.\nAre you bullish or bearish on APLD"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 5,
+     "user": "InvestifyDaily",
+     "url": "https://x.com/InvestifyDaily/status/2111176597168345509",
+     "date": "2026-10-16",
+     "text": "$TSM\n$IREN\n$APLD\n$CRWV \n\nRegardless if you are bearish bullish or anything inbetween. Risk management is a must. Will be readjusting my strategy and learning more. Trying new things and hopefully to be alert on investing in bad macro conditions. https://t.co/rJAtymnFwx"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "ElvisCritz",
+     "url": "https://x.com/ElvisCritz/status/2111730959049425331",
+     "date": "2026-10-18",
+     "text": "\ud83d\udea8 $ICE $APP $APLD ALERT: Nine US Companies Object to Tokenized Trading on OKXICE\n\n\ud83d\udd17 Open on MEXC: https://t.co/Dzc46WQPiL\n\n\ud83d\udfe2 Bullish: 30%\n\u2022 OKXICE still plans to offer 24/7 tokenized U.S. equity trading through a permissioned Uniswap v4 AMM on XLayer\n\n\ud83d\udd34 Bearish: 70%\n\u2022 Nine"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 2,
+     "user": "toptraderSam",
+     "url": "https://x.com/toptraderSam/status/2110763094032982303",
+     "date": "2026-10-15",
+     "text": "I\u2019m buying $APLD at around $20 because I see this selloff in AI stocks as a potential longterm opportunity. I\u2019m bullish on the AI infrastructure business and believe $APLD could benefit as its massive investments start generating more returns, especially if the company can grow"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 0,
+     "user": "GetRichStayRich",
+     "url": "https://x.com/GetRichStayRich/status/2111575664042332494",
+     "date": "2026-10-17",
+     "text": "$APLD on Watch for Entry Price - 160% Upside \u2b06\ufe0f\n\nThe more push back on data centers, the stronger the moat and barrier to entry.\n\nAnalysts Validate Applied Digital\u2019s Results, Reaffirm Outlook for Triple-Digit Upside\n\nAnalysts' responses following the release were mixed. Most"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 0,
+     "user": "Daniel_Lawson__",
+     "url": "https://x.com/Daniel_Lawson__/status/2111907916978729005",
+     "date": "2026-10-18",
+     "text": "$APLD, $CIFR and $ONDS: all three show 200%+ implied upside to average analyst targets.\n\nThat gets my attention. I'm bullish on the opportunity, but I want contracts, funding and execution to back it up.\n\n10 names worth a closer look \ud83d\udc47 https://t.co/L9cN75HxtA"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "ThetaTradesHQ",
+     "url": "https://x.com/ThetaTradesHQ/status/2111215642414121450",
+     "date": "2026-10-16",
+     "text": "$APLD $NVDA $MSFT \n\nLEAN BEARISH \u2014 calls two-sided + put buying\n\nAPLD \u2014 biggest OI moves (confirmed):\nOct. 16, 2026 $19 calls  +5.1k \u2014 bought at ask, buyers (bullish) \u00b7 (expired at the close)\nJan. 15, 2027 $20 puts  +2.7k \u2014 sold at bid, sellers \u00b7 ~43% tied to spreads\nOct. 23,"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 8,
+     "user": "JoshTradeOption",
+     "url": "https://x.com/JoshTradeOption/status/2110507694062768292",
+     "date": "2026-10-14",
+     "text": "Bullish trade idea.\n\nPremium-Funded LEAP Idea\n\nSell 6 contracts $APLD  Nov 27, 2026 $21 puts. Collect $798 in premium.\n\nBuy 1 contract $APLD Jan 21, 2028 $27 calls. Cost $720.\nThe leftover premium buys about 3 shares outright.\n\nIf $APLD never gets above $27, the calls can expire"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "EthanCalloqlqt",
+     "url": "https://x.com/EthanCalloqlqt/status/2109659582520021045",
+     "date": "2026-10-12",
+     "text": "Key Tactical Focus This Week: \"Contrarian\" (Left-Side) Entry Maps &amp; Asymmetric Odds Matrices for Three High-Beta Growth Stocks \ud83e\uddf5\ud83d\udcc8\ud83d\ude80\nStrike precisely when pullbacks test key liquidity pivot zones. This week, we are targeting three high-beta growth and AI-sector stocks that offe"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 24,
+     "user": "Invst_Informant",
+     "url": "https://x.com/Invst_Informant/status/2110401053267005888",
+     "date": "2026-10-14",
+     "text": "Market makers chose violence on AI infrastructure and data center stocks these last few weeks\n\nThe bearish flag on $APLD  Applied Digital is now playing out with a loss of the 0.887 fib, which could mean a move into the area in blue in the future for a bottoming formation. https:"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 1,
+     "user": "Finora_EN",
+     "url": "https://x.com/Finora_EN/status/2111950221928223153",
+     "date": "2026-10-18",
+     "text": "\ud83d\udcca APLD shows a 3.4% jump on 15m with a massive 92.6x volume surge\u2014bullish momentum locked in\n\n- my bias is bullish here: the 1h structure is clearly bullish, with strong confirmation from both the explosive 92.6x volume spike and aggressive buy-side flows (taker dominance, top ht"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "ThetaTradesHQ",
+     "url": "https://x.com/ThetaTradesHQ/status/2110198583102214157",
+     "date": "2026-10-14",
+     "text": "$APLD \n\nNEUTRAL / TWO-SIDED \u2014 calls two-sided + put writing\n\nAPLD \u2014 biggest OI moves (confirmed):\nOct. 16, 2026 $22 puts  +2.9k \u2014 sold at bid, sellers (bullish)\nOct. 16, 2026 $25 calls  +1.4k \u2014 mixed fills, mixed\nNov. 20, 2026 $23 calls  +1.1k \u2014 sold at bid, sellers (bearish)"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "viral_stocks",
+     "url": "https://x.com/viral_stocks/status/2111611326468633079",
+     "date": "2026-10-18",
+     "text": "Tickers lighting up X conversation right now:\n\n1. Strategy Inc $MSTR is down 1.0% today after falling 9.6% in the regular session\n\n\ud83d\udfe2 Sentiment: 45% bullish, 14% bearish, 41% neutral\n\nMSCI announced new rules on Oct 16 that could remove Strategy from its indexes, prompting a 9.6% "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "ThetaTradesHQ",
+     "url": "https://x.com/ThetaTradesHQ/status/2110517032361836722",
+     "date": "2026-10-14",
+     "text": "$APLD \n\nNEUTRAL / TWO-SIDED \u2014 calls two-sided + put buying\n\nAPLD \u2014 biggest OI moves (confirmed):\nOct. 16, 2026 $25 calls  +2.1k \u2014 sold at bid, sellers (bearish)\nJan. 15, 2027 $22 calls  +1.7k \u2014 bought at ask, buyers \u00b7 ~73% tied to spreads\nJan. 15, 2027 $25 calls  +1.5k \u2014 bought"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 17,
+     "user": "dusty_bull",
+     "url": "https://x.com/dusty_bull/status/2110148801054826620",
+     "date": "2026-10-13",
+     "text": "$CIFR took a beating today over the convertible note announcement, but I think the corporate debt market offers a useful perspective on whether the selloff is pricing in too much downside or not? \n\nThe stock market is reacting to potential dilution. The credit (bond) market is"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "ThetaTradesHQ",
+     "url": "https://x.com/ThetaTradesHQ/status/2109813720876712436",
+     "date": "2026-10-13",
+     "text": "$APLD \n\nNEUTRAL / TWO-SIDED \u2014 call writing + puts two-sided\n\nAPLD \u2014 biggest OI moves (confirmed):\nOct. 16, 2026 $23.50 puts  +3.7k \u2014 sold at bid, sellers \u00b7 ~58% tied to spreads\nOct. 16, 2026 $22.50 puts  +3.6k \u2014 sold at bid, sellers \u00b7 ~80% tied to spreads\nNov. 20, 2026 $23 calls "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "toptraderSam",
+     "url": "https://x.com/toptraderSam/status/2110763988959043689",
+     "date": "2026-10-15",
+     "text": "I\u2019m buying $APLX for a short term swing trade into next week, betting on a relief bounce after the selloff in AI stocks. $APLD is sitting near the $20 support area and if it rebounds toward $22\u2013$23, I think $APLX could move from around $4.60 toward $5.50, giving us a potential"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "MihaSTOCK",
+     "url": "https://x.com/MihaSTOCK/status/2111552978456891790",
+     "date": "2026-10-17",
+     "text": "My entire feed is suddenly predicting a bear market, Black Monday, a flash crash or the AI bubble bursting.\n\nThe speed at which conviction turns into panic is incredible. A few brutal sessions and suddenly everyone is convinced the whole investment thesis is dead.\n\nI\u2019m skeptical"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "stockAlexander1",
+     "url": "https://x.com/stockAlexander1/status/2111148074613735829",
+     "date": "2026-10-16",
+     "text": "\ud83d\ude80 $APLZ : Momentum Is Heating Up!\n\nAPLZ surged 18.87% on Oct. 14, pushing its closing price to $32.07. Despite a slight pullback in the following session, the ETF has gained roughly 33% from its Oct. 7 close.\n\n\ud83d\udcca Technical Outlook:\n\u2022 Momentum remains strong, but volatility is"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 7,
+     "user": "SlavMarkets",
+     "url": "https://x.com/SlavMarkets/status/2111880148345864694",
+     "date": "2026-10-18",
+     "text": "\ud83d\udea8 NEOCLOUDS GOT OBLITERATED LAST WEEK. WHAT HAPPENS NEXT? \ud83d\udea8\n\nLast week was absolute carnage across AI infrastructure stocks.\n\n$CIFR: -34%\n$CRWV: -25%\n$NBIS: -25%\n$APLD: -24%\n$IREN: -23%\n$WULF: -15%\n\nThe Nasdaq dropped 4.5%, but neoclouds got absolutely demolished.\n\nSo here\u2019s http"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 8,
+     "user": "SlavMarkets",
+     "url": "https://x.com/SlavMarkets/status/2110416355006779808",
+     "date": "2026-10-14",
+     "text": "\ud83d\udea8 $CRWV CREDIT MARKETS FLASHING RED \ud83d\udea8\n\nCoreWeave\u2019s 2032 bond yield just touched 15%, raising serious questions about how the AI infrastructure boom is being financed.\n\nFor context:\n\u2022 ~$52B in debt and lease obligations\n\u2022 Parent company rated below investment grade\n\u2022 Bond https://"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "AllOrNada",
+     "url": "https://x.com/AllOrNada/status/2110688369600815110",
+     "date": "2026-10-15",
+     "text": "Bad month to want to diversify into AI plays. \ud83d\ude0c What are you guys doing with your $IREN and $APLD ? Are these overvalued?"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "msammyintel",
+     "url": "https://x.com/msammyintel/status/2110678882114486344",
+     "date": "2026-10-15",
+     "text": "\ud83d\udea8Are We Watching a Repeat of 2000 and 2008?\n\nI'm extremely bearish on this market, and it's not because of one bad CPI report, one red candle, or some technical indicator flashing a sell signal.\n\nI'm seeing disturbing similarities to BOTH the 2000 Dot-Com bubble and the economic"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 0,
+     "user": "anjungmin0427",
+     "url": "https://x.com/anjungmin0427/status/2109620668295971245",
+     "date": "2026-10-12",
+     "text": "$APLD Honestly, I think this stock is undervalued. There\u2019s no reason it couldn\u2019t go above $30."
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 0,
+     "user": "GetRichStayRich",
+     "url": "https://x.com/GetRichStayRich/status/2109962462485242172",
+     "date": "2026-10-13",
+     "text": "Applied Digital ($APLD) Could Be 64% Undervalued Following Its Latest Quarterly Results\n\nApplied Digital ($APLD) just released fiscal first quarter numbers that combine very strong reported revenue of US$341.88 million with a much wider net loss of US$237.08 million, putting"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Smarter Web's MORE Preferred Shares Launch on LSE with \u00a310M IPO",
+     "url": "https://x.com/i/trending/2110399506990977138"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Saylor Frames Bitcoin as Digital Capital for Strategy's Credit and Equity",
+     "url": "https://x.com/i/trending/2110781582290145543"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Bitget Launches Jio Platforms Pre-IPO Futures Contract",
+     "url": "https://x.com/i/trending/2110683249102233684"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Cipher Digital Stock Drops 12% on $850 Million AI Data Center Financing",
+     "url": "https://x.com/i/trending/2109983830064890317"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Anthropic's Revenue Growth Slows Sharply, Rattling AI Investors",
+     "url": "https://x.com/i/trending/2111923830600167453"
+    }
+   ]
+  },
+  "CIFR": {
+   "name": "Cipher",
+   "bull_headline": "Analyst targets imply large upside after selloff",
+   "bear_headline": "$850M convertible offering sparks dilution fears",
+   "items": [
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 181,
+     "user": "Jake__Wujastyk",
+     "url": "https://x.com/Jake__Wujastyk/status/2109419495739805808",
+     "date": "2026-10-11",
+     "text": "$CIFR #CIFR Trading back down at the S/R flip zone. https://t.co/PLJXZYstFi"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "MihaSTOCK",
+     "url": "https://x.com/MihaSTOCK/status/2109380497109389678",
+     "date": "2026-10-11",
+     "text": "$CIFR at $13.50 or $CRDO at $215\u2014which would you buy for the next 6 months?\n\nCIFR: HPC rent ramp and potential upside, with construction and financing risk.\nCRDO: proven earnings growth, but a premium valuation.\nWhich offers the better risk/reward through April 2027?"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 25,
+     "user": "FinTonyX",
+     "url": "https://x.com/FinTonyX/status/2109354009890853217",
+     "date": "2026-10-11",
+     "text": "$CIFR\n\nBased on this and many other neocloud setups, I think there will be a bit more short term weakness.\n\n$CIFR is moving close to its IPO VWAP, which will either be a key buy zone, or an exit for many investors. \n\nWhat do you think? https://t.co/2UqFg8qqPv"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Jeremy_219",
+     "url": "https://x.com/Jeremy_219/status/2109371361764241740",
+     "date": "2026-10-11",
+     "text": "If you missed the significant rise in $STNE and $PCVXstocks, don't worry.\n\nMy personal WhatsApp link: \ud83d\udcf2: https://t.co/93GsjHw4HO\n\nReply \"Stocks\" to join for free.\n\nDetailed trading plans for the following stocks have been shared in my personal WhatsApp group.\n$TME $LYFT $CIFR htt"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "YaseenBasman",
+     "url": "https://x.com/YaseenBasman/status/2109358869776671218",
+     "date": "2026-10-11",
+     "text": "$CIFR November  https://t.co/VEm9CYxBZh"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "MihaSTOCK",
+     "url": "https://x.com/MihaSTOCK/status/2109380650012991781",
+     "date": "2026-10-11",
+     "text": "$CIFR at $13.50 or $CRDO at $215\u2014which would you buy for the next 6 months?\n\nCIFR: HPC rent ramp and potential upside, with construction and financing risk.\nCRDO: proven earnings growth, but a premium valuation.\n\nWhich offers the better risk/reward for the next 6-12 months?"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 11,
+     "user": "InvestmentGuru_",
+     "url": "https://x.com/InvestmentGuru_/status/2109415549256306900",
+     "date": "2026-10-11",
+     "text": "Compression...\n\n#Bitcoin \n$HOOD\n$SOFI \n$JPM\n$WFC \n$IREN \n$CIFR\n$ONDS \n$HIMS https://t.co/uF7XXwTdNQ"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "otium33",
+     "url": "https://x.com/otium33/status/2109379321383244231",
+     "date": "2026-10-11",
+     "text": "$CIFR $12 this week ?"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 39,
+     "user": "kholov23",
+     "url": "https://x.com/kholov23/status/2109399276078215611",
+     "date": "2026-10-11",
+     "text": "this shit is getting more attention and engagement, you are so fucked up $CIFR https://t.co/c6JnrQrtqI"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 3,
+     "user": "Bblythe_Gr",
+     "url": "https://x.com/Bblythe_Gr/status/2109329326768615647",
+     "date": "2026-10-11",
+     "text": "$CIFR significant upside \u2026.massive opportunity \n\n$WULF $APLD $META $NBIS https://t.co/10IWTR7kCw"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 9,
+     "user": "101sfinance",
+     "url": "https://x.com/101sfinance/status/2109408612552479138",
+     "date": "2026-10-11",
+     "text": "Many people are bearish on $IREN and $CIFR right now. \n\nI think we could see a nice rebound from both this week. \n\nAm I wrong or right?"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 13,
+     "user": "PebbySandhu",
+     "url": "https://x.com/PebbySandhu/status/2109362007489352187",
+     "date": "2026-10-11",
+     "text": "Even though i know we got a bounce here on $CIFR \n\nBut my parents taught me to respect candles, no matter what\n\nSo, I'm out.\n\n9/25 https://t.co/OaDmmMVFGQ https://t.co/wMS4Ug11rk"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 48,
+     "user": "datacentrebull",
+     "url": "https://x.com/datacentrebull/status/2109332610518499356",
+     "date": "2026-10-11",
+     "text": "$CIFR investors, asking for a green day like\u2026 https://t.co/00ywT9hrkd"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 15,
+     "user": "datacentrebull",
+     "url": "https://x.com/datacentrebull/status/2109378769349984613",
+     "date": "2026-10-11",
+     "text": "Where the money is flowing:\n\n\u26a1 Energy &amp; nuclear: $CEG $OKLO\n\n\ud83e\udde0 AI compute: $NVDA $IREN\n\n\ud83d\udd26 Optical networking: $GLW $LITE\n\n\ud83c\udfd7\ufe0f Data centres: $CIFR $APLD\n\n\ud83e\udd16 Robotics: $TSLA $ISRG\n\n\ud83e\udd47 Gold &amp; Bitcoin: $GLD $IBIT https://t.co/X6YQyqDMFa"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "CGGalakoutis",
+     "url": "https://x.com/CGGalakoutis/status/2109359927919546709",
+     "date": "2026-10-11",
+     "text": "Absurd price on $CIFR https://t.co/cR6bioSwxe"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "bridadonn__",
+     "url": "https://x.com/bridadonn__/status/2109401136759189705",
+     "date": "2026-10-11",
+     "text": "$CIFR, $AXTI and $AEHR are all testing long-term support. High-beta names can rebound fast, but support only matters if it holds. I\u2019m watching for buyers to show up before calling this a recovery. https://t.co/tzxUeBNb63"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 3,
+     "user": "warai_ein",
+     "url": "https://x.com/warai_ein/status/2109366605700329611",
+     "date": "2026-10-11",
+     "text": "$CIFR would you believe it if it goes below $10?"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "d_pavlos",
+     "url": "https://x.com/d_pavlos/status/2109344672388698351",
+     "date": "2026-10-11",
+     "text": "Three weeks ago the $CIFR plan was a daily close above 19.50.\n\nIt traded to 19.75 on 9/22. It closed 19.09.\nNo close, no trade.\n\nThursday's low was 12.88. That's \u221234.8% from that high. \ud83d\udcc9\n\nNow it sits on a floor that is a year old:\n11/21 \u2192 13.09\n2/05 \u2192 12.64\n3/12 \u2192 13.03\nIt https:"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "clarafajardomua",
+     "url": "https://x.com/clarafajardomua/status/2109379919478468793",
+     "date": "2026-10-11",
+     "text": "$TEM $XPEV $CIFR $XPEV $SWRD \ud83d\udcc8\n\n**Watching these setups closely.**\n\nLast week, my WhatsApp team banked **$50K\u2013$130K**.\n\nReal-time alerts guide members through the trade from entry to exit.\n\n\ud83d\udc49 **https://t.co/E9Lnaopq2Z**\n\nReply **\u201cHot Stocks\u201d** to join free. \ud83d\ude80 https://t.co/j3zImIP"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 113,
+     "user": "Edge_Bolt",
+     "url": "https://x.com/Edge_Bolt/status/2109352899792838800",
+     "date": "2026-10-11",
+     "text": "$CIFR\n\nPay attention to the signs.\n\nYou were warned. https://t.co/B9yZmIuIPW"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 32,
+     "user": "OInvests",
+     "url": "https://x.com/OInvests/status/2109365659201380660",
+     "date": "2026-10-11",
+     "text": "Levels I'm watching this week:\n\n$IREN | $30\u201334 support\n\n$ASTS | $48\u201351 support\n\n$INTC | $103 (50-day average)\n\n$VRT | $221\u2013235 support\n\n$CIFR | ~$12 support\n\n$AMD | gap fill at ~$557\n\nWhat's on your list?"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 3,
+     "user": "contrarianduck_",
+     "url": "https://x.com/contrarianduck_/status/2109433800665223544",
+     "date": "2026-10-11",
+     "text": "Welcome to the party, you are so early!\n\n$IREN $CIFR $CLSK $SLNH $KEEL https://t.co/Hbj8qg1f2L"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 23,
+     "user": "TheBigBerbowski",
+     "url": "https://x.com/TheBigBerbowski/status/2109336231742177281",
+     "date": "2026-10-11",
+     "text": "Competition = good for everyone\nPacing and duopoly = bad for everyone except for Sam and Dario, best buddies.\n\n$NBIS $IREN $CIFR $WULF https://t.co/c7mXBg2GFK"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "thelvstdon",
+     "url": "https://x.com/thelvstdon/status/2109418928636101100",
+     "date": "2026-10-11",
+     "text": "Join my exclusive WhatsApp group\n\nI\u2019ll be sharing high-probability stock trading strategies before the market opens.\n\n\ud83d\udc49 https://t.co/xQTk1pryxZ\n\nPlease be ready. See you there!\n\n$V $JD $CIFR $RIVN $RBLX https://t.co/nzaAdq6HwK"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "onizukabylee",
+     "url": "https://x.com/onizukabylee/status/2109374698337542261",
+     "date": "2026-10-11",
+     "text": "\ud83d\ude80 US Stock Research Access Open\n\n\ud83d\udcc8 Daily market insights:\n\u2705 Technical analysis\n\u2705 Momentum opportunities\n\u2705 Trading ideas\n\nLimited access available.\n\n\ud83d\udd17 https://t.co/aihGT6sBnC\n\nSend \u201cHot Stocks\u201d\n\n$STLD $REGN $TGT $CIFR $BA https://t.co/T3sziEqSxG"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "NASNMEDIA",
+     "url": "https://x.com/NASNMEDIA/status/2111204385044967935",
+     "date": "2026-10-16",
+     "text": "\u2699\ufe0f $CIFR  ~$9.1 \u25bc~10%\n\nNews: $850M zero-coupon convert pricing (dilution fears) + AI financing worries. Barber Lake progress.\n\nSentiment: Bearish near-term.\n\nCatalysts: HPC lease conversion, more deals.\n\nPT: ~$28\u201335 range (high upside).\n\nBull: Contracted revenue + AI pivot."
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "EmmanuelInvest",
+     "url": "https://x.com/EmmanuelInvest/status/2111480011026821292",
+     "date": "2026-10-17",
+     "text": "AI INFRASTRUCTURE \u2014 $NBIS vs $IREN vs $CIFR\nBULL VS BEAR | EMMANUELINVEST \u2014 PART 1\nAI DEMAND IS BOOMING. BUT WHO ACTUALLY MAKES MONEY FOR SHAREHOLDERS?\nThe AI infrastructure trade is entering a more demanding phase.\nFor much of the buildout, investors rewarded companies securing "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 5,
+     "user": "cottonfields",
+     "url": "https://x.com/cottonfields/status/2110334970162028577",
+     "date": "2026-10-14",
+     "text": "Yesterday's options flow (13 oct)\nmarkets: unclear\nmag7: accumulation\ncrypto: bullish\nbiotech: income\nmetals: income\nenergy: hedging\nrates: accumulation\nrisk-off: unclear\nsemis: bullish\nfinancials: income\n\nMarkets\nOct 13 flow: USD 1.28bn confirmed opening, 55.0% calls. Largest"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "Weeklyoptions",
+     "url": "https://x.com/Weeklyoptions/status/2109789378692407717",
+     "date": "2026-10-12",
+     "text": "$CIFR technical read (Daily): Strong Sell \u2014 5 bullish / 21 bearish across 25+ indicators (Ichimoku, MACD, RSI &amp; more). https://t.co/xmhVgmzYhx"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 80,
+     "user": "CrypticTrades_",
+     "url": "https://x.com/CrypticTrades_/status/2109791876517642462",
+     "date": "2026-10-12",
+     "text": "Low-volume session overall across semis, $IREN, $CIFR, $MU, $BTC and the broader market, on top of bearish headlines driving today\u2019s selloff.\n\nFor now, there are no major technical invalidations, which is why I wouldn\u2019t put too much emphasis on the news-driven move.\n\nUntil the"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "viral_stocks",
+     "url": "https://x.com/viral_stocks/status/2111460935496040664",
+     "date": "2026-10-17",
+     "text": "Trending tickers on X right now:\n\n1. Cipher Mining Inc. CIFR is up in post-market after falling 10.6% in the regular session\n\n\ud83d\udfe2 Sentiment: 46% bullish, 16% bearish, 38% neutral\n\nCantor Fitzgerald cut its price target from $28 to $19 on Oct 16, and the stock fell 10.6% that day. h"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "MaharajTrading",
+     "url": "https://x.com/MaharajTrading/status/2110048889814327549",
+     "date": "2026-10-13",
+     "text": "AI BETS ARE FLYING FOR WEEKS, MAYBE BLIND?\n\n$CORZ\nLook for price action to test $15 and hold. Then working its way to $15.5. Upside price target is $15.5.\nIf price action loses $15 and fails to reclaim it, then working its way to $12. Downside price targets are $12 and $11."
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 1,
+     "user": "thedailystck",
+     "url": "https://x.com/thedailystck/status/2111207029679296901",
+     "date": "2026-10-16",
+     "text": "$CIFR\n\nCipher Digital fell 10.6% to $8.98, its lowest close of the past year, with no new company news found, as AI data center names slid on debt worries, per Benzinga. Bullish: RSI of 22 is deeply oversold. Bearish: 44% below its 50-day average. https://t.co/WtCLSG7iUc"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 1,
+     "user": "Weeklyoptions",
+     "url": "https://x.com/Weeklyoptions/status/2110831682454786338",
+     "date": "2026-10-15",
+     "text": "$CIFR technical read (Daily): Strong Sell \u2014 7 bullish / 21 bearish across 25+ indicators (Ichimoku, MACD, RSI &amp; more). https://t.co/IU5tBC3hP1"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "MMECTraining",
+     "url": "https://x.com/MMECTraining/status/2109498897496494272",
+     "date": "2026-10-12",
+     "text": "MMEC Report Scorecard \u2014 Oct 9, 2026: 6 analyses aligned.\nWith the bullish report bias: S +2.80%, CIFR +2.25%. With the bearish bias: MU -1.58%, AA -1.36%, NVDA -0.83%, COIN -0.64%.\nOthers still pending. Educational review, not investment advice.\nhttps://t.co/5Wah23D3Kp https://t."
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 0,
+     "user": "Daniel_Lawson__",
+     "url": "https://x.com/Daniel_Lawson__/status/2111907916978729005",
+     "date": "2026-10-18",
+     "text": "$APLD, $CIFR and $ONDS: all three show 200%+ implied upside to average analyst targets.\n\nThat gets my attention. I'm bullish on the opportunity, but I want contracts, funding and execution to back it up.\n\n10 names worth a closer look \ud83d\udc47 https://t.co/L9cN75HxtA"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "notjust_anybody",
+     "url": "https://x.com/notjust_anybody/status/2111156354580926720",
+     "date": "2026-10-16",
+     "text": "\ud83d\udea8 THE NEOCLOUD SELLOFF IS GETTING UGLY.\n\n$CRWV \n$NBIS \n$IREN \n$CIFR \n$HUT\n\nThe AI infrastructure trade is facing a serious reality check.\n\n\ud83d\udcc9 Rising financing costs\n\u26a0\ufe0f Heavy capital spending\n\ud83d\udcca Growing concerns about returns on AI infrastructure\nThe big question: Is this a"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 3,
+     "user": "MarcelSchu53413",
+     "url": "https://x.com/MarcelSchu53413/status/2109961565386469830",
+     "date": "2026-10-13",
+     "text": "$CIFR 2-Week\n\nBullish or bearish chart for you? https://t.co/xbsTPGdcCG"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 1,
+     "user": "PrintDemBandz",
+     "url": "https://x.com/PrintDemBandz/status/2110394149648335244",
+     "date": "2026-10-14",
+     "text": "No bullish print worth flagging this cycle, but $CIFR lit up the bearish side \u2014 1,065,600 shares at $10.36 for an $11.04M block near the bid \ud83d\udd3b #DarkPool https://t.co/AmuFrfPhqW"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 1,
+     "user": "jaronwrld",
+     "url": "https://x.com/jaronwrld/status/2111156789769335082",
+     "date": "2026-10-16",
+     "text": "\ud83d\udea8 THE NEOCLOUD SELLOFF IS GETTING UGLY.\n\n$CRWV\n$NBIS\n$IREN\n$CIFR\n$HUT\nThe AI infrastructure trade is facing a serious reality check.  \ud83d\udcf7 Rising financing costs \ud83d\udcf7 Growing concerns about returns on AI infrastructure The big question: Is this a buying opportunity or the start of a"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 10,
+     "user": "GDXTrader",
+     "url": "https://x.com/GDXTrader/status/2111461486396669961",
+     "date": "2026-10-17",
+     "text": "$RIOT\n\n$RIOT delivered ugly price action last week, closing below ascending support and losing the 200 EMA. \n\nThe technical structure is deteriorating as price breaks its sequence of higher lows and key ascending support levels, signaling a potential shift in trend and growing ht"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 0,
+     "user": "Weeklyoptions",
+     "url": "https://x.com/Weeklyoptions/status/2110335094460145827",
+     "date": "2026-10-14",
+     "text": "$CIFR technical read (1-hour): Strong Sell \u2014 1 bullish / 21 bearish across 25+ indicators (Ichimoku, MACD, RSI &amp; more). https://t.co/7tSkZEGCmB"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 1,
+     "user": "thedailystck",
+     "url": "https://x.com/thedailystck/status/2110475605556769108",
+     "date": "2026-10-14",
+     "text": "$CIFR\n\nCipher Digital dropped 12.3% to $9.94, another 52-week low, after pricing $850M of zero-coupon convertible notes and a note exchange for about 40.7M shares, per its filing. Bullish: RSI of 23. Bearish: no support from the past year below. https://t.co/NSzrMz1dP5"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 1,
+     "user": "theonzali620",
+     "url": "https://x.com/theonzali620/status/2111266329303113974",
+     "date": "2026-10-17",
+     "text": "15 popular stocks in clear weekly bearish trends:\n1) $NBIS \n2) $SKHY \n3) $IREN \n4) $CIFR\n5) $AAOI\n6) $CRWV\n7) $SNDK \n8) $ASTS \n9) $LITE\n10) $IONQ\n11) $OKLO\n12) $SMCI\n13) $BE\n14) $COHR\n15) $AEHR\n\nNone of them are showing signs of a potential upside reversal or even a sideways base"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "viral_stocks",
+     "url": "https://x.com/viral_stocks/status/2110041205488943320",
+     "date": "2026-10-13",
+     "text": "Tickers dominating X conversation today:\n\n1. The Goldman Sachs Group, Inc. $GS is up 0.8%\n\n\ud83d\udfe2 Sentiment: 36% bullish, 9% bearish, 55% neutral\n\nGoldman posted Q3 earnings with EPS of $17.01 beating the roughly $13 estimate, and equities revenue surged 72% year\u2011over\u2011year. The beat h"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 7,
+     "user": "GDXTrader",
+     "url": "https://x.com/GDXTrader/status/2111415533476139330",
+     "date": "2026-10-17",
+     "text": "$HIVE\n\n$HIVE Following our September 26 post highlighting a dark cloud cover pattern at the 200 EMA, bears confirmed the reversal signal the following week with a bearish continuation candle, reinforcing the developing pullback. \n\nFor Japanese candlestick traders, last week\u2019s htt"
+    },
+    {
+     "kind": "post",
+     "label": "bear",
+     "eng": 1,
+     "user": "ozzy_livin",
+     "url": "https://x.com/ozzy_livin/status/2110392835249693182",
+     "date": "2026-10-14",
+     "text": "$CIFR in a BEARISH \ud83d\udfe5 TREND\n\nPrice has declined to the monthly basis\n\nResistance \u27a1 $15.55 then $21.50\nSupport \u27a1 $11.20 then $10.00\n\nMonthly \u3030 failed the monthly basis and is sliding... latest candle is a continuation, not a reclaim\n\nDaily \u3030\ufe0f broke the lower band after https://t.co"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 13,
+     "user": "GDXTrader",
+     "url": "https://x.com/GDXTrader/status/2109451496114852073",
+     "date": "2026-10-12",
+     "text": "$MARA\n\n$MARA remains firmly entrenched in a downtrend, and our bearish outlook over the past several months remains unchanged. \n\nLast week delivered another strong bearish continuation candle, closing near the lows and reinforcing persistent selling pressure with little evidence "
+    },
+    {
+     "kind": "news",
+     "label": "bear",
+     "title": "Cipher Digital Stock Hits Single Digits After $850 Million Notes Offering",
+     "url": "https://x.com/i/trending/2110743920858599925"
+    },
+    {
+     "kind": "news",
+     "label": "bear",
+     "title": "Cipher Digital Stock Drops 12% on $850 Million AI Data Center Financing",
+     "url": "https://x.com/i/trending/2109983830064890317"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Nebius Shares Drop 12% Amid AI Debt Worries, Draws Investor Interest",
+     "url": "https://x.com/i/trending/2111241114900717845"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Cerebras Stock Hits New Lows After 10% Drop",
+     "url": "https://x.com/i/trending/2109659761197105637"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "SWI Group Raises \u20ac800 Million to Repurpose Bitcoin Mines for AI Data Centers",
+     "url": "https://x.com/i/trending/2109646798059176076"
+    }
+   ]
+  },
+  "WULF": {
+   "name": "TeraWulf",
+   "bull_headline": "Morgan Stanley sees it as mispriced with a $65 target",
+   "bear_headline": null,
+   "items": [
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "MrChiefEli",
+     "url": "https://x.com/MrChiefEli/status/2109318639035854910",
+     "date": "2026-10-11",
+     "text": "\ud83d\udea8 $WULF HOLDERS!\n\nOur WhatsApp group is LIVE.\n\n\ud83d\udcc8 Discuss  $WULF\n\ud83d\udcf0 Get the latest updates\n\ud83d\udcac Connect with other holders\n\nClick the link and send \u201c8\u201d to join!   \ud83d\udc49https://t.co/rRUPsrit1Q https://t.co/mrkVZ9DD3V"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "yun_21111",
+     "url": "https://x.com/yun_21111/status/2109318174034501947",
+     "date": "2026-10-11",
+     "text": "The  $WULF  Investor Discussion Group is now open! \n\nWe cordially invite $WULF  holders to join us to discuss the latest financial reports, launch plans, and market trends. \n\nClick this link and send \"8\" to join the group:https://t.co/PlmvlBqLhY\n\n#Stocks #Fin #TA #EPS https://t.c"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 19,
+     "user": "ZivahedX",
+     "url": "https://x.com/ZivahedX/status/2109332722397143049",
+     "date": "2026-10-11",
+     "text": "I just cracked a Common $WULF card in @stoxacoin early access \ud83d\udd13 https://t.co/BphnOizkHU"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 3,
+     "user": "poIobabyshawty",
+     "url": "https://x.com/poIobabyshawty/status/2109384346847043985",
+     "date": "2026-10-11",
+     "text": "this me w robb banks, xavier wulf, chris travis etc https://t.co/cYB0Dw5qq9"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "RdoTan4653",
+     "url": "https://x.com/RdoTan4653/status/2109352656187916407",
+     "date": "2026-10-11",
+     "text": "turned the crank on @stoxacoin, got $WULF https://t.co/SskNil3sJh"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 23,
+     "user": "TheBigBerbowski",
+     "url": "https://x.com/TheBigBerbowski/status/2109336231742177281",
+     "date": "2026-10-11",
+     "text": "Competition = good for everyone\nPacing and duopoly = bad for everyone except for Sam and Dario, best buddies.\n\n$NBIS $IREN $CIFR $WULF https://t.co/c7mXBg2GFK"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "TebiOba1",
+     "url": "https://x.com/TebiOba1/status/2109378179903144218",
+     "date": "2026-10-11",
+     "text": "pulled WULF, who's next \ud83c\udfaf https://t.co/aS4VlWhDw3"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "sierraxyz99",
+     "url": "https://x.com/sierraxyz99/status/2109377311267340361",
+     "date": "2026-10-11",
+     "text": "stock gacha is wild. WULF https://t.co/pbRMkFe4AN"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "king_giovanni_",
+     "url": "https://x.com/king_giovanni_/status/2109384213069963753",
+     "date": "2026-10-11",
+     "text": "Join my exclusive WhatsApp group\n\nI\u2019ll be sharing high-probability stock trading strategies before the market opens.\n\n\ud83d\udc49 https://t.co/lyoeiRKNCZ\n\nPlease be ready. See you there!\n\n$RIOT $RUM $WULF $LOW $SPCX https://t.co/2xaOQWEOii"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "kratos_harmony",
+     "url": "https://x.com/kratos_harmony/status/2109428176619463150",
+     "date": "2026-10-11",
+     "text": "\ud83d\udea8 @HIVEDigitalTech Master Plan aims for 1,000 MW of Contracted Capacity, which the company says could be built in about 18 months. \n\nCc: $SLNH $NBIS $CRWV $IREN $CIFR $KEEL $WULF $HUT $RIOT $ASST https://t.co/5tFj7Xup1A"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "thelvstdon",
+     "url": "https://x.com/thelvstdon/status/2109385735715565743",
+     "date": "2026-10-11",
+     "text": "Join my exclusive WhatsApp group\n\nI\u2019ll be sharing high-probability stock trading strategies before the market opens.\n\n\ud83d\udc49 https://t.co/xQTk1ps6nx\n\nPlease be ready. See you there!\n\n$TME $ONDS $WULF $HD $BLFS https://t.co/8qYXuk6QLd"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 11,
+     "user": "PaladinPolecat",
+     "url": "https://x.com/PaladinPolecat/status/2109369306463224001",
+     "date": "2026-10-11",
+     "text": "There were probably dozens or scores of human or half-elf guys named Wolf, Wulf, or Foxi who had the tunic, colored hair, and animal tail setup. Sword and board or greataxe every time. Boomerang for ranged weapon if allowed. https://t.co/VThor6a2cd"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 3,
+     "user": "Bblythe_Gr",
+     "url": "https://x.com/Bblythe_Gr/status/2109329326768615647",
+     "date": "2026-10-11",
+     "text": "$CIFR significant upside \u2026.massive opportunity \n\n$WULF $APLD $META $NBIS https://t.co/10IWTR7kCw"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "hasanbridges",
+     "url": "https://x.com/hasanbridges/status/2109358267126480909",
+     "date": "2026-10-11",
+     "text": "\ud83d\udea8 Even market giants are adjusting their positions! How should retail investors respond?\n\nMust-read before the market opens: Urgent market trend analysis!\n\nhttps://t.co/UAncZsg5ii\n\nReply \"Stock\" to join the group for free\u2014last chance!\n$WULF $DKNG $SCHW $GS $PRTH https://t.co/xXmv"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "MarianeCluzel",
+     "url": "https://x.com/MarianeCluzel/status/2109403069591265349",
+     "date": "2026-10-11",
+     "text": "\ud83d\ude80 Market Watchlist Update\n\nTracking:\n$WULF $LI $BABA $RXRX $FEAM\n\n\ud83d\udcc8 Stock insights  \n\ud83d\udcca Market trends  \n\ud83d\udd25 Research updates  \n\nWhatsApp:\nhttps://t.co/6Ba7j8o5w6\n\nReply \"Hot Stocks\" https://t.co/9vLuBxaT8r"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Jeremy_219",
+     "url": "https://x.com/Jeremy_219/status/2109395535257854327",
+     "date": "2026-10-11",
+     "text": "$WULF $TGT $APP $RBLX $MDWD \ud83d\udcc8\n\n**Watching these setups closely.**\n\nLast week, my WhatsApp team banked **$50K\u2013$130K**.\n\nReal-time alerts guide members through the trade from entry to exit.\n\n\ud83d\udc49 **https://t.co/93GsjHw4HO**\n\nReply **\u201cHot Stocks\u201d** to join free. \ud83d\ude80 https://t.co/K6elO91T"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "RebeccaThouu",
+     "url": "https://x.com/RebeccaThouu/status/2109318352334106997",
+     "date": "2026-10-11",
+     "text": "A dedicated WhatsApp group for\n$WULF\nholders is now online! All investors holding\n$WULF\nstock are welcome to join this exclusive group to discuss the stock and get thelatest information     \n\nJoin for free:https://t.co/4x4bTFE6LP\n\n#Stocks #Fin #TA #EPS https://t.co/0xuqOL8JRZ"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "hasanbridges",
+     "url": "https://x.com/hasanbridges/status/2109376394363105397",
+     "date": "2026-10-11",
+     "text": "\ud83c\udf0d Welcome to our global stock market enthusiast WhatsApp learning group\nHere, we focus on\n\u2705 Market Analysis\n\u2705 Stock Picks\n\u2705 Live Ideas\nJoin us. Send \u201cStocks\u201d now:\n\ud83d\udc49\ud83d\udcf2https://t.co/UAncZsg5ii\n\nEngage in in-depth discussions and grow together\n$WULF $WBD $RDDT $LCID $XPOF https://t.co"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Hunter29n8",
+     "url": "https://x.com/Hunter29n8/status/2109396554373349773",
+     "date": "2026-10-11",
+     "text": "There are thousands of investors in my WhatsApp stock group. \ud83d\ude80\n\nRecently, they made significant profits by buying $RXO, $PENG, $PAGS, and $NVAX shares based on my guidance. \ud83d\udcb0\n\nMy WhatsApp: \u2705https://t.co/McAGKW2Gb2\n\nReply \"Stocks\" on WhatsApp to join. \u261d\ufe0f\n$WULF $FUTU $SQ $SOFI http"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "Wilbur_Stein11",
+     "url": "https://x.com/Wilbur_Stein11/status/2109322866252816758",
+     "date": "2026-10-11",
+     "text": "There are thousands of investors in my WhatsApp stock group. \ud83d\ude80\n\nRecently, they made significant profits by buying $RXO, $PENG, $PAGS, and $NVAX shares based on my guidance. \ud83d\udcb0\n\nMy WhatsApp: \u2705https://t.co/qVqV0TZFSx\n\nReply \"Stocks\" on WhatsApp to join. \u261d\ufe0f\n$RCL $BLK $SPOT $WULF http"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "EBTheatres",
+     "url": "https://x.com/EBTheatres/status/2109328198878031960",
+     "date": "2026-10-11",
+     "text": "Planning to see Stewart Lee vs The Man-Wulf? We have limited tickets left!\n\nCheck our website and secure your seats!\nSun 1 Nov 2026\nDevonshire Park Theatre https://t.co/8XFrhcx0HX"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "butifimhonest",
+     "url": "https://x.com/butifimhonest/status/2109388894127177940",
+     "date": "2026-10-11",
+     "text": "My stock trading team consists of experienced Wall Street investors and traders.\n\nWhatsApp: https://t.co/56Z2eaQ9f7 \ud83d\ude80\nReply \"Hot Stocks\" to join for free.\n$BX $ADI $WULF $D $AMN\n\nWe provide accurate buy/sell signals, daily short-term investment opportunities, entry and exit https"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "clarafajardomua",
+     "url": "https://x.com/clarafajardomua/status/2109343695833366838",
+     "date": "2026-10-11",
+     "text": "\ud83d\ude80 Weekend Market Prep \ud83d\ude80\n\nSerious about trading next week?\nJoin my private US stock group \ud83d\udc47\n\u2705 Fast alerts\n\u2705 High-volume breakouts\n\u2705 Clear plans &amp; stops\n\n\ud83d\udd25 Active names: \n$MELI $PDD $GS $WULF $ETS\n\n\ud83d\udc49 https://t.co/E9Lnaopq2Z\n\nReply STOCK https://t.co/XZZPXXM9Ul"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "scottishservant",
+     "url": "https://x.com/scottishservant/status/2109327898213785973",
+     "date": "2026-10-11",
+     "text": "If you missed the significant rise in $STNE and $PCVXstocks, don't worry.\n\nMy personal WhatsApp link: \ud83d\udcf2: https://t.co/giHPVHeMqh\n\nReply \"Stocks\" to join for free.\n\nDetailed trading plans for the following stocks have been shared in my personal WhatsApp group.\n$PDD $HUT $COIN http"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "DennisDong15",
+     "url": "https://x.com/DennisDong15/status/2111230498278178910",
+     "date": "2026-10-16",
+     "text": "\ud83d\udcca October 19, 2026 Watchlist\n\n\ud83d\udd25 Top Catalysts\n\n$IAM \u2014 AI-driven biotech IPO gained ~26% Friday. Strong debut momentum, but already extended. Watch for consolidation and renewed buying volume.\n\n$CTY \u2014 RNAi biotech IPO jumped ~24% after pricing at $18. Fresh listing momentum, but"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 18,
+     "user": "MDCTrades305",
+     "url": "https://x.com/MDCTrades305/status/2111479062853984432",
+     "date": "2026-10-17",
+     "text": "brutal week. no hiding it. Friday closed -$30,533, every name in my book bearish on my own scan \u2014 23 bullish, 140 bearish across the whole list. and I still added. $WULF \ud83e\uddf5 https://t.co/uqiXPOUQpH"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 46,
+     "user": "DCryptDeezNutz",
+     "url": "https://x.com/DCryptDeezNutz/status/2110819401637212237",
+     "date": "2026-10-15",
+     "text": "After watching this interview and others in the past from the WULF CFO it is clear that the $WULF management is focused \ud83d\udcaf on their business and will promote/defend their house. Slowly pivoting away from $GLXY over time and into WULF as I have lost faith in @novogratz willingness "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "OpinionAlphaApp",
+     "url": "https://x.com/OpinionAlphaApp/status/2111893102768365670",
+     "date": "2026-10-18",
+     "text": "Daily opinions \u00b7 US \u00b7 Oct 18, 2026\n22 opinions from 6 influencers \u00b7 31 bullish / 2 bearish\nMost discussed: NVDA, MU, QQQ, CRWV, WULF https://t.co/f0QfGALPYc"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "MaharajTrading",
+     "url": "https://x.com/MaharajTrading/status/2110048889814327549",
+     "date": "2026-10-13",
+     "text": "AI BETS ARE FLYING FOR WEEKS, MAYBE BLIND?\n\n$CORZ\nLook for price action to test $15 and hold. Then working its way to $15.5. Upside price target is $15.5.\nIf price action loses $15 and fails to reclaim it, then working its way to $12. Downside price targets are $12 and $11."
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 2,
+     "user": "MMECTraining",
+     "url": "https://x.com/MMECTraining/status/2110311449956343818",
+     "date": "2026-10-14",
+     "text": "MMEC Report Scorecard \u2014 Oct 13, 2026: 9 analyses aligned.\nBullish bias: WULF +3.23%, MRNA +2.32%, NVDA +1.53%, COIN +0.99%, MU +0.78%, TSLA +0.37%. Bearish: C -1.87%, NFLX -1.14%, IBM -0.19%.\nOthers still pending. Educational, not advice.\nhttps://t.co/bCbMsnLk3L https://t.co/M0Dn"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 7,
+     "user": "GDXTrader",
+     "url": "https://x.com/GDXTrader/status/2111415533476139330",
+     "date": "2026-10-17",
+     "text": "$HIVE\n\n$HIVE Following our September 26 post highlighting a dark cloud cover pattern at the 200 EMA, bears confirmed the reversal signal the following week with a bearish continuation candle, reinforcing the developing pullback. \n\nFor Japanese candlestick traders, last week\u2019s htt"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 10,
+     "user": "GDXTrader",
+     "url": "https://x.com/GDXTrader/status/2111461486396669961",
+     "date": "2026-10-17",
+     "text": "$RIOT\n\n$RIOT delivered ugly price action last week, closing below ascending support and losing the 200 EMA. \n\nThe technical structure is deteriorating as price breaks its sequence of higher lows and key ascending support levels, signaling a potential shift in trend and growing ht"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 3,
+     "user": "thedailystck",
+     "url": "https://x.com/thedailystck/status/2110837117861449856",
+     "date": "2026-10-15",
+     "text": "$WULF\n\nTeraWulf rose 9.4% to $12.62 after touching a 52-week low of $10.35 intraday, on a day Morgan Stanley and TD Cowen both published positive notes. Bullish: the opening gap down was fully bought back. Bearish: still below its 200-day average near $18.13. https://t.co/Lnf9ADz"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 1,
+     "user": "MarketWave7",
+     "url": "https://x.com/MarketWave7/status/2111943164491628872",
+     "date": "2026-10-18",
+     "text": "\ud83d\udc4b HAPPY SUNDAY \ud83d\udc4b\nWeekly Intelligence Report \u00b7 Oct 18, 2026 \u00b7 Week Reviewed: 10/12-10/16 \u00b7 Week Ahead: 10/19-10/23\n\ud83c\udf0d MACRO BACKDROP\u2028NOT a bear market \u2014 indices up ~120% from 2022 lows, a few % off ATHs. Portfolios down 20-40% reflect chasing momentum + leverage, not index"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 17,
+     "user": "dusty_bull",
+     "url": "https://x.com/dusty_bull/status/2110148801054826620",
+     "date": "2026-10-13",
+     "text": "$CIFR took a beating today over the convertible note announcement, but I think the corporate debt market offers a useful perspective on whether the selloff is pricing in too much downside or not? \n\nThe stock market is reacting to potential dilution. The credit (bond) market is"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 205,
+     "user": "bitcoinbutcher1",
+     "url": "https://x.com/bitcoinbutcher1/status/2110007535809826835",
+     "date": "2026-10-13",
+     "text": "I got be honest with people here but if $wulf and $cifr are going to continue to trade with the volatility of the neoclouds and not command the proper NOI multiples, do the stocks really warrant investment?\n\nNotice I said the stocks and not the companies.  @rftylerpage"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 3,
+     "user": "Lia111579428197",
+     "url": "https://x.com/Lia111579428197/status/2111829954228899879",
+     "date": "2026-10-18",
+     "text": "The interesting part about $WULF is that the upside may depend on execution over the next few quarters, not just the current AI infrastructure narrative.\n\nIf projects come online as planned and start contributing more cash flow, that could improve funding flexibility and reduce h"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 13,
+     "user": "GDXTrader",
+     "url": "https://x.com/GDXTrader/status/2109451496114852073",
+     "date": "2026-10-12",
+     "text": "$MARA\n\n$MARA remains firmly entrenched in a downtrend, and our bearish outlook over the past several months remains unchanged. \n\nLast week delivered another strong bearish continuation candle, closing near the lows and reinforcing persistent selling pressure with little evidence "
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 57,
+     "user": "TheBigBerbowski",
+     "url": "https://x.com/TheBigBerbowski/status/2110625374598054399",
+     "date": "2026-10-15",
+     "text": "How to recognize FUDers and paid content sellers?\nImage 1, month ago super bullish.\nImage 2, during another tech selloff super bearish.\n\nGartner sells subscriptions, research, advisory services and conferences.\n\nIf they didn't publish it yesterday, I would trust it more. This htt"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 0,
+     "user": "DennisDong15",
+     "url": "https://x.com/DennisDong15/status/2110867194624270546",
+     "date": "2026-10-15",
+     "text": "\ud83d\udcca October 16, 2026 Watchlist\n\n\ud83d\udd25 Top Catalysts\n\n$ARWR \u2014 Positive ARO-MAPT data showed a 73% mean reduction in CSF tau in healthy volunteers. Limited price reaction leaves room for a volume-backed breakout, though patient efficacy remains unproven.\n\n$VSTM \u2014 Promising pancreatic"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 6,
+     "user": "GDXTrader",
+     "url": "https://x.com/GDXTrader/status/2110434473854550350",
+     "date": "2026-10-14",
+     "text": "\ud835\udc06\ud835\udc28\ud835\udc25\ud835\udc1d\ud835\udc1e\ud835\udc27\ud83d\udc41\ufe0f - \ud835\udc01\ud835\udc2b\ud835\udc1e\ud835\udc1a\ud835\udc24\ud835\udc1e\ud835\udc2b \ud835\udc01\ud835\udc25\ud835\udc28\ud835\udc1c\ud835\udc24\n\nHow Smart Traders Identify Failed Order Blocks and Trade the Reversal.\n\nA bearish breaker block forms when price sweeps buy-side liquidity above prior highs, fails to sustain the breakout, and reverses with aggressive bearish https://t.co/Zml3OXueiG"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 350,
+     "user": "ChillBanking",
+     "url": "https://x.com/ChillBanking/status/2110720296093184399",
+     "date": "2026-10-15",
+     "text": "Morgan Stanley: $WULF Multiple Catalysts, Severely Mispriced $65 PT\n\n\u201cWe rarely see a stock as mispriced as WULF and other Powered Shell Providers\u201d\n\n\u201cWe view WULF as a highly compelling Overweight, with 392% upside to our $65 price target, and 32% upside to our bear case\u201d https:/"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 92,
+     "user": "MikaelXeeland",
+     "url": "https://x.com/MikaelXeeland/status/2110728639645896945",
+     "date": "2026-10-15",
+     "text": "$WULF Morgan Stanley is out today with a new note titled \"Multiple Catalysts, Severely Mispriced\". Overweight, $65 target, 392% upside.\n\nWhat stands out to me is the bear case. Built on contract value alone, it still sits 32% above the share price. Next on their list are the http"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 13,
+     "user": "InvertedWingr",
+     "url": "https://x.com/InvertedWingr/status/2111303015311573383",
+     "date": "2026-10-17",
+     "text": "$NBIS bear case, from someone who is long.\n\n-&gt; mcap ~$42bn vs 2026 revenue guidance of $3 to $3.4b, so ~13x sales\n-&gt; still a GAAP loss ($190m in Q2), though adjusted EBITDA is positive\n-&gt; capex guidance is $20b to $25b this year, vs $8b of cash at the end of Q2\n-&gt; pre"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 7,
+     "user": "SlavMarkets",
+     "url": "https://x.com/SlavMarkets/status/2111880148345864694",
+     "date": "2026-10-18",
+     "text": "\ud83d\udea8 NEOCLOUDS GOT OBLITERATED LAST WEEK. WHAT HAPPENS NEXT? \ud83d\udea8\n\nLast week was absolute carnage across AI infrastructure stocks.\n\n$CIFR: -34%\n$CRWV: -25%\n$NBIS: -25%\n$APLD: -24%\n$IREN: -23%\n$WULF: -15%\n\nThe Nasdaq dropped 4.5%, but neoclouds got absolutely demolished.\n\nSo here\u2019s http"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 162,
+     "user": "McnallieM",
+     "url": "https://x.com/McnallieM/status/2110794599065374737",
+     "date": "2026-10-15",
+     "text": "\ud83d\udea8 @MorganStanley reiterates @TeraWulfInc as \"severely mispriced\": Overweight, $65 base-case target vs. $11.54 close on Oct 14 \ud83d\udea8\n\n\u26a1 Bear case $17.50 (existing contracts only, 12% discount rate), bull case $104.50\n\n\u26a1 Signed contracts should generate ~$1.5B in annual NOI once https:"
+    },
+    {
+     "kind": "post",
+     "label": "neutral",
+     "eng": 3,
+     "user": "mxrbtc",
+     "url": "https://x.com/mxrbtc/status/2110640958542856253",
+     "date": "2026-10-15",
+     "text": "It's telling that even a twitter KOL darling like $NUAI is now caught up with massive downside moves, bringing it to an 8-month low.\n\nThere are key aspects of NUAI that are similar to the following companies: $SLNH $KEEL $VIVO $GPUS $AGPU. They are all either awaiting deals or ht"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 1,
+     "user": "RBTradesLLC",
+     "url": "https://x.com/RBTradesLLC/status/2111851755658997824",
+     "date": "2026-10-18",
+     "text": "$WULF - Daily Chart\nWulf is undervalued down here. Under 10 should print RB Long signal. Nonetheless, it's a buy here. +200% on the table long term. NFA.\n#TeraWulf #Wulf #BuyTheDips #Stocks https://t.co/EyTaq54cCT"
+    },
+    {
+     "kind": "post",
+     "label": "bull",
+     "eng": 3,
+     "user": "RPace801",
+     "url": "https://x.com/RPace801/status/2110812623260561898",
+     "date": "2026-10-15",
+     "text": "Deeply undervalued $WULF https://t.co/HN8jQ69e4I"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Cracks Emerge in US AI Data Center Boom Amid Debt Pressures",
+     "url": "https://x.com/i/trending/2111755342308852120"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Web3 Wallets Unlock Reputation and Rewards from Past Activity",
+     "url": "https://x.com/i/trending/2111643041660649777"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Altimeter Capital Sells Entire CoreWeave Stake Amid AI Overheating Concerns",
+     "url": "https://x.com/i/trending/2110818144113541173"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Tera_Map Creators Race for Free Land Mints as 3D World Goes Live",
+     "url": "https://x.com/i/trending/2109399912706187545"
+    },
+    {
+     "kind": "news",
+     "label": "neutral",
+     "title": "Uranium Stocks Hit Lows Amid Oversold Signals",
+     "url": "https://x.com/i/trending/2109786600985026903"
     }
    ]
   }

@@ -681,29 +681,29 @@ const sesc=x=>String(x??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 async function sdraw(){wtipHide();if(MODE!=='sent')return;const seq=++SSEQ;
   if(!SDATA){chart.clear();return}
   const all=SDATA.tickers||[],want=$('stickers').value.split(/[\s,]+/).map(x=>x.trim().toUpperCase()).filter(Boolean);
-  const rows=want.length?all.filter(r=>want.includes(r.symbol)):all.slice(),miss=want.filter(t=>!all.some(r=>r.symbol===t));
-  const logos={};await Promise.all(rows.map(async r=>{try{logos[r.symbol]=await circLogo(r.symbol)}catch(e){}}));if(seq!==SSEQ||MODE!=='sent')return;
-  const n=Math.max(1,rows.length),top=110,bot=70,rh=Math.min(110,(900-top-bot)/n),G=[],up=bc('#22C55E'),dn=bc('#EF4444');
-  const X0=440,X1=1540,BW=X1-X0,fs=Math.round(Math.max(11,Math.min(20,rh*0.24))),bh=Math.max(6,Math.round(rh*0.11)),lg=Math.round(Math.min(40,rh*0.42));
+  const rows=want.length?all.filter(r=>want.includes(r.symbol)||want.includes(r.display)):all.slice(),miss=want.filter(t=>!all.some(r=>r.symbol===t||r.display===t));
+  const logos={};await Promise.all(rows.map(async r=>{try{logos[r.symbol]=await circLogo(r.logoKey||r.symbol)}catch(e){}}));if(seq!==SSEQ||MODE!=='sent')return;
+  const n=Math.max(1,rows.length),top=n>12?96:110,bot=n>12?60:70,rh=Math.min(110,(900-top-bot)/n),G=[],up=bc('#22C55E'),dn=bc('#EF4444');
+  const X0=440,X1=1540,BW=X1-X0,fs=Math.round(Math.max(14,Math.min(20,rh*0.24))),cmp=rh<60,bh=Math.max(6,Math.round(rh*0.11)),lg=Math.round(Math.min(40,rh*0.42));
   rows.forEach((r,i)=>{const y0=top+i*rh,ym=y0+rh*0.5,pos=r.sigma>=0,lc=pos?up:dn;
     if(i<n-1)G.push({type:'line',shape:{x1:60,y1:y0+rh,x2:X1,y2:y0+rh},style:{stroke:T.grid,lineWidth:1}});
     G.push({type:'text',x:60,y:ym-rh*0.12,style:{text:String(i+1),fontSize:fs,fill:T.src,textAlign:'left',textVerticalAlign:'middle'}});
     if(logos[r.symbol])G.push({type:'image',style:{image:logos[r.symbol],x:92,y:ym-rh*0.12-lg/2,width:lg,height:lg}});
     const tx=92+lg+12;
-    G.push({type:'text',x:tx,y:ym-rh*0.22,style:{text:r.symbol,fontSize:fs+2,fontWeight:'bold',fill:T.title,textAlign:'left',textVerticalAlign:'middle'}});
-    G.push({type:'text',x:tx,y:ym+rh*0.02,style:{text:shortName(r.name,r.symbol),fontSize:fs-4,fill:T.src,textAlign:'left',textVerticalAlign:'middle',width:X0-tx-20,overflow:'truncate'}});
-    G.push({type:'text',x:tx,y:ym+rh*0.24,style:{text:(r.sigma>0?'+':r.sigma<0?'−':'')+Math.abs(r.sigma).toFixed(1)+'σ '+(pos?'Bullish':'Bearish'),fontSize:fs-3,fill:lc,textAlign:'left',textVerticalAlign:'middle'}});
+    G.push({type:'text',x:tx,y:cmp?ym-rh*0.18:ym-rh*0.22,style:{text:r.display||r.symbol,fontSize:fs+2,fontWeight:'bold',fill:T.title,textAlign:'left',textVerticalAlign:'middle'}});
+    if(!cmp)G.push({type:'text',x:tx,y:ym+rh*0.02,style:{text:r.kind==='crypto'?r.name:shortName(r.name,r.symbol),fontSize:fs-4,fill:T.src,textAlign:'left',textVerticalAlign:'middle',width:X0-tx-20,overflow:'truncate'}});
+    G.push({type:'text',x:tx,y:cmp?ym+rh*0.2:ym+rh*0.24,style:{text:(r.sigma>0?'+':r.sigma<0?'−':'')+Math.abs(r.sigma).toFixed(1)+'σ '+(pos?'Bullish':'Bearish'),fontSize:Math.max(11,fs-3),fill:lc,textAlign:'left',textVerticalAlign:'middle'}});
     const sx=X0+BW*(1-r.bull),by=y0+rh*0.72;  // red (bear) on the left, green (bull) on the right; split at bear share
     G.push({type:'rect',shape:{x:X0,y:by,width:Math.max(0,sx-X0),height:bh},style:{fill:dn}});
     G.push({type:'rect',shape:{x:sx,y:by,width:Math.max(0,X1-sx),height:bh},style:{fill:up}});
     const hx0=X0+BW*(1-r.hi),hx1=X0+BW*(1-r.lo);  // uncertainty band around the split, hatched
     if(hx1-hx0>1)G.push({type:'rect',shape:{x:hx0,y:by,width:hx1-hx0,height:bh},style:{fill:{image:shatch(T.dark?'rgba(255,255,255,.75)':'rgba(255,255,255,.85)'),repeat:'repeat'}}});
     // headlines sit around the split; anchor clamped so both sides keep room; dominant side bolder + larger
-    const minW=360,ax=Math.max(X0+minW,Math.min(X1-minW,sx)),bullDom=r.bull>=0.5,big=fs,small=fs-4,ty=by-5;
-    const bearTxt=r.bear_headline||'No dominant bearish consensus — analysts hold a range of individual views.';
+    const minW=360,ax=Math.max(X0+minW,Math.min(X1-minW,sx)),bullDom=r.bull>=0.5,big=fs,small=Math.max(11,fs-4),ty=by-5;
+    const bearTxt=r.bear_headline||(cmp?'No dominant bearish consensus':'No dominant bearish consensus — analysts hold a range of individual views.');
     G.push({type:'text',x:ax-8,y:ty,style:{text:bearTxt,fontSize:r.bear_headline&&!bullDom?big:small,fontWeight:r.bear_headline&&!bullDom?'bold':'normal',fill:dn,textAlign:'right',textVerticalAlign:'bottom',width:ax-8-X0,overflow:'break',lineHeight:Math.round(small*1.25)}});
     G.push({type:'text',x:ax+8,y:ty,style:{text:r.bull_headline||'No dominant bullish consensus',fontSize:bullDom?big:small,fontWeight:bullDom?'bold':'normal',fill:up,textAlign:'left',textVerticalAlign:'bottom',width:X1-ax-8,overflow:'break',lineHeight:Math.round(small*1.25)}});
-    const tip=`<b>${sesc(r.symbol)}</b> · ${sesc(r.name)}<br>Bull ${(r.bull*100).toFixed(1)}% · bear ${((1-r.bull)*100).toFixed(1)}%<br>95% band: ${(r.lo*100).toFixed(0)}–${(r.hi*100).toFixed(0)}% bull<br>${r.posts} posts + ${r.news} news scanned · ${r.classified} classified (${r.n_bull} bull / ${r.n_bear} bear)<br>Score ${r.sigma>=0?'+':''}${r.sigma.toFixed(2)}σ (${r.sigma_basis==='own'?'vs own history':'vs other tickers'})`;
+    const tip=`<b>${sesc(r.display||r.symbol)}</b> · ${sesc(r.name)}<br>Bull ${(r.bull*100).toFixed(1)}% · bear ${((1-r.bull)*100).toFixed(1)}%<br>95% band: ${(r.lo*100).toFixed(0)}–${(r.hi*100).toFixed(0)}% bull<br>${r.posts} posts + ${r.news} news scanned · ${r.classified} classified (${r.n_bull} bull / ${r.n_bear} bear)<br>Score ${r.sigma>=0?'+':''}${r.sigma.toFixed(2)}σ (${r.sigma_basis==='own'?'vs own history':'vs other tickers'})`;
     G.push({type:'rect',shape:{x:X0,y:by-8,width:BW,height:bh+16},style:{fill:'rgba(0,0,0,0)'},z:200,onmousemove:e=>wtipShow(e,tip),onmouseout:wtipHide})});
   const src='Source: '+(SDATA.source||'X posts & news')+', '+sDate(SDATA.asOf)+' · bar = engagement-weighted bull share, hatched = 95% band · σ vs '+(rows.some(r=>r.sigma_basis==='own')?'own history':'cross-section');
   const o=base($('stitle').value||'Bull vs bear sentiment',src,'swm');o.graphic.push(...G);chart.clear();chart.setOption(o,true);

@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-18T12:30-04:00",
+ "asOf": "2026-10-18T21:00-04:00",
  "window": {
   "start": "2026-10-11T16:00:00Z",
   "end": "2026-10-18T16:30:00Z"
@@ -33,7 +33,36 @@
      "url": "https://x.com/FinancePotentia/status/2111525148050199029"
     }
    ],
-   "sigma": 1.57,
+   "sigma": 1.5,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "WULF",
+   "name": "TeraWulf",
+   "bull": 1.0,
+   "lo": 0.6616,
+   "hi": 1.0,
+   "bull_headline": "Morgan Stanley sees it as mispriced with a $65 target",
+   "bear_headline": null,
+   "posts": 49,
+   "news": 5,
+   "classified": 9,
+   "n_bull": 9,
+   "n_bear": 0,
+   "n_eff": 7.5,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "ChillBanking",
+     "url": "https://x.com/ChillBanking/status/2110720296093184399"
+    },
+    {
+     "label": "bull",
+     "user": "McnallieM",
+     "url": "https://x.com/McnallieM/status/2110794599065374737"
+    }
+   ],
+   "sigma": 1.5,
    "sigma_basis": "cross"
   },
   {
@@ -67,7 +96,7 @@
      "url": "https://x.com/kapualabs/status/2111394619703386383"
     }
    ],
-   "sigma": 1.06,
+   "sigma": 1.08,
    "sigma_basis": "cross"
   },
   {
@@ -101,7 +130,7 @@
      "url": "https://x.com/Finora_EN/status/2111096434753724638"
     }
    ],
-   "sigma": 1.03,
+   "sigma": 1.05,
    "sigma_basis": "cross"
   },
   {
@@ -135,7 +164,46 @@
      "url": "https://x.com/RockyTSTH/status/2110045091637387484"
     }
    ],
-   "sigma": 0.68,
+   "sigma": 0.76,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "APLD",
+   "name": "Applied Digital",
+   "bull": 0.8039,
+   "lo": 0.5028,
+   "hi": 0.9433,
+   "bull_headline": "$36B contracted revenue; selloff seen as an entry point",
+   "bear_headline": "Bear-flag breakdown; options flow leans bearish",
+   "posts": 50,
+   "news": 5,
+   "classified": 14,
+   "n_bull": 12,
+   "n_bear": 2,
+   "n_eff": 10.6,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "InvestifyDaily",
+     "url": "https://x.com/InvestifyDaily/status/2110884947208601995"
+    },
+    {
+     "label": "bull",
+     "user": "JoshTradeOption",
+     "url": "https://x.com/JoshTradeOption/status/2110507694062768292"
+    },
+    {
+     "label": "bear",
+     "user": "Invst_Informant",
+     "url": "https://x.com/Invst_Informant/status/2110401053267005888"
+    },
+    {
+     "label": "bear",
+     "user": "ThetaTradesHQ",
+     "url": "https://x.com/ThetaTradesHQ/status/2111215642414121450"
+    }
+   ],
+   "sigma": 0.59,
    "sigma_basis": "cross"
   },
   {
@@ -174,7 +242,46 @@
      "url": "https://x.com/NunezAlfred/status/2109392242121265655"
     }
    ],
-   "sigma": 0.35,
+   "sigma": 0.48,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "IREN",
+   "name": "IREN",
+   "bull": 0.7624,
+   "lo": 0.5511,
+   "hi": 0.8935,
+   "bull_headline": "Reported Anthropic cloud deal adds a major customer",
+   "bear_headline": "52-week lows on debt fears; chartists see more downside",
+   "posts": 49,
+   "news": 5,
+   "classified": 27,
+   "n_bull": 17,
+   "n_bear": 10,
+   "n_eff": 21.3,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "Sam_Badawi",
+     "url": "https://x.com/Sam_Badawi/status/2109415855029432525"
+    },
+    {
+     "label": "bull",
+     "user": "AIStockSavvy",
+     "url": "https://x.com/AIStockSavvy/status/2109413695268827619"
+    },
+    {
+     "label": "bear",
+     "user": "MMatters22596",
+     "url": "https://x.com/MMatters22596/status/2111134323063554262"
+    },
+    {
+     "label": "bear",
+     "user": "cryptoalphagg",
+     "url": "https://x.com/cryptoalphagg/status/2109320672610500730"
+    }
+   ],
+   "sigma": 0.4,
    "sigma_basis": "cross"
   },
   {
@@ -213,7 +320,7 @@
      "url": "https://x.com/xentrixcatalyst/status/2109331909604208731"
     }
    ],
-   "sigma": 0.03,
+   "sigma": 0.22,
    "sigma_basis": "cross"
   },
   {
@@ -252,7 +359,7 @@
      "url": "https://x.com/PiEDawg_/status/2110565100415316469"
     }
    ],
-   "sigma": -0.19,
+   "sigma": 0.03,
    "sigma_basis": "cross"
   },
   {
@@ -291,7 +398,46 @@
      "url": "https://x.com/Errecck/status/2109495119225221490"
     }
    ],
-   "sigma": -0.56,
+   "sigma": -0.28,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "NBIS",
+   "name": "Nebius",
+   "bull": 0.5849,
+   "lo": 0.3471,
+   "hi": 0.7888,
+   "bull_headline": "Large backlog and asymmetric risk/reward after selloff",
+   "bear_headline": "Breakdown below support on heavy volume",
+   "posts": 46,
+   "news": 5,
+   "classified": 22,
+   "n_bull": 11,
+   "n_bear": 11,
+   "n_eff": 15.4,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "babyfolio",
+     "url": "https://x.com/babyfolio/status/2111236065591771230"
+    },
+    {
+     "label": "bull",
+     "user": "ren_stocks",
+     "url": "https://x.com/ren_stocks/status/2109320173995880876"
+    },
+    {
+     "label": "bear",
+     "user": "pdicarlotrader",
+     "url": "https://x.com/pdicarlotrader/status/2110792067555475645"
+    },
+    {
+     "label": "bear",
+     "user": "vivekrajan1380",
+     "url": "https://x.com/vivekrajan1380/status/2110395382467567784"
+    }
+   ],
+   "sigma": -0.42,
    "sigma_basis": "cross"
   },
   {
@@ -330,7 +476,7 @@
      "url": "https://x.com/xentrixcatalyst/status/2109328631277539802"
     }
    ],
-   "sigma": -1.01,
+   "sigma": -0.65,
    "sigma_basis": "cross"
   },
   {
@@ -369,7 +515,88 @@
      "url": "https://x.com/panicsellweekly/status/2109672539693965453"
     }
    ],
-   "sigma": -1.26,
+   "sigma": -0.86,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "CRWV",
+   "name": "CoreWeave",
+   "bull": 0.4836,
+   "lo": 0.2537,
+   "hi": 0.7207,
+   "bull_headline": "~30% drop seen as a discount to its growth outlook",
+   "bear_headline": "$35B+ debt and rising financing costs weigh on shares",
+   "posts": 46,
+   "news": 5,
+   "classified": 18,
+   "n_bull": 6,
+   "n_bear": 12,
+   "n_eff": 13.8,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "LeifInvests",
+     "url": "https://x.com/LeifInvests/status/2110443962142253370"
+    },
+    {
+     "label": "bull",
+     "user": "CGInvesting10",
+     "url": "https://x.com/CGInvesting10/status/2109390785242341479"
+    },
+    {
+     "label": "bear",
+     "user": "unnatural78",
+     "url": "https://x.com/unnatural78/status/2110438973437042876"
+    },
+    {
+     "label": "bear",
+     "user": "eduinvestingin",
+     "url": "https://x.com/eduinvestingin/status/2109394575911702569"
+    }
+   ],
+   "sigma": -0.89,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "BTC-USD",
+   "name": "Bitcoin",
+   "bull": 0.4406,
+   "lo": 0.2338,
+   "hi": 0.6703,
+   "bull_headline": "Weekly structure and bull-flag setup point to a rebound",
+   "bear_headline": "Rejected at $84K; bearish weekly candle and ETF outflows",
+   "posts": 50,
+   "news": 5,
+   "classified": 20,
+   "n_bull": 9,
+   "n_bear": 11,
+   "n_eff": 16.1,
+   "display": "BTC",
+   "logoKey": "c:BTC",
+   "kind": "crypto",
+   "sources": [
+    {
+     "label": "bull",
+     "user": "0xPepesso",
+     "url": "https://x.com/0xPepesso/status/2111160998744740307"
+    },
+    {
+     "label": "bull",
+     "user": "Morecryptoonl",
+     "url": "https://x.com/Morecryptoonl/status/2111975060974215507"
+    },
+    {
+     "label": "bear",
+     "user": "DoctorCatX",
+     "url": "https://x.com/DoctorCatX/status/2110341361123680302"
+    },
+    {
+     "label": "bear",
+     "user": "PeacePrinc29959",
+     "url": "https://x.com/PeacePrinc29959/status/2109525095777468677"
+    }
+   ],
+   "sigma": -1.09,
    "sigma_basis": "cross"
   },
   {
@@ -408,7 +635,46 @@
      "url": "https://x.com/alphacharts365/status/2111527161245114720"
     }
    ],
-   "sigma": -1.68,
+   "sigma": -1.21,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "CIFR",
+   "name": "Cipher",
+   "bull": 0.1924,
+   "lo": 0.0659,
+   "hi": 0.4461,
+   "bull_headline": "Analyst targets imply large upside after selloff",
+   "bear_headline": "$850M convertible offering sparks dilution fears",
+   "posts": 48,
+   "news": 5,
+   "classified": 19,
+   "n_bull": 4,
+   "n_bear": 15,
+   "n_eff": 14.8,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "101sfinance",
+     "url": "https://x.com/101sfinance/status/2109408612552479138"
+    },
+    {
+     "label": "bull",
+     "user": "Bblythe_Gr",
+     "url": "https://x.com/Bblythe_Gr/status/2109329326768615647"
+    },
+    {
+     "label": "bear",
+     "user": "Edge_Bolt",
+     "url": "https://x.com/Edge_Bolt/status/2109352899792838800"
+    },
+    {
+     "label": "bear",
+     "user": "FinTonyX",
+     "url": "https://x.com/FinTonyX/status/2109354009890853217"
+    }
+   ],
+   "sigma": -2.23,
    "sigma_basis": "cross"
   }
  ]
