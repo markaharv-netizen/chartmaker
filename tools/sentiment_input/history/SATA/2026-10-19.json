@@ -1,0 +1,427 @@
+{
+ "symbol": "SATA",
+ "start": "2026-10-12T11:00:00Z",
+ "end": "2026-10-19T11:00:00Z",
+ "src": "x-rolling7",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "SATA (Strive OR ASST OR preferred OR dividend) -is:retweet -is:reply lang:en",
+  "SATA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "UncleDividends",
+   "url": "https://x.com/UncleDividends/status/2110773948464161050",
+   "date": "2026-10-15",
+   "text": "Strive is launching SATS, a 15% fixed-rate perpetual preferred stock that pays a cash dividend every business day. It sits behind SATA and ahead of the ASST common. \n\n#ASST $SATA $SATS #DigitalCredit https://t.co/5xlh2ZG5Y4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "astrohodling",
+   "url": "https://x.com/astrohodling/status/2111520541756592302",
+   "date": "2026-10-17",
+   "text": "Since an Oct 13 amendment, #Strive legally can't sell new $SATA under its $100 face value, so the preferred it issues to fund $BTC buys never goes out at a discount. They also tweaked the fine print so SATA's 13% dividend, paid daily, could someday pay on weekends too 👀 \n\n$ASST"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "investorphoenix",
+   "url": "https://x.com/investorphoenix/status/2110705558936244256",
+   "date": "2026-10-15",
+   "text": "Strive $ASST announced the IPO of a new preferred, $SATS: 5M shares at $100 (~$500M) with a 15% fixed dividend paid every business day from Nov 9.\n\nHow it stacks up:\n$SATS: 15% fixed, junior to SATA\n$SATA: variable, currently 13%\nStrategy's $STRC: 12%, variable\n\nThe extra 2 https://t.co/5LyOVRiqJF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 45,
+   "user": "BitcoinNewsCom",
+   "url": "https://x.com/BitcoinNewsCom/status/2110340836546245073",
+   "date": "2026-10-14",
+   "text": "STRIVE ANNOUNCES $500 MILLION PREFERRED STOCK OFFERING $SATS WITH 15% ANNUAL DIVIDEND\n\nStrive ($ASST) plans to issue 5 million shares of its new SATS perpetual preferred stock at $100 per share, targeting $500 million in gross proceeds.\n\nThe company intends to use the proceeds to"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 64,
+   "user": "LuxWire",
+   "url": "https://x.com/LuxWire/status/2110138036868563334",
+   "date": "2026-10-13",
+   "text": "Strive (ASST) plans to sell a new preferred stock, $SATS, in an underwritten public offering (its IPO), with terms still subject to pricing.\n\nIn plain English:\n• 15% fixed yearly dividend on the $100 stated amount, perpetual (no maturity date)\n• Cumulative: any unpaid dividend https://t.co/z6wYfcYQSS https://t.co/0VVl6hK760"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 172,
+   "user": "GrainofSaltSF",
+   "url": "https://x.com/GrainofSaltSF/status/2111080585171235250",
+   "date": "2026-10-16",
+   "text": "STRIVE ($ASST): Where is the cash coming from to fund the new SATS dividend reserve?\n\nStrive’s SATS prospectus calls for an 18-month dividend reserve of $22.50 per preferred share.\n\nWith the offering upsized to 7M shares, that’s $157.5M in additional reserves.\n\nLet’s reconstruct"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "Agek1d",
+   "url": "https://x.com/Agek1d/status/2110312790678200392",
+   "date": "2026-10-14",
+   "text": "🚨 HUGE NEWS: @Strive ($ASST) just announced a $500M IPO for their new Series A Perpetual Preferred Stock ($SATS)! 📈\n\n💰 Offering 5M shares at $100 each.\n\n🔥 Features a massive 15% fixed cumulative dividend yield, to be paid DAILY starting Nov 9, 2026!\n\n🟠 The proceeds? Going https://t.co/iC93PmzQPN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "ErhanKOfficial",
+   "url": "https://x.com/ErhanKOfficial/status/2110225953125199985",
+   "date": "2026-10-14",
+   "text": "Strive ($ASST) wants to raise $500 million through a new perpetual preferred stock, $SATS, to buy more $BTC, acquire income-producing assets or buy back stock.\n\nIt's offering 5 million shares at $100 each, with a fixed 15% dividend yield at par and daily payouts. At closing, https://t.co/w0DDAGmYly"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Filecrux",
+   "url": "https://x.com/Filecrux/status/2110112691851571518",
+   "date": "2026-10-13",
+   "text": "$ASST Strive, a Dallas firm holding 32,773 bitcoin, expects to fund its new 15% SATS preferred dividend mainly by raising more capital, including at-the-market sales, once an 18-month reserve is spent. The $500M IPO is ~16% of its $3.06B market value at the Oct 12 close of"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AIBM_WHALe",
+   "url": "https://x.com/AIBM_WHALe/status/2110271685781770664",
+   "date": "2026-10-14",
+   "text": "🚨 JUST IN: Strive Inc. (Nasdaq: $ASST) to raise $500M\n\nOffering: 15% Series A Perpetual Preferred Stock SATS\n •  5M shares @ $100\n •  $75M/year dividend obligation\n •  Junior to SATA (13%)\n\nUse of proceeds: Bitcoin purchases\nTreasury now: 26,355 BTC\nBTC: ∼$83.4K\n\nBarclays + https://t.co/ZAS4z6l5TW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2159,
+   "user": "ColeMacro",
+   "url": "https://x.com/ColeMacro/status/2110109170037129243",
+   "date": "2026-10-13",
+   "text": "Strive is offering $SATS through an IPO available to select investors.\n- 15% fixed-rate perpetual preferred stock\n- Cumulative dividends paid every business day\n- Junior to SATA\n\nINVESTOR PRESENTATION TIMESTAMPS\n00:00 - Introducing SATS\n01:46 - Executive Summary\n18:50 - SATS https://t.co/77sxHcHFvO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MartianLawyerB",
+   "url": "https://x.com/MartianLawyerB/status/2111019423104479464",
+   "date": "2026-10-16",
+   "text": "🚨 BREAKING: Strive, Inc. ($ASST) prices $630M Public Offering of 15% Series A Perpetual SATS Preferred Stock 🧵👇\n\n1/ 📊 OFFERING DETAILS\n• Shares: 7.0M (upsized by 2.0M)\n• Offer Price: $90 / share\n• Gross Proceeds: ~$630 Million\n• Settlement Date: Oct 20, 2026\n\n2/ 💰 https://t.co/p5m8uiIPse"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "apyx_fi",
+   "url": "https://x.com/apyx_fi/status/2111209074427941223",
+   "date": "2026-10-16",
+   "text": "🔴 Digital Credit - Weekly Close (Oct. 16)\n\nA drawdown week across the stack, with $BTC sliding to $81.6K and MSCI's new index-eligibility rules hit treasury names. Regardless, the balance sheets kept working...\n\n@Strategy\n• $MSTR -11.3% w/w to $136.83. Net mNAV compressed to https://t.co/CPHW7Z3sXD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1178,
+   "user": "Strive",
+   "url": "https://x.com/Strive/status/2110109682610172383",
+   "date": "2026-10-13",
+   "text": "Strive is offering $SATS through an IPO available to select investors.\n- 15% fixed-rate perpetual preferred stock\n- Cumulative dividends paid every business day\n- Junior to SATA\n\nINVESTOR PRESENTATION TIMESTAMPS\n00:00 - Introducing SATS\n01:46 - Executive Summary\n18:50 - SATS https://t.co/Xcdy2qa2Ac"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancialCycle",
+   "url": "https://x.com/FinancialCycle/status/2110052951461138931",
+   "date": "2026-10-13",
+   "text": "Strive bought 13x more bitcoin than Strategy last week.\n\n8-Ks filed this morning:\nStrive ($ASST): 3,311 BTC, ~$280M (Oct 5-9)\nStrategy ($MSTR): 250 BTC, $21.5M (Oct 5-11)\n\nStrive now holds 32,773 $BTC, about 4% of Strategy's 848,250.\n\nBoth lean on perpetual preferred stock, and https://t.co/1fHRRFIuFw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "robot2trade1",
+   "url": "https://x.com/robot2trade1/status/2111497617410572636",
+   "date": "2026-10-17",
+   "text": "📋 STRIVE PRICED SATS — 15% PREFERRED, UPSIZED, $630M\n\nTHE DEAL 💰\nStrive priced 7M shares of 15.00% Series A Perpetual SATS Preferred at $90 on Oct 15. Upsized +2M shares (+40%) from the 5M announced Oct 13. Gross: ~$630M. Settles Oct 20. Barclays + Cantor led; Clear Street, B. https://t.co/dIHYxh7yhY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 79,
+   "user": "Sharp_On_Sats",
+   "url": "https://x.com/Sharp_On_Sats/status/2110559015721734574",
+   "date": "2026-10-15",
+   "text": "I think Strive has a credible case for a $1.1B SATS IPO, more than double the proposed size. That could put roughly $1B into Bitcoin without issuing ASST common, lifting amplification from ~47% to ~63% and advancing management's stated objective. https://t.co/d8BwJGFElD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 31,
+   "user": "monster_models",
+   "url": "https://x.com/monster_models/status/2110203964746518788",
+   "date": "2026-10-14",
+   "text": "HOT LATE-NIGHT MONSTER MODEL FEATURE DROP 🔥🚨\n\n@Strive's new preferred equity, $SATS, announced earlier TODAY, is now supported within the Monster Model! 😮\n\n→ 15% fixed dividend on its $100 stated amount, cumulative, junior to $SATA\n\n→ Daily dividends on the same https://t.co/RgdCWujXNF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 67,
+   "user": "OneChairPod",
+   "url": "https://x.com/OneChairPod/status/2110769912335515853",
+   "date": "2026-10-15",
+   "text": "Is Wall Street fundamentally mispricing Bitcoin-backed credit?\n\nIn Episode 6 of Inside the Walls, we had a fascinating conversation with @AlexandreLaizet from @_ALCPB, @Andre_Dragosch from @Bitwise, and @YChoueifaty from TOBAM.\n\nA few particularly interesting takeaways:\n→ https://t.co/YBgs3g1khf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "theretailbull",
+   "url": "https://x.com/theretailbull/status/2110730746508042702",
+   "date": "2026-10-15",
+   "text": "What $126k Bitcoin Could Mean for ASST https://t.co/gGRW9XVOOR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 89,
+   "user": "_Adrian",
+   "url": "https://x.com/_Adrian/status/2110479966508810599",
+   "date": "2026-10-14",
+   "text": "Recent price action with $SATA has some investors confused. But there is no cause for worry, and the price action today should not come as a surprise. I shared analysis back in June that seems particularly relevant now, especially re: the Up | Down Betas and correlations with https://t.co/TVOdjnLcwD https://t.co/QouvkMJWqY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 164,
+   "user": "andysmith_asap",
+   "url": "https://x.com/andysmith_asap/status/2111731339279880339",
+   "date": "2026-10-18",
+   "text": "I've been doing quite a bit of research into $MORE since it launched on the London Stock Exchange last Wednesday, and the more I understand the structure, the more interesting I think it becomes.\n\nFor anyone looking for income from UK-listed investments, an initial 12% annual"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NASNMEDIA",
+   "url": "https://x.com/NASNMEDIA/status/2110832819715133951",
+   "date": "2026-10-15",
+   "text": "₿ Treasury / Digital Credit ($MSTR  $STRC  $ASST  $SATA $DFDV $CHAD)\n$MSTR ~$150 (+4-5% bounce) | BTC proxy + preferred financing.\n\n$STRC ~$99.55 (+0.3%) | Stable near par (12% variable).\n\n$SATA  ~$97.75 | Strive preferred (13% variable, daily pay).\n\n$ASST | Strive common (BTC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "TreasuryGTM",
+   "url": "https://x.com/TreasuryGTM/status/2111067280649982197",
+   "date": "2026-10-16",
+   "text": "*STRIVE $ASST: ~$630M FROM UPSIZED $SATS OFFERING CAN FUND BITCOIN, \"INCOME GENERATING ASSETS,\" OR REPURCHASES OF ITS $SATA PREFERRED AND CLASS A COMMON"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 37,
+   "user": "GrindeOptions",
+   "url": "https://x.com/GrindeOptions/status/2110730597530534263",
+   "date": "2026-10-15",
+   "text": "We are seeing a small stress test for $ASST here today as Bitcoin falls. \n\nWatching $SATA as well. \n\nYou have to remember that strive is a Bitcoin multiplier and with that comes dramatic swings higher and dramatic swings lower.\n\nKeep an eye on Bitcoin acquisition and capital for https://t.co/HxarHh3z3y"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NASNMEDIA",
+   "url": "https://x.com/NASNMEDIA/status/2111204580541550777",
+   "date": "2026-10-16",
+   "text": "📈 $SATA  ~$97.5 ▼~0.5%\n\nNews: Strive preferred holding near $100.\n\nSentiment: Stable.\n\nCatalysts: BTC accumulation, preferred activity.\n\nPT: N/A.\n\nBull: High effective yield + BTC treasury.\n\nBear: Premium to par if BTC stalls.\n\nGrowth comment: Yield + Bitcoin exposure play."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "strategydocs",
+   "url": "https://x.com/strategydocs/status/2111900623436185761",
+   "date": "2026-10-18",
+   "text": "Strategy wants to dominate Bitcoin-backed credit.\n\nSo why promote $SATA, a direct competitor to $STRC?\n\nMore competition could mean higher financing costs and less Bitcoin for $MSTR shareholders.\n\nHere’s why that matters. 👇 https://t.co/dZaB8AcHKD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "NASNMEDIA",
+   "url": "https://x.com/NASNMEDIA/status/2110464092972433640",
+   "date": "2026-10-14",
+   "text": "🪙 $MSTR  \nPrice: ~$142.50 (-6.4%)\n\nNews: BTC proxy + broader risk-off.\n\nSentiment: BTC-tied.\n\nUnusual: Elevated volume.\n\nPT: Varies with BTC.\n\nBull: Largest corporate BTC holder + software cash flow.\n\nBear: BTC volatility + leverage.\n\nFuture growth: Still the purest leveraged"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "thebtcpharaoh",
+   "url": "https://x.com/thebtcpharaoh/status/2111322408032284942",
+   "date": "2026-10-17",
+   "text": "Seventeen percent for life\n\nOn 13 October Strive ($ASST) formalized a policy to never sell $SATA below $100; an important piece of housekeeping I had called for in my piece, Darling of the Bear. Two days later they announced their intention to list a new pref, $SATS, at $90, https://t.co/bH7GvHDRy4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 103,
+   "user": "thebtcpharaoh",
+   "url": "https://x.com/thebtcpharaoh/status/2111322871737794885",
+   "date": "2026-10-17",
+   "text": "Seventeen percent for life\n\nOn 13 October Strive ($ASST) formalized a policy to never sell $SATA below $100; an important piece of housekeeping I had called for in my piece, Darling of the Bear. Two days later they announced their intention to list a new pref, $SATS, at $90, https://t.co/bH7GvHDRy4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 463,
+   "user": "CJ_Bitcoin",
+   "url": "https://x.com/CJ_Bitcoin/status/2109685514978902467",
+   "date": "2026-10-12",
+   "text": "My podcast conversation with @chasepalmieri. We discuss all the tough questions posed by $MSTR and $STRC shareholders, including competition, returns, innovation, and @Strategy's vision.\n\n00:00 Introduction to Strategy and CJ's Role\n01:07 Proposal for Daily Dividends and Market https://t.co/n3Yqvab6At"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "MaverickFletch",
+   "url": "https://x.com/MaverickFletch/status/2110535421587345472",
+   "date": "2026-10-15",
+   "text": "thoughts on how big 1% of the bond market really is and how Strive is eating it up already.\n\nBullish.\n\n$ASST https://t.co/6DNxPH0tBV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 38,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2111507784067932329",
+   "date": "2026-10-17",
+   "text": "For $ASSR to outperform BTC, the demand for $SATA needs to grow faster than the demand for BTC.\n\nConsidering how small SATA is and how high the yield is, this is very likely to happen.\n\nI just can’t imagine not being bullish on digital credit."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 492,
+   "user": "JoshMandell6",
+   "url": "https://x.com/JoshMandell6/status/2110131207430377695",
+   "date": "2026-10-13",
+   "text": "I just heard about this from @GrainofSaltSF!\n\nAt first glance, it seems this change would take a lot of pressure off SATA, as it will no longer bear sole responsibility for providing amplification.  It’s like intercepting a pass that would normally go to the fixed income market. https://t.co/A9lXUfbVEt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "JoshMandell6",
+   "url": "https://x.com/JoshMandell6/status/2110130831482040600",
+   "date": "2026-10-13",
+   "text": "I just heard about this from @GrainofSaltSF!\n\nAt first glance, it seems this change would take a lot of pressure off SATA, as it will no longer bear sole responsibility for providing amplification.  It’s like intercepting a pass that would normally go to the fixed income market. https://t.co/A9lXUfbnOV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ngrfreedom",
+   "url": "https://x.com/ngrfreedom/status/2111133995144815065",
+   "date": "2026-10-16",
+   "text": "Bullish on Bitcoin?\n\n$ASST is worth watching as Strive uses offerings like $SATA and $SATS to expand its BTC holdings, aiming for the No. 2 spot behind $MSTR. \n\nThe upside thesis comes with extreme volatility. https://t.co/oDjpiMOPIB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "iluzracso",
+   "url": "https://x.com/iluzracso/status/2110985770127249484",
+   "date": "2026-10-16",
+   "text": "Zoom out. The macro foundation for the next expansion phase is being built right now. 🌅📈\n​While short-term noise and noisy inflation prints get retail traders emotional, look at what’s quietly happening beneath the surface:\n​$80,000–$81,500 Support: Defended continuously"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "TheSamsPodcast",
+   "url": "https://x.com/TheSamsPodcast/status/2109740000069775845",
+   "date": "2026-10-12",
+   "text": "Adoption by the mainstream is key to the success of any technology. So can Bitcoin learn anything from the roll-out of Ai https://t.co/wBJjwKdnfq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "KayJayInvesting",
+   "url": "https://x.com/KayJayInvesting/status/2111170041131741504",
+   "date": "2026-10-16",
+   "text": "Over the last few months, we have seen Strive's BTC yield consistently grow 3-8% week-over-week (even before the exercised warrants). \n\nWhat could this type of growth look like over the next couple of years?\n\nLet's take a conservative estimate of 2% WoW BTC yield from SATA, SATS https://t.co/tmjDyqv3Wz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "e1psre",
+   "url": "https://x.com/e1psre/status/2111637289445023753",
+   "date": "2026-10-18",
+   "text": "I am concerned that the STRC / SATA  story is not over.\n\n✅ Yes, Strategy managed to get STRC close to par with buybacks\n🔺 BUT It took 1.6 Billion to do that, including buys at 99.65\n🔺AND NOW It last traded at 97.72 - well under par\n🔺SATS, the Strive instrument was priced at"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "diglloyd",
+   "url": "https://x.com/diglloyd/status/2109753093701423281",
+   "date": "2026-10-12",
+   "text": "$SATA is a wildly impressive product.\n\n$STRC is wheezing but should be fine once:\n1.  Daily dividends (coming soon).\n2.  Regains par... asymptotic is a bad look.\n3.  Yield bumps up slightly. https://t.co/wvZGNM95XF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "diglloyd",
+   "url": "https://x.com/diglloyd/status/2110143509865144620",
+   "date": "2026-10-13",
+   "text": "On @Strive $SATA:\n\n1.  can be issued BELOW  par.\n2.  can be issued ABOVE par.\n\n#1 is probably a bad idea, but the terms allow it.\n#2 limits upside vs par"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "refreshcoinxyz",
+   "url": "https://x.com/refreshcoinxyz/status/2110175506855276848",
+   "date": "2026-10-14",
+   "text": "Strive raising $500M in 15% preferred stock to buy Bitcoin, the SATS series pays fixed 15% yield at par but ranks behind existing SATA prefer ...\nhttps://t.co/yErhdEjLOz\n#crypto #news #bitcoin #btc #cryptocurrency #trading https://t.co/qc7Qemc29z"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "elwithT4",
+   "url": "https://x.com/elwithT4/status/2110150855542354296",
+   "date": "2026-10-13",
+   "text": "• Strive raising $500 million to buy additional bitcoin with new preferred share class.\n• SATS will offer a fixed 15% dividend yield at par and be junior to the company's existing SATA, which pays a variable rate (currently 13%).\n\nBy Stephen Alpher"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 305,
+   "user": "RobinSeyr",
+   "url": "https://x.com/RobinSeyr/status/2110403889262403803",
+   "date": "2026-10-14",
+   "text": "STRC just a few cents away from par! \nSATA crashing down to $96\n\nI continue to have doubts if there is space for more than 1 player in the market. STRC has:\n\n-&gt; The highest BTC Rating\n-&gt; The longest USD duration\n-&gt; Strategy with an S&amp;P Credit rating\n-&gt; Way more Liquidity &amp; Volume https://t.co/Iu61nfmr20"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 50,
+   "user": "khingoei",
+   "url": "https://x.com/khingoei/status/2111529217393590717",
+   "date": "2026-10-17",
+   "text": "Strive priced a second preferred this week.  The parallel is a bank adding a capital tier.\n\nOn June 18, $STRC traded down to 82.50 and closed at 88.59, and $SATA fell with it.  @ColeMacro, @Strive’s CEO, called it a leverage liquidation which was indeed the story trading volumes"
+  }
+ ]
+}
