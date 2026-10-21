@@ -17,6 +17,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
 <span style="margin-left:16px">Saved views</span><select id="views" style="min-width:180px"><option value="">— pick a view —</option></select>
+<span id="wlpickbox" style="margin-left:16px">Load from Watchlist <select id="wlpick" style="min-width:150px"><option value="">— watchlist view —</option></select></span>
 <button id="vsave" title="Overwrites the selected view. To save a new view, pick “— pick a view —” first.">Save view</button><button id="vren">Rename</button><button id="vdel">Delete</button>
 <button id="vexp">Export</button><button id="vimp">Import</button><input id="vfile" type="file" accept=".json,application/json" style="display:none">
 </div>
@@ -777,7 +778,7 @@ $('sreload').addEventListener('click',()=>{if($('sview').value==='time'&&!HBUSY)
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
 const VFIELDS=['sview','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
 let VIEWS=[];
-function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}return{name,mode:MODE,fields:f,saved:new Date().toISOString()}}
+function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}const o={name,mode:MODE,fields:f,saved:new Date().toISOString()};if(MODE==='watch')o.wl=WL.slice();return o}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
 // Saved views are per tab: each view carries .mode and only shows/saves/loads in that tab.
 const VMODES=['prices','fin','heat','tre','val','watch','sent'];
@@ -797,11 +798,20 @@ async function vload(){try{VSTORE=(await (await fetch('/api/config')).json()).vi
   let mig=0;for(const x of VIEWS){if(x&&typeof x==='object'&&x.mode!==vmode(x)){x.mode=vmode(x);mig++}}
   if(mig){try{await vput()}catch(e){console.warn('view migration not saved',e)}}
   vlist()}
-function vlist(){const v=$('views');if(!v)return;const own=VIEWS.map((x,i)=>[x,i]).filter(([x])=>vmode(x)===MODE);
+function vlist(){try{wlpicklist()}catch(e){}const v=$('views');if(!v)return;const own=VIEWS.map((x,i)=>[x,i]).filter(([x])=>vmode(x)===MODE);
   v.innerHTML='<option value="">— pick a view —</option>'+own.map(([x,i])=>`<option value="${i}">${String(x.name).replace(/</g,'&lt;')}</option>`).join('');
   const i=VLASTM[MODE]?vfind(VLASTM[MODE]):-1;v.value=i>=0?String(i):''}
+// "Load from Watchlist": copies a Watchlist view's tickers into this tab's ticker box. Read-only; never adds to this tab's saved views.
+const WLIN={prices:'tickers',fin:'ftickers',heat:'htickers',tre:'ttickers',val:'vtickers',sent:'stickers'};
+function wlpicklist(){const p=$('wlpick');if(!p)return;const box=$('wlpickbox');box.style.display=WLIN[MODE]?'':'none';
+  const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  p.innerHTML='<option value="">— watchlist view —</option><option value="cur">Current watchlist ('+WL.length+')</option>'+VIEWS.map((x,i)=>[x,i]).filter(([x])=>vmode(x)==='watch').map(([x,i])=>Array.isArray(x.wl)&&x.wl.length?`<option value="${i}">${esc(x.name)} (${x.wl.length})</option>`:`<option value="${i}" disabled>${esc(x.name)} (no tickers saved — re-save on Watchlist)</option>`).join('');p.value=''}
+$('wlpick').onchange=()=>{const p=$('wlpick'),v=p.value,id=WLIN[MODE];p.value='';if(!v||!id)return;
+  const x=v==='cur'?{wl:WL}:VIEWS[v];if(!x||!Array.isArray(x.wl)||!x.wl.length)return;
+  $(id).value=x.wl.join(',');if(MODE==='heat')$('huni').value='custom';if(MODE==='prices'&&$('names'))$('names').value='';if(MODE==='fin'&&$('fnames'))$('fnames').value='';if(MODE==='val'&&$('vnames'))$('vnames').value='';rerender()};
 function vapply(x){const m=vmode(x),own=VOWN[m];if(m==='prices'){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';$('ddbase').value='range'}
   for(const [id,val] of Object.entries(x.fields||{})){if(id!=='theme'&&!own.test(id))continue;const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
+  if(m==='watch'&&Array.isArray(x.wl)&&x.wl.length){WL=x.wl.slice();wsave()}
   applyTheme();vsync();setMode(m)}
 const vmsg=t=>{$('status').className='';$('status').textContent=t};
 const vflash=t=>{vmsg(t);setTimeout(()=>{if($('status').textContent===t)$('status').textContent=''},2500)};
