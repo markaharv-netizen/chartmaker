@@ -835,6 +835,30 @@ $('vfile').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{let arr
   await vput();vmsg(`Imported ${n} view(s)`)}catch(err){alert('Import failed: '+err.message)}e.target.value=''};
 $('theme').onchange=()=>{applyTheme();rerender()};
 window.__vapply=vapply;window.__snap=snap;
+
+// ---------- Ticker autocomplete: suggestions for the token being typed in comma-separated ticker inputs ----------
+(function(){const IDS=['tickers','ftickers','htickers','ttickers','vtickers','stickers','wadd'];
+  const box=document.createElement('div');box.id='acbox';box.style.cssText='position:absolute;z-index:9999;background:#fff;border:1px solid #d1d5db;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,.15);font:13px system-ui,sans-serif;display:none;min-width:260px;max-width:420px';document.body.appendChild(box);
+  let inp=null,items=[],sel=-1,timer=null,seq=0;const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const tok=e=>{const v=e.value,c=e.selectionStart??v.length,a=v.lastIndexOf(',',c-1)+1,bi=v.indexOf(',',c),b=bi<0?v.length:bi;return{a,b,t:v.slice(a,b).trim()}};
+  const hide=()=>{box.style.display='none';items=[];sel=-1};
+  const show=()=>{if(!items.length||!inp)return hide();const r=inp.getBoundingClientRect();box.style.left=(r.left+scrollX)+'px';box.style.top=(r.bottom+scrollY+2)+'px';
+    box.innerHTML=items.map((x,i)=>`<div data-i="${i}" style="padding:5px 8px;cursor:pointer;${i===sel?'background:#e5e7eb':''}">${esc(x.name)} — <b>${esc(x.symbol)}</b>${x.exch?' <span style="color:#6B7280">('+esc(x.exch)+')</span>':''}</div>`).join('');box.style.display='block'};
+  const pick=i=>{const x=items[i];if(!x||!inp)return;const {a,b}=tok(inp),v=inp.value,pre=v.slice(0,a),post=v.slice(b);
+    inp.value=pre+(pre&&!/\s$/.test(pre)&&pre.endsWith(',')?'':'')+x.symbol+post;const c=(pre+x.symbol).length;inp.setSelectionRange(c,c);hide();inp.focus()};
+  async function look(e){const {t}=tok(e),my=++seq;if(t.length<2){hide();return}
+    try{const j=await (await fetch('/api/search?q='+encodeURIComponent(t))).json();if(my!==seq||inp!==e)return;items=Array.isArray(j)?j:[];sel=-1;show()}catch(_){hide()}}
+  box.addEventListener('mousedown',ev=>{const d=ev.target.closest('[data-i]');if(d){ev.preventDefault();pick(+d.dataset.i)}});
+  for(const id of IDS){const e=$(id);if(!e)continue;e.setAttribute('autocomplete','off');
+    e.addEventListener('input',()=>{inp=e;clearTimeout(timer);timer=setTimeout(()=>look(e),200)});
+    e.addEventListener('blur',()=>setTimeout(()=>{if(inp===e)hide()},150));
+    // capture phase so Enter picks a suggestion instead of submitting/rendering
+    e.addEventListener('keydown',ev=>{if(box.style.display==='none'||inp!==e)return;
+      if(ev.key==='ArrowDown'||ev.key==='ArrowUp'){ev.preventDefault();sel=(sel+(ev.key==='ArrowDown'?1:-1)+items.length)%items.length;show()}
+      else if((ev.key==='Enter'||ev.key==='Tab')&&sel>=0){ev.preventDefault();ev.stopImmediatePropagation();pick(sel)}
+      else if(ev.key==='Escape'){ev.preventDefault();hide()}
+      else if(ev.key==='Enter'){hide()}},true)}
+})();
 applyTheme();vload();
 window.__render=render; window.__frender=frender; window.__setMode=setMode; render();
 </script></body></html>

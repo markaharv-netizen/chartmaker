@@ -31,6 +31,21 @@ form{background:#181b22;padding:36px 32px;border-radius:14px;box-shadow:0 10px 4
 input{width:100%;box-sizing:border-box;padding:11px 12px;border-radius:8px;border:1px solid #2c313c;background:#0F1115;color:#fff;font-size:15px;margin-bottom:14px}
 button{width:100%;padding:11px;border:0;border-radius:8px;background:#F7931A;color:#111;font-weight:600;font-size:15px;cursor:pointer}.e{color:#ff6b6b;font-size:13px;margin:-4px 0 12px}</style></head>
 <body><form method=post action=/login><h1>Chartmaker</h1><p>Enter the password to continue.</p>%ERR%<input type=password name=password autofocus autocomplete=current-password placeholder=Password><button>Sign in</button></form></body></html>"""
+_SQ = {}
+def ysearch(q):
+    """Ticker autocomplete via Yahoo search (quotes only). Cached 10 min; any failure returns []."""
+    q = q.strip()[:60]
+    if not q: return []
+    k = q.lower(); hit = _SQ.get(k)
+    if hit and time.time() - hit[0] < 600: return hit[1]
+    try:
+        url = "https://query2.finance.yahoo.com/v1/finance/search?" + urllib.parse.urlencode({"q": q, "quotesCount": 10, "newsCount": 0, "listsCount": 0, "enableFuzzyQuery": "false"})
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=6) as r: j = json.load(r)
+        out = [{"symbol": x["symbol"], "name": x.get("longname") or x.get("shortname") or x["symbol"], "exch": x.get("exchDisp") or x.get("exchange") or "", "type": x.get("quoteType")}
+               for x in j.get("quotes", []) if x.get("symbol") and x.get("quoteType") in ("EQUITY", "ETF", "CRYPTOCURRENCY")][:8]
+    except Exception: return []
+    if len(_SQ) > 500: _SQ.clear()
+    _SQ[k] = (time.time(), out); return out
 def views_read():
     try:
         with open(VIEWS, encoding="utf-8") as f: v = json.load(f)
@@ -146,6 +161,7 @@ class H(SimpleHTTPRequestHandler):
         if u.path == "/api/config": return s.send_json({"viewsStore": VIEWS_STORE, "auth": bool(PASSWORD)})
         if u.path == "/api/views": return s.send_json([] if VIEWS_STORE == "browser" else views_read())
         qs = urllib.parse.parse_qs(u.query)
+        if u.path == "/api/search": return s.send_json(ysearch(qs.get("q", [""])[0]))
         if u.path == "/api/logo":
             b = heat.logo(qs.get("symbol", [""])[0])
             if not b: return s.send_json({"error": "no logo"}, 404)
