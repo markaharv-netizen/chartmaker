@@ -1,0 +1,93 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-09T00:00:00Z",
+ "end": "2026-10-10T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "RobbMaos",
+   "url": "https://x.com/RobbMaos/status/2108522324467343682",
+   "date": "2026-10-09",
+   "text": "Market Analysis: Are We Seeing A Shift In Crypto?\n#xcn #kaspa #solana #ethereum\n#bitcoin\n\n-Bearish Pattern Nobody Is Talking About\n-HUGE Macro Pattern Thats MEGA Bullish\n-More Downside Coming Soon?\n-#crypto Markey Ana;ysis"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "clarkron_2008",
+   "url": "https://x.com/clarkron_2008/status/2108404675225723342",
+   "date": "2026-10-09",
+   "text": "The crypto market remains under bearish short-term pressure, particularly in altcoins.\n\nBitcoin (BTC): Selling pressure remains high.\nEthereum (ETH): Weak momentum suggests further downside risk.\nAltcoins: Generally more vulnerable to market declines.\nKey bearish signal: BTC https://t.co/IMzHh6dnvo"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2108494715234418738",
+   "date": "2026-10-09",
+   "text": "🚨 $ETH ALERT: Ethereum Price Analysis: Whale Liquidated, Is $2,400 Next?\n\n🟢 Bullish: 35%\n• The liquidated whale still holds about 78,955 ETH in longs valued near $195.57 million.\n• The 50-day EMA remains above the 200-day EMA near $2,300, which the analysis calls a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "chinmaycrypto",
+   "url": "https://x.com/chinmaycrypto/status/2108449645198488030",
+   "date": "2026-10-09",
+   "text": "XAU is at $4,197.35, +1.72% over 24 hours.\n\nThe 24h high is $4,212.42.\nThe 24h low is $4,110.68.\n\n📍 Three levels\n\n1️⃣ $4,212.42, the 24h high. That is resistance.\n\n2️⃣ $4,197.35, where price is now.\n\n3️⃣ $4,110.68, the 24h low. That is support.\n\n🟢 Bull scenario\nA 15m or 1H close https://t.co/jyi1dsVKpa"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "urxrl_trading",
+   "url": "https://x.com/urxrl_trading/status/2108614609296826832",
+   "date": "2026-10-09",
+   "text": "🔲 ethereum:0x30d20208d987713f46dfd34ef128bb16c404d10f – Multi-Cycle CSR → Major Descending Compression → Early Reversal Setup\n\nethereum:0x30d20208d987713f46dfd34ef128bb16c404d10f has spent a prolonged period unwinding its previous expansion, but the character of the chart is https://t.co/9vkdZklaho"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2108437111380611442",
+   "date": "2026-10-09",
+   "text": "Macro Observatory Week 41 Friday Briefing\n\nThursday's telemetry delivers a mechanical severance in tech equities as Nvidia and TSMC collapsed into Emerging Bear Breakdown, and the Nasdaq 100 joined Microsoft in Flash Flush state, targeting Emerging Bear Breakdown.\n\nThe market is"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "CoinListingBot",
+   "url": "https://x.com/CoinListingBot/status/2108585825017659533",
+   "date": "2026-10-09",
+   "text": "🚨 $ETH faces a critical $2,500 crossroads as the Supertrend indicator turns bearish.\nTraders are watching whether #Ethereum can hold this key level or face further downside.\nRead more 👇\nhttps://t.co/QvHdH4Tm6Y\n\n#Crypto #Ethereum #Trading"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "abiel720s",
+   "url": "https://x.com/abiel720s/status/2108453606181765441",
+   "date": "2026-10-09",
+   "text": "$APT &amp; $SEI  \nThe Future Giants of Layer 1?\n\nI strongly believe that Aptos and Sei are among the most undervalued Layer 1 projects in the crypto market today.\n\nFrom current levels, I see the potential for at least 10X returns for both projects in the next major bull cycle.\n\nWhy"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "0Melnyk",
+   "url": "https://x.com/0Melnyk/status/2108619545942671717",
+   "date": "2026-10-09",
+   "text": "🎯 $ETH: The Market Crashed Exactly Where I Expected!\n\nYesterday's sell-off confirmed my bearish outlook.\n\n📉 Ethereum dropped sharply from the $2,700 area, reaching $2,406 before bouncing back toward $2,490.\n\nThe first downside target has been reached, but I don't think the https://t.co/yQ6TlEJy1N"
+  }
+ ]
+}

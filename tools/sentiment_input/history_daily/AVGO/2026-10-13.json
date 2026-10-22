@@ -1,0 +1,210 @@
+{
+ "symbol": "AVGO",
+ "start": "2026-10-13T00:00:00Z",
+ "end": "2026-10-14T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AVGO (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "MaharajTrading",
+   "url": "https://x.com/MaharajTrading/status/2110061875954123127",
+   "date": "2026-10-13",
+   "text": "👑 Maharaj Swing Analysis 👑\n\n$AVGO — Bullish\n\nLook for price action to test $360 and hold, then work its way toward $370. Upside targets are $370 and $380.\n\nWatch $350 as key support. If price loses this level and fails to reclaim it, the downside could accelerate into the"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Zurieliooo",
+   "url": "https://x.com/Zurieliooo/status/2109988790085288308",
+   "date": "2026-10-13",
+   "text": "📊 SENTINEL PREMARKET | Tuesday, Oct. 13\n\nMarket Outlook: Defensive → Selectively Bearish\n\nTechnology remains under pressure heading into the open.\n\n📉 S&amp;P futures: -0.1%\n📉 Nasdaq-100 futures: -0.6%\n🛢️ Brent crude: ~$104.60\n📊 10Y yield: ~5.19%\n\nBank earnings and Wednesday’s"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "QuantAlgosAi",
+   "url": "https://x.com/QuantAlgosAi/status/2110060633798361520",
+   "date": "2026-10-13",
+   "text": "⚠️ TRAPDOOR $AVGO — board is short gamma; the bullish/bearish technical level is NOT a magnet, it's a vol-trap for fast whipsaws.\n📐 Technicals (4h): Resistance 355.86 · Support 354.20 · Fib 61.8% @ 353.01 (up-leg) · RSI 43\n🎯 Options layer: magnet 370.00 · MVC 355.00 · top GEX https://t.co/0JqYGv8t0V"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 13,
+   "user": "Jeremy_Lefcn7l",
+   "url": "https://x.com/Jeremy_Lefcn7l/status/2110068550698451176",
+   "date": "2026-10-13",
+   "text": "I don’t care what anyone else says, and I don’t give a damn about the market naysayers—\n\nThese 6 stocks are my core positions that I’m holding all the way to 2027. Let’s see who can outperform!\n\n1. $NVDA – Targeting more than double +100–150%\n\n2. $AVGO – Targeting big upside https://t.co/MxdaFmfP6a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ThesisAndMetric",
+   "url": "https://x.com/ThesisAndMetric/status/2109829535814549735",
+   "date": "2026-10-13",
+   "text": "THE PHYSIOLOGY OF FEAR AND THE 2027 MAP\nThesis and Metric — October 12, 2026\n\nThis wasn't a crash — the S&amp;P 500 finished flat at 7,807; the Dow rose. The pain was in concentration: Lumentum ($LITE) -10%, Ciena ($CIEN) -10%, Semtech ($SMTC) -10%, Sandisk ($SNDK) -6%, Micron ($MU)"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Zurieliooo",
+   "url": "https://x.com/Zurieliooo/status/2110105265035260117",
+   "date": "2026-10-13",
+   "text": "📊 SENTINEL MARKET CLOSE | OCT. 13\n\nMarket Outlook: Mixed → Defensive\n\n$SPY finished nearly flat while $QQQ remained weak. Technology showed mixed leadership, making stock selection more important than overall market direction.\n\nMy Sentinel Five: $SPY $QQQ $MSFT $AMZN $TSLA\n\n🟡"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "RanjitAlpha",
+   "url": "https://x.com/RanjitAlpha/status/2109971908909314518",
+   "date": "2026-10-13",
+   "text": "🌎 MARKET FORECAST — TUESDAY, OCTOBER 13, 2026\n\n📰 Overnight News Update\n\n• 🇰🇷 South Korea / Rates: President Lee Jae Myung warned that further rate increases may be unavoidable amid global tightening pressures. No new BOK hike has been announced.\n\n• 🏦 Bank Earnings: JPMorgan"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "eansky1",
+   "url": "https://x.com/eansky1/status/2109999767820603854",
+   "date": "2026-10-13",
+   "text": "PREMARKET BRIEF — OCT. 13, 2026\n\nMARKET\n\n* ESZ26: 7,848.75, -0.12%. NQ: -0.70%.\n$VIX: 15.34, +0.85%. 10Y: 5.19%, down about 5 bp.\n* Breadth: Mixed rotation—not broad selling. SPY -0.07%, QQQ -0.74%, DIA +0.85%, IWM +0.10%; advance/decline data unavailable. \n* Tech/Semis:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "eansky1",
+   "url": "https://x.com/eansky1/status/2109999506662068398",
+   "date": "2026-10-13",
+   "text": "PREMARKET BRIEF — OCT. 13, 2026\n\nMARKET\n\n* ESZ26: 7,848.75, -0.12%. NQ: -0.70%.\n$VIX: 15.34, +0.85%. 10Y: 5.19%, down about 5 bp.\n* Breadth: Mixed rotation—not broad selling. SPY -0.07%, QQQ -0.74%, DIA +0.85%, IWM +0.10%; advance/decline data unavailable. \n* Tech/Semis:"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "OSTradez",
+   "url": "https://x.com/OSTradez/status/2109982477687169312",
+   "date": "2026-10-13",
+   "text": "$AVGO (Broadcom Inc.)  \nSector weakness pressures price action, needing a close above $360.60 to negate bearish sentiment despite potential momentum above $355 and $357. Key support levels are at $335 and $332, indicating risk of further downside.  \nVerdict: Watch for breakout https://t.co/nHsTI75fql"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "killthemarket",
+   "url": "https://x.com/killthemarket/status/2110106238449258681",
+   "date": "2026-10-13",
+   "text": "Wednesday’s picks.\n\n$AAPL — bearish \n$AMZN — bearish \n$AVGO — bullish \n$MU — bullish (bonus)\n\nLevel first. Then the move.\n\nWatch here 👇\nhttps://t.co/bIixCdZS9C\n\n#KillTheMarket #AAPL #AMZN #AVGO #MU"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 14,
+   "user": "doughboysfn",
+   "url": "https://x.com/doughboysfn/status/2110037763743420816",
+   "date": "2026-10-13",
+   "text": "$AVGO\n\nHeatmap Update \n\nDownside nodes are still there, but we did not get the move we were expecting. They killed a lot of the exposure one the downside nodes so the thesis for downside is dampened. \n\nUnder $355 those nodes are back in play, but if this $355 area holds we can https://t.co/uhRwp9v30M https://t.co/U1IKvVK9TC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 28,
+   "user": "athuinvests",
+   "url": "https://x.com/athuinvests/status/2109960676462448840",
+   "date": "2026-10-13",
+   "text": "Anyone who actually read $AVGO Hock Tan's comments from yesterday saw the media spin them for their own reasons...\n\nSome of the things he mentioned were bullish while others were quite unexpected from someone like him.\n\nTL;DR\n\n&gt; financing could become a bigger obstacle to AI https://t.co/zGP9wa9bqu"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "MaharajTrading",
+   "url": "https://x.com/MaharajTrading/status/2110005252355481637",
+   "date": "2026-10-13",
+   "text": "$AVGO\nBias: No clear direction\nLook for price action to test $360 and hold. Then working its way to $370. Upside price target is $370.\nIf price action loses $360 and fails to reclaim it, then working its way to $340. Downside price targets are $350 and $340."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "truthunfoldxxx",
+   "url": "https://x.com/truthunfoldxxx/status/2109867144381112510",
+   "date": "2026-10-13",
+   "text": "A bullish comment from $avgo ceo twisted into bearish new headline ...impressive https://t.co/SWmnLzrPLX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2109799385567822308",
+   "date": "2026-10-13",
+   "text": "Tickers dominating X conversation right now:\n\n1. SoFi Technologies $SOFI is down 0.3% today after falling 3.6% in the regular session\n\n🟢 Sentiment: 32% bullish, 13% bearish, 55% neutral\n\nThe dip follows a KBW analyst downgrade that cut the price target to $15 and an insider https://t.co/uMSsmbAybO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 22,
+   "user": "treasureh8nter",
+   "url": "https://x.com/treasureh8nter/status/2109910473726394758",
+   "date": "2026-10-13",
+   "text": "This post suggests that the market may be too pessimistic about Marvell’s 2028 ASIC revenue prospects following delays to their chip project. \n\nIt also suggests that $AMD and Marvell are collaborating on a potential TPU opportunity, which could free up engineering resources and https://t.co/H1gFOKYJxa"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NarumiAIonX",
+   "url": "https://x.com/NarumiAIonX/status/2109990285178540114",
+   "date": "2026-10-13",
+   "text": "#BREAKING: Broadcom faces significant upside and downside risk linked to OpenAI's $50 billion revenue run rate and ongoing custom chip projects.\n\nThe chip maker finds itself deeply tied to the rapid monetization of artificial intelligence, especially as major labs push massive"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1821,
+   "user": "aleabitoreddit",
+   "url": "https://x.com/aleabitoreddit/status/2109900353349300590",
+   "date": "2026-10-13",
+   "text": "So spent some more time to look at more DBS conference material: \n\n- \"Two semiconductor giants, $AVGO and $INTC, both stated that breakthroughs in AI will keep demand for chip investment elevated for at least another 2 years. As current supply is insufficient to meet market https://t.co/6azsacIEdc https://t.co/6l58aL0XbX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2109957481665302623",
+   "date": "2026-10-13",
+   "text": "🚨 $BTC $AVGO $MU ALERT: Bitcoin diverges from South Korean stocks as AI concerns deepen the Kospi selloff\n\n📊 Trade This Asset: https://t.co/0tFuuDrnrE\n\n🟢 Bullish: 65%\n• Bitcoin has recovered about 40% from near $58,000 to as high as $87,000 while the KOSPI is down roughly 38%"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "nowayraghav",
+   "url": "https://x.com/nowayraghav/status/2110000220285329525",
+   "date": "2026-10-13",
+   "text": "Over the next 3-5 years, these are the 10 hot stocks I’m heavily overweight for multi-bagger potential!\n\nHigh-upside growth plays (potential 3-8x):\n1. $SPCX (Space + satellite internet)\n2. $MU (AI memory boom)\n3. $MRVL (AI networking chips)\n4. $BE (Bloom Energy – data center"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "X_thetrader",
+   "url": "https://x.com/X_thetrader/status/2110149040235000258",
+   "date": "2026-10-13",
+   "text": "$SPY barely moved. The market underneath it did.\n\nTuesday ended with semiconductors recovering, banks selling off after earnings, credit softening and oil climbing. Wednesday brings CPI and $ASML earnings.\n\nA flat close does not mean a quiet setup.\n\nTHE GOOD\n\nTreasury yields"
+  }
+ ]
+}

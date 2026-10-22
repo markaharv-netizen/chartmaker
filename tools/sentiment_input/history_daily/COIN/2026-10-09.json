@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-09T00:00:00Z",
+ "end": "2026-10-10T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 30,
+   "user": "AtlasTradez",
+   "url": "https://x.com/AtlasTradez/status/2108696080749633550",
+   "date": "2026-10-09",
+   "text": "bitcoin:native \n\nGot a pretty good pullback through the previous expansion inefficiency, making for a spring on volume. \n\nNow in the process of a reclaim of the consolidation range and retesting the lows. \n\nGiven high timeframe bias and quantum/AI FUD that came with the spring, https://t.co/YBIYKORLg4 https://t.co/oOTO2fxp7N"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108448281810387275",
+   "date": "2026-10-09",
+   "text": "⬆️ $MAGIC pumps 7.7% on 8.7x volume spike—momentum looks set to test new highs\n\n- my bias is bullish here with a short-term upside expectation, as 1h structure is confirmed bullish and price is well above the last swing high and EMA cluster 🚀\n- the explosive 8.7x volume spike https://t.co/64PN4XrWGI"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108350031736504827",
+   "date": "2026-10-09",
+   "text": "📐 $SNDK down 4.9% but showing a 4h bullish divergence vs BTC —relief rally or just noise?\n\n- my bias is still bearish on SNDK #SNDKUSDT.P here, in line with the 1h structure (lower highs and lower lows), but I’m watching closely for a potential short-term relief rally after that https://t.co/Fpk7lIU6bv"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108516801562791937",
+   "date": "2026-10-09",
+   "text": "🔻 ETH down 1.9% in 24h but the real story is lower highs locking in bear pressure\n\n- my bias is bearish here, as the 1h market structure is clearly printing lower highs and lower lows; price sits at 2488.67, well below the last confirmed lower high at 2586.61 and beneath both https://t.co/tYgTpWkMPL"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108410431907696804",
+   "date": "2026-10-09",
+   "text": "💎 $ENSO jumps 4.2% in 15m on 118x volume spike—can this bullish momentum hold against BTC's bearish drag?\n\n- my bias is bullish here on ENS #ENSOUSDT 1h, with structure confirmed bullish and both the 1h and daily trends aligned to the upside, despite BTC showing a bearish https://t.co/s40QOkPDEt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "kairoshades",
+   "url": "https://x.com/kairoshades/status/2108563305530896644",
+   "date": "2026-10-09",
+   "text": "TBD whether I panic sold yesterday or not, will see.  Not bear-holed here, just expected value picture got much worse and would rather collect 5% on cash than pay option premium for now\n\nUpside is probably capped and amount of angry longs on the timeline tells you something about"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108570447268770129",
+   "date": "2026-10-09",
+   "text": "🚨 LAZIO breaks out with 5.2% pump and 2.6x volume spike—smart money’s move, not retail noise\n\n- my bias is bullish here on $LAZIO #LAZIOUSDT 1h, as the market structure is confirmed bullish and price just fired off a significant +5.2% pump on 4.7x normal volume — this is not https://t.co/UzHU5g1mxE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108430718082642012",
+   "date": "2026-10-09",
+   "text": "🐂 $CTSI climbs 7.1% in 15m with 2.3x volume spike—momentum's real, but how high can it run?\n\n- my bias is bullish here on CTSI following the recent explosive move, as the 1h structure remains bullish with higher highs and higher lows and price trading well above EMA20 and EMA200 https://t.co/mX55UQPk89"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "SpquekS",
+   "url": "https://x.com/SpquekS/status/2108519726167347417",
+   "date": "2026-10-09",
+   "text": "The Board Is Pricing ±8.9% On Netflix Earnings. The Downside Break-Even Sits Below The 52-Week Low.\n\nrobinhood:0xe0444ef8bf4ed74f74fd73686e2ddf4c1c5591e8  closed Thursday at $71.57. That's down 23.7% this year, 42.3% below the 52-week high of $124.14, and only 6.7% above a"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108527524636397690",
+   "date": "2026-10-09",
+   "text": "⚠️ $COIN swept liquidity above 176.39 but the downtrend keeps the bears comfortably in control\n\n- my bias is bearish here, fully aligned with the 1h structure (lower highs, lower lows) and with BTC’s own bearish structure on this timeframe 🚨\n- the 15m wick above 176.39 and https://t.co/I3qFNachWn"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108577476481798493",
+   "date": "2026-10-09",
+   "text": "⚠️ $ETH : 1% down with steady lower highs—bearish setup intact, no relief in sight\n\n- my bias remains bearish on ETH #ETHUSDT.P in the 1h — structure is still making lower highs and lower lows, with price currently at 2486 and well below both the last swing high (2586) and the 1h https://t.co/9nI1RMBlLe"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108431277279903880",
+   "date": "2026-10-09",
+   "text": "🔻 $PROM liquidity sweep above 5.208 confirms deeper downtrend—10% drop says bears still rule.\n\n- the 1h structure remains firmly bearish, with the latest lower high marked at 6.313 and a lower low at 4.711 — price is well below the trend flip level, so bearish momentum dominates https://t.co/U9HsybEwwu"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108691149892329973",
+   "date": "2026-10-09",
+   "text": "🧾 $BTC steady at +0.8% in 24h but the downtrend on 1h and daily charts warns of more pain ahead\n\n- my bias is bearish here in line with the 1h structure (lower highs/lower lows), and the daily trend is also bearish, so I expect continued downside unless the key flip triggers\n- https://t.co/hvwVObk3YE"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108529628369268889",
+   "date": "2026-10-09",
+   "text": "⚠️ $UNI just cleared liquidity above 7.381 but the downtrend pressure and -4% 24h drop say bears aren’t done yet\n\n- my bias is bearish here: the 1h trend is clearly down, with a confirmed lower high at 7.453 and lower low at 6.983, and both the 1h and daily structure remain https://t.co/O6rNKUirnq"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "Zig_ZagTrades",
+   "url": "https://x.com/Zig_ZagTrades/status/2108544819257860580",
+   "date": "2026-10-09",
+   "text": "$COIN  1h/1h/5min\nCOIN  bounces out of its time target...⏳and .786,   front running 170.55 for the potential start of wave 3........🌊   Bearish alt is a deeper (2)   OVN price action looking good with price testing the bull/bear line....   🍿🍿\n\n📊 Stoch rising, EWO green, low https://t.co/vWXMlFq3uU"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108649204734116029",
+   "date": "2026-10-09",
+   "text": "💡 COIN swept liquidity above 182.18 with 3.7% 24h gain—bullish trap? More likely a breakout setup.\n\n- my bias remains bullish here: the 1h structure is firmly bullish with higher highs and higher lows, and the trend flip level is well below at 172.00 — the sweep above 182.18 on https://t.co/BbysXXGqkt"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 332,
+   "user": "ArdiNSC",
+   "url": "https://x.com/ArdiNSC/status/2108623437673513317",
+   "date": "2026-10-09",
+   "text": "Some of you only rate a trader as long as he stays bullish on your bags.\n\nBullish on your coin? Great trader.\n\nPoint out that the structure has broken and a sizeable drawdown is likely? Suddenly they have no idea what they’re talking about.\n\n$ZEC at $1,500, I’m an idiot for"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108468610297380932",
+   "date": "2026-10-09",
+   "text": "📈 JCT volume doubles as price dips 3.5% in 15m—bullish structure holds strong above key invalidation\n\n- my bias remains bullish here despite the heavy volume spike and rapid drop, as the 1h structure is still confirmed bullish and price is trading comfortably above the key https://t.co/GKPqAg09ch"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "CryptoLab_1",
+   "url": "https://x.com/CryptoLab_1/status/2108608050835648546",
+   "date": "2026-10-09",
+   "text": "$BTC X Traders Sentiment · 9 Oct 2026\n\nBears are standing on the cliff edge, peering down. Bulls are shouting \"it's a fractal!\" from the valley 🐻🧗\n\nScored ~120 recent $BTC posts.\nLean: soft bearish, about 20 bearish vs 17 bullish actual trade calls. Basically a coin flip https://t.co/47MYY2Sc68"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 10,
+   "user": "cryptowatczc",
+   "url": "https://x.com/cryptowatczc/status/2108493392376176866",
+   "date": "2026-10-09",
+   "text": "Bullish on $BORRO: stock tokens that can earn rent, back loans and work inside farms on Robinhood Chain.\n\nI break down how it works, where Longbow and $DELTA fit, and the growth case for this $PONS-launched project with simple examples. 👇 https://t.co/lWEzzSMn0F"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108548105696166110",
+   "date": "2026-10-09",
+   "text": "🟢 $JCT up 3.7% in 15m with 69.5% in 24h — trend’s up but BTC’s shadow looms large\n\n- my bias here is bullish in the short term, but with strong caution: the 1h, daily, and weekly structures are all bullish, confirming trend alignment, but BTC is bearish right now so any long https://t.co/XktOE3DPLh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 68,
+   "user": "atzebase",
+   "url": "https://x.com/atzebase/status/2108505966761128195",
+   "date": "2026-10-09",
+   "text": "Quick update on the most exciting coin in crypto rn. $DRB has closed below the 50d.\n\nWhat to expect?\n\nAs mentioned before the 100d is definitely one to watch out for, but if ETH decides to change direction we’re likely to reclaim the 20m like it’s nothing.\n\nWhat changed? https://t.co/QCrWccO0Ji"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 116,
+   "user": "Wa666Mr",
+   "url": "https://x.com/Wa666Mr/status/2108377681712832758",
+   "date": "2026-10-09",
+   "text": "Privacy coin with options &amp; smart contracts = Midnight\n\nmidnight-3:native is extremely undervalued for what it is offering \n\n10x is considered bearish https://t.co/0TsMnPaYtS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 24,
+   "user": "FinBeyond",
+   "url": "https://x.com/FinBeyond/status/2108384570555207919",
+   "date": "2026-10-09",
+   "text": "What Could Invalidate My Bullish Thesis on $WALLET?\n\nI’ve been bullish on $WALLET because of its unusual on-chain connections, growing holder count, CEX exposure, and the possibility that this story goes deeper than a typical meme coin.\n\nBut there are uncomfortable questions I https://t.co/HKpL48Rysm"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 14,
+   "user": "negcrypto",
+   "url": "https://x.com/negcrypto/status/2108644505100619780",
+   "date": "2026-10-09",
+   "text": "Gm fam,\n\nStill bullish on @AttentionAgents \nsolana:75gGuxuqKhQQiHae8JKDQaetK3XguKf1rUJ1csispump \n\nDay 5 today - floor is still holding at 240-250k mcap.\n\nDev is working hard, heaps of updates including integration of all ai agents into the metaverse ecosystem (muse from meta, https://t.co/TrSl5cKWzS"
+  }
+ ]
+}

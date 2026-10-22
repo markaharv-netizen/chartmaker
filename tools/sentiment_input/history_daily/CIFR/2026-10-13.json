@@ -1,0 +1,201 @@
+{
+ "symbol": "CIFR",
+ "start": "2026-10-13T00:00:00Z",
+ "end": "2026-10-14T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "CIFR (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "MaharajTrading",
+   "url": "https://x.com/MaharajTrading/status/2110048889814327549",
+   "date": "2026-10-13",
+   "text": "AI BETS ARE FLYING FOR WEEKS, MAYBE BLIND?\n\n$CORZ\nLook for price action to test $15 and hold. Then working its way to $15.5. Upside price target is $15.5.\nIf price action loses $15 and fails to reclaim it, then working its way to $12. Downside price targets are $12 and $11."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2110041205488943320",
+   "date": "2026-10-13",
+   "text": "Tickers dominating X conversation today:\n\n1. The Goldman Sachs Group, Inc. $GS is up 0.8%\n\n🟢 Sentiment: 36% bullish, 9% bearish, 55% neutral\n\nGoldman posted Q3 earnings with EPS of $17.01 beating the roughly $13 estimate, and equities revenue surged 72% year‑over‑year. The beat https://t.co/bA1dsr7ZaJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "MarcelSchu53413",
+   "url": "https://x.com/MarcelSchu53413/status/2109961565386469830",
+   "date": "2026-10-13",
+   "text": "$CIFR 2-Week\n\nBullish or bearish chart for you? https://t.co/xbsTPGdcCG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "thedailystck",
+   "url": "https://x.com/thedailystck/status/2110153638731559402",
+   "date": "2026-10-13",
+   "text": "$CIFR\n\nCipher Digital fell 12.8% to $11.34 on 3.9x volume, a new 52-week low, after proposing $850 million of zero-coupon convertible notes due 2032, per its filing. Bullish: RSI of 27 is oversold. Bearish: no support from the past year below. https://t.co/IpqHIQEbMt"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 168,
+   "user": "bitcoinbutcher1",
+   "url": "https://x.com/bitcoinbutcher1/status/2110019697143902366",
+   "date": "2026-10-13",
+   "text": "Anyone who concludes that I’m bearish on $cifr specifically is missing the point.  The question is risk adjusted returns.\n\nThe Street is clearly confident in @rftylerpage if they’re willing to offer 0% coupon notes\n\n$cifr will sign Ulysses, Reveille and Colchis in the next 6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "robinflowai",
+   "url": "https://x.com/robinflowai/status/2110035564624044500",
+   "date": "2026-10-13",
+   "text": "$CIFR down nearly 15%, trading around $11.\n\nThe overall options flow is mixed, with 47% bullish and 46% bearish premium over the past 3 days. But there’s more to the story when you look at the individual trades: https://t.co/zHEr4fxQbZ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 17,
+   "user": "dusty_bull",
+   "url": "https://x.com/dusty_bull/status/2110148801054826620",
+   "date": "2026-10-13",
+   "text": "$CIFR took a beating today over the convertible note announcement, but I think the corporate debt market offers a useful perspective on whether the selloff is pricing in too much downside or not? \n\nThe stock market is reacting to potential dilution. The credit (bond) market is"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 210,
+   "user": "bitcoinbutcher1",
+   "url": "https://x.com/bitcoinbutcher1/status/2110007535809826835",
+   "date": "2026-10-13",
+   "text": "I got be honest with people here but if $wulf and $cifr are going to continue to trade with the volatility of the neoclouds and not command the proper NOI multiples, do the stocks really warrant investment?\n\nNotice I said the stocks and not the companies.  @rftylerpage"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TMA_MarketIntel",
+   "url": "https://x.com/TMA_MarketIntel/status/2110100756070281406",
+   "date": "2026-10-13",
+   "text": "🚨 $291M IN $SPX CALL PREMIUM. $META PUTS OUTWEIGH CALLS 2.6:1.\n\nToday's options flow reveals where traders are concentrating exposure.\n\n🟢 TOP CALL PREMIUM\n$SPX $291.39M\n$GOOGL $28.13M\n$SPY $22.69M\n$CIFR $11.19M\n$SOXX $11.01M\n🔴 TOP PUT PREMIUM\n$META $26.47M\n$IWM $8.73M\n$STX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 26,
+   "user": "datacentrebull",
+   "url": "https://x.com/datacentrebull/status/2110048882218631657",
+   "date": "2026-10-13",
+   "text": "$CIFR is raising $850M in 0% converts due 2032, with a $150M greenshoe.\n\nThe bull case: the 1.75% 2030 paper gets swapped for zero-coupon debt that matures two years later, and the money funds Barber Lake and the HPC pipeline.\n\nThe bear case: exchanging 2030 notes for common"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Taylor_WZW",
+   "url": "https://x.com/Taylor_WZW/status/2110008851429040443",
+   "date": "2026-10-13",
+   "text": "Let me make the $CIFR bull case properly.  \nBarber Lake: $5.2B contracted revenue, Google-backed tenant, debt structured to fully amortize in the first 10 years.  \nBlack Pearl: rent started in August.  \nStingray: online H1 2027. Revenue goes from $219M this year to $850M next https://t.co/sywFs91ed6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "PK_Fund",
+   "url": "https://x.com/PK_Fund/status/2109994590044631334",
+   "date": "2026-10-13",
+   "text": "Let me make the $CIFR bull case properly.  \nBarber Lake: $5.2B contracted revenue, Google-backed tenant, debt structured to fully amortize in the first 10 years.  \nBlack Pearl: rent started in August.  \nStingray: online H1 2027. Revenue goes from $219M this year to $850M next"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "dissectmarkets",
+   "url": "https://x.com/dissectmarkets/status/2110029591415079297",
+   "date": "2026-10-13",
+   "text": "Both $CIFR and $IREN are great long term plays on the AI buildout, but both are unique in different ways.\n\nIREN will make more $ per MW here at $8.33M/MW/year as they rent out GPUs and aim to make $4B+ annually.\n\nWith 13B market cap, that gives it a P/S ratio of slightly over 3. https://t.co/QJbcg4p8yr"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "BTDenominator",
+   "url": "https://x.com/BTDenominator/status/2110154311443603542",
+   "date": "2026-10-13",
+   "text": "AI Fears Lead to Undervalued Stocks: NBIS, IREN, CLSK, CIFR &amp; MU. https://t.co/ebHM5EQSFq"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 29,
+   "user": "LegalGrapes_Esq",
+   "url": "https://x.com/LegalGrapes_Esq/status/2109995008531320891",
+   "date": "2026-10-13",
+   "text": "After a long weekend of fun in the northwoods, it's back to reality.\n\nI can't help but notice that $CIFR looks substantially undervalued here....adding more today.\n\nI'll gladly buy more of the scarcest assets powering the world of tomorrow while everyone is capitulating in fear."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TwoToesTrading",
+   "url": "https://x.com/TwoToesTrading/status/2109989014572822990",
+   "date": "2026-10-13",
+   "text": "Downside target finally hit here\n\nWhen bounce? \n\n$CIFR https://t.co/rA3H5kzPcE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "StoxScanner",
+   "url": "https://x.com/StoxScanner/status/2110119514830704837",
+   "date": "2026-10-13",
+   "text": "$CIFR Daily: -12.8% gap down through the 13.76 / 13.20 support. Red ribbon since August and lowest levels since April. Resistance 13.76 / 14.55. MCDX smart money ~34.\n\nCapitulation or more downside? 👇\n\n$SPY $QQQ $BTC $ETH https://t.co/x6vG5J5mOf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Joelbodker",
+   "url": "https://x.com/Joelbodker/status/2110026354942964066",
+   "date": "2026-10-13",
+   "text": "$CIFR 10P 6/17/2027 ∘ $𝟏.𝟓𝐌 𝐁𝐞𝐚𝐫𝐢𝐬𝐡 𝐏𝐫𝐞𝐦𝐢𝐮𝐦\ndata @_marketmono https://t.co/zpaYvPqetX"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "kushaldesai0",
+   "url": "https://x.com/kushaldesai0/status/2109995786545365090",
+   "date": "2026-10-13",
+   "text": "$CIFR This hasnt played out so far as expected but the general sentiment around the datacenter names has been bearish over the last week. Will continue holding this position as I do expect the sentiment to change soon. https://t.co/ygffs01zQq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 105,
+   "user": "StonkChris",
+   "url": "https://x.com/StonkChris/status/2110015349189980284",
+   "date": "2026-10-13",
+   "text": "Which retail fan-favorite name is worth buying, or at least approaching a compelling HTF buy zone?\n\n$ASTS $CIFR $EOSE $TE and several others.\n\nSome of these high-beta growth names are approaching major HTF support and measured downside targets where I think the risk/reward could"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 36,
+   "user": "MWi_EW",
+   "url": "https://x.com/MWi_EW/status/2110001237567459738",
+   "date": "2026-10-13",
+   "text": "$CIFR - Target box hit today. ✅\n\nDown big today, but as I posted just a few days ago, further downside was to be expected.\n\nNews like today’s just tends to accelerate the primary trend.\n\n⚪️Path\nMy primary expectation is a bottom somewhere between $11.50 and $6.50.\nThe classic https://t.co/UZeW4kw1C9 https://t.co/ERVpyb5R7L"
+  }
+ ]
+}

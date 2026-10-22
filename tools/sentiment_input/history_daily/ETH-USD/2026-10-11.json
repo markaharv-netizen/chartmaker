@@ -1,0 +1,93 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-11T00:00:00Z",
+ "end": "2026-10-12T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 110,
+   "user": "Billal6968",
+   "url": "https://x.com/Billal6968/status/2109147451160682783",
+   "date": "2026-10-11",
+   "text": "The crypto market is sending a signal traders should not ignore.\n\nBitcoin is trading near $82,958, while ethereum is around $2,508. \n\nThe total crypto market cap is approximately $2.81 trillion, with the market facing short-term selling pressure.\n\nThe big question is whether https://t.co/A0iqonNJGg https://t.co/AtGmylJOG6"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 33,
+   "user": "TradePro16",
+   "url": "https://x.com/TradePro16/status/2109156825933427022",
+   "date": "2026-10-11",
+   "text": "Like Ethereum, Bitcoin is also fully resetting the daily momentum which negates the daily bearish divergence concern and primes this for the next major trending move to the upside. It is doing this with barely any downside. I was anticipating a bit more of a brutal flush than https://t.co/LV4wmTXWMw"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2109359088417341466",
+   "date": "2026-10-11",
+   "text": "🚨 BITCOIN WEEKLY UPDATE 📊 | ALPHA MARKET\n\n🎯 BTC Respected Our Support — Is a Liquidity Sweep Coming Next?\n\nFirst, look at how the market respected the support zone shared on Alpha Market! 👀📈\n\nLast week, I was bullish, but the market moved further to the downside. No problem https://t.co/MXRnYH010R"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "MisterLukeCrypt",
+   "url": "https://x.com/MisterLukeCrypt/status/2109216069520957652",
+   "date": "2026-10-11",
+   "text": "🚨 $ETH SHORT UPDATE — SECURED PARTIAL PROFITS 🚨\n\nI’ve closed half of my $ETH short position after price reached its first support zone around $2,400.\n\nI’ve been heavily shorting $ETH from nearly $2,800, and with profits this significant, securing a portion is simply the logical https://t.co/eN5LBr7Ahg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "Amurakis",
+   "url": "https://x.com/Amurakis/status/2109181597073207460",
+   "date": "2026-10-11",
+   "text": "Whales Load Up: Bitfinex ETH Longs Smash Multi-Year Highs as Someone Bets Aggressively on Upside\n\nEthereum’s derivatives positioning is flashing an unusually clear signal on Bitfinex. \nMargin long positions in #ETH have climbed to approximately 283,400 ETH (worth more than $710 https://t.co/YTAtOMuwaZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "TradeTheCrowd",
+   "url": "https://x.com/TradeTheCrowd/status/2109147948038668662",
+   "date": "2026-10-11",
+   "text": "How 21,576+ traders spotted the quiet catalyst behind $VST 11% breakout https://t.co/3l6BmQ1cDb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cryptotalkiesai",
+   "url": "https://x.com/cryptotalkiesai/status/2109368236584350176",
+   "date": "2026-10-11",
+   "text": "🤖 [MARKET ANALYST] — STARKNET ($STRK) Intelligence Report\n\nCrypto AI Agent : https://t.co/04F3Ah8tGc \n\n📊 Live Market Data\n- Price: $0.0730 | 24h: Data unavailable\n- FDV: $1.17B | Circulating Supply: 7.42B / 10B max (74.2% in circulation)\n- Market Cap vs FDV: Currently trading https://t.co/FJ1U5GP9lo"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "TheRingGroup",
+   "url": "https://x.com/TheRingGroup/status/2109374335806849074",
+   "date": "2026-10-11",
+   "text": "#RINGRepost 📬🚨 Claim: ETH rally to $6,500 will carry altcoins “to another dimension”\n\n📈 Chart (5D ETHUSD): Rising channel from prior highs projects recovery toward ~$6,500 after recent dips. \n\n📚 Historical pattern of dips followed by rallies is real. ETH currently ~$2,540 https://t.co/AsOGaSYYwH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TheRingGroup",
+   "url": "https://x.com/TheRingGroup/status/2109374093351157949",
+   "date": "2026-10-11",
+   "text": "#RINGRepost 📬🚨 Claim: ETH rally to $6,500 will carry altcoins “to another dimension”\n\n📈 Chart (5D ETHUSD): Rising channel from prior highs projects recovery toward ~$6,500 after recent dips. \n\n📚 Historical pattern of dips followed by rallies is real. ETH currently ~$2,540 https://t.co/AsOGaSZwmf"
+  }
+ ]
+}

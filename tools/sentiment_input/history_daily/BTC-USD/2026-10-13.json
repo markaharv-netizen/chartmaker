@@ -1,0 +1,237 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-10-13T00:00:00Z",
+ "end": "2026-10-14T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "KEVINWEB3TRADER",
+   "url": "https://x.com/KEVINWEB3TRADER/status/2109819702025638174",
+   "date": "2026-10-13",
+   "text": "📊 October 13 Market Outlook\n\nBTC Rebound Continues | Medium-Term Bearish, Long-Term Bullish\nOver the past few days, I've consistently highlighted opportunities to short the market on rallies. One of my trading accounts is now showing $10,000 in unrealized profits.\n\nHowever, https://t.co/1qtegqTcgb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2110022757216084359",
+   "date": "2026-10-13",
+   "text": "Belt-Hold Bullish - A Potential Bullish Trend Change\nhttps://t.co/UbMWz3OD3s\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2110149332695650394",
+   "date": "2026-10-13",
+   "text": "The Shooting Star - A Bearish Reversal at Resistance\nhttps://t.co/VedCElrDgV\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 32,
+   "user": "XRPathologist",
+   "url": "https://x.com/XRPathologist/status/2110087916559216760",
+   "date": "2026-10-13",
+   "text": "$BTC still looks vulnerable to another leg lower here.\n\nOn the daily, Bitcoin is showing bearish RSI divergence while price is consolidating inside a rising parallel channel after a sharp drop.\n\nA rising channel following an impulsive decline often acts more like a bear flag than https://t.co/MJB9qfKUvd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2110133981454684595",
+   "date": "2026-10-13",
+   "text": "AB=CD Pattern \nhttps://t.co/Z548pzvT7H\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2109963357902246362",
+   "date": "2026-10-13",
+   "text": "AMD Entry Model - Accumulation, Manipulation and Distribution\nhttps://t.co/vw0UmF4d5U\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Sharmapraeep",
+   "url": "https://x.com/Sharmapraeep/status/2109866866089091142",
+   "date": "2026-10-13",
+   "text": "# 🟡 BNB Update — 13 October 2026\n\nentity[\"cryptocurrency\",\"BNB\",\"BNB Chain native cryptocurrency\"] is facing selling pressure today, with the broader crypto market also showing weakness. Traders should watch the $720–$730 support zone and whether BNB can recover above"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "virotechnics",
+   "url": "https://x.com/virotechnics/status/2110061839635636464",
+   "date": "2026-10-13",
+   "text": "Loose ideas on Q4 BTC:\n\n1. October has waiting room vibes. It feels unlikely to me that the Fed will move on anything before midterms. Expecting that late-October meeting will be a hold. That might be perceived as dovish &amp; push the top of the range; but if inflation sticks it's"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "cryptomoki",
+   "url": "https://x.com/cryptomoki/status/2109848993782243662",
+   "date": "2026-10-13",
+   "text": "a little late but Weekly Analysis for BTC\n------------------------------------------------------\nBitcoin is currently trading in a compressed, rotational structure following the liquidation-driven selloff from the 85–86k area. Price recovered through the developing-year VAH and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "EuroFinanceClub",
+   "url": "https://x.com/EuroFinanceClub/status/2110102477987012910",
+   "date": "2026-10-13",
+   "text": "🔥 Crypto News\n\n🚨 BTC, SPX, GOOGL &amp; NVDA: The Final Macro Bull Run May Be Closer Than You Think!\n\nAcross four major charts, a striking pattern is emerging. Bitcoin, the S&amp;P 500, Google and NVIDIA are all displaying a similar macro cycle structure, moving through bull expansion, https://t.co/gamWDuIBDQ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "marketowleu",
+   "url": "https://x.com/marketowleu/status/2110012768686416142",
+   "date": "2026-10-13",
+   "text": "₿ BITCOIN: BULLISH RECOVERY OR ANOTHER REJECTION? 📊\n\nBitcoin is trading near a critical decision zone, and MarketOwl's Live Chart Analytics reveals some interesting signals across multiple timeframes.\n\n📅 October 13, 2026 | 13:51\n📊 BTCUSDT | Binance Spot | HTF + LTF\n\nWe https://t.co/Zfob3NWouW"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Marketexpert16",
+   "url": "https://x.com/Marketexpert16/status/2109887903094751303",
+   "date": "2026-10-13",
+   "text": "BTCUSD 15M Outlook\n\nBitcoin recovered from 81,000 to 83,500.\n\nResistance/Liquidity: 84,300–84,400\n\nBearish rejection after a liquidity sweep could trigger downside. Sustaining above 84,400 may open the door for further upside.\n\nWait for confirmation.\n\n#BTCUSD #BitcoinTrading https://t.co/2jTHdi3bNL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "PockeyCrypto",
+   "url": "https://x.com/PockeyCrypto/status/2109908260493123897",
+   "date": "2026-10-13",
+   "text": "BTCUSDT | Liquidation Map Analysis\n\nBitcoin has rebounded from the $81,000 region and is currently approaching a key liquidity zone overhead.\n\nKey Levels\n\nResistance: $84,200–$84,400\n\nSupport: $83,000–$83,300\nLower Support: $81,700–$82,000\nMajor Downside Zone: $80,500–$81,000 https://t.co/Bxn0QZN9Bi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "btc_hipe",
+   "url": "https://x.com/btc_hipe/status/2110018460151624117",
+   "date": "2026-10-13",
+   "text": "🚨 ₿ BITCOIN PRICE UPDATE: BTC AT A CRITICAL ZONE! 🔥\n\nBitcoin is trading around $83,300. Bulls are trying to regain control, but key resistance levels stand in their way. 👀\n\n📊 BTC SUPPORT &amp; RESISTANCE 📊\n\n💰 Current Price: ~$83,300\n\n🟢 Support Levels:\n▪️ $82,000\n▪️ $80,950\n▪️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "AMCapital13",
+   "url": "https://x.com/AMCapital13/status/2109963430190776679",
+   "date": "2026-10-13",
+   "text": "#BTC/USDT ANALYSIS\n\nBitcoin is consolidating within the descending broadening wedge pattern and is currently trading inside the Ichimoku cloud, indicating uncertainty in the current market structure.\n\nA solid breakout above the wedge resistance could provide strong bullish https://t.co/KQi6NhjZ6m"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "PredatorVauLt",
+   "url": "https://x.com/PredatorVauLt/status/2109888890081591611",
+   "date": "2026-10-13",
+   "text": "$BTC/USDT, 4H MARKET UPDATE\n\nBitcoin is approaching a key decision zone....\n\n Bullish Scenario: A strong 4H candle close above $84,500 could confirm a breakout and open the door toward $86,000–$87,000.\n\n🐻 Bearish Scenario: If BTC fails to reclaim this level and faces another https://t.co/Tv825rGjVX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Sharmapraeep",
+   "url": "https://x.com/Sharmapraeep/status/2109867318088269852",
+   "date": "2026-10-13",
+   "text": "# ₿ Bitcoin (BTC) Update — 13 October 2026\n\nentity[\"cryptocurrency\",\"Bitcoin\",\"BTC digital asset\"] is facing short-term selling pressure after failing to sustain its recent highs. Traders are watching support levels closely as US inflation data could increase volatility"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "Jemi2n",
+   "url": "https://x.com/Jemi2n/status/2109944437757354399",
+   "date": "2026-10-13",
+   "text": "$BTC /USDT ANALYSIS\n\nBitcoin is consolidating within the descending broadening wedge pattern and is currently trading inside the Ichimoku cloud, indicating uncertainty in the current market structure.\n\nA solid breakout above the wedge resistance could provide strong bullish https://t.co/UpJODZ8FQo"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2110034252972642611",
+   "date": "2026-10-13",
+   "text": "🚨 $BTC $DXY ALERT: Bitcoin keeps up pressure on $84K as US stocks skirt Korea tech sell-off\n\n📈 Trade Futures: https://t.co/0tFuuDrnrE\n\n🟢 Bullish: 55%\n• Bitcoin remained up around 2% and continued targeting $84,000 at the US open\n• US stocks avoided a copycat sell-off after"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "heldersilva86",
+   "url": "https://x.com/heldersilva86/status/2110007346868928977",
+   "date": "2026-10-13",
+   "text": "🚨 $770 MILLION LIQUIDATED. IS BITCOIN ENTERING A DANGEROUS PHASE?\n\nBitcoin slipped below $82,000 as crypto liquidations surged past $770 million, highlighting just how quickly leverage can turn a market move into a cascade.\n\n📉 What matters now?\n\n• Leverage can amplify both"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2109988019768037399",
+   "date": "2026-10-13",
+   "text": "Bear Flag - A Bearish Continuation Pattern \nA Temporary Pause Within a Downtrend\nhttps://t.co/TX8bmBrQKo\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2110074251432861797",
+   "date": "2026-10-13",
+   "text": "🚨 $BTC ALERT: Bitcoin Whales Seen Accumulating — Market Talk\n\n📈 Trade Futures: https://t.co/0tFuuDrVhc\n\n🟢 Bullish: 70%\n• Whales holding 3.03 million BTC, highest since late November 2025\n• Switch back to buying after selling since September 2025\n• Market deemed in early"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "CryptoKid_____",
+   "url": "https://x.com/CryptoKid_____/status/2109946743232286744",
+   "date": "2026-10-13",
+   "text": "Never seen X this bearish.\nNot a bear market.\nJust a correction inside a bull.\n$BTC $ETH\n#Bitcoin #Crypto #BullMarket #HODL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Bossmustee00",
+   "url": "https://x.com/Bossmustee00/status/2110071946914263168",
+   "date": "2026-10-13",
+   "text": "📊 BTC/USDT ANALYSIS 🔥\n\n⏱️ Timeframe: 1H\n\n₿ BTC is showing a recovery, but the next move depends on how price reacts around key levels.\n\n🔴 Resistance: $84,100–$84,300\n🟢 Support: $81,000–$81,800\n\n📈 BULLISH SCENARIO:\nA confirmed breakout above resistance could open the door to https://t.co/lQSV4ar2ID"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2110075068353003803",
+   "date": "2026-10-13",
+   "text": "🚨 $BTC ALERT: Bitcoin Whales Seen Accumulating — Market Talk\n\n🔗 Open on MEXC: https://t.co/0tFuuDrnrE\n\n🟢 Bullish: 65%\n• Whales now holding 3.03 million BTC, highest since late November 2025\n• Switch from selling since September 2025 back to buying\n• Market deemed in early"
+  }
+ ]
+}

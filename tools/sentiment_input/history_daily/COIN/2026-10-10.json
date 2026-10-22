@@ -1,0 +1,228 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-10T00:00:00Z",
+ "end": "2026-10-11T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108742488236097753",
+   "date": "2026-10-10",
+   "text": "🛎️ $BULLA volume spikes 4.4x amid 2.7% dip—bullish structure intact, but is this a shakeout or setup?\n\n- my bias is neutral-bullish for BULLAUSDT.P here despite the violent 4.4x volume spike and sharp drawdown — the 1h structure remains bullish while price holds above 0.07997, https://t.co/QFkwiA4Wae"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109055086827638902",
+   "date": "2026-10-10",
+   "text": "🔍 $BTC holds steady at +0.5% in 24h but the downtrend on 1h charts warns caution.\n\n- my bias is still bearish on BTC here, as the 1h structure is in a clear sequence of lower highs and lower lows, and the trend only flips bullish on a 1h close above 83,137  \n- price is currently https://t.co/NGLfSktG6M"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108880741618589757",
+   "date": "2026-10-10",
+   "text": "🛑 ETH holding flat at +0.1% in 24h—consolidation or calm before the next move?\n\n- my bias is neutral-bearish here on $ETH #ETHUSDT.P 1h, with the structure showing a clear bearish sequence of lower highs and lower lows; however, price is consolidating just below the most recent https://t.co/T2zD8UgNut"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2108824771869671873",
+   "date": "2026-10-10",
+   "text": "𝐆𝐨𝐥𝐝𝐞𝐧👁️ - 𝐄𝐱𝐭𝐞𝐫𝐧𝐚𝐥 𝐇𝐢𝐠𝐡 𝐒𝐭𝐫𝐚𝐭𝐞𝐠𝐲\n\nHow to Trade the External High\n\nBSL refers to liquidity resting above prior swing highs, where short sellers’ stop-loss orders and breakout traders’ buy orders tend to cluster.\n\nWhen price sweeps those highs and https://t.co/HFduHXfXhJ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108751761829703828",
+   "date": "2026-10-10",
+   "text": "⚠️ $BTC barely up 0.6% yet stuck under resistance—momentum fading as bears tighten the noose\n\n- 1h structure is clearly bearish with lower highs and lower lows in place; price sits at 82,589, capped by resistance overhead and only 1.1% below the trend-flip level (83,499)\n- Both https://t.co/CTIHAlVp9C"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2108957057831608347",
+   "date": "2026-10-10",
+   "text": "BTC Coin Pulse Analysis (Last 1 Hour)\nVerdict: Bullish (Upside Liquidity &amp; Squeeze Setup)\n\nKey Indicator Breakdown:\n\nLiquidation Level Size Short: High density of short liquidations stacked overhead, acting as an immediate upside liquidity magnet.\n\nLiquidation Level Size Long: https://t.co/PT1ECl7IGP"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2108786640575484278",
+   "date": "2026-10-10",
+   "text": "BTC Coin Pulse Analysis (Last 1 Hour)\nVerdict: Neutral to Mildly Bearish\n\nIndicator Breakdown:\n\nPrice Action &amp; Structure: Price is hovering near local range lows ($82,450–$82,500) following a step down from the $82,650–$82,700 level, showing lack of immediate buying pressure. https://t.co/enadmzVf6d"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108941233645117843",
+   "date": "2026-10-10",
+   "text": "🔥 C98 just swept liquidity below 0.01796 with a 14.5% 24h rise—bullish trap or real fuel?\n\n- my bias is bullish here: the 1h structure is confirmed bullish (higher highs and higher lows), and the recent 15m sweep beneath 0.01796 is a classic liquidity grab fueling continuation, https://t.co/ReSyoiddNX"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108873084300145016",
+   "date": "2026-10-10",
+   "text": "🔎 $BTC steady at +0.5% in 24h but the downtrend structure warns patience over hype.\n\n- my bias is still bearish on BTC here, as the 1h structure remains in a confirmed downtrend with a lower high at 83499 and a higher low at 82241, and price is currently 82812—right between https://t.co/G55nf1lxcV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108961900549595204",
+   "date": "2026-10-10",
+   "text": "📈 $BB jumps 2.9% in 15m with 4.5x volume—are big hands quietly stacking before a breakout?\n\n- my bias is bullish here on BBUSDT with the 1h chart in clear bullish structure, a strong 4.5x volume anomaly, and price up nearly 3% in 15 minutes — this surge likely signals aggressive https://t.co/KRdxZScN3X"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108883255378276723",
+   "date": "2026-10-10",
+   "text": "🦭 $ORCA : 4.6% pump on 3.7x volume spike—momentum agrees, ready for a bigger move?\n\n- my bias is bullish here as the 1h, daily, and weekly structures are all firmly bullish, with price currently at 2.594 following a high-momentum pump and a confirmed higher low at 2.218 🚀\n- the https://t.co/FbBFULAufz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109012964443312407",
+   "date": "2026-10-10",
+   "text": "⚖️ $LIT shows 3.3% lift but 4h BTC divergence warns this might be a fragile bounce.\n\n- my bias is still modestly bullish here on LITUSDT.P as long as the 1h structure remains intact, but I’m cautious: the 4h bearish divergence versus BTC (higher high on LIT/USDT, lower high on https://t.co/q1kVFObFha"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108830542326104400",
+   "date": "2026-10-10",
+   "text": "⚠️ $RLC slips 4% on 2.2x volume but bulls hold key 0.8350 support—trap or setup?\n\n- my bias is neutral-to-cautiously bullish here for RLC #RLCUSDT on the 1h — despite the violent -4% dump and 2.2x volume spike, the local structure is still bullish above 0.8350 and the move looks https://t.co/AFH8fpVKt3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Lions_Share_",
+   "url": "https://x.com/Lions_Share_/status/2108799556448083982",
+   "date": "2026-10-10",
+   "text": "LIONIQ | 10 OCT | Crypto in 60 Seconds\n\nRelief rally or another bull trap?\n\nbitcoin:native  is holding near $82.6K as oil pressure eases, but elevated bond yields and ETF outflows remain major obstacles.\n\nThe market is stabilising. Conviction hasn't returned.\n\nTHE TAPE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 134,
+   "user": "RafelineK",
+   "url": "https://x.com/RafelineK/status/2108722734314234362",
+   "date": "2026-10-10",
+   "text": "Took a moment of pause and took my mind off the screen before saying anything.\n\nHere is what happend with solana:8k4sBtEeK4pf26noKqApv8NBTnuSJcbdwpKYknk5PbAA any my full breakdown\n\nMaye Musk unfollowed Cali X account.\nThe market reacted how it reacted.\n\nI got dozens of DMs from"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 22,
+   "user": "pikestrike88",
+   "url": "https://x.com/pikestrike88/status/2108958378588311858",
+   "date": "2026-10-10",
+   "text": "The Setup\nEvery major cycle needs a face. Rockets had their moment. Dogs owned a season. Frogs and cats rotated through. Wall Street has its bronze Charging Bull. On Robinhood Chain — the fast, low-fee Ethereum L2 built by Robinhood (Arbitrum Orbit stack, chain ID 4663) — the https://t.co/80pFyKqRy3"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "leocrypto009",
+   "url": "https://x.com/leocrypto009/status/2108773301761998872",
+   "date": "2026-10-10",
+   "text": "LIVE TOP 10 GAINERS RIGHT NOW\n\n$MAGIC  — Told you guys this coin could move higher, after being bearish for months and falling so much, it has finally made a strong move. I still think there could be more upside ahead.\n\n$US  — Just delivered a nice pump, but it’s starting to look https://t.co/NV3QGBzeYx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "i_Jamescarter",
+   "url": "https://x.com/i_Jamescarter/status/2108803528974385625",
+   "date": "2026-10-10",
+   "text": "₿ Bitcoin is more than a coin—it's a revolution in digital finance! 🌍🚀 Are you bullish or bearish? 📈📉\n\n#BTC #Bitcoin #CryptoCommunity"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "snatchnsol",
+   "url": "https://x.com/snatchnsol/status/2108812818875302296",
+   "date": "2026-10-10",
+   "text": "Tech analysis is not needed for meme coins but can definitely can give you an edge on when to buy and when to sell and whether we are in a bullish or bearish trend. Why buy the retrace when you can wait? Why topblast when you can wait? If narrative good coin will send! 🚀 HHL LLH https://t.co/bPAoEguoIc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "krionnno6s",
+   "url": "https://x.com/krionnno6s/status/2108728467240149449",
+   "date": "2026-10-10",
+   "text": "Thursday: BTC ETFs bled $244M. ETH ETFs bled $73M, 8th losing day straight.\n\nThe ONLY crypto ETF with inflows? XRP. +$8M.\n\nSince launch, XRP funds have pulled $1.81B — more than Solana's $1.59B. The \"meme coin\" is quietly winning the ETF race while the majors bleed.\n\nInstitutions"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Whalestrike7",
+   "url": "https://x.com/Whalestrike7/status/2108964400547983750",
+   "date": "2026-10-10",
+   "text": "🚨 $RLC VOLATILITY ALERT! ⚠️\n$RLC is up 18.13%, but be careful! 👀 This coin can pump aggressively and suddenly dump just as fast. The chart shows sharp spikes and quick reversals, making it a high-risk trade.\n🐋 Don't chase the pump blindly. Manage your risk and watch the next https://t.co/wp9psRixBp https://t.co/PRf7jfBvtA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 70,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2108936969124257923",
+   "date": "2026-10-10",
+   "text": "🚨 $NEAR ALERT: NEAR Rallies As Quantum-Resistant Upgrade Nears Mainnet And Intents Volume Tops $33B, Arthur Hayes Stays Bullish\n\n🟢 Bullish: 80%\n• NEAR rose more than 12% in 24 hours amid quantum upgrade news\n• Intents cumulative DEX volume hit $33.29B with $4.76B in last 30"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "En_hxg",
+   "url": "https://x.com/En_hxg/status/2108973123559428240",
+   "date": "2026-10-10",
+   "text": "I’m very bullish on ETH. Among the major coin markets, ETH currently has a very high cost performance ratio. Once it breaks through its own limits, it’ll have unlimited upside potential. https://t.co/x4mZf05UfQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2108867832012226934",
+   "date": "2026-10-10",
+   "text": "🚨 $AAVE $BTC $PENDLE $UNI $ETHFI $SOL $HOOD $COIN $HYPE ALERT: AAVE Jumps After Citrini Research Bets On DeFi Tokens’ $157T Tokenization Opportunity\n\n🟢 Bullish: 70%\n• AAVE outperformed Bitcoin as the clearest gainer among the five DeFi tokens in Citrini's basket\n• MetaMask"
+  }
+ ]
+}

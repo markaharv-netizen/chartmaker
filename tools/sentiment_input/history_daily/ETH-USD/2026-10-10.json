@@ -1,0 +1,102 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-10T00:00:00Z",
+ "end": "2026-10-11T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 14,
+   "user": "CryptoAvenue0",
+   "url": "https://x.com/CryptoAvenue0/status/2108809919810158688",
+   "date": "2026-10-10",
+   "text": "🚨 ETHEREUM UPDATE: BOUNCE OR BULL TRAP? 🔷\n\n📈 ETH is trading near $2,489, up around 0.5% in 24 hours.\n\n⚠️ U.S. spot ETH ETFs recorded $72.54M in net outflows on October 8, extending the withdrawal streak to eight trading sessions.\n\n🛠️ Meanwhile, Ethereum’s Glamsterdam upgrade https://t.co/U3a56wV6tG"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2108896225449685204",
+   "date": "2026-10-10",
+   "text": "🚨 $ETH $BTC $BMNR ALERT: Tom Lee’s Ethereum Year-End Call Is Now Half Of What He Called ‘Conservative’ Last Month, But He Expects ‘Monster Moves’ In The Crypto Industry\n\n🟢 Bullish: 55%\n• Lee still targets Ethereum above $5,000 by year-end and $7,500 if Bitcoin hits $100,000\n•"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "cryptochain_Xp",
+   "url": "https://x.com/cryptochain_Xp/status/2109035265964798263",
+   "date": "2026-10-10",
+   "text": "🚨 ETH/USD | 4H Technical Outlook\nEthereum is trading near $2,500 after a sharp decline, with price attempting to stabilize.\n\n📈 Bullish Scenario: A confirmed 4H breakout above $2,740, followed by a successful retest, could signal renewed upside momentum.\n\n📉 Bearish Scenario: A https://t.co/urgOe7gNx5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "HeyEva",
+   "url": "https://x.com/HeyEva/status/2108910420832428501",
+   "date": "2026-10-10",
+   "text": "The Justice Department's active compliance review into Binance's historical settlement agreement reopens acute counterparty existential tail-risk across global crypto liquidity infrastructure.\n\n- Downside execution target: $80,308 structural support floor to monitor for https://t.co/V78nnF1dj2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "protrader_365",
+   "url": "https://x.com/protrader_365/status/2108902896016425121",
+   "date": "2026-10-10",
+   "text": "❌ ethereum:0x607f4c5bb672230e8672085532f7e901544a7375 Stop Loss Hit — But the Bigger Correction Risk Remains\n\nThe previous setup was invalidated and the Stop Loss was triggered. Transparency matters to me, so I’ll always report losing setups just as clearly as winning ones. https://t.co/KWLsLXLolS https://t.co/KnNdOXkanG"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2109010942289657903",
+   "date": "2026-10-10",
+   "text": "🚨 $ETH $BTC ALERT: Ethereum News | Tom Lee Predicts Ethereum Could Reach $25,000–$50,000 This Bull Cycle\n\n🔗 Open on MEXC: https://t.co/wsbSCPlkCm\n\n🟢 Bullish: 60%\n• Tom Lee predicts ETH could reach $25,000–$50,000 this bull cycle after five-year consolidation\n• Lee expects"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 24,
+   "user": "xenowhale_eth",
+   "url": "https://x.com/xenowhale_eth/status/2108932602707206157",
+   "date": "2026-10-10",
+   "text": "🐳 XENO WHALE | MARKET WATCH 🚨\n$BTC is fighting to hold $83K.\n$ETH is struggling near $2.5K.\n\n📉 ETF outflows are adding pressure.\n🐋 Whales are watching.\n⚡ Volatility isn’t going anywhere.\nThe real question: Is this a buying opportunity or another bull trap? 👀\n\n🐂 BULLISH or"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 96,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2108762794569203759",
+   "date": "2026-10-10",
+   "text": "I think the crypto fiesta can continue this weekend because smaller altcoins are already showing strength while Bitcoin consolidates. TOTALE50.D held above the cloud and TOTALE100.D reclaimed it; that is more encouraging to me than waiting for Ethereum to lead. I remain bullish, https://t.co/tAEI8kwBqK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 22,
+   "user": "pikestrike88",
+   "url": "https://x.com/pikestrike88/status/2108958378588311858",
+   "date": "2026-10-10",
+   "text": "The Setup\nEvery major cycle needs a face. Rockets had their moment. Dogs owned a season. Frogs and cats rotated through. Wall Street has its bronze Charging Bull. On Robinhood Chain — the fast, low-fee Ethereum L2 built by Robinhood (Arbitrum Orbit stack, chain ID 4663) — the https://t.co/80pFyKqRy3"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 67,
+   "user": "LightYa8ami",
+   "url": "https://x.com/LightYa8ami/status/2109070777211326795",
+   "date": "2026-10-10",
+   "text": "ethereum:0x4a220e6096b25eadb88358cb44068a3248254675  remains neutral-to-bearish, consolidating beneath a descending trendline with price near $240. Support sits around $216, while resistance is near $250–255 and then $275. \n\nA breakout above $255 could open the way toward $275, https://t.co/pc4o0D3Hxv"
+  }
+ ]
+}

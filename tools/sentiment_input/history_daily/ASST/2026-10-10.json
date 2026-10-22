@@ -1,0 +1,66 @@
+{
+ "symbol": "ASST",
+ "start": "2026-10-10T00:00:00Z",
+ "end": "2026-10-11T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "ASST (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "loanmycoins",
+   "url": "https://x.com/loanmycoins/status/2108716805342785986",
+   "date": "2026-10-10",
+   "text": "Loan My Coins Bitcoin Reality Check \nWeek Ending 10 October 2026\n\nBitcoin dipped. The treasury equities dipped more.\n\nAll three 1-week rows are red versus HODL. Metaplanet was the weakest of the week in sats. A quiet grind higher the week before, a sharper pullback this week. https://t.co/calANSX17e"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "debasementindex",
+   "url": "https://x.com/debasementindex/status/2108730142097015143",
+   "date": "2026-10-10",
+   "text": "A deep dive into the next generational wealth building company $ASST I could not be bullish enough on $ASST or its digital credit instrument $SATA follow my YouTube channel @thedebasementindex to watch daily content like this!\n\nhttps://t.co/GObsdw95Ai\n\n#btc #bitcoin #asst #mstr"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Rosanainvestsmb",
+   "url": "https://x.com/Rosanainvestsmb/status/2108948451878965521",
+   "date": "2026-10-10",
+   "text": "Bullish Bitcoin 🟠 $BTC $ASST https://t.co/ARLO9rFImx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "Strategy_B_ATM",
+   "url": "https://x.com/Strategy_B_ATM/status/2108878506201416104",
+   "date": "2026-10-10",
+   "text": "Basel 3 will unlock more Bitcoin inflows than the $btc ETF approval\n\nBank balance sheets are ~$190 trillion, a tiny 0.5–1% allocation is a trillion inflows\n\nThe real institutional adoption is coming\n\nAsk Grok \n\n$mstr $asst\n\nU not bullish enough, god candles re loading"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 103,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2108934075071533487",
+   "date": "2026-10-10",
+   "text": "$ASST $27 warrants expire next week.\n\nI expect some extra volatility and selling pressure as the remaining warrants are exercised and holders monetize their shares.\n\nBut I don’t expect 10/13 itself to create a massive new wave of shorting.\n\nThe warrants have already been"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 26,
+   "user": "PinguStacks",
+   "url": "https://x.com/PinguStacks/status/2108883234461254120",
+   "date": "2026-10-10",
+   "text": "The Week of Misfortune 🫪📉\n\nPortfolio value £164,227 / 2.63 BTC ⚠️\n\nDown roughly £14,545 / 0.18 BTC since last week 🤮\n\nThis week has been brutal in all honesty, at one point I was down £26,000 in a 48 hour window after reaching a new ATH at the start of the week.\n\nWhat pains me https://t.co/Ilp7TdXUgw"
+  }
+ ]
+}

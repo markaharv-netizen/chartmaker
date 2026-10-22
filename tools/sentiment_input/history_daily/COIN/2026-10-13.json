@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-13T00:00:00Z",
+ "end": "2026-10-14T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109800308570309088",
+   "date": "2026-10-13",
+   "text": "📉 CYPHB sinks 16% in 24h with 3.4x volume spike—selling pressure confirms the downtrend is real\n\n- my bias is bearish here: the 1h trend is confirmed bearish with successive lower highs/lows, and both the daily and BTC trends are also bearish, increasing downside conviction\n- https://t.co/X5NEMCcwPZ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2110004171420099004",
+   "date": "2026-10-13",
+   "text": "🔺 ️ MVLL volume spikes 3.1x with 4.7% bounce—relief rally or just a bearish counter-trend trap?\n\n- my bias here is cautiously bullish for a relief move after the massive volume spike and strong 15-min recovery, but this is still within a 1h bearish structure and against a https://t.co/ArezpVrQYg"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109951442454823350",
+   "date": "2026-10-13",
+   "text": "⚖️ $W volume spike 3.2x fuels 3.6% 15m lift, but 24h drop keeps bulls cautious.\n\n- strong bullish bias here: the 1h trend is bullish and fully aligned with daily, weekly, and even BTC trend; this is a rare multi-timeframe agreement 🚀  \n- the 3.2x volume anomaly alongside a sharp https://t.co/Hl99olIbMn"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109996387823673430",
+   "date": "2026-10-13",
+   "text": "🟢 CGPT jumps 4.1% in 15m with 3.2x volume spike—bullish momentum confirms strong buying pressure\n\n- my bias is bullish here ⬆️ — the 1h, daily, and weekly structures are all firmly bullish, and price trades well above both EMA20 and EMA200, with BTC and overall market trends https://t.co/vOQ0n6GDml"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "EuroFinanceClub",
+   "url": "https://x.com/EuroFinanceClub/status/2109848229915357277",
+   "date": "2026-10-13",
+   "text": "🔥 Crypto News\n\n🔥 $BAT breaks out with 5.2% in 15m and 3.1x volume spike—momentum says this pump is for real\n\n- my bias is bullish here on BAT #BATUSDT 1h, but with caution: the 1h, daily, and weekly structures are all bullish, and price just triggered a major breakout with very https://t.co/K6oe1sR63N"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2110099464148963406",
+   "date": "2026-10-13",
+   "text": "⚠️ $TSLA liquidity sweep above 376.36 traps bulls in a 0.31% fake breakout amid bearish downtrend\n\n- My bias remains bearish here: 1h structure is firmly BEARISH, with a lower high at 377.59 and lower low at 371.95. That 15m wick above 376.36 was a classic liquidity grab against https://t.co/btvEsjUTkH"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109812114663588074",
+   "date": "2026-10-13",
+   "text": "🔻 ACH slides 3.6% in 15m on 1.8x volume—breakdown or just a shakeout before the next move?\n\n- my bias is firmly bearish here after the sharp dump and strong volume spike — this was a clear breakdown move, not a random wick, and it aligns with the dominant 1h, daily, weekly and https://t.co/7v7Fk9U8Lx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109962410157134272",
+   "date": "2026-10-13",
+   "text": "🔥 $BAT down 2.8% in 15m but 2.2x volume spike says bulls are gearing up for more gains\n\n- my bias remains bullish here as the 1h, daily, and weekly all hold strong bullish structure, with price well above 0.1501 (structure flip/invalidation) and the BTC trend also aligned to the https://t.co/Wc14i3ml73"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "RanjitAlpha",
+   "url": "https://x.com/RanjitAlpha/status/2109971908909314518",
+   "date": "2026-10-13",
+   "text": "🌎 MARKET FORECAST — TUESDAY, OCTOBER 13, 2026\n\n📰 Overnight News Update\n\n• 🇰🇷 South Korea / Rates: President Lee Jae Myung warned that further rate increases may be unavoidable amid global tightening pressures. No new BOK hike has been announced.\n\n• 🏦 Bank Earnings: JPMorgan"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2110029450133786750",
+   "date": "2026-10-13",
+   "text": "📊 $BULLA breaks out with 3.7% in 15m and 11.6x volume—buyers are clearly in control today\n\n- my bias is bullish here, as the 1h structure has flipped up with strong momentum and a clear sweep of previous liquidity levels, confirmed by the 11.6x volume spike and solid buyer https://t.co/kLpCU8jgWS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "DrValidator",
+   "url": "https://x.com/DrValidator/status/2110008051939897759",
+   "date": "2026-10-13",
+   "text": "Kol who is just oh so smart at doing his due diligence on tech is infinitely bullish on coin being undervalued under millions after securing a ton of nearly-free supply"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 63,
+   "user": "jovarmanz",
+   "url": "https://x.com/jovarmanz/status/2110123774360322429",
+   "date": "2026-10-13",
+   "text": "Most chase 1000x. I chase reasons to believe.\n\nI bought $LAYOOO because I saw a meme people enjoy beyond crypto—and a community building around it. @LayoooSol 🦍\n\nThe upside caught my attention. The thesis made me stay.\n\nHere’s my thinking. https://t.co/xAdJULgOaZ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109798108288667711",
+   "date": "2026-10-13",
+   "text": "⚠️ $HANMI dumps 4% in 15m on nearly 12x volume—strong sell pressure, but is this a trap or real weakness?\n\n- my bias is still bearish here: the 1h trend is confirmed bearish and price just broke down hard with extremely elevated volume, signalling strong sell-side conviction and https://t.co/3uXMXU5RQy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "krasnovtrader",
+   "url": "https://x.com/krasnovtrader/status/2110029554450616765",
+   "date": "2026-10-13",
+   "text": "$QNT / $USDT\n\nThe coin has fully played out both the local bullish and bearish scenarios https://t.co/yaU3RXfTYv https://t.co/wNn6zz38FC"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 9,
+   "user": "CB_Blogs",
+   "url": "https://x.com/CB_Blogs/status/2110053867538809315",
+   "date": "2026-10-13",
+   "text": "🚨 JUSTIN: A crypto trader and builder CB BeampayPRO just flipped bearish on $QNT coin, expecting price to hit $130 👀\n\n@CB_BeamPay said \"I see $QNT going straight below $160, it can even hit $130 sooner than expected ~ prediction\"\n\nAre you bullish or bearish? https://t.co/plxNNPQ0ai"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Sivam_kumar_Rai",
+   "url": "https://x.com/Sivam_kumar_Rai/status/2109834004803486094",
+   "date": "2026-10-13",
+   "text": "🚨 CT, ARE YOU WATCHING ethereum:0xaea46a60368a7bd060eec7df8cba43b7ef41ad85? 👀\n\n🔥 VERY BULLISH SETUP LOADING 📈🐂\n\n💎 Is this the next AI coin ready to explode?\n\n👇 BULLISH or BEARISH? DROP YOUR TARGETS BELOW!\n\n🔁 Repost if ethereum:0xaea46a60368a7bd060eec7df8cba43b7ef41ad85 is https://t.co/HoU5BS53PE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MMECTraining",
+   "url": "https://x.com/MMECTraining/status/2109862705402441937",
+   "date": "2026-10-13",
+   "text": "MMEC Report Scorecard — Oct 12, 2026: 8 analyses aligned.\nBullish bias: MRNA +0.46%, DIS +0.28%, MU +0.25%. Bearish: FSLR -2.06%, NOW -1.54%, S -1.52%, COIN -1.26%, GOOG -0.17%.\nOthers still pending. Educational, not advice.\nhttps://t.co/ffHLHQgYQf https://t.co/UUAJGA2j6s"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "amirfdevs",
+   "url": "https://x.com/amirfdevs/status/2109838827712074218",
+   "date": "2026-10-13",
+   "text": "Black Bear at 600k ATH.\n\nWe need to stay positive and send memes and represent the meme coin space.\n\nSend Black PePe. \n\nLets over take the black bear and show people we arent bearish"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 107,
+   "user": "ast_dotfun",
+   "url": "https://x.com/ast_dotfun/status/2109954074921644348",
+   "date": "2026-10-13",
+   "text": "Intel is accelerating its infrastructure for the agentic AI era. 👀\n\nBullish or bearish on $INTC?\n\nNew listing on https://t.co/zABi6AwtLd ✦\n\nCreate a coin backed by $INTC with up to 5x leveraged perp exposure, long or short, through @Aster_DEX on @BNBCHAIN.\n\nLaunch yours at https://t.co/64mX1vGHJB https://t.co/3fyDgyYSop"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 26,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2110097019393949771",
+   "date": "2026-10-13",
+   "text": "South Korea’s #KOSPI plunged 5.46% to 6,035.35 as investors dumped tech stocks. Mounting concerns over fierce semiconductor competition and the sustainability of the #AI boom triggered a heavy selloff in chipmakers across the region.\n\n#MarketUpdate #StockMarket #USA #stocks https://t.co/gBostEIaBp"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2110068841686647169",
+   "date": "2026-10-13",
+   "text": "⚔️ BURAKTHESCALPER LLC\nTUESDAY | OCTOBER 13, 2026\nINTRADAY MARKET BATTLE PLAN\n\n🟡 BIAS: MIXED / DEFENSIVE\nNASDAQ ATTEMPTING RECOVERY\n\n━━━━━━━━━━━━━━━━━━━━\n📊 INDEX BATTLE ZONES\n━━━━━━━━━━━━━━━━━━━━\n\n$ES_F | 7,845.75\n🟢 Above 7,864 = Bullish"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 23,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2110095531011649989",
+   "date": "2026-10-13",
+   "text": "#Anthropic warns self-replicating #AIagents could emerge within months, using smart TVs, cameras, and #IoT devices instead of data centers to spread autonomously. Researchers successfully ran models across low-cost Android TV boxes, warning fully autonomous #AI worms may arrive https://t.co/ZWbWol6jXD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2110094578514583851",
+   "date": "2026-10-13",
+   "text": "#MorganStanley is building infrastructure to launch tokenized stock trading in early 2027, eyeing a real-world asset market projected to hit $3T-$10T by 2030. Driven by intense institutional #FOMO, major banks are rushing to capture tokenized equities, private funds, and private https://t.co/FvRQWRU3xr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2110095349142728739",
+   "date": "2026-10-13",
+   "text": "#Anthropic warns self-replicating #AIagents could emerge within months, using smart TVs, cameras, and #IoT devices instead of data centers to spread autonomously. Researchers successfully ran models across low-cost Android TV boxes, warning fully autonomous #AI worms may arrive https://t.co/o43Lg9wG2n"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2110094203846013122",
+   "date": "2026-10-13",
+   "text": "#Meta entered the #AI race with Muse Wonder, priced at $20 and $100 subscriptions. While $Meta #Stock surged 40% in two months, this adds serious pressure on #OpenAI, #Google, and especially #Anthropic ahead of its #IPO, escalating the fight for paying users.\n\n#MarketUpdate https://t.co/mlMULrSVcL"
+  }
+ ]
+}

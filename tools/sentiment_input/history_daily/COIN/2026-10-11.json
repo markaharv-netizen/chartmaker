@@ -1,0 +1,228 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-11T00:00:00Z",
+ "end": "2026-10-12T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109135581301092739",
+   "date": "2026-10-11",
+   "text": "📈 FRAX jumps 4.9% in 15m with volume 2.5x above average—momentum looks primed to run higher\n\n- my bias is bullish here — 1h, daily, and weekly trends are all aligned to the upside, and the recent aggressive breakout with a 2.5x volume spike points to strong momentum likely https://t.co/ZHfjAcXoJJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2109145962732236947",
+   "date": "2026-10-11",
+   "text": "BTC Coin Pulse Analysis (Last 1 Hour)\nVerdict: Bullish (Upside Liquidity Sweep &amp; Squeeze Setup)\n\nKey Indicator Breakdown:\n\nLiquidation Level Size Short: At 93 — Massive density of short liquidations stacked overhead, creating an immediate upside liquidity magnet.\n\nLiquidation https://t.co/JJuq75rqNr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2109145832813658409",
+   "date": "2026-10-11",
+   "text": "BTC Coin Pulse Analysis (Last 1 Hour)\nVerdict: Bullish (Upside Liquidity &amp; Squeeze Setup)\n\nKey Indicator Breakdown:\n\nLiquidation Level Size Short: High density of short liquidations stacked overhead, acting as an immediate upside liquidity magnet.\n\nLiquidation Level Size Long: https://t.co/7baWjplPkY"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109315453067616675",
+   "date": "2026-10-11",
+   "text": "🔻 $MUBARAK eyes deeper drop as 24h slips 1.9% amid clear lower highs—trend says sell pressure builds.\n\n- my bias is bearish here on MUBARAKUSDT.P with the 1h structure in clear downtrend; price keeps making lower highs and lower lows, and the last confirmed swing high at 0.07950 https://t.co/a5wuxMJc6B"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109166007054922127",
+   "date": "2026-10-11",
+   "text": "⚠️ $BTW plunges 12.6% in 15m on 15.7x volume—distribution, not panic, is driving this sell-off\n\n- my bias is bearish here following the violent 15.7x volume spike and sharp breakdown, which strongly suggests distribution and aggressive supply entering the market rather than https://t.co/xsDvOqycOF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2109288395147268349",
+   "date": "2026-10-11",
+   "text": "BTC Coin Pulse Analysis (8H Lookback)\nVerdict: Bullish (Upside Liquidity &amp; Squeeze Setup)\n\nKey Indicator Breakdown:\n\nLiquidation Level Size Short: Sitting high at 94.5 — Significant density of short liquidations stacked right above current market price, acting as an immediate https://t.co/0WnA1PYKTJ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109205616740724983",
+   "date": "2026-10-11",
+   "text": "⚡ $MUBARAK jumps 3.6% in 15m with 4.3x volume—strong hands pushing despite BTC drag\n\n- my bias is bullish here on MUBARAKUSDT — the 1h structure is clearly bullish, with both daily and weekly trends also aligned to the upside, even though BTC is still bearish, so this is a https://t.co/2br6zRuo0z"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109176296844509587",
+   "date": "2026-10-11",
+   "text": "🔍 $BTC holds steady with just +0.5% in 24h, but the lower-high pattern keeps bears in control.\n\n- my bias is still bearish here on BTC short-term, with the 1h structure showing a clear lower-high/lower-low sequence and price currently capped below 83,137.2, which marks both the https://t.co/wuBV1T9WSN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109183952351060025",
+   "date": "2026-10-11",
+   "text": "📌 ETH steady at +0.3% 24h—bullish structure intact but watch closely for breakout signals\n\n- short-term structure is bullish on the 1h, with both daily and weekly trends aligned bullishly, but BTC’s trend remains bearish, so I’m cautious about upside follow-through without clear https://t.co/yBlnlfinDJ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109418751477031135",
+   "date": "2026-10-11",
+   "text": "📈 $BTC holds steady with a +0.7% 24h gain—bullish trend intact and eyes on higher highs\n\n- my bias is bullish on BTC here as the 1h structure remains clearly bullish, with price printing higher highs and higher lows and currently holding well above the last confirmed swing low https://t.co/yyZEVSjfiI"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 108,
+   "user": "Alejandro_XBT",
+   "url": "https://x.com/Alejandro_XBT/status/2109217331897364694",
+   "date": "2026-10-11",
+   "text": "$COIN and crypto, especially Bitcoin, are highly correlated.\n\nInteresting to see Coinbase forming such a bearish structure, with a potential downside target of $50 by 2027.\n\nIf this plays out, it would add even more fuel to my thesis that crypto has much further to fall.\n\nThe https://t.co/RFCwAYQW63"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109176380780937611",
+   "date": "2026-10-11",
+   "text": "🎣 PONS 2.4% 24h gain masks a liquidity sweep above 0.3564—trap or temporary pause in downtrend?\n\n- my bias is firmly bearish here — the 1h market structure is in a clean downtrend (lower highs/lower lows), and that recent 15m wick above 0.3564 is a textbook liquidity grab https://t.co/fpvY1Thn6h"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AllSeeingEYEM",
+   "url": "https://x.com/AllSeeingEYEM/status/2109374367138476185",
+   "date": "2026-10-11",
+   "text": "Gotta take the good with the bad &amp; vice versa. That’s #balance &amp; #duality ☯️\n\nThere’s an upside &amp; downside to everything. 2 sides to every coin #heads or #tails 🪙"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "RogLabs",
+   "url": "https://x.com/RogLabs/status/2109337022934753436",
+   "date": "2026-10-11",
+   "text": "My plan assumes Bitcoin stays at $81,686 for 25 years.\nZero growth.\nThe S&amp;P 500 side still crosses my number around 2051.\nIf Bitcoin hits $1M, my whole coin is worth 12x what I modeled.\nDownside: the plan still works.\nUpside: asymmetric.\nI’m not selling."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "MRjahantigh2",
+   "url": "https://x.com/MRjahantigh2/status/2109335485831344574",
+   "date": "2026-10-11",
+   "text": "BTC BULLISH \nBTC.D bearish \n\nALT COIN IS BOOOOOOM\n\n#BTC #PEPE #SHIB https://t.co/7pFgUp1HRp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "TheMuggZone",
+   "url": "https://x.com/TheMuggZone/status/2109408577538465866",
+   "date": "2026-10-11",
+   "text": "STOCKS I WILL BE ON THE WATCH FOR BULLISH MOMEMTUM THIS WEEK:\n\n$MRVL $IONQ $PYPL $RKLB $CRWV $COIN $AMAT  $SOFI \n\nPossibly $INTC if $TSM has bad earnings.\n\nBEARISH on $DDOG $CVX \n\n**NFA** https://t.co/pupq2ln1nf"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 35,
+   "user": "alexelorenzo",
+   "url": "https://x.com/alexelorenzo/status/2109101682353426924",
+   "date": "2026-10-11",
+   "text": "Major warning for anyone trading crypto with leverage.\n\nTap the link in my bio to see the strategy we trade with, for a dollar a month.\n\nLeverage means trading with borrowed money, and it comes with liquidation. If the price moves against you far enough, the position gets closed https://t.co/VjHdcNBcDt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "buzztickr",
+   "url": "https://x.com/buzztickr/status/2109346534865125531",
+   "date": "2026-10-11",
+   "text": "We checked 5,360 US stocks once a month for 5 years, and followed every check for a full year.\n\nThe 4 \"bullish\" signals everyone uses: +1.8% a year later. Half the stocks rose. A coin flip.\nTheir bearish mirror images: -15.9%.\n\nIs one of them on your chart? Save this before your https://t.co/lAK8R9Rkbh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 129,
+   "user": "ast_dotfun",
+   "url": "https://x.com/ast_dotfun/status/2109234721767276808",
+   "date": "2026-10-11",
+   "text": "$STRK has more than doubled its market cap in just 4 days. 👀\n\nBullish or bearish on what comes next?\n\nCreate a coin backed by $STRK with real leveraged perp exposure, long or short, through @Aster_DEX on @BNBCHAIN.\n\nNow live on https://t.co/zABi6Ax1AL ✦ https://t.co/arCDdopJ30 https://t.co/k8KUiBkq9X"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "gginvestments1",
+   "url": "https://x.com/gginvestments1/status/2109296107306000484",
+   "date": "2026-10-11",
+   "text": "Price down = you don't believe\nPrice up = you do believe\nPrice sideways = you start to doubt\nSidelined = you don't believe in anything and want the world to burn for your benefit \n\nThe only way you were going to get comfy exposure to everything was to be buying a piece of every https://t.co/06oxQ9P4hT"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109331906718245207",
+   "date": "2026-10-11",
+   "text": "🛑 $BLUAI hits 26x volume with a 2.6% dip—this isn’t panic, it’s forced exit pressure building.\n\n- my bias remains bearish on BLUAI #BLUAIUSDT.P 1h after the extreme 26x volume spike and sharp -2.6% drop; this is classic distribution or forced exit, not just panic selling, given https://t.co/MRP6ZedeLh"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109115691940856182",
+   "date": "2026-10-11",
+   "text": "🟡 $BTC steady at +0.6% in 24h but trapped below key resistance—trend still doubts the bulls.\n\n- my bias on BTC here is still bearish on the 1h, as price remains capped below the 83,137 key swing high that marks the structure flip—this is a clean lower high and the trend only https://t.co/zQBpIYGln6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2109146091983647189",
+   "date": "2026-10-11",
+   "text": "⚔️ $WUSDT dips 0.82% below 0.017474 but uptrend holds—ready to test new highs?\n\n- my bias is bullish here after the 0.017474 sweep, as the 1h trend is confirmed bullish and both daily and weekly market structure remain bullish as well\n- the liquidity grab below 0.017474 aligns https://t.co/EBS8LpqppM"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2109214887444349130",
+   "date": "2026-10-11",
+   "text": "#BITCOIN \n\n#Bitcoin has now printed a double inside-range pattern, with Friday’s candle contained within Thursday’s range, signaling tightening consolidation and indecision between buyers and sellers. \n\nBulls will want to see a bullish pivot reversal today, ideally with a close https://t.co/XauMIDlgH7"
+  }
+ ]
+}

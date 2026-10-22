@@ -1,0 +1,75 @@
+{
+ "symbol": "WULF",
+ "start": "2026-10-10T00:00:00Z",
+ "end": "2026-10-11T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "WULF (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "dudilagent",
+   "url": "https://x.com/dudilagent/status/2108962964326019573",
+   "date": "2026-10-10",
+   "text": "Screener contrast, one live run of 1,049 names:\n\nBullish $ABBV: 78, A, Strong Buy. Mom 30 · Trend 20 · Qual 20 · RSI 69.5\n(#2 after BOX at 79 — sat out on the 7-day edge cooldown)\n\nBearish $WULF: 23, F, Strong Sell. Mom 15 · Trend 0 · Qual 0 · RSI 36.9\n(lowest name with real RSI; https://t.co/ClIs8jjNzB"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 83,
+   "user": "Edge_Bolt",
+   "url": "https://x.com/Edge_Bolt/status/2108998681558933600",
+   "date": "2026-10-10",
+   "text": "$WULF closed at $13.77 on Friday. The bear case in the latest Street note is $17.50.\n\nSo the market is pricing this below the downside scenario of an analyst who covers it for a living. I've spent the weekend going through the numbers and I think that's a mistake.\n\nThe big fear"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2109042586438766612",
+   "date": "2026-10-10",
+   "text": "$HIVE\n\n$HIVE delivered another textbook bearish pivot reversal, identified by https://t.co/o0TVg8acvN in our September 26 post following a dark cloud cover at resistance (200 EMA). \n\nThe following week confirmed the reversal with bearish follow-through, and as we would expect https://t.co/mYmVcviJLF https://t.co/87h3gpLdLV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "BosteInvest",
+   "url": "https://x.com/BosteInvest/status/2108821410286055666",
+   "date": "2026-10-10",
+   "text": "Morgan Stanley is still seeing massive upside in the AI data center trade \n\n$WULF target raised to $65 from $62.50 (+371% upside).\n\n$CIFR target cut to $51.50 from $54 (+283% upside).\n\n$HUT target raised to $275 from $273 (+237% upside).\n\nEven after the $CIFR downgrade, the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 192,
+   "user": "McnallieM",
+   "url": "https://x.com/McnallieM/status/2108727864682328490",
+   "date": "2026-10-10",
+   "text": "🚨 @MorganStanley Price Targets 🚨\n\n⚡ Cuts: $RIOT to $35.50 from $43, $GLXY to $43 from $48, $CIFR to $51.50 from $54, and $MARA to $10 from $11.\n\n⚡ Raises: $HUT to $275 from $273 and $WULF to $65 from $62.50.\n\n⚡ Implied upside: @TeraWulfInc ~371%, @CipherInc ~283%, @Hut8Corp https://t.co/d57KiKG61i"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "dusty_bull",
+   "url": "https://x.com/dusty_bull/status/2108963599620170084",
+   "date": "2026-10-10",
+   "text": "Power + AI infrastructure names have taken a BEATING the past few weeks but the story hasn’t changed. AI isn’t going anywhere, we still are going to need power but macro and midterms have hit these extra hard. I truly believe there are huge opportunities out there at these"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 36,
+   "user": "dusty_bull",
+   "url": "https://x.com/dusty_bull/status/2108966415638433944",
+   "date": "2026-10-10",
+   "text": "Power + AI infrastructure names have taken a BEATING the past few weeks but the story hasn’t changed. AI isn’t going anywhere, we still are going to need power but macro and midterms have hit these extra hard. I truly believe there are huge opportunities out there at these"
+  }
+ ]
+}
