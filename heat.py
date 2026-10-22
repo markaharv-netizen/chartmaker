@@ -213,6 +213,9 @@ def alt_shares(sym, name):
             import fin
             cik, _ = fin.cik_of(sym); f = fin.facts(cik)
             d = sorted(f["facts"].get("dei", {}).get("EntityCommonStockSharesOutstanding", {}).get("units", {}).get("shares", []), key=lambda x: (x["end"], x.get("filed", "")))
+            # 20-F/40-F filers (foreign issuers, usually US-listed as ADRs) report home-market ordinary shares, not ADRs:
+            # e.g. TSM 20-F = 25.9B ordinary shares = 5x the ADR count. Skip -> equal-size tile instead of a wrong size.
+            if d and d[-1].get("form", "").upper().startswith(("20-F", "40-F")): d = []
             if d: out = (d[-1]["val"], f"SEC cover page {d[-1]['end']}")
         except Exception: pass
     SHARES[sym] = (time.time(), out); return out
