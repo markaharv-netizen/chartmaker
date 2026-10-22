@@ -1,0 +1,228 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-15T00:00:00Z",
+ "end": "2026-10-16T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2110754936313057626",
+   "date": "2026-10-15",
+   "text": "🔥 $GIGADEV breaks out with 9.3x volume spike and 2.6% in 15m—are bulls running the show now?\n\n- my bias is bullish here on GIGADEVUSDT.P 1h — the current structure flipped to bullish after a major 9.3x volume spike and strong +2.6% move in 15 minutes, classic signs of aggressive https://t.co/pyDnC49TO1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "coinclockers",
+   "url": "https://x.com/coinclockers/status/2110756507226607645",
+   "date": "2026-10-15",
+   "text": "📊 **TOP PERP MOVERS AI Powered by - Coin Clockers** — \n🆕 **NEW: MUU, EWY, INJ, OP**\n\n# 📊 TOP 20 PERP MOVERS ANALYSIS\n\n## 🚨 MACRO CONTEXT\n**10Y Treasury @ 5.19%** = elevated risk-off pressure. **TSLA/META earnings 10/21** could trigger tech volatility. **BlackRock warning on https://t.co/3aVOFN1NUI"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2110753286546509838",
+   "date": "2026-10-15",
+   "text": "🔻 $BTC holds flat at +0.3% but lower highs warn this bounce may be just a pause, not a turn.\n\n- the 1h trend on BTC is bearish, with price currently sitting at 82,144 and recent structure confirming lower highs and lower lows; daily is also bearish, but weekly remains bullish, https://t.co/F6K0ofSIor"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2110736933341077880",
+   "date": "2026-10-15",
+   "text": "🔺 $CVX heats up with a 4.3% 15m jump and volume nearly 3x—bullish momentum is building fast!\n\n- my bias is bullish here on CVX #CVXUSDT 1h, as the short-term structure is strongly bullish and aligned with the daily and weekly trends, even if BTC is still bearish for now\n- the https://t.co/Xj5V4HYjN2"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2110737779160121465",
+   "date": "2026-10-15",
+   "text": "🔥 $XTZ volume spikes 2.3x with a 2.5% bounce—but bearish structure warns this might just be a relief rally.\n\n- my bias is still bearish here despite the sharp 2.3x volume spike and strong bounce, because the 1h structure, daily, weekly, and BTC trend all remain bearish — this is https://t.co/6cPfWfiNPu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2110571261327716724",
+   "date": "2026-10-15",
+   "text": "🕓 $BTC down 3% in 24h and still stuck below key levels—bearish pressure isn’t letting up today\n\n- my bias is bearish on BTCUSDT.P 1h as long as price remains below 84117.6, with the lower high and lower low structure intact and price trading under both EMA20 and EMA200 🚩\n- https://t.co/y7YuHixxBn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2110763438490493430",
+   "date": "2026-10-15",
+   "text": "⚔️ BURAKTHESCALPER LLC\nTHURSDAY | OCTOBER 15, 2026\n\n🚨 OPENING-HOUR MARKET BATTLE PLAN\n\n🔴 BIAS: BEARISH TECHNOLOGY\n⚠️ ELEVATED VOLATILITY\n\n━━━━━━━━━━━━━━━━━━━━\n📊 INDEX FUTURES\n━━━━━━━━━━━━━━━━━━━━\n\n$ES_F | 7,731.75 | -0.50%\n\nSupport:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2110793938709934193",
+   "date": "2026-10-15",
+   "text": "⚔️ BURAKTHESCALPER LLC\nTHURSDAY | OCTOBER 15, 2026\n\n🚨 OPENING-HOUR MARKET BATTLE PLAN\n\n🔴 BIAS: BEARISH TECHNOLOGY\n⚠️ ELEVATED VOLATILITY\n\n━━━━━━━━━━━━━━━━━━━━\n📊 INDEX FUTURES\n━━━━━━━━━━━━━━━━━━━━\n\n$ES_F | 7,731.75 | -0.50%\n\nSupport:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2110778100435104161",
+   "date": "2026-10-15",
+   "text": "⚔️ BURAKTHESCALPER LLC\nTHURSDAY | OCTOBER 15, 2026\n\n🚨 OPENING-HOUR MARKET BATTLE PLAN\n\n🔴 BIAS: BEARISH TECHNOLOGY\n⚠️ ELEVATED VOLATILITY\n\n━━━━━━━━━━━━━━━━━━━━\n📊 INDEX FUTURES\n━━━━━━━━━━━━━━━━━━━━\n\n$ES_F | 7,731.75 | -0.50%\n\nSupport:"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2110772747198419068",
+   "date": "2026-10-15",
+   "text": "🔍 $ANIME up 6.2% in 15m on 20x volume spike—bullish short-term or just a counter-trend rally?\n\n- my bias here is bullish in the short-term given the clear structural shift to bullish on the 1h, but caution is essential since the daily/weekly and BTC trends remain bearish — this https://t.co/ym1EfgF6Gn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RanjitAlpha",
+   "url": "https://x.com/RanjitAlpha/status/2110695070693269734",
+   "date": "2026-10-15",
+   "text": "🌎 MARKET FORECAST — THURSDAY, OCTOBER 15, 2026\n\n📰 Overnight News Update\n\n• 🏭 TSMC: Q3 revenue reached $46.72B, gross margin 66.4%, and net profit NT$763.1B (+69% YoY). Q4 revenue guidance came in at $52.3–54.3B, confirming exceptionally strong AI-chip demand.\n\n• 🤖"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 233,
+   "user": "JamesDula82",
+   "url": "https://x.com/JamesDula82/status/2110762493186560058",
+   "date": "2026-10-15",
+   "text": "CRYPTO HOLDERS WORLDWIDE: YOU ARE NOT BULLISH ENOUGH ON YOUR OWN BAGS\n\nBook mark this then check your bag. \n\nNot the price. \n\nThe count.\n\nHere is what it takes to be in the TOP 10% of wallets:\n$XRP : 2,111\n$XDC : 16,698\n$QNT : 50\n$SHX : 300,008\n$VELO : 412,619\n$LTC : 1.06\n\nAnd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "topdoog11",
+   "url": "https://x.com/topdoog11/status/2110717085760516131",
+   "date": "2026-10-15",
+   "text": "CT being so bearish on this coin makes me more bullish"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2110727343303966761",
+   "date": "2026-10-15",
+   "text": "📉 $HPEB drops 2.6% on 9.2x volume—distribution in full force, more pain ahead.\n\n- my bias is bearish here — the 1h structure is strongly bearish, with a steep cascade and new lows getting printed after a -2.6% dump on 9.2x volume, which signals aggressive supply absorption and https://t.co/rnfIz3oQg6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MarketPulseXXX",
+   "url": "https://x.com/MarketPulseXXX/status/2110650195096547424",
+   "date": "2026-10-15",
+   "text": "You should be subjective not be married to your bullish position the price action is quite clearly bearish look at bitcoin mining stocks RIOT coin and MSTR they all getting hammered still pre market https://t.co/BMUcxSAXWI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 79,
+   "user": "ast_dotfun",
+   "url": "https://x.com/ast_dotfun/status/2110641312269468051",
+   "date": "2026-10-15",
+   "text": "New listing: $PAXG (PAX Gold) ✦\n\nGold is now available on https://t.co/zABi6AwtLd.\n\nCreate a coin backed by $PAXG with up to 5x leveraged perp exposure, long or short, through @Aster_DEX on @BNBCHAIN.\n\nBullish or bearish on gold? Your call.\n\nLaunch yours at https://t.co/iWFq6Aj0Gk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2110704263882063994",
+   "date": "2026-10-15",
+   "text": "🚨 $COIN ALERT: Taiwan blocks Coinbase, Kalshi over suspected election bets - Bloomberg News\n\n📊 Trade This Asset: https://t.co/PHiKE8Wz0W\n\n🟢 Bullish: 20%\n\n🔴 Bearish: 80%\n• Taiwan blocks access to Coinbase over suspected election bets\n• Regulatory restriction on a major"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 39,
+   "user": "ANCrypto_",
+   "url": "https://x.com/ANCrypto_/status/2110578704208519449",
+   "date": "2026-10-15",
+   "text": "🗞️ CRYPTO MARKET — OCT 15, 2026 with ANCRYPTO\n\n📊 MARKET SNAPSHOT\n\nTotal market cap: ~$2.76T\nBTC dominance: 59.3% — capital remains concentrated in Bitcoin\nFear &amp; Greed Index: 53 (Neutral)\n24h trading volume: ~$84.9B\n\nBitcoin has pulled back toward $81.7K, while Ethereum trades https://t.co/17b3iauh7V"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "TheMrGamble",
+   "url": "https://x.com/TheMrGamble/status/2110782152984174835",
+   "date": "2026-10-15",
+   "text": "You were bearish the strongest coin in the early stages of a bull market ? \n\n$ZEC https://t.co/ybLHeZDXg9"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2110643455797940516",
+   "date": "2026-10-15",
+   "text": "🚨 enjincoin:native ALERT: Enjin Coin to Hold Live Stream on X\n\n💹 View Futures Market: https://t.co/PGNtJCwcqy\n\n🟢 Bullish: 55%\n• Live stream promotion of Enjin platform and ENJ token on X\n• Episode focuses on game retention and includes Enjin Misfits preview\n• Highlights"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "krasnovtrader",
+   "url": "https://x.com/krasnovtrader/status/2110734277008888096",
+   "date": "2026-10-15",
+   "text": "$QNT / $USDT\n\nA local bearish trend has started on the coin after the move to the upside, exactly according to the scenario https://t.co/2tMs58a0XY https://t.co/EzienQveDZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2110654247113052309",
+   "date": "2026-10-15",
+   "text": "🚨 $XAU ALERT: ZAWYA: Gold prices in Egypt slightly down on October 14\n\n📈 Trade Futures: https://t.co/1asrsiOoLu\n\n🟢 Bullish: 30%\n\n🔴 Bearish: 70%\n• Local gold prices declined, with 24-karat at EGP 7,038.29 purchase and EGP 7,935.71 sale, 21-karat and 18-karat also lower, and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 36,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2110729243843785006",
+   "date": "2026-10-15",
+   "text": "#Circle #USDC became the first electronic money #token designated as significant under the #EU #MiCA framework. Starting November 12, the European Banking Authority and France's ACPR will jointly oversee Circle, directly monitoring its reserves, capital, liquidity, and redemption https://t.co/wYjPTUX3Fx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 34,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2110731821121929625",
+   "date": "2026-10-15",
+   "text": "#Mastercard launched its Global Money Platform with newly acquired #BVNK unifying #fiat and #stablecoins via a single API. Businesses can now issue #stablecoin cards across 130+ countries, manage multi-currency accounts, and convert funds directly, targeting payouts in 200+ https://t.co/9zMfHMl9DW"
+  }
+ ]
+}

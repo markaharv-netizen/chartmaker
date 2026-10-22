@@ -1,0 +1,219 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-16T00:00:00Z",
+ "end": "2026-10-17T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111157790014136415",
+   "date": "2026-10-16",
+   "text": "⚡ PARTI posts a 3.4% jump on 34x volume—real demand or just a noisy blip?\n\n- my bias is cautiously bullish for a tactical move, but I want to see confirmation before taking action — the 1h structure remains bearish, but the explosive 34.2x volume spike with strong buying https://t.co/WaVayJDb4h"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111121008174219677",
+   "date": "2026-10-16",
+   "text": "⚠️ $OPN hits 3.5x volume and 3.2% lift in 15m, but the 24h drop keeps the bearish flag waving strong\n\n- my bias remains bearish on OPNUSDT here despite the explosive 3.5x volume surge and sharp +3.2% price pump in 15 minutes 🚩  \n- the 1h structure is clearly bearish (lower https://t.co/srNRAXGuvv"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111087098446917756",
+   "date": "2026-10-16",
+   "text": "⚖️ BLUR shorts overcrowded with -0.57% funding but price holds firm—bullish setup despite daily bears\n\n- my bias is bullish here for BLURUSDT.P on the 1h, as the local trend is bullish and price is holding well above the latest swing low at 0.01034, despite strong bearish https://t.co/OiOMh0R0Nm"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111046318550339728",
+   "date": "2026-10-16",
+   "text": "💎 $SUPER surges 20.1% with 2.6x volume spike—smart money stepping in or just early hype?\n\n- my bias is bullish here in line with the 1h, daily, and weekly structure; the trend is clearly up and this pump is backed by a huge volume anomaly, suggesting strong interest and possible https://t.co/g0CXZp6ZiS"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111186455175332097",
+   "date": "2026-10-16",
+   "text": "🗺 $ETH holds below key averages with a cautious 1.9% dip—structure still points down, no relief yet\n\n- my bias remains cautious and bearish here on ETH #ETHUSDT.P 1h, as the local structure is still printing lower highs and lower lows, and price sits below both the 20 and 200 https://t.co/ze0iC82lOA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "risenfit",
+   "url": "https://x.com/risenfit/status/2111174798697209958",
+   "date": "2026-10-16",
+   "text": "🟢 Early signal: $MSTR $COIN $IBIT \n\n🔸 The bond market appears more focused on near-term Fed policy repricing than on a broad collapse in long-term growth or inflation expectations.\n\n🔸 For #Bitcoin and growth equities, this can become bullish. \n\n🟢 Divergence:  \nVIX is spiking https://t.co/2UxY0faJgM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 308,
+   "user": "CryptoPatel",
+   "url": "https://x.com/CryptoPatel/status/2110966467277824158",
+   "date": "2026-10-16",
+   "text": "$ZEC DUMPED 36% FROM OUR SELL ZONE! WHILE SOMEONE SAYS $10,000, I’M WATCHING $641 &amp; $150!\n\nFamily, remember my previous #ZEC analysis?\nWhen ZEC/USDT was trading around $1,700, I clearly marked the $1,800–$2,100 region as my TOP WATCH ZONE and warned everyone about the risk of https://t.co/BVzQaqdeRD https://t.co/HixC3klwyl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "wisehw25",
+   "url": "https://x.com/wisehw25/status/2111027942902088159",
+   "date": "2026-10-16",
+   "text": "$BNB is doing something less exciting but still useful today.\n\nWhile higher-beta alts are bouncing harder, BNB is relatively muted around the broader recovery.\n\nThat makes it a good control asset.\n\nBNB has actual recurring utility through Binance and BNB Chain, gas demand and its"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2111081153356791983",
+   "date": "2026-10-16",
+   "text": "⚔️ BURAKTHESCALPER LLC\nTHURSDAY | OCTOBER 15, 2026\n\n🚨 CLOSING-BELL MARKET BATTLE PLAN\n\n🟢 BIAS: BROAD-MARKET RECOVERY\n🟡 NASDAQ: RELATIVE WEAKNESS\n⚠️ VOLATILITY REMAINS ELEVATED\n\n━━━━━━━━━━━━━━━━━━━━\n📊 INDEX FUTURES\n━━━━━━━━━━━━━━━━━━━━"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111123769825607728",
+   "date": "2026-10-16",
+   "text": "📉 $ZEREBRO dumps 3.9% on rising volume—forced liquidations signal deeper downside ahead.\n\n- my bias remains bearish on ZEREBROUSDT.P here, with both the 1h structure and BTC trend showing clear downside momentum; the recent -3.9% dump on elevated volume is a classic example of https://t.co/GqBvyEQwKR"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "OSTradez",
+   "url": "https://x.com/OSTradez/status/2111084754296569915",
+   "date": "2026-10-16",
+   "text": "$COIN (Coinbase Global, Inc.)  \nA bullish trend characterized by higher highs and lows is bolstered by significant accumulation from large investors. Key resistance at $185.49 should be monitored for continuation, while a breach below $165.80 indicates potential downside risk. https://t.co/0CkXrGNgrl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "candlescope_sm",
+   "url": "https://x.com/candlescope_sm/status/2111076972537262361",
+   "date": "2026-10-16",
+   "text": "Top 9 by liquidity, daily indicators: 7 of 9 bearish; NEAR and STRK the only bullish. BTC and ZEC below MACD signal; ETH, SOL, XRP low RSI/Stoch/CCI; DOGE and BNB OBV falling.\n\nNext-close odds 50–58%. Coin-flip territory.\n\nAll 100: https://t.co/rkSk5Z1R1s https://t.co/ECUI0tllSw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2110981447213310344",
+   "date": "2026-10-16",
+   "text": "🚨 $COIN solana:WKMZummev5UcXz5nNKQZvTD6QjNSM2X58uwmDReondo ALERT: Coinbase Global Says Aware That Users May Be Experiencing Delayed Sends On Ton Network\n\n💹 View Futures Market: https://t.co/PHiKE8Wz0W\n\n🟢 Bullish: 35%\n\n🔴 Bearish: 65%\n• Users may be experiencing delayed sends"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "michellekrb_xrp",
+   "url": "https://x.com/michellekrb_xrp/status/2111192884951269733",
+   "date": "2026-10-16",
+   "text": "🚨 HONEST QUESTION, XRP ARMY! 🚨\n\nDo you REALLY believe $XRP could reach $10,000 per coin? 👀\n\nDrop your honest opinion below! 👇 Bullish or bearish, everyone’s welcome. Just keep it respectful—no arguing! 🙏🔥\n\n#XRP #XRPArmy https://t.co/TEVkn5qRTI"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2110996491691057605",
+   "date": "2026-10-16",
+   "text": "📉 $BTC +1.3% but lower highs and lows keep the bearish structure intact\n\n- my bias is bearish here — 1h structure is still lower highs and lower lows, aligned with the daily, so this is not a counter-trend call on the main trading frames; weekly remains bullish, which just means https://t.co/mTjIvuZAVw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "candlescope_sm",
+   "url": "https://x.com/candlescope_sm/status/2111076902236790974",
+   "date": "2026-10-16",
+   "text": "Top 9 by liquidity, daily indicators: 7 of 9 bearish; NEAR and STRK the only bullish. BTC and ZEC below MACD signal; ETH, SOL, XRP low RSI/Stoch/CCI; DOGE and BNB OBV falling.\n\nNext-close odds 50–58%. Coin-flip territory.\n\nAll 100: https://t.co/rkSk5Z2oR0 https://t.co/biy644fPTc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "KulasekaraJ",
+   "url": "https://x.com/KulasekaraJ/status/2111108070210466296",
+   "date": "2026-10-16",
+   "text": "$STRK is at a critical decision point. 📉\n\nCoiling in a tight triangle at 0.077 support—it's a 50/50 coin flip. Don't guess, wait for the breakout:\n\n🔹 Bullish: 15m close above trendline + volume\n🔹 Bearish: Loss of 0.076\nNFA. DYOR.\n\n#Crypto #STRK #Bybit #Trading https://t.co/uz7v722r1o"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "EuroFinanceClub",
+   "url": "https://x.com/EuroFinanceClub/status/2110966161286299836",
+   "date": "2026-10-16",
+   "text": "🔥 Crypto News\n\n💭 $SKDD -8% sweep below 10.848 fuels the bullish uptrend grab\n\n- my bias is bullish here — the 15m wick through 10.848 that closed back above is a liquidity grab below the latest swing, not a reversal, and it fuels continuation while 1h structure stays bullish https://t.co/eMB78GBDE0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "kangChi01Crypto",
+   "url": "https://x.com/kangChi01Crypto/status/2111197339243389150",
+   "date": "2026-10-16",
+   "text": "𝐀𝐧𝐨𝐭𝐡𝐞𝐫 𝐜𝐨𝐢𝐧 𝐥𝐢𝐤𝐞 $𝐁𝐓𝐖 𝐭𝐨 𝐰𝐚𝐭𝐜𝐡 𝐜𝐥𝐨𝐬𝐞𝐥𝐲 👀\n\n$BTW recently did over 20000% pump in less than 6 months, therefore I made my research to find the next coin like btw.\n\n$DNA is powering the NeoSoul ecosystem, which focuses on AI-agent reputation, https://t.co/sbEWjD2PcZ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2110943458668027987",
+   "date": "2026-10-16",
+   "text": "🧐 $ETH +3.4% but 1h still printing lower highs — bias stays bearish\n\n- my bias is bearish here on the 1h — structure is still printing lower highs with price below the last LH at 2466.62, even though this is a counter-trend pullback inside bullish daily and weekly structure, so https://t.co/DJCGze8nUa"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2111080524533961131",
+   "date": "2026-10-16",
+   "text": "🚨 $COIN $MQ ALERT: Marqeta and Coinbase team up for stablecoin-backed card payments\n\n📊 Trade This Asset: https://t.co/PHiKE8Wz0W\n\n🟢 Bullish: 60%\n• Partnership enables stablecoin-backed cards for crypto-native and non-crypto firms using Coinbase infrastructure and Base for"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111030065056153884",
+   "date": "2026-10-16",
+   "text": "⚠️ $OGN 8.7x volume on a 2.7% pop looks like a liquidity grab, not real buying\n\n- my bias is bearish here on the 1h — that volume spike and the 15-minute pop look more like a liquidity grab into the last swing high than clean smart-money accumulation, especially with sellers https://t.co/LwYvAxcJW7"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2110936173279396043",
+   "date": "2026-10-16",
+   "text": "👀 $WUSDT 0.74% sweep above highs fuels the downtrend, not a reversal\n\n- my bias is bearish here after the 15m wick above 0.014901 that closed back below — that grab of resting highs is fuel for the 1h lower-high / lower-low structure, not a reversal, even though daily and weekly https://t.co/UkJTCO3nH5"
+  }
+ ]
+}

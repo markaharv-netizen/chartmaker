@@ -1,0 +1,237 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-14T00:00:00Z",
+ "end": "2026-10-15T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2110415288814755984",
+   "date": "2026-10-14",
+   "text": "🚨 $BTC $ETH $SOL ALERT: Cryptocurrency Analysts Seen Positive on Market Future — Market Talk\n\n📈 Trade Futures: https://t.co/0tFuuDrVhc\n\n🟢 Bullish: 45%\n• Analysts have flipped from bear to bull across the five majors since July per CryptoQuant\n• 89 percent of analysts are now"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "signalcorevip",
+   "url": "https://x.com/signalcorevip/status/2110385256800891102",
+   "date": "2026-10-14",
+   "text": "📊 24H Market Analysis @ October 14, 2026\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nThe dominant price action narrative indicates a market under significant institutional selling pressure, masked by minor intra-day upticks.\n\nDespite BTC and ETH showing slight"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Bullish_Cryptox",
+   "url": "https://x.com/Bullish_Cryptox/status/2110260372879856108",
+   "date": "2026-10-14",
+   "text": "ETH: The Next Big Move? 👀\n\nEthereum needs strong momentum and volume to confirm its next move.\n\n🐂 Buyers take control → bullish opportunity.\n🐻 Sellers dominate → downside risk remains.\n\nNo FOMO. Wait for confirmation.\n\nAre you bullish or bearish on $ETH? 👇\n\n#ETH #etherium"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "redheadslots",
+   "url": "https://x.com/redheadslots/status/2110207309401985376",
+   "date": "2026-10-14",
+   "text": "🚨 CRYPTO MARKET OUTLOOK, OCT 14, 2026 \n\n₿ Bitcoin (BTC): Watch $82K–$85K\n♦️ Ethereum (ETH): Bulls need stronger momentum\n📈 Bullish scenario: BTC breaks above resistance\n📉 Bearish scenario: BTC loses support, triggering further downside\n\n #Crypto #BTC #Altcoins #CryptoTrading"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "CryptonyX7",
+   "url": "https://x.com/CryptonyX7/status/2110480829646606702",
+   "date": "2026-10-14",
+   "text": "🚨 ETHEREUM NEWS ⚡\n\n📉 ETH Faces Selling Pressure!\n\nEthereum came under pressure as hotter US inflation data weighed on the crypto market.\n\n🔥 But here's another development:\nInteractive Brokers has introduced Ethereum staking services for investors.\n\n👀 Traders are watching:\n• https://t.co/EwGgadYeVO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "CryptoAvenue0",
+   "url": "https://x.com/CryptoAvenue0/status/2110435871711477870",
+   "date": "2026-10-14",
+   "text": "🚨 ETHEREUM UPDATE: BEARS IN CONTROL?\n\n🔻 ETH faced selling pressure as hotter-than-expected U.S. inflation rattled the crypto market.\n\n📊 Latest reported price: ~$2,427\n📉 24H change: -3.58%\n\n🎯 KEY LEVELS TO WATCH:\n🟢 Support: $2,413\n🔴 Resistance: $2,500\n\n⚠️ A hold above https://t.co/I5QWWnPfSV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2110286393654280564",
+   "date": "2026-10-14",
+   "text": "ethereum:0x75231f58b43240c9718dd58b4967c5114342a86c / USDT 📉 | 1H OKX\nOKB is forming a falling wedge near $123.64! 👀 Price is compressing between descending trendlines after a sharp rally and pullback. This pattern can signal a bullish reversal if buyers break resistance. ⚡ https://t.co/kgNK4KrFXm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "WikiBitOfficial",
+   "url": "https://x.com/WikiBitOfficial/status/2110250898417213951",
+   "date": "2026-10-14",
+   "text": "US Sept CPI drops tonight 8:30 PM Beijing time. Market's real questions: Will the Fed tighten again in late October? Will liquidity improve for the rest of 2026? And is Bitcoin's rebound a new bull run — or just a bear market bounce? https://t.co/1WZEHNUek4"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2110305148019048701",
+   "date": "2026-10-14",
+   "text": "$ETC / USDT | 1H Binance 📊\n🔥 Double Bottom forming! Ethereum Classic is holding the $7.70–$7.80 support zone, with price currently near $8.08. Buyers are attempting to build a base after the recent pullback.\n\n🚀 Bullish breakout: A confirmed move above $8.50 could open the path https://t.co/LMcDceMEYc"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 144,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2110196106248454611",
+   "date": "2026-10-14",
+   "text": "I don't want to be on the wrong side of this crypto rally: Bitcoin looks ready for 87,000 and higher, not a repeat crash dictated by a calendar date. I'm still macro bullish, but that doesn't erase my warning about a 20% pullback. Trade the charts we have and prepare for the dip https://t.co/JJefbC1a91"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 33,
+   "user": "clarkron_2008",
+   "url": "https://x.com/clarkron_2008/status/2110243796101587321",
+   "date": "2026-10-14",
+   "text": "ronin:native  ( Ronin Network ) is trading near $0.0655 after a small drop in the last 24 hours. The price may be preparing for its next move. (axie Infinity )\n\n4-Hour Chart Analysis\nSupport and Resistance\n\nSupport: $0.0580\nResistance: $0.0660\n\nRON's price depends on the overall https://t.co/b17K0h7pzN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "heldersilva86",
+   "url": "https://x.com/heldersilva86/status/2110366755444978122",
+   "date": "2026-10-14",
+   "text": "🚨 CRYPTO MARKET ALERT: HOT US INFLATION PUTS BITCOIN AND ALTCOINS TO THE TEST\n\nThe latest US CPI report has changed the market conversation.\n\nHeadline inflation reached 3.7% year over year, above the 3.6% forecast. The result has increased concerns that the Federal Reserve may"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "heldersilva86",
+   "url": "https://x.com/heldersilva86/status/2110485899607765025",
+   "date": "2026-10-14",
+   "text": "🚨 ETHEREUM’S NEXT BIG MOVE MAY DEPEND ON SOMETHING BIGGER THAN THE PRICE OF $ETH.\n\nEthereum is fighting for its position at the centre of digital finance — and three developments deserve investors’ attention. 👇\n\n🏦 1. INSTITUTIONS ARE LOOKING BEYOND SPECULATION\n\nEthereum is"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "AlphaLensCrypto",
+   "url": "https://x.com/AlphaLensCrypto/status/2110330101728493595",
+   "date": "2026-10-14",
+   "text": "📊 THE CRYPTO EDGE | DAILY MARKET BRIEF \n📅 October 14, 2026\n\n🚨 CPI CATALYST &amp; $300M SHORT LIQUIDATION WALL: IS $88K–$90K NEXT FOR BITCOIN? 🚨\nBitcoin tests critical $83.8K resistance ahead of today's CPI inflation release, with up to $300M in short liquidations stacked at https://t.co/kt7rTe4MfL"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "coinapalooza",
+   "url": "https://x.com/coinapalooza/status/2110425411549089834",
+   "date": "2026-10-14",
+   "text": "Omg is this bull flattening or bear flattening? Fiscal dominance? Bullish hikes?\n\nDoesn’t matter. \n\nThe ticker is ethereum:0x30ae41d5f9988d359c733232c6c693c0e645c77e."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 47,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2110309654785827247",
+   "date": "2026-10-14",
+   "text": "$BTC : Perma-bulls are becoming increasingly interesting.\n\nThey come into my comments to argue against my Bitcoin analysis — an analysis based on Bitcoin’s entire market history that suggests the true bottom is still ahead and that we could be entering a prolonged bear market. https://t.co/BU0vEr6uXk https://t.co/tZVwotW46d"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "heldersilva86",
+   "url": "https://x.com/heldersilva86/status/2110352531704434833",
+   "date": "2026-10-14",
+   "text": "🚨 BREAKING: US CORE CPI COMES IN HOTTER — IS CRYPTO FACING ANOTHER SELL-OFF?\n\nThe latest US inflation report has delivered an unwelcome surprise for financial markets.\n\n📊 THE NUMBERS THAT MATTER\n\n🇺🇸 Core CPI YoY: 2.6% vs. 2.5% expected\n🇺🇸 Core CPI MoM: 0.3% vs. 0.2% expected\n🇺🇸"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "Rick_Barber_",
+   "url": "https://x.com/Rick_Barber_/status/2110432398370369825",
+   "date": "2026-10-14",
+   "text": "I rarely lay out how I’m looking at the market as a whole and usually stick to individual tokens or stocks, but I get asked often enough privately that I figured I’d just share the view and how I’m positioning.  For those who are interested, here is my take and plan.\n\nStocks look https://t.co/FaVG7FkIfS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 152,
+   "user": "TheMoneyApe",
+   "url": "https://x.com/TheMoneyApe/status/2110387653442978104",
+   "date": "2026-10-14",
+   "text": "🚨 BTC TO ETH WHALE UPDATE 🚨\n\nMultiple BTC whales are rotating into ETH, which is super bullish for altcoins.\n\nEthereum seems to be undervalued compared to Bitcoin. Will ETH hit a new ATH in Q4? https://t.co/krDoQIyTZA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "BCarter5150",
+   "url": "https://x.com/BCarter5150/status/2110452338515169597",
+   "date": "2026-10-14",
+   "text": "$BLOX  upside is completed capped , and lagging bitcoin and ethereum but hey .. we’re catching every bit of the downside !! Way to go @DavidANicholas  fucking genius"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "kl100x",
+   "url": "https://x.com/kl100x/status/2110423418181210384",
+   "date": "2026-10-14",
+   "text": "ethereum:0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c tends to front run the markets\n\nI expect this time to be no different \n\nKey downside levels: 0.30, 0.25 \nFirst upside target: 0.75 🎯"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 29,
+   "user": "ponzibaron",
+   "url": "https://x.com/ponzibaron/status/2110185309744873828",
+   "date": "2026-10-14",
+   "text": "Another incredibly bullish project that Solana degens are now finding out about because of a meme token lol.\n\nsolana:5JCM2Vyp6xxEYqc6Jeot6KS2PhicsWLkhK9yDCBwhNcS &lt;&gt; $VVV\n$ZSHIB &lt;&gt; ethereum:0xa12cc123ba206d4031d1c7f6223d1c2ec249f4f3 \n\nBoth undervalued privacy-focused alt pairs https://t.co/TKKugzliAk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Gkctechio",
+   "url": "https://x.com/Gkctechio/status/2110279347043291259",
+   "date": "2026-10-14",
+   "text": "Bitcoin and XRP face bearish market sentiment, while Ethereum gains bullish attention amid rising investor optimism.\n\nRead Now: https://t.co/FiYn2XXwwz\n\n#Bitcoin #XRP #Ethereum #CryptoMarket #CryptoNews #MarketSentiment #Blockchain #DigitalAssets #GKCtech"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "YWereTheyThere",
+   "url": "https://x.com/YWereTheyThere/status/2110413468520370219",
+   "date": "2026-10-14",
+   "text": "There are no bearish developments. Only bullish misunderstandings. 📈💅 ethereum:0x2b591e99afe9f32eaa6214f7b7629768c40eeb39 https://t.co/4N8Ydhj1P6 https://t.co/CiikWSwav3"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "GreenWCapital",
+   "url": "https://x.com/GreenWCapital/status/2110370464518549771",
+   "date": "2026-10-14",
+   "text": "Everyone is bearish on Bitcoin. Everyone is bullish on Ethereum.\nSantiment data shows ETH bullish ratio at 2.05. BTC at 0.82 - fear territory.\nHistorically, when the crowd panics - that’s when the move happens 💬"
+  }
+ ]
+}

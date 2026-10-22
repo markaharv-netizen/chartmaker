@@ -1,0 +1,237 @@
+{
+ "symbol": "MSTR",
+ "start": "2026-10-16T00:00:00Z",
+ "end": "2026-10-17T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "MSTR (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR mNAV) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NASNMEDIA",
+   "url": "https://x.com/NASNMEDIA/status/2111204445245579391",
+   "date": "2026-10-16",
+   "text": "₿ $MSTR  ~$136 ▼~10%\n\nNews: BTC proxy hit by inflation + MSCI index eligibility risk for digital asset treasuries.\n\nSentiment: Bearish today.\n\nCatalysts: BTC price, potential index decisions, earnings.\n\nVolume/Options: Very active options (bullish call flow noted).\n\nPT: ~$200+"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "jamie_selects",
+   "url": "https://x.com/jamie_selects/status/2111209097928606160",
+   "date": "2026-10-16",
+   "text": "This is the first cycle where I’m going to take gains on the way up. \n\nI’ve built a plan to sell bitcoin:native $ASST $MSTR at certain levels based on BTC price and mnav multiples. \n\nThe goal is to make it mechanical.\n\nSell covered calls for the target prices when there’s a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "risenfit",
+   "url": "https://x.com/risenfit/status/2111174798697209958",
+   "date": "2026-10-16",
+   "text": "🟢 Early signal: $MSTR $COIN $IBIT \n\n🔸 The bond market appears more focused on near-term Fed policy repricing than on a broad collapse in long-term growth or inflation expectations.\n\n🔸 For #Bitcoin and growth equities, this can become bullish. \n\n🟢 Divergence:  \nVIX is spiking https://t.co/2UxY0faJgM"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "mlb_ttk",
+   "url": "https://x.com/mlb_ttk/status/2111145513534042560",
+   "date": "2026-10-16",
+   "text": "mstr trading at like 0.82 mnav and ppl think thats bearish for btc lol. treasury tourists gettin flushed, coins dont care"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2110990071016919098",
+   "date": "2026-10-16",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• Kalshi and Coinbase Websites Blocked in Taiwan Amid Election Betting Probe\n• Mastercard Global Money Platform Goes Live, Unifying Stablecoin and Fiat Payments\n• Gold Price Warning: Inflation May Be Sending the Opposite https://t.co/JXwNXF7Vpt"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 607,
+   "user": "ki_young_ju",
+   "url": "https://x.com/ki_young_ju/status/2111059784598249475",
+   "date": "2026-10-16",
+   "text": "Analysts don't care about MSCI. $MSTR consensus still very bullish.\n\nCiti $240, Barclays $175, B. Riley $195. Targets going up, not down.\n\nMSCI is a flow story, and it's priced in. What matters now: mNAV ~1.0x, STRC at par, $3.75B reserve covering dividends. https://t.co/NWKtUrVVaM https://t.co/bYv4i16zbe"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Solix_Trade",
+   "url": "https://x.com/Solix_Trade/status/2111164780593676655",
+   "date": "2026-10-16",
+   "text": "Analysts seem to be overlooking the MSCI story while sentiment around $MSTR remains strongly bullish. 📈 Citi has a $240 price target, Barclays $175, and B. Riley $195. Targets are moving higher, not lower.\n\nThe MSCI issue is mainly about capital flows, and that risk is already https://t.co/m5r1BUCTFG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2111186084390469659",
+   "date": "2026-10-16",
+   "text": "While OpenAI's revenue miss torched $200B of $NVDA market cap, someone quietly sold $8M of 2028 puts into the panic.\n\nTHE SETUP\n\nNVDA shed roughly $200B of market cap after OpenAI's revenue run-rate came in $18B light of expectations, and the Nasdaq slid 1.09% as money rotated https://t.co/o1eiTjoK3B"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 257,
+   "user": "ChrisMMillas",
+   "url": "https://x.com/ChrisMMillas/status/2111110436150006121",
+   "date": "2026-10-16",
+   "text": "Cantor Fitzgerald just raised its $MSTR 12-month price target to $208.\n\nBearish but bullish."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "BigpictureBTC",
+   "url": "https://x.com/BigpictureBTC/status/2111135146799718440",
+   "date": "2026-10-16",
+   "text": "$MSTR / $IBIT is back at February levels, when $BTC was trading at $60,000.\n\nWhen will the BTCTC sector wake up to how damaging Saylor’s model is to long term shareholder value and Bitcoin’s integration into capital markets?\n\nRetail investors, he’s finessing you. MSCI and S&amp;P https://t.co/imCwKj2LfU"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2111052662288289841",
+   "date": "2026-10-16",
+   "text": "🚨 $BTC $ZEC $MSTRSTOCK ALERT: MSTR Stock Falls Pre-Market as Strategy Faces MSCI Index Exclusion Under New Rules for &amp;#39;Non-Operating Companies&amp;#39;\n\n📈 Trade Futures: https://t.co/0tFuuDrnrE\n\n🟢 Bullish: 24%\n• The company holds 848,000 BTC with nearly $6 billion in"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 45,
+   "user": "BigpictureBTC",
+   "url": "https://x.com/BigpictureBTC/status/2111135398856372369",
+   "date": "2026-10-16",
+   "text": "$MSTR / $IBIT is back at February levels, when $BTC was trading at $60,000.\n\nWhen will the BTCTC sector wake up to how damaging Saylor’s model is to long term shareholder value and Bitcoin’s reputation in capital markets?\n\nRetail investors, he’s finessing you. MSCI and S&amp;P https://t.co/CtSSrj2zW0"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2111016096463507608",
+   "date": "2026-10-16",
+   "text": "🚨 $MSTR $BTC ALERT: MSCI approves rules that could eject Strategy, Metaplanet from equity indexes\n\n💹 View Futures Market: https://t.co/6ChzjkEV2k\n\n🟢 Bullish: 20%\n• Strategy describes itself as an operating business with a software arm and rejects comparisons to investment"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "ForeDex_Global",
+   "url": "https://x.com/ForeDex_Global/status/2111147661457842398",
+   "date": "2026-10-16",
+   "text": "⚡️ More liquidity, limited transmission. @ForeDex_Global Recognized Analyst @MurphyBTC tracks the tension using ForeDex API:\n\n🌩️ U.S. M2 is up 5.7% year over year, but high oil prices and a 5.21% 10 year Treasury yield impede flows into crypto. Stablecoin supply and DeFi TVL rose https://t.co/VhcJsaJtPq https://t.co/RwHxC93Lpp"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 26,
+   "user": "BitcoinTeacher_",
+   "url": "https://x.com/BitcoinTeacher_/status/2111074659542212972",
+   "date": "2026-10-16",
+   "text": "Daily dividends passed.\n\nBullish on digital credit $STRC\n\nBullish on amplified bitcoin $MSTR\n\nJust a bull. https://t.co/uJdF5sYaRn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ngrfreedom",
+   "url": "https://x.com/ngrfreedom/status/2111133995144815065",
+   "date": "2026-10-16",
+   "text": "Bullish on Bitcoin?\n\n$ASST is worth watching as Strive uses offerings like $SATA and $SATS to expand its BTC holdings, aiming for the No. 2 spot behind $MSTR. \n\nThe upside thesis comes with extreme volatility. https://t.co/oDjpiMOPIB"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "OSTradez",
+   "url": "https://x.com/OSTradez/status/2111085571573526593",
+   "date": "2026-10-16",
+   "text": "$MSTR (MicroStrategy Incorporated)  \nCrucial momentum threshold at $154 suggests a pivotal point for price action, with upside targets at $158 and $165. A sustained hold above $154 indicates bullish continuation potential.  \nVerdict: Buy above $154. https://t.co/CoGA8yBG25"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "allday_stocks",
+   "url": "https://x.com/allday_stocks/status/2111056154465906872",
+   "date": "2026-10-16",
+   "text": "$MSTR 𝗦𝘁𝗿𝗮𝘁𝗲𝗴𝘆: 𝗖𝗮𝗻𝘁𝗼𝗿 𝗙𝗶𝘁𝘇𝗴𝗲𝗿𝗮𝗹𝗱 𝗠𝗮𝗶𝗻𝘁𝗮𝗶𝗻𝘀 𝗢𝘃𝗲𝗿𝘄𝗲𝗶𝗴𝗵𝘁, 𝗥𝗮𝗶𝘀𝗲𝘀 𝗣𝗧 📈\nPT ↑ $208 (from $186) | Current $146.35 (Upside ~42.1%)\n⠀\nCantor Fitzgerald raises its 12-month Bitcoin price assumption to ~$112K from $98K, valuing"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "S_NewsRoomCOM",
+   "url": "https://x.com/S_NewsRoomCOM/status/2111117286132097147",
+   "date": "2026-10-16",
+   "text": "$MSTR Strategy is getting repriced for index mechanics, not Bitcoin. MSCI’s new rules put passive holders on the clock while Cantor still sees $208. The market hates forced selling more than it loves a thesis. Bull or bear take?\n\n#StockNewsroom #Strategy #MSCI 1/2 https://t.co/f5YddNpFaj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "risenfit",
+   "url": "https://x.com/risenfit/status/2111194422637642032",
+   "date": "2026-10-16",
+   "text": "$MSTR $COIN\n\n🔸 $BTC BITCOIN DEVELOPING BULL FLAG AMID THE AI TRADE UNWIND\n\n🔸 Bitcoin continues consolidating within a descending parallel channel following its rally from $74.5K to $87.3K \n\n🔸 The internal trading range remains well-defined, with temporary upper deviations https://t.co/k9wNt4J4eK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "orcabayio",
+   "url": "https://x.com/orcabayio/status/2111071423254999312",
+   "date": "2026-10-16",
+   "text": "This week in Diary of a Market Maker:\n- U.S. PPI jumps 1.3% MoM\n- South Korea’s KOSPI plunges nearly 8%\n- BTC briefly falls below $80K before rebounding\n- Mastercard &amp; BVNK launch Global Money Platform\n- Ripple Prime launches 24/7 RWA perps https://t.co/6vpaZaoNDX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "wisehw25",
+   "url": "https://x.com/wisehw25/status/2111031239402824168",
+   "date": "2026-10-16",
+   "text": "I have $15K of hypothetical fresh capital to deploy in today's stock radar.\n\nMy allocation right now?\n\nDEPLOY: $0\nRESERVE: $15K\n\nNot because theres nothing bullish.\n\nThere are plenty of strong themes:\n\nAI power: $GEV $ETN $PWR $VRT $EME\n\nSemis: $TSM $NVDA $AMD $ASML\n\nDefence:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "DannyLeeKrohn",
+   "url": "https://x.com/DannyLeeKrohn/status/2111192032613925021",
+   "date": "2026-10-16",
+   "text": "$MSTR  update: rebuy filled at $135.95\nYesterday I sold at $148.41 and set a rebuy at $136. \nToday it filled at $135.95 8.4% below my exit.\n\nAfter the fill, MSTR represented approximately 8.1% of the portfolio, with BTC/MSTR together around 20.6%. No account-level leverage. My https://t.co/FA7b0tvaEB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "the_mNAVigator",
+   "url": "https://x.com/the_mNAVigator/status/2111144924486013282",
+   "date": "2026-10-16",
+   "text": "Midday #mNAV check. \n\n$BTC &amp; $ETH both lower. Five names sit below NAV — $MSTR 's mNAV is 0.822, $SBET 's 0.789, $BMNR 's 0.904, $XXI 's 0.996, $BTBT 's 0.960."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "the_mNAVigator",
+   "url": "https://x.com/the_mNAVigator/status/2111083771558567993",
+   "date": "2026-10-16",
+   "text": "Morning #mNAV Pre-Market Pulse.\n$BTC $81,970 $ETH $2,461\n\n$MSTR mNAV 0.868 — low end of its range, below NAV.\n$BMNR mNAV 0.940 — low end of its range, below NAV.\n$SBET mNAV 0.818 — low end of its range, below NAV."
+  }
+ ]
+}
