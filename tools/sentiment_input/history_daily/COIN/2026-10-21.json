@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-21T00:00:00Z",
+ "end": "2026-10-22T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112827761962238058",
+   "date": "2026-10-21",
+   "text": "⚡ OSMO volume jumps 21x with just 2.8% gain—smart money or just noise on the tape?\n\n- my bias is cautiously bullish here due to the explosive 21.2x volume spike and strong buy-side candle, suggesting likely smart money accumulation or aggressive positioning after a sweep of https://t.co/miyuB81fev"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112756511348809949",
+   "date": "2026-10-21",
+   "text": "🟢 $BTC steady above 81280 with a subtle 0.8% rise—bullish momentum quietly building\n\n- my bias is bullish here on the 1h, with price holding above 81280 and maintaining a series of higher highs and higher lows 🟢\n- price is currently at 82760.4, sitting just above a local demand https://t.co/NBBuQFR0LV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112763714290037050",
+   "date": "2026-10-21",
+   "text": "🔍 ICNT jumps 30.4% in 24h with modest volume—momentum real or just a tease?\n\n- my bias here is still bullish in the short term as the 1h market structure is strongly upward and fully aligned with the daily uptrend, plus BTC is bullish too, which supports continuation 🟢  \n- https://t.co/7joL6EOqmh"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2113049201026150733",
+   "date": "2026-10-21",
+   "text": "🧨 $JCT drops 3% on 3.5x volume—smart money clearly unloading, don’t buy the dip here\n\n- my bias is bearish here: the 1h market structure is firmly bearish, and the sharp -3% move on a 3.5x volume spike signals strong distribution, not panic bottoming — this looks like smart https://t.co/g0LgsLtd0r"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112695725431668842",
+   "date": "2026-10-21",
+   "text": "📐 $BTC holding steady with a 1.2% climb—bullish structure intact, trend flip still well below\n\n- My bias is bullish here on BTC #BTCUSDT.P 1h — structure remains in an uptrend with price printing higher highs and higher lows, and the trend flip (invalidation) sits 1.96% below at https://t.co/tvYWeMZwKu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BTCAlphaFlow",
+   "url": "https://x.com/BTCAlphaFlow/status/2112963118561407031",
+   "date": "2026-10-21",
+   "text": "Kimchi is looking great. For me there are 3 scenarios: \n1. Kimchi sells 100% and gets 450.000$ because of the liquidity. Bearish\n2. Kimchi doesn‘t react to the coin. Neutral\n3. Kimchi post about the coin. Possibibly goes higher then Black Bull. Strong Bullish, most probability"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2113003234293932426",
+   "date": "2026-10-21",
+   "text": "📈 ETH holds steady with a 2.3% climb—bullish vibes intact as structure sets up for more gains\n\n- my bias is bullish here on $ETH as long as price holds above 2435, with 1h structure showing higher highs/higher lows and the BTC trend also supportive 🚀\n- price is currently 2490, https://t.co/pnWbSIvXp1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112993715144810656",
+   "date": "2026-10-21",
+   "text": "⚖️ $PTB jumps 6.3% on 2.5x volume—can this rally outrun the still-bearish 1h structure?\n\n- my bias is cautiously bullish in the short term, expecting a further retrace higher after the aggressive 2.5x volume spike and +6.3% pump, but only with confirmation; the 1h structure is https://t.co/pwYUc6bPQc"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112942616572497942",
+   "date": "2026-10-21",
+   "text": "🔍 $ETH steady at +3.1% in 24h—bullish structure intact, is this the calm before a breakout?\n\n- my bias is bullish here on the 1h for ETH #ETHUSDT.P — structure is cleanly bullish, with price above both the recent higher low (2435.88) and all key EMAs, and the most recent swing https://t.co/A8r2pLnGp2"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112881981818089545",
+   "date": "2026-10-21",
+   "text": "🗺 $ETH holds strong above EMAs with a steady 3.2% lift—bulls are setting the stage for more gains\n\n- my bias is bullish here on ETH #ETHUSDT.P 1h, with price holding firmly above both the 20 and 200 EMA and the structure showing a clear sequence of higher highs and higher lows https://t.co/dqnPdFlqjx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "1bsl_Official",
+   "url": "https://x.com/1bsl_Official/status/2112727618118373870",
+   "date": "2026-10-21",
+   "text": "$DACITY (SOL) — GTA VI NARRATIVE IS REAL. THE TOKEN IS NOT OFFICIAL. 🧵\n\nRockstar just put “DacityCoin AudaCity” in the GTA VI launch trailer.\n\nThe Solana memecoin caught the narrative, ripped hard, and is now trading around a ~$9.5M market cap.\n\nBut before aping in, here's the https://t.co/3CJZO1IaYK"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112987880687607861",
+   "date": "2026-10-21",
+   "text": "🟢 $DRAM just cleaned below 48.99 but bulls hold firm—uptrend looks intact after a mild 0.47% sweep\n\n- my bias remains bullish on DRAMUSDT.P for the 1h after that 15m sweep below 48.99, since the sweep occurred just below a local key level but the primary 1h structure is still https://t.co/BLbLulVT3o"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "cryptocoinkingz",
+   "url": "https://x.com/cryptocoinkingz/status/2113001662209982858",
+   "date": "2026-10-21",
+   "text": "@Hoookedpad HOOKED TOKEN ($HOOK) — MY THESIS\n\nWe need some good updates from the DEV and shipped!! LETS FKN GO @Hoookedpad team!! \n\nMy thesis remains strong when it comes to the broader market cycle, but I have serious concerns about Hooked’s current performance.\n\nLooking at"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "DaxxTrader",
+   "url": "https://x.com/DaxxTrader/status/2112720457195724877",
+   "date": "2026-10-21",
+   "text": "Most traders ride a coin all the way up…\n\nand all the way back down.\n\nBuying is easy. Selling is the skill nobody practises.\n\nI wrote up the 7 exit signals I use to finish a cycle with money in hand, with real charts from past tops.\n\nSave it. https://t.co/ciiU3eVS54"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "1bsl_Official",
+   "url": "https://x.com/1bsl_Official/status/2112739734149869961",
+   "date": "2026-10-21",
+   "text": "1/ $GTA6 (Solana): the GTA VI beta play nobody asked for — a neutral look after a ~7.8x hype run.\n\nNot a call. Not a shill. Just the setup, the risks, and the levels I'd watch.\n\nCA: 4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz\n\nThe numbers below are a market snapshot, not https://t.co/ga73kgLYmd"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "zectrillionaire",
+   "url": "https://x.com/zectrillionaire/status/2112838236582359147",
+   "date": "2026-10-21",
+   "text": "It's not as bullish as you think it is.\n\nMining is a way of going synthetic short, it means the coin is overvalued and they will dump, especially since emission is 0.3% a day.\n\nAltcoin miners will mine anything that gives them the highest yield and auto-switch into BTC or https://t.co/GcijY9ywrO"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "zectrillionaire",
+   "url": "https://x.com/zectrillionaire/status/2112838121524273474",
+   "date": "2026-10-21",
+   "text": "It's not as bullish as you think it is.\n\nMining is a way of going synthetic short, it means the coin is overvalued and they will dump, especially since emission is 0.3% a day. https://t.co/GcijY9ywrO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 32,
+   "user": "pouyanroohii",
+   "url": "https://x.com/pouyanroohii/status/2112987897574129992",
+   "date": "2026-10-21",
+   "text": "I believe Bitcoin will eventually surpass $3 million.\n\nBut I don't trust this rally. https://t.co/PtlSuMK3Hc"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "WallStreetFlows",
+   "url": "https://x.com/WallStreetFlows/status/2112890143514206369",
+   "date": "2026-10-21",
+   "text": "$COIN is on our Down Cascade this week. Not a surprise. Bitcoin proxies have been weakening, and we flagged last week that $MSTR was on our Bear Bot (bearish loading, not full fire).\n\nThis week $COIN joined $BMNR on our Down Cascade (both at score 10, Weekly + 4-hour bearish https://t.co/BG5iqNApbG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 48,
+   "user": "ast_dotfun",
+   "url": "https://x.com/ast_dotfun/status/2112917988240232519",
+   "date": "2026-10-21",
+   "text": "$PREDICT just landed on @Aster_DEX with up to 5x leverage. 👀\n\nSo we decided to list it on ast too. ✦\n\nBullish or bearish on $PREDICT?\n\nCreate your own coin backed by a real $PREDICT leveraged perp position through @Aster_DEX.\n\nLong or short, up to 5x leverage on @BNBCHAIN. https://t.co/QzNoyRudyU https://t.co/3TvinQEm2D"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Ewr_AhadX",
+   "url": "https://x.com/Ewr_AhadX/status/2112906067260964947",
+   "date": "2026-10-21",
+   "text": "🚀 Crypto is changing the future of finance! 🌍\n₿ Bitcoin is more than just a coin.\n📈 Every market move tells a story.\n🧠 Smart investors focus on knowledge, not hype.\n🔥 Are you bullish or bearish on BTC?\n👇 Drop your thoughts in the comments!\n\n#Bitcoin #BTC #Crypto #Web3 https://t.co/zvR51zwmLx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "cilinixcrypto",
+   "url": "https://x.com/cilinixcrypto/status/2112899202267398266",
+   "date": "2026-10-21",
+   "text": "I know $XRP is not the hottest coin on the block but look at this:\n\nAfter a major period of bearish pressure, forming bullish divergences along the way, $XRP has now been able to reclaim the 7d rolling for the first time in over 2 weeks\n\nAlso;\n- Reclaimed pqVWAP\n- XRP/BTC https://t.co/QmG0AVisXZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "0xplanetearth",
+   "url": "https://x.com/0xplanetearth/status/2112947815018279341",
+   "date": "2026-10-21",
+   "text": "The largest asset manager is filing a product that deliberately does not own Bitcoin, trading some upside for a defined downside buffer.\n\nBlackRock files for a Bitcoin ETF that limits losses by using options instead of holding the coin.\n\nOn October 19 BlackRock submitted a https://t.co/aS9TMHY3fQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 29,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2112963002626384289",
+   "date": "2026-10-21",
+   "text": "#WesternUnion partnered with #Noah to integrate international transfers in its #Solana-based stablecoin, #USDPT. Across its network of over 200 countries, recipients can now hold $USDPT in digital #wallets instead of taking cash, though the official launch date remains https://t.co/TOimuURCgU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 33,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2112959105816027531",
+   "date": "2026-10-21",
+   "text": "Top 7 analysts highlighted 15 #crypto projects whose #tokens lost nearly all value. Despite raising $855M combined, their total #TVL sits at just $171M. With names like #ZKsync, Dymension, and Mode down over 99% from highs, massive venture funding clearly guarantees neither https://t.co/YLCdrLFLoo"
+  }
+ ]
+}
