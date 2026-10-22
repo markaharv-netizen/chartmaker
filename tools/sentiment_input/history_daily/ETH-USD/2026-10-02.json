@@ -1,0 +1,111 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-02T00:00:00Z",
+ "end": "2026-10-03T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 331,
+   "user": "koolkrypto223",
+   "url": "https://x.com/koolkrypto223/status/2106053104810783010",
+   "date": "2026-10-02",
+   "text": "This one is pretty simple.\n\nEither @Lighter_xyz gets bullish news from the CFTC and Robinhood and it's going to $10, or ethereum:0x232ce3bd40fcd6f80f3d55a522d03f25df784ee2  slow bleeds to $2.50 as January unlocks loom large.\n\nIf I were an intelligent trader, I would have done https://t.co/Oba0CTbLvo"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "dangsoun",
+   "url": "https://x.com/dangsoun/status/2105841701852192793",
+   "date": "2026-10-02",
+   "text": "XRP sentiment turns bearish as bull/bear ratio hits 0.67\nMarket sentiment for XRP has dropped to its lowest level since August, with bearish comments far outweighing bullish discussions as October began. Santiment flagged this pessimism as a potential contrarian investment https://t.co/VBuGMwrVqh"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TroutEntCrypto",
+   "url": "https://x.com/TroutEntCrypto/status/2105837674686767144",
+   "date": "2026-10-02",
+   "text": "Just a friendly reminder:\nThe next bull run is going to be nasty.\nBitcoin, Ethereum, and Solana are still massively undervalued.\nBetter get bullish before the FOMO hits."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2105916161611210968",
+   "date": "2026-10-02",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 (𝗹𝗲𝗮𝗻𝗶𝗻𝗴 𝗯𝘂𝗹𝗹𝗶𝘀𝗵) - 𝗕𝘂𝗹𝗹𝗶𝘀𝗵 𝗰𝗮𝘁𝗮𝗹𝘆𝘀𝘁𝘀 - Bitcoin rallying toward the $86 K–#90 K zone, a level many view as the start of a new bull market. - Fear &amp; Greed Index at 74, indicating strong optimism. - Multiple https://t.co/8vGzVpQRja"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "El_YonnyX21",
+   "url": "https://x.com/El_YonnyX21/status/2106006042429603964",
+   "date": "2026-10-02",
+   "text": "Good Morning X-Comunity☀️\nethereum:0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c | PRE-MARKET UPDATE — OCT 2 🎯\nPM: 7,735\nBull &gt;7740 | Bear &lt;7720\n7740–7720: NO TRADE\nCALL: 7760/7780/7800 | PUT: 7710/7664/76500DTE \nIV: 19.44% | Exp: ±34.60\nNFP: +29K vs +90K | U/E: 4.2% vs 4.1%\nWeak https://t.co/BKz44ovPpL"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 255,
+   "user": "BMNRBullz",
+   "url": "https://x.com/BMNRBullz/status/2106011644111265873",
+   "date": "2026-10-02",
+   "text": "IS $50,000 ETH POSSIBLE?\n\nTom Lee @fundstrat outlines a potential 10x move after Ethereum breaks $5,000. His chart shows $50,000 as the possible destination.\n\nMy interpretation: reaching that price would require far more than a breakout.\n\n🔹 BULL CASE: $50,000\nIn a world where https://t.co/i9RAoYXu6M https://t.co/gTAHX5QeUX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "cryptomansui",
+   "url": "https://x.com/cryptomansui/status/2105952420035727674",
+   "date": "2026-10-02",
+   "text": "ETH/USDT Current Price (Oct 2, 2026) ≈ 2,728.72\n\nOn-chain data: Funding rates are generally positive; longs are paying. Binance's rate over the last 8 hours is approximately +0.0100% (annualized ~10.95%); Hyperliquid is at +0.00125%/h; and Bybit is also at +0.0100%/8h. Binance"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "goldstagcrypto",
+   "url": "https://x.com/goldstagcrypto/status/2105952306474975549",
+   "date": "2026-10-02",
+   "text": "ETH/USDT Current Price (Oct 2, 2026) ≈ 2,728.72\n\nOn-chain data: Funding rates are generally positive; longs are paying. Binance's rate over the last 8 hours is approximately +0.0100% (annualized ~10.95%); Hyperliquid is at +0.00125%/h; and Bybit is also at +0.0100%/8h. Binance"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2105959276690940098",
+   "date": "2026-10-02",
+   "text": "ethereum:0x455e53cbb86018ac2b8092fdcd39d8444affc3f6 is forming a clear double top on the 4H chart 👀📉\n\nPrice rejected the $0.125 area twice, creating two similar highs and confirming a key resistance zone. The neckline sits around $0.110, with price currently testing this area. https://t.co/DICleP5Vwi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2105962020818592051",
+   "date": "2026-10-02",
+   "text": "ethereum:0xf34960d9d60be18cc1d5afc1a6f012a723a28811 is forming a clear double top on the 4H chart 👀📉\n\nPrice has tested the $7.55–$7.60 zone twice and faced rejection, creating a key resistance area. The neckline/support sits around $7.30.\n\nA clean break below $7.30 could https://t.co/bCgUfkXqaJ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 46,
+   "user": "stobixcom",
+   "url": "https://x.com/stobixcom/status/2105992154229162232",
+   "date": "2026-10-02",
+   "text": "📈 $ETH to $10,000?\n\nArthur Hayes says Ethereum remains undervalued and expects it to reach $10K by the end of 2026 👀\n\nTom Lee believes that target may actually be conservative - predicting ETH could reach $10K or higher within the next 12 months.\n\nHere’s what’s supporting the https://t.co/ZzLG6l0cnc"
+  }
+ ]
+}

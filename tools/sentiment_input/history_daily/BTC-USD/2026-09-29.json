@@ -1,0 +1,219 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-29T00:00:00Z",
+ "end": "2026-09-30T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "KiaraFX_Gold",
+   "url": "https://x.com/KiaraFX_Gold/status/2104868411385717172",
+   "date": "2026-09-29",
+   "text": "BTCUSD | 4H SETUP — KEY BREAKOUT ZONE\n\nBitcoin is holding around 83,780 after bouncing from the 82,700–82,900 support area. The recovery is building, but bulls need confirmation above 84,300–84,500 to strengthen the upside move.\n\nBULLISH: Break &amp; hold above 84,500 → recovery https://t.co/JS6tHavuF9"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2104808952844177689",
+   "date": "2026-09-29",
+   "text": "Macro Observatory Week 40 Tuesday Briefing\n\nMonday's telemetry delivered a structural confirmation with the S&amp;P 500 suffering a Flash Flush targeting an Emerging Bear Breakdown; the speculative crypto chimney collapsing into single-digit daily velocity; precious metals entering"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 38,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2104751356154200089",
+   "date": "2026-09-29",
+   "text": "People’s psychology is interesting.\n\nThey believe Bitcoin can reach $160K–$165K — only around 32% above the previous ATH, which is also within the range many are targeting.\n\nBut at the same time, they refuse to consider that Bitcoin could form a bottom relatively close to the https://t.co/xIk3SB6Ikn"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2105072308297814132",
+   "date": "2026-09-29",
+   "text": "#BITCOIN \n\n#Bitcoin printed a long-range spinning top today as we continue to monitor price action within the developing bull flag. \n\nThe broader structure remains bullish, with price holding within a strong uptrend and the market still on bull-flag breakout watch. There are some https://t.co/qoDrjxnKXZ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "ShedrackGreen",
+   "url": "https://x.com/ShedrackGreen/status/2104959955056939143",
+   "date": "2026-09-29",
+   "text": "Bitcoin’s latest move is creating a bull-vs-bear debate.\n\nBTC recently pushed above $87,000 before pulling back toward $83,000, and analysts interpret the move differently. \n\n🐻 Bearish view: https://t.co/wZPfMUXM2V analyst Adam says the rally looks more like a bear-market https://t.co/fXLDNFdSOm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 23,
+   "user": "CoinTabNews",
+   "url": "https://x.com/CoinTabNews/status/2105020415860985901",
+   "date": "2026-09-29",
+   "text": "Bitcoin is heading into its best Q3 in eight years, but the usual Uptober optimism is facing some pushback.\n\nSlowing momentum, rising exchange reserves, and a looming bearish MACD crossover suggest October could open weaker than expected.\n\nKey levels: $80K downside, $85K upside. https://t.co/xJRu2BSjPt"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 15,
+   "user": "Badonxy",
+   "url": "https://x.com/Badonxy/status/2104912789693460600",
+   "date": "2026-09-29",
+   "text": "🚨 BTC UPDATE 🚨\n\n₿ BTC: ~$84.2K\n\n🟢 Bullish: 75%\n🔴 Bearish: 25%\n\nHolding $83K could support further upside. 🚀\n\n⚠️ Scenario only, not financial advice.\n\nBullish or Bearish? 👇\n\n#BTC #Bitcoin #CRYPTOCLARITYACT"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 55,
+   "user": "Aria_BNB_1",
+   "url": "https://x.com/Aria_BNB_1/status/2104849377294700819",
+   "date": "2026-09-29",
+   "text": "$BTC\n\nBitcoin looks like it’s starting to lose momentum near the expected local top.\n\nWe could still see one more push toward the $85.5K area, potentially forming a bearish retest. From there, I’ll be watching for a move toward the downside liquidity.\n\nMy current expectation is https://t.co/1NEcyYl8NV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 25,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2104748824187089225",
+   "date": "2026-09-29",
+   "text": "$BTC This is how Bitcoin’s long-term curve has been developing.\n\nWith each cycle, both the upside and downside impulses have gradually decreased in magnitude. Bitcoin continues to make new ATHs, but each cycle’s expansion is becoming smaller than the previous one. At the same https://t.co/8WDJorwi2B https://t.co/MsKlgBD3Nh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "signalboatcom",
+   "url": "https://x.com/signalboatcom/status/2104848222879363366",
+   "date": "2026-09-29",
+   "text": "Bitcoin is currently experiencing downward pressure, with recent price action indicating a corrective structure.\n\n- Bitcoin reached a multi-day low, with recent positive ETF inflows totaling $31M, the lowest in recent weeks.\n- Immediate support is identified between $82,500 and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "TradingParrot",
+   "url": "https://x.com/TradingParrot/status/2104849905617387764",
+   "date": "2026-09-29",
+   "text": "Bitcoin Bull Flag: Why $88,000 Is The Trap\n\nWatch now 👉 https://t.co/zYZJEcMTlB\n\nBitcoin is carving out a double bottom near $82K-$83K, fueling a bull flag with upside targets toward $87,500, the $88K-$90K golden pocket and even $95K-$96K if shorts keep piling in — but a failure https://t.co/qXXaxiBHmv"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 79,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2104779350210138392",
+   "date": "2026-09-29",
+   "text": "Crypto rejection at 9% does not scare me. OTHERS.D tagged 9% on Monday, closed 1% lower, and is showing bearish divergence, but it remains above the TBO cloud with the slow line curling up. I see a pullback toward 8.3% as a broad buy-the-dip signal, while a wick or close above https://t.co/dewOASO6kE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "CryptoLab_1",
+   "url": "https://x.com/CryptoLab_1/status/2105043445190361207",
+   "date": "2026-09-29",
+   "text": "$BTC X Traders Sentiment · 29 Sep\n\nSlightly more bearish than bullish, and only by a nose. One camp wants a sweep under the lows. The other calls this range a polite bullish backtest. Bitcoin picked option three: stand in the hallway and charge rent.\n\nAbout 70 recent trader https://t.co/QaxmvElfM8"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2104986075592577317",
+   "date": "2026-09-29",
+   "text": "🚨 $BTC ALERT: Bitcoin traders position for $90K+ calls as ETFs see eight-day inflow streak\n\n🟢 Bullish: 68%\n• Eight consecutive days of spot Bitcoin ETF net inflows totaling roughly $2.39 billion, the largest weekly haul since October 2025\n• Cumulative net inflows of"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105016560918372469",
+   "date": "2026-09-29",
+   "text": "🚨 $BTC ALERT: CryptoQuant says bitcoin correction could be near as traders’ unrealized profit hits 21-month high\n\n🟢 Bullish: 40%\n• Close above the 365-day moving average confirmed a new bull market\n• Bitcoin Bull Score Index stood at an extremely bullish 90 out of 100\n• A"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "SignalxBinance",
+   "url": "https://x.com/SignalxBinance/status/2104793334405554269",
+   "date": "2026-09-29",
+   "text": "My recent market look paints a cautious picture, largely driven by macro. Global equities struggle, hitting a one-week low, fueled by rising oil (Brent up 2nd day) and increased Fed rate hike bets ahead of Wednesday's PCE inflation data. This risk-off sentiment generally doesn't https://t.co/F1wGX8FkeU"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2104922984787910729",
+   "date": "2026-09-29",
+   "text": "🚨 $BTC ALERT: Bitcoin reclaims $84k as ETF inflows and strategy buying counter profit-taking\n\n🟢 Bullish: 65%\n• BTC climbed back above $84,000 and traded around $84,300, within reach of $85,000\n• US spot Bitcoin ETFs posted an eighth consecutive inflow day and about $2.4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2104898016746643487",
+   "date": "2026-09-29",
+   "text": "⚠️ Bitcoin Price Prediction: Big Players Are Buying $BTC and $ETH, but Is This a Long Trap?\n\nStrategy recently bought Bitcoin, and BlackRock is now reported to be buying too. Most traders will read this as \"the bull run has started.\" Here's how I read the game 👇\n\n1️⃣ Big players https://t.co/oMFbvcUfjG"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Web3insightsio",
+   "url": "https://x.com/Web3insightsio/status/2104969218206605384",
+   "date": "2026-09-29",
+   "text": "₿ Bitcoin has historically outperformed the S&amp;P 500 during major bull markets.\n\nAnd if history offers any clues, the next cycle could bring another period of significant outperformance.\n\nThe key is the breakout.\n\nIf BTC turns decisively bullish, history suggests the potential https://t.co/gsN0DEijqJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 57,
+   "user": "CanarinhoFNC",
+   "url": "https://x.com/CanarinhoFNC/status/2104883615964213424",
+   "date": "2026-09-29",
+   "text": "GOLD has been the victim of a stronger dollar + higher yields  \n\nGlobal equities and Bitcoin have not broken their broader trends the way gold has.  \n\nUntil early August the setup looked constructive: a bull flag after the sharp ignition that followed Scott Bessent’s unorthodox https://t.co/mgndT6Jleg"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2104993376361697291",
+   "date": "2026-09-29",
+   "text": "🚨 $BTC ALERT: CryptoQuant warns of potential Bitcoin correction as profits peak\n\n🟢 Bullish: 38%\n• Exchange inflows remain relatively low, limiting signs of mass selling onto exchanges\n• CryptoQuant framed conditions as a bullish cooldown rather than a confirmed shift into a"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 23,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2104921126920986793",
+   "date": "2026-09-29",
+   "text": "Perma bulls, before commenting on or insulting my bearish posts or my $32K target for this cycle, I suggest you take a step back and ask yourself a simple question:\n\nIf the previous bull cycle produced roughly a +710% move, why should the current cycle suddenly deliver only a https://t.co/147hH2ksgb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 29,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2104911132347584938",
+   "date": "2026-09-29",
+   "text": "$BTC This is what I was referring to in the quoted post.\n\nIt also explains an important piece of Bitcoin’s long-term logic: every bearish cycle becomes the foundation for the next major bullish cycle.\n\nEach deep correction creates enough room for Bitcoin to fight against the https://t.co/RzKmeZQjQp https://t.co/mOirLY7Oi9"
+  }
+ ]
+}

@@ -1,0 +1,228 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-01T00:00:00Z",
+ "end": "2026-10-02T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2105553710625542249",
+   "date": "2026-10-01",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟮 / 𝟱 (𝗹𝗲𝗮𝗻𝗶𝗻𝗴 𝗯𝗲𝗮𝗿𝗶𝘀𝗵) - 𝗖𝗿𝘆𝗽𝘁𝗼 𝗺𝗮𝗿𝗸𝗲𝘁: - One tweet sees three straight green months as proof of a new bull market → bullish cue. - Competing tweet argues the bull market hasn’t started and current optimism is misplaced https://t.co/xKSeJGxp06"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105660208596852784",
+   "date": "2026-10-01",
+   "text": "🔍 $ETH treads water with a quiet -0.6% 24h dip—will the bears tighten or flip the script?\n\n- 1h structure is clearly bearish, with price sitting at 2687 and lower highs/lower lows in play; this puts my bias to the downside unless the structure flips above 2721\n- This is a https://t.co/KGgYei3Qbr"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105648690178232432",
+   "date": "2026-10-01",
+   "text": "📈 $BTC down 2.2% in 24h but structure says bulls are quietly gearing up for the next move\n\n- my bias remains bullish here on the 1h, with price holding above the most recent HL at 83136.6 and structure fully aligned across 1h/D/W timeframes 📊\n- expecting a push higher from this https://t.co/weURPe0YCL"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 88,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2105481415555244263",
+   "date": "2026-10-01",
+   "text": "Bitcoin’s flip-flopping is the setup I want for an OTHERS.D breakout, not proof that the trend has failed. All four TBO Cloud lines still point up, while the one clear warning is a low-volume bearish on-balance-volume cross below its 21 SMA. Even a roughly 2% pullback to the https://t.co/F8PQD2dzOH"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105570689868562837",
+   "date": "2026-10-01",
+   "text": "⚖️ $BCH lags BTC with a mild -0.7% slide—bullish structure intact, but is the divergence a red flag?\n\n- my bias remains cautiously bullish short-term for BCH #BCHUSDT.P, as the 1h structure is still confirmed bullish (higher highs/higher lows) and price holds above the key 303.54 https://t.co/Mlgcbj7xgf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 63,
+   "user": "chroe_trades",
+   "url": "https://x.com/chroe_trades/status/2105619918058107216",
+   "date": "2026-10-01",
+   "text": "$NEAR\n\nPrice is going exactly where we wanted it to go.\n\nThe trade is already up more than 1R.\n\nI’m cancelling my second entry and moving my stoploss slightly above the recent high wick. This allows me to cut the majority of my remaining risk while keeping the trade open for the https://t.co/uYfPmlIHbY https://t.co/ivHNxqoiPe"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105587853967180205",
+   "date": "2026-10-01",
+   "text": "✨ $BTC steady at +0.5% 24h—quiet calm before the next bullish move unfolds\n\n- my bias remains bullish here on BTC in the 1h, with structure aligned bullish across the 1h, daily, and weekly, though the short-term setup is quieter with price consolidating below the last high 🟢\n- https://t.co/lcFoclcKQ3"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105530747322822883",
+   "date": "2026-10-01",
+   "text": "✅ $NIGHT 5x volume on the 5.1% 15m spike is continuation inside the uptrend\n\n- my bias is bullish here — structure, daily, weekly and BTC are all aligned, so this 15-minute spike is continuation inside a confirmed uptrend, not a bull trap\n- I expect a digestion pullback first https://t.co/HVEf4AFV34"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "SectorZeroCap",
+   "url": "https://x.com/SectorZeroCap/status/2105763695989305488",
+   "date": "2026-10-01",
+   "text": "SECTOR ZERO DAILY DISPATCH | Oct 1, 2026\nCommodities Catch a Bid, Equities Whip Around ISM, &amp; NFP Eve Chop.\n\n■ THE BATTLEFIELD\nThursday’s ISM Manufacturing PMI threw Equities ($MNQ, $MES) into a massive two-way volatility blender, splitting trend filters and leaving https://t.co/9onq86HZuK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "darthvalidator_",
+   "url": "https://x.com/darthvalidator_/status/2105678123865890890",
+   "date": "2026-10-01",
+   "text": "Road to $3M | Month 3 Recap\n\nI decided to take my investment portfolio live for this next bull cycle to document my journey, not only for anyone who finds value in my research but also as a diary for myself. This is not financial advice.\n\nSeptember recap: +$35,873.67\n\nLockout https://t.co/kq3gOAQmEX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FF__Crypto",
+   "url": "https://x.com/FF__Crypto/status/2105635524719292880",
+   "date": "2026-10-01",
+   "text": "ethereum:0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c 6900 is setting up nicely for the bull run and here’s why…\n\nThe two most popular metas right now are tokenised stocks + meme coins (also AI but that doesn’t apply here). \n\nSPX6900 is the meme coin to represent the S&amp;P500 as a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "FF__Crypto",
+   "url": "https://x.com/FF__Crypto/status/2105635708991897967",
+   "date": "2026-10-01",
+   "text": "ethereum:0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c 6900 is setting up nicely for the bull run and here’s why…\n\nThe two most popular metas right now are tokenised stocks + meme coins (also AI but that doesn’t apply here). \n\nSPX6900 is the meme coin to represents the S&amp;P500 as a"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 40,
+   "user": "carsoncantwinn",
+   "url": "https://x.com/carsoncantwinn/status/2105703076459909370",
+   "date": "2026-10-01",
+   "text": "Last night we got another interesting development for solana:H8WTvo3ZXSYHJAcYqzCforbG8coR1FDAX2kHFfqHBAGS .\n\nThe token officially showed DEX Paid on DexScreener, meaning the team paid to upgrade the token’s DexScreener profile and establish its branding, socials, and information"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "NarcoLunatic",
+   "url": "https://x.com/NarcoLunatic/status/2105694527822418300",
+   "date": "2026-10-01",
+   "text": "if the President can literally turn your ticker into official U.S. government language and the obvious memecoin STILL can’t hold $50M...\n\nthe trenches might actually be fucking broken.\n\nthink about how insane that is.\n\n“SI” becomes official government terminology.\n\nTrump is https://t.co/wdkdVvmW2j"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "plutosends",
+   "url": "https://x.com/plutosends/status/2105770545547522391",
+   "date": "2026-10-01",
+   "text": "Good lore on $RSTR \n\nIt says:\n \"Get ready for the bull market? If you missed Doge Coin moon ride in the last bull run, make sure you get some Ondori before the next one. #dogecoin #ondoricoin $rstr \"\n\nI believe this is super undervalued at the moment, im in. https://t.co/tu0jCUDISj"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "indratan655",
+   "url": "https://x.com/indratan655/status/2105552715866882146",
+   "date": "2026-10-01",
+   "text": "If you try to turn $10 into $100,000 with this \"Super Intelligence\" coin, it might be a once-in-a-lifetime opportunity. Your downside risk is 100% (meaning the $10), but your upside potential is 10,000% (meaning $100,000). Give it a try—you can thank me later."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "SatsSculptor",
+   "url": "https://x.com/SatsSculptor/status/2105615451879346434",
+   "date": "2026-10-01",
+   "text": "Looks like robinhood chain is forming a wave 2 correction bottom at the moment. Probably a good time to accumulate any conviction bags you have your eye on with a team of solid builders. Wave 3 will be larger than the wave 1 we experienced. Make of that what you will. Many larp"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105760546196771074",
+   "date": "2026-10-01",
+   "text": "📉 $XPL 0.40% sweep above highs just feeds the downtrend\n\n- my bias is bearish here — the 15m wick through ~0.09636 that closed back below is a liquidity grab into the last LH, and it fuels the 1h bearish structure rather than reversing it\n- this is a counter-trend short versus https://t.co/FDEAgla4jX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105510499102159131",
+   "date": "2026-10-01",
+   "text": "🧐 $AXTI diverging from BTC on 4h while barely +0.9% — counter-trend fade in play\n\n- my bias is bearish here on the 1h while structure stays below the 83.98 swing high — this is a counter-trend fade versus the bullish daily and bullish BTC backdrop, so I am demanding a clean https://t.co/rsLVR0yJPs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2105639209692188784",
+   "date": "2026-10-01",
+   "text": "#EU #regulators say they need expanded authority to oversee the #crypto #market effectively. The watchdogs argue that current frameworks lack sufficient power to monitor cross-border risks, enforce compliance, and protect retail investors as digital asset adoption grows across https://t.co/MAqLDHthd3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105657174361821259",
+   "date": "2026-10-01",
+   "text": "🚨 enjincoin:native ALERT: Enjin Coin to Hold Live Stream on X on October 1st\n\n🟢 Bullish: 50%\n• Enjin is hosting a scheduled weekly live stream that could increase community engagement around its Web3 and gaming products\n\n🔴 Bearish: 50%\n• The stream topic focuses on why"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2105640530226954285",
+   "date": "2026-10-01",
+   "text": "#Crypto losses from major #hacks reached $766.49M across 55 incidents in September 2026, according to PeckShield. #Exploits surged 462% compared to August's $136.3M total, making it one of the heaviest months for security breaches this year\n\n#MarketUpdate #StockMarket #USA https://t.co/PKuLQcmmCN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105722528677122061",
+   "date": "2026-10-01",
+   "text": "↘️ $ETH +0.7% holds but 1h bias stays bearish below structure\n\n- my bias is bearish here on the 1h while price holds below the last lower high at 2721.39 — this is a counter-trend pullback inside bullish daily/weekly structure and a bullish BTC tape, so I only take it with a https://t.co/bRZunkDmVk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2105642758664822945",
+   "date": "2026-10-01",
+   "text": "#MetaMask reported a #security incident affecting part of its infrastructure, though no direct threat to user #wallets was identified. As a precaution, the team began exiting affected validators from non-custodial staking, including some servicing Lido. No user action is required https://t.co/IRMgUHfNOE"
+  }
+ ]
+}

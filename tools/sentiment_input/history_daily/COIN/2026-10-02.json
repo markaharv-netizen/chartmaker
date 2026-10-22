@@ -1,0 +1,210 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-02T00:00:00Z",
+ "end": "2026-10-03T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105968606802542940",
+   "date": "2026-10-02",
+   "text": "⚠️ $ICP sweeps below 3.27 then fades — bearish grab, not reversal, more downside ahead\n\n- my bias is bearish here on the 1h: the 15m wick through 3.27 and close back above is a sell-side liquidity grab against the local downtrend, and I treat it as fuel for continuation lower, https://t.co/4X0GaeniV7"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106055175408439527",
+   "date": "2026-10-02",
+   "text": "❗ $STXX -10.5% on BTC divergence — continuation dump, not a dip to buy\n\n- my bias is bearish here on the 1h — structure already printed a clean breakdown with lower highs and a new low under 895.42, so I treat this as a continuation dump, not a buy-the-dip\n- this 1h bearish read https://t.co/9QjACzOMyY"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105940818997526826",
+   "date": "2026-10-02",
+   "text": "📈 $DRAM diverging from BTC at +3.1% — structure looks aligned for more upside\n\n- my bias is bullish here — 1h structure is already printing HH/HL, daily is aligned bullish and BTC is bullish, so this is not a counter-trend call; weekly is still ranging so I still want a clean https://t.co/5Uv0w207zs"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 18,
+   "user": "Abdullah1125655",
+   "url": "https://x.com/Abdullah1125655/status/2105863699940655339",
+   "date": "2026-10-02",
+   "text": "why I am bullish for $DASH crypto ?\n1.Every technical setup say Only upside move , most technical setup are long time (1M,3M) \n2.previous coin season right now .\n3.Crypto bull run start now. https://t.co/c2yFMi4IQk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105870407865680125",
+   "date": "2026-10-02",
+   "text": "👀 $CYS 3.6% 15m lift on 1.6x vol — 1h structure bullish, waiting on the dip\n\n- my bias is bullish on the 1h structure here, but this is a counter-trend rally against daily and weekly bearish structure, so I demand a proper pullback and a lower-timeframe shift before any long — I https://t.co/tpGFqsMLIk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105833622364135492",
+   "date": "2026-10-02",
+   "text": "📊 $IMX 14.6x volume confirms 3.1% move as structure stays aligned bullish\n\n- my bias is bullish here — structure is aligned bullish on 1h, daily and weekly, and BTC is bullish too, so this is not a counter-trend chase\n- the 15-minute spike with 4x+ volume looks like https://t.co/Xg18KPjs3M"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "KoMin6428",
+   "url": "https://x.com/KoMin6428/status/2105930395363741962",
+   "date": "2026-10-02",
+   "text": "1M timeframe $STRK coin doji is bullish\nNow  1M timeframe is doji “Where are you going?” $mantra bullish (or)bearish????? https://t.co/5HxxFiWle1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AUSTINXRPcryo",
+   "url": "https://x.com/AUSTINXRPcryo/status/2106005431059452040",
+   "date": "2026-10-02",
+   "text": "🚩 Ethereum and XRP sentiment has turned sharply negative, with bullish-to-bearish comment ratios falling to 0.89 for $ETH and 0.67 for $XRP, per Santiment\n#coin #usdt #XRPHolders"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 61,
+   "user": "ynmontyy",
+   "url": "https://x.com/ynmontyy/status/2106172104517312663",
+   "date": "2026-10-02",
+   "text": "When u guys see me deploy a coin do u feel:\n\na) very happy and excited\n\nb) scared\n\nc) ready to get bullish\n\nd) bearish\n\nlet me know and why!"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 20,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2106126031879111162",
+   "date": "2026-10-02",
+   "text": "#Trump reportedly consulted xAI's #Grok before ordering the capture of Nicolas #Maduro, asking how Venezuelans would react to his removal. Bullish on #AI Trump labeled the sector bigger than the internet, opposed heavier regulation, and officially renamed AI to Super Intelligence https://t.co/v8G4Sz9dEz"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 8,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106116612940091506",
+   "date": "2026-10-02",
+   "text": "⚠️ $ADA 4h BTC divergence flags clear relative weakness at -3.4%\n\n- my bias is bearish here on the 1h — structure already printed lower highs after the dump through 0.2438, and that 4h coin/BTC lower-high vs a USDT higher high is classic relative weakness while BTC stays bullish https://t.co/skxTdJa2EN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2106124675067834686",
+   "date": "2026-10-02",
+   "text": "The #EU allocated 47.5M euros to the #Quantum Internet Alliance to build a functional quantum #network prototype over 42 months. The project aims to link two metropolitan quantum networks across long distances using fiber optics and quantum repeaters\n\n#MarketUpdate #StockMarket https://t.co/s46v9wf99O"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105944047760154717",
+   "date": "2026-10-02",
+   "text": "🚨 $SOL ALERT: Fiserv Puts Stablecoin Banking Platform Live With North Dakota Roughrider Coin\n\n🟢 Bullish: 74%\n• Fiserv’s digital-asset platform is live with financial-institution clients, and Roughrider Coin is the first production use case\n• The dollar-backed coin uses"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2106127338564165809",
+   "date": "2026-10-02",
+   "text": "The #SEC proposed rules allowing registered advisers and funds to self-custody #crypto or use state-chartered trusts under specific conditions. Aimed at easing restrictions for broader investment strategies, the proposal now enters a 60-day public comment period before potential https://t.co/J0dviTg2Rp"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105980499856331055",
+   "date": "2026-10-02",
+   "text": "📉 $WDCB 3.9x volume dump reads as distribution not reversal\n\n- my bias is bearish here — 1h structure is already in LH/LL and daily is bearish too, so this 4.39x volume dump looks like continuation/distribution, not a finished bottom, even with RSI at 18.4\n- the move is https://t.co/Wi26D6JDHd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2106128689826037879",
+   "date": "2026-10-02",
+   "text": "#Binance is using the reverse solicitation loophole to serve #EU clients via an Abu Dhabi entity without a #MiCA license. Regulators including ESMA, France, Germany, and Greece are now probing the exchange to see if the exemption is being misused to bypass compliance across the https://t.co/IkAIAjFMMx"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105814047849316698",
+   "date": "2026-10-02",
+   "text": "📉 $PUMP BTC divergence at -0.8% — lower highs already forming, fade the move\n\n- my bias is bearish here on the 1h — structure is already printing lower highs after the 0.006096 swing, so I treat this as a counter-trend pullback inside a still-bullish daily, weekly, and BTC https://t.co/s7aY587Plo"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105833587320754386",
+   "date": "2026-10-02",
+   "text": "📉 $MINIMAX 10.8x volume on the -3.5% dump screams distribution, not reversal\n\n- my bias is bearish here — this 1h structure is already in lower highs / lower lows, daily agrees, and the spike dump with 12.8x volume looks like distribution, not a finished flush\n- BTC is still https://t.co/xUL255vEow"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106019402436980860",
+   "date": "2026-10-02",
+   "text": "⚠️ ️ $RDDT 10.2x volume spike into -2.9% 15m selling reads like distribution from supply\n\n- my bias is bearish here — 1h and daily structure already flipped lower, and that 7.5x+ volume dump from the 151–154 supply cluster reads as distribution, not a one-off panic wick\n- I https://t.co/oKM1tUqET8"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106117515789127782",
+   "date": "2026-10-02",
+   "text": "🐻 $UNI diverging from BTC on 4h while down 4.4% — sellers still pressing\n\n- my bias is bearish here on the 1h: last confirmed structure is LH at 9.186 and price is already trading below the 8.850 swing-low liquidity edge, so I expect sellers to keep pressing first toward 8.618 https://t.co/XG0VvLLFue"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2105965454992793950",
+   "date": "2026-10-02",
+   "text": "📉 $WIN slips 6% on 112x volume — this selling pressure looks heavy\n\n- my bias is bearish here on the 1h — this is a counter-trend short inside bullish daily/weekly structure and a bullish BTC trend, so I demand a clear liquidity sweep and a lower-timeframe shift before I take it https://t.co/Dcjm88dkDk"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106118265709777299",
+   "date": "2026-10-02",
+   "text": "↘️ $BMNR 4h BTC divergence with -2.1% slide shows sellers firmly in control\n\n- my bias is bearish here on the 1h — structure is already printing lower lows after the 28.21 swing, and the 4h coin/BTC lower-high divergence (USDT HH vs BTC-ratio LH) plus seller-dominant taker flow https://t.co/1ZDpXd4EjD"
+  }
+ ]
+}

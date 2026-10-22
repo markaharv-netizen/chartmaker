@@ -1,0 +1,75 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-29T00:00:00Z",
+ "end": "2026-09-30T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2104808952844177689",
+   "date": "2026-09-29",
+   "text": "Macro Observatory Week 40 Tuesday Briefing\n\nMonday's telemetry delivered a structural confirmation with the S&amp;P 500 suffering a Flash Flush targeting an Emerging Bear Breakdown; the speculative crypto chimney collapsing into single-digit daily velocity; precious metals entering"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "DyorNetCrypto",
+   "url": "https://x.com/DyorNetCrypto/status/2104737855771717760",
+   "date": "2026-09-29",
+   "text": "ethereum:0xd33526068d116ce69f19a9ee46f0bd304f21a51f - 1d\nBias: Bullish 🟢\nTrend Score: 41/100 | Confidence: 8.1/10\n\nRPL/USDT is trading at $1.9430, showing a bearish shift with a Trend Score of 54/100 and a setup confidence of 8.1/10. The hidden bearish divergence in RSI https://t.co/HYyllMtllY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2104898016746643487",
+   "date": "2026-09-29",
+   "text": "⚠️ Bitcoin Price Prediction: Big Players Are Buying $BTC and $ETH, but Is This a Long Trap?\n\nStrategy recently bought Bitcoin, and BlackRock is now reported to be buying too. Most traders will read this as \"the bull run has started.\" Here's how I read the game 👇\n\n1️⃣ Big players https://t.co/oMFbvcUfjG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "thaianhoang",
+   "url": "https://x.com/thaianhoang/status/2104940846235967876",
+   "date": "2026-09-29",
+   "text": "ETH Options: Short-term defensive, long-term still intact\n\nEthereum options flow last week was relatively small and tactical, not a major wave.\n\nMost volume clustered in short-dated puts just below spot. On Sep 25, open interest in the Sep 25 $2,600 puts rose by 7,900 ETH. The https://t.co/SyR2HsN9rn"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 62,
+   "user": "mayaivanoff",
+   "url": "https://x.com/mayaivanoff/status/2104740400028107104",
+   "date": "2026-09-29",
+   "text": "🚨 ethereum:0x4a220e6096b25eadb88358cb44068a3248254675  : THE NEXT BIG BREAKOUT OR ANOTHER BULL TRAP? 👀\n\nFrom $372 to $222.58. A 40% correction after an explosive rally.\n\nEveryone is watching the upside, but my 1H + 15m charts have identified an interesting confluence.\n\n🎯 https://t.co/xMqapxrPAZ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Kryptoalpha4",
+   "url": "https://x.com/Kryptoalpha4/status/2105011665356152953",
+   "date": "2026-09-29",
+   "text": "📊 Elliott Wave Scenario\n\nWave 1 – Impulse Move Up\n\nAccording to Elliott Wave Theory, a five-wave impulse move to the upside is followed by a three-wave corrective move.\n\nThe market has already experienced a strong uptrend and reached the top of the first major bullish wave – https://t.co/L1s02FnXGK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "MarzOblivion",
+   "url": "https://x.com/MarzOblivion/status/2105059931111973098",
+   "date": "2026-09-29",
+   "text": "the downside is limited but the upside is infinite. ethereum:0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3"
+  }
+ ]
+}

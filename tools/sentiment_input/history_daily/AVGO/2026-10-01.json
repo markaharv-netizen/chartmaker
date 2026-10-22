@@ -1,0 +1,219 @@
+{
+ "symbol": "AVGO",
+ "start": "2026-10-01T00:00:00Z",
+ "end": "2026-10-02T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AVGO (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "StockXcapital",
+   "url": "https://x.com/StockXcapital/status/2105649304702783746",
+   "date": "2026-10-01",
+   "text": "🔍 Stock X – Key Levels to Watch Today\n🧭 $SPX / $QQQ / $SMH\n\nSPX Outlook: Daily gamma indicates a neutral/pinned structure with a slight bearish edge; trading inside a 7,723–7,652 macro channel.\n\nSPX Bullish Breakout Gate: Pre-market high rests at 7,709. A high-volume cross"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "koichi3694",
+   "url": "https://x.com/koichi3694/status/2105661526812295465",
+   "date": "2026-10-01",
+   "text": "I’ll pull the latest market chatter and price drivers, then draft five English Twitter-style takes plus a sector call.Not financial advice. Tape as of Oct 1, 2026. These are the five names dominating flow and page views among liquid large caps, not penny-stock gainers.\n\n1/ $MU —"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "TajVincent",
+   "url": "https://x.com/TajVincent/status/2105648408698445978",
+   "date": "2026-10-01",
+   "text": "📊 PRE-MARKET OUTLOOK &amp; KEY LEVELS — Thursday, October 1, 2026 (8:30 AM Eastern/NYSE)\n\n⚡ BEARISH accelerating into the open — overnight got MORE bearish. All three instruments BEARISH; $SPY/$SPXW High conviction, no TF divergence. Breadth −64 across the board. 18/18 leaderboard https://t.co/SgiR5rSIGl"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2105541138157334606",
+   "date": "2026-10-01",
+   "text": "Macro Observatory Week 40 Thursday Briefing\n\nWednesday's telemetry delivered a devastating structural verdict with the sovereign collateral dam entering a terminal failure as $TLT collapsed to near-absolute max compression Monthly; Dow Industrials and European equities breaking"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "ROR_Traders",
+   "url": "https://x.com/ROR_Traders/status/2105650943324811417",
+   "date": "2026-10-01",
+   "text": "$NVDA has a clean trigger for calls today. I'm still not sure a day trade is the best way to play it.\n\nPremarket plan 10/01\n\n$NVDA\nCalls above 230\n227.5 is an interesting level too\nHonestly, a swing looks like the better opportunity here\n\n$META\nUpside: 740, 750\nDownside: 715, 700"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "UrAvgStockGuy",
+   "url": "https://x.com/UrAvgStockGuy/status/2105485938122223840",
+   "date": "2026-10-01",
+   "text": "3 companies I like lots.\n$CRDO fighting the fib area, I think $225 is soon.\n$VRT this one actually looks really good here fighting at a fib resistance area, if holds could run back towards $300 I think beaten too much.\n$AVGO I think undervalued and forming a small bull flag."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2105663057108390139",
+   "date": "2026-10-01",
+   "text": "Tickers dominating X chatter right now:\n\n1. Rocket Lab $RKLB is up 1.6%\n\n🟢 Sentiment: 58% bullish, 6% bearish, 36% neutral\n\nRocket Lab surged after announcing its biggest Electron launch contract ever, a 20‑launch deal with Japan’s Synspective, and the approval of the $8 https://t.co/dabl3ptA49"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "xCortana_",
+   "url": "https://x.com/xCortana_/status/2105795692350615881",
+   "date": "2026-10-01",
+   "text": "Unusual Flow 10/1\n\nBullish Flow\n$MSTR 172.5C 10/23 $3.2M 80x ask\n$AVGO 352.5P 10/9 $1.9M 8.2x bid\n$INOD 100C 1/15/27 $800K 4.5x ask\n$STLA 5C 12/18 $757K 22.8x\n$CRCL 91.5P 10/16 $481K 166x bid\n\nBearish Flow\n$MCD 255P 10/16 $938K 2.1x ask\n$TSEM 210P 10/16 $339K 19.8x\n\n@VoluxAI_"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105737527038734484",
+   "date": "2026-10-01",
+   "text": "🚨 $MUSTOCK $AVGOSTOCK ALERT: Micron Earnings, Broadcom Deal Signal Shift in AI Trade\n\n🟢 Bullish: 42%\n• Weak jobs data may trigger a short-squeeze rebound in bonds and stocks\n• Early-session flows into tech giants, SPY, and QQQ are positive\n\n🔴 Bearish: 58%\n• Long-term U.S."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 16,
+   "user": "nightglasstrade",
+   "url": "https://x.com/nightglasstrade/status/2105641852103995658",
+   "date": "2026-10-01",
+   "text": "$AVGO \n\nYesterday saw a $1.7M bullish sweep selling the Oct. 9 $352.5 puts — a clear sign of confidence around this area.\n\nKey support sits right below at 347. \n\nIf that holds would look for 358–360 first, then 366.68. Above that, 385.89 and 407 are the bigger upside targets. https://t.co/yHME8bIQzM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Au4Ryan",
+   "url": "https://x.com/Au4Ryan/status/2105707553649029356",
+   "date": "2026-10-01",
+   "text": "Broadcom isn’t just an “AI chip stock.” It’s a bet that hyperscalers will keep designing their own silicon—and keep relying on Broadcom to build and connect it.\n\nAt ~$348 (Oct. 1 close), Morningstar’s $650 fair-value estimate implies ~87% upside. But that’s an analyst estimate, https://t.co/hWV9X6y54z"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "pf02101963",
+   "url": "https://x.com/pf02101963/status/2105597411766698396",
+   "date": "2026-10-01",
+   "text": "11:16 SWITZERLAND 🇨🇭 | 04:16 CME / CHICAGO 🇺🇸\n\nNQ / NASDAQ — FIRST REGIME RADAR\n1 OCT 2026\n\nMAIN CONCLUSION:\nMicron strengthened the AI/semiconductor earnings story, but NQ is still trading against a very hostile rates backdrop: the US 10Y is above 5.3% and the 30Y is close to"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "pf02101963",
+   "url": "https://x.com/pf02101963/status/2105596810563584325",
+   "date": "2026-10-01",
+   "text": "11:16 SWITZERLAND 🇨🇭 | 04:16 CME / CHICAGO 🇺🇸\n\nNQ / NASDAQ — FIRST REGIME RADAR\n1 OCT 2026\n\nMAIN CONCLUSION:\nMicron strengthened the AI/semiconductor earnings story, but NQ is still trading against a very hostile rates backdrop: the US 10Y is above 5.3% and the 30Y is close to"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "thepuresignal",
+   "url": "https://x.com/thepuresignal/status/2105701950541197704",
+   "date": "2026-10-01",
+   "text": "Per @AsymmetricBets_, Anthropic's IPO prospectus shows up to $42B in convertible notes, roughly one-third of its $125.2B five-year TPU lease. The debt converts to equity.\n\nAnthropic is expected to become Broadcom's largest customer by 2027. The post highlights a bull case of"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "BabylonLedger",
+   "url": "https://x.com/BabylonLedger/status/2105744231901889011",
+   "date": "2026-10-01",
+   "text": "Broadcom just agreed to lend Anthropic up to $42B so Anthropic can lease… Broadcom's chips.\nBull case: it locks in a frontier lab as a multi-year TPU customer from 2027.\nBear case: the supplier is financing its own demand. That's not the cleanest kind of revenue.\nStock barely https://t.co/7ViArynUf8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "pf02101963",
+   "url": "https://x.com/pf02101963/status/2105595910189129783",
+   "date": "2026-10-01",
+   "text": "11:16 SWITZERLAND 🇨🇭 | 04:16 CME / CHICAGO 🇺🇸\n\nNQ / NASDAQ — FIRST REGIME RADAR\n1 OCT 2026\n\nMAIN CONCLUSION:\nMicron strengthened the AI/semiconductor earnings story, but NQ is still trading against a very hostile rates backdrop: the US 10Y is above 5.3% and the 30Y is close to"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "AsymmetricBets_",
+   "url": "https://x.com/AsymmetricBets_/status/2105689199655448874",
+   "date": "2026-10-01",
+   "text": "Per Anthropic's IPO prospectus: up to $42B in convertible notes, sized to ~1/3 of its $125.2B five-year TPU lease. \n\nThe debt can convert into Anthropic equity.\n\nWhat complicates things more is Anthropic is expected to become Broadcom's largest customer in 2027.\n\nBull read: https://t.co/jQugXKbGIp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "DeepEdgeInsight",
+   "url": "https://x.com/DeepEdgeInsight/status/2105789435061182518",
+   "date": "2026-10-01",
+   "text": "Everyone Gets an Agent. Who Gets Paid?\n\nAs we mentioned yesterday, we think always-on agents can extend the earnings runway for constrained memory and custom chips.\n\nOpenAI’s Dots, Meta’s Muse and xAI’s Grok Bot let people delegate more work without supervising every step.\n\nAn https://t.co/CwuAA5UVs5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JamesBo78032540",
+   "url": "https://x.com/JamesBo78032540/status/2105643936593117684",
+   "date": "2026-10-01",
+   "text": "🚨 $AVGO Traders: Are Market Makers Pining a 2-Day Breakout to $360+? Here is What GEX and Vanna Are Signaling 🚨\n​Broadcom ($AVGO) is trading at a critical nexus. While the surface chart looks like chop, the underlying institutional options flow is coiling for a definitive move https://t.co/2rk6Q9n4jY"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "StephanInvests",
+   "url": "https://x.com/StephanInvests/status/2105740799119913289",
+   "date": "2026-10-01",
+   "text": "I've decided to increase my position in $AVGO by purchasing a leap call expiring in Dec, 2028. \n\nBroadcom has been the second best investment in my portfolio, even after its recent 27% drawdown from its high, and I'm still very bullish in this company. The company has a great https://t.co/MaxXgdVjzn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "pf02101963",
+   "url": "https://x.com/pf02101963/status/2105589403875696813",
+   "date": "2026-10-01",
+   "text": "11:16 SWITZERLAND 🇨🇭 | 04:16 CME / CHICAGO 🇺🇸\n\nNQ / NASDAQ — FIRST REGIME RADAR\n1 OCT 2026\n\nMAIN CONCLUSION: Micron has strengthened the AI/semiconductor growth story, but the US 10Y above 5.3% and 30Y near 5.7% mean the bond market remains the biggest threat to NQ.\n\nKEY RISK:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "wsagentai",
+   "url": "https://x.com/wsagentai/status/2105795129353064694",
+   "date": "2026-10-01",
+   "text": "10/01/2026 Market Daily Summary\n\nStocks closed modestly higher, with the S&amp;P 500 snapping a losing streak, led by a surge in memory chips, while crude spiked on Middle East tensions and a weak Nike guide weighed on sentiment.\n\n💾 Movers\n\n- MU +2.38% to $1090.50 after guiding"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 22,
+   "user": "ValueSpectre",
+   "url": "https://x.com/ValueSpectre/status/2105746770424635726",
+   "date": "2026-10-01",
+   "text": "Thinking about increasing my $AVGO position 👀\n\nEPS estimates continue to rise: $3.32 → $3.83 → $4.08. The stock trades around 20x forward P/E.\n\nRisks include customer concentration and lower AI hardware margins, but cash generation and AI growth are hard to ignore.\n\nIs $AVGO https://t.co/cBB9KQpzfU"
+  }
+ ]
+}

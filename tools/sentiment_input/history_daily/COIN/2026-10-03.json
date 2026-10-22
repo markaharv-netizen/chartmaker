@@ -1,0 +1,219 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-03T00:00:00Z",
+ "end": "2026-10-04T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "richardnhsu",
+   "url": "https://x.com/richardnhsu/status/2106208150672073200",
+   "date": "2026-10-03",
+   "text": "I think $RAY is still extremely undervalued here.\n\nYou can see that revenue has been exploding over the last 3 weeks, largely thanks to working with solana:6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx.\n\nThis pushed the mcap/rev ratio to be below 10x when the ratio bounced between https://t.co/vvTYiEyqTu"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106296628629979491",
+   "date": "2026-10-03",
+   "text": "🚨 $PUMP lags BTC with a 7% slide—lower highs signal this bear trend isn’t done yet\n\n- my bias is bearish here: the 1h market structure shows clear lower highs and lower lows, and price remains below the key 0.005777 structural level, so the trend is down unless reclaimed 🚩  \n- https://t.co/jeyJyK69G0"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2106400046728327511",
+   "date": "2026-10-03",
+   "text": "BTC Single-Coin Histogram Analysis\nOverall Bias: Bullish\n\nTrue Retail Positioning (Longs vs Shorts): Retail long accounts (blue) sit heavily suppressed near historic floor levels (2nd percentile), while retail short accounts (orange) remain crowded at peak levels (98th https://t.co/6Wq9spCb8S"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "CryptoLab_1",
+   "url": "https://x.com/CryptoLab_1/status/2106438550442983499",
+   "date": "2026-10-03",
+   "text": "$BTC X Traders Sentiment · 3 Oct 2026\n\nX timeline check: traders are still mostly bull-coded today — not a soft coin flip, a clearer lean after filtering the spam bots.\n\n~198 recent $BTC posts → about 40 bullish vs 14 bearish.\n\nBulls: cycle-bottom cosplay (inverse H&amp;S / “bottom https://t.co/xtSL8ceJs6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106485151563682035",
+   "date": "2026-10-03",
+   "text": "🔥 $TAO holds firm with a 4.6% climb despite 4h bearish divergence—buyers still in control today.\n\n- my bias is bullish on TAO here, as the 1h, daily, and weekly structure are all firmly bullish and aligned with BTC's own uptrend, so momentum remains with the buyers despite the https://t.co/xmW6xw0vCI"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106322718991712457",
+   "date": "2026-10-03",
+   "text": "📈 $BTC down 2.1% in 24h but the structure screams higher—bulls aren’t done yet\n\n- my bias is bullish here as the 1h structure remains in a confirmed uptrend, with both daily and weekly trends also aligned to the upside 📈\n- price is consolidating just above the latest higher low https://t.co/2pgYLwZ1Wv"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106343036913385696",
+   "date": "2026-10-03",
+   "text": "💹 $QI up 3.1% in 15m with 5x volume spike—real accumulation or just the start?\n\n- my bias is bullish here while price holds above 0.002488, as the 1h, daily, and weekly structure are all aligned to the upside, and this pump is accompanied by a major volume anomaly suggesting https://t.co/jIZOuOlKDN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106454105002590254",
+   "date": "2026-10-03",
+   "text": "📈 $ETH steady at +0.4% 24h—structure holds strong, bulls still in control today\n\n- my bias is bullish here as the 1h, daily, and weekly market structure all remain intact to the upside, with price currently at 2684.61, safely above the recent higher low at 2675.95 and still https://t.co/L2fR1my09a"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106368392244384030",
+   "date": "2026-10-03",
+   "text": "🔥 $MAGMA breaks volume norms with 2.4x spike and quick 2.6% lift—bullish buildup looks real despite 24h dip\n\n- my bias is bullish here — the 1h structure is confirmed bullish, aligning with the daily and BTC trend, and the recent 2.4x volume spike with a rapid +2.6% move https://t.co/wXbZeBSRaN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 445,
+   "user": "0xRenaissance",
+   "url": "https://x.com/0xRenaissance/status/2106473666280407150",
+   "date": "2026-10-03",
+   "text": "robinhood:0x2e8c31162b855a2ffa90f6f8634643ad6f111e18 is now roughly in a 70% correction from ATH.\n\nIn order for a coin (and eventually, coins) to go to 1B+ marketcap you need three things:\n\n1. Delusional holders who refuse to sell\n\n2. Continued upside potential for the thesis"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 349,
+   "user": "cryptoklotz",
+   "url": "https://x.com/cryptoklotz/status/2106458601799766338",
+   "date": "2026-10-03",
+   "text": "why i'm maximally bullish on ticker solana:8t5C4AWDg4CroMChxdo7rG2e8nJM31QG2GG7Czx9X7x2, better known as \"sand kitten\", the coin that airdrops you free sandisk stock 24/7 for holding:\n\ni came across this during my @fomo 1k -&gt; 100k challenge and it's evolved into the https://t.co/XWjQztbYBC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Nathycryptoh",
+   "url": "https://x.com/Nathycryptoh/status/2106299199796936830",
+   "date": "2026-10-03",
+   "text": "SECRET OF TRADING CRYPTO COINS..\n* ALWAYS ANALYS BITCOIN FIRST BEFORE TAKING ANY TRADE ON ANY COIN, \n* IF YOU HAVE A BULLISH SETUP ON ANY COIN, MAKE SURE BTC IS BULLISH BEFORE TAKING THE TRADE * IF YOUR BEARISH ON ANYCOIN MAKE SURE BITCOIN IS BEARISH BEFORE TAKING THE TRADE\nGM CT https://t.co/M0P1wfTuft"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106175511500042267",
+   "date": "2026-10-03",
+   "text": "⚠️ $STXX BTC divergence locks in bearish structure at -10.6% 24h\n\n- my bias is bearish here on the 1h: lower highs and lower lows are already confirmed, and that 4h relative-weakness vs BTC (higher high in USDT while coin/BTC printed a lower high) supports continuation of this https://t.co/cjFqL64Ugo"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "robot2trade1",
+   "url": "https://x.com/robot2trade1/status/2106191453441372325",
+   "date": "2026-10-03",
+   "text": "The week the hike died: weekly review, September 28–October 2, 2026\n(Translated and distilled from my Chinese-language weekly review — Humble Trader | Gemini Trading.)\nFriday's tape: the S&amp;P 500 closed at 7,722.72 (+0.73%), still ~1.2% below its August high of 7,816.70. The https://t.co/EMoNJAIHia"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Allice_Crypto",
+   "url": "https://x.com/Allice_Crypto/status/2106469675483766963",
+   "date": "2026-10-03",
+   "text": "📊 CRYPTO MARKET REPORT\n🕑 2026-10-03 18:46 GMT\n━━━━━━━━━━━━━━━━━━\n\n₿ #BITCOIN ($BTCUSDT)\n💰 Price: 84,942.02   🔺 +0.50%\n🟢 Bias: Mildly bearish - below pivot\n🔺 Resistance: 86,529.34 / 88,540.67 / 89,861.34\n⚖️ Pivot: 85,208.67\n🔻 Support: 83,197.34 /"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2106192494417305703",
+   "date": "2026-10-03",
+   "text": "#BITCOIN\n\nBitcoin’s failed flag breakout represents a significant loss of bullish momentum on the daily timeframe and reinforces exactly why confirmation is so important before chasing a breakout. \n\nPatience is required now, as today’s rejection introduces the potential for a https://t.co/KnlrmEUOej"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106174481819447724",
+   "date": "2026-10-03",
+   "text": "🐻 $MU leaks vs BTC on 4h divergence with -1.6% 24h move\n\n- my bias is bearish here on the 1h — structure already flipped lower after the break under 1086.49, and that 4h coin/BTC lower-high vs the USDT higher-high is extra fuel: MU is leaking relative to BTC even while BTC’s own https://t.co/HG2FugXVgV"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106210016868852057",
+   "date": "2026-10-03",
+   "text": "🔻 ETH holds below key EMAs with a 1.2% dip—buyers losing grip as downtrend deepens\n\n- current bias remains bearish on the 1h, as price is still making lower highs/lows and sits below both EMA20 and EMA200, with recent attempts to reclaim lost ground getting sold into 📉\n- price https://t.co/fS5MBFxN6C"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 8,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106477252141523188",
+   "date": "2026-10-03",
+   "text": "⚠️ $LYN 2.7% BTC divergence gets outgunned by lower highs on higher TFs\n\n- my bias is bearish here — 1h, daily and weekly structure are aligned lower highs/lower lows, and that outweighs the 4h coin/BTC relative-strength print (USDT lower low vs BTC-pair higher low). that RS is a https://t.co/nFiIXD44EK"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 374,
+   "user": "Schoen_xyz",
+   "url": "https://x.com/Schoen_xyz/status/2106490057356128511",
+   "date": "2026-10-03",
+   "text": "ngl i was kind of bearish on $OTC for a long time, but recently I have changed my tune\n\nat first the platform was massive cope to stock pairs not being available on pump &amp; stonk mogging\n\nthen when pump added stock pairs it tanked, but kept its use case of giving a basket of stock https://t.co/weRJAuh5qO"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2106250224716951766",
+   "date": "2026-10-03",
+   "text": "BTC Coin Pulse Analysis (Last 1 Hour)\nOverall Bias: Bullish\n\nTrue Retail Positioning (Longs vs Shorts): Over the past hour, True Retail Long accounts remain heavily suppressed at the 14th percentile, while True Retail Short accounts hold strong near the 86th percentile. The https://t.co/WvTUWxQvcZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "taqin29ok",
+   "url": "https://x.com/taqin29ok/status/2106451148513346025",
+   "date": "2026-10-03",
+   "text": "The next coin pump\n$MEMEROBIN\n$ZCAT\n$G \n$BANK\n$BILL \n$2ZUSDT\n$MARSCOIN \n#NEWATH #ATH #AllTimeHigh #bull #bullish #cryptobullish\n#crypto #MEXC #mx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Apexscalpers",
+   "url": "https://x.com/Apexscalpers/status/2106332061082530138",
+   "date": "2026-10-03",
+   "text": "🚨 CRYPTO MARKET WATCH: BIGGEST GAINERS &amp; LOSERS! 🚀📊\n\n🔥 TOP GAINERS ARE EXPLODING! 💚\n\n🚀 $DHN: +223.08% 🤯\n📈 $SAND: +19.51%\n🇰🇷 South Korean exchanges lifted trading warnings and restored token transfers, boosting market access and buying interest.\n\n🔻 TOP PULLBACK COINS: BE https://t.co/RWciGIbw5M"
+  }
+ ]
+}

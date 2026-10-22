@@ -1,0 +1,219 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-10-02T00:00:00Z",
+ "end": "2026-10-03T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ChrisWadetu",
+   "url": "https://x.com/ChrisWadetu/status/2105928125964251396",
+   "date": "2026-10-02",
+   "text": "BITCOIN Are we gonna have an UPTOBER?\n\nBitcoin (BTCUSD) has officially entered the final (Q4) quarter of the year today and with that the month of October. Whether you are new to the market or not, you've heard of the Uptober meme, which in a play of words suggests that October https://t.co/KanUjKIspe"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TroutEntCrypto",
+   "url": "https://x.com/TroutEntCrypto/status/2105837674686767144",
+   "date": "2026-10-02",
+   "text": "Just a friendly reminder:\nThe next bull run is going to be nasty.\nBitcoin, Ethereum, and Solana are still massively undervalued.\nBetter get bullish before the FOMO hits."
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "crypto_rush22",
+   "url": "https://x.com/crypto_rush22/status/2106120709248270367",
+   "date": "2026-10-02",
+   "text": "🚨 Market Pump &amp; Dump\n\nBTC 4H Chart Analysis:\n\n#Bitcoin finally breaks out of the range to the upside, surpassing $85,000 and reaching $87,000 — but something in the Price Action is a red flag: a bearish engulfing candle swallowed the two previous green candles with a liquidity https://t.co/snYs5dqHVg"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2106046158271287442",
+   "date": "2026-10-02",
+   "text": "🚨 $BTC ALERT: Bitcoin briefly hits $87K as weak US jobs data sends bond yields lower\n\n🟢 Bullish: 62%\n• September payrolls missed at 29,000 versus 84,000 expected, with August revised down from 162,000 to 133,000\n• October 0.25% Fed hike odds fell to 18% from 64% a week"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Bybit_Learn",
+   "url": "https://x.com/Bybit_Learn/status/2105940577464484000",
+   "date": "2026-10-02",
+   "text": "Will the incoming US jobs report send Bitcoin to a 8-month high?\n\nGET READY: September US nonfarm payrolls (NFP) lands at 12:30PM UTC today - Fri, Oct 2nd.\n\nAccording to Bloomberg models, BTC options are leaning bearish - point to greater downside (up to 2.9%) for BTC rather than"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 13,
+   "user": "Bybit_Learn",
+   "url": "https://x.com/Bybit_Learn/status/2105940642283376817",
+   "date": "2026-10-02",
+   "text": "Will the incoming US jobs report send Bitcoin to an 8-month high?\n\nGET READY: September US nonfarm payrolls (NFP) lands at 12:30PM UTC today - Fri, Oct 2nd.\n\nAccording to Bloomberg models, BTC options are leaning bearish - point to greater downside (up to 2.9%) for BTC rather"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 37,
+   "user": "og_ghazi",
+   "url": "https://x.com/og_ghazi/status/2105887293395636318",
+   "date": "2026-10-02",
+   "text": "While retail traders expect a bullish expansion off the lower boundary, this symmetrical triangle breakdown on $BTC  is setting up a steep decline toward lower liquidity pools.\n\nAfter sweeping Buy-Side Liquidity (BSL) and rejecting heavily off the $84,235 to $84,043 zone, price https://t.co/baVCEEVfE9"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Shrawan_akumar",
+   "url": "https://x.com/Shrawan_akumar/status/2106041967914467587",
+   "date": "2026-10-02",
+   "text": "🚨 THE BITCOIN BULL TRAP MAY FINALLY BE PLAYING OUT.\n\nBTC pushed toward $87K, failed to hold the breakout and quickly slipped back toward $85K.\n\nEveryone was turning bullish again.\nEveryone was chasing the breakout.\nBut the rejection is exactly what I was waiting for.\n\nMy thesis https://t.co/XBAlKQxwsU"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Shrawan_akumar",
+   "url": "https://x.com/Shrawan_akumar/status/2106041767376429422",
+   "date": "2026-10-02",
+   "text": "🚨 THE BITCOIN BULL TRAP MAY FINALLY BE PLAYING OUT.\n\nBTC pushed toward $87K, failed to hold the breakout and quickly slipped back toward $85K.\n\nEveryone was turning bullish again.\nEveryone was chasing the breakout.\nBut the rejection is exactly what I was waiting for.\n\nMy thesis https://t.co/8DrnHzTfNB"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105987631716683898",
+   "date": "2026-10-02",
+   "text": "🚨 $BTC $ETH ALERT: Citi turns bullish on Bitcoin again with a $113,000 price target\n\n🟢 Bullish: 68%\n• Citi raised its 12-month Bitcoin target to $113,000 from $82,000, implying about 35% upside from prices near $84,000\n• Ether target was lifted to $3,028 from $2,240\n• Bank"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 29,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2106103665618489760",
+   "date": "2026-10-02",
+   "text": "The Bigger Picture: BTC vs. #SP500 \n\nI already explained in my previous post why I expect the current cycle to develop into a prolonged bearish cycle lasting more than one year.\n\nAnd this is important: the 2013–2015 period was also a prolonged bearish cycle.\n\nAlmost 12 years ago, https://t.co/atwGfnf1EF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "TradePro16",
+   "url": "https://x.com/TradePro16/status/2106098928177627302",
+   "date": "2026-10-02",
+   "text": "Possibly getting this now? This is the best possible scenario in my eyes because it flushes late and overexposed longs, fully resets the daily, and primes this for another massive trending move to the upside that I can position aggressively on without the concern of a looming https://t.co/QUo7v7eHiN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105969499421745258",
+   "date": "2026-10-02",
+   "text": "🚨 $BTC ALERT: Crypto traders are in risk-on mode as bitcoin dominance nears return to 60%\n\n🟢 Bullish: 62%\n• Bitcoin traded above $86,000, up 3.4% in 24 hours, while major tokens also rose and dominance neared 60%.\n• USDT’s share slipped to around 6.3%, suggesting traders are"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2106090085510709356",
+   "date": "2026-10-02",
+   "text": "Dark Cloud Cover:\nA Bearish Reversal Pattern:\nhttps://t.co/fNeWhyMkVr\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2105907130696122707",
+   "date": "2026-10-02",
+   "text": "The Double Top:\nA Bearish Reversal Pattern-\nhttps://t.co/IA9uFmL4eZ…\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 93,
+   "user": "CryptoTheBossX",
+   "url": "https://x.com/CryptoTheBossX/status/2106022436688875965",
+   "date": "2026-10-02",
+   "text": "‼️‼️ Bearish Divergence: $BTC Faces Momentum Exhaustion \n\nFollowing up on our previous study. Bitcoin continues its upward trajectory along the black ascending trendline, holding firm above its green bull market support band following the confirmation of a golden cross structure. https://t.co/a9VDfW2Zbs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2106014761741853071",
+   "date": "2026-10-02",
+   "text": "Dark Cloud Cover:\nA Bearish Reversal Pattern:\nhttps://t.co/fNeWhyMSKZ\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2106074482766942659",
+   "date": "2026-10-02",
+   "text": "Dark Cloud Cover:\nA Bearish Reversal Pattern:\nhttps://t.co/fNeWhyMkVr\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "oaktreeTrade",
+   "url": "https://x.com/oaktreeTrade/status/2106001132757700799",
+   "date": "2026-10-02",
+   "text": "🇺🇸 U.S. JOBS REPORT: A CLEAR DOWNSIDE SURPRISE\nThe September labor report just came in significantly weaker than expected.\n📉 NON-FARM PAYROLLS\nActual: +29K\nExpected: +90K\nPrevious: +133K (revised from +162K)\n👥 UNEMPLOYMENT\nActual: 4.2%\nExpected: 4.1%\nPrevious: 4.1%\n💵 AVERAGE https://t.co/FLu6TPmnDS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2105916161611210968",
+   "date": "2026-10-02",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 (𝗹𝗲𝗮𝗻𝗶𝗻𝗴 𝗯𝘂𝗹𝗹𝗶𝘀𝗵) - 𝗕𝘂𝗹𝗹𝗶𝘀𝗵 𝗰𝗮𝘁𝗮𝗹𝘆𝘀𝘁𝘀 - Bitcoin rallying toward the $86 K–#90 K zone, a level many view as the start of a new bull market. - Fear &amp; Greed Index at 74, indicating strong optimism. - Multiple https://t.co/8vGzVpQRja"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "WhatsNextBTC",
+   "url": "https://x.com/WhatsNextBTC/status/2105952167081206162",
+   "date": "2026-10-02",
+   "text": "Happy Friday! We have another massive structural shift on the tape. #Bitcoin is currently trading at $86,306. Yesterday, we issued a bearish forecast when the sellers cracked our $83,800 support line, printing a local dip down to $83,338. However, that breakdown turned out to be https://t.co/EezE0MLp8x"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "cryptomansui",
+   "url": "https://x.com/cryptomansui/status/2105952437907644594",
+   "date": "2026-10-02",
+   "text": "BTC/USDT Current Price (Oct 2, 2026): ~85,932.00\n\nStructural Confirmation: Two bullish candles pushed up to the 84,433.00 level, followed by a bearish candle (K3) that knocked the price down to 83,461.00. After two days of narrow consolidation between 83,461.00 and 83,624.50, a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "goldstagcrypto",
+   "url": "https://x.com/goldstagcrypto/status/2105952326296994176",
+   "date": "2026-10-02",
+   "text": "BTC/USDT Current Price (Oct 2, 2026): ~85,932.00\n\nStructural Confirmation: Two bullish candles pushed up to the 84,433.00 level, followed by a bearish candle (K3) that knocked the price down to 83,461.00. After two days of narrow consolidation between 83,461.00 and 83,624.50, a"
+  }
+ ]
+}

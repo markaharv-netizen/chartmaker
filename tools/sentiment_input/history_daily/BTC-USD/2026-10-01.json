@@ -1,0 +1,219 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-10-01T00:00:00Z",
+ "end": "2026-10-02T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2105714832226025824",
+   "date": "2026-10-01",
+   "text": "🚨 BITCOIN PRICE UPDATE: BTC LIQUIDITY SWEEP — $87K–$88K REJECTION ZONE\n\n$BTC is currently trading around $84K–$85K.\nThe 1-month Bitcoin liquidation heatmap showed major liquidity around $84,701 (~$144M), which helps explain this upside move. But there is still significant https://t.co/IhcYnolaEq"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105677947134742707",
+   "date": "2026-10-01",
+   "text": "🚨 $BTC ALERT: Bitcoin Snaps ETF Inflow Streak — Market Talk\n\n🟢 Bullish: 40%\n• October has a historical median bitcoin return of around 11%-14% and a strong track record for ETF flows and retail demand.\n• Bitcoin was up 0.5% at $84,047, and Citi raised its 12-month bitcoin"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "ZenTrader777",
+   "url": "https://x.com/ZenTrader777/status/2105784399182872815",
+   "date": "2026-10-01",
+   "text": "BTC Evening Update! Price has been choppy all day with a slight bullish move to the upside. We are consolidating bullishly for now above the 1HR 200MA, but NFP Friday could reverse price. The same targets apply in both directions. Downside: $81,800 - $82,400. Upside: $86k -"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "fxtrendo",
+   "url": "https://x.com/fxtrendo/status/2105700163272495210",
+   "date": "2026-10-01",
+   "text": "₿ Bitcoin Analysis | #BTCUSD\n\nOn the 4-hour timeframe, Bitcoin is trading around $84,474 after pulling back from the $87,397 high. Price remains above the EMA50 and EMA200, keeping the bullish structure intact.\n\n🔼 Key resistance: $86,509\n🔽 Key supports: $83,200 and $80,820\n\nA https://t.co/5gLeLctWqk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 298,
+   "user": "KGeNazeemali12",
+   "url": "https://x.com/KGeNazeemali12/status/2105718914965803378",
+   "date": "2026-10-01",
+   "text": "i stopped asking how much BTC could go up and started asking what happens if my thesis fails.\n\nmy initial BTC thesis was bullish if bitcoin can hold its current support and buyers return the market could attempt another move higher.\n\nbut i didn't want Quant AI to simply confirm https://t.co/MEZUluiBkn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "oobiewpb",
+   "url": "https://x.com/oobiewpb/status/2105622172265803832",
+   "date": "2026-10-01",
+   "text": "$SPX $SPY $QQQ $IGV $IWM \n\nDLMM PREMARKET INTELLIGENCE\nThursday, October 1, 2026\nData checked: 7:30 AM ET\nMarket snapshot time range: 7:19 AM–7:30 AM ET\n\nMARKET TONE\n\nES: 7,729.75, +14.25 points (+0.18%). Overnight range: 7,705.00–7,767.75. ES is green but sits below the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "TradeSafeAI",
+   "url": "https://x.com/TradeSafeAI/status/2105657863867716064",
+   "date": "2026-10-01",
+   "text": "Navigating Bitcoin's future means mapping both bullish and bearish scenarios. Will it hold higher low structures in a bull run, or form an ABC pattern and drop? Staying mindful of market signals is key. #Bitcoin #CryptoTrading https://t.co/cUD1f8WL7O"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BigBull_BTC",
+   "url": "https://x.com/BigBull_BTC/status/2105702000948387879",
+   "date": "2026-10-01",
+   "text": "⚠️ BTC IS APPROACHING A DECISION POINT — 82.8K COULD OPEN THE TRAPDOOR\n\nBTC has now printed 3 daily closes below the Daily 8 EMA while continuing to hold below the key $84K level  keeping short-term momentum weak.\n\nPrice remains compressed inside the $82.8K–$85.1K yellow channel. https://t.co/BxJeRa7aSD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "BigBull_BTC",
+   "url": "https://x.com/BigBull_BTC/status/2105707244319088648",
+   "date": "2026-10-01",
+   "text": "⚠️ BTC IS APPROACHING A DECISION POINT — 82.8K COULD OPEN THE TRAPDOOR\n\nBTC has now printed 3 daily closes below the Daily 8 EMA while continuing to hold below the key $84K level  keeping short-term momentum weak.\n\nPrice remains compressed inside the $82.8K–$85.1K yellow channel. https://t.co/zkvzJPzf7N"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105718360998568335",
+   "date": "2026-10-01",
+   "text": "🚨 $BTC ALERT: Bitcoin buyers clear the $85K sell wall, opening a path for upside\n\n🟢 Bullish: 62%\n• Buyers removed the $85,000 sell wall, reducing the stack of overhead limit sell orders\n• Clearing the Binance cluster between $85,000 and $85,500 increases the potential for"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2105655746352538099",
+   "date": "2026-10-01",
+   "text": "The Double Top:\nA Bearish Reversal Pattern-\nhttps://t.co/0mvNaXfRW8\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2105776519385665732",
+   "date": "2026-10-01",
+   "text": "The Double Top:\nA Bearish Reversal Pattern-\nhttps://t.co/0mvNaXfk6A\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2105630816172699765",
+   "date": "2026-10-01",
+   "text": "$BTC The market itself is constantly fighting against the historical trend-angle compression, which is one of the reasons Bitcoin’s meaningful ATHs have become increasingly difficult to achieve cycle after cycle.\n\nBut while everyone is screaming that “the bottom is in,” “the bull https://t.co/XmrwQQmpRe https://t.co/COzhTuaGLt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "toofluffy_",
+   "url": "https://x.com/toofluffy_/status/2105702164144566289",
+   "date": "2026-10-01",
+   "text": "Based on historical data i have looked up on bitcoin, every year when bitcoin bottomed and ends the bear market. The monthly chart of bitcoin always print 8 Green months, this year 206 is the end of the bear market for $btc, and we've only printed 6 green monthly candle so far,"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "blockmann247",
+   "url": "https://x.com/blockmann247/status/2105618128210149875",
+   "date": "2026-10-01",
+   "text": "bitcoin: the upside down coping.\n\none last leg and $BTC is expected to touch the 200d/ma before continuation, same scenario in 2022. \n\n200sma always bull market support band, once that happen it's wise to officially flip bullish. https://t.co/fCKCH5KE5P"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 203,
+   "user": "dangambardello",
+   "url": "https://x.com/dangambardello/status/2105680374256873474",
+   "date": "2026-10-01",
+   "text": "Since June lows, I showed you when our Bitcoin risk model was sitting at a low 17 and our altcoins risk model was at a 9!\n\nIt was the time to be bullish, and I wasn't waiting around for a four-year cycle calendar to play out. \n\nBitcoin is up over 30% since then and now the https://t.co/s8eWfAu3VF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CaffeSatoshi",
+   "url": "https://x.com/CaffeSatoshi/status/2105565522054066489",
+   "date": "2026-10-01",
+   "text": "US 10-year yield just hit 5.33%, the highest since 2002. Here's what it means for Bitcoin:\n\nThe Treasury can't set yields directly, but it has options:\n\n- Issue more short-term bills and fewer long bonds\n- Slow the growth of long-dated auctions\nBuy back older debt\n- Boost demand https://t.co/foNgohhzDo"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptrixLabs",
+   "url": "https://x.com/CryptrixLabs/status/2105785155386315070",
+   "date": "2026-10-01",
+   "text": "AVAX is on the radar, not in play yet — a 4-hour close back above $11.18 is what would put this setup back in the conversation.\n\nZoom out and the daily chart is the issue. AVAX has already run well above where it typically trades over the long run, and the recent push looks https://t.co/PQlkibHERO"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 35,
+   "user": "TonySeverinoCMT",
+   "url": "https://x.com/TonySeverinoCMT/status/2105558731836600525",
+   "date": "2026-10-01",
+   "text": "It begins (this is not at all a knock to this analyst — talking RSI behavior only)\n\nSee how the RSI didn’t go as high as previous cycles?\n\nBut price did?\n\nThat is a bearish divergence\n\nVolume decreasing\n\nVolatility diminishing \n\nWhen will everyone understand that’s a lack of https://t.co/2ocW8q4zXQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "WhatsNextBTC",
+   "url": "https://x.com/WhatsNextBTC/status/2105576780903981532",
+   "date": "2026-10-01",
+   "text": "What's up guys! I just checked the charts here as we head into the Thursday sessions, and we have a major shift in the short-term structure. #Bitcoin is currently trading at $83,338. As we tracked in our previous updates, the market attempted to hold the line at the $83,800 https://t.co/X9m2noYtZ7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "darthvalidator_",
+   "url": "https://x.com/darthvalidator_/status/2105678123865890890",
+   "date": "2026-10-01",
+   "text": "Road to $3M | Month 3 Recap\n\nI decided to take my investment portfolio live for this next bull cycle to document my journey, not only for anyone who finds value in my research but also as a diary for myself. This is not financial advice.\n\nSeptember recap: +$35,873.67\n\nLockout https://t.co/kq3gOAQmEX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 134,
+   "user": "_thespacebyte",
+   "url": "https://x.com/_thespacebyte/status/2105567566529699959",
+   "date": "2026-10-01",
+   "text": "The Bitcoin seller I care about here isn’t necessarily underwater.\n\nIt’s the guy sitting on a huge PnL.\n\nCryptoQuant has trader unrealized profits at a 21-month high.\n\nAt the same time:\n\nProfit realization is increasing.\n\nDemand is cooling.\n\nThat combination is more useful than https://t.co/gck0BFMLLk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 281,
+   "user": "Pixelclipz",
+   "url": "https://x.com/Pixelclipz/status/2105717725121097765",
+   "date": "2026-10-01",
+   "text": "Before looking at upside targets, I opened @tryquantio today and asked one direct question:\n\n\"What happens if this trade fails?\"\n\nWith Bitcoin trading right around $84,726, the retail urge is to market buy the momentum and target $90k and beyond.\n\nBut Quant mapped out the exact https://t.co/o8Bj82Wifj"
+  }
+ ]
+}

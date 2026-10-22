@@ -1,0 +1,30 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-30T00:00:00Z",
+ "end": "2026-10-01T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 106,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2105136074171592863",
+   "date": "2026-09-30",
+   "text": "Bitcoin’s current dip looks like a buying opportunity, not a reason to abandon the trend. I’m focused on price holding above a rising TBO Cloud with bullish on-balance volume, much like September’s fast-line pullback before a 13% rally. A deeper move toward 80,600 would be https://t.co/6e5IuncpRK"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105347367805338072",
+   "date": "2026-09-30",
+   "text": "🚨 $BTC $ETH $ENA $CRCLSTOCK ALERT: Ethereum-Based Stablecoin Issuer ENA Could Surge 600%: Standard Chartered\n\n🟢 Bullish: 82%\n• Standard Chartered sets a $2 target for February 2028, implying 614% upside\n• USDe could reach a $10 billion market cap fastest, with strong growth"
+  }
+ ]
+}

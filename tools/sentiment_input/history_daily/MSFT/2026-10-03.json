@@ -1,0 +1,183 @@
+{
+ "symbol": "MSFT",
+ "start": "2026-10-03T00:00:00Z",
+ "end": "2026-10-04T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "MSFT (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "InsiderFinancex",
+   "url": "https://x.com/InsiderFinancex/status/2106378518883889586",
+   "date": "2026-10-03",
+   "text": "The week closed barely bullish: $270.7M net, with $NVDA and #TSLA taking the week’s biggest spend.\n\n↗️ Market: $5.47B calls vs $5.20B puts\n➡️ Rotation: ORCL 1.39x, MSFT 1.4x kept the upside bid alive\n↘️ Breadth: AMD 51% puts led the weak pockets; NFLX and CRWV stayed put-heavy\n➡️ https://t.co/SwQxluHRSV"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "xplosion79",
+   "url": "https://x.com/xplosion79/status/2106192950053015937",
+   "date": "2026-10-03",
+   "text": "**October, historically**\n\n- S&amp;P 500 since 1928: **+0.54%** average, green ~59% of the time  September (-1.17%) is the real worst month\n\n- Reputation comes from variance, not direction: most volatile month (5.6% std dev), 8 of the 20 worst single-day drops, but also where bear https://t.co/zAvytG7yBj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 78,
+   "user": "spacemnke",
+   "url": "https://x.com/spacemnke/status/2106404642594689458",
+   "date": "2026-10-03",
+   "text": "You could spend your Sunday going through hundreds of charts. I already did 🫠\n\nHere are the names, levels, and setups that actually stood out for next week.\n\nThe indices are holding up, but underneath the surface this remains an extremely selective market.\n\nQQQ is breaking https://t.co/jZY86mbT5A"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "us_stock_com",
+   "url": "https://x.com/us_stock_com/status/2106258379387613431",
+   "date": "2026-10-03",
+   "text": "Microsoft just had its best quarter since 1998. It added a trillion dollars in three months. And it's still lagging the Nasdaq this year.\n\nThat combination is the most interesting thing in AI stocks right now, so I dug in.\n\nThe facts:\n• MSFT rose 37.5% from July through"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 89,
+   "user": "The_RockTrading",
+   "url": "https://x.com/The_RockTrading/status/2106370794565804455",
+   "date": "2026-10-03",
+   "text": "$MSFT pull back probably this week, on bearish divergence. https://t.co/mDJDLM79na"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "IM51628944",
+   "url": "https://x.com/IM51628944/status/2106362717695348954",
+   "date": "2026-10-03",
+   "text": "🟢 $MSFT · Bullish\nF🟢 S🟢 T🟢 I🟢 O🟢\nStrong bullish trend with EMA alignment and Ichimoku support. Options data shows moderate bullishness with IV at 32.09%.\n📊 Oct 2 close · 5D $493.94–$544.01 (±4.8%) · IV 32%(r39)\n⚠️ Automated · not financial advice\nhttps://t.co/BZKMWNSFT3"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AnalystMarkets_",
+   "url": "https://x.com/AnalystMarkets_/status/2106187762827235576",
+   "date": "2026-10-03",
+   "text": "Anthropic targets mega-IPO before Thanksgiving, valued at $965B\n$AMZN ▲+1.33% · GOOGL ▲+1.56% · MSFT ▲+0.92%\nModels: Bullish 65% (GPT-OSS 120B)\n\nNot advice. DYOR."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "DailyAlphaBites",
+   "url": "https://x.com/DailyAlphaBites/status/2106429566843826231",
+   "date": "2026-10-03",
+   "text": "$MSFT is knocking on all-time highs at $517.53, just 1% under resistance at $522.85. It posted its best quarter since 1998 on renewed Azure AI optimism. ADX at 36 confirms a strong uptrend, and the MACD histogram stays bullish. https://t.co/gSzLj5dy6c"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AlphaBovine",
+   "url": "https://x.com/AlphaBovine/status/2106190457462030428",
+   "date": "2026-10-03",
+   "text": "$MSFT\nDaily MACD crossover confirms fresh bullish momentum within a strong uptrend. Price holds above the 9-day EMA, sitting just 2.9% away — healthy and not overextended.\n\nVolume has dried to 51% of the preceding stretch, signaling supply exhaustion inside this flat base. Weekly https://t.co/vTwTEPuyIi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "HomerOpines",
+   "url": "https://x.com/HomerOpines/status/2106516009234710753",
+   "date": "2026-10-03",
+   "text": "Tech is setting the tone again this morning.\nNasdaq futures are leading, while semiconductors continue to show relative strength. Premarket moves in $NVDA, $MU, $AVGO, and $AMD suggest AI and chip names could remain the center of attention after the bell.\nMy focus today is https://t.co/IBGRHPdL6k"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 62,
+   "user": "BullMarketBoss",
+   "url": "https://x.com/BullMarketBoss/status/2106338487351845084",
+   "date": "2026-10-03",
+   "text": "Top of the morning ☕️📈\n\nAndy Jassy $AMZN “There is not one tool to rule the world.”\n\nThat’s the point.\n\nInstead of trying to pick the one AI model that wins, own the few infrastructure powerhouses powering the entire ecosystem.\n\n$AMZN $GOOG $MSFT cloud\n$AAPL consumer gateway https://t.co/Rd5XTSVdDs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Jay64468740",
+   "url": "https://x.com/Jay64468740/status/2106191362068807983",
+   "date": "2026-10-03",
+   "text": "S&amp;P 500 top 3 (NVDA, AAPL, MSFT) hit a record 21.1% weight—highest since at least 1980 (prior peaks ~13% early ’80s with IBM/T/XOM, ~12% in 2000 with MSFT/GE/CSCO). Extreme concentration raises vulnerability if those few names stumble, but it is not a reliable crash signal. https://t.co/saoWKKfarv https://t.co/dOhKRIxbXG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 22,
+   "user": "Florian_0707",
+   "url": "https://x.com/Florian_0707/status/2106463772256919564",
+   "date": "2026-10-03",
+   "text": "CALL ME CRAZY FOR SHORTING $MSFT \n\nI have short limit orders at 528$.\n\nIn total return I expect up to 60% profit from this setup.\n\nEven if the bull case goes intact I definitely ecpect at least a short term rejection.\n\nThis or that way this short hedge is very strategically. https://t.co/T3HhWubIrn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "SanCompounding",
+   "url": "https://x.com/SanCompounding/status/2106193757209251847",
+   "date": "2026-10-03",
+   "text": "Hyperscalers FCF = AI Chip companies FCF — per a16z\n\nThis was the rotation that led AI bull market in 2024-2026\n\nHyperscalers Debt + FCF will drive for 1 more year but not sure beyond that.. CDS can blow up mid 2027 as well  \n\n$AMZN $GOOG $MSFT $NVDA , $AMD $MU https://t.co/Um4vEbGsKi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "amess4jxde",
+   "url": "https://x.com/amess4jxde/status/2106183238335053877",
+   "date": "2026-10-03",
+   "text": "Expected Free Cash Flow Growth — Next 5 YearsThese projections are ridiculous:\n\n$MU Micron → +4,797%\n$LITE Lumentum → +2,206%\n$AMZN Amazon → +1,817%\nSK Hynix → +1,436%\n$ALAB Astera Labs → +1,329%\n$AVGO Broadcom → +1,056%\n$PLTR Palantir → +933%\n$ARM Arm → +903%\n$AMD →"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "zhanglixiang779",
+   "url": "https://x.com/zhanglixiang779/status/2106397505034613107",
+   "date": "2026-10-03",
+   "text": "Who is actually the cheapest among the Magnificent 7 right now? Ignore raw stock price gains and look directly at the P/E metrics.\n\n​Based on data around the October 2 close:\n​$NVDA: Trailing P/E ~29.6x | Forward P/E ~19.4x\n​$META: Trailing P/E ~27.4x | Forward P/E ~22.6x\n​$GOOG:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptoRozzay",
+   "url": "https://x.com/CryptoRozzay/status/2106496935570149408",
+   "date": "2026-10-03",
+   "text": "4,000+ people have now used the @notesystems protocol. \n\nSeason 0 closed with 109,500+ deposits and 91M+ $USDG tracked on-chain. Deposits are up 4x since the 2,000-user mark. A market that did not exist a month ago is already clearing structured notes.\n\nWhat’s actually live on https://t.co/MTdrbC6Irs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 343,
+   "user": "RealSimpleAriel",
+   "url": "https://x.com/RealSimpleAriel/status/2106510914442629573",
+   "date": "2026-10-03",
+   "text": "A look ahead to next week: Time for breadth to expand? \n- $FOTO $EUV leading themes last week. Photonics $LITE $COHR $GLW \n- $SMH continues to lead this market as well $ASML $MRVL $TSM $NVDA $AMD \n- $CIBR also at a new closing high $CRWD $RBRK $OKTA $PANW $NET. \n- $IGV starting https://t.co/G2D4ynmVOr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TradeWarriors99",
+   "url": "https://x.com/TradeWarriors99/status/2106183478308192303",
+   "date": "2026-10-03",
+   "text": "**📊 Market close recap**\n\nBad news was good news on Wall Street. A strikingly weak September jobs report — +29K vs ~84K expected, the biggest miss in recent memory, with August revised down 162K → 133K — crushed October Fed-hike odds from 64% a week ago to ~23% (CME FedWatch)"
+  }
+ ]
+}

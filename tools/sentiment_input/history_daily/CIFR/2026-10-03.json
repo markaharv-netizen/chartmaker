@@ -1,0 +1,48 @@
+{
+ "symbol": "CIFR",
+ "start": "2026-10-03T00:00:00Z",
+ "end": "2026-10-04T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "CIFR (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "StockTraderMax8",
+   "url": "https://x.com/StockTraderMax8/status/2106253714440761711",
+   "date": "2026-10-03",
+   "text": "$CIFR Ok team, we are making money on this position 📈\n\nWe are still SUPER early, we will make a lot on this one as $CIFR looks bullish to me 🚀\n\nMake sure you are in my group to follow my every move on this posi https://t.co/UQz2olrojE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 39,
+   "user": "dollar_mara",
+   "url": "https://x.com/dollar_mara/status/2106519544176980014",
+   "date": "2026-10-03",
+   "text": "We are so overdue for a good week. It's been awful for AI data centers. Our turn! $IREN and $CIFR feel like bullish macro/AI sector news is imminent"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 93,
+   "user": "panicsellweekly",
+   "url": "https://x.com/panicsellweekly/status/2106380987680563700",
+   "date": "2026-10-03",
+   "text": "New chart updates in the No Panic Zone 👇\n\n$NBIS — the split board broke bullish\n$MSTR — momentum flipped positive, one ceiling left\n$COIN — caught on a 4-level support cluster\n$CIFR $IREN — weekly cracked, monthly still trending up\n$CLSK — sitting right on important support"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "PSInvestor",
+   "url": "https://x.com/PSInvestor/status/2106515312363663472",
+   "date": "2026-10-03",
+   "text": "These are the names I'm stacking and adding to. I think they're the ones that can actually change my portfolio's trajectory.\n\nMy targets, with the upside from Friday's close and each stock's 52-week high:\n\n1. $NVTS $23, +85% from $12.40 (high $34.17)\n2. $IREN $60, +44% from https://t.co/8EwX8AOb8s"
+  }
+ ]
+}

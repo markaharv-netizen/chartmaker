@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-30T00:00:00Z",
+ "end": "2026-10-01T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2105170327768629567",
+   "date": "2026-09-30",
+   "text": "Macro Observatory Mid-Week  40 Briefing\n\nTuesday's telemetry delivered a structural resolution with the mega-cap tech generals severing as Apple and Nvidia transitioned into early stage Bear phases; and Long Treasuries ( $TLT) joined 11 other foundational tickers sinking below"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105253966720188571",
+   "date": "2026-09-30",
+   "text": "🚨 $BTC ALERT: Bitcoin Price Tests $83,000 Ahead of Key PCE Inflation Release\n\n🟢 Bullish: 42%\n• A softer core PCE print could ease pressure on risk assets such as Bitcoin\n• Fed funds futures implied a 54% chance of an October hike, down from 75% the prior day\n• A softer"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Arman_Trading",
+   "url": "https://x.com/Arman_Trading/status/2105307978211508485",
+   "date": "2026-09-30",
+   "text": "By analyzing the #Bitcoin chart on the weekly timeframe, we can see that after reaching around $87,400, BTC entered a correction and dropped toward $82,600. Buyers reacted from this area and pushed price back toward $85,000, while Bitcoin is currently trading around $83,500.\n\nThe https://t.co/aKkuCLDNlF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 106,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2105136074171592863",
+   "date": "2026-09-30",
+   "text": "Bitcoin’s current dip looks like a buying opportunity, not a reason to abandon the trend. I’m focused on price holding above a rising TBO Cloud with bullish on-balance volume, much like September’s fast-line pullback before a 13% rally. A deeper move toward 80,600 would be https://t.co/6e5IuncpRK"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "MacroSniperPro",
+   "url": "https://x.com/MacroSniperPro/status/2105276516405858635",
+   "date": "2026-09-30",
+   "text": "STATUS: MACRO \"GOLDILOCKS\" &amp; BEAR LIQUIDATION\n\nThis morning, we warned you not to be exit liquidity before 14:30. The trap was just sprung—and it devoured the early shorts. \n\nThe data delivered a flawless \"Goldilocks\" scenario, instantly destroying the bearish stagflation thesis:"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2105191591086268578",
+   "date": "2026-09-30",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 (strongly bullish, with a few cautious notes) - 𝗕𝘂𝗹𝗹𝗶𝘀𝗵 𝗰𝗮𝘁𝗮𝗹𝘆𝘀𝘁𝘀 - Repeated references to Tom Lee’s “biggest crypto bull cycle ever” and his view that Ethereum’s long‐term consolidation sets the stage for a massive upside. - https://t.co/ssYGXTNdu5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "TheCycleProf",
+   "url": "https://x.com/TheCycleProf/status/2105090274963656921",
+   "date": "2026-09-30",
+   "text": "🚨 STOCK MARKET ALERT 🚨\n\nThe consensus on the street is dump October, pump November. I’ve heard it on CNBC and from big accounts on X.\n\nBut here’s what I see:\n\n1. Charts: \nA lot of the big names are sitting on support with room to run higher. \n\nPlenty of AI names have tagged the https://t.co/jywQeiMW8d"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "CryptoGirl0808",
+   "url": "https://x.com/CryptoGirl0808/status/2105178388562424008",
+   "date": "2026-09-30",
+   "text": "BTC: $82,500 Is the Most Important Level to Watch\nBTC is trading around $83.3K after being rejected from the $84.4K–$84.8K resistance zone. Price is consolidating near support, while RSI around 45 reflects neutral-to-soft momentum.\n\nBullish scenario: A 1H close above $83.8K,"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105331827816669255",
+   "date": "2026-09-30",
+   "text": "🚨 $BTC $ETH $XRP ALERT: Bitcoin steadies as soft PCE cools October Fed rate hike bets\n\n🟢 Bullish: 65%\n• Softer core PCE of 0.2 percent month-over-month cools October rate hike bets\n• Experts say the data eases pressure for another hike and could shift positioning upside\n• A"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "ainotesus",
+   "url": "https://x.com/ainotesus/status/2105304396640780420",
+   "date": "2026-09-30",
+   "text": "Daily crypto corner 🟢 bullish\nBitcoin's long-term case holds, but the group is split on one more flush first\n\n🟢 Ivan on Tech — Keeps the bull trend intact despite possible dips into the 70Ks\n🔴 Crypto Banter — Waits for a broad flush before adding, with $86K key to recovery\n🟡"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105155657955451209",
+   "date": "2026-09-30",
+   "text": "🚨 $BTC ALERT: Bitcoin rally shows signs of cooling even as a 'bull score' gauge nears its perfect score\n\n🟢 Bullish: 30%\n• CryptoQuant Bull Score is 90/100 after bitcoin broke above its 365-day moving average last week\n• Bitcoin still rose 0.4% to just above $83,300\n\n🔴"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ASignals88640",
+   "url": "https://x.com/ASignals88640/status/2105394498759225580",
+   "date": "2026-09-30",
+   "text": "#BTCUSDT WEEKLY ANALYSIS\n\nBitcoin is consolidating after a strong rally, with price currently around $83.5K.\n\nKey Resistance:\n83,500 – 85,000\n86,000 – 88,000\n\nKey Support:\n78,000 – 80,000\n72,000 – 74,000\n66,000 – 68,000\n\nBullish Scenario:\nA confirmed breakout above 85K could open https://t.co/FmiwL2SGKJ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 16,
+   "user": "blackwidowbtc",
+   "url": "https://x.com/blackwidowbtc/status/2105433717380665658",
+   "date": "2026-09-30",
+   "text": "$ETH 5 year reset - BULLISH may be an understatement!\n\nBitcoin took the dominance last cycle and the spotlight!\n\nBut now... ETH is reset AND its dominance (ETH/BTC) is starting to form a new uptrend for the first time since 2020!\n\nThat leads me to the question..\n\nIf ETH can get https://t.co/8oPJC8AqE8"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105269573880541660",
+   "date": "2026-09-30",
+   "text": "🚨 $BTC ALERT: Key facts: BTCUSD OI plunges ~90%; 25,700 BTC profit day; rate pressure\n\n🟢 Bullish: 40%\n• Institutional spot demand is described as a key support for the BTCUSD rally\n• U.S. spot Bitcoin ETFs drew about $2.7B in net inflows last week\n• BTCUSD closed the week of"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2105331523821961469",
+   "date": "2026-09-30",
+   "text": "🚨 $BTC ALERT: Bitcoin trader profit margin hits 30.7%, highest since December 2024\n\n🟢 Bullish: 40%\n• Profit and loss margin at 30.7 percent marks the highest reading since December 2024\n• Short-term holders sit at roughly 33 percent unrealized profit\n• Bitcoin remains above"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 48,
+   "user": "TXMCtrades",
+   "url": "https://x.com/TXMCtrades/status/2105332250384457884",
+   "date": "2026-09-30",
+   "text": "Top = 10 Year Yield\nBottom = S&amp;P 500\nPanes = Bitcoin full bull/bear cycles, old low to new low\n🔵 = Bitcoin bulls\n🔴 = Bitcoin bears\n\n*Typically*: Yields rise in a 🔵bull market as growth is positive and the Fed tightens. BTC and equities both perform. But when yields break https://t.co/9JR1JLhYRb https://t.co/DnRNSyIfj0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2105419457552334927",
+   "date": "2026-09-30",
+   "text": "📊【XWIN CAPITAL INDEX｜October 1, 2026】\nOverall Score: 68 / 100\n・80–100 = Strong Bullish Environment\n ・60–79 = Bullish Environment\n ・40–59 = Neutral / No Clear Direction\n ・20–39 = Bearish Environment\n ・0–19 = Strong Bearish Environment\n7-Day Moving Average: 68.86 → https://t.co/NzmSmBVaCz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2105242227429548498",
+   "date": "2026-09-30",
+   "text": "#BITCOIN \n\nBitcoin continues to look constructive, with yesterday’s spinning top followed by an inside-range candle today, reflecting short-term indecision rather than a breakdown in structure. \n\nPrice continues to hold above prior resistance, which is now acting as new support, https://t.co/aYaz5jc7v2"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 14,
+   "user": "ShedrackGreen",
+   "url": "https://x.com/ShedrackGreen/status/2105300470445031574",
+   "date": "2026-09-30",
+   "text": "🚨 BITCOIN BULL MARKET?\n\nBIT Research says the Bitcoin bear market is over — and a new bull scenario is emerging. 📈\n\nTheir upside scenario puts BTC at:\n\n🎯 $185K — lower bull target\n🚀 $215K — upper bull target\n\nThe key question now is whether Bitcoin can sustain the recovery https://t.co/9zr24l7NJc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 170,
+   "user": "EtherRawl",
+   "url": "https://x.com/EtherRawl/status/2105180534955499981",
+   "date": "2026-09-30",
+   "text": "99.9% of CT don't understand the concept behind every PR post from these big influencers, such as CZ, Jim Cramer, Michael Saylor, Tom Lee, Capo, and many others who have a strong voice in a relatively small market with only a $3T market cap.\n\nBasically all you have to do is https://t.co/z7t0kTZwjW https://t.co/zUYXLYDMrm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "Jon_sens",
+   "url": "https://x.com/Jon_sens/status/2105308605222465985",
+   "date": "2026-09-30",
+   "text": "🚨 BITCOIN JUST SHOWED WHY THIS MARKET ISN’T READY TO SLEEP!\n\nBTC/USDT is trading around $83,650, only -0.28% on the 24H snapshot — but that tiny percentage hides a serious battle underneath.\n\nBitcoin first pushed aggressively from the $82,900 low toward a $85,649.95 high, https://t.co/aK1uB8wiUz"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "piptrain",
+   "url": "https://x.com/piptrain/status/2105304583782256948",
+   "date": "2026-09-30",
+   "text": "🧐if you are bullish BITCOIN,\n\nyou need $MSTR to stay above $154 here. thats Year Open price.\n\n🟥BITCOIN is still -4% this year. \n\ni am NOT in the \"BITCOIN has bottomed and a new bull market has already started\" camp.\n\nrelief rallies in a bear market are opportunities to sell."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "Blair519",
+   "url": "https://x.com/Blair519/status/2105280772802297941",
+   "date": "2026-09-30",
+   "text": "Micron Earnings: A Key Test for Tech and AI Micron ($MU) reports earnings today, and this is more than just another semiconductor report—it could be a major catalyst for the broader technology and AI trade.  MU has been one of the market’s clear leaders, supported by surging"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "oobiewpb",
+   "url": "https://x.com/oobiewpb/status/2105261257188167973",
+   "date": "2026-09-30",
+   "text": "$NVDA $INTC $AMD $MU $SPCX \n\nDLMM PREMARKET INTELLIGENCE\nWednesday, September 30, 2026\nData checked: 7:30 AM ET\nMarket snapshot time range: 7:15 AM–7:30 AM ET\nActive quarterly equity-index futures contract month: December 2026\n\nMARKET TONE\n\nES: 7,720.00, down 12.00 points"
+  }
+ ]
+}

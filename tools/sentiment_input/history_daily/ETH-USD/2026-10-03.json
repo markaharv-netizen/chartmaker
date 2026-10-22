@@ -1,0 +1,84 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-03T00:00:00Z",
+ "end": "2026-10-04T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "cvey15",
+   "url": "https://x.com/cvey15/status/2106463431440371896",
+   "date": "2026-10-03",
+   "text": "The short-term outlook for @ethena leans bearish. The medium-to-long-term case is more bullish, but it depends on Ethena's dollar token, USDe, growing a lot.\n\nethereum:0x57e114b691db790c35207b2e685d4a43181e6061 \n\nNext week or so, around the unlock:\n\nNew supply is the main worry."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2106278557676720184",
+   "date": "2026-10-03",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 (𝗕𝘂𝗹𝗹𝗶𝘀𝗵) - 𝗕𝘂𝗹𝗹𝗶𝘀𝗵 𝗱𝗿𝗶𝘃𝗲𝗿𝘀 - Multiple October‐focused bullish narratives (UPTOBER/PUMPTOBER) and a poll showing 62 % of participants expecting a strong October rally. - Technical setups: weekly bull flag pointing to https://t.co/CFp8XvVE8J"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "DyorNetCrypto",
+   "url": "https://x.com/DyorNetCrypto/status/2106187118817001973",
+   "date": "2026-10-03",
+   "text": "ethereum:0x68749665ff8d2d112fa859aa293f07a622782f38 - 1d\nBias: Bearish 🔴\nTrend Score: -31/100 | Confidence: 7.9/10\n\nCurrently at $4143.14, the trend remains bearish with a Trend Score of 31/100 and a setup confidence of 7.9/10. The hidden bullish divergence in RSI and other https://t.co/fBhkWyQ1iI"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 9,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2106327040412856748",
+   "date": "2026-10-03",
+   "text": "$ETHFI is forming a bearish pennant on the 1H chart 👀📉\n\nPrice is consolidating after a sharp drop, with the pennant tightening around $0.69–$0.71. This structure suggests a potential continuation of the prior bearish move if support breaks.\n\nThe chart projects a downside target https://t.co/pfXdxnu7MY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "pf02101963",
+   "url": "https://x.com/pf02101963/status/2106338631283511507",
+   "date": "2026-10-03",
+   "text": "12:45 SWITZERLAND 🇨🇭 | 10:45 UTC | 06:45 NEW YORK 🇺🇸\nMFFU PERPS — WEEKEND REGIME RADAR\n3 OCT 2026\nMAIN CONCLUSION: The weekend has started in consolidation rather than breakout mode. Bitcoin failed to hold Friday's post-payroll surge above $87K, but ETH and SOL are showing"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "pf02101963",
+   "url": "https://x.com/pf02101963/status/2106338222389313992",
+   "date": "2026-10-03",
+   "text": "12:45 SWITZERLAND 🇨🇭 | 10:45 UTC | 06:45 NEW YORK 🇺🇸\nMFFU PERPS — WEEKEND REGIME RADAR\n3 OCT 2026\nMAIN CONCLUSION: The weekend has started in consolidation rather than breakout mode. Bitcoin failed to hold Friday's post-payroll surge above $87K, but ETH and SOL are showing"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2106267116689391689",
+   "date": "2026-10-03",
+   "text": "$ETH is forming a clear Rising Wedge on the 1H chart 👀📐\n\nPrice is around $2,676, with the wedge tightening between rising support and resistance. ETH has just rejected the upper area near $2,750–$2,780, bringing the lower boundary back into focus.\n\nA clean breakdown below https://t.co/UmFNV0j3Dz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2106309381948080621",
+   "date": "2026-10-03",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• Jumper Token Presale Ended: Base Campaign Live As JUMP Listing Nears\n• Apeing Presale Update: Stage 6 Hits 114K as Referral Rewards Launch\n• Dogecoin Price Prediction: 545M DOGE Whale Claim vs a 3.2% Price Drop\n• https://t.co/1mcZMXEPrQ"
+  }
+ ]
+}

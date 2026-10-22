@@ -1,0 +1,30 @@
+{
+ "symbol": "WULF",
+ "start": "2026-10-03T00:00:00Z",
+ "end": "2026-10-04T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "WULF (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Crazystockfans2",
+   "url": "https://x.com/Crazystockfans2/status/2106407065778315636",
+   "date": "2026-10-03",
+   "text": "$WULF Kentucky regulators cleared up to 482 MW of power for the Justified Data Campus, de‑risking TeraWulf’s flagship AI infrastructure project. \nA 20‑year, roughly 401 MW Anthropic lease at Justified supports an estimated $19B in contracted revenue and $4.0–$4.5B of initial https://t.co/MOnbWtRxjB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "lzbobr",
+   "url": "https://x.com/lzbobr/status/2106452833168195887",
+   "date": "2026-10-03",
+   "text": "WSB just put $4.3M into $WULF after a ~50% drawdown. The bull case is simple: Anthropic’s 20-year Kentucky lease turns stranded power into AI rent. But data-center debt still trades like duration. If rates stay high, the lease matters more than the hype. https://t.co/wHD8zoR9jo"
+  }
+ ]
+}

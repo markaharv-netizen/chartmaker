@@ -1,0 +1,93 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-01T00:00:00Z",
+ "end": "2026-10-02T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 88,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2105481415555244263",
+   "date": "2026-10-01",
+   "text": "Bitcoin’s flip-flopping is the setup I want for an OTHERS.D breakout, not proof that the trend has failed. All four TBO Cloud lines still point up, while the one clear warning is a low-volume bearish on-balance-volume cross below its 21 SMA. Even a roughly 2% pullback to the https://t.co/F8PQD2dzOH"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "TU_Crypto_News",
+   "url": "https://x.com/TU_Crypto_News/status/2105529924874313936",
+   "date": "2026-10-01",
+   "text": "David Gokhshtein says the crypto bull market has not started yet, arguing bullish sentiment alone is not real momentum. He warns rapid rotation trading can hurt investors, despite outlining longer-term upside targets for Solana and Ethereum."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "TheChartDeck",
+   "url": "https://x.com/TheChartDeck/status/2105596110613979484",
+   "date": "2026-10-01",
+   "text": "🚨 ethereum:0xaea46a60368a7bd060eec7df8cba43b7ef41ad85 Update 🚨\n\nethereum:0xaea46a60368a7bd060eec7df8cba43b7ef41ad85 has quite a unique chart here.\n\nMany #altcoins in this bear market have broken into fresh all time lows and have kept going.\n\n#FET on the other hand, has managed https://t.co/nVLk51JJyt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "darthvalidator_",
+   "url": "https://x.com/darthvalidator_/status/2105678123865890890",
+   "date": "2026-10-01",
+   "text": "Road to $3M | Month 3 Recap\n\nI decided to take my investment portfolio live for this next bull cycle to document my journey, not only for anyone who finds value in my research but also as a diary for myself. This is not financial advice.\n\nSeptember recap: +$35,873.67\n\nLockout https://t.co/kq3gOAQmEX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "LyricaaEdge",
+   "url": "https://x.com/LyricaaEdge/status/2105592699889869302",
+   "date": "2026-10-01",
+   "text": "LYRICAA HYPE vs REAL\n\nClaim\n\n“BTC reclaimed $85K, so the next crypto bull leg is confirmed.”\n\nReality Score: 44/100 — PARTLY TRUE / HEAVILY STRETCHED\n\nBitcoin genuinely reclaimed $85K temporarily.\n\nETF demand is genuinely supportive.\n\nBut BTC has already fallen back near $83.4K,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "FF__Crypto",
+   "url": "https://x.com/FF__Crypto/status/2105635708991897967",
+   "date": "2026-10-01",
+   "text": "ethereum:0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c 6900 is setting up nicely for the bull run and here’s why…\n\nThe two most popular metas right now are tokenised stocks + meme coins (also AI but that doesn’t apply here). \n\nSPX6900 is the meme coin to represents the S&amp;P500 as a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FF__Crypto",
+   "url": "https://x.com/FF__Crypto/status/2105635524719292880",
+   "date": "2026-10-01",
+   "text": "ethereum:0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c 6900 is setting up nicely for the bull run and here’s why…\n\nThe two most popular metas right now are tokenised stocks + meme coins (also AI but that doesn’t apply here). \n\nSPX6900 is the meme coin to represent the S&amp;P500 as a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "viedoogo",
+   "url": "https://x.com/viedoogo/status/2105544437191594098",
+   "date": "2026-10-01",
+   "text": "The Secret Behind LDO’s Price: Lido’s Market Makers Earn Annual Profits Exceeding the Protocol's Net Revenue!\n\nIn the cryptocurrency market, many investors are often baffled by why certain projects with strong fundamentals suffer from long-term depressed prices and erratic https://t.co/jVgazA4AfN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Ninjastlye01",
+   "url": "https://x.com/Ninjastlye01/status/2105738390012662243",
+   "date": "2026-10-01",
+   "text": "Been in ethereum:0x4a220e6096b25eadb88358cb44068a3248254675 for years. So undervalued even now IYKYK. Now I can hold a meme solana:4Xfph5jWxEj3zzPTsDNPJtJbf24LizaqPQGohodJZ1PV and get paid $QNT with potential crazy upside. You son of a bitch, I’m in."
+  }
+ ]
+}
