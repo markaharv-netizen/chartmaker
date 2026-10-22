@@ -1,0 +1,111 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-08T00:00:00Z",
+ "end": "2026-10-09T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "JeremeehK2GJ",
+   "url": "https://x.com/JeremeehK2GJ/status/2107993935721247205",
+   "date": "2026-10-08",
+   "text": "CRYPTO TONIC:  MORNING MARKET UPDATE\n\nThursday, October 8, 2026\n\nThe market is starting the day in risk-off mode after yesterday’s sharp selloff.\n\n MARKET SNAPSHOT\n\n BTC: ~$83,550\n🔻 24h: ~-2.4%\n\n ETH: ~$2,570\n🔻 24h: ~-4.7%\n\nBitcoin traded between roughly $82,805 and $85,599"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "El_YonnyX21",
+   "url": "https://x.com/El_YonnyX21/status/2108184959185785042",
+   "date": "2026-10-08",
+   "text": "ethereum:0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c | PRE-MARKET UPDATE — OCT 8 🎯\n\nPM: ~7,773\n\nBull &gt;7,780 → Break + retest + 5-min volume confirmation for bullish bias.\n\nBear &lt;7,765 → Break + retest + 5-min volume confirmation for bearish bias.\n\n7,780–7,765 → NO TRADE | https://t.co/o2PxasfdW8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 22,
+   "user": "RobbMass",
+   "url": "https://x.com/RobbMass/status/2108179293327040753",
+   "date": "2026-10-08",
+   "text": "Market Analysis: Are We Seeing A Shift In Crypto?\nsolana:ZBCNpuD7YMXzTHB2fhGkGi78MNsHGLRXUhRewNRm9RU ethereum:0x7420b4b9a0110cdc71fb720908340c03f9bc03ec #xcn #kaspa #solana #ethereum #bitcoin \n\n- Bearish Pattern Nobody Is Talking About\n- HUGE Macro Pattern Thats MEGA Bullish\n-"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "NextGenRichard",
+   "url": "https://x.com/NextGenRichard/status/2108000363823693976",
+   "date": "2026-10-08",
+   "text": "🚨 BTC IS AT A DECISION POINT.\n\nThe next move could set the tone for the entire market today.\n\n🌅 Morning Crypto &amp; Macro Recap | Oct 8\n\nBTC: Bitcoin is hovering around the $83K–$84K zone. The key battle is simple: $83K support vs. $86.5K–$87K resistance.\n\n🔥Reclaim $87K → bulls https://t.co/Rvh8KfA8pK"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "KamranKhan36053",
+   "url": "https://x.com/KamranKhan36053/status/2108219043995931117",
+   "date": "2026-10-08",
+   "text": "$ETH — Structure Turning Bearish\nEthereum is showing a clear short-term structural breakdown after spending several sessions consolidating around the upper range. Sellers have now taken control, pushing price below the previous support area and creating a sequence of lower highs https://t.co/yMQQth3t5c"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "CryptoKid_____",
+   "url": "https://x.com/CryptoKid_____/status/2108054449654755744",
+   "date": "2026-10-08",
+   "text": "Just added more $BTC spot bags at the 82k support.\nWorst case downside is tiny compared to the upside from here.\nBull market is intact. 60k-70k lows? Not coming back this cycle.\nStacking through the noise.\n$ETH looking soft too, same play.\n#Bitcoin #BTC #Ethereum #ETH #Crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "officialbitnxt",
+   "url": "https://x.com/officialbitnxt/status/2108091180705796510",
+   "date": "2026-10-08",
+   "text": "Tom Lee: \"We're 2 days past the bottom. This may be the biggest bull market we've ever seen.\"\nBut his company Bitmine says it will stop buying ETH once it owns 5% of the supply. It has only about 76K ETH, roughly $200M, left to buy.\n\nBullish or bearish for $ETH?\n#TomLee #Ethereum https://t.co/Tlw0zzX1fE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FIBFINDERSX",
+   "url": "https://x.com/FIBFINDERSX/status/2108209594891649194",
+   "date": "2026-10-08",
+   "text": "Has ethereum:0xcfcecfe2bd2fed07a9145222e8a7ad9cf1ccd22a finally found a bottom?\n\nThe price structure forming just above the 78.6% Fibonacci retracement shows promising signs of a potential bottom. Nevertheless, confirmation is still missing.\n\nA micro 5 wave move to the upside is https://t.co/93Ry4PPuIS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2108136417037549664",
+   "date": "2026-10-08",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• Samsung Wallet to add USDC transfers for US Galaxy users in October\n• USDC Transfers Are Coming to Samsung Wallet\n• Bitcoin Dumps to 17-Day Low, But Key Metric Flashes Rebound Signal\n• Bitcoin Just Lost A Key Level, Is https://t.co/3BbJHPWTvW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "dngg294601",
+   "url": "https://x.com/dngg294601/status/2108275619675168886",
+   "date": "2026-10-08",
+   "text": "Global Cryptocurrency Market Update\nOctober 8, 2026 | 12:15 PM Pacific Time\nMarket Overview\nThe global crypto market is undergoing a broad correction driven by tighter liquidity, institutional outflows, and leveraged liquidations.\nTotal Market Cap: ~$2.74T (−3.4%)\nBTC:"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 91,
+   "user": "Kebbi_kingjr",
+   "url": "https://x.com/Kebbi_kingjr/status/2108222553890210008",
+   "date": "2026-10-08",
+   "text": "Ethereum Cannot Find Direction The Market Needs a Strong Signal\n\n$ETH remains trapped in a zone of uncertainty, with on-chain data showing neither aggressive accumulation nor significant profit-taking from whales.\n\nThe bigger picture is clear: the market is waiting for https://t.co/p93EevoABX"
+  }
+ ]
+}

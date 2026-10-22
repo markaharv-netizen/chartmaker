@@ -1,0 +1,228 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-05T00:00:00Z",
+ "end": "2026-10-06T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 9,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2107054026965598666",
+   "date": "2026-10-05",
+   "text": "#BITCOIN\n\n#BITCOIN broke out of its bull flag yesterday, pushing into the recent September highs, and is now consolidating with a spinning top. \n\nThe technical structure remains bullish as these consolidation patterns continue to resolve to the upside, while price holds above the https://t.co/Cb5YCQTXGn"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107104836827193788",
+   "date": "2026-10-05",
+   "text": "📈 $SHOP up 6.2% with 6.6x volume spike—this looks like a real breakout, not just noise\n\n- my bias is bullish here: the 1h structure is firmly bullish, with both the daily trend and BTC context aligned to the upside, so this move is not counter-trend but a continuation attempt 🚀 https://t.co/tULX2LsyPd"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107008802662863272",
+   "date": "2026-10-05",
+   "text": "⚠️ $US drops 4.2% in 15m on double volume—capitulation or just noise in a bearish trend?\n\n- my bias is still bearish here given the clear 1h and daily structure, with the recent -4.2% capitulation marking aggressive supply and strong momentum toward further downside 📉\n- the 2.0x https://t.co/JbWanP6zcK"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107173025263084017",
+   "date": "2026-10-05",
+   "text": "⚠️ $BTC barely moved +0.1% but lower highs keep the bears in control, no relief yet\n\n- my bias remains bearish on BTC in the 1h as price is printing lower highs and lower lows, and structure has not flipped to bullish; price sits below both the EMA20 and EMA200, confirming a https://t.co/XPbGghlZ5e"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2107143956270354636",
+   "date": "2026-10-05",
+   "text": "BTC Coin Pulse Chart Analysis (Last 1 Hour)\nVerdict: Bullish\n\nKey Takeaways:\n\nLiquidation Levels (Upside Magnet): Short Liquidation Size is clustered extremely high (92.5) while Long is minimal (3.5). This massive asymmetry acts as a strong upward magnet, heavily favoring price https://t.co/xQAcZ471zf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2107199811510210733",
+   "date": "2026-10-05",
+   "text": "One trader dropped $108M on $AMD calls expiring in 11 days. The rest of the tape spent the session selling calls on everything else.\n\nTHE TRADE\n\nAt 12:39 ET, someone bought 7,580 AMD October-16 $490 calls for $108.1M in a single print. Eleven days to expiry. Deep in the money. https://t.co/kenHcKcg92"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107000041298657572",
+   "date": "2026-10-05",
+   "text": "📐 ETH steady at +1.0% in 24h—bullish structure intact, the setup’s gearing for more than just routine gains\n\n- bias remains bullish on $ETH here while price holds above the 2690 zone, backed by clear bullish structure on the 1h, daily, and weekly timeframes, plus higher https://t.co/ZzEgiCtWqG"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107060658827071991",
+   "date": "2026-10-05",
+   "text": "🟢 ETH steady at +0.5% 24h with bullish structure locked in—quiet before the next move?\n\n- my bias is bullish here as the 1h structure is confirmed bullish, backed by bullish daily and weekly trends and also aligned with BTC’s structure 🟢\n- price is currently 2715.94, sitting https://t.co/WIfWvO9g4q"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107099095366062554",
+   "date": "2026-10-05",
+   "text": "🔄 COIN: liquidity sweep above 188.01 on 1.3% 24h gain signals bullish trap cleared\n\n- my bias is bullish here: the 1h structure is confirmed bullish (higher highs/higher lows) and both the daily structure and BTC trend are also bullish, so the sweep above 188.01 is a textbook https://t.co/MLytyeqZPV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107109407674769652",
+   "date": "2026-10-05",
+   "text": "💡 $RLC 52.6% surge with heavy shorts and -2% funding screams a short squeeze brewing, not a dip.\n\n- my bias is strongly bullish here — the 1h, daily, and weekly structures are all aligned bullish, with the current price at 0.5584 well above recent swing highs and the trend flip https://t.co/LuRrsxldbS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 78,
+   "user": "AkiraOrderFlow",
+   "url": "https://x.com/AkiraOrderFlow/status/2107189291637932529",
+   "date": "2026-10-05",
+   "text": "Asked Muse to sort through @jbulltard1 database with a few parameters that I look at and identify trends, here’s what it came up with (pretty interesting)\n\nFlow Brief — Oct 5\n\n- Semis/AI infra: still the dominant bid at every horizon, Info Tech +1007 on $3.11B over 30d with $INTC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "jake_options",
+   "url": "https://x.com/jake_options/status/2106927229737333233",
+   "date": "2026-10-05",
+   "text": "$COIN 130m⤵️\n- Very interesting price action here on #coinbase. Expanding triangle candlestick pattern followed by a \"pump-fake\" (false) breakout with an immediate gap fill to the downside. \n- Since 21SEP with that gap creation, Coinbase has been steady taking back to the 200-day"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "BullBrezza",
+   "url": "https://x.com/BullBrezza/status/2107030613719212360",
+   "date": "2026-10-05",
+   "text": "Calling $TAO “just another AI coin” is what happens when your research ends at the ticker.\n\nStillcore’s case for a $1 trillion Bittensor ecosystem by 2030 deserves serious arithmetic. \n\nI’ll give you my bull, base and bear scenarios at the end.\n\nStart with what businesses"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 45,
+   "user": "WheelerrDealerr",
+   "url": "https://x.com/WheelerrDealerr/status/2107191497321746892",
+   "date": "2026-10-05",
+   "text": "some thoughts on contemporary market participant habits, expressed in these two charts - the reality is most traders here now demand and chase the chart in exhibit A over exhibit B.\n\ntraders are so psyopsed into topping daily/weekly/monthly leaderboards that they continuously https://t.co/ZxOL3SdJ98"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107065145214025934",
+   "date": "2026-10-05",
+   "text": "🚨 $BTC ALERT: MSTR, COIN, CRCL, BMNR Stocks Rally With Bitcoin Within $500 Of September Peak\n\n🟢 Bullish: 44%\n• MSTR, COIN, CRCL and BMNR rallied, with pre-market gains of about 2.5% to 3% as Bitcoin neared its late-September peak.\n• Bitcoin edged up 0.8% over 24 hours and"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2107108598920720777",
+   "date": "2026-10-05",
+   "text": "📊 $BTC Overview | 2026-10-05\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Bitcoin\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 25,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2107119932609577215",
+   "date": "2026-10-05",
+   "text": "📊 $DOT Overview | 2026-10-05\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI 🟢 Bounce\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Polkadot\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2107143836724301876",
+   "date": "2026-10-05",
+   "text": "BTC Single-Coin Histogram Analysis\nVerdict: Bullish\n\nKey Takeaways:\n\nRetail Sentiment (Contrarian Bullish): True Retail Longs dropped (-2.425 to 40th percentile) while True Retail Shorts rose (+2.425 to 60th percentile). Retail leaning short acts as a contrarian bullish https://t.co/7DQwJ7BwjK"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2107113636502069640",
+   "date": "2026-10-05",
+   "text": "📊 $ETH Overview | 2026-10-05\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Ethereum\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Mervin_Trades",
+   "url": "https://x.com/Mervin_Trades/status/2107120154265993652",
+   "date": "2026-10-05",
+   "text": "Watchlist for Oct 05, 2026\n\n🟢 $COIN Bullish → 195.0\n🔴 $IREN Bearish → 35.0\n\nBuilt by Kronos — GEX, options &amp; dark pool scanner.\nWhat's Kronos? Check the pinned tweet.\n#GEX #OptionsFlow #DarkPool #Kronos"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 25,
+   "user": "Errecck",
+   "url": "https://x.com/Errecck/status/2107040227445334408",
+   "date": "2026-10-05",
+   "text": "$COIN is now at the BSI support that gave both major bottoms in 2026.\n\nEach rally gave 50%+ \n\nIt's now or never.  If COIN is going to be bullish it's off this support and a rally this week comes.  If we break down this is an extremely bearish occurence. https://t.co/AgtqAg4S3U https://t.co/OLt6QqWO1A"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 38,
+   "user": "OnyxKrypto",
+   "url": "https://x.com/OnyxKrypto/status/2107202360724578367",
+   "date": "2026-10-05",
+   "text": "$XCN\n3+ years of lower highs. That’s not a bullish chart it’s a warning.\nA coin can survive and still recover, but the burden of proof is on the bulls.\nI want to see a higher high, a higher low, and sustained volume before calling it a comeback.\nUntil then, the trend is bearish."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 27,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2107128402801053970",
+   "date": "2026-10-05",
+   "text": "#Trump announced the creation of a Super Intelligence Force #SIF task group to push the new branding forward. Following the move, #Elon #Musk confirmed #SpaceXAI will officially change its name to SpaceXSI to align with the initiative\n\n#MarketUpdate #StockMarket #USA #stocks https://t.co/Kyb9zkD3Hr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 23,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2107127879414804872",
+   "date": "2026-10-05",
+   "text": "#Elon #Musk is urging everyone to ditch the term #AI and start calling it Super Intelligence #SI instead, claiming it sounds better. The push follows a recent presidential executive order attempting to officially rebrand the tech sector as SI\n\n#MarketUpdate #StockMarket #USA https://t.co/0NZM4X49AC"
+  }
+ ]
+}

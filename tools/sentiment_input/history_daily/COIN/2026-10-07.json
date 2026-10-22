@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-07T00:00:00Z",
+ "end": "2026-10-08T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NASNMEDIA",
+   "url": "https://x.com/NASNMEDIA/status/2107963815379824799",
+   "date": "2026-10-07",
+   "text": "$CIFR  — $14.57 | −6.0%\n\nDriver: same BTC flush. AI-hosting pivot ignored for a day.\n\nSentiment: trader’s name. High beta.\n\nVolume: ~30M, elevated. Flag.\n\nCatalyst: hosting / HPC contract news.\n\nBull: power capacity gets re-rated as AI real estate.\n\nBear: coin price still sets"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107624990719766722",
+   "date": "2026-10-07",
+   "text": "🧐 $ASTER shows calm 0.2% dip amid bullish structure—bull trap or subtle strength?\n\n- my bias here is still bullish on ASTER #ASTERUSDT.P 1h as the immediate market structure remains firmly bullish, with higher highs and higher lows, and the structure flip is well-defined below https://t.co/3oQP1hpcp6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107794976067178506",
+   "date": "2026-10-07",
+   "text": "🔥 $RAYSOL volume spikes 4.1x with 5.6% 24h gain—bullish momentum ready to break higher\n\n- my bias is bullish here — 1h, daily, and weekly trends are all aligned to the upside, and the structure is confirmed by a sequence of higher highs and higher lows, with price pushing above https://t.co/TaomamHQcy"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107727778816594286",
+   "date": "2026-10-07",
+   "text": "📉 $ETH at -3% 24h and stuck below key EMAs—bearish pressure won't ease without a breakout soon\n\n- my bias remains bearish on ETH #ETHUSDT.P 1h as price is locked well below both EMA20 and EMA200, with the 1h Dow structure clearly showing lower highs and lower lows; the swing https://t.co/LBjdHggUmI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2107810426767425626",
+   "date": "2026-10-07",
+   "text": "$GLXY \n\nSubscriber Chart Request\n\n(Want your favorite ticker charted? Become a member at https://t.co/IJumYWrSF2 and enjoy unlimited technical chart requests).\n\n$GLXY continues to trade within a sideways channel, with price below the key moving averages clustered around the https://t.co/0kJOEbzYFO"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107625097796141072",
+   "date": "2026-10-07",
+   "text": "🛰 ️ $RAYSOL dips 3.6% in 24h despite bullish structure—divergence or just noise?\n\n- my bias is still bullish here as the 1h, daily, and weekly structure all remain firmly bullish, with the most recent higher high at 2.3380 and higher low at 2.1009; price is currently holding https://t.co/RgqgCCLrzp"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107849160221241660",
+   "date": "2026-10-07",
+   "text": "🛑 ETH at -6% 24h and breaking key EMAs—are bulls ready to surrender or just warming up?\n\n- the 1h structure for $ETH #ETHUSDT.P is decisively bearish, with price making new lows and sitting well below both EMA20 and EMA200, while BTC is also in a bearish trend—downside pressure https://t.co/aPYsmlUu0T"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107657654751433158",
+   "date": "2026-10-07",
+   "text": "📈 $XMR just swept liquidity below 555.71—bullish structure holds despite a mild 0.6% dip.\n\n- My bias remains bullish on XMR here, as the 1h structure is confirmed bullish (higher highs/higher lows), with both daily and weekly trends aligned to the upside 🚀\n- The recent 15m wick https://t.co/ydkDNRFami"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107900878501957790",
+   "date": "2026-10-07",
+   "text": "🛑 $BTC down 2.7% in 24h but structure warns this dip could deepen, not bounce back.\n\n- my bias remains bearish on BTCUSDT.P in the 1h as the market structure is clearly making lower highs and lower lows, with price currently at 83,325 and the swing high to flip the structure https://t.co/KJaTisY40A"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 215,
+   "user": "Saint10Fourteen",
+   "url": "https://x.com/Saint10Fourteen/status/2107911948520030671",
+   "date": "2026-10-07",
+   "text": "with $ANT u have 2 ways to earn $ZEC \n\n1.) hold the coin and collect holder rewards.\n\n2.) own and activate a miner NFT and earn from a separate miner reward pool.\n\nthere are only 210 miner NFTs, modeled after real zcash mining rigs.\n\neach earning cycle requires activation, which"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107871137677955287",
+   "date": "2026-10-07",
+   "text": "⬆️ $RAD surges 3% in 15m on 5.1x volume spike—smart money stacking before a bigger move?\n\n- my bias is bullish here — strong 5.1x volume spike with a fast +3% move indicates aggressive accumulation, suggesting smart money involvement and a likely upward continuation while the https://t.co/LizJnMfje0"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107790731276357883",
+   "date": "2026-10-07",
+   "text": "📊 $KOMA pops 2.7% on an 18x volume surge—but is this genuine buying or just noise?\n\n- my bias is cautiously bullish for a tactical long opportunity after this extreme 18x volume spike and sudden +2.7% price jump—this kind of high-volume move, especially after taking out a prior https://t.co/7pWl0E6lhR"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107802971396247711",
+   "date": "2026-10-07",
+   "text": "🔄 $NMR swept liquidity below 16.094; a classic fuel for the ongoing bullish uptrend.\n\n- My bias remains bullish here following the sweep and recovery above 16.094, since the 1h structure is still firmly bullish (higher highs/higher lows) and the recent wick below 16.094 was a https://t.co/IAMbYUHLDs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "Jiurn",
+   "url": "https://x.com/Jiurn/status/2107892432327016855",
+   "date": "2026-10-07",
+   "text": "First time I see a coin be 3x more than its launchpad\n\nOne is either undervalued or the other overvalued\n\nI believe it to be the former https://t.co/mPEj4AwtbF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "hoodtoshi",
+   "url": "https://x.com/hoodtoshi/status/2107946568506855701",
+   "date": "2026-10-07",
+   "text": "i want Jack Duval to ape my coin because he thinks my app is intuitive and a must have for artists and the trajectory of my company is extremely undervalued and because he thinks im a bullish dev"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 16,
+   "user": "Leonardo_CMNT",
+   "url": "https://x.com/Leonardo_CMNT/status/2107926058041291072",
+   "date": "2026-10-07",
+   "text": "$XFUND soon coming to iOS is massive!\n\nSo now we will all be able to launch a coin, trade, bet up or down with those options and claim your fees!\n\nSuper undervalued, super under the radar, super useful, super bullish, super of the super LFG!! https://t.co/5aloJqHSXB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "Jus7Degen",
+   "url": "https://x.com/Jus7Degen/status/2107787868714500170",
+   "date": "2026-10-07",
+   "text": "Unpopular opinion:\n\nMost old altcoins don't deserve another bull run.\n\n$EOS\n$NEO\n$IOTA\n$ZIL\n$DASH\n$ALGO\n$VET\n$LTC \n\nBeing down 90% doesn't make a coin undervalued.\n\nSometimes it just means:\n\nThe narrative is dead.\nUsers moved on.\nDevelopers moved on.\nLiquidity moved somewhere"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2107736488654119280",
+   "date": "2026-10-07",
+   "text": "ethereum:0x925206b8a707096ed26ae47c84747fe0bb734f59 4H TA ⚠️\n\nWhiteBIT Coin is consolidating inside a symmetrical triangle after a strong previous rally.\n\n🔹 Current: $83.95\n🟢 Breakout zone: $86–$88\n⚠️ Key support: $82–$83\n🎯 Bullish target: ~$92–$94\n🎯 Bearish target: ~$76\nThe https://t.co/bZpupDhcYm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "xynath",
+   "url": "https://x.com/xynath/status/2107814150504153435",
+   "date": "2026-10-07",
+   "text": "Someone asked me for the non hype version. Copper (inu) is a Robinhood Chain meme that routes trade tax toward copper exposure for stakers and toward buybacks that reduce supply. \n\nIt does not promise metal delivery. It does not pay you for holding in a wallet and doing nothing. https://t.co/dizO2sVi9G"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "trendscoreio",
+   "url": "https://x.com/trendscoreio/status/2107788369749020866",
+   "date": "2026-10-07",
+   "text": "A coin being green doesn't make it bullish.\n\nA coin being red doesn't make it bearish.\n\nWe need to look at what is underneath the price;\n\n• #Momentum\n• Volume\n• Trend strength\n• #Market structure\n• Risk/reward\n\nWhen several independent signals align, the probability profile https://t.co/0cF39J1J0Z"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "OmasExchange",
+   "url": "https://x.com/OmasExchange/status/2107955764878778724",
+   "date": "2026-10-07",
+   "text": "Crypto traders, what are you watching right now? 👀📊\nBTC? ETH? SOL? Memecoins? 👀\nDrop the coin you're watching and your bias below: 🟢 Bullish\n🔴 Bearish\n🟡 Waiting for confirmation\nLet’s see what everyone is watching. 🧠📈\nNFA • DYOR https://t.co/iewhWfAhKO"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 14,
+   "user": "HedgebergCom",
+   "url": "https://x.com/HedgebergCom/status/2107878797135462580",
+   "date": "2026-10-07",
+   "text": "$RKLB\n\nThis one is currently a coin flip. It is positive it left the trend but the thing is it doesn't look like a real breakout.\n\nWatch for that channel. If it fall back into it would be bad. On the upside it needs some daily closes above $76. I am closing the tiny swing trade https://t.co/lgJYXxYQzg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107676227955761574",
+   "date": "2026-10-07",
+   "text": "🚨 $COIN ALERT: Coinbase CEO Says Coinbase Pro Is Coming Back\n\n🟢 Bullish: 68%\n• The Coinbase CEO said Coinbase Pro is coming back, signaling a planned return of the professional trading product.\n\n🔴 Bearish: 32%\n• No timing, features, or confirmation of a completed relaunch"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2107869875636969817",
+   "date": "2026-10-07",
+   "text": "Reports suggest #Democrats are targeting a #Congressional #majority to launch #impeachment proceedings against the #president - while media speculation grows, market watchers are weighing whether a political shift could trigger a black swan event for financial markets https://t.co/8kVIuxkyHq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2107868457656111555",
+   "date": "2026-10-07",
+   "text": "World Liberty Financial teamed up with Mesh to integrate the #Trump family's #USD1 #stablecoin into a global merchant network this quarter. #WLFI also plans to bring the tech to major Web2 platforms, targeting mainstream online payments across millions of storefronts https://t.co/cMcbKj038K"
+  }
+ ]
+}

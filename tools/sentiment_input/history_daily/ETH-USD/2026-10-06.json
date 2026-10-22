@@ -1,0 +1,84 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-06T00:00:00Z",
+ "end": "2026-10-07T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AlphaLensCrypto",
+   "url": "https://x.com/AlphaLensCrypto/status/2107422541367177527",
+   "date": "2026-10-06",
+   "text": "📊 THE CRYPTO EDGE | DAILY MARKET BRIEF\n📅 October 6, 2026\n\n🚨 365-DAY BEAR MA RKET SIGNAL &amp; 2-DAY SMA CROSSOVER: IS $92K NEXT? 🚨\nExactly 365 days after the bull market peak, Bitcoin is flashing its most powerful historical bottom indicator while coiling in an ascending triangle https://t.co/8a7NTEOXze"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107322465902801341",
+   "date": "2026-10-06",
+   "text": "🚨 ethereum:0x4e67db19044549ff420860834c91b45bad298722 $ZS $ZW ALERT: Corn, soybeans fall on dry weather forecast; wheat eases\n\n🟢 Bullish: 30%\n• Russia-Ukraine war disruption to global wheat supplies limited the downside in wheat\n• A major Saudi purchase supported wheat prices"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Faiyaz56615629",
+   "url": "https://x.com/Faiyaz56615629/status/2107431909475414459",
+   "date": "2026-10-06",
+   "text": "Here’s my full outlook and forward analysis on $CLAUS.\n \nThe massive rally we’re seeing on $CLAUS is no coincidence. It’s a perfect combination of trending AI Agent narrative, ultra-small market cap, thin liquidity, and continuous smart money inflows picked up early on FOMO"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 19,
+   "user": "AragornWindbrkr",
+   "url": "https://x.com/AragornWindbrkr/status/2107480711837986920",
+   "date": "2026-10-06",
+   "text": "ethereum:0x25f8087ead173b73d6e8b84329989a8eea16cf73  chart request.\n\nYield Guild Games is another mid-low cap with a crazy chart that is down 449x from its all-time-high.\n\nIf YGG breaks its 4-year bearish White channel, there are 3 Orange FVG’s above that it hasn’t filled yet, https://t.co/coUE0jkYnF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 283,
+   "user": "CryptoPatel",
+   "url": "https://x.com/CryptoPatel/status/2107342589036736703",
+   "date": "2026-10-06",
+   "text": "Forgotten 2021 Gem iExec ethereum:0x607f4c5bb672230e8672085532f7e901544a7375 Is Back: Bullish Flip Confirmed, 5x–12x Targets Revealed\n\nThe coin everyone forgot just woke up.\nIn the 2017 and 2021 bull runs, iExec RLC was one of the hottest trending altcoins in crypto. Then came a https://t.co/19wf16bLXi"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 58,
+   "user": "anasta_maverk",
+   "url": "https://x.com/anasta_maverk/status/2107505618873659670",
+   "date": "2026-10-06",
+   "text": "ethereum:0xddb3422497e61e13543bea06989c0789117555c5 is showing clear bearish pressure after losing the 0.01360–0.01370 support zone. Unless price quickly reclaims this area, the next downside target sits around 0.01340–0.01350, while 0.01400–0.01410 remains the key resistance. https://t.co/TrYdsf5jVv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2107430819186770105",
+   "date": "2026-10-06",
+   "text": "ethereum:0x54d2252757e1672eead234d27b1270728ff90581 / USDT — 5M Rising Wedge ⚠️\n\nethereum:0x54d2252757e1672eead234d27b1270728ff90581 is forming a rising wedge on the 5-minute chart, with price around $2.0003.\n\n🔴 Resistance: ~$2.010–$2.012\n🟢 Key support: ~$1.995\n⚠️ Wedge https://t.co/RRdIP7qknG"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "CoinEdition",
+   "url": "https://x.com/CoinEdition/status/2107424971610026009",
+   "date": "2026-10-06",
+   "text": "🚨 $ETH DERIVATIVES SIGNAL BEARISH PRESSURE\n\nETH options show negative IV across multiple expiries, while Bybit funding turned sharply negative at -0.01046%, signaling rising short positioning.\n\nBinance ETH volume also surged to $154.5M in one hour, nearly 6× the average, as ETH https://t.co/a8El5a2uuj"
+  }
+ ]
+}

@@ -1,0 +1,219 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-08T00:00:00Z",
+ "end": "2026-10-09T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108054243537985898",
+   "date": "2026-10-08",
+   "text": "📈 $ON up 5.4% with 2.1x volume—real breakout or just the start of something bigger?\n\n- my bias is bullish here on ONUSDT.P while price holds above 0.1035, as the 1h trend is confirmed bullish and the pump is backed by very strong volume expansion (4.7x normal) and a structural https://t.co/b2BV8jChwj"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108167366832017683",
+   "date": "2026-10-08",
+   "text": "🔻 $APR : 5.2% drop on 18.7x volume screams forced selling, not capitulation.\n\n- my bias is bearish here: the 1h, daily, weekly, and BTC trends are all aligned to the downside, and the massive volume spike on a sharp -5% breakdown strongly suggests distribution and forced selling https://t.co/jRuDhvHuP6"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2108108923760685096",
+   "date": "2026-10-08",
+   "text": "🚨 $XAU ALERT: ZAWYA: Egypt gold prices ease as global bullion falls on stronger dollar\n\n🟢 Bullish: 35%\n• Evangelista said gold’s downside remains supported by geopolitical uncertainty, government-debt and inflation concerns, and central-bank demand.\n\n🔴 Bearish: 65%\n• Spot"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108023710934298873",
+   "date": "2026-10-08",
+   "text": "📌 $BTC holds the downtrend with -0.9% in 24h—lower lows and highs say bears aren’t done yet\n\n- market structure on BTCUSDT.P 1h remains bearish, with price currently at 83,130 and making lower lows and lower highs\n- recent confirmed swing low at 82,706 and swing high at 86,664 https://t.co/wT83SJo1Xp"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108152636222460023",
+   "date": "2026-10-08",
+   "text": "📉 ETH drifts lower with 1.6% down—downtrend still intact, no relief in sight today\n\n- my bias is bearish here on $ETH #ETHUSDT.P 1h, as the structure is clearly in a downtrend with consistent lower highs and lower lows, and price remains below both EMA20 and EMA200, trading at https://t.co/qgJhnt5pgY"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108213256389087698",
+   "date": "2026-10-08",
+   "text": "🕓 ETH: Quiet day but steady below key resistance with a 1.5% dip—bearish on the horizon\n\n- my bias stays bearish for $ETH #ETHUSDT.P on the 1h as price holds below both the recent lower high at 2586.61 and the key structure flip level at the same price; 1h trend is cleanly https://t.co/d4aABVvQmy"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107986782998462686",
+   "date": "2026-10-08",
+   "text": "👀 $SKHY BTC divergence at -1.4% 24h keeps the 1h bias bearish for now\n\n- my bias is bearish here on the 1h while price remains below the last lower high — this is a counter-trend short versus the daily bullish structure, so I want cleaner confirmation before treating it as more https://t.co/DIkNlktFlf"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108218086172115217",
+   "date": "2026-10-08",
+   "text": "⚠️ $LA drops 4.1% in 15m on 14x volume spike—big players unloading, not a trap yet\n\n- my bias remains bearish here on LAUSDT 1h, as the local structure is confirmed bearish with lower highs and lower lows, and strong selling pressure with a 14.1x volume anomaly suggests https://t.co/TbbWz4ba6I"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108239871038968196",
+   "date": "2026-10-08",
+   "text": "🛑 $OPENAI dives 5.2% on 8.8x volume—panic selloff or smart money unloading?\n\n- my bias is bearish here following the aggressive -5.2% liquidation wick on 8.8x relative volume, which is classic of a strong selloff event and signals either panic selling or smart money distribution https://t.co/Y92oe7YTsd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108144970565632505",
+   "date": "2026-10-08",
+   "text": "🗺 ️ $BTC down 1.2% over 24h but 1h structure warns this dip could deepen, not just a retrace\n\n- the 1h structure is clearly bearish with lower highs and lower lows, while both the daily and weekly remain bullish — so any upside here is a counter-trend retrace unless 86664.9 is https://t.co/qGE9fXgFmM"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2108266981208326554",
+   "date": "2026-10-08",
+   "text": "⚔️ BURAKTHESCALPER LLC\nTHURSDAY | OCTOBER 8, 2026\nAFTERNOON MARKET BATTLE PLAN\n\n🔴 BIAS: BEARISH\nSELLERS CONTROL THE TAPE\n\n📊 INDEX FUTURES\n\n$ES_F | 7,803.50\nS: 7,783.00 | R: 7,852.25\nBelow 7,800 = defensive.\nWatch for acceptance below 7,783.\nRecovery requires a confirmed"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108264637493821745",
+   "date": "2026-10-08",
+   "text": "📊 MOVR jumps 5.1% in 15m with 2.2x volume spike—real move or tactical stop-run setup?\n\n- my bias is cautiously bullish here for a tactical long play, as the 2.2x volume spike and sharp +5.1% price surge in 15 minutes signal possible smart money accumulation or a stop-run https://t.co/B2VtswYZYz"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108091990873165826",
+   "date": "2026-10-08",
+   "text": "📌 ️ $ETH still trapped under resistance after a quiet day, no signs yet of trend reversal or breakout\n\n- my bias is still bearish for ETH #ETHUSDT.P on the 1h as price remains locked in a clear lower-high, lower-low structure; the trend hasn't flipped and price sits well below https://t.co/17aIdPh9Qk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108195246592975190",
+   "date": "2026-10-08",
+   "text": "⚖️ $ETHFI shows 3x volume spike and 3.8% up in 15m, but can this counter-trend hold or is this noise?\n\n- my bias is cautiously bullish here for a tactical move up, but this is a counter-trend play on the 1h: the structure remains bearish, so I need to see clear upside https://t.co/IKxu6xFI4v"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 41,
+   "user": "TajVincent",
+   "url": "https://x.com/TajVincent/status/2108194921828044844",
+   "date": "2026-10-08",
+   "text": "📊 PRE-MARKET OUTLOOK &amp; KEY LEVELS — Thursday, October 8, 2026 (9:46 AM Eastern/NYSE)\n\n📉 BEARISH TAPE — SHORT BIAS. Regime CHANGE day, not a continuation: all three flipped bearish ($SPXW −27.5 / $SPY −61.9 / $QQQ −45.5) with no timeframe divergence on any of them. Breadth https://t.co/dSxjPXn2MQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "wsagentai",
+   "url": "https://x.com/wsagentai/status/2108331938599620849",
+   "date": "2026-10-08",
+   "text": "10/08/2026 Market Daily Summary\n\nMarkets ended mixed with a defensive tilt as an oil surge, a bond rout, and a disruptive SpaceX spectrum deal crushed tech and telecom stocks. The S&amp;P 500 fell 0.47% while the Dow eked out a +0.1% gain, revealing a sharp divergence between"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "thetalkingalpha",
+   "url": "https://x.com/thetalkingalpha/status/2108151814935687200",
+   "date": "2026-10-08",
+   "text": "Samsung guided ₩107.4 trillion (~$80B) of Q3 operating profit last night, its fourth straight record. I believe it changes nothing for Micron $MU or Sandisk $SNDK. That isn't because Samsung doesn't matter. It's because this print told us nothing new.\n\nSamsung matters. It's one https://t.co/gpVhUD5R3s"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2108246561272557891",
+   "date": "2026-10-08",
+   "text": "🔍 $QKC sees 16.4x volume but 15m down 2.8%—real selling or just noise in a bearish trend?\n\n- My bias is firmly bearish here: the 1h structure, as well as daily and weekly, are all in clear downtrend and aligned with bearish BTC context — this is not the time to fight momentum\n- https://t.co/LcNvloqBqM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "VersaceBoysRH",
+   "url": "https://x.com/VersaceBoysRH/status/2108150123507179687",
+   "date": "2026-10-08",
+   "text": "Alpha to watch - PaperDAO (@paperdao_xyz)\nhttps://t.co/CFkwXKc5SR\n\nPapertrade Founders - @izebel_eth and @blurryface \n\nPaperDAO Team/Founder(??) - @4IV4R\n\n$PULP / Robinhood Chain / 60 ETH raise\n\nPaperDAO raised ETH through @daosdotworld to create a community treasury that will https://t.co/gkRumIg4Cl https://t.co/2UFZge4XqD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "18decimals",
+   "url": "https://x.com/18decimals/status/2108204830275854838",
+   "date": "2026-10-08",
+   "text": "crypto has conditioned people to think a coin being 20 minutes old is bullish and a coin surviving 20 days is bearish.\n\nmight be the dumbest market psychology ever created."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "TradeTitanX_",
+   "url": "https://x.com/TradeTitanX_/status/2108264849771815097",
+   "date": "2026-10-08",
+   "text": "This coin right now it’s on Support, besides the bearish market this coin hold up strongly showing that a lot of upside is coming in the next few days.🚀 https://t.co/xzm17luTty"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 233,
+   "user": "grimacexbt",
+   "url": "https://x.com/grimacexbt/status/2108030569716347311",
+   "date": "2026-10-08",
+   "text": "Phew… the goyim really weren’t ready for this one.\n\nFirst of all… god forbid a young nigga catch a vibe, believe in something and actually work for the bag. Goddamn… not a crime! Rasmr and crew are out here doing infinitely embarrassing shit every single day + raping every new https://t.co/uKw5Msy55s https://t.co/u0wZKKtLzv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 156,
+   "user": "GreatMattsby",
+   "url": "https://x.com/GreatMattsby/status/2108291738746130611",
+   "date": "2026-10-08",
+   "text": "Lets not forget about good ole faithful AVWAP at 170.29. \nIt would be a shame to be bullish at $200 and then bearish at $170\n\n$COIN\n\nhttps://t.co/xpEyY8vVcP https://t.co/dbgFOPxmjO"
+  }
+ ]
+}

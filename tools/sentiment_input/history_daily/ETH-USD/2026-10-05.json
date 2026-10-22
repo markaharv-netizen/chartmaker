@@ -1,0 +1,93 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-05T00:00:00Z",
+ "end": "2026-10-06T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MoneyProtocolHQ",
+   "url": "https://x.com/MoneyProtocolHQ/status/2107144605850374365",
+   "date": "2026-10-05",
+   "text": "THE MARKET NOBODY IS READY FOR 👀\n\nEveryone wants a simple answer:\n\nBull market or bear market?\n\nBut what if the real setup is much more complicated?\n\nHere’s one possible scenario I’m watching.\n\nNot a prediction. Not a trade call.\n\nA map of what COULD happen.\n\n₿ BITCOIN\n\nBTC has https://t.co/dRR4fJAj3h"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2107044282960076946",
+   "date": "2026-10-05",
+   "text": "ethereum:0x4f8e5de400de08b164e7421b3ee387f461becd1a — Rectangle Breakout Setup 📊\n\nethereum:0x4f8e5de400de08b164e7421b3ee387f461becd1a is trading around $0.9990 and remains inside a broad $0.95–$1.00 rectangle on the 1D chart.\n\n🔸 Resistance: ~$1.0000\n🔸 Support: ~$0.95\n📈 https://t.co/JDFpW68phc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2107046812578431102",
+   "date": "2026-10-05",
+   "text": "ethereum:0x54d2252757e1672eead234d27b1270728ff90581 — Triangle Breakout Setup 📊\n\nethereum:0x54d2252757e1672eead234d27b1270728ff90581 is consolidating inside a symmetrical triangle on the 15M chart, with price around $2.0194.\n\n🔹 Immediate resistance: ~$2.03–$2.05\n🔹 Support: https://t.co/2cXISsB65G"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "El_YonnyX21",
+   "url": "https://x.com/El_YonnyX21/status/2106917708566544866",
+   "date": "2026-10-05",
+   "text": "ethereum:0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c | OCT 5 — OVERNIGHT PLAN 🎯\nOvernight → ~7,732.50\nBullish &gt;7740 | Bearish &lt;7725\n7740–7725: NO TRADE\nCALL TARGETS → 7760 / 7780 / 7800\nPUT TARGETS → 7695 / 7680 / 7670\nKey Levels:\n7695 → 1H MA40 / 7680 → 1H MA100\nOn the 1H https://t.co/lbQoqOiMCp"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107144246897631382",
+   "date": "2026-10-05",
+   "text": "🚨 $BMNR $ETH ALERT: BMNR Stock Gains Alongside Ethereum After Tom Lee's BitMine Makes One Of Its Smallest Ethereum Purchases Ever\n\n🟢 Bullish: 58%\n• BitMine bought 15,112 ETH and raised holdings to 6.02 million tokens, or 4.9% of supply, closer to its 5% target.\n• BMNR edged"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 132,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2106939176910528761",
+   "date": "2026-10-05",
+   "text": "Sitting on my hands in this crypto rally is harder than it sounds after BTC gained 2.1% Sunday, closed above TBO resistance at 84,999, and left a predictive wick pointing toward 93K. The macro trend remains extremely bullish, but overbought RSI and weekly stablecoin dominance https://t.co/2awtbovFUA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 136,
+   "user": "AndrewCryptoHQ",
+   "url": "https://x.com/AndrewCryptoHQ/status/2107144350572413137",
+   "date": "2026-10-05",
+   "text": "Buying something new on chain usually gives you one of two outcomes:\n\nYou found a gem and it starts printing.\n\nOr\n\nYou bought yourself a rug or a farm, roundtripping your gains and losing your money.\n\nBut investing in companies that have already been building for 2+ years https://t.co/RE0lZ9LBnV"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "WRONGWIRE_X",
+   "url": "https://x.com/WRONGWIRE_X/status/2107211000659247270",
+   "date": "2026-10-05",
+   "text": "He lost $471,000 shorting Ethereum.\n\nThen immediately opened a $64.3 MILLION long.\n\n25x leverage.\n\n23,734 ETH.\n\nLiquidation: $2,650.\n\nThis might be one of the craziest revenge trades on-chain right now.\n\nThe trader first shorted 14,976 ETH worth roughly $41M.\n\nThe trade failed. https://t.co/bt4ErQ0L0P"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2107049043071287658",
+   "date": "2026-10-05",
+   "text": "ethereum:0xa3eb7a9e57fca4e40b79e394ed5eb37fed205a24 — Rising Wedge Setup 📉\n\nethereum:0xa3eb7a9e57fca4e40b79e394ed5eb37fed205a24 is trading around $1.0002 on the 4H chart and remains inside a rising wedge.\n\n🔻 Resistance: ~$1.0015–$1.0018\n🔸 Key support: ~$0.9980\n🎯 Bearish https://t.co/BpPoI6cHYI"
+  }
+ ]
+}

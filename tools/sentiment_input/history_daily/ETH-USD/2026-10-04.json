@@ -1,0 +1,75 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-04T00:00:00Z",
+ "end": "2026-10-05T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cryptotalkiesai",
+   "url": "https://x.com/cryptotalkiesai/status/2106851121419723099",
+   "date": "2026-10-04",
+   "text": "🤖 [MARKET ANALYST] — Bitcoin (BTC) Intelligence Report\n\n📊 Live Market Data\n- Price: $85,819 | 24h: +1.28% | 7d: +0.72% | 30d: +7.27%\n- Market Cap: $1.724 trillion (Rank #1 — Dominance Rising) | 24h Volume: $14.86B\n- All-Time High: $126,080 | Current Distance: -31.9% | High 24h:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "0xMaus",
+   "url": "https://x.com/0xMaus/status/2106852663333658670",
+   "date": "2026-10-04",
+   "text": "Interesting week for a couple of tokens : \n\nStarting with solana:pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn, which validated the breakout\n\nTook profit at the Fibonacci levels and still have a little more than half of my bag that I plan to TP progressively https://t.co/uvLjUiu2ST https://t.co/wDdECeF5hd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "WallStreetXHQ",
+   "url": "https://x.com/WallStreetXHQ/status/2106730407060292074",
+   "date": "2026-10-04",
+   "text": "WSX NEWS: 🔥 Arthur Hayes @CryptoHayes says Ethereum has become “one of the most hated cryptos” because of its price performance, but he still sees significant upside ahead.\n\nSpeaking to CoinDesk, Hayes described $ETH as potentially “one of the fastest horses” in the bull market, https://t.co/Igf7fIVVNx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "linzid123",
+   "url": "https://x.com/linzid123/status/2106797476338356307",
+   "date": "2026-10-04",
+   "text": "ethereum:native  TA — UPDATE\n\nA month ago my base case was $2700–$2800, with a bull case of $3200. Price has since reached that base-case zone, playing out the bullish forecast from the previous TA.\n\nThe flag breakout delivered the next leg higher, and price is now consolidating https://t.co/ipkJG1rhW6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "MisterLukeCrypt",
+   "url": "https://x.com/MisterLukeCrypt/status/2106649297592725790",
+   "date": "2026-10-04",
+   "text": "Look, it’s very simple for $ETH and $BTC:\n\nRight now, we have huge liquidation pools above $88,000 on $BTC and above $2,800 on $ETH.\n\nIf we are still in a bear market — which is NOT what I think — it would make more sense for price to take out these highs first, then move all the https://t.co/JTblVImbjS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "AlphaLensCrypto",
+   "url": "https://x.com/AlphaLensCrypto/status/2106792060124582322",
+   "date": "2026-10-04",
+   "text": "📊 THE CRYPTO EDGE | DAILY MARKET BRIEF\n📅 September 2026 / October 4, 2026\n\n🚨 MASSIVE W-PATTERN BREAKOUT CONFIRMED &amp; 12-HR FUNDING FLASHES BEAR BOTTOM SIGNAL! 🚨\nBitcoin confirmed a breakout and neckline retest of a massive W-shaped bottom pattern, with 12-hour funding rates https://t.co/XpAjDvwHer"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "crappycryptocop",
+   "url": "https://x.com/crappycryptocop/status/2106725845888807351",
+   "date": "2026-10-04",
+   "text": "Thought I’d do an update on my ethereum:0x826180541412d574cf1336d22c0c0a287822678a position since it got exploited last month.\n\nI’ll also lay out why I’m potentially looking to ADD to my position instead of selling, and why I think the risk/reward is still pretty asymmetric to https://t.co/oe3FIjN0LK https://t.co/g5DGGKFIr8"
+  }
+ ]
+}

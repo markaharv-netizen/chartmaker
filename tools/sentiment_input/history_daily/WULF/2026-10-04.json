@@ -1,0 +1,66 @@
+{
+ "symbol": "WULF",
+ "start": "2026-10-04T00:00:00Z",
+ "end": "2026-10-05T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "WULF (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 23,
+   "user": "CK_Cryptoklepto",
+   "url": "https://x.com/CK_Cryptoklepto/status/2106713633690382383",
+   "date": "2026-10-04",
+   "text": "I asked @grok to analyze \"Price to Book\" ratio utilizing Q2 2026 earnings data and live Bitcoin price\n\nNot only is $MARA undervalued vs the pack, but when you factor in the $943 million that the 35,577 $BTC has increased in value since Q2 then MARA is only at 1.60x Price to Book https://t.co/IviZZMaHp7 https://t.co/H41f8ulxnp"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Christine_een",
+   "url": "https://x.com/Christine_een/status/2106852805302489590",
+   "date": "2026-10-04",
+   "text": "$WULF My team and I are looking forward to watching the team at Tera Wulf cook something big and tasty in the days ahead   \nWe are extremely bullish https://t.co/gBMm3Aa1Gj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "TENETTRADEGROUP",
+   "url": "https://x.com/TENETTRADEGROUP/status/2106557414925652088",
+   "date": "2026-10-04",
+   "text": "💹 $WULF Analyst Insights \n\nUBS initiates coverage on WULF with a Buy rating and a $24 PT, implying ~38.5% upside from current levels.\n\nView highlights contracted HPC assets, strong leasing economics, and growing demand for data center capacity as key growth drivers.\n\nSigned https://t.co/8rS7bV2U9l"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "tradestoryai",
+   "url": "https://x.com/tradestoryai/status/2106846320984199490",
+   "date": "2026-10-04",
+   "text": "The crowd is still bullish on miners turning into AI data centers, but the stocks aren't going along with it.\n\nMiners Transitioning To AI Data Centers ($IREN, APLD, WULF) scores 73 on the TradeStory AI Sentiment Score this week, down from 88. The score reads what the crowd says https://t.co/y3KwPN3MVf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "tatiiiiana_6",
+   "url": "https://x.com/tatiiiiana_6/status/2106775274478088635",
+   "date": "2026-10-04",
+   "text": "Warren Buffett showed us the power of finding great businesses early. But which companies could become the next major AI winners\n\n$NVDA — AI accelerators &amp; computing\n$LITE — Optical connectivity for data centers\n$IREN — AI cloud infrastructure\n$MU — HBM &amp; advanced memory\n$AVGO — https://t.co/yHvkQgBoz1"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 14,
+   "user": "Schulz_Research",
+   "url": "https://x.com/Schulz_Research/status/2106686929903444319",
+   "date": "2026-10-04",
+   "text": "The most-mentioned stock on WallStreetBets this weekend is $NKE, at its lowest month-end price since August 2013, and 82% of the chatter reads bullish. The biggest jump in mentions went to $WULF, up 2,600% in 24 hours, on a lease it signed in July.\n\nWeekend volumes are thin, so https://t.co/R3xOboc6jP"
+  }
+ ]
+}

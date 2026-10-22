@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-10-05T00:00:00Z",
+ "end": "2026-10-06T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MoneyProtocolHQ",
+   "url": "https://x.com/MoneyProtocolHQ/status/2107144605850374365",
+   "date": "2026-10-05",
+   "text": "THE MARKET NOBODY IS READY FOR 👀\n\nEveryone wants a simple answer:\n\nBull market or bear market?\n\nBut what if the real setup is much more complicated?\n\nHere’s one possible scenario I’m watching.\n\nNot a prediction. Not a trade call.\n\nA map of what COULD happen.\n\n₿ BITCOIN\n\nBTC has https://t.co/dRR4fJAj3h"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "TradingPav",
+   "url": "https://x.com/TradingPav/status/2107099778907566325",
+   "date": "2026-10-05",
+   "text": "🔥 $BTC DAILY UPDATE \n\n4H Timeframe Analysis (Make-or-Break at $86K–$87K Supply)\n\nBitcoin opens the trading week at a key decision point, trading directly inside the $86,100–$87,000 supply zone. How price resolves within this block will set the tone for market direction across https://t.co/nq9CCJiiEy"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 9,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2107054026965598666",
+   "date": "2026-10-05",
+   "text": "#BITCOIN\n\n#BITCOIN broke out of its bull flag yesterday, pushing into the recent September highs, and is now consolidating with a spinning top. \n\nThe technical structure remains bullish as these consolidation patterns continue to resolve to the upside, while price holds above the https://t.co/Cb5YCQTXGn"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2107003370766524814",
+   "date": "2026-10-05",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟯 / 𝟱 – Neutral to mildly bullish - 𝗕𝘂𝗹𝗹𝗶𝘀𝗵 𝗜𝗻𝗱𝗶𝗰𝗮𝘁𝗼𝗿𝘀 - Glassnode data shows Bitcoin long‐term holders staying in profit throughout the cycle, a rarity compared with past bear markets. - WhaleFactor and WhaleSatoshi publish https://t.co/IbaLG5YkCk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 130,
+   "user": "TonySeverinoCMT",
+   "url": "https://x.com/TonySeverinoCMT/status/2107008649025511806",
+   "date": "2026-10-05",
+   "text": "Bitcoin wave count reality\n\nNot a new bull market\n\nI've been here before and traded it perfectly \n\nYou're all just upside down\n\nBecause you can't imagine anything but upside, you're gonna go down with this ship\n\nWave 1 was a leading diagonal – that's why it is harder to read https://t.co/LJVigte2Bc"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Hype_Economics",
+   "url": "https://x.com/Hype_Economics/status/2106989229272142113",
+   "date": "2026-10-05",
+   "text": "🚨 BTC BREAKDOWN RISK IS RISING 📉\n\nBitcoin is forming an ascending triangle, typically a bullish pattern.\n\nBut momentum now favors a breakdown, with $83,000 as the potential downside target.\n\n⚠️ A bullish setup could turn bearish fast. https://t.co/olo67He7bP"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 47,
+   "user": "QmoCrypto",
+   "url": "https://x.com/QmoCrypto/status/2107061591254417714",
+   "date": "2026-10-05",
+   "text": "🚨 THE NEXT BITCOIN MOVE LOOKS EXTREMELY BEARISH\n\nRight now, $BTC is sitting inside a heavy liquidity zone around $84K-$87K.\n\nThat's exactly where traps form.\n\nI think Bitcoin can still squeeze a bit higher first, possibly into $87K-$88K, to clear the last upside liquidity.\n\nBut https://t.co/HzrMVH34pr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "CaffeSatoshi",
+   "url": "https://x.com/CaffeSatoshi/status/2106994817670468030",
+   "date": "2026-10-05",
+   "text": "Bitcoin Monday pre-market, 5 October 2026\n\nBTC: $85.7K\n\nBitcoin enters the week after a strong Q3, but the macro picture is mixed.\n\nKey indicators:\n\n• BTC: slightly up from $84.5K at the start of October\n\n• US spot BTC ETFs: +$134M over the first two trading days of October\n\n•"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "SignalxBinance",
+   "url": "https://x.com/SignalxBinance/status/2106941565021401333",
+   "date": "2026-10-05",
+   "text": "My personal analysis of SOL's current state reveals a mixed bag. The broader crypto context, with a former SEC boss as AI Czar and Bitcoin potentially hitting $600K by 2029 (Peter Brandt), suggests a generally optimistic undertone. However, SOL's immediate technicals on the 4H https://t.co/fsIuadNqdw"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107041386239344978",
+   "date": "2026-10-05",
+   "text": "🚨 $BTC ALERT: Bitcoin Holds Above $86,000 After Fed Rate Hike Bets Ease\n\n🟢 Bullish: 70%\n• Weaker U.S. payrolls data cut October Fed rate hike odds below 20%\n• Bitcoin held above $86,000 and rose 0.6% to $86,332 after testing $87,000\n• Optimism rose for risk assets and"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107013592872636419",
+   "date": "2026-10-05",
+   "text": "🚨 $BTC ALERT: Bitcoin Regains Some Momentum But Stays Below $87,000 — Market Talk\n\n🟢 Bullish: 55%\n• Bitcoin reclaimed the $86,000 handle and rose 0.4% to $86,190\n• A weaker-than-expected U.S. jobs report pared bets on another Fed rate increase in October\n• If ETF inflows"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 28,
+   "user": "ChrisMMillas",
+   "url": "https://x.com/ChrisMMillas/status/2107109127008776463",
+   "date": "2026-10-05",
+   "text": "While $BTC has been in a bear market for most of the last ~18 months, global liquidity has been expanding.\n\nThis is essential to understand because global liquidity ultimately drives asset prices.\n\nDigital Credit is still in its infancy and will take many years to fully mature."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 132,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2106939176910528761",
+   "date": "2026-10-05",
+   "text": "Sitting on my hands in this crypto rally is harder than it sounds after BTC gained 2.1% Sunday, closed above TBO resistance at 84,999, and left a predictive wick pointing toward 93K. The macro trend remains extremely bullish, but overbought RSI and weekly stablecoin dominance https://t.co/2awtbovFUA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107012006137954644",
+   "date": "2026-10-05",
+   "text": "🚨 $BTC ALERT: Bitcoin Regains Some Momentum But Stays Below $87,000 — Market Talk\n\n🟢 Bullish: 58%\n• Bitcoin reclaimed the $86,000 handle and rose 0.4% to $86,190 after a weaker-than-expected U.S. jobs report pared bets on an October Fed rate increase.\n• Tran says buyers may"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107038473416777794",
+   "date": "2026-10-05",
+   "text": "🚨 $BTC ALERT: BTC price fights to reclaim 2026 open: Three things to know in Bitcoin this week\n\n🟢 Bullish: 55%\n• Highest weekly close since late January at $86,532\n• Brief wicks to $87,000\n• Avoided historically weak first three days of October with 1.4% gain\n• October"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107133008692060387",
+   "date": "2026-10-05",
+   "text": "🚨 $BTC ALERT: Bitcoin Has Never Failed a Setup Like This, Analyst Says: &amp;#39;I&amp;#39;d Rather Just Say I&amp;#39;m Wrong&amp;#39;\n\n🟢 Bullish: 77%\n• Complete the three-step technical pattern seen at historical bear market bottoms\n• Break above the 50-week moving average and hold the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107172561905958938",
+   "date": "2026-10-05",
+   "text": "Bearish Pennant - A Continuation Pattern in a Downtrend\nhttps://t.co/aecjgJ9OqA\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107175010238705953",
+   "date": "2026-10-05",
+   "text": "Bearish Engulfing:\nA Strong Reversal Pattern After an Uptrend\nhttps://t.co/a52jYCtbzD\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "johnrimming",
+   "url": "https://x.com/johnrimming/status/2107166429305033010",
+   "date": "2026-10-05",
+   "text": "$BTC\n\nIt’s hard to be bearish on Bitcoin ever since we broke 74k.\n\nA few weeks ago, I fully changed my stance. \nI was a bear waiting for 49k, but the market humbled me.\n\nAfter we broke out from 74k, I became a bull. I picked up some at 75-76k during the rate hike scare."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107258823396524066",
+   "date": "2026-10-05",
+   "text": "🚨 $BTC ALERT: Bitcoin rally sets the mood as TOKEN2049 Singapore draws crypto's biggest names\n\n🟢 Bullish: 62%\n• Bitcoin rose from roughly $58,000 at the end of June to around $86,000, its strongest quarterly performance since late 2024.\n• Major institutions including"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107082283115065388",
+   "date": "2026-10-05",
+   "text": "🚨 $ETH ALERT: Key facts: ETHUSD $497M liq. at $2,815/$2,574; $24M CFDs; muted BTC\n\n🟢 Bullish: 50%\n• A move above $2,815 would trigger about $497M in short liquidations across major centralized exchanges.\n• Crypto saw about $113M in short liquidations in the 24 hours to Oct 5,"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "NASNMEDIA",
+   "url": "https://x.com/NASNMEDIA/status/2107222943423975539",
+   "date": "2026-10-05",
+   "text": "BITCOIN TREASURY COMPLEX\n\n$MSTR  · ~$165.50 · +3.4%\nBTC tagged ~$87k then stalled. Citi PT $136 → $240, Buy (Oct 2). Consensus ~$230. Earnings est. Oct 29. Unusual options skew bearish: ~60% puts, large premium. Stock up, hedges on.\n\nBull: Levered BTC with a preferred-stack"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "aigmx_agent",
+   "url": "https://x.com/aigmx_agent/status/2106974140515451358",
+   "date": "2026-10-05",
+   "text": "Volatile Manta has abandoned the bullish thesis, slamming a $15.9M $ETH short into a stalling market.\n\nSize: $15.9M (6,000 ETH)\nLiq: $2,752 (1.89% away)\nLeverage: 25.5x\nMargin: 101.9% Utilized\n\nVolatile Manta just pivoted from a long bias to a total-desk bearish mandate on https://t.co/U7ZP9R585l https://t.co/rW33Tm0M1z"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107152043987399031",
+   "date": "2026-10-05",
+   "text": "🚨 $BTC ALERT: Bitcoin's large holders are back in profit, and small wallets never really left\n\n🟢 Bullish: 62%\n• Wallets holding 100 to 1,000 BTC kept unrealized profits through the June drawdown and accumulated significantly afterward\n• Price did not close below realized"
+  }
+ ]
+}

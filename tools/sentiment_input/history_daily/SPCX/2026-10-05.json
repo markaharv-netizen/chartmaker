@@ -1,0 +1,219 @@
+{
+ "symbol": "SPCX",
+ "start": "2026-10-05T00:00:00Z",
+ "end": "2026-10-06T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "SPCX (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -pump -memecoin -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2107105038720024733",
+   "date": "2026-10-05",
+   "text": "⚡ $SPCX jumps 2.8% with an 11x volume surge—aggressive bulls are taking control.\n\n- my bias is bullish here: the 1h trend is confirmed bullish, price is aggressively above both EMA20 and EMA200, and the recent explosive 11.1x volume spike with a +2.8% price jump points to https://t.co/QEmdNHtElb"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "ask_volAI",
+   "url": "https://x.com/ask_volAI/status/2107151968284311573",
+   "date": "2026-10-05",
+   "text": "Three bullish setups. Three very different trades.\n\n$SPCX +5.3%\n5,481 Nov. $220 calls bought\n$734K premium | 1.60x prior OI\nMomentum is already there, and buyers are reaching for considerably more upside.\n\n$GME +3.2%\n4,949 Oct. $24 puts sold\n$114K premium | 3.10x prior OI\nThe https://t.co/Glkoix3HSD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NagosX",
+   "url": "https://x.com/NagosX/status/2107200207931027563",
+   "date": "2026-10-05",
+   "text": "Afternoon tape read 🧵\n\n$TSLA  — cleanest of the day. $380.01, +2.54%. Repeated call sweeps through the session, mostly near-term strikes, stock holding +2.5%. The most persistent upside flow on my screen today.\n\n$CBRS  — most interesting smaller name. $182.28, +9.52%. Broad call"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2107199811510210733",
+   "date": "2026-10-05",
+   "text": "One trader dropped $108M on $AMD calls expiring in 11 days. The rest of the tape spent the session selling calls on everything else.\n\nTHE TRADE\n\nAt 12:39 ET, someone bought 7,580 AMD October-16 $490 calls for $108.1M in a single print. Eleven days to expiry. Deep in the money. https://t.co/kenHcKcg92"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2107184723487289350",
+   "date": "2026-10-05",
+   "text": "🐳 $SPCX ripped to $168 on SpaceX hype. The biggest trade today just bet it stalls here.\n\nTHE TRADE\n\nAt 14:56 ET, someone sold 2,500 SPCX October 30 $172 calls and collected $1.6M in premium. The stock is trading $168.22, so these calls are sitting right at the money with 25 days https://t.co/y4Oiq2pECI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 369,
+   "user": "DeepIceValue",
+   "url": "https://x.com/DeepIceValue/status/2107060883201376271",
+   "date": "2026-10-05",
+   "text": "Quick Mag 7 Valuation:\n\n$NVDA - fairly valued\n$AAPL - highly overvalued\n$MSFT - fairly valued\n$GOOG - slightly overvalued\n$META - slightly undervalued\n$AMZN - undervalued\n$TSLA - heavily overvalued\n\nBonus:\n\n$TSM - fairly valued\n$ASML - overvalued\n$NFLX - undervalued\n$MU -"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "MaharajTrading",
+   "url": "https://x.com/MaharajTrading/status/2107099039095247337",
+   "date": "2026-10-05",
+   "text": "October 5 price-level watchlist\n\n$SPCX (~$158): Watch $160. Calls if price clears it and holds above; wait if it rejects.\n\n$MSTR (~$165): Right at the $165 line. Calls only if it holds above $165 after the open. A quick move above followed by a drop back below is a failed break."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 33,
+   "user": "RyanTanaka",
+   "url": "https://x.com/RyanTanaka/status/2106936249215054119",
+   "date": "2026-10-05",
+   "text": "I am extremely bullish on $TSLA.\n\nOf course, I continue to love $SPCX and Elon.\n\nTesla is so undervalued. I predict Q4 sales will be extraordinary."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "InterstellarBet",
+   "url": "https://x.com/InterstellarBet/status/2107178627620123060",
+   "date": "2026-10-05",
+   "text": "$ASTS $RKLB Are still chained to $SPCX ( Negative Beta upside / downside ) meaning at the current conditions they can never go up."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 83,
+   "user": "Napoleon__Bon",
+   "url": "https://x.com/Napoleon__Bon/status/2107090535274176688",
+   "date": "2026-10-05",
+   "text": "Morgan Stanley is doubling down on SpaceX $SPCX\n\nThe firm reiterated its Overweight rating and $300 price target\n\nThat implies nearly 89% upside from the current $158.96 price\n\nMorgan Stanley says SpaceX still trades at a big discount to mega-cap AI companies when growth is taken https://t.co/6YKzctrdkU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "VoluxAI_",
+   "url": "https://x.com/VoluxAI_/status/2107116941466804478",
+   "date": "2026-10-05",
+   "text": "Morning Flow Pulse check.\n\nBullish flow: $SPCX +$35M, $TSLA +$32M, $MSFT +$20M.\n\nBearish: $META -$23M, $SNDK -$17M, $STX -$15M. https://t.co/HiwvcLHFHe"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "fundspec",
+   "url": "https://x.com/fundspec/status/2107128687074144536",
+   "date": "2026-10-05",
+   "text": "🚀 Our AI Trading model just locked in a 5.38% win for a BULLISH trade on $SPCX!\nEntry: $158.71 at 09:31 AM EDT\nExit: $167.25 at 10:28 AM EDT\n\nDaily bullish and bearish AI signals on every US stock.\nDownload the FundSpec app on the Apple App Store or Google Play Store."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 27,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2107128402801053970",
+   "date": "2026-10-05",
+   "text": "#Trump announced the creation of a Super Intelligence Force #SIF task group to push the new branding forward. Following the move, #Elon #Musk confirmed #SpaceXAI will officially change its name to SpaceXSI to align with the initiative\n\n#MarketUpdate #StockMarket #USA #stocks https://t.co/Kyb9zkD3Hr"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107052206646071348",
+   "date": "2026-10-05",
+   "text": "🚨 $BTC $VSTSTOCK $SPCXSTOCK $QCOMSTOCK $RDWSTOCK $QQQSTOCK ALERT: Stock Market Today: Dow Jones, S&amp;P 500 Futures Slip as Iran Keeps Conditions To Reopen Hormuz Strait — SPCX, QCOM, VST in Focus\n\n🟢 Bullish: 54%\n• SPCX rises 1.18% pre-market\n• Completed three launches within 13"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "RotationDesk",
+   "url": "https://x.com/RotationDesk/status/2107167784413327459",
+   "date": "2026-10-05",
+   "text": "Today's standout stock moves clustered in industrials on the upside and software / internet on the downside, while a couple of bigger liquid names also moved.\n\n• Stock tape: $PAGS was up about 22% on very heavy volume, and Space Exploration (SPCX) was up about 6% on heavy"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "jpriceceo",
+   "url": "https://x.com/jpriceceo/status/2107238902675489157",
+   "date": "2026-10-05",
+   "text": "📷 BREAKING | IRHUB GLOBAL MARKET INTELLIGENCE\nMorgan Stanley analyst Adam Jonas has reiterated anOverweight rating on SpaceX (SPCX) and maintained a Street-high $300 price target, signaling significant potential upside from current levels.\nAt $300 per share, SpaceX’s market https://t.co/Ash1OFlLyt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107232471431479559",
+   "date": "2026-10-05",
+   "text": "🚨 $NDX $SPX $DJI $NVDA $SPCX $TSLA $CRML $QCOM solana:kLqMvUm1p4pRbxU4r8kWCTVAuWMJLtcTJqGb4b5pump $WTI ALERT: Nasdaq 100 Hits Record Highs As Investors Shrug Off Pressure From Soaring Yields — NVDA, SPCX, CRML, TSLA, QCOM In Focus\n\n🟢 Bullish: 74%\n• Nasdaq 100 rose 0.9% to"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 38,
+   "user": "JdubTrades_",
+   "url": "https://x.com/JdubTrades_/status/2107093820563214699",
+   "date": "2026-10-05",
+   "text": "GAMEPLAN OCTOBER 5 📈\n\nAfter a strong push higher on Friday and new all-time highs in the Nasdaq, we are opening fairly flat and directly around PDL.\n\nThe main focus at the open will be QQQ 748. If we can hold above that level, I want to see buyers step in for a bounce back"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "boldkay",
+   "url": "https://x.com/boldkay/status/2107142651393069253",
+   "date": "2026-10-05",
+   "text": "🚀 SPCX Technical Analysis | Oct 5\n📈 Trend:\nSPCX continues its short-term breakout after holding the $150 area.\n\n🔹 Support: $150\n🔹 Resistance: $170\nMy view:\nAs long as SPCX stays above the $150 support zone, the bullish momentum remains intact.\n\nA clean breakout above $170"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 33,
+   "user": "drchadgreene",
+   "url": "https://x.com/drchadgreene/status/2107208762914451528",
+   "date": "2026-10-05",
+   "text": "Wall Street is taking note of Musk’s SpaceX SI push. $SPCX rose nearly 7% as the AI-to-superintelligence narrative grew. Morgan Stanley still sees upside before Starship Flight 15. Bullish or cautious? https://t.co/gobf6N33Ev"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "YouYouFXRESERCH",
+   "url": "https://x.com/YouYouFXRESERCH/status/2107172439813754970",
+   "date": "2026-10-05",
+   "text": "🚨 SPACEX $167: MORGAN STANLEY SEES $300 — 80% UPSIDE\n\nWall Street is turning bullish ahead of Starship Flight 15. Morgan Stanley says SpaceX looks “cheap” on a growth-adjusted basis and maintains its $300 target.\n\n#SpaceX #SPCX #AI #YouYouFXResearch https://t.co/PkxhffsXY2"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "NGLSHMUELI",
+   "url": "https://x.com/NGLSHMUELI/status/2107076867907821909",
+   "date": "2026-10-05",
+   "text": "$SPCX Morgan Stanley maintains Buy on SpaceX with a $300 price target.\n\n- Rating and PT unchanged following latest review\n- $300 target implies significant upside from current levels\n- Morgan Stanley remains one of the most bullish institutional voices on the name"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "StreetAlphaApp",
+   "url": "https://x.com/StreetAlphaApp/status/2107138758600462789",
+   "date": "2026-10-05",
+   "text": "🤖 Swing Trader entered $SPCX @ $165.67\n\nSPCX is #3 net impact ($18.2M bullish) with a fresh $630k dark pool print, RSI 65.6 mid-range (not extended), price above both 50ma/200ma in confirmed BULL regime -- satisfies dark-pool corroborati..."
+  }
+ ]
+}

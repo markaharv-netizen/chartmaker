@@ -1,0 +1,201 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-04T00:00:00Z",
+ "end": "2026-10-05T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106851302621827344",
+   "date": "2026-10-04",
+   "text": "🔺 $1000000BOB pops 6.6% in 15m but bearish structure keeps this rally suspect, pump or trap?\n\n- my bias here remains bearish on $1000000BOBUSDT.P 1h despite the sharp +6.6% pump, as the Dow structure is still printing lower highs and lower lows; both daily and weekly structure https://t.co/rxFtcmh1zL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2106860344606142533",
+   "date": "2026-10-04",
+   "text": "📊【XWIN CAPITAL INDEX｜October 5, 2026】\nOverall Score: 72 / 100\n・80–100 = Strong Bullish Environment\n・60–79 = Bullish Environment\n・40–59 = Neutral / No Clear Direction\n・20–39 = Bearish Environment\n・0–19 = Strong Bearish Environment \n7-Day Moving Average: 68.00 ↑\n14-Day https://t.co/HCOyDyIfTk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106707872474140700",
+   "date": "2026-10-04",
+   "text": "📊 $NMR jumps 4.6% in 15m on 15x volume spike—real strength or just noise?\n\n- my bias here is bullish on NMRUSDT in the 1h after this explosive move, with continued upward expectation while price holds above 11.21 🟢\n- structure is clearly bullish on the 1h and daily, with BTC https://t.co/VWw8sVc6qv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 51,
+   "user": "1amgroo1",
+   "url": "https://x.com/1amgroo1/status/2106683653438976423",
+   "date": "2026-10-04",
+   "text": "BNB (Binance Coin) Market Update — Today\n\n💰 Current Price &amp; Market Data\n\nBNB price: around $787–$788\n24h change: about +2.8% to +3%\nMarket cap: about $104.9 billion\n24h trading volume: about $1.3 billion\nCirculating supply: about 133.2 million BNB\n(Binance)\n📈 Price Action https://t.co/nhpuPhjX1v"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106768932644212892",
+   "date": "2026-10-04",
+   "text": "⚖️ $PUMPBTC funding hits +0.44% but price holds—crowded longs warn of possible exhaustion, not a clear break yet\n\n- my bias is cautiously bullish here on PUMPBTCUSDT.P while price holds above 0.00804, since 1h structure remains bullish even as funding hits an extreme and https://t.co/pJlTfOEysT"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106878778303512888",
+   "date": "2026-10-04",
+   "text": "🔵 ETH steady at +1.5% in 24h—bullish structure intact, this one’s quietly gearing up\n\n- my bias is bullish here as ETH holds a strong uptrend on the 1h, with both daily and weekly structure also aligned bullish and BTC providing supportive structure\n- price is trading at 2727, https://t.co/TIug4Wj27s"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2106686142699430374",
+   "date": "2026-10-04",
+   "text": "#BITCOIN\n\n#Bitcoin is attempting another bull flag breakout today, and technically there’s very little bearish about the current structure. \n\nThe trend remains firmly higher, price is holding above key moving averages, and consolidation patterns continue resolving to the upside. https://t.co/gSYgSsekDl"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106696618565095602",
+   "date": "2026-10-04",
+   "text": "🕓 ETH steady at +0.7% 24h—bullish structure keeps the uptrend intact, no signs of weakness yet\n\n- my bias is bullish on $ETH here as the 1h structure remains clear: price is printing higher highs and higher lows, aligned with the bullish daily and weekly structure and a https://t.co/yGTdeEP4GS"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 468,
+   "user": "CryptoPatel",
+   "url": "https://x.com/CryptoPatel/status/2106754046350782949",
+   "date": "2026-10-04",
+   "text": "$IOTA PRICE PREDICTION: DOWN 99.5% | IS A 10X COMEBACK LOADING?\n\n#IOTA was A TOP Crypto project during the 2017–2018 bull run. Once loved by everyone, it has now crashed 99.50% from its December 2017 ATH.\n\nCrypto lesson: NEVER FALL IN LOVE WITH A COIN. Book profits and avoid https://t.co/elAgN93ehZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 334,
+   "user": "cryptoklotz",
+   "url": "https://x.com/cryptoklotz/status/2106879565209428286",
+   "date": "2026-10-04",
+   "text": "been meaning to post this, but would like to discuss the solana:8RVBk8vxLiUHueLUW1f4izFVqN3nWippLhkohKg6EGkS trade\n\nVERY long post. if you're not interested in dissecting KNOTS or stonk eco, skip this.\n\ntimeline of what happened, from my purview\n\n(this is annotated on a chart at https://t.co/Ch0ne6Ah3b"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "0xJeetSparrow",
+   "url": "https://x.com/0xJeetSparrow/status/2106815196887236940",
+   "date": "2026-10-04",
+   "text": "well well well... it's time to bullpost the ARTIFICIAL INU \nyes the ARTIFICIAL not the SUPER . \nsomeone once said: be greedy when others are fearful.\nthat time has come.\n\ndid you really think it would be easy?\n\nlet's break down a few points:\n\nPA standpoint:\nok, maybe there's a https://t.co/SCEUUYQIzT"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "turingtestsol",
+   "url": "https://x.com/turingtestsol/status/2106682886350925942",
+   "date": "2026-10-04",
+   "text": "THIS IS THE PONZI AI AGENT ON AGENCY!\n \nThe agent will long and short sol and rebuys into the coin!!\n\nYou are an autonomous quantitative trading agent specializing exclusively in SOL (Solana).\n\nYour job is to continuously analyze SOL market conditions and choose exactly one https://t.co/wdeIFeAGnx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 139,
+   "user": "MunchMunc_21",
+   "url": "https://x.com/MunchMunc_21/status/2106798097695453578",
+   "date": "2026-10-04",
+   "text": "Next week we will see jimothy go higher ⏳💵\n\nThx for the fud, I got cheaper price and waiting jimothy until $40M\n\n$CATE $60M Animal coin and why $Jimothy still $4M, looks very undervalued 💎\n\nWaiting some big media mention about $Jimothy, I'm so bullish from here. https://t.co/dszfdQeI1G https://t.co/CY7rMARNZL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 57,
+   "user": "MichealResearch",
+   "url": "https://x.com/MichealResearch/status/2106835285216809269",
+   "date": "2026-10-04",
+   "text": "$FLOKI has the strongest utility narrative among these three tokens, but it remains a small-cap speculative asset. \nIts bullish case depends on Valhalla adoption, TokenFi growth, burns, exchange access, and ecosystem revenue. Its bearish case is based on low market depth, https://t.co/HUWeaGXIQ0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2106680362122215605",
+   "date": "2026-10-04",
+   "text": "🚨 $SI ALERT: Musk’s “SI Is Better” Post Sends SI Meme Coin Above $50M\n\n🟢 Bullish: 78%\n• Musk's “SI is better” remark sparks strong narrative momentum\n• SI market cap briefly surpassed $50 million, up over 20% in 1 hour\n\n🔴 Bearish: 22%\n• MEME coins rely on celebrity"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "WhaleRadarNews",
+   "url": "https://x.com/WhaleRadarNews/status/2106849204773781916",
+   "date": "2026-10-04",
+   "text": "🐋 Whales don’t wait. The crowd does.\nMost traders notice the move after it already\nhappened.\nWhaleRadar helps you watch whale transfers,\nexchange flows, stablecoin movements,\nliquidation pressure, new-token activity, crypto\nnews and AI-powered market signals before the\ncrowd https://t.co/jFJDNlz1Wv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "alwayswinning57",
+   "url": "https://x.com/alwayswinning57/status/2106750739863449627",
+   "date": "2026-10-04",
+   "text": "Daily Briefing — October 4, 2026\n\n1. ₿ Crypto: Bitcoin is benefiting from a macro shift\n\nBitcoin is around $85K–$87K, after rising sharply on Friday as the September U.S. jobs report came in much weaker than expected. Reuters reported that the softer labor data pushed stocks and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "alwayswinning57",
+   "url": "https://x.com/alwayswinning57/status/2106748810009473240",
+   "date": "2026-10-04",
+   "text": "Daily Briefing — October 4, 2026\n\n1. ₿ Crypto: Bitcoin is benefiting from a macro shift\n\nBitcoin is around $85K–$87K, after rising sharply on Friday as the September U.S. jobs report came in much weaker than expected. Reuters reported that the softer labor data pushed stocks and"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106687709351715023",
+   "date": "2026-10-04",
+   "text": "✅ $BTC holds structure at +0.8% — buyers still building for continuation\n\n- my bias is bullish here — 1h, daily and weekly structure are aligned with higher highs and higher lows, and derivatives flow (buyers in control, longs still building) supports continuation rather than a https://t.co/lGq5q9DU2T"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2106844124800258532",
+   "date": "2026-10-04",
+   "text": "✨ $PUMPBTC posts 7.9% in 15m but resistance looms—momentum or just a stretched bounce?\n\n- my bias here is cautiously bullish on PUMPBTCUSDT.P as long as price stays above 0.00804, but this move is a high-momentum extension that just ran straight into fresh resistance and is https://t.co/5Ap6HiommB"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2106780150712991932",
+   "date": "2026-10-04",
+   "text": "🚨 $STRK $BTC ALERT: Starknet's STRK coin extends surge as trading volume jumps\n\n🟢 Bullish: 62%\n• STRK rose about 16% Sunday after jumping about 26% Saturday, with more than $240 million in 24-hour volume.\n• Starknet said it would cover bridge fees for the first 100 Bitcoin"
+  }
+ ]
+}

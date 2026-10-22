@@ -1,0 +1,237 @@
+{
+ "symbol": "AMZN",
+ "start": "2026-10-07T00:00:00Z",
+ "end": "2026-10-08T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AMZN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "eansky1",
+   "url": "https://x.com/eansky1/status/2107821408449708287",
+   "date": "2026-10-07",
+   "text": "PREMARKET BRIEF — OCT. 7, 2026\n\nMarket — around 9:00 AM ET / 6:00 AM PT\n\nES −0.42%; NQ −0.70%. VIX +3.3% to 15.52. U.S. 10Y +5.3 bp to 5.323%.\nBreadth does not confirm Tuesday’s records: equal-weight S&amp;P remains over 5% below its high; Russell 2000 over 8% below its high.\nTech"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "NagosX",
+   "url": "https://x.com/NagosX/status/2107659320552730674",
+   "date": "2026-10-07",
+   "text": "$AMZN - AWS is accelerating and the stock looks undervalued, even though heavy AI capex is dragging down returns on capital. Revenue growth accelerated to 20%, operating income up 43%, record operating income and free cash flow, backlog approaching ~$500B. Revenue run rate over https://t.co/xw64TzhrhA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107921150630371727",
+   "date": "2026-10-07",
+   "text": "Bearish Pennant - A Continuation Pattern in a Downtrend\nhttps://t.co/aecjgJ9OqA\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107902024624804328",
+   "date": "2026-10-07",
+   "text": "Bearish Pennant - A Continuation Pattern in a Downtrend \nhttps://t.co/EPSJBYO2nY\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107653387474850058",
+   "date": "2026-10-07",
+   "text": "Dark Cloud Cover:\nA Bearish Reversal Pattern-\nhttps://t.co/fNeWhyMkVr\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107825774032285877",
+   "date": "2026-10-07",
+   "text": "Bearish Pennant - A Continuation Pattern in a Downtrend\nhttps://t.co/aecjgJ9OqA\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107826678756233478",
+   "date": "2026-10-07",
+   "text": "Bearish Pennant - A Continuation Pattern in a Downtrend \nhttps://t.co/EPSJBYOAdw\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107869057538007050",
+   "date": "2026-10-07",
+   "text": "AB=CD Pattern \nhttps://t.co/Z548pzvT7H\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107803878687183232",
+   "date": "2026-10-07",
+   "text": "URA daily, weekly, monthly October 3rd 2026\nJoin us for more:\nhttps://t.co/qLrPdTiicX\n\nhttps://t.co/HFB0U0EhoN\n\n$URN $URNM $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107880130299523242",
+   "date": "2026-10-07",
+   "text": "Why You Keep Starting Over - \nMotivation Starts the Journey a Repeatable Process Keeps it Going.\nhttps://t.co/HTlvQCHuU2\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "wsagentai",
+   "url": "https://x.com/wsagentai/status/2107969570912784567",
+   "date": "2026-10-07",
+   "text": "10/07/2026 Market Daily Summary\n\nStocks ended lower as hawkish Fed minutes pushed the 10-year yield to 5.28% (highest since 2002). Memory stocks surged on Samsung's record profit, but rate-sensitive sectors dragged the broader market.\n\n💾 Movers\n- MU +3.94% to $1,086.76 after"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "MikshuAlpha",
+   "url": "https://x.com/MikshuAlpha/status/2107814701388177746",
+   "date": "2026-10-07",
+   "text": "MikshuAlpha pre-market analysis, Wednesday 7th October, 2026\n\n1. Market Summary\n\nYesterday delivered the all-time high breakout I have been discussing for the past month. $SPY gained 0.55%, touching 781.62, while $SPX tested approximately 7844 before closing around 7822, also up https://t.co/MK6tn1h0u6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ROR_Traders",
+   "url": "https://x.com/ROR_Traders/status/2107824454139052479",
+   "date": "2026-10-07",
+   "text": "$AAPL already made its move before the bell. Now one zone decides if it was the whole move or just the start.\n\n$AAPL 334 / 335 / 336. Hold that zone and 340 and above opens up.\n\n$MSFT 530 / 535 / 540. Cleaner trade above 530.5 and the 200sma on the 5m. Below that I am not"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107676790537769391",
+   "date": "2026-10-07",
+   "text": "The Inverse Head and Shoulders: \nA Bullish Reversal Pattern-\nhttps://t.co/ku4ElZFZL5…\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #bearish #bullish"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "wsagentai",
+   "url": "https://x.com/wsagentai/status/2107803481994121311",
+   "date": "2026-10-07",
+   "text": "10/07/2026 Morning Briefing\n\nRisk-off tone grips markets into today's US session as Iran vows to keep Hormuz closed, French fiscal woes rattle Europe, and surging yields hit 20-year extremes. S&amp;P futures are flat (+0.02%) while semiconductors lead pre-market weakness ahead of"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 310,
+   "user": "VanquishTrader",
+   "url": "https://x.com/VanquishTrader/status/2107825437250629966",
+   "date": "2026-10-07",
+   "text": "WHY $MU COULD TRIPLE FROM HERE\n\nThe easiest way to understand the new Micron bull case is that D.A. Davidson is no longer treating this as a normal memory upcycle where investors should assume pricing eventually collapses and the stock deserves a permanently low multiple. \n\nTheir https://t.co/TZYaMcKaZu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107840620404318613",
+   "date": "2026-10-07",
+   "text": "The Bearish Engulfing:\nA Strong Reversal Signal After an Uptrend-\nhttps://t.co/UkXs5tq0Zs\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107659425947218251",
+   "date": "2026-10-07",
+   "text": "The Bearish Engulfing:\nA Strong Reversal Signal After an Uptrend-\nhttps://t.co/UkXs5tq0Zs\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "vanshb_95",
+   "url": "https://x.com/vanshb_95/status/2107837935185973692",
+   "date": "2026-10-07",
+   "text": "Nvidia is 0.4% from its 52-week high. AMD is 0.6% above its old one.\n\nAmazon is 10.8% under its own, and just below its 50 day average.\n\n$AMZN keeps 17% of every sale as profit and costs 23.6x next year's earnings.\n\nD. E. Shaw added $2.61B of it in the latest filings, and 6 X"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "Gammaoptions99",
+   "url": "https://x.com/Gammaoptions99/status/2107622413299052787",
+   "date": "2026-10-07",
+   "text": "Something very interesting happened today, guys. My algo/analysis has picked up 6 CSPs just today—I’ll list them below. To give you an idea, I don’t think we had 6 for the entire month of September. \nDoes this mean anything? Well, to me it does. What does a CSP (cash-secured put)"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107849681778655355",
+   "date": "2026-10-07",
+   "text": "Bottom Island Reversal A Bullish Reversal Pattern:\nhttps://t.co/e99GWx0OdP\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ajitsingh",
+   "url": "https://x.com/ajitsingh/status/2107906218581000555",
+   "date": "2026-10-07",
+   "text": "Midday Options flow is all about Micron, with some megacap hedging alongside it.\n\n$MU  calls: a big wave of 0DTE calls at the $1,020 to $1,080 strikes, many trading 15x to 70x open interest. The biggest single print of the day so far is the $1,050 call at $84.8M, followed by the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "and_canam",
+   "url": "https://x.com/and_canam/status/2107773227879878668",
+   "date": "2026-10-07",
+   "text": "🏔️ $SYN Synergy Metals: gold is trading near multi-year highs in October 2026. The Swayze Greenstone Belt -- where Dale sits -- is the southwestern extension of the Abitibi Greenstone Belt, the geological corridor that produced over 200 million ounces of gold historically. In"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2107894431881818282",
+   "date": "2026-10-07",
+   "text": "🐳 $AMZN just caught a $2.4M bullish bet — and the news tape has nothing to do with it.\n\nTHE TRADE\n\nAt 13:37 ET, someone bought 1,600 AMZN January 15, 2027 $270 calls for $14.89 apiece — $2.4M in premium, in a single print, with the stock at $258.56. In plain English: a buyer https://t.co/sjFsemFkCO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2107735426857410671",
+   "date": "2026-10-07",
+   "text": "AB=CD Pattern \nhttps://t.co/Z548pzvT7H\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  }
+ ]
+}

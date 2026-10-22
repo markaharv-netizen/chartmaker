@@ -1,0 +1,120 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-07T00:00:00Z",
+ "end": "2026-10-08T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2107667606073184317",
+   "date": "2026-10-07",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 𝟯 / 𝟱 – modestly bullish overall, with significant mixed signals pulling the outlook toward the middle of the scale. - 𝗕𝗲𝗮𝗿𝗶𝘀𝗵 / 𝗻𝗲𝘂𝘁𝗿𝗮𝗹 𝗽𝗿𝗲𝘀𝘀𝘂𝗿𝗲𝘀 - Abstract (the Pudgy‐Penguins‐backed Ethereum L2) is winding down, https://t.co/OPWyKYa3Cl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "El_YonnyX21",
+   "url": "https://x.com/El_YonnyX21/status/2107823726100123798",
+   "date": "2026-10-07",
+   "text": "ethereum:0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c | PRE-MARKET UPDATE — OCT 7 🎯\nPM: ~7,790\nBull &gt;7800 → break + retest + 5-min confirmation for bullish bias.\nBear &lt;7780 → break + retest + 5-min confirmation for bearish bias.\n7800–7780 → NO TRADE | Confirmation zone.\nCALL https://t.co/W1VgQl1joB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 267,
+   "user": "CryptoPatel",
+   "url": "https://x.com/CryptoPatel/status/2107825775835590942",
+   "date": "2026-10-07",
+   "text": "ethereum:0x259338656198ec7a76c729514d3cb45dfbf768a1 PRICE PREDICTION: 97% CRASH DONE | IS A 7X–10X REVERSAL NEXT?\n\n#RESOLV corrected nearly 97% from its June 2025 ATH of $0.4299 to $0.0142 in June 2026.\nNow, price is attempting a major reversal from the $0.018–$0.015 accumulation https://t.co/N7qBLWrvxL"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "jackthewolff",
+   "url": "https://x.com/jackthewolff/status/2107966000549200103",
+   "date": "2026-10-07",
+   "text": "Ethereum just delivered a bearish breakdown from a pennant, sweeping a key liquidity block and triggering a wave of liquidations across the market. Now the big question is: was this simply a liquidity grab before continuation, or is there still unfinished business below?\n\nAfter https://t.co/1zsVO5mYHb"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2107661533576581364",
+   "date": "2026-10-07",
+   "text": "🚨 ethereum:0x4e67db19044549ff420860834c91b45bad298722 $ZS $ZW ALERT: Corn hits one-week high on US crop worries, soybeans firm\n\n🟢 Bullish: 68%\n• Corn hit its highest since September 30 as declining US crop conditions supported prices\n• USDA said corn and soybean harvests were"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 37,
+   "user": "ProofOfMacro",
+   "url": "https://x.com/ProofOfMacro/status/2107622900534587704",
+   "date": "2026-10-07",
+   "text": "TLDR: ethereum:0x4a220e6096b25eadb88358cb44068a3248254675 is showing a bullish divergence, and the setup looks very healthy now for an upward break.\n\nIt’s no surprise that since QNT had its amazing pump we’ve been getting into a tighter and tighter range.\n\nAt first, everyone was https://t.co/ff3EPKZXGJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "0xkiringe",
+   "url": "https://x.com/0xkiringe/status/2107914569322529108",
+   "date": "2026-10-07",
+   "text": "3/16, 14 days to new @aeroxyz.\n\nFrax, Renzo, Beefy and Liquity did not just send a tweet. They said their own liquidity is moving.\n\nFrax plans to migrate protocol-owned ethereum:0x5e8422345238f34275888049021821e8e08caa1f and $FRAX. \n\nBeefy, its own $BIFI. \n\nRenzo, its own book. https://t.co/BBRuPnlxbh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SilkTea97",
+   "url": "https://x.com/SilkTea97/status/2107711852528709663",
+   "date": "2026-10-07",
+   "text": "bitcoin:native And price indeed went for sell-side first instead of the easy short squeeze that was much more within reach... Just like how they fucked with the bears at RL, the same tricks are applied to the bulls now.\n\nJust keep in mind that we do also have a trail of buy-side https://t.co/7NHcFNRu3D"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2107725318845001934",
+   "date": "2026-10-07",
+   "text": "$ETH 1H TA ⚠️\n\nEthereum has broken below the ascending support of the triangle, suggesting a potential bearish continuation.\n\n🔻 Current: $2,619\n⚠️ Breakdown zone: $2,650–$2,670\n🟢 Key support: $2,580–$2,600\n🎯 Bearish target: ~$2,400\nIf ETH reclaims $2,700+, the breakdown could https://t.co/PXNWvLx1dd"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Tradallion",
+   "url": "https://x.com/Tradallion/status/2107688488032190582",
+   "date": "2026-10-07",
+   "text": "Ethereum is crashing hard. \n\nMore downside in the offing. \n\nPosition yourself and don't miss the incoming bearish move. \n\nethereum:native https://t.co/xVGpAW42UA"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Yannis_trades",
+   "url": "https://x.com/Yannis_trades/status/2107797940769038556",
+   "date": "2026-10-07",
+   "text": "Whales are aggressively shorting $BTC Bitcoin and $ETH Ethereum- over $1.8B in combined downside positions.\n\nHowever, Solana bucks the trend with a 62% long majority, leaving $SOL uniquely isolated from the bearish pressure."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2107784308895457770",
+   "date": "2026-10-07",
+   "text": "ethereum:0x61ec85ab89377db65762e234c946b5c25a56e99e/USDT — 1H ⚠️\n\nRectangle breakdown setup.\n\n📍 Current: ~$0.000001685\n🔼 Resistance: ~$0.00000173\n🔻 Support: ~$0.000001685\n🎯 Upside target: ~$0.00000179\n🎯 Downside target: ~$0.00000163\nHTX is testing the lower boundary. A break https://t.co/2XKioQrwo5"
+  }
+ ]
+}
