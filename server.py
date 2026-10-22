@@ -1,5 +1,5 @@
 """Chartmaker backend: stdlib-only proxy for Yahoo Finance chart API + static frontend."""
-import fin, heat, watch, treasury, valuation, valhist, json, os, sys, time, hmac, hashlib, secrets, threading, html, urllib.request, urllib.parse
+import urllib.error, fin, heat, watch, treasury, valuation, valhist, json, os, sys, time, hmac, hashlib, secrets, threading, html, urllib.request, urllib.parse
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
 PORT = int(os.environ.get("PORT", sys.argv[1] if len(sys.argv) > 1 else 8791))
@@ -46,16 +46,81 @@ def ysearch(q):
     except Exception: return []
     if len(_SQ) > 500: _SQ.clear()
     _SQ[k] = (time.time(), out); return out
-def views_read():
-    try:
-        with open(VIEWS, encoding="utf-8") as f: v = json.load(f)
-        return v if isinstance(v, list) else []
-    except (OSError, ValueError): return []
-def views_write(v):
+# Saved views + current watchlist. With GITHUB_TOKEN set they live in views.json on a data-only branch (VIEWS_BRANCH) of VIEWS_REPO
+# via the GitHub Contents API, so they survive redeploys and follow Mark to any browser. Without a token: local views.json file.
+GH_TOKEN = os.environ.get("GITHUB_TOKEN") or ""
+VIEWS_REPO = os.environ.get("VIEWS_REPO") or "markaharv-netizen/chartmaker"
+VIEWS_BRANCH = os.environ.get("VIEWS_BRANCH") or "views-data"
+_VS = {"doc": None, "sha": None, "at": 0}; _VLOCK = threading.Lock()
+def _norm(d):
+    if isinstance(d, list): d = {"views": d}
+    if not isinstance(d, dict): d = {}
+    v = d.get("views"); w = d.get("watchlist")
+    return {"views": v if isinstance(v, list) else [], "watchlist": w if isinstance(w, dict) and isinstance(w.get("list"), list) else None}
+def _gh(method, body=None):
+    url = f"https://api.github.com/repos/{VIEWS_REPO}/contents/views.json" + ("" if body else f"?ref={urllib.parse.quote(VIEWS_BRANCH)}")
+    rq = urllib.request.Request(url, method=method, data=json.dumps(body).encode() if body else None, headers={
+        "Authorization": "Bearer " + GH_TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "chartmaker", "Content-Type": "application/json"})
+    with urllib.request.urlopen(rq, timeout=20) as r: return json.load(r)
+def _gh_load():
+    import base64
+    try: j = _gh("GET"); return _norm(json.loads(base64.b64decode(j["content"]) or b"{}")), j["sha"]
+    except urllib.error.HTTPError as e:
+        if e.code == 404: return _norm({}), None
+        raise
+def store_read(fresh=False):
+    with _VLOCK:
+        if not GH_TOKEN:
+            try:
+                with open(VIEWS, encoding="utf-8") as f: return _norm(json.load(f))
+            except (OSError, ValueError): return _norm({})
+        if fresh or _VS["doc"] is None or time.time() - _VS["at"] > 60: _VS["doc"], _VS["sha"] = _gh_load(); _VS["at"] = time.time()
+        return json.loads(json.dumps(_VS["doc"]))
+def store_update(fn):
+    """Apply fn(doc)->doc and persist. On GitHub, a 409/422 (sha moved) reloads and retries."""
+    import base64
+    with _VLOCK:
+        if not GH_TOKEN:
+            try:
+                with open(VIEWS, encoding="utf-8") as f: doc = _norm(json.load(f))
+            except (OSError, ValueError): doc = _norm({})
+            doc = _norm(fn(doc)); tmp = VIEWS + ".tmp"
+            with open(tmp, "w", encoding="utf-8") as f: json.dump(doc, f, indent=1)
+            os.replace(tmp, VIEWS); return doc
+        for attempt in range(4):
+            if _VS["doc"] is None or attempt: _VS["doc"], _VS["sha"] = _gh_load(); _VS["at"] = time.time()
+            doc = _norm(fn(json.loads(json.dumps(_VS["doc"]))))
+            if doc == _VS["doc"]: return doc
+            body = {"message": f"Chartmaker views update ({len(doc['views'])} views) [skip ci] [skip render]", "branch": VIEWS_BRANCH,
+                    "committer": {"name": "Chartmaker Bot", "email": "bot@chartmaker"},
+                    "content": base64.b64encode(json.dumps(doc, indent=1).encode()).decode()}
+            if _VS["sha"]: body["sha"] = _VS["sha"]
+            try: j = _gh("PUT", body)
+            except urllib.error.HTTPError as e:
+                if e.code in (409, 422) and attempt < 3: continue
+                raise
+            _VS["doc"], _VS["sha"], _VS["at"] = doc, j["content"]["sha"], time.time(); return doc
+def _chk_views(v):
     if not isinstance(v, list) or not all(isinstance(x, dict) and x.get("name") for x in v): raise ValueError("views must be a list of {name,...}")
-    tmp = VIEWS + ".tmp"
-    with open(tmp, "w", encoding="utf-8") as f: json.dump(v, f, indent=1)
-    os.replace(tmp, VIEWS); return v
+    return v
+def views_read(): return store_read()["views"]
+def views_write(v):
+    v = _chk_views(v); return store_update(lambda d: {**d, "views": v})["views"]
+def _vkey(x): return (x.get("mode") or "prices", x.get("name"))
+def store_merge(inc):
+    """Merge a browser's copy into the server: match on mode+name, newest 'updated' (or 'saved') wins, never deletes."""
+    inc = _norm(inc); _chk_views(inc["views"])
+    ts = lambda x: str(x.get("updated") or x.get("saved") or "")
+    def fn(d):
+        idx = {_vkey(x): i for i, x in enumerate(d["views"])}
+        for x in inc["views"]:
+            k = _vkey(x)
+            if k not in idx: idx[k] = len(d["views"]); d["views"].append(x)
+            elif ts(x) > ts(d["views"][idx[k]]): d["views"][idx[k]] = x
+        w = inc["watchlist"]
+        if w and (not d["watchlist"] or str(w.get("updated") or "") > str(d["watchlist"].get("updated") or "")): d["watchlist"] = w
+        return d
+    return store_update(fn)
 INTRA = {"1m", "2m", "5m", "15m", "30m", "60m", "90m", "1h"}
 NAMES = {}
 def company_name(sym, m=None):
@@ -144,11 +209,19 @@ class H(SimpleHTTPRequestHandler):
         if PASSWORD and path == "/login": return s.do_login()
         if not s.gate(path): return
         if VIEWS_STORE == "browser" and path == "/api/views": return s.send_json({"error": "views are stored in the browser on this server"}, 410)
-        if path != "/api/views": return s.send_json({"error": "not found"}, 404)
+        if VIEWS_STORE == "browser" and path.startswith("/api/views"): return s.send_json({"error": "views are stored in the browser on this server"}, 410)
+        if path not in ("/api/views", "/api/views/merge", "/api/views/watchlist"): return s.send_json({"error": "not found"}, 404)
         try:
             n = int(s.headers.get("Content-Length", 0))
             if n > 5_000_000: raise ValueError("too large")
-            s.send_json(views_write(json.loads(s.rfile.read(n) or b"[]")))
+            body = json.loads(s.rfile.read(n) or b"null")
+            if path == "/api/views": s.send_json(views_write(body))
+            elif path == "/api/views/merge": s.send_json(store_merge(body))
+            else:
+                w = _norm({"watchlist": body})["watchlist"]
+                if not w: raise ValueError("watchlist must be {list,updated}")
+                s.send_json(store_update(lambda d: {**d, "watchlist": w}))
+        except urllib.error.URLError as e: s.send_json({"error": "storage unavailable: " + str(getattr(e, "code", "") or e.reason)}, 502)
         except Exception as e: s.send_json({"error": str(e)}, 400)
     def do_HEAD(s):
         if not s.gate(urllib.parse.urlparse(s.path).path): return
@@ -159,7 +232,11 @@ class H(SimpleHTTPRequestHandler):
         if PASSWORD and u.path == "/logout": return s.redirect("/", f"{COOKIE}=; Max-Age=0; Path=/; HttpOnly; Secure; SameSite=Lax")
         if not s.gate(u.path): return
         if u.path == "/api/config": return s.send_json({"viewsStore": VIEWS_STORE, "auth": bool(PASSWORD)})
-        if u.path == "/api/views": return s.send_json([] if VIEWS_STORE == "browser" else views_read())
+        if u.path in ("/api/views", "/api/views/all"):
+            if VIEWS_STORE == "browser": return s.send_json([] if u.path == "/api/views" else _norm({}))
+            try: d = store_read(fresh=u.path == "/api/views/all")
+            except Exception as e: return s.send_json({"error": "storage unavailable: " + str(e)}, 502)
+            return s.send_json(d["views"] if u.path == "/api/views" else d)
         qs = urllib.parse.parse_qs(u.query)
         if u.path == "/api/search": return s.send_json(ysearch(qs.get("q", [""])[0]))
         if u.path == "/api/logo":
@@ -203,4 +280,4 @@ class H(SimpleHTTPRequestHandler):
         b = body.encode(); s.send_response(code)
         s.send_header("Content-Type", "application/json"); s.send_header("Cache-Control", "no-store"); s.send_header("Content-Length", len(b)); s.end_headers(); s.wfile.write(b)
 if __name__ == "__main__":
-    print(f"Chartmaker on http://localhost:{PORT} (password {'on' if PASSWORD else 'off'}, views: {VIEWS_STORE})", flush=True); ThreadingHTTPServer(("0.0.0.0", PORT), H).serve_forever()
+    print(f"Chartmaker on http://localhost:{PORT} (password {'on' if PASSWORD else 'off'}, views: {VIEWS_STORE}{' via GitHub ' + VIEWS_REPO + '@' + VIEWS_BRANCH if GH_TOKEN and VIEWS_STORE == 'server' else ''})", flush=True); ThreadingHTTPServer(("0.0.0.0", PORT), H).serve_forever()

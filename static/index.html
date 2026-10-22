@@ -617,7 +617,11 @@ window.__hrender=hrender;
 const WDEF=['MSTR','BTC-USD','TSLA','NVDA','COIN','SPY'],WLS='chartmaker_watchlist';
 let WL=(()=>{try{const a=JSON.parse(localStorage.getItem(WLS));if(Array.isArray(a)&&a.length)return a}catch(e){}return WDEF.slice()})();
 let WROWS={},WAT=0,WSRC='Yahoo Finance',WSORT={k:null,d:-1},WBUSY=false;
-const wsave=()=>{localStorage.setItem(WLS,JSON.stringify(WL));wchips()};
+let WLUP=localStorage.getItem(WLS+'_updated')||'';
+// Watchlist is cached in this browser and, when views are server-stored, synced to the server (newest wins).
+const wsave=(sync=true)=>{localStorage.setItem(WLS,JSON.stringify(WL));if(sync){WLUP=new Date().toISOString();localStorage.setItem(WLS+'_updated',WLUP);
+  if(window.__VSTORE==='server')fetch('/api/views/watchlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({list:WL,updated:WLUP})}).catch(e=>console.warn('watchlist not synced',e))}
+  wchips()};
 function wchips(){const esc=x=>x.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   $('wchips').innerHTML=WL.map((t,i)=>`<span style="background:#e5e7eb;border-radius:4px;padding:3px 4px;display:inline-flex;gap:3px;align-items:center"><a href="#" data-mv="${i},-1" title="Move left" style="color:#6B7280;text-decoration:none">‹</a><b>${esc(t)}</b><a href="#" data-mv="${i},1" title="Move right" style="color:#6B7280;text-decoration:none">›</a><a href="#" data-rm="${i}" title="Remove" style="color:#EF4444;text-decoration:none;margin-left:2px">×</a></span>`).join('')}
 $('wchips').onclick=e=>{const a=e.target.closest('a');if(!a)return;e.preventDefault();
@@ -797,7 +801,7 @@ $('sreload').addEventListener('click',()=>{if($('sview').value==='time'&&!HBUSY)
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
 const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
 let VIEWS=[];
-function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}const o={name,mode:MODE,fields:f,saved:new Date().toISOString()};if(MODE==='watch')o.wl=WL.slice();return o}
+function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();return o}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
 // Saved views are per tab: each view carries .mode and only shows/saves/loads in that tab.
 const VMODES=['prices','fin','heat','tre','val','watch','sent'];
@@ -808,11 +812,23 @@ const VOWN={sent:/^(sview|shist|sprice|stickers|stitle|swm)$/,watch:/^(wtitle|ww
 const VLASTM={};try{localStorage.removeItem(VLAST)}catch(e){}
 function vremember(name){if(name)VLASTM[MODE]=name;else delete VLASTM[MODE]}
 const vfind=(n,m=MODE)=>VIEWS.findIndex(v=>v.name===n&&vmode(v)===m);
-async function vput(){if(VSTORE==='browser'){localStorage.setItem(VLS,JSON.stringify(VIEWS));vlist();return}
-  const r=await fetch('/api/views',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(VIEWS)});
-  if(!r.ok)throw Error('save failed: '+r.status);VIEWS=await r.json();vlist()}
-async function vload(){try{VSTORE=(await (await fetch('/api/config')).json()).viewsStore||'server'}catch(e){}
-  try{VIEWS=VSTORE==='browser'?JSON.parse(localStorage.getItem(VLS)||'[]'):await (await fetch('/api/views')).json();if(!Array.isArray(VIEWS))VIEWS=[]}catch(e){VIEWS=[]}
+// Server mode: views.json on the server (GitHub-backed), with this browser's localStorage kept as an offline cache.
+async function vput(){localStorage.setItem(VLS,JSON.stringify(VIEWS));if(VSTORE==='browser'){vlist();return}
+  try{const r=await fetch('/api/views',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(VIEWS)});
+    if(!r.ok)throw Error('status '+r.status);VIEWS=await r.json();localStorage.setItem(VLS,JSON.stringify(VIEWS))}
+  catch(e){vlist();vmsg('⚠ Saved in this browser only — server sync failed ('+e.message+'). Save again to retry.');throw e}vlist()}
+async function vload(){try{VSTORE=(await (await fetch('/api/config')).json()).viewsStore||'server'}catch(e){}window.__VSTORE=VSTORE;
+  let loc=[];try{loc=JSON.parse(localStorage.getItem(VLS)||'[]');if(!Array.isArray(loc))loc=[]}catch(e){}
+  if(VSTORE==='browser')VIEWS=loc;
+  else try{const MIG='chartmaker_views_uploaded';let d;
+    // first load in this browser: upload its saved views + watchlist (merge by tab+name, newest wins, nothing deleted)
+    if(!localStorage.getItem(MIG)){const r=await fetch('/api/views/merge',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({views:loc.filter(x=>x&&x.name),watchlist:localStorage.getItem(WLS)?{list:WL,updated:WLUP||'0'}:null})});
+      if(!r.ok)throw Error('merge '+r.status);d=await r.json();localStorage.setItem(MIG,new Date().toISOString())}
+    else{const r=await fetch('/api/views/all',{cache:'no-store'});if(!r.ok)throw Error('load '+r.status);d=await r.json()}
+    VIEWS=Array.isArray(d.views)?d.views:[];localStorage.setItem(VLS,JSON.stringify(VIEWS));
+    const w=d.watchlist;if(w&&Array.isArray(w.list)&&w.list.length&&String(w.updated||'')>=WLUP&&JSON.stringify(w.list)!==JSON.stringify(WL)){WL=w.list.slice();WLUP=String(w.updated||'');localStorage.setItem(WLS+'_updated',WLUP);wsave(false);if(MODE==='watch')wenter()}}
+  catch(e){VIEWS=loc;console.warn('views server unavailable, using browser cache',e);setTimeout(()=>vmsg('⚠ Saved views server unavailable — showing this browser’s cached copy.'),0)}
+  if(!Array.isArray(VIEWS))VIEWS=[]
   // migrate old views: anything without a valid tab goes under Prices (nothing is dropped)
   let mig=0;for(const x of VIEWS){if(x&&typeof x==='object'&&x.mode!==vmode(x)){x.mode=vmode(x);mig++}}
   if(mig){try{await vput()}catch(e){console.warn('view migration not saved',e)}}
@@ -844,7 +860,7 @@ $('vsave').onclick=async()=>{const i=vsel();
   if(j>=0)VIEWS[j]=snap(n);else VIEWS.push(snap(n));vremember(n);await vput();vflash('Saved “'+n+'”')};
 $('vren').onclick=async()=>{const i=vsel();if(i===''){alert('Pick a saved view first');return}
   const n=(prompt('New name:',VIEWS[i].name)||'').trim();if(!n||n===VIEWS[i].name)return;if(vfind(n)>=0){alert(`A view named "${n}" already exists in this tab`);return}
-  VIEWS[i].name=n;vremember(n);await vput()};
+  VIEWS[i].name=n;VIEWS[i].updated=new Date().toISOString();vremember(n);await vput()};
 $('vdel').onclick=async()=>{const i=vsel();if(i===''){alert('Pick a saved view first');return}
   if(!confirm(`Delete "${VIEWS[i].name}"?`))return;VIEWS.splice(i,1);vremember('');await vput()};
 $('vexp').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(VIEWS,null,2)],{type:'application/json'}));a.download='chartmaker_views.json';a.click()};

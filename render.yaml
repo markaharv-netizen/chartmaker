@@ -12,6 +12,12 @@ services:
       - key: SECRET_KEY
         generateValue: true
       - key: VIEWS_STORE
-        value: browser
+        value: server
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: VIEWS_REPO
+        value: markaharv-netizen/chartmaker
+      - key: VIEWS_BRANCH
+        value: views-data
       - key: PYTHON_VERSION
         value: 3.12.7
