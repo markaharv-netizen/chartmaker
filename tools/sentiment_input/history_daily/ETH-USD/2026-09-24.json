@@ -1,0 +1,147 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-24T00:00:00Z",
+ "end": "2026-09-25T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "AlphaLensCrypto",
+   "url": "https://x.com/AlphaLensCrypto/status/2102936599612809486",
+   "date": "2026-09-24",
+   "text": "📊 THE CRYPTO EDGE | DAILY MARKET BRIEF\n📅 September 23, 2026\n\n🚨 DAILY BEARISH DIVERGENCE VS. SHORT SQUEEZE: IS $93K NEXT? 🚨\nBitcoin is printing a daily RSI bearish divergence at range highs, but negative funding rates signal a potential massive short squeeze ahead. Here is https://t.co/SKbY3Kw5fm"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "MorningRecap",
+   "url": "https://x.com/MorningRecap/status/2103204966630392022",
+   "date": "2026-09-24",
+   "text": "Today's brief:\n\nBear-Bull Index for today: 7/10 📈(Comment on the rating: Investors are bullish.)\n\n• Bitcoin moves around $84.5K.\n• The U.S. is reportedly considering expanding the global use of dollar-backed stablecoins to help reinforce the dollar’s position as the leading"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "MorningRecap",
+   "url": "https://x.com/MorningRecap/status/2103204761260409286",
+   "date": "2026-09-24",
+   "text": "Today's brief:\n\nBear-Bull Index for today: 7/10 📈(Comment on the rating: The market is bullish.)\n\n• Bitcoin moves around $84.5K.\n• The U.S. is reportedly considering expanding the global use of dollar-backed stablecoins to help reinforce the dollar’s position as the leading"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "DyorNetCrypto",
+   "url": "https://x.com/DyorNetCrypto/status/2102923660902424859",
+   "date": "2026-09-24",
+   "text": "ethereum:0x6e2a43be0b1d33b726f0ca3b8de60b3482b8b050 - 1d\nBias: Bullish 🟢\nTrend Score: 51/100 | Confidence: 7.9/10\n\nCurrently priced at $0.12180000, ARKM is in a bullish trend with a score of 52/100 and setup confidence at 7.9/10, yet exhaustion signals are rising. Key indicators https://t.co/N7YGqyk4La"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 51,
+   "user": "Cryoto_Ghost23",
+   "url": "https://x.com/Cryoto_Ghost23/status/2102961637531721790",
+   "date": "2026-09-24",
+   "text": "Daily reminder ethereum:0x57e114b691db790c35207b2e685d4a43181e6061 is undervalued and will most likely set new ATHs before the bull even gets started . \n\nSuper bullish . \n\nBuy , hodl , chill = Gen Wealth."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Crypto_Cosa",
+   "url": "https://x.com/Crypto_Cosa/status/2103072319253930461",
+   "date": "2026-09-24",
+   "text": "ethereum:0xb2617246d0c6c0087f18703d576831899ca94f01 ~ @ZIGFinance \n\nReally pushing to build a solid uptrend here. After establishing that strong foundation, it has been looking for more upside ever since.\n\nAnd now we're on the verge of crossing the 0-line on the (MACD) for the https://t.co/wH9dfxradr"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Option_Prophets",
+   "url": "https://x.com/Option_Prophets/status/2103062116412563815",
+   "date": "2026-09-24",
+   "text": "Today I opened this options position because I’m expecting a strong move into tomorrow’s major crypto options expiry.\n\nethereum:native Max Pain is around $2,350, which is still quite far from the current price. I think this increases the probability of bearish outcome.\n\nThat https://t.co/txmRbYADXu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "SignalxBinance",
+   "url": "https://x.com/SignalxBinance/status/2103119769855783086",
+   "date": "2026-09-24",
+   "text": "My personal research into ETH's current technical posture reveals a fascinating tension amidst impactful Web3 developments. 🧐\n\n**Context:** The Cathie Wood ARK/Securitize collaboration is a profound signal. Tokenizing a venture fund with stakes in giants like OpenAI and https://t.co/22Vf3PgivO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 234,
+   "user": "AragornWindbrkr",
+   "url": "https://x.com/AragornWindbrkr/status/2103121210510844079",
+   "date": "2026-09-24",
+   "text": "ethereum:0xaea46a60368a7bd060eec7df8cba43b7ef41ad85 just broke out of its 21-month bearish channel after it printed a weekly bullish RSI divergence.\n\nRight now, it is above the Daily and below the weekly 50/200 EMA’s.\n\nIt missed the confluence bottom fib area, which reinforced https://t.co/grE2UgWwWE https://t.co/vAWQRHdpN8"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2103017433657122853",
+   "date": "2026-09-24",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• StarkWare Says Bitcoin “Last-Resort” Quantum-Safe Plan Drops 79%\n• Bitwise survey finds 1%-2% crypto allocations dominate\n• FBI crypto forum targets scams, hacks and DPRK threats\n• Cardano News Today: Why is ADA Price https://t.co/AymIyNguSe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "HeyEva",
+   "url": "https://x.com/HeyEva/status/2103108440197411292",
+   "date": "2026-09-24",
+   "text": "Macro yield pressure triggered the largest derivatives leverage flush of the month, cleansing overextended longs without breaking institutional market structure.\n\n- Downside defense target: $81,722 serves as the primary structural support anchored by the aggregate US spot Bitcoin https://t.co/aJgT3z075K"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "radiant_algo",
+   "url": "https://x.com/radiant_algo/status/2103039541980373027",
+   "date": "2026-09-24",
+   "text": "Yesterday we saw a small correction, but the market reversed sharply afterward.\n\nRight now the portfolio is mostly hedged, with the overall bias starting to tilt lower. 📉\n\nSome algorithms are still holding up well, while others are already reacting to the downside.\n\n$NEAR, https://t.co/xIo07EyXwP"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "phamkien50bqve",
+   "url": "https://x.com/phamkien50bqve/status/2103045025026494907",
+   "date": "2026-09-24",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential transactions Undervalued gem #cotinetwork privacy mainstream 🌕"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "vunamdz0hzg",
+   "url": "https://x.com/vunamdz0hzg/status/2103015110067585357",
+   "date": "2026-09-24",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential DeFi Undervalued gem #cotinetwork institutional inflow 🛡️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "tranduc9le4fg",
+   "url": "https://x.com/tranduc9le4fg/status/2103013670896975928",
+   "date": "2026-09-24",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential DeFi Undervalued gem #cotinetwork real utility 🤖"
+  }
+ ]
+}

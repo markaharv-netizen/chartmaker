@@ -1,0 +1,84 @@
+{
+ "symbol": "ASTS",
+ "start": "2026-09-28T00:00:00Z",
+ "end": "2026-09-29T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "ASTS (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "PK_Fund",
+   "url": "https://x.com/PK_Fund/status/2104453391560982763",
+   "date": "2026-09-28",
+   "text": "$ASTS There are a lot of bad takes on here lately, some of them like the bearish comment below me are completely laughable. Rather than respond to them and give them an audience, I'm just going to focus on what's good, and there is a lot. Lamenting is not productive. The only"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 20,
+   "user": "disgusting_pleb",
+   "url": "https://x.com/disgusting_pleb/status/2104362122083725602",
+   "date": "2026-09-28",
+   "text": "$ASTS been bullish this whole time unfortunately lmao https://t.co/IQETRyNuhx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 39,
+   "user": "aituninglab",
+   "url": "https://x.com/aituninglab/status/2104497665476014109",
+   "date": "2026-09-28",
+   "text": "$ASTS A quietly bullish weekend.\nTwo developments worth watching:\n\n1. BB11: The orbital signature continued moving in the right direction. Estimated area is now 3.04×, drag vs floor 4.21×, and the HMM remains “Transitioning.” Still NOT confirmed as fully unfolded, but much more https://t.co/YNeYiinAWl"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "bilaalDinvestig",
+   "url": "https://x.com/bilaalDinvestig/status/2104496242453565693",
+   "date": "2026-09-28",
+   "text": "GOOGLE IS SENDING AI CHIPS TO SPACE\n\nGoogle will launch 4 TPUs into orbit on Oct 1 with SpaceX. $SPCX\n\nAl's massive power and land needs are pushing Big Tech to explore space-based data centers.\nThis is bullish for space stocks\n\n$RKLB $ASTS https://t.co/mvJIcDEiuy"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "DenWhoward",
+   "url": "https://x.com/DenWhoward/status/2104531830615704009",
+   "date": "2026-09-28",
+   "text": "$ASTS Dow Jones Industrial Average futures fell 0.47% on Monday morning, tracking a broader dip across Wall Street. A rejection of an Iran truce by President Donald Trump pushed crude oil prices and Treasury yields higher, weighing heavily on risk assets. Bullish https://t.co/dRFIusnnce"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 104,
+   "user": "CatSE___ApeX___",
+   "url": "https://x.com/CatSE___ApeX___/status/2104452154366832810",
+   "date": "2026-09-28",
+   "text": "GP (spaceforce radar) data is delayed.\n\nMeanwhile lets have a look at SupGP the noisy data from satellite telemetry.\n\nNoisy so I had Grok smooth the lines.\n\nThen asked it to use the derivative of these smoothed lines as decay rate and plot the gap.\n\nUsing that data filtering we https://t.co/EoA0N3RWYS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 44,
+   "user": "WallStConqueror",
+   "url": "https://x.com/WallStConqueror/status/2104393440251256867",
+   "date": "2026-09-28",
+   "text": "ARE YOU READY TODAY, SPACE INVESTORS?\n\nThe CLPS 2.0 vendor-pool list is expected to be announced on September 28. Companies that make the list will be eligible to compete for task orders from the $10 billion program, with an option that can raise the ceiling to $15 billion over https://t.co/NLupd5Y8gA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "DerekCollinsF51",
+   "url": "https://x.com/DerekCollinsF51/status/2104548325471215880",
+   "date": "2026-09-28",
+   "text": "$ASTS is not a stock to chase today.\nIt is a stock that tumbled from $133 and has been trading sideways in the $58–$63 range, digesting the tension between \"launch cadence\" and \"commercial realization.\"\n\nIt closed at $61.81 (+1.23%) last Friday. In pre-market trading this https://t.co/JbVuRxs6vo"
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "symbol": "CIFR",
+ "start": "2026-09-28T00:00:00Z",
+ "end": "2026-09-29T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "CIFR (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "arfalive0",
+   "url": "https://x.com/arfalive0/status/2104522402529231012",
+   "date": "2026-09-28",
+   "text": "$CIFR 👀\n\nCurrent price: $17.31\nTarget: $19.00 by Sept. 30\nThat’s roughly a 9.8% upside from here.\n\nThe target is there. Now it’s all about whether price action can deliver the follow-through. 📈 https://t.co/WLO0vdX5c7"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "NGLSHMUELI",
+   "url": "https://x.com/NGLSHMUELI/status/2104527548570796290",
+   "date": "2026-09-28",
+   "text": "$CIFR — H.C. Wainwright reiterates Buy, keeps $30 price target\n\n- Barber Lake extension viewed as a net positive\n- Analyst says it meaningfully increases the site's contracted value\n- PT implies significant upside from current levels"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 10,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2104362948076659040",
+   "date": "2026-09-28",
+   "text": "$MARA\n\n$MARA long-term holders should remain mindful that the higher-timeframe structure is still bearish. \n\nOver the past two weeks, the daily chart has produced several interesting setups that allowed traders to capture shorter-term bounces, and we’ve shared and participated in https://t.co/WiOwi8SQ9N https://t.co/w9QfCPkwdE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "risenfit",
+   "url": "https://x.com/risenfit/status/2104392441734533562",
+   "date": "2026-09-28",
+   "text": "$CIFR $WULF $IREN \n\nBULLISH! https://t.co/2okvtVxiLG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "TheSkayeth",
+   "url": "https://x.com/TheSkayeth/status/2104456498206462042",
+   "date": "2026-09-28",
+   "text": "$IWM correction to $277 would make this correction look MUCH more complete.\n\nAnd this would set up for a very, very bullish October for $IREN, $CIFR, $NBIS, and others. https://t.co/39W7tDHkmg"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 122,
+   "user": "TheBigBerbowski",
+   "url": "https://x.com/TheBigBerbowski/status/2104553711943237789",
+   "date": "2026-09-28",
+   "text": "H.C. Wainwright reiterated its BUY rating and $30 price target on $CIFR, arguing that the latest Barber Lake agreement materially improves the long-term economics of the project.\n\nBarber Lake was previously contracted for 10 years; the new agreement extends that to 20 years, https://t.co/TgJZwgNzI1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "oobiewpb",
+   "url": "https://x.com/oobiewpb/status/2104533451881759029",
+   "date": "2026-09-28",
+   "text": "$SMH $DRAM $CIBR $EUV $DTCR \n\nDLMM WEEKLY AI INFRASTRUCTURE INTELLIGENCE\nMONDAY, SEPTEMBER 28, 2026\nTHE BIG PICTURE\nThe AI infrastructure trade is still intact, but the market is changing what it is rewarding.\nThe story is no longer simply “buy the GPU names.” Capital is"
+  }
+ ]
+}

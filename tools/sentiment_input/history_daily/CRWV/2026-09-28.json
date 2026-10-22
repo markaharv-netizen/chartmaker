@@ -1,0 +1,30 @@
+{
+ "symbol": "CRWV",
+ "start": "2026-09-28T00:00:00Z",
+ "end": "2026-09-29T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "CRWV (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "YouYouFXRESERCH",
+   "url": "https://x.com/YouYouFXRESERCH/status/2104543900819931255",
+   "date": "2026-09-28",
+   "text": "🚨 COREWEAVE FACES A $35.6B DEBT PROBLEM — UBS GOES BULLISH\n\n$CRWV carries $35.6B in debt, but has a massive $104B backlog plus $25B+ of new Q3 commitments.\n\nUBS initiated coverage with a $120 price target, arguing leverage concerns may be peaking.\n\n#CRWV #AI #Nvidia #YouYouFX https://t.co/30UeyFhS6u"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "taylornikolzink",
+   "url": "https://x.com/taylornikolzink/status/2104529779315945736",
+   "date": "2026-09-28",
+   "text": "Building AI infrastructure represents the single largest wealth-creation opportunity of this decade.\n\nHere are 8 stocks best positioned in the market:\n\n1. $NBIS\n\nProvides full-stack AI cloud services and data center operations.\n\nIt is the second-largest \"NeoCloud\" provider, yet https://t.co/kAYXOkTDiX"
+  }
+ ]
+}

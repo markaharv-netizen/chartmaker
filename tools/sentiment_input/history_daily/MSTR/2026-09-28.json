@@ -1,0 +1,219 @@
+{
+ "symbol": "MSTR",
+ "start": "2026-09-28T00:00:00Z",
+ "end": "2026-09-29T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "MSTR (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR mNAV) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2104543968570614270",
+   "date": "2026-09-28",
+   "text": "🚨 $BTC ALERT: Strategy Acquires 1,665 BTC, Repurchases $152M of STRC\n\n🟢 Bullish: 58%\n• Strategy bought 1,665 BTC during the week using ATM proceeds.\n• Holdings rose to 847,666 BTC with an aggregate purchase price of $63.95 billion.\n\n🔴 Bearish: 42%\n• Strategy sold 1,469,165"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2104504787609723272",
+   "date": "2026-09-28",
+   "text": "#BITCOIN\n\n#BITCOIN is approaching a retest of its prior horizontal resistance level, which could now act as support. \n\nToday’s bearish continuation candle shows sellers still controlling short-term momentum, while the MACD is nearing a bearish crossover below its signal line. https://t.co/QPqMy7gSQk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "TrillinDaGame",
+   "url": "https://x.com/TrillinDaGame/status/2104451641499890131",
+   "date": "2026-09-28",
+   "text": "mikhail sailor worlds dumbest investor dude lost mad money hodling bitcoin during the semis and storage bull run what the hell is wrong with the guy lmfao cant say mstr isnt hella volatile and bullish off lows sometimes tho its definitely a ticker to trade lol"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "LuxWire",
+   "url": "https://x.com/LuxWire/status/2104395332280812012",
+   "date": "2026-09-28",
+   "text": "22K BTC a month through bull and bear, then STRC buybacks since July. The 12% prefs were the bear-market product. $MSTR https://t.co/P6BjdWbY45"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cottonfields",
+   "url": "https://x.com/cottonfields/status/2104537082215440772",
+   "date": "2026-09-28",
+   "text": "Yesterday's options flow (25 sep)\nmarkets: income\nmag7: bullish\ncrypto: accumulation\nbiotech: unclear\nmetals: unclear\nenergy: unclear\nrates: income\nrisk-off: bullish\nsemis: hedging\nfinancials: hedging\n\nMarkets\n25 Sep flow: USD 976.4m confirmed opening, split 50.4% puts / 49.6%"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "TychoOnnasch",
+   "url": "https://x.com/TychoOnnasch/status/2104546180671918276",
+   "date": "2026-09-28",
+   "text": "MSTR ATM is back on above 1.2x mNAV https://t.co/sYD6sAEOR0 https://t.co/3IrpDZgYJw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 224,
+   "user": "thepowerfulHRV",
+   "url": "https://x.com/thepowerfulHRV/status/2104542735487435221",
+   "date": "2026-09-28",
+   "text": "$MSTR bought 1,665 BTC and now holds 847,666.\n\nThe purchases were funded through the common ATM.\n\nThese purchases were accretive to BTC/share, with mNAV holding around 1.2x last week. https://t.co/0fPq1u1hQP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 139,
+   "user": "FinFreedom414",
+   "url": "https://x.com/FinFreedom414/status/2104547733457838536",
+   "date": "2026-09-28",
+   "text": "Not a fan of tapping the $MSTR ATM here again, but are we surprised?\n\nLet’s let this mnav expand a little bit. https://t.co/XQtqrHMrIE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "GalaxyMind",
+   "url": "https://x.com/GalaxyMind/status/2104544224360427952",
+   "date": "2026-09-28",
+   "text": "Bitcoin Buying Gauge: 55/100, STACK SATS. MSTR mNAV is leaning toward stacking. Ten on-chain and market signals compressed into one honest number, updated live.\nhttps://t.co/wU9C2vzQkt via @GalaxyMind"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Node_Rabbit",
+   "url": "https://x.com/Node_Rabbit/status/2104385953012092976",
+   "date": "2026-09-28",
+   "text": "$MSTR is up +28.5% over the last 5 days while $BTC is up +10.7%.\n\nIf you pull up the @get_truenorth desk, you can see exactly what is driving the spread:\n\n• Basic mNAV is still sitting at 0.89x (while enterprise mNAV factoring debt/prefs is back near ~1.1x–1.2x)\n• $2.3B in spot https://t.co/9hHuBIOmDf https://t.co/5kB5Ib7FBl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "CK_Cryptoklepto",
+   "url": "https://x.com/CK_Cryptoklepto/status/2104544795846697408",
+   "date": "2026-09-28",
+   "text": "Strategy₿ acquired 1,665 $BTC and repurchased $152 Million of $STRC via funds raised from the $MSTR ATM\n\nTotal Bitcoin Holdings = 847,666\n\nTotal USD Reserve and Cash Holdings = $6.02 Billion\n\nLive mNAV = 1.20x (https://t.co/SEyvaLBNgR) https://t.co/hL0pvOkeAk https://t.co/tcptzWsDDw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 145,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2104524338074685694",
+   "date": "2026-09-28",
+   "text": "Got a lot of heat for suggesting taking profit on $MSTR in the $400-600 range this cycle. \n\nAssume Bitcoin doubles and BTC yield is 20% with moderate mNAV expansion.\n\nThat puts us in the $400-600 range.\n\nThen, the plan is to rotate into Bitcoin for better risk-adjusted returns. https://t.co/orzaVVp9Wg"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 80,
+   "user": "TheBTCKnight",
+   "url": "https://x.com/TheBTCKnight/status/2104398188878627242",
+   "date": "2026-09-28",
+   "text": "bitcoin:native is still undervalued. \n\n$MSTR  is still undervalued. \n\n$ASST is still undervalued. \n\nAll digital assets are undervalued. \n\nWhat are your favorites?"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "PhatChin",
+   "url": "https://x.com/PhatChin/status/2104553158525518227",
+   "date": "2026-09-28",
+   "text": "$MSTR W 🟨\nAlmost ready to take on the thick bearish cloud above. https://t.co/ZY576XNa7P"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 14,
+   "user": "olaxbt_agent",
+   "url": "https://x.com/olaxbt_agent/status/2104481316494622743",
+   "date": "2026-09-28",
+   "text": "$MSTR (Stock): Bearish distribution teases—CVD continues falling beneath its SMA while price breaks below lower channel limits, confirming the drift. MFI scrapes the oversold floor, yet sell dominance persists as the tape slides through thin depth. Pivots remain locked in a https://t.co/hVpvV5xEw0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "leocrypto009",
+   "url": "https://x.com/leocrypto009/status/2104475272028537194",
+   "date": "2026-09-28",
+   "text": "$MSTR this trader is sitting on a beautiful short and it is printing profits right now. He is holding a 10x cross short on 4,000 shares with over 62,000 in margin. Already up 20,950 with a plus 14 percent ROI and it keeps climbing. He shorted at 160.25 and the price has dropped https://t.co/NO7S0mPXFF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Davies3319",
+   "url": "https://x.com/Davies3319/status/2104529176048947333",
+   "date": "2026-09-28",
+   "text": "$ETH/USDT | SHORT \n\n⚡️Leverage: Cross 200x\n\n🎯Entry Targets: 2645\n\n💵Take Profits👇\n1️⃣2620\n\n2️⃣2560\n\n3️⃣2500\n\n4️⃣2408\n\n🛑Stop Loss: 2780\n\n💵 Bearish setup active — follow the signal and secure profits at targets.💎\n\nClick on the link to join  our free  premium trading group 👇🏿👇🏿"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "TradingParrot",
+   "url": "https://x.com/TradingParrot/status/2104415038677123149",
+   "date": "2026-09-28",
+   "text": "📈 MSTR is breaking out on the MONTHLY chart - a rare event. Mariano breaks down both sides: bullish breakout to new highs, or rejection at $170. Plus: MSTR just announced DAILY dividends on yield instruments 😳 https://t.co/TdVNuSrWyE\n#MicroStrategy #MSTR #Bitcoin #StockAnalysis https://t.co/5DG2yNqhHq"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 13,
+   "user": "totalwinner69",
+   "url": "https://x.com/totalwinner69/status/2104376170351386995",
+   "date": "2026-09-28",
+   "text": "Bullish Af #BITCOIN #BTC🐮 \n#BITCOINCASH #BCHG #DOGECOIN #DOGE #SHIB. \n💪🐶💪  👀👀    🔥🙌\nMSTR in Focus as Michael Saylor Hints at Fresh Bitcoin Purchase $MSTR $BTC $BTC https://t.co/vET2vU3E03 via @Benzinga"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 344,
+   "user": "cryptogoos",
+   "url": "https://x.com/cryptogoos/status/2104541677490946411",
+   "date": "2026-09-28",
+   "text": "Michael Saylor's Strategy $MSTR bought another 1,666 Bitcoin worth $138 million.\n\nBullish for $BTC! https://t.co/gON08iVJkN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "TheCycleProf",
+   "url": "https://x.com/TheCycleProf/status/2104389522490364187",
+   "date": "2026-09-28",
+   "text": "🚨 WARNING: ARE YOU READY? 🚨\n\nI WARNED YOU LAST MONDAY. CHECK MY POST BELOW 👇🏻👇🏻\n\nStrap in. Volatility is about to pick up hard.\n\nWhen sentiment gets this stretched to the upside, the tape needs a reset. That reset only comes with a sharp flush.\n\nAfter that flush is done, the https://t.co/4ia22Vzwjs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "JRamirezChacon1",
+   "url": "https://x.com/JRamirezChacon1/status/2104543687598321701",
+   "date": "2026-09-28",
+   "text": "Red 🩸 to very very green 💚 ✅️ \n\n$MSTU $MSTR $ASST $BTC bullish 🚀📈🔥💪 https://t.co/Emb5UIzSsP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "VantoraTrade",
+   "url": "https://x.com/VantoraTrade/status/2104364784317567063",
+   "date": "2026-09-28",
+   "text": "$NVDA : $221.09 support, $225.80 confirmation.\n\n$TSLA : constructive above its daily trend; $390 caps, $354 is larger risk.\n\n$AMD : bullish above $600, but extended.\n\n$PLTR : range $188.37–$194.80.\n\n$MSTR : $144 support; $173.61 open-gap watch."
+  }
+ ]
+}

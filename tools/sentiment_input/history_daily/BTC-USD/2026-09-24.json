@@ -1,0 +1,237 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-24T00:00:00Z",
+ "end": "2026-09-25T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "ChainInsightLab",
+   "url": "https://x.com/ChainInsightLab/status/2103107185865871414",
+   "date": "2026-09-24",
+   "text": "Bitcoin Bottom Signal Emerges, Bullish Target Set at $126,000\n\nCrypto trader Killa (@KillaXBT) posted that he believes the Bitcoin bottom has been confirmed. He expects that during the push toward $126K in this bull cycle, the maximum pullback will be around 10–15%. Should BTC https://t.co/X3vwGZFWrc"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "AlphaLensCrypto",
+   "url": "https://x.com/AlphaLensCrypto/status/2102936599612809486",
+   "date": "2026-09-24",
+   "text": "📊 THE CRYPTO EDGE | DAILY MARKET BRIEF\n📅 September 23, 2026\n\n🚨 DAILY BEARISH DIVERGENCE VS. SHORT SQUEEZE: IS $93K NEXT? 🚨\nBitcoin is printing a daily RSI bearish divergence at range highs, but negative funding rates signal a potential massive short squeeze ahead. Here is https://t.co/SKbY3Kw5fm"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2102939582153060703",
+   "date": "2026-09-24",
+   "text": "🚨 $BTC ALERT: Bitcoin Stalls Near $84,000 as $18B Options Expiry Meets Rising Yields\n\n🟢 Bullish: 55%\n• Spot ETF net inflows neared $1 billion in a single day, with strong institutional buying\n• ETF inflows provide downside support for BTC price\n\n🔴 Bearish: 45%\n• Rising"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "Bitcoin_Clarity",
+   "url": "https://x.com/Bitcoin_Clarity/status/2103087513917083664",
+   "date": "2026-09-24",
+   "text": "Bitcoin just pulled back ~3%.\n\nNow the question is: where does it go from here?\n\nHere are the levels I’m watching:\n\n$83.5K → immediate support\n\n$82K → recent breakout area\n\n$80K → major psychological + technical level\n\n$77K → major support\n\n$72K → next downside target if"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "MorningRecap",
+   "url": "https://x.com/MorningRecap/status/2103204966630392022",
+   "date": "2026-09-24",
+   "text": "Today's brief:\n\nBear-Bull Index for today: 7/10 📈(Comment on the rating: Investors are bullish.)\n\n• Bitcoin moves around $84.5K.\n• The U.S. is reportedly considering expanding the global use of dollar-backed stablecoins to help reinforce the dollar’s position as the leading"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "MorningRecap",
+   "url": "https://x.com/MorningRecap/status/2103204761260409286",
+   "date": "2026-09-24",
+   "text": "Today's brief:\n\nBear-Bull Index for today: 7/10 📈(Comment on the rating: The market is bullish.)\n\n• Bitcoin moves around $84.5K.\n• The U.S. is reportedly considering expanding the global use of dollar-backed stablecoins to help reinforce the dollar’s position as the leading"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2102996674356342977",
+   "date": "2026-09-24",
+   "text": "Macro Observatory Week 39 Thursday Briefing\n\nWednesday's telemetry has delivered a defining systemic verdict with the speculative chimney suffering acute velocity exhaustion. Google triggered an Emerging Bear Breakdown, the sovereign collateral reservoir ( $TLT) sank into Macro"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BTCPRJT",
+   "url": "https://x.com/BTCPRJT/status/2103222444698095790",
+   "date": "2026-09-24",
+   "text": "Friday, 25 September | Bitcoin signal through the noise\n\nbitcoin:native has broken through 82K to 83K, reached 87K, and is now testing whether that breakout can hold.\n\nKey levels:\n\n82K to 83K = support\n87K = higher-timeframe resistance\n90K to 92K = next area above\n\nFor those https://t.co/OwLvxDRfhs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2103148888848773499",
+   "date": "2026-09-24",
+   "text": "🚨 $MSTRSTOCK ALERT: Bitcoin Bets Go Into Overdrive As MSTR, Leveraged ETFs Surge\n\n🟢 Bullish: 66%\n• Strategy adds 950 BTC, bringing holdings to 846,000 BTC\n• BTC breaking above $86,000 drives MSTR up nearly 29% in five days\n\n🔴 Bearish: 34%\n• BTC and MSTR pull back in a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BTCPRJT",
+   "url": "https://x.com/BTCPRJT/status/2103221885668577327",
+   "date": "2026-09-24",
+   "text": "Friday, 25 September | Bitcoin signal through the noise\n\nbitcoin:native has broken through 82K to 83K, reached 87K, and is now testing whether that breakout can hold.\n\nKey levels:\n\n82K to 83K = support\n87K = higher-timeframe resistance\n90K to 92K = next area above\n\nFor those https://t.co/hpCVcShEd9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Lempap_99",
+   "url": "https://x.com/Lempap_99/status/2103060781499928945",
+   "date": "2026-09-24",
+   "text": "₿ **BTC MARKET UPDATE**\n\nBitcoin is currently trading around **$84K**, after rejecting the **$87K area**.\n\nKey levels to watch:\n\n📍 Resistance: **$87K**\n📍 Support: **$83.5K–$84K**\n\n🟢 **Bullish scenario:**\nBTC holds the $83.5K–$84K area, forms a strong rejection, and reclaims"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 31,
+   "user": "JTheretohelp1",
+   "url": "https://x.com/JTheretohelp1/status/2102923620846555199",
+   "date": "2026-09-24",
+   "text": "To clarify my previous analysis, I have provided a cleaner chart comparing the DXY and BTC, as the inclusion of my GMMA bands may have obscured the data. Despite prevailing market sentiment, I maintain a bullish outlook on the DXY, which inherently suggests continued bearish"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2103170060475105408",
+   "date": "2026-09-24",
+   "text": "🚨 BURAKTHESCALPER LLC — 9/24 INTRADAY UPDATE\n\n⚔️ BIAS: BEARISH / DEFENSIVE — SELLERS CONTROL UNTIL RECLAIM\n\nThe fresh tape is weaker than the prior plan. NQ futures are around 30,455, after trading 30,370–30,713.50 today. Yesterday NQ closed at 30,769.25, so tech remains under"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Arman_Trading",
+   "url": "https://x.com/Arman_Trading/status/2103122492600594659",
+   "date": "2026-09-24",
+   "text": "By analyzing the #Bitcoin chart on the weekly timeframe, we can see that BTC is currently trading around $84,000, and nothing important has changed from the previous analysis.\n\nThe key level remains $82,300. As long as Bitcoin holds above this area, I still expect another bullish https://t.co/FHjcd8Cuif"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 231,
+   "user": "CrypticTrades_",
+   "url": "https://x.com/CrypticTrades_/status/2103090153375838214",
+   "date": "2026-09-24",
+   "text": "This is EXTREMELY BULLISH for $BTC. 👀\n\nWhile Bitcoin has been pulling back, Open Interest has dropped by roughly 30K BTC.\n\nAt the same time, Funding Rates are now approaching NEGATIVE territory.\n\nIn other words, leverage is getting flushed while sentiment is turning increasingly https://t.co/KA9zjgOack https://t.co/jUBjXJFr60"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "WhatsNextBTC",
+   "url": "https://x.com/WhatsNextBTC/status/2103062888218779849",
+   "date": "2026-09-24",
+   "text": "Hope everyone is having a solid Thursday so far. #Bitcoin is currently trading around $83,150 after executing a massive structural flush over the last couple of sessions. As we tracked previously, the 4-hour Double Top pattern initiated a strong corrective pullback. The selling https://t.co/mERYE8Rrq5"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "ERA_btc",
+   "url": "https://x.com/ERA_btc/status/2103051798399557962",
+   "date": "2026-09-24",
+   "text": "#BTC UPDATE IMPORTANT\n\nBitcoin reached the upside target near $87,380, but failed to take out the high.\n\nAfter that rejection, price started to correct and eventually broke below the $85,089 low.\n\nThis break invalidates the previous bullish structure, meaning the local trend has https://t.co/VD05Pp1x3g"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Mats_Forberg",
+   "url": "https://x.com/Mats_Forberg/status/2103006447093039179",
+   "date": "2026-09-24",
+   "text": "On the short term. Bitcoin price is looking weak. Both the inside pitchfork and the modified schiff is pointing towards lower prices. Andrews is pointing bullish but is deviating into the yellow band. \n\nif the inside pitchfork price was to move into the yellow deviation on the https://t.co/mV72oC3dzi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "travels007",
+   "url": "https://x.com/travels007/status/2103066886355206523",
+   "date": "2026-09-24",
+   "text": "Hi folks, Did you enjoy bullish days on Wall Street,\nAs mentioned Bull Traps on Wall Street &amp; #Bitcoin.\nBearish Dow Jones &amp; #Bitcoin, expect Dow Jones 48,000\n&amp; another hike by FOMC &amp; Treasury yields climbing higher. Expect crude $110+ &amp;  increase odds #USA\n#recession 2027 🐸"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1797,
+   "user": "KillaXBT",
+   "url": "https://x.com/KillaXBT/status/2103074401830768804",
+   "date": "2026-09-24",
+   "text": "This is a very important post &amp; I suggest you read it at least 10 times. \n\nI believe the bottom is in.\n\nFrom here to $126K, I expect the largest pullbacks in this bull market to be roughly 10–15%.\n\nThat means, theoretically, if $87K acts as our local high before a deeper retrace https://t.co/4PB1Px6FWc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "SignalxBinance",
+   "url": "https://x.com/SignalxBinance/status/2103058120826409398",
+   "date": "2026-09-24",
+   "text": "My personal analysis of recent BTC activity highlights a complex dynamic. After topping $87K, BTC has pulled back to $83148.01, reflecting a 24h drop of -2.92% and a mixed/range-bound state. This coincided with US spot Bitcoin ETF inflows slowing to $347M on Wednesday, though https://t.co/hAs8ypjXBD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 58,
+   "user": "zyra_Vale01",
+   "url": "https://x.com/zyra_Vale01/status/2103110346877927607",
+   "date": "2026-09-24",
+   "text": "Don’t panic over this Bitcoin correction.\nAfter a strong rally, pullbacks are normal. The first support zone is $81K–$82K.\n\nBullish: Hold Weekly MA50 near $78K → broader trend remains intact.\n\nBearish: Lose $83K → bull trap risk rises, with $75K next.\n\nFor $ETH, watch https://t.co/Urqt3NVxZp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2103087973163991462",
+   "date": "2026-09-24",
+   "text": "$BTC : Honestly, I don’t pay much attention to individual candle closes. I focus on structure.\n\nAnd if your structural analysis is correct, the candles will eventually work in your favor.\n\nI’ve seen many people paying close attention to the current weekly candle and assuming that https://t.co/KENjkRZZkU https://t.co/xAzYf9yeOu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SignalxBinance",
+   "url": "https://x.com/SignalxBinance/status/2103089932457873833",
+   "date": "2026-09-24",
+   "text": "My personal analysis of recent BTC movements. 🧐\n\n**Context:** Macroeconomic sentiment is a significant driver right now. Traders are actively pricing in four Fed rate hikes by June 2027, with rising bond yields and a stronger dollar creating headwinds for both Bitcoin and gold. https://t.co/SuRYpWAbZm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 204,
+   "user": "aroogle",
+   "url": "https://x.com/aroogle/status/2103138667514786237",
+   "date": "2026-09-24",
+   "text": "hedera-hashgraph:native defended the trendline. \n\nLet’s see if we can break $0.10 now or of we have to wait a few days to retest the trend. \n\n$0.14 by October is critical and obviously depends on Bitcoin breaking 90k \n\nIf this fails, I think we will see another 1-2 years of a https://t.co/XUO57Diqp1"
+  }
+ ]
+}

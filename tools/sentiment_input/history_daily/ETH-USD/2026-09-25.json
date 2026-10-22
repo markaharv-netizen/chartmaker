@@ -1,0 +1,102 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-25T00:00:00Z",
+ "end": "2026-09-26T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2103504298441130282",
+   "date": "2026-09-25",
+   "text": "🚨 BTC &amp; ALTCOINS UPDATE — IS THIS A BULL TRAP? 📉\n\nBITCOIN PRICE PREDICTION | BTC ANALYSIS | CRYPTO MARKET OUTLOOK\n\nRight now, crypto market sentiment has completely changed. After BTC broke its recent high and pushed another $4K–$5K higher, I’m seeing bullish calls everywhere: https://t.co/Lz2bZRyhOs"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "FAT7official",
+   "url": "https://x.com/FAT7official/status/2103507075036745950",
+   "date": "2026-09-25",
+   "text": "🚨 BTC COULD BE SETTING UP FOR A MASSIVE FAKEOUT. 🐻📉\n\nEveryone is waiting for the next Bitcoin pump…\n\nBut what if BTC does the exact opposite?\n\nBitcoin could be preparing for a sharp downside move if:\n\n⚠️ Leverage is too high\n⚠️ Open interest keeps rising\n⚠️ Liquidity is"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "FAT7official",
+   "url": "https://x.com/FAT7official/status/2103506148775084330",
+   "date": "2026-09-25",
+   "text": "🚨 WHAT IF BTC DOES THE OPPOSITE? 👀\n\nEveryone is watching for the next Bitcoin breakout…\n\nBut what if the market is setting up for a major fakeout? 📉\n\n$BTC could surprise the market with a downside move if:\n\n⚠️ Leverage keeps building\n⚠️ Open interest remains elevated\n⚠️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 82,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2103312407179489560",
+   "date": "2026-09-25",
+   "text": "I open by discussing reports of a massive Bitget hack and withdrawal freeze, but my market takeaway is the surprising resilience: Bitcoin and the broader crypto market really don't care. That strength is bullish, yet I am not treating it as permission to get careless; in this https://t.co/2QTPz9bTuM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RandoRiches",
+   "url": "https://x.com/RandoRiches/status/2103484101638356993",
+   "date": "2026-09-25",
+   "text": "$TSLA (Tesla)\nCurrent: ~$378 (closed Sep 24 at $377.94, -0.57%; premarket modestly higher around $379–382).\nRecent: Up ~8% over the past month but down ~15% over 1 year. Day range recently $376–383.\nProjections/Sentiment: Analyst average target near $397 (modest upside)."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "GreeksLive",
+   "url": "https://x.com/GreeksLive/status/2103395175179645438",
+   "date": "2026-09-25",
+   "text": "September 25 Options Settlement Data\n\n167,000 BTC options expired, with a put-call ratio of 0.87, a maximum pain point of $79,000, and a notional value of $14.04 billion.\n\n789,000 ETH options expired, with a put-call ratio of 0.67, a maximum strike price of $2,380, and a notional https://t.co/7NKgpugOAl"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "CryptoTrader3X",
+   "url": "https://x.com/CryptoTrader3X/status/2103414099166068869",
+   "date": "2026-09-25",
+   "text": "$ETHUSD | 3-day chart\n\nBearish divergence and a tap into the bearish fair value gap have me watching for a reversal lower. If the rejection holds, the $2,000 area is my downside target.\n\n#ETH #Ethereum"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "CryptoTrader3X",
+   "url": "https://x.com/CryptoTrader3X/status/2103415727516504064",
+   "date": "2026-09-25",
+   "text": "$ETHUSD | 3-day chart\n\nBearish divergence and a tap into the bearish fair value gap have me watching for a reversal lower. If the rejection holds, the $2,000 area is my downside target.\n\n#ETH #Ethereum https://t.co/8bGWd9II3C"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "bradarska1",
+   "url": "https://x.com/bradarska1/status/2103486258219552962",
+   "date": "2026-09-25",
+   "text": "The total cryptocurrency market capitalization is approximately $2.88-2.89 trillion, with @Bitcoin  dominance at 58.5-58.8% and Ethereum at 11.3-11.4%. The Fear &amp; Greed Index is at 71 (Greed), with a 24-hour volume of around $100 billion. Bitcoin is consolidating below $86-87k https://t.co/1ROtk0Gmso"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "fxtrendo",
+   "url": "https://x.com/fxtrendo/status/2103570199764955286",
+   "date": "2026-09-25",
+   "text": "🔹 Ethereum Analysis | $ETH\n\nEthereum is trading around $2,691 after pulling back from the $2,806 high.\n\nPrice remains above the EMA50 &amp; EMA200, while ETH continues to move within a range.\n\n🔼 Resistance: $2,756\n🔽 Supports: $2,650 | $2,555\n\nAbove $2,756: upside momentum could https://t.co/J1ZJgRTLjg"
+  }
+ ]
+}

@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-28T00:00:00Z",
+ "end": "2026-09-29T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2104466771033960843",
+   "date": "2026-09-28",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 – broadly bullish with a few cautionary notes. 𝗪𝗵𝘆 𝘁𝗵𝗲 𝘀𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗹𝗲𝗮𝗻𝘀 𝗯𝘂𝗹𝗹𝗶𝘀𝗵 - 𝗕𝗶𝘁𝗰𝗼𝗶𝗻 𝗺𝗮𝗿𝗸𝗲𝘁 𝘀𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲 – Multiple accounts cite a weekly market‐structure break, a close above May highs and https://t.co/RfFUSftmes"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "ChrisWadetu",
+   "url": "https://x.com/ChrisWadetu/status/2104394786409259395",
+   "date": "2026-09-28",
+   "text": "BITCOIN Can 2023 Bearish Divergence cause a 1D MA200 pull-back?\n\nBitcoin (BTCUSD) seems to be replicating the post Bear Cycle bottom of 2022/23 as the price is currently sitting on Higher Highs while the RSI is under Lower Highs pressure.\n\nThis is a technical Bearish Divergence https://t.co/1X5glX0Hpk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2104535246750326891",
+   "date": "2026-09-28",
+   "text": "🚨 $BTC $ETH ALERT: Traders aren't panicking yet despite cooling crypto sentiment\n\n🟢 Bullish: 55%\n• No signs of traders scrambling for crash insurance or sudden put bid in options skew\n• BTC downside remains historically cheap relative to typical readings\n• Bitcoin options"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "signalboatcom",
+   "url": "https://x.com/signalboatcom/status/2104474764962046385",
+   "date": "2026-09-28",
+   "text": "Bitcoin is currently stabilizing around the $84,000 level, with a slowing decline ahead of the quarter-end options expiry.\n\n- BTC found support at $82,888, with a push back to $85,000 likely confirming the completion of Wave A from $87,300.\n- Immediate upside resistance lies at"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "oobiewpb",
+   "url": "https://x.com/oobiewpb/status/2104534911684149656",
+   "date": "2026-09-28",
+   "text": "$SPX $SPY $QQQ $IGV $IWM \n\nDLMM PREMARKET INTELLIGENCE\nMonday, September 28, 2026\nData checked: 7:30 AM ET\nMarket snapshot time range: 7:15 AM–7:30 AM ET\n\nMARKET TONE\n\nES: 7,763.00, down 40.75 points (-0.52%). Overnight range: 7,757.00–7,792.25.\n\nNQ: 30,591.50, down 297.75 points"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "peaqs_net",
+   "url": "https://x.com/peaqs_net/status/2104394275471372466",
+   "date": "2026-09-28",
+   "text": "Is it a possibility that the four year cycle is broken and we have a extended bear market? \n\nBitcoin closing red on the weekly chart \nAfter a bearish divergences and reversal signals start flashing, also forming massive head and shoulders pattern which everyone seems to be https://t.co/SmIXLoDyHS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "TA_On_Chain",
+   "url": "https://x.com/TA_On_Chain/status/2104524256851694032",
+   "date": "2026-09-28",
+   "text": "Bitcoin tease-mode has been activated...\n\nYesterday, Bitcoin finally closed the week above $83k — a key level that, structurally speaking, determines whether Bitcoin is in a bull or a bear market.\n\nLess than 24 hours later, however, Bitcoin is already back testing it.\n\nWhile a https://t.co/Jb97cSJq9j"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "CryptoDad_DDC",
+   "url": "https://x.com/CryptoDad_DDC/status/2104416566058119441",
+   "date": "2026-09-28",
+   "text": "BTC/USD, 4H + 1W, September 27, 2026\n\nWeekly recovery intact, but the 4H just lost momentum at a key liquidity shelf\n\nSummary for Non-Traders\n\nBTC is still constructive on the weekly chart, but the immediate 4H setup has weakened.\n\nBias: neutral-to-bullish medium term; https://t.co/crrFSRW3vc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 36,
+   "user": "bull_genius",
+   "url": "https://x.com/bull_genius/status/2104514811891425498",
+   "date": "2026-09-28",
+   "text": "now after bitcoin:native short term 1h chart let us take a look at the 1d.\n\ngreen highlighted area is 2026 (bottom year) value area.\nthis is where about 70% of all BTC changed hands. so between 60k and 76k. it is downside skewed heavy so actually the average BTC changed hands for https://t.co/nBiVOBwdSB https://t.co/aLyreWHiVT"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "cryptotradindev",
+   "url": "https://x.com/cryptotradindev/status/2104443508312375368",
+   "date": "2026-09-28",
+   "text": "https://t.co/lRX0rGMQ5d \n\nNew week, final week of September. Time for a fresh Bitcoin update.\n\nThe downside scenario from the previous analysis has now triggered and the breakdown was decisive.\n\nThe previous plan was:\n\n“A 1h close below 86,013 with negative delta targets https://t.co/xO9ehBCGd5"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "HashimiAl12",
+   "url": "https://x.com/HashimiAl12/status/2104462805956976667",
+   "date": "2026-09-28",
+   "text": "#Gold remains bearish below *4,264, with downside targets at **4,162 and 4,136*.\nA break below *4,162* could open further downside, while a move above *4,264* may target *4,308–4,335*.\n\nhttps://t.co/3hJVoVimcR\n\n#Ukraine #Gaza #Iran #Oil #Gold #Bitcoin  #Trading #StockMarket https://t.co/SsPHw17bUE"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Crypto_AiTrader",
+   "url": "https://x.com/Crypto_AiTrader/status/2104502983560249558",
+   "date": "2026-09-28",
+   "text": "Bearish NN signal on ETH/USDT\n\nShort-term forecast: -0.58% | nearest horizon: +7.99%\nOur LSTM model flags downside pressure across near horizons.\n\nLive charts &amp; bot:\n\n#Bitcoin #CryptoAI #TradingBot https://t.co/Ch1nLBRZZX"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Crypto_AiTrader",
+   "url": "https://x.com/Crypto_AiTrader/status/2104395632916201901",
+   "date": "2026-09-28",
+   "text": "Bearish NN signal on ETH/USDT\n\nShort-term forecast: +0.11% | nearest horizon: +6.41%\nOur LSTM model flags downside pressure across near horizons.\n\nLive charts &amp; bot:\n\n#Bitcoin #CryptoAI #TradingBot https://t.co/DEanKaeNMz"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Crypto_AiTrader",
+   "url": "https://x.com/Crypto_AiTrader/status/2104441618493542731",
+   "date": "2026-09-28",
+   "text": "Bearish NN signal on ETH/USDT\n\nShort-term forecast: -2.36% | nearest horizon: +1.26%\nOur LSTM model flags downside pressure across near horizons.\n\nLive charts &amp; bot:\n\n#Bitcoin #CryptoAI #TradingBot https://t.co/BeC8Gcz9Ia"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Crypto_AiTrader",
+   "url": "https://x.com/Crypto_AiTrader/status/2104371779208970329",
+   "date": "2026-09-28",
+   "text": "Bearish NN signal on ETH/USDT\n\nShort-term forecast: -5.55% | nearest horizon: -18.59%\nOur LSTM model flags downside pressure across near horizons.\n\nLive charts &amp; bot:\n\n#Bitcoin #CryptoAI #TradingBot https://t.co/zuahUmYPsj"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Crypto_AiTrader",
+   "url": "https://x.com/Crypto_AiTrader/status/2104495334634496436",
+   "date": "2026-09-28",
+   "text": "Bearish NN signal on ETH/USDT\n\nShort-term forecast: -1.22% | nearest horizon: +7.99%\nOur LSTM model flags downside pressure across near horizons.\n\nLive charts &amp; bot:\n\n#Bitcoin #CryptoAI #TradingBot https://t.co/6vL1pczk5T"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Crypto_AiTrader",
+   "url": "https://x.com/Crypto_AiTrader/status/2104487679144644787",
+   "date": "2026-09-28",
+   "text": "Bearish NN signal on ETH/USDT\n\nShort-term forecast: -2.41% | nearest horizon: +1.24%\nOur LSTM model flags downside pressure across near horizons.\n\nLive charts &amp; bot:\n\n#Bitcoin #CryptoAI #TradingBot https://t.co/ibS5bVj9lP"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Crypto_AiTrader",
+   "url": "https://x.com/Crypto_AiTrader/status/2104364117268271293",
+   "date": "2026-09-28",
+   "text": "Bearish NN signal on ETH/USDT\n\nShort-term forecast: -4.38% | nearest horizon: -14.53%\nOur LSTM model flags downside pressure across near horizons.\n\nLive charts &amp; bot:\n\n#Bitcoin #CryptoAI #TradingBot https://t.co/oEXOoVavCK"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Crypto_AiTrader",
+   "url": "https://x.com/Crypto_AiTrader/status/2104433969387405606",
+   "date": "2026-09-28",
+   "text": "Bearish NN signal on ETH/USDT\n\nShort-term forecast: -1.61% | nearest horizon: +1.29%\nOur LSTM model flags downside pressure across near horizons.\n\nLive charts &amp; bot:\n\n#Bitcoin #CryptoAI #TradingBot https://t.co/EOfiCGhV8W"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Crypto_AiTrader",
+   "url": "https://x.com/Crypto_AiTrader/status/2104403307569770985",
+   "date": "2026-09-28",
+   "text": "Bearish NN signal on ETH/USDT\n\nShort-term forecast: -0.40% | nearest horizon: +6.37%\nOur LSTM model flags downside pressure across near horizons.\n\nLive charts &amp; bot:\n\n#Bitcoin #CryptoAI #TradingBot https://t.co/Fl6qkZ4vQn"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Crypto_AiTrader",
+   "url": "https://x.com/Crypto_AiTrader/status/2104383850357117403",
+   "date": "2026-09-28",
+   "text": "Bearish NN signal on ETH/USDT\n\nShort-term forecast: -1.68% | nearest horizon: -15.02%\nOur LSTM model flags downside pressure across near horizons.\n\nLive charts &amp; bot:\n\n#Bitcoin #CryptoAI #TradingBot https://t.co/UXJStgbrYs"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "idaehye09819729",
+   "url": "https://x.com/idaehye09819729/status/2104516086855262328",
+   "date": "2026-09-28",
+   "text": "📉 **Bitcoin Bears Ramp Up Bets as Futures Positioning Hits Yearly Lows**\n\n- Traders are increasingly paying a premium to short Bitcoin, signaling growing bearish sentiment across futures markets.\n- Futures positioning has slid near yearly lows, reflecting weakened confidence and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2367,
+   "user": "TheBTCTherapist",
+   "url": "https://x.com/TheBTCTherapist/status/2104377923910185011",
+   "date": "2026-09-28",
+   "text": "According to this model, the downside risk of buying bitcoin today is -23% and the potential upside return is +650%.\n\n🟪 Resistance: $635,000\n🟩 Fair value: $183,000\n🟥 Support: $65,000\n\nThis is the easiest decision of your life. https://t.co/4PA6h2UQW2"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2104504787609723272",
+   "date": "2026-09-28",
+   "text": "#BITCOIN\n\n#BITCOIN is approaching a retest of its prior horizontal resistance level, which could now act as support. \n\nToday’s bearish continuation candle shows sellers still controlling short-term momentum, while the MACD is nearing a bearish crossover below its signal line. https://t.co/QPqMy7gSQk"
+  }
+ ]
+}

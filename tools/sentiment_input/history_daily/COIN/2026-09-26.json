@@ -1,0 +1,228 @@
+{
+ "symbol": "COIN",
+ "start": "2026-09-26T00:00:00Z",
+ "end": "2026-09-27T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 332,
+   "user": "astronomer_zero",
+   "url": "https://x.com/astronomer_zero/status/2103796654503825854",
+   "date": "2026-09-26",
+   "text": "$btc \n\nWith bullish sentiment comes liquidity.\n\nYou might feel like the bull market is \"so back\", or if you were a bear expecting 50k, feel like you were wrong right now.\n\nAnd no one really wants to see sub 75k occur because then it would be \"over\" again.\n\nWell, that's frankly https://t.co/vTdIPuK6eg https://t.co/2g9pvKSwD7"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2103858723508609329",
+   "date": "2026-09-26",
+   "text": "BTC Single-Coin Histogram Analysis\n\nOverall Bias: Bearish\n\nBlue Histogram (True Retail Longs - 89th Percentile / 56.25): Retail long exposure is heavily crowded in the upper percentiles, indicating buyer exhaustion and a dense layer of sell-stop liquidity sitting directly beneath https://t.co/x9BXmHk14S"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103844008459980807",
+   "date": "2026-09-26",
+   "text": "⚡ $SPELL 3.4% spike with 1.6x volume points to short squeeze into higher highs\n\n- my bias is bullish here on the 1h — this +3.4% spike with rising OI looks like a short squeeze into higher highs, not a finished bull trap, though weekly structure is still bearish so treat any https://t.co/pNpW92Fp1x"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "pollakrhmn",
+   "url": "https://x.com/pollakrhmn/status/2103868962815476148",
+   "date": "2026-09-26",
+   "text": "You’re not “max bearish on tokenized stocks.” You’re mad the farm closed.\n\n$STONK and $AllInu already told on this meta. Hold a meme to earn pennies of stock. Volume fades. People sell the stock the same day. Yield dies. Cult doesn’t save it. $AllInu had the cult and DraftKings https://t.co/BnO7pW96n0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CHAVEZzil9",
+   "url": "https://x.com/CHAVEZzil9/status/2103923853097320621",
+   "date": "2026-09-26",
+   "text": "📊 Opened a short on #H\n\nThe asset has settled deep below the Ichimoku cloud, as well as below the major MA200, which technically confirms the full strength of the sellers and opens the way for further downside.\n\nTrading volumes continue to remain low, so I wouldn’t expect https://t.co/4iyR2gW9SN"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2103858880434655397",
+   "date": "2026-09-26",
+   "text": "BTC Coin Pulse Chart Analysis (8-Hour Relative Lookback)\n\nOverall Bias: Strongly Bearish\n\nTrue Retail Longs (100) vs. Shorts (1): True Retail Longs (bright green line) is maxed out at 100 relative to itself, while True Retail Shorts sits pinned at 1. Extreme retail long https://t.co/fqYCjrZp6X"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 9,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103994767403085965",
+   "date": "2026-09-26",
+   "text": "🛑 $NIL 2.2x volume on 3.9% pop reads as liquidity grab, not real accumulation\n\n- my bias is bearish here — 1h structure is still LH/LL while price sits on the last swing low, so I treat the volume spike as a liquidity grab / short-covering bounce, not smart-money accumulation\n- https://t.co/yXFOGMLYC3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2103809313546338487",
+   "date": "2026-09-26",
+   "text": "🚨 $PAID ALERT: Solana Meme Coin PAID Soars 13,493% in 10 Days, Wallet Nets $437K\n\n🟢 Bullish: 78%\n• Solana ecosystem meme coin rotation draws capital attention\n• Price reaches an all-time high with strong short-term momentum\n\n🔴 Bearish: 22%\n• Up 13,493% in 10 days, with high"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 120,
+   "user": "iamshunph",
+   "url": "https://x.com/iamshunph/status/2103754626562744388",
+   "date": "2026-09-26",
+   "text": "You guys are asking my target price for $STONK before I re-enter again\n\nRight now $STONK is inside the fib golden zone. If we see a bullish momentum shift here I will start bidding.\n\nBut if we get a 4H candle close below $0.25 I will not touch it and will wait a little longer. https://t.co/xHmjIPC0ze"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103673285233832190",
+   "date": "2026-09-26",
+   "text": "📉 $SAGA -44.5% on 3.4x volume looks like distribution, not a buyable dip\n\n- my bias is bearish here on the 1h — this is a counter-trend move against bullish daily/weekly structure, so I only want shorts after a clear rejection or liquidity grab, not a chase into the dump 📉\n- I https://t.co/7AGGaAJ79B"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103887340754120735",
+   "date": "2026-09-26",
+   "text": "🔻 $BR 27.6% higher but 4h BTC divergence locks in the bearish structure\n\n- my bias is bearish here on the 1h — the confirmed structure is still lower-high / lower-low while price sits well below the 1.17400 liquidity high, and the fresh 4h coin/BTC lower-high (USDT printed a https://t.co/V4wvu2c9k0"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103722490123927906",
+   "date": "2026-09-26",
+   "text": "🔥 $ATH 4% in 15m on 3x volume looks like real buying into the uptrend\n\n- my bias is bullish here on the 1h while daily structure is also bullish — this spike with 3.47x relative volume looks like participation into the existing uptrend, not a trap, though it is a counter-trend https://t.co/fKlLEcAy59"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "JiuCrypto",
+   "url": "https://x.com/JiuCrypto/status/2103772452920701306",
+   "date": "2026-09-26",
+   "text": "As litecoin:native @litecoin is STARTING to get SOME traction, I see more and more charts popping up on X 👀.\n\nThe biggest problem I see with most of them: They mostly target too low. MUCH too low. Maybe it is because many are trading with leverage and not investing and are only https://t.co/X2zGezRVjD"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103813753317777755",
+   "date": "2026-09-26",
+   "text": "🔥 $AMP 13% spike on 5x volume reads as real displacement, not noise\n\n- my bias is bullish here on the 1h: this +13% spike with ~9.4x volume is impulsive displacement, not a finished trap, but chasing 0.000599 with RSI at 89.2 is the wrong side of the move\n- weekly structure is https://t.co/NKCRlEo8US"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103752697023173020",
+   "date": "2026-09-26",
+   "text": "👀 $QUICK 10.2% in 15m on 8x volume — impulse, not finished trap\n\n- my bias is bullish here on the 1h — structure printed a higher low at 0.01068 and is still holding above it after that 15m spike, so I treat the pump as impulse rather than a finished trap, but this is a https://t.co/bleFgsXyWD"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103638490139303958",
+   "date": "2026-09-26",
+   "text": "🟢 $CVC volume spikes 3.7x on buying pressure, bias stays bullish above key level\n\n- my bias is bullish here on the 1h while structure stays above the 0.03003 flip — 1h and daily are aligned bullish, but this is a counter-trend push versus weekly and versus a bearish BTC, so I am https://t.co/yxj7PY1IDg"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103700270869803404",
+   "date": "2026-09-26",
+   "text": "✅ $ICP 3.7% BTC divergence lines up with higher highs — bias stays long\n\n- my bias is bullish here — 1h, daily and weekly Dow structure all print higher highs and higher lows, so I treat this as an aligned long-side market; the 4h coin/BTC lower-high (USDT HH vs BTC-pair LH) https://t.co/Ns7zCM16Dy"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103700683685773737",
+   "date": "2026-09-26",
+   "text": "👀 $RENDER +4.9% treats 4h BTC divergence as noise — 1h bulls stay in charge\n\n- my bias is bullish here on RENDER — 1h structure is still HH/HL with daily aligned, so I treat the 4h coin/BTC lower-high as relative-weakness context, not a trend override; this is a counter-trend https://t.co/iFf4fL3WIf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 39,
+   "user": "richardnhsu",
+   "url": "https://x.com/richardnhsu/status/2103754583726317769",
+   "date": "2026-09-26",
+   "text": "People who are fading up-2:native because of base:0x940181a94a35a4569e4529a3cdfb74e38fd98631 don't realize that multiple projects can win at the same time. \n\nLook at ORCA/RAY price. They're competing CLMMs on Solana, but they ended up dominating their own niches. \n\nThe https://t.co/wkr8p3qDvY"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103948910267944972",
+   "date": "2026-09-26",
+   "text": "⚡ $1000SATS 2.9x volume into the dip is a shakeout, not distribution\n\n- my bias is bullish here — that 2.9x sell spike with the sharp drop looks like a liquidity grab / shakeout into demand, not a clean distribution; 1h and daily structure remain bullish (aligned with BTC), so I https://t.co/72doq5S2tc"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103942827759608246",
+   "date": "2026-09-26",
+   "text": "📈 $BTC higher lows locked in at +0.1% — structure stays aligned bullish\n\n- my bias is bullish here — 1h, daily and weekly structure are aligned with higher highs and higher lows, so this is not a counter-trend call\n- I expect price to probe the 84296 swing-high liquidity first, https://t.co/jukRiojHsA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103879501985775708",
+   "date": "2026-09-26",
+   "text": "📉 $USELESS -2.8% but this 4h bullish divergence vs BTC is the signal\n\n- my bias is bullish here — 1h structure is bullish and it is aligned with daily, weekly, and BTC, so this is not a counter-trend call; the 4h relative-strength vs BTC (USDT lower low vs coin/BTC higher low) https://t.co/yBl5G1XFSz"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103893562177831339",
+   "date": "2026-09-26",
+   "text": "⚡ $ETH flat at 0% 24h yet higher-low structure holds firm with daily, weekly and BTC\n\n- my bias is bullish here — 1h structure is still higher-low based and it lines up with daily, weekly, and BTC, so this is not a counter-trend call\n- I expect a first test of the latest swing https://t.co/Ud6EY20rQ9"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103650326444159312",
+   "date": "2026-09-26",
+   "text": "🎯 $ETH -0.1% 24h noise while structure stays bullish on higher highs\n\n- my bias is bullish here while 1h, daily and weekly structure stay aligned on higher highs and higher lows — this is still a counter-BTC long so I want a clean sweep-and-reclaim of 2667 before adding risk 📊 https://t.co/XPoODT0TfW"
+  }
+ ]
+}

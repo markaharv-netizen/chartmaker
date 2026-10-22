@@ -1,0 +1,219 @@
+{
+ "symbol": "CRWV",
+ "start": "2026-09-24T00:00:00Z",
+ "end": "2026-09-25T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "CRWV (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "GreenBeretTradr",
+   "url": "https://x.com/GreenBeretTradr/status/2103093642512449925",
+   "date": "2026-09-24",
+   "text": "Top 5 Bullish OI Changes\n1.  $U $47 call (Oct 16, 22 DTE) — +26,651 OI (~75% ask) Unity ~$44.10, 7% OTM. Largest bought-call print. Short-dated directional upside.\n2.  $CCJ $75 put (Nov 20, 57 DTE) — +13,213 OI (100% bid) Cameco ~$90.80, 17% OTM. Clean 100% sold puts."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "kaixinluo6268",
+   "url": "https://x.com/kaixinluo6268/status/2103147356778831900",
+   "date": "2026-09-24",
+   "text": "Nebius ($NBIS) showing relative strength in a down market, up 6% while the broader AI infrastructure sector is getting hit after the Oracle Project Jupiter force majeure news.\n\nYour thesis evolution (IREN → CRWV → consolidating into NBIS) paid off. You held through https://t.co/M3ZuEyFDP3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ValueNotDeadYet",
+   "url": "https://x.com/ValueNotDeadYet/status/2103113082071327006",
+   "date": "2026-09-24",
+   "text": "Bearish $ORCL this morning and bullish Neoclouds $CRWV $NBIS ... is that the read?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2103156484062536175",
+   "date": "2026-09-24",
+   "text": "The tickers X are buzzing about right now:\n\n1. CoreWeave $CRWV is down 0.7%\n\n🟢 Sentiment: 56% bullish, 9% bearish, 35% neutral\n\nThe JPMorgan upgrade to Overweight with a $125 target sparked a surge of mentions, pushing the ticker up 26 spots. Despite the stock slipping 0.7% https://t.co/jDkNaVaqZg"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103146858222690525",
+   "date": "2026-09-24",
+   "text": "📉 $CRWV sweep below 86.35 is just sell-side liquidity in the downtrend, -3.3% seals it\n\n- my bias is bearish here — 1h structure is still lower highs / lower lows, and that 15m wick under 86.35 with the close back above is a sell-side liquidity grab inside the prevailing https://t.co/dc3YNgzmtv"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2103065809798992336",
+   "date": "2026-09-24",
+   "text": "👀 $CRWV 39.8x volume spike reads as noise inside bearish 1h structure\n\n- my bias is bearish here on the 1h — structure still prints as bearish until a close above 90.43, so I treat the volume spike as noise inside a lower-high sequence, not as smart-money accumulation\n- that https://t.co/X3Ieu9heDa"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2102914585418408421",
+   "date": "2026-09-24",
+   "text": "The tickers dominating X chatter right now:\n\n1. IonQ $IONQ is down 0.9% in pre-market after climbing 4.4% in the regular session\n\n🟢 Sentiment: 63% bullish, 2% bearish, 35% neutral\n\nIonQ’s mentions jumped after it announced a real‑time quantum error‑correction decoder and a https://t.co/V9aGBRF1gv"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "homoXBT",
+   "url": "https://x.com/homoXBT/status/2103182121993142603",
+   "date": "2026-09-24",
+   "text": "$CRWV weekly\n\nbeen in a bear trend since july 2025, but this has formed a massive base now. macd is curling toward a bullish cross.\n\ni’m long from $60-$70. send it. https://t.co/U1wL0Iz2TL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "sonnyilysh2004",
+   "url": "https://x.com/sonnyilysh2004/status/2103205573772693657",
+   "date": "2026-09-24",
+   "text": "I actually think Frontier AI Labs internalizing more compute can be positive for Neoclouds, not negative.\n\nAt first glance, it sounds contradictory.\n\nIf OpenAI, Anthropic and other Frontier Labs build more of their own infrastructure, why would they need $CRWV or $NBIS?\n\nBecause"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "venaodiver",
+   "url": "https://x.com/venaodiver/status/2103201677293883698",
+   "date": "2026-09-24",
+   "text": "$CRWV just stacked two days of Street ink — UBS Buy $120 (CNBC Sep 23) into the leverage scare, then JPMorgan Overweight $125 (CNBC Sep 24) on short-term contract premium pricing. Same tape: ~−18% over three months after convert/dilution chatter, while LSEG counts ~28 Buys of"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2103229051406315862",
+   "date": "2026-09-24",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• A Newly Created Wallet Withdrew $10 Million in Altcoins from Binance Today\n• HBAR’s $0.11 Breakout Test Puts $0.14 and $0.073 on the Map\n• SUI Flashes a Key Macro Signal: Has the Bull Market Begun?\n• Crypto Treasury https://t.co/vEqNIdHcLQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "davidhudspeth21",
+   "url": "https://x.com/davidhudspeth21/status/2103118671690506653",
+   "date": "2026-09-24",
+   "text": "These 5 companies are extremely undervalued and can potentially 10x in a few years:    \n\n1. $RKLB\n\n2. $CIFR\n\n3. $NBIS\n\n4. $CRWV\n\n5. $ASTS\n\nIf this helped you out, follow me for more."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "JoshuaK30333670",
+   "url": "https://x.com/JoshuaK30333670/status/2103077819534418032",
+   "date": "2026-09-24",
+   "text": "These 5 companies are extremely undervalued and can potentially 10x in a few years:    \n\n1. $RKLB\n\n2. $CIFR\n\n3. $NBIS\n\n4. $CRWV\n\n5. $ASTS\n\nIf this helped you out, follow me for more."
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "AZelkanovic360",
+   "url": "https://x.com/AZelkanovic360/status/2102915799531090023",
+   "date": "2026-09-24",
+   "text": "$CRWV needs to stay above that 85 level bearish below it https://t.co/NrW4ES5AMm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "XhumbleTRADER",
+   "url": "https://x.com/XhumbleTRADER/status/2103156423093809207",
+   "date": "2026-09-24",
+   "text": "🎯WHAT TRADERS SHOULD KNOW TODAY — SEPT. 24\n\n🚨QQQ GAMMA REACHES AN EXTREME\n\n• $QQQ — Extreme Gamma: Gamma exposure surged to $1.36B (100th %ile), with $2.00B total exposure, signaling exceptionally concentrated options positioning across tech.\n\n• $VIX — Hedging Demand: Long https://t.co/B53LiLbCTW"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "allday_stocks",
+   "url": "https://x.com/allday_stocks/status/2103082509378678906",
+   "date": "2026-09-24",
+   "text": "$CRWV CoreWeave — JPMorgan upgrades to Overweight 📈\nPT $125 | Current $87.97 (Upside ~42%)"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Z4_Jordan",
+   "url": "https://x.com/Z4_Jordan/status/2102956187310489717",
+   "date": "2026-09-24",
+   "text": "Someone just SOLD $15.4 MILLION of $CRWV calls today...\n\nTwo massive sweeps, 25K contracts on the 105s, 36K on the 110s, all SELL side, one month out.\n\nNobody dumps that much upside if they think the stock is RIPPING. The smart money just capped!! $CRWV 📉 https://t.co/4nrPJamusU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "mudirshin",
+   "url": "https://x.com/mudirshin/status/2103143541635461523",
+   "date": "2026-09-24",
+   "text": "$CRWV Gamma Update\n\nSpot: $86.47\nNet Gamma: -148K\nKey levels:\n\n$88: +388K Long Gamma\n$87: -236K Short Gamma\n$85: -372K Short Gamma\n$84: -430K Short Gamma\n$82: +837K Long Gamma\n\nPrice is sitting between a Short Gamma zone at $87 and a strong Long Gamma pin at $88.\n\nReclaim $87 → https://t.co/KsHtb9hG0I"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 14,
+   "user": "RealNickMugalli",
+   "url": "https://x.com/RealNickMugalli/status/2103071614967374051",
+   "date": "2026-09-24",
+   "text": "UBS initiates coverage on $CRWV with Buy Rating and price target of $120 implying a 38% upside from here https://t.co/Adn6mgolDM https://t.co/req9iw458O"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "Gekko_app",
+   "url": "https://x.com/Gekko_app/status/2103236170151059729",
+   "date": "2026-09-24",
+   "text": "Samik Chatterjee from JP Morgan, the #4 best ranked Wall Street Analyst in terms of historical performance out of 12,000+ just upgraded CoreWeave $CRWV to a Buy with a $125 price target, implying 40% upside from current levels as the stock reclaims it's 50 Day MA.\n\nSamik cited https://t.co/c7DuZ72tyn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "tax_concervs",
+   "url": "https://x.com/tax_concervs/status/2103129684817150160",
+   "date": "2026-09-24",
+   "text": "🚨 $1.2M just went into $CRWV $99 October calls.\n\nThat’s roughly 11% OTM, putting fresh upside exposure on the stock.\n\nA notable options position hitting the tape. 👀 https://t.co/ro7Cv7zcpb"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "fininnumbers",
+   "url": "https://x.com/fininnumbers/status/2103107283995807981",
+   "date": "2026-09-24",
+   "text": "$CRWV  JPMorgan raises to Overweight, lifts price target to $125 from $120 (~42% upside from $86.90 close). July pricing up ~25%; short-term rates near 3x long-term contract levels."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "NGLSHMUELI",
+   "url": "https://x.com/NGLSHMUELI/status/2103079686557270177",
+   "date": "2026-09-24",
+   "text": "$CRWV JPMorgan upgrades to Overweight with a $125 price target\n\n- First major Wall Street upgrade since IPO\n- JPM sees CoreWeave as a primary beneficiary of surging AI infrastructure demand\n- Current price gives significant upside to the $125 PT\n\n#CoreWeave"
+  }
+ ]
+}

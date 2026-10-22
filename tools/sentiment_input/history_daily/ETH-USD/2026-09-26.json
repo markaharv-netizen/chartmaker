@@ -1,0 +1,30 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-26T00:00:00Z",
+ "end": "2026-09-27T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "AlphaLensCrypto",
+   "url": "https://x.com/AlphaLensCrypto/status/2103801731838517625",
+   "date": "2026-09-26",
+   "text": "📊 THE CRYPTO EDGE | DAILY MARKET BRIEF\n📅 September 26, 2026\n\n🚨 NEGATIVE FUNDING TICKING TIME BOMB: IS AN EXPLOSIVE SHORT SQUEEZE NEXT? 🚨\nBitcoin is coiling in a multi-timeframe reaccumulation phase while funding rates turn negative across all exchanges. Here is your essential https://t.co/tZoOkCU5JB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "MacroAlphaHQ",
+   "url": "https://x.com/MacroAlphaHQ/status/2103877966044233732",
+   "date": "2026-09-26",
+   "text": "THE BIGGEST DIVERGENCE in the market is wide open.\nS&amp;P 500 is overvalued as stocks pushed higher, while Bitcoin and Ethereum lag, clearly undervalued.\nThis gap won't stay this wide forever. The cost is being left behind when the spread unwinds. https://t.co/2ZrX1WMyuv"
+  }
+ ]
+}

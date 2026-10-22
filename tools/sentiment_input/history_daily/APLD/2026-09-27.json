@@ -1,0 +1,66 @@
+{
+ "symbol": "APLD",
+ "start": "2026-09-27T00:00:00Z",
+ "end": "2026-09-28T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "seahorse_anton",
+   "url": "https://x.com/seahorse_anton/status/2104172189519851588",
+   "date": "2026-09-27",
+   "text": "🚨 HPC, BITCOIN MINER &amp; MEGACAP FLOW UPDATE 🚨\n\nTwo weeks ago, 9 names in this basket were pinned at max accumulation (+2.00σ) on quad-witching Friday. Most have now normalized back to 0.4–1.6σ—proving it was mechanical rebalancing, not real structural buying.\n\nHere is the full https://t.co/LusIMWDEs2"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "TheFroggy1001",
+   "url": "https://x.com/TheFroggy1001/status/2104300287418651110",
+   "date": "2026-09-27",
+   "text": "I love trying to find undervalued names before the crowd catches on 👀\n\n$EMPD is one that's caught my attention.\n\n✅ ~1,179 BTC\n✅ ~$62M cash reported in August\n✅ Management said September lease signing was on track\n✅ Payments expected from early 2027\n✅ Potential $440M+ cash"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 53,
+   "user": "CK_Cryptoklepto",
+   "url": "https://x.com/CK_Cryptoklepto/status/2104225092590850086",
+   "date": "2026-09-27",
+   "text": "I asked @grok to analyze \"Price to Book\" ratio utilizing Q2 2026 earnings data and current Bitcoin price\n\nNot only is $MARA undervalued vs the pack, but when you factor in the $925 million that the 35,577 $BTC has increased in value in Q3 then MARA is only at 1.81x Price to Book https://t.co/kwZCEPjdDN https://t.co/qeChDWutfL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 27,
+   "user": "FantasyInvRealm",
+   "url": "https://x.com/FantasyInvRealm/status/2104226888746942516",
+   "date": "2026-09-27",
+   "text": "🚀 Let's Go Monday!\n\nHighest Upside Names Right Now (Ticker, Upside %, SS = 1 Underperform thru 10 Outperform)\n\n$APLD 129% SS 9  •  $QBTS 106% SS 5  •  \n$AUR 92% SS 10  •  $JOBY 82% SS 5  •  \n$LUNR 71% SS 10   $POWL 71% SS 7  •  \n$MYRG 64% SS 7  •  $AAOI 61% SS 6  •"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "LoveAndMoney15",
+   "url": "https://x.com/LoveAndMoney15/status/2104231263024382296",
+   "date": "2026-09-27",
+   "text": "This ⬇️ is my bull thesis on datacenters and why I have large positions in $ORCL and $APLD, among other datacenter names.\n\nThe broadening AI use case essentially guarantees insufficiency of compute supply for the foreseeable future. A dynamic that favors datacenter operators. https://t.co/gW15UgEaJi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Enkhmanal",
+   "url": "https://x.com/Enkhmanal/status/2104017192950091847",
+   "date": "2026-09-27",
+   "text": "$CIFR's September 25 Barber Lake amendment adds about $5.2B of contracted revenue, but phased delivery now runs from Q4 2026 into Q1 2027 and Cipher bears the first $359M of cost overruns. That is the powered-land trade in one line: a signed lease is not collected rent. https://t.co/KxzX6cIcGI"
+  }
+ ]
+}

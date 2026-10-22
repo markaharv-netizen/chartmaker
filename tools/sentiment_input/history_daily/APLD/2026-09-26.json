@@ -1,0 +1,39 @@
+{
+ "symbol": "APLD",
+ "start": "2026-09-26T00:00:00Z",
+ "end": "2026-09-27T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2103834640402248167",
+   "date": "2026-09-26",
+   "text": "$HIVE\n\n$HIVE was rejected once again last week at the 200 EMA, reinforcing the significance of this moving average as a dynamic resistance level that has repeatedly capped price over the last few years. \n\nThe rejection also produced a Dark Cloud Cover candlestick pattern at the https://t.co/0X6Gg10ZzU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 32,
+   "user": "CSmallCaps",
+   "url": "https://x.com/CSmallCaps/status/2103908939318394938",
+   "date": "2026-09-26",
+   "text": "I am happy I fully loaded my portfolio with $CIFR.\n\nOCTOBER LOOKS VERY BULLISH 🚀🚀🚀\n\n$WGMI $IREN $CLSK $WULF $APLD https://t.co/xodjczsULR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 36,
+   "user": "InvestifyDaily",
+   "url": "https://x.com/InvestifyDaily/status/2103986836829872365",
+   "date": "2026-09-26",
+   "text": "I would say right now the sectors I’m most familiar with are Quantum, Fintech, and Neo-Clouds: \n\nQuantum: \n$IONQ \n$INFQ \n$LAES \n$QNT \n$QBTS \n\nNeoclouds: \n$IREN \n$APLD \n$CRWV \n$NBIS \n\nFintech: \n$BULL \n$HOOD \n$SOFI \n\nI’ve started to learn that expanding your sector knowledge can"
+  }
+ ]
+}

@@ -1,0 +1,201 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-27T00:00:00Z",
+ "end": "2026-09-28T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2104044053755031693",
+   "date": "2026-09-27",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟮.𝟳 / 𝟱 (𝗺𝗼𝗱𝗲𝗿𝗮𝘁𝗲𝗹𝘆 𝗯𝘂𝗹𝗹𝗶𝘀𝗵, 𝗯𝘂𝘁 𝘁𝗲𝗺𝗽𝗲𝗿𝗲𝗱 𝗯𝘆 𝘀𝗶𝗴𝗻𝗶𝗳𝗶𝗰𝗮𝗻𝘁 𝗯𝗲𝗮𝗿𝗶𝘀𝗵 𝘀𝗶𝗴𝗻𝗮𝗹𝘀) - 𝗕𝘂𝗹𝗹‐𝗺𝗮𝗿𝗸𝗲𝘁 𝗼𝗽𝘁𝗶𝗺𝗶𝘀𝗺 - Multiple posts claim the bear market is over; Fidelity’s Jurrien Timmer https://t.co/CE2s0zx2zZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2104198573193887909",
+   "date": "2026-09-27",
+   "text": "🚨 BITCOIN PRICE PREDICTION THIS WEEK | BTC WEEKLY ANALYSIS\n\nBitcoin (bitcoin:native ) could be preparing for a major move this week. Here’s my BTC price prediction, Bitcoin technical analysis, key support &amp; resistance levels, and the 2 BTC scenarios I’m watching. 👇\n\n📉 BTC https://t.co/3SN9OTGmRv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "SignalxBinance",
+   "url": "https://x.com/SignalxBinance/status/2104152268962771015",
+   "date": "2026-09-27",
+   "text": "My personal dive into the recent ETH market structure on the 4H chart. 🧐 The broader crypto sentiment sees some positive undertones, notably with Riot Platforms strengthening its financial position and expanding data-center operations. While this is Bitcoin-centric, robust https://t.co/ADAwziKknt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 114,
+   "user": "CryptoKid",
+   "url": "https://x.com/CryptoKid/status/2104140721305624976",
+   "date": "2026-09-27",
+   "text": "Bitcoin is going higher over the next few months.\n\nDon’t fight it.\n\nBeing a bear during a bear market is logical, but the part most get wrong is abandoning their bearish biases when technical conditions are met to declare the beginning of a bull.\n\nIt’s not too late to be bullish!"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "CryptoKid",
+   "url": "https://x.com/CryptoKid/status/2104140575805239477",
+   "date": "2026-09-27",
+   "text": "Bitcoin is going higher over the next few months.\n\nDon’t fight it.\n\nBeing a bear during a bear market is logical, but the part most get wrong is abandoning the bearish bias when technical conditions are met to declare the start of a bull.\n\nIt’s not too late to be bullish."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4543,
+   "user": "DrProfitCrypto",
+   "url": "https://x.com/DrProfitCrypto/status/2104279510795665657",
+   "date": "2026-09-27",
+   "text": "#Bitcoin – What’s Next?\n\nThe Big Sunday Report: All We Need to Know\n\nTA / LCA / Psychological Breakdown: \n\nSeveral weeks ago, when Bitcoin was trading around $60,000, I called for $88,000. Last Sunday, I repeated that target and explained why the rejections at the MA50 Weekly did https://t.co/pbsc5RlyYq"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "TradingPav",
+   "url": "https://x.com/TradingPav/status/2104315129504449015",
+   "date": "2026-09-27",
+   "text": "Weekly Market Update (Sep 28- Oct 2, 2026)\n\nHere is the weekly market update going into the week of September 28, 2026. \n\n₿ Bitcoin (BTC) ₿\n\nBTC maintained its bullish posture, consolidating tightly in the $82,255–$82,874 range following last week's ETF-driven short squeeze."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "FocusMonk9",
+   "url": "https://x.com/FocusMonk9/status/2104225555789062419",
+   "date": "2026-09-27",
+   "text": "BITCOIN SUNDAY REPORT: $79K First or a Deeper Correction Toward $66K?\n\nThe Big Sunday Report | September 27, 2026\nBitcoin Technical Analysis • Weekly 50 MA • Liquidity • RSI Divergence • Market Psychology\n\nBitcoin is trading around $84,600 on my September 27 chart, and I https://t.co/ZegmBmZEzK"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "KaioS54783",
+   "url": "https://x.com/KaioS54783/status/2104158226040471617",
+   "date": "2026-09-27",
+   "text": "Bitcoin Funding Rates Are Flashing a Bearish Signal ⚠️\n\nAccording to CoinGlass data cited by BlockBeats, funding rates across major CEXs and DEXs are showing increasing downside pressure after Bitcoin’s recent breakout and subsequent volatility.\n\nA useful way to read funding:\n\n• https://t.co/U0kyPtu6HH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2104271927712063795",
+   "date": "2026-09-27",
+   "text": "🚨 ETHEREUM PRICE PREDICTION THIS WEEK | ETH/USDT WEEKLY ANALYSIS\n\nEthereum (ETH) could be setting up for an important move this week. Here’s my ETH price prediction, Ethereum technical analysis, key liquidity level, and the 2 scenarios I’m watching. 👇\n\n📉 ethereum:native https://t.co/1dN5iKDQoe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptoMannnuel",
+   "url": "https://x.com/CryptoMannnuel/status/2104033869523485108",
+   "date": "2026-09-27",
+   "text": "At the start of the bull cycle, most people will undervalue the potential upside that's about to come for #Bitcoin and #Altcoins.\n\nThat's not weird.\n\nThat's just the nature of markets, as we've just endured a long period of bearish momentum"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 26,
+   "user": "TradePro16",
+   "url": "https://x.com/TradePro16/status/2104110517162070173",
+   "date": "2026-09-27",
+   "text": "16 hours until Bitcoin closes the weekly with a bullish structure flip! All it has to do is hang out here a little longer and we have ultimate confirmation that the bull has started. There will be very few bearish arguments left for bears once this happens. https://t.co/quV8qiAW5Z"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2104303312069636533",
+   "date": "2026-09-27",
+   "text": "🚨 USDT DOMINANCE ANALYSIS — MAJOR WARNING FOR CRYPTO LONGS\n\nUSDT Dominance (USDT.D) is sitting at an extremely important area, and this could have a major impact on Bitcoin, Ethereum and the overall crypto market.\nHere’s my USDT Dominance prediction and crypto market outlook https://t.co/GVZBqjdOBG"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2104347825660125202",
+   "date": "2026-09-27",
+   "text": "$XLE \n\n$XLE: Last weekend, we highlighted the bearish engulfing candle forming alongside bearish divergence, signaling that upside momentum was deteriorating as price pushed higher. \n\nLast week delivered the bearish continuation we were watching for, confirming a bearish https://t.co/v3xJnjrtz0 https://t.co/EpGdx8fi9w"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 19,
+   "user": "car_taquino",
+   "url": "https://x.com/car_taquino/status/2104288734153703625",
+   "date": "2026-09-27",
+   "text": "$DOG MONTHLY TIGHT COMPRESSION\n\nNEVER BEEN IN A BULL MARKET \n\nNEVER BROKEN OUT INTO UPSIDE EXPANSION\n\nLARGEST NATIVE BITCOIN ASSETS\n\nLARGEST ORGANIC DIE HARD COMMUNITY\n\nMACD BULLISH CROSSOVER IMMINENT\n\nWEEKLY TESTING 50MA SUPPORT\n\nYOU ARE NOT READY FOR THE BITCOIN NATIVE DOG ONCE https://t.co/IoeS8c0uS2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "cryptodaddy75",
+   "url": "https://x.com/cryptodaddy75/status/2104298819491930515",
+   "date": "2026-09-27",
+   "text": "🐺 #Bitcoin\n\nA few weeks ago, $BTC was around $60K and I mapped $86.8K. We reached the target.\n\nNow I’m looking for a correction within the bull market, not a cycle top.\n\nI opened a short around $86.6K and have additional short orders between $86K–$89.8K.\n\n🎯 First target: $79.5K https://t.co/6gPYWgaXoN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "0xQuantyx",
+   "url": "https://x.com/0xQuantyx/status/2104146002882048214",
+   "date": "2026-09-27",
+   "text": "BTC update\n\nThe execution layer has improved materially.\n2H and 4H derivatives are now both bullish:\n\n-&gt;rising open interest\n-&gt; balanced funding\n-&gt;buying CVD\n-&gt;positive flow scores\n-&gt; agreement stacked to the bull side\n\nMicrostructure also improved, with strong buying imbalance https://t.co/Opf9cTQcRv https://t.co/fM8jPFWqZr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2104328334750691433",
+   "date": "2026-09-27",
+   "text": "📊 XWIN CAPITAL INDEX | September 28, 2026\nOverall Score: 70 / 100\n•80–100 = Strong Bullish Environment\n•60–79 = Bullish Bias\n•40–59 = Neutral / No Clear Direction\n•20–39 = Bearish Bias\n•0–19 = Strong Bearish Environment\n7-Day Moving Average: 70.71 ↑\n14-Day Moving Average: https://t.co/SlS4oIdtEE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2104158332688744748",
+   "date": "2026-09-27",
+   "text": "$WPM\n\n$WPM following the falling wedge breakout, the measured target was hit. \n\nOver the last few weeks, price has been consolidating within a bull flag, characterized by a controlled pullback following the prior advance. \n\nBears maintained short-term momentum last week with a https://t.co/vYO48oqW8u https://t.co/kChCyRAUnB"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "thereviewglobal",
+   "url": "https://x.com/thereviewglobal/status/2104243097861226761",
+   "date": "2026-09-27",
+   "text": "Analysts like Ash Crypto highlighted a potential second weekly close above the 50-week moving average at $78,300, signaling the bear market's close. Bitcoin dominance dipped below 60%, with charts showing a bearish flag that could spark altseason, while U.S. spot ETFs saw $2.4"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 11,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2104322482962415858",
+   "date": "2026-09-27",
+   "text": "$PAAS\n\n$PAAS printed a bearish engulfing candle at descending resistance within its bull flag, while closing just above the 50 EMA. \n\nThe setup becomes interesting if we don’t get bearish confirmation and follow-through next week; if bulls can defend the 50 EMA, this remains on https://t.co/D25q77WQCy"
+  }
+ ]
+}

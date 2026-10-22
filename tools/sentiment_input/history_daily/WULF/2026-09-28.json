@@ -1,0 +1,39 @@
+{
+ "symbol": "WULF",
+ "start": "2026-09-28T00:00:00Z",
+ "end": "2026-09-29T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "WULF (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 10,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2104362948076659040",
+   "date": "2026-09-28",
+   "text": "$MARA\n\n$MARA long-term holders should remain mindful that the higher-timeframe structure is still bearish. \n\nOver the past two weeks, the daily chart has produced several interesting setups that allowed traders to capture shorter-term bounces, and we’ve shared and participated in https://t.co/WiOwi8SQ9N https://t.co/w9QfCPkwdE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "danjkelley1966",
+   "url": "https://x.com/danjkelley1966/status/2104488433427394811",
+   "date": "2026-09-28",
+   "text": "📈 **Today’s bullish watchlist**\n\n$MIRA $ORCL $RSGT  $PFSE $YUW  $TQP $WULF\n\nPotential short-term returns: **38%–110%**\n\nCongrats to everyone who profited with the group yesterday. 🎉\n\nToday’s setups are already posted here:\n\n👉 https://t.co/PijgbFsOko\n\nReply **“Hot Stocks”** for https://t.co/N9MJNKMbc4"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "risenfit",
+   "url": "https://x.com/risenfit/status/2104392441734533562",
+   "date": "2026-09-28",
+   "text": "$CIFR $WULF $IREN \n\nBULLISH! https://t.co/2okvtVxiLG"
+  }
+ ]
+}

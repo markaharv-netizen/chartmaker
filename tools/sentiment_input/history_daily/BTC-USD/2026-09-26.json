@@ -1,0 +1,219 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-26T00:00:00Z",
+ "end": "2026-09-27T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2103681555159797839",
+   "date": "2026-09-26",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 (𝗕𝘂𝗹𝗹𝗶𝘀𝗵) 𝗪𝗵𝘆 𝘁𝗵𝗲 𝘀𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗹𝗲𝗮𝗻𝘀 𝘀𝘁𝗿𝗼𝗻𝗴𝗹𝘆 𝗯𝘂𝗹𝗹𝗶𝘀𝗵: - Multiple posts 𝗱𝗲𝗰𝗹𝗮𝗿𝗲 𝗮 𝗰𝗿𝘆𝗽𝘁𝗼 𝗯𝘂𝗹𝗹 𝗺𝗮𝗿𝗸𝗲𝘁 𝗶𝘀 𝗰𝗼𝗻𝗳𝗶𝗿𝗺𝗲𝗱 𝗼𝗿 𝗶𝗺𝗺𝗶𝗻𝗲𝗻𝘁, citing headlines like “CRYPTO https://t.co/OiyqvkqXVp"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "AlphaLensCrypto",
+   "url": "https://x.com/AlphaLensCrypto/status/2103801731838517625",
+   "date": "2026-09-26",
+   "text": "📊 THE CRYPTO EDGE | DAILY MARKET BRIEF\n📅 September 26, 2026\n\n🚨 NEGATIVE FUNDING TICKING TIME BOMB: IS AN EXPLOSIVE SHORT SQUEEZE NEXT? 🚨\nBitcoin is coiling in a multi-timeframe reaccumulation phase while funding rates turn negative across all exchanges. Here is your essential https://t.co/tZoOkCU5JB"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "FAT7official",
+   "url": "https://x.com/FAT7official/status/2103826594309546182",
+   "date": "2026-09-26",
+   "text": "🚨 BITCOIN: A DEEPER PULLBACK COULD BE COMING.\n\nThe market may be underestimating the downside risk.\n\nBTC is showing signs of weakness, and if key support levels fail, selling pressure could accelerate quickly. 📉\n\nA breakdown could trigger:\n• Long liquidations\n• Rising"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2103817103765602632",
+   "date": "2026-09-26",
+   "text": "Macro Observatory Week 39 Wrap\n\nFriday's telemetry delivered a structural resolution, with the sovereign collateral dam breaking as $TLT confirmed an Emerging Bear Breakdown vector; the breakdown wave expanding to eight core anchors; and 37 out of 48 tickers aligning into"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "AvrgJoeCrypto",
+   "url": "https://x.com/AvrgJoeCrypto/status/2103882526758433117",
+   "date": "2026-09-26",
+   "text": "BITCOIN | A Pattern Within A Pattern\n\nLEFT PHOTO:\nIn my opinion Bitcoin is forming an Asymmetrical Triangle pattern on the hourly \n\nwith these two areas above and below the breakout squeeze being the possible measured move targets aligning with previous support and resistance https://t.co/CcY02mzWLI https://t.co/J2qLHq7rW6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Aqbitcrypto",
+   "url": "https://x.com/Aqbitcrypto/status/2103682524254011837",
+   "date": "2026-09-26",
+   "text": "🟠 $BTC/USDT 15M Technical Update\n​Bitcoin ($84,008) is consolidating in a tight sideways range following a sharp rejection from $85,224. Buyers continue to defend key local support, setting up a potential volatility expansion once the current range breaks.\n\n​Key Technical https://t.co/vx8ZVizywI"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "FAT7official",
+   "url": "https://x.com/FAT7official/status/2103824408880017882",
+   "date": "2026-09-26",
+   "text": "📊 ETF markets are getting tighter.\n\nThis kind of compression can sometimes be the calm before a major move.\n\nA bullish breakout could be building beneath the surface. 🚀\n\nBut there’s a key risk:\n\n📉 Nasdaq could still face downside pressure.\n\nIf Nasdaq weakens, risk assets could"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "peaqs_net",
+   "url": "https://x.com/peaqs_net/status/2103718876450009310",
+   "date": "2026-09-26",
+   "text": "I’ve gone through the latest Bitcoin charts in detail and the picture that stands out is more cautious than the current “bear market is over” narrative. The recent bounce has been impressive on the surface, but several higher-timeframe signals suggest this move still has the https://t.co/US3fQ5mXiX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "TheBTCTherapist",
+   "url": "https://x.com/TheBTCTherapist/status/2103670462563700937",
+   "date": "2026-09-26",
+   "text": "It’s not a surprise bitcoin is up recently.\n\nJP Morgan, BlackRock and Fidelity have  all put out bullish statements on bitcoin over the last 6 weeks:\n\n- JP Morgan gives BTC a $266k target\n- BlackRock says there’s less downside risk \n- Fidelity says a new bull market is underway https://t.co/yB30aKSNqT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AbdulMuhin73",
+   "url": "https://x.com/AbdulMuhin73/status/2103973418119180560",
+   "date": "2026-09-26",
+   "text": "At the start of the bull cycle, most people will undervalue the potential upside that's about to come for #Bitcoin and #Altcoins.\n\nThat's not weird.\n\nThat's just the nature of markets, as we've just endured a long period of bearish momentum, where it's quite hard to expect to see"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 197,
+   "user": "TheBTCTherapist",
+   "url": "https://x.com/TheBTCTherapist/status/2103670646379049281",
+   "date": "2026-09-26",
+   "text": "It’s not a surprise bitcoin is up recently.\n\nJP Morgan, BlackRock and Fidelity have all put out bullish statements on bitcoin over the last 6 weeks:\n\n- JP Morgan gives BTC a $266k target\n- BlackRock says there’s less downside risk \n- Fidelity says a new bull market is underway https://t.co/y4mWPzB9lj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "signalboatcom",
+   "url": "https://x.com/signalboatcom/status/2103761207807132138",
+   "date": "2026-09-26",
+   "text": "Bitcoin is consolidating around the $84,000 level, with support found at $82,888 amid a slowing decline prior to today's significant options expiry.\n\n- Current focus: BTC is stabilizing as it approaches the $85,000 battleground; confirmation of Wave A completion hinges on this"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 486,
+   "user": "CryptoMichNL",
+   "url": "https://x.com/CryptoMichNL/status/2103954010378035534",
+   "date": "2026-09-26",
+   "text": "At the start of the bull cycle, most people will undervalue the potential upside that's about to come for #Bitcoin and #Altcoins.\n\nThat's not weird.\n\nThat's just the nature of markets, as we've just endured a long period of bearish momentum, where it's quite hard to expect to see"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "tbsniper7",
+   "url": "https://x.com/tbsniper7/status/2103799919874326780",
+   "date": "2026-09-26",
+   "text": "Be ready \n#btcusd #bitcoin #crypto \nIf the month close above 83k bullish until the next level at 98k. If reject is a monthly bearish fvg + 10ema rejected(same bear trap of the 2022 bear market) be ready short the shit out of bitcoin baby. Wait for monthly close than take decision https://t.co/4nhZSkFO0m"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "MartinTGeorge",
+   "url": "https://x.com/MartinTGeorge/status/2103773800928072017",
+   "date": "2026-09-26",
+   "text": "Bitcoin today – key levels, 26 Sep. Daily chart: bullish above 83,000.\n\nUpside objective 1: 94,700\nUpside objective 2: 97,900\nUpside objective 3: 103,370 (bull flag extension)\n\nSupport 1: 83,000\nSupport 2: 76,000\n\nDaily analysis and newsletter: https://t.co/ZubGWXjBW2\n\nAnalysis, https://t.co/odJJyrlJjk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 106,
+   "user": "ElephantCapita2",
+   "url": "https://x.com/ElephantCapita2/status/2103830410828603554",
+   "date": "2026-09-26",
+   "text": "#Bitcoin - \"a bear dressed as a bull\". \n\n$BTC is in a bullish cycle. The bullish cycle has two phases to it. We are in the final move of phase 1 (95-100k), before it corrects and recommences its run to deliver phase 2 (~117-122k). \n\nHowever, this bullish cycle is occurring in the https://t.co/FC96fy4HPV https://t.co/Zs1IRewV5A"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 266,
+   "user": "thebtcfrontierX",
+   "url": "https://x.com/thebtcfrontierX/status/2103886962482368572",
+   "date": "2026-09-26",
+   "text": "✒️To my dear loyal fellas,\n\nSheriff's been listening to and answering to all of your comments, requests, and questions. Every time we interact with each other, my inner Bitcoin soul comes alive. And as Sheriff's been listening to his dear friends at the Bitcoin Frontier, many of https://t.co/G4XVHAdmlA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "chowdhuryari",
+   "url": "https://x.com/chowdhuryari/status/2103905529051619717",
+   "date": "2026-09-26",
+   "text": "🚨 BITCOIN VOLATILITY SQUEEZE: The calm before the $84K storm? 🚨\n\nThe Bitcoin ($BTC) price is currently coiling tightly near $84,038, and all signs point to an explosive move on the horizon. Here is the gist of what's happening on the charts right now:\n\n📈 The Daily Bull Run:\n * https://t.co/hW4RQXWkvO"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "CryptoCycleGod",
+   "url": "https://x.com/CryptoCycleGod/status/2103724775700849042",
+   "date": "2026-09-26",
+   "text": "// solana:2pASaZVMQCusTpUc6MdfFBXSML9yKeJQZGLf8L8RyYwQ / $GOLD and bitcoin:native 1M\n\nAnother one, that shows why Crypto did not have a \"normal\" bull market since the top in 2021. It worked against headwinds. Thus Altcoins did not get much love.\n\nThis is extremely bullish. https://t.co/mExoYlFN2B https://t.co/tlB8a9aTVB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 466,
+   "user": "mignoletkr",
+   "url": "https://x.com/mignoletkr/status/2103838040397631707",
+   "date": "2026-09-26",
+   "text": "On August 21, when Bitcoin was around $73K, I bought spot BTC with 40% of my funds.\n\nAnd I just sold all of it.\n\nFor the past month, I’ve been trading based on the same view and framework I’ve been sharing here. I’ve been clear about my view, and I’ve acted on it.\n\nMy view has https://t.co/KNt5eg1fSJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 105,
+   "user": "TheSamsPodcast",
+   "url": "https://x.com/TheSamsPodcast/status/2103717373819642194",
+   "date": "2026-09-26",
+   "text": "Strategy's proposed move to daily dividends on STRC is yet more validation that Strive absolutely knocked it out of the park, particularly given that it happened in the pits of a bear market.\n\nInstead of joining the popular debate on whether SATA and STRC are now battling for the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "MacroAlphaHQ",
+   "url": "https://x.com/MacroAlphaHQ/status/2103877966044233732",
+   "date": "2026-09-26",
+   "text": "THE BIGGEST DIVERGENCE in the market is wide open.\nS&amp;P 500 is overvalued as stocks pushed higher, while Bitcoin and Ethereum lag, clearly undervalued.\nThis gap won't stay this wide forever. The cost is being left behind when the spread unwinds. https://t.co/2ZrX1WMyuv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "bull_genius",
+   "url": "https://x.com/bull_genius/status/2103757716803997934",
+   "date": "2026-09-26",
+   "text": "gm taking a look at bitcoin:native over the weekend into monthly and quarterly close next week. \n\nquarterly close means a lot of options expire and things natually become more choppy, price action more corrective and range bound, trend pauses for that time\n\nbut zoom out\n\n- https://t.co/ZE0Ih83kR1"
+  }
+ ]
+}

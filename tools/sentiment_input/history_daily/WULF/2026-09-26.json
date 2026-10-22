@@ -1,0 +1,48 @@
+{
+ "symbol": "WULF",
+ "start": "2026-09-26T00:00:00Z",
+ "end": "2026-09-27T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "WULF (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2103834640402248167",
+   "date": "2026-09-26",
+   "text": "$HIVE\n\n$HIVE was rejected once again last week at the 200 EMA, reinforcing the significance of this moving average as a dynamic resistance level that has repeatedly capped price over the last few years. \n\nThe rejection also produced a Dark Cloud Cover candlestick pattern at the https://t.co/0X6Gg10ZzU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 32,
+   "user": "CSmallCaps",
+   "url": "https://x.com/CSmallCaps/status/2103908939318394938",
+   "date": "2026-09-26",
+   "text": "I am happy I fully loaded my portfolio with $CIFR.\n\nOCTOBER LOOKS VERY BULLISH 🚀🚀🚀\n\n$WGMI $IREN $CLSK $WULF $APLD https://t.co/xodjczsULR"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "DenWhoward",
+   "url": "https://x.com/DenWhoward/status/2103967910213632224",
+   "date": "2026-09-26",
+   "text": "$WULF   Real headlines. I used AI to make them nice and easy to read for the naysayers. Bullish https://t.co/xgwcHIU7CT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "MikaelXeeland",
+   "url": "https://x.com/MikaelXeeland/status/2103839758065578090",
+   "date": "2026-09-26",
+   "text": "⚡️UPDATE: Google $GOOG now shows up as a 7.6% owner of $WULF.\n\nA new SEC filing says Alphabet, through Google, holds warrants for 41M TeraWulf shares that it can exercise now or within 60 days.\n\nGoogle got these warrants for backing TeraWulf's AI data center leases. The filing"
+  }
+ ]
+}

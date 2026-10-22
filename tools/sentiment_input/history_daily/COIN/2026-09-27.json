@@ -1,0 +1,228 @@
+{
+ "symbol": "COIN",
+ "start": "2026-09-27T00:00:00Z",
+ "end": "2026-09-28T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2104044053755031693",
+   "date": "2026-09-27",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟮.𝟳 / 𝟱 (𝗺𝗼𝗱𝗲𝗿𝗮𝘁𝗲𝗹𝘆 𝗯𝘂𝗹𝗹𝗶𝘀𝗵, 𝗯𝘂𝘁 𝘁𝗲𝗺𝗽𝗲𝗿𝗲𝗱 𝗯𝘆 𝘀𝗶𝗴𝗻𝗶𝗳𝗶𝗰𝗮𝗻𝘁 𝗯𝗲𝗮𝗿𝗶𝘀𝗵 𝘀𝗶𝗴𝗻𝗮𝗹𝘀) - 𝗕𝘂𝗹𝗹‐𝗺𝗮𝗿𝗸𝗲𝘁 𝗼𝗽𝘁𝗶𝗺𝗶𝘀𝗺 - Multiple posts claim the bear market is over; Fidelity’s Jurrien Timmer https://t.co/CE2s0zx2zZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2104271927712063795",
+   "date": "2026-09-27",
+   "text": "🚨 ETHEREUM PRICE PREDICTION THIS WEEK | ETH/USDT WEEKLY ANALYSIS\n\nEthereum (ETH) could be setting up for an important move this week. Here’s my ETH price prediction, Ethereum technical analysis, key liquidity level, and the 2 scenarios I’m watching. 👇\n\n📉 ethereum:native https://t.co/1dN5iKDQoe"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2104092860173726055",
+   "date": "2026-09-27",
+   "text": "💥 $AMP : 3.3% 15m pop on 1.5x volume looks like clean continuation, not a trap\n\n- my bias is bullish here on the 1h — that +3.3% spike with the volume pop looks like continuation after the impulsive break, not a bull trap, while 1h and daily stay aligned bullish (weekly is still https://t.co/AIttfbhR4q"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2104307914479452318",
+   "date": "2026-09-27",
+   "text": "📈 $BTC bias stays bullish as higher-high structure lines up across timeframes at +0.7%\n\n- my bias is bullish here — 1h structure is still higher-high / higher-low and it is aligned with daily and weekly, so this is not a counter-trend read\n- I expect price to work the latest https://t.co/aqUYo4RKuT"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2104141235237572947",
+   "date": "2026-09-27",
+   "text": "📈 $W 25.6% in 24h on 1.9x volume - this squeeze has room to run\n\n- my bias is bullish here on the 1h: structure already printed a higher high above 0.01323, daily is aligned bullish with BTC, and the recent spike looks more like a squeeze continuation than a finished bull trap\n- https://t.co/Fniuwxphh1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 525,
+   "user": "MrWhale_____",
+   "url": "https://x.com/MrWhale_____/status/2104132687737004236",
+   "date": "2026-09-27",
+   "text": "Happy weekend WhalesCall fam.\n\nI know KOMA is a meme coin.\n\nI know meme coins are risky.\n\nThat's exactly why I'm treating this as a risk-managed bet, not an investment.\n\nPosition size: $100.\n\nTP1 already hit.\n\nSL has been trailed into profit.\n\nWorst case, I walk away green.\n\nBest https://t.co/93DlRvSIME"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2104010232015810720",
+   "date": "2026-09-27",
+   "text": "🔥 $RARE 3.7% burst on 2.9x volume looks like clean continuation not noise\n\n- my bias is bullish here — 1h structure is aligned with daily, weekly and BTC, so this is not a counter-trend chase; the +3.7% burst with the volume spike looks like continuation after the impulse, not a https://t.co/9y4lNeHqSM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 67,
+   "user": "9tonone",
+   "url": "https://x.com/9tonone/status/2104189734964846757",
+   "date": "2026-09-27",
+   "text": "Longing alts is simpler than it sounds, the trend up is marred with a lot of wicks, you can easily get stopped\n\nYou then have to decide lev risk vs return profile \n\nThis is why memes have been the preferred avenue for many \n\nThough... \n\n99% of on-chain stuff isn't worth touching; https://t.co/FKqo1hWHmC https://t.co/Bw9Idmov0W"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "CoreMarketScan",
+   "url": "https://x.com/CoreMarketScan/status/2104097634025668757",
+   "date": "2026-09-27",
+   "text": "$COIN 1H bearish 26/18 formation on Binance Futures. Watch for a failed retest of the breakdown zone — if sellers defend it, downside continuation likely. Momentum still favors bears. Fading the bounce or waiting for confirmation? 👇 #COINUSDT #Crypto #TechnicalAnalysis https://t.co/UWKj1EjbMj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "EDMONDDANTES618",
+   "url": "https://x.com/EDMONDDANTES618/status/2104332369687920851",
+   "date": "2026-09-27",
+   "text": "BLACK MIRROR\n\nThe typical cycle for a #Bitcoin bottom is around the 30th month after the halving. A deep bottom, total despair, capitulation, social media goes silent, investors swear they will never buy crypto again.\n\nThe mirror world (\"Black Mirror\"): Instead of chilling https://t.co/gCkrhoeqO5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "EDMONDDANTES618",
+   "url": "https://x.com/EDMONDDANTES618/status/2104327396744663539",
+   "date": "2026-09-27",
+   "text": "BLACK MIRROR\n\nThe typical cycle for a Bitcoin bottom is around the 30th month after the halving. A deep bottom, total despair, capitulation, social media goes silent, investors swear they will never buy crypto again.\n\nThe mirror world (\"Black Mirror\"): Instead of chilling https://t.co/ldlYNYTXRF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "EDMONDDANTES618",
+   "url": "https://x.com/EDMONDDANTES618/status/2104328022031478796",
+   "date": "2026-09-27",
+   "text": "BLACK MIRROR\n\nThe typical cycle for a Bitcoin bottom is around the 30th month after the halving. A deep bottom, total despair, capitulation, social media goes silent, investors swear they will never buy crypto again.\n\nThe mirror world (\"Black Mirror\"): Instead of chilling https://t.co/E185f7Q9jP"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 27,
+   "user": "adamagb",
+   "url": "https://x.com/adamagb/status/2104246081735344525",
+   "date": "2026-09-27",
+   "text": "Why is Uniswap outperforming everything?\n\nI was confused why a boomer coin is up more than all of CT's darlings like VVV, HYPE, and ZEC\n\n115% this month alone\n\nLet's see what's going on...\n\n(1) Fee Switch\n\nUniswap's token used to be a boring governance one\n\nLast year, they gave https://t.co/n6VifyEXpH"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "ShahMuzami98676",
+   "url": "https://x.com/ShahMuzami98676/status/2104247493446008879",
+   "date": "2026-09-27",
+   "text": "Every coin is crashing badly right now.\n\nAnd I’m seeing a lot of people saying, “Buy the dip.”\n\nBut remember, not every dip is meant to be bought. Sometimes, the dip is simply meant to be watched and waited out.\n\nLooking at how aggressively these coins are crashing, I think more https://t.co/fbVVcqBK3g"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2104225827265167733",
+   "date": "2026-09-27",
+   "text": "📊 $FIL Overview | 2026-09-27\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#Filecoin\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2104219529953804395",
+   "date": "2026-09-27",
+   "text": "📊 $PEPE Overview | 2026-09-27\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#PEPE\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Rage_of_the_Age",
+   "url": "https://x.com/Rage_of_the_Age/status/2104086936184836352",
+   "date": "2026-09-27",
+   "text": "'JUST SAW THAT YOU PLAY WITH SMALL MONEY ON MEMECOINS LOL LEAVE THIS 1.2M MCAP COIN TO THE BIG BOYS'\n\nhaha lol this is both so bullish and so bearish https://t.co/raST1nSKpB"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2104133630117257248",
+   "date": "2026-09-27",
+   "text": "🤔 $ARX 4.6x volume spike on +4.5% reads like a squeeze into supply not accumulation\n\n- my bias is bearish here on the 1h — that 4.6x volume pop and +4.5% burst looks like a squeeze off the 0.2187 swing low into supply, not clean accumulation; declining open interest with https://t.co/JRUCRlL9W6"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2104183260150481360",
+   "date": "2026-09-27",
+   "text": "📉 $CRV 4h weakness vs BTC outweighs the flat -0.2% 24h move\n\n- my bias is bearish here on the 1h — local structure still prints as bearish while price sits under the 0.3598 liquidity edge, and the confirmed 4h relative-weakness vs BTC (USDT higher high vs coin/BTC lower high) https://t.co/bw1lxQJb6F"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2104000986654101527",
+   "date": "2026-09-27",
+   "text": "🔍 $ASTER holds -0.4% yet 4h divergence from BTC keeps the bullish structure intact\n\n- my bias is bullish here on the 1h while structure holds — 1h and daily are aligned bullish with BTC, so I treat the weekly bearish backdrop as higher-timeframe context, not the driver of this https://t.co/c6IjgCqNKs"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2104042004837474582",
+   "date": "2026-09-27",
+   "text": "📈 $AWE 16.2x volume spike lines up with the bullish 1h structure holding firm\n\n- my bias is bullish here on the 1h — structure is HH/HL with weekly and BTC aligned, but this is a counter-trend bounce versus a still-bearish daily, so I am not chasing the 15-minute spike into the https://t.co/xjJ4g2Bz1f"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2104182918021034141",
+   "date": "2026-09-27",
+   "text": "🟢 $1000SHIB 1.2% edge vs BTC divergence keeps 1h structure firmly bullish\n\n- my bias is bullish here on the 1h while price holds above the last higher low; 1h and daily structure plus BTC are aligned, so I treat the weekly bearish backdrop as higher-timeframe context, not the https://t.co/Iyxw7g7L1d"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2104232312879644957",
+   "date": "2026-09-27",
+   "text": "🚨 9.2x volume into $ETHFI -2.7% dump reads as distribution, not capitulation\n\n- my bias is bearish here on the 1h: the dump through 0.7171 with that elevated volume looks like distribution and a liquidity grab under the last higher low, not random panic — sellers still dominate https://t.co/K3qcwxWhAb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 170,
+   "user": "youdoubro",
+   "url": "https://x.com/youdoubro/status/2104171355088293991",
+   "date": "2026-09-27",
+   "text": "Zcash legit retired me, but that's not the point; the point is that I'm financially free from the burden of government surveillance. And before you start running your mouth, listen to me for a second... Zcash is pumping for a reason; a \"shit coin\" doesn't just pump 2698% in a"
+  }
+ ]
+}

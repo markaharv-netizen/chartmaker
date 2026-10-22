@@ -1,0 +1,75 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-27T00:00:00Z",
+ "end": "2026-09-28T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2104323193221914717",
+   "date": "2026-09-27",
+   "text": "🚨 XAU/USD WEEKLY PREDICTION | GOLD PRICE FORECAST &amp; TECHNICAL ANALYSIS\n\nGold (ethereum:0x68749665ff8d2d112fa859aa293f07a622782f38 /USD) is approaching two major liquidity levels this week. Here is my XAUUSD weekly prediction, Gold price analysis, support &amp; resistance levels, and https://t.co/nklsmAfofv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2104198573193887909",
+   "date": "2026-09-27",
+   "text": "🚨 BITCOIN PRICE PREDICTION THIS WEEK | BTC WEEKLY ANALYSIS\n\nBitcoin (bitcoin:native ) could be preparing for a major move this week. Here’s my BTC price prediction, Bitcoin technical analysis, key support &amp; resistance levels, and the 2 BTC scenarios I’m watching. 👇\n\n📉 BTC https://t.co/3SN9OTGmRv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2104271927712063795",
+   "date": "2026-09-27",
+   "text": "🚨 ETHEREUM PRICE PREDICTION THIS WEEK | ETH/USDT WEEKLY ANALYSIS\n\nEthereum (ETH) could be setting up for an important move this week. Here’s my ETH price prediction, Ethereum technical analysis, key liquidity level, and the 2 scenarios I’m watching. 👇\n\n📉 ethereum:native https://t.co/1dN5iKDQoe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SignalxBinance",
+   "url": "https://x.com/SignalxBinance/status/2104261883226378343",
+   "date": "2026-09-27",
+   "text": "My personal dive into ETH's 4H chart, sparked by an X post, reveals a nuanced picture. Vitalik's ambitious 2030 vision for Ethereum, focusing on efficiency and scaling by reducing redundant calculations, beautifully frames this analysis. 🧐\n\nCurrent price is 2687.82, with a https://t.co/gejIc3me7b"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2104303312069636533",
+   "date": "2026-09-27",
+   "text": "🚨 USDT DOMINANCE ANALYSIS — MAJOR WARNING FOR CRYPTO LONGS\n\nUSDT Dominance (USDT.D) is sitting at an extremely important area, and this could have a major impact on Bitcoin, Ethereum and the overall crypto market.\nHere’s my USDT Dominance prediction and crypto market outlook https://t.co/GVZBqjdOBG"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 37,
+   "user": "Uns7oPpabl3_",
+   "url": "https://x.com/Uns7oPpabl3_/status/2104297334800830765",
+   "date": "2026-09-27",
+   "text": "If we combine this bearish outlook for risk assets with the ever record highs on bond yields surpassing record levels from 2008, we can conclude 2 things: \n\n1. Bull market may not mirror its 4-year cycle which a lot of people consider as the default market mechanism. The reason https://t.co/SNKLRpZ7Pj https://t.co/6eQmQ9v8qS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "AlphaLensCrypto",
+   "url": "https://x.com/AlphaLensCrypto/status/2104161294395773020",
+   "date": "2026-09-27",
+   "text": "📊 THE CRYPTO EDGE | DAILY MARKET BRIEF\n📅 September 27, 2026\n\n🚨 18 HOURS TO WEEKLY CLOSE &amp; 70% LONG RESET: SHORT SQUEEZE TO $89K LOADING? 🚨\nBitcoin is coiling in an intense reaccumulation range between $83,000 and $85,000 as 70% of longs get wiped out and shorts pile back in. https://t.co/0giCHTdj14"
+  }
+ ]
+}
