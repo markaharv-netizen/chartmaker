@@ -1,0 +1,75 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-18T00:00:00Z",
+ "end": "2026-10-19T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BitcoinOnwards",
+   "url": "https://x.com/BitcoinOnwards/status/2111819334657900679",
+   "date": "2026-10-18",
+   "text": "ETHEREUM: THE 60-DAY FRACTAL — SIGNAL OR COINCIDENCE?\n\nSomething interesting is emerging in ETH's historical price structure.\n\nFollowing major bottoms, ETH has repeatedly consolidated for approximately 59–60 days before a significant move.\n\nThe historical record:\n\n🔴 2022: 59 https://t.co/Gmh3S07COl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 28,
+   "user": "Bastiaan_ETH",
+   "url": "https://x.com/Bastiaan_ETH/status/2111926480997630335",
+   "date": "2026-10-18",
+   "text": "💪 NO BEAR CAN STOP TOM LEE &amp; $BMNR !👇\n\nTom Lee’s $ETH treasury Bitmine is absolutely well positioned with over 6,000,000 Ethereum for the next huge bull run .\n\nDespite of the ongoing Iran conflict, high oil prices, inflation pressure and record breaking bonds.\n\nShort term we https://t.co/uAaZPgh5LJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Sharmapraeep",
+   "url": "https://x.com/Sharmapraeep/status/2111662302324023677",
+   "date": "2026-10-18",
+   "text": "# 🔷 Ethereum (ETH) Market Update\n**📅 October 18, 2026 | ETH/USDT Analysis**\n\nEthereum (ETH)\n\n### $2,417.40\n\n-$9.27 (0.38%)\n\n1D5D1M6MYTD1Y5YMAX\n\nOpen\n\n-\n\nVolume\n\n-\n\nMarket Cap\n\n-\n\nDay Low\n\n2,366.4\n\nYear Low\n\n1,512.07\n\nEPS (TTM)\n\n-\n\nDay High\n\n2,438.05\n\nYear High\n\n4,246.23\n\nP/E"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "signalcorevip",
+   "url": "https://x.com/signalcorevip/status/2111834804891066564",
+   "date": "2026-10-18",
+   "text": "📊 24H Market Analysis @ October 18, 2026\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nThe dominant price action narrative indicates a market under significant institutional selling pressure, masked by minor intra-day upticks.\n\nDespite BTC and ETH showing slight"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 8,
+   "user": "1amgroo1",
+   "url": "https://x.com/1amgroo1/status/2111855604071563380",
+   "date": "2026-10-18",
+   "text": "Crypto Market Analysis Today\n\nSunday, October 18, 2026 · Latest available market snapshots · USD\n\nThe crypto market is showing cautious, sideways-to-bearish momentum. Bitcoin is hovering around $81,500, while Ethereum and several major altcoins are struggling to build a strong https://t.co/5MLtgk7HCJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "moonstacker0",
+   "url": "https://x.com/moonstacker0/status/2111851768577699970",
+   "date": "2026-10-18",
+   "text": "$ETH\n\nETH Update – Decision time\n\nEthereum remains in a broader uptrend on the higher timeframes, but it is now at a critical decision point.\n\nSupport zone:\nPrice is testing a strong confluence area between $2,350 and $2,380, which aligns with a rising trendline support. This https://t.co/5tdGOVFWXp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "Jon_sens",
+   "url": "https://x.com/Jon_sens/status/2111897151257391545",
+   "date": "2026-10-18",
+   "text": "🚨🔥 $ETH IS AT A CRITICAL TURNING POINT — THE NEXT MOVE COULD GET INTERESTING! 👀⚡\n\nEthereum ($ETH) is trading around $2,365.37, down 2.09% in the latest screenshot, after a sharp sell-off from the $2,430 high. The bulls are under pressure, the bears have taken control of the https://t.co/xyPvvRE6pU"
+  }
+ ]
+}

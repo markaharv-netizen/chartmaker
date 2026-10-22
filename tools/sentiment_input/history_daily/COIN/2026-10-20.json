@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-20T00:00:00Z",
+ "end": "2026-10-21T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112513699558646159",
+   "date": "2026-10-20",
+   "text": "📐 ️ $BTC down 1.1% in 24h amid steady bearish structure—still watching for signs to flip the script\n\n- the 1h structure is firmly bearish, with clear lower highs and lower lows; both the 1h and daily are in bearish alignment (only the weekly stays bullish), so my bias here is https://t.co/PjGqF6SCW5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "KRL_defi_",
+   "url": "https://x.com/KRL_defi_/status/2112690022092607885",
+   "date": "2026-10-20",
+   "text": "Doug says $PEPE could offer 5 to 20X upside in a bull market while limiting downside risk to around 30% if bought at the right level.\n\n“If you look at a year-long bear market and look at Pepe, which has a ton of chart history, you can see how low it went during Bitcoin’s and the https://t.co/b76Jsmkwgu"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112470660073099664",
+   "date": "2026-10-20",
+   "text": "🧊 NIL dips below 0.08411 in a shallow sweep—bulls look weak despite 9.5% 24h bounce, real pressure ahead\n\n- my bias remains bearish here: the 1h structure is clearly bearish (lower highs/lower lows), and the BTC trend is also bearish, so the path of least resistance is still to https://t.co/soIFTCrXio"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "fundspec",
+   "url": "https://x.com/fundspec/status/2112564502952599820",
+   "date": "2026-10-20",
+   "text": "🚀 Our AI Trading model just locked in a 4.59% win for a BULLISH trade on $COIN!\nEntry: $168.37 at 09:40 AM EDT\nExit: $176.09 at 10:42 AM EDT\n\nStress test revenue, margin and WACC to see the real upside and downside.\nDownload FundSpec on the Apple App Store or Google Play."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112574318341206460",
+   "date": "2026-10-20",
+   "text": "📐 $BTC steady above key swing low at 81280 signals bullish runway despite mild 0.7% 24h gain\n\n- bias is bullish here as the 1h market structure shows clean higher highs and higher lows, with price sitting comfortably above the last swing low at 81280; structure supports further https://t.co/m8NyLGh4f9"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112401935596675375",
+   "date": "2026-10-20",
+   "text": "🧲 $SEI barely budges after liquidity sweep above 0.0609—downtrend pressure still dominates.\n\n- my bias is bearish here: the 1h structure is clearly bearish, confirmed by lower highs/lows, and both the daily/weekly and BTC trends are also bearish, so momentum and higher https://t.co/fHBdVmsmPL"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "leohuynh139",
+   "url": "https://x.com/leohuynh139/status/2112561984919196035",
+   "date": "2026-10-20",
+   "text": "🚨 $COIN ALERT: StoneX Reaffirms Buy Rating and $230 Target on Coinbase Amid Revenue Diversification\n\n📈 Trade Now: https://t.co/u8YsgyIRjI\n\nBullish: 64%\n• StoneX says Street overweights retail fees; ~88% of Q2 net revenue came from non-Bitcoin spot sources\n•"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112638179840790656",
+   "date": "2026-10-20",
+   "text": "⚖️ $BCH breaks bullish divergence vs BTC with 1.7% 24h gain — is this the next breakout signal?\n\n- my bias is bullish here on BCHUSDT.P 1h: the short-term structure is bullish, price is holding above both the last swing low (271.80) and the trend flip zone, and we have a https://t.co/bRn9slurK6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112583291878396301",
+   "date": "2026-10-20",
+   "text": "📈 ETH holds steady with a 2% gain, building a base for the next bullish rally—ready to break higher soon\n\n- my bias is bullish on ETHUSDT.P here, with 1h structure showing higher highs and higher lows, and price holding well above both last swing low (2376.18) and in the upper https://t.co/n3PrQAfbUd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112638716208402729",
+   "date": "2026-10-20",
+   "text": "🔬 ️ $CL trades cautiously below BTC despite slight dips—tactical bounce possible, but structure warns on longs\n\n- my bias is cautiously bullish for a tactical bounce, but the 1h structure remains bearish for now — any long setup is counter-trend and needs strong confirmation https://t.co/NxRa8GiN4K"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112564203122806887",
+   "date": "2026-10-20",
+   "text": "⚡ $KAITO shows a 3x volume surge but quick 2.6% dip—volume says real, structure says trap.\n\n- my bias is cautiously bearish for KAITOUSDT in the short term following the violent rejection from 0.2885 resistance, paired with the 3.0x volume spike and sharp -2.6% drop in 15 https://t.co/nTcE2HMzcZ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112562506501665226",
+   "date": "2026-10-20",
+   "text": "💰 $BR bursts with 3.3x volume and a 2.8% lift — bullish momentum carving out a clear path up\n\n- my bias is bullish here as the 1h structure is decisively bullish, price is well above both EMA20 and EMA200, and the last confirmed swing sequence is intact; the 3.3x volume spike on https://t.co/IAWoOeKR6t"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112538031378845983",
+   "date": "2026-10-20",
+   "text": "🔻 $ASTS dumps 4.4% in 15m with 2.8x volume spike—smart money offloading or the real sell-off begins?\n\n- my bias is bearish here: the 1h, daily, and weekly trends are all aligned bearish, and ASTS just broke sharply lower on a 2.8x+ volume spike with strong sell flow — this https://t.co/3tneOD8QPC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112358120534008299",
+   "date": "2026-10-20",
+   "text": "💎 $UNITREE surges 3% in 15m with 2x volume spike—momentum looks unstoppable today\n\n- my bias is bullish here on UNITREEUSDT.P 1h as the immediate structure is decisively bullish and price is riding a powerful momentum burst, confirmed by a 3.78x volume anomaly and rapid +3% https://t.co/XnvqC0rUIs"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "samuwl_",
+   "url": "https://x.com/samuwl_/status/2112538527141412893",
+   "date": "2026-10-20",
+   "text": "pumpfun is building a new era casino\n\ni don’t love the gacha/gambling direction, but it’s incredibly bullish for $PUMP metrics\n\nonchain has entered a bear market and pf is barely producing runners, yet it still did $2m in 24h revenue...\n\nthe recent updates suck for creating"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 23,
+   "user": "falenostar",
+   "url": "https://x.com/falenostar/status/2112333388132831244",
+   "date": "2026-10-20",
+   "text": "US Stock Market 24-Hour Important News Summary\n\n1. Tech and AI stocks staged a sharp rebound Monday after last week’s brutal selloff, with the Nasdaq climbing about 1.35% while the S&amp;P 500 gained roughly 0.4-0.66%. Chips and memory names like Micron, SanDisk, Broadcom, and Nvidia https://t.co/9DsQY4d8vK https://t.co/j5naCuODvK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "STARXtoken",
+   "url": "https://x.com/STARXtoken/status/2112467157351338291",
+   "date": "2026-10-20",
+   "text": "🚨 Inflation is heating up! Is crypto in trouble?\nWith U.S. inflation rising and producer prices surging, the Fed may have less room to cut rates!\nWhat do you think happens next? 👇\n\n#Crypto #Bitcoin #Inflation #FederalReserve https://t.co/3Z4OuZei8r"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "BuiltByTrading",
+   "url": "https://x.com/BuiltByTrading/status/2112343698721702077",
+   "date": "2026-10-20",
+   "text": "Nightly Prep 10.19.26\n\nFirst time looking at the charts for the week.\nDid not have time to prep this weekend. Here are my thoughts.\n\nGapping up and selling off is not a sign of a strong market.\nA lot of names are still under declining moving averages.\nKeep in mind: from failed"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 703,
+   "user": "Handre",
+   "url": "https://x.com/Handre/status/2112435342322155676",
+   "date": "2026-10-20",
+   "text": "Gresham's Law states that bad money drives out good, and every government that has ever debased its currency has proven this true the hard way.\n\nThe mechanism is straightforward. When a sovereign declares that two coins carry equal legal value despite one containing more silver, https://t.co/adoDMX0bbv"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "capitalfronts",
+   "url": "https://x.com/capitalfronts/status/2112513611201401080",
+   "date": "2026-10-20",
+   "text": "Black Monday that never came\n\nRemember all the people calling for a Black Monday crash? Their reasoning was that October 19th landed on a Monday again, the same date as 1987, when stocks dropped something like 22% in a single day.\n\nWe didn’t go along with it. A date repeating https://t.co/TBTtWjgrq2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 40,
+   "user": "hccventure",
+   "url": "https://x.com/hccventure/status/2112499755184259443",
+   "date": "2026-10-20",
+   "text": "#Bitcoin is forming a base with an improved on-chain structure, as selling pressure eases and the price holds key support levels. However, supply from investors who bought at higher prices remains a barrier, meaning the uptrend needs new capital inflows. https://t.co/p9zxidQAsC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "SyntheticYields",
+   "url": "https://x.com/SyntheticYields/status/2112437085193834560",
+   "date": "2026-10-20",
+   "text": "$COIN — Buy Zone\n\nCoinbase closed the week at $168.45, sitting right inside the Wave 2 Buy Zone. Price has been chopping around in here for a couple weeks now rather than snapping back hard, which is its own kind of information.\n\nThe Fib is drawn from the June low at $139.18 to https://t.co/p24Kh9cwSZ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "defichristopher",
+   "url": "https://x.com/defichristopher/status/2112362414968541439",
+   "date": "2026-10-20",
+   "text": "Somewhere today a BlackRock PM built downside protection for Bitcoin, and a 19-year-old launched a coin named after his cat.\n\nBoth are bullish signals. Different time horizons."
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Gildard0Baez",
+   "url": "https://x.com/Gildard0Baez/status/2112598768331964882",
+   "date": "2026-10-20",
+   "text": "Although I have bearish “feelings”. I’m bullish, It’s important that I see both sides of the coin. Most importantly, I know me seeing red charts across the board does reinforce these bearish views."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "signalcalls",
+   "url": "https://x.com/signalcalls/status/2112361425234542927",
+   "date": "2026-10-20",
+   "text": "System suggests $ZEC has more downside ahead. Expecting the dump to resume. #ZCASH\n\nETFs and institutional involvement aren’t necessarily bullish for a privacy coin. I’d argue the complete opposite.\n\nGrayscale and the Winklevoss twins aren’t buying $ZEC for privacy. They’re https://t.co/N0HAw1Bxjf"
+  }
+ ]
+}

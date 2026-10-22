@@ -40,6 +40,8 @@ With no APP_PASSWORD (local PC) behavior is unchanged. Render: `render.yaml` Blu
 Ranked bull-vs-bear board (like the "analyst sentiment" boards on X). The app only reads the static
 `sentiment.json` (served at `/api/sentiment`); nothing is scraped on Render.
 
+**Board tickers (24):** AAPL, MSFT, GOOGL, AMZN, META, NVDA, TSLA, AVGO, INTC, **MU**, MSTR, COIN, BTC-USD, **ETH-USD**, CRWV, NBIS, IREN, APLD, CIFR, WULF, **ASST**, **SPCX**, **RKLB**, **ASTS**. Added 2026-10-21: RKLB (Rocket Lab; news "Rocket Lab RKLB stock"), ASTS (AST SpaceMobile; news "AST SpaceMobile ASTS stock") — both tickers are unambiguous on X, so plain `RKLB`/`ASTS` queries; ETH-USD (Ethereum; crypto row like BTC-USD: `display` "ETH", `logoKey` "c:ETH", `kind` "crypto"; X queries use `Ethereum ...`; news "Ethereum price"), ASST (Strive; news "Strive ASST stock"), MU (Micron; X queries use `MU Micron ...` because bare "MU" is ambiguous; news "Micron stock"), SPCX (SpaceX, so every DCF-model stock — TSLA, SPCX, MSTR — is on the board; news "SpaceX SPCX stock"; plain query `SPCX SpaceX -pump -memecoin ...`). The daily input file must list all 24; they first appear on the board at the next daily refresh (no board snapshot is fabricated for them before that).
+
 **Data pipeline (daily refresh)**
 1. An agent with the X connector collects the last 7 days per ticker (≈3 calls/ticker):
    `search_posts_all` "`<T> -is:retweet -is:reply lang:en`" (relevancy, 25), a second call adding
@@ -68,8 +70,7 @@ Ranked bull-vs-bear board (like the "analyst sentiment" boards on X). The app on
 
 Sentiment tab → **View: Over time**. Weekly bull share (0–100%) per ticker with its 95% band shaded, a dashed 50% line,
 and an optional dashed price line on a right axis (weekly closes from the normal `/api/chart` path with its usual fallbacks:
-`$` for one ticker, % from start when several are picked). The picker lists only tickers that have history:
-**MSTR, TSLA, SPCX, SATA, STRC, BTC-USD**. Hover shows window dates, bull %, band, bull/bear counts, posts and the close.
+`$` for one ticker, % from start when several are picked). The picker lists only tickers that have history: weekly = **MSTR, TSLA, SPCX, SATA, STRC, BTC-USD**; daily (Points: Daily) = all 26 names. Hover shows window dates, bull %, band, bull/bear counts, posts and the close.
 Hollow dots = thin week (< 8 bull+bear posts). Download PNG is 1600×900; view, picker and price toggle are saved per tab in views.
 Data: `sentiment_history.json` → `series` (served at `/api/sentiment_history`); the board's own daily snapshots sit under `daily`.
 
@@ -115,9 +116,19 @@ Do both parts every morning. Budget ≈ 12 X calls for the history + ≈ 3 per b
    Never hand-edit labels in history files: the series must stay one consistent labeler.
 4. `python3 tools/sentiment_history.py build` → rewrites `series` in `sentiment_history.json` from every saved file.
 
-**B. Board snapshot** (the 18 names, unchanged): steps 1–3 of "Data pipeline" above, then
+**B. Board snapshot** (the 24 board tickers listed above, incl. ETH-USD, ASST, MU, SPCX, RKLB, ASTS): steps 1–3 of "Data pipeline" above, then
 `python3 tools/build_sentiment.py tools/sentiment_input/<YYYY-MM-DD>.json` **after** A.4 (so MSTR/TSLA/BTC σ uses today's history point).
 It writes `sentiment.json` and adds `daily[<date>]` to `sentiment_history.json` without touching `series`.
+
+**A2. Daily points (all 26 names: the 24 board tickers + SATA, STRC)** — `series_daily`, shown with Over time → Points: Daily.
+For yesterday's UTC day `D` (00:00–24:00Z), per ticker run ONE `search_posts_all` with the opinion query
+`<SYM> (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued[ OR mNAV for MSTR | OR par OR yield for STRC/SATA]) [-pump -memecoin for SPCX] -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en`
+(BTC-USD uses `Bitcoin`, ETH-USD uses `Ethereum`, MU uses `MU Micron`), `start_time=D`, `end_time=D+1`, max 25, relevancy, same fields as above; then
+`python3 tools/sentiment_history.py ingest-daily <SYM> <D> <file> --q "<query>"` and re-run `build`. ≈ 26 calls/day.
+**Backfill still open:** target start 2026-07-21 (`DAILY_START`); as of 2026-10-21 only Oct 18–20 are collected, so each ticker has
+90 gap days (Jul 21 – Oct 17; `daily_gaps` in `sentiment_history.json`). Continue backwards with the same single search per
+ticker-day (≈ 2,340 calls, i.e. ~2 days of the 1,000/day X budget, ≤ 30/min). Never interpolate gaps. Daily points are thin
+(1 search, often < 8 bull+bear posts → hollow dots); read them for turns, not levels.
 
 **C.** Commit `sentiment.json`, `sentiment_history.json`, `tools/sentiment_input/<date>.json` and `tools/sentiment_input/history/` together.
 

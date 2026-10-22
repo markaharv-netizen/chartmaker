@@ -1,0 +1,120 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-19T00:00:00Z",
+ "end": "2026-10-20T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Howling__Husky",
+   "url": "https://x.com/Howling__Husky/status/2112033549528215678",
+   "date": "2026-10-19",
+   "text": "GOOD FUCKING MORNING, FRIENDS! ☕🐺🔥\n\nMONDAY IS HERE. TIME FOR THE $ETH WEEKLY DEEP DIVE!\n\nTHE HUSKY HAS BEEN STARING AT CHARTS AGAIN. 😂📉\n\nAnd this time, the chart deserves some respect.\n\n🐺 THE BULL CASE:\nETH needs to reclaim momentum, defend its recent support and start https://t.co/wbfisD3EQA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "RiskRewardRider",
+   "url": "https://x.com/RiskRewardRider/status/2112161679387906105",
+   "date": "2026-10-19",
+   "text": "🚨 ETHEREUM ($ETH): IS A MAJOR BULLISH REVERSAL SETUP FORMING? \n\nETH appears to be developing an Inverse Head &amp; Shoulders pattern on the weekly chart. If the right shoulder completes and price breaks above neckline resistance, a significant upside move could follow.\n\n🔍 Key https://t.co/pnuglCA2Gx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "RiskRewardRider",
+   "url": "https://x.com/RiskRewardRider/status/2112161953984717254",
+   "date": "2026-10-19",
+   "text": "🚨 ETHEREUM ($ETH): IS A MAJOR BULLISH REVERSAL SETUP FORMING? \n\nETH appears to be developing an Inverse Head &amp; Shoulders pattern on the weekly chart. If the right shoulder completes and price breaks above neckline resistance, a significant upside move could follow.\n\n🔍 Key https://t.co/UWtddZPcyu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "signalcorevip",
+   "url": "https://x.com/signalcorevip/status/2112197195122241546",
+   "date": "2026-10-19",
+   "text": "📊 24H Market Analysis @ October 19, 2026\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nThe dominant price action narrative indicates a market under significant institutional selling pressure, masked by minor intra-day upticks.\n\nDespite BTC and ETH showing slight"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "DyorNetCrypto",
+   "url": "https://x.com/DyorNetCrypto/status/2112079463466803278",
+   "date": "2026-10-19",
+   "text": "ethereum:0x54d2252757e1672eead234d27b1270728ff90581 - 4h\nBias: Bearish 🔴\nTrend Score: -30/100 | Confidence: 7.5/10\n\nCurrently at $1.8596, BGB/USDT displays a bearish trend with a strength of 44/100 and a setup confidence of 7.5/10. The active Descending Channel pattern suggests https://t.co/AfXKpDc1f1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "CryptoAvenue0",
+   "url": "https://x.com/CryptoAvenue0/status/2112082255451713563",
+   "date": "2026-10-19",
+   "text": "ETHEREUM DAILY UPDATE 🔷\nOCT 19, 2026\n\n📈 Price: $2,425 (+0.8% 24h)\n\nKey Levels\n🛡️ Support: $2,380\n🚧 Resistance: $2,450\n\nETH is stabilizing after the recent drop. Defending the support zone keeps recovery hopes alive, while a break above resistance is required for stronger https://t.co/lEgsdhzh9e"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2112263649725464950",
+   "date": "2026-10-19",
+   "text": "🚨 ethereum:0x4e67db19044549ff420860834c91b45bad298722 $ZW $ZS ALERT: Corn Futures Slide as Technical Support Gets Broken - Daily Grain Highlights\n\n📈 Trade Futures: https://t.co/5j7mlIzNjX\n\n🟢 Bullish: 25%\n• USDA reported new soybean sales of 114,000 metric tons to China and"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 13,
+   "user": "CashXman",
+   "url": "https://x.com/CashXman/status/2112030697091457286",
+   "date": "2026-10-19",
+   "text": "The crypto market is weakening. Is the bull run coming to an end?\n\nMy take: cautious until proven otherwise. I’m not calling the top yet, but the market hasn’t given us enough reasons to turn aggressively bullish.\n\nBTC is struggling to regain momentum, ETF outflows are weighing https://t.co/qS9B3i9RYc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 124,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2112007013190537431",
+   "date": "2026-10-19",
+   "text": "I’m not buying the Black Monday repeat just because the calendar matches 1987. Bitcoin held the support zone around 80,800 through a quiet weekend, and I still see a macro bullish trend beneath the daily bearish consolidation. Another TBO close-short signal is developing, not https://t.co/qAYWZ2kUI4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "zBit_Official",
+   "url": "https://x.com/zBit_Official/status/2112197084761727155",
+   "date": "2026-10-19",
+   "text": "Can Bitcoin Sustain Its $80K Level This Week?\n\nBitcoin is facing a crucial test around the $80,000 level as traders watch whether BTC can maintain support or face another pullback. Market sentiment, trading volume, institutional and ETF flows, U.S. economic data, and Federal https://t.co/jllUdURKup"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 115,
+   "user": "Daviddye01",
+   "url": "https://x.com/Daviddye01/status/2112178451218080116",
+   "date": "2026-10-19",
+   "text": "**$MANYU (https://t.co/pkeNJkUeSz Ethereum token) shows strong community bullish sentiment despite recent price volatility and a micro-cap profile.**[](&lt;https://t.co/DRJ16boTGb&gt;)\n\n### Current Snapshot\n- **Price**: ~$0.0000000037 (roughly $0.0₈37)\n- **Market cap**: ~$3.7M\n- **24h https://t.co/UCR05a3ELi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "wisehw25",
+   "url": "https://x.com/wisehw25/status/2111977135779057960",
+   "date": "2026-10-19",
+   "text": "$ETH is trading around 2.4k and trying to stabilise after another week of underperformance.\n\nThere is an important technical reference underneath price: ETH recently tested the area around its 200-day EMA near 2.3k.\n\nTechnical map:\nSupport: 2.33-2.35k.\nResistance: 2.42-2.43k,"
+  }
+ ]
+}

@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-19T00:00:00Z",
+ "end": "2026-10-20T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112086500770758811",
+   "date": "2026-10-19",
+   "text": "🔎 $US up 2.8% on 2.9x volume—smart money or just noise in a bearish 1h setup?\n\n- my bias is cautiously neutral-to-bullish here in the very short term — despite the 1h timeframe still showing a confirmed bearish structure, the 2.9x volume spike and strong +2.8% price rally signal https://t.co/2EjMlOdgKN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112276633847468093",
+   "date": "2026-10-19",
+   "text": "📈 $BAT : 17.1% climb with 5.6x volume spike—momentum says this rally's just getting started\n\n- my bias is bullish here; structure is strong with clear bullish trend on the 1h, daily, and weekly, and even BTC trend is aligned, so momentum is in favor of continuation 📈  \n- the https://t.co/8o0i7676xX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112234717416223062",
+   "date": "2026-10-19",
+   "text": "⚡ GTC powering up with 33.5% in 24h and 2.2x volume—momentum is lining up for more gains\n\n- my bias is bullish here: the 1h, daily, and weekly structure are all aligned bull, confirmed by the benchmark ($BTC) also trending up, so momentum is working with the long side 🚀  \n- the https://t.co/JxbrGlGkFH"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112010814433403319",
+   "date": "2026-10-19",
+   "text": "🧐 $ICNT showing a sharp 2.7% dip on 2.2x volume—selling pressure weighs heavy despite 13% daily gain\n\n- my bias is bearish here—the 1h structure is clearly in a downtrend with a fresh lower high at 0.1967 and price trading well below that, and the 2.2x volume spike combined with https://t.co/fvPUbcm50d"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "leohuynh139",
+   "url": "https://x.com/leohuynh139/status/2112208048236466422",
+   "date": "2026-10-19",
+   "text": "🚨 $COIN ALERT: Coinbase Partners With Marqeta on Stablecoin-Backed Enterprise Cards\n\n💰 Trade on OKX: https://t.co/u8YsgyIRjI\n\n🟢 Bullish: 58%\n• Citi raised price target to $230 (from $210) citing tokenization and infrastructure\n• Deal expands custody and Base settlement role"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112276670887395448",
+   "date": "2026-10-19",
+   "text": "🧐 $AKE posts a 3.5% 24h gain but 4h divergence vs BTC warns: strength may be deceiving.\n\n- my bias is cautious-bullish here, but very selective: 1h structure remains bullish (higher highs/higher lows) and price sits above the key 0.027787 invalidation, yet the newly confirmed 4h https://t.co/GLig4FYrr8"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112217570770055518",
+   "date": "2026-10-19",
+   "text": "🔥 $REZ breaks out with 7.4x volume and a sharp 3.2% 15m gain—smart money heating up, ready to run?\n\n- my bias is bullish here on REZUSDT 1h after that explosive 7.4x volume spike and rapid +3.2% price rally — this looks like strong demand stepping in, likely smart money driving https://t.co/M5yTz22Kkt"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112088990832635918",
+   "date": "2026-10-19",
+   "text": "🧾 $BTC up 1.3% in 24h with steady momentum—buyers aren’t letting up on this clear uptrend\n\n- my bias is bullish here on BTC as the 1h structure is in clear uptrend, with price above both EMA20 and EMA200, and momentum supported by active buyer dominance in flow data and positive https://t.co/UTD09uiiNd"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112097907570524195",
+   "date": "2026-10-19",
+   "text": "🟢 ETH steady at +1.0% in 24h—momentum building quietly into higher highs and lows\n\n- my bias is bullish here in line with the 1h market structure, which is making higher highs and higher lows, and is supported by bullish BTC structure and strong short-term order flow from both https://t.co/BPncLoDe56"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "zBit_Official",
+   "url": "https://x.com/zBit_Official/status/2112197084761727155",
+   "date": "2026-10-19",
+   "text": "Can Bitcoin Sustain Its $80K Level This Week?\n\nBitcoin is facing a crucial test around the $80,000 level as traders watch whether BTC can maintain support or face another pullback. Market sentiment, trading volume, institutional and ETF flows, U.S. economic data, and Federal https://t.co/jllUdURKup"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 115,
+   "user": "Daviddye01",
+   "url": "https://x.com/Daviddye01/status/2112178451218080116",
+   "date": "2026-10-19",
+   "text": "**$MANYU (https://t.co/pkeNJkUeSz Ethereum token) shows strong community bullish sentiment despite recent price volatility and a micro-cap profile.**[](&lt;https://t.co/DRJ16boTGb&gt;)\n\n### Current Snapshot\n- **Price**: ~$0.0000000037 (roughly $0.0₈37)\n- **Market cap**: ~$3.7M\n- **24h https://t.co/UCR05a3ELi"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112037300397908432",
+   "date": "2026-10-19",
+   "text": "🔻 ETH steady 24h at 0% but the downtrend’s intact—bears still pulling the strings beneath 2428\n\n- my bias is bearish here on $ETH 1h, as structure remains in a clear downtrend with lower highs/lows; price is currently trading just under the last confirmed lower high (2428.43), https://t.co/BABH0X9LeA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "wisehw25",
+   "url": "https://x.com/wisehw25/status/2111977470169923777",
+   "date": "2026-10-19",
+   "text": "$ZEC has one of the clearest near-term catalysts in crypto.\n\nThe NU7 mainnet decision is targeted for October 20, with activation targeted for November 5 if approved.\n\nPrice remains extremely volatile after the huge privacy-coin run, so the technical structure matters more than"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "fly_welinkBTC",
+   "url": "https://x.com/fly_welinkBTC/status/2112095241302069692",
+   "date": "2026-10-19",
+   "text": "Continuing our analysis of altcoins, we'll track $UNI and $PEPE.\n\nI've discussed UNI's fundamentals countless times, and I even warned everyone against entering the market when it was at its peak. Now that it has fallen, it's within our entry range. Let me update UNI's https://t.co/wWTOiwK827"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Slonkky_",
+   "url": "https://x.com/Slonkky_/status/2112102579727372789",
+   "date": "2026-10-19",
+   "text": "I’ll happily be a community kol for it. solana:A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T is so undervalued IMO. this coin with the slop core with Claudia has so much potential. Obie knows this and is not shy with growing this at a larger scale! Extremely bullish! \n@mrpmrpm_"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 11,
+   "user": "TOGINEWS",
+   "url": "https://x.com/TOGINEWS/status/2112169296231321764",
+   "date": "2026-10-19",
+   "text": "Genuine question for everyone still here 👀\n\nIf you were scooping up PulseChain/Atropa assets right now, what would be your coin of choice and why?\n\nWhich assets do you think are seriously undervalued, and what makes you bullish on them?\n\nNo stupid answers. Genuinely interested"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "babaugaa",
+   "url": "https://x.com/babaugaa/status/2112316782681932026",
+   "date": "2026-10-19",
+   "text": "Hello everyone,  i've a token to shared with you. $LUMIA. It serms like a dead coin already but i found it interesting. \nTill now i can say it will gollow down trend but has the great chance to see the correction also👏👀\n\n$LUMIA is trading around $0.0854, down 8.86%, after https://t.co/UpwO1J3SdK"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2112154435048636443",
+   "date": "2026-10-19",
+   "text": "⚠️ $ASTER 4h BTC divergence fails to break the bearish 1h structure at -0.7%\n\n- my bias is bearish here while 1h structure stays in lower-high / lower-low mode — the 4h coin/BTC higher-low relative-strength print is noted, but it does not override the confirmed 1h bearish Dow https://t.co/16376oBfM8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MaharajTrading",
+   "url": "https://x.com/MaharajTrading/status/2112305689075073381",
+   "date": "2026-10-19",
+   "text": "$COIN Bullish bias failed.  \nPrice action rejected hard and moved toward the bearish target $170.✅  If lost, then move towards $150. \nPuts printed 🔥 https://t.co/0JsJGvzHr6 https://t.co/9zDR4oadXU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "crypto_nuclear",
+   "url": "https://x.com/crypto_nuclear/status/2112038052860473640",
+   "date": "2026-10-19",
+   "text": "$ALT The Descending TrendLine structure continues to suppress the price of this coin. This indicates that Bearish Pressure will continue to persist since 2024.\n#ALT #Crypto\n\nHowever, currently buyers/Bullish are trying to push the price of this Coin back up to break through this https://t.co/WnLSWz59Ez"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "Onchain_Pilot",
+   "url": "https://x.com/Onchain_Pilot/status/2112094412511592478",
+   "date": "2026-10-19",
+   "text": "GMgm CT\n\nSome of you woke up bullish\n\nSome woke up bearish\n\nSome woke up to check if that coin has recovered\n\nAnd some of us just woke up broke\n\nWe move sha https://t.co/aeGe1AoUqB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "wha_investments",
+   "url": "https://x.com/wha_investments/status/2111978760467873928",
+   "date": "2026-10-19",
+   "text": "🥊 MAN vs MACHINE — Week 1 (Oct 19–23)\n\nMe (real lotto $): AMD puts, MSTR puts, GLD puts — all bearish.\n\nThe machine (paper): TSLA $360C, QQQ $710C, COIN $180C — all bullish.\n\nScored Friday on underlying % move. Someone's wrong. 🍿"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 63,
+   "user": "ast_dotfun",
+   "url": "https://x.com/ast_dotfun/status/2112148680287428924",
+   "date": "2026-10-19",
+   "text": "New listing: $XMR (Monero) on ast ✦\n\nBullish or bearish on $XMR?\n\nCreate your own coin backed by a real $XMR leveraged perp position through @Aster_DEX.\n\nLong or short, with up to 5x leverage on @BNBCHAIN.\n\nLaunch yours at https://t.co/G5xmXWGuzU\n\n$AST https://t.co/myNYSZDWBm"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2112090765715263997",
+   "date": "2026-10-19",
+   "text": "🚨 $ETH $JPM ALERT: JPMorgan to Offer JPM Coin Deposit Token to Institutional Clients on Ethereum\n\n📊 Trade This Asset: https://t.co/wsbSCPlkCm\n\n🟢 Bullish: 85%\n• JPMorgan will offer JPM Coin to institutional clients on Ethereum enabling round-the-clock payments that settle in"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "MaharajTrading",
+   "url": "https://x.com/MaharajTrading/status/2112159208728621371",
+   "date": "2026-10-19",
+   "text": "👑 Maharaj Swing Analysis 👑\n$MRVL Bullish\nBearish: Look for price action to lose $220 and fail to reclaim it. If that happens, look for a move toward $200.\nBullish: Look for price action to reclaim $245 and hold. If that level holds, look for a move toward $255.\nBased on data: https://t.co/Odhl9rhYcU"
+  }
+ ]
+}

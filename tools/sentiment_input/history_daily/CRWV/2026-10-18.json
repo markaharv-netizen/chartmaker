@@ -1,0 +1,237 @@
+{
+ "symbol": "CRWV",
+ "start": "2026-10-18T00:00:00Z",
+ "end": "2026-10-19T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "CRWV (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "checkballyo",
+   "url": "https://x.com/checkballyo/status/2111847561447575890",
+   "date": "2026-10-18",
+   "text": "This is bullish for $CRWV and $NBIS…. Not bearish wtf are you talking about lol https://t.co/xvPb3GQ05U"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "OpinionAlphaApp",
+   "url": "https://x.com/OpinionAlphaApp/status/2111893102768365670",
+   "date": "2026-10-18",
+   "text": "Daily opinions · US · Oct 18, 2026\n22 opinions from 6 influencers · 31 bullish / 2 bearish\nMost discussed: NVDA, MU, QQQ, CRWV, WULF https://t.co/f0QfGALPYc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 753,
+   "user": "RJCcapital",
+   "url": "https://x.com/RJCcapital/status/2111813494181929169",
+   "date": "2026-10-18",
+   "text": "Bullish for $NBIS and especially $CRWV more contracts available for them don’t let anyone scare you into thinking a data center cancellation could be bearish https://t.co/YCpz0SPWLG"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 49,
+   "user": "KeyserSozeThree",
+   "url": "https://x.com/KeyserSozeThree/status/2111792406580597182",
+   "date": "2026-10-18",
+   "text": "Regardless of bullish or bearish the outcome scenarios are:\n\nScenario 1: $NVDA backstop,\nScenario 2: no backstop &amp; $CRWV goes into a bankruptcy washout, is restructured,\nScenario 3: angels are real &amp; bonds get paid b/c hyper growth continues, new or rolled debt issues possible. https://t.co/mROIwGOC5w"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JwGaoteded",
+   "url": "https://x.com/JwGaoteded/status/2111860326610124856",
+   "date": "2026-10-18",
+   "text": "$Iren $nbis $crwv this is more bullish than bearish lmao\n\nMicrosoft is walking away from being the anchor tenant at Nscale’s Loughton, Essex site because of power.\n\nUK grid operators told Nscale they don’t expect sufficient supply until the early to mid 2030s. https://t.co/107UZULNLH"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "leohuynh139",
+   "url": "https://x.com/leohuynh139/status/2111892088719851696",
+   "date": "2026-10-18",
+   "text": "🚨 $CRWV $NVDA ALERT: CoreWeave Drops 25% on Week as Bonds Signal Distress, Nvidia CEO Backs Firm\n\n📉 Trade Futures: https://t.co/BNmL98KY2B\n\n🟢 Bullish: 38%\n• $104.2B revenue backlog plus &gt;$25B new Q3 commitments cover obligations\n• Jensen Huang: strength improving daily;"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "leohuynh139",
+   "url": "https://x.com/leohuynh139/status/2111759817954230645",
+   "date": "2026-10-18",
+   "text": "🚨 $CRWV $NVDA ALERT: CoreWeave bonds yield 15%+, CDS hits distress as stock drops ~25% on week\n\n📉 Trade Futures: https://t.co/BNmL98KY2B\n\n🟢 Bullish: 38%\n• CEO Intrator memo: $104.2B revenue backlog “more than supports” debt (Reuters/Bloomberg)\n• Secured &gt;$25B net new"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "leohuynh139",
+   "url": "https://x.com/leohuynh139/status/2111938383836750123",
+   "date": "2026-10-18",
+   "text": "🚨 $CRWV $NVDA ALERT: CoreWeave Bonds Hit Distress as CDS Imply 60%+ Default Odds — Shares Drop 25% on Week\n\n📉 Trade Live: https://t.co/xf0VxGVgPL\n\n🟢 Bullish: 35%\n• Deutsche Bank and Cantor reiterate Buy with $150–$176 targets after calling selloff a buying opportunity\n• Q2"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "FutureAlphaAl",
+   "url": "https://x.com/FutureAlphaAl/status/2111863354834685983",
+   "date": "2026-10-18",
+   "text": "AI is not dead.\n\nThe easy money might be.\n\nNasdaq just lost 4.5% in a week.\n$CRWV dropped ~25%.\nWall Street is suddenly questioning the same AI trade it couldn't stop buying.\n\nBut here's what the market is missing:\n\nAI demand can keep exploding while AI stocks collapse.\n\nThose"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "leohuynh139",
+   "url": "https://x.com/leohuynh139/status/2111739345304695192",
+   "date": "2026-10-18",
+   "text": "🚨 $NBIS $CRWV ALERT: NBIS Slides 12% to $165 as CoreWeave Bond Yields Near 15% on AI Debt Fears\n\n📉 Trade Live: https://t.co/agZc9wA0zG\n\nBullish: 35%\n• Q2 revenue $582.3M +454% YoY; Microsoft multiyear $17B compute deal\n• Consensus Moderate Buy, avg PT ~$246; Rosenblatt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Da_vidXL",
+   "url": "https://x.com/Da_vidXL/status/2111811374167044597",
+   "date": "2026-10-18",
+   "text": "MONDAY PRE-MARKET WATCH — BIG TECH AT A CROSSROADS! 🇺🇸\n\nNasdaq just dropped 4.5% last week.\n\nAI stocks are getting hammered, but I don't think the AI trade is dead.\n\nHere's what I'm watching Monday:\n\n $NVDA — My top AI rebound watch.\n\n $GOOGL — One of my favorite long-term tech https://t.co/ebAi9XDTHa"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "leohuynh139",
+   "url": "https://x.com/leohuynh139/status/2111841116123504942",
+   "date": "2026-10-18",
+   "text": "🚨 $CRWV $NVDA ALERT: CoreWeave shares, bonds plunge ~25% weekly on $50B debt and rate fears\n\n📈 Trade Futures: https://t.co/BNmL98KY2B\n\n🟢 Bullish: 38%\n• $104.2B Q2 backlog (plus &gt;$25B Q3 commitments) covers debt, per CEO memo\n• Nvidia’s Huang voices confidence; 2027 capacity"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 42,
+   "user": "JwGoatedd",
+   "url": "https://x.com/JwGoatedd/status/2111822255713890340",
+   "date": "2026-10-18",
+   "text": "$Iren $nbis $crwv this is more bullish than bearish lmao\n\nMicrosoft is walking away from being the anchor tenant at Nscale’s Loughton, Essex site because of power.\n\nUK grid operators told Nscale they don’t expect sufficient supply until the early to mid 2030s. \n\nNscale’s Norway https://t.co/00yhrnlclH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 29,
+   "user": "VulcanMK5",
+   "url": "https://x.com/VulcanMK5/status/2111963033992065361",
+   "date": "2026-10-18",
+   "text": "Vulcan Sunday Market Pulse | Oct 18\n\nNasdaq -4.5%. Dow +0.7%. Same week.\n\nOnly 2 of the 78 ETFs I screen are still in uptrends. A week ago it was 11.\n\nHot CPI at 3.7% sent the 10yr to 5.33% &amp; then the AI trade cracked. $CRWV sank on debt worries &amp; chipmakers fell 8 sessions https://t.co/b5esNB4JeX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 64,
+   "user": "Sam_Badawi",
+   "url": "https://x.com/Sam_Badawi/status/2111891064198168712",
+   "date": "2026-10-18",
+   "text": "Michael Burry warns that record S&amp;P 500 highs may be masking broader market weakness, with 32% of stocks trading more than 10% below their highs and just 64 reaching new records as of October 6.\n\nHe has previously shorted NVIDIA $NVDA, Micron $MU, Nebius $NBIS and CoreWeave https://t.co/bzchdTJZva"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "taste",
+   "url": "https://x.com/taste/status/2111613872645816610",
+   "date": "2026-10-18",
+   "text": "BULL vs BEAR: $CRWV — BULL: Cantor reiterated Overweight with a $176 target; $104B backlog and Nvidia backstops unsold capacity. BEAR: Bernstein says Sell ($74) — debt at distress levels, down 25% in its worst week in 11 months. Buy the dip or sell the rip — what's your take?"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "plevchen",
+   "url": "https://x.com/plevchen/status/2111833572705284540",
+   "date": "2026-10-18",
+   "text": "first time in ages, probably since tariffs panic (which actually had a fair basis)  that I see bearish sentiment so entrenched and the amount of FUD on AI related fundamentals and capex and debt out of line with at least what objective measures of the same are showing at the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 260,
+   "user": "StonkChris",
+   "url": "https://x.com/StonkChris/status/2111877408169091174",
+   "date": "2026-10-18",
+   "text": "If you liked:\n\n$CIFR in the $20s\n$CRWV in the $100s\n$EOSE in the $10s\n$GLXY in the $30s\n$IREN in the $70s\n$TE in the $10s\n\nBut suddenly don’t like:\n\n$CIFR in the $8s\n$CRWV in the $50s\n$EOSE in the $1s\n$GLXY in the $10s\n$IREN in the $20s\n$TE in the $2s\n\n…then you have to question"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "S_NewsRoomCOM",
+   "url": "https://x.com/S_NewsRoomCOM/status/2111803026855821632",
+   "date": "2026-10-18",
+   "text": "$CRWV CoreWeave is getting priced like a financing problem, not an AI story. Fifteen percent bond yields and a $20.9B current-liability stack will do that. Bulls keep waving the $104B backlog. Bears see the bill coming due. Bull or bear take? 1/2 https://t.co/bBh1LKWjij"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Hirschi_invests",
+   "url": "https://x.com/Hirschi_invests/status/2111841698439393694",
+   "date": "2026-10-18",
+   "text": "Why this is viewed as bullish for $NBIS and especially $CRWV\nThe thesis is that a data-center cancellation (or delay/cancellation of capacity by a hyperscaler or large customer) is not automatically bad for specialized GPU cloud providers like CoreWeave and Nebius. In the current https://t.co/5hQPmvX7U0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "SlavMarkets",
+   "url": "https://x.com/SlavMarkets/status/2111880148345864694",
+   "date": "2026-10-18",
+   "text": "🚨 NEOCLOUDS GOT OBLITERATED LAST WEEK. WHAT HAPPENS NEXT? 🚨\n\nLast week was absolute carnage across AI infrastructure stocks.\n\n$CIFR: -34%\n$CRWV: -25%\n$NBIS: -25%\n$APLD: -24%\n$IREN: -23%\n$WULF: -15%\n\nThe Nasdaq dropped 4.5%, but neoclouds got absolutely demolished.\n\nSo here’s https://t.co/apJPhHrDXA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DavidRi24012971",
+   "url": "https://x.com/DavidRi24012971/status/2111721521391489295",
+   "date": "2026-10-18",
+   "text": "$SPCX $TSLA $PLTR Hedge funds just capitulated on #AI . $CRWV applied to the whole sector AI Capex.  The next shoe to drop is retail over leveraged on Margin👹\n\nThe story checks out. ZeroHedge's write-up of the same Goldman notes confirms hedge funds gave back all their net AI https://t.co/LvCOMdoNBE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 17,
+   "user": "CK_Cryptoklepto",
+   "url": "https://x.com/CK_Cryptoklepto/status/2111811082448683312",
+   "date": "2026-10-18",
+   "text": "I asked @grok to analyze \"Price to Book\" ratio utilizing Q2 2026 earnings data and live Bitcoin price\n\nNot only is $MARA undervalued vs the pack, but when you factor in the $836 million that the 35,577 $BTC has increased in value since Q2 then MARA is only at 1.12x Price to Book https://t.co/qLKv4gYTNo https://t.co/lrQKTK9BqJ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 109,
+   "user": "BP_Investments_",
+   "url": "https://x.com/BP_Investments_/status/2111864893963907182",
+   "date": "2026-10-18",
+   "text": "The AI sell-off is playing out exactly as planned.\n\nWe called the drop last time, and we will be right again.\n\nHere are our downside targets for these 4 stocks:\n\n1. $NBIS\nFirst target: $114 (-31% downside)\n\n2. $IREN\nFirst target: $16 (-38% downside)\n\n3. $CRWV\nFirst target: $40 https://t.co/yQ8h94vDi3"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AddictTequila",
+   "url": "https://x.com/AddictTequila/status/2111884858629001469",
+   "date": "2026-10-18",
+   "text": "$CRWV was a wild ride to the downside. 🎢\n\nNow we’re riding the $OPEN wave higher. 🚀 https://t.co/JpRyQwY7oC"
+  }
+ ]
+}

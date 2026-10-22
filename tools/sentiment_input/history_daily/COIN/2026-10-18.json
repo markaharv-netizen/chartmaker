@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-18T00:00:00Z",
+ "end": "2026-10-19T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111792996660248933",
+   "date": "2026-10-18",
+   "text": "⚖️ $CYS shows a 4h bearish BTC divergence with a -5.7% 24h drop—bullish trap or capitulation?\n\n- my bias is cautiously bearish for CYS #CYSUSDT.P here on the 1h, despite the immediate bullish structure — the 4h BTC-relative bearish divergence at the highs (coin making a higher https://t.co/RXFU2QH1cm"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111612490618401131",
+   "date": "2026-10-18",
+   "text": "🧊 ETH drifts down 0.8% in 24h, stuck below last lower high—bearish pressure mounting\n\n- my bias is bearish here as the 1h structure is clearly making lower highs and lower lows, with price currently sitting just above the latest swing low (2392.14) and well below the last lower https://t.co/EjWPcllc0Y"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111732495599255560",
+   "date": "2026-10-18",
+   "text": "🔥 $AGT outpaces BTC with 19.3% gain—bullish alignment signals real momentum here\n\n- my bias remains bullish on AGTUSDT.P here, as the 1h, daily, and weekly structure are all in confirmed uptrends, with BTC also supporting from a bullish structure – this alignment keeps the path https://t.co/T2KajZ4aUc"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111732399113384143",
+   "date": "2026-10-18",
+   "text": "🔍 $BAT slips 10.6% in 24h but fresh 4h BTC divergence hints at cautious rebound potential\n\n- my bias is cautiously bullish for BATUSDT.P here despite the 1h structure being bearish — the fresh 4h bullish divergence vs BTC is a high-quality relative strength signal, especially as https://t.co/SyEL5CQV39"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111846503199195554",
+   "date": "2026-10-18",
+   "text": "🧊 $BTC down 0.5% in 24h but holding key support—caution trumps optimism in this quiet session\n\n- my bias is cautiously bullish on BTC in the 1h, as price is holding above the last swing low at 80751 and the hourly trend remains bullish, but I want to see confirmation given daily https://t.co/1EpUohNP2k"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111916024731779506",
+   "date": "2026-10-18",
+   "text": "🔻 ETH routine check-in: down 3% in 24h, lower highs spell trouble ahead\n\n- my bias is bearish here on the 1h, with price trading at 2343.76 and structure showing a clear series of lower highs and lower lows 📉\n- the most recent swing low at 2355.00 has just been swept; I expect https://t.co/atlW6t7xNR"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "leohuynh139",
+   "url": "https://x.com/leohuynh139/status/2111842785573933469",
+   "date": "2026-10-18",
+   "text": "🚨 $COIN ALERT: Assenagon More Than Doubles Stake With 159,636-Share Purchase\n\n📊 Trade Futures: https://t.co/u8YsgyIRjI\n\nBullish: 55%\n• Assenagon lifted position 103% to 314,338 shares worth ~$58.9M\n• Institutions collectively own 68.84% of COIN\n• Consensus target near $224"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111800675679994334",
+   "date": "2026-10-18",
+   "text": "📉 $FIL falling 5.4% while BTC holds steady—bearish structure says no quick rebound in sight\n\n- the 1h structure on FIL #FILUSDT.P is firmly bearish, with a clear sequence of lower highs and lower lows; price sits at 1.0588, well below the last swing high (1.0748) and under both https://t.co/gH1I33RUYL"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111967713501331699",
+   "date": "2026-10-18",
+   "text": "⚡ $BTC holds steady with a 0.9% rise—structure’s bullish, but will momentum follow through?\n\n- my bias is bullish here on BTC as the 1h structure is firmly bullish, with price making higher highs and higher lows while holding comfortably above the recent swing low at 80751\n- https://t.co/JFlyuQytAx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111622951468445942",
+   "date": "2026-10-18",
+   "text": "🔥 $ARIA jumps 2.9% in 15m on 2.3x volume—smart money stacking or just getting started?\n\n- my bias is bullish here on ARIAUSDT.P 1h: the structure is clearly bullish and price just broke out with a powerful 2.3x volume surge and strong buying pressure, suggesting either smart https://t.co/QdAb6c8eq5"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2111709662915543386",
+   "date": "2026-10-18",
+   "text": "⚡COLLECT jumps 3.1% on 4.8x volume spike — is smart money quietly piling in or just a transient blip?\n\n- my bias is cautiously bullish here due to the massive 4.8x volume spike and sharp +3.1% move in 15 minutes, signaling strong interest and likely smart money activity https://t.co/0lgteW8YP5"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 8,
+   "user": "1amgroo1",
+   "url": "https://x.com/1amgroo1/status/2111855604071563380",
+   "date": "2026-10-18",
+   "text": "Crypto Market Analysis Today\n\nSunday, October 18, 2026 · Latest available market snapshots · USD\n\nThe crypto market is showing cautious, sideways-to-bearish momentum. Bitcoin is hovering around $81,500, while Ethereum and several major altcoins are struggling to build a strong https://t.co/5MLtgk7HCJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "wisehw25",
+   "url": "https://x.com/wisehw25/status/2111663796431556967",
+   "date": "2026-10-18",
+   "text": "I found something important when digging deeper into $INDEX.\n\nalmost the entire current holder-revenue engine is STILL the original INDEX trading tax.\n\nQ4 so far:\n\ngross protocol revenue:\n~27.5K\n\noriginal INDEX swap taxes:\n~27.5K\n\nEarn-A-Stock launch fees:\n$0\n\ncreator coin taxes:"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "Slonkky_",
+   "url": "https://x.com/Slonkky_/status/2111863737195876775",
+   "date": "2026-10-18",
+   "text": "So bullish on solana:A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T @obie is working consistently hard to continue to build this project and bring it bigger then where we are at now. I believe this is a 5 mil market cap coin IMO. extremely undervalued https://t.co/dIaqceXluP"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "babaugaa",
+   "url": "https://x.com/babaugaa/status/2111853290644496460",
+   "date": "2026-10-18",
+   "text": "BTC Dump Is Dragging The Entire Market Down 📉 except few of coin\n\nSo guys, we can see that when $BTC drops sharply, most altcoins also face heavy selling pressure. This happens because market fear increases, traders reduce risk, and liquidations can accelerate the decline.\n\nEven https://t.co/WWBeZf57nk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "pumpetual_perps",
+   "url": "https://x.com/pumpetual_perps/status/2111808466054738009",
+   "date": "2026-10-18",
+   "text": "bullish? long it.\nbearish? short it.\n\nsame coin. different conviction.\n\nlearn more on:\n\nhttps://t.co/bEWUJqAZqs https://t.co/fkIb4R7Tle"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "nbot_app",
+   "url": "https://x.com/nbot_app/status/2111841986428723432",
+   "date": "2026-10-18",
+   "text": "Coin of the day: $Q, up 40.0% in 24h on $309M turnover.\n\nOn the 1H chart price is 0.1182, above a rising 50 EMA.\n\nResistance 0.1358\nSupport 0.0961, then 0.0550\nZones: unfilled bullish FVG 0.0837 to 0.0868, unfilled bearish FVG 0.1246 to 0.1316, bearish order block 0.1316 to https://t.co/U0iEHgY4xz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 62,
+   "user": "MaaziEgo",
+   "url": "https://x.com/MaaziEgo/status/2111878799696539977",
+   "date": "2026-10-18",
+   "text": "We're in a bear market...\nWe're in a bear market🐻...\nIf you understand the principles of crypto, this is the time to put that knowledge into practice.\nThat coin you have been researching for months?\nThat project you have been watching from the sidelines? \nThat token you wish you https://t.co/AETo3dlr6l"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2111677352791146815",
+   "date": "2026-10-18",
+   "text": "BTC Single-Coin Histogram Analysis (1D TF)\nVerdict: Bearish (Elevated Retail Long Exposure &amp; Weak Open Interest)\n\nKey Indicator Breakdown:\n\nTrue Retail Longs Accounts (Blue): At 62.932 (73rd percentile) | 24h Δ +0.252 — Retail long exposure sits elevated in the upper portion of https://t.co/iz9ohf0fto"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2111828949361918002",
+   "date": "2026-10-18",
+   "text": "BTC Coin Pulse Analysis (8H TF / Last 1 Hour)\nVerdict: Bearish\n\nKey Indicator Breakdown:\n\nTrue Retail Longs Accounts (Blue): Sitting elevated around the upper portion of the range (~72nd percentile), reflecting sustained retail long participation.\n\nTrue Retail Shorts Accounts https://t.co/surzIHGsFi"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2111677521783841238",
+   "date": "2026-10-18",
+   "text": "BTC Coin Pulse Analysis (8H TF / Last 1 Hour)\nVerdict: Bearish\n\nKey Indicator Breakdown:\n\nTrue Retail Longs Accounts (Blue): Sitting elevated near the 98.5th percentile (81.20), reflecting extreme retail long participation and overcrowding.\n\nTrue Retail Shorts Accounts (Orange): https://t.co/qdN3ySXQfk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "damitradez",
+   "url": "https://x.com/damitradez/status/2111969433447215232",
+   "date": "2026-10-18",
+   "text": "Beginner mistake #7: only reading people who agree with you.\n\nYou buy a coin. Suddenly your feed is all bullish posts about it.\nYou mute anyone bearish.\n\nThat's not research. That's a fan club.\n\nBefore entering, write down what would prove you wrong. NFA https://t.co/F01BBohi27"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "USDtoma",
+   "url": "https://x.com/USDtoma/status/2111906832491122742",
+   "date": "2026-10-18",
+   "text": "my ct trading system\n\nflip bearish 2 days after @blknoiz06 gets OVERLY bullish\n\nwhen @mert shills a coin and it rips 60-100% on the weekly, short it back to where the run started, then long again. worked on ZEC, working on NEAR rn\n\nwhen @gainzy222 posts a chart, drop everything."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "leocrypto009",
+   "url": "https://x.com/leocrypto009/status/2111828339988308013",
+   "date": "2026-10-18",
+   "text": "$BTW : The Pump Is Losing Steam, Watch the Rejection‼️🤤\n\nHey everyone, keep your eyes on $BTW. After that strong pump, price is now facing heavy rejection from the upside. This is the kind of price action that makes me pay attention to a potential reversal.\n\nWhen a coin pumps https://t.co/wbzV1GcYdf"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "leohuynh139",
+   "url": "https://x.com/leohuynh139/status/2111781846979858756",
+   "date": "2026-10-18",
+   "text": "🚨 $COIN ALERT: Assenagon Doubles Coinbase Stake in Q3, Buys 159k Shares\n\n📊 Trade This Asset: https://t.co/u8YsgyIRjI\n\n🟢 Bullish: 42%\n• Assenagon lifted position 103% to 314,338 shares worth ~$58.9M per 13F\n• Institutions own 68.84% of COIN; consensus PT $224.44 with 20 Buys"
+  }
+ ]
+}

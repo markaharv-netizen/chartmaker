@@ -1,0 +1,228 @@
+{
+ "symbol": "AAPL",
+ "start": "2026-10-19T00:00:00Z",
+ "end": "2026-10-20T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AAPL (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "MaharajTrading",
+   "url": "https://x.com/MaharajTrading/status/2112156382166143313",
+   "date": "2026-10-19",
+   "text": "Mon Oct 19\n👑 Maharaj Swing Analysis 👑\n$BE  Bearish\nBearish: Look for price action to lose $220 and fail to reclaim it. If that happens, look for a move toward $200.\nBullish: Look for price action to reclaim $230 and hold. If that level holds, look for a move toward $240.\nBased https://t.co/ba6hr2969E"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "leohuynh139",
+   "url": "https://x.com/leohuynh139/status/2112032598562357715",
+   "date": "2026-10-19",
+   "text": "🚨 $AAPL LERT: Apple Calls iPhone Duo Demand Extraordinary as Preorders Slip Into 2027\n\n📈 Trade Now: https://t.co/V7nLpDIQAO\n\n🟢 Bullish: 70%\n• Apple: pre-order demand “nothing short of extraordinary,” all configs shipping to late Jan\n• Shares closed $343.46 near 52-week high"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "leohuynh139",
+   "url": "https://x.com/leohuynh139/status/2112044113629741163",
+   "date": "2026-10-19",
+   "text": "🚨 $AAPL ALERT: iPhone Duo Preorders Sell Out in Minutes as Ship Dates Slip to Jan 2027\n\n📈 Trade Futures: https://t.co/V7nLpDIQAO\n\nBullish: 65%\n• Apple called Duo demand “nothing short of extraordinary” after preorders sold out within minutes on Oct 16\n• Shipping estimates for"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2112244034609823835",
+   "date": "2026-10-19",
+   "text": "Dark Cloud Cover:\nA Bearish Reversal Pattern:\nhttps://t.co/fNeWhyMSKZ\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2112280626334470651",
+   "date": "2026-10-19",
+   "text": "Bearish Engulfing:\nA Strong Reversal Pattern After an Uptrend\nhttps://t.co/a52jYCtbzD\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2112319130401726832",
+   "date": "2026-10-19",
+   "text": "The Bearish Engulfing:\nA Strong Reversal Signal After an Uptrend-\nhttps://t.co/UkXs5tqyP0\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2112308946375504172",
+   "date": "2026-10-19",
+   "text": "Bear Flag - A Bearish Continuation Pattern\nA Temporary Pause Within a Downtrend\nhttps://t.co/TX8bmBriUQ\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2112287678721053005",
+   "date": "2026-10-19",
+   "text": "Bearish Pennant - A Continuation Pattern in a Downtrend\nhttps://t.co/aecjgJ9OqA\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2112249576870846864",
+   "date": "2026-10-19",
+   "text": "The Golden Cross:\nA Powerful Bullish Signal-\nhttps://t.co/P3dppTOyYm\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2112213182571782327",
+   "date": "2026-10-19",
+   "text": "Concealing Baby Swallow A Bullish Reversal Pattern\nhttps://t.co/KojxzXFRBR\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2112182891492848052",
+   "date": "2026-10-19",
+   "text": "The Bullish Hammer A Potential Reversal Signal\nhttps://t.co/FyBFMK9ivX\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2111982411395264739",
+   "date": "2026-10-19",
+   "text": "Morning Star Strength Weak, Standard and Strong - A Bullish Reversal Pattern\nhttps://t.co/XWvt4akrIx\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2112316865066492073",
+   "date": "2026-10-19",
+   "text": "The Double Bottom:\nA Bullish Reversal Pattern that Signals a Trend Change-\nhttps://t.co/73HdyMeMic\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2112326931446178009",
+   "date": "2026-10-19",
+   "text": "Bottom Island Reversal A Bullish Reversal Pattern:\nhttps://t.co/e99GWx0OdP\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "krisshane14",
+   "url": "https://x.com/krisshane14/status/2112177445227086231",
+   "date": "2026-10-19",
+   "text": "$AAPL is still showing a constructive technical setup, with price above the 20-day and 50-day moving averages.\n\nBut the $348-$350 area is an important test.\n\nBull case: a convincing breakout with solid volume could open the door to further upside.\n\nBear case: repeated rejection https://t.co/siLnsXAFv3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 39,
+   "user": "Henderson014t",
+   "url": "https://x.com/Henderson014t/status/2112144100535500946",
+   "date": "2026-10-19",
+   "text": "$AAPL There is one very clear Mega Cap you should not be buying right now\n\nAnd at the very least you should trim your position\n\n$AAPL It has very limited upside next before needing a correction and it is the last Mega Cap to move to the downside\n\n$AAPL is a Sell here"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Alfred3o3",
+   "url": "https://x.com/Alfred3o3/status/2112283684586021154",
+   "date": "2026-10-19",
+   "text": "#Institutional Price-Action Pattern Stock Screen - 2026-10-19 13:20 PT\nLatest daily bar: 2026-10-19\n\nPattern families learned from the cheat sheet:\n- Bullish breakout retest / continuation QM\n- Bull flag / first pullback after displacement\n- Bullish liquidity sweep / spring\n- https://t.co/qZ4OJGjmKo"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "momentumtradz33",
+   "url": "https://x.com/momentumtradz33/status/2112163006037860678",
+   "date": "2026-10-19",
+   "text": "SPY \nneutral:760-770\nBullish: 770&gt;775&gt;780\nBearish760&gt;755&gt;750\n\nQQQ\nNeutral 710-720\nBullish: 720&gt;725&gt;730\nBearish 710&gt;705&gt;700\n\nTOD\nAAPL\n\nNeutral340-348\nBullish 348&gt;352&gt;356\nBearish 340&gt;336&gt;332"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "HomerOpines",
+   "url": "https://x.com/HomerOpines/status/2112284885268476240",
+   "date": "2026-10-19",
+   "text": "📈 Above $348.15: Watch for breakout confirmation.\n➡️ $340–$348: Possible consolidation.\n⚠️ Below $340: Reassess downside risk.\nMy take: I'm cautiously bullish on the chart, but confirmation matters. Let price action lead.\n#AAPL #Apple #Stocks #Investing https://t.co/ybWJ91MsUj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "hyperlongcom",
+   "url": "https://x.com/hyperlongcom/status/2112011991590351359",
+   "date": "2026-10-19",
+   "text": "We analyzed all trades made this weekend on Hyperliquid trad-fi markets and identified how top traders are positioned heading into Monday open:\n\nBullish: \n$AAPL\n\nBearish: \n$CRWV, $TSLA\n\nSubscribe for the full report: https://t.co/E2LV0MpLzQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2112197831314575754",
+   "date": "2026-10-19",
+   "text": "Top 10 Bad Habits of Trading:\nAvoid these and become a better trader...\nhttps://t.co/td8OsGjr4Z\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA  $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "FinanceJack44",
+   "url": "https://x.com/FinanceJack44/status/2112210252321955985",
+   "date": "2026-10-19",
+   "text": "MUSE TRADE ALERT 🚨 \n\nMuse has decided to sell out of $AAPL for a 1.73% gain and move into $BRK.B \n\nAfter running some projections on Apple, Muse had a base case of only 1.5% CAGR through 2030.\n\nBerkshire on the other hand had a base case of 6.8% CAGR over the same period, with https://t.co/7soGLk4R5o"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "VegaSlpyart78",
+   "url": "https://x.com/VegaSlpyart78/status/2112169187498152375",
+   "date": "2026-10-19",
+   "text": "$AAPL  0DTE: 🎯\n\n🐂 Bull: Hold $340 -&gt; $345 move up 🚀\n🐻 Bear: Lose $340 -&gt; $337.23 flip 📉\n\n⚡ #AAPL https://t.co/EQwg5ITmRh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2112272575183421484",
+   "date": "2026-10-19",
+   "text": "Concealing Baby Swallow A Bullish Reversal Pattern \nhttps://t.co/KojxzXGprp\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  }
+ ]
+}
