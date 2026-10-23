@@ -1,5 +1,5 @@
 """Chartmaker backend: stdlib-only proxy for Yahoo Finance chart API + static frontend."""
-import urllib.error, fin, heat, watch, treasury, valuation, valhist, json, os, sys, time, hmac, hashlib, secrets, threading, html, urllib.request, urllib.parse
+import urllib.error, fin, heat, watch, treasury, valuation, valhist, json, os, sys, time, hmac, hashlib, secrets, threading, html, http.cookiejar, urllib.request, urllib.parse
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
 PORT = int(os.environ.get("PORT", sys.argv[1] if len(sys.argv) > 1 else 8791))
@@ -152,6 +152,17 @@ def yahoo(sym, p1, p2, interval, rng=None, prepost=False, fresh=False):
     r0 = res[0]; ts = r0.get("timestamp") or []
     q0 = r0["indicators"]["quote"][0]
     closes = q0.get("close") or []; highs = q0.get("high") or [None] * len(ts)
+    opens = q0.get("open") or []; lows = q0.get("low") or []; vols = q0.get("volume") or []
+    # bars: [time_ms, open, high, low, close, volume]. Kept beside `points` so line charts stay close-only.
+    bars = []
+    for i, t in enumerate(ts):
+        o = opens[i] if i < len(opens) else None
+        h = highs[i] if i < len(highs) else None
+        lo = lows[i] if i < len(lows) else None
+        c = closes[i] if i < len(closes) else None
+        if o is None or h is None or lo is None or c is None: continue
+        v = vols[i] if i < len(vols) and vols[i] is not None else 0
+        bars.append([t * 1000, o, h, lo, c, v])
     pts = [[t * 1000, c] for t, c in zip(ts, closes) if c is not None]
     if not pts: raise ValueError(f"No price points for {sym} in range")
     stitched = []
@@ -160,7 +171,7 @@ def yahoo(sym, p1, p2, interval, rng=None, prepost=False, fresh=False):
         if stitched: pts = [[t * 1000, c] for t, c in sp]
     m = r0["meta"]
     out = {"symbol": m.get("symbol", sym), "name": company_name(sym, m),
-           "currency": m.get("currency"), "points": pts, "lastTime": m.get("regularMarketTime"),
+           "currency": m.get("currency"), "points": pts, "bars": bars, "lastTime": m.get("regularMarketTime"),
            "lastBarTime": pts[-1][0] // 1000, "lastPrice": m.get("regularMarketPrice"), "interval": interval,
            "highs": [[t * 1000, h] for t, h in zip(ts, highs) if h is not None],
            "prevClose": m.get("regularMarketPreviousClose") or m.get("previousClose") or (m.get("chartPreviousClose") if rng == "1d" else None),
@@ -168,6 +179,94 @@ def yahoo(sym, p1, p2, interval, rng=None, prepost=False, fresh=False):
            "fiftyTwoWeekHigh": m.get("fiftyTwoWeekHigh"), "instrumentType": m.get("instrumentType"),
            "fetchedAt": int(time.time()), "stitched": stitched}
     CACHE[key] = (time.time(), out); return out
+# Earnings dates. Yahoo's chart API `events=earn` no longer returns a history (only dividends/splits).
+# quoteSummary `earnings` (same crumb cookie flow as the heatmap) gives the last 4 reported quarters
+# plus the next date, with no API key. Older dates are a custom-marker job in the UI.
+_EARN = {}
+_EOP = None
+_ECR = [None, 0]
+EARN_COV = "Yahoo quoteSummary: last 4 reported quarters plus the next date. Older earnings are not in this free feed."
+def _sym_ok(sym):
+    return bool(sym) and len(sym) <= 24 and all(c.isalnum() or c in ".-^=" for c in sym)
+def _earn_opener():
+    global _EOP
+    if _EOP is None: _EOP = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    return _EOP
+def _earn_crumb(op, force=False):
+    if force or not _ECR[0] or time.time() - _ECR[1] > 1800:
+        try: op.open(urllib.request.Request("https://fc.yahoo.com", headers={"User-Agent": "Mozilla/5.0"}), timeout=10)
+        except Exception: pass
+        _ECR[0] = op.open(urllib.request.Request("https://query1.finance.yahoo.com/v1/test/getcrumb", headers={"User-Agent": "Mozilla/5.0"}), timeout=10).read().decode().strip()
+        _ECR[1] = time.time()
+    return _ECR[0]
+def _ymd(block):
+    if not isinstance(block, dict): return None
+    fmt = block.get("fmt")
+    if isinstance(fmt, str) and len(fmt) >= 10 and fmt[4] == "-" and fmt[7] == "-": return fmt[:10]
+    raw = block.get("raw")
+    if isinstance(raw, (int, float)) and raw > 0: return time.strftime("%Y-%m-%d", time.gmtime(int(raw)))
+    return None
+def _qshort(s):
+    s = str(s or "")
+    if len(s) >= 2 and s[0].isdigit() and s[1] == "Q": return "Q" + s[0]
+    if len(s) >= 2 and s[0] == "Q" and s[1].isdigit(): return "Q" + s[1]
+    return ""
+def yahoo_earnings(sym):
+    """{symbol, events:[{date, quarter, note, kind, upcoming?}], coverage, error?}."""
+    sym = (sym or "").strip().upper()
+    base = {"symbol": sym, "events": [], "coverage": EARN_COV}
+    if not _sym_ok(sym): return {**base, "error": "bad symbol"}
+    hit = _EARN.get(sym)
+    if hit and time.time() - hit[0] < hit[1]: return hit[2]
+    try:
+        op = _earn_opener(); res = None; desc = "no earnings data"
+        for attempt in (1, 2):
+            crumb = _earn_crumb(op, force=attempt == 2)
+            url = "https://query2.finance.yahoo.com/v10/finance/quoteSummary/" + urllib.parse.quote(sym) + "?" + urllib.parse.urlencode({"modules": "earnings", "crumb": crumb})
+            with op.open(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=15) as r: j = json.load(r)
+            res = ((j.get("quoteSummary") or {}).get("result") or [None])[0]
+            if res: break
+            err = (j.get("quoteSummary") or {}).get("error") or {}
+            desc = str(err.get("description") or desc)
+            if not (attempt == 1 and ("crumb" in desc.lower() or err.get("code") == "Unauthorized")): break
+        if not res:
+            out = {**base, "error": desc}
+            _EARN[sym] = (time.time(), 120, out); return out
+        chart = ((res.get("earnings") or {}).get("earningsChart") or {})
+        events, seen = [], set()
+        for q in chart.get("quarterly") or []:
+            if not isinstance(q, dict): continue
+            d = _ymd(q.get("reportedDate") or {})
+            if not d or d in seen: continue
+            seen.add(d)
+            act, est = (q.get("actual") or {}).get("raw"), (q.get("estimate") or {}).get("raw")
+            bits = []
+            if isinstance(act, (int, float)): bits.append(f"EPS {act:.2f}")
+            if isinstance(est, (int, float)): bits.append(f"vs {est:.2f} est")
+            sp = q.get("surprisePct")
+            if sp not in (None, ""): bits.append(f"surprise {sp}%")
+            cq = q.get("calendarQuarter") or ""
+            if cq: bits.append(str(cq))
+            events.append({"date": d, "quarter": _qshort(cq or q.get("date")), "note": " · ".join(bits), "kind": "earn"})
+        for ed in chart.get("earningsDate") or []:
+            d = _ymd(ed if isinstance(ed, dict) else {})
+            if not d or d in seen: continue
+            seen.add(d)
+            qlabel = _qshort(chart.get("currentQuarterEstimateDate"))
+            note = "Next earnings" + (" (Yahoo estimates the date)" if chart.get("isEarningsDateEstimate") else "")
+            est = (chart.get("currentQuarterEstimate") or {}).get("fmt")
+            if est: note += f" · est EPS {est}"
+            events.append({"date": d, "quarter": qlabel or "Next", "note": note, "kind": "earn", "upcoming": True})
+        events.sort(key=lambda e: e["date"])
+        out = {**base, "events": events}
+        _EARN[sym] = (time.time(), 6 * 3600, out); return out
+    except urllib.error.HTTPError as e:
+        msg = "no earnings for this symbol" if e.code == 404 else str(e)
+        out = {**base, "error": msg}
+        _EARN[sym] = (time.time(), 6 * 3600 if e.code == 404 else 120, out); return out
+    except Exception as e:
+        out = {**base, "error": str(e)}
+        _EARN[sym] = (time.time(), 120, out); return out
 class H(SimpleHTTPRequestHandler):
     def __init__(s, *a, **k): super().__init__(*a, directory=ROOT, **k)
     def log_message(s, *a): pass
@@ -239,6 +338,7 @@ class H(SimpleHTTPRequestHandler):
             return s.send_json(d["views"] if u.path == "/api/views" else d)
         qs = urllib.parse.parse_qs(u.query)
         if u.path == "/api/search": return s.send_json(ysearch(qs.get("q", [""])[0]))
+        if u.path == "/api/earnings": return s.send_json(yahoo_earnings(qs.get("symbol", [""])[0]))
         if u.path == "/api/logo":
             b = heat.logo(qs.get("symbol", [""])[0])
             if not b: return s.send_json({"error": "no logo"}, 404)

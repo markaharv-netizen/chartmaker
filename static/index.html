@@ -13,9 +13,18 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #cotd{display:none;padding:16px 16px 40px;max-width:1240px}#cotd h2{margin:0 0 4px;font-size:22px}#cotd .theme{color:#374151;margin:0 0 18px;font-size:15px}
 #cotd .card{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:14px;margin-bottom:18px}#cotd .card img{width:100%;max-width:1200px;display:block;cursor:zoom-in;border:1px solid #f0f0f0}
 #cotd .card h3{margin:0 0 8px;font-size:17px}#cotd .src{font-size:12px;color:#6B7280;margin:6px 0 10px}#cotd .src a{color:#2563eb}#cotd .sec{margin:6px 0;font-size:14px;line-height:1.45}#cotd .sec b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:#6B7280}
+#actl{display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px}
+#actl label{font-size:13px;flex-direction:row;align-items:center;gap:4px}
+#annList{display:flex;flex-wrap:wrap;gap:4px;width:100%}
+#sheets{display:none;padding:16px 16px 48px;max-width:1100px}#sheets h2{margin:0 0 4px;font-size:22px}#sheets .theme{color:#374151;margin:0 0 14px;font-size:15px;line-height:1.45}
+#sheets .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}#sheets .count{font-size:13px;color:#6B7280;margin:0 0 10px}
+#sheets .row{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start}
+#sheets .row .meta{flex:1;min-width:0}#sheets .book{font-size:11px;letter-spacing:.4px;text-transform:uppercase;color:#6B7280}
+#sheets .row h3{margin:2px 0 4px;font-size:16px}#sheets .charts{font-size:13px;color:#374151;line-height:1.4}
+#sheets .row a.open{color:#2563eb;font-size:13px;white-space:nowrap}#sheets .row img{width:240px;max-width:42%;border:1px solid #f0f0f0;cursor:zoom-in}
 #status{padding:4px 12px;font-size:13px}#status.err{color:#EF4444;font-weight:bold}
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mVal">Valuation</button><button id="mWatch">Watchlist</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mVal">Valuation</button><button id="mWatch">Watchlist</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -91,7 +100,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Display names (comma, optional)<input id="names" size="22"></label>
 <label>Range<select id="range"><option>1D</option><option>5D</option><option selected>YTD</option><option>1M</option><option>6M</option><option>1Y</option><option>5Y</option><option>Max</option><option>Custom</option></select></label>
 <label>Start<input id="start" type="date"></label><label>End<input id="end" type="date"></label>
-<label>Type<select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="bar">Bar ranking % return</option><option value="bardd">Bar ranking % drawdown</option><option value="ratio">Ratio A priced in B</option><option value="drawdown">Drawdown from peak</option></select></label>
+<label>Type<select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="candle">Candles + volume</option><option value="bar">Bar ranking % return</option><option value="bardd">Bar ranking % drawdown</option><option value="ratio">Ratio A priced in B</option><option value="drawdown">Drawdown from peak</option></select><span id="ctypeNote" style="font-size:11px;color:#6B7280;font-weight:400"></span></label>
 <label id="ddbox" title="Drawdown = % below the running high of daily closes">Peak from<select id="ddbase"><option value="range">Start of range</option><option value="ath">All-time high (full history)</option></select></label>
 <label>Title<input id="title" size="34" placeholder="auto"></label>
 <label>Line color<select id="color"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
@@ -103,9 +112,21 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <input id="smac" type="number" min="2" max="1000" placeholder="custom" style="width:70px;padding:4px"></span></label>
 <button id="go">Render</button><button id="refresh" title="Fetch fresh prices, bypassing the cache">Refresh</button><button id="dl">Download PNG</button>
 </div>
+<div id="actl">
+<label title="Vertical event lines on the shared time axis. Off for bar charts. Saved with the Prices view."><input id="annOn" type="checkbox"> Annotations</label>
+<label title="Yahoo gives the last 4 reported quarters plus the next date for the first ticker. Older dates: add a custom marker. Crypto usually has none."><input id="annEarn" type="checkbox" checked> Earnings <span id="annEarnWho" style="color:#6B7280"></span></label>
+<label title="The four historical Bitcoin halvings (2012, 2016, 2020, 2024). Shared timeline, not tied to one series."><input id="annHalf" type="checkbox"> Halvings</label>
+<label>Date <input id="annDate" type="date"></label>
+<label>Label <input id="annLabel" size="14" maxlength="24" placeholder="e.g. ETF approval"></label>
+<label>Note <input id="annNote" size="18" maxlength="80" placeholder="optional, hover only"></label>
+<button id="annAdd" type="button">Add marker</button>
+<span id="annHint" style="color:#6B7280">Shared time axis. Earnings use the first ticker.</span>
+<div id="annList"></div>
+</div>
 <div id="status"></div>
 <div id="wrap"><div id="chart"></div></div>
 <div id="cotd"></div>
+<div id="sheets"></div>
 <div id="fnote"></div><table id="ftable"></table>
 <script>
 const $=id=>document.getElementById(id);
@@ -127,7 +148,7 @@ function bc(c){return T.dark&&BRIGHT[c]?BRIGHT[c]:c}
 function applyTheme(){T=THEMES[$('theme').value]||THEMES.white;axLabel={fontSize:16,color:T.text};split={lineStyle:{color:T.grid}};
   $('chart').style.background=T.bg;$('tprev').style.background=T.bg;$('tprev').style.color=T.title;
   $('tprev').innerHTML=`Aa <b style="color:${bc('#F7931A')}">■</b><b style="color:${bc('#8B5CF6')}">■</b><b style="color:${bc('#22C55E')}">■</b><b style="color:${bc('#EF4444')}">■</b>`}
-function rerender(){return MODE==='cotd'?null:MODE==='sent'?sdraw():MODE==='watch'?wdraw():MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
+function rerender(){return MODE==='sheets'||MODE==='cotd'?null:MODE==='sent'?sdraw():MODE==='watch'?wdraw():MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
 
 function rangeParams(){
   const r=$('range').value, now=Math.floor(Date.now()/1000), d=new Date();
@@ -183,6 +204,7 @@ async function render(){
     if(!syms.length)throw Error('Enter at least one ticker');
     const type=$('type').value, p=rangeParams();
     if(type==='ratio'&&syms.length!==2)throw Error('Ratio needs exactly two tickers: A,B');
+    if(type==='candle'&&syms.length!==1)throw Error('Candles + volume needs one ticker. The option is off while several symbols are selected.');
     const dd=type==='drawdown', intra=['1D','5D'].includes(p.r), ath=(dd||type==='bardd')&&$('ddbase').value==='ath';
     $('ddbox').style.opacity=dd||type==='bardd'?1:0.4;
     if(type==='bardd'){p.ath=ath;const data=await Promise.all(syms.map(s=>fetchSym(s,p)));
@@ -198,8 +220,13 @@ async function render(){
     $('smabox').style.opacity=type==='line'&&!['1D','5D'].includes(p.r)?1:0.4;
     if(sl.length){p.vis=data[0].points[0][0];
       const ss=await Promise.all(data.map(d=>smaSeries(d.symbol,{...p,vis:d.points[0][0]},sl)));data.forEach((d,i)=>d.smas=ss[i])}
+    if(type==='candle'){const b=trimYTD(data[0].bars||[],p.r);
+      if(b.length<2)throw Error(syms[0]+': no OHLC bars in this range');
+      data[0].bars=b;data[0].points=b.map(x=>[x[0],x[4]])}
+    p.markers=await collectMarkers(type,syms,p);
     if(my!==RSEQ||MODE!=='prices')return; // a newer render started while this one was fetching; don't overwrite it
     const titleAuto={line:data.map(d=>d.label).join(' vs ')+' price',pct:data.map(d=>d.label).join(' vs ')+' % change',
+      candle:(data[0]?data[0].label:'')+' price',
       bar:'Return, '+(p.r==='Custom'?'custom range':p.r),ratio:`${data[0].label} priced in ${data[1]?.label}`,
       drawdown:data.map(d=>d.label).join(' vs ')+(ath?' drawdown from all-time high':' drawdown from peak')}[type];
     p.ath=ath; finish(type,data,p,titleAuto);
@@ -247,8 +274,12 @@ function finish(type,data,p,titleAuto){
     if(f&&f>exp+6*DAY*1000){d.since=f;flagged.push({sym:d.symbol,date:fmtD(f)});d.label=star(d.label);if(d.barLabel)d.barLabel=star(d.barLabel)}});
   p.flagged=flagged;
   const asOf=Math.max(...data.map(d=>Math.max(d.lastTime||0,d.lastBarTime||0)));
-  $('status').textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv+(p.rng?' · incl. pre/after-hours bars':'');
+  $('status').textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv+(p.rng?' · incl. pre/after-hours bars':'')+(type==='candle'?' · OHLC + volume':'');
   p.asOf=asOf; last={opt:buildOpt(type,data,$('title').value||titleAuto,p),asOf};
+  if(p.drawnMarkers) $('status').textContent+=` · ${p.drawnMarkers} marker`+(p.drawnMarkers>1?'s':'');
+  if(p.earnErr) $('status').textContent+=' · earnings unavailable ('+String(p.earnErr).slice(0,90)+')';
+  else if(p.earnFetched&&!p.earnCount) $('status').textContent+=' · no earnings from Yahoo for '+data[0].symbol;
+  else if(p.earnFetched&&p.earnCount&&!p.earnDrawn) $('status').textContent+=' · earnings dates are outside this range';
   last.opt.graphic[0].style.text+=stitchNote(data);if(flagged.length){last.opt.graphic[0].style.text+=shortNote(flagged);$('status').textContent+=' · ⚠ short history: '+flagged.map(x=>x.sym+' starts '+x.date).join(', ')+' (measured from first available day)'}
   chart.setOption(last.opt,true)}
 const etTime=t=>new Date(t*1000).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})+' ET';
@@ -328,17 +359,129 @@ function ddOpt(o,data,c,p){
   o.graphic[0].style.text='Source: Yahoo Finance · daily closes · % below running high '+(p.ath?'(all-time high, full history)':'since start of range');
   return o}
 function colors(n){return n===1?[$('color').value]:PALETTE}
+// ---------- Annotations: shared time-axis markers (earnings = first ticker, halvings, custom) ----------
+const HALVINGS=[
+  {date:'2012-11-28',label:'Halving 2012',note:'1st halving · block 210,000 · reward 50→25 BTC'},
+  {date:'2016-07-09',label:'Halving 2016',note:'2nd halving · block 420,000 · reward 25→12.5 BTC'},
+  {date:'2020-05-11',label:'Halving 2020',note:'3rd halving · block 630,000 · reward 12.5→6.25 BTC'},
+  {date:'2024-04-20',label:'Halving 2024',note:'4th halving · block 840,000 · reward 6.25→3.125 BTC (2024-04-20 00:09 UTC)'}];
+const ANLS='chartmaker_ann';
+let ANN=[];try{const a=JSON.parse(localStorage.getItem(ANLS)||'[]');if(Array.isArray(a))ANN=a.filter(x=>x&&x.date&&x.label).slice(0,40)}catch(e){}
+function annsave(){try{localStorage.setItem(ANLS,JSON.stringify(ANN))}catch(e){}annDraw()}
+function annDraw(){const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  $('annList').innerHTML=ANN.map((a,i)=>`<span style="background:#e5e7eb;border-radius:4px;padding:3px 6px;display:inline-flex;gap:4px;align-items:center"><b>${esc(a.date)}</b> ${esc(a.label)}${a.note?` <span style="color:#6B7280">${esc(a.note)}</span>`:''}<a href="#" data-rm="${i}" title="Remove" style="color:#EF4444;text-decoration:none">×</a></span>`).join('');
+  syncPriceUi()}
+function priceSyms(){return $('tickers').value.split(',').map(s=>s.trim()).filter(Boolean)}
+function syncPriceUi(){const n=priceSyms().length,t=$('type').value,bar=t==='bar'||t==='bardd';
+  const opt=[...$('type').options].find(o=>o.value==='candle');if(opt)opt.disabled=n!==1;
+  $('ctypeNote').textContent=t==='candle'?'One ticker · volume below':n!==1?'Candles need one ticker':'';
+  $('actl').style.opacity=bar?'0.45':'1';
+  const who=(priceSyms()[0]||'').toUpperCase();$('annEarnWho').textContent=who?'('+who+')':'';
+  const hid=ANN.length&&!$('annOn').checked&&!bar;
+  $('annHint').textContent=(bar?'Annotations stay off on bar charts. ':(hid?ANN.length+' custom marker'+(ANN.length>1?'s':'')+' hidden — tick Annotations. ':''))+'Shared time axis. Earnings use the first ticker.'}
+function qLabel(e){const q=e.quarter&&e.quarter!=='Earn'&&e.quarter!=='Next'?e.quarter:'';const yy=e.date&&e.date.length>=4?" '"+e.date.slice(2,4):'';
+  if(q)return q+yy;return e.upcoming?'Next earn':'Earn'}
+async function collectMarkers(type,syms,p){p.earnErr='';p.earnCount=0;p.earnFetched=false;p.drawnMarkers=0;p.earnDrawn=0;
+  if(type==='bar'||type==='bardd'||!$('annOn').checked)return [];
+  const out=[];
+  if($('annHalf').checked)for(const h of HALVINGS)out.push({date:h.date,ts:Date.parse(h.date+'T00:00:00Z'),label:h.label,note:h.note,kind:'halving'});
+  if($('annEarn').checked&&syms[0]){p.earnFetched=true;
+    try{const r=await fetch('/api/earnings?symbol='+encodeURIComponent(syms[0]),{cache:'no-store'});const j=await r.json();
+      if(!r.ok||j.error)p.earnErr=(j&&j.error)||('HTTP '+r.status);
+      const ev=Array.isArray(j.events)?j.events:[];p.earnCount=ev.length;const multi=syms.length>1,pre=syms[0].replace(/-USD$/,'');
+      for(const e of ev){if(!e||!e.date)continue;const ts=Date.parse(e.date+'T00:00:00Z');if(isNaN(ts))continue;
+        out.push({date:e.date,ts,label:(multi?pre+' ':'')+qLabel(e),note:e.note||'',kind:'earn'})}}
+    catch(e){p.earnErr=e.message||'fetch failed'}}
+  for(const a of ANN){if(!a||!a.date||!a.label)continue;const ts=Date.parse(String(a.date)+'T00:00:00Z');if(isNaN(ts))continue;
+    out.push({date:a.date,ts,label:String(a.label).slice(0,24),note:String(a.note||'').slice(0,80),kind:'custom'})}
+  return out.filter(m=>!isNaN(m.ts))}
+function fmtVol(v){const a=Math.abs(v);return a>=1e12?(v/1e12).toFixed(1)+'T':a>=1e9?(v/1e9).toFixed(a>=1e10?0:1)+'B':a>=1e6?(v/1e6).toFixed(a>=1e7?0:1)+'M':a>=1e3?(v/1e3).toFixed(0)+'K':String(Math.round(v))}
+function candleTip(label,intra){const esc=x=>String(x).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  return ps=>{const arr=[].concat(ps),c=arr.find(x=>x.seriesType==='candlestick'),v=arr.find(x=>x.seriesType==='bar');if(!c)return'';
+    const raw=c.data||c.value||[];let t,o,cl,lo,hi;
+    if(raw.length>=5){t=raw[0];o=raw[1];cl=raw[2];lo=raw[3];hi=raw[4]}else{o=raw[0];cl=raw[1];lo=raw[2];hi=raw[3];t=c.axisValue}
+    const when=new Date(t).toLocaleString('en-US',{timeZone:intra?'America/New_York':'UTC',month:'short',day:'numeric',year:'numeric',...(intra?{hour:'numeric',minute:'2-digit'}:{})})+(intra?' ET':'');
+    const vol=v?(Array.isArray(v.data)?v.data[v.data.length-1]:(Array.isArray(v.value)?v.value.at(-1):v.value)):null;
+    const up=cl>=o;
+    return `<div style="font-weight:600;color:${T.title};margin-bottom:4px">${esc(when)}</div><div>${esc(label)}</div>`+
+      `<div>O <b>${fmtNum(o)}</b> · H <b>${fmtNum(hi)}</b></div><div>L <b>${fmtNum(lo)}</b> · C <b style="color:${up?bc('#22C55E'):bc('#EF4444')}">${fmtNum(cl)}</b></div>`+
+      (vol!=null&&vol!==''?`<div>Vol <b>${fmtVol(vol)}</b></div>`:'')}}
+function candleOpt(o,d,p){
+  const bars=d.bars,intra=['1D','5D'].includes(p.r),upC=bc('#22C55E'),dnC=bc('#EF4444'),last=bars.at(-1);
+  const t0=bars[0][0],t1=last[0],pad=Math.max((t1-t0)*0.008,intra?60e3:DAY*500);
+  o.grid=[{left:90,right:190,top:112,height:548},{left:90,right:190,top:688,height:112}];
+  o.axisPointer={link:[{xAxisIndex:'all'}],label:{show:false}};
+  const xBase={type:'time',min:t0-pad,max:t1+pad,axisLine:{lineStyle:{color:T.axis}},axisTick:{show:false},splitLine:{show:false}};
+  o.xAxis=[{...xBase,gridIndex:0,axisLabel:{show:false}},{...xBase,gridIndex:1,axisLabel:{...axLabel,hideOverlap:true}}];
+  o.yAxis=[
+    {type:'value',scale:true,gridIndex:0,axisLabel:{...axLabel,formatter:fmtNum},splitLine:split},
+    {type:'value',gridIndex:1,min:0,splitNumber:2,axisLabel:{...axLabel,fontSize:12,color:T.src,formatter:fmtVol},splitLine:{show:false},axisLine:{show:false}}];
+  const upLast=last[4]>=last[1];
+  o.series=[
+    {type:'candlestick',name:d.label,xAxisIndex:0,yAxisIndex:0,barMaxWidth:14,
+      dimensions:['time','open','close','lowest','highest'],encode:{x:'time',y:['open','close','lowest','highest']},
+      data:bars.map(b=>[b[0],b[1],b[4],b[3],b[2]]),
+      itemStyle:{color:upC,color0:dnC,borderColor:upC,borderColor0:dnC}},
+    {type:'line',name:d.label+' close',xAxisIndex:0,yAxisIndex:0,data:bars.map(b=>[b[0],b[4]]),showSymbol:false,silent:true,z:3,
+      lineStyle:{width:0,opacity:0},itemStyle:{color:upLast?upC:dnC},
+      endLabel:{show:true,fontSize:17,fontWeight:'bold',color:upLast?upC:dnC,formatter:q=>`${d.label} ${fmtNum(q.value[1])}`},
+      tooltip:{show:false}},
+    {type:'bar',name:'Volume',xAxisIndex:1,yAxisIndex:1,barMaxWidth:14,
+      data:bars.map(b=>({value:[b[0],b[5]],itemStyle:{color:b[4]>=b[1]?upC:dnC}}))}];
+  o.tooltip={trigger:'axis',confine:true,transitionDuration:0,backgroundColor:T.dark?'rgba(23,26,32,0.95)':'rgba(255,255,255,0.97)',borderColor:T.axis,
+    textStyle:{color:T.text,fontSize:14},extraCssText:'box-shadow:0 2px 10px rgba(0,0,0,.25);border-radius:6px',
+    axisPointer:{type:'line',lineStyle:{color:T.axis,width:1,type:'dashed'},label:{show:false}},formatter:candleTip(d.label,intra)};
+  o.graphic[0].style.text='Source: Yahoo Finance · OHLC + volume';
+  return o}
+function attachMarkers(o,data,p){
+  const times=[];data.forEach(d=>(d.points||[]).forEach(pt=>times.push(pt[0])));times.sort((a,b)=>a-b);
+  if(times.length<2)return;
+  const intra=['1m','2m','5m','15m','30m','60m','1h'].includes(p.iv),lim=intra?6*3600e3:4*86400e3;
+  const snapped=[];
+  for(const m of p.markers||[]){let lo=0,hi=times.length-1;while(hi-lo>1){const mid=(lo+hi)>>1;if(times[mid]<m.ts)lo=mid;else hi=mid}
+    const t=Math.abs(times[lo]-m.ts)<=Math.abs(times[hi]-m.ts)?times[lo]:times[hi];
+    if(Math.abs(t-m.ts)<=lim)snapped.push({...m,ts:t})}
+  p.earnDrawn=snapped.filter(m=>m.kind==='earn').length;
+  if(!snapped.length){p.drawnMarkers=0;return}
+  const groups=[];
+  for(const m of snapped.sort((a,b)=>a.ts-b.ts)){const g=groups.length&&groups.at(-1).ts===m.ts?groups.at(-1):null;
+    if(g){g.items.push(m);g.kind=g.kind===m.kind?m.kind:'custom'}else groups.push({ts:m.ts,items:[m],kind:m.kind})}
+  const t0=times[0],span=Math.max(1,times.at(-1)-t0);let lastPx=[-1e9,-1e9,-1e9,-1e9];
+  for(const g of groups){const px=(g.ts-t0)/span*1300;let row=0;while(row<3&&px-lastPx[row]<96)row++;if(row>2)row=2;lastPx[row]=px;g.row=row;
+    g.text=g.items.map(m=>m.label).join(' · ').replace(/[{}]/g,'').slice(0,36);
+    g.note=g.items.map(m=>m.note?m.label+(m.note?': '+m.note:''):'').filter(Boolean).join(' · ')}
+  const ser=(o.series||[]).find(s=>s.type==='candlestick')||(o.series||[]).find(s=>s.type==='line'&&s.lineStyle&&s.lineStyle.width!==0);
+  if(!ser)return;
+  const col={halving:bc('#F7931A'),earn:bc('#8B5CF6'),custom:T.dark?'#93C5FD':'#0369A1'};
+  ser.markLine={symbol:['none','none'],silent:true,animation:false,
+    data:groups.map(g=>{const right=(g.ts-t0)/span>0.84;
+      return {xAxis:g.ts,name:g.text,lineStyle:{color:col[g.kind]||col.custom,type:'dashed',width:1.25},
+        label:{show:true,position:'insideEndTop',distance:10,offset:[right?-6:6,g.row*18],align:right?'right':'left',
+          formatter:g.text,color:T.title,fontSize:12,fontWeight:600,backgroundColor:T.bg,
+          borderColor:col[g.kind]||T.axis,borderWidth:1,borderRadius:3,padding:[2,5]}}})};
+  if(o.graphic&&o.graphic[0]&&o.graphic[0].style)o.graphic[0].style.text+=' · event markers';
+  p.drawnMarkers=groups.length;
+  const baseTip=o.tooltip&&o.tooltip.formatter;
+  if(!baseTip)return;
+  const notes=groups.map(g=>({ts:g.ts,text:g.text,note:g.note}));
+  o.tooltip.formatter=ps=>{const h=baseTip(ps)||'';const arr=[].concat(ps);if(!arr.length||!h)return h;
+    const t=arr[0].axisValue!=null?arr[0].axisValue:(Array.isArray(arr[0].value)?arr[0].value[0]:null);if(t==null)return h;
+    const gap=intra?6*3600e3:3*86400e3,hit=notes.filter(n=>Math.abs(n.ts-t)<=gap);if(!hit.length)return h;
+    const esc=x=>String(x).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+    return h+hit.map(n=>`<div style="margin-top:4px"><b style="color:${T.title}">${esc(n.text)}</b>${n.note?`<div style="color:${T.src}">${esc(n.note)}</div>`:''}</div>`).join('')}}
+function marked(o,data,p){if(p.markers&&p.markers.length)attachMarkers(o,data,p);return o}
 function buildOpt(type,data,title,p){
   const o=base(title), c=colors(data.length);
-  if(type==='line')return lineOpt(o,data.map((d,i)=>({label:d.label,color:c[i%c.length],data:d.points,smas:d.smas})),fmtNum);
+  if(type==='line')return marked(lineOpt(o,data.map((d,i)=>({label:d.label,color:c[i%c.length],data:d.points,smas:d.smas})),fmtNum),data,p);
   if(type==='pct'){const s=data.map((d,i)=>{const b=p.r==='1D'&&d.chartPreviousClose?(d.prevClose||d.chartPreviousClose):d.points[0][1];return{label:d.label,color:c[i%c.length],data:d.points.map(q=>[q[0],(q[1]/b-1)*100])}});
-    const o2=lineOpt(o,s,v=>pct(v)); o2.yAxis.scale=false; return o2}
-  if(type==='drawdown')return ddOpt(o,data,c,p);
+    const o2=lineOpt(o,s,v=>pct(v)); o2.yAxis.scale=false; return marked(o2,data,p)}
+  if(type==='drawdown')return marked(ddOpt(o,data,c,p),data,p);
+  if(type==='candle')return marked(candleOpt(o,data[0],p),data,p);
   if(type==='ratio'){const [a,b]=data; // align on timestamp (nearest prior B value; crypto has weekend bars)
     const bp=b.points; let j=0; const out=[];
     for(const q of a.points){while(j+1<bp.length&&bp[j+1][0]<=q[0])j++; if(bp[j]&&bp[j][0]<=q[0]+DAY*1000/2)out.push([q[0],q[1]/bp[j][1]])}
     if(!out.length)throw Error('No overlapping dates for ratio');
-    return lineOpt(o,[{label:`${a.label}/${b.label}`,color:$('color').value,data:out}],v=>v.toPrecision(4))}
+    return marked(lineOpt(o,[{label:`${a.label}/${b.label}`,color:$('color').value,data:out}],v=>v.toPrecision(4)),[{points:out}],p)}
   // bar ranking (% return or % drawdown); deepest/lowest on the right
   const isdd=type==='bardd';
   const rows=data.map(d=>({label:d.barLabel||d.label,v:isdd?ddNow(d,p):ret(d,p),st:!!d.since})).sort((x,y)=>y.v-x.v);
@@ -360,15 +503,27 @@ function download(){if(!last)return;
 $('go').onclick=render;
 ['tickers','names','title','start','end','smac'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();render()}}));
 ['ftickers','fnames','ftitle','fy1','fy2'].forEach(id=>$(id)&&$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();frender()}}));$('refresh').onclick=async()=>{FRESH=true;try{await render()}finally{FRESH=false}};$('dl').onclick=download;
-['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'].forEach(id=>$(id).onchange=render);
+['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf'].forEach(id=>$(id).onchange=()=>{syncPriceUi();render()});
+$('tickers').addEventListener('input',()=>{const n=priceSyms().length;if(n!==1&&$('type').value==='candle')$('status').textContent='Candles + volume needs one ticker.';syncPriceUi()});
+function annAdd(){const date=$('annDate').value,label=$('annLabel').value.trim().slice(0,24),note=$('annNote').value.trim().slice(0,80);
+  if(!date||!label){$('status').className='';$('status').textContent='A marker needs a date and a short label.';return}
+  ANN=ANN.filter(a=>!(a.date===date&&a.label===label));ANN.push({date,label,note});ANN.sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:0);
+  if(ANN.length>40)ANN=ANN.slice(-40);$('annLabel').value='';$('annNote').value='';annsave();if(MODE==='prices')render()}
+$('annAdd').onclick=annAdd;
+['annLabel','annNote'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();annAdd()}}));
+$('annList').onclick=e=>{const a=e.target.closest('a');if(!a)return;e.preventDefault();ANN.splice(+a.dataset.rm,1);annsave();if(MODE==='prices'&&$('annOn').checked)render()};
 
 // ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------
 let MODE='prices', flast=null;
-function setMode(m){MODE=m;wtipHide();$('mCotd').classList.toggle('on',m==='cotd');$('cotd').style.display=m==='cotd'?'block':'none';$('wrap').style.display=m==='cotd'?'none':'';$('vbar').style.display=m==='cotd'?'none':'flex';if(typeof vlist==='function')try{vlist()}catch(e){}$('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';$('mSent').classList.toggle('on',m==='sent');$('sctl').style.display=m==='sent'?'flex':'none';
-  $('ctl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
+function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets';
+  $('mCotd').classList.toggle('on',m==='cotd');$('cotd').style.display=m==='cotd'?'block':'none';
+  $('mSheets').classList.toggle('on',m==='sheets');$('sheets').style.display=m==='sheets'?'block':'none';
+  $('wrap').style.display=lib?'none':'';$('vbar').style.display=lib?'none':'flex';if(typeof vlist==='function')try{vlist()}catch(e){}
+  $('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';$('mSent').classList.toggle('on',m==='sent');$('sctl').style.display=m==='sent'?'flex':'none';
+  $('ctl').style.display=m==='prices'?'flex':'none';$('actl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
   $('ftable').innerHTML='';$('fnote').textContent='';chart.clear();$('status').textContent='';
-  if(m==='prices')render();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
-$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');
+  if(m==='prices'){syncPriceUi();render()}else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
+$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');
 // ---------- Charts of the day: static/cotd/today.json (refreshed daily by Flash via scripts/cotd_build.py) ----------
 async function cotdenter(){const el=$('cotd'),E=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   el.innerHTML='<p>Loading…</p>';
@@ -380,6 +535,33 @@ async function cotdenter(){const el=$('cotd'),E=t=>String(t??'').replace(/[&<>"]
 <div class="src">${E(x.sheet)} · ${E(x.tab)}${safe(x.sheet_url)?` · <a href="${E(x.sheet_url)}" target="_blank" rel="noopener">open in sheet</a>`:''}</div>
 <div class="sec"><b>Why it was picked today</b>${E(x.picked)}</div><div class="sec"><b>Why it matters</b>${E(x.matters)}</div><div class="sec"><b>What you should know</b>${E(x.know)}</div></div>`).join('');
   }catch(e){el.innerHTML='<p style="color:#EF4444">Could not load today\'s charts ('+E(e.message)+').</p>'}}
+// ---------- Sheets library: static/sheets/catalog.json (scripts/sheets_catalog.py). No live Google call. ----------
+let SHEETS=null,COTD=null;
+async function sheetsEnter(){const el=$('sheets'),E=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  el.innerHTML='<p>Loading…</p>';
+  try{
+    if(!SHEETS){const r=await fetch('sheets/catalog.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);SHEETS=await r.json()}
+    try{if(!COTD){const r=await fetch('cotd/today.json?t='+Date.now(),{cache:'no-store'});if(r.ok)COTD=await r.json()}}catch(e){}
+    if(MODE!=='sheets')return;
+    const books=SHEETS.books||[],tabs=SHEETS.tabs||[];
+    const bookBy=Object.fromEntries(books.map(b=>[b.id,b]));
+    const img={};(COTD&&COTD.items||[]).forEach(x=>{img[(x.sheet||'').trim().toLowerCase()+'|'+(x.tab||'').trim().toLowerCase()]=x.image});
+    const when=SHEETS.generated?new Date(SHEETS.generated).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'';
+    el.innerHTML=`<h2>Sheets library</h2><p class="theme">Search ${tabs.length} tabs across ${books.map(b=>E(b.name)).join(', ')}. Opens the Google Sheet. A PNG shows up only when that tab is also in today’s Charts of the day — the full image library is not stored here.${when?' Catalog '+E(when)+'.':''}</p>
+<div class="bar"><input id="shq" size="28" placeholder="Search tabs or chart titles" autocomplete="off">
+<select id="shbook"><option value="">All workbooks</option>${books.map(b=>`<option value="${E(b.id)}">${E(b.name)}</option>`).join('')}</select>
+<label style="display:flex;flex-direction:row;align-items:center;gap:4px;font-size:13px"><input id="shcharts" type="checkbox"> Has a chart</label></div>
+<p class="count" id="shcount"></p><div id="shlist"></div>`;
+    const draw=()=>{const q=($('shq').value||'').trim().toLowerCase(),book=$('shbook').value,need=$('shcharts').checked;
+      const rows=tabs.filter(t=>{if(book&&t.book!==book)return false;if(need&&!(t.charts||[]).length)return false;
+        if(!q)return true;const blob=(t.tab+' '+(t.charts||[]).join(' ')+' '+(bookBy[t.book]||{}).name).toLowerCase();return blob.includes(q)});
+      $('shcount').textContent=rows.length+' tab'+(rows.length===1?'':'s');
+      $('shlist').innerHTML=rows.map(t=>{const b=bookBy[t.book]||{},url=`https://docs.google.com/spreadsheets/d/${encodeURIComponent(b.spreadsheetId||'')}/edit#gid=${t.gid}`;
+        const im=img[(b.name||'').trim().toLowerCase()+'|'+(t.tab||'').trim().toLowerCase()];
+        const safeUrl=/^https:\/\/docs\.google\.com\/spreadsheets\/d\/[A-Za-z0-9_-]+\/edit#gid=\d+$/.test(url)?url:'';
+        return `<div class="row"><div class="meta"><div class="book">${E(b.name)}</div><h3>${E(t.tab)}</h3>${(t.charts||[]).length?`<div class="charts">${(t.charts||[]).map(E).join(' · ')}</div>`:''}${safeUrl?`<div style="margin-top:6px"><a class="open" href="${E(safeUrl)}" target="_blank" rel="noopener">Open in Sheets</a></div>`:''}</div>${im?`<a href="${E(im)}" target="_blank" rel="noopener"><img src="${E(im)}" alt=""></a>`:''}</div>`}).join('')||'<p>No tabs match.</p>'};
+    $('shq').addEventListener('input',draw);$('shbook').onchange=$('shcharts').onchange=draw;draw();
+  }catch(e){el.innerHTML='<p style="color:#EF4444">Could not load the Sheets catalog ('+E(e.message)+').</p>'}}
 const MUNIT={eps_diluted:'eps',shares:'sh',gross_margin:'%',operating_margin:'%',net_margin:'%'};
 function fmtFin(v,u,cur){if(v==null||isNaN(v))return '';const a=Math.abs(v),sg=v<0?'-':'';
   if(u==='%')return v.toFixed(1)+'%'; if(u==='eps')return sg+'$'+a.toFixed(2);
@@ -799,15 +981,15 @@ $('shgran').onchange=()=>{hpick();sdraw()};
 $('sreload').addEventListener('click',()=>{if($('sview').value==='time'&&!HBUSY){HDATA=null;stime()}});
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
+const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf'];
 let VIEWS=[];
-function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();return o}
+function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();if(MODE==='prices')o.ann=ANN.map(a=>({date:a.date,label:a.label,note:a.note||''}));return o}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
 // Saved views are per tab: each view carries .mode and only shows/saves/loads in that tab.
 const VMODES=['prices','fin','heat','tre','val','watch','sent'];
 const vmode=x=>VMODES.includes(x&&x.mode)?x.mode:'prices';
 // Fields each tab owns; applying a view only touches its own tab's fields (+ theme), so other tabs are left alone.
-const VOWN={sent:/^(sview|shist|sprice|stickers|stitle|swm)$/,watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase)$/};
+const VOWN={sent:/^(sview|shist|sprice|stickers|stitle|swm)$/,watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase|annOn|annEarn|annHalf)$/};
 // Session-only memory of each tab's selected view: a page load/refresh always starts every tab at "— pick a view —".
 const VLASTM={};try{localStorage.removeItem(VLAST)}catch(e){}
 function vremember(name){if(name)VLASTM[MODE]=name;else delete VLASTM[MODE]}
@@ -844,7 +1026,9 @@ function wlpicklist(){const p=$('wlpick');if(!p)return;const box=$('wlpickbox');
 $('wlpick').onchange=()=>{const p=$('wlpick'),v=p.value,id=WLIN[MODE];p.value='';if(!v||!id)return;
   const x=v==='cur'?{wl:WL}:VIEWS[v];if(!x||!Array.isArray(x.wl)||!x.wl.length)return;
   $(id).value=x.wl.join(',');if(MODE==='heat')$('huni').value='custom';if(MODE==='prices'&&$('names'))$('names').value='';if(MODE==='fin'&&$('fnames'))$('fnames').value='';if(MODE==='val'&&$('vnames'))$('vnames').value='';rerender()};
-function vapply(x){const m=vmode(x),own=VOWN[m];if(m==='prices'){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';$('ddbase').value='range'}
+function vapply(x){const m=vmode(x),own=VOWN[m];if(m==='prices'){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';$('ddbase').value='range';
+  $('annOn').checked=false;$('annHalf').checked=false;$('annEarn').checked=true;
+  ANN=(Array.isArray(x.ann)?x.ann:[]).filter(a=>a&&a.date&&a.label).slice(0,40).map(a=>({date:String(a.date),label:String(a.label).slice(0,24),note:String(a.note||'').slice(0,80)}));annsave()}
   for(const [id,val] of Object.entries(x.fields||{})){if(id!=='theme'&&!own.test(id))continue;const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
   if(m==='watch'&&Array.isArray(x.wl)&&x.wl.length){WL=x.wl.slice();wsave()}
   applyTheme();vsync();setMode(m)}
@@ -894,6 +1078,6 @@ window.__vapply=vapply;window.__snap=snap;
       else if(ev.key==='Escape'){ev.preventDefault();hide()}
       else if(ev.key==='Enter'){hide()}},true)}
 })();
-applyTheme();vload();
+applyTheme();annDraw();vload();
 window.__render=render; window.__frender=frender; window.__setMode=setMode; render();
 </script></body></html>
