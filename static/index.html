@@ -518,7 +518,7 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
   chart.setOption(o,true);last={opt:o,asOf:j.asOf};
   const nts=(j.notes||[]).filter(n=>!/equal-size/.test(n)),miss=(nts.length?' · skipped: '+nts.join('; '):'')+(j.missing.length?' · no quote: '+j.missing.join(', '):'')+(j.eq&&j.eq.length?' · equal-size (no share count): '+j.eq.join(', '):'')+(j.est&&j.est.length?(j.est.length>8?` · mcap = price × shares for ${j.est.length} tickers`+(j.sharesAsOf&&j.sharesAsOf.length?` (shares as of ${j.sharesAsOf.join(', ')})`:''):' · mcap = price × shares: '+j.est.join(', ')):''),nolog=j.rows.filter(d=>!d.logo).map(d=>d.symbol);
   const shs=j.rows.filter(d=>d.since);$('status').className='';$('status').textContent=(shs.length?'⚠ short history: '+shs.map(d=>d.symbol+' starts '+fmtD(d.since*1000)).join(', ')+' · ':'')+`${rows.length}${shN?' '+shN+' of '+j.rows.length:''} tiles · data as of ${etTime(j.asOf)}${miss}${nolog.length?' · no logo: '+nolog.join(', '):''}`}
-// ---------- Treasury mode: /api/treasury (treasury.json holdings + live Yahoo market cap/shares/BTC-USD) ----------
+// ---------- Treasury mode: /api/treasury (filings and company disclosures; treasury.json fallback; Yahoo market cap/shares/BTC-USD) ----------
 let tlast=null,TFRESH=false;
 const TMET={mnav:{t:'mNAV',f:r=>r.mnav,fmt:v=>v.toFixed(2)+'x',ax:v=>v+'x',d:'mNAV = market cap / (BTC held × BTC price)'},
   amp:{t:'Amplification',f:r=>r.amp==null?null:r.amp*100,fmt:v=>v.toFixed(1)+'%',ax:v=>v+'%',d:'amplification = (debt + preferred) / BTC NAV'},
@@ -534,18 +534,23 @@ function tdraw(){const j=tlast,M=TMET[$('tmetric').value],col=$('tcolor').value;
   const rows=ok.map(r=>({label:barLabel({symbol:r.symbol,name:r.name},SHORT[r.symbol]||r.name),v:M.f(r)})).sort((a,b)=>b.v-a.v);
   const o=base($('ttitle').value||`BTC treasury companies: ${M.t}`,'','twm');
   o.grid={left:90,right:60,top:130,bottom:110};
-  const AX=barAxisLayout(rows.map(r=>r.label),chart.getWidth()-o.grid.left-o.grid.right);o.grid.bottom=AX.bottom+20;
+  const AX=barAxisLayout(rows.map(r=>r.label),chart.getWidth()-o.grid.left-o.grid.right);o.grid.bottom=AX.bottom+132;
   o.xAxis={type:'category',data:AX.data,axisLabel:{...axLabel,fontSize:AX.fontSize,fontWeight:'bold',color:T.title,interval:0,margin:14,lineHeight:AX.lineHeight,rotate:AX.rotate,align:AX.rotate?'right':'center'},axisTick:{show:false},axisLine:{lineStyle:{color:T.axis}}};
   o.yAxis={type:'value',...headroom(rows.map(r=>r.v)),axisLabel:{...axLabel,formatter:M.ax},splitLine:split};
   const one=$('tmetric').value==='mnav'?[{yAxis:1,lineStyle:{color:T.axis,type:'dashed'},label:{show:true,formatter:'1.0x',color:T.src,fontSize:15},symbol:'none'}]:[];
   o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:r.v,itemStyle:{color:bc(col)}})),markLine:one.length?{silent:true,data:one}:undefined,
     label:{show:true,position:'top',fontSize:Math.max(15,Math.min(20,AX.fontSize+2)),fontWeight:'bold',color:T.title,formatter:q=>M.fmt(q.value)}}];
-  const srcs=[...new Set(ok.map(r=>r.source).filter(Boolean))].join('; ');
-  o.graphic[0].style.text=`${M.d} · BTC $${Math.round(j.btcPrice).toLocaleString('en-US')} & prices: Yahoo Finance, as of ${etTime(j.asOf)} · market cap = ${(j.mcapSrc||[]).join(' / ')||'n/a'}`+(j.stale&&j.stale.length?` · ⚠ cached quote (Yahoo unavailable): ${j.stale.join(', ')}`:'');
-  o.graphic.push({type:'text',left:60,bottom:4,style:{text:`Holdings/debt/pref compiled ${j.compiled}: ${srcs}`+(ok.some(r=>r.sharesSrc&&r.sharesSrc.startsWith('treasury'))?` · shares: Yahoo sharesOutstanding as of ${[...new Set(ok.filter(r=>r.sharesSrc&&r.sharesSrc.startsWith('treasury')).map(r=>r.sharesSrc.match(/(\d{4}-\d\d-\d\d)/)?.[1]))].join(', ')}`:'')+(skip.length?` · excluded (missing data): ${skip.join(', ')}`:''),fontSize:15,fill:T.src}});
-  o.graphic[0].bottom=26;
+  const fmtB=v=>v==null?'':Number(v).toLocaleString('en-US',{maximumFractionDigits:2});
+  const cite=(src,asof,url)=>[src||'n/a',asof?('as of '+asof):'',url?String(url).replace(/^https?:\/\/(www\.)?/,''):''].filter(Boolean).join(', ');
+  const hold=ok.map(r=>`${r.symbol} ${fmtB(r.btc)} BTC (${cite(r.btcSrc||r.source,r.btcAsOf,r.btcUrl)})`).join('; ');
+  const cap=ok.map(r=>`${r.symbol} debt ${cite(r.debtSrc,r.debtAsOf,r.debtUrl)}; pref ${cite(r.prefSrc,r.prefAsOf,r.prefUrl)}`).join(' · ');
+  const shareNote=ok.some(r=>r.sharesSrc&&r.sharesSrc.startsWith('treasury'))?` Shares: Yahoo sharesOutstanding as of ${[...new Set(ok.filter(r=>r.sharesSrc&&r.sharesSrc.startsWith('treasury')).map(r=>r.sharesSrc.match(/(\d{4}-\d\d-\d\d)/)?.[1]))].join(', ')}. `:'';
+  o.graphic[0].style.text=`${M.d} · BTC $${Math.round(j.btcPrice).toLocaleString('en-US')} and prices: Yahoo Finance, as of ${etTime(j.asOf)} · market cap = ${(j.mcapSrc||[]).join(' / ')||'n/a'}`+(j.stale&&j.stale.length?` · cached quote (Yahoo unavailable): ${j.stale.join(', ')}`:'');
+  o.graphic[0].style.width=1480;o.graphic[0].style.overflow='break';o.graphic[0].style.lineHeight=18;
+  o.graphic.push({type:'text',left:60,bottom:8,style:{text:(hold?`BTC holdings: ${hold}`:(j.compiled?`Holdings compiled ${j.compiled}`:''))+`\nDebt/pref: ${cap}`+(shareNote?`\n${shareNote}`:'')+(skip.length?`\nExcluded (missing data): ${skip.join(', ')}`:''),fontSize:13,lineHeight:17,fill:T.src,width:1480,overflow:'break'}});
+  o.graphic[0].bottom=124;
   chart.setOption(o,true);last={opt:o,asOf:j.asOf};
-  $('status').textContent=`${rows.length} companies · BTC $${Math.round(j.btcPrice).toLocaleString('en-US')} · as of ${etTime(j.asOf)}`+(j.flags.length?' · ⚠ '+j.flags.join('; '):'')}
+  $('status').textContent=`${rows.length} companies · BTC $${Math.round(j.btcPrice).toLocaleString('en-US')} · prices as of ${etTime(j.asOf)} · holdings ${ok.map(r=>r.symbol+' '+(r.btcAsOf||'?')).join(', ')}`+(j.flags.length?' · ⚠ '+j.flags.join('; '):'')}
 $('tgo').onclick=trender;$('tmetric').onchange=()=>tlast&&tdraw();$('tcolor').onchange=()=>tlast&&tdraw();
 $('trefresh').onclick=async()=>{TFRESH=true;try{await trender()}finally{TFRESH=false}};
 $('tdl').onclick=()=>{if(!tlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('ttitle').value||'treasury').replace(/[^\w]+/g,'_')+'.png';a.click()};

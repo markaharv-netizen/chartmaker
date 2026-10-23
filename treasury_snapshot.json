@@ -1,0 +1,80 @@
+{
+  "generated": "2026-10-23T10:10:31Z",
+  "_note": "Last successful primary-source refresh (python3 treasury.py --refresh). The server prefers a live refetch once this is older than 6 hours, then this file, then treasury.json. Do not hand-edit.",
+  "tickers": {
+    "MSTR": {
+      "t": 1792750226.5261855,
+      "error": false,
+      "fields": {
+        "debt_m": 6709.928,
+        "debt_cur": "USD",
+        "debtAsOf": "2026-06-30",
+        "debtSrc": "SEC 10-Q LongTermDebt filed 2026-08-03",
+        "debtUrl": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000044/mstr-20260630.htm",
+        "btc": 848517,
+        "btcAsOf": "2026-10-18",
+        "btcUrl": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526424688/mstr-20261019.htm",
+        "btcSrc": "SEC 8-K filed 2026-10-19",
+        "pref_m": 13570.8511,
+        "pref_cur": "USD",
+        "prefAsOf": "2026-10-18",
+        "prefUrl": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000044/mstr-20260630.htm",
+        "prefSrc": "SEC 10-Q liquidation preference as of 2026-06-30 filed 2026-08-03, minus 18,912,049 STRC \u00d7 $100 stated amount through 2026-10-18"
+      },
+      "flags": []
+    },
+    "ASST": {
+      "t": 1792750226.5261855,
+      "error": false,
+      "fields": {
+        "btc": 36818,
+        "btcAsOf": "2026-10-16",
+        "btcSrc": "SEC 8-K filed 2026-10-19",
+        "btcUrl": "https://www.sec.gov/Archives/edgar/data/1920406/000162828026066222/asst-20261019.htm",
+        "pref_m": 2103.0176,
+        "pref_cur": "USD",
+        "prefAsOf": "2026-10-20",
+        "prefUrl": "https://www.sec.gov/Archives/edgar/data/1920406/000095010326015849/dp255260_8k.htm",
+        "prefSrc": "SEC 8-K SATA 14,030,176 \u00d7 $100 + SATS $700M stated amount, closing filed 2026-10-20",
+        "debt_m": 0,
+        "debt_cur": "USD",
+        "debtAsOf": "2026-10-20",
+        "debtUrl": "https://www.sec.gov/Archives/edgar/data/1920406/000095010326015849/dp255260_ex9901.htm",
+        "debtSrc": "SEC 8-K filed 2026-10-20 (company states it has no debt)"
+      },
+      "flags": []
+    },
+    "3350.T": {
+      "t": 1792750226.5261855,
+      "error": false,
+      "fields": {
+        "btc": 44000,
+        "btcAsOf": "2026-09-30",
+        "btcUrl": "https://contents.xj-storage.jp/xcontents/33500/4b5f0c2e/ab52/4d40/9d89/e2aa6e3f3524/140120261005546274.pdf",
+        "btcSrc": "Metaplanet notice filed 2026-10-05"
+      },
+      "flags": []
+    },
+    "SWC.L": {
+      "t": 1792750226.5261855,
+      "error": false,
+      "fields": {
+        "btc": 2850,
+        "btcAsOf": "2026-10-23",
+        "btcSrc": "Smarter Web treasury feed",
+        "btcUrl": "https://www.smarterwebcompany.co.uk/_private/treasury-data.aspx",
+        "debt_m": 16,
+        "debt_cur": "GBP",
+        "debtAsOf": "2026-10-23",
+        "debtSrc": "Smarter Web analytics",
+        "debtUrl": "https://www.smarterwebcompany.co.uk/bitcoin-treasury/analytics-/",
+        "pref_m": 11.1137,
+        "pref_cur": "GBP",
+        "prefAsOf": "2026-10-23",
+        "prefSrc": "Smarter Web analytics",
+        "prefUrl": "https://www.smarterwebcompany.co.uk/bitcoin-treasury/analytics-/"
+      },
+      "flags": []
+    }
+  }
+}

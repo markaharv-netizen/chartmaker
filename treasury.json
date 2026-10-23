@@ -1,9 +1,10 @@
 {
-  "_note": "Edit me. Amounts in the stated currency (major units, millions for debt/pref). Leave a field null if unknown; it is flagged, never guessed. compiled = date these figures were gathered for the tab-88 amplification chart. shares = fallback when Yahoo's live quote has no share count (used only if v7 quote is unavailable).",
+  "_note": "Last-resort fallback. Treasury mode refreshes from primary filings and company disclosures (6h cache in cache/treasury_live.json; committed last success in treasury_snapshot.json). Do not hand-edit for a routine buy. compiled = date these fallback figures were gathered. Amounts in the stated currency, millions for debt/pref. pref_par = stated amount per preferred share when an 8-K reports shares but not dollars. shares = fallback when Yahoo's live quote has no share count.",
   "compiled": "2026-10-15",
   "companies": [
     {
       "ticker": "MSTR",
+      "sec_cik": 1050446,
       "name": "Strategy",
       "btc": 848250,
       "debt_m": 6714,
@@ -18,6 +19,8 @@
     },
     {
       "ticker": "ASST",
+      "sec_cik": 1920406,
+      "pref_par": 100,
       "name": "Strive",
       "btc": 35595,
       "debt_m": 0,
