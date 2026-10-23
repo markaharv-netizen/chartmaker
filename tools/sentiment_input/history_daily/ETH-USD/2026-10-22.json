@@ -1,0 +1,138 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-22T00:00:00Z",
+ "end": "2026-10-23T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 12,
+   "user": "mastermojo83",
+   "url": "https://x.com/mastermojo83/status/2113254176817848743",
+   "date": "2026-10-22",
+   "text": "My current technical thesis on @Trueo_  base:0x21cfcfc3d8f98fc728f48341d10ad8283f6eb7ab using the True/wEth Chart\n\n- Bearish/resistance case: Failure to hold and accept above the current band keeps the pair range-bound or subject to further rotation lower, consistent with https://t.co/zL1exzY20o"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2113376779784101935",
+   "date": "2026-10-22",
+   "text": "🚨 $BTC $ETH $XRP ALERT: Bitcoin Follows Equities Lower as Investors Seek Safety\n\n📊 Trade This Asset: https://t.co/0tFuuDrnrE\n\n🟢 Bullish: 35%\n• Bitcoin  ETFs  recorded  $1.07  billion  in  net  inflows  over  three  consecutive  days.\n• Wednesday  alone  saw  more  than  $500"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "signalcorevip",
+   "url": "https://x.com/signalcorevip/status/2113284364578480332",
+   "date": "2026-10-22",
+   "text": "📊 24H Market Analysis @ October 22, 2026\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nThe dominant price action narrative indicates a market under significant institutional selling pressure, masked by minor intra-day upticks.\n\nDespite BTC and ETH showing slight"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2113225379712549071",
+   "date": "2026-10-22",
+   "text": "ethereum:0x61ec85ab89377db65762e234c946b5c25a56e99e forming a triangle pattern with price action tightening 👀📉\n\nPrice is hovering near $0.000001646 after compressing inside converging trendlines. The latest move hints at a downside breakdown, with $0.000001635 support under https://t.co/My0lddUGd8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "yahyaiqbal40785",
+   "url": "https://x.com/yahyaiqbal40785/status/2113266875627192365",
+   "date": "2026-10-22",
+   "text": "Ethereum ($ETH) — English Prediction\n\nReference price: Approximately $2,403–$2,408.\n\nSupport: $2,406, then $2,324.\n\nResistance: $2,502, then $2,540.\n\nBullish target: $2,583 if ETH confirms a breakout above $2,502.\n\nBearish scenario: A daily close below $2,406 could increase"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 196,
+   "user": "CryptoLara_",
+   "url": "https://x.com/CryptoLara_/status/2113246495436591605",
+   "date": "2026-10-22",
+   "text": "$ETH Preparing for a Massive $6,000 Breakout!🚀\n\nEthereum’s weekly chart is looking strong! The higher-timeframe support is holding firm, and the re-accumulation structure suggests another potential move to the upside.\n\n🎯 Major Target: $6,000\n🔥 Key Support: Holding Strong\n📈 https://t.co/AdKJ96MVhr"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Sharmapraeep",
+   "url": "https://x.com/Sharmapraeep/status/2113108337600684399",
+   "date": "2026-10-22",
+   "text": "📊 Ethereum (ETH) Update\n\nDate: October 22, 2026 | ETH/USDT Analysis\n\nEthereum\n\n1. 💰 Current Market Price\n\nETH price: Approximately $2,500–$2,515.\n\nMarket trend: Attempting to recover, but resistance remains.\n\nShort-term outlook: Neutral to cautiously bullish.\n\nMarket risk: High"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2113170061590475120",
+   "date": "2026-10-22",
+   "text": "🚨 $ZS ethereum:0x4e67db19044549ff420860834c91b45bad298722 $ZW ALERT: Soybeans dip on US harvest pressure; wheat gains on Black Sea risks\n\n📊 Trade This Asset: https://t.co/v9LDQq9dxt\n\n🟢 Bullish: 35%\n• Renewed  Chinese  demand  for  US  soybeans  provides  support  for  soybean"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "DayTrader_Steve",
+   "url": "https://x.com/DayTrader_Steve/status/2113091428884586766",
+   "date": "2026-10-22",
+   "text": "ethereum:0x57e114b691db790c35207b2e685d4a43181e6061 has been a very useful canary thus far, and I'm quite concerned with this plausible lower high and 6hr RSI rejection at 70.\n\nbitcoin:native also looking suspicious on 6hr. \n\nThis is NOT bear control or confirmation, but worth https://t.co/AnCTuBS8rU"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "TheMacroWhales",
+   "url": "https://x.com/TheMacroWhales/status/2113250194175431148",
+   "date": "2026-10-22",
+   "text": "WHALE TRACKER\n\nAsset Class: Equities\nAsset: S&amp;P 500 Index (ES1 Futures)\nPrice Action: Bearish\nCurrent: 7729\nNext Demand: 7660\nNext Supply: 7818\n\nAsset Class: Equities\nAsset: Nasdaq (NAS100)\nPrice Action: Bearish\nCurrent: 29340\nNext Demand: 28800\nNext Supply: 30100\n\nAsset Class: https://t.co/ltXv2Jnm8w"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "usaagentnet",
+   "url": "https://x.com/usaagentnet/status/2113352138315436086",
+   "date": "2026-10-22",
+   "text": "🚨 CRYPTO MARKET UPDATE | October 22, 2026\n\nThe crypto market is under heavy selling pressure.\n\n📉 BTC: $81,445 (-3.46%)\n📉 ETH: $2,389 (-4.20%)\n📉 SOL: $103.71 (-3.84%)\n📉 BNB: $732 (-2.14%)\n📉 XRP: $1.31 (-4.89%)\n\n💥 Approximately $431M in liquidations over 24 hours.\n\nWhat's"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "huynhtuanfwb0bf",
+   "url": "https://x.com/huynhtuanfwb0bf/status/2113313623615721817",
+   "date": "2026-10-22",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 Garbled Circuits Undervalued gem #cotinetwork institutional inflow 🔥"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "hoangbaotng6fv",
+   "url": "https://x.com/hoangbaotng6fv/status/2113340748796235844",
+   "date": "2026-10-22",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 programmable privacy Undervalued gem #cotinetwork diamond hands forever 🔥"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "phamhieu8u9scr",
+   "url": "https://x.com/phamhieu8u9scr/status/2113334326515642425",
+   "date": "2026-10-22",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 Garbled Circuits Undervalued gem #cotinetwork institutional inflow 🔥"
+  }
+ ]
+}

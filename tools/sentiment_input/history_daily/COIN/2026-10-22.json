@@ -1,0 +1,219 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-22T00:00:00Z",
+ "end": "2026-10-23T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "bitcoinmaxingg",
+   "url": "https://x.com/bitcoinmaxingg/status/2113339699964117051",
+   "date": "2026-10-22",
+   "text": "We don't have bull or bear seasons where every coin goes up or down at the same time anymore, we have:\n\n1) Bullish coins that are useful with real demand, real utility\n2) Bearish coins with high-FDV ghost chains and with massive team unlocks ahead\n3) Memecoins that will go up and"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2113246683744108737",
+   "date": "2026-10-22",
+   "text": "🔻 $ETH drifts down 2.7% over 24h—structure warns further weakness ahead, no relief in sight\n\n- my bias is bearish here as the 1h trend structure remains clearly to the downside, with both the most recent swing high (2526.99) and swing low (2435.88) set lower, and price currently https://t.co/jkvB811aPE"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2113059965313204289",
+   "date": "2026-10-22",
+   "text": "📉 $SKDD volume doubles but price drops 3.5%—real selling pressure or just a shakeout?\n\n- my bias is bearish here as the 1h structure is clearly bearish with confirmed lower highs and lower lows, and the trend flip is a full 4.6% above current price — the recent 2.1x volume spike https://t.co/FEYtvHALsx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2113310353127887107",
+   "date": "2026-10-22",
+   "text": "🟢 KERNEL shows a 6.3x volume spike with 2.7% gain in 15m—but is this strength real or just noise?\n\n- my bias is cautiously bullish here after the explosive 6.3x volume spike and strong 15-minute impulsive move, but I want to see a clear reaction inside the 0.0483–0.0490 demand https://t.co/hD9NaQ1Eeu"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2113189773460324415",
+   "date": "2026-10-22",
+   "text": "⚖️ $CT drops 16.5% as BTC divergence sparks doubt—can this downtrend find a bottom soon?\n\n- my bias is firmly bearish here: the 1h structure is in a strong downtrend with clear lower highs and lower lows, and this is confirmed by the daily structure and by the bearish stance on https://t.co/8rrAFWGxvq"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2113367961524113456",
+   "date": "2026-10-22",
+   "text": "📌 ETH dips 4.3% in 24h, stuck in lower highs and deeper lows—bearish structure intact.\n\n- my bias is bearish here on $ETH #ETHUSDT.P 1h, with the structure showing consistent lower highs and lower lows and price currently trading well below both EMA20 and EMA200\n- price is https://t.co/QsxAyWRXZH"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2113196956667310137",
+   "date": "2026-10-22",
+   "text": "⚡ $MBL jumps 4% in 15m with 2.6x volume surge—momentum or just steam building?\n\n- my bias is cautiously bullish here on MBLUSDT after the explosive +4% breakout with a 2.6x+ volume surge, as the 1h market structure is decisively bullish and price is holding above both EMA20 and https://t.co/9Nxh34Jtok"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Rich_314159",
+   "url": "https://x.com/Rich_314159/status/2113347391780798660",
+   "date": "2026-10-22",
+   "text": "🃏🤖 THE FOOL &amp; MAJOR DIP — PUBLIC APOLOGY\n\nWe owe our followers an apology.\n\nOur Tokyo Daily Dip forecast assigned:\n\n🟢 Bullish: 35%\n↔️ Range: 45%\n🔴 Bearish: 20%\n\nThe market subsequently sold off sharply.\n\nBTC fell approximately 3.8% over 24 hours, ETH 4.1%, and our Coin Push https://t.co/hNLQ18J5fx"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2113265200967061875",
+   "date": "2026-10-22",
+   "text": "⚖️ SOFI jumps 2.8% on 4.4x volume—tactical bounce or just noise against bearish trends?\n\n- my bias is cautiously bullish for a tactical move, but this setup is a counter-trend play against the prevailing bearish 1h and daily structures, and with BTC also bearish, any long should https://t.co/JhkpOrjS9d"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SPX_Moves",
+   "url": "https://x.com/SPX_Moves/status/2113330213170061665",
+   "date": "2026-10-22",
+   "text": "$NEM today 🔥\n\nHere's the tension: HOT mover historically but options are EXPENSIVE.\nMarket knows it moves. You're paying for that knowledge.\n\n📊 Hits EM 46% — no better than a coin flip\n💰 Options: EXPENSIVE — IV running hot vs typical Q4 levels\n\nFundamentals:\n- PE: 13.37 https://t.co/ET2lbSaEFB"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2113084410337620383",
+   "date": "2026-10-22",
+   "text": "⚡ $BILL dips 3.8% after 2.4x volume spike—smart money stirring or a shakeout in disguise?\n\n- my bias is cautiously bullish here despite the violent -3.8% flush and 2.4x volume anomaly — this looks like a classic post-parabolic shakeout and potential smart money stop hunt, not https://t.co/JmwFIQEHPw"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2113222026760421474",
+   "date": "2026-10-22",
+   "text": "🟢 $MITO pumps 6.9% on 19.9x volume—strong action but is smart money really behind this?\n\n- my bias here is cautiously bullish on MITO #MITOUSDT 1h after this explosive +6.9% pump with massive 19.9x volume — this is classic high-impact, high-participation activity often linked to https://t.co/JkuJGOu6tC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 56,
+   "user": "bensimpsonau",
+   "url": "https://x.com/bensimpsonau/status/2113231485729968423",
+   "date": "2026-10-22",
+   "text": "I can't stress this enough.\n\nIf you're holding an altcoin, you need an exit strategy for it. Even if you're holding popular ones like HYPE, PUMP, SOL or ZEC. Even if you're convinced it'll be 5x it's price in 5 years (most likely won't).\n\nBecause what most investors don't https://t.co/Jr8kVUjx2l"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "itsmattyyyyyyyy",
+   "url": "https://x.com/itsmattyyyyyyyy/status/2113307268355633325",
+   "date": "2026-10-22",
+   "text": "Claudia is single handily the most bullish coin I’ve had in my coin journey. Currently Sitting at a  2.5M MC it’s super undervalued IMO. Billion dollar Claudia✨💅 https://t.co/4dggeWqmkp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ChartTheThesis",
+   "url": "https://x.com/ChartTheThesis/status/2113319580223340980",
+   "date": "2026-10-22",
+   "text": "$MRNA is a true coin flip into tomorrow: 250 if they release all the data, 120 if they don't. The downside gap dwarfs the upside, so the asymmetry is the whole story here. Which way does the data read break? https://t.co/m1YtlbKaZV"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2113356170643615977",
+   "date": "2026-10-22",
+   "text": "⬇️ $SKUU drops 3.1% in 15m on 3.9x volume—selling pressure confirms bearish lower structure.\n\n- my bias remains bearish here: the 1h, daily, and BTC structure are all firmly bearish, with the most recent swing confirming lower highs and lower lows 📉\n- the sharp -3.1% 15min dump https://t.co/SKWshiD53H"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "krlosimc94",
+   "url": "https://x.com/krlosimc94/status/2113290043943244277",
+   "date": "2026-10-22",
+   "text": "Small tip if you want to use bots: pick a volatile coin you like, check the higher timeframe to see if it’s bullish or bearish, then set up a bot accordingly and let it buy and sell automatically.\n\nethereum:0x232ce3bd40fcd6f80f3d55a522d03f25df784ee2 https://t.co/7JrBJulU5U"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "RTRockeTeller",
+   "url": "https://x.com/RTRockeTeller/status/2113215097527214164",
+   "date": "2026-10-22",
+   "text": "Gold Looks Bearish, Until You See Who’s Buying 289 Tonnes\n\nGold fell, and the obvious trade was to run for the exits. Except some of the biggest buyers did exactly the opposite. In Q2 2026, gold ETFs flipped from buying 62 tonnes to selling 45 tonnes. Retail bar and coin demand https://t.co/p7c8QO9VI7"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2113262675241074785",
+   "date": "2026-10-22",
+   "text": "🔻 AXTI volume surges 4.2x but selling pressure drags price down 2.5%—is this distribution or capitulation?\n\n- my bias is bearish here: the 1h, daily, and bitcoin trends are all aligned to the downside, and the structure is locked in with lower highs/lows; the recent 4.2x volume https://t.co/KbxYBn3gta"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 28,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2113348572833824911",
+   "date": "2026-10-22",
+   "text": "#GoogleCloud added #OpenAI's #GPT-6 Astra, GPT-6.1 Sol, and GPT-6 Luna to its model catalog in private preview. Enterprise clients can now deploy OpenAI models with #Google Cloud's security tools under unified billing, with data strictly excluded from base model training. https://t.co/HBXALyYZQa"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 26,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2113350195719098742",
+   "date": "2026-10-22",
+   "text": "The #US and #Israel are considering new #strikes on #Iran immediately following the US midterm elections, according to the NYT. Israeli PM #Netanyahu planned a fresh bombing campaign earlier this month, but Trump opposed resuming active strikes until after the votes are cast. https://t.co/tFDSi97Pea"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 28,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2113347414186709173",
+   "date": "2026-10-22",
+   "text": "#Claude integrated an official #Etherscan connector, enabling users to check wallet balances, audit smart contracts, and track gas fees across 60+ chains directly in chat using natural language. The feature is built into Claude's connector catalog with no API key or account https://t.co/bVQc2T71ia"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 29,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2113346127890174366",
+   "date": "2026-10-22",
+   "text": "#Visa is reportedly in talks to acquire #crypto infrastructure provider #Fireblocks for around $2.5B. Fireblocks supplies banks, exchanges, and financial institutions with secure custody and transfer tech, making the potential deal a major play for Visa's digital asset stack. https://t.co/IbblLLqJ17"
+  }
+ ]
+}
