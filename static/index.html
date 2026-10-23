@@ -96,7 +96,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <button id="sgo">Render</button><button id="sreload" title="Re-read sentiment.json from the server">Reload data</button><button id="sdl">Download PNG</button>
 </div>
 <div id="ctl">
-<label>Tickers (comma)<input id="tickers" value="NBIS,CRWV" size="22"></label>
+<label>Tickers (comma)<input id="tickers" size="22"></label>
 <label>Display names (comma, optional)<input id="names" size="22"></label>
 <label>Range<select id="range"><option>1D</option><option>5D</option><option selected>YTD</option><option>1M</option><option>6M</option><option>1Y</option><option>5Y</option><option>Max</option><option>Custom</option></select></label>
 <label>Start<input id="start" type="date"></label><label>End<input id="end" type="date"></label>
@@ -196,12 +196,30 @@ async function smaSeries(sym,p,list){
   return list.map(x=>{const a=x.w?smaWeekly(pts,x.n):smaArr(vals,x.n);
     return{key:x.key,data:pts.map((q,i)=>[q[0],a[i]]).filter((q,i)=>q[0]>=p.vis&&q[1]!=null)}})}
 let last=null,RSEQ=0;
-async function render(){
-  const st=$('status'), my=++RSEQ; st.className=''; st.textContent='Loading…';
+// No tickers yet: empty axes, no series, no fetch. Not an error and not a spinner.
+function blankPrice(){
+  const now=Date.now();
+  let min=now-180*DAY*1000, max=now;
   try{
-    const syms=$('tickers').value.split(',').map(s=>s.trim().toUpperCase()).filter(Boolean);
+    const p=rangeParams();
+    if(p.p1>0)min=p.p1*1000;
+    if(p.p2)max=p.p2*1000;
+    if(!(max>min))min=max-DAY*1000;
+  }catch(e){}
+  const o=base($('title').value,'\u00a0');
+  o.xAxis={type:'time',min,max,axisLabel:{...axLabel,hideOverlap:true},axisLine:{lineStyle:{color:T.axis}},splitLine:{show:false}};
+  o.yAxis={type:'value',min:0,max:1,axisLabel:{show:false},axisTick:{show:false},splitLine:split};
+  o.series=[{type:'line',data:[],silent:true,showSymbol:false}];
+  o.graphic.push({type:'text',left:'center',top:'middle',silent:true,style:{text:'Enter tickers, then Render',fill:T.src,fontSize:22,font:'22px Inter, Arial, sans-serif'}});
+  chart.clear();chart.setOption(o,true);last=null;
+}
+async function render(){
+  const st=$('status'), my=++RSEQ;
+  const syms=$('tickers').value.split(',').map(s=>s.trim().toUpperCase()).filter(Boolean);
+  if(!syms.length){st.className='';st.textContent='Enter tickers, then Render.';blankPrice();syncPriceUi();return}
+  st.className=''; st.textContent='Loading…';
+  try{
     const names=$('names').value.split(',').map(s=>s.trim());
-    if(!syms.length)throw Error('Enter at least one ticker');
     const type=$('type').value, p=rangeParams();
     if(type==='ratio'&&syms.length!==2)throw Error('Ratio needs exactly two tickers: A,B');
     if(type==='candle'&&syms.length!==1)throw Error('Candles + volume needs one ticker. The option is off while several symbols are selected.');
@@ -1083,6 +1101,12 @@ window.__vapply=vapply;window.__snap=snap;
       else if(ev.key==='Escape'){ev.preventDefault();hide()}
       else if(ev.key==='Enter'){hide()}},true)}
 })();
-applyTheme();annDraw();vload();
+// Deep link only: ?tickers=AAPL,MSFT (optional &names=). Absent params leave the empty default.
+function applyPriceQuery(){
+  let q;try{q=new URLSearchParams(location.search)}catch(e){return}
+  if(q.has('tickers'))$('tickers').value=q.get('tickers')||'';
+  if(q.has('names'))$('names').value=q.get('names')||'';
+}
+applyTheme();annDraw();vload();applyPriceQuery();
 window.__render=render; window.__frender=frender; window.__setMode=setMode; render();
 </script></body></html>
