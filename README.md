@@ -5,7 +5,7 @@ Start: `cd /workspace/chartmaker && nohup python3 server.py 18790 > server.log 2
 (Port 8790 is held by the box's egress tunnel, so the app runs on 18790.)
 
 Use: tickers (comma-separated, e.g. `NBIS,CRWV,BTC-USD`), optional display names, range (1D/5D intraday, YTD, 1M, 6M, 1Y, 5Y, Max, Custom),
-type (price line, % change indexed to start, bar ranking of % return, ratio A/B with exactly two tickers), title, color, watermark toggle.
+type (price line, % change indexed to start, candles + volume for one ticker, bar ranking of % return, ratio A/B with exactly two tickers), title, color, watermark toggle.
 "Download PNG" exports 1600x900 at 2x (3200x1800). Status bar shows "data as of" (ET); fetch failures show an error and render nothing.
 
 Notes: YTD baseline = last close of prior year. 5Y uses weekly bars, Max monthly. Ratio aligns A to the latest B bar at or before each date.
@@ -34,6 +34,29 @@ Env vars: `APP_PASSWORD` (if set, every route incl. /api requires login; login p
 instead of views.json; use Export/Import as backup), `PORT` (overrides CLI port; binds 0.0.0.0).
 Session cookie: `cm_session`, signed HMAC-SHA256, HttpOnly, Secure, SameSite=Lax, 30 days. Login throttling: after 5 failures per IP, lockout 30s doubling up to 15 min.
 With no APP_PASSWORD (local PC) behavior is unchanged. Render: `render.yaml` Blueprint (free plan, `python server.py`).
+
+## Annotations, candles, Sheets library
+
+### Event markers (Prices)
+Tick **Annotations** on the row under the price controls. Markers are dashed lines on the shared time axis, so a multi-ticker chart gets one timeline (earnings belong to the **first** ticker). Bar-ranking charts ignore them. Labels are short pills inside the plot so they stay on the 1600×900 PNG; the optional note shows on hover, not on the image.
+
+- **Earnings** — `/api/earnings` reads Yahoo `quoteSummary` (crumb, no API key): the last 4 reported quarters plus the next date. Yahoo's chart `events=earn` feed no longer returns a history. Older dates are custom markers. Crypto and some listings come back empty; the status line says so and the price chart still draws.
+- **Halvings** — four historical Bitcoin halvings: 2012-11-28, 2016-07-09, 2020-05-11, 2024-04-20 UTC (block 840,000). No estimated future date.
+- **Custom** — date, short label (24 characters), optional note. Stored on the Prices saved view as `ann` (same views store as everything else) and in this browser until another Prices view is loaded.
+
+### Candles + volume (Prices)
+Type **Candles + volume**. One ticker only; the option is disabled while several symbols are in the box. `/api/chart` now also returns `bars`: `[time_ms, open, high, low, close, volume]` from the same Yahoo request as the closes (`points` is unchanged). Works for 1D/5D intraday and the daily/weekly/monthly ranges. Volume sits in a pane under the candles; green is close ≥ open, red is down, on both the candle and its volume bar. Download PNG is the same 1600×900 canvas, both panes. Other types are unchanged.
+
+### Sheets library
+The **Sheets** tab, next to Charts of the day, reads `static/sheets/catalog.json`. Render never calls Google. Search by workbook, tab name, or chart title, then **Open in Sheets**. A PNG is shown only when that tab is also in today's Charts of the day. The full Drive PNG library is not in this repo.
+
+Refresh on a machine that can read the workbooks (not on Render):
+
+1. Save each spreadsheet's metadata JSON (`spreadsheets.get` / the Sheets `get_spreadsheet` response: sheetId, title, chart titles).
+2. `python3 scripts/sheets_catalog.py bot1.json bot2.json bot3.json`
+3. Commit `static/sheets/catalog.json`.
+
+Workbooks: Bot experiments `1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY`, bot experiments 2 `1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ`, My Bot's Sheets `1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU`. All three dumps are required unless you pass `--allow-partial`.
 
 ## Sentiment tab
 
