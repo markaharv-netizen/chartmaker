@@ -1,106 +1,106 @@
 {
- "date": "2026-10-22",
- "theme": "Tesla's capex cut and record energy margin meet Meta's first cash burn in years, while bitcoin sits right on the ETF and treasury-company cost basis near $80K.",
+ "date": "2026-10-23",
+ "theme": "Tesla and SpaceX open merger talks as AI credit risk hits new highs, chips sell off, and bitcoin treasury buying slows.",
  "items": [
   {
    "sheet": "bot experiments 2",
-   "tab": "13 BTC cost basis by holder",
-   "title": "Bitcoin cost basis by holder",
-   "image": "cotd/2026-10-22/01.png",
-   "picked": "Glassnode data trending on X today says bitcoin is testing the spot ETF cost basis near $81K, and that treasury companies are back above their roughly $80K cost basis but aren't buying. This chart tracks those same average-cost lines.",
-   "matters": "When the price sits right on the average cost of the biggest holder groups, it decides whether they are in profit or underwater. That shapes ETF flows and how easily treasury companies can raise money to buy more.",
-   "know": "As of Oct 14 the sheet has iShares IBIT's average cost at $81,126, treasury companies at $80,382, all public companies at $78,881, all US spot ETFs at $76,645 and Strategy at $75,444, with BTC at $81,562. Glassnode's ~$81K ETF figure lines up with the IBIT line, not the sheet's lower all-ETF line, so methods differ. The weekly data is about a week old; BTC traded near $82K this morning after touching $84.8K on Oct 21.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1078237833"
+   "tab": "61 AI borrower CDS",
+   "title": "Cost to insure AI borrowers' debt (5-year CDS)",
+   "image": "cotd/2026-10-23/01.png",
+   "picked": "A Bloomberg-sourced chart going viral on X says Oracle's 5-year CDS just topped 300bps, SpaceX passed 200bps and Meta hit a record 119bps as AI spending commitments pile up. This tab ranks those same names.",
+   "matters": "CDS is what the market charges to insure a company's debt against default, so rising spreads mean lenders see the AI build-out as riskier. It also puts SpaceX in the same credit conversation as Oracle and the hyperscalers.",
+   "know": "The sheet's levels are older snapshots quoted on X: Oracle 261bps (Oct 9), SpaceX 197bps (Oct 7), Broadcom 136bps (Oct 9), Meta 95bps, Nvidia 89bps, Amazon 73bps, Alphabet 72bps and Microsoft 52bps (Sep 28), against the IG index at 55bps. Today's quotes are higher, so treat the chart as the ranking, not the current level, and note CDS data is paywalled and dates differ.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1913607487"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "107 SpaceX vs Tesla mkt cap",
+   "title": "SpaceX vs Tesla market value since the IPO",
+   "image": "cotd/2026-10-23/02.png",
+   "picked": "Tesla and SpaceX both confirmed their boards formed special committees to look at deepening ties, including a possible combination, and Reuters says SpaceX approached Tesla about a merger. This chart shows how the two companies compare in size.",
+   "matters": "In any deal, relative value sets who buys whom and the exchange ratio. The chart shows SpaceX has been worth more than Tesla every day since its IPO.",
+   "know": "On Oct 20 the sheet has SpaceX at about $1,948B and Tesla at about $1,476B, a ratio of 1.32x, down from 1.51x on Oct 5 and back near its 1.32x on IPO day (Jun 12). The data stops Oct 20, so it misses Thursday's selloff when SPCX fell about 9%.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=970167937"
+  },
+  {
+   "sheet": "My Bot's Sheets",
+   "tab": "SPCX and TSLA Correlation",
+   "title": "30-day rolling correlation, TSLA vs SPCX",
+   "image": "cotd/2026-10-23/03.png",
+   "picked": "With merger talk front and center, traders are treating SPCX and TSLA as a pair trade. This chart shows how tightly the two stocks have moved together.",
+   "matters": "If the stocks already move as one, a combination changes less for holders, and a high correlation means owning both gives less diversification than people think.",
+   "know": "The 30-day correlation was 0.58 on Oct 20 and 0.62 on Oct 19, up from roughly 0.05 to 0.09 in late July. Data ends Oct 20, before the merger headlines and Thursday's split move (TSLA about -3%, SPCX about -9%), which will pull the number down.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1491835473"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "101 SPCX drawdown & vol",
+   "title": "SpaceX after the IPO: drawdown and volatility vs Tesla",
+   "image": "cotd/2026-10-23/04.png",
+   "picked": "Barchart's post that SPCX just had its third-worst day since listing is trending, with the stock down about 9% on Thursday. This chart tracks how far SPCX sits below its record close and how volatile it is next to Tesla.",
+   "matters": "It shows the post-IPO ride has been rough even before the merger news, which matters for anyone sizing a position in either name.",
+   "know": "On Oct 20 SPCX was 30.1% below its record close, with 10-day realized volatility of 33.8% vs Tesla's 30.8%. Drawdown peaked at about 31% in late September and SPCX vol hit 67.6% on Oct 15. Data ends Oct 20, so Thursday's drop isn't in it yet.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1314300784"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "2 MSTR BTC buys & sales",
-   "title": "Strategy's weekly bitcoin buys vs sales",
-   "image": "cotd/2026-10-22/02.png",
-   "picked": "Treasury companies are back in profit but barely buying, and Strategy is the clearest example. Its Oct 19 filing showed only 267 BTC bought for $22.1M, while it spent $193.1M buying back STRC preferred stock and raised its buyback authorization to $3B.",
-   "matters": "Strategy's weekly buying has been one of bitcoin's steadiest sources of demand. Small buys alongside much larger preferred buybacks show where its cash is going right now.",
-   "know": "The ledger runs through the Oct 12 filing (250 BTC at $86,194) and doesn't include the Oct 19 purchase yet. The chart counts 6,948 BTC sold since Jan 2025, nearly all in four weekly sales between Jun 30 and Aug 10, 2026, before buying resumed with 4,603 BTC on Aug 31. Holdings were 848,250 BTC after Oct 12; the Oct 19 filing put them at 848,517.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=560255331"
+   "tab": "26 Tesla FSD subscriptions",
+   "title": "Tesla's active FSD subscriptions",
+   "image": "cotd/2026-10-23/05.png",
+   "picked": "Sawyer Merritt's post that Tesla is adding a record 2,800 FSD subscribers a day, about $1.1B a year, is one of the biggest Tesla posts on X right now. This chart shows the reported subscriber count by quarter.",
+   "matters": "FSD is the software revenue that bulls point to for robotaxi, and steady growth here supports the autonomy story in Tesla's valuation, including in any SpaceX deal talk.",
+   "know": "Per Tesla's quarterly updates, active FSD subscriptions went from 0.95M in Q2 2025 to 1.74M in Q3 2026, up 67% in a year, with Q3 adding 0.26M. The count includes upfront purchases and monthly subs but excludes free trials, and the 2,800-a-day figure comes from the X post, not this sheet.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1936535169"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "04 BTC vs 200-week MA",
-   "title": "Bitcoin vs its 200-week moving average",
-   "image": "cotd/2026-10-22/03.png",
-   "picked": "Michael Saylor said this week that the next bull market has started, pointing to bitcoin's roughly $20,000 rebound from its 200-week moving average. This chart shows that line.",
-   "matters": "The 200-week average has marked the bottom zone in past cycles, so how far the price sits above it is a common gauge of cycle risk and of how much room there is to fall.",
-   "know": "In the latest weekly row (week of Oct 16), BTC was $81,475 against a 200-week average of $66,710, a ratio of 1.22x, up from 1.19x in mid-September. The chart uses a log scale, and the data ends before this week's move to $84.8K and back to about $82K.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1810821762"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "305 Tesla free cash flow",
-   "title": "Tesla free cash flow, trailing four quarters",
-   "image": "cotd/2026-10-22/04.png",
-   "picked": "Tesla reported Q3 last night with free cash flow of $1.53B, far above the roughly -$4.9B analysts expected, because capex came in at $4.7B instead of about $8B. It also cut 2026 capex guidance to about $20B from more than $25B, and the stock was down about 5% premarket.",
-   "matters": "Free cash flow is what funds robotaxi, Optimus, AI compute and Terafab without raising money, and it matters more if a merger with capital-hungry SpaceX goes ahead. Musk said spending will become more meaningful next year and reach the tens of billions in 2028.",
-   "know": "The chart already includes Q3: trailing-four-quarter free cash flow was $3.30B at Sep 30, 2026, down from $7.0B in March, as trailing capex rose to $15.4B while operating cash flow held near $18.7B. The peak was $8.9B in Sep 2022.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=441584127"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "306 Tesla auto vs energy margin",
-   "title": "Tesla gross margin: automotive vs energy",
-   "image": "cotd/2026-10-22/05.png",
-   "picked": "Energy was a standout in Tesla's Q3: 13.7 GWh deployed, its highest-ever order rate and backlog, and the CFO described extreme demand from data centers. Energy gross margin jumped to 33.1% from 20.4% in Q2.",
-   "matters": "Energy storage earns much higher margins than cars and is tied directly to the AI data center buildout. That gives Tesla an AI-linked business that is already profitable today.",
-   "know": "The chart includes Q3: energy gross margin was 33.1% versus 18.0% for automotive. Tesla said part of the jump came from tariff refunds and warranty true-downs, so not all of it repeats. The energy margin swings a lot from quarter to quarter (39.5% in Q1 2026, 20.4% in Q2).",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1522447490"
+   "tab": "230 Hyperscaler capex by co",
+   "title": "Quarterly capex of Amazon, Alphabet, Microsoft, Meta and Oracle",
+   "image": "cotd/2026-10-23/06.png",
+   "picked": "Meta fell about 7% after its earnings and posts on X are focused on its roughly $250B 2027 capex plan and first cash outflow in years. This chart shows how fast big tech capex has climbed.",
+   "matters": "Capex at this pace is what's driving the AI credit-risk worries and the debt raises, so it ties together today's CDS, Meta and neocloud stories.",
+   "know": "In the June 2026 quarter, Amazon spent $54.2B, Alphabet $44.9B, Microsoft $35.8B, Meta $30.1B and Oracle $16.5B, versus $32.2B, $22.5B, $17.1B, $16.5B and $9.1B a year earlier. The sheet stops at June 2026, so it doesn't include the September quarters now being reported.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1983689450"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "25 Cybercab registrations",
-   "title": "Cybercabs on the Texas robotaxi registry",
-   "image": "cotd/2026-10-22/06.png",
-   "picked": "On last night's call Musk said the Cybercab fleet in Austin has grown by a factor of 10, and Tesla said cumulative unsupervised Robotaxi miles grew eightfold in Q3 to nearly 2 million.",
-   "matters": "State registrations are the earliest public sign of how fast Tesla is putting Cybercabs on the road, ahead of its own fleet numbers.",
-   "know": "The Texas DMV registry count went from 45 on Aug 31 to 319 on Oct 8, 2026. The data is two weeks old, and registered vehicles are not the same as vehicles actively giving rides.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1601417155"
+   "tab": "87 Neocloud debt vs market cap",
+   "title": "Neocloud debt as % of market cap",
+   "image": "cotd/2026-10-23/07.png",
+   "picked": "Nebius signed a $3.5B Citi credit facility for data centers and GPUs, yet its stock fell about 8.5%, and AI financing is the theme of the day. This chart compares how much debt each neocloud carries relative to its equity value.",
+   "matters": "When debt approaches or exceeds market value, a stock drop makes leverage look worse fast and new funding gets pricier.",
+   "know": "Using Oct 21 prices, Cipher's debt was 150% of its market cap, CoreWeave 116%, Applied Digital 101%, TeraWulf 82%, IREN 72% and Nebius 27% ($13.5B of debt on a $49.4B market cap). The Citi facility is undrawn and excluded, operating leases are excluded, and this is equity value, not enterprise value.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=185222515"
   },
   {
-   "sheet": "Bot experiments",
-   "tab": "100 SPCX vs TSLA & Nasdaq",
-   "title": "SpaceX since its IPO vs Tesla and the Nasdaq-100",
-   "image": "cotd/2026-10-22/07.png",
-   "picked": "The two Musk stocks split after earnings. SpaceX was up 9.8% on Oct 21 after its first profitable quarter as a public company and Musk's merger comments, while Tesla was down about 5% premarket today after its capex cut.",
-   "matters": "If the boards' special committees pursue a merger, the exchange ratio would depend on how the two stocks trade against each other, so the gap between them is now closely watched.",
-   "know": "Through Oct 20 the sheet has SPCX at 109.5 (9.5% above its $135 IPO price), Tesla at 93.6 and the Nasdaq-100 at 100.2, all indexed to Jun 11, 2026. SPCX peaked at 156.6 on Jun 16. The image ends in mid-October, and neither it nor the data includes the post-earnings moves.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1421725187"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "325 Meta quarterly FCF",
-   "title": "Meta: operating cash flow, capex and free cash flow",
-   "image": "cotd/2026-10-22/08.png",
-   "picked": "Meta reported Q3 last night: revenue rose 26% to $64.6B, but capex of $34.9B topped operating cash flow of $32.8B, so free cash flow was negative $2.1B. That would be the first negative quarter on this chart, which goes back to 2019.",
-   "matters": "Meta is now the clearest case of AI spending using up all of a megacap's cash flow, which is the core worry behind the AI trade.",
-   "know": "The sheet stops at Q2 2026 (Jun 30), when free cash flow was $1.75B on $31.9B of operating cash flow and $30.1B of capex; Q3 isn't in yet. The sheet computes FCF as operating cash flow minus capex, which can differ slightly from Meta's own figure because Meta also subtracts finance-lease principal payments.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1692929819"
+   "sheet": "My Bot's Sheets",
+   "tab": "MSTR Volume",
+   "title": "MSTR 30-day average daily trading volume",
+   "image": "cotd/2026-10-23/08.png",
+   "picked": "BTCTreasuries' post that MSTR passed IBM in trading volume to become the 31st most-traded US stock is making the rounds. This chart shows MSTR's dollar volume trend.",
+   "matters": "Heavy trading volume is what lets Strategy sell stock and preferreds through its ATM programs without crushing the price, so liquidity is part of the bitcoin-buying engine.",
+   "know": "The 30-day average was about $3.26B a day as of Oct 16, with $4.35B traded that day, far below the spike shown around late 2024. The sheet ends Oct 16, and the IBM ranking comes from the X post, not this tab.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1187650332"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "77 Neocloud debt vs cash",
-   "title": "Neocloud debt vs cash",
-   "image": "cotd/2026-10-22/09.png",
-   "picked": "Nvidia's Jensen Huang told CNBC today that demand for neoclouds is 'off the charts' but capital is scarce. CoreWeave was at the center of last week's AI-stock selloff over concerns about its finances.",
-   "matters": "Neoclouds borrow heavily to buy GPUs, so higher borrowing costs and pickier lenders hit them first. This chart shows which ones have the thinnest cushion.",
-   "know": "CoreWeave carries $35.6B of debt against $5.5B of cash and Cipher $5.4B against $0.8B, while Nebius is nearly matched at $8.5B against $8.0B. Most balance sheets are as of Jun 30, 2026 (Applied Digital Aug 31, TeraWulf Mar 31), and CoreWeave's large lease liabilities aren't included.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1479637352"
+   "tab": "16 Strategy vs other corp BTC",
+   "title": "Strategy vs all other public companies' bitcoin",
+   "image": "cotd/2026-10-23/09.png",
+   "picked": "Posts on X are claiming a Tesla-SpaceX combination would create a top corporate bitcoin holder, while Cointelegraph reports treasury companies are barely buying. This chart puts Strategy's pile next to everyone else's.",
+   "matters": "It shows how concentrated corporate bitcoin is, so any new big holder, or Strategy slowing down, changes the picture.",
+   "know": "As of Oct 14 the sheet has Strategy at 848,250 BTC and all other public companies at 455,468, so Strategy holds about 65% of the 1.30M total. Strategy added only about 2,250 BTC since Q2 while others added about 16,000. The Tesla and SpaceX bitcoin figures in the X posts aren't in this tab, and the universe is CoinGecko's list.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=757276361"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "154 Semis vs S&P 500",
-   "title": "Chip stocks vs the S&P 500",
-   "image": "cotd/2026-10-22/10.png",
-   "picked": "Chip stocks bounced on Oct 21 after Super Micro raised its revenue forecast, but Reuters noted the Philadelphia semiconductor index had just fallen eight sessions in a row, its longest losing streak in 18 years.",
-   "matters": "Semis have led the AI bull market, so their strength against the S&P 500 is a quick read on whether the AI trade is cracking or just resetting.",
-   "know": "On monthly data, the SOXX-to-SPY ratio hit a record 327.8 in June 2026 and was 246.5 in the October row, with SOXX 23% below its high. October is a partial month, and the image was exported Oct 19.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=2061031585"
+   "tab": "155 Software vs semis",
+   "title": "Software vs semiconductors",
+   "image": "cotd/2026-10-23/10.png",
+   "picked": "The Nasdaq had its worst day since June and the SOX chip index dropped about 6.7% as the AI trade cracked. This chart tracks software stocks against chip stocks.",
+   "matters": "Chips led the whole AI rally, so when semis fall harder than software the ratio swings back, which is a quick read on whether the market is rotating out of AI hardware.",
+   "know": "Weekly data with Dec 2 2022 set to 100: on Oct 16 the software-to-semis ratio was 48.1, up from 41.9 on Oct 2, as SOXX fell from 476.7 to 399.3 while IGV was 192.0. The sheet ends Oct 16, so this week's chip selloff isn't in it yet.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=358971003"
   }
  ]
 }
