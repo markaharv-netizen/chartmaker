@@ -1,6 +1,7 @@
 {
  "generated": "2026-10-23T15:23:32Z",
- "note": "Offline snapshot. Render does not call Google. Regenerate with scripts/sheets_catalog.py. A PNG is shown in the app only when the tab is also in today's Charts of the day.",
+ "note": "Offline snapshot. Render does not call Google. Regenerate tabs with scripts/sheets_catalog.py. Search previews are optional compressed thumbnails under static/sheets/thumbs/, built by scripts/sheets_thumbs.py from a local folder of chart PNGs. The Sheets tab shows a thumbnail only while the search box has a query. Full-resolution chart PNGs stay on Drive and are not committed.",
+ "thumbsGenerated": "2026-10-23T17:04:29Z",
  "books": [
   {
    "id": "bot1",
@@ -828,7 +829,8 @@
    "gid": 1314300784,
    "charts": [
     "SpaceX after the IPO: drawdown from peak and 10-day volatility vs Tesla"
-   ]
+   ],
+   "thumb": "sheets/thumbs/bot1/1314300784.jpg"
   },
   {
    "book": "bot1",
@@ -876,7 +878,8 @@
    "gid": 970167937,
    "charts": [
     "Musk's two giants: SpaceX vs Tesla market value since the IPO"
-   ]
+   ],
+   "thumb": "sheets/thumbs/bot1/970167937.jpg"
   },
   {
    "book": "bot1",
@@ -1260,7 +1263,8 @@
    "gid": 358971003,
    "charts": [
     "Does AI eat software? Software (IGV) vs chips (SOXX) since ChatGPT"
-   ]
+   ],
+   "thumb": "sheets/thumbs/bot1/358971003.jpg"
   },
   {
    "book": "bot1",
@@ -1860,7 +1864,8 @@
    "gid": 1983689450,
    "charts": [
     "The AI build-out: quarterly capex of Amazon, Alphabet, Microsoft, Meta and Oracle"
-   ]
+   ],
+   "thumb": "sheets/thumbs/bot1/1983689450.jpg"
   },
   {
    "book": "bot1",
@@ -2871,7 +2876,8 @@
    "gid": 757276361,
    "charts": [
     "Strategy owns 65% of all bitcoin held by public companies: 848,000 of 1.30M BTC (Oct 7 2026)"
-   ]
+   ],
+   "thumb": "sheets/thumbs/bot2/757276361.jpg"
   },
   {
    "book": "bot2",
@@ -2945,7 +2951,8 @@
    "gid": 1936535169,
    "charts": [
     "Tesla's active FSD subscriptions: 1.74M, up 67% in a year (Q3 2026)"
-   ]
+   ],
+   "thumb": "sheets/thumbs/bot2/1936535169.jpg"
   },
   {
    "book": "bot2",
@@ -3197,7 +3204,8 @@
    "gid": 1913607487,
    "charts": [
     "Cost to insure AI borrowers' debt: 5-year CDS (bps), late Sep–Oct 9 2026"
-   ]
+   ],
+   "thumb": "sheets/thumbs/bot2/1913607487.jpg"
   },
   {
    "book": "bot2",
@@ -3399,7 +3407,8 @@
    "gid": 185222515,
    "charts": [
     "Neocloud debt as % of market cap"
-   ]
+   ],
+   "thumb": "sheets/thumbs/bot2/185222515.jpg"
   },
   {
    "book": "bot2",
@@ -3752,7 +3761,8 @@
    "charts": [
     "MSTR 30-Day Average Daily Trading Volume (billions)",
     "STRC/MSTR volume"
-   ]
+   ],
+   "thumb": "sheets/thumbs/bot3/1187650332.jpg"
   },
   {
    "book": "bot3",
@@ -3864,7 +3874,8 @@
    "gid": 1491835473,
    "charts": [
     "30-Day rolling Correlation: TSLA vs SPCX"
-   ]
+   ],
+   "thumb": "sheets/thumbs/bot3/1491835473.jpg"
   },
   {
    "book": "bot3",

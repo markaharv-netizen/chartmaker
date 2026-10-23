@@ -48,15 +48,24 @@ Tick **Annotations** on the row under the price controls. Markers are dashed lin
 Type **Candles + volume**. One ticker only; the option is disabled while several symbols are in the box. `/api/chart` now also returns `bars`: `[time_ms, open, high, low, close, volume]` from the same Yahoo request as the closes (`points` is unchanged). Works for 1D/5D intraday and the daily/weekly/monthly ranges. Volume sits in a pane under the candles; green is close ≥ open, red is down, on both the candle and its volume bar. Download PNG is the same 1600×900 canvas, both panes. Other types are unchanged.
 
 ### Sheets library
-The **Sheets** tab, next to Charts of the day, reads `static/sheets/catalog.json`. Render never calls Google. Search by workbook, tab name, or chart title, then **Open in Sheets**. A PNG is shown only when that tab is also in today's Charts of the day. The full Drive PNG library is not in this repo.
+The **Sheets** tab, next to Charts of the day, reads `static/sheets/catalog.json`. Render never calls Google. Search by workbook, tab name, or chart title, then **Open in Sheets**.
+
+With the search box empty, the list is text only. After you type a search, a result shows a chart preview when that tab has a thumbnail. Tabs without one still appear, and a missing file does not leave a broken image. Thumbnails are small JPEGs in `static/sheets/thumbs/`. The full-resolution PNG library stays on Drive and is not committed.
 
 Refresh on a machine that can read the workbooks (not on Render):
 
 1. Save each spreadsheet's metadata JSON (`spreadsheets.get` / the Sheets `get_spreadsheet` response: sheetId, title, chart titles).
-2. `python3 scripts/sheets_catalog.py bot1.json bot2.json bot3.json`
-3. Commit `static/sheets/catalog.json`.
+2. `python3 scripts/sheets_catalog.py bot1.json bot2.json bot3.json`  
+   This rewrites the tab list and **keeps** a thumbnail already recorded for a book and gid when that JPEG is still on disk.
+3. Point `scripts/sheets_thumbs.py` at a local folder of the weekly chart export (not at Render). The export names files after the tab, with the number sometimes zero-padded and a date on the end (`090 TSLA gross margin vs price 2026-10-21.png`). Duplicate names: the script keeps the newest date, then the newest file time.
+   `python3 scripts/sheets_thumbs.py --from-dir /path/to/exported-pngs`
+4. Commit `static/sheets/catalog.json` and `static/sheets/thumbs/`. Do not commit the source PNGs.
 
-Workbooks: Bot experiments `1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY`, bot experiments 2 `1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ`, My Bot's Sheets `1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU`. All three dumps are required unless you pass `--allow-partial`.
+Until that export is on the machine, seed only the tabs that overlap today's Charts of the day:
+
+`python3 scripts/sheets_thumbs.py --from-cotd`
+
+Workbooks: Bot experiments `1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY`, bot experiments 2 `1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ`, My Bot's Sheets `1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU`. All three dumps are required unless you pass `--allow-partial`. The weekly PNG folders are the same ones Charts of the day uses: `1SwZgYGwwHsoL_DXQUuQAYS6lhq5KxFe9`, `1mMUKaB_RbeZhtn5ntuKJV5xZOeo6LzGH`, `1AVfHRo2mJgBhbJoszHhe5vgOscfKhbzT`.
 
 ## Sentiment tab
 

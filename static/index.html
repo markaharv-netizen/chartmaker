@@ -21,7 +21,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #sheets .row{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start}
 #sheets .row .meta{flex:1;min-width:0}#sheets .book{font-size:11px;letter-spacing:.4px;text-transform:uppercase;color:#6B7280}
 #sheets .row h3{margin:2px 0 4px;font-size:16px}#sheets .charts{font-size:13px;color:#374151;line-height:1.4}
-#sheets .row a.open{color:#2563eb;font-size:13px;white-space:nowrap}#sheets .row img{width:240px;max-width:42%;border:1px solid #f0f0f0;cursor:zoom-in}
+#sheets .row a.open{color:#2563eb;font-size:13px;white-space:nowrap}#sheets .row img{width:240px;max-width:42%;height:auto;border:1px solid #f0f0f0;border-radius:4px;background:#fff;cursor:zoom-in}
 #status{padding:4px 12px;font-size:13px}#status.err{color:#EF4444;font-weight:bold}
 </style></head><body>
 <div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mVal">Valuation</button><button id="mWatch">Watchlist</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
@@ -536,31 +536,32 @@ async function cotdenter(){const el=$('cotd'),E=t=>String(t??'').replace(/[&<>"]
 <div class="sec"><b>Why it was picked today</b>${E(x.picked)}</div><div class="sec"><b>Why it matters</b>${E(x.matters)}</div><div class="sec"><b>What you should know</b>${E(x.know)}</div></div>`).join('');
   }catch(e){el.innerHTML='<p style="color:#EF4444">Could not load today\'s charts ('+E(e.message)+').</p>'}}
 // ---------- Sheets library: static/sheets/catalog.json (scripts/sheets_catalog.py). No live Google call. ----------
-let SHEETS=null,COTD=null;
+// Thumbnails are optional catalog fields (static/sheets/thumbs/...). Shown only while the search box has a query.
+let SHEETS=null;
+function sheetThumb(t){const p=String(t&&t.thumb||'');return /^sheets\/thumbs\/[A-Za-z0-9][A-Za-z0-9_-]{0,24}\/\d+\.jpg$/.test(p)?p:''}
 async function sheetsEnter(){const el=$('sheets'),E=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   el.innerHTML='<p>Loading…</p>';
   try{
     if(!SHEETS){const r=await fetch('sheets/catalog.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);SHEETS=await r.json()}
-    try{if(!COTD){const r=await fetch('cotd/today.json?t='+Date.now(),{cache:'no-store'});if(r.ok)COTD=await r.json()}}catch(e){}
     if(MODE!=='sheets')return;
     const books=SHEETS.books||[],tabs=SHEETS.tabs||[];
     const bookBy=Object.fromEntries(books.map(b=>[b.id,b]));
-    const img={};(COTD&&COTD.items||[]).forEach(x=>{img[(x.sheet||'').trim().toLowerCase()+'|'+(x.tab||'').trim().toLowerCase()]=x.image});
     const when=SHEETS.generated?new Date(SHEETS.generated).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'';
-    el.innerHTML=`<h2>Sheets library</h2><p class="theme">Search ${tabs.length} tabs across ${books.map(b=>E(b.name)).join(', ')}. Opens the Google Sheet. A PNG shows up only when that tab is also in today’s Charts of the day — the full image library is not stored here.${when?' Catalog '+E(when)+'.':''}</p>
-<div class="bar"><input id="shq" size="28" placeholder="Search tabs or chart titles" autocomplete="off">
+    el.innerHTML=`<h2>Sheets library</h2><p class="theme">Search ${tabs.length} tabs across ${books.map(b=>E(b.name)).join(', ')}. Opens the Google Sheet. Type a search to see a chart preview beside each result that has one. The full list stays text-only, and a tab with no thumbnail is still listed.${when?' Catalog '+E(when)+'.':''}</p>
+<div class="bar"><input id="shq" type="search" size="28" placeholder="Search tabs or chart titles" autocomplete="off">
 <select id="shbook"><option value="">All workbooks</option>${books.map(b=>`<option value="${E(b.id)}">${E(b.name)}</option>`).join('')}</select>
 <label style="display:flex;flex-direction:row;align-items:center;gap:4px;font-size:13px"><input id="shcharts" type="checkbox"> Has a chart</label></div>
 <p class="count" id="shcount"></p><div id="shlist"></div>`;
     const draw=()=>{const q=($('shq').value||'').trim().toLowerCase(),book=$('shbook').value,need=$('shcharts').checked;
       const rows=tabs.filter(t=>{if(book&&t.book!==book)return false;if(need&&!(t.charts||[]).length)return false;
         if(!q)return true;const blob=(t.tab+' '+(t.charts||[]).join(' ')+' '+(bookBy[t.book]||{}).name).toLowerCase();return blob.includes(q)});
-      $('shcount').textContent=rows.length+' tab'+(rows.length===1?'':'s');
+      const withThumb=q?rows.filter(t=>sheetThumb(t)).length:0;
+      $('shcount').textContent=rows.length+' tab'+(rows.length===1?'':'s')+(q?(withThumb?` · ${withThumb} with a preview`:' · no previews'):'');
       $('shlist').innerHTML=rows.map(t=>{const b=bookBy[t.book]||{},url=`https://docs.google.com/spreadsheets/d/${encodeURIComponent(b.spreadsheetId||'')}/edit#gid=${t.gid}`;
-        const im=img[(b.name||'').trim().toLowerCase()+'|'+(t.tab||'').trim().toLowerCase()];
+        const im=q?sheetThumb(t):'';
         const safeUrl=/^https:\/\/docs\.google\.com\/spreadsheets\/d\/[A-Za-z0-9_-]+\/edit#gid=\d+$/.test(url)?url:'';
-        return `<div class="row"><div class="meta"><div class="book">${E(b.name)}</div><h3>${E(t.tab)}</h3>${(t.charts||[]).length?`<div class="charts">${(t.charts||[]).map(E).join(' · ')}</div>`:''}${safeUrl?`<div style="margin-top:6px"><a class="open" href="${E(safeUrl)}" target="_blank" rel="noopener">Open in Sheets</a></div>`:''}</div>${im?`<a href="${E(im)}" target="_blank" rel="noopener"><img src="${E(im)}" alt=""></a>`:''}</div>`}).join('')||'<p>No tabs match.</p>'};
-    $('shq').addEventListener('input',draw);$('shbook').onchange=$('shcharts').onchange=draw;draw();
+        return `<div class="row"><div class="meta"><div class="book">${E(b.name)}</div><h3>${E(t.tab)}</h3>${(t.charts||[]).length?`<div class="charts">${(t.charts||[]).map(E).join(' · ')}</div>`:''}${safeUrl?`<div style="margin-top:6px"><a class="open" href="${E(safeUrl)}" target="_blank" rel="noopener">Open in Sheets</a></div>`:''}</div>${im?`<a href="${E(im)}" target="_blank" rel="noopener"><img src="${E(im)}" alt="${E(t.tab)}" loading="lazy" onerror="var a=this.closest('a');if(a)a.remove()"></a>`:''}</div>`}).join('')||'<p>No tabs match.</p>'};
+    $('shq').addEventListener('input',draw);$('shq').addEventListener('search',draw);$('shbook').onchange=$('shcharts').onchange=draw;draw();
   }catch(e){el.innerHTML='<p style="color:#EF4444">Could not load the Sheets catalog ('+E(e.message)+').</p>'}}
 const MUNIT={eps_diluted:'eps',shares:'sh',gross_margin:'%',operating_margin:'%',net_margin:'%'};
 function fmtFin(v,u,cur){if(v==null||isNaN(v))return '';const a=Math.abs(v),sg=v<0?'-':'';
