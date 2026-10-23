@@ -537,8 +537,10 @@ async function cotdenter(){const el=$('cotd'),E=t=>String(t??'').replace(/[&<>"]
   }catch(e){el.innerHTML='<p style="color:#EF4444">Could not load today\'s charts ('+E(e.message)+').</p>'}}
 // ---------- Sheets library: static/sheets/catalog.json (scripts/sheets_catalog.py). No live Google call. ----------
 // Thumbnails are optional catalog fields (static/sheets/thumbs/...). Shown only while the search box has a query.
+// View PNG and Download PNG use that same JPEG. Full-resolution chart PNGs stay on Drive.
 let SHEETS=null;
 function sheetThumb(t){const p=String(t&&t.thumb||'');return /^sheets\/thumbs\/[A-Za-z0-9][A-Za-z0-9_-]{0,24}\/\d+\.jpg$/.test(p)?p:''}
+function sheetFile(tab){const n=String(tab||'').replace(/[^\w]+/g,'_').replace(/^_+|_+$/g,'');return (n||'chart')+'.jpg'}
 async function sheetsEnter(){const el=$('sheets'),E=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   el.innerHTML='<p>Loading…</p>';
   try{
@@ -560,7 +562,9 @@ async function sheetsEnter(){const el=$('sheets'),E=t=>String(t??'').replace(/[&
       $('shlist').innerHTML=rows.map(t=>{const b=bookBy[t.book]||{},url=`https://docs.google.com/spreadsheets/d/${encodeURIComponent(b.spreadsheetId||'')}/edit#gid=${t.gid}`;
         const im=q?sheetThumb(t):'';
         const safeUrl=/^https:\/\/docs\.google\.com\/spreadsheets\/d\/[A-Za-z0-9_-]+\/edit#gid=\d+$/.test(url)?url:'';
-        return `<div class="row"><div class="meta"><div class="book">${E(b.name)}</div><h3>${E(t.tab)}</h3>${(t.charts||[]).length?`<div class="charts">${(t.charts||[]).map(E).join(' · ')}</div>`:''}${safeUrl?`<div style="margin-top:6px"><a class="open" href="${E(safeUrl)}" target="_blank" rel="noopener">Open in Sheets</a></div>`:''}</div>${im?`<a href="${E(im)}" target="_blank" rel="noopener"><img src="${E(im)}" alt="${E(t.tab)}" loading="lazy" onerror="var a=this.closest('a');if(a)a.remove()"></a>`:''}</div>`}).join('')||'<p>No tabs match.</p>'};
+        const open=safeUrl?`<a class="open" href="${E(safeUrl)}" target="_blank" rel="noopener">Open in Sheets</a>`:'';
+        const png=im?`<span data-png>${open?' · ':''}<a class="open" href="${E(im)}" target="_blank" rel="noopener">View PNG</a> · <a class="open" href="${E(im)}" download="${E(sheetFile(t.tab))}">Download PNG</a></span>`:'';
+        return `<div class="row"><div class="meta"><div class="book">${E(b.name)}</div><h3>${E(t.tab)}</h3>${(t.charts||[]).length?`<div class="charts">${(t.charts||[]).map(E).join(' · ')}</div>`:''}${open||png?`<div style="margin-top:6px">${open}${png}</div>`:''}</div>${im?`<a href="${E(im)}" target="_blank" rel="noopener"><img src="${E(im)}" alt="${E(t.tab)}" loading="lazy" onerror="var row=this.closest('.row');var a=this.closest('a');if(a)a.remove();var x=row&&row.querySelector('[data-png]');if(x)x.remove()"></a>`:''}</div>`}).join('')||'<p>No tabs match.</p>'};
     $('shq').addEventListener('input',draw);$('shq').addEventListener('search',draw);$('shbook').onchange=$('shcharts').onchange=draw;draw();
   }catch(e){el.innerHTML='<p style="color:#EF4444">Could not load the Sheets catalog ('+E(e.message)+').</p>'}}
 const MUNIT={eps_diluted:'eps',shares:'sh',gross_margin:'%',operating_margin:'%',net_margin:'%'};
