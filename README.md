@@ -138,3 +138,33 @@ overlapping rolling-7-day point per day (`src: "x-rolling7"`, plotted at its end
 so they move smoothly; don't read day-to-day wiggles as new information. The weekly points are left as they are (never
 recomputed from daily files). σ "own" compares the newest point with all earlier points (weekly + daily).
 If a search errors or returns nothing, skip that ticker for the day (no point is better than an invented one) and note it in the commit message.
+
+## BTC Top 100
+
+Tab **BTC Top 100** (the Treasury tab is unchanged: it still reads hand-edited `treasury.json` for mNAV / amplification / BTC per share on MSTR, ASST, Metaplanet and Smarter Web). This tab is the ranked corporate-holdings board: top ~100 public companies, columns Rank, Company, Ticker, Country, Change, BTC Holdings, As-of Date, Source, Source Link, Notes. The chart is the top 10/15/20/25 as horizontal bars. Download PNG is the 1600×900 chart with the as-of range and the primary-source footnote. Download CSV is the full table.
+
+The page only reads the committed snapshot `btctop100.json` (`GET /api/btctop100`). It does not hit a filings site on page load. Once a day is enough.
+
+**Daily refresh**
+
+```
+python3 tools/refresh_btctop100.py            # rewrite btctop100.json
+python3 tools/refresh_btctop100.py --dry-run  # print, don't write
+python3 tools/refresh_btctop100.py --fresh    # ignore the 12h document cache
+```
+
+Commit `btctop100.json` when the file changes. No API keys. SEC requests use the same contact User-Agent as the financials tab. `bitcointreasuries.net` is not contacted.
+
+**What the job rewrites** from a primary document, and only when the parsed as-of is newer than the snapshot and the new total is within 0.5×–2× of the current figure (otherwise it flags and leaves the row):
+
+- SEC 8-K / 6-K / 10-Q / 10-K text: Strategy (MSTR), Strive (ASST), MARA, Tesla, Riot, CleanSpark, Twenty One (XXI), Trump Media (DJT), Block (XYZ), SpaceX (SPCX), American Bitcoin (ABTC), Coinbase (investment BTC only).
+- Metaplanet (3350.T): the latest English TSE timely-disclosure PDF linked from metaplanet.jp (TDnet / xj-storage).
+
+**What stays curated** (seeded 2026-10-23 from the "BTCTC Top 100" tab of the My Bot's Sheets spreadsheet):
+
+- The other ~87 names. Their citations are the sheet's filing / RNS / DART / SEDAR+ / HKEX / press-release notes.
+- Hut 8 is review-only. Its 10-Q consolidates American Bitcoin (17,316). The snapshot keeps Hut ex-ABTC (9,314) so the two rows are not double-counted.
+- Bullish is review-only. The snapshot is the treasury-only figure (18,200), not total BTC including inventory, receivables and ETFs (23,800). The earnings slides are not an SEC total the parser will overwrite.
+- CleanSpark's September operational update (13,530 as of 2026-09-30, company IR) is newer than the 10-Q (12,205 as of 2026-06-30), so the job keeps the press-release figure.
+
+A same-day disagreement, an ambiguous filing (two different totals), or a jump outside 0.5×–2× is recorded on the row as `check` and is not applied. Change stays blank until a refresh actually moves the BTC count.

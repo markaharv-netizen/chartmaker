@@ -10,12 +10,19 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #mode button{background:#e5e7eb;color:#111;margin-right:4px}#mode button.on{background:#111;color:#fff}
 #ftable{margin:0 16px 30px;border-collapse:collapse;font-size:15px;background:#fff}#ftable td,#ftable th{border:1px solid #e5e7eb;padding:4px 10px;text-align:right}#ftable th:first-child,#ftable td:first-child{text-align:left}
 #fnote{margin:0 16px 8px;font-size:14px;color:#374151}
+#ftable.top100{font-size:13px;max-width:1568px;width:calc(100% - 32px)}
+#ftable.top100 th{background:#111;color:#fff;font-weight:600}
+#ftable.top100 td.l,#ftable.top100 th.l{text-align:left}
+#ftable.top100 td.note,#ftable.top100 td.src{max-width:320px;text-align:left;font-size:12px;color:#374151;white-space:normal}
+#ftable.top100 a{color:#2563eb}
+#ftable.top100 tr:nth-child(even){background:#fafafa}
+#ftable.top100 .up{color:#15803d;font-weight:600}#ftable.top100 .dn{color:#b91c1c;font-weight:600}
 #cotd{display:none;padding:16px 16px 40px;max-width:1240px}#cotd h2{margin:0 0 4px;font-size:22px}#cotd .theme{color:#374151;margin:0 0 18px;font-size:15px}
 #cotd .card{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:14px;margin-bottom:18px}#cotd .card img{width:100%;max-width:1200px;display:block;cursor:zoom-in;border:1px solid #f0f0f0}
 #cotd .card h3{margin:0 0 8px;font-size:17px}#cotd .src{font-size:12px;color:#6B7280;margin:6px 0 10px}#cotd .src a{color:#2563eb}#cotd .sec{margin:6px 0;font-size:14px;line-height:1.45}#cotd .sec b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:#6B7280}
 #status{padding:4px 12px;font-size:13px}#status.err{color:#EF4444;font-weight:bold}
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mVal">Valuation</button><button id="mWatch">Watchlist</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mTop">BTC Top 100</button><button id="mVal">Valuation</button><button id="mWatch">Watchlist</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -55,6 +62,13 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Bar color<select id="tcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="twm" type="checkbox" checked></label>
 <button id="tgo">Render</button><button id="trefresh" title="Fresh quotes">Refresh</button><button id="tdl">Download PNG</button>
+</div>
+<div id="bctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
+<label>Chart shows<select id="b100n"><option value="10">Top 10</option><option value="15" selected>Top 15</option><option value="20">Top 20</option><option value="25">Top 25</option></select></label>
+<label>Title<input id="b100title" size="36" placeholder="Corporate Bitcoin Treasury Holdings"></label>
+<label>Bar color<select id="b100color"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
+<label><span>Watermark</span><input id="b100wm" type="checkbox" checked></label>
+<button id="b100go">Render</button><button id="b100reload" title="Re-read btctop100.json. Numbers change when the daily job runs, not on each page load.">Reload snapshot</button><button id="b100dl">Download PNG</button><button id="b100csv">Download CSV</button>
 </div>
 <div id="vctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
 <label>View<select id="vview"><option value="snap">Snapshot</option><option value="time">Over time</option></select></label>
@@ -127,7 +141,7 @@ function bc(c){return T.dark&&BRIGHT[c]?BRIGHT[c]:c}
 function applyTheme(){T=THEMES[$('theme').value]||THEMES.white;axLabel={fontSize:16,color:T.text};split={lineStyle:{color:T.grid}};
   $('chart').style.background=T.bg;$('tprev').style.background=T.bg;$('tprev').style.color=T.title;
   $('tprev').innerHTML=`Aa <b style="color:${bc('#F7931A')}">■</b><b style="color:${bc('#8B5CF6')}">■</b><b style="color:${bc('#22C55E')}">■</b><b style="color:${bc('#EF4444')}">■</b>`}
-function rerender(){return MODE==='cotd'?null:MODE==='sent'?sdraw():MODE==='watch'?wdraw():MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
+function rerender(){return MODE==='cotd'?null:MODE==='top'?(blast?bdraw():toprender()):MODE==='sent'?sdraw():MODE==='watch'?wdraw():MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
 
 function rangeParams(){
   const r=$('range').value, now=Math.floor(Date.now()/1000), d=new Date();
@@ -364,11 +378,17 @@ $('go').onclick=render;
 
 // ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------
 let MODE='prices', flast=null;
-function setMode(m){MODE=m;wtipHide();$('mCotd').classList.toggle('on',m==='cotd');$('cotd').style.display=m==='cotd'?'block':'none';$('wrap').style.display=m==='cotd'?'none':'';$('vbar').style.display=m==='cotd'?'none':'flex';if(typeof vlist==='function')try{vlist()}catch(e){}$('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';$('mSent').classList.toggle('on',m==='sent');$('sctl').style.display=m==='sent'?'flex':'none';
+function setMode(m){MODE=m;wtipHide();
+  const on=(id,yes)=>{const e=$(id);if(e)e.classList.toggle('on',yes)};
+  on('mCotd',m==='cotd');on('mVal',m==='val');on('mTre',m==='tre');on('mTop',m==='top');on('mPrices',m==='prices');on('mFin',m==='fin');on('mHeat',m==='heat');on('mWatch',m==='watch');on('mSent',m==='sent');
+  $('cotd').style.display=m==='cotd'?'block':'none';$('wrap').style.display=m==='cotd'?'none':'';$('vbar').style.display=m==='cotd'?'none':'flex';
+  if(typeof vlist==='function')try{vlist()}catch(e){}
+  $('vctl').style.display=m==='val'?'flex':'none';$('tctl').style.display=m==='tre'?'flex':'none';$('bctl').style.display=m==='top'?'flex':'none';
+  $('wctl').style.display=m==='watch'?'flex':'none';$('sctl').style.display=m==='sent'?'flex':'none';
   $('ctl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
-  $('ftable').innerHTML='';$('fnote').textContent='';chart.clear();$('status').textContent='';
-  if(m==='prices')render();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
-$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');
+  $('ftable').className='';$('ftable').innerHTML='';$('fnote').textContent='';chart.clear();$('status').textContent='';
+  if(m==='prices')render();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='top')toprender();else if(m==='heat')hrender();else frender()}
+$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mTop').onclick=()=>setMode('top');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');
 // ---------- Charts of the day: static/cotd/today.json (refreshed daily by Flash via scripts/cotd_build.py) ----------
 async function cotdenter(){const el=$('cotd'),E=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   el.innerHTML='<p>Loading…</p>';
@@ -549,6 +569,48 @@ function tdraw(){const j=tlast,M=TMET[$('tmetric').value],col=$('tcolor').value;
 $('tgo').onclick=trender;$('tmetric').onchange=()=>tlast&&tdraw();$('tcolor').onchange=()=>tlast&&tdraw();
 $('trefresh').onclick=async()=>{TFRESH=true;try{await trender()}finally{TFRESH=false}};
 $('tdl').onclick=()=>{if(!tlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('ttitle').value||'treasury').replace(/[^\w]+/g,'_')+'.png';a.click()};
+// ---------- BTC Top 100: committed btctop100.json (daily filing refresh). Not the four-name Treasury tab. ----------
+let blast=null;
+function bfmt(n){if(n==null||n==='')return '';const x=+n;return Math.abs(x-Math.round(x))<1e-6?Math.round(x).toLocaleString('en-US'):x.toLocaleString('en-US',{maximumFractionDigits:2})}
+function bname(r){let nm=(r.company||r.ticker).replace(/,?\s+(Inc\.?|Corp\.?|Ltd\.?|PLC|S\.A\.|AG)$/i,'').trim();if(nm.length>28)nm=nm.slice(0,26)+'…';return nm+' ('+r.ticker+')'}
+async function toprender(){const st=$('status');st.className='';st.textContent='Loading snapshot…';
+  try{const r=await fetch('/api/btctop100',{cache:'no-store'});const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);blast=j;bdraw()}
+  catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();blast=null;$('ftable').innerHTML='';$('fnote').textContent=''}}
+function bdraw(){const j=blast;if(!j)return;const n=+($('b100n').value||15),rows=j.companies.slice(0,n),col=$('b100color').value;
+  const o=base($('b100title').value||j.title||'Corporate Bitcoin Treasury Holdings','','b100wm');
+  o.grid={left:300,right:120,top:118,bottom:86};
+  o.xAxis={type:'value',...headroom(rows.map(r=>+r.btc),0.2),axisLabel:{...axLabel,formatter:v=>v>=1000?(v/1000).toLocaleString('en-US')+'k':String(v)},splitLine:split};
+  o.yAxis={type:'category',inverse:true,data:rows.map(bname),axisTick:{show:false},axisLine:{lineStyle:{color:T.axis}},
+    axisLabel:{...axLabel,fontSize:n>18?13:15,fontWeight:'bold',color:T.title,width:270,overflow:'truncate',interval:0}};
+  o.series=[{type:'bar',barMaxWidth:26,data:rows.map(r=>({value:+r.btc,itemStyle:{color:bc(col)}})),
+    label:{show:true,position:'right',fontSize:n>18?12:14,fontWeight:'bold',color:T.title,formatter:q=>bfmt(q.value)}}];
+  const asofs=rows.map(r=>r.asof).filter(Boolean).sort(),snap=String(j.refreshed_at||j.seeded_on||'').slice(0,10);
+  o.graphic[0].style.text='Primary filings (SEC 8-K/10-Q/6-K, TSE/TDnet, RNS, company IR) · not bitcointreasuries.net · snapshot '+snap;
+  o.graphic[0].bottom=30;o.graphic[0].style.fontSize=15;
+  o.graphic.push({type:'text',left:60,bottom:8,style:{text:`Top ${rows.length} of ${j.count} public companies · as-of ${asofs[0]||''} to ${asofs[asofs.length-1]||''} on this chart (each company has its own date) · ${bfmt(j.btc_total)} BTC across all ${j.count}`,fontSize:14,fill:T.src}});
+  o.tooltip={trigger:'item',confine:true,backgroundColor:T.dark?'rgba(23,26,32,0.95)':'rgba(255,255,255,0.97)',borderColor:T.axis,textStyle:{color:T.text,fontSize:14},
+    formatter:q=>{const r=rows[q.dataIndex];return `<b style="color:${T.title}">${r.company}</b> (${r.ticker})<br>${bfmt(r.btc)} BTC · as of ${r.asof}<br>${r.source_label||''}`}};
+  chart.setOption(o,true);last={opt:o,asOf:Date.now()/1000};btable(j);
+  const s=j.refresh_summary||{};
+  $('status').className='';$('status').textContent=`${j.count} companies · ${bfmt(j.btc_total)} BTC · snapshot ${snap}`+(s.confirmed?` · ${s.confirmed.length} matched a filing`:'')+(s.updated&&s.updated.length?` · ${s.updated.length} updated`:'')+(s.seeded_count!=null?` · ${s.seeded_count} still the curated seed`:'' )}
+function btable(j){const esc=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const link=r=>{const lab=esc(r.source_label||'link');return r.source_url&&/^https:\/\//.test(r.source_url)?`<a href="${esc(r.source_url)}" target="_blank" rel="noopener">${lab}</a>`:lab};
+  const chg=n=>{if(n==null||n==='')return '—';const x=+n;if(!x)return '0';return `<span class="${x>0?'up':'dn'}">${x>0?'+':'−'}${bfmt(Math.abs(x))}</span>`};
+  const cols=[['Rank',''],['Company','l'],['Ticker','l'],['Country',''],['Change',''],['BTC Holdings',''],['As-of Date',''],['Source','src'],['Source Link','l'],['Notes','note']];
+  $('ftable').className='top100';
+  $('ftable').innerHTML='<tr>'+cols.map(([t,c])=>`<th class="${c}">${t}</th>`).join('')+'</tr>'+j.companies.map(r=>`<tr><td>${r.rank}</td><td class="l">${esc(r.company)}</td><td class="l">${esc(r.ticker)}</td><td>${esc(r.country)}</td><td>${chg(r.change)}</td><td>${bfmt(r.btc)}</td><td>${esc(r.asof)}</td><td class="src">${esc(r.source)}</td><td class="l">${link(r)}</td><td class="note">${esc(r.notes||'')}</td></tr>`).join('');
+  const s=j.refresh_summary||{},snap=String(j.refreshed_at||'').slice(0,10);
+  $('fnote').textContent=`Seeded ${j.seeded_on||''} from the BTCTC Top 100 sheet. Daily refresh ${snap||'has not run'}: ${(s.confirmed||[]).length} names matched a primary filing, ${(s.updated||[]).length} updated, ${s.seeded_count??'—'} left on the curated citation. Hut 8 and Bullish stay hand-curated (the filing total is a different definition).`;
+}
+$('b100go').onclick=()=>blast?bdraw():toprender();
+$('b100n').onchange=$('b100color').onchange=()=>blast&&bdraw();
+$('b100title').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();blast?bdraw():toprender()}});
+$('b100wm').onchange=()=>blast&&bdraw();
+$('b100reload').onclick=()=>{blast=null;toprender()};
+$('b100dl').onclick=()=>{if(!blast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('b100title').value||'corporate_bitcoin_treasury_holdings').replace(/[^\w]+/g,'_')+'.png';a.click()};
+$('b100csv').onclick=()=>{if(!blast)return;const cols=['rank','company','ticker','country','change','btc','asof','source','source_label','source_url','notes','check'];
+  const q=v=>{const s=v==null?'':String(v);return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s};
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([[cols.join(',')].concat(blast.companies.map(r=>cols.map(k=>q(r[k])).join(','))).join('\n')],{type:'text/csv'}));a.download='btc_top100.csv';a.click()};
 // ---------- Valuation mode: /api/valuation (Yahoo quoteSummary, 6h disk cache; stale / SEC-derived fallback) ----------
 let vlast=null,VFRESH=false;
 const vfmt=(m,v)=>m==='mcap'?(v>=1e12?'$'+(v/1e12).toFixed(2)+'T':v>=1e9?'$'+(v/1e9).toFixed(1)+'B':'$'+(v/1e6).toFixed(0)+'M'):m==='dy'?(v*100).toFixed(2)+'%':v.toFixed(v>=100?0:v>=10?1:2)+(m==='peg'?'':'x');
@@ -799,15 +861,15 @@ $('shgran').onchange=()=>{hpick();sdraw()};
 $('sreload').addEventListener('click',()=>{if($('sview').value==='time'&&!HBUSY){HDATA=null;stime()}});
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
+const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','b100n','b100title','b100color','b100wm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();return o}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
 // Saved views are per tab: each view carries .mode and only shows/saves/loads in that tab.
-const VMODES=['prices','fin','heat','tre','val','watch','sent'];
+const VMODES=['prices','fin','heat','tre','top','val','watch','sent'];
 const vmode=x=>VMODES.includes(x&&x.mode)?x.mode:'prices';
 // Fields each tab owns; applying a view only touches its own tab's fields (+ theme), so other tabs are left alone.
-const VOWN={sent:/^(sview|shist|sprice|stickers|stitle|swm)$/,watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase)$/};
+const VOWN={sent:/^(sview|shist|sprice|stickers|stitle|swm)$/,watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$|op$)/,top:/^b100/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase)$/};
 // Session-only memory of each tab's selected view: a page load/refresh always starts every tab at "— pick a view —".
 const VLASTM={};try{localStorage.removeItem(VLAST)}catch(e){}
 function vremember(name){if(name)VLASTM[MODE]=name;else delete VLASTM[MODE]}

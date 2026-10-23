@@ -1,5 +1,5 @@
 """Chartmaker backend: stdlib-only proxy for Yahoo Finance chart API + static frontend."""
-import urllib.error, fin, heat, watch, treasury, valuation, valhist, json, os, sys, time, hmac, hashlib, secrets, threading, html, urllib.request, urllib.parse
+import urllib.error, fin, heat, watch, treasury, valuation, valhist, btctop100, json, os, sys, time, hmac, hashlib, secrets, threading, html, urllib.request, urllib.parse
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
 PORT = int(os.environ.get("PORT", sys.argv[1] if len(sys.argv) > 1 else 8791))
@@ -244,6 +244,12 @@ class H(SimpleHTTPRequestHandler):
             if not b: return s.send_json({"error": "no logo"}, 404)
             s.send_response(200); s.send_header("Content-Type", "image/webp" if b[:4] == b"RIFF" else "image/jpeg" if b[:2] == b"\xff\xd8" else "image/png"); s.send_header("Cache-Control", "public, max-age=604800")
             s.send_header("Content-Length", len(b)); s.end_headers(); s.wfile.write(b); return
+        if u.path == "/api/btctop100":
+            try: body = json.dumps(btctop100.load()).encode()
+            except FileNotFoundError: return s.send_json({"error": "btctop100.json not found"}, 404)
+            except Exception as e: return s.send_json({"error": str(e)}, 500)
+            s.send_response(200); s.send_header("Content-Type", "application/json"); s.send_header("Cache-Control", "no-store")
+            s.send_header("Content-Length", len(body)); s.end_headers(); s.wfile.write(body); return
         if u.path in ("/api/sentiment", "/api/sentiment_history"):
             fn = "sentiment.json" if u.path == "/api/sentiment" else "sentiment_history.json"
             try:
