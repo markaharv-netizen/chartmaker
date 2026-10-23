@@ -1,0 +1,219 @@
+{
+ "symbol": "MSFT",
+ "start": "2026-09-01T00:00:00Z",
+ "end": "2026-09-02T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "MSFT (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2094916772709146686",
+   "date": "2026-09-01",
+   "text": "EOD Tape | Indexes + Mag7 | Tuesday, September 1st, 2026\n\nIndexes\n\n$SPY\n761.73 -5.32 (-0.69%) H/L 764.67 / 759.51\nOpened another bear gap and sold toward the island bottom, which is open to 757.67 with the full bull gap fill at 757.67. Bounced just above the open bear gap inside"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Tickeron",
+   "url": "https://x.com/Tickeron/status/2094752487643259088",
+   "date": "2026-09-01",
+   "text": "What Does Wall Street Expect From This Stock? Ask TickeronAI.\n\nA stock may be trading at $100 today.\nBut the more interesting question for a trader may be:\nWhere is it expected to go next?\n\nThat’s one of the ideas behind Tickeron Ask AI — helping retail traders quickly understand"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "nims213",
+   "url": "https://x.com/nims213/status/2094727745393590510",
+   "date": "2026-09-01",
+   "text": "IREN (IREN) Swaps Bitcoin Rigs For Microsoft’s (MSFT) GPU Contracts https://t.co/a7ZoiAKkVD \n\nIREN (NASDAQ:IREN) spent years mining Bitcoin. On August 27, the company told investors that the chapter is closing for good. Fourth-quarter AI cloud revenue more than doubled to $70.5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2094605765780672542",
+   "date": "2026-09-01",
+   "text": "EOD Tape | Indexes + Mag7 | Monday, August 31st, 2026\n\nIndexes\n$SPY\n767.05 -2.30 (-0.30%) H/L 767.99 / 764.72\nBear gap open and last week’s bull gap filled. Back below 767.25 on low volume with not much action.\n\n$QQQ\n716.76 +0.33 (+0.05%) H/L 717.58 / 713.16\nBounced off the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2094663086393201082",
+   "date": "2026-09-01",
+   "text": "Macro Observatory Week 36 Tuesday Briefing\n\nMonday's telemetry confirms the primary dynamic outlined in our Sunday Omnibus: the great attrition takes control as 25 tickers map to Macro Bleed while the mega-cap tech leadership layer slips into exhaustion.\n\nWhile mainstream"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "NTradezOptions1",
+   "url": "https://x.com/NTradezOptions1/status/2094635710682726867",
+   "date": "2026-09-01",
+   "text": "Watchlist for 9/1/26\n$PLTR  Upside\n$TSLA  upside\n$MU  upside\nsolana:CWr8CzC1gCz7KhDMSUAjathCoSyVE7MxauNT75Bimoon  downside\n$MSFT side watch if above pdh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Pynvestment",
+   "url": "https://x.com/Pynvestment/status/2094772860547944897",
+   "date": "2026-09-01",
+   "text": "🚨Scan Golden Cross (50vs200)\n \nBullish (days, change)\nMSFT (1, 0.0%)\nAXP (18, -3.6%)\nMA (18, +3.5%)\nWFC (21, -1.2%)\nBRK/A (33, -1.1%)\n\nBearish (days, change)\nPG (11, +0.3%)\nCOST (29, -1.1%)\nWMT (39, -4.2%)\nPEP (71, -0.3%)\nMCD (116, -4.4%)"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2094844124918607936",
+   "date": "2026-09-01",
+   "text": "$1.6M OF PUTS HIT AAPL TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - SNDK, AMAT, COP, APA, SYF\nPUTS BOUGHT (bearish bets) - AAPL, DELL, AMZN, MU, MSFT\n\nSize is conviction. It is not intent. https://t.co/CRYzQRCPlx"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 9,
+   "user": "FishtownCap",
+   "url": "https://x.com/FishtownCap/status/2094906048695914957",
+   "date": "2026-09-01",
+   "text": "$MSFT $GOOG $AMZN \n\nThis seems bearish if\n\n1. You don’t know what it represents \n2. Your negative confirmation bias needs feeding\n\nThis alone says little. To be useful you need\n\n1. Blended token price (the index)\n2. Token volume or GPU-hours\n3. Realized cloud AI revenue / https://t.co/knFns6e93C https://t.co/1Xa1nbxFrz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Source_options",
+   "url": "https://x.com/Source_options/status/2094831607958192231",
+   "date": "2026-09-01",
+   "text": "Legendary day.\n\nsolana:J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr We’re looking for 7620, then 7600. That could happen later today or early tomorrow. Keep an eye on 7627 for the move.\n\n$SNDK We took 145% on the position with the team. Now we wait for the next move. I’m watching"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "KevinJagiah",
+   "url": "https://x.com/KevinJagiah/status/2094614669004591359",
+   "date": "2026-09-01",
+   "text": "👑 TUESDAY'S KING NODES ARE LIVE\n\nMonday gave us:\n\n🔥 $TSLA 350 reclaim → 368.92\n🔥 $MU → 959.97\n🟢 $NVDA reclaimed 220\n\nTomorrow we reset.\n\nThe new paid trading plan maps all 12 names:\n\n$SPY $QQQ $TSLA $NVDA $AAPL $AMZN $MU $META $SPCX $MSFT $AMD $PLTR\n\n🧱 Walls\n\n🧲 Magnets"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2094878615288566193",
+   "date": "2026-09-01",
+   "text": "Someone just paid $128M to bet the biggest names in tech and energy go nowhere. That's the whole tape today.\n\nTAPE READ — SEP 1\n\nThe headline print today wasn't a directional bet. Someone sold 6,720 SLB Sep-18 $42 calls for $10.4M at 14:50 ET — deep in the money, 17 days to https://t.co/81AejsHdnC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2094788832923140106",
+   "date": "2026-09-01",
+   "text": "🐳 $MSFT rips to $502 on custom-silicon hype. The biggest option print today isn't chasing — it's renting the rally.\n\nTHE TRADE\n\nAt 09:57 ET, someone sold 2,500 MSFT October 16 $485 puts and pocketed $2.43M in premium. The stock was trading at $502. In plain English: this seller https://t.co/m3NuHlmSjn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "AlphaFeedX",
+   "url": "https://x.com/AlphaFeedX/status/2094767077793878513",
+   "date": "2026-09-01",
+   "text": "🔴 The Day Microsoft and OpenAI Both Went Dark\n\nKey Takeaways:\nThis wasn-t just a glitch, it was a stress test for the future of enterprise AI.\n🚨 OpenAI-s ChatGPT Work suffered elevated errors and latency for ~3 hours, with over 1,100 users reporting issues on Downdetector.\n💻 https://t.co/OQwDXVaTiG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FZD19990831",
+   "url": "https://x.com/FZD19990831/status/2094619928053825859",
+   "date": "2026-09-01",
+   "text": "$NVDA $SNDK Drawing on the views of HERMAN (a former GS wealth management professional whom I follow on Twitter), and with which I personally concur: in essence, AI is not a bubble—we are currently in the equivalent of **1998**. If at some point in 2027 a CSP can demonstrate to"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "ryanTesling",
+   "url": "https://x.com/ryanTesling/status/2094708146132369651",
+   "date": "2026-09-01",
+   "text": "Gavin, always a pleasure to hear your thoughts. What stood out to me:\n\nAI demand accelerated through July and August, while the market increasingly trades the risk that the capex cycle is already peaking.\n\nThe market is increasingly worried about bubbles and overbuilding, while https://t.co/8uLFxUhnUO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "janscharts",
+   "url": "https://x.com/janscharts/status/2094909583684727051",
+   "date": "2026-09-01",
+   "text": "$MSFT Stage 2 advance intact on weekly bull engulfing. Daily prints bear harami (momentum stall) after sharp rally to ~510. Key supports 474 then 429; confirm w/ volume &amp; follow-through ahead of earnings. https://t.co/zRPuEN58Pj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AlphaFeedX",
+   "url": "https://x.com/AlphaFeedX/status/2094609869005340803",
+   "date": "2026-09-01",
+   "text": "🚨 The $1B Ad Engine in 200 Days: OpenAI Just Became a Media Titan\n\nThis isn’t just a revenue beat. It’s a signal that OpenAI’s business model is shifting faster than anyone expected ,  and the IPO clock is ticking.\n\nKey Takeaways:\n🤖 OpenAI’s ad business hit $1 billion https://t.co/XvziPU2akQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "salutemekhalil",
+   "url": "https://x.com/salutemekhalil/status/2094891157528674722",
+   "date": "2026-09-01",
+   "text": "Stocks are getting hit, but the story is bigger than today’s red candles. 👀\n\nThe market is dealing with a tough combination:\n\n🔥 Geopolitical risk\n⛽ Rising oil prices\n📈 Higher Treasury yields\n🏦 Fed rate uncertainty\nToday:\n$SPY sellers stepped in.\n$QQQ felt pressure.\n\nTech https://t.co/SgbNnULdJ5"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 49,
+   "user": "fitz_keith",
+   "url": "https://x.com/fitz_keith/status/2094805574969958814",
+   "date": "2026-09-01",
+   "text": "$MSFT is still ~9% off its October 2025 highs.\n\nSkeptics have spent months blathering that the company has run its course, that it’s overvalued, that the AI CapEx will never pay off.\n\nMeanwhile it just locked in another sovereign AI deal with HUMAIN — bundling Copilot with local"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "KB2019_19",
+   "url": "https://x.com/KB2019_19/status/2094836589398757648",
+   "date": "2026-09-01",
+   "text": "Bank Of America says $MSFT is a buy but $CRM has 40% downside risk from current price.\n\nBofA raised $MSFT to $600 from $500.\n\nBofA has kept Underperform on $CRM with PT $160,concerns are slower customer additions, limited upselling potential."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2094833843052179795",
+   "date": "2026-09-01",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• Pfizer (PFE) Stock Surges to 52-Week Peak Following Strong Q2 Results and Major Legal Settlement\n• Piper Sandler Boosts Tempus AI (TEM) Stock Rating to Overweight with $76 Target\n• XRP Faces Fed Rate Hike Risk as Treasury https://t.co/8yhuSKv0Uz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "M4VERICK_CARTER",
+   "url": "https://x.com/M4VERICK_CARTER/status/2094824364671717422",
+   "date": "2026-09-01",
+   "text": "Dip buyers adding more fuel to the downside \n\n$MSFT https://t.co/uDBIgCwiQ7 https://t.co/g4niBu7JvB"
+  }
+ ]
+}

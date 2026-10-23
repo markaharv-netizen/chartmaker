@@ -1,0 +1,210 @@
+{
+ "symbol": "TSLA",
+ "start": "2026-09-05T00:00:00Z",
+ "end": "2026-09-06T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "TSLA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2096213255316263089",
+   "date": "2026-09-05",
+   "text": "EOD Tape | Indexes + Mag7 | Friday, September 4th, 2026\n\nIndexes\n$SPY\n769.98 -3.19 (-0.41%) H/L 772.87 / 769.00\nOpened a small bear gap and went sideways; not a clean bear flag but still under the trendline, needs 773.40 to resume bullishness. Breaking the inside day risks a"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 158,
+   "user": "alshfaw",
+   "url": "https://x.com/alshfaw/status/2096052326213509197",
+   "date": "2026-09-05",
+   "text": "$SPY Followed the Roadmap Today. 🎯\n\nYesterday, I flagged the 20-SMA &gt; 5-SMA setup as a bearish warning and expected $SPY to rotate lower and retest the 20-SMA. That is exactly what happened today—the price came down and tagged it. See chart below.\n\n$SPY also closed with a https://t.co/Cj28e8n8KV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 42,
+   "user": "panicsellweekly",
+   "url": "https://x.com/panicsellweekly/status/2096232354540888290",
+   "date": "2026-09-05",
+   "text": "Weekly chart roundup — Round 2 (No Panic Zone)\n\n$TSLA — the board's most stubborn holdout just held for a second straight week as resistance is strong\n\n$CIFR — the slowest, most stubborn filter on this board just confirmed bullish... while the Bear Flip is still technically"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinanceGlobal9",
+   "url": "https://x.com/FinanceGlobal9/status/2096152107141284192",
+   "date": "2026-09-05",
+   "text": "Market pulse (07:08 09/05 UTC)\nTone: Mixed (Medium) · Outlook Mixed 1-3D\n\n$AMZN Bullish · $TSLA Bearish · $SPY Bearish · $SOL.X Bullish\n\nInstitutional AI/cloud bias vs retail index caution; crypto active on L1 staking / L2 execution.\n\nWatching: $AMZN $TSLA $SPY $SOL.X $STRK.X https://t.co/IcMLd7RyUy"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "0xmarketsurfers",
+   "url": "https://x.com/0xmarketsurfers/status/2096229871793979673",
+   "date": "2026-09-05",
+   "text": "Seems like we were wrong about this one.\n\n$TSLA had the vah shift lower and flipped from resistance into support.\n\nBearish structure to the downside is done and now the question is if we’ll get a complex correction down to the poc as we were expecting.\n\nOr if it’s gonna bounce https://t.co/gjYgnExLtV https://t.co/jvK1DR4oke"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinanceGlobal9",
+   "url": "https://x.com/FinanceGlobal9/status/2096212853854241234",
+   "date": "2026-09-05",
+   "text": "FC GLOBAL Market Digest — Mixed / Low conf · Neutral 1-3D\n$BE Bullish · $TSLA Bearish · $MU Bullish · $DASH.X Neutral\nAI memory &amp; hardware supercycle, index inclusions &amp; insider trades; rates/CPI caution on a quiet weekend ahead of Sunday futures.\nhttps://t.co/ow54W6rry8 https://t.co/yCcPXLjnn1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2096163460279107721",
+   "date": "2026-09-05",
+   "text": "Macro Observatory Week 36 Wrap\n\nFriday's Weekly Close telemetry delivered a multi-duration resolution with a full unwinding of Thursday's monetary metals synthetic squeeze. 29 tickers are locked into forward Macro Bleed.\n\nWhile surface commentary heading into the weekend will"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2096026823419158613",
+   "date": "2026-09-05",
+   "text": "$2.0M OF CALLS HIT MU TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - MU, IREN, TSLA, ARM, SNDK\nPUTS BOUGHT (bearish bets) - AMD, NFLX, SNOW\nFOUGHT OVER (heavy both ways) - ORCL\n\nSize is conviction. It is not intent."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "technosucks",
+   "url": "https://x.com/technosucks/status/2096098634651861133",
+   "date": "2026-09-05",
+   "text": "There was a time when $TSLA was my #1 investment idea, but I was never blindly bullish like so many Tesla investors these days. At the time, people were blindly bearish of the company before it squeezed shorts to the moon. Now, Tesla is nowhere on my list of investment ideas. https://t.co/2RWaRMpknk"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "janscharts",
+   "url": "https://x.com/janscharts/status/2096237528328065499",
+   "date": "2026-09-05",
+   "text": "$TSLA Weekly Stage 4 declining post-range breakdown. Bear Harami (1w ago) stalls momentum on small inside body—needs trend/volume confirm. Below rolling-over 8/13/30w EMAs, MACD bearish. Resistance at EMAs/~range low; support next swing lows. https://t.co/WBi0bDDEWP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SUSIEMATTY02",
+   "url": "https://x.com/SUSIEMATTY02/status/2096385381969399845",
+   "date": "2026-09-05",
+   "text": "$DASH has broken out 222 days accumulation range on daily timeframe 👀 \n\nAlso a massive downtrend line broken out upside, expecting 2x-3x Bullish Rally 📈 \n#helevier #OlympiacosBC #السويداء #كاريزما5 #LingOrm #LoveIslandUK\n\n $SPY $TSLA  $NVDA $QQQ  $META $COIN $MSTR #BTC $AVGO https://t.co/5A6G2TDqki"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SUSIEMATTY02",
+   "url": "https://x.com/SUSIEMATTY02/status/2096385308463939896",
+   "date": "2026-09-05",
+   "text": "$DASH has broken out 222 days accumulation range on daily timeframe 👀 \n\nAlso a massive downtrend line broken out upside, expecting 2x-3x Bullish Rally 📈 \n#helevier #OlympiacosBC #السويداء #كاريزما5 #LingOrm #LoveIslandUK\n\n $SPY $TSLA  $NVDA $QQQ  $META $COIN $MSTR #BTC $AVGO https://t.co/M1MHHZunsP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "randytimwilson",
+   "url": "https://x.com/randytimwilson/status/2096199978595045515",
+   "date": "2026-09-05",
+   "text": "$DASH has broken out 222 days accumulation range on daily timeframe 👀 \n\nAlso a massive downtrend line broken out upside, expecting 2x-3x Bullish Rally 📈 \n#helevier #OlympiacosBC #السويداء #كاريزما5 #LingOrm #LoveIslandUK\n\n $SPY $TSLA  $NVDA $QQQ  $META $COIN $MSTR #BTC $AVGO https://t.co/LcV0bJy6vG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2096209326981435837",
+   "date": "2026-09-05",
+   "text": "𝐆𝐨𝐥𝐝𝐞𝐧👁️ - 𝐌𝐨𝐦𝐞𝐧𝐭𝐮𝐦 𝐎𝐬𝐜𝐢𝐥𝐥𝐚𝐭𝐨𝐫\n\nThe Momentum Oscillator is a technical analysis tool that measures the rate of change in a security's price, helping traders identify trend strength and potential reversals. It compares the current price with the price from https://t.co/0iYmLWc7to"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "MightyTesla",
+   "url": "https://x.com/MightyTesla/status/2096354951249178826",
+   "date": "2026-09-05",
+   "text": "This OG $TSLA bull makes me feel bullish on this ticker again.\n\nPeople will prefer this sleek product over any other option.\nI can see the strong demand for this product. Regular approval will be the only major hurdle. https://t.co/xu4ZD5CnDy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "TheETFTracker",
+   "url": "https://x.com/TheETFTracker/status/2096301083194712435",
+   "date": "2026-09-05",
+   "text": "Here are the most popular ETFs traded over the last 3 months:\n\n🥇 ProShares Bitcoin ETF $BITO 206.0M (average daily share volume)\n🥈 Tradr 2X Long SNDK Daily ETF $SNXX 81.1M\n🥉 Direxion Daily TSLA Bull 2X ETF $TSLL 80.2M\n4. GraniteShares 2x Short NVDA Daily ETF $NVD 73.4M\n5."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2096306057916170551",
+   "date": "2026-09-05",
+   "text": "𝐆𝐨𝐥𝐝𝐞𝐧👁️ - 𝐓𝐡𝐫𝐮𝐬𝐭𝐢𝐧𝐠 𝐋𝐢𝐧𝐞 𝐂𝐚𝐧𝐝𝐥𝐞\n\nA Thrusting Line is a two-candle pattern that typically appears during a downtrend. It forms when a strong bearish candle is followed by a bullish candle that pushes back into the prior candle’s body but fails to close https://t.co/agAFQqdujt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Janeyu002",
+   "url": "https://x.com/Janeyu002/status/2096303359397708075",
+   "date": "2026-09-05",
+   "text": "$TSLA — Wave 5\n\nIf $348–358 (0.382 + 50 DMA) holds → bull\nIf $330.50 / 0.618 fails → bear\n\nFibs: 0.382 $350.94 · 0.5 $340.71 · 0.618 $330.48 · 0.786 $315.93\nWave 5: $438–$491 (+24–39% from the zone) https://t.co/KHlnEC7xTE"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "archora_ai",
+   "url": "https://x.com/archora_ai/status/2096078897913950622",
+   "date": "2026-09-05",
+   "text": "◆ $TSLA · debate spotlight\nTwitter claim: \"Strong FSD safety data from EU testing will drive October approval, unlocking big revenue.\"\n3-round Bull/Bear → STRONG SUPPORT (0.9). Tesla’s 4.1x lower crash rate &amp; zero FSD collis…\nOpen the Judge write-up:\nhttps://t.co/jy19OnOaXF https://t.co/lQyUyryMVZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MarketCaseNotes",
+   "url": "https://x.com/MarketCaseNotes/status/2096285431947989413",
+   "date": "2026-09-05",
+   "text": "🚨 MIDDAY MARKET CHECK-IN — Saturday Edition 🚨\n\nWall St is closed for the weekend, but crypto never sleeps 😤 — here's what's actually moving and what matters before Monday's open 👇\n\n₿ CRYPTO PULSE\nBTC: $80,100 | ETH: $2,479 | SOL: $103.60\nBitcoin is holding its range after a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 50,
+   "user": "ASutton810",
+   "url": "https://x.com/ASutton810/status/2096284231215313292",
+   "date": "2026-09-05",
+   "text": "$TSLA How to think about the next 3–5 years\n\nBull case: FSD unsupervised clears safety validation, Cybercab S-curve steepens in 2027, Tesla undercuts Uber on price in Texas/Florida/Nevada/Arizona, owner-fleet option turns on, and every other player is forced to either partner, https://t.co/5eUXQXGlHy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "QuantScraper",
+   "url": "https://x.com/QuantScraper/status/2096159126594228571",
+   "date": "2026-09-05",
+   "text": "Where the noise fades and the signal speaks—your daily market pulse starts here.\n\nMarket Brief — September 4 (Generated by GPT 5.6):\n\nWall Street finished Friday modestly lower after a much stronger-than-expected jobs report revived the prospect of another Federal Reserve rate https://t.co/uqvfFSCAkK"
+  }
+ ]
+}

@@ -1,0 +1,219 @@
+{
+ "symbol": "AMZN",
+ "start": "2026-09-20T00:00:00Z",
+ "end": "2026-09-21T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AMZN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 167,
+   "user": "ProblemSniper",
+   "url": "https://x.com/ProblemSniper/status/2101804137222660326",
+   "date": "2026-09-20",
+   "text": "$SPY $SPX \n\nWe are still in a massive consolidation on the market and as laid out yesterday 754-750 is a massive buy the dip zone where the bulls have come out roaring back into the end of the week bounce back after the FOMC and a rate hike decision from the FED.\n\nThis was https://t.co/FbclofYTqe"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "stockedgeN",
+   "url": "https://x.com/stockedgeN/status/2101688006046257478",
+   "date": "2026-09-20",
+   "text": "$CRDO the most bullish PT cut to $245 based on RISING estimates but lower multiple of 13x PS prior 15x ( de rating based on sector comps )\n\nBull case of $345 based on 16x PS remains… \n\nThe recent note (\"Fat Tail GB300; Upside 1.6T AEC; Optical Into 2027; Buy Pullback\") is itself"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 78,
+   "user": "stockedgeN",
+   "url": "https://x.com/stockedgeN/status/2101688235235725369",
+   "date": "2026-09-20",
+   "text": "$CRDO Mizuho just dropped the most bullish PT cut to $245 ($290 prior)  I’ve ever seen. \n\nIt is based on RISING estimates but lower multiple of 13x PS prior 15x ( de rating based on sector comps )\n\nBull case of $345 based on 16x PS remains… \n\nThe recent note (\"Fat Tail GB300;"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Monika_Piazzesi",
+   "url": "https://x.com/Monika_Piazzesi/status/2101755634181918792",
+   "date": "2026-09-20",
+   "text": "A quick look at this $1M portfolio allocation model 📌\n\n• NVDA: 15%\n\n• MSFT: 12%\n\n• AMZN: 12%\n\n• GOOGL: 10%\n\n• AAPL: 10%\n\n• META: 10%\n\n• VST: 8%\n\n• LLY: 8%\n\n• JPM: 8%\n\n• BRK.B: 7%\n\nTotal Value: $1,000,000\n\nA solid mix of high-growth tech paired with energy, healthcare, https://t.co/6jsjnVBWSr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "y0ellen",
+   "url": "https://x.com/y0ellen/status/2101735475849691262",
+   "date": "2026-09-20",
+   "text": "TRADE PLAN - week of 21SEP\n\n📈 EXPIRING OPTIONS:\n\n$AMZN 25SEP 260 Sold Call\n$ASTS 25SEP 59 Sold Call (ATM)\n$HOOD 25SEP 114 Sold Call (ITM)\n$NBIS 25SEP 205 Sold Put\n\n📊 OPEN OPTIONS:\n\nSold PUTS: $NFLX $HOOD $ASTS\nSold PCS: $LLY\nLONG LEAPS for PMCCs: $NFLX $HOOD\n\n♟️STRATEGY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AIMarketMind",
+   "url": "https://x.com/AIMarketMind/status/2101591443349397511",
+   "date": "2026-09-20",
+   "text": "Safety Said Slow Down. Wall Street Said Ship. Anthropic May Rush a New Model Before Its IPO as GPT‑6 Astra Takes Enterprise Share.\n\nThree Reuters sources say Anthropic is considering bringing forward its next model to counter Astra’s momentum. Anthropic declined to comment. No https://t.co/YCtCJBHgaG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "0xearthh",
+   "url": "https://x.com/0xearthh/status/2101654580241068336",
+   "date": "2026-09-20",
+   "text": "I built AfterHours Sentinel for the @Bitget_AI Base Camp Hackathon S2, competing in the Agentic Trading Track under the Event Driven Agent Sub Theme.\n\nAfterHours Sentinel is an autonomous, event driven quantitative trading agent I engineered specifically for tokenized U.S. https://t.co/TPEpmb4B9k https://t.co/mvQnAkq7Oo"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 182,
+   "user": "CKCapitalxx",
+   "url": "https://x.com/CKCapitalxx/status/2101754685388419440",
+   "date": "2026-09-20",
+   "text": "It’s crazy how undervalued $AMZN is becoming.\n\nThis is a $300+ stock. https://t.co/roXBHPFWqQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AlphaAllegro",
+   "url": "https://x.com/AlphaAllegro/status/2101786018651238682",
+   "date": "2026-09-20",
+   "text": "DTA STRATEGIC MARKET INTELLIGENCE REPORT\n\nTarget Period: Week of September 21–25, 2026\n\nTactical Bias: CYCLE EXHAUSTION TOP | STFR (Inflection Window September 21 to 25)\n\nCore Action: Execute the Sell The Rally (STFR) playbook as QQQ and IWM reach cycle exhaustion at the"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 8,
+   "user": "PhatChin",
+   "url": "https://x.com/PhatChin/status/2101814357067755940",
+   "date": "2026-09-20",
+   "text": "$AMZN W 🟥\nJust lost support of the 1.618 Fib with indicators confirming an outflow wave. Could meander sideways for a while but support from Kijun below is likely. Bearish momentum is not strong. https://t.co/tatYSPeA7J"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "zeffpena",
+   "url": "https://x.com/zeffpena/status/2101740166977106098",
+   "date": "2026-09-20",
+   "text": "Treasury yields are still way too elevated for me to get aggressive here\n\nI’m still sitting around 35% cash\n\nThat doesn’t mean I’m bearish. It means I think patience still has value here\n\nI’d rather miss the first few percent of a move than force exposure while the bond market is"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "patternsmart",
+   "url": "https://x.com/patternsmart/status/2101778961973875087",
+   "date": "2026-09-20",
+   "text": "AMZN Stock Technical Analysis: Hidden Bullish Double Divergence Chart Analysis https://t.co/ZxAMMwFsGF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Original_Kind",
+   "url": "https://x.com/Original_Kind/status/2101701252237455573",
+   "date": "2026-09-20",
+   "text": "$AMZN — setups can only stay compressed for so long before the pressure is finally released.\n\nThis continues to look overdue for a fast 5% upside move. 👀\n\nThe longer this consolidation lasts, the more interesting the eventual breakout could become.\n\nWatching $AMZN closely. 📈 https://t.co/0vEofETYnq"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "KingOfInvestors",
+   "url": "https://x.com/KingOfInvestors/status/2101760599440994404",
+   "date": "2026-09-20",
+   "text": "$AMZN - time for this POS to stop being a bitch &amp; go higher\n\nDespite attrocious price action, the flows have been bullish.\n\nHODL. https://t.co/4Pi2h2Gd4T"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "MKRlimitless",
+   "url": "https://x.com/MKRlimitless/status/2101687555280519223",
+   "date": "2026-09-20",
+   "text": "OPENAI JUST BEAT GOOGLE $GOOGL, META META, AND AMAZON AMZN TO THIS KEY MILESTONE. IS IT BULLISH FOR AI STOCKS. — THE GLOBE AND MAIL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "johnfheerdinkjr",
+   "url": "https://x.com/johnfheerdinkjr/status/2101505852125675528",
+   "date": "2026-09-20",
+   "text": "The Great Consumer Disconnect: Weak Sentiment, Resilient Spending and a Bullish Setup -( $AMZN $AXP $COST $DG $GS $LULU $NOW $NVDA $ORCL $WMT )\n\nhttps://t.co/hJnwLQjoEJ\n\n#ConsumerSentiment #ConsumerSpending #StockMarket #Investing #Markets #WallStreet"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Elizabethtradee",
+   "url": "https://x.com/Elizabethtradee/status/2101636566368002167",
+   "date": "2026-09-20",
+   "text": "I’m really bullish on $HEI 👀\n\nClick  👇🏿👇🏿 to join  our free  signals group. \n\nhttps://t.co/SlQc0au886\n\n$xrp $btc $fil $icp $iran $NFE\n$TSLA $EOSE  $IREN $NBIS $RKLB $LMND $SOFI $AMZN $TEM $Gold $silver #UnitedStates https://t.co/n91Kad11yo"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "VistaPResearch",
+   "url": "https://x.com/VistaPResearch/status/2101505951568388603",
+   "date": "2026-09-20",
+   "text": "The Great Consumer Disconnect: Weak Sentiment, Resilient Spending and a Bullish Setup -( $AMZN $AXP $COST $DG $GS $LULU $NOW $NVDA $ORCL $WMT )\n\nhttps://t.co/Lgofiqjp4O\n\n #Inflation #Retail #Earnings #ArtificialIntelligence #NVIDIA #Amazon #Walmart #Costco #InvestorInsights"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "randykivv",
+   "url": "https://x.com/randykivv/status/2101608236528836805",
+   "date": "2026-09-20",
+   "text": "I’m really bullish on $HEI 👀\n\nClick on the link to join  our free  signals group 👇🏿👇🏿. \nhttps://t.co/bvjrWvI5ZW\n\n$xrp $btc $fil $icp $iran $NFE\n$TSLA $EOSE  $IREN $NBIS $RKLB $LMND $SOFI $AMZN $TEM $Gold $silver #UnitedStates https://t.co/khptRzbXgQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "KingsCrypto0",
+   "url": "https://x.com/KingsCrypto0/status/2101534547095531985",
+   "date": "2026-09-20",
+   "text": "I’m really bullish on $HEI 👀\n\nClick  👇🏿👇🏿 to join  our free  signals group. \n\nhttps://t.co/uI8eGxsQ79\n\n$xrp $btc $fil $icp $iran $NFE\n$TSLA $EOSE  $IREN $NBIS $RKLB $LMND $SOFI $AMZN $TEM $Gold $silver #UnitedStates https://t.co/wG64qTQMDO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Kendallde_",
+   "url": "https://x.com/Kendallde_/status/2101672751732064301",
+   "date": "2026-09-20",
+   "text": "$AMZN $AMZU Setups can only remain compressed for so long until the pressure is finally released.\n\nThis continues to be overdue for a 5% very fast upside move. https://t.co/TsfuuH8i2B"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 369,
+   "user": "Jake__Wujastyk",
+   "url": "https://x.com/Jake__Wujastyk/status/2101664675058631045",
+   "date": "2026-09-20",
+   "text": "$AMZN $AMZU Setups can only remain compressed for so long until the pressure is finally released. \n\nThis continues to be overdue for a 5% very fast upside move. https://t.co/q3PxkBO9sB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "tribepublic",
+   "url": "https://x.com/tribepublic/status/2101506071039009110",
+   "date": "2026-09-20",
+   "text": "The Great Consumer Disconnect: Weak Sentiment, Resilient Spending and a Bullish Setup -( $AMZN $AXP $COST $DG $GS $LULU $NOW $NVDA $ORCL $WMT )\n\nhttps://t.co/A5j9VBUmIX\n\n#ConsumerSentiment #ConsumerSpending #StockMarket #Investing #Markets #WallStreet  #InvestorInsights"
+  }
+ ]
+}

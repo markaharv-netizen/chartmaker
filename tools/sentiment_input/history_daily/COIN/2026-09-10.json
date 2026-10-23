@@ -1,0 +1,219 @@
+{
+ "symbol": "COIN",
+ "start": "2026-09-10T00:00:00Z",
+ "end": "2026-09-11T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2097883803037409783",
+   "date": "2026-09-10",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 𝟮.𝟱 / 𝟱 (leaning slightly bearish‐to‐neutral) - 𝗕𝗲𝗮𝗿𝗶𝘀𝗵 𝗰𝘂𝗲𝘀 - Many traders calling the rally “the shortest bull market ever” and “back to bear.” - Macro headwinds: higher oil prices, geopolitical tensions, rising U.S. 10‐yr yield https://t.co/bQDwjVlZH7"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 9,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2097989463964094959",
+   "date": "2026-09-10",
+   "text": "#BITCOIN\n\n#BITCOIN is printing another bearish continuation candle today as price remains contained within last Thursday’s master candle for the seventh consecutive session. \n\nDespite the short-term selling pressure, Bitcoin continues to high-base, suggesting consolidation rather https://t.co/5RBjAj7CiR"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2098055766984765801",
+   "date": "2026-09-10",
+   "text": "❓ $GPRO 5.4% spike looks like liquidity grab into supply, not a chase\n\n- my bias is that this +5.4% spike is an overextended liquidity grab into supply, not a clean long to chase — I treat it as a bull-trap risk until price accepts above 1.634–1.700, especially with BTC bearish https://t.co/WjjtRKHFeF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2098052948521546108",
+   "date": "2026-09-10",
+   "text": "📈 $ETHFI 3.7% burst on 2.8x volume reads like continuation, not noise\n\n- my bias is bullish here — the 1h structure is aligned with daily and weekly bullish structure after the break of the last swing high at 0.6408; the +3.7% burst with elevated volume looks like https://t.co/lqQLSRw1aZ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 645,
+   "user": "CryptoGodJohn",
+   "url": "https://x.com/CryptoGodJohn/status/2098018159429132479",
+   "date": "2026-09-10",
+   "text": "I think the biggest reason why meme coins hit escape velocity and go to $100m+ and higher is because of community. Community is the biggest aspect of a coin\n\nIf you look at the two biggest runners recently they had periods of sideways accumulation where communities were formed https://t.co/r9yP8tMelJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "beachlesslee",
+   "url": "https://x.com/beachlesslee/status/2098125932125114508",
+   "date": "2026-09-10",
+   "text": "have you ever seen a coin whose thesis sounds so good you immediately skip it cause it sounds like bullshit? \n\ni think that's the case with $szr, and that's why i'd take a couple of minutes to actually read it if you want to make it\n\n@SazareProtocol probably had enough attention https://t.co/XPOyi6L2UZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "TheMuggZone",
+   "url": "https://x.com/TheMuggZone/status/2098159739079434535",
+   "date": "2026-09-10",
+   "text": "TOMORROW'S CPI CONSESUS &amp;\nRest of September Macro / Earnings : \n\nFirst, a correction to how I've been framing this week: the September FOMC debate is about a hike, not a cut. Chair Warsh went hawkish at Jackson Hole, three FOMC members already voted to raise in July, and after https://t.co/HxhEDKJr9Y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TheMuggZone",
+   "url": "https://x.com/TheMuggZone/status/2098159576063279462",
+   "date": "2026-09-10",
+   "text": "TOMORROW'S CPI CONSESUS &amp;\nRest of September Macro / Earnings : \n\nFirst, a correction to how I've been framing this week: the September FOMC debate is about a hike, not a cut. Chair Warsh went hawkish at Jackson Hole, three FOMC members already voted to raise in July, and after https://t.co/dSuCC1RxoN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2098079134685774024",
+   "date": "2026-09-10",
+   "text": "🚨 BURAKTHESCALPER LLC — 9 AM PT LIVE BATTLE PLAN\nTHURSDAY • SEPTEMBER 10, 2026\n\n⚔️ BIAS: RISK-OFF, BUT WATCH FOR A MIDDAY RECLAIM. The selloff is still active, but the indexes have trimmed part of the opening damage: S&amp;P and Dow are about -0.5%, Nasdaq roughly -0.3%, and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "CHItrader",
+   "url": "https://x.com/CHItrader/status/2098022659887898721",
+   "date": "2026-09-10",
+   "text": "ECB HIKES 25 BPS\n\nThey did the hike everyone already had in the model, then called the outlook a coin flip.\n\n🔹 Deposit facility: 2.50% from 2.25%\n🔹 Main refinancing: 2.65% from 2.40%\n🔹 Marginal lending: 2.90% from 2.65%\n🔹 All three printed in line with 2.50 / 2.65 / 2.90"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 29,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2098048928956440905",
+   "date": "2026-09-10",
+   "text": "📊 $GRT Overview | 2026-09-10\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#TheGraph\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "shadymd_eth",
+   "url": "https://x.com/shadymd_eth/status/2098065385534738764",
+   "date": "2026-09-10",
+   "text": "Just seeing more and more bull posting about $GCS\n\nIt just makes sense, seeing tons of buzz in X about $XRP\n\nWrote a thread I’ll put in comments about the clarity act and global currency standard tieing all this together \n\nSuper undervalued coin https://t.co/ndMcSzHf0U"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 29,
+   "user": "degengamblah",
+   "url": "https://x.com/degengamblah/status/2097928560820551964",
+   "date": "2026-09-10",
+   "text": "Just a backpack on stonk the most undervalued coin on the whole platform. Essential infrastructure and team that is solana OG &amp; focused.\n\n\"Backpack Securities lets investors buy, hold, and sell stocks through regulated brokerage infrastructure — and convert those holdings into https://t.co/yH7B0jfouQ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2098065284703641748",
+   "date": "2026-09-10",
+   "text": "📊 $SHIB Overview | 2026-09-10\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🔴 Bearish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#Shiba Inu\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 50,
+   "user": "davidonchainx",
+   "url": "https://x.com/davidonchainx/status/2098179182014402861",
+   "date": "2026-09-10",
+   "text": "The reason I'm even sharing this is because it proves how great stock paired tokens with stimmies are\n\nAs a trader you protect your downside and increase your upside by recieving stimmies of stocks for holding\n\nIf you buy $100 of a coin and sell for $90 but earned $10 of stock https://t.co/ilgTSQKoeE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2098053951174083024",
+   "date": "2026-09-10",
+   "text": "📊 $SOL Overview | 2026-09-10\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI 🟢 Bounce\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Solana\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "naked_delta",
+   "url": "https://x.com/naked_delta/status/2097861133961175524",
+   "date": "2026-09-10",
+   "text": "#qqq bearish #spx bullish hot PPI and CPI \n#orcl #cprt #adbe #mara #coin \n#earnings and market update and #GME👇\nhttps://t.co/Rtu8Z7OnK2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "naked_delta",
+   "url": "https://x.com/naked_delta/status/2097861503022157984",
+   "date": "2026-09-10",
+   "text": "#qqq bearish #spx bullish hot PPI and CPI \n#orcl #cprt #adbe #mara #coin \n#earnings and market update and #GME👇\nhttps://t.co/Rtu8Z7OnK2"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "LaleParvin99994",
+   "url": "https://x.com/LaleParvin99994/status/2098148064431370461",
+   "date": "2026-09-10",
+   "text": "Why don't we see anyone bearish on a coin ? All the posts say \"x\" bullish \"y\" bulishh \"z\" bulish, buy the dip\n\nBut the dip always goes deeper !!!!"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "APlantedTree",
+   "url": "https://x.com/APlantedTree/status/2098077368631898593",
+   "date": "2026-09-10",
+   "text": "The beauty of CT on full display where you got a bearish meme on global macro conditions &amp; fed responses and then the next thing you read is a bullish call on a meme coin \n\nLove it here \n\nWhich way western man https://t.co/u2Nxfn6hec"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 26,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2098038756863320567",
+   "date": "2026-09-10",
+   "text": "Jack #Dorsey #Block applied for an OCC charter to form Builders Bank &amp; Trust. If approved, the national trust #bank will handle #bitcoin and #stablecoin custody along with traditional fiduciary services, marking a major step toward institutional #crypto infrastructure integration https://t.co/JcqVmYYzCd"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 16,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2098036174178718043",
+   "date": "2026-09-10",
+   "text": "Hunter #Biden claims he didn't make a single dollar off the #LAPTOP token crash, blaming low #liquidity technical issues, and early snipers. He insists team #tokens remain locked with zero #insider sales, pushing forward as FDV holds above $1B\n\n#MarketUpdate #StockMarket #USA https://t.co/FqO0yxXd1G"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2098034856697430092",
+   "date": "2026-09-10",
+   "text": "#Hackers compromised #Trezor #email #provider to send #phishing alerts about a fake STM32 Entropy Vulnerability. Trezor disabled the malicious domain and is investigating the #breach warning users not to click any links from these emails\n\n#MarketUpdate #StockMarket #USA #stocks https://t.co/QMJl44iXID"
+  }
+ ]
+}

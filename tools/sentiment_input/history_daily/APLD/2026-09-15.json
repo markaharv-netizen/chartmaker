@@ -1,0 +1,93 @@
+{
+ "symbol": "APLD",
+ "start": "2026-09-15T00:00:00Z",
+ "end": "2026-09-16T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "ThetaTradesHQ",
+   "url": "https://x.com/ThetaTradesHQ/status/2099974799447736574",
+   "date": "2026-09-15",
+   "text": "$APLD \n\n LEAN BEARISH — call writing + puts two-sided\n\nAPLD — biggest OI moves (confirmed):\nSep. 18, 2026 $23 puts  +2.3k — sold at bid, sellers (bullish)\nSep. 18, 2026 $25 calls  +1.6k — sold at bid, sellers (bearish)\nSep. 18, 2026 $23.50 puts  +1.4k — sold at bid, sellers"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "ThetaTradesHQ",
+   "url": "https://x.com/ThetaTradesHQ/status/2099651249498996988",
+   "date": "2026-09-15",
+   "text": "$APLD \n\n LEAN BULLISH — calls two-sided + put writing\n\nAPLD — biggest OI moves (confirmed):\nSep. 18, 2026 $26.50 puts  +4.2k — sold at bid, sellers · ~91% tied to spreads\nSep. 18, 2026 $25.50 puts  +3.2k — bought at ask, buyers · ~93% tied to spreads\nSep. 18, 2026 $23.50 puts"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 23,
+   "user": "InvestifyDaily",
+   "url": "https://x.com/InvestifyDaily/status/2099838502116442568",
+   "date": "2026-09-15",
+   "text": "$APLD I recently started a position along with $IREN. I don’t need to repeat the post below. I will say $APLD is undervalued and underrated. https://t.co/7FXo8YkgPi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "idearikas",
+   "url": "https://x.com/idearikas/status/2099672254078496836",
+   "date": "2026-09-15",
+   "text": "Out of Leopold's stocks, almost the only one that hasn't bounced back yet after the Citadel incident is in fact $APLD (Oversold too!)\nRetail keeps hyping co-location names like $CIFR &amp; $WULF and forget $APLD has better fundamentals, value &amp; upside potential from here.\nLong $APLD!"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "kastriooot8",
+   "url": "https://x.com/kastriooot8/status/2099785729970745755",
+   "date": "2026-09-15",
+   "text": "This is f*king bullish for the AI Sector!\n\n$NVDA $APLD $DGXX $IREN $AMD $MU https://t.co/jPsPI4rj7u"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "kastriooot8",
+   "url": "https://x.com/kastriooot8/status/2099799617185464429",
+   "date": "2026-09-15",
+   "text": "JUST READ: Wells Fargo just made an important point:\n\nAI is unlikely to slow down because of “AI safety.”\n\nThe bigger constraint is SUPPLY.\n\n⚡ Power\n🏗️ Data-center capacity\n🔌 Grid connections\n🏛️ Permitting\n\nThat doesn’t mean a smaller AI cycle.\nIt means a LONGER AI cycle.\n\nAnd https://t.co/ral7EVetuM"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 20,
+   "user": "toptraderSam",
+   "url": "https://x.com/toptraderSam/status/2099836072805253310",
+   "date": "2026-09-15",
+   "text": "I’m buying the dip on $APLD. I’m very bullish long term and think this recent AI sector selloff is an overreaction rather than a broken thesis. The concerns about AI becoming too powerful may create short term fear but they also highlight how important AI infrastructure will"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "kastriooot8",
+   "url": "https://x.com/kastriooot8/status/2099863684797370680",
+   "date": "2026-09-15",
+   "text": "🚨 $MU just showed again why AI is NOT only about GPUs.\n\nMicron is pushing the world’s first 512GB DDR5 RDIMM, enabling up to 12TB of system memory in a dual-socket server.\n\nWhy does this matter? 🤖\n\nAI servers need massive amounts of memory — not just HBM.\n\nMore AI https://t.co/0BmMgwzeZe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "kastriooot8",
+   "url": "https://x.com/kastriooot8/status/2099772218477543773",
+   "date": "2026-09-15",
+   "text": "🇺🇸🇮🇷 Trump can’t afford to lose the Midterms politically.\n\nThat makes oil prices and inflation extremely important.\n\nA quick end to the war would remove the geopolitical risk premium from oil and could significantly ease gasoline prices and inflation.\n\nTrump himself says: oil https://t.co/gfCE7gzH0e"
+  }
+ ]
+}

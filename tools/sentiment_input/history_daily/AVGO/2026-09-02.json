@@ -1,0 +1,228 @@
+{
+ "symbol": "AVGO",
+ "start": "2026-09-02T00:00:00Z",
+ "end": "2026-09-03T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AVGO (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "TajVincent",
+   "url": "https://x.com/TajVincent/status/2095212757024989499",
+   "date": "2026-09-02",
+   "text": "Finn's read and Trade Idea🚀 After-Hours Earnings Brief: Sep 2nd\n\nHere is the analysis and recommended positioning for tonight's earnings reports.\n| Symbol | Price | Regime | Score | Expected Move (+/-) | Primary Bias |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| AVGO | $367.34 https://t.co/4CpmyNt8zv"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "RanjitAlpha",
+   "url": "https://x.com/RanjitAlpha/status/2095119107125284949",
+   "date": "2026-09-02",
+   "text": "🌎 MARKET FORECAST — WEDNESDAY, SEPTEMBER 2, 2026\n\n🎯 Pre-Market Bias: Cautiously Bearish\n\n🌏 Overnight:\n\n• Asia delivered a clear risk-off signal: KOSPI -3.99%, with Samsung Electronics -4.02% and SK Hynix -4.73%; Japan’s Nikkei fell ~2.9%, while Taiwan’s Taiex dropped 1.67%."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ThetaVantage",
+   "url": "https://x.com/ThetaVantage/status/2095279104539189456",
+   "date": "2026-09-02",
+   "text": "$AVGO reported Sep 2\n\n• Adjusted EPS: $3.32 vs $3.22 expected — a 3.1% positive surprise\n• Revenue: $29.59B vs $29.24B expected — about 1.2% above consensus\n• Revenue growth: 85.5% year over year\n• GAAP diluted EPS: $2.68 vs $0.85\n• Gross margin: 69.1%\n\nFiscal Q3 revenue"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Ayush_Panda25",
+   "url": "https://x.com/Ayush_Panda25/status/2095133696319787464",
+   "date": "2026-09-02",
+   "text": "Morning Notes, 9/2\nEarnings did the talking overnight, and the two prints split hard in opposite directions. $DELL beat and is up 8.8% premarket at 462, while $PANW is getting sold off 2.2% after its report. The tape itself is quiet outside of those two names, with the indexes"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "art_the_trader",
+   "url": "https://x.com/art_the_trader/status/2095103445690667333",
+   "date": "2026-09-02",
+   "text": "$AVGO has followed through on our August downside thesis. Earnings after the bell could trigger a bounce into 390-413 resistance.\n\nAs long as price closes below 413, the medium-term outlook stays bearish with further downside ahead. https://t.co/CRQMCEZmsz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "zedryaz",
+   "url": "https://x.com/zedryaz/status/2095240668972990808",
+   "date": "2026-09-02",
+   "text": "$AVGO On a solid print, upside targets are $375 first, then $400.\n\nIn case of a selloff, downside targets are $350 first, then $340 https://t.co/KqEzzwUpjC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "InvestVerified",
+   "url": "https://x.com/InvestVerified/status/2095238943864180778",
+   "date": "2026-09-02",
+   "text": "Verified Pro Trader Jake Sweeney: $AVGO options are pricing an 8% move on the print. Traders are paying $29.38 for that bet. Upside $396. Downside $340. Clear either one and the move ran bigger than expected. Stay inside and the sellers win. 👀"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 23,
+   "user": "Bitget_TradFi",
+   "url": "https://x.com/Bitget_TradFi/status/2095072589265949085",
+   "date": "2026-09-02",
+   "text": "Broadcom $AVGO reports earnings in less than 12 hours.\n\nJPMorgan is bullish on $AVGO, while the market remains concerned about competition from $GOOGL’s TPUs.\n\nTechnically, $379–$385 remains the key resistance zone, while $368 is the key level on the downside. https://t.co/F7Xis3R56y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "martinhurtadocc",
+   "url": "https://x.com/martinhurtadocc/status/2095236567501849006",
+   "date": "2026-09-02",
+   "text": "Broadcom $AVGO reports earnings in 30 minutes!\n\nBullish or Bearish? https://t.co/JjsBNqwSMs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinanceGlobal9",
+   "url": "https://x.com/FinanceGlobal9/status/2095040006465126738",
+   "date": "2026-09-02",
+   "text": "FC GLOBAL Market Digest — 03:09 UTC Sep 2\nOverall Bearish (Medium) · Outlook Bearish 1-3D\n$DELL Bullish · $NVDA Neutral · $SPY Bearish · $AVGO Bearish\nME escalation, AI servers, rising yields weighing on markets. https://t.co/TpKzd5cfKc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 52,
+   "user": "RealSPXSniper",
+   "url": "https://x.com/RealSPXSniper/status/2094986788867641645",
+   "date": "2026-09-02",
+   "text": "Midnight $AVGO  Check:\n\nEarnings tomorrow after the bell. Spot ~$370 with options pricing roughly a ±7% move → ~$344 - 396.\n\nCurrent positioning:\n\n$360 : major put OI / downside battleground\n$370- 375 :  current pivot/magnet\n$395 - 400 :  major upside zone, with ~7.7K calls at https://t.co/AeYy6QAuox"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 13,
+   "user": "crypt_shprd",
+   "url": "https://x.com/crypt_shprd/status/2095244350557163607",
+   "date": "2026-09-02",
+   "text": "Earnings just dropped. What kind of price action can we expect tomorrow?\n\nRight now $AVGO  is trading right at a resistance level that's held for the past 12 months, and holding above it here will be very important.\n\nI'm leaning into a bullish scenario, with the next resistance https://t.co/aCnvuSGxCq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "RowFlowPro",
+   "url": "https://x.com/RowFlowPro/status/2095214867280253220",
+   "date": "2026-09-02",
+   "text": "📊Earnings Inbound: $AVGO \n \nBullish Outlook on GEX, but Netflow is Bearish on the Day!\n\n👑King Node: 10/16 $440 https://t.co/Prl0firlEq https://t.co/l5p4sGUgV6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "ChartOvrChattr",
+   "url": "https://x.com/ChartOvrChattr/status/2095095621531443677",
+   "date": "2026-09-02",
+   "text": "$AVGO bullish case :\nThis is the only bullish scenario I’m currently watching for AVGO, besides the bearish case I posted earlier (quoted below)..\n\nIf AVGO can break above this mini range 👇 and show enough strength to reclaim the $405 high of the larger range, I’d be interested https://t.co/jPvcQEAT4A https://t.co/WPymORY3ac"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "ChartOvrChattr",
+   "url": "https://x.com/ChartOvrChattr/status/2095095355474121007",
+   "date": "2026-09-02",
+   "text": "$AVGO bullish case :\nThis is the only bullish scenario I’m currently watching for AVGO, besides the bearish case I posted earlier (quoted below)..\n\nIf AVGO can break above this mini range 👇 and show enough strength to reclaim the $405 high of the larger range, I’d be interested https://t.co/Ikho0AQfar https://t.co/WPymORY3ac"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BrandlyMo",
+   "url": "https://x.com/BrandlyMo/status/2095173713364693392",
+   "date": "2026-09-02",
+   "text": "💎Earnings Afterhours $SNOW (Snowflake) $AVGO (Broadcom) $AI (https://t.co/vIH8IiHiEV) $WOOF (Petco) $HPE (Hewlett Packard) Bullish or Bearish on these Companies?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RowFlowPro",
+   "url": "https://x.com/RowFlowPro/status/2095214758311956763",
+   "date": "2026-09-02",
+   "text": "📊Earnings Inbound: $AVGO \n \nBullish Outlook on GEX, but Netflow is Bearish on the Day!\n\n👑King Node: 10/16 $440 https://t.co/UqXjdd6PGn https://t.co/l5p4sGTJ5y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "MorningMadness4",
+   "url": "https://x.com/MorningMadness4/status/2095165676642013473",
+   "date": "2026-09-02",
+   "text": "💎Earnings Afterhours $SNOW (Snowflake) $AVGO (Broadcom) $AI (https://t.co/pZiUIvVWIB) $WOOF (Petco) $HPE (Hewlett Packard) Bullish or Bearish on these Companies?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2095155942707048789",
+   "date": "2026-09-02",
+   "text": "The tickers X can't stop talking about right now:\n\n1. Credo Technology Group Holding Ltd $CRDO is down 17.4% today\n\n🟢 Sentiment: 37% bullish, 16% bearish, 47% neutral\n\nCredo reported a revenue beat, but the stock slipped 8% in pre‑market trading. The mixed‑neutral chatter https://t.co/1IB0M1ymB9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DanSheehan9",
+   "url": "https://x.com/DanSheehan9/status/2095244950380196287",
+   "date": "2026-09-02",
+   "text": "Bullish or Bearish on Broadcom $AVGO on the initial earnings release? \n\nRevenue: $29.6B vs $29.36B Est, +86% YoY \nAdj. EPS: $3.32 vs $3.24 Est"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 35,
+   "user": "RealSPXSniper",
+   "url": "https://x.com/RealSPXSniper/status/2095198900067996020",
+   "date": "2026-09-02",
+   "text": "$AVGO Earnings Trade: \n\nSold the 345/320 put credit spread into earnings.\n\nAVGO ~$370, Implied move ~7%, IV ~130% (Elon Musk Rich)\nIdea is simple: capture elevated IV/vol crush while staying bullish-to-neutral on the post-earnings move.\n\nShort 345P sits near the implied downside https://t.co/bUZwV7HVW5"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2095231580763517121",
+   "date": "2026-09-02",
+   "text": "$1.2M OF PUTS HIT META TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - DELL, AVGO, HOOD, WBD, SPCX\nPUTS BOUGHT (bearish bets) - MPC, SNOW\nFOUGHT OVER (heavy both ways) - META\n\nSize is conviction. It is not intent."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "Sadiqtech_",
+   "url": "https://x.com/Sadiqtech_/status/2095013188605501544",
+   "date": "2026-09-02",
+   "text": "$AVGO EARNINGS WATCH\n\nBroadcom reports after the U.S. market closes on September 2.\n\nAI chip revenue is expected around $16B, showing how important AI has become to Broadcom’s growth. But revenue alone may not determine the market reaction.\n\nI’ll be watching AI growth, margins, https://t.co/D3yaIAJl6s"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 11,
+   "user": "stockedgeN",
+   "url": "https://x.com/stockedgeN/status/2095293861069218184",
+   "date": "2026-09-02",
+   "text": "$AVGO provided a strong bullish read-through for Celestica — the silicon supplier one layer up just confirmed, with “secured supply,” that the Google TPU, OpenAI, and Meta programs Celestica builds systems for are ramping hard into 2027-28. $CLS \n\nBroadcom’s silicon is the layer"
+  }
+ ]
+}

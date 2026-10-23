@@ -1,0 +1,21 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-18T00:00:00Z",
+ "end": "2026-09-19T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "cfjcrypto",
+   "url": "https://x.com/cfjcrypto/status/2100813491871584635",
+   "date": "2026-09-18",
+   "text": "🔥 BEAR TRAP SETUP? 🚨\n\nHas the crypto market just set a bear trap? 👀\n\nAfter the rate hike, Bitcoin dipped toward $75K but quickly reclaimed support—while BTC dominance is falling and altcoins are showing strength.\n\n🔹 BTC: $72K–$74K remains the key support zone.\n🔹 Bullish https://t.co/Hwf3JOBBKP"
+  }
+ ]
+}

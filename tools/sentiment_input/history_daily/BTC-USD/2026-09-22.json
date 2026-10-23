@@ -1,0 +1,219 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-22T00:00:00Z",
+ "end": "2026-09-23T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "Jon_sens",
+   "url": "https://x.com/Jon_sens/status/2102482091917422961",
+   "date": "2026-09-22",
+   "text": "🚨🔥 $BTC IS LOADING FOR A BIG MOVE! 🔥🚨\n\nBitcoin is currently trading around $86,422 after a strong recovery from the $85,114 low. The bounce is real, but BTC is now facing a serious battle around the $86,500 resistance zone. 👀\n\nBulls have pushed price back above $86K, https://t.co/Av4mGvFqeS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 184,
+   "user": "frankshielded",
+   "url": "https://x.com/frankshielded/status/2102470964596662738",
+   "date": "2026-09-22",
+   "text": "Grayscale, with approximately $35 billion in assets under management, believes the next bull cycle will be centered around privacy and, specifically, $ZEC. \n\nGemini, the crypto exchange founded by the Winklevoss twins, trades an average of $40M per day and believes the next bull https://t.co/fjWTdioF3C"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "HeyEva",
+   "url": "https://x.com/HeyEva/status/2102384921943925093",
+   "date": "2026-09-22",
+   "text": "Bitcoin has executed a decisive multi-month breakout fueled by historic institutional ETF inflows and heavy short liquidations, yet sharp positioning divergences between aggressive retail buyers and defensive top whales signal heightened near-term consolidation risk.\n\n- Baseline https://t.co/I5gp4QXaYm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BTCPRJT",
+   "url": "https://x.com/BTCPRJT/status/2102492430511808631",
+   "date": "2026-09-22",
+   "text": "Should we celebrate if the Four Year Cycle is Finished?\n\nThere is plenty of cheering across Crypto X at the possible death of the 4YC.\n\nAnd I get it. A sustained break higher would clearly be constructive for Bitcoin.\n\nBut there is another side worth thinking about..\n\nMaybe it https://t.co/KWjTO1IadE"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 130,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2102230920677970234",
+   "date": "2026-09-22",
+   "text": "Bitcoin pumped 6.7% while crypto Twitter argued over apologies and bull traps. I'm watching the confirmed daily TBO breakout above resistance, not the drama. Bearish RSI divergence warns of a pullback, but it doesn't force an immediate crash. My approach is to take profit at https://t.co/i8yRETZ5iG"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 902,
+   "user": "ki_young_ju",
+   "url": "https://x.com/ki_young_ju/status/2102422863596728579",
+   "date": "2026-09-22",
+   "text": "I expect this Bitcoin bull cycle to deliver 3–5x rather than another 10x+ parabolic rally, followed by a milder bear market.\n\nWhen Bitcoin was smaller and retail dominated, hot money fueled explosive rallies and 80% crashes. Today, a much larger market and growing institutional https://t.co/KmUd32jq13"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BTCPRJT",
+   "url": "https://x.com/BTCPRJT/status/2102494388794585088",
+   "date": "2026-09-22",
+   "text": "Should we celebrate if the Four Year Cycle is Finished?\n\nThere is plenty of cheering across Crypto X at the possible death of the 4YC.\n\nAnd I get it. A sustained break higher would clearly be constructive for Bitcoin.\n\nBut there is another side worth thinking about..\n\nMaybe it https://t.co/8sn77rDnmZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BTCPRJT",
+   "url": "https://x.com/BTCPRJT/status/2102493766250885453",
+   "date": "2026-09-22",
+   "text": "Should we celebrate if the Four Year Cycle is Finished?\n\nThere is plenty of cheering across Crypto X at the possible death of the 4YC.\n\nAnd I get it. A sustained break higher would clearly be constructive for Bitcoin.\n\nBut there is another side worth thinking about..\n\nMaybe it https://t.co/5yHeCFIWiK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Marketscans1980",
+   "url": "https://x.com/Marketscans1980/status/2102514426545094834",
+   "date": "2026-09-22",
+   "text": "AVAX-USD Scan Breakdown: #1 Ranked, But Late to the Party\n\nAVAX topped today's daily scan, ranking #1 of 20 with an MSP score of 60, placing it in the top 2% of everything scanned (98th percentile). But a high rank and a good setup are not the same thing, and this chart is a https://t.co/WTpkKe8Ptg"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "marketintelOG",
+   "url": "https://x.com/marketintelOG/status/2102237576052543592",
+   "date": "2026-09-22",
+   "text": "STOP TRYING TO PREDICT EVERY MOVE\n\nprofessional trading isn't about knowing exactly where bitcoin goes next.\n\nit's about preparing for both scenarios.\n\nBULLISH:\nbreak → retest → continuation\n\nBEARISH:\nsweep → MSS → rejection → downside\n\nlet price confirm the scenario.\n\nyour"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2102513466653483095",
+   "date": "2026-09-22",
+   "text": "📊【XWIN CAPITAL INDEX｜September 23, 2026】\nOverall Score: 74 / 100\n・80–100 = Strong Bullish Environment\n ・60–79 = Bullish Bias\n ・40–59 = Neutral / No Clear Direction\n ・20–39 = Bearish Bias\n ・0–19 = Strong Bearish Environment\n7-Day Moving Average: 56.00 ↑\n 14-Day Moving https://t.co/IrJdy7aljn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "TraderGemin",
+   "url": "https://x.com/TraderGemin/status/2102190641148994038",
+   "date": "2026-09-22",
+   "text": "BTC Sentiment: Greed Is High, but YouTube Narratives Remain Neutral\n\nTwo ForeDex sentiment indicators are currently showing an interesting divergence.\n\n1. Crypto Fear &amp; Greed Index\n\nThe Fear &amp; Greed Index summarizes overall market sentiment using factors such as volatility, https://t.co/lAesUbvOpy"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "BillGatesOHell",
+   "url": "https://x.com/BillGatesOHell/status/2102401744814653787",
+   "date": "2026-09-22",
+   "text": "I'm not biased, bullish or bearish.\nAnything above $97.8k confirms we are in a bull market.\nAnything below $79k opens the door to $50k.\nAnything goes between $79k and $97.8k\n\nI'm long currently and will continue to look for signs of weakness or bullish continuation.\n$BTC #Bitcoin"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 26,
+   "user": "BartTradesX",
+   "url": "https://x.com/BartTradesX/status/2102322334036300258",
+   "date": "2026-09-22",
+   "text": "So Bitcoin is up 16% in last 7 days and bears are celebrating a 2% pullback?\n\nShorting pumps in bear market is completely different from shorting pumps in bull market.\n\nIf you are bearish in bear market you are going to make money but if you are bearish in a bull market rally you https://t.co/aOnyHKIJUz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 59,
+   "user": "CacheTrading",
+   "url": "https://x.com/CacheTrading/status/2102540949150646436",
+   "date": "2026-09-22",
+   "text": "$BTC\n\nTook a short in the $86k range, anticipating a pullback rather than a broader market reversal.\n\nThe larger trend still looks constructive to me, and I view this as a correction within an ongoing bull cycle not the beginning of a fresh bear market.\n\nMy target downside is https://t.co/9fcZ21RFKT"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 12,
+   "user": "Investingwaves",
+   "url": "https://x.com/Investingwaves/status/2102193859665228008",
+   "date": "2026-09-22",
+   "text": "I see a lot people use the 50w MA as their indicator to decide if Bitcoin is in a bull or bear market. \n\nWith that in mind:\n\nBearish confirmation in 2025: Sell at ~95K\n\nBull confirmation in 2026: Buy at ~81K.\n\nGreat trade everyone. I hope you live in a tax haven."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1047,
+   "user": "BritishHodl",
+   "url": "https://x.com/BritishHodl/status/2102400293749067914",
+   "date": "2026-09-22",
+   "text": "The 4 year cycle for Bitcoin is dead.\n\nWe made a new all time high before the previous halving. That wasn't enough.\n\n2025 was supposed to close green, it closed red. That wasn't enough. \n\nThe bottom was supposed be October 5th, it won't be. That won't be enough. \n\nThen this year"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "BySignalstreet",
+   "url": "https://x.com/BySignalstreet/status/2102427967276438005",
+   "date": "2026-09-22",
+   "text": "Bitcoin is in a bull run, and I can explain why in 3 sentences:\n\n1. Fed 25bps rate hike.\n2. BOJ 25bps rate hike.\n3. Failed Clarity Act vote.\n\nThese are 3 separate events that would have all caused $BTC to crash just a few months ago.\n\nThe fact that Bitcoin is brushing them off as"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "BtbAlexandr",
+   "url": "https://x.com/BtbAlexandr/status/2102252080287170794",
+   "date": "2026-09-22",
+   "text": "Bitcoin just broke above $85K.\n\nBut the breakout itself isn’t the most interesting part. 👀\n\nLook underneath:\n\n→ Spot ETF flows turned positive again\n→ Shorts are getting squeezed\n→ BTC reclaimed a major technical level\n→ Spot demand is coming back\n→ But leverage is building https://t.co/RSOCPEgaH7"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 253,
+   "user": "Sherlockwhale",
+   "url": "https://x.com/Sherlockwhale/status/2102420893179801771",
+   "date": "2026-09-22",
+   "text": "I SAID I WOULD FLIP WHEN THE STRUCTURE FLIPPED. IT JUST DID.\n\nFor months, every Bitcoin rally was a retracement inside a bear market. The line was the $82.9K swing high.\n\nBTC has now closed a daily candle above it. The bearish structure has been invalidated.\n\nThis was the final https://t.co/eF5k2zc3fv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 33,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2102388571852173607",
+   "date": "2026-09-22",
+   "text": "$BTC 50WMA:\n\nI usually follow market structure, and I never rely on indicators.\n\nBecause if your structural analysis is truly correct, the indicators will eventually align with what the structure is telling you.\n\nHowever, I’ve noticed many people saying that if Bitcoin closes a https://t.co/4MMDQ52GPW https://t.co/AjPsop3Fmg"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "MartinTGeorge",
+   "url": "https://x.com/MartinTGeorge/status/2102343723874934878",
+   "date": "2026-09-22",
+   "text": "📊 ALPHA SIGNALS DESK · MORNING BRIEF\n22 September 2026\n$BTC remains bullish above $83,000.\n\nMonday’s US spot-Bitcoin ETF flow was +$998.95m. Coinbase Premium is positive, while spot and futures taker CVD remain buy dominant.\n\nOpen interest rose 8.17% to $61.32bn as price https://t.co/XpCAEbMh6J"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 89,
+   "user": "VincentTimmerDC",
+   "url": "https://x.com/VincentTimmerDC/status/2102435775665131768",
+   "date": "2026-09-22",
+   "text": "Before calling this the start of the big #Bitcoin bull run, there’s one confirmation I want to see first.\n\nBitcoin needs to open and close a weekly candle above the last major swing high. (82K)\n\nA weekly candle open and close above a key level is one of the strongest https://t.co/VUWJB8SNGF"
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-15T00:00:00Z",
+ "end": "2026-09-16T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2099861808966140318",
+   "date": "2026-09-15",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• Tuesday’s Market Highlights: Crypto Stocks Slide While Semiconductor Shares Rebound\n• Coinbase (COIN) Stock Plunges as ARK Invest Exits Crypto Holdings Amid Bitcoin Decline\n• Ripple CEO urges Senate to pass CLARITY Act, https://t.co/uiKSmjL6qX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 90,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2099686844082573765",
+   "date": "2026-09-15",
+   "text": "Bitcoin is the lead market signal I’m watching while BTC tests its current structure, nearby support, and the levels that would confirm either continuation or a deeper reset. I’m focused on price, momentum, and confirmation instead of reacting to one isolated move.\n\nI’m using https://t.co/Xdko83YUmf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "TLDL_EN",
+   "url": "https://x.com/TLDL_EN/status/2099779183236772067",
+   "date": "2026-09-15",
+   "text": "The market is holding its breath, waiting on two macro bombs that could blow everything up in the next 48h.\n\nLet's break down the possible scenarios with insights from the latest @MktMates Space.\n\nLet's dive in 👇\n\n1️⃣ The calm before the macro storm 💣\n\nTwo crucial events coming https://t.co/35IhDOD2IN https://t.co/tumNH9entz"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "nguyenkien27ik5",
+   "url": "https://x.com/nguyenkien27ik5/status/2099702543802912786",
+   "date": "2026-09-15",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 privacy layer Undervalued gem #cotinetwork real utility 🚀"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "morgan3yhqpz5b",
+   "url": "https://x.com/morgan3yhqpz5b/status/2099720644812509222",
+   "date": "2026-09-15",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 programmable privacy Undervalued gem #cotinetwork privacy mainstream 🔒"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "jordan1dotfzd8",
+   "url": "https://x.com/jordan1dotfzd8/status/2099722350094860718",
+   "date": "2026-09-15",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential transactions Undervalued gem #cotinetwork diamond hands forever 🔥"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "wilsonaoz0ewbw",
+   "url": "https://x.com/wilsonaoz0ewbw/status/2099721340416844260",
+   "date": "2026-09-15",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential DeFi Undervalued gem #cotinetwork institutional inflow 🛡️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "averymz0mvx62v",
+   "url": "https://x.com/averymz0mvx62v/status/2099712220955652250",
+   "date": "2026-09-15",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential DeFi Undervalued gem #cotinetwork institutional inflow 🛡️"
+  }
+ ]
+}

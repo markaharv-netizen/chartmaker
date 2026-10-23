@@ -1,0 +1,210 @@
+{
+ "symbol": "COIN",
+ "start": "2026-09-11T00:00:00Z",
+ "end": "2026-09-12T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "xBlockFi",
+   "url": "https://x.com/xBlockFi/status/2098404206172663849",
+   "date": "2026-09-11",
+   "text": "🔴 6 CRYPTO &amp; ENERGY STOCKS IN THE RED TODAY\n\nSeptember 11, 2026. Here's the full breakdown:\n\n─────────────────────\n🔵 $COIN $172.28 (-1.40%)\n\n📊 FUNDAMENTALS:\n→ Record Q2 trading volumes. Subscription + services: $583M = 44% of net revenue\n→ 13 consecutive https://t.co/PJzJfGR6hq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2098502496339570731",
+   "date": "2026-09-11",
+   "text": "Someone just paid $12M for a NVDA bet that doesn't pay off until 2028.\n\nTHE PRINT\n\nAt 11:33 ET, someone bought 3,000 NVDA December 2028 $280 calls and paid $12.4M for the privilege. The strike is right at the money, the contract has 826 days on the clock, and the buyer needs both https://t.co/El6FkU71sy"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "santavirtuals",
+   "url": "https://x.com/santavirtuals/status/2098268419397407155",
+   "date": "2026-09-11",
+   "text": "$ETH: a T2 wallet closed its full 150-coin short, removing roughly $367.6k of bearish notional.\n\nthe read is less downside exposure, not new upside demand. it strengthens only if follow-on longs or spot buying appear. https://t.co/HaZas46pm5"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "crypto_nuclear",
+   "url": "https://x.com/crypto_nuclear/status/2098331845121474864",
+   "date": "2026-09-11",
+   "text": "$KAS ~ 3D #Crypto\n#KAS is still trading within a Descending Channel that has formed over a long period.\n\n📉 Red Line: Acts as the upper resistance / descending trendline, consistently limiting upside movements.\n\n📉 Yellow Line: Represents the lower boundary/support of the https://t.co/upsYagFU2U"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2098212849096986831",
+   "date": "2026-09-11",
+   "text": "🔥 $RAYSOL 3.6% spike on 1.4x volume lines up with bullish structure for continuation\n\n- my bias is bullish here — 1h structure is bullish and aligned with daily and weekly; the +3.6% spike with elevated volume and rising OI looks like continuation after liquidity was taken above https://t.co/pQczJ6liSN"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2098472145168871718",
+   "date": "2026-09-11",
+   "text": "🤔 $SC 4.7% spike on 16.3x volume? Looks like a liquidity grab, not real buying\n\n- my bias is bearish here on SC #SCUSDT 1h — that 15-minute +4.7% spike with the 16.3x volume burst looks like a liquidity grab into the last swing high at 0.001038, not clean accumulation; volume https://t.co/K5qqo7WGPV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2098393730730348956",
+   "date": "2026-09-11",
+   "text": "🔺 2.6x volume lifts $NEAR 3.7% in 15m as bullish structure extends the impulse\n\n- my bias is bullish here — 1h structure is bullish and it is aligned with daily and weekly, so this is not a random spike against the larger map; it is a continuation impulse, even if it is https://t.co/HZ5QpY4Kyd"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 242,
+   "user": "zeroxkyle",
+   "url": "https://x.com/zeroxkyle/status/2098250936582111739",
+   "date": "2026-09-11",
+   "text": "Alright now that the entire chain decided to take a dump + everyone rotating to solana - we've had a sell off across assets on the chain, people chasing other stuff w no fundamentals, etc. giving a setup for opportunities that are undervalued and are selling off irrationally https://t.co/5XQSKwjCoq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "FlyJones_",
+   "url": "https://x.com/FlyJones_/status/2098367551117857000",
+   "date": "2026-09-11",
+   "text": "Clearly there’s a massive appetite right now to better understand the @LaunchOnSF ecosystem.\n\nThe last post blew up, and honestly, a lot of the questions and pushback helped me sharpen my own thesis.\n\nCandidly, I’m learning this stuff alongside everyone else. But the more I dig"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "LordPos3idon",
+   "url": "https://x.com/LordPos3idon/status/2098520820712628311",
+   "date": "2026-09-11",
+   "text": "Ya think Leo seeing my Spot up Vol up thesis for single stock names? Probably not but I’m merely a vessel of the Zeitgeist. He’s as tapped in. If Leo make a come back I’m going back to being Geopol Aschenbrenner.  \n\nOne thing I will say, and I had this breakthrough with my boy https://t.co/Ww1AFWsqhS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "notheoryguy",
+   "url": "https://x.com/notheoryguy/status/2098514598710182005",
+   "date": "2026-09-11",
+   "text": "so $stonkcat is very undervalued still considering it is paying out more than 2x any other coin (per $100 invested)\n\naccumulating more  with massive upside potential seems like a good combination \n\ncheck out https://t.co/XsydfDl9eS https://t.co/vq3UBbLJvZ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "notheoryguy",
+   "url": "https://x.com/notheoryguy/status/2098514359215325246",
+   "date": "2026-09-11",
+   "text": "so $stonkcat is very undervalued still considering it is paying out more than 2x any other coin\n\naccumulating more solana:6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx with massive upside potential seems like a good combination \n\ncheck out https://t.co/XsydfDl9eS https://t.co/F1yBDYmByV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 25,
+   "user": "notheoryguy",
+   "url": "https://x.com/notheoryguy/status/2098514801030754392",
+   "date": "2026-09-11",
+   "text": "so $stonkcat is very undervalued still considering it is paying out more than 2x any other coin (per $100 invested)\n\naccumulating more $STONK plus massive upside potential seems like a good combination \n\ncheck out https://t.co/XsydfDl9eS https://t.co/Gvfqm4nGM4"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2098416353552077242",
+   "date": "2026-09-11",
+   "text": "📊 $HBAR Overview | 2026-09-11\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#Hedera\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2098427686657896700",
+   "date": "2026-09-11",
+   "text": "📊 $AAVE Overview | 2026-09-11\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI 🟢 Bounce\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#Aave\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1348,
+   "user": "cryptoklotz",
+   "url": "https://x.com/cryptoklotz/status/2098440067081466268",
+   "date": "2026-09-11",
+   "text": "so, it's been a crazy week, and i haven't really had time to catch my breath and tweet this\n\ni succeeded in the 1k -&gt; 100k challenge. it took 6 days. i thought it'd take 6 months. i want to talk about how i accomplished this, but need some feedback\n\ni've gotten infinite well https://t.co/hKPY4ucZcF https://t.co/FTgqpmN3cv"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2098411313785438603",
+   "date": "2026-09-11",
+   "text": "📊 $LINK Overview | 2026-09-11\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Chainlink\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TimArnoX",
+   "url": "https://x.com/TimArnoX/status/2098516496473354375",
+   "date": "2026-09-11",
+   "text": "$WLD is holding up after the strong sell-off, but I’d like to see another move down toward $0.40 and a strong buyback from there.\n\nIf the price starts recovering quickly, the first move I’ll be watching is toward $0.44 and above.\n\nThe coin already delivered a move up after my https://t.co/zDf2DVPv49 https://t.co/n2ROOwqpAl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "heisenberg83",
+   "url": "https://x.com/heisenberg83/status/2098220472475226262",
+   "date": "2026-09-11",
+   "text": "They launched BULLISH\n\nwhy donmt we run a beta for it which is BEARISH\n\nthis coin will go to 0 https://t.co/c3zV4IRtJ5"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 25,
+   "user": "jewelsindefi",
+   "url": "https://x.com/jewelsindefi/status/2098448040113635790",
+   "date": "2026-09-11",
+   "text": "I am very bullish but it has nothing to do with the pnls of meme coin traders. \n\nMost of those gains will not be realized. \n\nI’m bullish but not because of Robinhood (it is bullish tho)\n\nI’m bullish but it’s not because of “stocks getting tokenized” (it is bullish tho)\n\nI’m"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2098422424656101553",
+   "date": "2026-09-11",
+   "text": "#Coinbase quietly reverted #Base #App back to Coinbase #Wallet abandoning its social experiment to refocus on trading and cross-chain support beyond the $Base $network - The sudden rebrand signals a clear strategic pivot as the team doubles down on core #crypto functionality https://t.co/Z5IDg9R9ck"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2098424385635787149",
+   "date": "2026-09-11",
+   "text": "#LayerZero and #a16z introduced #Lattice Jolt, upgrading proof creation and verification to run 2 to 3 times faster. Built on lattice-based Akita mathematics, the #technology adds quantum-resistant security while significantly boosting processing efficiency across #blockchain https://t.co/frnvnFECuR"
+  }
+ ]
+}

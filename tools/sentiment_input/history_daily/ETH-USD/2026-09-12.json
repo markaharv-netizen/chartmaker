@@ -1,0 +1,93 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-12T00:00:00Z",
+ "end": "2026-09-13T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 126,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2098597401955328289",
+   "date": "2026-09-12",
+   "text": "BTC wicked up to 79,760, almost 80,000, on Friday before news pumped and dumped it right back down. I don't think this is a predictive wick, because this rally has already been running for a while, so I'm calling it a pump and dump wick. Bitcoin still closed above the cloud with https://t.co/Iowdkviic3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "CashXman",
+   "url": "https://x.com/CashXman/status/2098590953137430730",
+   "date": "2026-09-12",
+   "text": "🚨 CRYPTO MARKET UPDATE\n\nThe market is getting interesting.\n\nBTC is sitting right on a KEY decision zone.\n\nAnd this is where traders usually make the same mistake:\n\nFOMO the pump ❌\nPanic the dump ❌\nTrade the confirmation ✅\nHere’s what I’m watching 👇\n₿ BTC\n\n🔥 $77K = THE LINE https://t.co/fCmtK6rR0T"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "marketmaker_hq",
+   "url": "https://x.com/marketmaker_hq/status/2098648170351964321",
+   "date": "2026-09-12",
+   "text": "ethereum:0xaea46a60368a7bd060eec7df8cba43b7ef41ad85 - technically still early but want to see break of $0.2 and $0.32 on weekly before being sure about the upside as a bull you want to see that $0.11 low is not lost\n\nbear case price continues to consolidate for next few https://t.co/qFOhynXzEt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "macroinvest365",
+   "url": "https://x.com/macroinvest365/status/2098728351544295860",
+   "date": "2026-09-12",
+   "text": "$ETH — the framework I use for Ethereum.\n\nReference price: $2,445.00 | FY26 rev: N/A (token) | NI: N/A | Shares: 120M ETH\n\n5-year bull / base / bear model:\n\n                    Bear        Base        Bull\n2031 price          $950–1,100     $1,500–1,850     $3,500–5,000+\nAnnual"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "LeafsHeaven",
+   "url": "https://x.com/LeafsHeaven/status/2098660584237432886",
+   "date": "2026-09-12",
+   "text": "New market thesis &amp; strategy from now until Q4 2027/Q1 2028:\n\n1) 75% allocation to ETH (1x long ~1:1)\n2) 25% allocation to ARB (1x long ~ 1:1)\n\nLong-term directional trading only with zero downside risk, size will compound over time and no need to catch tops or bottoms. The"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Yaroslav_Glune",
+   "url": "https://x.com/Yaroslav_Glune/status/2098729216409768413",
+   "date": "2026-09-12",
+   "text": "The total crypto market cap edged up 0.59% to approximately $2.66 trillion, while BTC dominance slipped 0.33 percentage points to 58.15%, a subtle but meaningful rotation signal suggesting capital is beginning to migrate toward altcoins. \n\nBitcoin itself is holding near $77,485, https://t.co/DrvaY1VHqn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 170,
+   "user": "BroosterWeb3",
+   "url": "https://x.com/BroosterWeb3/status/2098830666515312858",
+   "date": "2026-09-12",
+   "text": "Good Evening Legends! 🔥\n\nBefore my GN, today’s crypto highlights:\n\n- Coinbase CEO Brian Armstrong says Bitcoin has bottomed and $400,000 by 2030 is still a reasonable target. He added that this down period has now lasted about a year and he personally believes the bottom is in. https://t.co/zX7wd5ujQX"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 27,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2098689658331037756",
+   "date": "2026-09-12",
+   "text": "ethereum:0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3 / Onyxcoin 🔥 forming a Double Top.\n\nPrice is around $0.00429 after rejecting the $0.0048–$0.0049 resistance zone twice. 📉 A breakdown below the neckline near $0.00375 could confirm the bearish setup, with the chart pointing https://t.co/tGIHRl85H7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "benditthebandit",
+   "url": "https://x.com/benditthebandit/status/2098840947027058872",
+   "date": "2026-09-12",
+   "text": "Usdt.d ethereum:0xdac17f958d2ee523a2206206994597c13d831ec7 \n\nTesting session vwap from the upside…looks like structure and direction is shifting….there is a Lot of space above!\n\nMiddle Band of direction is shifting so possibly more downside for $shitcoins are incoming…\n\n;-) https://t.co/JafDZfkagG"
+  }
+ ]
+}

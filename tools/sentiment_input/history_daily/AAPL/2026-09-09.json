@@ -1,0 +1,192 @@
+{
+ "symbol": "AAPL",
+ "start": "2026-09-09T00:00:00Z",
+ "end": "2026-09-10T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AAPL (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "neph401",
+   "url": "https://x.com/neph401/status/2097784295909912635",
+   "date": "2026-09-09",
+   "text": "$AAPL traded a nearly $9.25 intraday range, hit $319.15, dropped to $309.90, then recovered to $315.34.\n\nThat tells me both sides are fighting hard around this level.\n\n🔥 Bull trigger: $320\n🎯 Upside: $328 → $330 → $344\n⚠️ Bear trigger: &lt;$309\n🎯 Downside: $305 → $300\nFor me, https://t.co/k0Us1vautI"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 93,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2097528581517955386",
+   "date": "2026-09-09",
+   "text": "BTC closed red and confirmed a close below our short-term support, so a tag of the fast line looks inevitable. The chart is still technically strong bullish, and I see any dip as a buy the dip opportunity with 76,706 as the level to hold. ETH printed a bearish OBV cross, https://t.co/EthS4mDu0o"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ChrisDaltonMacr",
+   "url": "https://x.com/ChrisDaltonMacr/status/2097662455350780372",
+   "date": "2026-09-09",
+   "text": "$CMPS: First, regarding COMP360 for treatment-resistant depression, both COMP005 and COMP006 met their primary endpoints, with rapid onset of action and effects lasting up to 26 weeks. The company aims to submit a rolling NDA by the fourth quarter of this year, with a projected https://t.co/cuQk9xbJZk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinanceGlobal9",
+   "url": "https://x.com/FinanceGlobal9/status/2097630065110536622",
+   "date": "2026-09-09",
+   "text": "XDigest 10:08 UTC — Bearish (High), Outlook Bearish 1-3D\n\n$SPY Bearish · $IRT Bullish · $IREN Mixed · $AAPL Bearish · $AMZN Bullish\n\nOil toward $100 + 10y at 4.81% weighing equities; $IRT–Centerspace $8.1B REIT deal still active. https://t.co/bMs8CfIzQu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinanceGlobal9",
+   "url": "https://x.com/FinanceGlobal9/status/2097598166438719527",
+   "date": "2026-09-09",
+   "text": "XDigest 07:07 09/09 UTC | Mixed (Med)\nOutlook Mixed 1-3D\n$GOOG Bullish · $MSFT Bullish · $AAPL Neutral · $RKLB Bullish · $SPY Bearish\nBrent nears $100; GOOG $15B Finland AI; MSFT PT hiked to $530. Tech cushion vs oil/yields. https://t.co/l8I5jfZuGg"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2097743162538086791",
+   "date": "2026-09-09",
+   "text": "$1.0M OF PUTS HIT AAPL TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - MU, HOOD, META, PURR, GOOGL\nPUTS BOUGHT (bearish bets) - AAPL, INTC, COP, TSLA\n\nSize is conviction. It is not intent. https://t.co/DVS4tOMtuy"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "bullandbear_id",
+   "url": "https://x.com/bullandbear_id/status/2097751858836348947",
+   "date": "2026-09-09",
+   "text": "🎲 The collapsing cost of consumer tech when priced in Bitcoin (from 1.23 bitcoin:native  for an iPhone $AAPL  7 Plus down to 0.01 BTC for an iPhone 18 Pro) highlights the ultimate macro power law: holding fiat-denominated consumer goods or cash guarantees purchasing power https://t.co/v9Wjk88dRP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Williamvwvxmt",
+   "url": "https://x.com/Williamvwvxmt/status/2097683648103559206",
+   "date": "2026-09-09",
+   "text": "$AAPL is more than a consumer hardware giant; its tightly locked device ecosystem forms a private AI sandbox, differentiating it from cloud-only AI peers.\n\nOn-device AI reduces cloud inference costs while protecting user privacy, creating stickier recurring service revenue. The https://t.co/B8bzfVRVjW"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2097823665991581851",
+   "date": "2026-09-09",
+   "text": "$1.1M OF CALLS HIT SKHY TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - SKHY, META, AAPL, CVNA, SMTC\nPUTS BOUGHT (bearish bets) - INTC, MU, SNDK, SPOT\nFOUGHT OVER (heavy both ways) - AMD\n\nSize is conviction. It is not intent."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "obed1TG",
+   "url": "https://x.com/obed1TG/status/2097669273598505143",
+   "date": "2026-09-09",
+   "text": "🌅 Good morning \n\n📉 $SPY futures are gapping down ~31 points near 7642.\n🐂 BULLISH: Hold 7650 → 7670 → 7680\n🐻 BEARISH: Below 7620 → 7600 → 7590\n\n💡 Trade Ideas:\n\n$COIN 190C above 184\n$ASTS 70C above 68\n$XOM 165C above 163\n$USO 150C above 149\n⏸️ Sideways: $AAPL $GOOGL $AMZN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "De__Marc",
+   "url": "https://x.com/De__Marc/status/2097666435988222397",
+   "date": "2026-09-09",
+   "text": "📉 $SPY futures are gapping down ~31 points near 7642.\n\n🐂 BULLISH: Hold 7650 → 7670 → 7680\n🐻 BEARISH: Below 7620 → 7600 → 7590\n\n💡 Trade Ideas:\n$COIN 190C above 184\n$ASTS 70C above 68\n$XOM 165C above 163\n$USO 150C above 149\n\n⏸️ Sideways: $AAPL $GOOGL $AMZN $NOW\n\nGood luck"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Zurieliooo",
+   "url": "https://x.com/Zurieliooo/status/2097664335308857537",
+   "date": "2026-09-09",
+   "text": "Premarket 9/9:\n\nRisk is leaning defensive. Nasdaq futures are roughly -0.4% as Brent pushes through $100 and the 10Y climbs near 4.81% — oil + yields remain the biggest headwind for tech this morning. \n\nOne major exception: $META is +5% premarket after launching its new Muse AI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "OptionKing33996",
+   "url": "https://x.com/OptionKing33996/status/2097666094828003801",
+   "date": "2026-09-09",
+   "text": "🌅 Good morning everyone!\n\n📉 $SPY futures are gapping down ~31 points near 7642.\n\n🐂 BULLISH: Hold 7650 → 7670 → 7680\n🐻 BEARISH: Below 7620 → 7600 → 7590\n\n💡 Trade Ideas:\n\n$COIN 190C above 184\n$ASTS 70C above 68\n$XOM 165C above 163\n$USO 150C above 149\n\n⏸️ Sideways: $AAPL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "vkingstrade",
+   "url": "https://x.com/vkingstrade/status/2097754814151307702",
+   "date": "2026-09-09",
+   "text": "🚨 $AAPL FOLDABLE IPHONE WATCH\n\nApple officially unveiled the iPhone Duo—its first foldable iPhone. Starting at $1,999 with a 7.6-inch display and the new A20 Pro chip.\n\nBullish above $313.40 with a clean hold. Below $309.92 turns bearish. Between those levels, wait.\n\nTrade the"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "StelliumTape",
+   "url": "https://x.com/StelliumTape/status/2097759112129814763",
+   "date": "2026-09-09",
+   "text": "📈 $AAPL upside bet just printed.\n$AAPL (Apple) 310C — bullish sweep\n$816K premium · 7x sweeps · 0DTE · -1.8% ITM\n\n⚡ Fastest option-flow alerts — follow @Vicky_BigBull:\nhttps://t.co/JPDhSCKJjM\n\n#options #optionsflow https://t.co/Udep5QZpoD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 23,
+   "user": "icooperTrades",
+   "url": "https://x.com/icooperTrades/status/2097764071281971376",
+   "date": "2026-09-09",
+   "text": "#Apple announced news on it's new folding phones today but as always, the news had leaked out days ago. Personally, I love folding phones and would never have anything else. But I am a Samsung customer and over $3000 for the high end version is STEEP. \nThe chart didn't react https://t.co/CIiMYClXnC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AlphawalkAi",
+   "url": "https://x.com/AlphawalkAi/status/2097600418557862190",
+   "date": "2026-09-09",
+   "text": "Apple’s $2,000 Foldable Bet | September 9, 2026\n(📍Data From https://t.co/qY3S9XbHvL Daily Report)\n\nApple’s September event is not simply another iPhone launch.\n\nIt is a test of whether a new CEO, a new form factor and higher prices can restart the company’s hardware growth https://t.co/V7M5D4EOlD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DonnaAnnleffler",
+   "url": "https://x.com/DonnaAnnleffler/status/2097815844671631366",
+   "date": "2026-09-09",
+   "text": "$NKE $IBM $AAPL $C \n\nI’m starting to believe we may be setting up for a meaningful market correction as we get closer to the midterms. 📉\n\nThat doesn’t mean I’m bearish long term — I’m still very bullish on quality companies — but uncertainty around elections, rates, inflation,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "msperfectlex",
+   "url": "https://x.com/msperfectlex/status/2097736810319188303",
+   "date": "2026-09-09",
+   "text": "$AAPL — this chart is a clean example of an early squeeze turning into a full intraday fade.\n\nApple opened around $315.8, pushed hard into a morning high near $318.13, and for a moment it looked like buyers had control. But once that move failed to hold, the tape completely https://t.co/Fm8YayzERq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Mhotashim",
+   "url": "https://x.com/Mhotashim/status/2097754375011934296",
+   "date": "2026-09-09",
+   "text": "Want exposure to a stock move without using a traditional stock brokerage?\n\nThat’s where MEXC Stock Futures become interesting.\n\nIf you have a view on names like $NVDA, $TSLA or $AAPL, Stock Futures let you trade the price direction through a futures-style product including Long https://t.co/KDJoPVWw87"
+  }
+ ]
+}

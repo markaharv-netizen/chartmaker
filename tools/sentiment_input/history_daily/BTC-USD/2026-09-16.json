@@ -1,0 +1,210 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-16T00:00:00Z",
+ "end": "2026-09-17T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 13,
+   "user": "rittikd",
+   "url": "https://x.com/rittikd/status/2100223982050189428",
+   "date": "2026-09-16",
+   "text": "📒The Rittik Report: Bitcoin Liquidation Structure\n\nBitcoin’s 1 week liquidation heatmap shows that the market has undergone a meaningful reset.\n\nPrice has fallen from the recent $79K area into roughly $75.5K-$76K, clearing several liquidity concentrations that previously sat https://t.co/cOSWDhxw15"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "rittikd",
+   "url": "https://x.com/rittikd/status/2100223918653255781",
+   "date": "2026-09-16",
+   "text": "The Rittik Report: Bitcoin Liquidation Structure\n\nBitcoin’s 1 week liquidation heatmap shows that the market has undergone a meaningful reset.\n\nPrice has fallen from the recent $79K area into roughly $75.5K-$76K, clearing several liquidity concentrations that previously sat below https://t.co/EJcQNSjGtH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "_Warriorspiritx",
+   "url": "https://x.com/_Warriorspiritx/status/2100286802921992678",
+   "date": "2026-09-16",
+   "text": "Fed raises rates is bullish if yen is raising rates. How? Dollar strength vs Yen Strength spread = NEUTRAL. If fed cut rates USD strength vs Yen Strength = unwind selloff = BEARISH. its not bear, not bull, but NEUTRAL. which means TGA DRAIN can be NET LIQUIDITY POSITIVE. Yen"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "0xQuantyx",
+   "url": "https://x.com/0xQuantyx/status/2100014138277917082",
+   "date": "2026-09-16",
+   "text": "BTC’s higher-timeframe trend hasn’t broken, but the internals are deteriorating.\n\nMy medium-term positioning models remain LONG:\n\nTOTALES: +0.42\nBitcoin: +0.40\nEthereum: +0.72\nBut all three are losing momentum, with daily score changes of −0.19, −0.22 and −0.14 respectively. https://t.co/jVtrqzipFz https://t.co/1RUpBG0JBc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "HCFlowSniper",
+   "url": "https://x.com/HCFlowSniper/status/2100215371626405940",
+   "date": "2026-09-16",
+   "text": "📊 AM Crypto Pulse — Wed Sep 16, 2026\n\n🪙 Market snapshot (levels)\nBitcoin (BTC): Support $75,000 → $74,000 | Resistance $77,000 → $80,000\nEthereum (ETH): Support $2,400 → $2,350 | Resistance $2,500 → $2,600\nXRP: Support $1.27 → $1.20 | Resistance $1.35 → $1.40\nSolana https://t.co/Cv988xwAjm"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 8,
+   "user": "alifaisaltrades",
+   "url": "https://x.com/alifaisaltrades/status/2100248342643261716",
+   "date": "2026-09-16",
+   "text": "$BTC\n\nYesterday, the market held the support strongly even after the Clarity Act failed.\n\nThat is a bullish sign people are ignoring just because another bearish news event is coming.\n\nFor me, that news is already priced in.\n\nI’m still looking for the downside to fill my long https://t.co/bLH9sj4yTs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "bayektrader",
+   "url": "https://x.com/bayektrader/status/2100140224172995021",
+   "date": "2026-09-16",
+   "text": "🚨 BTC MORNING BIAS - 16 September 2026 🔥\n\n📍 BTC is trading around 75,422 right now.\n\nThe structure is still heavy, and downside continuation improves only if support gives way.\n\nKEY LEVELS TO WATCH\n• Resistance: 76,235\n• Support: 75,127 / 75,681\n\nBias: Cautiously Bearish\nKey https://t.co/54rIaglqAj"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "juanktrades",
+   "url": "https://x.com/juanktrades/status/2100254531263054178",
+   "date": "2026-09-16",
+   "text": "All I see today on CT is mixed opinions about bitcoin and bearish setups cuz the clarity act not being pass and FOMC, there’s more bearish thesis and lots on fear.\nIf we’re really on a bull market, things like this are precisely to disorient everyone and continue with more upside"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "SignalxBinance",
+   "url": "https://x.com/SignalxBinance/status/2100337764323762238",
+   "date": "2026-09-16",
+   "text": "My personal research into ETH's 4H chart, contextualized by the impending Fed meeting, paints a picture of clear caution. The Fed is in a tough spot, likely needing to deliver a hawkish message to maintain credibility, which generally isn't great for risk assets like ETH. 📉\n\nThe https://t.co/0cXIv6OjvD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "WiseAnalyze",
+   "url": "https://x.com/WiseAnalyze/status/2100168300521001097",
+   "date": "2026-09-16",
+   "text": "📉 Bitcoin Daily 📈\n\nWaiting for 18 UTC volatility on Feds Interest Rates decision. I'll be watching that live and act based on PA. Main zones to watch if bitcoin:native pump are Daily 20ema and area above Monthly 20ema (TG alarms set for both). On Day timeframe BTC is still https://t.co/3pw1E13Jal https://t.co/s6JxfgI02B"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 19,
+   "user": "NFTdavie",
+   "url": "https://x.com/NFTdavie/status/2100053725456785431",
+   "date": "2026-09-16",
+   "text": "Rapid Fire Charts: $BTC\n\nHere’s the bullish case for $BTC.\n\nBitcoin shrugs off the failed CLARITY Act news and keeps moving. Right now, I can see two potentially bullish patterns forming:\n\n🧡A bull flag.\n🧡And an inverse head and shoulders.\n\nIf either pattern confirms, it could https://t.co/sHiAch2D90 https://t.co/LHPNJ3LyoH"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 22,
+   "user": "RealeRose",
+   "url": "https://x.com/RealeRose/status/2100216980108095797",
+   "date": "2026-09-16",
+   "text": "For our long term investors who are spot buying,\n\nI’M SO BULLISH. \n\nI’m still dollar cost averaging as long as Bitcoin is bullish on the weekly. Another option is to wait for our buy zone at $74k to make larger buys. \n\nWe keep our eyes on the 50-week SMA around $78,800. If we get"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "XRP_EXPERT_",
+   "url": "https://x.com/XRP_EXPERT_/status/2100126196063142064",
+   "date": "2026-09-16",
+   "text": "⚠️ Crypto Bull-Market Watch — status downgraded: Bearish/Neutral\n\nThis is a meaningful deterioration from the previous Early Bullish reading.\n\nBitcoin has fallen from roughly $79–81k to around $76k, with Reuters reporting BTC at $75,908 after the U.S. Senate failed to advance the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "apedintocrypto",
+   "url": "https://x.com/apedintocrypto/status/2100186181078220880",
+   "date": "2026-09-16",
+   "text": "USDT.D+USDC.D Stablecoins Dominance - It's definitely not bearish, as of now. \n\nIn a bull market one says \"all dips are for buying\", which in turn means Bitcoin and cryptos are still in the bear market.\n\nA snapback to RSI 40 on weekly, ready for next leg up.\n\nUpon reclaim of https://t.co/bKkzaYgZT6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "BulletOneOneTwo",
+   "url": "https://x.com/BulletOneOneTwo/status/2100048686411886919",
+   "date": "2026-09-16",
+   "text": "Okay, some Bitcoin chart porn for a beautiful Tues night.  What was shaping up to be an ugly rejection and rising flag (bearish) at resistance is now starting to morph into something a bit more bullish - a bull flag coiling under that same resistance. The clarity act is https://t.co/qipc8cHkff"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2100096791936987603",
+   "date": "2026-09-16",
+   "text": "Macro Observatory Mid-Week 38 Briefing\n\nTuesday's telemetry delivers a critical systemic resolution: the Monday relief squeeze dissolves as the tech core cracks, Bearish Hibernation expands to 14 tickers, and 35 Monthly Gauges sink below neutral.\n\nThe transient relief bounce that"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NadHam83",
+   "url": "https://x.com/NadHam83/status/2100041983376998738",
+   "date": "2026-09-16",
+   "text": "🚨 FED HIKE TOMORROW. TOM LEE STILL SEES A MASSIVE CRYPTO RALLY. 🔥\n\nWhat if the Fed raises rates tomorrow, and Bitcoin still rallies?\n\nThat's exactly the scenario Tom Lee is preparing for.\n\nThe Fundstrat co-founder says he expects a Fed hike, but remains strongly bullish on the https://t.co/fLiyeewHyR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "oobiewpb",
+   "url": "https://x.com/oobiewpb/status/2100212106784067986",
+   "date": "2026-09-16",
+   "text": "$MARA $NIO \n\nDLMM DAILY OPTIONS WATCHLIST\nWednesday, September 16, 2026\n9:11 AM ET PREMARKET\n\nMARKET CONTEXT\n\nFutures are modestly higher this morning ahead of today's Federal Reserve decision.\n\nS&amp;P 500 futures: approximately +0.1%\nNasdaq 100 futures: approximately +0.3%\nDow"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "BullishPulse_",
+   "url": "https://x.com/BullishPulse_/status/2100217095568949420",
+   "date": "2026-09-16",
+   "text": "$Bitcoin buy signal appears ahead of #Fed rate decision.\n\nA closely watched momentum indicator is telling Bitcoin traders to go long, and the timing couldn't be more interesting. The TD Sequential has generated a buy signal on Bitcoin's chart just ahead of the Federal Reserve's https://t.co/5xvDwxgY4t"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Rina_BingX",
+   "url": "https://x.com/Rina_BingX/status/2100152472514015734",
+   "date": "2026-09-16",
+   "text": "📉 Crypto Market Overview (Sep.16) \nPrice Action, Macro, Fund Flows, FOMC, Today's Key Points 🇺🇸\n\n■ Bitcoin, Ethereum, Hyperliquid, Altcoin Sentiment \n\n🟠 BTC: 75,816.9 USDT, -1.43% on the day. Dropped from ~77,300 overnight to a low near 74,900 after the CLARITY Act failed in https://t.co/at4uGrPaKZ https://t.co/xzuEXM7aNN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "BullishPulse_",
+   "url": "https://x.com/BullishPulse_/status/2100217476206272961",
+   "date": "2026-09-16",
+   "text": "$Bitcoin buy signal appears ahead of #Fed rate decision.\n\nA closely watched momentum indicator is telling Bitcoin traders to go long, and the timing couldn't be more interesting. The TD Sequential has generated a buy signal on Bitcoin's chart just ahead of the Federal Reserve's https://t.co/hxcu144wZS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "BullishPulse_",
+   "url": "https://x.com/BullishPulse_/status/2100217279283601454",
+   "date": "2026-09-16",
+   "text": "$Bitcoin buy signal appears ahead of #Fed rate decision.\n\nA closely watched momentum indicator is telling Bitcoin traders to go long, and the timing couldn't be more interesting. The TD Sequential has generated a buy signal on Bitcoin's chart just ahead of the Federal Reserve's https://t.co/jLqy3CLzJK"
+  }
+ ]
+}

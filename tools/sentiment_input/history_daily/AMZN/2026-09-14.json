@@ -1,0 +1,228 @@
+{
+ "symbol": "AMZN",
+ "start": "2026-09-14T00:00:00Z",
+ "end": "2026-09-15T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AMZN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "deemancpa",
+   "url": "https://x.com/deemancpa/status/2099485867991531633",
+   "date": "2026-09-14",
+   "text": "🚨 $AMZN sitting on 252.5 with $7.8M of NEGATIVE gamma at 250 and $30M of call gamma capping 260\n\n📉 Bear trigger: lose 252.4 on volume → 250 magnet → 247.35\n\nPlay: 250P / 247.5P 9/18–9/21, stop above 257.6\n\n⚡ Twist: spot is 7 pts under the flip (259.35)\nDealers sell weakness"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 72,
+   "user": "Pharmdca",
+   "url": "https://x.com/Pharmdca/status/2099605475226763326",
+   "date": "2026-09-14",
+   "text": "The biggest opportunities often appear when sentiment is at its worst.\nPatience. Conviction. Execution. 📈\n\n$GOOGL was “dead” last year.\n$MSFT was in a bearish trend before momentum shifted.\n$NVDA was called overvalued by plenty of pundits,\n\nNow $AMZN is the “dead money” theme."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2099589661186273655",
+   "date": "2026-09-14",
+   "text": "Someone paid $25M to bet MRK does nothing for four days — and the whole tape sold calls with them.\n\nTHE TAPE\n\nThe headline print of the session wasn't a bet on a stock going up or down — it was a bet on a stock going nowhere. At 15:23 ET, someone sold 5,640 MRK September-18 $100 https://t.co/Ms8P1tAiHW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ruoxi0x3",
+   "url": "https://x.com/ruoxi0x3/status/2099458094728446097",
+   "date": "2026-09-14",
+   "text": "$SPCX  The bias remains valid, with price playing out as mapped. \n\nA short term retest of the demand zone is expected. From demand, an upside move could follow.  \n\nBIAS: Bearish short term, with upside favored after a confirmed demand bounce.\n\n$SPY $AMZN $AMD $MSFT $META https://t.co/dE6hRHzrkG"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "optafinance",
+   "url": "https://x.com/optafinance/status/2099414581865062673",
+   "date": "2026-09-14",
+   "text": "amzn oct 2 '26: ~10% otm puts at 13 iv, same-distance calls at 6 — a 6 pt skew with spot 256.78. same distance from spot, double the price for downside. that's skew: crash protection bid, upside supply heavy. either puts are being bought or calls sold — often both at once."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Cashflowfarming",
+   "url": "https://x.com/Cashflowfarming/status/2099551636717031480",
+   "date": "2026-09-14",
+   "text": "Bullish $AMZN \nBearish model layer https://t.co/R0YWZzU0tg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AkinAdemGokhan",
+   "url": "https://x.com/AkinAdemGokhan/status/2099529611742781743",
+   "date": "2026-09-14",
+   "text": "By midday 45 of 70 names sit at last stop — breadth exhaustion. TITAN opened three CALLs anyway.\n\nTop directional bet: $MU CALL $297M. Macro bias bullish at 1.03, but the last 3 days flipped bearish.\n\nSeptember 14, 2026, 12:02 PM ET · Options Desk\nRegime: RANGE_WHIPSAW · Clarity https://t.co/cglpnhsEaK"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "curtsummers_",
+   "url": "https://x.com/curtsummers_/status/2099525088949506249",
+   "date": "2026-09-14",
+   "text": "$AMZN Latest Update. Amazon’s Q2 earnings beat market estimates. AWS operating income jumped sharply, and long-term AI cloud contracts continue to expand. The firm invests heavily in generative AI infrastructure. Analysts remain bullish with solid upside targets. AI capex and https://t.co/GJd1j4kny3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "make1tpos1t1ve",
+   "url": "https://x.com/make1tpos1t1ve/status/2099476027059650628",
+   "date": "2026-09-14",
+   "text": "AMZN rallied yesterday. AWS AI growth &amp; retail margin improvement are driving the move. Bull or bear on AMZN? #AMZN #CloudStocks https://t.co/MFfVTsKMuK"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "septinvesting66",
+   "url": "https://x.com/septinvesting66/status/2099468959896453275",
+   "date": "2026-09-14",
+   "text": "🚨 TOP NEWS OVERNIGHT &amp; PRE-MARKET MOVERS 🚨\n\nBig catalysts hitting tech, AI, and micro-caps before the bell:\n\n📈 BULLISH\n\n🟢 $RUM | Anthropic inks a massive $13.7B, 6-year compute deal with Trump-linked Rum Group. Pure revenue rocket fuel.\n🟢 $AMZN | Anthropic selects Nasdaq for"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "KevinJagiah",
+   "url": "https://x.com/KevinJagiah/status/2099488565088362633",
+   "date": "2026-09-14",
+   "text": "👑 MONDAY'S KING NODES ARE LIVE\n\nThis is NOT Friday's map.\n\nSeveral major names have been dramatically repriced this morning, and that means we're not anchoring ourselves to last week's trades.\n\nToday's decision points:\n\n🎯 $SPY 760\n🎯 $QQQ 710\n🎯 $AAPL 332.50 / 335\n🎯 $NVDA 215"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2099502413703159918",
+   "date": "2026-09-14",
+   "text": "Tickers dominating X conversation today:\n\n1. Intel $INTC is down 6.3% premarket\n\n🟢 Sentiment: 33% bullish, 12% bearish, 55% neutral\n\nIntel slipped 6% in pre‑market trading after Anthropic’s CEO warned of an AI slowdown, leading to a rise in X posts. The community is split, with https://t.co/FKkBcIBSr2"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AkinAdemGokhan",
+   "url": "https://x.com/AkinAdemGokhan/status/2099594241865322948",
+   "date": "2026-09-14",
+   "text": "STATION tagged 88 of 115 names LAST STOP — breadth 77% spent. TITAN still opened five of eight picks on CALLs, real confirmation just 3/8. Biggest directional bet $MRK CALL $714M, 20% of the tape. Macro bullish 1.01, micro flipped bear.\n\nSeptember 14, 2026 · Options Desk\nRegime: https://t.co/VDFChPxs5k"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "EAribisala31797",
+   "url": "https://x.com/EAribisala31797/status/2099370232485683669",
+   "date": "2026-09-14",
+   "text": "New week. New positioning.\n\nThe MAG7 remains one of the most important baskets to watch going into this week ,  $NVDA, $MSFT, $AAPL, $GOOGL, $AMZN, $META and $TSLA.\n\nBut what stands out right now is how differently they’re moving.\n\n$META has been one of the strongest names https://t.co/S0hV4ByVh1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "DreadPirateMOR",
+   "url": "https://x.com/DreadPirateMOR/status/2099624272788341048",
+   "date": "2026-09-14",
+   "text": "Here are the results of my first two weeks in September on my defined risk strategies I have posted here on X.\n\nTDLR:\n\nCaptain's Log. Last two weeks.\n+$2,320 profit\n$3,975 peak risk in one day\n+58% on that risk\nBest day +$925. Worst day -$150\n5 wins. 1 loss. 2 even\n\nDefined-risk https://t.co/run9F20TZc"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2099500308644659205",
+   "date": "2026-09-14",
+   "text": "🚨 BURAKTHESCALPER LLC — 7 AM PT LIVE BATTLE PLAN\nMONDAY • SEPTEMBER 14, 2026\n\n⚔️ BIAS: BEARISH / SELL FAILED RECLAIMS. The opening confirmed the premarket warning: the S&amp;P 500 opened -0.59% at 7,611.44, Nasdaq opened -1.19%, and fresh coverage has Nasdaq down about 1.2% with"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "tickerta1k",
+   "url": "https://x.com/tickerta1k/status/2099469542393258344",
+   "date": "2026-09-14",
+   "text": "$AMZN AMZN: AI supercycle or capex trap at 256.78 USD? 3.22B USD FCF vs 220B USD burn paints a wild story. The Anthropic IPO could flip the script — or expose it. 👀\n\n📐 MODEL SCENARIO RANGE\n• Current Price: 256.78 USD | Assumption-based reference: ~166.91 USD\n• Model scenario https://t.co/ty9r85kjBb"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2099543600887439839",
+   "date": "2026-09-14",
+   "text": "🚨 BURAKTHESCALPER LLC — 10 AM PT MARKET BATTLE PLAN\nMONDAY • SEPTEMBER 14, 2026\n\n⚔️ BIAS: RISK-OFF / TECH STILL THE WEAK LINK. The key macro setup has not improved enough to flip bullish: AI/chip selling remains the dominant drag, oil is still above $100, and the 10Y briefly"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2099559185381720375",
+   "date": "2026-09-14",
+   "text": "🚨 BURAKTHESCALPER LLC — 11 AM PT MARKET BATTLE PLAN\nMONDAY • SEPTEMBER 14, 2026\n\n⚔️ BIAS: DEFENSIVE / SELECTIVE ROTATION — NOT A BLIND SHORT. The important development is that the broad market has absorbed much of the opening shock even while the AI/chip complex remains"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "H143capital",
+   "url": "https://x.com/H143capital/status/2099487862487978371",
+   "date": "2026-09-14",
+   "text": "Check out my free deep dive into another undervalued company that operates in a unique niche and has a loyal customer base spanning decades. https://t.co/yYsBKYzKNY\n$AMZN $TSCO $META $ELMT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "XpertPATrader",
+   "url": "https://x.com/XpertPATrader/status/2099508929944572045",
+   "date": "2026-09-14",
+   "text": "Directions changed on index - chop or more downside ? NDX SPX AVGO MU NVDA AMZN TSLA JPM https://t.co/alNwtsmrBF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Hunter29n8",
+   "url": "https://x.com/Hunter29n8/status/2099520017067135290",
+   "date": "2026-09-14",
+   "text": "My portfolio isn’t built around chasing whatever is hot.\n\n~40% → AI &amp; cloud infrastructure\n$NBIS $IREN $CRWV $AMZN $ORCL\n~30% → High-conviction asymmetric setups\n$HIMS $LMND $SOFI $GRAB\n\n~20% → Undervalued + dividends\n$NVO $NKE $UNH\n~10% → Crypto\n$BTC $ETH\n\nPlus cash on the https://t.co/1ALYHMfRqP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DreamvioApp",
+   "url": "https://x.com/DreamvioApp/status/2099476622478832099",
+   "date": "2026-09-14",
+   "text": "The most UNDERPRICED Mag 7 stocks based on valuation + AI exposure right now:\n\n$NVDA 🟢 Strong Buy\n$GOOGL 🟢 Strong Buy\n$MSFT 🟢 Buy\n$AMZN 🟢 Buy\n$META 🟢 Buy\n$AAPL 🟡 Hold\n$TSLA 🔴 Valuation Risk\n\nThe key distinction:\n\n$GOOGL = arguably the cheapest on absolute valuation.\n\n$NVDA"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Vlachavas_D",
+   "url": "https://x.com/Vlachavas_D/status/2099490558414590106",
+   "date": "2026-09-14",
+   "text": "Is the S&amp;P 500 Really Overvalued? \n\nMany investors look at the S&amp;P 500 near all-time highs and reach the same conclusion: the market must be overvalued. It's an understandable reaction. After all, how can stocks keep climbing when they've already risen so much? \n\nThe problem is https://t.co/zaSCiSC3Os"
+  }
+ ]
+}

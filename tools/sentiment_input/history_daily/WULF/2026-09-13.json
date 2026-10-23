@@ -1,0 +1,57 @@
+{
+ "symbol": "WULF",
+ "start": "2026-09-13T00:00:00Z",
+ "end": "2026-09-14T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "WULF (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 25,
+   "user": "mxrbtc",
+   "url": "https://x.com/mxrbtc/status/2099115519865753872",
+   "date": "2026-09-13",
+   "text": "With all of this weekend's AI doom &amp; gloom, it makes me even more bullish on the market's reaction IF $DGXX secures a credit financing facility (similar to NUAI) and doesn't instead go down the convertible note option\n\nAny financing would be welcome. The effect would be it https://t.co/VG506bgVoc"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 33,
+   "user": "CK_Cryptoklepto",
+   "url": "https://x.com/CK_Cryptoklepto/status/2099133062487380408",
+   "date": "2026-09-13",
+   "text": "I asked @grok to analyze \"Price to Book\" ratio utilizing Q2 2026 earnings data and current Bitcoin price\n\nNot only is $MARA undervalued vs the pack, but when you factor in the $640 million that the 35,577 $BTC has increased in value in Q3 then MARA is only at 1.93x Price to Book https://t.co/5xqOYY8bsV https://t.co/HthguL4EuD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "firedog8423",
+   "url": "https://x.com/firedog8423/status/2099125166412574741",
+   "date": "2026-09-13",
+   "text": "🚨 \n$WULF\n gets a Buy initiation from Freedom Capital with a $19 PT. The analyst sees a defensible ~$14 floor and meaningful upside from capacity growth. 👀 https://t.co/K9cfdUjn4t"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "williams44631",
+   "url": "https://x.com/williams44631/status/2099109675581202885",
+   "date": "2026-09-13",
+   "text": "🚨 $WULF gets a Buy initiation from Freedom Capital with a $19 PT. The analyst sees a defensible ~$14 floor and meaningful upside from capacity growth. 👀 https://t.co/rp4XUtELrk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2099275773651599763",
+   "date": "2026-09-13",
+   "text": "$RIOT\n\n$RIOT two weeks ago printed a bullish engulfing candle directly at ascending support, which also aligned with the 50 EMA, creating a strong area of technical confluence where buyers stepped back in and defended the trend. \n\nLast week, however, bulls failed to confirm the https://t.co/W0K8ivxNrM"
+  }
+ ]
+}

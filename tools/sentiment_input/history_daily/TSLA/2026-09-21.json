@@ -1,0 +1,219 @@
+{
+ "symbol": "TSLA",
+ "start": "2026-09-21T00:00:00Z",
+ "end": "2026-09-22T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "TSLA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 126,
+   "user": "wickedstocks",
+   "url": "https://x.com/wickedstocks/status/2102005271094612210",
+   "date": "2026-09-21",
+   "text": "📺 $TSLA IS TESTING THE BREAKOUT TRIGGER AGAIN\n\nPlease ❤️like and 🔁share with fellow @Tesla traders/investors\n\n#Tesla closed Friday at $364.27 buy is trading above $369 on Monday, putting it right back near the critical breakout/reversal zone.\n\nFriday’s reversal attempt didn’t https://t.co/OhT8Vyqcaw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "DavidMPontes",
+   "url": "https://x.com/DavidMPontes/status/2102146568837042337",
+   "date": "2026-09-21",
+   "text": "$TSLA\n\n$374.33 is the main pivot I’m watching this week.\n\nBulls want the weekly close above it, while bears want to keep price below.\n\nIf bulls can defend $374.33, the next big test is the 200 EMA around $378.79. $TSLA still hasn’t gotten a clean daily close above that EMA since https://t.co/g7DehMSqia"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2102023831623991739",
+   "date": "2026-09-21",
+   "text": "BURAKTHESCALPER LLC — MONDAY MARKET BATTLE PLAN\n\nSeptember 21, 2026 | Premarket\n\nMarket regime: RISK-ON REBOUND — BUT CONFIRMATION REQUIRED\n\n✅ CONFIRMED\n\nThe setup has improved sharply from last Monday. S&amp;P 500 futures are +0.67%, Nasdaq-100 futures +1.04%, and Dow futures"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "GE0DT_1788",
+   "url": "https://x.com/GE0DT_1788/status/2102180836145545410",
+   "date": "2026-09-21",
+   "text": "$TSLA Level Analysis 📊\n\n🟢 Upside:\nWatch 379. A clear break above 379 can open the upside toward:\n382 → 390 → 400 → 406\n\n🔴 Downside:\nA break below 367 can lead toward:\n360 → 355 → 346 → 342\n\nKey levels: 379 for upside confirmation | 367 for downside https://t.co/8XhmpM7ojV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "tenceptyecb",
+   "url": "https://x.com/tenceptyecb/status/2102023851509198945",
+   "date": "2026-09-21",
+   "text": "$TSLA prediction\nUpside: 370.4 overnight high, 371.3 (+2σ), ~374 Thursday's spike, 375.44 two-week high.  Downside: lose 368.7 → 366.1–367 base, then 364.8 (gap fill), then the 363.1–363.6 zone that held Friday.  Waiting for the open to settle. Tape decides https://t.co/bU4uIK0cbD"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "YapWatch",
+   "url": "https://x.com/YapWatch/status/2101946384198910438",
+   "date": "2026-09-21",
+   "text": "🟢 Donald Trump — Market Alert\n\n$TSLA bullish\n$BA bearish\n\nSentiment: bullish | Confidence: 82%\n\nHIGH-VALUE ALERT: Trump directly praised Tesla's manufacturing and criticized Boeing's quality/safety. TSLA likely gaps up 3-5% on open (strong buy si…\n\nhttps://t.co/qd4Ceuhu1E"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2102096838694170822",
+   "date": "2026-09-21",
+   "text": "$738k OF CALLS HIT META TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - META, MRVL, ADBE, TSM\nPUTS BOUGHT (bearish bets) - MU, ASML, TSLA\n\nSize is conviction. It is not intent."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2102152222578446737",
+   "date": "2026-09-21",
+   "text": "$915k OF CALLS HIT SNDK TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - SNDK, ASML, ARM, SPCX, TSLA\nPUTS BOUGHT (bearish bets) - LITE, META\n\nSize is conviction. It is not intent."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Pynvestment",
+   "url": "https://x.com/Pynvestment/status/2102021079203991790",
+   "date": "2026-09-21",
+   "text": "🚨Scan Golden Cross (50vs200)\n \nBullish (days, change)\nCRM (6, -6.9%)\nPLTR (12, +4.8%)\nMSFT (21, -2.7%)\nTMO (34, +10.6%)\nAXP (38, -9.0%)\n\nBearish (days, change)\nPG (31, +1.2%)\nCOST (49, -6.2%)\nWMT (59, -2.5%)\nTSLA (165, +5.4%)\nIBM (193, -7.3%)"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JaiChotalia",
+   "url": "https://x.com/JaiChotalia/status/2102127655881719991",
+   "date": "2026-09-21",
+   "text": "As of 9/21/2026 a rolling 30 day snapshot: \n\nBullish on $SPX 169M, $MU 16.7M, $XLE 4.9M, $NDX 3M\n\nBearish on $SNDK -19.9M, $QQQ -15.4M, $IWM -4.6M, $SPY -4.4M, $SPCX -4.1M, $META -2.9M, $TSLA -2.8M, $FSLR -2.7M\n\nInformational use only, directional dollars ($ in M). https://t.co/jzwSwStsQd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 442,
+   "user": "DanBTC916",
+   "url": "https://x.com/DanBTC916/status/2102036064500437149",
+   "date": "2026-09-21",
+   "text": "I think Q4 2026 and 2027 will be the most exciting time for $TSLA investors.\n\nA strengthening auto business, CyberCab launched and scaling, incoming merger, increasing institutional ownership, and so much more makes the set up for TSLA very attractive.\n\nWe had one of the largest"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "sentisenseapp",
+   "url": "https://x.com/sentisenseapp/status/2101831972045902025",
+   "date": "2026-09-21",
+   "text": "$TSLA closed up 5.4% on Sept 3, the day the Cybercab went live in Austin, and gave back 5.9% the next day.\n\nOur news analysis counts on the robotaxi flipped with it: 85 bullish to 10 bearish on launch day, then 47 to 54 on Sept 4, its loudest day in 90. NHTSA opened an audit the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 277,
+   "user": "CillionaireMind",
+   "url": "https://x.com/CillionaireMind/status/2102042569891070256",
+   "date": "2026-09-21",
+   "text": "🚗 Trade TSLA's Price Movement With Bybit TradFi Perpetuals\n\nTesla ($TSLA) is one of the world's most followed stocks, with its price often reacting to earnings, vehicle deliveries, product developments and broader market sentiment.\n\nIf you're already watching TSLA, Bybit TradFi https://t.co/j6n83UIYWV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "goodmoat",
+   "url": "https://x.com/goodmoat/status/2101915579061825652",
+   "date": "2026-09-21",
+   "text": "- Tesla free cash flow turns negative — capital spending program draws on $43.5 billion cash cushion\n\n- Amazon vs. Uber Technologies: Analyzing Recent Quarterly Revenue Trends Between Two Consumer Companies\n\n- Nvidia CEO Wants To Pay Workers ‘As Much As Possible,’ Calls $8B In"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2101828513380880436",
+   "date": "2026-09-21",
+   "text": "Tickers trending on X right now:\n\n1. Broadcom $AVGO is down 0.2% after climbing 3.0% in the regular session\n\n🟢 Sentiment: 40% bullish, 3% bearish, 57% neutral\n\nBroadcom pledged $29 billion to lease chips to Anthropic, sparking chatter.\n\nPiper Sandler set a $460 target, adding https://t.co/1QhJwircPr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "mirsada_spx",
+   "url": "https://x.com/mirsada_spx/status/2101862478582030691",
+   "date": "2026-09-21",
+   "text": "$SPX $NVDA $TSLA $SPY $QQQ\n🐂 BULL SPREAD — Simple Breakdown\n\nBullish on a stock but want defined risk?\n\nBull Call Spread:\n• Buy lower-strike call\n• Sell higher-strike call\n• Same expiration\nExample:\nBuy $100 Call: $4\nSell $110 Call: $1.50\nNet cost: $2.50\nMax loss: $250\nMax https://t.co/iQ4zUx5OeT"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TSLAMarketWatch",
+   "url": "https://x.com/TSLAMarketWatch/status/2102092010916106459",
+   "date": "2026-09-21",
+   "text": "Bull case vs. bear case: $TSLA\n\nBulls focus on growth opportunities in AI, autonomy, energy storage, and EVs.\n\nBears question valuation, competition, margins, and execution.\n\nWhich assumption do you think deserves the closest scrutiny? 👇"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "RaberTrades",
+   "url": "https://x.com/RaberTrades/status/2102144778758492398",
+   "date": "2026-09-21",
+   "text": "$TSLA 1M/1W:\n\nPrice held the $280’s like a champ. We now are facing Monthly resistance and are attempting to hold the bull market support band. Price is pinned at the important $376 level. Let’s see how this plays out as we have a Weekly bullish North Star. ⭐️ https://t.co/rJZ10QYHKH https://t.co/zg8rh060iN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TradingAssistAI",
+   "url": "https://x.com/TradingAssistAI/status/2102018773595123863",
+   "date": "2026-09-21",
+   "text": "$TSLA Game Plan · Sep 21 🎯\n\nModel leans lower — base case close ~357.8 (-1.9%).\nProjected: O 364.6 / H 368.5 / L 357.6 / C 357.8\nBull above 372.2 · Bear below 362.5\n3 of 8 similar past setups closed green.\n\nLevels update with pre-market. Not financial advice. https://t.co/XPxIh7GR9I"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 23,
+   "user": "TheETFTracker",
+   "url": "https://x.com/TheETFTracker/status/2102128246158705095",
+   "date": "2026-09-21",
+   "text": "Here are the most actively traded ETFs today:\n\n🥇 ProShares Bitcoin ETF $BITO 98.6M\n🥈 Direxion Daily Semiconductor Bear 3X Shares $SOXS 82.1M\n🥉 GraniteShares 2x Short NVDA Daily ETF $NVD 77.3M\n4. iShares Bitcoin Trust ETF $IBIT 71.3M\n5. T-Rex 2X Inverse MSTR Daily Target ETF https://t.co/g4WYsLxqej"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TA_Team00",
+   "url": "https://x.com/TA_Team00/status/2101851335222055212",
+   "date": "2026-09-21",
+   "text": "$BMNR \nis showing a strong daily bull flag breakout after consolidating following its sharp August move. Price has pushed above the descending resistance line while holding above key moving averages, keeping the broader bullish structure intact. Continued strength above the https://t.co/uRJaUk0Fq4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JohnC426",
+   "url": "https://x.com/JohnC426/status/2102015930847109152",
+   "date": "2026-09-21",
+   "text": "The most interesting thing right now isn't just Bitcoin.\n\nIt’s the synchronization across risk assets.\n\nBitcoin → ~$85,000;\nNasdaq futures → Up 1.04%;\nS&amp;P 500 futures → Up 0.67%;\nCrude oil → Dropping sharply;\nAI/Semiconductors → Rebounding.\n\nSeveral charts I’m watching are"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2102174242229961039",
+   "date": "2026-09-21",
+   "text": "EOD Tape | Indexes + Mag7 | Monday, September 21st, 2026\n\nIndexes\n$SPY\n773.50 +11.81 (+1.55%) H/L 774.89 / 766.03\nGapped up and formed a double island bottom, then filled two more bear gaps above — no bear gaps left in the market. Broke out of a 65-minute and daily trendline;"
+  }
+ ]
+}

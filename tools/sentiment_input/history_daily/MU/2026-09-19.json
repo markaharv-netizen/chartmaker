@@ -1,0 +1,57 @@
+{
+ "symbol": "MU",
+ "start": "2026-09-19T00:00:00Z",
+ "end": "2026-09-20T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "MU Micron (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "LiteProfitLab",
+   "url": "https://x.com/LiteProfitLab/status/2101295712256303380",
+   "date": "2026-09-19",
+   "text": "WATCHLIST RECAP 📈\n\n$ORCL — Oracle was sitting directly inside a demand zone after a sharp pullback. We were watching to see if buyers could continue defending the area, with $147 as the upside level and $139 as the downside level. Buyers stepped in from demand and price bounced, https://t.co/m1wedwRTcj https://t.co/1NjUJAI1Xa"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "investingclinic",
+   "url": "https://x.com/investingclinic/status/2101441604745904324",
+   "date": "2026-09-19",
+   "text": "🩺  **THE LYNCH SCREEN**\n\nPeter Lynch beat the market for 13 straight years using a plain checklist\n\n**AT THE TOP OF THE LIST THIS WEEK**\n$MU (Micron) sits atop the alert tier this week, with a P/E 20.9, Fwd 5.9, PEG 0.1, EPS +1368.5%, D/E 6.3% and bullish momentum."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 33,
+   "user": "EhrmantrautCap_",
+   "url": "https://x.com/EhrmantrautCap_/status/2101326810608775674",
+   "date": "2026-09-19",
+   "text": "Interesting chart.\n\nRight now, $NVDA dominates HBM demand, but $AVGO is expected to have a huge upwards surge in the coming years. Just like Meritz Securities, Citi is expecting Broadcom $AVGO to demand (slightly) more HBM bits than Nvidia $NVDA by 2028.\n\nFurthermore, while https://t.co/f12N4XPhrB https://t.co/iCc2g7Ywyx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "ValueCroc",
+   "url": "https://x.com/ValueCroc/status/2101121151472894008",
+   "date": "2026-09-19",
+   "text": "Micron $MU thy beauty\n\nMany dont understand Micron, and misread the genuine need in the market, and despite its ups and downs Micron (MU) closed near $1,016 on Friday (Sep 18), up about 4% on the day after a choppier stretch that had briefly taken it down mid-single-digits on the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "InvestwithColby",
+   "url": "https://x.com/InvestwithColby/status/2101109156832752094",
+   "date": "2026-09-19",
+   "text": "A TON OF THINGS HAPPENED IN THE STOCK MARKET TODAY.\n\nHere's a full recap:\n\n1. Wall Street\n\n$SPY $QQQ The week ended split down the middle. The Dow fell 95.40 points, or 0.18%, to 51,682.64 and posted its worst week since March, while the S&amp;P 500 added 0.17% to 7,650.50 and the"
+  }
+ ]
+}

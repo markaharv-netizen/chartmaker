@@ -1,0 +1,138 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-11T00:00:00Z",
+ "end": "2026-09-12T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Pound_Ster524x",
+   "url": "https://x.com/Pound_Ster524x/status/2098440047271776575",
+   "date": "2026-09-11",
+   "text": "Ethereum is consolidating after a 37% rally that pushed ETH to $2,564. The current structure still resembles a bull flag, with $2,350–$2,360 acting as the key downside zone. A sustained move above resistance around $3,040–$3,060 would significantly strengthen the bullish setup."
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 107,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2098252130046054671",
+   "date": "2026-09-11",
+   "text": "BTC dropped 2.22% after PPI came in hotter than expected, printed its first TBO bearish divergence in a long time, and closed below the 0.786 fib at 76,706. It is now in bearish consolidation inside the daily cloud. A bounce back toward 80K would not surprise me, but once price https://t.co/wzdJm1ULO6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 87,
+   "user": "OVmarkets",
+   "url": "https://x.com/OVmarkets/status/2098455507937661164",
+   "date": "2026-09-11",
+   "text": "#Ethereum main chart update\n\nEthereum has been showing quite a lot of strength since its June bottom, breaking above the yellow downtrend and already printing a Higher High, something Bitcoin has still not done. It is also currently trading above both the 200w and 50w SMAs, https://t.co/tXCz7VMUIB https://t.co/28s33TqIPV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "macroinvest365",
+   "url": "https://x.com/macroinvest365/status/2098365988781658533",
+   "date": "2026-09-11",
+   "text": "$ETH — the framework I use for Ethereum.\n\nReference price: $2,445.00 | FY26 rev: N/A (token) | NI: N/A | Shares: 120M ETH\n\n5-year bull / base / bear model:\n\n                    Bear        Base        Bull\n2031 price          $950–1,100     $1,500–1,850     $3,500–5,000+\nAnnual"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "BasedCapitalLP",
+   "url": "https://x.com/BasedCapitalLP/status/2098487680871055865",
+   "date": "2026-09-11",
+   "text": "The idea that Ethereum is overvalued because not enough fees flow to the L1 protocol is a little like saying that the castle is worthless because all of the treasure is inside it. \n\nThe treasure is PART of the castle unless it’s extracted, and can’t be PROTECTED without the"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 14,
+   "user": "RAFA_AI",
+   "url": "https://x.com/RAFA_AI/status/2098423087758758293",
+   "date": "2026-09-11",
+   "text": "🔥CPI Data Ignites Unusual Options Trading \n\nData released today sparked a strong market relief rally, propelling SPY, QQQ, and IWM up by around 1%. \n\nIn options markets, this macro shift triggered aggressive institutional bullish put-writing (selling options to pocket premium) https://t.co/UZyfjIEGU9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "naim1242",
+   "url": "https://x.com/naim1242/status/2098283319473635570",
+   "date": "2026-09-11",
+   "text": "🚨 CRYPTO MARKET UPDATE — BTC IS AT A CRITICAL CROSSROAD\n\nThe crypto market is moving into one of the most important sessions of the week.\n\nBitcoin is currently trading around the $77K–$78K zone, while Ethereum is holding near $2.45K. The total crypto market remains above $2.6T, https://t.co/Te7hLOujy6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "BuryCrypto",
+   "url": "https://x.com/BuryCrypto/status/2098369813760327717",
+   "date": "2026-09-11",
+   "text": "GM crypto\n\nWell  is sitting right on it's 200-week moving average\n\nSome may call that fair value, some may call that undervalued \n\nI call that we are about 20% of the way to where Ethereum is gonna go\n\n$2,500 to $6,000 is my bearish guess on Ethereum for 2028! 👀 https://t.co/TZKwyqS6mz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BuryCrypto",
+   "url": "https://x.com/BuryCrypto/status/2098369767392280624",
+   "date": "2026-09-11",
+   "text": "Well ethereum:native is sitting right on it's 200-week moving average\n\nSome may call that fair value, some may call that undervalued \n\nI call that we are about 20% of the way to where Ethereum is gonna go\n\n$2,500 to $6,000 is my bearish guess on Ethereum for 2028! 👀 https://t.co/yQwF3Pq1EZ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "AlphaLensCrypto",
+   "url": "https://x.com/AlphaLensCrypto/status/2098224588828065854",
+   "date": "2026-09-11",
+   "text": "📊 THE CRYPTO EDGE | DAILY MARKET BRIEF\n📅 September 10, 2026\n\n🚨 BTC DAILY GOLDEN CROSS: BULLISH SIGNAL OR A 90% TRAP? 🚨\nBitcoin just flashed a daily Golden Cross while consolidating in a bull flag. But history warns us of one major catch before the real breakout 👇 https://t.co/RSqfcNMAZw"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "Cryoto_Ghost23",
+   "url": "https://x.com/Cryoto_Ghost23/status/2098251938236186963",
+   "date": "2026-09-11",
+   "text": "Feeling like the market is overeating… or it’s manipulated dump designed to make retail feel bearish . \n\nI’d was caution selling. You can do 2 things atm. \n\n1.) sit on your hands\n2.) load your bags.\n\nWere undervalued af for all the things happening. \n\n$BTC $ENA"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "CryptoJobs3",
+   "url": "https://x.com/CryptoJobs3/status/2098339791209165008",
+   "date": "2026-09-11",
+   "text": "ethereum:0x6982508145454ce325ddbe47a25d4ec3d2311933  is showing distinct bearish momentum. 📉\n\nA clean rejection followed by a breakdown below previous lows confirms weakness across local structure.\n\nWatching the $0.00003000 demand zone closely as the primary downside target. https://t.co/HN2fVzlNEG"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "krypto_pulse",
+   "url": "https://x.com/krypto_pulse/status/2098404110282207414",
+   "date": "2026-09-11",
+   "text": "📉 ethereum:0x7a58c0be72be218b41c608b7fe7c5bb630736c71 /USDT – Bearish Setup\n\nPEOPLE just lost its ascending support, signaling potential downside continuation.\n\n🎯 Main target: 0.0063–0.0064\n\nWatching for the move lower. 👀📉\n\n#crypto #trading #BTC #altcoins #marketcrash https://t.co/N4kfUvMObb"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 13,
+   "user": "mptybc",
+   "url": "https://x.com/mptybc/status/2098273457045717495",
+   "date": "2026-09-11",
+   "text": "₿ EMPTYCOIN: AN #AFRICANBITCOIN BUILT FOR CRISIS 🌍\n\nIn March 2020, the world experienced something the crypto market had never seen before.\n\n🦠 COVID-19 triggered a global liquidity crisis.\n\n₿ Bitcoin crashed.\n\n🪙 Altcoins crashed even harder.\n\nBitcoin fell from around $8,000 https://t.co/k4kLWEACCc"
+  }
+ ]
+}

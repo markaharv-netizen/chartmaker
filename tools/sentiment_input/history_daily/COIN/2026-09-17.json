@@ -1,0 +1,228 @@
+{
+ "symbol": "COIN",
+ "start": "2026-09-17T00:00:00Z",
+ "end": "2026-09-18T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Gammaoptions99",
+   "url": "https://x.com/Gammaoptions99/status/2100642226267398179",
+   "date": "2026-09-17",
+   "text": "flow $ELF Plain English: today's  flow is genuinely split — one clean bullish bet further out at $100, matched by protective puts bought near spot, while the nearer-term calls right above spot are being sold into, not bought. Net premium looks call-heavy, but the actual"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Gammaoptions99",
+   "url": "https://x.com/Gammaoptions99/status/2100695933755470255",
+   "date": "2026-09-17",
+   "text": "flow heatmap for  $GOOG Plain English  flow today is call-heavy in dollars but genuinely mixed in intent — the biggest trade is calls being written against stock, the nearest-dated action at spot is split evenly, and the clearest directional buying is actually a protective put."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "Gammaoptions99",
+   "url": "https://x.com/Gammaoptions99/status/2100612717388366064",
+   "date": "2026-09-17",
+   "text": "(New feature for you guys) Flow Analysis $ionq more money and more contracts traded on the call (bullish) side than the put side today, roughly 2-to-1. That's real buying pressure, not just a premium number skewed by one big trade.\nThe biggest single trade wasn't actually bearish"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2100579052603965669",
+   "date": "2026-09-17",
+   "text": "👀 $BTC +0.9% with 1h bullish bias seeking clean confirmation\n\n- my bias is bullish here on the 1h, but this bounce is counter-trend versus daily and weekly bearish structure, so I want cleaner confirmation before treating it as more than a relief leg 📈\n- I expect price to probe https://t.co/DZqsirENSC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "Gammaoptions99",
+   "url": "https://x.com/Gammaoptions99/status/2100633758840078800",
+   "date": "2026-09-17",
+   "text": "flow heatmap  $AAOI \nCalls lead premium (62.5% of $9.8M) and volume actually agrees this time — bullish 11,607 vs bearish 10,144, a modest but real tilt bullish.\n\nThe biggest trade is actually a put: the Dec 18 $100 put, bought 99% of the time — that's real conviction, but at a"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2100521600302862398",
+   "date": "2026-09-17",
+   "text": "#BITCOIN \n\nBitcoin is printing a double inside-range setup, with both yesterday’s and today’s candles trading within Tuesday’s long bearish continuation candle, showing that downside momentum has temporarily stalled but bulls have yet to regain control. \n\nPsychologically, we’re https://t.co/C2ODyUQz5j"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Gammaoptions99",
+   "url": "https://x.com/Gammaoptions99/status/2100694580731720165",
+   "date": "2026-09-17",
+   "text": "flow Heatmap $NOK Plain English: 's flow is bullish in aggregate — real buying at $11 further out — but the crowd is writing calls at $12 and this week's $11 rather than chasing them, meaning upside is being capped near-term even as longer-dated conviction stays bullish. It's"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Gammaoptions99",
+   "url": "https://x.com/Gammaoptions99/status/2100693363054043141",
+   "date": "2026-09-17",
+   "text": "flow map $HOOD Plain English: today's  flow is cleanly bullish overall, driven by one large, fresh long-dated call bet, while the near-term strikes right around spot are more balanced — traders chasing upside further out, but not aggressively piling into this week's calls"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Gammaoptions99",
+   "url": "https://x.com/Gammaoptions99/status/2100625431343038778",
+   "date": "2026-09-17",
+   "text": "flow Heatmap for $gme \nCalls dominate the premium (97.1% of $12.1M) but volume is actually a coin flip — bearish volume (65,849) edges out bullish (63,426). Big dollar headline, no clean direction underneath.\n\nToday is 30.9% of the trailing week's premium already, well above the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2100664978076225992",
+   "date": "2026-09-17",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙• SEC Clears Tokenized Stocks for Onchain Trading as CFTC Eases Software Relief• Major gold holder quietly lends $1.5 billion to top U.S. dealer• From Bear to Bull: Analyst Says Bitcoin UTXO Data Points to a Cycle Shift• https://t.co/QyU2uyBT5K"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ANCrypto_",
+   "url": "https://x.com/ANCrypto_/status/2100437750096990614",
+   "date": "2026-09-17",
+   "text": "🦓 @Zcash  ($ZEC) — DEEP-DIVE ANALYSIS\n\n📌 PROJECT OVERVIEW\n\nZcash is a privacy-focused Layer-1 built around zero-knowledge proofs (zk-SNARKs), allowing users to shield transaction details while still proving transactions are valid.\n\nWith a 21M maximum supply and Bitcoin-style https://t.co/k73zrJjbNj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "degsonstonk",
+   "url": "https://x.com/degsonstonk/status/2100636068811006456",
+   "date": "2026-09-17",
+   "text": "For anyone following here and didn't read my thesis, go like it on Fomo, but here it is.\n\n‼️MAJOR UPDATE‼️\nSo I did some more thinking about the whole silv thing, this is a rewrite of my previous thesis with more added. \n\nI’m STILL not going anywhere. All the bullshit this coin https://t.co/W9GWER6cwg https://t.co/Z7K7yUFiRz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 82,
+   "user": "degsonstonk",
+   "url": "https://x.com/degsonstonk/status/2100639991189971337",
+   "date": "2026-09-17",
+   "text": "For anyone following here and didn't read my thesis, go like it on Fomo, but here it is.\n\n‼️MAJOR UPDATE‼️\nSo I did some more thinking about the whole silv thing, this is a rewrite of my previous thesis with more added. \n\nI’m STILL not going anywhere. All the bullshit this coin https://t.co/9ZtUPEAakE https://t.co/3jnmtoQWX3"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Shirroweb3",
+   "url": "https://x.com/Shirroweb3/status/2100715689908596772",
+   "date": "2026-09-17",
+   "text": "Im super bullish on robinhood:0x1e6ea1e89151cdc8443968bf047cfa3177181e18 , its paired with crude oil, and with the ongoing war between iran and the us, crude oil prices will keep on increasing.\n\nI genuinely think its the most undervalued coin on RH ATM"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 17,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2100585576604799257",
+   "date": "2026-09-17",
+   "text": "📊 $GRT Overview | 2026-09-17\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI 🟢 Bounce\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#TheGraph\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2100595658449142052",
+   "date": "2026-09-17",
+   "text": "📊 $ICP Overview | 2026-09-17\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI 🟢 Bounce\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#ICP\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 92,
+   "user": "duckingnator",
+   "url": "https://x.com/duckingnator/status/2100632503602369003",
+   "date": "2026-09-17",
+   "text": "With everyone being publicly bullish on the Long eco (myself included), I think $Schiffy is probably one of the most asymmetrical bets in the eco. \n\nHas all the good things you want in a coin. \n\nA16z backing, axie backing, fully doxxed dev, unique gamefi primitive in the long https://t.co/uMFAa7H4tJ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2100601954183352435",
+   "date": "2026-09-17",
+   "text": "📊 $SHIB Overview | 2026-09-17\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🔴 Bearish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI 🟢 Bounce\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#Shiba Inu\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2100590619399778488",
+   "date": "2026-09-17",
+   "text": "📊 $SOL Overview | 2026-09-17\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Solana\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Gammaoptions99",
+   "url": "https://x.com/Gammaoptions99/status/2100648734849953810",
+   "date": "2026-09-17",
+   "text": "$SOFI Flow Heatmap. \n\nPlain English: 's flow today is muddled, not bullish despite the call-premium headline — the biggest trades are calls being sold against existing positions, volume itself leans bearish, and today's activity is already 34% of the whole trailing week, meaning"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 796,
+   "user": "cryptoklotz",
+   "url": "https://x.com/cryptoklotz/status/2100642132289900874",
+   "date": "2026-09-17",
+   "text": "Update on my 1k-&gt;100k FOMO challenge:\n\nI did it again, this time by maintaining conviction in what I think are 50-100x opportunities, while coins nuked alongside BTC,\n\nand adding a new \"winning/escape velocity\" stonk fun coin (solana:6JrR1iqPdinYTNvNPWTR2P7e2wSJ1rwdsrKGyhnzjUVr), https://t.co/avayydYegD https://t.co/FTgqpmNB23"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "silentmax",
+   "url": "https://x.com/silentmax/status/2100415254320873774",
+   "date": "2026-09-17",
+   "text": "the crypto industry shrugging off the clarity act downdraft.... who would have thought.... massively bullish in this seasonally bearish environment\n$IBIT $crcl $coin"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 131,
+   "user": "gigagriff",
+   "url": "https://x.com/gigagriff/status/2100614034043158889",
+   "date": "2026-09-17",
+   "text": "$FLY has accumulated 11 million $GIGA coins\n\nCrypto Twitter refuses to buy $GIGA because it is “old”\n\nDespite being\n#1 evenly distributed\n#1 diamond hand % on sol\n23% of supply held by coinbase, most of any memecoin ever\nmost bought memecoin by normies\n\n$GIGA is hands down the"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 33,
+   "user": "greenytrades",
+   "url": "https://x.com/greenytrades/status/2100562663751504361",
+   "date": "2026-09-17",
+   "text": "If you’re long / market buying, it doesn’t mean you should marry the coin and be blindly bullish\n\nIf you’re out / short, it doesn’t mean your bearish\n\nPrice goes up and price goes down, learn to trade consistently in all directions, the market presents many opportunities and I"
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "symbol": "NBIS",
+ "start": "2026-09-05T00:00:00Z",
+ "end": "2026-09-06T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "NBIS (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2096241384378548250",
+   "date": "2026-09-05",
+   "text": "The tickers X are talking about right now:\n\n1. Sandisk $SNDK is down 0.3% after climbing 11.9% in the regular session\n\n🟢 Sentiment: 51% bullish, 13% bearish, 36% neutral\n\nA sudden 11.9% intraday jump, driven by record edge‑segment revenue and new datacenter contracts, lifted the https://t.co/E5fuqqLZmz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 81,
+   "user": "LeaderInvests",
+   "url": "https://x.com/LeaderInvests/status/2096211744829931633",
+   "date": "2026-09-05",
+   "text": "$NBIS \n\nThis is exactly what you want to see from a chart that looked heavy.\n\nA week ago it looked set up for real downside. Now it's recovered and closed above the 8, 21 and 50 week.\n\nA 15% week did the work, and the daily is back above all its EMAs too.\n\nThe honest other side: https://t.co/SeB2TG2OHG"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "Henry8cj",
+   "url": "https://x.com/Henry8cj/status/2096284954271588779",
+   "date": "2026-09-05",
+   "text": "$NBIS\n 👀 Setup looks very bullish.\n\nTTM Squeeze looks ready for an upside move, daily MACD is close to crossing bullish, and there’s a gap around $245 that could get filled.\n\nOnce $245 is reclaimed, momentum + options activity could push this toward $280–300.\n\nI’m watching RSI https://t.co/cIqUxcITuB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Ploutos97",
+   "url": "https://x.com/Ploutos97/status/2096079053874978971",
+   "date": "2026-09-05",
+   "text": "$NBIS Analysis 👀\n\nThe candles show a strong rebound from the ~$200 area, with buyers pushing the stock back toward $226. A break above $240 could open the door toward the $260–$280 zone.\n\nThe bigger story is the short side: ~25% short float is elevated, while the 2.66 short https://t.co/IvMNA9x4Np"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 29,
+   "user": "InvestNorthwise",
+   "url": "https://x.com/InvestNorthwise/status/2096038604346626403",
+   "date": "2026-09-05",
+   "text": "$NBIS has a valuable kind of capacity that rarely appears in a headline: megawatts attached to land, permits, and a credible path to the grid.\n\nThat matters as regulators tighten data centre development, because every project already through zoning, environmental, and https://t.co/udrHcy6TcX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "belbeleggers",
+   "url": "https://x.com/belbeleggers/status/2096189964631282039",
+   "date": "2026-09-05",
+   "text": "The stocks called “too expensive” a year ago:\n\n$NBIS $63 → $225 (+257%)\n$MU $100 → $980 (+880%)\n$PLTR $80 → $143 (+79%)\n\nThe ones called that now: \n\n$ASTS $60\n$IREN $35 \n$CRWV $82\n\n“Expensive” and “overvalued” were never the same word."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JBMovinOnUp",
+   "url": "https://x.com/JBMovinOnUp/status/2096379256422973621",
+   "date": "2026-09-05",
+   "text": "$NBIS gap fill on downside, next gap fill at 250.00 https://t.co/Uvn56WpjZV"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "StockTraderMax8",
+   "url": "https://x.com/StockTraderMax8/status/2096071060613390389",
+   "date": "2026-09-05",
+   "text": "$NBIS There is nothing bearish about this chart at all.. $300 will likely be hit any week now \nThe wave 5 target is $400 a share, this target could be hit by EOY or Q1 https://t.co/FdL79syGF3 target for the upcoming weeks is $300 which is my sub wave 3, within wave 5 target https://t.co/XEMjbtVzgm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "DesolierA42777",
+   "url": "https://x.com/DesolierA42777/status/2096302613402947801",
+   "date": "2026-09-05",
+   "text": "Today's price - avg 12 month PT (upside)\n\n$ONDS— $7.50 - $19 (+153%)\n$NBIS— $216 → $293 (+36%)\n$IREN— $43 → $82 (+88%)\n$CIFR— $18 →$42 (+133%)\n$BE— $240 → $278 (+16%)\n$AAOI— $103 → $163 (+58%)\n$OUST— $36 →$55 (+53%)\n$RKLB— $64 → $109 (+70%)\n$ASTS— $62 - $84 (+35%)"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "KyleOnTheChart",
+   "url": "https://x.com/KyleOnTheChart/status/2096031328043163803",
+   "date": "2026-09-05",
+   "text": "$NBIS\n\nOnce again, we look to test the $228.75 pivot. Price flushed into support earlier in the week, where buyers quickly stepped in, allowing $NBIS to finish the week with a strong bullish candle on a slight increase in volume.\n\nWeekly price closed above key moving averages, https://t.co/WsgJN37DNa"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Sebastian2qls",
+   "url": "https://x.com/Sebastian2qls/status/2096090383667101870",
+   "date": "2026-09-05",
+   "text": "$NBIS 🐂\n\nDon’t focus only on the stock price.\n\nFocus on Arkady’s execution.\n\nHe keeps setting aggressive targets and delivering. Q1 revenue jumped 684%, while AI demand remained extremely strong.\nAmazon changed. Apple changed.\nGreat companies evolve with the opportunity.\nNBIS is https://t.co/HEQMCEzXld"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "roughstocks",
+   "url": "https://x.com/roughstocks/status/2096319672350359905",
+   "date": "2026-09-05",
+   "text": "Bullish $NBIS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AbdIullah_A_Q",
+   "url": "https://x.com/AbdIullah_A_Q/status/2096232307208413484",
+   "date": "2026-09-05",
+   "text": "$NBIS\n is up 83.43% YTD but I still think the upside is just beginning.\n\nMost investors would look at a stock that’s nearly doubled in six months and assume the easy gains are over. \n\nI don’t.\n\n I think Nebius is just getting started. This isn’t a story about chasing momentum. https://t.co/fVcycWTOqB"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 54,
+   "user": "profitzet",
+   "url": "https://x.com/profitzet/status/2096196639899676781",
+   "date": "2026-09-05",
+   "text": "Everyone is bullish again? \n\n$NBIS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 402,
+   "user": "EndicottInvests",
+   "url": "https://x.com/EndicottInvests/status/2096265894557040653",
+   "date": "2026-09-05",
+   "text": "Bullish the neoclouds yet again \n\n$NBIS $CRWV $IREN https://t.co/2ywWkE8YXR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "kurosee_BTC",
+   "url": "https://x.com/kurosee_BTC/status/2096100268844646541",
+   "date": "2026-09-05",
+   "text": "🚨\n$AMD\n$SOXX\n$LRCX\n$NBIS\n$SNDK\n$MU\n$CRWV\nstrong today forming bullish weekly candle 🚀   Can see a continuation next week.📈"
+  }
+ ]
+}

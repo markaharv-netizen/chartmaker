@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-15T00:00:00Z",
+ "end": "2026-09-16T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2099756114069909752",
+   "date": "2026-09-15",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟯 / 𝟱 (𝗺𝗼𝗱𝗲𝗿𝗮𝘁𝗲𝗹𝘆 𝗯𝘂𝗹𝗹𝗶𝘀𝗵/𝗻𝗲𝘂𝘁𝗿𝗮𝗹) - 𝗙𝗲𝗮𝗿 &amp; 𝗚𝗿𝗲𝗲𝗱 𝗜𝗻𝗱𝗲𝘅 = 𝟲𝟵 (𝗚𝗿𝗲𝗲𝗱) – market mood leans optimistic despite Bitcoin’s flat price and falling total‐cap, indicating a sentiment‐price divergence. - https://t.co/crykiJ1bVw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "HeyEva",
+   "url": "https://x.com/HeyEva/status/2099850220075159649",
+   "date": "2026-09-15",
+   "text": "Institutional spot accumulation is absorbing structural market liquidity while derivatives traders remain overleveraged on the long side.\n\nBitcoin is consolidating inside an upper distribution band where heavy downside liquidation clusters create near-term sweep risks before the https://t.co/D6I4bhBhvG"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 545,
+   "user": "rektcapital",
+   "url": "https://x.com/rektcapital/status/2099869028894355567",
+   "date": "2026-09-15",
+   "text": "#BTC \n\n\"If this price action ends as an upside wick by the end of the week, this will have been a bearish retest to confirm the breakdown from the 50-week EMA\"\n\nAlready, price action is forming an upside wick beyond the 50-week EMA (purple), solidifying a potential bearish retest https://t.co/8IXSFugycX https://t.co/W0T6gFoJAe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "APEXMedia2017",
+   "url": "https://x.com/APEXMedia2017/status/2099942416501600569",
+   "date": "2026-09-15",
+   "text": "$KEEL — KEEL INFRASTRUCTURE CORP. | NASDAQ | DAILY STOCK STUDY\nThe $3.20–$3.55 white-box region is the immediate bull gate. Holding or reclaiming this area keeps a large-cycle candidate alive. Losing it shifts the model toward downside structure.\nThis is a conditional market https://t.co/hlnGZkVMXv"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 19,
+   "user": "tradingdiff",
+   "url": "https://x.com/tradingdiff/status/2099676438857240723",
+   "date": "2026-09-15",
+   "text": "BTC on #Hyperliquid 15m Chart 📊\n\nBTC trades near 77,800 USD, pulling back sharply after the highs reached yesterday. ⚖️📉\n\nTo the upside, a dense liquidation band waits at 79,300 USD, positioning itself as the primary objective if buying volume steps in. 🎯\n\nTo the downside, the https://t.co/TvmUQrVA0C"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 11,
+   "user": "0xQuantyx",
+   "url": "https://x.com/0xQuantyx/status/2099845785735283190",
+   "date": "2026-09-15",
+   "text": "BTC is approaching an interesting decision area.\n\nMy positioning data still leans bearish: price fell 1.17% while open interest increased 1.23%, putting QX OIPX into a Leveraged Sell-Off state.\n\nBut the internals aren’t uniformly bearish.\n\nQX FLOW remains +0.75 bullish, with https://t.co/YZCh1L2iwB https://t.co/a9QxDp6KBA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "wisehw25",
+   "url": "https://x.com/wisehw25/status/2099683712896258439",
+   "date": "2026-09-15",
+   "text": "$BTC DECISION ENGINE: CAUTIOUS BULLISH\n\n9-5 Traders OS currently has Bitcoin at:\n\nCAUTIOUS BULLISH\nConfidence: MEDIUM\n\nThe interesting part isn't the label.\n\nIt's WHY the engine isn't willing to go fully bullish yet.\n\nTrend + cycle structure remain the strongest part of the https://t.co/NZKqou0Ah7"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 11,
+   "user": "thelegionmaster",
+   "url": "https://x.com/thelegionmaster/status/2099749788711293131",
+   "date": "2026-09-15",
+   "text": "BTC positioning is getting interesting.\n\nThe Long/Short Accounts ratio is leaning long again while BTC trades around the $78K area.\n\nThat tells me retail positioning is becoming increasingly bullish  but that can become fuel for a downside move if price fails to follow through. https://t.co/0vcXCj6um8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptoXRayHQ",
+   "url": "https://x.com/CryptoXRayHQ/status/2099763711678484860",
+   "date": "2026-09-15",
+   "text": "$BTC rejected the 79.3–79.6K supply and gave back most of the last bullish leg.\n\n15M structure has shifted bearish again.\n\nFirst support: 77.0–77.15K\nKey support: 76.4–76.6K\n\nFirst resistance: 77.55–77.65K\nKey resistance: 77.95–78.10K\n\nA 15M reclaim above 77.6K would be the first https://t.co/p5Rhf5WsxW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2099861808966140318",
+   "date": "2026-09-15",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• Tuesday’s Market Highlights: Crypto Stocks Slide While Semiconductor Shares Rebound\n• Coinbase (COIN) Stock Plunges as ARK Invest Exits Crypto Holdings Amid Bitcoin Decline\n• Ripple CEO urges Senate to pass CLARITY Act, https://t.co/uiKSmjL6qX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 86,
+   "user": "Kebbi_kingjr",
+   "url": "https://x.com/Kebbi_kingjr/status/2099844917761654924",
+   "date": "2026-09-15",
+   "text": "I’M FULLY PREPARED FOR THE CLARITY ACT VOTE.\n\nThe market is approaching a major regulatory catalyst, and Bitcoin is sitting at a critical technical decision point.\n\n$BTC has been consolidating in a tightening range, with $79K–$80K acting as the key resistance zone. A decisive https://t.co/9avYSxM76Z"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "TerraNewsEN",
+   "url": "https://x.com/TerraNewsEN/status/2099863489393168610",
+   "date": "2026-09-15",
+   "text": "I’M FULLY PREPARED FOR THE CLARITY ACT VOTE.\n\nThe market is approaching a major regulatory catalyst, and Bitcoin is sitting at a critical technical decision point.\n\n$BTC has been consolidating in a tightening range, with $79K–$80K acting as the key resistance zone. A decisive https://t.co/oAAch1GPkJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Sharmapraeep",
+   "url": "https://x.com/Sharmapraeep/status/2099854570474353131",
+   "date": "2026-09-15",
+   "text": "Bitcoin (BTC) Analysis — 15 September 2026\n\nBTC is trading around $77,000 today. The short-term structure is neutral to slightly bearish after the recent pullback from above $80,000. \n\nKey levels:\n\n🟢 Support: $75,000\n\n🟢 Major support: $72,800–$73,000\n\n🔴 Resistance:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 90,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2099686844082573765",
+   "date": "2026-09-15",
+   "text": "Bitcoin is the lead market signal I’m watching while BTC tests its current structure, nearby support, and the levels that would confirm either continuation or a deeper reset. I’m focused on price, momentum, and confirmation instead of reacting to one isolated move.\n\nI’m using https://t.co/Xdko83YUmf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FoYeAlsace",
+   "url": "https://x.com/FoYeAlsace/status/2099763424851083546",
+   "date": "2026-09-15",
+   "text": "At 2:00 p.m. ET on Wednesday, September 16, the Federal Reserve will announce its rate decision.\n\nAt 2:30 p.m. ET, Kevin Warsh will face the market.\n\nBut the market may have already made the decision for him.\n\nAs of September 15, CME FedWatch puts the probability of a"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2099834775779303493",
+   "date": "2026-09-15",
+   "text": "$PBR \n\n$PBR is consolidating near its all-time highs, but there are several signs that bullish momentum may be starting to weaken. \n\nFriday’s bearish harami provided an initial reversal warning, followed by yesterday’s inside-range candle as price continues to compress near the https://t.co/VaiB2BFrga"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "cryptlogis",
+   "url": "https://x.com/cryptlogis/status/2099803545751232901",
+   "date": "2026-09-15",
+   "text": "The Big Picture | September 15\n\nToday stands out as one of the most event heavy sessions of the month for crypto markets. With the CLARITY Act in focus and broader macroeconomic pressures building, traders should prepare for volatility in both directions.\n\n🟢 Crypto-specific https://t.co/BL8hgavFAQ https://t.co/ADvvzmwlpg"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "C2Lightfc",
+   "url": "https://x.com/C2Lightfc/status/2099955460279562452",
+   "date": "2026-09-15",
+   "text": "Bearish news ≠ bear market. 🐂\n\nCLARITY Act stalling doesn't mean crypto is done — nearly 50% of people still believe in this space. Crypto has always carved its own path, independent of political noise.\n\nNo need to panic about the bull run. The fundamentals haven't changed. https://t.co/lvrgLvvhPQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 33,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2099844844461998510",
+   "date": "2026-09-15",
+   "text": "$BTC \n\nFollowing up on my previous post about the three relief rallies within major Bitcoin bear-market structures, I want to highlight another interesting detail.\n\nWhen we measure these rallies, there is often a clear progression in their magnitude: the first is smaller, the https://t.co/j0pXmZLFTU https://t.co/kYk1qffNDm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Sharmapraeep",
+   "url": "https://x.com/Sharmapraeep/status/2099833455874084896",
+   "date": "2026-09-15",
+   "text": "🌍 Global Crypto News — Sept. 15, 2026\n\n1. 🇺🇸 U.S. Senate — CLARITY Act is the biggest catalyst today\nThe Senate is set to vote on advancing the CLARITY Act, which could establish a clearer regulatory framework for digital assets. The procedural hurdle requires 60 votes. A"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "new_era_finance",
+   "url": "https://x.com/new_era_finance/status/2099921192606208027",
+   "date": "2026-09-15",
+   "text": "\"What you're seeing right now is not a new bull market. It's actually a bear market rally. It's also called a fool's rally.\"\n\n@HZeberg, macro strategist known for calling major turns, on why he thinks most people are about to get fooled:\n\nHis sequence is specific. Bitcoin bounces https://t.co/JjPgRjKkRg https://t.co/9N76d5AM05"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "croat154",
+   "url": "https://x.com/croat154/status/2099883420436279561",
+   "date": "2026-09-15",
+   "text": "$BITX\n\nBase case:\nWhipsaw around $16.00–$16.50. First bounces can fail; first breakdowns can get bought if Bitcoin stabilizes. Expect choppy, fast 50–80¢ swings, not a smooth trend.\n\nBear case (more consistent \nwith this morning’s tape):\nLose $16 and the next stops are $15.50"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "cryptomansui",
+   "url": "https://x.com/cryptomansui/status/2099688408016957683",
+   "date": "2026-09-15",
+   "text": "ETH/USDT Current Price (September 15, 2026) ≈ 2,519.05 USDT\nOn-chain Data:\nFunding rates near zero/slightly negative; long-side crowding has dissipated. Binance ETH Perpetual Open Interest (OI) is in the ~$5.8 billion range. ETH.D (dominance) ≈ 11.4%; BTC.D ≈ 59%. Price surged"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "goldstagcrypto",
+   "url": "https://x.com/goldstagcrypto/status/2099688241104662974",
+   "date": "2026-09-15",
+   "text": "ETH/USDT Current Price (September 15, 2026) ≈ 2,519.05 USDT\nOn-chain Data:\nFunding rates near zero/slightly negative; long-side crowding has dissipated. Binance ETH Perpetual Open Interest (OI) is in the ~$5.8 billion range. ETH.D (dominance) ≈ 11.4%; BTC.D ≈ 59%. Price surged"
+  }
+ ]
+}

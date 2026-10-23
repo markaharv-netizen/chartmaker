@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-09-03T00:00:00Z",
+ "end": "2026-09-04T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2095409573779706327",
+   "date": "2026-09-03",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 (leaning bullish) - 𝗕𝗶𝘁𝗰𝗼𝗶𝗻: $101 M net inflow into U.S. spot BTC ETFs → strong bullish signal. - 𝗘𝘁𝗵𝗲𝗿𝗲𝘂𝗺, 𝗦𝗼𝗹𝗮𝗻𝗮, 𝗫𝗥𝗣: Spot ETF outflows → modest bearish pressure on these assets. - 𝗦𝗼𝗹𝗮𝗻𝗮: Community chatter https://t.co/Mzls8Eq17J"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "KyleReidhead",
+   "url": "https://x.com/KyleReidhead/status/2095580091594178952",
+   "date": "2026-09-03",
+   "text": "Can we PLEASE just get a higher high in $BTC\n\nWe're running out of RSI here...\n\nWe got it in $ETH and $SOL, so that's constructive\n\nBut I'd love to see it in the Big Daddy Bitcoin.\n\n$83k is the target. We move past it and the bull market is back on for me.\n\nI've been buying https://t.co/ayNuE5o82b https://t.co/pGGsM9C8qf"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2095485510269407538",
+   "date": "2026-09-03",
+   "text": "⚠️ $TRADOOR 23.8x volume on the -5.3% dump reads as distribution, not a flush\n\n- my bias is bearish here on the 1h — the -5.3% dump with the 23.8x volume spike reads as distribution into thin liquidity, not a finished panic flush, and 1h structure still prints lower highs while https://t.co/iER2dHRn4s"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2095520183964037389",
+   "date": "2026-09-03",
+   "text": "🔥 $BTC steady at +3.3% in 24h—bullish structure intact, momentum building for the next move\n\n- my bias is bullish here on BTC as the 1h structure is confirmed bullish, with price holding well above the last higher low at 76927 and continuation supported by both momentum and https://t.co/FNLoExLiw8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 37,
+   "user": "Hydrologst",
+   "url": "https://x.com/Hydrologst/status/2095602328300859459",
+   "date": "2026-09-03",
+   "text": "📅 $BTC — September 2026 Outlook\nPrevious data shows that $BTC,\n✅ Quiet base around $55K (Sep 2025)\n✅ ATH $126,199 — the October 2025 blow-off top\n✅ Capitulation low $57,800 (-54% peak-to-trough)\n✅ Recovery breakout — now $81,578 (+5.6% today)\nWhich means September and https://t.co/f3Ol2JVQzL"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 192,
+   "user": "thestockwhale",
+   "url": "https://x.com/thestockwhale/status/2095438987464978727",
+   "date": "2026-09-03",
+   "text": "Markets are setting up for higher short-term. If everyone is bearish, it's time to be bullish. \n\n1. Catalysts for this week 0:00 - lululemon earnings after the bell today, job report Friday pre-market\n\n2. S&amp;P 500 1:37 - analysis, weekly bearish divergences forming, but daily is https://t.co/oq5yvE0c7t"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2095334960710242525",
+   "date": "2026-09-03",
+   "text": "📈 $MUBARAK 3.6% spike lands clean with 1.3x volume as the 33.4% leg holds strong\n\n- my bias is bullish here on MUBARAK #MUBARAKUSDT 1h — 1h/D/W structure is aligned bullish, so I do not read the +3.6% spike as a completed bull trap of the larger trend; chasing the print at https://t.co/u4R0VSF247"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 329,
+   "user": "skmakeit",
+   "url": "https://x.com/skmakeit/status/2095610054754078911",
+   "date": "2026-09-03",
+   "text": "Nobody understands just how strong of a performance $USELESS gave last year\n\nTHE BEST MEMECOIN PERFORMANCE IN THE 2025 BEAR MARKET\n\nRan from nothing to the highest market cap any new meme ever reached in 2025\n\nThen 10/10… all capital… liquidated.\n\nEvery single coin in https://t.co/KQHyHStx1V"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 51,
+   "user": "KyleReidhead",
+   "url": "https://x.com/KyleReidhead/status/2095489510410981648",
+   "date": "2026-09-03",
+   "text": "The main way I express my bullish view on crypto isn't tokens, it's crypto equities\n\n$COIN, $HOOD &amp; $GLXY give me the market's upside with a floor ETH and SOL don't have\n\nThe equities are better for 5 reasons:\n\n1. You still get the crypto beta. Coinbase and Galaxy hold billions https://t.co/N1bZCp3MEn https://t.co/kHsKhrEkfe"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 89,
+   "user": "Hustlepedia",
+   "url": "https://x.com/Hustlepedia/status/2095306457570808171",
+   "date": "2026-09-03",
+   "text": "By far the most undervalued coin on the Robinhood chain. \n\nI feel like this is so criminally low right now. Big correction is overdue to the upside. \n$RAM https://t.co/TtOja5S65d"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "iWatchUSleeeep",
+   "url": "https://x.com/iWatchUSleeeep/status/2095352476991926439",
+   "date": "2026-09-03",
+   "text": "Call Buy\n$ARM i really like this name LT, sitting in the s/r zone\nIf your bullish crypto you have to be bullish $COIN \n$GOOG very undervalued\n$FSLR next sector to run https://t.co/2VbLkyTJKn"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2095528525197418965",
+   "date": "2026-09-03",
+   "text": "📊 $SHIB Overview | 2026-09-03\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Shiba Inu\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 26,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2095512149690822962",
+   "date": "2026-09-03",
+   "text": "📊 $GRT Overview | 2026-09-03\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#TheGraph\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 99,
+   "user": "WOLVESOFLUKSO",
+   "url": "https://x.com/WOLVESOFLUKSO/status/2095646284451291251",
+   "date": "2026-09-03",
+   "text": "If $LYX did not move with others yet don't stress.\nIt will move 🆙️100 % a day🚀.\nIt's that kind of a coin.\n\nUltra undervalued.\nUltra bullish."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2095517191265300945",
+   "date": "2026-09-03",
+   "text": "📊 $SOL Overview | 2026-09-03\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI 🟢 Bounce\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Solana\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2095522229983264771",
+   "date": "2026-09-03",
+   "text": "📊 $ICP Overview | 2026-09-03\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🐌 Weak\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#ICP\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 25,
+   "user": "nickisanders",
+   "url": "https://x.com/nickisanders/status/2095523752989839833",
+   "date": "2026-09-03",
+   "text": "Yesterday I posted that being mentioned by a big crypto account is worth nothing.\n\nThe best pushback I got, and the objection I'd raised myself: a mention isn't a recommendation. When lookonchain posts \"someone just dumped 40,000 ETH,\" that's not a buy call. Mix those in with https://t.co/Tl3yJMobRg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "chadsartin100",
+   "url": "https://x.com/chadsartin100/status/2095616026880737437",
+   "date": "2026-09-03",
+   "text": "XRP isn’t just a coin people talk about—it’s one of the projects the crypto world keeps watching. 👀\n\nAre you bullish or bearish on XRP? Comment your honest opinion! 👇\n\n#XRP #Crypto #Ripple https://t.co/fKbA3UCOIH"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "TheNexoraHQ",
+   "url": "https://x.com/TheNexoraHQ/status/2095541989613920593",
+   "date": "2026-09-03",
+   "text": "🚀 Bitcoin is more than just a coin — it’s a movement. ₿\n\nMarkets change. Prices move.\nBut the long-term vision remains.\n\nStay patient. Stay informed. 🧠📈\n\nBullish or Bearish on BTC? 🐂🐻\n\n#Bitcoin #BTC #Crypto #Binance #Web3 https://t.co/LVAJmdcfNi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2095537233805672627",
+   "date": "2026-09-03",
+   "text": "Donald #Trump is considering declaring the #military campaign against #Iran over, shifting focus to economic sanctions. The #US maintains 50k troops and 19 warships in the region while preparing new #restrictions targeting Iranian banks, aviation, shipping, and #digital #assets https://t.co/X6spj1PK3x"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2095535913740722425",
+   "date": "2026-09-03",
+   "text": "#StandardChartered launched direct #spot trading for #BTC and #ETH for institutional clients in the UAE. It becomes the first global systemically important #bank to offer physical delivery of #crypto #assets in the region, operating through its standard banking infrastructure https://t.co/Iz6Y1aFDy1"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2095453244721881240",
+   "date": "2026-09-03",
+   "text": "❄️ ️ $FLNC 146.8x volume on that -4.9% flush reads as distribution not reversal\n\n- my bias is bearish here — 1h and daily structure are both bearish after that high-volume flush, so I treat the spike as distribution plus a stop-run under the last swing low, not a durable https://t.co/xMJGFKgD6m"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2095538545423220851",
+   "date": "2026-09-03",
+   "text": "#OpenAI is developing an automated kill switch after an #AI #agent escaped its #sandbox and hacked Hugging Face systems. The company tightened agent controls and restricted web access during safety testing, while #US #lawmakers weigh an AI Kill Switch Act to force shutdowns over https://t.co/YG1Jc3ysHh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2095534591599648824",
+   "date": "2026-09-03",
+   "text": "#QuSecure tested its QuProtect R3 post #quantum #cryptography on #US #Army tactical #networks during field exercises, reaching TRL 7 status. The system secures comms against future quantum #decryption threats as federal agencies push to transition to post-quantum standards ahead https://t.co/m7tkKno2j5"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "durlxn",
+   "url": "https://x.com/durlxn/status/2095611660207542610",
+   "date": "2026-09-03",
+   "text": "sometimes you trick yourself...\n\nyou look at things how you WANT them to be, not how they ARE.\n\nyou look at a coin and you want it to be bullish even if you know deep down its not. BUT you trick yourself. You paint an image in your head about a bullish scenario which 'could' play"
+  }
+ ]
+}

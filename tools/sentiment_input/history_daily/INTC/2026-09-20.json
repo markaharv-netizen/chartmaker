@@ -1,0 +1,210 @@
+{
+ "symbol": "INTC",
+ "start": "2026-09-20T00:00:00Z",
+ "end": "2026-09-21T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "INTC (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2101676304261328974",
+   "date": "2026-09-20",
+   "text": "Tickers dominating X chatter right now:\n\n1. Intel Corp. $INTC is up 0.4% in post-market after falling 0.2% in the regular session\n\n🟢 Sentiment: 30% bullish, 2% bearish, 68% neutral\n\nA Reuters report on Sept 18 said Intel is in talks with SK Hynix to make memory chips in the https://t.co/q7FjX018t1"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2101679764612272309",
+   "date": "2026-09-20",
+   "text": "$NVDA\n\n$NVDA continues to trade under bullish momentum, with buyers maintaining control as long as ascending support continues to hold. \n\nThe trend remains defined by higher lows, showing that bulls are consistently stepping in on pullbacks. \n\nThat said, price is developing https://t.co/fV8ys0BYSB"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 80,
+   "user": "alphaticaio",
+   "url": "https://x.com/alphaticaio/status/2101743589701116314",
+   "date": "2026-09-20",
+   "text": "$INTC JUST COMPLETED ONE BULLISH PATTERN and triggered another.\n\nThe double bottom:\nFirst low: $85.14\nSecond low: $85.72\nNeckline: $93.70\nTarget: $102.26: ACHIEVED\n\nNow the inverse head-and-shoulders:\nBreakout level: $107.21\nFriday close: $108.60\nMeasured target: $132.63\n\nThat https://t.co/pCjLsrCYeE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "PJtrader_17",
+   "url": "https://x.com/PJtrader_17/status/2101810585264672929",
+   "date": "2026-09-20",
+   "text": "🚨 $INTC OPTIONS PLAN | Multi-exp: 09/21, 09/23, 09/25\n\n📊 $108.60 (-0.18%) — volatile week: +10% Sep 17 on 14A timeline news, gave back some Sep 18\n📈 Net $ flips hard by expiry: Sep 21 -5.10M → Sep 23 +3.03M → Sep 25 +24.58M\n\n🎯 Wall: $115 (Sep 25) — +5.06M, largest print https://t.co/xXzDKRBBKd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FairywangHk",
+   "url": "https://x.com/FairywangHk/status/2101692479829598244",
+   "date": "2026-09-20",
+   "text": "Last week’s US market recap:\n\nFed hiked 25bp as expected. $SPY and $QQQ tested support on Wednesday, bounced, and both closed above the 20-day EMA on Friday.\n\nMarket breadth got more oversold than last week, approaching March 2026 levels. Stocks remain in a consolidation range, I"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "timitufnuckles",
+   "url": "https://x.com/timitufnuckles/status/2101722205398995108",
+   "date": "2026-09-20",
+   "text": "$INTC — THE TURNAROUND IS GETTING REAL\n\nIntel just posted 25% YoY revenue growth to $16.1B, with gross margin jumping to 40.4% from 27.5% a year ago. Non-GAAP EPS came in at $0.42. \n\n🐂 BULL CASE\n• 18A is now in high-volume production, including Panther Lake\n• High-NA EUV is"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "0xearthh",
+   "url": "https://x.com/0xearthh/status/2101654580241068336",
+   "date": "2026-09-20",
+   "text": "I built AfterHours Sentinel for the @Bitget_AI Base Camp Hackathon S2, competing in the Agentic Trading Track under the Event Driven Agent Sub Theme.\n\nAfterHours Sentinel is an autonomous, event driven quantitative trading agent I engineered specifically for tokenized U.S. https://t.co/TPEpmb4B9k https://t.co/mvQnAkq7Oo"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "privacyisntdead",
+   "url": "https://x.com/privacyisntdead/status/2101539467324502126",
+   "date": "2026-09-20",
+   "text": "$INTC is undervalued https://t.co/doDzAZi31W"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "stocksZ_A",
+   "url": "https://x.com/stocksZ_A/status/2101710235584835980",
+   "date": "2026-09-20",
+   "text": "Trump is making thousands of stock trades and posting memes of him buying $INTC at $20 and some people want to get macro bearish before November 2028?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MaxKimResearch",
+   "url": "https://x.com/MaxKimResearch/status/2101743271974174802",
+   "date": "2026-09-20",
+   "text": "Intel ($INTC) at 53 times forward earnings and SK hynix at 4 times. Which looks cheaper to you?\n\nThis compares price-to-earnings ratios: how many times expected earnings investors pay for a stock. Nvidia (NVDA) is shown at 14 times, Micron (MU) at 6 times and SanDisk (SNDK) at 7 https://t.co/gkqdwTfG8E"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JSCC2020Lee",
+   "url": "https://x.com/JSCC2020Lee/status/2101790961626182110",
+   "date": "2026-09-20",
+   "text": "TSMC (TSM) is sizing CoPoS at 750 by 620 millimeters so AI packages can leave the 300-millimeter circle before CoWoS-L is finished.\n\nDailySynapse ran that panel map on September 20. Early CoPoS sits near 310 by 310 millimeters. A mid step runs about 515 by 510. The 750 by 620 https://t.co/pO8JDkAzC7"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "InsiderFinancex",
+   "url": "https://x.com/InsiderFinancex/status/2101696681192387056",
+   "date": "2026-09-20",
+   "text": "$NVDA soaked up $272.6M in weekly premium, but the week closed mixed. #DAL was the clean bullish pocket while SNDK, MU and INTC leaned into short-dated hedging.\n\n↗️ Premium cluster: NVDA $272.6M, MU $128.6M, AMD $92.6M, INTC $84.5M\n↘️ Put flow: SNDK 63% puts on $7.1M; MU 40% puts https://t.co/LkyW311Psp"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "JTX_Invests",
+   "url": "https://x.com/JTX_Invests/status/2101808337683628160",
+   "date": "2026-09-20",
+   "text": "$INTC BULLISH.  $INYY ♥️♥️♥️ https://t.co/aZTV70p7Ip"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FrankBanksSwing",
+   "url": "https://x.com/FrankBanksSwing/status/2101816253832671643",
+   "date": "2026-09-20",
+   "text": "$INTC Inside the day, right above the pivot. bullish engulfing on weekly \n\nGap resistance at $122 https://t.co/fh5FFQlkW4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "MarketInsightsC",
+   "url": "https://x.com/MarketInsightsC/status/2101749716711096687",
+   "date": "2026-09-20",
+   "text": "INTC: more than a PC chipmaker. Intel is repositioning as a U.S. chip foundry — 18A process, Panther Lake AI PCs, Crescent Island GPU testing 2H26. Gov't owns 9.9%, Nvidia put in $5B.\n\nWe model ~$180 (65% upside) vs Street ~$121.81 (12%). Not financial advice.\n\n#INTC #Semis https://t.co/qpASyHNmao"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 19,
+   "user": "JungleStocks",
+   "url": "https://x.com/JungleStocks/status/2101757669413376166",
+   "date": "2026-09-20",
+   "text": "$INTC Top momentum pick with 41.3% of votes \nflashing a bullish daily candle 📘 https://t.co/CSgfkdM5zD https://t.co/XbZR8uQ03h"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "OptionCalculate",
+   "url": "https://x.com/OptionCalculate/status/2101602375853297674",
+   "date": "2026-09-20",
+   "text": "$CRWV\nUnusual Options Roundup 2026-09-17: INTC Synthetic Long, AMD Bull Call Spread, CRWV Bull Put Spread\nEquities rebounded as tech led the Nasdaq higher, and unusual options activity included a synthetic long in INTC, a big bull call spread in AMD, and a bull put spread in"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 54,
+   "user": "khawatmiTradez",
+   "url": "https://x.com/khawatmiTradez/status/2101735854485967058",
+   "date": "2026-09-20",
+   "text": "Weekly Watchlist:\n\n$ARM \n$INTC\n$MRVL\n$LRCX \n$TER \n$SMCI \n$GLD\n\nWe’ve been bullish on semis and tech for a week now and it’s played out so far @MomoEdgeAI \n\nComment for any prism and I’ll share!"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "khawatmiTradez",
+   "url": "https://x.com/khawatmiTradez/status/2101735192809345478",
+   "date": "2026-09-20",
+   "text": "Weekly Watchlist:\n\n$ARM \n$INTC\n$MRVL\n$LRCX \n$TER \n$SMCI \n\nWe’ve been bullish on semis and tech for a week now and it’s played out so far @MomoEdgeAI \n\nComment for any prism and I’ll share!"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 372,
+   "user": "NickSchmidt",
+   "url": "https://x.com/NickSchmidt/status/2101677888852365525",
+   "date": "2026-09-20",
+   "text": "This is the best that weekly charts have looked since we topped in June.\n\n$INTC $SNDK $AMD $ARM coming up the right side of multi-month bases with bullish engulfing candles last week. https://t.co/rMsxe1pRk7"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 181,
+   "user": "enrichtrades",
+   "url": "https://x.com/enrichtrades/status/2101752943967891786",
+   "date": "2026-09-20",
+   "text": "$INTC\n\nBullish engulfing candle on the weekly, reclaiming the 9EMA with massive volume\n\nHigher lows stacking after months of consolidation. Momentum is clearly shifting here\n\nAnother set it &amp; forget it setup\n\nHold this structure and I think $120+ comes quickly https://t.co/CBnlAoo2a3"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 190,
+   "user": "Thomas_james_1",
+   "url": "https://x.com/Thomas_james_1/status/2101778184995733847",
+   "date": "2026-09-20",
+   "text": "I can honestly say that Intel $INTC is one of my favourite charts in the market right now.\n\nBroke above the $107 resistance on Thursday, held &amp; closed above that same level on Friday too.\n\nThis also gave us a bullish engulfing candle on the weekly chart.\n\nNext up? $117 gap fill. https://t.co/cNQFc3dW8d https://t.co/WtlC0RixRD"
+  }
+ ]
+}

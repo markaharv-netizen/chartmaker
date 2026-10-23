@@ -1,0 +1,93 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-01T00:00:00Z",
+ "end": "2026-09-02T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "MisterLukeCrypt",
+   "url": "https://x.com/MisterLukeCrypt/status/2094838360418467974",
+   "date": "2026-09-01",
+   "text": "$BTC: The most important thing right now is not to blindly focus on the U.S.–Iran war escalation.\n\nWhat we need to watch closely is the jobs data coming out this Friday. If the data comes in stronger than expected, Warsh’s hawkish speech could become a reality, and the"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "DenWeneth",
+   "url": "https://x.com/DenWeneth/status/2094694718294647232",
+   "date": "2026-09-01",
+   "text": "Good morning guys ☕️\n\n🚨ETHEREUM BROKE THE BEARISH STRUCTURE and confirmed a higher high on the monthly chart and ended the downtrend that had been going since August 2025.\n\n❗️For the first time in a long time, bears are starting to lose control of the global structure.\nWe saw a https://t.co/b7v2Dyx19c"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "cryptoleeches",
+   "url": "https://x.com/cryptoleeches/status/2094586252498538814",
+   "date": "2026-09-01",
+   "text": "Good luck to all the bears out there. Its been fun running with the pack but the time has come. This will be BRUTAL.\n\nWe are getting a perfect Fib retrace with candle stick validation being bought up off of the 0.5 fib on the 15 minute time frame.\n\nWe have also just close the https://t.co/md74vbuZys"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "CryptoTGlobal",
+   "url": "https://x.com/CryptoTGlobal/status/2094669369632526496",
+   "date": "2026-09-01",
+   "text": "📊 Crypto Analysis — 01 September 2026 (06:00 UTC)\n\n💰 Current price\n• BTC: $79,175 | ETH: $2,484\n\n📊 Market Sentiment\n🤑 Fear &amp; Greed: 69 (Greed) ↑7 (was 62)\n\n💥 Liquidations (24h)\n• Total: $26,453,692\n• Longs: $0 (0%) 🔴\n• Shorts: $26,453,692 (100%) 🟢\n⚠️ Massive short"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "naim1242",
+   "url": "https://x.com/naim1242/status/2094703712493293858",
+   "date": "2026-09-01",
+   "text": "The world is slowly realizing that crypto was never just about price.\n\nYes, Bitcoin created a new form of digital money.\n\nYes, Ethereum introduced programmable blockchain technology.\n\nBut the bigger story is happening beneath the charts.\n\nA new financial and technological https://t.co/o3gzI0bFSb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 22,
+   "user": "cryptoicehouse",
+   "url": "https://x.com/cryptoicehouse/status/2094913248063525310",
+   "date": "2026-09-01",
+   "text": "The AAA #Web3 Epic Trying to Prove Blockchain Gaming Can Finally Go Mainstream\n\nethereum:0x767fe9edc9e0df98e07454847909b5e959d7ca0e (Illuvium) a AAA open‑world + auto‑battler blockchain game with high‑end production values, land NFTs, creature ownership, and a full on‑chain https://t.co/NowHGHrmki"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "bradarska1",
+   "url": "https://x.com/bradarska1/status/2094732774770868510",
+   "date": "2026-09-01",
+   "text": "Bitcoin, Ethereum, XRP, Solana\n\n1| @Bitcoin  remains a key market anchor with ~19.95–20.08 million BTC supply. Spot ETFs hold ~1.3 million BTC (~6–6.5% of float), accumulating ~$52 billion net since launch despite 2026 outflows, and now dominate short-term flow equilibrium,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 93,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2094611541912129593",
+   "date": "2026-09-01",
+   "text": "Bitcoin is the lead market signal I’m watching while BTC tests its current structure, nearby support, and the levels that would confirm either continuation or a deeper reset. I’m focused on price, momentum, and confirmation instead of reacting to one isolated move.\n\nI’m using https://t.co/SwlxRIYRzd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2094776264171123175",
+   "date": "2026-09-01",
+   "text": "Institutional Technical Watch — ETH reaches major weekly resistance; 40% downside scenario activated on confirmation\n\nEthereum (ETH/USD) — Yashu Gola / FXEmpire — Weekly / medium-term — Sep. 1\n\nA genuinely new weekly structural risk has appeared. ETH’s roughly 70% rebound from https://t.co/Un2qNbLEmO"
+  }
+ ]
+}

@@ -1,0 +1,219 @@
+{
+ "symbol": "AMZN",
+ "start": "2026-09-15T00:00:00Z",
+ "end": "2026-09-16T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AMZN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2099653020623790556",
+   "date": "2026-09-15",
+   "text": "The tickers dominating X chatter right now:\n\n1. CrowdStrike Holdings $CRWD is flat in pre-market after up 13.9% in the regular session\n\n🟢 Sentiment: 58% bullish, 5% bearish, 37% neutral\n\nThe Fal.Con AI‑security launch and analyst upgrades pushed the stock up about 14% on double https://t.co/dhoYIlPVLi"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2099891953231884316",
+   "date": "2026-09-15",
+   "text": "🐳 Wall Street says $AMZN is a Strong Buy. One trader just put $15.4M behind that call — literally.\n\nTHE TRADE\n\nAt 11:34 ET, someone bought 15,000 AMZN November 20 $265 calls for $15.4M — paying $10.29 a contract with the stock at $248.98. That is a directional bullish bet with https://t.co/RaLrbMoows"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ChrisDaltonMacr",
+   "url": "https://x.com/ChrisDaltonMacr/status/2099838622228992429",
+   "date": "2026-09-15",
+   "text": "$NEOV isn't just spinning a yarn these days; it’s fitting together three key puzzle pieces: battery cells, a factory, and capital. Trading around $3.57, it has just pulled back from the spike driven by the SK On news.\nIs the pullback a buying opportunity, or is the dilution play https://t.co/61CasNq9F9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2099952047902564516",
+   "date": "2026-09-15",
+   "text": "Someone just paid $92.5M for a three-day bet against $SPCX. That's not a hedge. That's a countdown.\n\nTHE PRINT THAT ATE THE TAPE\n\nAt 15:28 ET, three-quarters of the way through an otherwise unremarkable session, someone bought 15,000 SPCX September-18 $205 puts and paid $92.5M https://t.co/5edIbxKEXK"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2099847810992787699",
+   "date": "2026-09-15",
+   "text": "🚨 BURAKTHESCALPER LLC — TUESDAY PREMARKET BATTLE PLAN\n\n⚔️ BIAS: CAUTIOUS BEARISH / SELL FAILED RECLAIMS, BUT WATCH NVDA FOR A RELIEF SQUEEZE. Fresh Tuesday futures are modestly red: US 500 futures ~7,682 (-0.23%) and US Tech 100 futures ~29,419 (-0.24%) in the latest available"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "mollyrubenlong",
+   "url": "https://x.com/mollyrubenlong/status/2099848140954509466",
+   "date": "2026-09-15",
+   "text": "⚠️ $AMZN is sitting at an important risk/reward zone.\n\nPrice: ~$253\nSupport: $250-$252\n52-week high: $287.20\nUpside if buyers defend support:\n$257 → $264 → $272\n\nDownside if $250 fails:\n\n$248 → $244 → $235\n\nMy bias is cautious, but the setup improves fast above $257.\n\n#AMZN https://t.co/poBsrV2NM4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "doughboysfn",
+   "url": "https://x.com/doughboysfn/status/2099683359853015271",
+   "date": "2026-09-15",
+   "text": "$AMZN\n\nPrice is currently stuck in 2 PBZ- $255 &amp; $252.5. Above these PBZ there is a solid chance at $260 with all the positive upside pull. $260 is going to be hard to break through, that node has a tombstone badge. If $260 breaks then $265 and $270 become extremely possible. https://t.co/YJEPJ3Y5NZ https://t.co/IgpIv9LxGP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2099861630486212916",
+   "date": "2026-09-15",
+   "text": "🚨 BURAKTHESCALPER LLC — 7 AM PT MARKET BATTLE PLAN\nTUESDAY • SEPTEMBER 15, 2026\n\n⚔️ BIAS: CAUTIOUS / TWO-WAY TAPE. The opening is much calmer than Monday: S&amp;P 500 opened 7,612.3 (-0.10%), Nasdaq -0.18%, Dow -0.23%. The macro pressure is still serious—10Y ~5.0% after touching"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "slava_invests",
+   "url": "https://x.com/slava_invests/status/2099965376553771196",
+   "date": "2026-09-15",
+   "text": "THIS RIGHT HERE IS AN EXAMPLE OF CONCLUSION MADE TOO EARLY. \n\nI posted this on 8th of September when the price of $ORCL was ~$170, now it sits at $140. Roughly a -17% decline.\n\nAgain my thesis i explained here: https://t.co/vkVdXeyTvw\n\nBut I will say it again: \nI belive that https://t.co/a6jEiSMy1w https://t.co/Fr8v6HNGLy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "slava_invests",
+   "url": "https://x.com/slava_invests/status/2099965625711858151",
+   "date": "2026-09-15",
+   "text": "THIS RIGHT HERE IS AN EXAMPLE OF CONCLUSION MADE TOO EARLY. \n\nI posted this on 8th of September when the price of $ORCL was ~$170, now it sits at $140. Roughly a -17% decline.\n\nAgain my thesis i explained here: https://t.co/vkVdXeylFY\n\nBut I will say it again: \nI belive that https://t.co/MYAl0QfRhv https://t.co/Fr8v6HN8W0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "gpaisa7",
+   "url": "https://x.com/gpaisa7/status/2099969132070346806",
+   "date": "2026-09-15",
+   "text": "These ugly charts just screaming no edge. $AMZN another one that just looks atrocious (not bullish or bearish, just trash). https://t.co/nerbujMNp3"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "TajVincent",
+   "url": "https://x.com/TajVincent/status/2099854635913646301",
+   "date": "2026-09-15",
+   "text": "Finn's Trade Idea...\n\n🎯 AMZN Dual-Path Trade Plan (Updated: 9:32 AM)\n\nI have refreshed the levels for the market open and redrawn the AMZN trade plan on your chart. Current price is $252.31, trading inside the opening range.\n\n---\n\n🟢 Bullish Path (Green)\n*   Trigger: $253.25 https://t.co/5TonqXt81s"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "CT_Richt3r",
+   "url": "https://x.com/CT_Richt3r/status/2099965994538303618",
+   "date": "2026-09-15",
+   "text": "$AMZN 1h\n\n251.74 is where sellers just proved they still run this. Price sits in discount after the break, so the bounce is the setup, not the reversal.\n\nI'm looking for a retrace into 251.74-253.18 (broken low, last bullish base, imbalance above) to get sold again.\n\nBelow 247.6 https://t.co/rptX9jtoVt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "AnthonySandford",
+   "url": "https://x.com/AnthonySandford/status/2099876778672025801",
+   "date": "2026-09-15",
+   "text": "Market Tide is pretty weak this morning.\n\n$SPY is around 756.56 with net volume down to -657K.\n\nNCP is -106M while NPP is +31M, so calls are leaning more bid side while puts are getting bought more aggressively at the ask.\n\nWhat stands out most is the Top Net Impact Chart.\n\nThere https://t.co/RSA5Zf0XXS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "VandelayRschNYC",
+   "url": "https://x.com/VandelayRschNYC/status/2099871951862849965",
+   "date": "2026-09-15",
+   "text": "Money's leaning short out the gate 🔻\nBullish premium hiding in energy + financials — $XOM , $BNY , $HOOD , $EOG  catching early bids while the Mega Caps get sold.\nBearish flow all over Big Tech: $META  (12.6M), $NVDA  (11.5M), $AMZN , $TSLA . https://t.co/Fe5sBYnxUS"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2099788046778441880",
+   "date": "2026-09-15",
+   "text": "📉 $AMZN 0.39% sweep above 254.26 fuels the downtrend not a reversal\n\n- my bias is bearish here — the 15m wick through 254.26 that closed back below is a liquidity grab into the last lower high, not a reversal; it fuels the 1h downtrend, which already lines up with daily bearish https://t.co/D4xWuRmWEJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "barb7726",
+   "url": "https://x.com/barb7726/status/2099848175544873263",
+   "date": "2026-09-15",
+   "text": "🟢 $AMZN BULL CASE\n\nAs long as $250-$252 holds, I see a clear path:\n\n→ Reclaim $255-$257\n→ Break $260-$264\n→ Target $268-$272\n→ Then $280\nThe stock is still in a correction, but a successful defense of $250 could turn this into a cleaner recovery.\nMy view: $250 is the floor, https://t.co/f0sTJqTj54"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "AlefMoney",
+   "url": "https://x.com/AlefMoney/status/2099815099900809292",
+   "date": "2026-09-15",
+   "text": "The letter #Alef was originally a picture of a #Bull. Like if you are #Bullish on Alef! By buying Alef you buy: #BTC #ETH #BNB #TRX #QQQ #NVDA #AAPL #MSFT #AMZN #TSLA #META #GOOGL #GOLD #SILVER #PLATINUM https://t.co/sz43e4pzuM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "HoneyyRene97",
+   "url": "https://x.com/HoneyyRene97/status/2099847835416203461",
+   "date": "2026-09-15",
+   "text": "📉 $AMZN is still correcting, but the selloff is becoming more controlled.\n\nLast close: $253.54\nPremarket: ~$253.00\nRecent support: $250-$252\nThe bigger issue is still overhead supply from the $260-$272 area.\nBull case:\n$250 holds → $257 → $264 → $272\n\nBear case:\nLose $250 → https://t.co/wCcxpmrXcO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FXFinanceFeeds",
+   "url": "https://x.com/FXFinanceFeeds/status/2099946550633890161",
+   "date": "2026-09-15",
+   "text": "$AMZN booked $62.6bn of Q2 net income on $27.5bn of operating income.\n\nThe gap isn't AWS. It's @AnthropicAI.\n\nStake marked up $50.5bn to $190.4bn\n1.5x @amazon's long-term debt\nTrailing FCF -$7.6bn, from +$18.2bn\n\nOur 12-month range: $340 bull, $190 bear.\n\nhttps://t.co/wH1lP9aWaJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "cottonfields",
+   "url": "https://x.com/cottonfields/status/2099828962302017984",
+   "date": "2026-09-15",
+   "text": "Yesterday's options flow (14 sep)\n\nmarkets: unclear\nmag7: bullish\ncrypto: unclear\nbiotech: unclear\nmetals: income\nenergy: unclear\nrates: unclear\nrisk-off: bullish\nsemis: bullish\nfinancials: hedging\n\nMarkets\nFlow on 14 Sep: USD 2.79bn confirmed opening, 75.3% in calls. But the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2099685236003029214",
+   "date": "2026-09-15",
+   "text": "EOD Tape | Indexes + Mag7 | Monday, September 14th, 2026\n\nIndexes\n$SPY\n760.81 -3.48 (-0.46%) H/L 763.52 / 757.93\nFilled the island bottom and avoided an island top. Bear gap remains open and 760 is a must hold. Weekend AI concerns drove the tape, eased some by Trump commentary"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "deemancpa",
+   "url": "https://x.com/deemancpa/status/2099666342739656755",
+   "date": "2026-09-15",
+   "text": "1/\n🚨 $AMZN closed 253.54 — $10 under the gamma flip (263). Dealers are net short gamma here: they amplify, they don't catch.\n\n📊 Above: +21M / +42M / +40M at 257.5–265 — all expiring Friday 😮\n\n📊 Below: −18M at 250, −18M at 240 — sticks around till 10/2\n\n🧵 The play 👇\n\n2/\n📉 https://t.co/ODSVeq88wF"
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "symbol": "APLD",
+ "start": "2026-09-13T00:00:00Z",
+ "end": "2026-09-14T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 33,
+   "user": "CK_Cryptoklepto",
+   "url": "https://x.com/CK_Cryptoklepto/status/2099133062487380408",
+   "date": "2026-09-13",
+   "text": "I asked @grok to analyze \"Price to Book\" ratio utilizing Q2 2026 earnings data and current Bitcoin price\n\nNot only is $MARA undervalued vs the pack, but when you factor in the $640 million that the 35,577 $BTC has increased in value in Q3 then MARA is only at 1.93x Price to Book https://t.co/5xqOYY8bsV https://t.co/HthguL4EuD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 22,
+   "user": "FantasyInvRealm",
+   "url": "https://x.com/FantasyInvRealm/status/2099189754961252814",
+   "date": "2026-09-13",
+   "text": "🚀 Let's Go Monday!\n\nHighest Upside Names Right Now (≥50% Targets)\n\n$APLD 173% • $QBTS 111% • $LUNR 104% • $VICR 93% • $AUR 87%\n\n$IONQ 83% • $JOBY 80% • $POWL 77% • $CRDO 76% • $RKLB 75%\n\n$MOD 66% • $MYRG 64% • $STRL 61% • $APP 61% • $MU 60%\n\n$AAOI 55% • $SPCX 53%"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TerionBHavin",
+   "url": "https://x.com/TerionBHavin/status/2099168769465626752",
+   "date": "2026-09-13",
+   "text": "$APLD | Today’s Update 🚀\nClosed at $26.42, +2.48% 📈\n\n🔥 What matters:\n• $1.59B financing completed for AI data-center expansion\n• Polaris Forge 1 remains the key growth story\n• Q4 revenue hit $258.7M, +407% YoY\n• AI infrastructure demand remains strong\n\nMy take: APLD is https://t.co/nxEm7zFbLs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "edwigos",
+   "url": "https://x.com/edwigos/status/2099019304167493657",
+   "date": "2026-09-13",
+   "text": "Two industries that with enormous potential in the near future.\n\nData Centers and Biology companies using AI. Here are some interesting companies with great potential upside:\n\n-&gt; Ai Data Centers:\n$CIFR \n$POWL \n$APLD \n\n-&gt; Biology x AI \n$SDGR \n$GENB \n$RXRX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "takayanagiissei",
+   "url": "https://x.com/takayanagiissei/status/2099069045186425283",
+   "date": "2026-09-13",
+   "text": "$APLD\n86 Billion in potential revenue and the base revenue should only grow over time! Bullish https://t.co/bKeigS575t"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "kastriooot8",
+   "url": "https://x.com/kastriooot8/status/2099078643779551441",
+   "date": "2026-09-13",
+   "text": "Anthropic CEO Dario Amodei wants to slow down the pace of AI development.\n\nMy thesis: Slower ≠ slow‼️\n\nEven if AGI arrives later than Elon Musk &amp; others expect, AI compute demand will remain massive.\n\nMore training. More inference. More GPUs. More power. More data centers. https://t.co/UoDss4rPqF"
+  }
+ ]
+}

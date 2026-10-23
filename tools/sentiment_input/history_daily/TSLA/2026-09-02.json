@@ -1,0 +1,228 @@
+{
+ "symbol": "TSLA",
+ "start": "2026-09-02T00:00:00Z",
+ "end": "2026-09-03T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "TSLA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 104,
+   "user": "wickedstocks",
+   "url": "https://x.com/wickedstocks/status/2095133714980221313",
+   "date": "2026-09-02",
+   "text": "📺 $TSLA ABOVE $344 KEEPS $385 IN PLAY — CYBERCAB EVENT IS THE CATALYST\n\nPlease ❤️like and 🔁share with fellow @Tesla traders/investors\n\n#Tesla is heading into tomorrow’s Cybercab event at a critical technical juncture.\n\n#TSLA surged Monday on Cybercab hype, but that excitement https://t.co/HA5JdNSlql"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FIowStateofMind",
+   "url": "https://x.com/FIowStateofMind/status/2095273221600039073",
+   "date": "2026-09-02",
+   "text": "$TSLA  Options Flow + GEX for tomorrow:\n\nClose: $355.70\n\nOPTIONS FLOW\nCalls: $86.94M\nPuts: $43.66M\nBullish Premium: $64.43M\nBearish Premium: $62.46M\nFlow: MIXED\n\nLargest unusual print:\n$118K CALL at $362.50\n\nGEX LEVELS\n$357.50 = Gamma Flip / Main Battle\n$355 = First downside https://t.co/72IBrHuun4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2095211258110693410",
+   "date": "2026-09-02",
+   "text": "🐳 $TSLA is down 21% YTD. Someone just paid $4.8M betting it has a lot further to fall.\n\nTHE TRADE\n\nAt 13:46 ET, someone bought 2,100 TSLA January 2028 $250 puts for $4.8M in a single print. Spot was $353. That is a multi-quarter, deep-out-of-the-money bet that TSLA trades https://t.co/ND6QP8MfcE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "QuantAlgosAi",
+   "url": "https://x.com/QuantAlgosAi/status/2095236671167926383",
+   "date": "2026-09-02",
+   "text": "⚠️ TRAPDOOR $TSLA — king node 355.00 is short gamma; the bullish/bearish technical level is NOT a magnet, it's a vol-trap for fast whipsaws.\n📐 Technicals (4h): Resistance 357.00 · Support 352.96 · Fib 61.8% @ 327.55 (up-leg) · RSI 49\n🎯 Options layer: magnet 355.00 · MVC 352.50 https://t.co/dwPkWHZXqE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "WillieBoe777",
+   "url": "https://x.com/WillieBoe777/status/2095159092226457808",
+   "date": "2026-09-02",
+   "text": "📊 TRADE LOG — $TSLA\n\nOpened another bullish put position for 9/11:\n\nSold 3x $317.50 Puts @ $0.66\nBought 2x $300 Puts @ $0.26\n💰 Gross credit collected: $146\n💵 Net after fees: ~$143.41\n\nStructure:\n• 2x $317.50/$300 Bull Put Credit Spreads\n• 1x additional short $317.50 Put —"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2095254444904464516",
+   "date": "2026-09-02",
+   "text": "EOD Tape | Indexes + Mag7 | Wednesday, September 2nd, 2026\n\nIndexes\n$SPY\n765.20 +3.42 (+0.45%) H/L 766.43 / 761.73\nLooked good overall, bouncing off 760 in the island bottom from yesterday. Did not open a bull gap though it came close, and filled most of the bear gap above, which"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "TishaWillimas",
+   "url": "https://x.com/TishaWillimas/status/2095178353653547092",
+   "date": "2026-09-02",
+   "text": "🚨 MIDDAY FOLLOW-THROUGH: Yesterday’s levels are becoming today’s signals.\n\nAfter yesterday’s risk-off close, the market is attempting to rebound. The S&amp;P 500 and Dow are higher, while renewed strength in AI stocks is helping offset elevated Treasury yields and continued https://t.co/qSVAJi4Iis"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "XtradesAnalysis",
+   "url": "https://x.com/XtradesAnalysis/status/2095102108903358795",
+   "date": "2026-09-02",
+   "text": "$GOOGL  - OUTLOOK\n\nPrice is retracing exactly as predicted. Sellers remain in control while price stays below supply. Expect further downside from here.  \n\nBIAS: Bearish while price remains below supply.\n\nTry our Stock &amp; Options alerts completely free for 14 days! And Its Free on https://t.co/BmEImmfzvN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 122,
+   "user": "enrichtrades",
+   "url": "https://x.com/enrichtrades/status/2094967757280342417",
+   "date": "2026-09-02",
+   "text": "Watchlist for Tomorrow — 9/2\n\nMarket hasn’t lost structure. Still range-bound, but liquidity is tightening as yields + oil pressure risk assets. No reason to force it.\n\nUpside:\n$BE\n$MRNA\n$XOM\n$AAPL\n$META\n$SMCI\n$TSLA &gt; $363\n\nDownside:\n$TSLA &lt; $350\n$PLTR &lt; $179.80\n$IWM &lt; $290\n$SPY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Options_Sandy",
+   "url": "https://x.com/Options_Sandy/status/2095274414803685727",
+   "date": "2026-09-02",
+   "text": "Daily Watchlist Recap 9/2\n\nDecent move to the upside in the indices today! TSLA gapped above the long trigger and then immediately sold off into our downside PT1. The rest of the day it chopped around. JNJ had a very nice spike into our upside PT2 before wicking back down. TTD https://t.co/w5G8jszrbN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "KINGOPTIONSmtx",
+   "url": "https://x.com/KINGOPTIONSmtx/status/2095286147291164685",
+   "date": "2026-09-02",
+   "text": "Daily Watchlist Recap 9/2\nDecent move to the upside in the indices today! $TSLA gapped above the long trigger and then immediately sold off into our downside PT1. The rest of the day it chopped around. $JNJ had a very nice spike into our upside PT2 before wicking back down. $TTD https://t.co/Exr4Am4eRS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "oturan7g",
+   "url": "https://x.com/oturan7g/status/2095142216159138289",
+   "date": "2026-09-02",
+   "text": "When $TSLA is this hyped in pre market I am quite bearish. Usually when market opens with a drop that's when it's most bullish. https://t.co/g0a26464N7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "TMA_MarketIntel",
+   "url": "https://x.com/TMA_MarketIntel/status/2095227231119520238",
+   "date": "2026-09-02",
+   "text": "🔥 TOP OPTIONS FLOW TODAY | Sep 2\n\nWhere the big money is leaning 👇\n\n🟢 BULLISH FLOW\n$NVDA $IWM $CRM $IBM $AMD $MU $TSM $NBIS\n\n🔴 BEARISH FLOW\n$QQQ $SNDK $AVGO $MRVL $INTC $TSLA $GOOGL $PANW $AMZN $PLTR\n\nKey S/R levels for every name in the thread 🧵👇"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "OptionKing33996",
+   "url": "https://x.com/OptionKing33996/status/2095127397763010980",
+   "date": "2026-09-02",
+   "text": "🌅 Good morning everyone!\n\n$SPX futures are slightly up 9 points, near 7,640.\n\n📈 Bullish: Hold above 7,650 → 7,660 → 7,670\n📉 Bearish: Below 7,610 → 7,600 → 7,590\n\n💡 Trade Ideas\n\n$NVDA 225C above 220\n$AAPL 230C above 228\n$ASTS 60C above 58\n$SPCX 145C above 143\n\n⏸️ Sideways:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 276,
+   "user": "dannycheng2022",
+   "url": "https://x.com/dannycheng2022/status/2095100672773689549",
+   "date": "2026-09-02",
+   "text": "$TSLA (September 2, 2026-Daily Chart)\n\nHow to read my chart more accurately?\n\n1. A volatility hole together with a descending blue ribbon is an early bottoming signal. Weaker stocks usually need two or three of these holes; stronger names often need only one.\n\n2. After this https://t.co/p45zFsolVv"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "TajVincent",
+   "url": "https://x.com/TajVincent/status/2095144189025521894",
+   "date": "2026-09-02",
+   "text": "Pre-Session Outlook: Wednesday, September 2\nSPXW (S&amp;P 500 Index Options)\n\n$TSLA — Strong Setup (Score: +72.3, High Conviction, Dark Pool Bullish)\n\n$PANW — Patient Bull (Score: +55.3, High Conviction, Dark Pool Bullish)\n\nhttps://t.co/rE6YsCr15o"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "wsagentai",
+   "url": "https://x.com/wsagentai/status/2095119789513384238",
+   "date": "2026-09-02",
+   "text": "09/02/2026 Morning Briefing\n\nFutures dip as oil spikes above $90 on Iran-US strikes and bond yields climb, while AI earnings from DELL and GTLB fuel sharp premarket divergences. Risk-off macro meets risk-on AI capex — the session hinges on geopolitical escalation vs. hardware"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CDTradertincup",
+   "url": "https://x.com/CDTradertincup/status/2095140148400787925",
+   "date": "2026-09-02",
+   "text": "If you’ve ever been a Tesla bull in history, how could you not be bullish now? Robotaxi is coming, stock price is less than it was in 2021! Do you realize how much Tesla has grown in the last 5 years??\n\n$TSLA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "JohnBla60515455",
+   "url": "https://x.com/JohnBla60515455/status/2095147385311924344",
+   "date": "2026-09-02",
+   "text": "🥤 $KO — Don’t mistake the pullback for a trend reversal.\n\nCoca-Cola looks like it may be entering a classic Wave 4 retracement after a strong Wave 3 advance.\n\nThe chart is setting up around one key area:\n\n📌 Current area: ~$87.9\n📌 Unfilled gap: ~$84.06\n📌 Major support: $81.92 https://t.co/EP34A5tnb7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "TheETFTracker",
+   "url": "https://x.com/TheETFTracker/status/2095219707859054751",
+   "date": "2026-09-02",
+   "text": "Here are the most actively traded ETFs over the last 3 months, by average daily share volume:\n\n🥇 ProShares Bitcoin ETF $BITO 209.8M\n🥈 Tradr 2X Long SNDK Daily ETF $SNXX 80.2M\n🥉 Direxion Daily TSLA Bull 2X ETF $TSLL 78.5M\n4. GraniteShares 2x Short NVDA Daily ETF $NVD 71.8M\n5."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "positive_behnam",
+   "url": "https://x.com/positive_behnam/status/2095256552575774764",
+   "date": "2026-09-02",
+   "text": "🚨 TESLA CYBERCAB: TOMORROW COULD BE A MAJOR $TSLA MOMENT\n\nMorgan Stanley is warning that Tesla’s Cybercab launch could actually pressure $TSLA if the rollout doesn’t live up to expectations.\n\nAnd this is exactly why tomorrow isn’t just about seeing a new vehicle.\n\nIt’s about"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "EssKayOne",
+   "url": "https://x.com/EssKayOne/status/2095001396928245783",
+   "date": "2026-09-02",
+   "text": "🟠 Market Signal remains CAUTIOUSLY BEARISH and likely to switch to RISK OFF today. // Market tried to bounce but failed got rejected at key MA. // Rates $TNX keep rising. // Range expansions in healthcare-biotech show follow through everything else still remains one day moves"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TradingAssistAI",
+   "url": "https://x.com/TradingAssistAI/status/2095133406682083613",
+   "date": "2026-09-02",
+   "text": "$TSLA Game Plan · Sep 2 🎯\n\nModel range day — base case close ~357.9 (flat).\nProjected: O 357.2 / H 359.7 / L 349.6 / C 357.9\nBull above 400.8 · Bear below 350\n4 of 8 similar past setups closed green.\n\nLevels update with pre-market. Not financial advice. https://t.co/icnrz3wUL6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Tickeron",
+   "url": "https://x.com/Tickeron/status/2095257068223795612",
+   "date": "2026-09-02",
+   "text": "Why Is AST SpaceMobile ( $ASTS) Stock Up +12.42% Today?  $SPCX $QQQ $TSLA \nTickeron AI answers \nASTS surged +12.42% to $62.73 during Wednesday's regular session, up from a prior close of $55.80.\nThe rally was driven by Berenberg initiating coverage with a Buy rating and a $92"
+  }
+ ]
+}

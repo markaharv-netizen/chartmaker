@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-21T00:00:00Z",
+ "end": "2026-09-22T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "apedintocrypto",
+   "url": "https://x.com/apedintocrypto/status/2101979602390503706",
+   "date": "2026-09-21",
+   "text": "Quick update: Bitcoin pumped to take the long-term liquidity in the 83-86k zone. We said earlier this might happen, and greedy MMs didn't disappoint. Now there is 10x liquidity to the downside, so bears have the opportunity to fulfill their destiny.\n\n88k is still possible to https://t.co/n5IfzfiThK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 90,
+   "user": "TonySeverinoCMT",
+   "url": "https://x.com/TonySeverinoCMT/status/2102145146103926911",
+   "date": "2026-09-21",
+   "text": "Mario is one of my favorite people on X – always tells it like it is. very objective\n\nI am glad he brought this up (he knows this isn't an attack, so don't assume that's what it is)\n\nIt appears I am the last bear standing – good\n\nIf you recall, I actually said we'd go to between https://t.co/f7CYrGQBsn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Bitnarium",
+   "url": "https://x.com/Bitnarium/status/2101929643439755711",
+   "date": "2026-09-21",
+   "text": "Bitcoin has reclaimed its 50-week moving average, a historical marker that may signal the end of bear markets. However, analysts caution that one weekly close is not enough to confirm a new bull run. #btc Bullish or bearish?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 129,
+   "user": "CryptoGirlNova",
+   "url": "https://x.com/CryptoGirlNova/status/2101954812220731588",
+   "date": "2026-09-21",
+   "text": "Said this before that Ethereum is leading the proof of the bull market.\n\nDespite all the signs and indications that Bitcoin has already changed trend from bear to bull, it has yet to make a higher high at $83k.\n\nWhich right now is looking to happen ANY MOMENT.\n       \nThis will https://t.co/LZeCnQYiZ7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JagannathB_",
+   "url": "https://x.com/JagannathB_/status/2102108974254621101",
+   "date": "2026-09-21",
+   "text": "I asked Nvile a simple question:\n\n“Where will Bitcoin be on Dec 31, 2026 and what evidence supports that view?”\n\nIt didn't just ask an LLM for a prediction.\n\nIt:\n→ collected 56 external sources\n→ prioritized primary/market data\n→ extracted and verified evidence\n→ tested"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "HuisorAI",
+   "url": "https://x.com/HuisorAI/status/2101918680351183264",
+   "date": "2026-09-21",
+   "text": "ETH/USDT price (September 20, 2026) ≈ 2,665.80 USDT.\n\nOn-chain data: Upside levels at 2,702.20 / 2,758.00 / 2,820.00; downside levels at 2,643.71 / 2,611.14 / 2,564.14; fluctuation range of 2,611.14–2,702.20. Following a deep bearish candle on the 15th, there have been five"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "cryptomansui",
+   "url": "https://x.com/cryptomansui/status/2101918111486337272",
+   "date": "2026-09-21",
+   "text": "ETH/USDT price (September 20, 2026) ≈ 2665.80 USDT.\n\nOn-chain data: Upside levels at 2702.20 / 2758.00 / 2820.00; downside levels at 2643.71 / 2611.14 / 2564.14; fluctuation range of 2611.14–2702.20. Following a deep bearish candle on the 15th, there have been five consecutive"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "goldstagcrypto",
+   "url": "https://x.com/goldstagcrypto/status/2101917975293120920",
+   "date": "2026-09-21",
+   "text": "ETH/USDT price (September 20, 2026) ≈ 2665.80 USDT.\n\nOn-chain data: Upside levels at 2702.20 / 2758.00 / 2820.00; downside levels at 2643.71 / 2611.14 / 2564.14; fluctuation range of 2611.14–2702.20. Following a deep bearish candle on the 15th, there have been five consecutive"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "CryptoDad_DDC",
+   "url": "https://x.com/CryptoDad_DDC/status/2101823933607547128",
+   "date": "2026-09-21",
+   "text": "BTCUSDT, 4H + 1W, SEPTEMBER 20, 2026:\n\nThis weekly close matters: BTC is trying to lock acceptance above $80,000 while trading directly into higher-timeframe inefficiency.\n\nSummary for Non-Traders\n\nThe weekly candle close is important because BTC is attempting to confirm https://t.co/WAThHoj0Q3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Shrawan_akumar",
+   "url": "https://x.com/Shrawan_akumar/status/2101893504205308388",
+   "date": "2026-09-21",
+   "text": "$BTC 1H UPDATE 📊\n\nBitcoin is still trading inside a key consolidation range.\n\nMain levels I’m watching right now:\n\n• Resistance / liquidity: $81,950–$82,100\n• Key support: $80,800–$80,900\n• Breakdown trigger: $80,350–$80,450\n\nCurrent structure:\nBTC is range-bound near"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 420,
+   "user": "rektcapital",
+   "url": "https://x.com/rektcapital/status/2102024756945899727",
+   "date": "2026-09-21",
+   "text": "#BTC \n\nThere's the invalidation, though no picture-perfect reclaim of~$78300 back into support took place\n\nInstead, price resembled more of a fake-breakdown below ~$78300\n\nBut because price did not bearish retest ~$78300, the bear case for additional downside was not validated https://t.co/JgQTGUoVT9 https://t.co/Y30INceAFx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 33,
+   "user": "Dan_Kostecki",
+   "url": "https://x.com/Dan_Kostecki/status/2102095295056421183",
+   "date": "2026-09-21",
+   "text": "Opcje #BTC #Bitcoin na @DeribitOfficial \n“People are repositioning from downside protection to wanting to capture the upside.” Bitcoin open interest on the options trading platform Deribit was heavily dominated by calls, signaling bullish sentiment. The platform showed more than"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Arman_Trading",
+   "url": "https://x.com/Arman_Trading/status/2102057253373116526",
+   "date": "2026-09-21",
+   "text": "By analyzing the #Bitcoin chart on the weekly timeframe, we can see that BTC followed our bullish scenario beautifully, hitting both our $82,500 and $85,000 targets and extending its rally all the way toward $86,300!\n\nIn my view, bullish momentum remains strong, and I wouldn't be https://t.co/bOD5IIZIeL"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2101983556687835166",
+   "date": "2026-09-21",
+   "text": "🚨 Just in: Bitcoin hits $85,000 as short squeeze forces out $648 million of bearish bets\n\nForced buying from the short squeeze is driving $BTC higher more than fresh conviction, yet open interest is still climbing and volume surging as traders reload positions. Taker flow now"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 235,
+   "user": "CryptoPatel",
+   "url": "https://x.com/CryptoPatel/status/2102072868284616901",
+   "date": "2026-09-21",
+   "text": "$BTC: THE BEARISH MARKET STRUCTURE IS NOW INVALIDATED\n\n#BTC Finally Broke Above The Critical $83K Level And Is Now Trading Above $86K.\nFrom An SMC + ICT Perspective, This Is A Major HTF Structure Shift.\nBitcoin Has Now Broken Above The Previous Lower High / Bearish Trendline, https://t.co/slF3TtJEra"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Aristide_REGAL",
+   "url": "https://x.com/Aristide_REGAL/status/2101960132728889759",
+   "date": "2026-09-21",
+   "text": "💰💰💰 BTC/USD OUTLOOK\n\n📅 21/09/2026\n\n⚡ EXECUTIVE SUMMARY:\nBitcoin (BTC/USD) is trading at 81,963.05. The cryptocurrency has experienced a slight downturn overnight, showing a daily percentage change of -1.8%. The sentiment for the next 24 hours leans neutral to slightly https://t.co/ECZ7lp9zCu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2101909757124559138",
+   "date": "2026-09-21",
+   "text": "Macro Observatory Week 39 Opening Briefing\n\nAs global exchanges power up for the new trading week, market commentary is buzzing with speculative fever. A weekend retail surge in crypto - headed by Bitcoin ( $BtcUSD) tearing into Macro Moon  - paired with semiconductor momentum in"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "DtrDailyNews",
+   "url": "https://x.com/DtrDailyNews/status/2101906496875368859",
+   "date": "2026-09-21",
+   "text": "BTC TA UPDATE\n\nBitcoin is consolidating near $80,500 after a strong daily impulse from the $75,500 area. The higher-timeframe structure remains bullish, but price is now trading directly below major resistance with daily momentum extended.\n\nWhat changed:\n• Rejection above"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2102010077955670112",
+   "date": "2026-09-21",
+   "text": "$PBR\n\n$PBR printed a shooting star last week near horizontal resistance, signaling rejection from the recent highs as sellers stepped in and absorbed the bullish momentum. \n\nThe setup also raises the possibility of a double top, adding another layer of potential supply at this https://t.co/NT0IGi50iX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "sergio_tesla_",
+   "url": "https://x.com/sergio_tesla_/status/2101957642348315089",
+   "date": "2026-09-21",
+   "text": "bitcoin:native\n\nAnd there it is, price took 83k, which invalidates a Q4 low, as mentioned on the quoted post:\n\n\"So taking out the range high would invalidate a Q4 bear market low\"\n\nI wrote about WHY this is on August 14:\n\n\"... if the range low gets taken, historically it's very https://t.co/MuEdbN9tPt https://t.co/29QcghTHYc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "CryptoBDHub",
+   "url": "https://x.com/CryptoBDHub/status/2101926760858439980",
+   "date": "2026-09-21",
+   "text": "CryptoBDHub Warns of a Reversal\n\nThe Bull Score indicator plummeted this week from the bullish zone and the 80 mark to a bearish 30:\n\n➖ Short-term holders’ profits are shrinking\n➖ Demand for cryptocurrencies is weak\n➖ The market has shifted into risk-off mode\n\nIt’s gone up https://t.co/ppJMX9huDv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 374,
+   "user": "King0ftheCharts",
+   "url": "https://x.com/King0ftheCharts/status/2102048175418978567",
+   "date": "2026-09-21",
+   "text": ".\nBTC Rug Pull Coming\nBitcoin breaks above 82,813. The crowd is now totally convinced that the BTC bear market is over and that the new bull market has begun. This rally is designed to force even the most hardened skeptics to abandon their doubts &amp; admit the bear market is over https://t.co/9f0p6HbnPM"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 496,
+   "user": "coinbureau",
+   "url": "https://x.com/coinbureau/status/2102064154773430692",
+   "date": "2026-09-21",
+   "text": "🚨BULLISH: Bitcoin has officially reclaimed the 50-week moving average at $78,206 and is now trading above the 110% band at $86,000.\n\nThe 50-week MA is one of Bitcoin’s MOST important long-term trend indicators, historically separating major bull-market recoveries from prolonged https://t.co/Ao5UqKsI0Y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 43,
+   "user": "sergio_tesla_",
+   "url": "https://x.com/sergio_tesla_/status/2101958499445981546",
+   "date": "2026-09-21",
+   "text": "$BTC\n\nAnd there it is, price took 83k, which invalidates a Q4 low, as mentioned in the quoted post:\n\n\"So taking out the range high would invalidate a Q4 bear market low\"\n\nI wrote about WHY this is on August 14:\n\n\"... if the range low gets taken, historically it's very unlikely https://t.co/JDAfrLzco8 https://t.co/29QcghTHYc"
+  }
+ ]
+}

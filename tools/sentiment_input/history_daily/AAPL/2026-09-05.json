@@ -1,0 +1,147 @@
+{
+ "symbol": "AAPL",
+ "start": "2026-09-05T00:00:00Z",
+ "end": "2026-09-06T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AAPL (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2096213255316263089",
+   "date": "2026-09-05",
+   "text": "EOD Tape | Indexes + Mag7 | Friday, September 4th, 2026\n\nIndexes\n$SPY\n769.98 -3.19 (-0.41%) H/L 772.87 / 769.00\nOpened a small bear gap and went sideways; not a clean bear flag but still under the trendline, needs 773.40 to resume bullishness. Breaking the inside day risks a"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 15,
+   "user": "DreadPirateMOR",
+   "url": "https://x.com/DreadPirateMOR/status/2096338822522884465",
+   "date": "2026-09-05",
+   "text": "Labor Day weekend. Tape is dead. I still opened EZPZ Ezra.\n\n“Dear Ezra, I missed you today. Would you give me a read so I can think about trading with you on Tuesday. Hugs and Kisses, Dread.”\n\nHe did not leave me on read.\n\nFriday closed broadly bearish. Net put premium $110.7M. https://t.co/M8fD4IEbid"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2096163460279107721",
+   "date": "2026-09-05",
+   "text": "Macro Observatory Week 36 Wrap\n\nFriday's Weekly Close telemetry delivered a multi-duration resolution with a full unwinding of Thursday's monetary metals synthetic squeeze. 29 tickers are locked into forward Macro Bleed.\n\nWhile surface commentary heading into the weekend will"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "GABI_intermilan",
+   "url": "https://x.com/GABI_intermilan/status/2096271348163051750",
+   "date": "2026-09-05",
+   "text": "$AAPL looks interesting for a short-term long.\n\nThe setup I’m watching:\n\nEntry: $319.98\nStop: $317.14\nTarget: $324.77\n\nThe bullish pattern gives this trade a clean risk/reward structure, but I’d still want to see the price hold the entry area before getting too aggressive.\n\nFor https://t.co/MQSEV6tG8m"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2096209326981435837",
+   "date": "2026-09-05",
+   "text": "𝐆𝐨𝐥𝐝𝐞𝐧👁️ - 𝐌𝐨𝐦𝐞𝐧𝐭𝐮𝐦 𝐎𝐬𝐜𝐢𝐥𝐥𝐚𝐭𝐨𝐫\n\nThe Momentum Oscillator is a technical analysis tool that measures the rate of change in a security's price, helping traders identify trend strength and potential reversals. It compares the current price with the price from https://t.co/0iYmLWc7to"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2096306057916170551",
+   "date": "2026-09-05",
+   "text": "𝐆𝐨𝐥𝐝𝐞𝐧👁️ - 𝐓𝐡𝐫𝐮𝐬𝐭𝐢𝐧𝐠 𝐋𝐢𝐧𝐞 𝐂𝐚𝐧𝐝𝐥𝐞\n\nA Thrusting Line is a two-candle pattern that typically appears during a downtrend. It forms when a strong bearish candle is followed by a bullish candle that pushes back into the prior candle’s body but fails to close https://t.co/agAFQqdujt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MarketCaseNotes",
+   "url": "https://x.com/MarketCaseNotes/status/2096285431947989413",
+   "date": "2026-09-05",
+   "text": "🚨 MIDDAY MARKET CHECK-IN — Saturday Edition 🚨\n\nWall St is closed for the weekend, but crypto never sleeps 😤 — here's what's actually moving and what matters before Monday's open 👇\n\n₿ CRYPTO PULSE\nBTC: $80,100 | ETH: $2,479 | SOL: $103.60\nBitcoin is holding its range after a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "richhomiecon",
+   "url": "https://x.com/richhomiecon/status/2096226295512248494",
+   "date": "2026-09-05",
+   "text": "So it’s Pokémon Go but you collect tokenized shares of $AAPL, $TSLA, etc\n\nStepn gamification with ad network upside\n\n- 25% of fees buys and burns $GRASS\n- 25% buys and places tokenized shares\n- 50% funds the team\n\nThe art is sick\n\nThe founder tweeted\n\nWhat’s not to like? https://t.co/P7cWzGtyuf"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 10,
+   "user": "prec_optionclub",
+   "url": "https://x.com/prec_optionclub/status/2096087338065813941",
+   "date": "2026-09-05",
+   "text": "$AAPL 330C look bullish for next week expiry 09/09"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "bilkhatib",
+   "url": "https://x.com/bilkhatib/status/2096218457704432008",
+   "date": "2026-09-05",
+   "text": "$AAPL  update: Price is $319.97, down 1.5% since the 09-03 flag. The bullish Fibonacci target of $339.79 remains untested. Current structure continues to lean bullish despite recent consolidation. https://t.co/AJCnUMm19P https://t.co/9rXVLpwvp0"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "David_1wy",
+   "url": "https://x.com/David_1wy/status/2096216051709260107",
+   "date": "2026-09-05",
+   "text": "$AAPL Gee, what to do here? I think I’ll hold. Bullish https://t.co/BH6k1mqpru"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Ai25Satisfied",
+   "url": "https://x.com/Ai25Satisfied/status/2096269594172568047",
+   "date": "2026-09-05",
+   "text": "$AAPL -2.51% and $MSFT -2.04% show the split: mega-cap platforms sold off while chip suppliers rallied. AI spending is bullish; valuation is not."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Henry8cj",
+   "url": "https://x.com/Henry8cj/status/2096215303101599763",
+   "date": "2026-09-05",
+   "text": "$SPY $SPCX $RKLB $AMZN $AAPL \n\nThis is what Swing Scout is built to do.\nYou don’t need to sit in front of charts all day looking for the next opportunity. Swing Scout focuses on identifying high-probability swing setups and bringing them to you.\n\n🎯 Find the setup.\n📊 Follow the https://t.co/YK3mHrdtlh"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "assetfeel",
+   "url": "https://x.com/assetfeel/status/2096059503657546087",
+   "date": "2026-09-05",
+   "text": "Spot shifting trends before the crowd. $ORCL just spiked +10.0 in sentiment to a bullish 7.0/10, outperforming tech peers like MSFT and AAPL. Trade with confidence at https://t.co/hdi9N6bzqO. Not financial advice. Follow @assetfeel #Stocks #Investing #Tech"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Fletcher_Os",
+   "url": "https://x.com/Fletcher_Os/status/2096066414486413684",
+   "date": "2026-09-05",
+   "text": "No change in mega-cap weekly Ichimoku Cloud positions this week. $TSLA though reached into it cloud mid week but closed the week below. $META has the best week of the group gaining 6.7% yet remains below its cloud.  \nSix of the eight remain in long-term bullish up trends. $NVDA https://t.co/bROllPEOt6"
+  }
+ ]
+}

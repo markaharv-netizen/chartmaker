@@ -1,0 +1,183 @@
+{
+ "symbol": "NVDA",
+ "start": "2026-09-05T00:00:00Z",
+ "end": "2026-09-06T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "NVDA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2096213255316263089",
+   "date": "2026-09-05",
+   "text": "EOD Tape | Indexes + Mag7 | Friday, September 4th, 2026\n\nIndexes\n$SPY\n769.98 -3.19 (-0.41%) H/L 772.87 / 769.00\nOpened a small bear gap and went sideways; not a clean bear flag but still under the trendline, needs 773.40 to resume bullishness. Breaking the inside day risks a"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 158,
+   "user": "alshfaw",
+   "url": "https://x.com/alshfaw/status/2096052326213509197",
+   "date": "2026-09-05",
+   "text": "$SPY Followed the Roadmap Today. 🎯\n\nYesterday, I flagged the 20-SMA &gt; 5-SMA setup as a bearish warning and expected $SPY to rotate lower and retest the 20-SMA. That is exactly what happened today—the price came down and tagged it. See chart below.\n\n$SPY also closed with a https://t.co/Cj28e8n8KV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2096241384378548250",
+   "date": "2026-09-05",
+   "text": "The tickers X are talking about right now:\n\n1. Sandisk $SNDK is down 0.3% after climbing 11.9% in the regular session\n\n🟢 Sentiment: 51% bullish, 13% bearish, 36% neutral\n\nA sudden 11.9% intraday jump, driven by record edge‑segment revenue and new datacenter contracts, lifted the https://t.co/E5fuqqLZmz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "macroinvest365",
+   "url": "https://x.com/macroinvest365/status/2096191633763009008",
+   "date": "2026-09-05",
+   "text": "$SMCI — the framework I use for Super Micro Computer.\n\nReference price: $45.20 | FY26 rev: $21.5B | NI: $1.2B | Shares: 584M\n\n5-year bull / base / bear model:\n\n                    Bear        Base        Bull\n2031 price          $7–10     $46–55     $128–170\nAnnual return"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Theodore_stock",
+   "url": "https://x.com/Theodore_stock/status/2096290163970428958",
+   "date": "2026-09-05",
+   "text": "🔥 $NVDA\n\n$96.2B quarterly revenue.\n\nBut the real question now isn’t growth.\n\nIt’s whether NVIDIA can keep beating expectations.\n\nAs AI CapEx continues to rise, $NVDA remains at the center of the AI trade.\n\nBullish or bearish?\n\n#NVDA #AI #Stocks https://t.co/BVBITxgA4H"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "optionssanta",
+   "url": "https://x.com/optionssanta/status/2096350180169724321",
+   "date": "2026-09-05",
+   "text": "Bullish: A daily close and hold above $232.30 could push $NVDA past its $236 ATH.\n\nBearish: A break below $228 could lead to $224–$226, then $215–$218.\n\nMy view: Bullish structure with short-term caution. A close above resistance and successful retest would confirm the breakout. https://t.co/mSWr9Qd0qZ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "optionssanta",
+   "url": "https://x.com/optionssanta/status/2096349626148200620",
+   "date": "2026-09-05",
+   "text": "Bullish: A daily close and hold above $232.30 could push NVDA past its $236 ATH.\n\nBearish: A break below $228 could lead to $224–$226, then $215–$218.\n\nMy view: Bullish structure with short-term caution. A close above resistance and successful retest would confirm the breakout. https://t.co/VjuVpKqMOI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Mr_O_WheelHouse",
+   "url": "https://x.com/Mr_O_WheelHouse/status/2096184002486923264",
+   "date": "2026-09-05",
+   "text": "Researching $IONQ this weekend. Analysts are still very bullish — average target around $67 with the high at $100 while shares sit near $40.\n\nQuantum is risky, but the upside is hard to ignore at these levels.\n\n$IONQ $QBTS $RGTI $QUBT $NVDA https://t.co/8OOBkeXA3s"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 249,
+   "user": "iruletrenches",
+   "url": "https://x.com/iruletrenches/status/2096166474402472377",
+   "date": "2026-09-05",
+   "text": "$PONS just did 750M+ in daily volume!!\n\na lot of people won’t want to admit it because they’re sidelined from one of the best trades of the cycle.\n\nbut $PONS at a 700M market cap is still incredibly undervalued.\n\nand it still hasn’t had its first 9figure runner (YET)\n\n$MICRODUCK https://t.co/mKBpAQDTGO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SUSIEMATTY02",
+   "url": "https://x.com/SUSIEMATTY02/status/2096385381969399845",
+   "date": "2026-09-05",
+   "text": "$DASH has broken out 222 days accumulation range on daily timeframe 👀 \n\nAlso a massive downtrend line broken out upside, expecting 2x-3x Bullish Rally 📈 \n#helevier #OlympiacosBC #السويداء #كاريزما5 #LingOrm #LoveIslandUK\n\n $SPY $TSLA  $NVDA $QQQ  $META $COIN $MSTR #BTC $AVGO https://t.co/5A6G2TDqki"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SUSIEMATTY02",
+   "url": "https://x.com/SUSIEMATTY02/status/2096385308463939896",
+   "date": "2026-09-05",
+   "text": "$DASH has broken out 222 days accumulation range on daily timeframe 👀 \n\nAlso a massive downtrend line broken out upside, expecting 2x-3x Bullish Rally 📈 \n#helevier #OlympiacosBC #السويداء #كاريزما5 #LingOrm #LoveIslandUK\n\n $SPY $TSLA  $NVDA $QQQ  $META $COIN $MSTR #BTC $AVGO https://t.co/M1MHHZunsP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "randytimwilson",
+   "url": "https://x.com/randytimwilson/status/2096199978595045515",
+   "date": "2026-09-05",
+   "text": "$DASH has broken out 222 days accumulation range on daily timeframe 👀 \n\nAlso a massive downtrend line broken out upside, expecting 2x-3x Bullish Rally 📈 \n#helevier #OlympiacosBC #السويداء #كاريزما5 #LingOrm #LoveIslandUK\n\n $SPY $TSLA  $NVDA $QQQ  $META $COIN $MSTR #BTC $AVGO https://t.co/LcV0bJy6vG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TradeVelocityX",
+   "url": "https://x.com/TradeVelocityX/status/2096239374757232942",
+   "date": "2026-09-05",
+   "text": "MOMENTUM EDGE TRADERS™\n\n🎯 END-OF-TRADING SPECULATIONS SCORECARD\nFriday, September 4, 2026\n\nDespite market-moving government labor news and the volatility surrounding the session, our quantitative projections remained remarkably effective.\n\n$USAS\nForecast: H4.67 L4.40 or https://t.co/gEYhdzo4tY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2096163460279107721",
+   "date": "2026-09-05",
+   "text": "Macro Observatory Week 36 Wrap\n\nFriday's Weekly Close telemetry delivered a multi-duration resolution with a full unwinding of Thursday's monetary metals synthetic squeeze. 29 tickers are locked into forward Macro Bleed.\n\nWhile surface commentary heading into the weekend will"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 9,
+   "user": "nvdiabull",
+   "url": "https://x.com/nvdiabull/status/2096185739654447307",
+   "date": "2026-09-05",
+   "text": "$NVDABULL is a memecoin paired directly with\n$NVDA stock https://t.co/fiQegPaCW2 \n\nthe idea is simple:\n\n$NVDA has become one of the clearest symbols of the AI trade, and the bull is the clearest symbol of being bullish https://t.co/JgEb6odGRU"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AIRewardrop",
+   "url": "https://x.com/AIRewardrop/status/2096104072210194703",
+   "date": "2026-09-05",
+   "text": "🐦 Today one of the best tickers to trade on Pacifica is: $NVDA\n\n🪙 NVDA 1H Trade Setup.\n\n😊 MARKET SENTIMENT: Greed at 73 favors longs but warns against chasing extended moves without a clean pullback entry.\n\n🌐 MARKET BIAS: Bullish and high confidence, with 4H and 1D holding https://t.co/UFwmx0ULqM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2096209326981435837",
+   "date": "2026-09-05",
+   "text": "𝐆𝐨𝐥𝐝𝐞𝐧👁️ - 𝐌𝐨𝐦𝐞𝐧𝐭𝐮𝐦 𝐎𝐬𝐜𝐢𝐥𝐥𝐚𝐭𝐨𝐫\n\nThe Momentum Oscillator is a technical analysis tool that measures the rate of change in a security's price, helping traders identify trend strength and potential reversals. It compares the current price with the price from https://t.co/0iYmLWc7to"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2096306057916170551",
+   "date": "2026-09-05",
+   "text": "𝐆𝐨𝐥𝐝𝐞𝐧👁️ - 𝐓𝐡𝐫𝐮𝐬𝐭𝐢𝐧𝐠 𝐋𝐢𝐧𝐞 𝐂𝐚𝐧𝐝𝐥𝐞\n\nA Thrusting Line is a two-candle pattern that typically appears during a downtrend. It forms when a strong bearish candle is followed by a bullish candle that pushes back into the prior candle’s body but fails to close https://t.co/agAFQqdujt"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 8,
+   "user": "MF_Camillus",
+   "url": "https://x.com/MF_Camillus/status/2096157117799379342",
+   "date": "2026-09-05",
+   "text": "A lot of people make forecasts based on silly analogies with past cycles, almost always on the bearish side, so why not turn their silliness against them?\n\nMy guess: sometime shortly after the Labor Day break, we enter something resembling a 1996-style Tech melt-up\n\nNow for the https://t.co/vOQveuqkBk https://t.co/yt5ePHdAxi"
+  }
+ ]
+}

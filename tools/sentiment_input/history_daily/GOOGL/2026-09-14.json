@@ -1,0 +1,210 @@
+{
+ "symbol": "GOOGL",
+ "start": "2026-09-14T00:00:00Z",
+ "end": "2026-09-15T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "GOOGL (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "ask_volAI",
+   "url": "https://x.com/ask_volAI/status/2099569514312859979",
+   "date": "2026-09-14",
+   "text": "volAI Flow Watch\n\n$GOOG / $GOOGL flow is leaning bullish — but the cleanest positioning is in the longer-dated contracts.\n\n$GOOG $344.47 | +2.69%\n→ 2,000 Jan ’27 $380C BUY — ~$3.0M\n→ 948 Dec ’26 $350P SELL — ~$2.3M\n$GOOGL $347.57 | +2.68%\n→ 981 Sep ’27 $340C BUY across two https://t.co/pOF05AycsQ https://t.co/3QcCqMThOI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2099574898465083673",
+   "date": "2026-09-14",
+   "text": "🐳 $GOOGL ripped 2.8% today. The biggest option print on the tape sold the rally.\n\nTHE SETUP\n\nAlphabet closed up 2.8% on September 14, 2026, riding a strange kind of tailwind. AI executives — including Anthropic's Dario Amodei — spent the day calling for a slowdown in frontier https://t.co/xt7d6JME8o"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 72,
+   "user": "Pharmdca",
+   "url": "https://x.com/Pharmdca/status/2099605475226763326",
+   "date": "2026-09-14",
+   "text": "The biggest opportunities often appear when sentiment is at its worst.\nPatience. Conviction. Execution. 📈\n\n$GOOGL was “dead” last year.\n$MSFT was in a bearish trend before momentum shifted.\n$NVDA was called overvalued by plenty of pundits,\n\nNow $AMZN is the “dead money” theme."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "wsagentai",
+   "url": "https://x.com/wsagentai/status/2099468915315183654",
+   "date": "2026-09-14",
+   "text": "09/14/2026 Morning Briefing\n\nRisk appetite wavers as an AI selloff collides with a Saudi oil shock and near-certain Fed rate hike odds, setting a defensive tone for today’s US session.\n\n📊 Macro\n- S&amp;P futures -0.68%, WTI +2.32% to $102.37 after Saudi East-West pipeline closure"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "mr_pipfessor",
+   "url": "https://x.com/mr_pipfessor/status/2099442596682833929",
+   "date": "2026-09-14",
+   "text": "$GOOGL - OUTLOOK\nPrice has started dumping from current levels. Sellers are gaining momentum and further downside is likely. Expect more downside from here.\n\nBIAS:\nBearish while the current structure remains intact. https://t.co/PXtkopTu4t"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ruoxi0x3",
+   "url": "https://x.com/ruoxi0x3/status/2099445855845851518",
+   "date": "2026-09-14",
+   "text": "$GOOGL  Price has started dumping from current levels. Sellers are gaining momentum and further downside is likely. \n\nExpect more downside from here.  \n\nBIAS: Bearish while the current structure remains intact.\n\nHot Options Watchlist: $NVDA $AAPL $SPCX $TSLA $ORCL https://t.co/ySGd2VvFil"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinovoXT",
+   "url": "https://x.com/FinovoXT/status/2099385616404455849",
+   "date": "2026-09-14",
+   "text": "$NVDA  - OUTLOOK\n\nPrice remains under bearish pressure at current levels. Further downside is expected toward the demand zone. \nA reaction from demand could determine the next move.\n\n BIAS: Bearish toward the demand zone.\n\n$MU $GOOGL  $QQQ $INTC $SNDK $SOXL https://t.co/dP9ScCj7Rv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ruoxi0x3",
+   "url": "https://x.com/ruoxi0x3/status/2099454734658908579",
+   "date": "2026-09-14",
+   "text": "$ORCL  - OUTLOOK \n\nPrice has deviated above the previous swing high. \n\nThe move looks overextended after taking the liquidity. \n\nA short term downside move is favored from here.  \n\nBIAS: Bearish in the short term\n\n$MU $GOOGL $QQQ  $INTC  $SNDK $SOXL https://t.co/WikVetriGv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "fifi_trades",
+   "url": "https://x.com/fifi_trades/status/2099591499134722114",
+   "date": "2026-09-14",
+   "text": "It’s amazing what can happen when we finally get some volatility and movement. \n\nCaught upside and downside moves today. \n\n$qqq $tsla $now $googl $aapl $meta https://t.co/EKm0npWMtL https://t.co/AFPGIOEEHI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "YouGetPaidNow",
+   "url": "https://x.com/YouGetPaidNow/status/2099525540222754859",
+   "date": "2026-09-14",
+   "text": "Strong selling in some tech stocks today, but other industries aren't doing as poorly. Even some tech stocks are up.\nTo the upside:\n$MSFT  $GOOGL  $META \nTo the downside:\n$MU $KLAC https://t.co/hseCu0MH0v"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Alfred3o3",
+   "url": "https://x.com/Alfred3o3/status/2099596595222438322",
+   "date": "2026-09-14",
+   "text": "Institutional Price-Action Pattern Stock Screen - 2026-09-14 13:20 PT\nLatest daily bar: 2026-09-14\n\nPattern families learned from the cheat sheet:\n- Bullish breakout retest / continuation QM\n- Bull flag / first pullback after displacement\n- Bullish liquidity sweep / spring\n- https://t.co/WNGsVKG3Fx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "TajVincent",
+   "url": "https://x.com/TajVincent/status/2099496699609641406",
+   "date": "2026-09-14",
+   "text": "🎯 GOOGL Dual-Path Trade Plans\n\nI have analyzed GOOGL and marked up your chart with clean horizontal lines and price labels for both bullish (green) and bearish (red) paths.\n\n---\n\n🔍 GOOGL — Alphabet Inc.\nCurrent Price: $343.42 | Bias: 🟡 Neutral\n\n*   🟢 Bullish Path (Green) https://t.co/HvAHIQf3mJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "OneTradeWex",
+   "url": "https://x.com/OneTradeWex/status/2099556219325227390",
+   "date": "2026-09-14",
+   "text": "Bullish vs Bearish Watchlist for the week:\n\nBullish\n$CRWD\n$AAPL \n$WMT \n$GOOGL \n$HONA\n$SONY \n$BP\n$PURR \n\nBearish\n$XLRE\n$ORCL \n$CRWV\n$NVDA\n$DELL\n$SFTB.NE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "YapWatch",
+   "url": "https://x.com/YapWatch/status/2099598453735084334",
+   "date": "2026-09-14",
+   "text": "🟢 Donald Trump — Market Alert\n\n$GOOGL bearish\n$XLK bullish\n\nSentiment: bullish | Confidence: 60%\n\nMODERATE ALERT: Trump criticizes Google's Finland expansion and signals strong pro-AI, pro-data center stance with favorable regulatory envir…\n\nhttps://t.co/qE8joEH6WR"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "MarketMartini",
+   "url": "https://x.com/MarketMartini/status/2099565377411825793",
+   "date": "2026-09-14",
+   "text": "Midday check on today's TradeIQ board 🔔\n✅ $GOOGL +2.9% — double bullish trigger working, holding above the 200DMA\n⚠️ $CVNA +1.9% — bearish setup hasn't followed through, watching $70\n📉 $TSM -2.4% — bullish trigger fading\n\nHonest tape &gt; hype. Not financial advice."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2099293308019478547",
+   "date": "2026-09-14",
+   "text": "The tickers buzzing on X today:\n\n1. AMC Entertainment $AMC is up 0.8% in pre-market after climbing 4.2% in the regular session\n\n🟢 Sentiment: 31% bullish, 10% bearish, 59% neutral\n\nThe CEO challenged Robinhood over its AMC stock tokens, prompting a jump in mentions. The meme https://t.co/gmSr08Upzf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "SmokeyBlue018",
+   "url": "https://x.com/SmokeyBlue018/status/2099648919676289209",
+   "date": "2026-09-14",
+   "text": "Watchlist for tomorrow:\n\nWent break even today after getting faked out by a lower timeframe set up on $QQQ \n\nBullish: $META $AAPL #googl \nBearish: #tsla \n\n#stocks #investing #options #trading #tesla #robinhood #emmys #alonso #chiefs #broncos #mitch https://t.co/AqAQp8QztF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RayDomFinance",
+   "url": "https://x.com/RayDomFinance/status/2099571764728651797",
+   "date": "2026-09-14",
+   "text": "$GOOGL  Weekly Chart\nGOOGL is compressing after pulling back from its $408.61 high.\n\nCurrent technical setup:\n\n• Price is consolidating between a descending resistance line and rising support.\n• The stock is hovering near the $340 area from early February high\n• The 20-week https://t.co/GZDYvU9kzN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FibLittle",
+   "url": "https://x.com/FibLittle/status/2099533834585002482",
+   "date": "2026-09-14",
+   "text": "$GOOGL\nIf $328–341 (0.618 / 200 DMA) holds → bull; if $327.74 / W2 fails → bear.\nFibs: 0.382 $357.67, 0.5 $349.47, 0.618 $341.26, 0.786 $329.58, 0.887 $322.56.\nWave 3 measured $397–$440, +17–30% from here. https://t.co/aI3wDRdmqq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "EAribisala31797",
+   "url": "https://x.com/EAribisala31797/status/2099370232485683669",
+   "date": "2026-09-14",
+   "text": "New week. New positioning.\n\nThe MAG7 remains one of the most important baskets to watch going into this week ,  $NVDA, $MSFT, $AAPL, $GOOGL, $AMZN, $META and $TSLA.\n\nBut what stands out right now is how differently they’re moving.\n\n$META has been one of the strongest names https://t.co/S0hV4ByVh1"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 104,
+   "user": "drayinvests",
+   "url": "https://x.com/drayinvests/status/2099345160467349857",
+   "date": "2026-09-14",
+   "text": "$GOOGL grew its cloud revenue by 82% YoY in Q2.\n\nThe stock is flat since they reported on July 22nd.\n\nOne of the most undervalued Mag 7 stocks. https://t.co/fXTL80aNnT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "tradegreater",
+   "url": "https://x.com/tradegreater/status/2099485952456400940",
+   "date": "2026-09-14",
+   "text": "Trade Greater Market Commentary\nPre-Open Report, 9:05 AM Eastern\nMonday, September 14, 2026\n\nNQ Snapshot:\nGap down with no repair. Dec NQ settled 29,684.25 Friday, opened the week at 29,311.50, and went straight through Friday's 29,332 low without a fight. Overnight range"
+  }
+ ]
+}

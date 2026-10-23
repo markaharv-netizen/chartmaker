@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-09T00:00:00Z",
+ "end": "2026-09-10T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "ainotesus",
+   "url": "https://x.com/ainotesus/status/2097639515946987945",
+   "date": "2026-09-09",
+   "text": "Bitcoin just turned bullish on the weekly chart.\n\nBitcoin is at 79.6 and has entered a new weekly bull trend, a signal that appears roughly once every four years. The broader market is still volatile, but the upside opportunity is larger than the downside while the trend holds."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Gann_analysis",
+   "url": "https://x.com/Gann_analysis/status/2097668699092029816",
+   "date": "2026-09-09",
+   "text": "📊 BITCOIN — 5 Min Probability Map\n#Bitcoin #BTC #BTCUSD #Crypto #Trading #TechnicalAnalysis\n\nCMP: $79,569\n🟢 Primary Trend: Bullish\n🟢 Immediate Trend: Bullish continuation\n\nStructure: LL → CHoCH → strong recovery → reclaim of $79,420–79,461\n🟢 Bullish: 55%\n🔴 Bearish: 30%\n🟡 https://t.co/7ZHWUbdxQa"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "gandreou007",
+   "url": "https://x.com/gandreou007/status/2097578035935392142",
+   "date": "2026-09-09",
+   "text": "BITCOIN’S NEXT REACTION COULD DECIDE WHETHER THE 2026 BOTTOM IS REALLY IN\n\nBitcoin has sold off around Golden Crosses before both in bear markets and in the early stages of bull markets.\n\nSo the drop itself doesn’t tell us enough.\n\nWhat matters now is how BTC reacts on the next https://t.co/w0IWUwFurF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Gann_analysis",
+   "url": "https://x.com/Gann_analysis/status/2097585386466005469",
+   "date": "2026-09-09",
+   "text": "#Bitcoin — 1H Probability Map\nCurrent Price: $79,280\n\n1H Primary Trend: 🔴 Bearish\nImmediate Trend: 🟢 Bullish recovery / short-term reversal attempt\nMajor Structure: Lower High → Lower Low, but price has now reclaimed the $78,826–$78,978 local resistance zone.\n\nProbabilities\n🔴 https://t.co/iBBJkSKzFi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 47,
+   "user": "matthewkerridge",
+   "url": "https://x.com/matthewkerridge/status/2097791865747570985",
+   "date": "2026-09-09",
+   "text": "For most of Bitcoin’s existence since the genesis block on 3rd January 2009 it has been the volatile asset.\n\nThrough the early cycles, through bull and bear markets and with volatility throughout.\n\nIn the last week we have Scott Bessent; the Secretary of the US Treasury claiming https://t.co/4SBlaz66v9 https://t.co/b0wGcyfCDG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "matthewkerridge",
+   "url": "https://x.com/matthewkerridge/status/2097791125826212131",
+   "date": "2026-09-09",
+   "text": "For most of Bitcoin’s existence since the genesis block on 3rd January 2009 it has been the volatile asset.\n\nThrough the early cycles, through bull and bear markets and with volatility throughout.\n\nIn the last week we have Scott Bessant; the Secretary of the US Treasury claiming https://t.co/EIRVC90JuC https://t.co/b0wGcyfCDG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2097799569018888670",
+   "date": "2026-09-09",
+   "text": "Daily Summary — September 9, 2026\n\nOil has officially become the market’s biggest macro problem.\n\nBrent broke and settled above $100, closing around $101.21 after reaching roughly $101.55 intraday as U.S.–Iran tensions intensified and tanker disruptions continued across the https://t.co/S5NhaStuq1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2097795940182872141",
+   "date": "2026-09-09",
+   "text": "📊【XWIN CAPITAL INDEX｜September 10, 2026】\nOverall Score: 58 / 100\n・80–100 = Strong Bullish Environment\n・60–79 = Bullish Bias\n・40–59 = Neutral / No Clear Direction\n・20–39 = Bearish Bias\n・0–19 = Strong Bearish Environment\n7-Day Moving Average: 61.14 ↑\n14-Day Moving https://t.co/3qnlJWSFeI"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Mr_Bip0_9",
+   "url": "https://x.com/Mr_Bip0_9/status/2097688571230748746",
+   "date": "2026-09-09",
+   "text": "Macro &amp; Crypto Market Analysis — September 9, 2026\n\nThe Market Is Entering a Much More Difficult Phase\n\nThe most important message from the latest data is that the bullish structure of financial markets has not necessarily ended, but the macro environment has become substantially https://t.co/NzoQjeWlv7"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 101,
+   "user": "0xbeehive",
+   "url": "https://x.com/0xbeehive/status/2097643546878595089",
+   "date": "2026-09-09",
+   "text": "THIS BITCOIN LIQUIDITY MAP IS WILD\n\nSee for yourselves:\n\n$BTC has already rallied roughly 40% from the lows\n\nBut the liquidity imbalance is insane:\n\n~5x more upside liquidity than downside\n\nAnd somehow the narrative is already turning bearish after a minor retrace\n\nIs this okay? https://t.co/GF2hUChbQ2 https://t.co/ae7hkwdXZl"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "PKTrader00",
+   "url": "https://x.com/PKTrader00/status/2097549759976259610",
+   "date": "2026-09-09",
+   "text": "🚀 BTC/USD BUY SETUP 🟢\n\nDownside liquidity sweep at 77.9k demand zone. Bullish rejection holding strong for upside expansion toward supply liquidity.\n\n🟢 Entry: $77,933 – $78,873\n🛑 SL: $77,494\n🎯 TPs: $79,600 | $80,400 | $81,235\nRisk 1-2% max 🛡️\n\n#BTC #Bitcoin #Crypto #Pktrader https://t.co/IBcw4dkMzG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "B4CRYPTOTW",
+   "url": "https://x.com/B4CRYPTOTW/status/2097557186884894810",
+   "date": "2026-09-09",
+   "text": "BTC 4H TA\n\nBitcoin is currently holding around $79.2K and still trading inside the rising structure.\n\nThe key level remains $82.3K resistance. A clean breakout above this area could open the door for a move toward $84K–$85K, followed by a possible extension into the upper $80Ks. https://t.co/U7WSgNDxHF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "FelixDeFi7",
+   "url": "https://x.com/FelixDeFi7/status/2097596579565768836",
+   "date": "2026-09-09",
+   "text": "LINK is sitting at a decision point around $12.57.\nIn this analysis:\nKey level to watch: $12.60\nBullish confirmation: strong daily close above $12.60\nUpside level: $14.11\nInvalidation: loss of the $12.01 area\nPlan: don’t chase the candle — wait for the reaction between $12.01 and https://t.co/Am5bF6B9P0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "B4CRYPTOTW",
+   "url": "https://x.com/B4CRYPTOTW/status/2097573909277122761",
+   "date": "2026-09-09",
+   "text": "🚨 BIG WEEK FOR BITCOIN — PPI + FOMC COULD DECIDE THE NEXT MOVE\n\n📅 Thursday, September 10 — U.S. PPI\nReleased at 8:30 AM ET / 14:30 CEST. PPI measures inflation at the producer level and is one of the final major inflation signals before the Fed meeting.\n\nWhat to expect:\n🔥 https://t.co/6CpB1rVw2E"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "MattStella01",
+   "url": "https://x.com/MattStella01/status/2097685519702397043",
+   "date": "2026-09-09",
+   "text": "BTC 4HR Update — Bitcoin Is Chopping Before The Big Data\n\nBitcoin is sitting right in the middle of the current decision area.\n\nPrice is around 79k after rejecting from the 80k to 82k zone, but it also has not broken down through the weekly orderzone underneath.\n\nThat means both https://t.co/BKgjY5ZeV3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NeuralCryptoLab",
+   "url": "https://x.com/NeuralCryptoLab/status/2097615381003178304",
+   "date": "2026-09-09",
+   "text": "I'm not necessarily a fan of fractals, but that would be a very logical development in a bullish scenario where the bear market has already come to an end.\nHowever, I still believe the bearish scenario holds true. A new and final low after the midterms, as always. #Bitcoin https://t.co/M56B84dsxd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "rajeev_motwani",
+   "url": "https://x.com/rajeev_motwani/status/2097696432744501571",
+   "date": "2026-09-09",
+   "text": "Golden Cross, Red Candles: Why Bitcoin's Bull Case Isn't Dead Yet.\n\nBitcoin just flashed a golden cross (50-day MA crossing above the 200-day MA). Everyone's asking: is this bullish or bearish?\n\nShort answer: both, in that order. Here's what history actually shows 🧵👇 https://t.co/ZeTEf5fUEw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "JohnBla60515455",
+   "url": "https://x.com/JohnBla60515455/status/2097672873716695485",
+   "date": "2026-09-09",
+   "text": "$NVDA Bear Case Is Getting Harder to Ignore\n\nNVIDIA is testing a major resistance zone again, but the daily chart is starting to look more like distribution than continuation.\n\n$NVDA closed near $225.73, after trading as high as $233.71 — another rejection beneath the major https://t.co/bcQX3pf6EQ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 93,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2097528581517955386",
+   "date": "2026-09-09",
+   "text": "BTC closed red and confirmed a close below our short-term support, so a tag of the fast line looks inevitable. The chart is still technically strong bullish, and I see any dip as a buy the dip opportunity with 76,706 as the level to hold. ETH printed a bearish OBV cross, https://t.co/EthS4mDu0o"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "MCryptoParadise",
+   "url": "https://x.com/MCryptoParadise/status/2097699918299140306",
+   "date": "2026-09-09",
+   "text": "Bitcoin’s weekly roadmap is still bearish.\n\nOur recent analysis shows the bigger structure still points toward a deeper move before the next macro bull market.\n\nThe key level remains $44K.\n\nThe current roadmap still expects Bitcoin to break below the previous $58K low before the https://t.co/ie18hfxK88"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "DiegoSonderberg",
+   "url": "https://x.com/DiegoSonderberg/status/2097776423263952919",
+   "date": "2026-09-09",
+   "text": "The next 7 days could decide whether Bitcoin’s bull market starts here, or whether we get one final correction first.\n\nPPI tomorrow. CPI Friday. Fed next week.\n\nIf inflation comes in hot while oil stays around $100, that could quickly change the picture.\n\nBitcoin also has a https://t.co/qAaYUXvpRB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 46,
+   "user": "IIICapital",
+   "url": "https://x.com/IIICapital/status/2097671373397389555",
+   "date": "2026-09-09",
+   "text": "Is the Bitcoin Bottom In? The Data Says Yes | @MattCrosbyPro \n\nTimestamps:\n00:00 Intro\n02:30 How predictive is on-chain data?\n08:28 Percentile-based Bitcoin valuation\n14:24 Is the Bitcoin bottom in?\n19:16 Why Bitcoin bear markets happen\n24:25 Price capitulation vs. time https://t.co/LeIVx8OawC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "crypto_mAItrix",
+   "url": "https://x.com/crypto_mAItrix/status/2097540444456362137",
+   "date": "2026-09-09",
+   "text": "The BEST predictor of Bitcoin bottoms has just signaled. \n\nThe 2 week MACD just had a bullish cross, indicating the bear market bottom is officially in. It has predicted the end of the last 3 cycle bear markets with striking precision.  \n\nIt may be premature to call that the bull https://t.co/MDVmwoSjEF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "titanfx",
+   "url": "https://x.com/titanfx/status/2097558194654421177",
+   "date": "2026-09-09",
+   "text": "Bitcoin price made another attempt to settle above $80,000 against the US Dollar but failed. BTC traded to a new multi-week high at $82,266 before it faced rejection.\n\nLooking at the 4-hour chart, the price started another pullback below $81,400 and $81,000. The price dipped https://t.co/36pHd48GTT"
+  }
+ ]
+}

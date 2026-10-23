@@ -1,0 +1,174 @@
+{
+ "symbol": "AMZN",
+ "start": "2026-09-22T00:00:00Z",
+ "end": "2026-09-23T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AMZN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 280,
+   "user": "CillionaireMind",
+   "url": "https://x.com/CillionaireMind/status/2102432803564695757",
+   "date": "2026-09-22",
+   "text": "📦 I put Bybit AI to the test on $AMZN 👀\n\nI asked Bybit AI to break down Amazon using fundamentals, earnings, analyst sentiment and technicals — and the result was surprisingly detailed.\n\n📊 What it found:\n• AWS revenue +37% YoY 🚀\n• Operating income +43%\n• EPS significantly https://t.co/3PtFvhFMuy"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2102405893031899643",
+   "date": "2026-09-22",
+   "text": "Tickers dominating X chatter today:\n\n1. Amazon $AMZN is down 0.5%\n\n🟢 Sentiment: 33% bullish, 6% bearish, 61% neutral\n\nAmazon blocked Meta's Muse AI shopping agent from its site over the weekend and issued an AWS margin warning, sparking debate on X.\n\nThe discussion lifted the https://t.co/RWYs8ILdxn"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "tldrmarket",
+   "url": "https://x.com/tldrmarket/status/2102488348942016989",
+   "date": "2026-09-22",
+   "text": "Amazon raised £4.25 billion through its first-ever sterling-denominated bond offering.\n\nThe massive issuance aims to finance the company's global AI infrastructure buildout.\n\n📈 $AMZN, 12.4% gain over 1 year, bullish with high conviction for further upside."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "QuantificS",
+   "url": "https://x.com/QuantificS/status/2102510492355051807",
+   "date": "2026-09-22",
+   "text": "$AMZN broke out &amp; is now in the retesting phase. I see about 15% upside, with potential for a move toward 290.  So I’m looking to buy a call spread instead of just buying calls.\n\n#AMZN Oct. 16 260/290 bull call spread https://t.co/qM2HaAPlYk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "clairemtrades",
+   "url": "https://x.com/clairemtrades/status/2102498977723842617",
+   "date": "2026-09-22",
+   "text": "$TTD Current valuation is completely detached from reality management needs to step up and defend the stock! 📉➡️🚀\n\nThe Bullish Case &amp; Capital Allocation Setup:\n\nBalance Sheet Flexibility: $TTD is sitting on massive liquidity. Unless an acquisition is quietly in the works,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 25,
+   "user": "marco__reed",
+   "url": "https://x.com/marco__reed/status/2102471354570182999",
+   "date": "2026-09-22",
+   "text": "Muse for $META is like:\n\niPhone for $AAPL\nYouTube for $GOOG / $GOOGL\nAlexa for $AMZN\nApp Store for $AAPL\n\nProjected Muse revenue (bull): \n\n2027: $5–8B\n2028: $12–18B\n2029: $20–28B\n2030: $28–36B\n2031: $40B+\n\n$40B on ~2.55B shares\n= ~$16 revenue / share\n= $200+ of incremental value"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "seatrips",
+   "url": "https://x.com/seatrips/status/2102358781933887497",
+   "date": "2026-09-22",
+   "text": "Deep dive: $AMZN LONG\n\nBull 40% · Base 38% · Bear 22%\nCoiled under the 258.5 shelf, 22 tests, thrust hitting resistance\nReclaim 258.5 opens 267; lose 252.7 exposes 238.2\n\n#FinTwit #StockMarket\n\nIndependent technical and fundamental research. Not investment advice. https://t.co/BV7oB1USa7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "reasonus4",
+   "url": "https://x.com/reasonus4/status/2102487137757303074",
+   "date": "2026-09-22",
+   "text": "Remarkable to see $QQQ rewarded for China’s success. What an upside down, low IQ, inbred Idiocracy stock market. \n\nChart 1: Domestic AI expenditures \n\nChart 2: $AMZN $ORCL $MSFT \n$GOOGL $META cashflow negative \n\n💣 If Chart 1, then no ROI for Chart 2 spend. \n\n💰 Chart 3: Chinese https://t.co/sl4wOLwks8"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2102382491432878296",
+   "date": "2026-09-22",
+   "text": "🚨 BURAKTHESCALPER LLC — TUESDAY 9/22 PREMARKET BATTLE PLAN\n\n⚔️ BIAS: NEUTRAL → BULLISH ABOVE CONFIRMATION. After Monday’s monster move—S&amp;P +1.49%, Nasdaq +2.26%—futures are essentially flat this morning. SPY is around $773.56 premarket, the 10Y has eased to ~4.93%, and oil has"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "YukaFinance",
+   "url": "https://x.com/YukaFinance/status/2102189019278750094",
+   "date": "2026-09-22",
+   "text": "⚡ Sensitive zone for $AMZN.\n\n📍 Spot: 259.00 vs Flip: 260.00 — 0.386% gap\nGEX regime: positive. Above 260.00 → more constructive. Below 240.00 → downside risk rises. https://t.co/ylmEGL2uCt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SentryAnalyst",
+   "url": "https://x.com/SentryAnalyst/status/2102392264102125791",
+   "date": "2026-09-22",
+   "text": "⚡ TITAN ALGO SCAN: STOCKS ⚡\n\n🚀 Squeeze &amp; Momentum Surge:\n• $MSFT: $501.61 | $AMZN: $258.45\n• $SMCI: $41.20 (+5.40% 3D)\n\n🟢 Institutional Uptrend:\n• $AAPL | $NVDA | $TSLA | $GOOGL\n\n🔻 Bearish Drift:\n• $BRK-B ($502.01) | $NFLX ($73.36)\n\n#Stocks #FinTwit https://t.co/LWzf59LpFY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "pulsecapitalx",
+   "url": "https://x.com/pulsecapitalx/status/2102273997593334222",
+   "date": "2026-09-22",
+   "text": "$META $AMZN $SHOP\n\nThe CPUs humming is the symptom.\n\nMuse doesn’t sell tokens. It sells occupancy.\n\nA chatbot spikes GPU for 3 seconds.\n\nMuse leaves a machine running — browser, session, context — while you’re not even looking.\n\nThat’s why $AMZN blocked it.\n\nYou don’t block a https://t.co/XqhrTBNRuG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CT_Richt3r",
+   "url": "https://x.com/CT_Richt3r/status/2102424862681923675",
+   "date": "2026-09-22",
+   "text": "$AMZN 1h\n\n260.99 already did its job: it pulled buyers in, then smart money dumped into them and repriced lower.\n\nThat flip leaves the 257.05-258.00 imbalance as the retrace zone, premium still heavy.\n\nFrom there I'm looking at a raid on sell-side liquidity at 253.82.\n\nTarget: https://t.co/x245H2ggM9"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 13,
+   "user": "RKLBMan",
+   "url": "https://x.com/RKLBMan/status/2102509683013570683",
+   "date": "2026-09-22",
+   "text": "I don't understand why anyone is bearish about $META because of the metaverse thing.  That was literally YEARS ago and it set the foundation for their AI infrastructure.  \n\nSure it wasted big money, but $aapl failed with their AV and Vision Pro.  $GOOG failed with some of their"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FL_DAYTR8R",
+   "url": "https://x.com/FL_DAYTR8R/status/2102196966084186237",
+   "date": "2026-09-22",
+   "text": "A very under appreciated part of the $AMZN upside thesis, as usual https://t.co/1GXFUIO5M4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "StelliumTape",
+   "url": "https://x.com/StelliumTape/status/2102470216609616161",
+   "date": "2026-09-22",
+   "text": "$AMZN 255 C 09/23 276K 1 DTE 0.1% ITM\n\nFresh upside positioning in $AMZN: the September 23 255 calls, $276K in premium, with 1,543 contracts traded. 100% of the prints paid the offer. Paid $1.76 on average — it needs $256.76 to work.\n\n#options #optionsflow https://t.co/gYAsbhJiyz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "LEAPSTrading",
+   "url": "https://x.com/LEAPSTrading/status/2102236226090827861",
+   "date": "2026-09-22",
+   "text": "$MRVL pushing by $260 in after-hours trading. I hope it can push to $270+ within a month or two. \n\nI plan to exercise 40 to 45 Marvell options contracts at $125 per share (probably half in 2026, half in 2026 for tax reasons related to sales of options contracts).\n\nThen I’ll use https://t.co/GVKL6Gv79B"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "EVInvestor21",
+   "url": "https://x.com/EVInvestor21/status/2102375860988674354",
+   "date": "2026-09-22",
+   "text": "$mu $skhy $nvda $googl $soxl $fslr all have huge upside… when these go up there will be no stopping them… oil is about to fall precipitously over next two weeks as a deal is made with Iran and rates will follow $spy $qqq $dia $iwm $msft $meta $amzn $nflx $tsla $spcx and whole https://t.co/qHUNefMWzI https://t.co/orAGNFTjAQ"
+  }
+ ]
+}

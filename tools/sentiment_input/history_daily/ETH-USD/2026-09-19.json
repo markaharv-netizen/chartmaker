@@ -1,0 +1,201 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-19T00:00:00Z",
+ "end": "2026-09-20T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 168,
+   "user": "CryptoPatel",
+   "url": "https://x.com/CryptoPatel/status/2101393387978932238",
+   "date": "2026-09-19",
+   "text": "ethereum:0xa12cc123ba206d4031d1c7f6223d1c2ec249f4f3 At The Make-Or-Break Zone: $0.20 Breakout Or $0.026 Breakdown?\n\n#ZAMA is testing the upper boundary of a well-defined ascending channel after a strong +43% daily expansion.\n\nTECHNICAL STRUCTURE\n🔹 ATL: $0.0166\n🔹 Major Support: https://t.co/NNghLOzOfH"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "PonyGoWeb3",
+   "url": "https://x.com/PonyGoWeb3/status/2101170491545575789",
+   "date": "2026-09-19",
+   "text": "Market Rebound｜Major Coins Surge Across the Board, Bull Trend Returns 🔥\n \nThe market has staged a strong rally today, with major cryptocurrencies climbing in tandem!\nBTC firmly holds the 80K level, while ETH, XRP and SOL follow suit. Market bullish sentiment has fully recovered https://t.co/jaGiKNaKG6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "benjii",
+   "url": "https://x.com/benjii/status/2101291204977512580",
+   "date": "2026-09-19",
+   "text": "David Hoffman selling his ETH months ago is looking increasingly interesting in hindsight. back in May, he made one of the harder calls you can make as someone whose entire career, business and identity are tied to Ethereum: he sold his ETH. his reasoning was nuanced. he wasn’t"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2101203511828451711",
+   "date": "2026-09-19",
+   "text": "$ETH / USDT — Double Top formation taking shape 👀\n\nETH has rejected the $2,650–$2,700 resistance zone twice, showing sellers defending the highs. The $2,350–$2,400 support is the key level to watch.\n\nA clean breakout above resistance could invalidate the bearish setup, while a https://t.co/ug2zDGtJtT"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "averybmd4ot8pl",
+   "url": "https://x.com/averybmd4ot8pl/status/2101460520633266467",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential DeFi Undervalued gem #cotinetwork institutional inflow 🛡️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "buinamtxiz1s",
+   "url": "https://x.com/buinamtxiz1s/status/2101385968188293207",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential DeFi Undervalued gem #cotinetwork institutional inflow 🛡️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "huynhtuancq879e",
+   "url": "https://x.com/huynhtuancq879e/status/2101214071974764665",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential transactions Undervalued gem #cotinetwork privacy mainstream 🌕"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "phamhieuxloznd",
+   "url": "https://x.com/phamhieuxloznd/status/2101208309604962670",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 encrypted compute Undervalued gem #cotinetwork privacy supercycle 🛡️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "volong1wakbp",
+   "url": "https://x.com/volong1wakbp/status/2101197248046707134",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 encrypted compute Undervalued gem #cotinetwork privacy supercycle 🛡️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "buiminhtfvmzm",
+   "url": "https://x.com/buiminhtfvmzm/status/2101216543900323890",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 Helium upgrade Undervalued gem #cotinetwork diamond hands forever 🔐"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "buinam0z6y2h",
+   "url": "https://x.com/buinam0z6y2h/status/2101383729726021661",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 encrypted compute Undervalued gem #cotinetwork privacy supercycle 🛡️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "buinam8appm1",
+   "url": "https://x.com/buinam8appm1/status/2101372562999840802",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential transactions Undervalued gem #cotinetwork privacy mainstream 🌕"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "voviet4tzyaf",
+   "url": "https://x.com/voviet4tzyaf/status/2101217561044275407",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 privacy layer Undervalued gem #cotinetwork institutional inflow 🔥"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "leminhsvbpjd",
+   "url": "https://x.com/leminhsvbpjd/status/2101204822171226388",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 encrypted compute Undervalued gem #cotinetwork privacy supercycle 🛡️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "lenamie3sud",
+   "url": "https://x.com/lenamie3sud/status/2101117538176467011",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 private RWAs Undervalued gem #cotinetwork real utility 🔒"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "vohoanglbtcnw",
+   "url": "https://x.com/vohoanglbtcnw/status/2101457794486722958",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 privacy layer Undervalued gem #cotinetwork institutional inflow 🔥"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "vunam95gpti",
+   "url": "https://x.com/vunam95gpti/status/2101357445574725789",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 Garbled Circuits Undervalued gem #cotinetwork institutional inflow 🔥"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "phamminhpphsxz",
+   "url": "https://x.com/phamminhpphsxz/status/2101219895430271215",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 private RWAs Undervalued gem #cotinetwork real utility 🔒"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "lehieux2k6sd",
+   "url": "https://x.com/lehieux2k6sd/status/2101203692578021841",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 private RWAs Undervalued gem #cotinetwork real utility 🔒"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "phamnamdpg53p",
+   "url": "https://x.com/phamnamdpg53p/status/2101167510402064759",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 programmable privacy Undervalued gem #cotinetwork privacy mainstream 🔒"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "phamhoangzqwmcz",
+   "url": "https://x.com/phamhoangzqwmcz/status/2101161595535810921",
+   "date": "2026-09-19",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential DeFi Undervalued gem #cotinetwork real utility 🤖"
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-17T00:00:00Z",
+ "end": "2026-09-18T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 10,
+   "user": "themetashark",
+   "url": "https://x.com/themetashark/status/2100389969345069269",
+   "date": "2026-09-17",
+   "text": "📊Crypto Asset Analysis for Futures Trading\n\nChainlink ( ethereum:0x514910771af9ca656af840dff83e8264ecf986ca ) — Higher TF Analysis \n$11.0100 | 24h: +1.07%\n\nMarket Structure \nLINK is in a short-term uptrend, trading above both the 20 and 50 SMA, supported by bullish MACD https://t.co/ZQOMNVASic"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2100664978076225992",
+   "date": "2026-09-17",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙• SEC Clears Tokenized Stocks for Onchain Trading as CFTC Eases Software Relief• Major gold holder quietly lends $1.5 billion to top U.S. dealer• From Bear to Bull: Analyst Says Bitcoin UTXO Data Points to a Cycle Shift• https://t.co/QyU2uyBT5K"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "iBuydipss",
+   "url": "https://x.com/iBuydipss/status/2100400714904130001",
+   "date": "2026-09-17",
+   "text": "ethereum:0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c | S&amp;P 500 Index (Broad Market Benchmark 🇺🇸📊)\nethereum:0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c  is testing key structural support on the 8H timeframe following a pullback from all-time highs near 7,800. Price action has https://t.co/AvhsS2Kyu2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 224,
+   "user": "Bird_XRPL",
+   "url": "https://x.com/Bird_XRPL/status/2100495190377058659",
+   "date": "2026-09-17",
+   "text": "Good morning XRP holders, crypto holders, legends and Bird family.\n\nLet me remind you of one thing. \n\nMy thesis has NOT changed.\n\nI’m a bull, and I believe we are going so much higher.\n\nWe just need to battle through the volatility, shake off the fear from this week and let the"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Crypto_Act38",
+   "url": "https://x.com/Crypto_Act38/status/2100516003167772950",
+   "date": "2026-09-17",
+   "text": "🚨 BREAKING: Smart money is quietly stacking $ETH while $BTC stays flat\n🐋 Overnight on-chain flow is not random noise. Whales and trackers just printed a clear split between Ethereum accumulation and Bitcoin liquidity moves.\n💎 ETH looks like accumulation. A new wallet pulled"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2100520153167659237",
+   "date": "2026-09-17",
+   "text": "FET\n\nA Triangle pattern is forming on the 1D chart 👀📊 Price is around $0.158, compressing near the triangle’s lower boundary.\n\nA confirmed breakdown below $0.15 could signal further downside toward the chart-marked target near $0.00 ⚠️📉\n\nMarket sentiment: Bearish breakdown https://t.co/ZlbfrKlF2a"
+  }
+ ]
+}

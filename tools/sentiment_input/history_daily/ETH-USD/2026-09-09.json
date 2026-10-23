@@ -1,0 +1,75 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-09T00:00:00Z",
+ "end": "2026-09-10T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Mr_Bip0_9",
+   "url": "https://x.com/Mr_Bip0_9/status/2097688571230748746",
+   "date": "2026-09-09",
+   "text": "Macro &amp; Crypto Market Analysis — September 9, 2026\n\nThe Market Is Entering a Much More Difficult Phase\n\nThe most important message from the latest data is that the bullish structure of financial markets has not necessarily ended, but the macro environment has become substantially https://t.co/NzoQjeWlv7"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "CryptoScient",
+   "url": "https://x.com/CryptoScient/status/2097582653415489915",
+   "date": "2026-09-09",
+   "text": "ethereum:0xd533a949740bb3306d119cc777fa900ba034cd52\n\n1H setup: tactical short bias, but the entry is not active yet.\n\nCRV is trading around $0.3655 after sweeping lower liquidity and bouncing, while the short-term structure still carries a bearish MSS.\n\nThe main area I’m watching https://t.co/KiL0HmAVvt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Enmaart1",
+   "url": "https://x.com/Enmaart1/status/2097719838550512006",
+   "date": "2026-09-09",
+   "text": "While everyone is searching for the next microcap, $ETH may be setting up the move that decides where the entire altcoin market goes next.\n\nEthereum rallied 37% in just ten days and is now consolidating around $2,500. So far, this looks more like a pause than a rejection.\n\nThe"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 93,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2097528581517955386",
+   "date": "2026-09-09",
+   "text": "BTC closed red and confirmed a close below our short-term support, so a tag of the fast line looks inevitable. The chart is still technically strong bullish, and I see any dip as a buy the dip opportunity with 76,706 as the level to hold. ETH printed a bearish OBV cross, https://t.co/EthS4mDu0o"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2097696914275717292",
+   "date": "2026-09-09",
+   "text": "$FNV \n\n$FNV continues to look technically constructive following the falling-wedge breakout shared in the post below on August 4, with bulls maintaining control and price continuing to trade above the key moving averages. \n\nWe are now seeing a bull flag develop as price https://t.co/OfbIaZOzJ1 https://t.co/dUfqWdNoRP"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "htp96_community",
+   "url": "https://x.com/htp96_community/status/2097597444599243014",
+   "date": "2026-09-09",
+   "text": "🚨 bitcoin:native: THE BULLISH SCENARIO IS STARTING TO TAKE SHAPE\n\nHere’s the scenario I’m watching:\n\n$77K → $83K → $71K → $59K–$70K → $109K+\n\nThe biggest risk right now is that the market could still be heavily influenced by macro news.\n\nIn October, Anthropic’s IPO could https://t.co/A8b4xg1RVZ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 8,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2097578031670026418",
+   "date": "2026-09-09",
+   "text": "$ETH printing a double top formation 👀\n\nPrice is struggling around the ~$2,550 resistance zone, with sellers defending the highs twice. A breakdown below ~$2,450 support could trigger further downside 📉🔥\n\nThe chart target points toward $2,300 if the breakdown confirms. https://t.co/VPPRr4lP0Q"
+  }
+ ]
+}

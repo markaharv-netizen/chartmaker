@@ -1,0 +1,138 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-22T00:00:00Z",
+ "end": "2026-09-23T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 130,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2102230920677970234",
+   "date": "2026-09-22",
+   "text": "Bitcoin pumped 6.7% while crypto Twitter argued over apologies and bull traps. I'm watching the confirmed daily TBO breakout above resistance, not the drama. Bearish RSI divergence warns of a pullback, but it doesn't force an immediate crash. My approach is to take profit at https://t.co/i8yRETZ5iG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "thelegionmaster",
+   "url": "https://x.com/thelegionmaster/status/2102289253929541704",
+   "date": "2026-09-22",
+   "text": "CVC is seeing a major OI reset.\n\nOI ↓ 8.18% in 4H\nOI ↓ 6.23% in 24H\n\nLeverage is being flushed from the market.\nNow watching price + funding to see who gets positioned next. 👀\n\nMacro → Positioning → Liquidity → Execution.\n\n📍 KEY LEVELS\n\n🔺 Resistance / Upside Liquidity: https://t.co/jkm0uKdmPI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "kenradio",
+   "url": "https://x.com/kenradio/status/2102235280145285276",
+   "date": "2026-09-22",
+   "text": "Before calling this crypto news bullish or bearish, ask what behavior it changes. Decrypt: Tom Lee's Bitmine Adds $74M in Ethereum, Declares a Crypto Bull Market 'Underway' https://t.co/bBlF3SOBTK"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 296,
+   "user": "CryptoPatel",
+   "url": "https://x.com/CryptoPatel/status/2102314458483978294",
+   "date": "2026-09-22",
+   "text": "ETHEREUM: THE 8-MONTH BEARISH STRUCTURE HAS FINALLY BROKEN\n\n$ETH Has Now Fully Shifted Its HTF Market Structure After Breaking The Critical $2,464 CHoCH Level.\nThe Bearish Structure Was Invalidated Once ETH Secured A HTF Close Above $2,464, And Price Subsequently Expanded Toward https://t.co/KwkNiWBjzL https://t.co/b1DWGGs4w2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2102388074290332109",
+   "date": "2026-09-22",
+   "text": "🚨 Institutional Technical Watch — ETH confirms a bull-flag breakout; Reuters targets $3,050, with $3,395–$3,445 possible\n\nA genuinely important new technical view was published 22 September 2026 by Reuters market analyst Christopher Romano. After spending roughly a month https://t.co/mMr5V0J2Ri"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "LiquidMindX",
+   "url": "https://x.com/LiquidMindX/status/2102279951919562759",
+   "date": "2026-09-22",
+   "text": "AVAX Short From Weekly Supply: Breakdown Accepted, But Weekly Is Pushing Back\n\nAVAXUSDT 1W SHORT - limit order queued by LiquidMind.\nEntry: 10.973\nStop: 11.503\nTarget: 5.678\nRR: 9.99\n\nTrade thesis:\nQueued a short from the weekly high origin because the lower timeframe finally https://t.co/bm3bgsCQTr"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2102275403524010474",
+   "date": "2026-09-22",
+   "text": "Macro Observatory Week 39 Tuesday Briefing\n\nMonday's telemetry delivered a classic early-week diagnostic with the speculative chimney redlining to an absolute max boundary while the 6-anchor trapdoor and sovereign reservoir froze in deep Bearish Hibernation.\n\nThe opening cash"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 46,
+   "user": "yourfriendSOMMI",
+   "url": "https://x.com/yourfriendSOMMI/status/2102516735509405866",
+   "date": "2026-09-22",
+   "text": "❤️💛💚💙\n\n🧃 Juicy News #1507\n\n🟢 Bitcoin $86,000\n🟢 Ethereum $2700\n⚪ ETH-BTC = 0.031\n\n🔻 Oil $89\n\n🇺🇸 Bitcoin is up 9.07% in September, defying its historical -2.21% average. Will it hold?\n\n🇺🇸 CME Group to add Bitcoin Cash &amp; Uniswap futures into its derivatives (BCH and UNI)\n\n🇺🇸 https://t.co/NgEdea80tT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "Rina_BingX",
+   "url": "https://x.com/Rina_BingX/status/2102330501826818109",
+   "date": "2026-09-22",
+   "text": "📈 Crypto Market Overview (Sep.22) \nPrice Action, Macro, Fund Flows, Today's Key Points 💫 \n\n■ Bitcoin, Ethereum, Hyperliquid, Altcoin Sentiment \n\n🟠 BTC is trading around 85,800, up roughly 2.2% in 24 hours. Price spiked as high as 87,368 overnight on ETF inflow news, then https://t.co/PcEz2OTdNV https://t.co/xzuEXM7aNN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "leviet0p4lxj",
+   "url": "https://x.com/leviet0p4lxj/status/2102344963694731386",
+   "date": "2026-09-22",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 Garbled Circuits Undervalued gem #cotinetwork institutional inflow 🔥"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "buivietz5m8g4",
+   "url": "https://x.com/buivietz5m8g4/status/2102268069381091384",
+   "date": "2026-09-22",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential transactions Undervalued gem #cotinetwork privacy mainstream 🌕"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "vulongx0ne07",
+   "url": "https://x.com/vulongx0ne07/status/2102263453289431150",
+   "date": "2026-09-22",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 encrypted compute Undervalued gem #cotinetwork privacy supercycle 🛡️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "voducmbd79k",
+   "url": "https://x.com/voducmbd79k/status/2102263172321493069",
+   "date": "2026-09-22",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 privacy layer Undervalued gem #cotinetwork institutional inflow 🔥"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "morganzlw6kh2m",
+   "url": "https://x.com/morganzlw6kh2m/status/2102512806147117181",
+   "date": "2026-09-22",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential transactions Undervalued gem #cotinetwork privacy mainstream 🌕"
+  }
+ ]
+}

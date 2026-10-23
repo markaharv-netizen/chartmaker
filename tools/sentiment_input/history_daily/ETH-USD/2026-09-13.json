@@ -1,0 +1,93 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-13T00:00:00Z",
+ "end": "2026-09-14T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "cryptlogis",
+   "url": "https://x.com/cryptlogis/status/2099134215837122803",
+   "date": "2026-09-13",
+   "text": "ETH 4H 👀\n\nERL/BSL → 2,665\nIRL → 2,403\nERL/SSL → 2,355\n\nFirst draw: 2,403\nDeeper liquidity: 2,355\n\nSSL sweep + reclaim = bullish reversal setup 📈\n\n4H close below 2,355 = potential bearish CHOCH and more downside 📉\n\nPatience over FOMO 🧘‍♂️\n\nLiquidity first, confirmation second. https://t.co/dgVdo7eh6x"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 248,
+   "user": "BitmonkCrypto",
+   "url": "https://x.com/BitmonkCrypto/status/2099060155392385101",
+   "date": "2026-09-13",
+   "text": "ethereum:0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3 is still trading in a corrective structure after rejecting $0.394.\n\n➟ Immediate pivot: $0.350–$0.352\n➟ Key support: $0.343–$0.345\n➟ Lose $0.343 and ~$0.330 becomes the next downside target\n➟ Major reclaim: $0.367–$0.368, https://t.co/0izaN2YlxE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "DyorNetCrypto",
+   "url": "https://x.com/DyorNetCrypto/status/2099247639330247056",
+   "date": "2026-09-13",
+   "text": "ethereum:0x8290333cef9e6d528dd5618fb97a76f268f3edd4 - 4h\nBias: Bullish 🟢\nTrend Score: 44/100 | Confidence: 8.2/10\n\nANKR is currently at $0.00468000, maintaining a bullish trend with a score of 44/100 and a confidence of 8.2/10. However, the hidden bearish divergence in OBV https://t.co/aBHgSKTtpu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 242,
+   "user": "Crypt0pi0neer",
+   "url": "https://x.com/Crypt0pi0neer/status/2099030974617047548",
+   "date": "2026-09-13",
+   "text": "During the bull in December 2024 ethereum:0x80122c6a83c8202ea365233363d3f4837d13e888 reached all time high. \n\nI remember our time at @token2049 in Dubai. We had the most amazing booth,  presenting new tech and products to the web3 world. \n\nBut like every bull run a bear market https://t.co/KhCq2Wbdxl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "macroinvest365",
+   "url": "https://x.com/macroinvest365/status/2099090840735924338",
+   "date": "2026-09-13",
+   "text": "$ETH — the framework I use for Ethereum.\n\nReference price: $2,445.00 | FY26 rev: N/A (token) | NI: N/A | Shares: 120M ETH\n\n5-year bull / base / bear model:\n\n                    Bear        Base        Bull\n2031 price          $950–1,100     $1,500–1,850     $3,500–5,000+\nAnnual"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "CryptoPulseXgl",
+   "url": "https://x.com/CryptoPulseXgl/status/2099115226855768432",
+   "date": "2026-09-13",
+   "text": "Crypto is quiet, not dead.\n\nBTC sitting near $77K after a small weekend fade.\nETH around $2,480–$2,520.\nTotal market cap ~$2.61T.\nBTC dominance ~58.8%.\n\nMajors are holding. Alts are doing the bleeding.\nFear &amp; Greed still in greed, but the tape feels cautious into next week’s Fed https://t.co/ZaKYlVwzDK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 47,
+   "user": "gasparjayena",
+   "url": "https://x.com/gasparjayena/status/2099037059700715819",
+   "date": "2026-09-13",
+   "text": "WILL ETH RECLAIM $2,535 TODAY? \n\nTraders on @trylimitless are weighing in on the ETH Up or Down Daily market.\nTarget: $2,535.23\nCurrent spot: $2,521.87\n\n👉 Track and trade the market here: https://t.co/uOyZVodCI0.\n\nMACRO CONTEXT\nEthereum is trading in a narrow weekend band. While https://t.co/XEijbmMDfd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptoBenedict",
+   "url": "https://x.com/CryptoBenedict/status/2099202177407361428",
+   "date": "2026-09-13",
+   "text": "$Ethereum is still in the consolidation phase. Any big news can trigger upside or downside this week. https://t.co/k9a2TcYsi6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 28,
+   "user": "TheBigCycleGame",
+   "url": "https://x.com/TheBigCycleGame/status/2099048744633106805",
+   "date": "2026-09-13",
+   "text": "WEEKLY MACRO UPDATE | September 13, 2026\n\n─────────────────\n\nMARKETS\n\nS&amp;P 500\nClose: 7,656 | Weekly: -1.2%\nCNN Fear &amp; Greed: 33.4 — Fear\n\nNasdaq 100\nClose: 29,368 | Weekly: -0.58%\n\nRussell 2000\nClose: 2,902 | Weekly: -2.42%\n\nDow Jones\nClose: 52,554 | Weekly: https://t.co/Vu0XNM46KR https://t.co/gMwenoIix7"
+  }
+ ]
+}

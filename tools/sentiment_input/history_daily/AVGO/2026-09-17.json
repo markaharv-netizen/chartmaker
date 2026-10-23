@@ -1,0 +1,228 @@
+{
+ "symbol": "AVGO",
+ "start": "2026-09-17T00:00:00Z",
+ "end": "2026-09-18T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AVGO (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2100467297768874466",
+   "date": "2026-09-17",
+   "text": "Macro Observatory Week 38 Thursday Briefing\n\nWednesday's telemetry delivered a defining structural verdict with the last commodity pillar - crude oil, collapsing into Early Stage Bear; equities sinking deeper sub-neutral Monthly decay; and the extinguishing of broad liquidity."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Gammaoptions99",
+   "url": "https://x.com/Gammaoptions99/status/2100664471358476429",
+   "date": "2026-09-17",
+   "text": "flow heatmap for $avgo \nPlain English: today's  flow is cleanly bullish — big premium, more buyers than sellers, and the largest single trade is a genuine long-dated bullish bet, not supply capping a level. It's also an unusually active session, already 38.5% of the trailing"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "QuantAlgosAi",
+   "url": "https://x.com/QuantAlgosAi/status/2100672544751653260",
+   "date": "2026-09-17",
+   "text": "⚠️ TRAPDOOR $AVGO — king node 340.00 is short gamma; the bullish/bearish technical level is NOT a magnet, it's a vol-trap for fast whipsaws.\n📐 Technicals (4h): Resistance 366.78 · Fib 61.8% @ 395.71 (down-leg) · RSI 31\n🎯 Options layer: magnet 340.00 · MVC 420.00 · top GEX call https://t.co/PsnIBu2jVz"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "baalhadid",
+   "url": "https://x.com/baalhadid/status/2100659454026858598",
+   "date": "2026-09-17",
+   "text": "$AVGO [BEARISH] — target $270.94 | stop $410.67\n\nFlow is showing a net delta of $21.8M BEARISH with puts significantly outweighing calls at $24.0M versus $2.2M.\n\n――――――\nORDER FLOW DELTA — Sep 17\n\n▸ Net delta: $21.8M BEARISH (calls $2.2M | puts $24.0M)\n▸ Avg IV: 155.4% — pricing https://t.co/iXE6AGlZ71"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "jrern7",
+   "url": "https://x.com/jrern7/status/2100586239544218013",
+   "date": "2026-09-17",
+   "text": "$AVGO 📊\n$348| 52wk range: $290–$495 (~30% off highs)\nRSI(14): 54 — neutral\nMACD: bullish crossover forming\nBelow 50DMA ($364) &amp; 200DMA ($388) — trend still bearish\nSupport ~$340 / Resistance ~$365\n\nHard not to pay attention"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "therealmoriahr",
+   "url": "https://x.com/therealmoriahr/status/2100552351006490669",
+   "date": "2026-09-17",
+   "text": "Broadcom $AVGO: The AI Infrastructure Story Continues 🚀\n\nThe semiconductor market is entering a new phase where networking, custom chips, and AI infrastructure remain major areas of investor focus.\n\nTechnical breakdown:\n\nPrice: $358.08\nDay High: $365.10\nDay Low: $354.89\nVolume: https://t.co/OdBgLxbSEL"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "captaintrading8",
+   "url": "https://x.com/captaintrading8/status/2100466664001458513",
+   "date": "2026-09-17",
+   "text": "The setup still looks bullish to me.\n\nThe Fed just raised rates.\n\nThe 10Y pushed above 5%.\n\nAnd semiconductors still held up.\n\nThat’s important.\n\nIf higher yields were enough to break the AI trade, I’d expect $NVDA , $MU  and $AVGO  to be getting hit much harder.\n\nInstead, the https://t.co/SnmKoom7Sp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2100677120720547949",
+   "date": "2026-09-17",
+   "text": "Someone sold $279M of puts expiring tomorrow on a SPAC index ETF. That's not a trade — that's a statement.\n\nTHE TAPE\n\nThe single loudest ticket of the session was not a bet. Someone sold 56,220 SPCX September 18 $205 puts in a 14:29 ET burst, collecting $279.7 million in premium. https://t.co/imFoS9A5fp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "LEAPSTrading",
+   "url": "https://x.com/LEAPSTrading/status/2100465060326031697",
+   "date": "2026-09-17",
+   "text": "Easy money picks at current prices:\n\n$AVGO $CRDO $GOOGL $ALAB $MSFT $LRCX\n\n$AVGO: PEG below 1, multi-year Forward PE lows, ready to bounce on MA charts. #1 play in custom silicon. Does connectivity and photonics. \n\n$CRDO: Down too hard on earnings. Easily worth $200+ (15% upside https://t.co/AUuBCBjZh1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cottonfields",
+   "url": "https://x.com/cottonfields/status/2100555932635701595",
+   "date": "2026-09-17",
+   "text": "Yesterday's options flow (16 sep)\n\nmarkets: unclear\nmag7: accumulation\ncrypto: unclear\nbiotech: unclear\nmetals: bullish\nenergy: income\nrates: unclear\nrisk-off: unclear\nsemis: unclear\nfinancials: unclear\n\nMarkets\nFed day flow: USD 2.79bn confirmed opening, 53.5% calls / 46.5%"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "AIMarketMind",
+   "url": "https://x.com/AIMarketMind/status/2100510849714503686",
+   "date": "2026-09-17",
+   "text": "Wall Street’s New AI Problem Isn’t Demand. It’s the Cost of Money.\n\nThe Fed raised rates to 3.75–4.00%, the vote was unanimous—and the dots signal another hike. Now Wall Street faces a harder question: can AI growth outrun its rising cost of capital?\n\n🐮The bull case: AI demand https://t.co/FWUM4jazcr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "_TP888",
+   "url": "https://x.com/_TP888/status/2100586761105641616",
+   "date": "2026-09-17",
+   "text": "📡 RADAR\n\nA buyer chose $AVGO downside over waiting.\n$115K in puts. 330.00 strike, Sep 23.\nVolume ran 12x open interest. https://t.co/7acil6DSgX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "kimeedee_",
+   "url": "https://x.com/kimeedee_/status/2100548845444665571",
+   "date": "2026-09-17",
+   "text": "Here we go.\n\nA delayed $Anthropic IPO would be very bearish for the entire AI ecosystem…\n\n$nvda $amd $avgo $smh $soxx $spy https://t.co/M0XpaWW011"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Financhle",
+   "url": "https://x.com/Financhle/status/2100592630962745431",
+   "date": "2026-09-17",
+   "text": "$114.9k aggressive purchase of Broadcom $AVGO $330 strike put option contracts exp 9/23 hitting the tape this morning... 5.3% OTM currently. Unusually bearish flow here https://t.co/a2vgK3Sott https://t.co/bc3WtciiPS"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "kimeedee_",
+   "url": "https://x.com/kimeedee_/status/2100548486483583185",
+   "date": "2026-09-17",
+   "text": "Bearish news for $nvda $amd and $avgo. Huawei is starting to branch out of China.\n\nHuawei ai datacenter chips could eventually dominate the  world(ex-USA), same as Chinese EVs and humanoid robots… https://t.co/5ARpEOR1hs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NeapoILLtan",
+   "url": "https://x.com/NeapoILLtan/status/2100501389071818907",
+   "date": "2026-09-17",
+   "text": "the more bearish people get the more retarded you should get so junk the fuck up $ORCL $GTLB $OWL but at the same time get yourself retard defense with $CLMT $VLO $DINO $FRO and keep core with hypers + avgo/nvda we'll get another hot run"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 44,
+   "user": "steady_profits",
+   "url": "https://x.com/steady_profits/status/2100471311831363846",
+   "date": "2026-09-17",
+   "text": "I'm pleased to report that I finally had a green day yesterday.\n\nMy eToro account ended the day 0.95% higher, while my Trading 212 ISA account was up 1.6%.\n\nThe biggest winners were $CIFR, up 10.8%, $SPCX, up 5.15%, and the Seraphim Space Investment Trust #SSIT, which was up https://t.co/En0ZBYANZa"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CapitalWisdomAI",
+   "url": "https://x.com/CapitalWisdomAI/status/2100573407934828810",
+   "date": "2026-09-17",
+   "text": "📈 Capital Wisdom Top Picks — Sep 17, 2026\n\n$AVGO | 🕰️Neutral\nBroadcom Inc.\n\n💵 Current price: $339.27\n🎯 Avg target: $649.53\n📊 Potential upside: +91.4%\n\nFollow for daily picks 📌\n#investing"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 8,
+   "user": "KGInvests_",
+   "url": "https://x.com/KGInvests_/status/2100657043665551683",
+   "date": "2026-09-17",
+   "text": "🚨 Many AI stocks have crashed and these are companies that WILL give life changing returns.\n\nThese 7 companies are accelerating earnings and the AI revolution is just getting started. There may never be a chance like this again \n\n1. $AVGO 30% off ATHs\n\nAVGO is the market leader https://t.co/jT99c3s6Ut"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Dukalion",
+   "url": "https://x.com/Dukalion/status/2100544295174598802",
+   "date": "2026-09-17",
+   "text": "🚨 10 stocks I’m watching for potential upside\n\nThe market often creates opportunities when great companies get ignored.\n\nWatchlist:\n\n$SOFI\n$AMZN\n$AVGO\n$NU\n$CRWV\n$MA\n$FICO\n$NVDA\n$UBER\n$NFLX\nStrong businesses. Long-term themes. Potential value opportunities.\nBookmark this list. https://t.co/9nSv7buVeh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "theoptionhaven",
+   "url": "https://x.com/theoptionhaven/status/2100422290857157013",
+   "date": "2026-09-17",
+   "text": "$AVGO \nCALL trigger: Hold above 342 and break 350 with momentum | Target 1: 362–365 (take 50% off) | Target 2: 374–378 | Stop: Daily close below 328 | Suggested: 345C or 350C exp Sep 25\n\nPUT trigger: Rejection at 342–348 OR daily close below 330 | Target 1: 322–325 (take 50% off) https://t.co/ZffAsA7Gw0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "JPMinvests",
+   "url": "https://x.com/JPMinvests/status/2100698792005702090",
+   "date": "2026-09-17",
+   "text": "Today my portfolio went up 1.27% 🟢\n\n$OKLO up ∼11% today after Piper Sandler initiated with Overweight &amp; $55 PT, implying ∼33% upside.\n\n$AVGO gained 2.29% and $META rose 1.34%\n\nHow was your portfolio performance today? 👇"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 62,
+   "user": "spluscollective",
+   "url": "https://x.com/spluscollective/status/2100386906068701618",
+   "date": "2026-09-17",
+   "text": "$AVGO is in accumulation phase. Tariff lows is a strong buy zone. With an entry at 340-335, we should see a strong upside potential from here. Have a clear plan where to stop. I am long. https://t.co/2dH0tg88kg https://t.co/VJcpOihp7o"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "CassoWAristos",
+   "url": "https://x.com/CassoWAristos/status/2100662091950563440",
+   "date": "2026-09-17",
+   "text": "Eighteen years ago I owned stocks through my bank. I inherited quite some money at age eighteen and got convinced by bank it's best to invest all of that since I would not need it at such a young age anyway...so I did.\nFlash forward about six months and the financial crisis hit."
+  }
+ ]
+}

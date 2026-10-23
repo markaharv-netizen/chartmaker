@@ -1,0 +1,84 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-06T00:00:00Z",
+ "end": "2026-09-07T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "cryptoleeches",
+   "url": "https://x.com/cryptoleeches/status/2096717482866131180",
+   "date": "2026-09-06",
+   "text": "bitcoin:native Waiting for another 50% drop in crypto will make me rich!\n\nWRONG!\n\nThis is the mentality of someone who consistently fails.\n\nHere are the facts, not emotions.\n\nIf we all agree that BTC bear market is in its ending phase and the BTC bull market always starts shortly https://t.co/GiNn0miHn3"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 31,
+   "user": "mach0crypto",
+   "url": "https://x.com/mach0crypto/status/2096468467821973945",
+   "date": "2026-09-06",
+   "text": "Called ethereum:0xb50721bcf8d664c30412cfbc6cf7a15145234ad1 undervalued months ago.\nLook at it now.  Still ridiculously undervalued.\nMy target remains top 10 mcap this bull run. \nRotate the shitcoins. Enjoy the ride.  \n#ARB #Arbitrum #Crypto #Altcoins #Bullish"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "orbyx_app",
+   "url": "https://x.com/orbyx_app/status/2096403273108320641",
+   "date": "2026-09-06",
+   "text": "📊 Market Brief | Asian Session ⬜\n\n🟢 $BTC: $79,868.00 (+0.0%)\n🟢 ETH: $2,490.20 (+0.4%)\n🟢 SOL: $103.31 (+0.1%)\n🟢 ADA: $0.22 (+0.5%)\n🟢 XRP: $1.41 (+0.2%)\n\nThe market opened the Asian session with subdued, slightly risk-on tape: BTC sat flat around $79.9k while ETH, SOL, ADA https://t.co/bhPimoyT83"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 102,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2096395455970078725",
+   "date": "2026-09-06",
+   "text": "Bitcoin just wrapped a wild August, closing up twenty six percent and wicking to nearly thirty one, a move that echoes what we saw back in January and October twenty twenty three. That said, I want to be straight with you about September. My Better Crypto Calendar nailed June and https://t.co/Aa1HcREAeW"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "taylor0ru1b12c",
+   "url": "https://x.com/taylor0ru1b12c/status/2096508652098404812",
+   "date": "2026-09-06",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential transactions Undervalued gem #cotinetwork diamond hands forever 🌕"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "caseyjw800916s",
+   "url": "https://x.com/caseyjw800916s/status/2096491775238262986",
+   "date": "2026-09-06",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 PriveX DEX Undervalued gem #cotinetwork privacy mainstream 🔒"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "avery91msczj4u",
+   "url": "https://x.com/avery91msczj4u/status/2096549195096416663",
+   "date": "2026-09-06",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential transactions Undervalued gem #cotinetwork diamond hands forever 🌕"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "avery2qomvf554",
+   "url": "https://x.com/avery2qomvf554/status/2096501061884498030",
+   "date": "2026-09-06",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 PriveX DEX Undervalued gem #cotinetwork privacy mainstream 🔒"
+  }
+ ]
+}

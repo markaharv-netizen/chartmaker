@@ -1,0 +1,66 @@
+{
+ "symbol": "APLD",
+ "start": "2026-09-16T00:00:00Z",
+ "end": "2026-09-17T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "LowFloatTradez",
+   "url": "https://x.com/LowFloatTradez/status/2100355869766807598",
+   "date": "2026-09-16",
+   "text": "$UUUU $APLD VERY Undervalued.. easy 100%"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "jameokayy",
+   "url": "https://x.com/jameokayy/status/2100351322373620136",
+   "date": "2026-09-16",
+   "text": "Applied Digital has a market cap of $6.9 billion. With total assets of $9.9 billion, one might think $APLD is undervalued. However, it has nearly $5bn in debt in what looks like special purpose vehicles and almost $2bn in preferred equity on almost $200mm net quarterly net loss. https://t.co/cSn9nhZKF9"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "DarkFlowAlert",
+   "url": "https://x.com/DarkFlowAlert/status/2100223753036673511",
+   "date": "2026-09-16",
+   "text": "🟢 $APLD 24.5C Sep 25\n💰 $131.6K · $1.35/contract · 20.8x Vol/OI\n📍 Spot $24.78\n\nAPLD call sweep for $131.6K targets $25.85 breakeven in 9 DTE with 20.8x Vol/OI ratio, following prior $106.8K bullish position from\n\n🌊 Front-run the headlines · https://t.co/aa082mbT6d"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DarkFlowAlert",
+   "url": "https://x.com/DarkFlowAlert/status/2100310283956687299",
+   "date": "2026-09-16",
+   "text": "🟢 $APLD 24C Sep 18 🚨 REPEAT SWEEP\n💰 $35K · $0.75/contract · 4.1x Vol/OI\n📍 Spot $24.23\n\nAPLD second sweep at $24 calls 2 DTE hits $24.75 breakeven with 4.1x Vol/OI ratio, adding to $270K prior bullish flow this\n\n🌊 Options flow decoded daily · #Options"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Linker868",
+   "url": "https://x.com/Linker868/status/2100022010047021431",
+   "date": "2026-09-16",
+   "text": "$APLD $WULF most of the data center stocks are taking a beating last few weeks, going to add more since we as close to the bottom I believe Bullish https://t.co/s0imBOnRFl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "PSInvestor",
+   "url": "https://x.com/PSInvestor/status/2100212958794289434",
+   "date": "2026-09-16",
+   "text": "𝗚𝗣𝗨 𝗿𝗲𝗻𝘁𝗮𝗹 𝗿𝗮𝘁𝗲𝘀 this morning\n\nMedian per $NVDA GPU hour:\nH100 $2.73\nH200 $4.31\nA100 $1.40\nRTX 4090 $0.45\n\nH200 carries a 58% premium over H100. A100 clears 49% below it, so last generation silicon still rents at roughly half the price of current. Datacenter to https://t.co/LNdFrettXP https://t.co/4aTzwn6mE2"
+  }
+ ]
+}

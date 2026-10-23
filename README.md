@@ -125,9 +125,9 @@ For yesterday's UTC day `D` (00:00–24:00Z), per ticker run ONE `search_posts_a
 `<SYM> (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued[ OR mNAV for MSTR | OR par OR yield for STRC/SATA]) [-pump -memecoin for SPCX] -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en`
 (BTC-USD uses `Bitcoin`, ETH-USD uses `Ethereum`, MU uses `MU Micron`), `start_time=D`, `end_time=D+1`, max 25, relevancy, same fields as above; then
 `python3 tools/sentiment_history.py ingest-daily <SYM> <D> <file> --q "<query>"` and re-run `build`. ≈ 26 calls/day.
-**Backfill still open:** target start 2026-07-21 (`DAILY_START`); as of 2026-10-21 (backfill run 5) Sep 24 – Oct 20 are collected, so each ticker has
-66 gap days (Jul 21 – Sep 23, plus Oct 21 until the morning routine; RKLB also Oct 3, whose search returned 0 posts; `daily_gaps` in `sentiment_history.json`). Continue backwards with the same single search per
-ticker-day (≈ 1,950 calls, i.e. ~2 days of the 1,000/day X budget, ≤ 30/min). Never interpolate gaps. Daily points are thin
+**Backfill still open:** target start 2026-07-21 (`DAILY_START`); as of 2026-10-22 (backfill run 6) Sep 1 – Oct 21 are collected, so each ticker has
+43 gap days (Jul 21 – Aug 31, plus Oct 22 until the morning routine; RKLB also Oct 3, whose search returned 0 posts; `daily_gaps` in `sentiment_history.json`). Continue backwards with the same single search per
+ticker-day (≈ 1,092 calls, i.e. ~1–2 more nightly runs of the 1,000/day X budget, ≤ 30/min). Never interpolate gaps. Daily points are thin
 (1 search, often < 8 bull+bear posts → hollow dots); read them for turns, not levels.
 
 **C.** Commit `sentiment.json`, `sentiment_history.json`, `tools/sentiment_input/<date>.json` and `tools/sentiment_input/history/` together.

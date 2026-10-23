@@ -1,0 +1,57 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-14T00:00:00Z",
+ "end": "2026-09-15T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "veyro_xbt",
+   "url": "https://x.com/veyro_xbt/status/2099608644782285098",
+   "date": "2026-09-14",
+   "text": "$ETH just broke out — but the breakout itself is not the most important part.\n\nThe retest is.\n\nEthereum pushed aggressively through the recent range, traded as high as $2,615, and then returned toward the $2,540–$2,550 area.\n\nThis is now the key decision zone.\n\nFor several days, https://t.co/RP0ErOwNBQ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 87,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2099333843606274509",
+   "date": "2026-09-14",
+   "text": "BTC hugged the TBO Fast line all weekend and closed Sunday back inside the cloud, sitting right on the 0.786 fib at 76,706. That is bearish consolidation, on-balance volume is hunching over, and I am watching the nasty fair value gap plus the 75,545 August bounce level on https://t.co/fZtMGJtSZf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2099454419381240049",
+   "date": "2026-09-14",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• CLARITY Act Final Draft Adds Trump Ethics Deal Before Senate Vote\n• Bitcoin Bucks Tech Selloff Amid AI Safety Concerns\n• Bitcoin ETFs Bleed $463M as Ethereum Funds Pull In $197M\n• Symbiosis says recovered 15 BTC from https://t.co/Kv2mYM7jw0"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 57,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2099445665814462699",
+   "date": "2026-09-14",
+   "text": "FET (FET/USDT) 📉 is forming a Bearish Pennant on the 4H chart.\n\nPrice is around $0.1697, consolidating after a sharp rejection from ~$0.19. A breakdown below the lower pennant support could trigger further downside toward the chart’s $0.135 target.\n\nBias: Bearish below ~$0.165 https://t.co/d0BPKCr5yG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "HCFlowSniper",
+   "url": "https://x.com/HCFlowSniper/status/2099488648261755328",
+   "date": "2026-09-14",
+   "text": "📊 AM Crypto Pulse —  Sep 14, 2026\n\n🪙 Market snapshot (levels)\nBitcoin (BTC): Support $76,000 → $74,500 | Resistance $78,000 → $80,200\nEthereum (ETH): Support $2,400 → $2,350 | Resistance $2,500 → $2,575\nXRP: Support $1.30 → $1.25 | Resistance $1.40 → $1.45\nSolana (SOL): https://t.co/Vl6aXbir4y"
+  }
+ ]
+}

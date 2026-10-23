@@ -1,0 +1,219 @@
+{
+ "symbol": "AAPL",
+ "start": "2026-09-01T00:00:00Z",
+ "end": "2026-09-02T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AAPL (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2094916772709146686",
+   "date": "2026-09-01",
+   "text": "EOD Tape | Indexes + Mag7 | Tuesday, September 1st, 2026\n\nIndexes\n\n$SPY\n761.73 -5.32 (-0.69%) H/L 764.67 / 759.51\nOpened another bear gap and sold toward the island bottom, which is open to 757.67 with the full bull gap fill at 757.67. Bounced just above the open bear gap inside"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Tickeron",
+   "url": "https://x.com/Tickeron/status/2094752487643259088",
+   "date": "2026-09-01",
+   "text": "What Does Wall Street Expect From This Stock? Ask TickeronAI.\n\nA stock may be trading at $100 today.\nBut the more interesting question for a trader may be:\nWhere is it expected to go next?\n\nThat’s one of the ideas behind Tickeron Ask AI — helping retail traders quickly understand"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "TishaWillimas",
+   "url": "https://x.com/TishaWillimas/status/2094870913884020907",
+   "date": "2026-09-01",
+   "text": "🚨 POWER HOUR CHECK-IN: The levels are telling the story.\n\nA few hours after my midday market watch, here’s how the five setups have developed:\n\n$AAPL — Breakout confirmed\n\nApple cleared the $325.80 level highlighted earlier and reached $327.20 before settling near $325.75.\n\nThis https://t.co/MYf6r0dOPO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2094605765780672542",
+   "date": "2026-09-01",
+   "text": "EOD Tape | Indexes + Mag7 | Monday, August 31st, 2026\n\nIndexes\n$SPY\n767.05 -2.30 (-0.30%) H/L 767.99 / 764.72\nBear gap open and last week’s bull gap filled. Back below 767.25 on low volume with not much action.\n\n$QQQ\n716.76 +0.33 (+0.05%) H/L 717.58 / 713.16\nBounced off the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "TishaWillimas",
+   "url": "https://x.com/TishaWillimas/status/2094894806074019932",
+   "date": "2026-09-01",
+   "text": "🚨 AFTER-HOURS VERDICT: The closing tape confirmed the winners—and exposed the weak spots.\n\nThe S&amp;P 500 closed down 0.7%, while the Nasdaq lost 1% as surging oil prices and a 10-year Treasury yield near 4.79% kept pressure on growth stocks.\n\nHere’s how the five names from my"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "twintraderusa",
+   "url": "https://x.com/twintraderusa/status/2094598034269032880",
+   "date": "2026-09-01",
+   "text": "📈 U.S. 10-YEAR YIELD HITS 4.778% — HIGHEST SINCE EARLY 2025, GLOBAL DURATION SELLOFF (9:13 PM ET)\n\nUS Treasury 10-year just printed **4.778%** — the highest level since early 2025. 5-year and 10-year both at multi-year highs.\n\nThis isn't a US-only story:\n- German Bund futures"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2094663086393201082",
+   "date": "2026-09-01",
+   "text": "Macro Observatory Week 36 Tuesday Briefing\n\nMonday's telemetry confirms the primary dynamic outlined in our Sunday Omnibus: the great attrition takes control as 25 tickers map to Macro Bleed while the mega-cap tech leadership layer slips into exhaustion.\n\nWhile mainstream"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2094848001986732349",
+   "date": "2026-09-01",
+   "text": "🚨 BURAKTHESCALPER LLC — MIDDAY BATTLE PLAN\nTUESDAY • SEPTEMBER 1, 2026 | ~11 AM PT\n\n⚔️ BIAS: BEARISH / SELL RIPS UNTIL TECH + BREADTH RECLAIM. The latest tape still has the S&amp;P lower, Nasdaq underperforming, and Russell 2000 weaker as rising oil and Treasury yields pressure"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "kapualabs",
+   "url": "https://x.com/kapualabs/status/2094917326139215887",
+   "date": "2026-09-01",
+   "text": "Apple’s near‑term bullish hinges on reclaiming $314 with expanding volume—failure opens downside to the $249 island‑bottom fill. #AAPL https://t.co/lsSitvXpKs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinanceGlobal9",
+   "url": "https://x.com/FinanceGlobal9/status/2094673869684486487",
+   "date": "2026-09-01",
+   "text": "Spiking bond yields and oil after Hormuz tanker attacks hit sentiment. AI infra still firm on Anthropic's $35B Nvidia-backed Lambda deal vs rate fears.\n\nMixed: $NVDA Bullish, $TLT Bearish, $AAPL Bearish, $DELL Neutral"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "davey_juice",
+   "url": "https://x.com/davey_juice/status/2094850608305947025",
+   "date": "2026-09-01",
+   "text": "Is this bullish or bearish $AAPL ? https://t.co/zjwstF43TJ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2094844124918607936",
+   "date": "2026-09-01",
+   "text": "$1.6M OF PUTS HIT AAPL TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - SNDK, AMAT, COP, APA, SYF\nPUTS BOUGHT (bearish bets) - AAPL, DELL, AMZN, MU, MSFT\n\nSize is conviction. It is not intent. https://t.co/CRYzQRCPlx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2094874300842959042",
+   "date": "2026-09-01",
+   "text": "$614k OF PUTS HIT SNDK TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - MU, OSCR, MDB, META, LCID\nPUTS BOUGHT (bearish bets) - SNDK, AMD, TSLA, AAPL\n\nSize is conviction. It is not intent."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "TMA_MarketIntel",
+   "url": "https://x.com/TMA_MarketIntel/status/2094881413644599595",
+   "date": "2026-09-01",
+   "text": "TOP OPTIONS FLOW - Sep 1 🔥\n\nWhere the smart money is positioning today 👇\n\n🟢 BULLISH FLOW:\n$IWM $AAPL $GOOGL $AMD $ORCL $SOXL $SPY $LITE\n\n🔴 BEARISH FLOW:\n$GLD $QQQ $TSLA $DELL $NVDA $CRWD $AVGO\n\nKey levels for every name in the thread 🧵👇"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "OptionKing33996",
+   "url": "https://x.com/OptionKing33996/status/2094767571878965643",
+   "date": "2026-09-01",
+   "text": "🌅 Good morning everyone!\n\n📉 $SPX Futures: Gapping down ~50 points near 7,635.\n\n🐂 Bullish: Need to hold 7,650 for a move toward 7,670 → 7,680\n\n🐻 Bearish: Below 7,620 could drop toward 7,600 → 7,590\n\n💡 Trade Ideas\n• $WMT Call above 106\n• $NVDA Call above 218\n• $AAPL Call"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "OneTradeWex",
+   "url": "https://x.com/OneTradeWex/status/2094843598831518130",
+   "date": "2026-09-01",
+   "text": "With the Iran war heating back up after Trumps announcement of more airstrikes, here’s what stocks watch:\n\nBullish\nOil:\n$XLE $HAL $CVX $VG \nConsumers:\n$XLP $SONY $AAPL $WMT \nHealthcare:\n$XLV $LLY $PFE $JNJ\n\nBearish:\nTech:\n$QQQ $NVDA $TSLA $MU\nFinance:\n$XLF $GS $HOOD \nCloud:\n$NCLD"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2094782219105554891",
+   "date": "2026-09-01",
+   "text": "💪 $AAPL 0.59% sweep below 316.98 is just liquidity fuel for the uptrend\n\n- my bias is bullish here — the 15m wick through 316.98 that closed back above is a liquidity grab under the prevailing 1h bullish structure, not a reversal, and I treat it as fuel for continuation\n- daily https://t.co/xSlJAjMelS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "Ploutos97",
+   "url": "https://x.com/Ploutos97/status/2094670266509238746",
+   "date": "2026-09-01",
+   "text": "$AAPL Analysis 👀\n\nThe chart shows a strong overall uptrend, with higher highs and higher lows. Recently, price has consolidated around $310–$320 after reaching roughly $340, suggesting some profit taking but no clear breakdown yet.\n\nShort float is only 0.80%, which is low, while https://t.co/eF8hDbCJ1n"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2094878615288566193",
+   "date": "2026-09-01",
+   "text": "Someone just paid $128M to bet the biggest names in tech and energy go nowhere. That's the whole tape today.\n\nTAPE READ — SEP 1\n\nThe headline print today wasn't a directional bet. Someone sold 6,720 SLB Sep-18 $42 calls for $10.4M at 14:50 ET — deep in the money, 17 days to https://t.co/81AejsHdnC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Incite_corp",
+   "url": "https://x.com/Incite_corp/status/2094873173871477219",
+   "date": "2026-09-01",
+   "text": "$AAPL at $325, up 2%, now 4% above its 50-day near $312 and 6% below the $345 high.\n\nThat bullish flow is big call buying, people paying for upside. I would ADD on dips near $320, not chase them.\n\nVisit Incite AI. Ask and get personalized live market decisions! https://t.co/kVzSIIOQXC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "KevinJagiah",
+   "url": "https://x.com/KevinJagiah/status/2094614669004591359",
+   "date": "2026-09-01",
+   "text": "👑 TUESDAY'S KING NODES ARE LIVE\n\nMonday gave us:\n\n🔥 $TSLA 350 reclaim → 368.92\n🔥 $MU → 959.97\n🟢 $NVDA reclaimed 220\n\nTomorrow we reset.\n\nThe new paid trading plan maps all 12 names:\n\n$SPY $QQQ $TSLA $NVDA $AAPL $AMZN $MU $META $SPCX $MSFT $AMD $PLTR\n\n🧱 Walls\n\n🧲 Magnets"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "edgeplatsllc",
+   "url": "https://x.com/edgeplatsllc/status/2094794911208083528",
+   "date": "2026-09-01",
+   "text": "SweepraEdge Opens\n#182 AAPL AAPL 312.5P 2026-08-10 (bear)\n#183 MSTR MSTR 101C 2026-08-14 (bull)\n#184 NVDA  (bull)\n#185 LLY  (bear)\n#186 MSTR  (bull)\n\nVerified by BAB — Better Agents Bureau"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "edgeplatsllc",
+   "url": "https://x.com/edgeplatsllc/status/2094855307482808401",
+   "date": "2026-09-01",
+   "text": "SweepraEdge Opens\n#192 AAPL AAPL 312.5P 2026-08-10 (bear)\n#193 NVDA NVDA 217.5P 2026-08-10 (bear)\n#194 AMD AMD 495C 2026-08-10 (bull)\n#195 TSLA TSLA 317.5C 2026-08-12 (bull)\n#196 QCOM QCOM 175C 2026-09-04 (bull)\n\nVerified by BAB — Better Agents Bureau"
+  }
+ ]
+}

@@ -1,0 +1,201 @@
+{
+ "symbol": "TSLA",
+ "start": "2026-09-18T00:00:00Z",
+ "end": "2026-09-19T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "TSLA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "TajVincent",
+   "url": "https://x.com/TajVincent/status/2100992093577453675",
+   "date": "2026-09-18",
+   "text": "MARKET OUTLOOK &amp; KEY LEVELS — Friday, September 18, 2026 (Eastern/NYSE)\n\nShort-bias, CONFLICTED tape.\n\nRegime flipped hard overnight: yesterdays averages were +43 to +49 bullish across $SPY / $SPXW / $QQQ. Today they’re running about -33 to -39. Sustained red session, not a late https://t.co/hwdl48tGgE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TajVincent",
+   "url": "https://x.com/TajVincent/status/2100991206872224055",
+   "date": "2026-09-18",
+   "text": "LOSE)\n\nShort-bias, CONFLICTED tape.\n\nRegime flipped hard overnight: yesterdays averages were +43 to +49 bullish across $SPY / $SPXW / $QQQ. Today they’re running about -33 to -39. Sustained red session, not a late fade. TREND still dissents on the daily (mega-cap EMA / QQQ bull https://t.co/is0pAiBoKI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "QuantAlgosAi",
+   "url": "https://x.com/QuantAlgosAi/status/2101000899086725383",
+   "date": "2026-09-18",
+   "text": "⚠️ TRAPDOOR $TSLA — king node 360.00 is short gamma; the bullish/bearish technical level is NOT a magnet, it's a vol-trap for fast whipsaws.\n📐 Technicals (4h): Resistance 365.10 · Support 360.16 · Fib 61.8% @ 351.35 (up-leg) · RSI 50\n🎯 Options layer: magnet 360.00 · MVC 365.00 https://t.co/PFx7aJoSSk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2100948641070407746",
+   "date": "2026-09-18",
+   "text": "🚨 BURAKTHESCALPER LLC — FRIDAY 09/18 BATTLE PLAN\n\nOVERNIGHT UPDATE: Thursday’s cash session closed with tech leadership, but the overnight tape is already showing some divergence. $SPY was recently $760.33 overnight vs. $762.60 close, while $NVDA was $220.59 vs. $219.34 close,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 105,
+   "user": "wickedstocks",
+   "url": "https://x.com/wickedstocks/status/2100920602596913593",
+   "date": "2026-09-18",
+   "text": "📺 $TSLA AT THE REVERSAL TRIGGER — $389.75 NEXT IF IT HOLDS TODAY\n\nPlease ❤️like and 🔁share with fellow @Tesla traders/investors\n\n#Tesla closed yesterday at $366.20 alongside the broad post-Fed market reversal, and is trading above $368 today. \n\nThat puts #TSLA right at the https://t.co/wrcCVVl1II"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "xarkgg",
+   "url": "https://x.com/xarkgg/status/2100865663115960824",
+   "date": "2026-09-18",
+   "text": "building a programmable downside protection for tokenized stocks on @RobinhoodApp. \n\nHold TSLA, AMZN &amp; more, buy a Protection Note, set your floor (70/80/90%), keep all the upside. if price drops below your floor at expiry, get paid the difference in USDG\n\nhttps://t.co/Ihu1dO60qx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "LoganCarter962",
+   "url": "https://x.com/LoganCarter962/status/2100923077332771043",
+   "date": "2026-09-18",
+   "text": "$LSCC: What makes Lattice truly interesting isn't just its AI-related rhetoric, but the awkward yet highly profitable niche it occupies. No matter how powerful large-scale models become, servers still require systems to manage power, security, and boot-up processes. If GPUs are https://t.co/xVhb125PlB"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "StreetAlphaApp",
+   "url": "https://x.com/StreetAlphaApp/status/2100978162528133529",
+   "date": "2026-09-18",
+   "text": "✅ Swing Trader closed $TSLA\n\nExit $368.25\n+$14.13 (+0.30%)\n\nNet-impact flow reversed from +$21.9M bullish to -$6.8M bearish with bearish call-selling alerts, invalidating pyramid thesis\n\nSee how it works → https://t.co/uEkYYMH2JC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DaxBulls",
+   "url": "https://x.com/DaxBulls/status/2100906152238125146",
+   "date": "2026-09-18",
+   "text": "Today’s options flow watchlist:\n\n🟢 Bullish: $PLTR $ZS $AFRM $CCJ $CAT $W $AMZN $HUT $INTU $COHR $NTRA $ARM $WAT $WOLF $SDGR\n\n🔴 Bearish / Protective: $TSLA $FLUT $PWR $HPE $FICO $CGON $RDW $DKS\n\nCyber/software stood out on the bullish side, led by $PLTR and $ZS. $AMZN a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "kozaek",
+   "url": "https://x.com/kozaek/status/2100938775912194260",
+   "date": "2026-09-18",
+   "text": "Good morning fellas, is anyone around today or yall still sleeping?\n\n$SPY is bearish and $TSLA bullish pre-market. I hate when both directions doesn't align and go the opposite way."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "tommking7",
+   "url": "https://x.com/tommking7/status/2100741341101896188",
+   "date": "2026-09-18",
+   "text": "Fresh setups from today's chart review. 🚀\n\nBest actionable in a bullish regime:\n• $TSLA — corrected, clean setup\n• $AMD — broke the 50-MA, \"off to the races\"\n• $MU — bullish, potential 112\n• $NVO — hit the .618 fib and bounced\n• $MSFT — new wave starting\n• $PLTR — solid"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Pynvestment",
+   "url": "https://x.com/Pynvestment/status/2100933976852418584",
+   "date": "2026-09-18",
+   "text": "🚨Scan Golden Cross (50vs200)\n \nBullish (days, change)\nCRM (3, -5.0%)\nPLTR (9, +4.0%)\nMSFT (18, -1.9%)\nTMO (31, +11.8%)\nAXP (35, -9.1%)\n\nBearish (days, change)\nPG (28, +2.0%)\nCOST (46, -6.3%)\nWMT (56, -2.4%)\nTSLA (162, +6.0%)\nIBM (190, -4.0%)"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "StewartJamael",
+   "url": "https://x.com/StewartJamael/status/2100947249249628223",
+   "date": "2026-09-18",
+   "text": "📈 Tesla ($TSLA) Setup: Recovery Still In Progress\n\nCurrent price: $367.66\n\nTesla has recovered more than 23% from the $297.38 low, showing strong demand around lower levels.\n\nHowever, volume remains moderate, meaning buyers still need confirmation.\n\nBullish scenario:\n🔥 Break https://t.co/LMgU2VKO2r"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ruoxi0x3",
+   "url": "https://x.com/ruoxi0x3/status/2100880627948270014",
+   "date": "2026-09-18",
+   "text": "$SNDK - OUTLOOK Price is holding above the demand zone. \n\nBuyers are showing strong bullish momentum. \n\nExpect further upside from current levels.  \n\nBIAS: Bullish while price remains above demand.\n\nToday's Hot Options Watchlist: $NVDA $INTC $TSLA $SPCX $AAPL https://t.co/14zT4FL7fS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "jaymactrades",
+   "url": "https://x.com/jaymactrades/status/2100781971295314204",
+   "date": "2026-09-18",
+   "text": "Quick OPEX lesson for anyone wondering what that means 👇🏽\n\nOPEX = Options Expiration.\n\nIt’s when a large amount of options contracts expire, which can create extra volume, volatility, and sometimes weird/choppy price action as traders and institutions close, roll, or adjust https://t.co/dDsQfo03ti"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Bullish_Babu",
+   "url": "https://x.com/Bullish_Babu/status/2100805740441063584",
+   "date": "2026-09-18",
+   "text": "TradFi brokers gave us strict 9-to-5 market hours, absurd commission stacks, and two-dimensional trading.\n\n​@bitget putting 540+ zero-commission US Stock Options directly alongside crypto changed the meta entirely.\n\n​\"I’m bullish\" is just a guess. Natively trading options on TSLA https://t.co/wxXNo3h6fg https://t.co/ljyLuF2qvA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NASNMEDIA",
+   "url": "https://x.com/NASNMEDIA/status/2101051474893533624",
+   "date": "2026-09-18",
+   "text": "$TSLA — Tesla\n\nPrice: ~$363–365 | Day: about -0.3% to -1.2% (prev. close $366.20)\n\nRange: $360.75–$370.90 | Vol: ~39M vs ~40M avg — normal\n\nWhat’s driving it: No single headline. Stock is drifting after yesterday’s bounce. News mix is mixed-to-soft: “safest cheap EV” coverage"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "xenomecha",
+   "url": "https://x.com/xenomecha/status/2101044138925769197",
+   "date": "2026-09-18",
+   "text": "TOP PICKS - $TSLA \nWeekly Chart Update, September 18th 2026\n\n$TSLA still has so much work to do. It doesn't appear to be ready yet. It's making progress, though.\n\nFirstly, the 0.618 fib retracement remains a key level to overcome in order to unlock further upside. Combined with https://t.co/ztEadotbcy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AurexSignal",
+   "url": "https://x.com/AurexSignal/status/2100936628445278298",
+   "date": "2026-09-18",
+   "text": "Seeing chatter on different names like $NVDA $META $HOOD $TSLA $AMD \n\nRan them through the scanners and $AMD is the only one of these large caps triggering multiple bullish scanners at once.\n\n-Bull flag \n-Minervini Trend Template\n\nMost of these other ones are quieter on the High https://t.co/3iKVByDtcY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "GarrettKing365",
+   "url": "https://x.com/GarrettKing365/status/2100923111151681925",
+   "date": "2026-09-18",
+   "text": "The easiest mistake to make with $HOOD isn't misjudging poor performance, but relying on an outdated label.\n\nMany still view it merely as a \"commission-free trading app + crypto lottery.\" But the ledger has turned a new page: trading activity remains, yet revenue increasingly https://t.co/MrHngcP3le"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "TessSwiftAI",
+   "url": "https://x.com/TessSwiftAI/status/2101046313609572676",
+   "date": "2026-09-18",
+   "text": "TSLA closed $364.27 (range $360.75–$370.9) as US cash settled. Bull case: Austin robotaxi now unsupervised metro-wide, 1M+ miles, Cybercabs since Sept 3. Bear case from @RossGerber and @Cordoba_trader: growth skepticism. Proof of autonomy isn't proof of multiple."
+  }
+ ]
+}

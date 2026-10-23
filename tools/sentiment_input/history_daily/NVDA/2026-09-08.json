@@ -1,0 +1,174 @@
+{
+ "symbol": "NVDA",
+ "start": "2026-09-08T00:00:00Z",
+ "end": "2026-09-09T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "NVDA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2097385524314972522",
+   "date": "2026-09-08",
+   "text": "🐳 Wall Street is debating if $GOOGL is undervalued. One trader just spent $22.3M saying yes.\n\nTHE TRADE\n\nAt 13:51 ET, someone bought 20,000 GOOGL November 20 $370 calls for $22.3 million, paying an average of $11.15 per contract with the stock at $339.36. That is a https://t.co/Edmr51tYmS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2097453332801396883",
+   "date": "2026-09-08",
+   "text": "EOD Tape | Indexes + Mag7 | Tuesday, September 8th, 2026\n\nIndexes\n\n$SPY\n765.96 -4.23 (-0.55%) H/L 769.70 / 765.15\nOpened a bear gap and filled last week's island bottom, which killed a lot of the momentum we were looking for. Next resistance is about 762.5 on the 65-minute, the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2097116018120544573",
+   "date": "2026-09-08",
+   "text": "Tickers dominating X chatter right now:\n\n1. Strategy Inc $MSTR is little changed in post-market after falling 1.4% in the regular session\n\n🟢 Sentiment: 48% bullish, 7% bearish, 45% neutral\n\nMicroStrategy announced a $370 million Bitcoin purchase, ending a two‑month buying pause https://t.co/Q9jpE3yT2g"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "JohnBla60515455",
+   "url": "https://x.com/JohnBla60515455/status/2097313516604785070",
+   "date": "2026-09-08",
+   "text": "$NVDA Reclaims 231.39 — But Bulls Still Need Confirmation\n\nNVDA is back around $231.47 after reclaiming 231.39, but the bigger question is whether buyers can actually hold the recovery.\n\nFriday’s push to a fresh $234.76 high was completely rejected, yet 229.14 held perfectly as https://t.co/4Qtk8ibO1q"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "FinancialMelody",
+   "url": "https://x.com/FinancialMelody/status/2097434736935534717",
+   "date": "2026-09-08",
+   "text": "Bank of America says Nvidia ($NVDA) could be at least 50% undervalued.\n\nYet, many people in the market still consider Nvidia overvalued.\n\nThat’s what makes this interesting.\n\nIs Nvidia actually undervalued?\n\nOr are people simply calling it overvalued because of its valuation?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "bartuhelvaci_",
+   "url": "https://x.com/bartuhelvaci_/status/2097285072495772100",
+   "date": "2026-09-08",
+   "text": "As of today, I’m increasing my cash position from around 8% to roughly 15%.\n\nOil prices aren’t coming down (1st chart), while Japanese bond yields are trading at their highest levels in 12 years (2nd chart). With such a strong upward trend there, I don’t want to fight the https://t.co/HY0TETIpDB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Ayush_Panda25",
+   "url": "https://x.com/Ayush_Panda25/status/2097304708239016385",
+   "date": "2026-09-08",
+   "text": "Morning Notes, 9/8\nThe US and Iran traded strikes over the weekend, and oil is sitting at six week highs, with WTI at 94. Futures are soft in response, and the Dow is leaking the most of the three, while the Nasdaq sits flat. Iran sent conditions back to the US through"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "pf02101963",
+   "url": "https://x.com/pf02101963/status/2097371802481668248",
+   "date": "2026-09-08",
+   "text": "🚨 NQ/NASDAQ RADAR — 18:40 SWISS TIME | 8 SEPTEMBER\nA major intraday reversal has developed since the opening sell-off.\n\nThe most important fact now is simple:\n\nThe Nasdaq did NOT confirm the strong bearish impulse seen during the first hour.\n\nNQ/Nasdaq has recovered sharply,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "pf02101963",
+   "url": "https://x.com/pf02101963/status/2097415417199198703",
+   "date": "2026-09-08",
+   "text": "NQ/NASDAQ CLOSING RADAR — 22:00 SWISS TIME | 8 SEPTEMBER\nWall Street closes a highly unusual session in which the macro environment remained clearly risk-off, but technology — particularly semiconductors — repeatedly resisted the pressure.\n\nThe key message from today:\n\nThe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "pf02101963",
+   "url": "https://x.com/pf02101963/status/2097320551136067703",
+   "date": "2026-09-08",
+   "text": "🚨 NQ/NASDAQ EXCEPTIONAL UPDATE — 15:44 SWISS TIME | 8 SEPTEMBER\nThe opening picture has changed materially.\n\nNasdaq initially opened comparatively resilient despite a hostile macro backdrop, but that resilience has now been rejected. The first post-open move has developed into a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "PhantomSpotAlgo",
+   "url": "https://x.com/PhantomSpotAlgo/status/2097446140350214444",
+   "date": "2026-09-08",
+   "text": "LIVE on PSA! Ranges for $SPY $IWM $QQQ $TSLA $AAPL $MSFT $GOOGL $AMZN $NVDA and $META sent around 4:20 PM Eastern. Easily prepare with upside/downside, runners' and bonus types of targets. 🎯 https://t.co/FLE8t4Jd9c"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Devorahsounds",
+   "url": "https://x.com/Devorahsounds/status/2097352967540072802",
+   "date": "2026-09-08",
+   "text": "$NVDA  -1.7% | Sellers Remain in Control as Price Tests Session Lows\nNVIDIA is trading around $226.43, down 1.71%, after opening at $233.14 and briefly reaching $233.71 before reversing sharply.\n\nThe intraday structure has remained decisively bearish. The initial rejection near https://t.co/Q6BQi94BnM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NVDAdirection",
+   "url": "https://x.com/NVDAdirection/status/2097326869834002769",
+   "date": "2026-09-08",
+   "text": "VIDA Verdict (10:06 AM EDT)\n\n[LIVE SIGNAL LOGGED - TRADE 1]\n\nACTION: BUY NVDA PUTS\n\nOption Contract: NVDA Sep 09, 2026 $230.00 Puts\nOption Entry Price: $3.05 (Ask)\nUnderlying Entry Price: $228.53\nUnderlying Stop Loss: $229.85 (Reclaim of Initial Open Low / breakout invalidation)"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "robin_cyblecity",
+   "url": "https://x.com/robin_cyblecity/status/2097247359176708303",
+   "date": "2026-09-08",
+   "text": "Floor price guarantee for Robin City landmarks.\n\nEvery landmark was issued at 5,000,000 $ROBINHOOD CITY. If an owner lists one on the Market below its issue price, the treasury buys it back at the ask.\n\nYour downside is capped at the issue price. Your upside is every 30-minute"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 43,
+   "user": "JesseOlson",
+   "url": "https://x.com/JesseOlson/status/2097360564096045119",
+   "date": "2026-09-08",
+   "text": "$NVDA is still bullish on the daily chart but...\n\nSigns of a reversal: \n• Price failed to make a new ATH\n• Bearish divergence\n• Rising wedge\n• Bearish engulfing candle\n\nNo confirmations of a reversal as of yet.\n\nAre you locking in gains or pushing it higher? https://t.co/Q6UgBaF86z"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MrJosephsIbvbk8",
+   "url": "https://x.com/MrJosephsIbvbk8/status/2097126309608468796",
+   "date": "2026-09-08",
+   "text": "KEY LEVELS TO WATCH FOR POPULAR STOCKS\n\nBullish: $NVDA, $PLTR, $HOOD\n\nNeutral: $TSLA, $AMD, $MU, $NBIS, $AEHR, $HIMS, $SOFI, $AAOI\n\nBearish: $AVGO, $ONDS, $CIFR, $OKLO, $RKLB, $ASTS, $IONQ, $OPEN, $IREN https://t.co/MXVU699Mo1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "obed1TG",
+   "url": "https://x.com/obed1TG/status/2097324318136893810",
+   "date": "2026-09-08",
+   "text": "🌅 Good morning\n\n📊 $SPX Futures: Slightly down ~20 points near 7,698\n\n🐂 Bullish: Hold 7,700 → 🎯 7,720 → 7,750\n\n🐻 Bearish: Below 7,680 → 🎯 7,660 → 7,650\n\n💡 Trade Ideas\n\n$IREN 48C above 46\n$IONQ 45C above 43\n$NVDA 235C above 233\n\n Sideways: $MU $SNDK $TSLA $QCOM $DELL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AkinAdemGokhan",
+   "url": "https://x.com/AkinAdemGokhan/status/2097379280715915329",
+   "date": "2026-09-08",
+   "text": "Three TITAN picks run against the multi-day trail: $INTC CALL while the tape prints 12/14 days PUT ($380M), $ORCL CALL vs 10/14 days PUT, $NVDA PUT vs 11/14 days CALL ($899M).\n\nMacro bias 1.06 bullish, the last 3 days flipped bearish. The split holds into the afternoon. https://t.co/y9tylovIbS"
+  }
+ ]
+}

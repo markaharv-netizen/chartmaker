@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-09-13T00:00:00Z",
+ "end": "2026-09-14T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 160,
+   "user": "trychinapad",
+   "url": "https://x.com/trychinapad/status/2099190363168854179",
+   "date": "2026-09-13",
+   "text": "Time to address every single FUD comment.\n\nWe launched, the site buckled under the traffic for an hour, and the timeline filled with questions and accusations. Fair. Here is every one of them, with what is true, how you verify it yourself, and why we are more bullish now than we"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2098993790862393589",
+   "date": "2026-09-13",
+   "text": "BTC Single-Coin Histogram Analysis\n\nTrue Retail Longs (Blue): Clustered near extreme top percentiles, showing high retail crowd consensus on the long side.\n\nTrue Retail Shorts (Orange): Compressed down near bottom percentiles, confirming an absolute lack of retail downside https://t.co/U55jFCSpbe"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2099136062635258108",
+   "date": "2026-09-13",
+   "text": "📊 $ADA Overview | 2026-09-13\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#Cardano\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2099137794467893289",
+   "date": "2026-09-13",
+   "text": "BTC Single-Coin Histogram Analysis\n\nTrue Retail Longs (Blue): Remains heavily saturated at extreme top percentiles, signaling massive retail crowd consensus on the long side.\n\nTrue Retail Shorts (Orange): Clustered near bottom percentile extremes, highlighting an absolute absence https://t.co/p3mlYvIOjp"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2099152434668937721",
+   "date": "2026-09-13",
+   "text": "📊 $FIL Overview | 2026-09-13\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🐌 Weak\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#Filecoin\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2099141099566616980",
+   "date": "2026-09-13",
+   "text": "📊 $AVAX Overview | 2026-09-13\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Avalanche\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 30,
+   "user": "japhethneo",
+   "url": "https://x.com/japhethneo/status/2099199278728261908",
+   "date": "2026-09-13",
+   "text": "This coin is seriously undervalued at these levels. \n\nThis is the kind of dip that gives you an opportunity to load up before the next move. A potential 10X upside is on the table if the thesis plays out.\n\nYou already know the play — accumulate, hold, and let the market do its https://t.co/Oq2GIB6mH7"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2099146137374515411",
+   "date": "2026-09-13",
+   "text": "📊 $PEPE Overview | 2026-09-13\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🔴 Bearish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI 🟢 Bounce\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#PEPE\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2099137930673709565",
+   "date": "2026-09-13",
+   "text": "BTC Coin Pulse Chart &amp; Indicator Analysis\n\nLiquidation Levels (Long / Short): Dense long liquidation pools sit stacked directly beneath current price consolidation, while overhead short liquidation clusters remain sparse. This asymmetric liquidity profile creates a magnetic pull https://t.co/SCiAM9eKDP"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2098993937675657527",
+   "date": "2026-09-13",
+   "text": "BTC Coin Pulse Chart &amp; Indicator Analysis\n\nLiquidation Levels (Long / Short): Dense long liquidation pools sit stacked directly beneath current price consolidation, while overhead short liquidation clusters remain sparse. This asymmetric liquidity profile creates a magnetic pull https://t.co/4T90P0Rc6n"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 57,
+   "user": "SeerMarket",
+   "url": "https://x.com/SeerMarket/status/2099065629604995340",
+   "date": "2026-09-13",
+   "text": "Entire timeline went from bullish Friday during the day to bearish during evening on crypto.\n\nThese are levels to accumulate, I expect prices to go much higher and very quickly.\n\nThere is no better meme coin than $pepecoin \n\n2nd meme coin in existence."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "0x_Lanceee",
+   "url": "https://x.com/0x_Lanceee/status/2099223416473571542",
+   "date": "2026-09-13",
+   "text": "Memecoin Terminology Part 4 just dropped and it’s pure alpha\n\nBullish vs Bearish is the difference between “this coin is going higher” and “this coin is dead.”\n\nThen he hits you with Whale 🐳\nA whale isn’t just rich.\nIt’s the guy who sizes in so hard the chart moves.\nIf you don’t https://t.co/xwb8rtFH65 https://t.co/t72rKayl79"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 229,
+   "user": "Crypto_Moe84",
+   "url": "https://x.com/Crypto_Moe84/status/2099238627293188427",
+   "date": "2026-09-13",
+   "text": "General Rule:\n\nIf you hold a coin that broke its 2022 bottom to the downside, be careful later in the bull market.\nThese coins require special attention in the bull market when it comes to taking profits later.\n\nOf course they can make a new ATH, but don't forget to start selling"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptrixLabs",
+   "url": "https://x.com/CryptrixLabs/status/2099231523555733791",
+   "date": "2026-09-13",
+   "text": "SKHYB is on the radar but not worth chasing here — the risk-to-reward is upside-down until it can close a 4-hour candle back above ~$190 on real volume.\n\nAt $180.80, the coin is sitting just under a low ceiling near $190 with the next real floor all the way down at ~$158. That's https://t.co/uWd9sdweVm"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2099073341113913376",
+   "date": "2026-09-13",
+   "text": "👀 $ETH under lower high at -1.9% with bearish 1h bias still intact\n\n- my bias is bearish here on the 1h while ETH sits under the last lower high — this is a counter-trend pullback inside still-bullish daily and weekly structure, so I only treat shorts as valid with a clear https://t.co/IQSWh3LV3i"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2099255973328171474",
+   "date": "2026-09-13",
+   "text": "📉 $ETH -0.6% on the day while bearish 1h structure holds below key levels\n\n- my bias is bearish here on the 1h while price holds below 2546.11 — this is a counter-trend pullback inside bullish daily, weekly, and BTC structure, so I want a clear rejection or lower-timeframe shift https://t.co/nODq4bObPF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2099012485227372769",
+   "date": "2026-09-13",
+   "text": "🧭 $ETH +0.5% 24h and the bullish 1h structure stays locked in\n\n- my bias is bullish here — 1h structure still prints as bullish and it is aligned with daily and weekly, though this is a counter-trend hold versus a bearish BTC tape so I want a clean hold of the last higher low https://t.co/j4YAWG69xS"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2099168011227656216",
+   "date": "2026-09-13",
+   "text": "🐻 $AKE 4h BTC divergence is noise not a flip — structure stays lower highs on -6.4%\n\n- my bias is bearish here on the 1h — Dow structure is still lower highs / lower lows, so I treat the 4h coin/BTC higher-low as relative-strength noise, not a trend flip; this is a counter-trend https://t.co/1rPLGxY69V"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2099030063358394670",
+   "date": "2026-09-13",
+   "text": "💥 Shorts jammed at -2% funding while $MTL rips 17% — squeeze fuel is stacked\n\n- my bias is bullish here — 1h and daily structure are both bullish (HH/HL intact) while shorts are crowded to an extreme (funding deeply negative), so that positioning is AGAINST the trend and I treat https://t.co/O950lqC5me"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2099109763246088266",
+   "date": "2026-09-13",
+   "text": "🧐 $XPL -2% masks real 4h bullish divergence vs BTC\n\n- my bias is bullish here on the 1h — structure already holds a bullish swing vs the last higher low at 0.07909, daily is aligned, and the 4h coin/BTC higher-low vs a USDT lower low is real relative strength at the lows, not https://t.co/yBnSu69SDj"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2099003044943831155",
+   "date": "2026-09-13",
+   "text": "⚠️ $IOST 2.7x volume spike on that 3.2% pop looks like a liquidity grab, not real buying\n\n- my bias is bearish here — that 2.7x burst and the +3.2% pop is not accumulation I trust; it looks like a liquidity grab into the last swing, and 1h structure is still lower-high / https://t.co/9kuuDzZpRC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2099020943674704008",
+   "date": "2026-09-13",
+   "text": "✅ $DOS 36.4x volume spike locks in the HH/HL structure for bulls\n\n- my bias is bullish here on DOS #DOSUSDT.P 1h — structure still prints HH/HL and I treat the 36.4x volume spike with the +2.8% burst as a liquidity grab into the 0.22 area, not a reason to chase longs at the https://t.co/9BntcYf3L7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 337,
+   "user": "Picolas_Caged",
+   "url": "https://x.com/Picolas_Caged/status/2099260674635423875",
+   "date": "2026-09-13",
+   "text": "The only reason people don't want to buy $STONK eco coins is because they are unproven and low MC.\n\nAt low MC, coins can do 50% +/- in a day no problem.\n\nSo 350% APR isn't attractive, because who cares about high interest when you can lose -50% in a day and it might go to zero?"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2099181320702189762",
+   "date": "2026-09-13",
+   "text": "❗ $IOST 9.7x volume into -3% selling pressure confirms the breakdown\n\n- my bias is bearish here — the 1h structure is already in lower highs/lower lows, price is trading under the last swing low at 0.000810 after a high-volume sell impulse, and that spike with declining open https://t.co/zzS58fqzFx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "DantePickss",
+   "url": "https://x.com/DantePickss/status/2098957180179194005",
+   "date": "2026-09-13",
+   "text": "A Mensa kid just market the bottom \n\n$ansem coin will lead the bull run , it will be the coin that will break ceilings we never seen before , \n\nBe bullish on who started the bull run @blknoiz06 https://t.co/6LxF9H32Kq https://t.co/rNPbZ3zvH4"
+  }
+ ]
+}

@@ -1,0 +1,210 @@
+{
+ "symbol": "COIN",
+ "start": "2026-09-20T00:00:00Z",
+ "end": "2026-09-21T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2101507140271669646",
+   "date": "2026-09-20",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 (leaning bullish) - 𝗕𝘂𝗹𝗹𝗶𝘀𝗵 𝗱𝗿𝗶𝘃𝗲𝗿𝘀 - Strong on‐chain activity: 5.2 B non‐vote transactions in August, &gt; $7 B tokenized value, #348 M+ 24‐h RWA volume. - Capital inflows: ≈ #61 M SOL‐ETF inflows; speculation that the Solana https://t.co/RElwhvnFBO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2101493083049251195",
+   "date": "2026-09-20",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-09-19 (Evening Edition)\n\n**Published:** 2026-09-19 09:05 PM CT\n\nBitcoin is grinding higher on a Saturday, with the Fear &amp; Greed Index holding at 71 (Greed) for a third consecutive day. The market is digesting a 5.6% seven-day gain"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101615469807505500",
+   "date": "2026-09-20",
+   "text": "📉 $BTC -1.1% keeps lower highs locked in with bearish structure intact\n\n- my bias is bearish here — 1h, daily and weekly Dow structure are all aligned lower highs / lower lows, so this is not a counter-trend call\n- I expect a first probe of the latest swing low liquidity around https://t.co/Uw5C8RczSm"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101585161577963869",
+   "date": "2026-09-20",
+   "text": "😏 $MYX -12.3% shows why that 4h BTC higher-low was never going to override the 1h bear trend\n\n- my bias is bearish here while 1h structure stays in LH/LL — the 4h coin/BTC higher-low is quiet relative strength vs a bearish BTC, but it does not override the confirmed 1h https://t.co/16QS3bNzbu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 390,
+   "user": "virtualbacon",
+   "url": "https://x.com/virtualbacon/status/2101794134797549654",
+   "date": "2026-09-20",
+   "text": "Someone asked me if they should sell their Solana at 107 and buy it back cheaper around 100.\n\nNo. There's no reason to sell anything right now.\n\nHere's the part people skip. If Bitcoin drops 15 percent from here, Solana drops something like 25 percent. That isn't a surprise and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4284,
+   "user": "DrProfitCrypto",
+   "url": "https://x.com/DrProfitCrypto/status/2101655494763204977",
+   "date": "2026-09-20",
+   "text": "#Bitcoin – What’s Next?\n\nThe Big Sunday Report: All We Need to Know\n\nTA / LCA / Psychological Breakdown: Something historic is happening! Friends, last week I showed you the chart with the MA50 Weekly and made one thing very clear: I did not agree with the idea that this moving https://t.co/9kosAckVLS"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2101678651058335938",
+   "date": "2026-09-20",
+   "text": "Single-Coin Histogram Chart Analysis\n\nVerdict: Bearish (Contrarian Setup)\n\nKey Takeaways:\n\nRetail Long Overcrowding: True Retail Longs (Blue) jumped to 48.582 (100th percentile, 24h Δ +0.942), while True Retail Shorts (Orange) dropped to 51.418 (0th percentile, 24h Δ -0.942). https://t.co/8Nng2wYi1i"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2101689108925931572",
+   "date": "2026-09-20",
+   "text": "📊 $FIL Overview | 2026-09-20\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🐌 Weak\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#Filecoin\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2101682812566835562",
+   "date": "2026-09-20",
+   "text": "📊 $PEPE Overview | 2026-09-20\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#PEPE\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2101672735369789503",
+   "date": "2026-09-20",
+   "text": "📊 $ADA Overview | 2026-09-20\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Cardano\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 44,
+   "user": "Shawn173985",
+   "url": "https://x.com/Shawn173985/status/2101688471454974218",
+   "date": "2026-09-20",
+   "text": "Bro it’s because you flipped from bullish to bearish in a blink of an eye. That’s the issue. You said IF was a +1B coin, if you truly thought that you wouldn’t sell at 10M lol https://t.co/YOKKuUCRuT"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "W0rkerOfSecrets",
+   "url": "https://x.com/W0rkerOfSecrets/status/2101761209905316203",
+   "date": "2026-09-20",
+   "text": "$COIN MASSIVE BUY SIGNAL.\n\nGreen diamond in Weekly Timeframe is fairly bullish especially in a stock that’s been in a bearish regime for a while. \n\nThis particular buy signal is a a recovery signal in an early markup path, it’s a research indicator.   \n\nYes, I’ve done research on https://t.co/ExGVCuyJKs"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 38,
+   "user": "AltOnChain",
+   "url": "https://x.com/AltOnChain/status/2101606348798476677",
+   "date": "2026-09-20",
+   "text": "Garrett jin sitting on a fat $ZEC bag is bearish as hell for ZEC.\n\nDude interned at a CCP state bank.\n\nA privacy coin with him as one of the biggest known holders is not bullish it’s a BIG problem imo. https://t.co/zS2K4Dgsfu"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101572455634477290",
+   "date": "2026-09-20",
+   "text": "👀 $ETH -2.3% but 1h bias stays bearish on this counter-trend pullback\n\n- my bias is bearish here on the 1h — this is a counter-trend pullback inside still-bullish daily and weekly structure, so I only take the short if rejection is clean and I do not chase\n- I expect price to https://t.co/rjYjS7gbOI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ImRoast0",
+   "url": "https://x.com/ImRoast0/status/2101540984882696240",
+   "date": "2026-09-20",
+   "text": "This is what I typed in chat gpt use for yourself if you want to also see the proof that this coin works \n(What I typed in chat got): tipp4C4Jnpft26HC9VXNjUPidojZqxXf8nzKvrKf5BS that’s the contract address this meme coin claims to provide tips to TikTok creators that the meme https://t.co/quTnYOYPez"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ImRoast0",
+   "url": "https://x.com/ImRoast0/status/2101540744209354903",
+   "date": "2026-09-20",
+   "text": "This is what I typed in chat gpt use for yourself if you want to also see the proof that this coin works \n(What I typed in chat got): tipp4C4Jnpft26HC9VXNjUPidojZqxXf8nzKvrKf5BS that’s the contract address this meme coin claims to provide tips to TikTok creators that the meme https://t.co/60L7IdBmye"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101470858522874005",
+   "date": "2026-09-20",
+   "text": "⚡ $SOXL dips 1.4% yet the 4h BTC divergence keeps the 1h bias firmly bullish for the reclaim\n\n- my bias is bullish here on the 1h while price holds the last higher low — this is a counter-trend bounce inside a bearish daily, so I want a clear sweep of 119.57 and a reclaim before https://t.co/2ysIpHHh0Y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 68,
+   "user": "0xplug_",
+   "url": "https://x.com/0xplug_/status/2101518700230697342",
+   "date": "2026-09-20",
+   "text": "Why i went from extremely bullish on $PAID to bearish.\n\nand it really comes down to one question:\n\nwhere does the actual demand for $PAID come from?\n\nthe fee distribution tech is cool. automatically sending fees to someone without them needing to launch, claim, or even"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101766619701686323",
+   "date": "2026-09-20",
+   "text": "👀 $TIA +0.3% rides 4h BTC divergence but 1h lower highs keep the bias bearish\n\n- my bias is bearish here while 1h structure stays in lower highs/lower lows and price remains below the 0.4324 flip — the 4h coin/BTC higher-low relative-strength print is noted, but it does not https://t.co/FM1MqPkN8l"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101720782267097536",
+   "date": "2026-09-20",
+   "text": "⬇️ $LIT 4h BTC divergence looks like fresh fuel for sellers after -7.4%\n\n- my bias is bearish here on the 1h — structure is already in lower-high / lower-low mode and that 4h coin/BTC relative-weakness (USDT higher high vs ratio lower high) plus BTC’s own bearish tape and https://t.co/ROuYIN0Ex8"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101661791851876680",
+   "date": "2026-09-20",
+   "text": "⚠️ $XVG -3.3% dump on 2.5x volume looks like distribution, not panic flush\n\n- my bias is bearish here — the 1h Dow structure is already in lower-high / lower-low mode, weekly and BTC are bearish too, so this dump with 1.87x volume looks like distribution rather than a finished https://t.co/QBYCOjNZsV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101759009090912387",
+   "date": "2026-09-20",
+   "text": "🔥 $DOGS 25.7x volume spike with buyers stepping up — structure says continuation\n\n- my bias is bullish here — 1h, daily and weekly structure are aligned bullish, so I treat this as continuation, not a coin-flip; the move is still counter-trend vs bearish BTC, so I demand a https://t.co/l4FKU8m2fV"
+  }
+ ]
+}

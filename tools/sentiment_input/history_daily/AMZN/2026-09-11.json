@@ -1,0 +1,201 @@
+{
+ "symbol": "AMZN",
+ "start": "2026-09-11T00:00:00Z",
+ "end": "2026-09-12T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AMZN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2098225921996042331",
+   "date": "2026-09-11",
+   "text": "EOD Tape | Indexes + Mag7 | Thursday, September 10th, 2026\n\nIndexes\n$SPY\n757.63 -4.77 (-0.63%) H/L 760.11 / 756.64\nOpened a 4th bear gap for the 4th straight day and filled the island bottom. 760 has to be recaptured for any upside; next bull gap sits below 750.\n\n$QQQ\n709.11"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2098467943671558351",
+   "date": "2026-09-11",
+   "text": "$1.2M OF CALLS HIT AMD TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - AMD, AAL, FTAI, AAPL, AMZN\nPUTS BOUGHT (bearish bets) - BE, AXP, SKHY, OKLO\nFOUGHT OVER (heavy both ways) - TSLA, MU\n\nSize is conviction. It is not intent."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Zurieliooo",
+   "url": "https://x.com/Zurieliooo/status/2098393642012496355",
+   "date": "2026-09-11",
+   "text": "Premarket 9/11:\n\n$QQQ/Nasdaq futures are ~+0.5–0.6%, but today’s green means very little until CPI hits at 8:30AM ET. Core CPI is expected around +0.2% MoM; a hotter print could quickly bring more Fed-hike risk back into the tape. (AP News)\n\nMacro is still the biggest obstacle:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AlphaFeedX",
+   "url": "https://x.com/AlphaFeedX/status/2098515931450253537",
+   "date": "2026-09-11",
+   "text": "💰 The Silent Killer of the U.S. Economy Just Hit a Record 🚨\n\nU.S. diesel just breached $6/gallon for the first time ever ,  and this isn't just a pump problem.\n\nKey Takeaways:\n📍 Diesel is the fuel that moves everything we eat, wear, and use ,  trucking, rail, farming\n📍 https://t.co/mWubqPpRmy"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2098519673914671497",
+   "date": "2026-09-11",
+   "text": "$DASH \n\nSubscriber Chart Request\n\n(Want your favorite ticker charted? Become a member at https://t.co/IJumYWsquA and enjoy unlimited technical chart requests).\n\n$DASH printed a bearish Fred Tam reversal signal at horizontal resistance last week, and this week’s bearish https://t.co/VsuKXbTD0V"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Merrill_MG",
+   "url": "https://x.com/Merrill_MG/status/2098523565670957544",
+   "date": "2026-09-11",
+   "text": "$ORCL Looked like a big breakout potential few days ago at $170, but now everything looks neutral.  \n \n■ RSI retracted to 52 \n■ MACD is flat with no strong bullish or bearish bias \n■ Back to midpoint in Bollinger Band, which happens to be 20 MA.  \n■ One notable negative is https://t.co/wIVIKvDW00"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "KevinJagiah",
+   "url": "https://x.com/KevinJagiah/status/2098244676021108777",
+   "date": "2026-09-11",
+   "text": "👑 FRIDAY'S KING NODES ARE LIVE\n\nThursday gave us the perfect lesson:\n\n$MU reached 999 vs. our 1000 node — no confirmation.\n\n$SPCX reached 154.70 vs. 155 — then lost 150.\n\n$META cleared 650 → 663.50 — then closed back below 650.\n\nMeanwhile $AMD held 500 → 516.33.\n\nTouching a"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "RichPeterLi",
+   "url": "https://x.com/RichPeterLi/status/2098302438759608771",
+   "date": "2026-09-11",
+   "text": "$AMZN --- Amazon Web Services (AWS) and Qualcomm officially announced a landmark multi-generational blockbuster partnership: over the coming years, AWS will purchase up to $60 billion worth of Qualcomm AI inference chips and networking silicon, with the agreement extending https://t.co/TjczUlcWfT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2098202815290069441",
+   "date": "2026-09-11",
+   "text": "$IONQ\n\nSubscriber Chart Request  \n(Want your favorite ticker charted? Become a member at https://t.co/IJumYWrSF2 and enjoy unlimited technical chart requests).\n\n$IONQ remains in a broader uptrend defined by a series of higher lows, but short-term momentum favors the bears over https://t.co/DzMaTFoAe1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "EdidiongMbong",
+   "url": "https://x.com/EdidiongMbong/status/2098517435423052237",
+   "date": "2026-09-11",
+   "text": "Oil pulled back from its spike, helping stocks recover. But inflation remains the wildcard, with the Fed meeting next week and rate-hike expectations elevated. \n\nAI/TECH:  AAPL, NVDA, AMD, META, GOOGL, AMZN, DELL, HPE, CSCO\n\nCRYPTO: BTC, ETH, SOL, XRP\n\nTHE TAKE: The bull market"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "deemancpa",
+   "url": "https://x.com/deemancpa/status/2098473492383485990",
+   "date": "2026-09-11",
+   "text": "⛽️⛽️⛽️🚨 $AMZN: $130M of call gamma dies Friday. What's left underneath? $62M of PUT gamma.\n\n📉 Triangle at apex. IV percentile 10%. No earnings till 10/30.\n\n🧵 The post-opex trade 👇\n\n2/\n⚡ THE SETUP\n🧲 This week: pinned to $260, capped at $265\n⏰ Mon 9/21: OTM calls expire → https://t.co/aoR0CGLQp4"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "AryaFintech",
+   "url": "https://x.com/AryaFintech/status/2098526998868238373",
+   "date": "2026-09-11",
+   "text": "For September 11, 2026, the market experienced a broadly bullish, risk-on session, with nearly every major sector and index finishing in positive territory.\n\nMarket Performance Overview:\n\n🔹 Index Returns: All major U.S. indices closed higher. The tech-heavy Nasdaq 100 (QQQ) led https://t.co/mAxBkseQaB"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AryaFintech",
+   "url": "https://x.com/AryaFintech/status/2098525777465901210",
+   "date": "2026-09-11",
+   "text": "Based on the provided performance chart for September 11, 2026, the market experienced a broadly bullish, risk-on session, with nearly every major sector and index finishing in positive territory.\n\nMarket Performance Overview:\n\n🔹 Index Returns: All major U.S. indices closed https://t.co/L02eiP3Rr7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AiGlitchPark",
+   "url": "https://x.com/AiGlitchPark/status/2098516426046816568",
+   "date": "2026-09-11",
+   "text": "GLITCH FRIDAY NIGHT\nNo TGIF. The consumer already left the party.\n$UMCSENT prints 47.8. Hsu didn’t dress it up: personal finances and business conditions plunged. Fuel. Trade tension. Pocketbooks next.\n\nCPI was the polite kind of ugly — headline up, core 2.4%. $SPY still found a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "jsouthard_",
+   "url": "https://x.com/jsouthard_/status/2098439812999197104",
+   "date": "2026-09-11",
+   "text": "WHEN THE MARKET PULLS BACK OPPORTUNITIES APPEAR...\nThis is exactly why I'm watching these 7 stocks I believe are undervalued.\n1. Uber Technologies $UBER\n2. Alphabet - $GOOGL\n3. Credo Technology - $CRDO\n4. Amazon - $AMZN\n5. Palantir - $PLTR\n6. Broadcom - $AVGO\n7. Sofi Technologies"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "EVInvestor21",
+   "url": "https://x.com/EVInvestor21/status/2098422754273816750",
+   "date": "2026-09-11",
+   "text": "$nvda $mu $skhy $googl $crm $adbe and more making tremendous amount of money and undervalued… shorts are playing with fire… one spark and these can explode higher like $meta today in premarket keep watching $spy $qqq $dia $iwm $soxl $amzn $msft $meta $googl reminder slightly https://t.co/EOquRE43Ee https://t.co/PoYzzek7UL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "DivineGex",
+   "url": "https://x.com/DivineGex/status/2098291643715838058",
+   "date": "2026-09-11",
+   "text": "🚨 $AMZN ALERT\n\nSpot: ~$252 | Divine confidence: 85% | Calls dominant: 66% | Long-gamma regime\nAMZN is sitting just above the $250 KING− floor/gamma magnet, with the $252.50–$254 flip zone overhead. This is the main decision area do not chase in the middle.\n🟢 Calls: Hold $250, https://t.co/3tdXfeZByU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "byehiselllo",
+   "url": "https://x.com/byehiselllo/status/2098433105279570118",
+   "date": "2026-09-11",
+   "text": "It’s absolutely unethical (stock market ethics) to be bearish today\n\n$spx $spy $qqq $aapl knows wassup $tsla $meta $amzn $spcx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "aaronbasile",
+   "url": "https://x.com/aaronbasile/status/2098412727957885050",
+   "date": "2026-09-11",
+   "text": "Hard to be bearish indexes when $MAGS looks like this. $SPY $QQQ $AMZN $AAPL $META $NVDA $GOOGL $MSFT $TSLA https://t.co/o9NWsevwr0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "PrintDemBandz",
+   "url": "https://x.com/PrintDemBandz/status/2098480858940547411",
+   "date": "2026-09-11",
+   "text": "$AMZN just printed 9,000 shares @ $256.92 — a $2.31M block near the ask, and no bearish flow worth naming this cycle 🐋 #DarkPool https://t.co/aXFJOGhLGU"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "VettisHQ",
+   "url": "https://x.com/VettisHQ/status/2098381541751636286",
+   "date": "2026-09-11",
+   "text": "$AMZN — BEARISH with 72% confidence.\n\n4 AI agents ran an adversarial debate. 2 arguments didn’t make it through.\n\nThe full logic tree:\n---\n\nNot financial advice. AI-generated analysis."
+  }
+ ]
+}

@@ -1,0 +1,102 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-10T00:00:00Z",
+ "end": "2026-09-11T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "iamBitcoinHead",
+   "url": "https://x.com/iamBitcoinHead/status/2098047150001410210",
+   "date": "2026-09-10",
+   "text": "🌐 Crypto market today:\nSept. 10, 2026\nbitcoin:native \n\nOverall sentiment: ⚠️ Cautious / slightly bearish\n\nBitcoin: around $77K–$79K, struggling to reclaim $80K.\nEthereum: around $2.4K–$2.5K and consolidating after its strong recent rally. Reuters notes a potential bull-flag https://t.co/3Inc7gR40k"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "0xDepth",
+   "url": "https://x.com/0xDepth/status/2098119466861408371",
+   "date": "2026-09-10",
+   "text": "📊 FLOWS &amp; LEVERAGE REPORT (1D) — LEVERAGE PURGE &amp; WIDESPREAD BULLISH DIVS\n\nThe 1D session delivers a sharp pullback across Memes, AI, and DeFi sectors (-6% to -9%). However, underlying derivative metrics indicate a massive leverage flush paired with emerging bullish momentum"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "DyorNetCrypto",
+   "url": "https://x.com/DyorNetCrypto/status/2097947117515894969",
+   "date": "2026-09-10",
+   "text": "ethereum:0x5283d291dbcf85356a21ba090e6db59121208b44 - 4h\nBias: Bullish 🟢\nTrend Score: 25/100 | Confidence: 8.3/10\n\nCurrent price is $0.01815000, maintaining a bullish trend with a strength score of 63/100 and setup confidence of 8.3/10. The hidden bullish divergence in stochRSI https://t.co/26dtmVyzYu"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 46,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2097993202435506626",
+   "date": "2026-09-10",
+   "text": "ethereum:0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3 showing a Rectangle pattern 📊\n\nPrice is near the $0.355 support zone after rejecting the $0.40 resistance. A breakout above $0.40 could open the upside move, while losing $0.34 would weaken the setup.\n\n🎯 Bullish target: ~$0.47 https://t.co/mvk2a8bOd6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 26,
+   "user": "RoundTripp3r",
+   "url": "https://x.com/RoundTripp3r/status/2098017588663963814",
+   "date": "2026-09-10",
+   "text": "My favorite project on $ETH helping me research robinhood:0x07ebb29a38fbcb41563817e5e19f2cec619c90d2 , my favorite project on @RobinhoodCrypto \n\nethereum:0x9cf0ed013e67db12ca3af8e7506fe401aa14dad6 AI Chart TA does the work for me, while the agent gives me the tldr\n\n\"Read – The https://t.co/BnR1lh9yVn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 23,
+   "user": "MuseExeArt",
+   "url": "https://x.com/MuseExeArt/status/2098154495297364342",
+   "date": "2026-09-10",
+   "text": "Market ConfusionBitcoin touched the specific level of 82,200 Although it failed to establish stability at this point the act of reaching this level reinforces the scenario of the bear market's conclusion\nEthereum has managed to stabilize above 2,450 however the specific https://t.co/tRn82ObsMd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "wxyzworldwide",
+   "url": "https://x.com/wxyzworldwide/status/2098037525046833466",
+   "date": "2026-09-10",
+   "text": "$ETH just completed a 37% rally in 10 days.\n\nEther reached approximately $2,564 before entering a consolidation phase.\n\nReuters technical analysis describes the current structure as a potential bull flag, with a projected upside target around $3,050 if the pattern breaks higher. https://t.co/3MxtgQMuST"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "macroinvest365",
+   "url": "https://x.com/macroinvest365/status/2098003576131887166",
+   "date": "2026-09-10",
+   "text": "$ETH — the framework I use for Ethereum.\n\nReference price: $2,445.00 | FY26 rev: N/A (token) | NI: N/A | Shares: 120M ETH\n\n5-year bull / base / bear model:\n\n                    Bear        Base        Bull\n2031 price          $950–1,100     $1,500–1,850     $3,500–5,000+\nAnnual"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 419,
+   "user": "xapa03",
+   "url": "https://x.com/xapa03/status/2098051424009466117",
+   "date": "2026-09-10",
+   "text": "I am very confident that Bitcoin will rise rather than fall.\nThe bear market is over, so it is advisable to take every dip seriously when it comes to long-term investments.\nI still expect September to be bullish rather than bearish.\nThe $85,000 to $87,000 range will be reached https://t.co/rnfftqJajK https://t.co/PdDKxUGtbH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Rina_BingX",
+   "url": "https://x.com/Rina_BingX/status/2097981185574248475",
+   "date": "2026-09-10",
+   "text": "📈 Crypto Market Overview (Sep.10) \nPrice Action, Macro, Fund Flows, Today's Key Points ✨\n\n■ Bitcoin, Ethereum, Altcoin Sentiment \n\n🟠 BTC: 78154.7 U, -1.7% on the day. Peaked near 79650 overnight, then a sharp drop around 23:00 UTC+8 took out ~1000 U of support. Currently https://t.co/f0hcezVWmh https://t.co/xzuEXM7aNN"
+  }
+ ]
+}

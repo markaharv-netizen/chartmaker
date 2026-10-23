@@ -1,0 +1,237 @@
+{
+ "symbol": "MSFT",
+ "start": "2026-09-14T00:00:00Z",
+ "end": "2026-09-15T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "MSFT (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Ayush_Panda25",
+   "url": "https://x.com/Ayush_Panda25/status/2099497154720997686",
+   "date": "2026-09-14",
+   "text": "Morning Notes, 9/14\nFriday's close auction called this move before the open ever happened. A negative $1,520 bearish print on the close hit the tape, and price followed it down 5.5 handles into the bell. Then, over the weekend, Anthropic CEO Dario Amodei published a 3,800 word"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "DerekCollinsF51",
+   "url": "https://x.com/DerekCollinsF51/status/2099473893849444839",
+   "date": "2026-09-14",
+   "text": "$NICE: A Severely Undervalued AI Dark Horse—Could Geopolitical Risks Actually Be a Buying Opportunity?\nStop fixating on those tech giants that dominate the headlines every day! $NICE, the Israeli AI customer service and risk management software giant, is quietly staging a https://t.co/NWFjQpByFT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2099514458477338888",
+   "date": "2026-09-14",
+   "text": "🐳 Wall Street likes $MSFT. One trader just paid $22.6M for the right to say they REALLY like it.\n\nTHE TRADE\n\nAt 10:37 ET, someone bought 17,000 MSFT November 20 $535 calls for $22.6M — paying $13.31 a contract with the stock at $498.97. That is a directional, leveraged bet that https://t.co/jicBh5jm82"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 72,
+   "user": "Pharmdca",
+   "url": "https://x.com/Pharmdca/status/2099605475226763326",
+   "date": "2026-09-14",
+   "text": "The biggest opportunities often appear when sentiment is at its worst.\nPatience. Conviction. Execution. 📈\n\n$GOOGL was “dead” last year.\n$MSFT was in a bearish trend before momentum shifted.\n$NVDA was called overvalued by plenty of pundits,\n\nNow $AMZN is the “dead money” theme."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2099589661186273655",
+   "date": "2026-09-14",
+   "text": "Someone paid $25M to bet MRK does nothing for four days — and the whole tape sold calls with them.\n\nTHE TAPE\n\nThe headline print of the session wasn't a bet on a stock going up or down — it was a bet on a stock going nowhere. At 15:23 ET, someone sold 5,640 MRK September-18 $100 https://t.co/Ms8P1tAiHW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "YouGetPaidNow",
+   "url": "https://x.com/YouGetPaidNow/status/2099525540222754859",
+   "date": "2026-09-14",
+   "text": "Strong selling in some tech stocks today, but other industries aren't doing as poorly. Even some tech stocks are up.\nTo the upside:\n$MSFT  $GOOGL  $META \nTo the downside:\n$MU $KLAC https://t.co/hseCu0MH0v"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "trend_delta",
+   "url": "https://x.com/trend_delta/status/2099347762038882345",
+   "date": "2026-09-14",
+   "text": "$ORCL Weekly setup to the downside. It's currently below the quarterly pivot point. Failed to break above the previous week's high and retraced more than 50% of the previous week's candle. \n\nThe indicator already gave an entry (149.84 to ride down to a target of 139.72)\n\n$MSFT https://t.co/7ZXRhhYg0Y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ruoxi0x3",
+   "url": "https://x.com/ruoxi0x3/status/2099458094728446097",
+   "date": "2026-09-14",
+   "text": "$SPCX  The bias remains valid, with price playing out as mapped. \n\nA short term retest of the demand zone is expected. From demand, an upside move could follow.  \n\nBIAS: Bearish short term, with upside favored after a confirmed demand bounce.\n\n$SPY $AMZN $AMD $MSFT $META https://t.co/dE6hRHzrkG"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "theincomewheel",
+   "url": "https://x.com/theincomewheel/status/2099314580375900497",
+   "date": "2026-09-14",
+   "text": "Everyone is worried an AI slowdown would be bearish for $NVDA.\n\nI’m not convinced.\n\nIf AI development gets more regulated and expensive, the winners are probably the companies with the deepest pockets, best chips, and biggest infrastructure already in place.\n\nThat sounds a lot"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Pynvestment",
+   "url": "https://x.com/Pynvestment/status/2099484429118791856",
+   "date": "2026-09-14",
+   "text": "🚨Scan Golden Cross (50vs200)\n \nBullish (days, change)\nPLTR (5, -1.4%)\nMSFT (14, -2.3%)\nTMO (27, +3.5%)\nAXP (31, -5.2%)\nMA (31, -0.0%)\n\nBearish (days, change)\nPG (24, +0.4%)\nCOST (42, -5.2%)\nWMT (52, -2.1%)\nTSLA (158, +5.7%)\nIBM (186, -1.8%)"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "De__Marc",
+   "url": "https://x.com/De__Marc/status/2099480950006542807",
+   "date": "2026-09-14",
+   "text": "GOOD MORNING\n\n$SPX futures are gapping down ~50 points, currently around 7,604.\n\n🐂 BULLISH: Need to reclaim &amp; hold 7,620 → 🎯 7,640 → 7,660\n🐻 BEARISH: Below 7,590 → 🎯 7,570 → 7,550\n\n💡 TRADE IDEAS\n $COIN 185C above 183\n$MSFT 505C above 500\n$PLTR 175C above 170"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Jones_Patrick1",
+   "url": "https://x.com/Jones_Patrick1/status/2099491142937043023",
+   "date": "2026-09-14",
+   "text": "🌅 GOOD MORNING @everyone 🚨\n\n$SPX futures are gapping down ~50 points, currently around 7,604.\n\n🐂 BULLISH: Need to reclaim &amp; hold 7,620 → 🎯 7,640 → 7,660\n\n🐻 BEARISH: Below 7,590 → 🎯 7,570 → 7,550\n\n💡 TRADE IDEAS\n\n $COIN 185C above 183\n$MSFT 505C above 500"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "PeterZh55178071",
+   "url": "https://x.com/PeterZh55178071/status/2099508745055453433",
+   "date": "2026-09-14",
+   "text": "Nadella just made it official Microsoft $MSFT published its AI code of conduct today — no weapons help, no violent/sexual content, no imitating consciousness. \"If AI isn't under human control, it's not worth pursuing.\" Bullish on safety, bearish on unchecked capex?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2099499676806328470",
+   "date": "2026-09-14",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• XRP nears key decision, analyst Egrag Crypto outlines bullish and bearish scenarios\n• Bitget Says Non-Crypto Trades Hit 40% As It Pushes Past Digital Assets\n• Cardano trades at $0.21, 93% below all time high after five https://t.co/k5KWPuG1hP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AkinAdemGokhan",
+   "url": "https://x.com/AkinAdemGokhan/status/2099529611742781743",
+   "date": "2026-09-14",
+   "text": "By midday 45 of 70 names sit at last stop — breadth exhaustion. TITAN opened three CALLs anyway.\n\nTop directional bet: $MU CALL $297M. Macro bias bullish at 1.03, but the last 3 days flipped bearish.\n\nSeptember 14, 2026, 12:02 PM ET · Options Desk\nRegime: RANGE_WHIPSAW · Clarity https://t.co/cglpnhsEaK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "JaiChotalia",
+   "url": "https://x.com/JaiChotalia/status/2099295579306410218",
+   "date": "2026-09-14",
+   "text": "As of 9/13/2026 a rolling 30 day snapshot: \n\nBullish on $BHP 16.8M, $RUT 13.6M, $VIX 12.8M, $PBR 8.5M, $IWM 8.4M, $INTC 4.3M, $MU 4.1M, $UNH 3.9M, $LLY 3.8M, $AMD 3.3M, $MSFT 3.3M, $BE 2.9M, $MSTR 2.8M\n\nBearish on $SPX -37M, $QQQ -14.9M, $DKS -14.8M, $NVDA -14.6M, $SPY -9M, $TTD https://t.co/3RRMS6Kukr"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "iammurae",
+   "url": "https://x.com/iammurae/status/2099464241409363991",
+   "date": "2026-09-14",
+   "text": "Nasdaq futures are down about 1.7% before the bell.\n\nAI stocks are under pressure.\n\nOil is above $100.\n\nThe 10Y is flirting with 5%.\n\nAnd the market is pricing roughly a 90% chance of a Fed hike this week.\n\nSounds bearish.\n\nBut this is exactly where I start looking for relative https://t.co/XHvP6og9n6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "OptionKing33996",
+   "url": "https://x.com/OptionKing33996/status/2099480594052972710",
+   "date": "2026-09-14",
+   "text": "🌅 GOOD MORNING \n\n$SPX futures are gapping down ~50 points, currently around 7,604.\n\n🐂 BULLISH: Need to reclaim &amp; hold 7,620 → 🎯 7,640 → 7,660\n\n🐻 BEARISH: Below 7,590 → 🎯 7,570 → 7,550\n\n💡 TRADE IDEAS\n\n$COIN 185C above 183\n$MSFT 505C above 500\n$PLTR 175C above 170\n\n⏸️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "followfinance_",
+   "url": "https://x.com/followfinance_/status/2099305720206307459",
+   "date": "2026-09-14",
+   "text": "🚨 BREAKING: BERNSTEIN STAYS BULLISH ON $MSFT! 🚀\nBernstein reiterated a $660 price target and Outperform rating, implying ~33% upside\nMicrosoft is taking a measured approach to AI spending, while Azure can flex between GPU and CPU workloads.\nAzure revenue just topped $100B🔥 https://t.co/kjQvKoGY1r"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "KevinJagiah",
+   "url": "https://x.com/KevinJagiah/status/2099488565088362633",
+   "date": "2026-09-14",
+   "text": "👑 MONDAY'S KING NODES ARE LIVE\n\nThis is NOT Friday's map.\n\nSeveral major names have been dramatically repriced this morning, and that means we're not anchoring ourselves to last week's trades.\n\nToday's decision points:\n\n🎯 $SPY 760\n🎯 $QQQ 710\n🎯 $AAPL 332.50 / 335\n🎯 $NVDA 215"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2099502413703159918",
+   "date": "2026-09-14",
+   "text": "Tickers dominating X conversation today:\n\n1. Intel $INTC is down 6.3% premarket\n\n🟢 Sentiment: 33% bullish, 12% bearish, 55% neutral\n\nIntel slipped 6% in pre‑market trading after Anthropic’s CEO warned of an AI slowdown, leading to a rise in X posts. The community is split, with https://t.co/FKkBcIBSr2"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AkinAdemGokhan",
+   "url": "https://x.com/AkinAdemGokhan/status/2099594241865322948",
+   "date": "2026-09-14",
+   "text": "STATION tagged 88 of 115 names LAST STOP — breadth 77% spent. TITAN still opened five of eight picks on CALLs, real confirmation just 3/8. Biggest directional bet $MRK CALL $714M, 20% of the tape. Macro bullish 1.01, micro flipped bear.\n\nSeptember 14, 2026 · Options Desk\nRegime: https://t.co/VDFChPxs5k"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "AO_Analytics",
+   "url": "https://x.com/AO_Analytics/status/2099507163571921193",
+   "date": "2026-09-14",
+   "text": "$MSFT $502.5C 09/18 EXP\nEntry: $5.00\n\n1st Take Profit: $6.50 (30%)\n2nd Take Profit: $7.50 (50%)\n3rd Take Profit: $8.75 (75%)\nRunner: $10.00+ (100%)\nStop: $3.50 (-30%)\n\nScore: 5/5 Breakout\nThesis: Calls: A&amp;O VOTE CALLS — C5/P0 + dealer BULLISH BULL FLOW γ-CHASE CONFIRM γ-AMPLIFY +"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "EAribisala31797",
+   "url": "https://x.com/EAribisala31797/status/2099370232485683669",
+   "date": "2026-09-14",
+   "text": "New week. New positioning.\n\nThe MAG7 remains one of the most important baskets to watch going into this week ,  $NVDA, $MSFT, $AAPL, $GOOGL, $AMZN, $META and $TSLA.\n\nBut what stands out right now is how differently they’re moving.\n\n$META has been one of the strongest names https://t.co/S0hV4ByVh1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AlphaFeedX",
+   "url": "https://x.com/AlphaFeedX/status/2099595332094963768",
+   "date": "2026-09-14",
+   "text": "🚨 The AI IPO Paradox: Selling a $2 Trillion Dream While Asking for a Slowdown\n\nAnthropic is courting investors for a historic Nasdaq debut, yet CEO Dario Amodei just published an essay urging the industry to pump the brakes on AI development. This isn't a contradiction, it's a https://t.co/NQK4l45BYg"
+  }
+ ]
+}

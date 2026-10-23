@@ -1,0 +1,57 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-04T00:00:00Z",
+ "end": "2026-09-05T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "CadeONeill",
+   "url": "https://x.com/CadeONeill/status/2095783925922861275",
+   "date": "2026-09-04",
+   "text": "Are you Bearish or Bullish on these crypto projects going into the next Bull Market? 👀\n\n• internet-computer:native \n• kaspa:native \n• optimism:native \n• ethereum:0xb50721bcf8d664c30412cfbc6cf7a15145234ad1 \n• $SOL \n• $ETH \n• tezos:native"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "coinscopecs",
+   "url": "https://x.com/coinscopecs/status/2095890305472196840",
+   "date": "2026-09-04",
+   "text": "📉 BTC retested $78K after the jobs report—but the technical picture is more nuanced than the price drop.\n\nHere's the technical breakdown across $BTC , $ETH , $SOL , $XRP , and $LINK .\n\n📊 Bitcoin (BTC ~$79,500)\n• RSI: 71.16 (overbought—overextended short-term)\n• MACD: https://t.co/Mz9GhiQqnl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "HeyEva",
+   "url": "https://x.com/HeyEva/status/2095869650739315048",
+   "date": "2026-09-04",
+   "text": "A sharp macro whip-saw defined the trading week as explosive institutional ETF demand and short squeezes ran headfirst into a blowout jobs report that crushed near-term monetary easing expectations.\n\nWEEK IN REVIEW\n\nDigital asset markets experienced intense two-way volatility"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "jordanrydjczf1",
+   "url": "https://x.com/jordanrydjczf1/status/2095754455937601592",
+   "date": "2026-09-04",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 privacy layer Undervalued gem #cotinetwork institutional inflow 🔥"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2095806576519250249",
+   "date": "2026-09-04",
+   "text": "ethereum:native  is testing one of the most important resistance zones on the chart, and I’m already in the short. 👀\n\nEthereum is the leading smart-contract Layer 1 and remains the foundation for a huge part of DeFi and the onchain economy.\n\nI entered around $2,524, and I’m https://t.co/vXvjL9iV8M"
+  }
+ ]
+}

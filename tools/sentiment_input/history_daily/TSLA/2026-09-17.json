@@ -1,0 +1,192 @@
+{
+ "symbol": "TSLA",
+ "start": "2026-09-17T00:00:00Z",
+ "end": "2026-09-18T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "TSLA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 95,
+   "user": "wickedstocks",
+   "url": "https://x.com/wickedstocks/status/2100564791173513664",
+   "date": "2026-09-17",
+   "text": "📺 $TSLA ABOVE $368.18 COULD TRIGGER A REVERSAL\n\nPlease ❤️like and 🔁share with fellow @Tesla traders/investors\n\n#Tesla closed Fed Day at $358.08 and is trading above $364 today as the broader market attempts a post-Fed reversal. \n\nThat puts Tesla right underneath a critical https://t.co/x60ce7k7b5"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "CAASSOO1",
+   "url": "https://x.com/CAASSOO1/status/2100415144102646049",
+   "date": "2026-09-17",
+   "text": "Cybercars finally starting to work is actually very bearish for $TSLA \n\nPeople will finally realize how overvalued Tesla is. \n\nThe only people who will still buy it are the religious elmo fanboys ignoring facts, numbers and reality https://t.co/IyXy1ryub7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2100726384675242347",
+   "date": "2026-09-17",
+   "text": "EOD Tape | Indexes + Mag7 | Thursday, September 17th, 2026\n\nIndexes\n$SPY\n762.70 +8.65 (+1.15%) H/L 763.57 / 759.96\nLarge bull gap open, broke the 65-minute trendline resistance and pushed above 762. Bear gap still open 763.52 to 764.18, 766 above. Watch the bull gap early"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AKtemik",
+   "url": "https://x.com/AKtemik/status/2100566216712589606",
+   "date": "2026-09-17",
+   "text": "🌡️ 5️⃣ $VIX + MAG7 + DESK MAP\n$VIX\n🟢 &lt;17: risk repair\n🟡 17–18: controlled/unstable\n🔴 &gt;18: defensive\n⚡ &gt;20: downside acceleration\n🚨 &gt;22: disorderly conditions\n⭐ $VIX 18 is today's key volatility line.\nMAG7 Catalysts\n🟢 Nvidia $NVDA — &gt;+1% premarket. AI hardware is"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "positivecarry88",
+   "url": "https://x.com/positivecarry88/status/2100617299824660702",
+   "date": "2026-09-17",
+   "text": "Hovering around the 50% retracement—typical when strength meets sellers who may be cutting losses.\nNow testing VWAP, which needs to hold to keep the door open for more upside later today.\nIf VWAP fails, this could simply be an FVG fill followed by continued downside. $TSLA https://t.co/eQ9tYYPLgs"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "StocklyOnArc",
+   "url": "https://x.com/StocklyOnArc/status/2100707115945836583",
+   "date": "2026-09-17",
+   "text": "Imagine being bullish on AAPL but bearish on TSLA.\n\nWith $Stockly, you can open separate positions for both.\n\nEach trade has its own margin and liquidation level, so the positions don’t get mixed together.\n\nDifferent ideas.\nDifferent risk.\nSame wallet. https://t.co/zHKUrKl4p8"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2100647276074955017",
+   "date": "2026-09-17",
+   "text": "$2.5M OF PUTS HIT MU TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - TSLA, META, ABNB\nPUTS BOUGHT (bearish bets) - MU\n\nSize is conviction. It is not intent. https://t.co/EzoqZIytDz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NASNMEDIA",
+   "url": "https://x.com/NASNMEDIA/status/2100690616262799666",
+   "date": "2026-09-17",
+   "text": "$TSLA  — Tesla\n\nPrice: $366.20 | +$8.12 (+2.27%) | Range $363–$374 | \n\nVol ~38M (about average)\n \nSentiment: Split. Street still Buy, but valuation and delivery skepticism are loud.\n \nWhat’s driving it: Rebound after Goldman cut the Q3 delivery forecast (around 435k). Also in the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Pynvestment",
+   "url": "https://x.com/Pynvestment/status/2100571491960053927",
+   "date": "2026-09-17",
+   "text": "🚨Scan Golden Cross (50vs200)\n \nBullish (days, change)\nCRM (2, -2.0%)\nPLTR (8, +2.8%)\nMSFT (17, -3.3%)\nTMO (30, +10.1%)\nAXP (34, -8.8%)\n\nBearish (days, change)\nPG (27, +1.6%)\nCOST (45, -6.3%)\nWMT (55, -1.8%)\nTSLA (161, +3.6%)\nIBM (189, -4.1%)"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "FishingAdam",
+   "url": "https://x.com/FishingAdam/status/2100637835497779507",
+   "date": "2026-09-17",
+   "text": "$TSLA | Today’s hot stock.  Tesla hovering around $421.90 (+0.62%).  The market is balancing EV delivery risk, margin pressure, and AI optimism.  Key levels: Support $395 Resistance $450  A close above $450 is needed for bullish momentum. Below $395, downside pressure increases. https://t.co/3rTt4lKFSJ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AIInvestmentsTe",
+   "url": "https://x.com/AIInvestmentsTe/status/2100590301744148909",
+   "date": "2026-09-17",
+   "text": "🎯 TRADING OPPORTUNITY\nDaily Institutional Intelligence, IIOS-V6 Engine\n📈 TOP 3 BULLISH\nNVDA — Strong Buy | IIOS: 94\nSPCX — Strong Buy | IIOS: 94\nAAPL — Buy | IIOS: 92\n📉 TOP 3 BEARISH\nQQQ — Strong Sell | IIOS: 97\nSMH — Strong Sell | IIOS: 96\nTSLA — Strong Sell | IIOS: 93 https://t.co/NH4Peh3f36"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Gammaoptions99",
+   "url": "https://x.com/Gammaoptions99/status/2100699814405320750",
+   "date": "2026-09-17",
+   "text": "$tsla \n\nPlain English: 's flow is bullish only in the aggregate premium tally — real money is flowing both ways in near-equal size at every major near-term strike, with tomorrow's expiry seeing enormous fresh volume but no clear winner. It's an unusually active session, already"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Javiithebest",
+   "url": "https://x.com/Javiithebest/status/2100717053569102277",
+   "date": "2026-09-17",
+   "text": "Wedbush’s Dan Ives is still flying a $600 TSLA bull case — about ~70% upside from the mid-$350s, driven by Robotaxi / FSD / Optimus.\nhttps://t.co/ijQO0gm75X"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "BreadAlerts",
+   "url": "https://x.com/BreadAlerts/status/2100601261699600854",
+   "date": "2026-09-17",
+   "text": "Pennant resolved to the UPSIDE — right on cue 🚀🎯\n\n$TSLA — 368.52 (+2.92%)\n Broke the pennant apex + reclaimed the basis. Path opens to 374.63 → 384.04 retest.\n$TSLL — 9.85 (+5.80%)\n Same story, 2x. Cleared 9.77/9.88. Next stops 10.21 → 10.79.\n\nFrom the original: \"pennants https://t.co/moY1VJCBIQ https://t.co/WXC4AQ0wK5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 57,
+   "user": "RedDogT3",
+   "url": "https://x.com/RedDogT3/status/2100566009794969690",
+   "date": "2026-09-17",
+   "text": "📺 THE FED SELLOFF IS REVERSING — CAN BULLS TAKE CONTROL? + $SPCX TECHNICAL REVERSAL + $TSLA IS BACK IN THE GAME + $AAPL REMAINS A POWER PLAY\n\nThe post-Fed reversal is underway, but now we need to see whether buyers can actually take control.\n\nYesterday’s strength offered a good https://t.co/ettsGPxaW0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TradingAssistAI",
+   "url": "https://x.com/TradingAssistAI/status/2100569223974076908",
+   "date": "2026-09-17",
+   "text": "$TSLA Game Plan · Sep 17 🎯\n\nModel leans lower — base case close ~360.5 (-1.2%).\nProjected: O 365.1 / H 371 / L 358.1 / C 360.5\nBull above 400.8 · Bear below 350\n3 of 8 similar past setups closed green.\n\nLevels update with pre-market. Not financial advice. https://t.co/tZR3tMrceX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "traders_kings",
+   "url": "https://x.com/traders_kings/status/2100376436565528748",
+   "date": "2026-09-17",
+   "text": "$NVDA we did close as a doji candle today,\n\nPersonally, I am more interested in seeing how we close the weekly candle on Friday. If you are a bull, you want to see Friday close above 221. and if you are a bear, you want to see a close below 212 on Friday.\n\n$spy $spx $qqq $tsla https://t.co/DxAIgSoAJC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "zenthena00",
+   "url": "https://x.com/zenthena00/status/2100518328129450094",
+   "date": "2026-09-17",
+   "text": "I’ve been looking at the FOMC setup and I’m not trying to guess Powell’s next sentence. I’m mapping out what I’ll do depending on how the market reacts.\n\nFor the rate-sensitive side, NVDA is the first one on my list. It closed around $213.90, with the short-term structure still https://t.co/z1kJNgffyK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 23,
+   "user": "Jimbo_Finance",
+   "url": "https://x.com/Jimbo_Finance/status/2100558077716017313",
+   "date": "2026-09-17",
+   "text": "You know i am watching stocks as much as crypto.\n\nEspecially when I’m trading around macro events.\n\nI’m usually jumping between apps to check NVDA, TSLA, BTC, DXY, yields and whatever else is moving.\n\nSo I’ve been testing the new Stocks tab on Binance Square. 👀\n\n➡️ What I like https://t.co/q663jVX8ao"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "Sifat0070",
+   "url": "https://x.com/Sifat0070/status/2100440222622449677",
+   "date": "2026-09-17",
+   "text": "The FOMC Fed funds rate has been published and the market is moving again.\n\nThe Federal Reserve has increased interest rates by 0.25%, signaling a tighter monetary policy stance.\n\nMarkets will now be watching closely for the Fed’s next moves, especially for their impact on https://t.co/wZqzL9o9TO"
+  }
+ ]
+}

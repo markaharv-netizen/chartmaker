@@ -1,0 +1,138 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-03T00:00:00Z",
+ "end": "2026-09-04T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2095409573779706327",
+   "date": "2026-09-03",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 (leaning bullish) - 𝗕𝗶𝘁𝗰𝗼𝗶𝗻: $101 M net inflow into U.S. spot BTC ETFs → strong bullish signal. - 𝗘𝘁𝗵𝗲𝗿𝗲𝘂𝗺, 𝗦𝗼𝗹𝗮𝗻𝗮, 𝗫𝗥𝗣: Spot ETF outflows → modest bearish pressure on these assets. - 𝗦𝗼𝗹𝗮𝗻𝗮: Community chatter https://t.co/Mzls8Eq17J"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Cryptoman_yak",
+   "url": "https://x.com/Cryptoman_yak/status/2095469409221427332",
+   "date": "2026-09-03",
+   "text": "☀️ TODAY | SEPTEMBER 3, 2026\n🔥 BITCOIN &amp; ETHEREUM | FORECAST\n\n🟠 bitcoin:native  ~ $77.7K\nBTC continues to consolidate after the strong August rally. Price is currently in the important $77K–78K zone.\n\n📈 BULLISH SCENARIO:\nHold $77K → reclaim $80K → targets $82.5K → $85K.\n\n📉"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 82,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2095336654861177264",
+   "date": "2026-09-03",
+   "text": "Bitcoin is holding above TBO resistance after dipping to 76,264. I am watching the 786 Fibonacci at 76,706: a daily close below it opens a fast-line test just under 75,000 and a possible short-term oversold bounce. A reclaim could mean more chop toward 80K, but 72,000 at the https://t.co/jPfeO7atVC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "HCFlowSniper",
+   "url": "https://x.com/HCFlowSniper/status/2095503352964538686",
+   "date": "2026-09-03",
+   "text": "📊 AM Crypto Pulse — Thu Sep 03, 2026\n\n🪙 Market snapshot (levels)\nBitcoin (BTC): Support $76,350 → $75,000 | Resistance $78,000 → $80,000\nEthereum (ETH): Support $2,350 → $2,300 | Resistance $2,400 → $2,500\nXRP: Support $1.30 → $1.25 | Resistance $1.36 → $1.40\nSolana https://t.co/AowwwMX16R"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "OnchainIns5699",
+   "url": "https://x.com/OnchainIns5699/status/2095632027366101135",
+   "date": "2026-09-03",
+   "text": "📊 ONCHAIN INSIGHTS DAILY BRIEFING - SEPTEMBER 3, 2026\n\n💠 CRYPTO\n• Bitcoin Momentum: BTC has rallied sharply and reclaimed elevated levels with bullish technicals, signaling intact risk-on appetite and participation in the debasement trade.\n• Ethereum Rotation: ETH inflows"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Aicryptonemi0w",
+   "url": "https://x.com/Aicryptonemi0w/status/2095422006087090578",
+   "date": "2026-09-03",
+   "text": "Bitcoin’s fabled golden cross is coming. And USDT may be the real signal this time\n\nBitcoin’s fabled golden cross is coming, but this time the real signal might be hiding in stablecoin liquidity rather than the moving averages themselves. As BTC approaches this widely tracked https://t.co/soSu81Usgw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "macroinvest365",
+   "url": "https://x.com/macroinvest365/status/2095466875530432989",
+   "date": "2026-09-03",
+   "text": "$ETH — the framework I use for Ethereum.\n\nReference price: $2,445.00 | FY26 rev: N/A (token) | NI: N/A | Shares: 120M ETH\n\n5-year bull / base / bear model:\n\n                    Bear        Base        Bull\n2031 price          $950–1,100     $1,500–1,850     $3,500–5,000+\nAnnual"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 170,
+   "user": "Crypto_Moe84",
+   "url": "https://x.com/Crypto_Moe84/status/2095465206629503064",
+   "date": "2026-09-03",
+   "text": "$ETH - ethereum:0x6982508145454ce325ddbe47a25d4ec3d2311933  - ethereum:0x68bbed6a47194eff1cf514b50ea91895597fc91e  - ethereum:0x67466be17df832165f8c80a5a120ccc652bd7e69 \n\nWe keep tracking.   \nLike a clockwork to the upside and to the downside \n\nI have warned you.... https://t.co/FOwTPz4ENW https://t.co/4bgpNSxTqE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "CrowdWisdom360",
+   "url": "https://x.com/CrowdWisdom360/status/2095616069301895275",
+   "date": "2026-09-03",
+   "text": "Memecoin Open Poistion With Buy Entry On 3rd September: \n\nethereum:0x07f5b6823751c2e2cd4560f28af75ff887102241 ; Outperformer, Whale Retail Both Bullish\n$PEPE ; Underperformer, Whale Bullish, Retail Bearish\nsolana:J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr ; Underperformer, https://t.co/tfek1ioN3e"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2095443232729768250",
+   "date": "2026-09-03",
+   "text": "ethereum:native  is showing weakness after another rejection from the $2,480 area, and I’m already in the short. 👀\n\nEthereum is the leading smart-contract Layer 1 and the foundation for a huge part of DeFi and the broader onchain economy.\n\nShort term, I’m bearish while ETH stays https://t.co/YDtDyOJ8fo"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "jordan8gg0l3pi",
+   "url": "https://x.com/jordan8gg0l3pi/status/2095404484424004094",
+   "date": "2026-09-03",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential DeFi Undervalued gem #cotinetwork institutional inflow 🛡️"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "PhilippInvest",
+   "url": "https://x.com/PhilippInvest/status/2095370326603616411",
+   "date": "2026-09-03",
+   "text": "I think, ethereum:0x07f5b6823751c2e2cd4560f28af75ff887102241 is in overvalued territory here. \n\n- PE of 5 prices high volume and an extended bull market\n- That may be the case long-term but short-term I think we cant maintain the volume and therefore such high revenue yet\n- V2"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "taylorjcnvwfwb",
+   "url": "https://x.com/taylorjcnvwfwb/status/2095398507083686123",
+   "date": "2026-09-03",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 Helium upgrade Undervalued gem #cotinetwork diamond hands forever 🔐"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "twtlinks",
+   "url": "https://x.com/twtlinks/status/2095548188291727562",
+   "date": "2026-09-03",
+   "text": "Ethereum holding $2,400 while analysts are split between $3,200 and $10K targets.\n\nThat's not confusion — that's an asymmetric setup.\n\nThe downside is known. The upside is debated.\n\nWhen smart people disagree wildly on price, it usually means the asset is early. 🐋"
+  }
+ ]
+}

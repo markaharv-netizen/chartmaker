@@ -1,0 +1,111 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-23T00:00:00Z",
+ "end": "2026-09-24T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 127,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2102602836748214499",
+   "date": "2026-09-23",
+   "text": "Crypto pumps won't stop until the market finally delivers the pullback I expect. BTC closed red, but it remains above TBO resistance with the slow line curling higher, so I still see the beginning of a strong bullish uptrend. I am taking partial profits into strength, keeping https://t.co/gDgbH5aWJR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2102633662810337382",
+   "date": "2026-09-23",
+   "text": "Macro Observatory Mid-Week 39 Briefing\n\nTuesday's telemetry delivered a critical systemic resolution with the speculative chimney beginning to fracture. Microsoft suffered a Flash Flush, Nvidia is targetting Macro Bear Resumption, and the 6-anchor trapdoor has decayed to historic"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "apedintocrypto",
+   "url": "https://x.com/apedintocrypto/status/2102721685762052591",
+   "date": "2026-09-23",
+   "text": "Near term liquidity sweeps expected, first down, then up.\n\nBitcoin: 83-84k, 88-89k\nEthereum: 2650, 2850\nSolana: 113, 123 \n\nAnd what happens after that with Bitcoin and majors? \n\nThey either make a decisive reversal move down, maybe after some local sideways crab but price not"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AI_Autosignal",
+   "url": "https://x.com/AI_Autosignal/status/2102556307165442186",
+   "date": "2026-09-23",
+   "text": "A Korean trader known as Wonyotti published a \"90-day letter\" on his market outlook. Here is what it says, and where his numbers sit against today's prices.\n\nHis fair value for Bitcoin: 85,000 dollars.\n\nBitcoin trades at 86,478 right now (Binance perpetuals, +0.19% in 24h). So by"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "yodaksha",
+   "url": "https://x.com/yodaksha/status/2102560941753975148",
+   "date": "2026-09-23",
+   "text": "2024/25 was a fake bull market for alts.\n\nThe only real new capital was flowing into BTC through DATs and ETFs.\n\nQ4 2024 for alts was mostly post-election high-beta chasing. The brief DAT mania only came for alts around GENIUS.\n\nThe real alt mania has begun now.\n\nAs the main https://t.co/52M5P2wGVB"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "0xcoinwhale",
+   "url": "https://x.com/0xcoinwhale/status/2102776469915140278",
+   "date": "2026-09-23",
+   "text": "🔥 120K traders liquidated. The next opportunity for $BTC may be forming.\n\nOver the past 24 hours, the market experienced a major leverage flush.\n\nAccording to CoinGlass data:\n📉 Total liquidations: around $505M\n👥 More than 120,000 traders were liquidated\n\nBreakdown:\n• Long https://t.co/9tzsEcMqJI"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 10,
+   "user": "PaBeLxPk",
+   "url": "https://x.com/PaBeLxPk/status/2102766735749529792",
+   "date": "2026-09-23",
+   "text": "🛰️ CRYPTO RADAR\n\n🚨 Bitcoin drops below $85,000, while Ethereum falls under $2,700.\n\n💥 Over $175M in crypto longs liquidated in just 15 minutes!\n\n📉 Market Impact: BEARISH\n\nA sharp flush for leveraged traders, with selling pressure and volatility picking up across the crypto"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "vuduc771acm",
+   "url": "https://x.com/vuduc771acm/status/2102721225449726133",
+   "date": "2026-09-23",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential DeFi Undervalued gem #cotinetwork institutional inflow 🛡️"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "phamtuanm7a7zq",
+   "url": "https://x.com/phamtuanm7a7zq/status/2102668146540999065",
+   "date": "2026-09-23",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 confidential transactions Undervalued gem #cotinetwork privacy mainstream 🌕"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "letuan95z3jn",
+   "url": "https://x.com/letuan95z3jn/status/2102665386621886510",
+   "date": "2026-09-23",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 privacy layer Undervalued gem #cotinetwork institutional inflow 🔥"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "buikienz1v6on",
+   "url": "https://x.com/buikienz1v6on/status/2102664766569521278",
+   "date": "2026-09-23",
+   "text": "Bullish on ethereum:0xddb3422497e61e13543bea06989c0789117555c5 privacy layer Undervalued gem #cotinetwork institutional inflow 🔥"
+  }
+ ]
+}

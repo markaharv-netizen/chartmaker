@@ -1,0 +1,75 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-09-16T00:00:00Z",
+ "end": "2026-09-17T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "DyorNetCrypto",
+   "url": "https://x.com/DyorNetCrypto/status/2100330064462381453",
+   "date": "2026-09-16",
+   "text": "ethereum:0xd7efb00d12c2c13131fd319336fdf952525da2af - 4h\nBias: Bearish 🔴\nTrend Score: -47/100 | Confidence: 8.3/10\n\nCurrently priced at $0.00242010, XPR is entrenched in a bearish trend with a Trend Score of 47/100 and setup confidence at 8.3/10. The strongest signals driving https://t.co/8XXFFSGtE1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "0xQuantyx",
+   "url": "https://x.com/0xQuantyx/status/2100014138277917082",
+   "date": "2026-09-16",
+   "text": "BTC’s higher-timeframe trend hasn’t broken, but the internals are deteriorating.\n\nMy medium-term positioning models remain LONG:\n\nTOTALES: +0.42\nBitcoin: +0.40\nEthereum: +0.72\nBut all three are losing momentum, with daily score changes of −0.19, −0.22 and −0.14 respectively. https://t.co/jVtrqzipFz https://t.co/1RUpBG0JBc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "HCFlowSniper",
+   "url": "https://x.com/HCFlowSniper/status/2100215371626405940",
+   "date": "2026-09-16",
+   "text": "📊 AM Crypto Pulse — Wed Sep 16, 2026\n\n🪙 Market snapshot (levels)\nBitcoin (BTC): Support $75,000 → $74,000 | Resistance $77,000 → $80,000\nEthereum (ETH): Support $2,400 → $2,350 | Resistance $2,500 → $2,600\nXRP: Support $1.27 → $1.20 | Resistance $1.35 → $1.40\nSolana https://t.co/Cv988xwAjm"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "jaymesrosenthal",
+   "url": "https://x.com/jaymesrosenthal/status/2100249237728710955",
+   "date": "2026-09-16",
+   "text": "Trade With Me (STREAM REPLAY) - Sept 16, 2026\n\nFOMC Day, RIP Clarity Act, The Bullish Hike Thesis\n\n6:44 - Intro (audio issues first couple min but then fixed), absolute shambles: broken phone, hip appointment, bags bludgeoned, boomers winning again\n13:16 - Hunting a heating oil https://t.co/ErsKMV0OMb"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2100096791936987603",
+   "date": "2026-09-16",
+   "text": "Macro Observatory Mid-Week 38 Briefing\n\nTuesday's telemetry delivers a critical systemic resolution: the Monday relief squeeze dissolves as the tech core cracks, Bearish Hibernation expands to 14 tickers, and 35 Monthly Gauges sink below neutral.\n\nThe transient relief bounce that"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Rina_BingX",
+   "url": "https://x.com/Rina_BingX/status/2100152472514015734",
+   "date": "2026-09-16",
+   "text": "📉 Crypto Market Overview (Sep.16) \nPrice Action, Macro, Fund Flows, FOMC, Today's Key Points 🇺🇸\n\n■ Bitcoin, Ethereum, Hyperliquid, Altcoin Sentiment \n\n🟠 BTC: 75,816.9 USDT, -1.43% on the day. Dropped from ~77,300 overnight to a low near 74,900 after the CLARITY Act failed in https://t.co/at4uGrPaKZ https://t.co/xzuEXM7aNN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NadHam83",
+   "url": "https://x.com/NadHam83/status/2100041983376998738",
+   "date": "2026-09-16",
+   "text": "🚨 FED HIKE TOMORROW. TOM LEE STILL SEES A MASSIVE CRYPTO RALLY. 🔥\n\nWhat if the Fed raises rates tomorrow, and Bitcoin still rallies?\n\nThat's exactly the scenario Tom Lee is preparing for.\n\nThe Fundstrat co-founder says he expects a Fed hike, but remains strongly bullish on the https://t.co/fLiyeewHyR"
+  }
+ ]
+}

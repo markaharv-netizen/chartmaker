@@ -1,0 +1,210 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-08T00:00:00Z",
+ "end": "2026-09-09T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AlphaLensCrypto",
+   "url": "https://x.com/AlphaLensCrypto/status/2097317459871121851",
+   "date": "2026-09-08",
+   "text": "📊 THE CRYPTO EDGE | DAILY MARKET BRIEF\n📅 September 8, 2026\n\n🚨 BTC: THE DUAL LIQUIDITY TRAP! WILL FRIDAY UNLEASH CHAOS? 🚨\nBitcoin is consolidating in a high-stakes range with massive liquidity building up on both sides. A major decision is coming fast. 👇 https://t.co/feOxtDphJi"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "themetashark",
+   "url": "https://x.com/themetashark/status/2097369814838763632",
+   "date": "2026-09-08",
+   "text": "📊Crypto Asset Analysis for Futures Trading\n\nBitcoin (bitcoin:native ) — Higher TF Analysis \n$78,799.00 | 24h: -0.25%\n\nMarket Structure \nBTC remains in a bullish trend on the 4H/Daily timeframe, trading well above the SMA20 ($67,188) and SMA50 ($69,755). Momentum is positive with https://t.co/UFce6zBCqo"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 13,
+   "user": "Zubair0910",
+   "url": "https://x.com/Zubair0910/status/2097220410677031168",
+   "date": "2026-09-08",
+   "text": "🚨 BITCOIN JUST FLASHED A GOLDEN CROSS AND THE HISTORICAL DATA IS VERY BULLISH.\n\nI analyzed every Bitcoin daily Golden Cross in my dataset since 2015, and below are some interesting findings -\n\n🔸 BTC's low came 73 days before the Golden Cross on average.\n\nToday's Golden Cross https://t.co/xJfyYtQbKa"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2097415469213065400",
+   "date": "2026-09-08",
+   "text": "📊【XWIN CAPITAL INDEX｜September 9, 2026】\nOverall Score: 53 / 100\n・80–100 = Strong Bullish Environment\n ・60–79 = Bullish Bias\n ・40–59 = Neutral / No Clear Direction\n ・20–39 = Bearish Bias\n ・0–19 = Strong Bearish Environment\n7-Day Moving Average: 60.29 ↓\n14-Day Moving https://t.co/vZCvDo7sfl"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "ainotesus",
+   "url": "https://x.com/ainotesus/status/2097292133711380949",
+   "date": "2026-09-08",
+   "text": "Bitcoin’s next major move is up.\n\nBitcoin is sitting around $78–79K in a confirmed bull trend. The weekly chart can move sideways for days or weeks without breaking the bigger setup. The key downside level is $60K: a bearish flip there invalidates the bull case. Until then, the"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "MFD0001",
+   "url": "https://x.com/MFD0001/status/2097381468540719288",
+   "date": "2026-09-08",
+   "text": "GN everyone \n\n$80K is now a major resistance for BTC.\nA strong daily close and volume confirmation above this could see bullish momentum return.\n\n🔼 Bullish Scenario\n\nIf BTC reclaims $80K and breaks out strongly above the $81K–$82.2K zone, the next targets could be:\n\n➡️ $84K\n➡️ https://t.co/cUcbUm52Vv"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 50,
+   "user": "chroe_trades",
+   "url": "https://x.com/chroe_trades/status/2097361124689649716",
+   "date": "2026-09-08",
+   "text": "$BTC \n\nThe data is looking extremely bearish right now, even whilr BTC is bouncing.\n\nThe biggest problem is that spot continues to sell aggressively, while most of the recent pumps are being driven primarily by perps.\n\nThat’s not the kind of demand I want to see for a sustainable https://t.co/vX87xYEU7V"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 41,
+   "user": "BitMasterK",
+   "url": "https://x.com/BitMasterK/status/2097376734060367927",
+   "date": "2026-09-08",
+   "text": "The 2 biggest mistakes I’ve made with $BTC are:\n1. Not understanding the physics behind it\n2. Thinking Bitcoin HAS TO go down or up because it’s just supposed to…\n\nThis is a very similar bounce off the Power Law as last time, folks. I think we can see low $70’s again but https://t.co/JABU7yT0ti https://t.co/hON6TQkvyx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 125,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2097155978194305418",
+   "date": "2026-09-08",
+   "text": "Bitcoin dropped 1.5% and cracked the first support fan line, so I’m watching the 0.786 Fib and the new 80,443 TBO resistance pivot. A reclaim would support continuation, but weak pullback volume, lower RSI structure, and four-hour close longs still warn of short-term profit https://t.co/WpmTy3qrMG"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "TradingParrot",
+   "url": "https://x.com/TradingParrot/status/2097426324713246840",
+   "date": "2026-09-08",
+   "text": "Mariano said at RSI 86: \"We're going to build a channel to the downside.\" It's playing out 📉 Now BTC is back below the bear market resistance band. RSI 65 and 52 are the battle lines that decide bull vs bear: https://t.co/3d0GySzstH\n#BTC #RSI #Bitcoin #TechnicalAnalysis #Trading https://t.co/WWjsXifgXR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 67,
+   "user": "DanielxHarald",
+   "url": "https://x.com/DanielxHarald/status/2097374744878178647",
+   "date": "2026-09-08",
+   "text": "BTC ☉ Sept 8\n\nToday’s drop reached a weekly level.\n\nNow we see a good bounce which looks impulsive so far.\n\nLook for 5 waves up. It will make for either a wave C (lower high) or number 1 of 5 additional waves (new highs +83K).\n\nI got three levels to the upside where I would https://t.co/LTxHI5qYw9 https://t.co/KgALktJu9l"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "petranto",
+   "url": "https://x.com/petranto/status/2097359819791310920",
+   "date": "2026-09-08",
+   "text": "Bitcoin vs 4.8% Treasuries: The Yield Paradox Behind the Next Move\n\nUS long bonds just suffered only their second negative decade since 1793.\nYet today's yields make them Bitcoin's toughest competitor since institutional money arrived.\n\n-------------------\nBitcoin is trading https://t.co/zAOuSpH5nV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "zBit_Official",
+   "url": "https://x.com/zBit_Official/status/2097339180301074497",
+   "date": "2026-09-08",
+   "text": "Bitcoin Could Slide to $76K if $78K Support Fails to Hold\n\nA short technical-analysis piece flagging that Bitcoin's $78,000 support level is losing strength, raising the risk of a drop toward $76,000 if buyers fail to defend the zone. Frames the setup for traders watching https://t.co/OyxMmwSuUu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Aicryptonemi0w",
+   "url": "https://x.com/Aicryptonemi0w/status/2097233958291530043",
+   "date": "2026-09-08",
+   "text": "Weekend altcoin rally runs out of road as bitcoin slips\n\nThe weekend’s speculative fire has fizzled. Bitcoin slipped 1.1% since midnight UTC, dragging the momentum out of an altcoin rally that saw double-digit percentage gains just 48 hours prior. While equities futures pointed https://t.co/9DQ5FGjOLM"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 14,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2097376325732331579",
+   "date": "2026-09-08",
+   "text": "$BTC #SP500 \n\nHere’s another interesting piece of evidence supporting my expectation that the current Bitcoin bearish cycle will rhyme with the prolonged 2013–2015 cycle.\n\nOne of the key similarities is the significant divergence between Bitcoin and the S&amp;P 500.\n\nDuring the https://t.co/pXTjpaRX3T https://t.co/SKUq2FXIQB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptrixLabs",
+   "url": "https://x.com/CryptrixLabs/status/2097253167687782856",
+   "date": "2026-09-08",
+   "text": "MUBARAK is a watch, not a lean — the whole setup hinges on whether buyers can finally punch through $0.0300, and until they do, there's roughly 1% of room up into that ceiling versus nearly 5% of open air down to the next real floor near $0.0282.\n\nZoom out on the daily and the https://t.co/KPTpG9YTd2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "varunsharma2024",
+   "url": "https://x.com/varunsharma2024/status/2097366107413991744",
+   "date": "2026-09-08",
+   "text": "I have been thinking about this Bitcoin cycle from a slightly different perspective, and I believe there is one possibility that deserves much more attention: what if what we are witnessing today is not the beginning of another bear market at all, but simply a major mid-cycle"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BTCPRJT",
+   "url": "https://x.com/BTCPRJT/status/2097414729346248794",
+   "date": "2026-09-08",
+   "text": "Bitcoin has improved. That matters.\n\nBut improvement is not confirmation.\n\n82–83K remains the major macro test.\n\nA pullback from here, even into the low 70Ks, would not, by itself, settle the bull vs bear debate.\n\nThe more important signal may be what happens after it.\n\n1. Higher https://t.co/OpJjwVC2uz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "fragoreeez",
+   "url": "https://x.com/fragoreeez/status/2097233340575137882",
+   "date": "2026-09-08",
+   "text": "BTC Prints First Long Signal in 4 Months: Bearish Structure Below $83K &amp; The Clarity Act Institutional Catalyst 🧠📊\n​Local technical relief signals clash with high-timeframe resistance as markets price in upcoming US regulatory milestones.\n​Market Breakdown &amp; Key Levels:\n​🔣 1. https://t.co/eP9h2mBorJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "varunsharma2024",
+   "url": "https://x.com/varunsharma2024/status/2097365980536349028",
+   "date": "2026-09-08",
+   "text": "I’ve combined both pieces into one flowing long-form X post, keeping your mid-cycle correction thesis as the central argument, while integrating the gold ETF precedent, how ETFs change access and market structure, institutional participation, the pre-halving ATH, absence of true"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2097116018120544573",
+   "date": "2026-09-08",
+   "text": "Tickers dominating X chatter right now:\n\n1. Strategy Inc $MSTR is little changed in post-market after falling 1.4% in the regular session\n\n🟢 Sentiment: 48% bullish, 7% bearish, 45% neutral\n\nMicroStrategy announced a $370 million Bitcoin purchase, ending a two‑month buying pause https://t.co/Q9jpE3yT2g"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 14,
+   "user": "AragornWindbrkr",
+   "url": "https://x.com/AragornWindbrkr/status/2097328694037446831",
+   "date": "2026-09-08",
+   "text": "bitcoin:native bull market confirmation progress, BTC.D altseason indicator, and $TOTAL crypto market cap macro outlook.\n\nBitcoin is printing a daily bearish divergence after a completed Wave 3.\n\nAs you know, to confirm the bottom is in and to start the next bull run, BTC still https://t.co/EujOnEtM2i https://t.co/eb0XzBwX4A"
+  }
+ ]
+}

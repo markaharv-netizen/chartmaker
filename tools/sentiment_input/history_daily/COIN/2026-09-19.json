@@ -1,0 +1,219 @@
+{
+ "symbol": "COIN",
+ "start": "2026-09-19T00:00:00Z",
+ "end": "2026-09-20T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2101315047079416213",
+   "date": "2026-09-19",
+   "text": "The tickers dominating X conversation today:\n\n1. IREN Limited $IREN is down 0.3% in pre-market after climbing 7.4% in the regular session\n\n🟢 Sentiment: 55% bullish, 4% bearish, 41% neutral\n\nNorthland began covering IREN on Sept 18 with a $99 price target, more than double the https://t.co/aBi5jmZDUu"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101224217710637102",
+   "date": "2026-09-19",
+   "text": "⚡ $ZAMA 2.4x volume validating the 19.3% push — structure stays aligned\n\n- my bias is bullish here — 1h structure is bullish and it lines up with daily, weekly, and BTC, so this is not a counter-trend chase\n- that 15m spike with elevated participation looks like continuation https://t.co/6D4Q6sEg63"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101322628485042381",
+   "date": "2026-09-19",
+   "text": "🟢 $ONE 3.2% 15m spike on volume looks like continuation not noise\n\n- my bias is bullish here — 1h, daily and weekly structure plus BTC are aligned, so this is not a counter-trend fade; the +3.2% 15-minute spike with a volume burst sits inside an already-confirmed HH/HL advance, https://t.co/wm8gAMPU5Z"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2101259603971322078",
+   "date": "2026-09-19",
+   "text": "#BITCOIN\n\nHere are our monthly thoughts on #BITCOIN from last weekend and why the higher-timeframe structure has been bullish.\n\nNothing has materially changed since that review, in fact, the technical picture has continued to improve over the last week.\n\nTraders who took the https://t.co/1wesELWxQV https://t.co/qYSOvCdUb9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "ibaxoni",
+   "url": "https://x.com/ibaxoni/status/2101350367024107621",
+   "date": "2026-09-19",
+   "text": "THE BULL MARKET IS WAKING UP AGAIN. \n\n$BTC reclaiming $80K changes the entire mood of the market.\n\nBitcoin is now trading around $81K after a strong move higher, while total crypto market cap has added roughly $100B+ in the past 24 hours and trading activity is expanding again. https://t.co/NzSH8ay5xg https://t.co/phQ0659u09"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "bai_ti_ganio",
+   "url": "https://x.com/bai_ti_ganio/status/2101099203439022555",
+   "date": "2026-09-19",
+   "text": "bear case for zksnarks (fudding my own bags): NodeMonkes topped at ~550M MC, but this was only ~8K BTC. snarks are at 15K ZEC MC mint price, so already overvalued as % of the coin supply."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2101320442120171768",
+   "date": "2026-09-19",
+   "text": "📊 $DOGE Overview | 2026-09-19\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#DOGECOIN\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 18,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2101326737858523470",
+   "date": "2026-09-19",
+   "text": "📊 $VTHO Overview | 2026-09-19\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#Vechain\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2101315389233783090",
+   "date": "2026-09-19",
+   "text": "📊 $SUI Overview | 2026-09-19\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🐌 Weak\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Sui\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 17,
+   "user": "GateSquare_EN",
+   "url": "https://x.com/GateSquare_EN/status/2101135689618489755",
+   "date": "2026-09-19",
+   "text": "🎉 Win Up to 100 USDT Weekly! Gate Square #WeeklyShare Is Ongoing!\n\n📌 How to Join\n① Sign up 👉 https://t.co/3P8sEssyjH\n② Post with #ShareWeekly and #WeekendMarketBullishOrBearish\n③ Share your market view to win rewards!\n\n💬 Weekend Hot Topic\nMarkets don’t stop on weekends! https://t.co/CuWqUdXLU4"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101435363059200286",
+   "date": "2026-09-19",
+   "text": "🔥 $JTO sweeps sell-side liquidity and holds 4.1% with the uptrend intact\n\n- my bias is bullish here — the 15m wick below 0.4698 that closed back above is a sell-side liquidity grab that fuels the 1h bullish structure (HH/HL intact), not a reversal\n- this is a counter-trend https://t.co/JNnFK7F7An"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptrixLabs",
+   "url": "https://x.com/CryptrixLabs/status/2101371474862846278",
+   "date": "2026-09-19",
+   "text": "ARB isn't a setup yet — it just dropped 6% in a day, is underperforming while BTC and ETH push higher, and needs to reclaim $0.213 on the 4-hour chart before it's worth another look.\n\nThe daily chart is in the middle of a fast sell-off, not the tail end of one. Price has https://t.co/NW5pS9jull"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101358603328229700",
+   "date": "2026-09-19",
+   "text": "⚡️ $LAB +16.5% while holding 1h structure against BTC divergence — buyers still in control\n\n- my bias is bullish on the 1h while structure holds, but this is a counter-trend rally inside daily and weekly bearish structure plus confirmed 4h relative weakness versus BTC (USDT HH vs https://t.co/zn9jt1aLiv"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "yogirlmiaaaa",
+   "url": "https://x.com/yogirlmiaaaa/status/2101306859269607453",
+   "date": "2026-09-19",
+   "text": "Friday close. Here’s what I’m watching next:\n\nS&amp;P 500 +0.17%\nNasdaq +0.40%\nDow -0.18%\nTech held up, but the market underneath was weaker. With Treasury yields still near 5% and crude above $100, I’m staying selective.\n🟢 \n$MU\n — BULLISH\nSemis led the market Friday, and MU kept https://t.co/sNSagJJoN5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101162796771573783",
+   "date": "2026-09-19",
+   "text": "✅ $XAUT 4h BTC divergence looks constructive on 0.4% 24h hold with 1h bias firm\n\n- my bias is bullish here on the 1h while structure holds — this is a counter-trend bounce versus daily bearish, so I want a clean sweep of 4345.27 then a reclaim before I trust continuation, https://t.co/6Lh4stT4o6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101197035835666922",
+   "date": "2026-09-19",
+   "text": "📈 $API3 31.5x volume with buying pressure building looks like conviction\n\n- my bias is bullish here on the 1h — structure is bullish and aligned with daily plus BTC, but this is still a counter-trend bounce versus weekly bearish structure, so I want cleaner confirmation before https://t.co/lNOyDC4yLe"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101224255132221470",
+   "date": "2026-09-19",
+   "text": "🟢 $FIL 2.9x volume at +2.8% reads like smart-money fuel, not noise\n\n- my bias is bullish here on FIL #FILUSDT 1h — structure is bullish and aligned with daily plus BTC, so I treat the 2.9x volume burst and the +2.8% lift as a smart-money continuation impulse, not a top; weekly https://t.co/yOSpY0HXXY"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101433890506174650",
+   "date": "2026-09-19",
+   "text": "💪 $ASTER 0.46% sweep reloaded the uptrend, not reversed it\n\n- my bias is bullish here — the 15m wick below 0.7555 that closed back above is a liquidity grab against the 1h bullish structure, not a reversal; that sweep of the last HL edge at 0.7524 fuels continuation higher\n- https://t.co/9y60DWnPOX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101223414757265413",
+   "date": "2026-09-19",
+   "text": "💪 $DOGE 3.4% move keeps the 1h bullish structure intact despite the 4h BTC divergence\n\n- my bias is bullish here on the 1h structure (HH/HL still intact) while this remains a counter-trend bounce inside bearish daily and weekly structure — the 4h coin/BTC lower-high vs a USDT https://t.co/3ABj248iYx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Just2Trade",
+   "url": "https://x.com/Just2Trade/status/2101371002055762019",
+   "date": "2026-09-19",
+   "text": "$COIN +11.7% today — and the reason may be bigger than a simple price swing.\n\nX user @WhaleInsider (676.4K followers) reports that Coinbase is currently in talks with the U.S. Treasury and Commerce Departments to help advance the Strategic Bitcoin Reserve initiative. If https://t.co/Lovis3vqyp"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101358493949108484",
+   "date": "2026-09-19",
+   "text": "📊 $NIL 11.3x volume spike with +3% print shows buyers loading up on the 1h\n\n- my bias is bullish here on the 1h, but this is a counter-trend rally inside daily and weekly bearish structure, so I demand a clean sweep-and-reclaim before I treat it as a long — the 11.3x spike with https://t.co/vKmANJNG45"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101348219020018117",
+   "date": "2026-09-19",
+   "text": "👀 $C 2.1x volume spike fuels the 4% 15m bounce as 1h structure holds\n\n- my bias is bullish here on the 1h while structure holds — aligned with daily and BTC, but this is a counter-trend bounce versus the still-bearish weekly, so I want a clean reclaim or a sweep-and-hold before https://t.co/26yXqMY338"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2101206842453979363",
+   "date": "2026-09-19",
+   "text": "💪 $ETH holding +5.4% as higher highs align across timeframes\n\n- my bias is bullish here — 1h structure is higher highs and higher lows and it is aligned with daily, weekly, and BTC, so this is not a counter-trend read\n- I expect price to work the last swing-high liquidity at https://t.co/83RQdXW4AW"
+  }
+ ]
+}

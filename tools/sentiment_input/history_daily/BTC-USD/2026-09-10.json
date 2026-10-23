@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-10T00:00:00Z",
+ "end": "2026-09-11T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "iamBitcoinHead",
+   "url": "https://x.com/iamBitcoinHead/status/2098047150001410210",
+   "date": "2026-09-10",
+   "text": "🌐 Crypto market today:\nSept. 10, 2026\nbitcoin:native \n\nOverall sentiment: ⚠️ Cautious / slightly bearish\n\nBitcoin: around $77K–$79K, struggling to reclaim $80K.\nEthereum: around $2.4K–$2.5K and consolidating after its strong recent rally. Reuters notes a potential bull-flag https://t.co/3Inc7gR40k"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 72,
+   "user": "CryptoLandy",
+   "url": "https://x.com/CryptoLandy/status/2098119566543212815",
+   "date": "2026-09-10",
+   "text": "Bitcoin is currently in a tight daily compression, with the bands pinching around a daily basis near $78.7k. \n\nPrice currently sits between the prior bull-market higher low and the current bear-market lower high; that structural intersection is the decision area.\n\nUpside: daily https://t.co/EXcpEabBuD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "MattStella01",
+   "url": "https://x.com/MattStella01/status/2098065292853117003",
+   "date": "2026-09-10",
+   "text": "BTC 4HR Update — PPI Hit, CPI Still To Come\n\nBitcoin has started to break lower after the PPI data.\n\nPPI came in at 0.4% month-on-month, which was in line with forecast, but the bigger issue is that inflation pressure is still hanging around. Annual PPI is now sitting at 5.4%, https://t.co/aQ4LChubeY"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 29,
+   "user": "GMartin_0",
+   "url": "https://x.com/GMartin_0/status/2098040616248582154",
+   "date": "2026-09-10",
+   "text": "Let me be clear about my #Bitcoin positioning.\n\nI am buying. Does that mean I am 100% bullish? Not yet..\nBut I am neutral/bullish. That’s why I am not fully allocated with the desired capital I want to deploy, as explained in the quoted post.\n\nI said before that we need to see https://t.co/KVJ1SDFlsB https://t.co/lZcIpQRR8d"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "C_PrincessMedia",
+   "url": "https://x.com/C_PrincessMedia/status/2097994126142628099",
+   "date": "2026-09-10",
+   "text": "Unfortunately, due to technical issues I would be going live today. \n\nMy bear market thesis has not changed.\n\nMarket:\nBTC has been in a neutral buyer/seller zone since the rally a few weeks ago. So far, spot demand hasn’t moved the market in a clear direction, and we are still in https://t.co/yeFpYOBNbx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Aicryptonemi0w",
+   "url": "https://x.com/Aicryptonemi0w/status/2098018906011300131",
+   "date": "2026-09-10",
+   "text": "Bitcoin traders dial down bullish plays ahead of U.S. inflation data\n\nBitcoin traders are dialing down bullish plays ahead of U.S. inflation data due Thursday, with the derivatives market showing a clear pullback in leveraged long positioning. The hesitation is not panic, but it https://t.co/ELOgzuovhV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 47,
+   "user": "swissblock__",
+   "url": "https://x.com/swissblock__/status/2098161731734216974",
+   "date": "2026-09-10",
+   "text": "Bitcoin Liquidity tells us when activity is intensifying, but activity is neither bullish nor bearish per se.\n\nIn February and June, expansion reflected selling pressure overwhelming the market.\n\nIn April and August, it reinforced upside participation.\n\nThe critical signal https://t.co/mN9l1HjZuc https://t.co/AmLjOuXsPH"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "hercules69x",
+   "url": "https://x.com/hercules69x/status/2098023064021930461",
+   "date": "2026-09-10",
+   "text": "BTC is showing a potentially bullish setup on the 4H chart after a breakout and liquidity-grab rejection. A falling wedge is forming, hinting at possible upside reversal. Would you buy the breakout, wait for confirmation, or expect further downside? #Bitcoin #BTC #Crypto #Trading https://t.co/r1rFyHMSCb"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2098162500298518730",
+   "date": "2026-09-10",
+   "text": "🚨 INSTITUTIONAL TECHNICAL WATCH — BTC MOMENTUM DOWNGRADED TO NEUTRAL\n\nBITCOIN — StoneX / Julian Pineda, CFA, CMT\n\nTimeframe: Daily / short-term swing\nPublished: September 10, 2026 — 21:11 UK time\n\nThis is a genuinely new development since the previous check.\n\nStoneX has https://t.co/QklsXOSKdI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "MrHippopopalous",
+   "url": "https://x.com/MrHippopopalous/status/2098077832089895147",
+   "date": "2026-09-10",
+   "text": "Recommend reading the AI summary at least \n\nUnderstand how some exposure to ASST, MSTR can be lucrative in bull markets. Use preferred yield products -&gt; raise capital -&gt; NO diluting common shares -&gt; preserve AMPLIFIED (multiplied) UPSIDE / DOWNSIDE when Bitcoin RISES / FALLS https://t.co/Eqyd5viTPf"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NewsTongueX",
+   "url": "https://x.com/NewsTongueX/status/2098013117565337882",
+   "date": "2026-09-10",
+   "text": "🔴 Bitcoin retreats to $78K as traders cut bullish bets ahead of U.S. inflation data\n\nBitcoin's call skew—a measure of bullish option positioning relative to downside hedges—is weakening as traders reduce upside exposure, according to OrderX. Price retraced from above $81,000 to https://t.co/65cxrdJagE"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 9,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2097989463964094959",
+   "date": "2026-09-10",
+   "text": "#BITCOIN\n\n#BITCOIN is printing another bearish continuation candle today as price remains contained within last Thursday’s master candle for the seventh consecutive session. \n\nDespite the short-term selling pressure, Bitcoin continues to high-base, suggesting consolidation rather https://t.co/5RBjAj7CiR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2098050156469858439",
+   "date": "2026-09-10",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-09-10 (Late Morning Edition)\n\n**Published:** 2026-09-10 09:04 AM CT\n\nBitcoin is grinding lower, down 2.54% over the last 24 hours, as the market digests a sharp divergence between the asset's price and miner performance. The Fear &amp;"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "GemsTrendingNew",
+   "url": "https://x.com/GemsTrendingNew/status/2097959720523084218",
+   "date": "2026-09-10",
+   "text": "📊 Bitcoin — Daily Outlook\n\n📊 BTC stays in a Daily uptrend: higher highs, higher lows, price above SMA50 70470.25 and SMA200 70005.54.\nBut last close 78142.00 sits below SMA20 78692.66, below volume POC 79989.46, and just under the value area 78281.67–80089.92.\nMomentum confirms https://t.co/kzYlgXChUR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "fly_welinkBTC",
+   "url": "https://x.com/fly_welinkBTC/status/2098102166368206900",
+   "date": "2026-09-10",
+   "text": "The $BTC Bitcoin SOPR indicator has remained above 1 for three consecutive weeks since August 19, and the current reading is approximately 1.002.\n\nThe current on-chain structure is close to the early recovery stage of a bull market.\n\nHowever, the price of Bitcoin still faces https://t.co/ibNSuwvv93"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 159,
+   "user": "DoctorCatX",
+   "url": "https://x.com/DoctorCatX/status/2098124111855923265",
+   "date": "2026-09-10",
+   "text": "$BTC Bitcoin - Update\n\nBased on the same logic which on the 1st of March correctly forecasted that April would close above $70,202: May 2027 should close below $87,496.\n\nThis is based on the assumption that the 2M timeframe has started to build a bearish cycle of Kyushu Ashi https://t.co/KEvLft1XUF https://t.co/NE2PNFhMjw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "gandreou007",
+   "url": "https://x.com/gandreou007/status/2098159882537173486",
+   "date": "2026-09-10",
+   "text": "👀 BITCOIN MAY BE REPEATING THE SAME SETUP FROM THE PREVIOUS BULL RUN\n\nThis is the scenario I’m watching closely.\n\nLast cycle, Bitcoin first got rejected from an important long-term moving average, corrected, reclaimed it, and then used the breakout area as support before the https://t.co/zWpFTsSTuW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Pztradingquant",
+   "url": "https://x.com/Pztradingquant/status/2098078494752149710",
+   "date": "2026-09-10",
+   "text": "Currently monitoring the Bitcoin situation.\n\nNot gonna lie, with the strong momentum, I would have expected the high at 83k to be swept by now.\n\nSo far, $BTC has only made lower highs and lower lows.\n\nI am expecting this to change as we transition from a bear market to a bull https://t.co/u7D6gJmaL2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 419,
+   "user": "xapa03",
+   "url": "https://x.com/xapa03/status/2098051424009466117",
+   "date": "2026-09-10",
+   "text": "I am very confident that Bitcoin will rise rather than fall.\nThe bear market is over, so it is advisable to take every dip seriously when it comes to long-term investments.\nI still expect September to be bullish rather than bearish.\nThe $85,000 to $87,000 range will be reached https://t.co/rnfftqJajK https://t.co/PdDKxUGtbH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 23,
+   "user": "MuseExeArt",
+   "url": "https://x.com/MuseExeArt/status/2098154495297364342",
+   "date": "2026-09-10",
+   "text": "Market ConfusionBitcoin touched the specific level of 82,200 Although it failed to establish stability at this point the act of reaching this level reinforces the scenario of the bear market's conclusion\nEthereum has managed to stabilize above 2,450 however the specific https://t.co/tRn82ObsMd"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 30,
+   "user": "Mavis054",
+   "url": "https://x.com/Mavis054/status/2097936028510335381",
+   "date": "2026-09-10",
+   "text": "BITCOIN: WE COULD BE ENTERING ANOTHER 1,000-DAY BULL RUN 🚀\n\nLook at the structure, not the noise.\n\nThis chart is showing something interesting.\n\nPrevious Bitcoin major bull-market legs lasted roughly 1,065 days.\n\n🔹 2018 → 2021\n🔹 2022 → 2025\n🔹 And the current projection is https://t.co/FbxLQ97IDc https://t.co/f8Yxb5084T"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "TheBigCycleGame",
+   "url": "https://x.com/TheBigCycleGame/status/2097970412885782594",
+   "date": "2026-09-10",
+   "text": "DOTCOM FRACTAL UPDATE | September 10, 2026\n\n─────────────────\n\nS&amp;P 500\n\nIn correction since the August 13 high, retested the 0.382 level again yesterday. Since Tuesday it's been trending down again, three straight negative closes, and currently sitting right at https://t.co/ueNY63etuc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "cryptotradindev",
+   "url": "https://x.com/cryptotradindev/status/2097946947072004542",
+   "date": "2026-09-10",
+   "text": "Bitcoin above $75K… but I’m not convinced this breakout marks the start of a new bull market.\n\nI’ve watched BTC through multiple bull and bear cycles, and there are a few things making me cautious right now:\n\n• $80K has turned into major resistance, with $BTC struggling to hold https://t.co/VF6oy6cyTE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "BlockClaimed",
+   "url": "https://x.com/BlockClaimed/status/2098138096080404578",
+   "date": "2026-09-10",
+   "text": "The liquidations keep piling up, but the number I keep coming back to is not the $4 billion in shorts that got wiped out. It is the fact that the rally is now leaning on spot demand to carry it, because short covering is a fuel that does not refill.\n\nBitcoin hit $78,449 before https://t.co/OhaNnZNdvw"
+  }
+ ]
+}

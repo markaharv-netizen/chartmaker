@@ -1,0 +1,219 @@
+{
+ "symbol": "COIN",
+ "start": "2026-09-06T00:00:00Z",
+ "end": "2026-09-07T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "supras7",
+   "url": "https://x.com/supras7/status/2096665723607412867",
+   "date": "2026-09-06",
+   "text": "$BTC looks bullish on short term time frame, holding this range very well. I'm thinking 82k test on the upside and 77.4k on downside. If that breaks 74k test..I'm getting worried on my $mstr short BTC is still holding its own\n$mstz $conl $coin $bmnr $nvda $AAPL $GOOG $MSFT $SPCX https://t.co/o5LJdOmJyP"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2096738477807137171",
+   "date": "2026-09-06",
+   "text": "📐 $BTC steady at +0.5% with higher highs—bullish momentum quietly building, not to ignore today\n\n- my bias is bullish here on the 1h, as the local structure is showing clear higher highs and higher lows, with price currently above both EMA20 and EMA200 and sitting at 80150\n- https://t.co/eGhJ5ONYCV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2096439303203098772",
+   "date": "2026-09-06",
+   "text": "⚡ $RAYSOL 9% spike on 5.4x volume looks like sustained expansion, not noise\n\n- my bias is bullish here — 1h, daily, weekly and BTC structure are aligned, so this is not a counter-trend squeeze; the +9% spike on ~7x volume is an impulsive expansion, not a bull trap, but chasing https://t.co/rlM3NlucIg"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "techwontsaveu",
+   "url": "https://x.com/techwontsaveu/status/2096695915457425525",
+   "date": "2026-09-06",
+   "text": "$ZEC has a lot of downside and/or monero:native is undervalued. There can only be one goated privacy coin and that is monero, case closed. Check back in 1, 2, 5 years to see monero back where it belongs https://t.co/dJUH6EyZTi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "ShillPLS",
+   "url": "https://x.com/ShillPLS/status/2096655681394966605",
+   "date": "2026-09-06",
+   "text": "Shining City is a nano-cap coin, which means all the upside potential is still there. Anyone can get massive bags with minimal funds and limited downside."
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 12,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2096604841418338542",
+   "date": "2026-09-06",
+   "text": "BTC Single-Coin Histogram Analysis\n\nVerdict: Bearish\n\nExtreme Retail Long Crowding: True Retail Longs (Blue) sit elevated near upper historical percentiles, indicating heavy retail concentration in long positions. Severe retail long crowding creates a high-risk setup for downside https://t.co/fEaf72fUAv"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "DrWhoReborn",
+   "url": "https://x.com/DrWhoReborn/status/2096411189958050079",
+   "date": "2026-09-06",
+   "text": "COIN at $185\n\nDownside? \n$120-150 in a worst-case scenario (another 20-30% drop).\n\nUpside? \n$400-600 over 24 months (200-300% return).\n\nThat's a 10:1 reward-to-risk ratio.\n\nName one other asset with that kind of asymmetry. \nI'll wait. https://t.co/x5S32nZ1bC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "lewajo123",
+   "url": "https://x.com/lewajo123/status/2096635081590804527",
+   "date": "2026-09-06",
+   "text": "I’ve begun trying to replicate @conviction_meta’s strategy for marking out resistance lines. I made these last night before the 85m liquidity sweep and to be honest I’m not exactly sure I’m doing it correctly but so far it seems to be.\n\nAs you can see it quickly tapped into that https://t.co/MlPj16xc8L"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "lewajo123",
+   "url": "https://x.com/lewajo123/status/2096635216534085756",
+   "date": "2026-09-06",
+   "text": "I’ve begun trying to replicate @conviction_meta’s strategy for marking out resistance lines. I made these last night before the 85m liquidity sweep and to be honest I’m not exactly sure I’m doing it correctly but so far it seems to be working.\n\nAs you can see it quickly tapped https://t.co/UIsILtCrVs"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2096605010264301940",
+   "date": "2026-09-06",
+   "text": "BTC Coin Pulse Chart Analysis\n\nVerdict: Bearish\n\nLiquidation Level Size (Long vs. Short): Liquidation Level Size Long remains significantly elevated compared to overhead Short Liquidations. These dense long liquidation clusters sitting directly beneath current price action form https://t.co/skKZP826tC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "lewajo123",
+   "url": "https://x.com/lewajo123/status/2096635343424340009",
+   "date": "2026-09-06",
+   "text": "I’ve begun trying to replicate @conviction_meta’s strategy for marking out resistance lines. I made these last night before the 85m liquidity sweep and to be honest I’m not exactly sure I’m doing it correctly but so far it seems to be working.\n\nAs you can see it quickly tapped https://t.co/4bIsUvq1Ne"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2096468807862948050",
+   "date": "2026-09-06",
+   "text": "BTC Single-Coin Histogram Analysis\n\nVerdict: Bearish\n\nExtreme Retail Long Crowding: True Retail Longs (Blue) sit near upper historical extremes, indicating that retail traders are heavily crowded into long positions. Overextended retail long sentiment significantly increases the https://t.co/nhpCIZbUI5"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2096604350923567144",
+   "date": "2026-09-06",
+   "text": "📊 $AVAX Overview | 2026-09-06\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Avalanche\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2096615687900774801",
+   "date": "2026-09-06",
+   "text": "📊 $FIL Overview | 2026-09-06\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🐌 Weak\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Filecoin\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2096609391134785882",
+   "date": "2026-09-06",
+   "text": "📊 $PEPE Overview | 2026-09-06\n\n📉 Trend\nEMA200 🟢 Bullish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI 🟢 Bounce\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#PEPE\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2096599312746578374",
+   "date": "2026-09-06",
+   "text": "📊 $ADA Overview | 2026-09-06\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Cardano\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2096468940964974986",
+   "date": "2026-09-06",
+   "text": "BTC Coin Pulse Chart Analysis\n\nVerdict: Bearish\n\nLiquidation Level Size (Long vs. Short): Liquidation Level Size Long remains heavily elevated compared to overhead Short Liquidations. These dense long liquidation pools resting below the current price create downside magnet zones https://t.co/eARAC6Rzns"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TradeCryptoLife",
+   "url": "https://x.com/TradeCryptoLife/status/2096499598093386122",
+   "date": "2026-09-06",
+   "text": "🆕 NEW ON BINANCE ALPHA: HAJIMI (哈基米) 🐱\n\nWhat is it?\nChinese viral cat-meme coin. Very little fundamental utility — the thesis is essentially culture + community + meme virality.\n\nWhy watch it?\n• Strong recognition in the Chinese meme community\n• Small market cap →"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "crypto_nuclear",
+   "url": "https://x.com/crypto_nuclear/status/2096520377849848287",
+   "date": "2026-09-06",
+   "text": "$ROSE ~ 4D \n#ROSEUSDT #Crypto\n#ROSE After a long period of decline, price has been slowly approaching a major descending trendline that has controlled the market for a very long time.\n\nThe overall trend is still bearish, but the chart is now reaching a critical decision point. https://t.co/xm4SA9fwzQ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 168,
+   "user": "Levi2v2y",
+   "url": "https://x.com/Levi2v2y/status/2096616152851943929",
+   "date": "2026-09-06",
+   "text": "$XCN Some people keep talking about dilution being bearish. Here are the facts for XCN. \n\n39.3 billion currently circulating\n68.98 billion total supply\nTotal supply remaining: 48.4 billion\n\nBut people miss that XCN has a burn mechanism and has to this day burned about 20.5 https://t.co/yYp0ya7Jhn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "ForbesOnX1",
+   "url": "https://x.com/ForbesOnX1/status/2096558244412219521",
+   "date": "2026-09-06",
+   "text": "$zcat went to basically 100m on solana and no KOL knew because they were hyper fixated on robinhood. It’s ok cause so was I😂. Such a good narrative in hindsight just not paying attention. Could’ve been so bullish on the coin but just the fact it was on solana made it bearish."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2096495447862919474",
+   "date": "2026-09-06",
+   "text": "🧐 $BTC +0.1% clings to the higher low — 1h bias stays bullish\n\n- my bias is bullish here on the 1h while price holds the last higher low — this is a counter-trend grind versus weekly bearish structure, so I want a clear reclaim or a sweep-and-hold before adding size 📊\n- I https://t.co/VQjc50EUpe"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2096611393487229260",
+   "date": "2026-09-06",
+   "text": "💪 $FIL swept 2.32% below and snapped back inside the uptrend\n\n- my bias is bullish here after the 15m sell-side sweep under 0.7858 that closed back above — that grab sits inside a confirmed 1h bullish structure (and daily is aligned bullish), so I read it as fuel for https://t.co/6arpKi1eVv"
+  }
+ ]
+}

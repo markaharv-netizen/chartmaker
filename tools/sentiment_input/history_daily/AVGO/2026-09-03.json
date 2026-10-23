@@ -1,0 +1,237 @@
+{
+ "symbol": "AVGO",
+ "start": "2026-09-03T00:00:00Z",
+ "end": "2026-09-04T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AVGO (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "wsagentai",
+   "url": "https://x.com/wsagentai/status/2095482282010182032",
+   "date": "2026-09-03",
+   "text": "09/03/2026 Morning Briefing\n\nWall Street gears up for a mixed open as Broadcom’s blowout AI outlook lifts tech sentiment, offset by cautious Fed commentary and a wave of short-seller attacks on speculative names. Futures indicate a tech-led advance, while small caps lag on rate"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "panicsellweekly",
+   "url": "https://x.com/panicsellweekly/status/2095484179551051820",
+   "date": "2026-09-03",
+   "text": "If you were a On Demand subscriber you can search any ticker any time and if so you would have been prepared for $AVGO going lower:\n\n$AVGO confirmed a Bear Flip two weeks ago — and premarket price just broke below the POC at $362.27, something the weekly close hadn't shown yet. https://t.co/Hoaa6I4z8Z"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2095582253346627735",
+   "date": "2026-09-03",
+   "text": "$NVDA \n\n$NVDA continues to show strong bullish price action this week, with buyers remaining firmly in control of the trend. \n\nLast week’s spinning top signaled some indecision, but rather than confirming a bearish pivot-high reversal, bulls have responded with a bullish https://t.co/CtPSNPkof0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "QuantAlgosAi",
+   "url": "https://x.com/QuantAlgosAi/status/2095565099285033092",
+   "date": "2026-09-03",
+   "text": "⚠️ TRAPDOOR $AVGO — king node 350.00 is short gamma; the bullish/bearish technical level is NOT a magnet, it's a vol-trap for fast whipsaws.\n📐 Technicals (4h): Resistance 359.85 · Support 350.06 · Fib 61.8% @ 398.15 (down-leg) · RSI 33\n🎯 Options layer: magnet 350.00 · MVC https://t.co/l9hxIviwc2"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 192,
+   "user": "thestockwhale",
+   "url": "https://x.com/thestockwhale/status/2095438987464978727",
+   "date": "2026-09-03",
+   "text": "Markets are setting up for higher short-term. If everyone is bearish, it's time to be bullish. \n\n1. Catalysts for this week 0:00 - lululemon earnings after the bell today, job report Friday pre-market\n\n2. S&amp;P 500 1:37 - analysis, weekly bearish divergences forming, but daily is https://t.co/oq5yvE0c7t"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ask_volAI",
+   "url": "https://x.com/ask_volAI/status/2095553816850726954",
+   "date": "2026-09-03",
+   "text": "volAI Block Trade Watch\n\nA few large 30+ DTE option prints stood out today, but only one cleared the bar for a clean directional read.\n\n$MSTR\n5,000 Oct. 16 150C traded at the Ask for roughly $3.73M, while IV at the strike rose 3.1 vol points. That is the clearest aggressive https://t.co/37mU9Qo5Tl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2095603479062479204",
+   "date": "2026-09-03",
+   "text": "The biggest tape today wasn't a bet on where anything goes — it was a bet on where things won't.\n\nTHE TAPE TODAY\n\n$617M crossed, 141 abnormal prints, and the loudest voice on the tape wasn't buying anything — it was renting out patience. The headline trade was in MCD: someone https://t.co/xPcP4pfp1Y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DaggerTrading",
+   "url": "https://x.com/DaggerTrading/status/2095557154287599836",
+   "date": "2026-09-03",
+   "text": "$AVGO 353.09 remains a key level.\n\nNeeds to hold as strong support for a push back up. If it breaks and holds as strong resistance with bearish momentum, more downside is likely. Momentum is key.\n\n$SPY $DELL $NVDA #daytrading #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "chartlyst",
+   "url": "https://x.com/chartlyst/status/2095417376778891567",
+   "date": "2026-09-03",
+   "text": "Broadcom ( $AVGO  ) Earnings Review: The Print vs. The Call\n\nBroadcom initially dropped ~6% following its earnings release, but shares recovered significantly as CEO Hock Tan outlined the long-term vision during the earnings call. The overarching narrative of the night: the print"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanWalkerMarke",
+   "url": "https://x.com/RyanWalkerMarke/status/2095497693695201451",
+   "date": "2026-09-03",
+   "text": "$EPRX: $EPRX = Eupraxia Pharmaceuticals, a Canadian clinical-stage biopharmaceutical company whose core technology is the Diffusphere™ sustained-release delivery platform. The main focus is not on “drugs already on the market,” but on EP-104GI for the treatment of eosinophilic https://t.co/J5ARaBNJQV"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "yeakubdurjoy002",
+   "url": "https://x.com/yeakubdurjoy002/status/2095656881503224032",
+   "date": "2026-09-03",
+   "text": "The $AVGO earnings trade delivered.\n\nI shorted $AVGO with a good call and decent profit. The chart shows why I was comfortable taking the trade. Price lost momentum after earnings, failed to reclaim the key resistance area, and the downside reaction confirmed the bearish https://t.co/klwTvvYCtC https://t.co/hX4NocLjt2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "TomWhite_S",
+   "url": "https://x.com/TomWhite_S/status/2095599305008505318",
+   "date": "2026-09-03",
+   "text": "Bearish moves in #UnusualOptionActivity $LEN $HPQ $AVGO = Bullish. @SchwabNetwork https://t.co/6YKL65xgt2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "sniptrade_bruce",
+   "url": "https://x.com/sniptrade_bruce/status/2095493687027355846",
+   "date": "2026-09-03",
+   "text": "TODAY’S WATCHLIST \nBULLISH\n$ SNOW\n$ TSLA\n$ META\n$ MSFT\n$ HOOD\n\nBEARISH\n$ AVGO\n$ HPE\n$ NTAP\n$ AMD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "corp_nick14",
+   "url": "https://x.com/corp_nick14/status/2095487672110260479",
+   "date": "2026-09-03",
+   "text": "$AVGO is trying to build a base after a sharp correction from $494.22.\n\nNow: $367.24 (-0.66%)\n\nThe chart is tightening around $355-$375. I’m watching $380 as the first real breakout trigger.\n\nAbove $380 → $400\nAbove $400 → $420-$430\nBelow $350 → downside risk increases\nMy https://t.co/Mg5CDBuHye"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2095305467157479911",
+   "date": "2026-09-03",
+   "text": "The tickers X can't stop talking about right now:\n\n1. Credo Technology Group Holding $CRDO is up 1.6% in post-market after falling 20.0% in the regular session\n\n🟢 Sentiment: 36% bullish, 19% bearish, 45% neutral\n\nCredo beat Q1 earnings and posted a 115% YoY revenue jump, https://t.co/UbNBi59efU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "JQMarketSignal",
+   "url": "https://x.com/JQMarketSignal/status/2095333949161795703",
+   "date": "2026-09-03",
+   "text": "Broadcom ($AVGO) Earnings Analysis\n\nQ3 revenue and earnings both beat expectations, driven by strong AI semiconductor and infrastructure demand.\n\nHowever, slightly softer Q4 operating margin guidance triggered significant after-hours volatility.\n\nAt the current valuation, https://t.co/6zec3CIVZC"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 8,
+   "user": "NitranTrades",
+   "url": "https://x.com/NitranTrades/status/2095549553365696624",
+   "date": "2026-09-03",
+   "text": "$AVGO ER dump: -4%\n\nThis weekly close will be very important.\n\nSimple:\n\n🟢 Weekly close above $358: Bullish scenario remains active.\n\n🔴 Weekly close below $358 + the trendline: Bearish scenario takes over.\n\nLet the weekly candle decide. https://t.co/PmYIRaYwDj https://t.co/FLs4pq3xjf"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2095568842713919835",
+   "date": "2026-09-03",
+   "text": "$1.8M OF CALLS HIT NVDA TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - NVDA, PLTR, SPCX, MSTR, PCG\nPUTS BOUGHT (bearish bets) - AVGO, MU, AXP, ARM, DOCU\nFOUGHT OVER (heavy both ways) - TSLA\n\nSize is conviction. It is not intent."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NathanCrossNC",
+   "url": "https://x.com/NathanCrossNC/status/2095465812874473705",
+   "date": "2026-09-03",
+   "text": "$AVGO: after-hours sold the multiple, not the guide.\n\nFact layer  \nRevenue, EPS, and AI semis all cleared  \nQ4 still accelerating  \nFY28 revenue and EPS anchors sit above prior Street\n\nTape layer  \nThis is not a “guidance fake” tape  \nIt is a concentration discount  \nPrice can https://t.co/NyMPFhyYLP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 37,
+   "user": "ripster47",
+   "url": "https://x.com/ripster47/status/2095517805592379420",
+   "date": "2026-09-03",
+   "text": "$AVGO \nSO you need to analyze daily chart\nClouds tell you when it is bearish or bullish\nLevels tell you targets\nSo this morning on short i gave target of 342\nWhy ? 342 is Daily Chart Gap Highs , Under it is gap to 333 , so those are levels to watch for longs\nFor now Shorts https://t.co/8uL8TuhcA6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "PrinceOfAtheism",
+   "url": "https://x.com/PrinceOfAtheism/status/2095539019811811583",
+   "date": "2026-09-03",
+   "text": "$AVGO is down roughly 5.3% despite reporting another quarter of exceptional AI growth.\n\nBroadcom delivered:\n\n• Adjusted EPS of $3.32 vs. $3.22 expected\n• Revenue of $29.59B vs. $29.24B expected\n• AI semiconductor revenue of $16.7B, up 221% YoY\n• Next-quarter revenue guidance https://t.co/7UtA4NWOzb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "PrinceOfAtheism",
+   "url": "https://x.com/PrinceOfAtheism/status/2095605737242443928",
+   "date": "2026-09-03",
+   "text": "⚠️ $AVGO  POST-MARKET: Outstanding AI growth wasn’t enough to satisfy the market.\n\nBroadcom reported:\n\n• Adjusted EPS of $3.32\n• Revenue of approximately $29.6B\n• AI semiconductor sales of $16.7B\n• AI revenue growth of roughly 221% year over year\nThose numbers would normally"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "tenet_research",
+   "url": "https://x.com/tenet_research/status/2095450981328658495",
+   "date": "2026-09-03",
+   "text": "$AVGO | Mizuho Reiterates Broadcom at Outperform with $530 PT on AI ASIC Leadership and XPU Growth\n\nMizuho stays bullish as AI revenue growth, hyperscaler XPU ramps, and networking leadership drive continued upside.\n\n@ripster47 | @TENETTRADEGROUP | @TenetCharts https://t.co/2523ZU0ocN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "XtradesAnalysis",
+   "url": "https://x.com/XtradesAnalysis/status/2095524551119544775",
+   "date": "2026-09-03",
+   "text": "$MU  - OUTLOOK\n\nPrice is holding above the current demand zone. As long as this level sustains, the bullish structure remains intact.\n\nUpside remains the main scenario from here.  \nBIAS: Bullish while price holds above demand.\n\nTry our Stock &amp; Options alerts completely free for https://t.co/1b579bvbAd"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "trade_catalyst",
+   "url": "https://x.com/trade_catalyst/status/2095615721417925069",
+   "date": "2026-09-03",
+   "text": "$AVGO printed the highest volume in the last 62 trading days and bounced right off the volume shelf.\nNow it needs a close above the sma 200 days, currently at $369.76, to trigger the bullish scenario and open the door for more upside. https://t.co/l8fv2KvKWo"
+  }
+ ]
+}

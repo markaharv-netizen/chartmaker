@@ -1,0 +1,201 @@
+{
+ "symbol": "AVGO",
+ "start": "2026-09-15T00:00:00Z",
+ "end": "2026-09-16T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AVGO (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "ChartsToro",
+   "url": "https://x.com/ChartsToro/status/2099688101664653533",
+   "date": "2026-09-15",
+   "text": "Scan results:\nA. Open Equals Low → bull (24)\nAMPL,ASTX,BFLY,BKSY,COMP,DIS,ERY,FSLR,HODL,LFST,NAMO,NCNO,NYMO,PRCH,QUBT,RELY,ROBN,SEZL,TREE,TSM,XPEV,YUMC,CL_F,ES_F\nB. Upside Reversal → bull (32)"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2099750314857361437",
+   "date": "2026-09-15",
+   "text": "Macro Observatory Week 38 Tuesday Briefing\n\nMonday's telemetry locks in a critical structural evolution: the matrix shifts from live breakdowns into deep bearish hibernation, cementing an unprecedented 35 Tickers (72.9%) mapped into forward Macro Bleed and Macro Bear Resumption."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "LuckySusan73774",
+   "url": "https://x.com/LuckySusan73774/status/2099711751227150556",
+   "date": "2026-09-15",
+   "text": "The key question for this FOMC is no longer simply:\nWill the Fed hike?\nThe market is already largely pricing in a 25bp move.\nWhat matters much more is:\nWhat happens after this hike?\nFor tech, semis and AI stocks, I’m watching three things:\n1. The dot plot\nDoes the Fed signal more"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2099864661487431815",
+   "date": "2026-09-15",
+   "text": "Tickers dominating X conversation today:\n\n1. Palantir Technologies $PLTR is down 0.6%\n\n🟢 Sentiment: 41% bullish, 6% bearish, 53% neutral\n\nAfter a 3.6% jump to $173 on Sept 14 that sparked fresh $200‑$250 price targets and news of a major law‑firm AI deal, PLTR slipped 0.6% https://t.co/H16EpTwof7"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "MarketMindCap",
+   "url": "https://x.com/MarketMindCap/status/2099863897566007764",
+   "date": "2026-09-15",
+   "text": "Are we really going to ignore how cheap $AVGO looks here?\n\n📊 PEG (ntm): 0.36 - highly undervalued relative to its growth\n📈 EPS climbing\n\nCEO Hock Tan stated that Broadcom is on track to exceed $30 EPS in fiscal 2028. At current price that implies P/E of just 11.5x.\n\nAnd before https://t.co/wBPSdoIz3p"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "investingtomars",
+   "url": "https://x.com/investingtomars/status/2099841914656956773",
+   "date": "2026-09-15",
+   "text": "Broadcom Outlook 📉📈\n\n$AVGO lost the $356 support, pivoting to a more bearish setup.\n\nIf it tags the 0.382 Fib level, it will target new all-time highs with even greater % upside potential.\n\n➡️ Target 1 :  $190 (-45%)  \n➡️ Target 2 : $730 (+110%) https://t.co/BhNQQya5Mb https://t.co/t5GSKVOim4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "AnthonySandford",
+   "url": "https://x.com/AnthonySandford/status/2099876778672025801",
+   "date": "2026-09-15",
+   "text": "Market Tide is pretty weak this morning.\n\n$SPY is around 756.56 with net volume down to -657K.\n\nNCP is -106M while NPP is +31M, so calls are leaning more bid side while puts are getting bought more aggressively at the ask.\n\nWhat stands out most is the Top Net Impact Chart.\n\nThere https://t.co/RSA5Zf0XXS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "AkinAdemGokhan",
+   "url": "https://x.com/AkinAdemGokhan/status/2099933366376390989",
+   "date": "2026-09-15",
+   "text": "$AVGO Fuel loaded, brakes missing: AVGO grinds in the lower half of its range with 360 the line the squeeze case still needs.\n\nSellers hold the upper hand in the trend, yet the positioning underneath is anything but resigned. Call accumulation keeps building alongside puts — two https://t.co/zX6Xmo2Y3u"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "RebeccaThouu",
+   "url": "https://x.com/RebeccaThouu/status/2099845729074254006",
+   "date": "2026-09-15",
+   "text": "$AVGO remains one of the highest-quality businesses out there.  Pullback has brought it closer to fair value. Short-term may stay soft, but these levels look reasonable for starting or adding to a long-term position.  Neither a steal nor overvalued. Solid entry for a proven https://t.co/WD7qDqME2O"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "VicInvesting",
+   "url": "https://x.com/VicInvesting/status/2099913864251125889",
+   "date": "2026-09-15",
+   "text": "$AVGO is DEEPLY UNDERVALUED! Why? AI revenue is expected to grow from $58B in FY26 to over $115B in FY27 &amp; over $230B in FY28; forward PE is only around 18; https://t.co/O9HsLWTyD9’s fair value: $461/share.\n\nSee the full report (available for 7 days): https://t.co/aL46wOZLaW https://t.co/TZzBhc5F3H"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Trade_Intel_",
+   "url": "https://x.com/Trade_Intel_/status/2099818214884585928",
+   "date": "2026-09-15",
+   "text": "$AVGO just lost its last remaining anchored VWAP⚓️\n\nWatch for more downside pressure https://t.co/Kuf4UEfrfr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DaggerTrading",
+   "url": "https://x.com/DaggerTrading/status/2099885135696965970",
+   "date": "2026-09-15",
+   "text": "$AVGO testing a key level at $340.68.\n\nWatch how price reacts here. If it breaks below and holds as strong resistance with momentum, more downside is likely.\n\nStay sharp.\n\n$SPY $DELL $NVDA #daytrading #stocks #StockMarket"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "XpertPATrader",
+   "url": "https://x.com/XpertPATrader/status/2099958053064065185",
+   "date": "2026-09-15",
+   "text": "choppy day, and at EOD status, TEM PANW ZS CRWD OKTA FTNT held well on long side, ORCL CAVA AMZN AVGO DLTR to the downside, cut losers hold runners. https://t.co/JtEEfPaTRC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DaggerTrading",
+   "url": "https://x.com/DaggerTrading/status/2099918013373755695",
+   "date": "2026-09-15",
+   "text": "$AVGO analysis just crossed 34K views on Reddit.\n\nThe $342 area was key... once it failed, downside opened up.\n\nJoin the conversation 👇\n https://t.co/F8yrVlgubs\n\n$SPY $DELL $NVDA #daytrading #stocks #StockMarket🗡️"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "nexushqintel",
+   "url": "https://x.com/nexushqintel/status/2099907503207190911",
+   "date": "2026-09-15",
+   "text": "AVGO hit our 5% downside target, closing at 338.36 versus the 340 threshold we called for, so that's a confirmed hit despite the modest 38% confidence, chip sector pressure showed up where we thought it might #NEXUS"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 192,
+   "user": "JEFETRADES",
+   "url": "https://x.com/JEFETRADES/status/2099977836350087409",
+   "date": "2026-09-15",
+   "text": "BUCKLE UP TOMORROW COULD BE NASTY🩸\n\n$NVDA $AVGO $MU Could start to see downside ahead of FOMC but the real concern is AFTER the meeting...\n\nThe entire market seems to be expecting Rate hikes and Semiconductors are losing a CRITICAL support. THIS IS GOING TO BE MAJOR👇 https://t.co/dOrADs2l0c"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "themarketradar",
+   "url": "https://x.com/themarketradar/status/2099860234143412251",
+   "date": "2026-09-15",
+   "text": "Broadcom $AVGO is going bearish trend again, not a good look https://t.co/6qbpq9SHaq"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 25,
+   "user": "JesseOlson",
+   "url": "https://x.com/JesseOlson/status/2099900550833742303",
+   "date": "2026-09-15",
+   "text": "$AVGO continues to bearish on the daily chart. \n\nPrice is about to fill the $334 and $316 gaps. \n\nWhat about the gap at $254? 👀 https://t.co/z9cxTIRLaB https://t.co/KXNyKXmdpn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "wsagentai",
+   "url": "https://x.com/wsagentai/status/2099996956168757615",
+   "date": "2026-09-15",
+   "text": "09/15/2026 Market Daily Summary\n\nRisk appetite held a rangebound tone, but institutions showed a notable divergence from the headline mood: net options premium flipped risk-off at -$216M while the greed index sat at 56. The broader tape closed mixed with QQQ -0.54% and SPY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Zurieliooo",
+   "url": "https://x.com/Zurieliooo/status/2099970759959437624",
+   "date": "2026-09-15",
+   "text": "Market close 9/15:\n\n$QQQ stayed heavy into the Fed, with tech fighting 5%+ yields and Brent around $108. The tape remained selective rather than outright capitulation — tomorrow’s Fed decision is the real directional catalyst.\n\nXLR8 had clear dispersion:\n\n$AMD ~+2.5% →"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "FIowStateofMind",
+   "url": "https://x.com/FIowStateofMind/status/2099988135438389621",
+   "date": "2026-09-15",
+   "text": "$AVGO  technical + flow breakdown:\n\nClose: 339.27\n\n• 339–340: Immediate pivot and dark-pool zone\n• 342.50: First reclaim\n• 350: Major options magnet\n• 334: Key weekly support\n• 330: Next downside level\n\nPrice is below the daily 10/21 cloud and both major moving averages. https://t.co/2b7vvA0zJW"
+  }
+ ]
+}

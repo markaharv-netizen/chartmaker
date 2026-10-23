@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-09-14T00:00:00Z",
+ "end": "2026-09-15T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "ainotesus",
+   "url": "https://x.com/ainotesus/status/2099392368017321997",
+   "date": "2026-09-14",
+   "text": "Will Bitcoin support hold? The bullish trend is intact, but the downside is real.\n\nBitcoin is sliding toward $77K, yet the higher-probability path remains sideways consolidation followed by an upside move. A drop toward the $40Ks fits inside a managed bull thesis. A move below"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "dbdegn",
+   "url": "https://x.com/dbdegn/status/2099443490534953395",
+   "date": "2026-09-14",
+   "text": "🚨Bitcoin is at a critical juncture right now, and there both bullish and bearish signals on the right timeframe\n- On the bullish side we're finding support at $76,500 and broken out of long term downtrend on the RSI.\n- On the bearish side we've rejected 3 times at the 50week MA. https://t.co/tyNKgoy0RM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "dbdegn",
+   "url": "https://x.com/dbdegn/status/2099443663176622590",
+   "date": "2026-09-14",
+   "text": "🚨Bitcoin is at a critical juncture right now, and there are both bullish and bearish signals on the higher time frame.\n- On the bullish side we're finding support at $76,500 and broken out of long term downtrend on the RSI.\n- On the bearish side we've rejected 3 times at the https://t.co/bE34E5RuxM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2099318168367837694",
+   "date": "2026-09-14",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-09-13 (Evening Edition)\n\n**Published:** 2026-09-13 09:03 PM CT\n\nBitcoin is grinding sideways on a quiet Sunday, with the 24-hour change flat at -0.46% and the Fear &amp; Greed Index holding steady in Greed territory at 57. The market is"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "defaiscope",
+   "url": "https://x.com/defaiscope/status/2099425672003260831",
+   "date": "2026-09-14",
+   "text": "Bitcoin demand is no longer collapsing, but it is not the same thing as demand coming back.\n\nThe constructive signal is on the downside of apparent demand. Since the May–June contraction, each negative trough has been shallower. \n\nThat higher-low structure usually means less https://t.co/2nrzQt9YiY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "SignalxBinance",
+   "url": "https://x.com/SignalxBinance/status/2099452990298214677",
+   "date": "2026-09-14",
+   "text": "My personal analysis of SOL's current posture suggests a cautious, range-bound environment. 🔍 The broader crypto market faces potential volatility from the upcoming Fed rate decision and the CLARITY Act vote, creating an air of uncertainty for altcoins like SOL, despite the https://t.co/V5v1ziJVrN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "MacroSniperPro",
+   "url": "https://x.com/MacroSniperPro/status/2099379845612339272",
+   "date": "2026-09-14",
+   "text": "STATUS: THE INSTITUTIONAL BULL TRAP (Monday Tape)\n\nRetail is aggressively bidding the Monday tape, blinded by a suppressed VIX (15.84) and cyclical Tech outperformance. But underneath the surface, the macroeconomic plumbing is flashing a severe structural warning. \n\nHere is why"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2099393791815766029",
+   "date": "2026-09-14",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟯 / 𝟱 – modestly bullish / near‐neutral - 𝗠𝗮𝗰𝗿𝗼 𝗰𝗮𝘁𝗮𝗹𝘆𝘀𝘁: Sept. 16 FOMC seen as a key driver; market pricing ~87‐90 % chance of a 25 bp hike – generally bearish for risk assets, but many view a confirmed hike as a “buy‐the‐dip” https://t.co/JChhOUQRiA"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "BloFin_Academy",
+   "url": "https://x.com/BloFin_Academy/status/2099362674052321341",
+   "date": "2026-09-14",
+   "text": "As BTC extends its decline, funding rates now signal growing bearish sentiment across the market.\n\n&gt; #CrudeOil leading the downside\n&gt; $SNDK stands out as the only asset showing relative bullishness\n\n🟢 Below 0.005% → broad bearish positioning\n🔴 Above 0.01% → broad bullish https://t.co/xvuXxIpKRc https://t.co/hdKHu7dLk9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "AntoniaXbt_",
+   "url": "https://x.com/AntoniaXbt_/status/2099418319618990579",
+   "date": "2026-09-14",
+   "text": "$BTC is testing the ceiling again. The next move could be sharp. 👀\n\nBitcoin has bounced from the horizontal demand zone and is now pushing against the pattern’s resistance trendline.\n\nThe Ichimoku Cloud is sitting directly above price as the next major barrier.\n\n🔼 Breakout: A https://t.co/Y6Gv1Z4XEW"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "FilipVantchev",
+   "url": "https://x.com/FilipVantchev/status/2099506875058237699",
+   "date": "2026-09-14",
+   "text": "#Bitcoin Weekly Update: More Downside Ahead?🚨\n\nBitcoin is holding the 0.2 Fibonacci level as support, but price is still struggling to break above the 50 SMA and the horizontal resistance.\n\nRSI is also showing a hidden bearish divergence, which could favor a continuation of the https://t.co/Sj8oX1ohCx"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "VenomCharts",
+   "url": "https://x.com/VenomCharts/status/2099527467023454406",
+   "date": "2026-09-14",
+   "text": "🔥 BTC — MAJOR BEARISH SETUP DEVELOPING 🐻📉\n\nBitcoin is trading around $78,466 and is showing signs of rejection near the $78,000–$80,000 supply zone.\n\nThe structure suggests a potential move lower if BTC fails to reclaim and hold above the key resistance levels.\n\n📍 SHORT ZONE: https://t.co/Y86m2Mtufi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 27,
+   "user": "browndataguy",
+   "url": "https://x.com/browndataguy/status/2099393221776265502",
+   "date": "2026-09-14",
+   "text": "$BTC Analysis 📊\n\nBTC is around $77.6K.\n\n🟢 Support: $76.4K–$76.8K\n🔴 Resistance: $81.2K–$81.6K\n\nHold support = bullish structure intact.\nBreak resistance = potential upside continuation.\nLosing support = downside risk.\n\nWaiting for confirmation. 📈\n\n#trading #crypto #Bitcoin https://t.co/MRF5F8bmCL"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Gosto_ox",
+   "url": "https://x.com/Gosto_ox/status/2099501462413836787",
+   "date": "2026-09-14",
+   "text": "Bitcoin is sending a strange signal ahead of the Fed.\n\nSpot BTC ETF flows weakened last week.\n\nThe dollar is stronger.\nOil is above $100.\nMarkets are pricing a high probability of a Fed hike.\n\nYet Bitcoin options have turned bullish for the first time in roughly a year, with https://t.co/DXffg72zFg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 103,
+   "user": "EtherRawl",
+   "url": "https://x.com/EtherRawl/status/2099564667249033494",
+   "date": "2026-09-14",
+   "text": "Over the past year, I've kept the idea that Bitcoin won't enter a new bull market until BTC.D goes back under 40% to 30%, hovering and bouncing in this area from 100k extending towards a shallow ATH, down to 50k, up and down for several years while altcoins go through their https://t.co/uCLqcJuOGV"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 93,
+   "user": "King0ftheCharts",
+   "url": "https://x.com/King0ftheCharts/status/2099410829540225459",
+   "date": "2026-09-14",
+   "text": ".\nBitcoin Closes the Week Out with a Reversal Bar at the 50 Week MA\n\nLet the Moonboys attack me for being bearish during a BTC bear market, which isn't over yet.  My Bitcoin trading system is designed to turn their panic into my ultimate entry point for the next BTC bull market. https://t.co/c3Uy3qIYtI"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "King0ftheCharts",
+   "url": "https://x.com/King0ftheCharts/status/2099410487729443177",
+   "date": "2026-09-14",
+   "text": ".\nBitcoin Closes the Week Out with a Reversal Bar at the 50 Week MA\n\nLet the Moonboys &amp; the crowd attack me for being bearish during a BTC bear market, which isn't over yet.  My Bitcoin trading system is designed to turn their panic into my ultimate entry point for the next BTC https://t.co/yvwOOBnd4g"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 53,
+   "user": "JukovCrypto",
+   "url": "https://x.com/JukovCrypto/status/2099594871715610818",
+   "date": "2026-09-14",
+   "text": "🐂Crypto Is the Cleanest Bid in the Room\n\nCame back from a weekend without displays and charts to a pretty red market. Reading through all the messages of my favorite groupchats &amp; timeline made me realize quickly that sentiment has flipped bearish across the board and majority of"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "King0ftheCharts",
+   "url": "https://x.com/King0ftheCharts/status/2099410778323554398",
+   "date": "2026-09-14",
+   "text": ".\nBitcoin Closes the Week Out with a Reversal Bar at the 50 Week MA\n\nLet the Moonboys attack me for being bearish during a BTC bear market, which isn't over yet.  My Bitcoin trading system is designed to turn their panic into my ultimate entry point for the next BTC bull market. https://t.co/tQp9FvcUOO"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FicusAgentLtd",
+   "url": "https://x.com/FicusAgentLtd/status/2099530118024819184",
+   "date": "2026-09-14",
+   "text": "BTC 1h: the rebuilt count still has no confirmation.\n\nThe engine's scenario is bullish impulse continuation, but the current read is 0%. Wave 2 is confirmed and the model is watching Wave 3. The panel records a current invalidation event: wave 2 cannot retrace beyond wave 1 start https://t.co/RDYJ5SvLCT"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "ainotesus",
+   "url": "https://x.com/ainotesus/status/2099481169171468687",
+   "date": "2026-09-14",
+   "text": "Is Bitcoin really going higher? Yes—the trend has flipped bullish.\n\nBitcoin closed above its bull-flip level and confirmed a golden cross. At around 77, the trend matters more than squeezing out a slightly cheaper entry. A year of bearish conditions has already forced many"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "King0ftheCharts",
+   "url": "https://x.com/King0ftheCharts/status/2099410356980666771",
+   "date": "2026-09-14",
+   "text": ".\nBitcoin Closes the Week Out with a Reversal Bar at the 50 Week MA\n\nLet the Moonboys &amp; the crowd attack me for being bearish during a BTC bear market, which isn't over yet.  My Bitcoin trading system is designed to turn their panic into my ultimate entry point for the next BTC https://t.co/rXZnv9q7jW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptrixLabs",
+   "url": "https://x.com/CryptrixLabs/status/2099593405332422916",
+   "date": "2026-09-14",
+   "text": "Litecoin is worth watching, not chasing — it's pinned right under a ceiling near $54.26, and it needs a strong 4-hour close above that level before this setup is back in play.\n\nThe problem is simple geometry. Price is sitting maybe a cent below the lid, while the nearest real https://t.co/WBNNLff7Vu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "The_DailyDigits",
+   "url": "https://x.com/The_DailyDigits/status/2099604342881898687",
+   "date": "2026-09-14",
+   "text": "wednesday would be the fed's first hike in 1,147 days, and what it does to bitcoin turns on something unrelated to the fed.\n\nall 20 hikes since 2015, split by where bitcoin sat in its own cycle. hikes in a bull phase bottomed a median 16% down. hikes in a post-peak bear, where we https://t.co/qpGWdugZp1"
+  }
+ ]
+}
