@@ -23,6 +23,17 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #sheets .row h3{margin:2px 0 4px;font-size:16px}#sheets .charts{font-size:13px;color:#374151;line-height:1.4}
 #sheets .row a.open{color:#2563eb;font-size:13px;white-space:nowrap}#sheets .row img{width:240px;max-width:42%;height:auto;border:1px solid #f0f0f0;border-radius:4px;background:#fff;cursor:zoom-in}
 #status{padding:4px 12px;font-size:13px}#status.err{color:#EF4444;font-weight:bold}
+#smabox{position:relative;z-index:30;font-size:12px;display:flex;flex-direction:column;gap:3px;align-items:flex-start}
+#smaBtn{background:#fff;color:#111;border:1px solid #767676;border-radius:2px;padding:6px 26px 6px 8px;text-align:left;min-width:9.5em;line-height:1.2;position:relative;white-space:nowrap}
+#smaBtn:hover,#smaBtn[aria-expanded=true]{border-color:#111}
+#smaBtn::after{content:"";position:absolute;right:9px;top:50%;margin-top:-2px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid #333;pointer-events:none}
+#smaMenu{position:absolute;z-index:40;top:calc(100% + 2px);left:0;background:#fff;color:#111;border:1px solid #ccc;border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,.18);min-width:100%;max-width:calc(100vw - 16px);padding:4px 0;max-height:70vh;overflow:auto}
+#smaMenu[hidden]{display:none !important}
+#smaMenu label{display:flex;flex-direction:row;align-items:center;gap:8px;font-size:14px;padding:8px 12px;cursor:pointer;white-space:nowrap}
+#smaMenu label:hover,#smaMenu label:focus-within{background:#f3f4f6}
+#smaMenu input[type=checkbox]{width:16px;height:16px;margin:0;flex:none}
+#smacrow{border-top:1px solid #e5e7eb;margin-top:4px}
+#smac{width:76px;padding:4px 6px}
 </style></head><body>
 <div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mVal">Valuation</button><button id="mWatch">Watchlist</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
@@ -31,10 +42,9 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <span style="margin-left:16px">Saved views</span><select id="views" style="min-width:180px"><option value="">— pick a view —</option></select>
 <span id="wlpickbox" style="margin-left:16px">Load from Watchlist <select id="wlpick" style="min-width:150px"><option value="">— watchlist view —</option></select></span>
 <button id="vsave" title="Overwrites the selected view. To save a new view, pick “— pick a view —” first.">Save view</button><button id="vren">Rename</button><button id="vdel">Delete</button>
-<button id="vexp">Export</button><button id="vimp">Import</button><input id="vfile" type="file" accept=".json,application/json" style="display:none">
 </div>
 <div id="fctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
-<label>Tickers (comma)<input id="ftickers" value="NVDA,AMD,INTC" size="22"></label>
+<label>Tickers (comma)<input id="ftickers" size="22"></label>
 <label>Display names (comma, optional)<input id="fnames" size="18"></label>
 <label>Metric<select id="fmetric">
 <option value="revenue">Revenue</option><option value="gross_profit">Gross profit</option><option value="operating_income">Operating income</option><option value="net_income">Net income</option><option value="eps_diluted">EPS (diluted)</option><option value="ocf">Operating cash flow</option><option value="capex">Capex</option><option value="fcf">Free cash flow</option><option value="cash">Cash</option><option value="total_debt">Total debt</option><option value="shares">Shares outstanding</option><option value="rnd">R&amp;D</option><option value="gross_margin">Gross margin %</option><option value="operating_margin">Operating margin %</option><option value="net_margin">Net margin %</option></select></label>
@@ -55,7 +65,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label title="Nest tiles inside sector boxes"><span>Group by sector</span><input id="hsector" type="checkbox"></label>
 <label>Title<input id="htitle" size="30" placeholder="auto"></label>
 <label><span>Watermark</span><input id="hwm" type="checkbox" checked></label>
-<button id="hgo">Render</button><button id="hrefresh" title="Fetch fresh quotes, bypassing the cache">Refresh</button><button id="hdl">Download PNG</button>
+<button id="hgo" title="Fetch fresh quotes, bypassing the cache">Render</button><button id="hdl">Download PNG</button>
 </div>
 <div id="tctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
 <label>Tickers (comma; blank = all in treasury.json)<input id="ttickers" value="MSTR,ASST,3350.T,SWC.L" size="30"></label>
@@ -63,11 +73,11 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Title<input id="ttitle" size="30" placeholder="auto"></label>
 <label>Bar color<select id="tcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="twm" type="checkbox" checked></label>
-<button id="tgo">Render</button><button id="trefresh" title="Fresh quotes">Refresh</button><button id="tdl">Download PNG</button>
+<button id="tgo" title="Fresh quotes">Render</button><button id="tdl">Download PNG</button>
 </div>
 <div id="vctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
 <label>View<select id="vview"><option value="snap">Snapshot</option><option value="time">Over time</option></select></label>
-<label>Tickers (comma)<input id="vtickers" value="NVDA,AAPL,TSLA,MSTR,MSFT,GOOGL" size="30"></label>
+<label>Tickers (comma)<input id="vtickers" size="30"></label>
 <label>Metric<select id="vmetric"><option value="pe">Trailing P/E</option><option value="fpe">Forward P/E</option><option value="ps">Price/Sales TTM</option><option value="evebitda">EV/EBITDA</option><option value="evrev">EV/Revenue</option><option value="pb">Price/Book</option><option value="peg">PEG</option><option value="mcap">Market cap USD</option><option value="dy">Dividend yield</option><option value="mnav">mNAV (Over time, SEC BTC holdings)</option></select></label>
 <label id="vrangebox" style="display:none">Range<select id="vrange"><option>1Y</option><option>3Y</option><option selected>5Y</option><option>10Y</option><option>Max</option></select></label>
 <label>Sort<select id="vsort"><option value="desc">High to low</option><option value="asc">Low to high</option></select></label>
@@ -75,7 +85,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Title<input id="vtitle" size="30" placeholder="auto"></label>
 <label>Bar color<select id="vcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="vwm" type="checkbox" checked></label>
-<button id="vgo">Render</button><button id="vrefresh" title="Bypass the 6h fundamentals cache">Refresh</button><button id="vdl">Download PNG</button><button id="vcsv" style="display:none">Download CSV</button>
+<button id="vgo" title="Bypass the 6h fundamentals cache">Render</button><button id="vdl">Download PNG</button><button id="vcsv" style="display:none">Download CSV</button>
 </div>
 <div id="wctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
 <label>Add tickers (comma)<input id="wadd" size="18" placeholder="e.g. AAPL, ETH"></label><button id="waddb">Add</button>
@@ -105,12 +115,17 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Title<input id="title" size="34" placeholder="auto"></label>
 <label>Line color<select id="color"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="wm" type="checkbox" checked></label>
-<label id="smabox" title="Simple moving averages of daily closes (Price line only, not intraday)"><span>SMA</span><span style="display:flex;gap:6px;align-items:center;font-size:13px">
-<label style="flex-direction:row;gap:2px"><input id="sma20" type="checkbox">20</label><label style="flex-direction:row;gap:2px"><input id="sma50" type="checkbox">50</label>
-<label style="flex-direction:row;gap:2px"><input id="sma100" type="checkbox">100</label><label style="flex-direction:row;gap:2px"><input id="sma200" type="checkbox">200</label>
-<label style="flex-direction:row;gap:2px"><input id="sma200w" type="checkbox">200W</label>
-<input id="smac" type="number" min="2" max="1000" placeholder="custom" style="width:70px;padding:4px"></span></label>
-<button id="go">Render</button><button id="refresh" title="Fetch fresh prices, bypassing the cache">Refresh</button><button id="dl">Download PNG</button>
+<div id="smabox" title="Simple moving averages of daily closes (Price line only, not intraday)"><span>SMA</span>
+<button type="button" id="smaBtn" aria-haspopup="true" aria-expanded="false" aria-controls="smaMenu">SMA: none</button>
+<div id="smaMenu" role="group" aria-label="Simple moving averages" hidden>
+<label><input id="sma20" type="checkbox">20</label>
+<label><input id="sma50" type="checkbox">50</label>
+<label><input id="sma100" type="checkbox">100</label>
+<label><input id="sma200" type="checkbox">200</label>
+<label><input id="sma200w" type="checkbox">200W</label>
+<label id="smacrow">Custom <input id="smac" type="number" min="2" max="1000" placeholder="length" inputmode="numeric"></label>
+</div></div>
+<button id="go" title="Fetch fresh prices, bypassing the cache">Render</button><button id="dl">Download PNG</button>
 </div>
 <div id="actl">
 <label title="Vertical event lines on the shared time axis. Off for bar charts. Saved with the Prices view."><input id="annOn" type="checkbox"> Annotations</label>
@@ -179,6 +194,21 @@ const SMA_COL={'SMA 20':'#94A3B8','SMA 50':'#64748B','SMA 100':'#0D9488','SMA 20
 function smaList(){const L=[];for(const n of [20,50,100,200])if($('sma'+n).checked)L.push({n,w:0,key:'SMA '+n});
   const c=parseInt($('smac').value);if(c>=2&&c<=1000&&!L.some(x=>x.n===c))L.push({n:c,w:0,key:'SMA '+c});
   if($('sma200w').checked)L.push({n:200,w:1,key:'SMA 200W'});return L}
+function smaSummary(){const parts=[];for(const n of [20,50,100,200])if($('sma'+n).checked)parts.push(String(n));
+  const c=parseInt($('smac').value,10);if(c>=2&&c<=1000&&!parts.includes(String(c)))parts.push(String(c));
+  if($('sma200w').checked)parts.push('200W');
+  const b=$('smaBtn');if(b)b.textContent=parts.length?'SMA: '+parts.join(', '):'SMA: none'}
+function smaPlace(){const m=$('smaMenu'),box=$('smabox').getBoundingClientRect(),b=$('smaBtn').getBoundingClientRect();
+  m.style.left='0';m.style.right='auto';m.style.top='';m.style.bottom='';m.style.maxHeight='';
+  let r=m.getBoundingClientRect();const vw=window.innerWidth,vh=window.innerHeight,pad=8;
+  if(r.right>vw-pad){m.style.left='auto';m.style.right='0';r=m.getBoundingClientRect()}
+  if(r.left<pad){m.style.right='auto';m.style.left=(pad-box.left)+'px';r=m.getBoundingClientRect()}
+  const below=vh-b.bottom-pad,above=b.top-pad;
+  if(r.bottom>vh-pad&&above>below){m.style.top='auto';m.style.bottom='calc(100% + 2px)';m.style.maxHeight=Math.max(140,above)+'px'}
+  else if(r.bottom>vh-pad)m.style.maxHeight=Math.max(140,below)+'px'}
+function smaSet(open){const m=$('smaMenu'),b=$('smaBtn'),on=open==null?m.hidden:!!open;
+  if(on)m.removeAttribute('hidden');else m.setAttribute('hidden','');
+  b.setAttribute('aria-expanded',on?'true':'false');if(on)smaPlace()}
 function smaArr(vals,n){const out=new Array(vals.length).fill(null);let s=0;
   for(let i=0;i<vals.length;i++){s+=vals[i];if(i>=n)s-=vals[i-n];if(i>=n-1)out[i]=s/n}return out}
 const wkKey=t=>{const d=new Date(t);const dow=(d.getUTCDay()+6)%7;return Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate()-dow)};
@@ -390,7 +420,7 @@ function annDraw(){const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<'
   $('annList').innerHTML=ANN.map((a,i)=>`<span style="background:#e5e7eb;border-radius:4px;padding:3px 6px;display:inline-flex;gap:4px;align-items:center"><b>${esc(a.date)}</b> ${esc(a.label)}${a.note?` <span style="color:#6B7280">${esc(a.note)}</span>`:''}<a href="#" data-rm="${i}" title="Remove" style="color:#EF4444;text-decoration:none">×</a></span>`).join('');
   syncPriceUi()}
 function priceSyms(){return $('tickers').value.split(',').map(s=>s.trim()).filter(Boolean)}
-function syncPriceUi(){const n=priceSyms().length,t=$('type').value,bar=t==='bar'||t==='bardd';
+function syncPriceUi(){smaSummary();const n=priceSyms().length,t=$('type').value,bar=t==='bar'||t==='bardd';
   const opt=[...$('type').options].find(o=>o.value==='candle');if(opt)opt.disabled=n!==1;
   $('ctypeNote').textContent=t==='candle'?'One ticker · volume below':n!==1?'Candles need one ticker':'';
   $('actl').style.opacity=bar?'0.45':'1';
@@ -518,9 +548,16 @@ function buildOpt(type,data,title,p){
 function download(){if(!last)return;
   const url=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});
   const a=document.createElement('a');a.href=url;a.download=(($('title').value||'chart').replace(/[^\w]+/g,'_'))+'.png';a.click()}
-$('go').onclick=render;
-['tickers','names','title','start','end','smac'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();render()}}));
-['ftickers','fnames','ftitle','fy1','fy2'].forEach(id=>$(id)&&$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();frender()}}));$('refresh').onclick=async()=>{FRESH=true;try{await render()}finally{FRESH=false}};$('dl').onclick=download;
+async function renderFresh(){FRESH=true;try{await render()}finally{FRESH=false}}
+$('go').onclick=renderFresh;
+$('smaBtn').addEventListener('click',e=>{e.stopPropagation();smaSet()});
+$('smac').addEventListener('input',smaSummary);
+document.addEventListener('pointerdown',e=>{if(!$('smabox').contains(e.target))smaSet(false)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('smaMenu').hidden){smaSet(false);$('smaBtn').focus()}});
+window.addEventListener('resize',()=>{if(!$('smaMenu').hidden)smaPlace()});
+window.addEventListener('scroll',()=>{if(!$('smaMenu').hidden)smaPlace()},true);
+['tickers','names','title','start','end','smac'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();renderFresh()}}));
+['ftickers','fnames','ftitle','fy1','fy2'].forEach(id=>$(id)&&$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();frender()}}));$('dl').onclick=download;
 ['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf'].forEach(id=>$(id).onchange=()=>{syncPriceUi();render()});
 $('tickers').addEventListener('input',()=>{const n=priceSyms().length;if(n!==1&&$('type').value==='candle')$('status').textContent='Candles + volume needs one ticker.';syncPriceUi()});
 function annAdd(){const date=$('annDate').value,label=$('annLabel').value.trim().slice(0,24),note=$('annNote').value.trim().slice(0,80);
@@ -593,11 +630,19 @@ function fmtFin(v,u,cur){if(v==null||isNaN(v))return '';const a=Math.abs(v),sg=v
   return sg+sym+t}
 async function fetchFin(s,q){const r=await fetch(`/api/fin?symbol=${encodeURIComponent(s)}&metric=${q.m}&period=${q.p}&y1=${q.y1}&y2=${q.y2}`);
   const j=await r.json(); if(!r.ok||j.error)throw Error(j.error||`${s}: HTTP ${r.status}`); return j}
+function blankShell(title,wmId){const o=base(title,'\u00a0',wmId);
+  o.xAxis={type:'category',data:[],axisLabel:{show:false},axisTick:{show:false},axisLine:{lineStyle:{color:T.axis}}};
+  o.yAxis={type:'value',min:0,max:1,axisLabel:{show:false},axisTick:{show:false},splitLine:split};
+  o.series=[];
+  o.graphic.push({type:'text',left:'center',top:'middle',silent:true,style:{text:'Enter tickers, then Render',fill:T.src,fontSize:22,font:'22px Inter, Arial, sans-serif'}});
+  chart.clear();chart.setOption(o,true);last=null}
+function blankFin(){flast=null;$('ftable').innerHTML='';$('fnote').textContent='';blankShell($('ftitle').value,'fwm')}
 async function frender(){
-  const st=$('status'); st.className=''; st.textContent='Loading SEC filings…';
+  const st=$('status');
+  const syms=$('ftickers').value.split(',').map(s=>s.trim().toUpperCase()).filter(Boolean), names=$('fnames').value.split(',').map(s=>s.trim());
+  if(!syms.length){st.className='';st.textContent='Enter tickers, then Render.';blankFin();return}
+  st.className=''; st.textContent='Loading SEC filings…';
   try{
-    const syms=$('ftickers').value.split(',').map(s=>s.trim().toUpperCase()).filter(Boolean), names=$('fnames').value.split(',').map(s=>s.trim());
-    if(!syms.length)throw Error('Enter at least one ticker');
     const q={m:$('fmetric').value,p:$('fperiod').value,y1:$('fy1').value,y2:$('fy2').value}, type=$('ftype').value, u=MUNIT[q.m]||'$';
     const res=await Promise.allSettled(syms.map(s=>fetchFin(s,q)));
     const errs=res.filter(r=>r.status==='rejected').map(r=>r.reason.message);
@@ -751,8 +796,8 @@ function tdraw(){const j=tlast,M=TMET[$('tmetric').value],col=$('tcolor').value;
   o.graphic[0].bottom=26;
   chart.setOption(o,true);last={opt:o,asOf:j.asOf};
   $('status').textContent=`${rows.length} companies · BTC $${Math.round(j.btcPrice).toLocaleString('en-US')} · as of ${etTime(j.asOf)}`+(j.flags.length?' · ⚠ '+j.flags.join('; '):'')}
-$('tgo').onclick=trender;$('tmetric').onchange=()=>tlast&&tdraw();$('tcolor').onchange=()=>tlast&&tdraw();
-$('trefresh').onclick=async()=>{TFRESH=true;try{await trender()}finally{TFRESH=false}};
+async function trenderFresh(){TFRESH=true;try{await trender()}finally{TFRESH=false}}
+$('tgo').onclick=trenderFresh;$('tmetric').onchange=()=>tlast&&tdraw();$('tcolor').onchange=()=>tlast&&tdraw();
 $('tdl').onclick=()=>{if(!tlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('ttitle').value||'treasury').replace(/[^\w]+/g,'_')+'.png';a.click()};
 // ---------- Valuation mode: /api/valuation (Yahoo quoteSummary, 6h disk cache; stale / SEC-derived fallback) ----------
 let vlast=null,VFRESH=false;
@@ -788,7 +833,10 @@ function vcsv(){if(!vhlast)return;const j=vhlast,ss=j.series.filter(s=>s.points.
   const ds=[...new Set(mp.flatMap(m=>[...m.keys()]))].sort(),lines=['date,'+ss.map(s=>s.symbol+' '+j.label.replace(/,/g,'')).join(',')];
   ds.forEach(d=>lines.push(d+','+mp.map(m=>{const v=m.get(d);return v==null?'':+v.toPrecision(6)}).join(',')));
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([lines.join('\n')],{type:'text/csv'}));a.download=($('vtitle').value||j.label+'_'+j.range).replace(/[^\w]+/g,'_')+'.csv';a.click()}
-async function vrender(){if($('vview').value==='time')return vhrender();const st=$('status');st.className='';st.textContent='Loading fundamentals…';
+function blankVal(){vlast=null;vhlast=null;blankShell($('vtitle').value,'vwm')}
+async function vrender(){const st=$('status');
+  if(!$('vtickers').value.split(',').map(s=>s.trim()).filter(Boolean).length){st.className='';st.textContent='Enter tickers, then Render.';blankVal();return}
+  if($('vview').value==='time')return vhrender();st.className='';st.textContent='Loading fundamentals…';
   try{const r=await fetch(`/api/valuation?tickers=${encodeURIComponent($('vtickers').value)}&metric=${$('vmetric').value}${VFRESH?'&fresh=1':''}`,{cache:'no-store'});
     const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);vlast=j;vdraw()}
   catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();vlast=null}}
@@ -808,13 +856,14 @@ function vdraw(){const j=vlast,m=j.metric,col=$('vcolor').value,asc=$('vsort').v
   if(j.nm.length)o.graphic.push({type:'text',left:60,bottom:4,style:{text:'n/m (negative or not available, excluded): '+j.nm.map(x=>x.symbol).join(', '),fontSize:15,fill:T.src}});
   chart.setOption(o,true);last={opt:o,asOf:oldest/1000};
   $('status').className='';$('status').textContent=`${rows.length} ranked · ${srcs} · as of ${etTime(oldest)}`+(j.nm.length?' · n/m: '+j.nm.map(x=>x.symbol+' ('+x.why+')').join(', '):'')+(j.errors.length?' · ⚠ '+j.errors.join('; '):'')}
-$('vgo').onclick=vrender;$('vview').onchange=()=>{vsync();vrender()};$('vrange').onchange=vrender;$('vcsv').onclick=vcsv;vsync();$('vmetric').onchange=vrender;['vsort','vcolor','vnames'].forEach(id=>$(id).onchange=()=>$('vview').value==='time'?vhlast&&vhdraw():vlast&&vdraw());
-$('vrefresh').onclick=async()=>{VFRESH=true;try{await vrender()}finally{VFRESH=false}};
+async function vrenderFresh(){VFRESH=true;try{await vrender()}finally{VFRESH=false}}
+$('vgo').onclick=vrenderFresh;$('vview').onchange=()=>{vsync();vrender()};$('vrange').onchange=vrender;$('vcsv').onclick=vcsv;vsync();$('vmetric').onchange=vrender;['vsort','vcolor','vnames'].forEach(id=>$(id).onchange=()=>$('vview').value==='time'?vhlast&&vhdraw():vlast&&vdraw());
 $('vdl').onclick=()=>{if(!vlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('vtitle').value||'valuation').replace(/[^\w]+/g,'_')+'.png';a.click()};
-$('hgo').onclick=hrender;$('hsize').onchange=$('hshow').onchange=()=>hlast&&hdraw();$('hrefresh').onclick=async()=>{HFRESH=true;try{await hrender()}finally{HFRESH=false}};
+async function hrenderFresh(){HFRESH=true;try{await hrender()}finally{HFRESH=false}}
+$('hgo').onclick=hrenderFresh;$('hsize').onchange=$('hshow').onchange=()=>hlast&&hdraw();
 $('hdl').onclick=()=>{if(!hlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('htitle').value||'heatmap').replace(/[^\w]+/g,'_')+'.png';a.click()};
-$('htickers').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();$('huni').value='custom';hrender()}});
-$('htitle').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();hlast?hdraw():hrender()}});
+$('htickers').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();$('huni').value='custom';hrenderFresh()}});
+$('htitle').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();hlast?hdraw():hrenderFresh()}});
 ['huni','hrange','hstable'].forEach(id=>$(id).onchange=hrender);['hsector','hwm'].forEach(id=>$(id).onchange=()=>hlast?hdraw():hrender());
 window.__hrender=hrender;
 
@@ -1070,11 +1119,6 @@ $('vren').onclick=async()=>{const i=vsel();if(i===''){alert('Pick a saved view f
   VIEWS[i].name=n;VIEWS[i].updated=new Date().toISOString();vremember(n);await vput()};
 $('vdel').onclick=async()=>{const i=vsel();if(i===''){alert('Pick a saved view first');return}
   if(!confirm(`Delete "${VIEWS[i].name}"?`))return;VIEWS.splice(i,1);vremember('');await vput()};
-$('vexp').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(VIEWS,null,2)],{type:'application/json'}));a.download='chartmaker_views.json';a.click()};
-$('vimp').onclick=()=>$('vfile').click();
-$('vfile').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{let arr=JSON.parse(await f.text());if(!Array.isArray(arr))arr=[arr];
-  let n=0;for(const x of arr){if(!x||!x.name||!x.fields)continue;x.mode=vmode(x);const i=vfind(x.name,x.mode);if(i>=0)VIEWS[i]=x;else VIEWS.push(x);n++}
-  await vput();vmsg(`Imported ${n} view(s)`)}catch(err){alert('Import failed: '+err.message)}e.target.value=''};
 $('theme').onchange=()=>{applyTheme();rerender()};
 window.__vapply=vapply;window.__snap=snap;
 
@@ -1101,11 +1145,16 @@ window.__vapply=vapply;window.__snap=snap;
       else if(ev.key==='Escape'){ev.preventDefault();hide()}
       else if(ev.key==='Enter'){hide()}},true)}
 })();
-// Deep link only: ?tickers=AAPL,MSFT (optional &names=). Absent params leave the empty default.
+// Deep link only. Absent params leave the empty default.
+// Prices: ?tickers=AAPL,MSFT (optional &names=). Financials: ?ftickers= . Valuation: ?vtickers= .
 function applyPriceQuery(){
   let q;try{q=new URLSearchParams(location.search)}catch(e){return}
   if(q.has('tickers'))$('tickers').value=q.get('tickers')||'';
   if(q.has('names'))$('names').value=q.get('names')||'';
+  if(q.has('ftickers'))$('ftickers').value=q.get('ftickers')||'';
+  if(q.has('fnames'))$('fnames').value=q.get('fnames')||'';
+  if(q.has('vtickers'))$('vtickers').value=q.get('vtickers')||'';
+  if(q.has('vnames'))$('vnames').value=q.get('vnames')||'';
 }
 applyTheme();annDraw();vload();applyPriceQuery();
 window.__render=render; window.__frender=frender; window.__setMode=setMode; render();
