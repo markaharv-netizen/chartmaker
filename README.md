@@ -7,7 +7,18 @@ Start: `cd /workspace/chartmaker && nohup python3 server.py 18790 > server.log 2
 Use: tickers (comma-separated, e.g. `NBIS,CRWV,BTC-USD`), optional display names, range (1D/5D intraday, YTD, 1M, 6M, 1Y, 5Y, Max, Custom),
 type (price line, % change indexed to start, candles + volume for one ticker, bar ranking of % return, ratio A/B with exactly two tickers), title, color, watermark toggle.
 "Download PNG" exports 1600x900 at 2x (3200x1800). Status bar shows "data as of" (ET); fetch failures show an error and render nothing.
-Render on Prices, Heatmap, Treasury, and Valuation fetches fresh data (the separate Refresh button is gone). Watchlist still updates only from its Refresh button. Financials has no quote-cache bypass. Financials and Valuation open with an empty ticker box and a blank chart until tickers are entered. Deep links: `?tickers=` and `&names=` (Prices), `?ftickers=` and `&fnames=` (Financials), `?vtickers=` and `&vnames=` (Valuation). Prices SMA is a multi-select menu (20, 50, 100, 200, 200W, plus a custom length).
+Render on Prices, Heatmap, Treasury, and Valuation fetches fresh data (the separate Refresh button is gone).
+
+## Treasury tab
+
+One metric: **BTCTC top 100** — the top 100 public companies by bitcoin held, in the same order BitcoinTreasuries.net publishes (rank, company, ticker, BTC, USD, % of 21M). Holdings are the committed snapshot `btctop100.json`, not a live scrape. USD = BTC × a live Yahoo `BTC-USD` quote when that quote is available; if it is not, the USD column stays blank. The chart shows the snapshot as-of date. Watermark is off unless the box is checked. Download PNG is the chart canvas.
+
+Refresh the snapshot (then commit `btctop100.json`):
+
+```
+python3 scripts/refresh_btctop100.py
+python3 scripts/refresh_btctop100.py --check
+``` Watchlist still updates only from its Refresh button. Financials has no quote-cache bypass. Financials and Valuation open with an empty ticker box and a blank chart until tickers are entered. Deep links: `?tickers=` and `&names=` (Prices), `?ftickers=` and `&fnames=` (Financials), `?vtickers=` and `&vnames=` (Valuation). Prices SMA is a multi-select menu (20, 50, 100, 200, 200W, plus a custom length).
 
 Notes: YTD baseline = last close of prior year. 5Y uses weekly bars, Max monthly. Ratio aligns A to the latest B bar at or before each date.
 Re-run samples: `python3 shoot.py` (uses /usr/bin/google-chrome).

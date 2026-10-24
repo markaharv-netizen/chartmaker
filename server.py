@@ -362,7 +362,7 @@ class H(SimpleHTTPRequestHandler):
             g = lambda k, d="": qs.get(k, [d])[0]
             body, code = json.dumps(valuation.compute(g("tickers"), g("metric", "pe"), g("fresh") == "1")), 200
           elif u.path == "/api/treasury":
-            body, code = json.dumps(treasury.compute(qs.get("tickers", [""])[0], qs.get("fresh", [""])[0] == "1")), 200
+            body, code = json.dumps(treasury.compute(qs.get("fresh", [""])[0] == "1")), 200
           elif u.path == "/api/heatmap":
             g = lambda k, d="": qs.get(k, [d])[0]
             body, code = json.dumps(heat.heatmap(g("universe", "sp100"), g("tickers"), g("range", "1D"), g("fresh") == "1", g("stables") == "1")), 200
