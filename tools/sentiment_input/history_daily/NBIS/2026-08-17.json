@@ -1,0 +1,210 @@
+{
+ "symbol": "NBIS",
+ "start": "2026-08-17T00:00:00Z",
+ "end": "2026-08-18T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "NBIS (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2089442803554156951",
+   "date": "2026-08-17",
+   "text": "Wall Street keeps calling AI the trade of the decade. The single biggest ticket on $META today was a $26M put.\n\nMARKET CLOSE — AUG 17\n\nThe headline number is $289M in tracked premium across 68 large prints, but the number isn't the story. The story is the split personality of the https://t.co/6qivE0NdFk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 204,
+   "user": "ren_stocks",
+   "url": "https://x.com/ren_stocks/status/2089474970741051857",
+   "date": "2026-08-17",
+   "text": "$NBIS\n\nI'm working on a new 12 month fair value for NBIS and the math is giving me numbers that seem out of this world.\n\nI'm going to fight my bullish instincts and build the most grounded bear case I can, but man, I keep going back through the release and the earnings call and https://t.co/vtloercF4a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "ThePupOfWallSt",
+   "url": "https://x.com/ThePupOfWallSt/status/2089351246842904586",
+   "date": "2026-08-17",
+   "text": "Morning Update\n\n$ALAB  gapped up to 346, downside support near 321, upside target is 366.\n\n$ASTS  broke the early trigger at 72.35 and is coming into the daily trigger at 74.65. Break that and we could see a 5 to 10 point move.\n\n$MRVL  broke through the 229.30 day trigger and hit https://t.co/ZFYDcIBfeU"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "CressTopStocks",
+   "url": "https://x.com/CressTopStocks/status/2089392586175992282",
+   "date": "2026-08-17",
+   "text": "Nebius: Strong earnings + elevated short interest *can combine to produce explosive upside when fundamentals challenge bearish expectations.\n\nSeveral other heavily shorted AI-related stocks continue to exhibit strong fundamentals. $NBIS #investing #quant \nhttps://t.co/hm1RJ06BjX"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "ROBTHEMARKET",
+   "url": "https://x.com/ROBTHEMARKET/status/2089394248109998500",
+   "date": "2026-08-17",
+   "text": "$NBIS   (bulls and bears) who's right ?\n\nFat Cat $GS is bullish on $NBIS \n\nJonah Lupton (Firstwave hedge fund) posted if he had only one stock at the moment it'll be NBIS\n\nMichael Burry is bearish, having shorted NBIS\n\nPorter Stansberry is very bearish on stocks like NBIS\n\nI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FSInvest_CIO",
+   "url": "https://x.com/FSInvest_CIO/status/2089456665821417889",
+   "date": "2026-08-17",
+   "text": "📊 FILTERED OPTIONS FLOW: AUGUST 17, 2026 Qualified aggressive flow was bullish in memory/semiconductors $SNDK $DRAM $MU $INTC , precious metals, and selective mega-cap tech $MSFT $XLE , while the clearest high-quality downside positioning was concentrated in $IBIT and $NBIS. https://t.co/9iq2rQ6sal"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "MindfulDataPath",
+   "url": "https://x.com/MindfulDataPath/status/2089421276402385075",
+   "date": "2026-08-17",
+   "text": "$NBIS \n\nWith upcoming Vineland audition later today, always interesting to see options flows. \n\nAs expected, a couple of bearish flows \n\n🔴 `13:32:26`  **NBIS**  Sep26 280.0P  501x @ $34.28  $1.7M  $274.84  | Puts Bought\n🔴 `13:38:28`  **NBIS**  Sep26 280.0P  519x @ $34.80  $1.8M"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 103,
+   "user": "StockTrader_Max",
+   "url": "https://x.com/StockTrader_Max/status/2089459285080076763",
+   "date": "2026-08-17",
+   "text": "$NBIS There is nothing bearish about this chart at all.. $300 will likely be hit any week now 🎯📈\n\nThe wave 5 target is $400 a share, this target could be hit by EOY or Q1 2027... My target for the upcoming weeks is $300 which is my sub wave 3, within wave 5 target 🎯\n\nVery https://t.co/gsgBJRYMoo https://t.co/a3Qnm5Rz7r"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "MindfulDataPath",
+   "url": "https://x.com/MindfulDataPath/status/2089420894980419993",
+   "date": "2026-08-17",
+   "text": "$NBIS \n\nWith upcoming Vineland audition later today, always interesting to see options flows. \n\nAs expected, a couple of bearish flows \n\n🔴 `13:32:26`  **NBIS**  Sep26 280.0P  501x @ $34.28  $1.7M  $274.84  | Puts Bought\n🔴 `13:32:26`  **NBIS**  Sep26 280.0P  501x @ $34.28  $1.7M"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TakatotoSanoshi",
+   "url": "https://x.com/TakatotoSanoshi/status/2089422336512479649",
+   "date": "2026-08-17",
+   "text": "The same guy who made the MOON Etf that went defunct in 2021 and got bearish in November 2022 at the bottom is now Super bullish and mocking Michael Burry with an AI hype fund. $NBIS https://t.co/aPcTecjKKe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AnalysisOp",
+   "url": "https://x.com/AnalysisOp/status/2089376707174089072",
+   "date": "2026-08-17",
+   "text": "Take serious note frens 🧐 Beyond the specific model, bullish Hyperscalers and Neoclouds with software capacity $GOOGL $AMZN $NBIS $ORCL $CRWV \n\nOn the other hand, I don't dare to say that's bearish SaaS in general, I think it's a complex situation with several details https://t.co/Qq1TKS9LWS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "CryptoBankz_65",
+   "url": "https://x.com/CryptoBankz_65/status/2089445452055793920",
+   "date": "2026-08-17",
+   "text": "Hey @grok \n\nDo you think $NBIS has a good chance of getting the Vineland data center approved?\n\nBased on everything you know about the project, the recent developments, and today’s hearing, how would you rate the probability of approval on a scale of 1–10?\n\nI want your honest https://t.co/L2snGtn8aS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2089437409692012602",
+   "date": "2026-08-17",
+   "text": "There is also a longer-term competitive risk. $META, other hyperscalers and companies such as SpaceX are increasingly building their own AI compute capacity, while Bitcoin miners are also converting power and infrastructure toward AI/HPC.\n\nFor $NBIS specifically, the stock has https://t.co/7EJYzHLBZc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "OverthoughtCap",
+   "url": "https://x.com/OverthoughtCap/status/2089267338579218478",
+   "date": "2026-08-17",
+   "text": "Lately I see a lot of investors against $NBIS doing a deal with $GOOGL, I see it the opposite way.\n\nA solid deal (good pricing + upfront cash) would:\n-give more credibility and reduce concentration on $META &amp; $MSFT\n-bring cash to accelerate data centers now\n-expand the backlog https://t.co/bK8FVD0EZI"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "SignalAtlas1",
+   "url": "https://x.com/SignalAtlas1/status/2089405571476722066",
+   "date": "2026-08-17",
+   "text": "NBIS compression getting tighter: rising support meets falling resistance in a textbook symmetrical triangle. Bullish structure underneath suggests upside breakout's more likely. Will the shorts capitulate when this snaps? https://t.co/B35Si7cJjd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "itsvikaskapil",
+   "url": "https://x.com/itsvikaskapil/status/2089354613019533716",
+   "date": "2026-08-17",
+   "text": "🚀 $KEEL, $NBIS, $CAPR &amp; $FAMI are gaining investor attention, with bullish targets suggesting 100%+ upside. 📈\n\nMomentum is also building in $DFSC, $XPON &amp; $WLDS. High interest, high volatility—watch closely. 👀\n\n#Stocks #StockMarket #Investing #Trading #SmallCaps"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Robert_Newman01",
+   "url": "https://x.com/Robert_Newman01/status/2089334146426663232",
+   "date": "2026-08-17",
+   "text": "$NBIS 👀 Louvre setup taking shape.\n\nPrice is compressing inside a falling structure after the run toward $280.\n\nHolding the $145–160 zone keeps the bullish thesis alive. A clean breakout above $220–230 could reopen $280, with $400+ as the larger upside target. 🚀 https://t.co/VwtJGWg7El"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "edge_of_power",
+   "url": "https://x.com/edge_of_power/status/2089296260591133115",
+   "date": "2026-08-17",
+   "text": "Will $ORCL  bounce back to $200 with its massive $630B backlog? At a 0.85 PEG ratio, it looks undervalued, and its forward P/E of 18.62 trades at a discount to $MSFT at 25. But that discount might be justified: MSFT has positive cash flow, whereas Larry’s cash flow will remain"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 24,
+   "user": "TheStockerMan",
+   "url": "https://x.com/TheStockerMan/status/2089366790031728712",
+   "date": "2026-08-17",
+   "text": "Trimmed some of my $NBIS position here.\n\nNothing has changed with the long-term thesis. I’m still very bullish on the company.\n\nBut after the recent rally, $NBIS had grown into a larger percentage of my portfolio than I wanted, so I’m taking a little off the table and"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "arcxXBT",
+   "url": "https://x.com/arcxXBT/status/2089388109142139006",
+   "date": "2026-08-17",
+   "text": "I’m an early $NBIS bull who is now bullish on $IREN\n\nIt’s actually time to play some catch up now after a slew of dilution and price suppression with real revenue finally being recognized. \n\nTwo years ago I actually bought $IREN first. It was the first neocloud I was bullish on https://t.co/9FXdm2sciy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "ShitcoinMaxi_",
+   "url": "https://x.com/ShitcoinMaxi_/status/2089448291586973730",
+   "date": "2026-08-17",
+   "text": "Market thoughts:\n\nBeen thinking a lot recently about how I want to play the rest of 26’\n\nThese thoughts have come as a result of suffering some drawdowns that could’ve been avoided recently and I’ve been punished by my own naivety.\n\nAnyways\n\n&gt; Bond yields at highs\n&gt; Vix at lows"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "profpicsou",
+   "url": "https://x.com/profpicsou/status/2089367496654455104",
+   "date": "2026-08-17",
+   "text": "I just published a full article on $NBIS.\nThe market still puts it in the \"neocloud\" bucket.\nI think that label is becoming increasingly incomplete.\n\nManagement is now talking about building a real AI-native hyperscaler.\n\nThe article breaks down:Why revenue per MW has become the https://t.co/4gajwfOVg5"
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "symbol": "WULF",
+ "start": "2026-08-16T00:00:00Z",
+ "end": "2026-08-17T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "WULF (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "antonymiha2000",
+   "url": "https://x.com/antonymiha2000/status/2088937648291230171",
+   "date": "2026-08-16",
+   "text": "$WULF is unstoppable. \n\nEnergy is the real constraint in AI 🔋 Not compute 🖥️ \n@TeraWulfInc is the 👑 of this \n\nAt those prices, TeraWulf is still very undervalued. Buy and it will take care of you! https://t.co/ihalLTjO4y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "TheOddsmakerInc",
+   "url": "https://x.com/TheOddsmakerInc/status/2089021203612852331",
+   "date": "2026-08-16",
+   "text": "🎲The Loved, Liquid, &amp; Late List\n⬇️Model predicts downside with these stocks\n\n$AEHR $NVTS $FFAI $HUT $UMAC $INFQ $MSTR $UEC $PLSE $GSAT $RKLB $CRWD $ALOY $INDI $SMR $ACHR $NN $EA $NET $HTZ $ALMU $CITR $USAR $SNOW $CDZI $WULF $QBTS https://t.co/lpiuuGvsmo"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "Abdullahi_abber",
+   "url": "https://x.com/Abdullahi_abber/status/2088900215629594861",
+   "date": "2026-08-16",
+   "text": "Weekend market check: the market is quiet, but the risk isn’t.\n\nA few things caught my attention going into the new week.\n\nRomania intercepted a drone that entered its airspace, while more drone attacks were reported around Moscow. With tensions around the NATO border increasing, https://t.co/v41lnK8APV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 40,
+   "user": "kratos_harmony",
+   "url": "https://x.com/kratos_harmony/status/2088939009955549188",
+   "date": "2026-08-16",
+   "text": ".@SolunaHoldings Bullish Path towards 50x 👀 \n\n📊 50x from ~$1.30 is ~$65/share → ~$16B market cap \n\nCc: @perspez 🙏 \n\n“Before $WULF, $HUT, $CIFR and $IREN had billions in project capital, they had something much less exciting:\n\n💰 ATMs, equity raises and expensive development https://t.co/AQ5tHox31H"
+  }
+ ]
+}

@@ -1,0 +1,201 @@
+{
+ "symbol": "MSTR",
+ "start": "2026-08-22T00:00:00Z",
+ "end": "2026-08-23T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "MSTR (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR mNAV) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 132,
+   "user": "BigpictureBTC",
+   "url": "https://x.com/BigpictureBTC/status/2091176772217790847",
+   "date": "2026-08-22",
+   "text": "To the $MSTR shareholders saying it’s outperforming because it’s +27% vs $BTC +21% over 5 days:\n\nYou’re missing the math of leverage.\n\nThe more leveraged downside you experience, the more upside you need just to break even. \n\nBTC is now near its May highs and MSTR isn’t even https://t.co/5b53GTzE7j https://t.co/RY8LGVRZjV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "belbeleggers",
+   "url": "https://x.com/belbeleggers/status/2091231451601596774",
+   "date": "2026-08-22",
+   "text": "The honest read on $MSTR:\n\nBull case — 840K BTC, cheap leverage, Wall Street keeps Buy ratings.\nBear case — an $8.3B quarterly loss and it lives and dies on one asset.\nIf you're bullish Bitcoin, it's a leveraged way to play it. If you're not, stay away."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "datcap_io",
+   "url": "https://x.com/datcap_io/status/2091181221573476492",
+   "date": "2026-08-22",
+   "text": "Bitcoin’s rally does more to $MSTR than increase the value of its BTC. Strategy now holds ~840K BTC worth about $65B. Its basic mNAV is ~0.71x vs ~0.99x on EV — a huge gap created by the senior capital stack.  As BTC rises, those largely nominal debt/preferred claims shrink"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 64,
+   "user": "thebtcpharaoh",
+   "url": "https://x.com/thebtcpharaoh/status/2091200207526695283",
+   "date": "2026-08-22",
+   "text": "MSTR’s Bitcoin Torque, Quantified\n\nNow that everyone's bullish again.. here's the math.\n\nKey inputs:\n840,447 BTC ≈ $65.8B at $78K\nCash: $4.8B\nSenior claims: $22.0B ($6.75B debt + $15.24B preferred)\nNet asset value to common: $48.6B\nmNAV: ~1.0x ($MSTR $121)\nAmplification ="
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Agi_Engineering",
+   "url": "https://x.com/Agi_Engineering/status/2090965843769520128",
+   "date": "2026-08-22",
+   "text": "Most talked-about stocks on X over the last 3 days:\n$MRNA — 🟢 Bullish\n$SPCX — 🔴 Bearish\n$MSTR — 🟢 Bullish\n$WMT — 🔴 Bearish\n$AVGO — 🔴 Bearish"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "OptionKing33996",
+   "url": "https://x.com/OptionKing33996/status/2091237963812446644",
+   "date": "2026-08-22",
+   "text": "Simple rule:\n🟢 Above VWAP + EMA + bullish MACD = Calls bias\n🔴 Below VWAP + EMA + bearish MACD = Puts bias\n⚠️ Mixed signals = Wait / avoid forcing the trade.\n\n$SPY $TSLA $NVDA $MSTR $COIN https://t.co/iWjfDZs5vX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 62,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2091154672279040352",
+   "date": "2026-08-22",
+   "text": "$MSTR covered call selling gives you more upside than put selling.\n\nTherefore, covered call sellers outperform put sellers in bull markets. \n\nHowever, covered call selling is also more volatile than low-delta put selling. \n\nDifferent strategies for different investors."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AIRewardrop",
+   "url": "https://x.com/AIRewardrop/status/2090963624638439694",
+   "date": "2026-08-22",
+   "text": "🐦 Today one of the best tickers to trade on Pacifica is: $MSTR\n\n🪙 MSTR 1H Trade Setup.\n\n😊 MARKET SENTIMENT: Greed at 71 supports risk-on bias but warns against chasing extensions without a pullback.\n\n🌐 MARKET BIAS: Bias is bullish with medium confidence; the four-hour trend https://t.co/eZXCOtC6dI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 285,
+   "user": "thebtcpharaoh",
+   "url": "https://x.com/thebtcpharaoh/status/2090998818351571033",
+   "date": "2026-08-22",
+   "text": "Dear @saylor,\n\nIn August 2022 I listened to you talk to Lex Fridman for four hours (twice), then sold my house, levered up, and bought $MSTR. It remains the highest-ROI meeting I ever attended, and it changed my life. This letter is me returning the favor.\n\nOn Friday bitcoin"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 67,
+   "user": "RobinSeyr",
+   "url": "https://x.com/RobinSeyr/status/2091170049616662603",
+   "date": "2026-08-22",
+   "text": "MSTR priced in BTC shows:\n\n-&gt; Strategy amplifies Bitcoin! \n\nBull market: 3-4X Faster than BTC\nBear market: BTC better than MSTR\n\nWe‘re at the start of a Bull market, that’s why the entry is so attractive: https://t.co/041WB1b0ln"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "JayTrades86",
+   "url": "https://x.com/JayTrades86/status/2091202716596924857",
+   "date": "2026-08-22",
+   "text": "Didn't take to long, now did it? $Mstr \n\nWhen I buy calls, I buy them a year out. \n\nWhen all the bear work unravels in your face and smashes all your shit talking, I know you are sad. I wanna see lower too. But thats because the lower it goes, the more bullish I am. https://t.co/8YJ74zNR5j"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 40,
+   "user": "TheETFTracker",
+   "url": "https://x.com/TheETFTracker/status/2091133194472947933",
+   "date": "2026-08-22",
+   "text": "The 15 most active ETFs by volume on Yahoo finance:\n\n🥇 $MSTU T-REX 2X Long MSTR Daily ETF 202.9M\n🥈 $TSLL Direxion Daily TSLA Bull 2X ETF 133.8M\n🥉 $BITO ProShares Bitcoin ETF 113.0M\n4. $IBIT iShares Bitcoin Trust ETF 109.9M\n5. $ETHA iShares Ethereum Trust ETF 66.9M\n6. $TSLG https://t.co/cSqhCaBCJD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "BTC_TRW",
+   "url": "https://x.com/BTC_TRW/status/2091100601652584927",
+   "date": "2026-08-22",
+   "text": "We’re on the way to a Million Dollars.\n \n$500 deposited $200k to go..\n\nOur very first contribution to the challenge was made on this ROTH IRA account, we believe that is a good idea to start with an IRA to set a good example. And show my commitment to long term investing.\n This https://t.co/K9JORqgPj0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 200,
+   "user": "AdamBLiv",
+   "url": "https://x.com/AdamBLiv/status/2091134083552227703",
+   "date": "2026-08-22",
+   "text": "Strategy has a mathematically plausible path to becoming the most valuable company on Earth without requiring a heroic mNAV premium at all.\n\nToday Strategy owns 840,447 BTC.\n\nBitcoin reserve: $69.58B\nDebt: $6.754B\nPreferred stock: $15.101B\nNet reserve: $47.725B\nMarket cap: https://t.co/roOuln0T4z"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "datcap_io",
+   "url": "https://x.com/datcap_io/status/2091183713606685125",
+   "date": "2026-08-22",
+   "text": "$PURR’s balance sheet behaves almost opposite to a debt-heavy DAT when HYPE rallies.\nDATCAP currently has PURR around 1.04x ATM mNAV vs 0.98x EV mNAV — the gap comes from net cash rather than senior claims.\nThat means if HYPE keeps rising and the enterprise valuation multiple"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "BigpictureBTC",
+   "url": "https://x.com/BigpictureBTC/status/2091200717436469351",
+   "date": "2026-08-22",
+   "text": "@ChrisMMillas Please explain how MSTR outperforms Bitcoin without an mNAV premium/expansion. BPS growth requires this.\n\nAlso, Dilution = selling pressure. MSTR has diluted its share count by +27% this year alone. \n\n“Amplified Bitcoin” is ultimately just mNAV expansion. And this https://t.co/wtqzv48wcR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 82,
+   "user": "StrategyMaxi",
+   "url": "https://x.com/StrategyMaxi/status/2091173329394938259",
+   "date": "2026-08-22",
+   "text": "I been reading that people fully demand Strategy to maintain x4 mNAV by ceasing to do $MSTR ATM.\n\nWhich you do prefer?\n\n200,000 BTC at x1 mNAV\n\nOr\n\n840,000 BTC at x1 mNAV\n\nAbove is being scared of retail stupidity.\n\nBottom is being SMART for the company. https://t.co/6ZHzFRr5tm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "BitAngels",
+   "url": "https://x.com/BitAngels/status/2091176352515039673",
+   "date": "2026-08-22",
+   "text": "Strategy now sits on ~$1.4B unrealized $BTC profit as BTC hit $78K. MSTR +10% Friday pre-market to $120, 2-month high. Company holds 840,447 BTC at $75,385 avg cost basis now above water. 2026 disposals: 6,948 BTC across 4 sales. mNAV crisis reversed. https://t.co/IkQugc77e5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Falco_Tradeoffs",
+   "url": "https://x.com/Falco_Tradeoffs/status/2091274522397696106",
+   "date": "2026-08-22",
+   "text": "You arent bright if you buy risky self custody over amplified 1 mnav $mstr\n\nYou will get smoked\n\nAnd if btc happens to underperform the needed 12%, then you were dumb for not being in a diversified index fund https://t.co/tDK45GIDeg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "GenevaInvestor",
+   "url": "https://x.com/GenevaInvestor/status/2091116925208396266",
+   "date": "2026-08-22",
+   "text": "Buying $MSTR here is not the same as buying Bitcoin.\nYou get the Bitcoin exposure plus the optionality of the preferred capital structure plus the demonstrated willingness to retire liabilities at a discount. Pure BTC gives you none of the capital-structure tools. \n\nThat is why, https://t.co/DcC64f7wwC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 479,
+   "user": "StrategyMaxi",
+   "url": "https://x.com/StrategyMaxi/status/2091295600058986997",
+   "date": "2026-08-22",
+   "text": "$MSTR will reach $10,000 by 2036.\n\nWe will enter an era of 10% M2 inflation for the next ten years. It will put the 2008 financial crisis and the pandemic crisis to shame.\n\nThe U.S. government will monetize debt aggressively, assuming a 50% debt-to-GDP ratio in ten years. People https://t.co/k8A07iRe7D"
+  }
+ ]
+}

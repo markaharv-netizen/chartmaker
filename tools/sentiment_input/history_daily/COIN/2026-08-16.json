@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-08-16T00:00:00Z",
+ "end": "2026-08-17T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088830990017814986",
+   "date": "2026-08-16",
+   "text": "📊 Double Alert: +6.2% Surge &amp; 3.4x Volume on $WAL \n\n- Right now, this is a textbook “potential manipulation” zone — massive volume spikes at or above the most recent swing high frequently signal liquidity grabs or engineered breakouts.\n- I would NOT blindly long at current https://t.co/HvMOdGU7oX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088860697237102623",
+   "date": "2026-08-16",
+   "text": "🚀 2.8x Buy Volume Spike on $AIO , breakout or exhaustion? Finora AI 15m breakdown\n\n- Given the current massive volume and sharp price rise, this is likely institutional accumulation or a high-impact news trade. With price well above equilibrium but not yet breaking out above the https://t.co/GhYgAPTwwj"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2089102111040827509",
+   "date": "2026-08-16",
+   "text": "#BITCOIN \n\nBitcoin is on the verge of closing the weekly candle below rising wedge support, which would confirm another bearish breakdown in an already weak technical structure. \n\nWe just delivered our multi-timeframe technical video review of #BITCOIN to https://t.co/o0TVg8acvN https://t.co/j6ft0vRtW0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088803694745636932",
+   "date": "2026-08-16",
+   "text": "🐋 Double Alert: +8.2% Surge &amp; 3.9x Volume on $ONG \n\n- This move looks like it was driven by either news, an aggressive buyer, or short squeeze, but with volume this high, it’s more likely a liquidity grab and possible bull trap unless followed by a consolidation and another leg https://t.co/4cnt4tPhQf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2088823876734054407",
+   "date": "2026-08-16",
+   "text": "- 𝗘𝗺𝗲𝗿𝗴𝗶𝗻𝗴 𝗔𝘀𝗶𝗮𝗻/𝗖𝗵𝗶𝗻𝗲𝘀𝗲 𝗺𝗲𝗺𝗲‐𝗰𝗼𝗶𝗻 𝘄𝗮𝘃𝗲 – indicates fresh speculative interest, pushing sentiment 𝗯𝘂𝗹𝗹𝗶𝘀𝗵. - 牛来 (𝗡𝗶𝘂 𝗟𝗮𝗶) 𝗯𝗿𝗲𝗮𝗸𝗶𝗻𝗴 𝘁𝗵𝗲 $𝟮𝟬 𝗠 𝗺𝗮𝗿𝗸𝗲𝘁‐𝗰𝗮𝗽 𝗯𝗮𝗿𝗿𝗶𝗲𝗿 – strong price action, further https://t.co/KtGvrqV2a1"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088819745516564890",
+   "date": "2026-08-16",
+   "text": "❌ 6.1x Unusual Selling Volume on $NIL , what just happened?\n\n- With this huge volume spike, sharp drop, and clear bearish structure, I expect further downside towards 0.04325 and potentially 0.041 if selling continues 🚨\n- If price bounces, watch for short entries at 0.04541 or https://t.co/vZYafkN1Uo"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "doughboysfn",
+   "url": "https://x.com/doughboysfn/status/2088937409039790092",
+   "date": "2026-08-16",
+   "text": "$PURR 🙀\n\nStanley Druckenmiller added a new stock to his port, crypto company Hyperliquid Strategies. This was interesting so we decided to do a breakdown on this one considering some of the miners did well on Friday into the close. $COIN still looks constructive, best entry for https://t.co/3NwpSRsfOw https://t.co/palpva0Qng"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088813896987472063",
+   "date": "2026-08-16",
+   "text": "📉 $PIVX  tanking at 5.0%, capitulation or manipulation?\n\n- After this -5% candle and volume spike, price is likely to pause or attempt a relief bounce toward 0.0123 (old support/new resistance) or 0.0125 (FVG), but as long as price is under 0.0130, the trend stays bearish 🚩\n- https://t.co/2TyEJp12Ch"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088840961984008313",
+   "date": "2026-08-16",
+   "text": "⚡ 4.5% Dump &amp; 6.7x Volume Spike on $BLESS , panic or opportunity?\n\n- I expect more downside unless a rapid reversal develops—this volume spike is likely smart money running stops and clearing out weak hands, but there’s no sign of strong absorption yet. Further selling into https://t.co/131kKsDuPS"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088800067238985960",
+   "date": "2026-08-16",
+   "text": "⬇️ 2.8x Unusual Selling Volume on $TUT , what just happened?\n\n- With this much selling volume and every major indicator pointing down, I expect further downside in the short term. This looks like a clear case of either smart money distribution or a liquidation event that could https://t.co/EdCqS6eaQ2"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088785471132373498",
+   "date": "2026-08-16",
+   "text": "⬇️ Crash Alert: 5.6% Drop on $APR , dead cat bounce or reversal?\n\n- With this -5.6% flush and the huge volume spike, it’s likely that forced liquidations or panic selling just occurred.\n- At these levels, further downside is possible, especially if 0.1506 now acts as resistance https://t.co/tCnJuwqfki"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088854058035560471",
+   "date": "2026-08-16",
+   "text": "$AXL 12h Breakdown\n- Given current structure, I expect the price is more likely to continue ranging or have another push down to test liquidity below 0.0355 and possibly 0.0349 before any bullish reversal attempt.\n- If there is a manipulation below 0.0349 and price quickly https://t.co/2bcMhv7Vrn"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088906209160028207",
+   "date": "2026-08-16",
+   "text": "🔻 Sharp 5.6% Drop on $APR \n\n- The recent dump looks like a possible liquidity hunt—price spiked down with a surge in volume, possibly sweeping weak hands.\n- I expect that if price holds above 0.1739 and forms a bullish reversal candle on the 15m or lower, we could see a quick https://t.co/ipXAMou2bX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088795472345403458",
+   "date": "2026-08-16",
+   "text": "❌ Massive Sell-Side Volume on $HEMI  at 4.2x\n\n- The massive 4.2x volume spike with a -12.1% drop strongly suggests this is distribution by smart money, not just panic retail selling. Liquidity has been taken from below, but there’s potential for further downside as the structure https://t.co/GpAv6JRVe3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088817329752690903",
+   "date": "2026-08-16",
+   "text": "📊 $KAITO  hit with 11.5x sell volume spike, is this over or just starting?\n\n- Given the massive selloff, extreme volume, and break below the most recent low, I expect more downside in the short term unless there is a very strong reversal signal.\n- My bias is for the price to https://t.co/rUbLodAm3s"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088818546822312099",
+   "date": "2026-08-16",
+   "text": "⚠️ $FOLKS  crashing 4.4% with 24.7x volume surge\n\n- This extreme volume spike and dump is rarely the absolute bottom, especially with all indicators and trend structure showing strong bearish momentum. However, after such a flush, there may be a short-term rebound or dead-cat https://t.co/Na24dEkcBQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088904872607252928",
+   "date": "2026-08-16",
+   "text": "🔥 +5.5% Pump &amp; 28.1x Volume Spike on $4 , what's happening here?\n\n- I expect a short-term pullback or consolidation after this unsustainable pump, as such volume spikes often mark the end of a move, not the beginning.\n- If you’re looking to long, do not chase here! Wait for a https://t.co/78JiQ7IIlw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "mirzauzair683",
+   "url": "https://x.com/mirzauzair683/status/2088882645283340591",
+   "date": "2026-08-16",
+   "text": "🚨 CRYPTO MARKET OUTLOOK — NEXT 72 HOURS 👀📊\n\nThe next 3 days could be very important for BTC, ETH, SOL and the wider altcoin market.\n\nHere’s what I’m watching:\n\n₿ BITCOIN\nBTC is currently around the low-$63K area. My base case is a volatile range with a possible recovery"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088842162028900522",
+   "date": "2026-08-16",
+   "text": "🎯 +4.7% Pump Detected on $COW , is it worth to watch?\n\n- This sudden pump looks mostly like a reaction rally in a broader bearish trend. While indicators are flipping bullish, the high timeframe trend and inability to break 0.1451 decisively means caution is warranted. \n- If you https://t.co/7cSDjl8j29"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088826475650666784",
+   "date": "2026-08-16",
+   "text": "🔔 $HEMI  pumping +6.2% with 3.1x abnormal volume\n\n- This pump is likely caused by aggressive smart money accumulation triggering stops/liquidity above the recent swing high at 0.00742. It could be the start of a larger trend if price remains above 0.00742, but if it fails to https://t.co/qjpAihf2x7"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088780847696544134",
+   "date": "2026-08-16",
+   "text": "📊 $AIO  hit with 4.9x sell volume spike, is this over or just starting?\n\n- The massive volume spike with a sharp price drop is often a sign of distribution by large players or liquidation events. Smart money frequently initiates further downside after such flushes but https://t.co/2kJwlMNOyY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088784252225626394",
+   "date": "2026-08-16",
+   "text": "🟢 $CHIP  rallied +5.2%\n\n- After a sharp pump with high volume and an overbought RSI, there is a strong chance of a short-term retrace or at least some consolidation before continuation 🚩\n- I expect price to first test the 0.02793–0.02871 area. If this zone holds as support and https://t.co/KnyAarZ6HM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088916655288074383",
+   "date": "2026-08-16",
+   "text": "💹 $DOLO  rallied +4.6%\n\n- Given the violent pump and volume spike, I expect a retracement to follow before the next leg up. It's common for price to revisit imbalances and demand zones to shake out weak hands and collect more liquidity before resuming higher 📉➡️📈\n- If price https://t.co/I39RM1rJgd"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088908709271392679",
+   "date": "2026-08-16",
+   "text": "⚡ +5.1% Pump &amp; 18.7x Volume Spike on $COTI , what's happening here?\n\n- With such an aggressive volume anomaly and strong buying pressure, this could be smart money accumulation, but it's also a classic spot for manipulation or a bull trap if late buyers rush in at the top 👀\n- https://t.co/7iU1HuwCGA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088834346345984315",
+   "date": "2026-08-16",
+   "text": "⏰ $CROSS  pumping +4.5% with 4.2x abnormal volume\n\n- Given the huge volume spike and overbought RSI, I do NOT recommend immediately longing after such a move. Strong hands may be offloading into FOMO buying after a liquidity grab above the most recent swing high.\n- If price https://t.co/o5DIpv1EFc"
+  }
+ ]
+}

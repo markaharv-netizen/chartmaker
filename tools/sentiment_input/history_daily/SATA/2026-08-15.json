@@ -1,0 +1,48 @@
+{
+ "symbol": "SATA",
+ "start": "2026-08-15T00:00:00Z",
+ "end": "2026-08-16T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "SATA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 49,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2088665067600416771",
+   "date": "2026-08-15",
+   "text": "I will never buy $SATA or $STRC at $100 because the downside risk is real. \n\nHowever, I will buy when they dip and sell at $95-99.\n\nNew swing trade unlocked."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "NICKFROMNEBRASK",
+   "url": "https://x.com/NICKFROMNEBRASK/status/2088442460561150296",
+   "date": "2026-08-15",
+   "text": "I  A M  A L E X A N D E R  T H E  G R R R R ! A T E ?\n'the fruit' aGAIN?? you MO+RT+ALL WH+OR+E$$\nhave NOT changed @ ALL SINce 'that SINgle DAY'\nA + L E X + A N D + D E R + F U H R E R\nnot GAY!\nHAPP ie NO+W??\nI AM ALEXANDER JAMES HAMILTON\nS+HOT DEE+AD @ 49yrs OLD in 1804\nBACK IN https://t.co/VsKYQq1q0i"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "NICKFROMNEBRASK",
+   "url": "https://x.com/NICKFROMNEBRASK/status/2088445380836876386",
+   "date": "2026-08-15",
+   "text": "I  A M  A L E X A N D E R  T H E  G R R R R ! A T E ?\n'the fruit' aGAIN?? you MO+RT+ALL WH+OR+E$$\nhave NOT changed @ ALL SINce 'that SINgle DAY'\nA + L E X + A N D + D E R + F U H R E R\nnot GAY! say hey! HELL+O?\nNORM &amp; I have 'A' GR+ATE 'bit' for:\nPRE+TEND III TIMETERNAL https://t.co/2ASnxvT0OV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "NICKFROMNEBRASK",
+   "url": "https://x.com/NICKFROMNEBRASK/status/2088446572346409293",
+   "date": "2026-08-15",
+   "text": "I  A M  A L E X A N D E R  T H E  G R R R R ! A T E ?\n'the fruit' aGAIN?? you MO+RT+ALL WH+OR+E$$\nhave NOT changed @ ALL SINce 'that SINgle DAY'\nA + L E X + A N D + D E R + F U H R E R\nnot GAY! say hey! HELL+O?\nNORM &amp; I have 'A' GR+ATE 'bit' for:\nPRE+TEND III TIMETERNAL https://t.co/Dj4507qZ58"
+  }
+ ]
+}

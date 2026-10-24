@@ -1,0 +1,48 @@
+{
+ "symbol": "APLD",
+ "start": "2026-08-23T00:00:00Z",
+ "end": "2026-08-24T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "AlphaSero37711",
+   "url": "https://x.com/AlphaSero37711/status/2091511453341663610",
+   "date": "2026-08-23",
+   "text": "$DGXX — the valuation gap vs. AI infrastructure peers is getting hard to ignore.\n\nUsing current market caps and the latest FY2027 revenue / ARR outlooks:\n\n• $DGXX: ~1.35x\n• $HIVE: ~2.31x\n• $IREN: ~4.90x\n• $CORZ: ~5.50x\n• $CIFR: ~7.02x\n• $WULF: ~7.95x\n• $APLD: ~9.18x\n\nThe https://t.co/MV73UnbDbj"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "Gammaoptions99",
+   "url": "https://x.com/Gammaoptions99/status/2091580872046854283",
+   "date": "2026-08-23",
+   "text": "Is everyone excited about this coming week? Which stocks are you guys looking at ? Can $htz get back to 2.5? Im bullish on $sofi finally going above 20 the gamma supports it but warsh speaking at jackson hole can really affect that. What about these data center stocks? $nbis"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "DenWhoward",
+   "url": "https://x.com/DenWhoward/status/2091597255661002774",
+   "date": "2026-08-23",
+   "text": "$APLD Expecting this to hit  $20  - the sweet spot. 🔪🚨 before a much needed bear rally. https://t.co/H38TGEO99j"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "MitchMartan98",
+   "url": "https://x.com/MitchMartan98/status/2091542785870414173",
+   "date": "2026-08-23",
+   "text": "Elon is predicting the global economy DOUBLES in size by roughly 2031–33, alongside at least 100M humanoid robots potentially as many as 1B.\n\nObviously an extremely aggressive prediction but Elon pretty much always claims aggressive scenarios will play out.\n\nBut just to put the https://t.co/ZV1661mfoM"
+  }
+ ]
+}

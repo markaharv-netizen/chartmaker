@@ -1,0 +1,30 @@
+{
+ "symbol": "ASST",
+ "start": "2026-08-09T00:00:00Z",
+ "end": "2026-08-10T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "ASST (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "risenfit",
+   "url": "https://x.com/risenfit/status/2086564118119805391",
+   "date": "2026-08-09",
+   "text": "$SBET $BMNR $ASST bitcoin:native ethereum:native (1) 🧵\n🔷 THE CLARITY ACT: #BITCOIN IS NO LONGER REACTING THE SAME. \n\n• For roughly one year, virtually every major CLARITY Act development\n\n(positive OR negative) has occurred alongside a bearish reaction in Bitcoin.\n\n• Positive https://t.co/4f1fdp8u0U https://t.co/tQMglWeJwl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ScalpSpirit",
+   "url": "https://x.com/ScalpSpirit/status/2086445889569120696",
+   "date": "2026-08-09",
+   "text": "My watchlist for this week.\n\n$UP Wheels Up\n$BULL Webull\n$OPEN Opendoor\n$ESOA Energy Services\n$BBAI BigBear\n$EU enCore Energy\n$ASST Strive Asset\n\n$TEVA $NICE $CYBR $TSEM $MGIC $NVCR $ICL $FVRR $WIX $KMDA $RDHL $MDGL $PLUR $ENLV $GMDA $RWLK $TAOP $INMD $BZUN $ORGS https://t.co/2N9GpXu7ln"
+  }
+ ]
+}

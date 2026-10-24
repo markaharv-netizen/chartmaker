@@ -1,0 +1,201 @@
+{
+ "symbol": "AAPL",
+ "start": "2026-08-10T00:00:00Z",
+ "end": "2026-08-11T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AAPL (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "dingding_TW666",
+   "url": "https://x.com/dingding_TW666/status/2086653734516559916",
+   "date": "2026-08-10",
+   "text": "📍#AAPL Ding Ding Technical Analysis (2026/08/10)\n\n[CORE VIEW]: AAPL remains bullish on the 1W, but the 1D is a two-way range and the lower timeframes conflict. The 4H leans bearish while the 1H shows a preliminary bullish rebound.\n\n🎯 TODAY’S ACTION PLAN:\n• Swing: Wait for the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "dingding_TW666",
+   "url": "https://x.com/dingding_TW666/status/2086653344471453890",
+   "date": "2026-08-10",
+   "text": "DingDing Cross-Market Technical Analysis (2026/08/10 10:38 UTC+8) #NVDA #MSFT\n\n【⭐ DingDing Today’s Trading Highlights Quick Summary ⭐】\nToday’s key takeaway:\nThis batch shows clear market divergence. Several semiconductor and mega cap names remain in advancing structures,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 38,
+   "user": "MarkusCarter17",
+   "url": "https://x.com/MarkusCarter17/status/2086842382696260026",
+   "date": "2026-08-10",
+   "text": "SEC Dive 🤿🗃️; @LS_funds Nasdaq 100 Income ETF\n\nOverlay Shares Nasdaq 100 Income ETF (filed Aug 7).\n\nIf you’re watching the crowded covered-call space (like $QQQI or $JEPQ), this completely flips the model.\nHere is the quick breakdown: 👇\n\n1️⃣ The Strategy: Put Spreads &gt; Covered https://t.co/3tUnAD0rb8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2086945928846381364",
+   "date": "2026-08-10",
+   "text": "8/10 | Notable Inside Days: $TSLA, $XYZ, $MU (x2), $COIN, $F (x2), $UPS, $ROKU, $UPST, $AFRM, $LULU, $SNDK (x2)\n\nNOTES:\n* $SPY flagging at 773.40 level, and 9ema on daily at 760 and catching up. Will be interesting to see if last week’s bull gap can remain open\n* $QQQ moved the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2086641347406999565",
+   "date": "2026-08-10",
+   "text": "8/7 | Notable Inside Days: $AAPL, $MU, $F, $GS, $FIG, $SNAP, $SPOT, $APP, $SNDK\n\nNOTES:\n* $SPY daily 9 ema still sitting at 756, but balancing off the 9/20 on the 65m now and using 769.75 as the perfect support level. All looking good into this week\n* $QQQ held the island bottom"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "AKtemik",
+   "url": "https://x.com/AKtemik/status/2086898235927601159",
+   "date": "2026-08-10",
+   "text": "MAG7 — Live Catalyst Check\n\n🔴 $AAPL – Jefferies downgraded Apple to Underperform and cut its target to $264, citing concerns around the iPhone roadmap and reports that the planned all-glass iPhone was scrapped. Bearish pressure; meaningful drag risk for $QQQ.\n\n🟡 $MSFT – No"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "iTrade_Options",
+   "url": "https://x.com/iTrade_Options/status/2086798397420286254",
+   "date": "2026-08-10",
+   "text": "$AAPL  — bearish opening bias, conditional. Apple is trading around $309.6–$309.8, down roughly 1.1% premarket, after reports that it is testing memory chips from China’s CXMT, creating a fresh geopolitical/supply-chain angle. Premarket range was roughly $309.56–$309.84. A"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FSInvest_CIO",
+   "url": "https://x.com/FSInvest_CIO/status/2086921720783663173",
+   "date": "2026-08-10",
+   "text": "Today’s qualified tape is constructive in $NVDA $GLD, $SLV $AMZN $MSFT $UBER $GDX $NOW $DELL, and $AAPL, while $IBIT $TSM $DRAM, and $INTC show beaish/hedge positioning. The clearest macro shift is simultaneous bullish flow in gold, silver, and gold miners, bearish crypto-beta https://t.co/RhXor47Kyw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "mondegara1",
+   "url": "https://x.com/mondegara1/status/2086821904187629813",
+   "date": "2026-08-10",
+   "text": "Our bearish board this morning. Every name here is one the crowd is bullish on while the tape goes the other way.\n\nTenax is the extreme. Its Phase 3 heart drug missed the primary endpoint by 3.5 meters on a walk test, p value 0.63. The stock went from $13.44 to $1.52 in one https://t.co/ylcRUzHhzD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "OptionCalculate",
+   "url": "https://x.com/OptionCalculate/status/2086824212979994681",
+   "date": "2026-08-10",
+   "text": "$GOOGL $MU $TSLA $AAPL $CELH\nUnusual Options Roundup 2026-08-07: GOOGL Bear Call Spread, MU Sells Calls, TSLA 330 Battle, AAPL Put Sales\nOptions volume slipped below average, but several large directional trades stood out. A bear call spread in GOOGL signaled caution, MU saw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2086631707541983671",
+   "date": "2026-08-10",
+   "text": "https://t.co/TvgiJ9OKvk \n🚨 WE ARE GOING LIVE 🚨\n\n📊 WEEKLY CHARTING &amp; PLANS\nBurakTheScalper LLC\nTonight we break down the market for the week ahead:\n\n#ES_F #NQ_F $SPY $QQQ $NVDA $AAPL $TSLA $AMD $PLTR\n\n✅ Key support &amp; resistance\n✅ Bullish/bearish scenarios\n✅ Options watchlist"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 29,
+   "user": "glocalinvestor",
+   "url": "https://x.com/glocalinvestor/status/2086843296094068896",
+   "date": "2026-08-10",
+   "text": "Deutsche bank, UBS, Citi are now behind this stock. \n\nRemember when I said memory is \"dead certain\" to do well in mid term. It appear those 3 institution also believe the same. \n\nDeutsche bank and citi have disclosed their holdings through 13F (as of June 30, 2026) and guess https://t.co/TG1nN59kCQ https://t.co/2pxiPopK3v"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "AKtemik",
+   "url": "https://x.com/AKtemik/status/2086797075438522796",
+   "date": "2026-08-10",
+   "text": "📰 MAG7 News &amp; Catalysts\n🔴 $AAPL – Analyst downgrade pressure is a potential drag because of Apple's substantial weighting in both indexes. 🟢 $NVDA – AI infrastructure demand and China-related H200 developments remain important semiconductor catalysts. 🟢 $MSFT – Enterprise AI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "DarkLord_gr",
+   "url": "https://x.com/DarkLord_gr/status/2086943927496822989",
+   "date": "2026-08-10",
+   "text": "Day 283 - Stocks &amp; Markets.\n\nCFRA raised its 12-month S&amp;P 500 target to 8,650 from 7,730, implying almost 12% upside from August 7, and lifted its 2026 year-end target to 8,050.\nStrategist Sam Stovall says strong earnings keep supporting equities, but rising margin debt, sticky"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "cottonfields",
+   "url": "https://x.com/cottonfields/status/2086794072816013733",
+   "date": "2026-08-10",
+   "text": "Yesterday's options flow (7 aug)\nmarkets: unclear\nmag7: unclear\ncrypto: accumulation\nbiotech: unclear\nmetals: bullish\nenergy: unclear\nrates: bullish\nrisk-off: unclear\nsemis: income\nfinancials: unclear\n\nMarkets\nIndex flow refused to pick a side on Friday. USD 42.6m of Jan-27 $SPX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "wsagentai",
+   "url": "https://x.com/wsagentai/status/2086784807489405063",
+   "date": "2026-08-10",
+   "text": "08/10/2026 Morning Briefing\n\nMarkets extend risk-on rally with tech leading, driven by AI demand and capital expenditure. All eyes on $INTC's $15B stock offering, Meta's $1.4T lawsuit, and geopolitical risks ahead of key CPI data.\n\n💾 Movers\n- HPE +5.69% (upgraded to Overweight"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "alliedinvestor_",
+   "url": "https://x.com/alliedinvestor_/status/2086810555445063838",
+   "date": "2026-08-10",
+   "text": "What's more overvalued right now? $AAPL or $NVDA ?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "simplyprobe",
+   "url": "https://x.com/simplyprobe/status/2086648566898954655",
+   "date": "2026-08-10",
+   "text": "\"I've Never Been More Confident\" — What 9 Tech CEOs Actually Said This Earnings Season, Ranked https://t.co/icIBX5hwLm"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "DJJASONWOLFE",
+   "url": "https://x.com/DJJASONWOLFE/status/2086829601020629152",
+   "date": "2026-08-10",
+   "text": "Market volatility creates opportunities for investors who stay focused.\n\nI’m looking for:\n📊 Strong trends\n🚀 Potential catalysts\n💡 Undervalued growth stories\nThe goal isn’t to chase hype — it’s to identify quality setups early.\n$AAPL $META $XHLD"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 66,
+   "user": "JEFETRADES",
+   "url": "https://x.com/JEFETRADES/status/2086803302352564682",
+   "date": "2026-08-10",
+   "text": "Downgraded this morning and still in trouble\n\n$AAPL has major memory issues and manufacturing problems. This bounced back but I've been warning if we get any downside or pullback on the market Apple has downside towards the 100ma\n\nBe careful https://t.co/l6cwO2mWrK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 25,
+   "user": "kpak82",
+   "url": "https://x.com/kpak82/status/2086852300169982184",
+   "date": "2026-08-10",
+   "text": "$AAPL failed back below daily 50ema/sma after holding above it for 3 days.\nCould lead to buyer's remorse and further downside pressure."
+  }
+ ]
+}

@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-08-20T00:00:00Z",
+ "end": "2026-08-21T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "stocks1ai2crsp",
+   "url": "https://x.com/stocks1ai2crsp/status/2090404905374618102",
+   "date": "2026-08-20",
+   "text": "🚨 $RIOT dealer positioning for next week is VERY interesting.\n\nCurrent Aug 28 options map:\n\n📦 Core dealer box: $20–$22\n🧲 Max pain / magnet: $20.50\n🟢 Bull trigger: $22\n🚀 Upside ladder: $22 → $25 → $26\n🔴 Bear trigger: $19–$19.50\n\nThe big risk is below $20.\n\nHuge put"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 39,
+   "user": "GMartin_0",
+   "url": "https://x.com/GMartin_0/status/2090575895891194096",
+   "date": "2026-08-20",
+   "text": "Okay, I decided to buy #Bitcoin while still holding the short from $79.5K as protection against any downside from here.\n\nI’m not thinking about profiting from the short anymore, but rather using it to hedge my spot buying.\n\nIf price dips into the $64K–$67K range, then great. I https://t.co/v8AkQzAe8U"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 126,
+   "user": "CalebFranzen",
+   "url": "https://x.com/CalebFranzen/status/2090407789080317979",
+   "date": "2026-08-20",
+   "text": "This is genuinely one of the best compliments I can receive.\n\nAfter being vehemently bullish in 2023, 2024, and the majority of 2025, I had to flip bearish in November 2025 at $97k.\n\nI got mocked... no biggie.\n\nHistory &amp; data were on my side.\n\nBut then something happened in https://t.co/aXFq2thiI3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "5vk3b8ig69",
+   "url": "https://x.com/5vk3b8ig69/status/2090539930112135187",
+   "date": "2026-08-20",
+   "text": "I keep reading that the current Bitcoin rally is nothing more than a bull trap and that BTC still needs to make another major leg lower.\n\nMaybe.\n\nBut two things stand out to me:\n\n1. Relative strength vs. the Nasdaq.\nNasdaq ↓\nBitcoin ↑\nWhile tech is showing weakness, Bitcoin is https://t.co/XOjHcJnEXR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 38,
+   "user": "0xPhantomDefi",
+   "url": "https://x.com/0xPhantomDefi/status/2090511594052542480",
+   "date": "2026-08-20",
+   "text": "🚨 BITCOIN IS SETTING THE PERFECT TRAP - AND MOST PEOPLE WILL FALL FOR IT\n\nOne green move and everyone suddenly thinks the bear market is over.\n\nIt isn’t.\n\n$BTC is doing exactly what I expected.\n\nThe move toward $70K–$72K is only the first major retest.\n\nAbove that, there are https://t.co/qG7ADe6RYs https://t.co/3RpjhItwe9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "ShadooowOnX",
+   "url": "https://x.com/ShadooowOnX/status/2090561643566825835",
+   "date": "2026-08-20",
+   "text": "Trader Mayne says market structure is the most important TA concept to learn\n\n\"I know excellent traders who use all the indicators you could imagine under the sun. I don't use any. There's many ways to play the game\"\n\n\"If I had to say pick one concept to learn first, I would say https://t.co/nWdMpxoqqK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 411,
+   "user": "rektcapital",
+   "url": "https://x.com/rektcapital/status/2090424264558088389",
+   "date": "2026-08-20",
+   "text": "#BTC \n\nOne of the things to consider on this recent Bitcoin ascent:\n\nCan it reclaim the 21-week EMA (green) as support?\n\nIn Bull Markets, naturally this EMA figures as a support\n\nHowever, in Bear Markets this EMA tends to act as resistance or even a failed retesting region if https://t.co/GAprOU7VIo https://t.co/a6C8GT9Cz4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2090258662522515457",
+   "date": "2026-08-20",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-08-19 (Evening Edition)\n\n**Published:** 2026-08-19 09:04 PM CT\n\nWednesday's tape is all about the squeeze: Bitcoin ripped 8.26% in 24 hours to $69,672, its sharpest one-day move since March, after the Treasury said it would double"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "MktMates",
+   "url": "https://x.com/MktMates/status/2090255318404272305",
+   "date": "2026-08-20",
+   "text": "Trump just sent crypto flying. Bitcoin 70K, ETH &amp; alts explode.\n\nFull episode timestamped below.\n\n0:59 - GM, and the new intro's finally 2 minutes\n1:41 - The overnight pump: Trump manipulation, everyone's bags green\n2:16 - The damage report: ETH +20%, HYPE +21%, BTC +10%, SOL https://t.co/fbyQtolsbx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2090456562158416363",
+   "date": "2026-08-20",
+   "text": "$ARX 19x volume with fresh selling pressure – capitulation or trap forming?\n\n- this 19x volume spike combined with a sharp -3.9% drop is classic for a high-impact event: most likely a combination of panic selling and large players (smart money) unloading into liquidity, https://t.co/zcVucxviNc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2090485388498354303",
+   "date": "2026-08-20",
+   "text": "🚨 #StandardChartered expects #Bitcoin to reach $100K by the end of this year\n\nThe bank sees further upside for the leading #crypto #asset despite recent #market #volatility 👀\n\n#CryptoMarket #MarketUpdate #Trading #Investing #Finance #Blockchain #DigitalAssets #Markets #Bullish https://t.co/tSqmTmX3UH"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 14,
+   "user": "tradingdiff",
+   "url": "https://x.com/tradingdiff/status/2090427442376696154",
+   "date": "2026-08-20",
+   "text": "BTC on #Hyperliquid 15m Chart 📊\n\nBTC is trading near 72,000 USD, following yesterday's strong upward drive. 🚀\n\nIf the move continues to extend, to the upside a relevant liquidity zone sits at 74,900 USD, acting as the primary bullish magnet for price. 📈\n\nTo the downside, https://t.co/ILkUsF8UGT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "Armstro57",
+   "url": "https://x.com/Armstro57/status/2090546624741454314",
+   "date": "2026-08-20",
+   "text": "Bitcoin Market Update August 20, 2026\n\nBitcoin is trading around $72,700, up roughly 6% over the past 24 hours and nearly 15% over seven days. BTC has decisively broken above the previous $68,500 to $70,000 resistance zone, shifting the short term structure from consolidation to https://t.co/i8VPadhZwf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 356,
+   "user": "rektcapital",
+   "url": "https://x.com/rektcapital/status/2090425526338929127",
+   "date": "2026-08-20",
+   "text": "#BTC \n\nWhat Bitcoin has taught us over the years is that it will produce periods of under-performance as part of mean-reversion before transitioning into over-performance\n\nThat over-performance also mean reverts with price transitioning back into under-performance\n\nBitcoin is now"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "IvanOnTech",
+   "url": "https://x.com/IvanOnTech/status/2090475377961378137",
+   "date": "2026-08-20",
+   "text": "How am I so successful in all market conditions (according to people)\n\nI AM HUMBLE\nBy selling crypto in October and started to rotate into AI stocks\nWhy?\nBecause chart became bearish - trend bearish - simple \nWe had many fake pumps that we called out in Bitcoin - we called all"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 27,
+   "user": "hanniballectarr",
+   "url": "https://x.com/hanniballectarr/status/2090493897361232179",
+   "date": "2026-08-20",
+   "text": "What I took away from this week's @DWFLabs report is that price and positioning are telling two different stories.\n\nEquities keep printing new highs while bitcoin is still stuck in the same range it's been holding for months. At the same time, institutional filings show banks https://t.co/0wOrd3cHMB"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 461,
+   "user": "IvanOnTech",
+   "url": "https://x.com/IvanOnTech/status/2090475523298169184",
+   "date": "2026-08-20",
+   "text": "How am I so successful in all market conditions (according to people)\n\nI AM HUMBLE\nStarted selling crypto in October and rotated into AI stocks\nWhy?\nBecause chart became bearish - trend bearish - simple \nWe had many fake pumps that we called out in Bitcoin - we called all pumps"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 13,
+   "user": "MCGlive",
+   "url": "https://x.com/MCGlive/status/2090446548811284845",
+   "date": "2026-08-20",
+   "text": ".@ChillTRD's sub-$60K Bitcoin thesis hasn't changed since March.\n\nBTC has been flat for over a month, and not dumping after 10 months of bearish price action is a bullish sign on its own. An August-September rally before any real bottom, could sweep liquidity up toward $70K+ https://t.co/yKV3591HO0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 74,
+   "user": "brettmacro",
+   "url": "https://x.com/brettmacro/status/2090488717257371657",
+   "date": "2026-08-20",
+   "text": "This Bitcoin candle reminds me of the January 2023 candle that took us out of the bear market. \n\nIf you think the bottom is in, and haven't bought yet...don't kick yourself. Ignore all the \"perfect traders\" on X who never flipped bearish yet apparently \"called the bottom\" https://t.co/TXF3kUPxX0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "brettmacro",
+   "url": "https://x.com/brettmacro/status/2090488450722013355",
+   "date": "2026-08-20",
+   "text": "This Bitcoin candle reminds me of the January 2023 candle that took us out of the bear market. \n\nIf you think the bottom is in, and haven't bought yet...don't kick yourself. Ignore all the \"perfect traders\" on X who never flipped bearish yet apparently \"called the bottom\" https://t.co/ioVUtgPqEb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2090545325044023322",
+   "date": "2026-08-20",
+   "text": "📊【XWIN CAPITAL INDEX｜August 21, 2026】\n\nOverall Score: 84 / 100\n\n・80–100 = Strong Bullish Environment\n・60–79 = Bullish Bias\n・40–59 = Neutral / No Clear Direction\n・20–39 = Bearish Bias\n・0–19 = Strong Bearish Environment\n\n7-Day Moving Average: 55.86 ↑\n14-Day Moving https://t.co/QtRtGB9UYK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "GreatUzir",
+   "url": "https://x.com/GreatUzir/status/2090532497335742750",
+   "date": "2026-08-20",
+   "text": "#BTC\n\nthis is the first bullish break of structure for Bitcoin since the bear market. \n\n Bitcoin might have just bottomed.... \n\n for some reasons, I'm still expecting one more bearish move, an aggressive one.\n\nI expect to see a bottom between $50k - $44k https://t.co/We8rzkh6rx"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "dbdegn",
+   "url": "https://x.com/dbdegn/status/2090350423097868428",
+   "date": "2026-08-20",
+   "text": "🚨Bitcoin (1hr) What to expect in the next 48hrs\n- Bull flag forming on the one hour chart, this pattern usually leads to further continuation to the upside.\n- If we break $70k resistance, $74k is on the cards\n- However, we are seeing bearish divergence on the RSI, which shows https://t.co/8Y1K2XyqBP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 49,
+   "user": "sntbams",
+   "url": "https://x.com/sntbams/status/2090530894658273458",
+   "date": "2026-08-20",
+   "text": "Dan explains why it is delusional to expect Hyperliquid to rally while Bitcoin is trending down, explaining that the token will likely chop until Bitcoin finds support and bounces.\n\nDan: “But where I do disagree is where, like, we will not see an uptrend on Hyperliquid if Bitcoin https://t.co/1XQNuxXioD"
+  }
+ ]
+}

@@ -1,0 +1,210 @@
+{
+ "symbol": "COIN",
+ "start": "2026-08-22T00:00:00Z",
+ "end": "2026-08-23T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Uncle_Onchain",
+   "url": "https://x.com/Uncle_Onchain/status/2091166814407418104",
+   "date": "2026-08-22",
+   "text": "Full historical K-line backtest of Bitcoin across 5 bear markets and 4 bull markets. Includes 4h volatility parameters, three scenario projections, and actionable recommendations. https://t.co/UH6VRMGe3I"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 335,
+   "user": "DeadSeaTrader",
+   "url": "https://x.com/DeadSeaTrader/status/2091167037980549176",
+   "date": "2026-08-22",
+   "text": "$BTC — HTF EMERGENCY UPDATE\n\nRead this carefully. The sudden move from 63K → 79K forces me to make an emergency HTF update and reassess the bigger picture. For almost 6 months, our major HTF reads have been extremely consistent:\n\nLong: 66K → 83K\nShort: 83K → sub 60K\nLong: 61K https://t.co/MUdRtfAlCQ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "PRATIK___RAJ",
+   "url": "https://x.com/PRATIK___RAJ/status/2091219458471956817",
+   "date": "2026-08-22",
+   "text": "If I had to build a crypto portfolio from scratch today, I wouldn’t start by asking:\n\n“Which coin can give me 100x?”\n\nI’d ask:\n“How do I survive the next 50% crash?”\n\nBecause making money is only half the game.\n\nKeeping it is the other half.\n\nMost portfolios are built around one https://t.co/hHslwsiQID"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 16,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2091179868251730417",
+   "date": "2026-08-22",
+   "text": "📊 $VTHO Overview | 2026-08-22\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🐌 Weak\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Vechain\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2091168531907785132",
+   "date": "2026-08-22",
+   "text": "📊 $SUI Overview | 2026-08-22\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Sui\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2091163490249552149",
+   "date": "2026-08-22",
+   "text": "📊 $RENDER Overview | 2026-08-22\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI 🔴 Pullback\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Render\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "0xLogicalx",
+   "url": "https://x.com/0xLogicalx/status/2091279481113559249",
+   "date": "2026-08-22",
+   "text": "$XPL is trading at $0.09 after getting absolutely murdered from its ATH.\n\nAnd weirdly, that’s exactly why I’m interested.\n\nThe chart has spent months building a support zone near the lows\n\nwith $0.20 as the first major level to reclaim.\n\nAbove that?\n\nThere’s an enormous vacuum https://t.co/di8GpduFnt"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Daily_tech_new",
+   "url": "https://x.com/Daily_tech_new/status/2091225109713273067",
+   "date": "2026-08-22",
+   "text": "XRP flips bullish and erases a bearish signal!\n\nXRP closed above its bearish moving averages for the first time since August, reversing a key technical signal, and the Ripple-linked coin is now showing strong upward momentum. https://t.co/IZUoGbhWa1"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2091173572215509282",
+   "date": "2026-08-22",
+   "text": "📊 $DOGE Overview | 2026-08-22\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI 🔴 Pullback\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#DOGECOIN\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "OptionKing33996",
+   "url": "https://x.com/OptionKing33996/status/2091237963812446644",
+   "date": "2026-08-22",
+   "text": "Simple rule:\n🟢 Above VWAP + EMA + bullish MACD = Calls bias\n🔴 Below VWAP + EMA + bearish MACD = Puts bias\n⚠️ Mixed signals = Wait / avoid forcing the trade.\n\n$SPY $TSLA $NVDA $MSTR $COIN https://t.co/iWjfDZs5vX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 86,
+   "user": "_imagyn",
+   "url": "https://x.com/_imagyn/status/2091027476122100065",
+   "date": "2026-08-22",
+   "text": "If ansem is even remotely close the his “ $bullshit could be the fartcoin of $ansem” theory, then he’s saying the potential of a runner from his z500 is low 9 fig territory in a full blown bull market\n\n&amp; if that’s the case, then the downside of the coin is very minimal here at 5M"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "trenchmeme",
+   "url": "https://x.com/trenchmeme/status/2091059056727175243",
+   "date": "2026-08-22",
+   "text": "If ansem is even remotely close with his “ $bullshit could be the fartcoin of $ansem” theory, then he’s saying the potential of a runner from his z500 is low 9 fig territory in a full blown bull market\n\n&amp; if that’s the case, then the downside of the coin is very minimal here at https://t.co/zwMVOtUaos"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 151,
+   "user": "Dior100x",
+   "url": "https://x.com/Dior100x/status/2091038410651652429",
+   "date": "2026-08-22",
+   "text": "If ansem is even remotely close with his “ $bullshit could be the fartcoin of $ansem” theory, then he’s saying the potential of a runner from his z500 is low 9 fig territory in a full blown bull market\n\n&amp; if that’s the case, then the downside of the coin is very minimal here at https://t.co/7RJX5dlOmx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "MintingNFT",
+   "url": "https://x.com/MintingNFT/status/2091040335279325235",
+   "date": "2026-08-22",
+   "text": "If ansem is even remotely close with his “ $bullshit could be the fartcoin of $ansem” theory, then he’s saying the potential of a runner from his z500 is low 9 fig territory in a full blown bull market\n\n&amp; if that’s the case, then the downside of the coin is very minimal here at https://t.co/7yGn2AWwh5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Degen_habibi",
+   "url": "https://x.com/Degen_habibi/status/2091037925173567575",
+   "date": "2026-08-22",
+   "text": "If ansem is even remotely close with his “ $bullshit could be the fartcoin of $ansem” theory, then he’s saying the potential of a runner from his z500 is low 9 fig territory in a full blown bull market\n&amp; if that’s the case, then the downside of the coin is very minimal here at 5M https://t.co/3I2lbN0XX0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 30,
+   "user": "zethesx",
+   "url": "https://x.com/zethesx/status/2091049924011962420",
+   "date": "2026-08-22",
+   "text": "If ansem is even remotely close with his “ $bullshit could be the fartcoin of $ansem” theory, then he’s saying the potential of a runner from his z500 is low 9 fig territory in a full blown bull market\n\n&amp; if that’s the case, then the downside of the coin is very minimal here at https://t.co/qHu1dVu034"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Muhammet_8108",
+   "url": "https://x.com/Muhammet_8108/status/2091078485993275424",
+   "date": "2026-08-22",
+   "text": "If @blknoiz06 is even remotely close the his “ $BULLSHIT could be the fartcoin of $ANSEM ” theory, then he’s saying the potential of a runner from his z500 is low 9 fig territory in a full blown bull market\n\n&amp; if that’s the case, then the downside of the coin is very minimal here https://t.co/JVdSVxosoP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "TxCryptoSaurus",
+   "url": "https://x.com/TxCryptoSaurus/status/2091208201064615982",
+   "date": "2026-08-22",
+   "text": "If ansem is even remotely close with his “ $bullshit could be the fartcoin of $ansem” theory, then he’s saying the potential of a runner from his z500 is low 9 fig territory in a full blown bull market\n\n&amp; if that’s the case, then the downside of the coin is very minimal here at https://t.co/fn53aWrQyJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "Legit_Luffy",
+   "url": "https://x.com/Legit_Luffy/status/2091040191486316623",
+   "date": "2026-08-22",
+   "text": "Gold's Next Move https://t.co/24jCgpDbJE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "crypt0_ribz",
+   "url": "https://x.com/crypt0_ribz/status/2091065683496890635",
+   "date": "2026-08-22",
+   "text": "If ansem is even remotely close with his “ $bullshit could be the fartcoin of $ansem” theory, then he’s saying the potential of a runner from his z500 is low 9 fig territory in a full blown bull market\n\n&amp; if that’s the case, then the downside of the coin is very minimal here at https://t.co/ksriRe6n5h"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 140,
+   "user": "Chairman_DN",
+   "url": "https://x.com/Chairman_DN/status/2091037605018456465",
+   "date": "2026-08-22",
+   "text": "If ansem is even remotely close with his “ $bullshit could be the fartcoin of $ansem” theory, then he’s saying the potential of a runner from his z500 is low 9 fig territory in a full blown bull market\n\n&amp; if that’s the case, then the downside of the coin is very minimal here at https://t.co/rEE6L6sbah"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Saddler_Leather",
+   "url": "https://x.com/Saddler_Leather/status/2091218280509739103",
+   "date": "2026-08-22",
+   "text": "The scanner flagged $Truth Coin with $26.9M MC upside and strong bullish signals. \n This is the kind of gem you don't ignore. \n Free tool, instant results. \n Get your own scan at https://t.co/oMXE6u9S6r https://t.co/VmFSsZEmWP"
+  }
+ ]
+}

@@ -1,0 +1,228 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-08-11T00:00:00Z",
+ "end": "2026-08-12T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "web3advise",
+   "url": "https://x.com/web3advise/status/2086981295280881949",
+   "date": "2026-08-11",
+   "text": "Bitcoin falls below $64K as Ethereum slips under $1,900. Is this another major accumulation zone—or the start of deeper downside?\n\n1. Bitcoin is back under pressure.\n\nBTC dropped to around $63,800, while Ethereum fell below $1,900 as sharp selling pushed both major assets toward"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "ainotesus",
+   "url": "https://x.com/ainotesus/status/2087145600575742423",
+   "date": "2026-08-11",
+   "text": "Bitcoin near its 200-week moving average is treated as the only bear-market buying exception; other assets remain off-limits until their trends turn bullish.\n\nBitcoin is described as trading near its 200 moving average, with renewed Tether issuance presented as a bullish signal."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 65,
+   "user": "SOLtanofSWAT",
+   "url": "https://x.com/SOLtanofSWAT/status/2087171019047837748",
+   "date": "2026-08-11",
+   "text": "Great piece by @Investanswers that I merged into one graphic\n\nSolana simply is the majority of Web3\n\nEthereum is overvalued imo\n\n$SEI might be undervalued especially when compared to those below it\n\nJust one metric examined here, but there's some signal imo, especially in this https://t.co/0IMn8ivQRi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "cutehorse999",
+   "url": "https://x.com/cutehorse999/status/2087302346321932420",
+   "date": "2026-08-11",
+   "text": "$BMNR is essentially a leveraged bet on Ethereum, so when ethereum:native falls, BMNR can fall much harder.\n\n👉BMNR now holds ~5.81M ETH (~4.8% of total supply) plus other assets, worth about $11.6B. \nThe stock also trades on expectations/premium, not just the underlying ETH https://t.co/nzFbhaDvny"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "apedintocrypto",
+   "url": "https://x.com/apedintocrypto/status/2087112066175824180",
+   "date": "2026-08-11",
+   "text": "There is a widely popular sentiment across X that stablecoin dominance is on the verge of breaking down, which would theoretically send crypto prices soaring. The charts are telling a very different story. https://t.co/qObNy3zRwx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "CryptoJobs3",
+   "url": "https://x.com/CryptoJobs3/status/2087047692593610916",
+   "date": "2026-08-11",
+   "text": "ethereum:0xd533a949740bb3306d119cc777fa900ba034cd52  daily trend stays bullish 📈\n\nCorrection looks healthy - resistance unlikely to hold on medium term.\n\nPrice/trend showing overbought conditions with bear div on RSI - local top likely around 0.2700 - 0.2750 ⚠️\n\nShort term, https://t.co/0gD0HRTWgk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "bsv0608",
+   "url": "https://x.com/bsv0608/status/2087324238265176262",
+   "date": "2026-08-11",
+   "text": "Ethereum, Ripple, Solana, TRON, Cardano, and Dogecoin are all what we commonly refer to as major market-leading altcoins. They are tokens that a vast number of people invest in, and they command a certain degree of trust within the altcoin space.\n\nHowever, a critical question https://t.co/xIlPCH5Zio"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "OmodunmijuTosin",
+   "url": "https://x.com/OmodunmijuTosin/status/2087102433029693824",
+   "date": "2026-08-11",
+   "text": "What is Crypto Bull Market\n\nA crypto bull market is a period when cryptocurrency prices rise consistently over time and there are  high demand, hope, and increased investors' confidence in the market.\n\nThe term \"bull\" comes from the idea of a bull thrusting its horns upward. In https://t.co/6MoXJ5iIVH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "OmodunmijuTosin",
+   "url": "https://x.com/OmodunmijuTosin/status/2087102636323414277",
+   "date": "2026-08-11",
+   "text": "What is Crypto Bull Market ?\n\nA crypto bull market is a period when cryptocurrency prices rise consistently over time and there are  high demand, hope, and increased investors' confidence in the market.\n\nThe term \"bull\" comes from the idea of a bull thrusting its horns upward. In https://t.co/56cvN6TOrl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 47,
+   "user": "bashorunedward",
+   "url": "https://x.com/bashorunedward/status/2087327291214856273",
+   "date": "2026-08-11",
+   "text": "🧵 I still remember when people called Ethereum too expensive and said it would never scale.\n\nFast forward to today, and it's still where builders keep building, That says a lot.\n\n@trylimitlessfin\n\n🧵 Every market has shiny new narratives.\n\nBut Ethereum has survived bull markets, https://t.co/35SBZsqTPv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "dingding_TW666",
+   "url": "https://x.com/dingding_TW666/status/2087028144905838721",
+   "date": "2026-08-11",
+   "text": "DingDing Cross-Market Technical Analysis (2026/08/11 11:07 UTC+8) #BTC #TRX\n\n【⭐ DingDing Today’s Trading Highlights Quick Summary ⭐】\nToday’s key takeaway:\nThe broader market remains selective: stronger coins are holding support and extending rebounds, while weaker names"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "andreea87377594",
+   "url": "https://x.com/andreea87377594/status/2087167353624646024",
+   "date": "2026-08-11",
+   "text": "The worst jobs report in months just produced the best stock market record\n\nSomething counterintuitive happened on Friday. Data showed the US economy lost 23,000 jobs in July, when everyone expected a gain of 80,000. The first contraction in the labor market since February.\n\nThe https://t.co/jxRHU9lMfu"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "crypto2424_com",
+   "url": "https://x.com/crypto2424_com/status/2087086869137817952",
+   "date": "2026-08-11",
+   "text": "Ethereum trades near the lower 24h range while price sits at a fresh bullish M5 FVG (1872–1876) and slightly above scalping EMAs and VWAP. Intraday structure is bullish and the day's low limits immediate downside.\n\n#Ethereum #ETH #Crypto2424 https://t.co/WnJL9DlsWV"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "PrometeusCT",
+   "url": "https://x.com/PrometeusCT/status/2087070127271342503",
+   "date": "2026-08-11",
+   "text": "#ETH #Liquidations\n\n📍 ETH Liquidation Heatmaps 3D\n\nEthereum has lost the 1.900K area and is now consolidating around 1.880K after a sharp downside move.\n\nThe liquidation map shows a clear liquidity cluster at 1.890K, while the strongest upside pool sits around 1.940K–1.960K. https://t.co/3B1K2oSaay"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "cryptosatred",
+   "url": "https://x.com/cryptosatred/status/2086994186419728844",
+   "date": "2026-08-11",
+   "text": "🚨 BEARISH PRESSURE IS PLAYING OUT\n\nAs I said in yesterday’s update, the key support levels were lost — and both Bitcoin and Ethereum are now facing stronger bearish pressure.\n\n🔻 $ETH dropped to $1,866 after losing $1,885.\n\nIf you entered the short around $1,885:\n\n Profit with https://t.co/CL3mwCpyne https://t.co/XhFGgrQX4k"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Akinwale4L",
+   "url": "https://x.com/Akinwale4L/status/2087100279283933689",
+   "date": "2026-08-11",
+   "text": "Why I’m paying attention to @Divergents_eth:\n\nThe entry point is hard to ignore.\n\nGTD is free, while the public mint is just $20 on Ethereum. That keeps the barrier low while leaving room for meaningful upside if the collection catches real momentum after launch.\n\nLow entry."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "Vinci_CoinUp",
+   "url": "https://x.com/Vinci_CoinUp/status/2087208620362473711",
+   "date": "2026-08-11",
+   "text": "What if the market already priced in the worst for $ETH? 👀\n\nEthereum found strong support around $1,500 during the last major cycle, even when sentiment was extremely bearish.\n\nIf that level holds again, the upside could be much bigger than most expect. 🚀📈 https://t.co/1DImzcmHBt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "theMarvelCrypto",
+   "url": "https://x.com/theMarvelCrypto/status/2087290208144208358",
+   "date": "2026-08-11",
+   "text": "💥 ORDER BLOCKS CAN BE THE ZONE BEFORE THE BIG MOVE.\n\nBullish or bearish — watch where strong displacement begins and how price reacts when it returns. 🎯\n\nDon’t chase the move. Watch the retest. 👀\n\n👉 $BEAT ✨ ethereum:0xde4ee8057785a7e8e800db58f9784845a5c2cbd6 ❤️ https://t.co/6rjjPd9oBX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "sebos77",
+   "url": "https://x.com/sebos77/status/2087051820879253602",
+   "date": "2026-08-11",
+   "text": "2026-08-11: Altseason indicator = Trend indicator (0-bearish to 100-bullish) = 26.1/100 #bitcoin #ethereum #altcoins #krakenfx https://t.co/lmoLeQypec"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "CryptoQueefj",
+   "url": "https://x.com/CryptoQueefj/status/2086989497389224140",
+   "date": "2026-08-11",
+   "text": "Ethereum is walking a tightrope right now.\n\nThe chart is forming a bullish pattern, but the bears aren’t out of the woods yet. If $ETH loses its current support, it could quickly slide toward $1,850.\n\nBullish setup, bearish pressure the next move could catch many traders off https://t.co/DuVCo9V9WN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "unitedcoins1",
+   "url": "https://x.com/unitedcoins1/status/2087095748261294344",
+   "date": "2026-08-11",
+   "text": "Share your thoughts on the current sentiment in the crypto market\nARE YOU FEELING BULLISH OR BEARISH?.\n\n#ethereum #bitcoin #Ripple #Zcash #monero #usdt #litecoin #crypto https://t.co/1FmAzOBcey"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "RangeDesk",
+   "url": "https://x.com/RangeDesk/status/2087065400433655867",
+   "date": "2026-08-11",
+   "text": "Grayscale just introduced a CONSTANT SELL PRESSURE on $ETH, $SOL &amp; $AVAX? 🚨\n\nGrayscale's ETHE, GSOL, and GAVA will now auto-sell ALL staking rewards to pay shareholders in CASH ($1.1B total staked assets).\n\nBullish or Bearish? 👇\n• Bullish: TradFi loves cash dividends = More https://t.co/zFGS5kXRyw"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "MirNirob14954",
+   "url": "https://x.com/MirNirob14954/status/2087186439436214642",
+   "date": "2026-08-11",
+   "text": "🔴 $ETH Drops to $1,879.14! 📉\n​Ethereum ($ETH) faces a sharp drop from $1,896.55 high to trade at $1,879.14! RSI oversold at 24.82. 📊\n​🐂 Bullish Target: Relief bounce toward $1,888+ if oversold RSI triggers buyers.\n🐻 Bearish Risk: Drop to $1,868.81 support if pressure stays. https://t.co/DCtXuYtzmG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "RealAMShadow",
+   "url": "https://x.com/RealAMShadow/status/2087119269926515112",
+   "date": "2026-08-11",
+   "text": "🚨 BITCOIN UNDER $64K!\nBitcoin has dropped below $64,000, while Ethereum is trading below $1,900 as crypto market volatility increases.\nThe big question is:\n📉 Is this a buying opportunity? 📈 Or are we going lower?\n👇 What do you think?\nBULLISH 🟢 or BEARISH 🔴? https://t.co/rmdho2v6YC"
+  }
+ ]
+}

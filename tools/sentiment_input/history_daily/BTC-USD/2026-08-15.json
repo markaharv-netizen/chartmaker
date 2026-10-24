@@ -1,0 +1,219 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-08-15T00:00:00Z",
+ "end": "2026-08-16T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Divehex",
+   "url": "https://x.com/Divehex/status/2088599507902898496",
+   "date": "2026-08-15",
+   "text": "I can say it plainly right now. $BTC is in capitulation.\n\nThe pullback after price touched 57K looks like capitulation designed to trap traders into believing the bottom is in. The thesis has shifted to \"we already bottomed,\" and that shift exists for a reason. It wears bears https://t.co/32hLXpBPvY"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 11,
+   "user": "Divehex",
+   "url": "https://x.com/Divehex/status/2088600077866832090",
+   "date": "2026-08-15",
+   "text": "I can say it plainly right now. $BTC is in capitulation.\n\nThe pullback after price touched 57K looks like capitulation designed to trap traders into believing the bottom is in. The thesis has shifted to \"we already bottomed,\" and that shift exists for a reason. It wears bears https://t.co/a7sjsSQJJ0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 45,
+   "user": "TraderJonesy",
+   "url": "https://x.com/TraderJonesy/status/2088729609424798010",
+   "date": "2026-08-15",
+   "text": "The longer this market expands, the easier it becomes to forget that bull markets are allowed to pull back.\n\nAnd after the expansion we’ve had since March, I think that is one of the most important things traders need to understand right now.\n\nWhen every dip gets bought for"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2088735766226853980",
+   "date": "2026-08-15",
+   "text": "📊【XWIN CAPITAL INDEX｜August 16, 2026】\nOverall Score: 48 / 100\n・80–100 = Strong Bullish Environment\n・60–79 = Bullish Bias\n・40–59 = Neutral / No Clear Direction\n・20–39 = Bearish Bias\n・0–19 = Strong Bearish Environment\n7-Day Moving Average: 47.86 ↓\n14-Day Moving Average: https://t.co/80huA6hk6x"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "MzeeMJaka1",
+   "url": "https://x.com/MzeeMJaka1/status/2088451786021732793",
+   "date": "2026-08-15",
+   "text": "Market sentiment was bearish for Bitcoin vs US Dollar (Spot CFD BTCUSD) despite price holding in range; analysts warned of $40,000 downside but flagged higher-probability upside scenarios. https://t.co/F3dTw8UteT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cryptosatred",
+   "url": "https://x.com/cryptosatred/status/2088638608165257484",
+   "date": "2026-08-15",
+   "text": "Constructive shift in Bitcoin options sentiment\n\n25-Delta Skew has declined across multiple maturities, with the 1-week skew now around 5%, indicating that traders are paying relatively less for downside protection.\n\nIn simple terms: the options market is becoming less defensive. https://t.co/52HS4O8sDC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FinansTarihi0",
+   "url": "https://x.com/FinansTarihi0/status/2088501690970595626",
+   "date": "2026-08-15",
+   "text": "BTCUSD — Smart Money Liquidity Map | 4H Analysis\n\nBitcoin is currently trading around 64,900 and showing bullish momentum toward a major 4H supply/POI zone around 72,300–74,400.\n\nThe chart shows multiple EQH formations and a clear buyside liquidity pool around 67,500, which could https://t.co/6UAe75iRC4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2088446822754730367",
+   "date": "2026-08-15",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-08-14 (Evening Edition)\n\n**Published:** 2026-08-14 09:04 PM CT\n\nFriday's board is flat and fearful: Bitcoin is down 0.86% over 24 hours, holding below its 30-day average of $64,209, and the Fear &amp; Greed Index sits at 34 for a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 42,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2088774557809233980",
+   "date": "2026-08-15",
+   "text": "$BTC You must read this logical view: \n\nCorrections may be getting smaller with each cycle, but they shouldn’t suddenly go from -77% to -50–55% — which would put the bottom around the $55K–$60K range, as many people currently assume.\n\nThe decline should be gradual, just like in https://t.co/H8Anf9OKnb https://t.co/XV1ijAtUJE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 30,
+   "user": "cryptoWZRD_",
+   "url": "https://x.com/cryptoWZRD_/status/2088440070474707213",
+   "date": "2026-08-15",
+   "text": "BTC Daily Technical Outlook:\n$Bitcoin closed indecisively. The intraday chart was somewhat volatile. Further upside and then a bearish move below $62,600 would offer a short. A continuous bullish move would offer further upside rally towards the $65,600 resistance 😈 https://t.co/c1VD5XPGDh"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Cbk19881",
+   "url": "https://x.com/Cbk19881/status/2088676593434509475",
+   "date": "2026-08-15",
+   "text": "$BTC – Bitcoin\n\nPrice is trading below the 200-WMA ($67,736).  \nWave (2) is targeting the green Fib zone:\n\n• 0.382 → $57,900  \n• 0.500 → $50,200  \n• 0.618 → $42,500  \n\nExecution plan:  \nLimit Buy: $50,500  \nMacro Target: $167,700\n\n**Bullish take:**  \nClassic Wave (2) https://t.co/XOVxmkSeeV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "VSVP_SW",
+   "url": "https://x.com/VSVP_SW/status/2088644120235413787",
+   "date": "2026-08-15",
+   "text": "bitcoin:native Textbook Bullish Harami, i inverted the btc chart once again, its textbook Bearish Harami, this signals a potential reversal for bitcoin to the upside, NFA GET LONG or GET WRONG. https://t.co/ZbTnr4M9LC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2088528850070159710",
+   "date": "2026-08-15",
+   "text": "Macro Observatory Week 33 Wrap\n\nFriday's Weekly Close telemetry locks in a multi-duration validation of our core macro thesis:  Stagflation tightens its grip as the Sovereign Bond backstop sinks below neutral.\n\nWhile mainstream financial outlets claim that broad equity indices"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2088529205994655951",
+   "date": "2026-08-15",
+   "text": "Macro Observatory Week 33 Wrap\n\nFriday's Weekly Close telemetry locks in a multi-duration validation of our core macro thesis:  Stagflation tightens its grip as the Sovereign Bond backstop sinks below neutral.\n\nWhile mainstream financial outlets claim that broad equity indices"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "PressSecretary7",
+   "url": "https://x.com/PressSecretary7/status/2088638792626258297",
+   "date": "2026-08-15",
+   "text": "Bitcoin Technical Analysis – August 15, 2026\nBTC is currently trading around $62,900 – $63,100. Short-term picture remains corrective and mildly bearish.\n\nKey Levels Right Now :\n\nSupport\n•Immediate: $62,800–$63,000\n•Strong: $62,000–$62,600 (channel low + horizontal)\n•Next:"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "PressSecretary7",
+   "url": "https://x.com/PressSecretary7/status/2088646834780524965",
+   "date": "2026-08-15",
+   "text": "ETH vs BTC Technical Comparison August 15, 2026\nHere’s the clean breakdown of where both stand right now:\n\nCurrent Snapshot\n\nBitcoin • Price: $62,900 – $63,100 • RSI: 42–45 (weaker) • Below 50-day SMA • ~9% under 200-day SMA • MACD clearly bearish • Testing the lower"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "WhatsNextBTC",
+   "url": "https://x.com/WhatsNextBTC/status/2088616626912456929",
+   "date": "2026-08-15",
+   "text": "The market experienced a massive test of our structural support yesterday, plunging directly into the $62,550 zone. Because the buyers stepped in exactly where they needed to and aggressively defended the macro floor, no new upside forecasted targets have been hit, but the https://t.co/pCfJMMbiBi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TradeSignals_24",
+   "url": "https://x.com/TradeSignals_24/status/2088693279093387615",
+   "date": "2026-08-15",
+   "text": "🚨 BITCOIN HAS NEVER STAYED BELOW “FIRE SALE” THIS LONG! 🔥\nBitcoin is spending an unusually long period in the “Basically a Fire Sale” zone of the Bitcoin Rainbow Chart, a level that has historically represented extreme undervaluation.\n📉 The Rainbow Chart moved BTC into this https://t.co/PF2mNw2n9Q"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "jasonwanghere",
+   "url": "https://x.com/jasonwanghere/status/2088550261073822066",
+   "date": "2026-08-15",
+   "text": "Bitcoin’s short-term structure is starting to look uncomfortable.\n\nThe loss of the 42-day uptrend matters because this rally had been defined by a series of higher lows. Once that trendline breaks, the question shifts from “how high can BTC go?” to “where will buyers step in?” https://t.co/PsBA98Q1ym"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "DannyStacksSats",
+   "url": "https://x.com/DannyStacksSats/status/2088611922643959811",
+   "date": "2026-08-15",
+   "text": "\"If they refuse to accept defeat, then their hope must be shattered too.\"\n\nThe first supervillain, The Bear King, has entered the battle, bringing crypto winter with him and no interest in a Bull return to the power floor.  \n\nAbilities:\n\n- Permabearfrost: A large winter aura that https://t.co/UjMOcCQCaV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Boring_Wins",
+   "url": "https://x.com/Boring_Wins/status/2088528635271467102",
+   "date": "2026-08-15",
+   "text": "Weak people see $63k and run. Strong people see $63k and load up.\nAlready 50% recovered from the top in a “bear market.”\nThis is the setup for the next massive bull run. Don’t be a spectator. Be the one who wins.\n#Bitcoin #BTC #Crypto #Bullish"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2088627698629251132",
+   "date": "2026-08-15",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-08-15 (Late Morning Edition)\n\n**Published:** 2026-08-15 09:03 AM CT\n\nBitcoin is grinding sideways on a quiet Saturday, up 0.72% over 24 hours but still down 3.0% over the past week, with the Fear &amp; Greed Index stuck at 34 for seven"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "iBuydipss",
+   "url": "https://x.com/iBuydipss/status/2088775966290022648",
+   "date": "2026-08-15",
+   "text": "$CAN  | Canaan Inc | Technology ⛏️\n\nHigh-conviction buyer volume is building on $CAN as price tightens right above primary volume profile support! 💥 Heavy order flow response off the $0.1510 liquidity sweep confirms strong baseline accumulation ⚡\nProfitability &amp; Fundamentals: https://t.co/wHmYx82h59"
+  }
+ ]
+}

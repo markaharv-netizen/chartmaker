@@ -1,0 +1,219 @@
+{
+ "symbol": "STRC",
+ "start": "2026-08-18T00:00:00Z",
+ "end": "2026-08-19T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "STRC (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 99,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2089757717116117056",
+   "date": "2026-08-18",
+   "text": "$MSTR is trading at 1x mNAV because the market does not expect them to be able to sustain a positive BTC yield. \n\nMight be undervalued if you believe $STRC will hit par and the BTC accumulation engine will turn on once again."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2089714775420772610",
+   "date": "2026-08-18",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-08-18 (Late Morning Edition)\n\n**Published:** 2026-08-18 09:03 AM CT\n\nTuesday's tape is a grind, not a breakout: Bitcoin is up 0.86% over 24 hours to $64,146, but it's still below the 30-day average of $64,179, and the Fear &amp; Greed"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 230,
+   "user": "MSTR_simulator",
+   "url": "https://x.com/MSTR_simulator/status/2089720074429251746",
+   "date": "2026-08-18",
+   "text": "$521.50 per MSTR.\n\nThis is my current base case for Strategy's price by March 31, 2028, calculated using Strategy Simulator.\n\nThe calculation is based on 7 input assumptions used to produce the price. I provide each of my assumptions and the rationale for each below.\n\n1) Bitcoin https://t.co/DamhF3R8tM"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "tonycarrera",
+   "url": "https://x.com/tonycarrera/status/2089506208239476742",
+   "date": "2026-08-18",
+   "text": "The bearish chart is real: MSTR’s basic share count is now 4.1x its August 2020 level. But some caption is required.\n\nBut dilution alone isn’t the verdict. BTC held grew 39.2x, leaving roughly 9x more BTC per assumed diluted share. MSTR also returned 7.85x vs BTC’s 5.43x.\n\nThe https://t.co/0jXRRxtpmy https://t.co/dposBhMpua"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "lelepepe_0",
+   "url": "https://x.com/lelepepe_0/status/2089526437485359347",
+   "date": "2026-08-18",
+   "text": "Stablecoins are the biggest \"killer app\" in crypto — yet most of them pay you 0% while inflation quietly eats your purchasing power. Apyx is trying to fix that by tapping into an asset class most crypto users have never even heard of: Digital Credit.\nLet's break it down 🧵\n\nWhat"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "diglloyd",
+   "url": "https://x.com/diglloyd/status/2089738170401464677",
+   "date": "2026-08-18",
+   "text": "I have a bet on $STRC, and I'm pissed that instead of improving the offering, @Strategy is letting it languish as an inferior product to $SATA, with a month delay for dividends (2 weeks + 2 weeks), lower yield, and inferior terms.\n\nSTRC can't get off the mat even today after a https://t.co/StYPzoY03M https://t.co/MOBQPpEqcb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "GenevaInvestor",
+   "url": "https://x.com/GenevaInvestor/status/2089796976116388107",
+   "date": "2026-08-18",
+   "text": "I normally avoid products like $MSTY. High distribution rates, heavy return of capital, and structural NAV decay can leave you with less principal than you started with, even after distributions.\n\nYet, at current levels I think it is a tactical BUY. The ~75% Distribution Rate https://t.co/KadicDUbcN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 30,
+   "user": "BTCtreasuries",
+   "url": "https://x.com/BTCtreasuries/status/2089690177967104171",
+   "date": "2026-08-18",
+   "text": "JUST IN: The pre-market is open. $SATA is only 50 cents away from par. $STRC holding above $94.\n\nIs $SATA about to hit par today and restart #Bitcoin accumulation? 👀🔥\n\nPowered by @Apyx_fi | Double-digit yield for everyone.\nhttps://t.co/HiyxiivmFH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "signalXBT",
+   "url": "https://x.com/signalXBT/status/2089735448335876492",
+   "date": "2026-08-18",
+   "text": "The best way to think of $mstr is a BTC hedge fund that buys high and sells low\n\nThey spend bull markets buying every local top\n\nAnd spent the entire bear market flipping to a forced seller\n\nThere’s an alternate universe where Saylor didn’t ask ChatGPT “how can I make my company"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "YouOughtaHODL",
+   "url": "https://x.com/YouOughtaHODL/status/2089665147581178139",
+   "date": "2026-08-18",
+   "text": "#MSTR ‘s ability to issue and find buyers for new shares in this bear market is pretty impressive. \n\nWhat if in a bull market they decided not to sell new shares and funded $BTC purchases and dividends only with new $STRC issuance and the cash reserve? \n\nCould that amplify stock"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 26,
+   "user": "matthewkerridge",
+   "url": "https://x.com/matthewkerridge/status/2089820342604771420",
+   "date": "2026-08-18",
+   "text": "Regardless of short term Bitcoin price action 👇 \n\n✅ Bitcoin continues to strengthen.\n✅ $STRC continues to strengthen.\n✅ $MSTR continues to strengthen.\n✅ $SATA continues to strengthen.\n✅ $ASST continues to strengthen.\n✅ Metaplanet continues to strengthen.\n✅ $SWC continues https://t.co/7xyR00fVAo https://t.co/sLkxBZSK41"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 31,
+   "user": "0xHaley_",
+   "url": "https://x.com/0xHaley_/status/2089708766988222704",
+   "date": "2026-08-18",
+   "text": "Saturn is building one of the more interesting intersections between $Bitcoin, RWA, and DeFi yield.\n\nThe thesis is simple:\n\nIf $Bitcoin becomes digital capital, the next opportunity is building the credit and financial infrastructure around it.\n\nThat’s where @saturn_credit  comes https://t.co/1A9T04j0mc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "signalXBT",
+   "url": "https://x.com/signalXBT/status/2089735079908262260",
+   "date": "2026-08-18",
+   "text": "The best way to think of $mstr is a BTC hedge fund that buys high and sells low\n\nThey spend bull markets buying every local top\n\nAnd spent the entire bear market flipping to a forced seller\n\nThere’s an alternate universe where Saylor didn’t ask ChatGPT “how can I make my company"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Evan_CryptoInfo",
+   "url": "https://x.com/Evan_CryptoInfo/status/2089537752190865462",
+   "date": "2026-08-18",
+   "text": "Most see a simple Bitcoin buy order, but Strategy is running a precise financial engineering loop:\n\nStep 1. De-risk the balance sheet with USD cash buffers and debt reduction.\n\nStep 2. Issue $STRC preferred stock targeting yield-hungry institutional funds.\n\nStep 3. Tap the market https://t.co/tOKRug6eh5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 34,
+   "user": "GrafYves",
+   "url": "https://x.com/GrafYves/status/2089797838049865965",
+   "date": "2026-08-18",
+   "text": "The setup is getting increasingly interesting: \n- Strategy $MSTR is building liquidity and defending $STRC.\n- Strive $ASST keeps accumulating Bitcoin while nearly 30% of its shares are sold short.\n- $SATA is pushing toward par.\n- Bitcoin keeps absorbing bad news without breaking. https://t.co/Yb1yKRCsAn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 256,
+   "user": "ChrisMMillas",
+   "url": "https://x.com/ChrisMMillas/status/2089668635761713268",
+   "date": "2026-08-18",
+   "text": "This clip demonstrates not only how misunderstood $MSTR still is, but how misaligned some investors are with what they actually own.\n\nThe questioner asks:\n\n“I have three children and I invested $73,000 each into MSTR, believing in the long-term potential.\n\nToday, that $73,000 is https://t.co/A9g6IilcAC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "OneChairPod",
+   "url": "https://x.com/OneChairPod/status/2089796511697866934",
+   "date": "2026-08-18",
+   "text": "Strategy $MSTR is raising capital again.\n\nBut the bigger question is what they're building toward.\n\nThis week:\n→ USD reserve reaches ~$4.8B\n→ Could ~$7B mean ZERO net debt?\n→ $STRC buybacks continue\n→ @saylor reveals how he thinks about $STRC above $100\n→ Strive $ASST short https://t.co/9nFvUBlQbl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 38,
+   "user": "CryptoPulseGLBL",
+   "url": "https://x.com/CryptoPulseGLBL/status/2089553799069483261",
+   "date": "2026-08-18",
+   "text": "🔔#Today’s Headlines\n\n1. There is a 65 per cent probability that the Federal Reserve will keep interest rates unchanged in September\n\n2. @saylor: Strategy will deploy all resources to bring STRC back to par value\n\n3. ARK Invest purchased $22.8 million worth of NVIDIA shares https://t.co/mbzIuVHFcA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 46,
+   "user": "TheBTCKnight",
+   "url": "https://x.com/TheBTCKnight/status/2089502787692605526",
+   "date": "2026-08-18",
+   "text": "Is anyone else as excited as I am for the bull market?\n\nBitcoin hits all times high\n$BCCC hits all times high\n$MSTR hits all times high\n$MSTY hits all times high\n$MSTE.TO hits all times high\n$ASST hits all times high \n$ETH hits all times high\n$ETHY hits all times high\n$SOL hits"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 341,
+   "user": "IvanOnTech",
+   "url": "https://x.com/IvanOnTech/status/2089717979885748733",
+   "date": "2026-08-18",
+   "text": "BITCOIN: GOD CANDLES COMING!!! 🚨🚨🚨,\n\n(FOR TRUE LOVERS ONLY: if you love the show follow\n@IvanOnTechClips for daily clips with highlights from the stream)\n\n00:00 Intro - BTC showing something beautiful\n00:10 BTC weekly chart - When we flip bullish god candles start\n01:12 When https://t.co/LLCwSIR35E"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "doxe_0x",
+   "url": "https://x.com/doxe_0x/status/2089808157333946375",
+   "date": "2026-08-18",
+   "text": "A closer look at Solstice new strcUSX product\n\nIt offers a new way to earn STRC linked yield on @solana. Users can choose between a lower risk senior position and a higher yield junior position.\n\nThe structure is simple:\n\n› deposit USX  \n› the vault buys mostly STRC and keeps a https://t.co/5omvCZjJND"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Willto1mill",
+   "url": "https://x.com/Willto1mill/status/2089760974207152558",
+   "date": "2026-08-18",
+   "text": "$STRC \nBRESSERT READY TO TURN BEARISH\n\nLOWER GAPS TO FILL\n$86\n$74\n\nTHIS SHOULD BE THE CATALYST TO GET $MSTR OUT OF ITS CURRENT RANGE AND DOWN TO $35\n\nEVERY MAN AND THEIR DOG WILL NOT WANT TO TOUCH IT\n\nTHIS IS WHEN YOU SHOULD BE GREEDY!!!!\n\nWHEN OTHERS ARE FEARFUL\n\nOPPORTUNITY OF https://t.co/c59OdrsM7m"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ChrisCyberBTC",
+   "url": "https://x.com/ChrisCyberBTC/status/2089661543369613386",
+   "date": "2026-08-18",
+   "text": "STRC vs Strive (SATA)\n\nBoth pay high yields and aim for ~$100.\n\nSTRC\nBigger. More liquid. ~11.5-12%. Monthly pay. More debt.\n\nSATA\nHigher yield (~13%). Daily pay. Cleaner balance sheet. Smaller.\n\nSame idea. Different vibe.\n\nWhich one you picking?"
+  }
+ ]
+}

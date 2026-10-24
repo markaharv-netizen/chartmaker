@@ -1,0 +1,219 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-08-24T00:00:00Z",
+ "end": "2026-08-25T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "CoinGPT_app",
+   "url": "https://x.com/CoinGPT_app/status/2091779016021639471",
+   "date": "2026-08-24",
+   "text": "$ETH update: Things are looking a bit heavy right now. 📉\n\nCoinGPT is currently flashing a Strong Bearish confluence for Ethereum around $2,446. The scanner is picking up 6 bearish signals against just 3 bullish, with indicators leaning firmly to the downside.\n\nWhat are your https://t.co/FxdzNiSnib"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "signalboatcom",
+   "url": "https://x.com/signalboatcom/status/2091791717720596850",
+   "date": "2026-08-24",
+   "text": "Bearish sentiment lingers ahead of the U.S. CPI report as Bitcoin struggles near critical levels. \n\n- Major market attention is on the impending CPI report, with heightened expectations for a potential surprise.\n- Significant short positions have formed around $64,400, creating"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Aicryptonemi0w",
+   "url": "https://x.com/Aicryptonemi0w/status/2091918970521788598",
+   "date": "2026-08-24",
+   "text": "Tom Lee's Bitmine buys $81 million of ETH in largest weekly haul since early July\n\nTom Lee's Bitmine has just dropped $81 million into Ethereum, marking its largest weekly ETH purchase since early July. The treasury firm's aggressive accumulation comes as Lee himself points to https://t.co/VjululwChf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 80,
+   "user": "Rancune_eth",
+   "url": "https://x.com/Rancune_eth/status/2091840628795625718",
+   "date": "2026-08-24",
+   "text": "ethereum:0x232ce3bd40fcd6f80f3d55a522d03f25df784ee2  got listed on @Official_Upbit.\n\nBEAR PTSS results in many people securing tiny % pnls and forgot how to HOLD.\n\nThe absolute minimum is the table below; it's based on BEAR data, no US approval, no Robin hood and even the most https://t.co/YDarAHzR6U"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "FirstSignalX",
+   "url": "https://x.com/FirstSignalX/status/2091848511667220843",
+   "date": "2026-08-24",
+   "text": "The First Signal Weekly Report\n\n#Bitcoin — What’s Next?\n\n🚩 TA / LCA / Psychological Breakdown\n\nIn my August 20 Bitcoin update, I made my position very clear:\n\nThe Bear Market is OVER as per my books.\n\nNo “if this happens.”\n\nNo “maybe if that breaks.”\n\nNo ten different scenarios https://t.co/NLUcJSaILL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 143,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2091722987825442952",
+   "date": "2026-08-24",
+   "text": "BTC chopped sideways after last week’s 26% wick-to-wick run, briefly dipping to 75,545 before stabilizing. My short-term support fan keeps the first meaningful danger zone near 68,300, while price remains roughly 12% above the fast line, so a pullback or sideways grind would be https://t.co/LWUhvfrVNF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "OWLDAOio",
+   "url": "https://x.com/OWLDAOio/status/2091703997199421807",
+   "date": "2026-08-24",
+   "text": "🚀 CRYPTO JUST EXPLODED! BITCOIN LEADS A MASSIVE MARKET RALLY ₿🔥\n\nThe crypto market delivered one of its strongest weeks of 2026, with Bitcoin jumping from around $62.8K on Monday, August 17, to nearly $77.5K by Sunday — a weekly surge of approximately +23.4%. BTC even broke https://t.co/GLioRVxQpy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "Benzinga",
+   "url": "https://x.com/Benzinga/status/2091848242652979465",
+   "date": "2026-08-24",
+   "text": "Fundstrat’s Tom Lee highlighted BMNR, MicroStrategy ($MSTR) and Coinbase ($COIN) as his top stock proxies for a fresh crypto bull run, while arguing that investors risk missing some of Bitcoin’s most important trading days.\n\nAmong 17 large-cap crypto-related stocks, Lee said BMNR https://t.co/hRJMPdMped"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2091858746431488183",
+   "date": "2026-08-24",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• Latest EU MiCA register update adds six German banks\n• Germany Extends Lead in EU Crypto Licensing as Six More Banks Join MiCA Register\n• Fasset Hits $1 Billion Valuation After SBI Group Leads $68 Million Funding\n• https://t.co/uH9awFxQfg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2091741109680844895",
+   "date": "2026-08-24",
+   "text": "Crypto + Stock Market Thesis\n\nCrypto is showing a potentially important shift from a short squeeze toward a broader liquidity/institutional-demand rally.\n\nBitcoin: ETF inflows, short covering, weaker USD and expectations of easier financial conditions are supporting $BTC. If $BTC https://t.co/3DULjIiuiK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 173,
+   "user": "0xRetardio",
+   "url": "https://x.com/0xRetardio/status/2091852796945424829",
+   "date": "2026-08-24",
+   "text": "Monday Playbook || Week 9\n\nFinally, the bulls ended up closing last week above $66k level as projected for continuation.\n\nNow that we’ve escaped the initial bull trap, opportunities are endless in the market.\n\nHere’s what I’m watching this week:\n\n➬ Funding Rate &amp; Open Interest https://t.co/AqOo0ROjyG"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 28,
+   "user": "clickoptions_ai",
+   "url": "https://x.com/clickoptions_ai/status/2091909395068428747",
+   "date": "2026-08-24",
+   "text": "Spotting momentum on Ethereum? 📈🚀\n\nTurn your market view into high-upside payouts with ClickOptions prediction ideas! 🪙\n\nTrade setups like turning a $500 position into $1,521.44 (+211% potential return) if ETH touches $2,539. 💸\n\nPick your target, set your amount, and lock in https://t.co/5pWenzpDru"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2091707967104078201",
+   "date": "2026-08-24",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-08-23 (Evening Edition)\n\n**Published:** 2026-08-23 09:03 PM CT\n\nSunday's board is flat, with Bitcoin down 0.28% over 24 hours, but the tape is anything but calm: the Fear &amp; Greed Index sits at 73 (Greed) for a fifth straight day,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2091820946210361772",
+   "date": "2026-08-24",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• Crypto roars back as bitcoin posts its second-best week since early 2021\n• Cardano (ADA) Jumps 29% Following T.Rowe Price ETF Addition — Price Outlook\n• Solana validators vote on 3 major network reforms\n• Samsung https://t.co/5IhrgezP3H"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "STEEEETY",
+   "url": "https://x.com/STEEEETY/status/2091812684090003797",
+   "date": "2026-08-24",
+   "text": "is this pennant bullish or bearish? ethereum:0x514910771af9ca656af840dff83e8264ecf986ca https://t.co/MqjrH3Xg5d"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "bionelabs",
+   "url": "https://x.com/bionelabs/status/2091895818240524402",
+   "date": "2026-08-24",
+   "text": "Ethereum is on the rise! 🚀 $2508.39, up 2.04% in 24h. What's your target? Let's hear your signals! 📈 Are you bullish or bearish? Share your thoughts below! #Crypto #Ethereum #InvestSmart @coinbase @Ethereum"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "sebos77",
+   "url": "https://x.com/sebos77/status/2091762887249240305",
+   "date": "2026-08-24",
+   "text": "2026-08-24: Altseason indicator = Trend indicator (0-bearish to 100-bullish) = 47.9/100 #bitcoin #ethereum #altcoins #krakenfx https://t.co/J3iwNApAob"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "FINANCIERNEWS",
+   "url": "https://x.com/FINANCIERNEWS/status/2091808045168734513",
+   "date": "2026-08-24",
+   "text": "Jiang Zhuoer Flips Bullish, Piles Into Ethereum\n\nP founder Jiang Zhuoer, one of China's most prominent Bitcoin miners, reversed his bearish market stance and now plans to move his remaining capital into Ethereum, betting ETH will outperform BTC this cycle. The shift follows his https://t.co/lP8LBWgSDz"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NexoraWire",
+   "url": "https://x.com/NexoraWire/status/2091846782938419630",
+   "date": "2026-08-24",
+   "text": "🚨🔥 CRYPTO IS HEATING UP AGAIN! 🔥🚨\n\n₿ Bitcoin is making moves 📈\nΞ Ethereum is waking up 👀\n⚡ Altcoins could be NEXT…\n\nThe question is: Are we entering the next BIG crypto run? 🚀💰\n\n$BTC 🔥 $ETH ⚡ $SOL 🚀\n\n@coinbase @binance @krakenfx @Bitcoin @ethereum\n\n👀 Bullish or https://t.co/SYRrsqwvGG"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "e_lukia",
+   "url": "https://x.com/e_lukia/status/2091887424322605204",
+   "date": "2026-08-24",
+   "text": "🚀 Bitcoin is testing the $80K zone while Ethereum gains momentum.\nBulls are back, but the real question is:\nIs this the start of the next major rally? 👀\nBullish or bearish? Drop your thoughts👇\n#BTC #ETH #Crypto https://t.co/IKSoSLaOx2"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "pfwafun",
+   "url": "https://x.com/pfwafun/status/2091927854816874677",
+   "date": "2026-08-24",
+   "text": "Haven’t done one of these in a while, it’s a bit all of over the place bc I had to record on my iPad(better resolution anyways).\n\nTDLR bitcoin:native leans more bearish short term, chart looks like a double top with an RSI bearish divergence.\n\nProlly good for everything else if https://t.co/2HydX82jvH"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "pfwafun",
+   "url": "https://x.com/pfwafun/status/2091921395366109372",
+   "date": "2026-08-24",
+   "text": "Haven’t do one of these in a while, it’s a bit all of over the place bc I had to record on my iPad(better resolution anyways).\n\nTDLR bitcoin:native leans more bearish short term, chart looks like a double top with an RSI bearish divergence.\n\nProlly good for everything else if we https://t.co/ZwGGNY1dLD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Bitnarium",
+   "url": "https://x.com/Bitnarium/status/2091873378822963456",
+   "date": "2026-08-24",
+   "text": "Term Finance loses an estimated $8.5M in a vault governance exploit, permanently closing its Meta Vaults after attackers removed nearly all Ethereum deposits. The incident raises questions about the security of decentralized finance platforms. #eth Bullish or bearish?"
+  }
+ ]
+}

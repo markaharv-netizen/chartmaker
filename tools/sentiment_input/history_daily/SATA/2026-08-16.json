@@ -1,0 +1,30 @@
+{
+ "symbol": "SATA",
+ "start": "2026-08-16T00:00:00Z",
+ "end": "2026-08-17T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "SATA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 21,
+   "user": "fiatarchive",
+   "url": "https://x.com/fiatarchive/status/2089118866404499456",
+   "date": "2026-08-16",
+   "text": "How long before Strategy's $STRC and Strive's $SATA start printing another 30k Bitcoin per month?\n\nWhat does that do to the bitcoin:native price when the two largest public accumulators are back in full force?\n\nLayer on expanding mNAV and they can opportunistically sell common"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 32,
+   "user": "_Adrian",
+   "url": "https://x.com/_Adrian/status/2089100832465944881",
+   "date": "2026-08-16",
+   "text": "If de-leveraging mitigates the risk profile of $STRC why wouldn't share buybacks and deleveraging drive a higher market price, all else equal?\n\nThis is a valid question, and the answer depends on what specific category of risk is being priced. Using a traditional credit and https://t.co/zcXUeVPx8D"
+  }
+ ]
+}

@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-08-10T00:00:00Z",
+ "end": "2026-08-11T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2086709612938457095",
+   "date": "2026-08-10",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟯.𝟱 / 𝟱 – leaning modestly bullish, but with notable bearish undercurrents. - 𝗕𝘂𝗹𝗹𝗶𝘀𝗵 𝗱𝗿𝗶𝘃𝗲𝗿𝘀 - $1.1 B+ weekly net inflows into U.S. spot crypto ETFs (BTC, ETH, SOL, XRP) signal strong investor appetite. - Solana highlighted for https://t.co/9cPmFUJHO4"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "StoryOfBlock",
+   "url": "https://x.com/StoryOfBlock/status/2086823503177638110",
+   "date": "2026-08-10",
+   "text": "BTC just broke its 6-day consolidation range. The on-chain data is screaming something most traders are missing.\n\nAs of 21:57 UTC, Aug 10, 2026.\n\nTHE RANGE IS DEAD\nBTC spent Aug 4–10 locked in a microscopic 64,166–65,474 band — just 2.5% width. Volume collapsed to 66% of the https://t.co/etjt0IeE1N"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "signalboatcom",
+   "url": "https://x.com/signalboatcom/status/2086717705017581604",
+   "date": "2026-08-10",
+   "text": "Market bias is cautiously constructive.\n\n- Bitcoin has retraced to around $64,200, following a push upward, driven by traders repositioning after recent volatility.\n- High-leverage shorts have been cleared out, with increased long positions indicating a potential shift in"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "rosticz",
+   "url": "https://x.com/rosticz/status/2086707892976005496",
+   "date": "2026-08-10",
+   "text": "$CRCL might be one of the most misunderstood stocks on the market.\n\nMost people see Circle as “the company behind USDC.”\n\nI see something bigger:\n\na regulated liquidity machine connecting traditional finance with the crypto economy.\n\nAnd after looking at both the bull and bear https://t.co/NtRhuaRKcd"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 100,
+   "user": "david_eng_mba",
+   "url": "https://x.com/david_eng_mba/status/2086834601675395267",
+   "date": "2026-08-10",
+   "text": "bitcoin:native: The Derivatives Setup Is Bullish\n\nBitcoin: $64,605\n\n• Gamma flip: $63.3K\n• Put wall: $60K\n• Call wall: $70K\n\nThe market is heavily hedged for downside.\n\nModel scenario:\nBTC −5% → ~$13M dealer selling\nBTC +5% → ~$387M dealer buying\n\nAbove $70K–$72K, gamma and https://t.co/06NDKRAbjD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "tradfi_moic",
+   "url": "https://x.com/tradfi_moic/status/2086785708002361639",
+   "date": "2026-08-10",
+   "text": "Italy's biggest bank just bought a put on #Bitcoin.\n\nIntesa Sanpaolo cut its common $IBIT stake 94%, took the call options to nearly zero, and added a put covering 500,000 shares. \n\nThat's not less bullish, it's dismantling a directional bet and paying for downside protection. https://t.co/WCibk8XxW1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Paul04Trader",
+   "url": "https://x.com/Paul04Trader/status/2086768285891088633",
+   "date": "2026-08-10",
+   "text": "I think a common mistake that most people are making (me included) is that Bitcoin will mimic last bear and go lower from here to make a LL. The theory is as Bitcoin becomes more well capitalized, upside and downside become more limited. The asset matures, so to say. I'm starting https://t.co/o65LOI0lyv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "tradfi_moic",
+   "url": "https://x.com/tradfi_moic/status/2086785755662180863",
+   "date": "2026-08-10",
+   "text": "Italy's biggest bank just bought a put on #Bitcoin.\n\nIntesa Sanpaolo cut its common $IBIT stake 94%, took the call options to nearly zero, and added a put covering 500,000 shares. \n\nThat's not less bullish, it's dismantling a directional bet and paying for downside protection. https://t.co/d4DgYyXzmt"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 24,
+   "user": "CryptoLifer33",
+   "url": "https://x.com/CryptoLifer33/status/2086813526400594279",
+   "date": "2026-08-10",
+   "text": "Bitcoin still looks constructive. The 4H is flagging above the 21SMA, and the 21 remains above the 200SMA, a key bullish sign.\n\nAs long as the 4H holds the 200SMA, I still favor a breakout to the upside. A bearish H&amp;S is still possible, but for now nothing much has changed. https://t.co/KzWvtjDj7O"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "Armstro57",
+   "url": "https://x.com/Armstro57/status/2086853756113551660",
+   "date": "2026-08-10",
+   "text": "Bitcoin Market Update August 10, 2026\n\nBitcoin is trading around the $65,000 to $65,300 region after briefly moving above $65,000. The short term structure has improved as buyers defend the $64,600 to $65,000 area, but BTC is approaching a critical resistance zone that could https://t.co/lTgg5WaRqt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "EmZet_LCA",
+   "url": "https://x.com/EmZet_LCA/status/2086729323315146880",
+   "date": "2026-08-10",
+   "text": "BTC Analysis #LCAIntelligence\n\nOverall Signal: CONFLICTED (Low Conviction – 35/100)\nBitcoin is trading at $65,279.29 with modest gains:\n\n+0.54% in the last 24 hours\n+2.77% over the past 7 days\n\nKey Observations\n\nSignificant whale activity: ~$95M in P2P transfers across six large https://t.co/xtVz0ZApuD"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 86,
+   "user": "BlockSulta",
+   "url": "https://x.com/BlockSulta/status/2086927420469198891",
+   "date": "2026-08-10",
+   "text": "The day $CORE pumps, \n\nthe same people who tweeted \"it's over for Core DAO\" \nwill be posting \"Core DAO is so undervalued\" \n\nWatch 🟧\n\nBear market filters tourists.\nBull market reveals conviction.\n\nStake. Build. Wait.\n#CoreDAO #BTCfi #Bitcoin https://t.co/k8LbRPo79C"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "WalkerKeistdt2",
+   "url": "https://x.com/WalkerKeistdt2/status/2086790137485136356",
+   "date": "2026-08-10",
+   "text": "Bitcoin Weekly Analysis  \n\nBitcoin gained 2.1% this week and has stayed above the important 200-week moving average for 6 weeks.\n\nBullish Case:  \n-MACD turned positive \n-RSI shows bullish divergence \n-Strong ISM data and Russell 2000 at all-time highs  \n\nBearish Case:  \n-Possible https://t.co/hL26p1zw12"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 9,
+   "user": "BlackcatTrader7",
+   "url": "https://x.com/BlackcatTrader7/status/2086783633269108970",
+   "date": "2026-08-10",
+   "text": "Bitcoin Weekly Analysis  \n\nBitcoin gained 2.1% this week and has stayed above the important 200-week moving average for 6 weeks.\n\nBullish Case:  \n-MACD turned positive \n-RSI shows bullish divergence \n-Strong ISM data and Russell 2000 at all-time highs  \n\nBearish Case:  \n-Possible https://t.co/yLzVOCWGLc"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TheCryptoJonny",
+   "url": "https://x.com/TheCryptoJonny/status/2086746154910519721",
+   "date": "2026-08-10",
+   "text": "Bitcoin Weekly Analysis  \n\nBitcoin gained 2.1% this week and has stayed above the important 200-week moving average for 6 weeks.\n\nBullish Case:  \n-MACD turned positive \n-RSI shows bullish divergence \n-Strong ISM data and Russell 2000 at all-time highs  \n\nBearish Case:  \n-Possible https://t.co/t0wXNVfcPe"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1082,
+   "user": "AshCrypto",
+   "url": "https://x.com/AshCrypto/status/2086740849795494061",
+   "date": "2026-08-10",
+   "text": "Bitcoin Weekly Analysis  \n\nBitcoin gained 2.1% this week and has stayed above the important 200-week moving average for 6 weeks.\n\nBullish Case:  \n-MACD turned positive \n-RSI shows bullish divergence \n-Strong ISM data and Russell 2000 at all-time highs  \n\nBearish Case:  \n-Possible https://t.co/iJpvEWq2Vn"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "Airdrop_Farming",
+   "url": "https://x.com/Airdrop_Farming/status/2086759521599554039",
+   "date": "2026-08-10",
+   "text": "Bitcoin Weekly Analysis  \n\nBitcoin gained 2.1% this week and has stayed above the important 200-week moving average for 6 weeks.\n\nBullish Case:  \n-MACD turned positive \n-RSI shows bullish divergence \n-Strong ISM data and Russell 2000 at all-time highs  \n\nBearish Case:  \n-Possible https://t.co/YsvCPnoUfA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "2bitcrypto_YT",
+   "url": "https://x.com/2bitcrypto_YT/status/2086758126573797803",
+   "date": "2026-08-10",
+   "text": "Bitcoin is still compressed beneath resistance — but the flows underneath price remain constructive.\n\nBTC is trading around $64.9K, with today’s range roughly $64.8K–$65.35K. ETH is near $1,625, XRP around $1.059, and SOL near $77.97.\n\nThe institutional bid is still there."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "alimul76",
+   "url": "https://x.com/alimul76/status/2086761351246917997",
+   "date": "2026-08-10",
+   "text": "🌏Bitcoin Weekly Analysis  \n\nBitcoin gained 2.1% this week and has stayed above the important 200-week moving average for 6 weeks.\n\nBullish Case:  \n-MACD turned positive \n-RSI shows bullish divergence \n-Strong ISM data and Russell 2000 at all-time highs  \n\nBearish Case: https://t.co/fSAsUCyMCR"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 36,
+   "user": "flaviusmg89",
+   "url": "https://x.com/flaviusmg89/status/2086762071132111037",
+   "date": "2026-08-10",
+   "text": "It's about time all of you turn bullish ! \nWhether a last flush will come or not \n\nBeing bearish after almost one year of bear market makes absolutely no sense \n\nMara selling, Strategy selling, FUD all over the space and Bitcoin consolidating at 65k since February ! https://t.co/7AYCASF2XB"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Theinner_pump",
+   "url": "https://x.com/Theinner_pump/status/2086873461163540673",
+   "date": "2026-08-10",
+   "text": "Bitcoin Weekly Analysis  \n\nBitcoin gained 2.1% this week and has stayed above the important 200-week moving average for 6 weeks.\n\nBullish Case:  \n-MACD turned positive \n-RSI shows bullish divergence \n-Strong ISM data and Russell 2000 at all-time highs  \n\nBearish Case:  \n-Possible https://t.co/18rMjvIikK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "WiseAnalyze",
+   "url": "https://x.com/WiseAnalyze/status/2086763330866139423",
+   "date": "2026-08-10",
+   "text": "📉 Bitcoin Daily 📈\n\nbitcoin:native starting it's 10th week within 59-67k range, which from higher timeframe appears to be a usual bear pennant/flag. Taking into account highly manipulative character of Bitcoin price action, I still stick to idea that pump into 69-72k zone has https://t.co/w0HMWwDpwV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Bitbaby_EX",
+   "url": "https://x.com/Bitbaby_EX/status/2086640678365184137",
+   "date": "2026-08-10",
+   "text": "1️⃣$16.5 Billion Stablecoin Liquidity Vanishes, Bitcoin \"Bull Trap\" Risk Emerges\n             The total stablecoin market cap has dropped by approximately $16.5 billion (5%) from its May peak of ~$322.4 billion to roughly $305.99 billion. This suggests some capital is now leaving https://t.co/ozTHSumb9K"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "iBuydipss",
+   "url": "https://x.com/iBuydipss/status/2086622986715504838",
+   "date": "2026-08-10",
+   "text": "$MSTR  is coiling tightly as massive net positive gamma (+286.1M) creates a high-pressure zone right beneath key psychological resistance. Driven by its colossal corporate Bitcoin treasury strategy, ongoing capital market activities, and institutional balance-sheet mechanics, the https://t.co/5XB8anCa0v"
+  }
+ ]
+}

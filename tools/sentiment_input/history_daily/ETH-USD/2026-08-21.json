@@ -1,0 +1,219 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-08-21T00:00:00Z",
+ "end": "2026-08-22T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 264,
+   "user": "KyleReidhead",
+   "url": "https://x.com/KyleReidhead/status/2090808126379601940",
+   "date": "2026-08-21",
+   "text": "$COIN is up 30% this week, while $BTC is up 22%\n\nEven $ETH is only up 27% in the same time frame\n\nMost people don't realize that Coinbase continues to be the BEST way to invest in crypto\n\nIt outperformed $ETH by 3x last bull market and $BTC by 2x\n\nCoinbase has the benefit of https://t.co/UALM3jt9ns"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Marketstudioo",
+   "url": "https://x.com/Marketstudioo/status/2090620236500496669",
+   "date": "2026-08-21",
+   "text": "🚨 Ethereum (ETH) Breakout Setup 📈\n\nETH/USD is showing strong momentum after breaking out of the ₹2,320–₹2,330 range.\n\n🎯 Upside Target: $2,435\n📍 Current Zone: ~$2,358\n🛡️ Key Support: $2,320–$2,330\n⚠️ Downside Level: $2,269\n\nBreakout + rising volume = bullish momentum 👀 https://t.co/09ODYAlx3g"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 79,
+   "user": "CryptofyHub",
+   "url": "https://x.com/CryptofyHub/status/2090596198814286190",
+   "date": "2026-08-21",
+   "text": "Last time I was this bullish on this altcoin was April 2025. It went up over 500% from my entry call at the time.\n\nThe conditions are once again looking very favorable.\n\nMassive upside with relatively little downside risk. At just a $3M market cap, this can move very fast once it https://t.co/qLn1LDRoJV https://t.co/QmOkI3LU8t"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "SoonTech_OFCL",
+   "url": "https://x.com/SoonTech_OFCL/status/2090607080663404622",
+   "date": "2026-08-21",
+   "text": "🚨 Crypto Twitter is bullish again. But the real question is: what changed?\n\nBitcoin is back above $70K.\n\nEthereum is moving higher.\n\nAltcoins are waking up.\n\nAnd suddenly, everyone remembers their favorite phrase:\n\n“Bull market is back.”\n\nBut crypto doesn’t usually move in a https://t.co/ZdDInrxrYc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "apedintocrypto",
+   "url": "https://x.com/apedintocrypto/status/2090767533234348439",
+   "date": "2026-08-21",
+   "text": "In this update, we are taking a hard look at traditional markets and why there is a growing probability that stocks are preparing to drag crypto down with them. https://t.co/ynm1OIFna6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "MSmith15784",
+   "url": "https://x.com/MSmith15784/status/2090886896335687798",
+   "date": "2026-08-21",
+   "text": "🚨 ETHEREUM (ETH) MARKET UPDATE — YESTERDAY ➜ TODAY ➜ TOMORROW 🚨\n\n📊 Yesterday: ETH closed around $2,373, after trading as high as roughly $2,443 on Aug. 21. That came after a powerful market-wide rebound, with ETH posting a strong weekly gain as crypto liquidity and risk https://t.co/xA1m5RL5kA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "CryptoCove4",
+   "url": "https://x.com/CryptoCove4/status/2090821788230189157",
+   "date": "2026-08-21",
+   "text": "The way I’m looking at this setup, ethereum:0x68749665ff8d2d112fa859aa293f07a622782f38  is still looking pretty strong here.\n\nPrice has pushed from around 4300 all the way into the 4570 area and the structure is clearly making higher highs and higher lows. That yellow trendline https://t.co/hM1XMUwoGX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2090771412004786538",
+   "date": "2026-08-21",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙 \n • Tether Pulls Plug on $120M Bitcoin Mining Venture in Uruguay Following Electricity Conflict.\n • XRP Price Surge: Strength and Insights from Derivatives Market.\n • UBS Boosts S&amp;amp;P 500 Forecast to 8,100 with Bull Run https://t.co/cm4644nYB4"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "advkunalINDIA",
+   "url": "https://x.com/advkunalINDIA/status/2090829146368942122",
+   "date": "2026-08-21",
+   "text": "🚀 $SUI ka deep dive – Weekly chart se\n\nAbhi price around $0.82 pe hai\n\nAll-time high tha $5.36 (Jan 2025)\n\nYani ATH se almost -85% down aa chuka hai 💀\n\nCurrent Market Cap: ~$3.2 Billion\nRank: #27 pe hai CoinMarketCap pe\nSui kya hai?\n\nSui ek high-performance Layer-1 blockchain https://t.co/TnBG3s6sUD"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 23,
+   "user": "Alray_crypto",
+   "url": "https://x.com/Alray_crypto/status/2090798608107110669",
+   "date": "2026-08-21",
+   "text": "📊📈ARE FINALLY IN THE BULL MARKET?\n\nThe crypto market has completely flipped bullish in just two days. Here’s what’s happening 👇\n\nBitcoin is back in control\nBTC exploded from around $64K to above $79K, briefly testing the $80K level. That’s roughly an 18–20% move in 48 hours. https://t.co/oUr46luitv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "favoritbookshop",
+   "url": "https://x.com/favoritbookshop/status/2090794779709755420",
+   "date": "2026-08-21",
+   "text": "Bitcoin, Ethereum and the Road to the Next Crypto Bull Run\n\n82,450 → 58,500 → 77,500+\n\nSometimes the market gives you a very clean lesson: price can recover strongly without the macro trend being fully reversed.\n\nBitcoin’s move from the $58.5K area toward $77.5K+ is impressive, https://t.co/9ydCOpsYvP"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 42,
+   "user": "bull_genius",
+   "url": "https://x.com/bull_genius/status/2090832033421340775",
+   "date": "2026-08-21",
+   "text": "some of the narratives of the coming cycle arent super hard to guess if you have been here through the bear, in order of conviction (probably also degree of priced in, crowdedness and risk vs upside)\n\n- perp dex wars\n- tokenized rwa including trading cards\n- privacy coins\n- https://t.co/hkCO9G2dRi"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 18,
+   "user": "baderin75798",
+   "url": "https://x.com/baderin75798/status/2090700118735425937",
+   "date": "2026-08-21",
+   "text": "🚨 CRYPTO MARKET UPDATE – BULLS ARE BACK IN CONTROL\n\nThe market is showing strong signs of renewed bullish momentum:\n🟢 Bitcoin (BTC): $75,926 (+8.79%)\n🟢 Ethereum (ETH): $2,380 (+5.74%)\n🟢 XRP: $1.309 (+17.76%)\n🟢 Gold: +0.98%\n🟢 Silver: +1.31%\nKey Takeaways\n✅ Bitcoin has https://t.co/ZiywIRn5wB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "TheHeavyKnight",
+   "url": "https://x.com/TheHeavyKnight/status/2090792321797226580",
+   "date": "2026-08-21",
+   "text": "🔥 MARKET UPDATE 🔥\n\nBitcoin exploded higher tonight, climbing into the mid-$75Ks after spending part of the day below $69K. Ethereum is trading around $2.36K, Solana is pushing $89, and the broader crypto market has finally broken out after weeks of slow price action.\n\nWhat https://t.co/S0csJgvfpc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "Lawwalb2",
+   "url": "https://x.com/Lawwalb2/status/2090780205564788970",
+   "date": "2026-08-21",
+   "text": "Crypto’s Rally Looks Strong — But the Real Test Is Still Ahead\n\nBitcoin’s rebound looks impressive.\n\nBut the bigger story isn’t the price spike. It’s whether real demand can survive after the forced buying disappears.\n\nThe market jumped nearly 4% in 24 hours, with Bitcoin leading https://t.co/YwWTaEcDDB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 102,
+   "user": "tradingriot",
+   "url": "https://x.com/tradingriot/status/2090829629191823738",
+   "date": "2026-08-21",
+   "text": "Ethereum 25-delta skew flipped positive at +5.32 vol points, its first close above +5 since July 2025. Skew compares what traders pay for upside calls against downside puts, and ETH has priced it negative in 349 of the last 354 sessions. https://t.co/QZWW5JyNSn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 48,
+   "user": "BlackskYprO",
+   "url": "https://x.com/BlackskYprO/status/2090702447878533606",
+   "date": "2026-08-21",
+   "text": "Welcome to the new cycle of real assets, tokenization, and Real World Assets (RWA)!\n\nWhile many are still stuck in the old charts, the future is already being built: TokenFi ($TOKEN) – the no-code tokenization platform from the Floki ecosystem – is right at the center of the $16 https://t.co/acz2lI52ti"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "sebos77",
+   "url": "https://x.com/sebos77/status/2090675722381607092",
+   "date": "2026-08-21",
+   "text": "2026-08-21: Altseason indicator = Trend indicator (0-bearish to 100-bullish) = 39.4/100 #bitcoin #ethereum #altcoins #krakenfx https://t.co/8beDK1yKw0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2090690291514957871",
+   "date": "2026-08-21",
+   "text": "#ETH/USDT 📉⚠️\n\nEthereum is forming a Rising Wedge on the 1H chart 👀. Price is around $2,369, trading near the upper boundary after a powerful rally.\n\n⚠️ Breakdown zone: Below ~$2,330\n🎯 Chart target: ~$2,220–$2,240\n🚧 Resistance: ~$2,390–$2,400\nThe structure suggests rising https://t.co/pGH11JOwhW"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 10,
+   "user": "CryptoJobs3",
+   "url": "https://x.com/CryptoJobs3/status/2090706826857722288",
+   "date": "2026-08-21",
+   "text": "Bullish on ethereum:0x57e114b691db790c35207b2e685d4a43181e6061 , no doubt. Still, this short setup here is worth a look 📉 (short term)\n\nRSI bearish divergence + daily resistance in 🚨\n\n#altın https://t.co/93bhiN80sD"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 86,
+   "user": "sm_eemrh",
+   "url": "https://x.com/sm_eemrh/status/2090865179852493074",
+   "date": "2026-08-21",
+   "text": "Why am I still so fucking bullish on @Memento_Bc  and $DEXTF?\n\nBecause after 6 years, they’re still fucking here.\n\nThink about that for a second.\n\nSix years in crypto. Bear markets, crashes, scams, dead projects, teams disappearing, pivots into every new shiny narrative… https://t.co/shXiGtAk1d"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Juhboness",
+   "url": "https://x.com/Juhboness/status/2090836637152342471",
+   "date": "2026-08-21",
+   "text": "The crypto market is getting REALLY interesting.\n\nBitcoin is testing $80K.\n\nEthereum is eyeing another breakout.\n\nAnd now Trump’s family-backed crypto company has received preliminary approval for a national trust bank charter.\n\nFeels like we’re entering a completely different"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "CryptoJobs3",
+   "url": "https://x.com/CryptoJobs3/status/2090770824022143082",
+   "date": "2026-08-21",
+   "text": "Is ethereum:0xd1d2eb1b1e90b638588728b4130137d262c87cae about to cool off? 📉\n\nBearish structure forming on ethereum:0xd1d2eb1b1e90b638588728b4130137d262c87cae  - daily resistance hit. Correction could follow to confirm bull break on lower levels. https://t.co/qBQRLaT48U"
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "symbol": "APLD",
+ "start": "2026-08-09T00:00:00Z",
+ "end": "2026-08-10T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 9,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2086419810574118956",
+   "date": "2026-08-09",
+   "text": "⚡ $WULF TeraWulf: Wall Street Stays Bullish on AI Data Centers\n\n$WULF continues to attract strong Wall Street support, with analysts maintaining Buy ratings across the board. Recent price targets range from $29 to $45, while the broader consensus sits around $37.50, implying https://t.co/KFnAXvqolQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2086419176223363331",
+   "date": "2026-08-09",
+   "text": "⚡ $IREN IREN: AI Cloud Story Is Getting Bigger\n\n$IREN is up 9.2% today as investors continue to respond to the company’s aggressive AI infrastructure expansion. The move also comes after a softer U.S. jobs report boosted high-growth, high-beta technology names.\n\n🔥 The biggest https://t.co/0Thc2FoceB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "spin1_xyz",
+   "url": "https://x.com/spin1_xyz/status/2086335669215936886",
+   "date": "2026-08-09",
+   "text": "neocloud bear case: huge capex, heavy financing needs, hyperscalers could eventually sell spare compute.\n\nbull case: customers are signing contracts before the capacity is even fully built.\n\n$IREN just added $2.8B of contracts.\nNscale got a $900M bank facility.\n$APLD crossed 1 GW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 170,
+   "user": "Dr_Crossroads",
+   "url": "https://x.com/Dr_Crossroads/status/2086572546405617871",
+   "date": "2026-08-09",
+   "text": "$CRWV CoreWeave has earnings on Tuesday after the market closes.\n\nWhile I'm not (yet) making concrete predictions (though I did drop a few numbers in the earnings preview video coming out tomorrow morning), here's what I'm expecting.\n\n🟢 REVENUE\n\nAnalysts are expecting $2.555b in https://t.co/wOBzSIvJFI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2086418714828890360",
+   "date": "2026-08-09",
+   "text": "🚨 $NBIS Nebius: AI Growth Story Meets Higher Expectations\n\n$NBIS fell more than 10% over the past week as investors became more cautious ahead of its August 12 Q2 earnings report. The stock has still more than doubled YTD, but after such a huge rally, the market is demanding https://t.co/4cmzSzFHQ8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "FinovoXT",
+   "url": "https://x.com/FinovoXT/status/2086337255338033306",
+   "date": "2026-08-09",
+   "text": "$TSLA  looks bearish  with this big gap down from ER. \n\nThis is a clear avoid and definitely a laggard. \n\nThis can go much lower and key support at 300, and then 280 level. \n\n$OPEN  $BBAI  $iren $apld https://t.co/KAuZwLzulN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "trade_catalyst",
+   "url": "https://x.com/trade_catalyst/status/2086469841565745194",
+   "date": "2026-08-09",
+   "text": "$APLD weekly chart has this huge upward channel, with the lower bound aligned with the AVWAP from 4/14/2025.\nThat support zone, currently around $21.71 to $23.09, looks strong and could be a good spot to add to a long position if we get another touch there.\nThe stock is currently https://t.co/zyfxh0UOgo"
+  }
+ ]
+}

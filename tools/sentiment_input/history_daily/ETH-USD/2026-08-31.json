@@ -1,0 +1,66 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-08-31T00:00:00Z",
+ "end": "2026-09-01T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "cryptofrontio",
+   "url": "https://x.com/cryptofrontio/status/2094398066417709232",
+   "date": "2026-08-31",
+   "text": "COINS THAT HAVE BETTER ODDS IN 2027: 💰 \n\nWe believe that the next bull run is actually a continuation of the 2024 cycle, that’s why we did not see many new all time highs, saw a shorter and shallower bear market. 📉 \n\nWith that in mind , coins that had less drops have better"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 131,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2094245510769201325",
+   "date": "2026-08-31",
+   "text": "BTC chopped sideways all weekend and Friday's pullback never broke the 786 Fibonacci level at 76,706, which is the level I'm watching to hold today. TBO resistance up at 81,788 still hasn't dropped, meaning bulls haven't lost control yet, and the weekly RSI staying overbought https://t.co/s8nBmomhRi"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 20,
+   "user": "AragornWindbrkr",
+   "url": "https://x.com/AragornWindbrkr/status/2094392485350924591",
+   "date": "2026-08-31",
+   "text": "ethereum:0x7420b4b9a0110cdc71fb720908340c03f9bc03ec printed a weekly bullish divergence after a macro corrective 3-wave move down.\n\nWhen it breaks its white local channel resistance, I expect it to start its next leg up of the bull run.\n\nThe same happened in December 2022 - when https://t.co/n5np7AxkB3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 55,
+   "user": "OnlyHades_",
+   "url": "https://x.com/OnlyHades_/status/2094455177751281716",
+   "date": "2026-08-31",
+   "text": "Love when I see people being honest and transparent.\n\nWith all the PnLs flying around, you'd think everyone is making a shitload of money.\n\nYou've been deceived.\n\nCan't give the exact percentages, but I'm sure that more people are losing more than the people printing.\n\nWHY? https://t.co/5zMJ11YqNs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "176_sol",
+   "url": "https://x.com/176_sol/status/2094491128426897531",
+   "date": "2026-08-31",
+   "text": "there's probably alot more upside than downside for alts like ethereum:0xb50721bcf8d664c30412cfbc6cf7a15145234ad1 here https://t.co/33M2XkvFnC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "PayneResidence",
+   "url": "https://x.com/PayneResidence/status/2094514194099876165",
+   "date": "2026-08-31",
+   "text": "ethereum:0xaea46a60368a7bd060eec7df8cba43b7ef41ad85\n\nBought ethereum:0xaea46a60368a7bd060eec7df8cba43b7ef41ad85 here, example of the many drives of bullish divergence, this is bottoming here.\n\nLooks undervalued.\n\n#Fet #FET #ASI #Crypto #Altcoins #Altcoin #HYPE #Hyperliquid https://t.co/rfMhmWOZxj https://t.co/ugSPn7rPvb"
+  }
+ ]
+}

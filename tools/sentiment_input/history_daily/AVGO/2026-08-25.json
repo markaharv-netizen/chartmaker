@@ -1,0 +1,219 @@
+{
+ "symbol": "AVGO",
+ "start": "2026-08-25T00:00:00Z",
+ "end": "2026-08-26T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AVGO (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SentryAnalyst",
+   "url": "https://x.com/SentryAnalyst/status/2092060584715899248",
+   "date": "2026-08-25",
+   "text": "🎯 TARGET HIT: QUANT MODEL ACCURACY ($AVGO)\n\nThe quant model downside target for $AVGO has been reached, hitting the $385.00 target as projected!\n\nModel Execution Summary:\n• Asset: Broadcom ($AVGO)\n• Initial Signal Price: $392.99 (Aug 15)\n• Predicted Target: $385.00\n• https://t.co/ghqldnyrjy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "wsagentai",
+   "url": "https://x.com/wsagentai/status/2092221245496406419",
+   "date": "2026-08-25",
+   "text": "08/25/2026 Morning Briefing\n\nTech futures push higher on AI optimism and memory strength, with S&amp;P 500 and Nasdaq 100 up 0.5% and 0.9% respectively in pre-market. Focus today on Fed speech, housing data, and simmering geopolitical tensions as $NVDA earnings loom.\n\n💾 Movers\n-"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "StackedGoblin",
+   "url": "https://x.com/StackedGoblin/status/2092220810962374927",
+   "date": "2026-08-25",
+   "text": "🚨 NVIDIA $NVDA EARNINGS PREVIEW\n\nNvidia reports fiscal Q2 earnings on Wednesday, August 26, after the market closes.\n\n📅 EARNINGS RELEASE: ~4:20 PM ET\n🎙️ EARNINGS CALL: 5:00 PM ET\n\n📊 WALL STREET EXPECTATIONS:\n\n• Revenue: ~$92.1B\n• Adjusted EPS: ~$2.09\n• Revenue growth: ~97% https://t.co/bn9nfqwVw6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "taylor_horton24",
+   "url": "https://x.com/taylor_horton24/status/2092222358027202887",
+   "date": "2026-08-25",
+   "text": "Scorecard Rankings as of the 8/24 close:  NEUTRAL BULLISH \n\n- Total 33%, Sectors 52%, Indices 42%, Big 10 just 5%. The average stock is working. Mega-cap tech is not. That gap is the whole story right now.   \n\n**Key details** \n\n1. Breadth over cap-weight. Equal-weight at 84% vs https://t.co/jXDrqcBqTH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "QQQ275Soon",
+   "url": "https://x.com/QQQ275Soon/status/2092336447202226341",
+   "date": "2026-08-25",
+   "text": "“Broadcom. All of the downside of semis, with none of the upside” should be the $AVGO slogan."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Mervin_Trades",
+   "url": "https://x.com/Mervin_Trades/status/2092265953325158742",
+   "date": "2026-08-25",
+   "text": "Watchlist for Aug 25, 2026\n\n🔴 $AVGO Bearish → 345.0\n🟢 $MSFT Bullish → 500.0\n🔴 $ON Bearish → 79.0\n\nBuilt by Kronos — GEX, options &amp; dark pool scanner.\nWhat's Kronos? Check the pinned tweet.\n#GEX #OptionsFlow #DarkPool #Kronos"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 51,
+   "user": "LongGameEquity",
+   "url": "https://x.com/LongGameEquity/status/2092340737228583176",
+   "date": "2026-08-25",
+   "text": "🚨 THIS IS A BIG DEAL FOR $AVGO\n\nOpenAI’s custom Jalapeño inference chip is beating NVIDIA’s $NVDA Blackwell on the 2 metrics that matter most for inference:\n\n🔹 Up to 1.9x more throughput per watt\n🔹 Up to 3.6x lower latency\n\nBuilt with $AVGO.\n\nThis is bullish for custom ASICs https://t.co/VWkTCtPuJx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 39,
+   "user": "GroupFinom",
+   "url": "https://x.com/GroupFinom/status/2092232086891499854",
+   "date": "2026-08-25",
+   "text": "Hard to get too bearish on the MegaCaps $MAGS when they're still on a Bullish signal. \n\nIn May, the 50-DMA crossed above the 150-DMA, which typically finds bullish price action. \n\nStill above 50-DMA and Accumulation/Distribution line remains favorable, slightly off the highs. https://t.co/qbR4yzTkOO"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2092277174057275896",
+   "date": "2026-08-25",
+   "text": "$895k OF CALLS HIT NVDA TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - NVDA, MU, AVGO, SPCX, META\nPUTS BOUGHT (bearish bets) - PURR, ARM, TSLA, WSM, PLTR\n\nSize is conviction. It is not intent. https://t.co/M4rxlIk17V"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 11,
+   "user": "GroupFinom",
+   "url": "https://x.com/GroupFinom/status/2092220112895971349",
+   "date": "2026-08-25",
+   "text": "Hard to get too bearish on the MegaCaps $MAGS when they're still on a Bullish signal. \n\nIn May, the 50-DMA crossed above the 150-DMA, which typically finds bullish price action. \n\nStill above 50-DMA and Accumulation/Distribution line remains favorable, slightly off the highs. https://t.co/MlduFGt95d"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "neph401",
+   "url": "https://x.com/neph401/status/2092222695048179785",
+   "date": "2026-08-25",
+   "text": "$AVGO Bulls vs Bears: The Next Battle ⚔️\n\nBroadcom is entering a critical technical area after a strong multi-month rally.\n\nCurrent price:\n $358.76 (-2.63%)\nChart structure:\n\n📈 Major trend:\n$289 → $494\n\n📉 Current phase:\nHigh-level consolidation\nBullish scenario:\n\n✅ Defend https://t.co/QFpChaoeB8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "wwiiogre",
+   "url": "https://x.com/wwiiogre/status/2092222600755945748",
+   "date": "2026-08-25",
+   "text": "$AVGO: AI Infrastructure Giant at a Key Turning Point 👀\n\nBroadcom’s journey:\n\n$289.50 low\n⬆️\n$494.22 high\n⬇️\n$358.76 current price\nThe stock is now testing whether this pullback becomes accumulation or a deeper correction.\nKey levels:\n🟢 Bullish case:\nHold $350-$360\n➡️ Break https://t.co/phBCXis9SB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SentryAnalyst",
+   "url": "https://x.com/SentryAnalyst/status/2092338214170157240",
+   "date": "2026-08-25",
+   "text": "📈 **$AVGO Technical Alert!** 📈\n\nBroadcom ($AVGO) is currently testing a critical support level, a key moment for this semiconductor giant.\n\n*   **Technical Breakdown:**\n    *   **Support Level:** `$355.32`\n    *   **Prior Reference Point:** `$358.71` on August 24\n    *   A"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "spxsignals1",
+   "url": "https://x.com/spxsignals1/status/2092230477025591535",
+   "date": "2026-08-25",
+   "text": "🚨 $SPX KEY LEVELS — MAJOR &amp; MINOR BATTLEFIELD! 🚨\n\n$SPX 7,652.85 👀\n\n🔴 MAJOR RESISTANCE\n7,705.34 → 7,740.68\n\n⚪ MINOR RESISTANCE\n7,670.02\n\n🟢 MAJOR SUPPORT\n7,630.91 → 7,597.76\n\n⚡ Any breakout above a level can turn that resistance into SUPPORT.\n🔻 Any breakdown below a level https://t.co/WtSDiJxLjR"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "AskHeyTheo",
+   "url": "https://x.com/AskHeyTheo/status/2092229567381668225",
+   "date": "2026-08-25",
+   "text": "Was Monday’s Nasdaq selloff a warning or just pre-earnings nerves?\n\nNvidia reports Wednesday, while NVDA, MU, AMD &amp; AVGO all fell sharply.\n\nThat divergence matters.\n\nThe bull case, bear case &amp; key NVDA levels ahead of earnings. Tap to read more: https://t.co/E3L5HZgZpL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ROR_Traders",
+   "url": "https://x.com/ROR_Traders/status/2092240768270274561",
+   "date": "2026-08-25",
+   "text": "The biggest catalyst of the week isn’t a level. It’s $NVDA earnings tomorrow after the close.\n\nHere’s the full board into 08/25, and where I’m actually willing to trade 👇\n\n$NVDA: 200, 210, 215, 220, 222.5, 225, 230. Earnings tomorrow after close, next contract expiry Friday. I’m"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "SentryAnalyst",
+   "url": "https://x.com/SentryAnalyst/status/2092244944530370848",
+   "date": "2026-08-25",
+   "text": "🔎 **TITAN PATTERN RECOGNITION REPORT (STOCKS)**\n**Date/Time:** August 25, 2026 - 09:00 NYT\n\n📌 **TICKER: COST** | Price: **$971.40** | Bias: 🟢 BULLISH (Score: 45)\n   • Z-Score: 1.85 SD | RSI(14): 60.0 | 3D Momentum: +2.50%\n   • Detected Patterns:\n   - 🚀 VOLATILITY SQUEEZE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "HiveIntelligent",
+   "url": "https://x.com/HiveIntelligent/status/2092059660505522507",
+   "date": "2026-08-25",
+   "text": "Goldman: Broadcom FY27 AI revenue pegged 12% above street into the Q2 print.\n\n&gt; FY27 AI semi revenue $133,045mn vs street $118,837mn. The whole call in one row.\n&gt; FQ3 guide seen revised up; the swing factor is any lift to the prior FY27 10GW data center guidance.\n&gt; MediaTek/AMD https://t.co/m0tzgiEScp"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "orbitant",
+   "url": "https://x.com/orbitant/status/2092233632895352869",
+   "date": "2026-08-25",
+   "text": "Nvidia's Q2 earnings report on August 26 is set to be a key moment for the broader AI sector. This is less an earnings report and more a market expectation test for artificial intelligence valuations.\n\nCommunity sentiment is largely bullish, with 77% of retail investors on https://t.co/t1v7BRZwvA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "microtrendscld",
+   "url": "https://x.com/microtrendscld/status/2092265310522847438",
+   "date": "2026-08-25",
+   "text": "🚨 TODAY’S TOP 20 HYPED STOCKS ON X 📊🔥\n\nWhat the timeline is trading, talking about, and positioning into right now 👇\n\n1️⃣ $NVDA | Score: 100 | -0.62% 🟢 Bullish (57%)  \n💡 Hype Catalyst: Uncontested king of AI compute; ongoing data center GPU demand &amp; earnings expectations https://t.co/tD4DuQzSyM"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 11,
+   "user": "MorningstarInc",
+   "url": "https://x.com/MorningstarInc/status/2092250646925701465",
+   "date": "2026-08-25",
+   "text": "$AVGO and $VMRK are now seen as significantly undervalued by our analysts. Here’s the full list of new 5-star stocks this week: https://t.co/vtui1SmqbP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "jedimarkus77",
+   "url": "https://x.com/jedimarkus77/status/2092258744159682578",
+   "date": "2026-08-25",
+   "text": "$AVGO printing April 2026 prices downside 😳😱 https://t.co/UrdEc2dDEQ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 27,
+   "user": "KeithMcCullough",
+   "url": "https://x.com/KeithMcCullough/status/2092179413831917818",
+   "date": "2026-08-25",
+   "text": "SEMIS: 1/4 of yesterday's red $SPY day came from 3 stocks and $AVGO = Bearish TREND @Hedgeye is killing Mo Monkeys https://t.co/aAaooai8dx"
+  }
+ ]
+}

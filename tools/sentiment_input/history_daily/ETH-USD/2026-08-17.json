@@ -1,0 +1,201 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-08-17T00:00:00Z",
+ "end": "2026-08-18T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "ZKChartAnalyst",
+   "url": "https://x.com/ZKChartAnalyst/status/2089309939869311276",
+   "date": "2026-08-17",
+   "text": "🚨 ethereum:0xaea46a60368a7bd060eec7df8cba43b7ef41ad85 Setup\n\nBearish Pennant broken to the downside.\n\nReversal Area is now activated.\n\nOnce price hits the zone and we get a bullish candle / bullish engulfing →  \nexpect +7% minimum and up to +14% move.\n\nInvalidation:  \nAny 2H https://t.co/Z9MQw1aRDO"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "ZKChartAnalyst",
+   "url": "https://x.com/ZKChartAnalyst/status/2089311385700462765",
+   "date": "2026-08-17",
+   "text": "🚨 ethereum:0xaea46a60368a7bd060eec7df8cba43b7ef41ad85 Setup\n\nBearish Pennant broken to the downside.\n\nReversal Area is now activated.\n\nOnce price hits the zone and we get a bullish candle / bullish engulfing →  \nexpect +7% minimum and up to +14% move.\n\nInvalidation:  \nAny 2H https://t.co/asoIcg1lXv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2089442448510685560",
+   "date": "2026-08-17",
+   "text": "₿ $BTC — Tight Range, But the Bigger Money-Supply Thesis Remains Intact\n\nBitcoin is still stuck around $63K–$64K, but two of its biggest corporate holders, Strategy ($MSTR) and Metaplanet, remain firmly committed to the long-term scarcity thesis.\n\nMetaplanet CEO Simon Gerovich https://t.co/dtlt2MdnCy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cuben2406",
+   "url": "https://x.com/cuben2406/status/2089179980114866515",
+   "date": "2026-08-17",
+   "text": "XAUUSD: Coiling at Triangle Apex Beneath MA100 – Strategic Trend-Following Short Opportunity\n\nGold (XAUUSD) is entering a critical technical apex as price action advances toward the terminal convergence point of a daily descending triangle pattern. Throughout the past week, price https://t.co/pJ7KIcYkht"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 147,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2089182145076175176",
+   "date": "2026-08-17",
+   "text": "BTC remains below the TBO cloud with bearish momentum, declining volume, and support near 62,275 under pressure. I’m watching the range between 61,000 and 62,000, while compressed hourly price action leaves room for an explosive move.\n\nI’m also watching stablecoin dominance for https://t.co/beYHse4XPl"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "jolly1007",
+   "url": "https://x.com/jolly1007/status/2089409432010866776",
+   "date": "2026-08-17",
+   "text": "#BTC traders Momentum trade will be established  upside because both side Bear &amp; Bullish Gang fighting good move possible be ready...😉😉😉#Astro #astrologer #stockmarket #optiontrading #Optionselling #stockmarketindia #cryptocurrency #crypto #btc #ethereum #forex #GOLD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 28,
+   "user": "0xQuantyx",
+   "url": "https://x.com/0xQuantyx/status/2089202090434547996",
+   "date": "2026-08-17",
+   "text": "BTC + ETH TREND SYSTEMS\n\nETH has been the dominant major for a while, and that relative strength is still showing up in the trend systems.\n\nBTC:\n• T value: -0.711, BEAR\n• LTPI: BEAR\n• Equity trend: BEAR\n• Consensus: BEAR\n\nETH:\n• T value: +0.322, BULL\n• Equity trend: BULL\n• https://t.co/AqACe3VAd7 https://t.co/MlCJJdtxxV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "cryptoicehouse",
+   "url": "https://x.com/cryptoicehouse/status/2089419294274715840",
+   "date": "2026-08-17",
+   "text": "The #Gaming #L2 Racing to Become Web3’s Go‑To Playground Before Competitors Close In\n\nethereum:0xa0ef786bf476fe0810408caba05e536ac800ff86 a dedicated gaming Layer‑2 + ecosystem at a low‑cap early stage. Real L2 infra, real games, and active asset minting — but adoption + https://t.co/mk5tbzFSrE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "isham_christy",
+   "url": "https://x.com/isham_christy/status/2089348303020265579",
+   "date": "2026-08-17",
+   "text": "$ETH has a decent sell wall around the $1,950-$2,000 level.\n\nOn the downside, big buy orders have been placed around the $1,800-$1,850 level.\n\nIf stock market momentum continues, I expect Ethereum to have its big move to the upside. https://t.co/KKp9XHByPl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 626,
+   "user": "TedPillows",
+   "url": "https://x.com/TedPillows/status/2089347185171112054",
+   "date": "2026-08-17",
+   "text": "$ETH has a decent sell wall around the $1,950-$2,000 level.\n\nOn the downside, big buy orders have been placed around the $1,800-$1,850 level.\n\nIf stock market momentum continues, I expect Ethereum to have its big move to the upside. https://t.co/mIQeWVbLiT"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2089356626608144423",
+   "date": "2026-08-17",
+   "text": "📊 $ETH Overview | 2026-08-17\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🐌 Weak\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🔴 Bearish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#Ethereum\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "TonTraderCom",
+   "url": "https://x.com/TonTraderCom/status/2089367215841952206",
+   "date": "2026-08-17",
+   "text": "🚨 𝗘𝗧𝗛𝗘𝗥𝗘𝗨𝗠 𝗠𝗔𝗬 𝗕𝗘 𝗤𝗨𝗜𝗘𝗧𝗟𝗬 𝗕𝗘𝗖𝗢𝗠𝗜𝗡𝗚 𝗧𝗛𝗘 𝗜𝗡𝗦𝗧𝗜𝗧𝗨𝗧𝗜𝗢𝗡𝗔𝗟 𝗙𝗔𝗩𝗢𝗥𝗜𝗧𝗘.\n\n🔸Key developments:\n\n• US Bitcoin ETFs saw ~1,132 BTC in net outflows\n• Ethereum ETFs recorded ~3,947 ETH in inflows\n• Institutional interest in ETH https://t.co/CPMXanm5wj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 122,
+   "user": "Alts_Anonymous",
+   "url": "https://x.com/Alts_Anonymous/status/2089434883437265223",
+   "date": "2026-08-17",
+   "text": "ChatGPT's extended take on lukso-token-2:native  \n\n1. I think LUKSO is attacking a problem Ethereum still hasn't solved well\n\nMost crypto accounts are simply just wallet addresses.\n\n@lukso_io's Universal Profiles are smart-contract accounts that can function as a wallet and an"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "NaveenCypto",
+   "url": "https://x.com/NaveenCypto/status/2089362866017026292",
+   "date": "2026-08-17",
+   "text": "While retail is bearish on $ETH ..\n\nFundamentals keeps improving in background .\n\nBullish catalysts for Ethereum.\n\nData - @_dexuai https://t.co/aumUNErjat"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "sebos77",
+   "url": "https://x.com/sebos77/status/2089226175239319744",
+   "date": "2026-08-17",
+   "text": "2026-08-17: Altseason indicator = Trend indicator (0-bearish to 100-bullish) = 22.5/100 #bitcoin #ethereum #altcoins #krakenfx https://t.co/X9BzOubDS7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "AP_Zara_Net",
+   "url": "https://x.com/AP_Zara_Net/status/2089259792795938919",
+   "date": "2026-08-17",
+   "text": "ETH Market Update — Key Levels to Watch \n\nEthereum is trading around the $1.88K area, with price action remaining cautious.\n\n🔹 Support: $1,800\n🔹 Resistance: $1,900–$2,000\n🔹 Bullish signal: A clean break above $1,900 could strengthen momentum.\n🔹 Bearish risk: Losing.. https://t.co/RpZ8J2iK6m"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JurOnChain",
+   "url": "https://x.com/JurOnChain/status/2089439880753402287",
+   "date": "2026-08-17",
+   "text": "This is why I am so bullish on @ZIGChain \n\nDespite all macro events, market sentiments, or other bearish intakes, this team keeps on building and delivering.\n\nThe current outlook imo is awesome! The flywheel will take effect and all ratios show that https://t.co/IMukqTwXHg"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "TradingPuzzles",
+   "url": "https://x.com/TradingPuzzles/status/2089240620107792812",
+   "date": "2026-08-17",
+   "text": "#ETH: A short-Term Bullish Setup \n\nEthereum has broken out of a very complex corrective pattern that has been forming for over a week.\n\nThe price is above the 1880 structure area, indicating further upside. A short pause is possible before Ethereum resumes its upward movement. https://t.co/d72opko0D9"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "DefiGameChanger",
+   "url": "https://x.com/DefiGameChanger/status/2089326159859200157",
+   "date": "2026-08-17",
+   "text": "And this is happening in a bear market.\n\nNow imagine what @ZIGChain can achieve when bullish liquidity returns and more capital starts flowing onchain.\n\nI have every reason to be bullish on ethereum:0xb2617246d0c6c0087f18703d576831899ca94f01 https://t.co/Gp59eMJaL8"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Johnnydigital6",
+   "url": "https://x.com/Johnnydigital6/status/2089405452190724589",
+   "date": "2026-08-17",
+   "text": "GM!☕️We have a Big Bull flag, a God candle as our flag pole! Bull pennant. We also have a Giant Ascending Triangle too! just like on Ethereum! The weekly chart is looking very Bullish! The long term charts are looking even more Bullish! Too! Go Bulls!🆙🚀📈🌙🐂🤩🙌🥳🥇💎 #crypto https://t.co/GT932mDHfC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Johnnydigital6",
+   "url": "https://x.com/Johnnydigital6/status/2089381800137072696",
+   "date": "2026-08-17",
+   "text": "We have a Big Bull flag, a God candle as our flag pole! Bull pennant. We also have a Giant Ascending Triangle too! just like on Ethereum! The weekly chart is looking very Bullish! The long term charts are looking even more Bullish! Too! Go Bulls!🆙🚀📈🌙🐂💥🤩🙌🥳🥇💎📠 #crypto https://t.co/dTkbjM9j7R"
+  }
+ ]
+}

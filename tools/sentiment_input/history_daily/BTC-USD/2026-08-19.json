@@ -1,0 +1,237 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-08-19T00:00:00Z",
+ "end": "2026-08-20T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 84,
+   "user": "xapa03",
+   "url": "https://x.com/xapa03/status/2090000832594862196",
+   "date": "2026-08-19",
+   "text": "In my previous thread I showed you a very interesting pattern, and on top of that I found a bullish signal from my LMACD Indicator, which happened exactly at the same time when the bear market ended in 2022, similar to today.\n\nIn June 2022, Bitcoin found its first low, only to https://t.co/iKIHg36IzD https://t.co/9rnh0Kfl3M"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2089971673717985295",
+   "date": "2026-08-19",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟮 / 𝟱 (leaning bearish) - 𝗕𝗲𝗮𝗿𝗶𝘀𝗵 𝗰𝘂𝗲𝘀 - Repeated references to a 𝘣𝘦𝘢𝘳 𝘮𝘢𝘳𝘬𝘦𝘵 and calls to “build” rather than chase airdrops. - Posts labeling recent price spikes as a 𝘥𝘦𝘢𝘥‐𝘤𝘢𝘵 𝘣𝘰𝘶𝘯𝘤𝘦 and dismissing any “bull https://t.co/8zJWeNzK0s"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 45,
+   "user": "gaah_im",
+   "url": "https://x.com/gaah_im/status/2090166916786590041",
+   "date": "2026-08-19",
+   "text": "Tactical Bull-Bear Sentiment Index (TBBI) #Bitcoin remains in the historical accumulation zone after a bullish divergence formed.\n\nThe indicator is rapidly approaching the top of this zone as #BTC price attempts a recovery.\n\nThis region is considered as Extreme Bearish🟩(0–20): https://t.co/pnUT66zmOS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 61,
+   "user": "WhaleTwits",
+   "url": "https://x.com/WhaleTwits/status/2090069599576293837",
+   "date": "2026-08-19",
+   "text": "🚨 SOMETHING IS SERIOUSLY WRONG WITH BITCOIN RIGHT NOW\n\nBitcoin should be getting DESTROYED.\n\nSaylor is selling again.\n\nMiners dumped 23,000 BTC.\n\nThe CLARITY Act got delayed.\n\nETF outflows just hit record levels.\n\nAnd $BTC barely fucking moved.\n\nRead that again.\n\nThis is the https://t.co/YBr3eXr6I2 https://t.co/TI0taWrl8Q"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Roposh82",
+   "url": "https://x.com/Roposh82/status/2090122168441213439",
+   "date": "2026-08-19",
+   "text": "🚨 𝗕𝗧𝗖 𝗝𝗨𝗦𝗧 𝗗𝗜𝗗 𝗦𝗢𝗠𝗘𝗧𝗛𝗜𝗡𝗚 𝗧𝗛𝗔𝗧 𝗦𝗛𝗢𝗨𝗟𝗗 𝗛𝗔𝗩𝗘 𝗘𝗩𝗘𝗥𝗬𝗢𝗡𝗘 𝗣𝗔𝗬𝗜𝗡𝗚 𝗔𝗧𝗧𝗘𝗡𝗧𝗜𝗢𝗡.\n\nBitcoin was grinding around $64K–$65K…\n\nThen, almost out of nowhere:\n\n𝗕𝗧𝗖 𝗥𝗜𝗣𝗣𝗘𝗗 𝗧𝗢𝗪𝗔𝗥𝗗 $𝟳𝟬𝗞. 🔥\n\nOne of the most violent upside moves https://t.co/V9Lis79vl5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "stewdamus",
+   "url": "https://x.com/stewdamus/status/2090164242825543692",
+   "date": "2026-08-19",
+   "text": "Trading Fam,\n\nIt's been over a year now since I set my expectations of at top at around $125k. I mention that not so that I can be one of those \"See, I told you so\" guys, but simply as a preface in lending credence to what I am about to surmise, which some of you are probably not https://t.co/X6hd2P6j1l"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "DorisDi3",
+   "url": "https://x.com/DorisDi3/status/2090111621758611525",
+   "date": "2026-08-19",
+   "text": "$IREN analysis 👇\nWave 5 is coming soon 👀 \nWhat they do 👇\nIREN owns and operates data centers powered by 100% renewable energy. \nLike many miner as $MARA they have rapidly pivoted into AI Cloud / HPC.\nLess crypto ==&gt; more AI.\nHonestly a smart move to be part of the AI run.\n\nWhy https://t.co/aVgw1CyVWx"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2090047256883831030",
+   "date": "2026-08-19",
+   "text": "$PLG\n\n$PLG, following our last post below where we highlighted that bears were maintaining short-term momentum, printed another bearish continuation candle yesterday and lost the 50 EMA, reinforcing the current pullback. \n\nFor traders who took the falling-wedge breakout a few https://t.co/5r9tWfdn1o https://t.co/0j9vGbyj7v"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2090125688082964640",
+   "date": "2026-08-19",
+   "text": "🔥 $BMNR Long-Term Thesis\n\n$BMNR is becoming one of the more aggressive Ethereum treasury plays in the market. The stock jumped about 13% to $20.72 Wednesday as $BTC moved above $68,500 and $ETH approached $2,100.\n\nThe biggest part of the story is the treasury.\n\nBitMine says its https://t.co/qN8Al6cKxx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1656,
+   "user": "ColeMacro",
+   "url": "https://x.com/ColeMacro/status/2090086726182334731",
+   "date": "2026-08-19",
+   "text": "I have believed for more than a decade that the U.S. Dollar Index, DXY, is in a structural decline that is likely to continue. I also think we may now be approaching a much more significant leg lower, and that has major implications for Bitcoin. If that view is right, the next https://t.co/7eMW4JapJ8"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "asante_myles",
+   "url": "https://x.com/asante_myles/status/2090141173512110292",
+   "date": "2026-08-19",
+   "text": "Bitcoin is nearing its 200 day moving average, a major long term trend indicator.\n\nRSI is approaching 70, but BTC tends to overshoot both upside and downside.\n\nWe’re also seeing bullish divergence for the first time since July.\n\nI’m still accumulating HEAVY while BTC remains https://t.co/68YU0TIbAj"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 13,
+   "user": "DaviddDotTech",
+   "url": "https://x.com/DaviddDotTech/status/2089986474867331119",
+   "date": "2026-08-19",
+   "text": "Flip your chart upside down before you take a trade.\n\nAlt + I on Windows, Option + I on Mac.\n\nTurn the candles black so they're not red or green.\n\nNow ask yourself if it looks bullish or bearish.\n\nTraders are tribal about Bitcoin and see what they want to see.\n\nUpside down with https://t.co/yTRBDh6OST"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "QuantificS",
+   "url": "https://x.com/QuantificS/status/2090133863812956450",
+   "date": "2026-08-19",
+   "text": "Is $BTC Finally Breaking the Bearish Trend?\n\nToday #BITCOIN moved up 8%, which is unusual, so I wanted to look at the chart and see if this move has actually changed the bearish trend. \n\nWhat I see is that we had a ST base forming at the bottom, and that has now broken to the https://t.co/wklqTi3tl6"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "MajorianBTC",
+   "url": "https://x.com/MajorianBTC/status/2090116258356248955",
+   "date": "2026-08-19",
+   "text": "Yes, if bitcoin has a sustained bull move to the upside, lots of my bearish commentary on $MSTR may prove untrue, for now.\n\nWhat remains evergreen is my belief in owning actual bitcoin instead of bitcoin IOU stocks."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "YessahBlessahCC",
+   "url": "https://x.com/YessahBlessahCC/status/2090109000771940821",
+   "date": "2026-08-19",
+   "text": "From @cantonmeow \n\nTell me if you like this set-up or not. \n\n- US large and small caps look fantastic and keep forming all time highs with currently no real sign of higher time frame exhaustion.\n\n- People are still worried about valuation expansion being unsustainable as if we're https://t.co/YW0x4WkAYi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 591,
+   "user": "cantonmeow",
+   "url": "https://x.com/cantonmeow/status/2089939812476235794",
+   "date": "2026-08-19",
+   "text": "Tell me if you like this set-up or not. \n\n- US large and small caps look fantastic and keep forming all time highs with currently no real sign of higher time frame exhaustion.\n\n- People are still worried about valuation expansion being unsustainable as if we're in a bear market."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "iamBitcoinHead",
+   "url": "https://x.com/iamBitcoinHead/status/2090080438048170241",
+   "date": "2026-08-19",
+   "text": "₿ Bitcoin Status Today:\nAug 19, 2026\n👀👇💯📊⚡️🚀🌔🥷🏽\nbitcoin:native \n\nSentiment: 🟡 Cautiously bullish\n\nBTC: around $65.3K currently, after trading as low as ~$64.1K intraday.\n$64K is the key support zone. BTC has shown resilience there despite macro/geopolitical pressure. \nETF https://t.co/uzLgVhB1i6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Grace12jx",
+   "url": "https://x.com/Grace12jx/status/2089947616205307975",
+   "date": "2026-08-19",
+   "text": "The crypto market is in a phase where patience matters more than prediction. Bitcoin is currently holding around the $64K–$65K area, showing resilience despite weakness in broader risk assets. Recent market data puts BTC near $64.7K, while sentiment remains cautious and the Fear https://t.co/AHqDAnEZ1L"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "0xautopsy",
+   "url": "https://x.com/0xautopsy/status/2090054228802744459",
+   "date": "2026-08-19",
+   "text": "$MSTR is one of my strongest picks right now.\n\nHere is why. The premium is gone, and that changes what you are actually buying.\n\n840,447 bitcoin. Minus 6.75B of debt and 15.24B of preferred, that leaves 1.43 net bitcoin per 1,000 shares. At today's bitcoin price that is 92.95 per https://t.co/uF0KfcTlIX"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "sodav001",
+   "url": "https://x.com/sodav001/status/2089991832482504854",
+   "date": "2026-08-19",
+   "text": "🟢 $BTC EARLY BULL SIGNAL IS STILL ON\n\nThe bearish signal has disappeared, while Bitcoin continues showing signs of transitioning from a bear market into an early bull phase.\n\nThe shift is happening now BTC needs to confirm it with sustained strength. https://t.co/x1PLgEL7rU"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 21,
+   "user": "d_1awrence",
+   "url": "https://x.com/d_1awrence/status/2090182355843735755",
+   "date": "2026-08-19",
+   "text": "I remember seeing posts like this back in October, but back then it was long positions getting completely wrecked. \n\nThere's still people calling for a $45-50k Bitcoin. \n\nThis is the biggest bottom signal you'll see. \n\nBulls were over bullish in October, bears have been far too https://t.co/aXunnCPcgu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Leap_CDNX",
+   "url": "https://x.com/Leap_CDNX/status/2090149271874224536",
+   "date": "2026-08-19",
+   "text": "🚨FOMC MINUTES UNPACKED: THE HAWKISH SURPRISE\n\nThe Fed just pulled back the curtain on its July meeting. Here are the key takeaways and the assets now in focus.\n\n3 KEY TAKEAWAYS\n\nThe 9–3 Split: Rates were held at 3.5%–3.75%, but three voting members pushed for an immediate rate https://t.co/TM2JZd7U59"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "onelifecrypto",
+   "url": "https://x.com/onelifecrypto/status/2090169694934511878",
+   "date": "2026-08-19",
+   "text": "Bitcoin Trying to Break Key Trend\n\n- The RSI daily trendline has marked all tops for Bitcoin since May 25, including all tops in this bear market\n- Now we are breaking out from this today (Not closed yet) - Need couple of days above this for more confirmation\n- Believe this is a https://t.co/GmXfB2nW4m https://t.co/ZyYcEwiafn"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 19,
+   "user": "Arturojrobles",
+   "url": "https://x.com/Arturojrobles/status/2090175643116019770",
+   "date": "2026-08-19",
+   "text": "$BTC is attempting to break above its 200 day moving average, currently around $69K \n\n*This is the level bulls need to reclaim\n\nA sustained break above the 200D MA would confirm a potential trend change from bearish → bullish.\n\nLook at the history:\n\n📉 May 2026: BTC failed to https://t.co/5wwzKA1iRr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "nftcrypto3",
+   "url": "https://x.com/nftcrypto3/status/2089946219896259037",
+   "date": "2026-08-19",
+   "text": "Top 10 Active Trader's Perspectives (https://t.co/rQaLrSWoaz recap)   2026.8.19\n\n1. Serenity (@aleabitoreddit)【China humanoid hardware race】\n\nCore idea: Serenity compares the rapid improvement of humanoid robots to the early OpenAI model cycle, pointing to Unitree’s claims https://t.co/ZuxUgrh9c5"
+  }
+ ]
+}

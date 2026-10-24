@@ -1,0 +1,228 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-08-15T00:00:00Z",
+ "end": "2026-08-16T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "gchtrades",
+   "url": "https://x.com/gchtrades/status/2088544238468268317",
+   "date": "2026-08-15",
+   "text": "ethereum:0x514910771af9ca656af840dff83e8264ecf986ca seems to be up based on the White House meeting next Wednesday,\n\nVarious executive partners meeting with the trump family including kalshi, Chainlink, Polymarket, Ripple, A16z and more. \n\nBullish, we know trump likes crypto and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "PressSecretary7",
+   "url": "https://x.com/PressSecretary7/status/2088645616637239409",
+   "date": "2026-08-15",
+   "text": "Ethereum Technical Analysis – August 15, 2026\nETH is currently trading around $1,876 – $1,883.\nShort-term picture is neutral-to-mildly constructive, but still in a broader corrective regime.\n\nKey Levels Right Now : \n\nSupport\n•Immediate: $1,870 – $1,876\n•Strong: $1,844 – $1,850"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 10,
+   "user": "DeltaResearch__",
+   "url": "https://x.com/DeltaResearch__/status/2088732456727769107",
+   "date": "2026-08-15",
+   "text": "$ETH update 👀\n\n$ETH is still moving pretty similar to $BTC right now.\n\nAs long as price keeps chopping around this area, there is not much confirmation — but a clean close below the 50D SMA would be the first signal that downside is opening up again.\n\nKey downside areas I’m https://t.co/1sC7XIvSnX https://t.co/kwnC8w1ko2"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "PressSecretary7",
+   "url": "https://x.com/PressSecretary7/status/2088646834780524965",
+   "date": "2026-08-15",
+   "text": "ETH vs BTC Technical Comparison August 15, 2026\nHere’s the clean breakdown of where both stand right now:\n\nCurrent Snapshot\n\nBitcoin • Price: $62,900 – $63,100 • RSI: 42–45 (weaker) • Below 50-day SMA • ~9% under 200-day SMA • MACD clearly bearish • Testing the lower"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2088433065869689311",
+   "date": "2026-08-15",
+   "text": "🚨 Institutional Technical Watch — ETH: IG defines a clean medium-term bullish structure\n\nA technical update from Axel Rudolph FSTA, Senior Technical Analyst at IG, is strong enough to clear the filter because it establishes a well-defined institutional ETH roadmap rather than https://t.co/n4f0fFi7To"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "0xRSPRO",
+   "url": "https://x.com/0xRSPRO/status/2088739703226806583",
+   "date": "2026-08-15",
+   "text": "You have to evolve and play the new game. Right now the game is on pumpfun and robinhood chain. Everything else in crypto is overvalued. hyperliquid:native and ethereum:0x232ce3bd40fcd6f80f3d55a522d03f25df784ee2 may still run higher but pump has more upside potential currently."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 143,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2088465958860124320",
+   "date": "2026-08-15",
+   "text": "Bitcoin is the lead market signal I’m watching while BTC tests its current structure, nearby support, and the levels that would confirm either continuation or a deeper reset. I’m focused on price, momentum, and confirmation instead of reacting to one isolated move.\n\nI’m using https://t.co/xF39KWJwVC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "crypto2424_com",
+   "url": "https://x.com/crypto2424_com/status/2088479991017189737",
+   "date": "2026-08-15",
+   "text": "Ethereum trades near the upper 24h range (80.8%) while a fresh bullish M5 FVG at 1869.6–1873.2 sits below as a nearby mitigation target. Scalping MA structure is bullish but M5 momentum is bearish and volume is low, so M\n\n#Ethereum #ETH #Crypto2424 https://t.co/V5De3P45dY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "sebos77",
+   "url": "https://x.com/sebos77/status/2088501374031937970",
+   "date": "2026-08-15",
+   "text": "2026-08-15: Altseason indicator = Trend indicator (0-bearish to 100-bullish) = 22.9/100 #bitcoin #ethereum #altcoins #krakenfx https://t.co/C6q4R3UWMV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "DipanshuC9",
+   "url": "https://x.com/DipanshuC9/status/2088497685884002598",
+   "date": "2026-08-15",
+   "text": "Crypto isn't simply bullish or bearish.\n\nRegulation is moving.\nBitcoin is struggling.\nEthereum is holding.\nSolana remains resilient.\nSpeculation is returning. 🧵\nhttps://t.co/pTvJ9pNBHu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "khuncoinchannel",
+   "url": "https://x.com/khuncoinchannel/status/2088466524508242284",
+   "date": "2026-08-15",
+   "text": "Link In bio - @khuncointrading\n\n#Crypto #CryptoTrading #CryptoFutures #FuturesTrading #Bitcoin #BTC #BTCUSDT #Ethereum #ETH #Altcoins #CryptoTrader #Trading #DayTrading #Scalping #TechnicalAnalysis #PriceAction #TradingView #LeverageTrading #PerpetualFutures #CryptoSignals https://t.co/QbgTsecbI7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "khuncoinchannel",
+   "url": "https://x.com/khuncoinchannel/status/2088466419453464781",
+   "date": "2026-08-15",
+   "text": "Link In bio - @khuncointrading\n\n#Crypto #CryptoTrading #CryptoFutures #FuturesTrading #Bitcoin #BTC #BTCUSDT #Ethereum #ETH #Altcoins #CryptoTrader #Trading #DayTrading #Scalping #TechnicalAnalysis #PriceAction #TradingView #LeverageTrading #PerpetualFutures #CryptoSignals https://t.co/5TYA5xmPuG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "khuncoinchannel",
+   "url": "https://x.com/khuncoinchannel/status/2088466278789054472",
+   "date": "2026-08-15",
+   "text": "Link In bio - @khuncointrading\n\n#Crypto #CryptoTrading #CryptoFutures #FuturesTrading #Bitcoin #BTC #BTCUSDT #Ethereum #ETH #Altcoins #CryptoTrader #Trading #DayTrading #Scalping #TechnicalAnalysis #PriceAction #TradingView #LeverageTrading #PerpetualFutures #CryptoSignals https://t.co/f01uhxv9LP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "khuncoinchannel",
+   "url": "https://x.com/khuncoinchannel/status/2088466220295307773",
+   "date": "2026-08-15",
+   "text": "Link In bio - @khuncointrading\n\n#Crypto #CryptoTrading #CryptoFutures #FuturesTrading #Bitcoin #BTC #BTCUSDT #Ethereum #ETH #Altcoins #CryptoTrader #Trading #DayTrading #Scalping #TechnicalAnalysis #PriceAction #TradingView #LeverageTrading #PerpetualFutures #CryptoSignals https://t.co/AHSFeomP4h"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "khuncoinchannel",
+   "url": "https://x.com/khuncoinchannel/status/2088466258463457706",
+   "date": "2026-08-15",
+   "text": "Link In bio - @khuncointrading\n\n#Crypto #CryptoTrading #CryptoFutures #FuturesTrading #Bitcoin #BTC #BTCUSDT #Ethereum #ETH #Altcoins #CryptoTrader #Trading #DayTrading #Scalping #TechnicalAnalysis #PriceAction #TradingView #LeverageTrading #PerpetualFutures #CryptoSignals https://t.co/vjk8xUjZgS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Ronalmarvelous",
+   "url": "https://x.com/Ronalmarvelous/status/2088710053565968631",
+   "date": "2026-08-15",
+   "text": "Ethereum keeps running into the same problem:\n\n$1,900.\n\nUntil ETH convincingly breaks above that level, the market probably stays cautious.\n\nNo need to force a bullish or bearish narrative.\n\nSometimes the chart is simply telling you to wait."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "sulaimanadaya24",
+   "url": "https://x.com/sulaimanadaya24/status/2088625484208705730",
+   "date": "2026-08-15",
+   "text": "🚨 BREAKING: SEC DELAYS KEY CRYPTO RULES MEETING\n\nThe U.S. SEC has abruptly canceled a meeting that was expected to consider new crypto regulations.\n\nThe meeting was scheduled to discuss exemptions that could make it easier for crypto startups to raise capital.\n\n⚠️ No new date"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 116,
+   "user": "WAGMIShills",
+   "url": "https://x.com/WAGMIShills/status/2088642668620546058",
+   "date": "2026-08-15",
+   "text": "🚨 BREAKING: The U.S. SEC has unexpectedly canceled its scheduled meeting on proposed crypto regulations. The move adds fresh uncertainty, with Bitcoin trading around $63K as investors await the next regulatory catalyst. Analysts expect volatility to remain elevated until there’s https://t.co/ZAJgEq98E2"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "chaingull",
+   "url": "https://x.com/chaingull/status/2088616793502081483",
+   "date": "2026-08-15",
+   "text": "Crypto Brief — Aug 15, 13:20 UTC\n\nTOP STORY — impact 75 / 100\n▲ Fed rate‑hike expectations plummeted amid AI rally and Middle East crisis.\n\nBULLISH\n▲ 70 BTC and ETH ETFs attracted $1.1B last week, reversing most 2026 net outflows\n▲ 45 27 maritime chokepoints handle most trade,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 42,
+   "user": "FlipStockMarket",
+   "url": "https://x.com/FlipStockMarket/status/2088732987936354416",
+   "date": "2026-08-15",
+   "text": "drawdowns prove it's a bubble\" has misread every prior generational asset. Bitcoin had multiple 80%+ drawdowns and became digital gold. Ethereum had 90%+ drawdowns and became the internet of money. The presence of severe drawdowns is not evidence of bubble behavior. The absence"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptoTGlobal",
+   "url": "https://x.com/CryptoTGlobal/status/2088556920302936206",
+   "date": "2026-08-15",
+   "text": "📊 Crypto Analysis — 15 August 2026 (06:00 UTC)\n\n💰 Current price\n• BTC: $62,932 | ETH: $1,877\n\n📊 Market Sentiment\n😨 Fear &amp; Greed: 34 (Fear) ↑5 (was 29)\n💡 When everyone fears — time to look for entries\n\n💥 Liquidations (24h)\n• Total: $42,029,361\n• Longs: $29,795,801 (71%)"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "orbyx_app",
+   "url": "https://x.com/orbyx_app/status/2088619444255814140",
+   "date": "2026-08-15",
+   "text": "📊 Market Brief | US Session ⬜\n\n🟢 $BTC: $63,036.01 (+0.0%)\n🟢 ETH: $1,883.10 (+0.2%)\n🟢 SOL: $75.46 (+0.3%)\n🟢 ADA: $0.18 (+0.2%)\n🔸 XRP: $1.00 (-0.1%)\n\nRangebound price action opened the US session after intraday friction: BTC briefly slipped under $63k to $62,470 as sellers https://t.co/Ivrw0QorKI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "TradeSignals_24",
+   "url": "https://x.com/TradeSignals_24/status/2088534811103338685",
+   "date": "2026-08-15",
+   "text": "🚨 $MOVE — BOTTOM ZONE UNDER WATCH 👀🔥\n\n$MOVE is currently trading near the lower end of its recent range, where buyers could potentially step in and trigger a sharp recovery.\n\n📍 Potential Entry Zone: $0.0062 – $0.0065\n\nIf buying pressure starts building and $MOVE manages to https://t.co/0Lx8flwqaF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "qatobit",
+   "url": "https://x.com/qatobit/status/2088581687739654422",
+   "date": "2026-08-15",
+   "text": "Most portfolios have one lever: buy more, or sell.\nQSI Core is built with three that behave differently in a downturn, by design.\nBitcoin and Ethereum for the upside. Gold as a structural buffer that absorbs bear-market drawdowns. A stable reserve on top.\nEvery month, the"
+  }
+ ]
+}

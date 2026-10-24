@@ -1,0 +1,48 @@
+{
+ "symbol": "WULF",
+ "start": "2026-08-15T00:00:00Z",
+ "end": "2026-08-16T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "WULF (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 11,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2088628302298718306",
+   "date": "2026-08-15",
+   "text": "$MSTR\n\n$MSTR’s weekly chart has remained technically bearish since our last weekly update on June 21 below, with bulls still unable to produce a confirmed pivot reversal or meaningful change in character. \n\nPrice continues to trade within a bearish pennant while respecting a https://t.co/zLH8MnJ6hY https://t.co/N5l6RxZCor"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 29,
+   "user": "kratos_harmony",
+   "url": "https://x.com/kratos_harmony/status/2088577180297261192",
+   "date": "2026-08-15",
+   "text": ".@SolunaHoldings A Bullish Path towards 50x 👀 \n\n📊 50x from ~$1.30 is ~$65/share → ~$16B market cap \n\nCc: $SPCX $NBIS $CRWV $IREN $CIFR $KEEL $SLNH $WULF $HUT $RIOT \n\nCc: @perspez \n\nManagement framework: ~$1.2–1.3 billion all-in per 100 MW of AI data center. \n\nFirst ~200 MW https://t.co/t3yRvDYtnY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "CortesMarkets",
+   "url": "https://x.com/CortesMarkets/status/2088417389948100746",
+   "date": "2026-08-15",
+   "text": "Put on your watchlist:\n\n$LUMN\n$CIFR\n$KEEL\n$WULF\n\nIm heavily in these for the next several months. #StocksToTrade #bullish #stocks #TradingCommunity"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "APJTradeOptions",
+   "url": "https://x.com/APJTradeOptions/status/2088611737658347656",
+   "date": "2026-08-15",
+   "text": "Here’s where we sit since I put out my Bull Thesis on 7/16\n$HUT down 10%\n$IREN up 23.5%\n$CIFR down 2.4%\n$WULF down 5.4%\n$NBIS up 55%\nMy thesis hasn’t changed. \nThere are still good opportunities to be had. https://t.co/zrC4sagxry"
+  }
+ ]
+}

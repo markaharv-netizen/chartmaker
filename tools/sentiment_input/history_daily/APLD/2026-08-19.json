@@ -1,0 +1,48 @@
+{
+ "symbol": "APLD",
+ "start": "2026-08-19T00:00:00Z",
+ "end": "2026-08-20T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2090083004240511229",
+   "date": "2026-08-19",
+   "text": "🚨 NEOCLOUD STOCKS – HEAVY SELLOFF SESSION\n\nNeocloud and AI infrastructure names under significant pressure, with the entire group finishing in the red and Nebius leading the downside.\n\n📊 TODAY’S NEOCLOUD STOCK SNAPSHOT\n\n🔴 $APLD (Applied Digital) — $26.85 -5.82%  \n🔴 $CRWV https://t.co/Ddo0r7KM74"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 18,
+   "user": "InvestifyDaily",
+   "url": "https://x.com/InvestifyDaily/status/2090045184855715878",
+   "date": "2026-08-19",
+   "text": "@TradeTracs Daily Summary for 8/19 @Grok Summary\n\nThe most recent Daily Tracs (dated 2026-08-18, labeled Bearish / “Oil Pressure”) notes markets were set to open lower due to a spike in oil prices tied to fresh escalation headlines in the Iran–U.S. conflict. \n\nPresident Trump’s https://t.co/TgvFgMFpZe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "StonkChris",
+   "url": "https://x.com/StonkChris/status/2089899355620671891",
+   "date": "2026-08-19",
+   "text": "Posted chart updates for the AI Data Center / NeoCloud space tonight, mapping out the key Smart Money / optimal buy zones I’m watching if we continue to see downside follow-through:\n\n$APLD \n$CIFR \n$CORZ \n$CRWV\n$GLXY \n$HUT\n$KEEL \n$IREN \n$NBIS \n$TE\n$WULF \n\nhttps://t.co/8brkB4n5VF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "capitalfronts",
+   "url": "https://x.com/capitalfronts/status/2090058000119509431",
+   "date": "2026-08-19",
+   "text": "The whales are buying Bitcoin MINING stocks. And who told you this was coming days ago? We did.\n\nBillionaire Stanley Druckenmiller — George Soros's former number one partner — just made his move. His Duquesne Family Office CLOSED positions in Intel and Micron Technology, and https://t.co/a9XxT277Pc"
+  }
+ ]
+}

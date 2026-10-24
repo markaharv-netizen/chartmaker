@@ -1,0 +1,237 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-08-16T00:00:00Z",
+ "end": "2026-08-17T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 20,
+   "user": "SplendidMite",
+   "url": "https://x.com/SplendidMite/status/2089014571038130491",
+   "date": "2026-08-16",
+   "text": "🦉 10 suggested prompts to put ATLAS Crypto Trading Mentor through its paces:\n\n🔎 “Give me a current fundamental analysis of Bitcoin. What are the strongest bullish and bearish arguments?”\n\n📊 “Analyse the current crypto market regime. Are we in accumulation, expansion, https://t.co/wXB68NdadT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 27,
+   "user": "Sirhassan21",
+   "url": "https://x.com/Sirhassan21/status/2088954522186002802",
+   "date": "2026-08-16",
+   "text": "🧵 1️⃣ Stop trying to predict ONE future.\n\nStart preparing for several.\n\nOne of the biggest mistakes in market analysis is becoming emotionally attached to a single prediction:\n\n“BTC will hit $150K.”\n\n“This stock is going higher.”\n\n“Rates will fall, so markets will rally.”\n\nBut https://t.co/sKL9sTk6Xz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "Americanthatguy",
+   "url": "https://x.com/Americanthatguy/status/2089045293492813851",
+   "date": "2026-08-16",
+   "text": "Just so we’re clear. I’m short term bullish, long term bearish on Bitcoin. I still see downside trends on the bigger charts. I see upside trends on the smaller charts. Once the smaller charts exhaust the bigger charts it’s going down again."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "mkoneth",
+   "url": "https://x.com/mkoneth/status/2088980232057532532",
+   "date": "2026-08-16",
+   "text": "yesterday's outcome report 📊\n\n+$152.47 pnl\n+4.0% performance\n\nbut the number i'm most interested in isn't the profit.\n\nit's the process behind it.\n\ni've been using coingyaan's bitcoin intelligence to make my outcome trades.\n\ni'm looking at:\n\n• market direction\n• upside vs https://t.co/sumC8WA9b6"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2089102111040827509",
+   "date": "2026-08-16",
+   "text": "#BITCOIN \n\nBitcoin is on the verge of closing the weekly candle below rising wedge support, which would confirm another bearish breakdown in an already weak technical structure. \n\nWe just delivered our multi-timeframe technical video review of #BITCOIN to https://t.co/o0TVg8acvN https://t.co/j6ft0vRtW0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 28,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2089040753146110304",
+   "date": "2026-08-16",
+   "text": "$BTC \n\nThe market makers’ plan is getting simpler every day.\n\nAs long as Bitcoin has been held in the same $60K–$66K range for almost two months, they’re essentially buying time — allowing more and more calendar-based buyers to step in.\n\nThe idea is simple: people start believing https://t.co/AwlQvOAyAe https://t.co/w0V14mlstB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1204,
+   "user": "Simba_crpt",
+   "url": "https://x.com/Simba_crpt/status/2089042101442843043",
+   "date": "2026-08-16",
+   "text": "🚨 SOMETHING IS VERY WRONG WITH BITCOIN RIGHT NOW\n\nSaylor is selling again.\n\nMiners dumped 23,000 BTC.\n\nThe CLARITY Act got delayed.\n\nETF outflows just hit record levels.\n\nAnd Bitcoin barely fucking moved.\n\nRead that again.\n\nAny one of these headlines should’ve sent $BTC straight https://t.co/nrGyC7sbJB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2089106183957463299",
+   "date": "2026-08-16",
+   "text": "📊【XWIN CAPITAL INDEX｜August 17, 2026】\nOverall Score: 38 / 100\n・80–100 = Strong Bullish Environment\n・60–79 = Bullish Bias\n・40–59 = Neutral / No Clear Direction\n・20–39 = Bearish Bias\n・0–19 = Strong Bearish Environment\n7-Day Moving Average: 46.43 ↓\n14-Day Moving Average: https://t.co/xVQKiNkb3U"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "thirdmetax",
+   "url": "https://x.com/thirdmetax/status/2088848523336782285",
+   "date": "2026-08-16",
+   "text": "Trader Mayne reveals the single most important chart concept he’d tell any trader to learn first\n\n“I know excellent traders who use all the indicators you could imagine under the sun, I don’t use any, there’s many ways to play the game, if I had to pick one concept to learn first https://t.co/Huogtgu5wR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 50,
+   "user": "uwuprivateer",
+   "url": "https://x.com/uwuprivateer/status/2089090262027079829",
+   "date": "2026-08-16",
+   "text": "Why the Global Liquidity Rate of Change and the Business Cycle Explain Bitcoin.  The Global Liquidity RoC (Rate of Change) is suggesting more downside into Q4.  The single most common mistake in liquidity analysis is watching the level of global M2 instead of its rate of change. https://t.co/IUdi7mGQXU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2088796325055697024",
+   "date": "2026-08-16",
+   "text": "𝐆𝐨𝐥𝐝𝐞𝐧👁️ - 𝐓𝐫𝐚𝐝𝐢𝐧𝐠 𝐭𝐡𝐞 𝐁𝐨𝐥𝐥𝐢𝐧𝐠𝐞𝐫 𝐁𝐚𝐧𝐝 𝐒𝐪𝐮𝐞𝐞𝐳𝐞 + 𝐁𝐮𝐥𝐥/𝐁𝐞𝐚𝐫 𝐏𝐨𝐰𝐞𝐫 𝐒𝐞𝐭𝐮𝐩\n\nHere’s a simple framework for combining Bollinger Bands with the Bull/Bear Power (BBP) indicator to identify volatility expansion and manage momentum https://t.co/M4Rk49JGDD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 440,
+   "user": "miiportable_btc",
+   "url": "https://x.com/miiportable_btc/status/2088973074129432619",
+   "date": "2026-08-16",
+   "text": "Think in Scenarios, Not Predictions\n\nMarkets rarely follow one guaranteed path, yet much of financial content is built around confident predictions such as Bitcoin will reach X or this stock is going higher. The problem is that a single prediction assumes one future outcome. https://t.co/bUY7fLKTZS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2088959120846000386",
+   "date": "2026-08-16",
+   "text": "$BTC \n\nWhat’s interesting here?\n\nThe same people calling $55K–$60K the Bitcoin bottom are often the same people who believe Bitcoin will eventually reach $1M+.\n\nBut there’s a major contradiction they’re overlooking: the market structure has to leave enough room for Bitcoin to https://t.co/1FnanHS7Mh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "SedarZan52448",
+   "url": "https://x.com/SedarZan52448/status/2089067180973256773",
+   "date": "2026-08-16",
+   "text": "📊 BTC — The Next Move Is Building\nA deeper breakdown of this BTC setup — including liquidity, market structure, key invalidation levels and both scenarios — will be posted in the Discord\nhttps://t.co/MEwpG2o9QW\n\nBitcoin is consolidating around $63.1K, but short-term structure https://t.co/mpJnPpT6Vf"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Giulia_Beletta",
+   "url": "https://x.com/Giulia_Beletta/status/2089052977726197880",
+   "date": "2026-08-16",
+   "text": "$BTC plan for the week 📊\n\nJust my trading idea 💁‍♀️\n\nHTF structure still keeps me bearish, so I’m more interested in selling rallies than chasing downside.\n\n🎯 Current short asks\n• $64.2K  1/3\n• $64.9K  1/3\n• $65.4K  1/3\n\n🛑 Invalidation\n4H close above $65.5K\nHard SL around"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2088970977854071100",
+   "date": "2026-08-16",
+   "text": "$BTC \n\nMany people think that those waiting for lower prices are being greedy.\n\nI actually think it’s the opposite.\n\nIn my opinion, the real greed is buying Bitcoin around $60–$70K simply because you’re afraid of missing the next bull market, while assuming that $55K is the https://t.co/1FnanHS7Mh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "chaingull",
+   "url": "https://x.com/chaingull/status/2088797984066867468",
+   "date": "2026-08-16",
+   "text": "Crypto Brief — Aug 16, 01:20 UTC\n\nTOP STORY — impact 60 / 100\n• Total liquidations reached $77.1M in 24 hours, with both longs and shorts liquidated.\n\nBULLISH\n▲ 50 The probability of a 25 basis point Fed rate hike in September is 33.1%\n▲ 45 Coinbase expands partnership with"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 95,
+   "user": "xapa03",
+   "url": "https://x.com/xapa03/status/2088963780919038330",
+   "date": "2026-08-16",
+   "text": "In June 2022, Bitcoin found its first low, only to form almost its final low 147 days later (on the weekly chart).\nAt that time we were still in the Corona pandemic.\nBitcoin fell by a maximum of 0.68% within two weeks to reach its \"final\" bottom.\nOn November 9, 2022, the UTXO age https://t.co/GpEAcQRNVh https://t.co/lojEuQP1xh"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "CuongTr00961203",
+   "url": "https://x.com/CuongTr00961203/status/2088910291576971281",
+   "date": "2026-08-16",
+   "text": "Can Bitcoin realistically touch $69k during this bear market cycle? 📉🤔\nWhile macro liquidity is tight and resistance levels remain strong, crypto has a history of brutal short squeezes when sentiment gets overly bearish.\nA relief rally is possible, but I’m treating any move https://t.co/gTp93dkzwf"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "JohnHor76068488",
+   "url": "https://x.com/JohnHor76068488/status/2089057134822486396",
+   "date": "2026-08-16",
+   "text": "Updated Post: Dogecoin (DOGE) Dips Into Red as Bearish Pressure | Crypto News\n\nDogecoin began a recent decline below the $0.10 zone against the US Dollar. DOGE is now consolidating losses and would possibly face hurdles close to $0.0950 and $0.10.\n\n- DOGE price began a recent https://t.co/T7LHBFthEn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "nftcrypto3",
+   "url": "https://x.com/nftcrypto3/status/2088978332134301893",
+   "date": "2026-08-16",
+   "text": "Top 10 Active Trader's Perspectives (https://t.co/rQaLrSWW07 recap)   2026.8.16\n\n1. 憨厚的麦总 (@michael_liu93)【Altcoins as insider battlegrounds】\n\nCore idea: 憨厚的麦总 warns that many altcoins and “demon coins” have become markets where insiders and self-perceived https://t.co/b3AVdJY1Hh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "sire_immortal",
+   "url": "https://x.com/sire_immortal/status/2088831492637995441",
+   "date": "2026-08-16",
+   "text": "$BTC 2028/2029 Bull Market Swing Long.\nNext 60days should print cycle low.\nBear market ATH &amp;Bottom Drawdown\n2011\n~$32\n~$2\n−94%\n\n2013–15\n~$1,163\n~$152–178\n−87%\n\n2017–18\n~$19,783\n~$3,122–3,022\n −84%\n\n2021–22\n~$68,789\n~$15,476–15,742\n−77%\n\n2025–26\n~$126.2k-$126.4k\n~$57.8k so far https://t.co/0tKARVmm5A"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "mirzauzair683",
+   "url": "https://x.com/mirzauzair683/status/2088882645283340591",
+   "date": "2026-08-16",
+   "text": "🚨 CRYPTO MARKET OUTLOOK — NEXT 72 HOURS 👀📊\n\nThe next 3 days could be very important for BTC, ETH, SOL and the wider altcoin market.\n\nHere’s what I’m watching:\n\n₿ BITCOIN\nBTC is currently around the low-$63K area. My base case is a volatile range with a possible recovery"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 8,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2088796655676014708",
+   "date": "2026-08-16",
+   "text": "$VALE\n\n$VALE gave us a nasty bearish engulfing candle last Tuesday at the declining 50 EMA and descending resistance, engulfing more than two weeks of price action and signaling a significant loss of bullish momentum. \n\nEvery session since has reinforced that bearish sentiment, https://t.co/knyZgkxkdL"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "JaceJohan227",
+   "url": "https://x.com/JaceJohan227/status/2088975653286637918",
+   "date": "2026-08-16",
+   "text": "🚨 Bitcoin may have only 51 days left in its current macro cycle.\n\nBitcoin’s historical market cycles have followed an unusually consistent pattern:\n\n📈 2015 → 2017 bull market: 1,065 days\n📉 2017 → 2018 bear market: 365 days\n📈 2018 → 2021 bull market: 1,065 days\n📉 2021 →"
+  }
+ ]
+}
