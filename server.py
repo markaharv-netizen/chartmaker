@@ -149,17 +149,23 @@ def yahoo(sym, p1, p2, interval, rng=None, prepost=False, fresh=False):
     with urllib.request.urlopen(req, timeout=20) as r: d = json.load(r)
     res = (d.get("chart") or {}).get("result")
     if not res: raise ValueError(f"No data for {sym}: {(d.get('chart') or {}).get('error')}")
-    r0 = res[0]; ts = r0.get("timestamp") or []
+    r0 = res[0]; ts = r0.get("timestamp") or []; m = r0["meta"]
     q0 = r0["indicators"]["quote"][0]
     closes = q0.get("close") or []; highs = q0.get("high") or [None] * len(ts)
     opens = q0.get("open") or []; lows = q0.get("low") or []; vols = q0.get("volume") or []
     # bars: [time_ms, open, high, low, close, volume]. Kept beside `points` so line charts stay close-only.
+    # Yahoo often leaves the latest daily close blank after the bell; the quote price is that close.
+    last_px = m.get("regularMarketPrice")
     bars = []
     for i, t in enumerate(ts):
         o = opens[i] if i < len(opens) else None
         h = highs[i] if i < len(highs) else None
         lo = lows[i] if i < len(lows) else None
         c = closes[i] if i < len(closes) else None
+        if c is None and i == len(ts) - 1 and last_px is not None and o is not None and h is not None and lo is not None:
+            c = last_px
+            if c > h: h = c
+            if c < lo: lo = c
         if o is None or h is None or lo is None or c is None: continue
         v = vols[i] if i < len(vols) and vols[i] is not None else 0
         bars.append([t * 1000, o, h, lo, c, v])
@@ -169,7 +175,6 @@ def yahoo(sym, p1, p2, interval, rng=None, prepost=False, fresh=False):
     if not rng and interval in ("1d", "1wk", "1mo") and sym.upper() in heat.ALT:
         sp, stitched = heat.extend(sym.upper(), [(t // 1000, c) for t, c in pts], {"period1": p1, "period2": p2, "interval": interval, "includePrePost": "false"}, p1)
         if stitched: pts = [[t * 1000, c] for t, c in sp]
-    m = r0["meta"]
     out = {"symbol": m.get("symbol", sym), "name": company_name(sym, m),
            "currency": m.get("currency"), "points": pts, "bars": bars, "lastTime": m.get("regularMarketTime"),
            "lastBarTime": pts[-1][0] // 1000, "lastPrice": m.get("regularMarketPrice"), "interval": interval,
