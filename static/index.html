@@ -34,6 +34,12 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #smaMenu input[type=checkbox]{width:16px;height:16px;margin:0;flex:none}
 #smacrow{border-top:1px solid #e5e7eb;margin-top:4px}
 #smac{width:76px;padding:4px 6px}
+/* Hint sits beside Type, not under it, so it does not push that select off the row baseline. */
+#typebox{align-items:flex-start}
+#typebox .type-line{display:flex;align-items:center;gap:8px}
+#ctypeNote{font-size:11px;line-height:1.2;color:#6B7280;font-weight:400;white-space:nowrap}
+#ctypeNote:empty{display:none}
+#ctl > label input[type=checkbox]{margin:0}
 </style></head><body>
 <div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mVal">Valuation</button><button id="mWatch">Watchlist</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
@@ -53,7 +59,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Chart<select id="ftype"><option value="line">Line over time</option><option value="bars">Grouped bars over time</option><option value="rank">Latest-period ranking</option></select></label>
 <label>Title<input id="ftitle" size="30" placeholder="auto"></label>
 <label>Color (1 ticker)<select id="fcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
-<label><span>Watermark</span><input id="fwm" type="checkbox" checked></label>
+<label><span>Watermark</span><input id="fwm" type="checkbox"></label>
 <button id="fgo">Render</button><button id="fdl">Download PNG</button><button id="fcsv">Download CSV</button>
 </div>
 <div id="hctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
@@ -64,7 +70,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label title="Filter tiles by % change (unchanged tiles appear only in All)">Show<select id="hshow"><option value="all">All</option><option value="up">Gainers only</option><option value="down">Decliners only</option></select></label><label title="Tile area: true market cap, or compressed so small caps stay readable">Tile size<select id="hsize"><option value="mcap">Market cap</option><option value="sqrt">√ market cap (small caps readable)</option><option value="eq">Equal</option></select></label>
 <label title="Nest tiles inside sector boxes"><span>Group by sector</span><input id="hsector" type="checkbox"></label>
 <label>Title<input id="htitle" size="30" placeholder="auto"></label>
-<label><span>Watermark</span><input id="hwm" type="checkbox" checked></label>
+<label><span>Watermark</span><input id="hwm" type="checkbox"></label>
 <button id="hgo" title="Fetch fresh quotes, bypassing the cache">Render</button><button id="hdl">Download PNG</button>
 </div>
 <div id="tctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
@@ -72,7 +78,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Metric<select id="tmetric"><option value="mnav">mNAV (market cap / BTC NAV)</option><option value="amp">Amplification ((debt+pref) / BTC NAV)</option><option value="bps">BTC per share</option><option value="bpk">BTC per 1,000 shares</option></select></label>
 <label>Title<input id="ttitle" size="30" placeholder="auto"></label>
 <label>Bar color<select id="tcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
-<label><span>Watermark</span><input id="twm" type="checkbox" checked></label>
+<label><span>Watermark</span><input id="twm" type="checkbox"></label>
 <button id="tgo" title="Fresh quotes">Render</button><button id="tdl">Download PNG</button>
 </div>
 <div id="vctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
@@ -84,7 +90,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Display names (comma, optional)<input id="vnames" size="18"></label>
 <label>Title<input id="vtitle" size="30" placeholder="auto"></label>
 <label>Bar color<select id="vcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
-<label><span>Watermark</span><input id="vwm" type="checkbox" checked></label>
+<label><span>Watermark</span><input id="vwm" type="checkbox"></label>
 <button id="vgo" title="Bypass the 6h fundamentals cache">Render</button><button id="vdl">Download PNG</button><button id="vcsv" style="display:none">Download CSV</button>
 </div>
 <div id="wctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
@@ -92,7 +98,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <div id="wchips" style="display:flex;flex-wrap:wrap;gap:4px;max-width:720px;font-size:13px"></div>
 <button id="wreset" title="Restore the default list" style="background:#6B7280">Reset list</button>
 <label>Title<input id="wtitle" size="24" placeholder="Watchlist"></label>
-<label><span>Watermark</span><input id="wwm" type="checkbox" checked></label>
+<label><span>Watermark</span><input id="wwm" type="checkbox"></label>
 <button id="wrefresh" title="Fetch fresh quotes for every ticker (the only time data updates)">Refresh</button><button id="wdl">Download PNG</button>
 </div>
 <div id="sctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
@@ -102,7 +108,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label id="sgl" style="display:none">Points<select id="shgran"><option value="weekly">Weekly (7-day windows)</option><option value="daily">Daily (1 UTC day)</option></select></label>
 <label id="spl" style="display:none"><span>Price line</span><input id="sprice" type="checkbox" checked></label>
 <label>Title<input id="stitle" size="28" placeholder="Bull vs bear sentiment"></label>
-<label><span>Watermark</span><input id="swm" type="checkbox" checked></label>
+<label><span>Watermark</span><input id="swm" type="checkbox"></label>
 <button id="sgo">Render</button><button id="sreload" title="Re-read sentiment.json from the server">Reload data</button><button id="sdl">Download PNG</button>
 </div>
 <div id="ctl">
@@ -110,11 +116,11 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Display names (comma, optional)<input id="names" size="22"></label>
 <label>Range<select id="range"><option>1D</option><option>5D</option><option selected>YTD</option><option>1M</option><option>6M</option><option>1Y</option><option>5Y</option><option>Max</option><option>Custom</option></select></label>
 <label>Start<input id="start" type="date"></label><label>End<input id="end" type="date"></label>
-<label>Type<select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="candle">Candles + volume</option><option value="bar">Bar ranking % return</option><option value="bardd">Bar ranking % drawdown</option><option value="ratio">Ratio A priced in B</option><option value="drawdown">Drawdown from peak</option></select><span id="ctypeNote" style="font-size:11px;color:#6B7280;font-weight:400"></span></label>
+<label id="typebox">Type<span class="type-line"><select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="candle">Candles + volume</option><option value="bar">Bar ranking % return</option><option value="bardd">Bar ranking % drawdown</option><option value="ratio">Ratio A priced in B</option><option value="drawdown">Drawdown from peak</option></select><span id="ctypeNote"></span></span></label>
 <label id="ddbox" title="Drawdown = % below the running high of daily closes">Peak from<select id="ddbase"><option value="range">Start of range</option><option value="ath">All-time high (full history)</option></select></label>
 <label>Title<input id="title" size="34" placeholder="auto"></label>
 <label>Line color<select id="color"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
-<label><span>Watermark</span><input id="wm" type="checkbox" checked></label>
+<label><span>Watermark</span><input id="wm" type="checkbox"></label>
 <div id="smabox" title="Simple moving averages of daily closes (Price line only, not intraday)"><span>SMA</span>
 <button type="button" id="smaBtn" aria-haspopup="true" aria-expanded="false" aria-controls="smaMenu">SMA: none</button>
 <div id="smaMenu" role="group" aria-label="Simple moving averages" hidden>
@@ -1098,9 +1104,12 @@ function wlpicklist(){const p=$('wlpick');if(!p)return;const box=$('wlpickbox');
 $('wlpick').onchange=()=>{const p=$('wlpick'),v=p.value,id=WLIN[MODE];p.value='';if(!v||!id)return;
   const x=v==='cur'?{wl:WL}:VIEWS[v];if(!x||!Array.isArray(x.wl)||!x.wl.length)return;
   $(id).value=x.wl.join(',');if(MODE==='heat')$('huni').value='custom';if(MODE==='prices'&&$('names'))$('names').value='';if(MODE==='fin'&&$('fnames'))$('fnames').value='';if(MODE==='val'&&$('vnames'))$('vnames').value='';rerender()};
+const WMID={prices:'wm',fin:'fwm',heat:'hwm',tre:'twm',val:'vwm',watch:'wwm',sent:'swm'};
 function vapply(x){const m=vmode(x),own=VOWN[m];if(m==='prices'){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';$('ddbase').value='range';
   $('annOn').checked=false;$('annHalf').checked=false;$('annEarn').checked=true;
   ANN=(Array.isArray(x.ann)?x.ann:[]).filter(a=>a&&a.date&&a.label).slice(0,40).map(a=>({date:String(a.date),label:String(a.label).slice(0,24),note:String(a.note||'').slice(0,80)}));annsave()}
+  // Watermark defaults off. A view that omits the field keeps that default; an explicit true/false still wins.
+  if(WMID[m])$(WMID[m]).checked=false;
   for(const [id,val] of Object.entries(x.fields||{})){if(id!=='theme'&&!own.test(id))continue;const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
   if(m==='watch'&&Array.isArray(x.wl)&&x.wl.length){WL=x.wl.slice();wsave()}
   applyTheme();vsync();setMode(m)}
