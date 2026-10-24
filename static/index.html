@@ -121,7 +121,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Title<input id="title" size="34" placeholder="auto"></label>
 <label>Line color<select id="color"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="wm" type="checkbox"></label>
-<div id="smabox" title="Simple moving averages of daily closes (Price line only, not intraday)"><span>SMA</span>
+<div id="smabox" title="Simple moving averages of daily closes. Price line and candles, not intraday bars."><span>SMA</span>
 <button type="button" id="smaBtn" aria-haspopup="true" aria-expanded="false" aria-controls="smaMenu">SMA: none</button>
 <div id="smaMenu" role="group" aria-label="Simple moving averages" hidden>
 <label><input id="sma20" type="checkbox">20</label>
@@ -186,7 +186,8 @@ function rangeParams(){
 }
 let FRESH=false;
 async function fetchSym(s,p){
-  const ex=p.rng?`&range=${p.rng}&prepost=1`:'';
+  // Line charts on 1D/5D pass a Yahoo range and want extended hours. Candle mode sets prepost:false.
+  const ex=p.rng?`&range=${p.rng}${p.prepost!==false?'&prepost=1':''}`:'';
   const res=await fetch(`/api/chart?symbol=${encodeURIComponent(s)}&period1=${p.p1}&period2=${p.p2}&interval=${p.iv}${ex}${FRESH?'&fresh=1':''}`,{cache:'no-store'});
   const j=await res.json(); if(!res.ok||j.error)throw Error(`${s}: ${j.error||res.status}`); return j;
 }
@@ -266,19 +267,22 @@ async function render(){
       data.forEach((d,i)=>d.label=barLabel(d,names[i]));
       if(my!==RSEQ||MODE!=='prices')return; return finish(type,data,p,'Drawdown from '+(ath?'all-time high':(p.r==='1D'?"today's high":p.r+' high')))}
     if(dd&&!intra)p.iv='1d'; // drawdowns use daily closes so peaks/troughs aren't smoothed away by weekly/monthly bars
+    if(type==='candle')Object.assign(p,candlePlan(p,syms[0]));
     const data=await Promise.all(syms.map(s=>fetchSym(s,ath&&!intra?{...p,p1:0}:p)));
     data.forEach((d,i)=>{d.label=names[i]||d.symbol.replace('-USD','');if(!(ath&&!intra))d.points=trimYTD(d.points,p.r)});
     if(type==='bar')data.forEach((d,i)=>d.barLabel=barLabel(d,names[i]));
     if(dd)data.forEach(d=>ddCalc(d,ath&&!intra?(p.r==='YTD'?trimYTD(d.points,'YTD')[0][0]:p.p1*1000):-Infinity));
-    const smaOn=type==='line'&&p.iv!=='5m'&&p.iv!=='15m'&&p.iv!=='1h'&&!['1D','5D'].includes(p.r), sl=smaOn?smaList():[];
-    $('smabox').style.opacity=type==='line'&&!['1D','5D'].includes(p.r)?1:0.4;
-    if(sl.length){p.vis=data[0].points[0][0];
-      const ss=await Promise.all(data.map(d=>smaSeries(d.symbol,{...p,vis:d.points[0][0]},sl)));data.forEach((d,i)=>d.smas=ss[i])}
-    if(type==='candle'){const b=trimYTD(data[0].bars||[],p.r);
+    if(type==='candle'){const b=prepCandleBars(data[0].bars,p,data[0].instrumentType);
       if(b.length<2)throw Error(syms[0]+': no OHLC bars in this range');
       data[0].bars=b;data[0].points=b.map(x=>[x[0],x[4]])}
+    // SMAs are daily closes. Price line keeps its old rule (off on 1D/5D). Candles can use them once the bars are daily or coarser.
+    const lineSma=type==='line'&&!['1D','5D'].includes(p.r), candleSma=type==='candle'&&!intradayIv(p.iv);
+    const smaOn=(lineSma&&p.iv!=='5m'&&p.iv!=='15m'&&p.iv!=='1h')||candleSma, sl=smaOn?smaList():[];
+    if(sl.length){p.vis=data[0].points[0][0];
+      const ss=await Promise.all(data.map(d=>smaSeries(d.symbol,{...p,vis:d.points[0][0]},sl)));data.forEach((d,i)=>d.smas=ss[i])}
     p.markers=await collectMarkers(type,syms,p);
     if(my!==RSEQ||MODE!=='prices')return; // a newer render started while this one was fetching; don't overwrite it
+    $('smabox').style.opacity=(lineSma||candleSma)?1:0.4;
     const titleAuto={line:data.map(d=>d.label).join(' vs ')+' price',pct:data.map(d=>d.label).join(' vs ')+' % change',
       candle:(data[0]?data[0].label:'')+' price',
       bar:'Return, '+(p.r==='Custom'?'custom range':p.r),ratio:`${data[0].label} priced in ${data[1]?.label}`,
@@ -324,11 +328,14 @@ function stitchNote(list){const parts=[];list.forEach(d=>(d.stitched||[]).forEac
 function star(lbl){return /\)$/.test(lbl)&&lbl.includes(' (')?lbl.replace(/ \(/,'* ('):lbl+'*'}
 function finish(type,data,p,titleAuto){
   const intra=['1D','5D'].includes(p.r)&&p.iv!=='1d', exp=p.r==='YTD'?Date.UTC(new Date().getUTCFullYear(),0,1)-DAY*1000:p.p1*1000, flagged=[];
+  // Weekly/monthly candles are stamped at the period start, so the first bar can sit a little after period1 without the history actually being short.
+  const slack=(type==='candle'&&p.iv==='1mo'?40:type==='candle'&&p.iv==='1wk'?10:6)*DAY*1000;
   if(!intra&&p.r!=='Max')data.forEach(d=>{const f=d.points[0]?.[0];
-    if(f&&f>exp+6*DAY*1000){d.since=f;flagged.push({sym:d.symbol,date:fmtD(f)});d.label=star(d.label);if(d.barLabel)d.barLabel=star(d.barLabel)}});
+    if(f&&f>exp+slack){d.since=f;flagged.push({sym:d.symbol,date:fmtD(f)});d.label=star(d.label);if(d.barLabel)d.barLabel=star(d.barLabel)}});
   p.flagged=flagged;
   const asOf=Math.max(...data.map(d=>Math.max(d.lastTime||0,d.lastBarTime||0)));
-  $('status').textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv+(p.rng?' · incl. pre/after-hours bars':'')+(type==='candle'?' · OHLC + volume':'');
+  const ext=!!(p.rng&&p.prepost!==false);
+  $('status').textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv+(ext?' · incl. pre/after-hours bars':'')+(type==='candle'?' · OHLC + volume':'');
   p.asOf=asOf; last={opt:buildOpt(type,data,$('title').value||titleAuto,p),asOf};
   if(p.drawnMarkers) $('status').textContent+=` · ${p.drawnMarkers} marker`+(p.drawnMarkers>1?'s':'');
   if(p.earnErr) $('status').textContent+=' · earnings unavailable ('+String(p.earnErr).slice(0,90)+')';
@@ -450,47 +457,115 @@ async function collectMarkers(type,syms,p){p.earnErr='';p.earnCount=0;p.earnFetc
     out.push({date:a.date,ts,label:String(a.label).slice(0,24),note:String(a.note||'').slice(0,80),kind:'custom'})}
   return out.filter(m=>!isNaN(m.ts))}
 function fmtVol(v){const a=Math.abs(v);return a>=1e12?(v/1e12).toFixed(1)+'T':a>=1e9?(v/1e9).toFixed(a>=1e10?0:1)+'B':a>=1e6?(v/1e6).toFixed(a>=1e7?0:1)+'M':a>=1e3?(v/1e3).toFixed(0)+'K':String(Math.round(v))}
-function candleTip(label,intra){const esc=x=>String(x).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-  return ps=>{const arr=[].concat(ps),c=arr.find(x=>x.seriesType==='candlestick'),v=arr.find(x=>x.seriesType==='bar');if(!c)return'';
-    const raw=c.data||c.value||[];let t,o,cl,lo,hi;
-    if(raw.length>=5){t=raw[0];o=raw[1];cl=raw[2];lo=raw[3];hi=raw[4]}else{o=raw[0];cl=raw[1];lo=raw[2];hi=raw[3];t=c.axisValue}
-    const when=new Date(t).toLocaleString('en-US',{timeZone:intra?'America/New_York':'UTC',month:'short',day:'numeric',year:'numeric',...(intra?{hour:'numeric',minute:'2-digit'}:{})})+(intra?' ET':'');
-    const vol=v?(Array.isArray(v.data)?v.data[v.data.length-1]:(Array.isArray(v.value)?v.value.at(-1):v.value)):null;
-    const up=cl>=o;
-    return `<div style="font-weight:600;color:${T.title};margin-bottom:4px">${esc(when)}</div><div>${esc(label)}</div>`+
-      `<div>O <b>${fmtNum(o)}</b> · H <b>${fmtNum(hi)}</b></div><div>L <b>${fmtNum(lo)}</b> · C <b style="color:${up?bc('#22C55E'):bc('#EF4444')}">${fmtNum(cl)}</b></div>`+
-      (vol!=null&&vol!==''?`<div>Vol <b>${fmtVol(vol)}</b></div>`:'')}}
+// Candle mode picks a Yahoo interval whose bars stay wide on the 1600px canvas. Price line does not use this.
+const INTRA_IV={'1m':1,'2m':1,'5m':1,'15m':1,'30m':1,'60m':1,'90m':1,'1h':1};
+function intradayIv(iv){return !!INTRA_IV[iv]}
+function candlePlot(){return Math.max(480,(chart.getWidth()||1600)-280)}
+function candlePlan(p,sym){
+  const r=p.r, span=Math.max(DAY,(p.p2||0)-(p.p1||0));
+  const short=r==='1D'||(r==='Custom'&&span<=1.6*DAY);
+  if(short){
+    // 24h pairs have no regular session; 30m keeps a full day fat. Stocks: 15m of the last session.
+    if(/-USD$/i.test(sym||''))return {iv:'30m',rng:'',p1:p.p2-DAY,p2:p.p2,prepost:false,session:false};
+    if(r==='1D')return {iv:'15m',rng:'1d',prepost:false,session:true};
+    return {iv:'15m',rng:'',prepost:false,session:true};
+  }
+  if(r==='5D')return {iv:'1d',rng:'5d',prepost:false,session:false}; // one regular-session candle per trading day
+  const days=span/DAY, maxBars=Math.max(12,Math.floor(candlePlot()/18));
+  const tdays=Math.max(1,Math.round(days*5/7)), weeks=Math.max(1,Math.ceil(days/7));
+  let iv='1mo';
+  if(tdays<=maxBars)iv='1d';
+  else if(weeks<=maxBars)iv='1wk';
+  return {iv,rng:'',prepost:false,session:false};
+}
+function etClock(ts){const g={};for(const x of new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(ts)))g[x.type]=x.value;
+  return {wd:g.weekday,hm:+g.hour*60+(+g.minute)}}
+function inRTH(ts){const {wd,hm}=etClock(ts);return wd!=='Sat'&&wd!=='Sun'&&hm>=570&&hm<960} // 9:30 inclusive, 16:00 exclusive
+function prepCandleBars(raw,p,instrument){
+  let b=(raw||[]).filter(x=>x&&x.length>=5&&[1,2,3,4].every(i=>x[i]!=null&&isFinite(+x[i])));
+  const seen=new Map();
+  for(const x of b){const prev=seen.get(x[0]);if(!prev||(x[5]||0)>(prev[5]||0))seen.set(x[0],x)}
+  b=[...seen.values()].sort((a,c)=>a[0]-c[0]);
+  if(intradayIv(p.iv)){
+    b=b.filter(x=>!(!(x[5]>0)&&x[1]===x[2]&&x[2]===x[3]&&x[3]===x[4])); // flat zero-volume close print
+    const kind=(instrument||'').toUpperCase();
+    if(p.session&&kind!=='CRYPTOCURRENCY'&&kind!=='CURRENCY'){const inside=b.filter(x=>inRTH(x[0]));
+      if(inside.length>=2&&inside.length>=b.length*0.5)b=inside}
+  }
+  return trimYTD(b,p.r)}
+// Pixel width from the free plot width: a small gap, then a cap so one or two bars don't become slabs, and a floor so Max (monthly only) doesn't vanish.
+function candleBody(n){const plot=candlePlot(),band=plot/Math.max(1,n),max=Math.round(plot*0.2);
+  const gap=Math.min(16,Math.max(3,band*0.12));let body=band-gap;
+  if(body>max)body=max;
+  if(body<8)body=Math.max(2,Math.min(8,band*0.75));
+  return Math.round(body)}
+function candleLab(ts,iv){const d=new Date(+ts);
+  if(intradayIv(iv))return d.toLocaleString('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'});
+  if(iv==='1mo')return d.toLocaleDateString('en-US',{timeZone:'UTC',month:'short',year:'numeric'});
+  return d.toLocaleDateString('en-US',{timeZone:'UTC',month:'short',day:'numeric'})}
+function candleWhen(ts,iv){const intra=intradayIv(iv);
+  return new Date(+ts).toLocaleString('en-US',intra?{timeZone:'America/New_York',weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}:{timeZone:'UTC',weekday:'short',month:'short',day:'numeric',year:'numeric'})+(intra?' ET':'')}
+// One SMA value per candle: the daily-close SMA nearest that bar.
+function alignSma(pts,bars){const out=[];let j=0;
+  for(const b of bars){const t=b[0];while(j+1<pts.length&&pts[j+1][0]<=t)j++;
+    let k=j;if(j+1<pts.length&&Math.abs(pts[j+1][0]-t)<Math.abs(pts[j][0]-t))k=j+1;
+    out.push(pts[k]&&Math.abs(pts[k][0]-t)<12*86400e3?pts[k][1]:null)}
+  return out}
+function candleTip(label,bars,iv){const esc=x=>String(x).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  return ps=>{const arr=[].concat(ps),c=arr.find(x=>x.seriesType==='candlestick');if(!c)return'';
+    const b=bars[c.dataIndex];if(!b)return'';
+    const up=b[4]>=b[1],smas=arr.filter(x=>x.seriesType==='line'&&String(x.seriesName||'').indexOf('SMA')===0&&x.value!=null&&x.value!=='-');
+    return `<div style="font-weight:600;color:${T.title};margin-bottom:4px">${esc(candleWhen(b[0],iv))}</div><div>${esc(label)}</div>`+
+      `<div>O <b>${fmtNum(b[1])}</b> · H <b>${fmtNum(b[2])}</b></div><div>L <b>${fmtNum(b[3])}</b> · C <b style="color:${up?bc('#22C55E'):bc('#EF4444')}">${fmtNum(b[4])}</b></div>`+
+      `<div>Vol <b>${fmtVol(b[5]||0)}</b></div>`+
+      smas.map(s=>`<div>${esc(s.seriesName)} <b>${fmtNum(s.value)}</b></div>`).join('')}}
 function candleOpt(o,d,p){
-  const bars=d.bars,intra=['1D','5D'].includes(p.r),upC=bc('#22C55E'),dnC=bc('#EF4444'),last=bars.at(-1);
-  const t0=bars[0][0],t1=last[0],pad=Math.max((t1-t0)*0.008,intra?60e3:DAY*500);
-  o.grid=[{left:90,right:190,top:112,height:548},{left:90,right:190,top:688,height:112}];
+  const bars=d.bars,upC=bc('#22C55E'),dnC=bc('#EF4444'),last=bars.at(-1),n=bars.length,bw=candleBody(n);
+  const cats=bars.map(b=>String(b[0]));
+  const smaLines=(d.smas||[]).filter(m=>m.data&&m.data.length).map((m,j)=>{const col=bc(SMA_COL[m.key]||'#7C3AED'),data=alignSma(m.data,bars);
+    if(!data.some(v=>v!=null))return null;
+    return {type:'line',name:m.key,xAxisIndex:0,yAxisIndex:0,data,showSymbol:false,smooth:false,connectNulls:true,z:4,
+      lineStyle:{width:1.6,color:col,type:j%2?[6,4]:'solid'},itemStyle:{color:col},
+      endLabel:{show:true,fontSize:14,color:col,formatter:q=>`${m.key} ${fmtNum(q.value)}`},labelLayout:{moveOverlap:'shiftY'}}})
+    .filter(Boolean);
+  const top=smaLines.length?132:112;
+  o.grid=[{left:90,right:190,top,height:548-(top-112)},{left:90,right:190,top:688,height:112}];
   o.axisPointer={link:[{xAxisIndex:'all'}],label:{show:false}};
-  const xBase={type:'time',min:t0-pad,max:t1+pad,axisLine:{lineStyle:{color:T.axis}},axisTick:{show:false},splitLine:{show:false}};
-  o.xAxis=[{...xBase,gridIndex:0,axisLabel:{show:false}},{...xBase,gridIndex:1,axisLabel:{...axLabel,hideOverlap:true}}];
+  const lab={...axLabel,hideOverlap:true,interval:n<=10?0:Math.max(0,Math.ceil(n/8)-1),formatter:v=>candleLab(v,p.iv)};
+  const xBase={type:'category',data:cats,boundaryGap:true,axisLine:{lineStyle:{color:T.axis}},axisTick:{show:false},splitLine:{show:false}};
+  o.xAxis=[{...xBase,gridIndex:0,axisLabel:{show:false}},{...xBase,gridIndex:1,axisLabel:lab}];
   o.yAxis=[
     {type:'value',scale:true,gridIndex:0,axisLabel:{...axLabel,formatter:fmtNum},splitLine:split},
     {type:'value',gridIndex:1,min:0,splitNumber:2,axisLabel:{...axLabel,fontSize:12,color:T.src,formatter:fmtVol},splitLine:{show:false},axisLine:{show:false}}];
   const upLast=last[4]>=last[1];
+  const lock={barWidth:bw,barMaxWidth:bw,barMinWidth:bw};
   o.series=[
-    {type:'candlestick',name:d.label,xAxisIndex:0,yAxisIndex:0,barMaxWidth:14,
-      dimensions:['time','open','close','lowest','highest'],encode:{x:'time',y:['open','close','lowest','highest']},
-      data:bars.map(b=>[b[0],b[1],b[4],b[3],b[2]]),
+    {type:'candlestick',name:d.label,xAxisIndex:0,yAxisIndex:0,...lock,
+      data:bars.map(b=>[b[1],b[4],b[3],b[2]]),
       itemStyle:{color:upC,color0:dnC,borderColor:upC,borderColor0:dnC}},
-    {type:'line',name:d.label+' close',xAxisIndex:0,yAxisIndex:0,data:bars.map(b=>[b[0],b[4]]),showSymbol:false,silent:true,z:3,
+    ...smaLines,
+    {type:'line',name:d.label+' close',xAxisIndex:0,yAxisIndex:0,data:bars.map(b=>b[4]),showSymbol:false,silent:true,z:3,
       lineStyle:{width:0,opacity:0},itemStyle:{color:upLast?upC:dnC},
-      endLabel:{show:true,fontSize:17,fontWeight:'bold',color:upLast?upC:dnC,formatter:q=>`${d.label} ${fmtNum(q.value[1])}`},
+      endLabel:{show:true,fontSize:17,fontWeight:'bold',color:upLast?upC:dnC,formatter:q=>`${d.label} ${fmtNum(q.value)}`},
       tooltip:{show:false}},
-    {type:'bar',name:'Volume',xAxisIndex:1,yAxisIndex:1,barMaxWidth:14,
-      data:bars.map(b=>({value:[b[0],b[5]],itemStyle:{color:b[4]>=b[1]?upC:dnC}}))}];
+    {type:'bar',name:'Volume',xAxisIndex:1,yAxisIndex:1,...lock,
+      data:bars.map(b=>({value:b[5]||0,itemStyle:{color:b[4]>=b[1]?upC:dnC}}))}];
+  if(smaLines.length)o.legend={top:78,left:60,data:smaLines.map(s=>s.name),icon:'roundRect',itemWidth:18,itemHeight:3,textStyle:{fontSize:14,color:T.text}};
   o.tooltip={trigger:'axis',confine:true,transitionDuration:0,backgroundColor:T.dark?'rgba(23,26,32,0.95)':'rgba(255,255,255,0.97)',borderColor:T.axis,
     textStyle:{color:T.text,fontSize:14},extraCssText:'box-shadow:0 2px 10px rgba(0,0,0,.25);border-radius:6px',
-    axisPointer:{type:'line',lineStyle:{color:T.axis,width:1,type:'dashed'},label:{show:false}},formatter:candleTip(d.label,intra)};
+    axisPointer:{type:'line',lineStyle:{color:T.axis,width:1,type:'dashed'},label:{show:false}},formatter:candleTip(d.label,bars,p.iv)};
   o.graphic[0].style.text='Source: Yahoo Finance · OHLC + volume';
   return o}
 function attachMarkers(o,data,p){
   const times=[];data.forEach(d=>(d.points||[]).forEach(pt=>times.push(pt[0])));times.sort((a,b)=>a-b);
   if(times.length<2)return;
-  const intra=['1m','2m','5m','15m','30m','60m','1h'].includes(p.iv),lim=intra?6*3600e3:4*86400e3;
+  const xAx=Array.isArray(o.xAxis)?o.xAxis[0]:o.xAxis, cat=!!(xAx&&xAx.type==='category');
+  const intra=['1m','2m','5m','15m','30m','60m','1h'].includes(p.iv);
+  const candle=!!(o.series||[]).some(s=>s.type==='candlestick');
+  // Coarser candle bars sit farther from an earnings date than a daily close does. Line charts keep the old window.
+  let lim=intra?6*3600e3:4*86400e3;
+  if(candle&&p.iv==='1wk')lim=8*86400e3;
+  if(candle&&p.iv==='1mo')lim=32*86400e3;
   const snapped=[];
   for(const m of p.markers||[]){let lo=0,hi=times.length-1;while(hi-lo>1){const mid=(lo+hi)>>1;if(times[mid]<m.ts)lo=mid;else hi=mid}
     const t=Math.abs(times[lo]-m.ts)<=Math.abs(times[hi]-m.ts)?times[lo]:times[hi];
@@ -508,8 +583,8 @@ function attachMarkers(o,data,p){
   if(!ser)return;
   const col={halving:bc('#F7931A'),earn:bc('#8B5CF6'),custom:T.dark?'#93C5FD':'#0369A1'};
   ser.markLine={symbol:['none','none'],silent:true,animation:false,
-    data:groups.map(g=>{const right=(g.ts-t0)/span>0.84;
-      return {xAxis:g.ts,name:g.text,lineStyle:{color:col[g.kind]||col.custom,type:'dashed',width:1.25},
+    data:groups.map(g=>{const right=cat?times.indexOf(g.ts)>=times.length*0.84:(g.ts-t0)/span>0.84;
+      return {xAxis:cat?String(g.ts):g.ts,name:g.text,lineStyle:{color:col[g.kind]||col.custom,type:'dashed',width:1.25},
         label:{show:true,position:'insideEndTop',distance:10,offset:[right?-6:6,g.row*18],align:right?'right':'left',
           formatter:g.text,color:T.title,fontSize:12,fontWeight:600,backgroundColor:T.bg,
           borderColor:col[g.kind]||T.axis,borderWidth:1,borderRadius:3,padding:[2,5]}}})};
@@ -519,7 +594,9 @@ function attachMarkers(o,data,p){
   if(!baseTip)return;
   const notes=groups.map(g=>({ts:g.ts,text:g.text,note:g.note}));
   o.tooltip.formatter=ps=>{const h=baseTip(ps)||'';const arr=[].concat(ps);if(!arr.length||!h)return h;
-    const t=arr[0].axisValue!=null?arr[0].axisValue:(Array.isArray(arr[0].value)?arr[0].value[0]:null);if(t==null)return h;
+    let t=arr[0].axisValue!=null?arr[0].axisValue:(Array.isArray(arr[0].value)?arr[0].value[0]:null);
+    if(cat){const i=arr[0].dataIndex;if(i!=null&&times[i]!=null)t=times[i]}
+    if(t==null||isNaN(+t))return h;t=+t;
     const gap=intra?6*3600e3:3*86400e3,hit=notes.filter(n=>Math.abs(n.ts-t)<=gap);if(!hit.length)return h;
     const esc=x=>String(x).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
     return h+hit.map(n=>`<div style="margin-top:4px"><b style="color:${T.title}">${esc(n.text)}</b>${n.note?`<div style="color:${T.src}">${esc(n.note)}</div>`:''}</div>`).join('')}}
