@@ -1,0 +1,228 @@
+{
+ "symbol": "AVGO",
+ "start": "2026-10-23T00:00:00Z",
+ "end": "2026-10-24T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AVGO (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "backquant",
+   "url": "https://x.com/backquant/status/2113608564854194316",
+   "date": "2026-10-23",
+   "text": "Pre-NY Positioning\n\ndownside hedging picked up pretty broadly yesterday.\n\n$SPY / $QQQ both had net put buying, but it was more obvious underneath.\n\n$MU / $META / $AVGO / $AMD all saw pretty heavy put demand, while $NVDA had a lot of call selling too.\n\nstill some upside flow mixed https://t.co/t00lvH6DGX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Pynvestment",
+   "url": "https://x.com/Pynvestment/status/2113617277929058556",
+   "date": "2026-10-23",
+   "text": "🚨Scan Golden Cross (50vs200)\n \nBullish (days, change)\nMETA (17, -12.2%)\nCRM (38, -2.1%)\nPLTR (44, +15.7%)\nMSFT (53, +2.7%)\nTMO (66, +14.9%)\n\nBearish (days, change)\nCAT (2, -4.9%)\nAVGO (8, -6.1%)\nLIN (28, +8.6%)\nAXP (30, +7.7%)\nPG (63, +14.5%)"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2113507461319516344",
+   "date": "2026-10-23",
+   "text": "Macro Observatory Week 43 Friday Briefing\n\nThursday’s telemetry delivered the exact physical execution anticipated by Wednesday's ceiling test, with Wednesday's Macro Lower-high ceilings snapping shut, unleashing a synchronized liquidation wave across fourteen tickers in Macro"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "reasonus4",
+   "url": "https://x.com/reasonus4/status/2113733258106249660",
+   "date": "2026-10-23",
+   "text": "Reasonus4 Cranky Old Man Indicator updated. The COMI is undefeated. \n\nEbbs and flows but relative outperformance guaranteed … bc I’m not stupid &amp; gullible.\n \nBearish: $MU $DRAM $SPY $QQQ $SNDK $ARM $AMD $INTC $SOXX $TSLA $SPCX $AAPL $NVDA $AVGO \n\nBullish: $GTBIF $TRLV $KWEB $ILF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "tnrriwr",
+   "url": "https://x.com/tnrriwr/status/2113728899058413644",
+   "date": "2026-10-23",
+   "text": "Blood in the streets? Good. Here is my ultimate dip shopping list. 🛒\n\nTime to put that dry powder to work. I only buy Tier-1 assets when they go on sale. Zero fluff, just the data:\n\n1. $CRDO (~$148) — AI connectivity monopoly. 67% GM, 70% fwd rev growth. Only 21x NTM.\n2. $NBIS https://t.co/v3ZUMCVVFb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Zurieliooo",
+   "url": "https://x.com/Zurieliooo/status/2113623516339741021",
+   "date": "2026-10-23",
+   "text": "Sentinel Stocks | Friday Premarket 📉\n\nMorning y’all!\n\nTech sold off hard yesterday, with $QQQ down nearly 3%. Futures remain cautious as oil tops $114 and geopolitical risks weigh on sentiment.\n\nHere’s what I’m watching:\n\n$SPY — SCALP WATCH 🔴\nPremarket: ~$761.53\nHold $761.17"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AlexisHankammer",
+   "url": "https://x.com/AlexisHankammer/status/2113619196810792999",
+   "date": "2026-10-23",
+   "text": "Key support levels have been breached across the board! The potential bottom zones for TSMC, Intel, and AMD have been laid bare:\n1. $GOOGL\n\nIt remains in the danger zone for the short term; a decline toward $312 is possible over the next 3–5 weeks. If the price stabilizes at that"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TapeFlash",
+   "url": "https://x.com/TapeFlash/status/2113618190169407666",
+   "date": "2026-10-23",
+   "text": "Key support levels have been breached across the board! The potential bottom zones for TSMC, Intel, and AMD have been laid bare:\n1. $GOOGL \n\nIt remains in the danger zone for the short term; a decline toward $312 is possible over the next 3–5 weeks. If the price stabilizes at"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "jaszboone",
+   "url": "https://x.com/jaszboone/status/2113700680405754221",
+   "date": "2026-10-23",
+   "text": "🇺🇸 English Version\n\n🚨 AI CHIPS: DEAD CAT BOUNCE OR THE NEXT BIG BUYING OPPORTUNITY?\n\nYesterday was brutal. Today, chip stocks are fighting back—but not every bounce is worth buying. 👀\n\n🔥 MY TAKE: The AI trade isn't dead. The market is repricing how much investors are willing"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FIMike4",
+   "url": "https://x.com/FIMike4/status/2113580951582150884",
+   "date": "2026-10-23",
+   "text": "$IDYA bullish setup just got stronger at #ESMO2026.\nIDEAYA’s IDE849 (DLL3 TOP1 ADC) just dropped promising Phase 1 data: 17.4-month median OS in 2L SCLC (n=51), 72.5% ORR / 60.8% cORR, 6.9-month mPFS, plus solid activity in brain mets and NECs. FDA alignment already in hand for"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "QuantAlgosAi",
+   "url": "https://x.com/QuantAlgosAi/status/2113729691144122452",
+   "date": "2026-10-23",
+   "text": "📊 WEEKLY RECAP — Oct 19 to Oct 25, 2026\n\n✅ 26 Winning Signals | 🎯 35.1% Win Rate\n\n💰 Winners:\nMU +18.74% · 1W · Simple Trailing Stop\nMSTR +6.02% · 4H · ORB 3R Short\nWDC +4.79% · 65m · 5/20 EMA Bull Cross\nAAOI +3.18% · 1H · RSI Divergence\nCRWV +2.46% · 4H · ORB 3R Short\nVXX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "cottonfields",
+   "url": "https://x.com/cottonfields/status/2113596421630730569",
+   "date": "2026-10-23",
+   "text": "Yesterday's options flow (22 oct)\nmarkets: unclear\nmag7: unclear\ncrypto: unclear\nbiotech: unclear\nmetals: unclear\nenergy: unclear\nrates: hedging\nrisk-off: unclear\nsemis: unclear\nfinancials: unclear\n\nMarkets\nTape on 22 Oct: USD 6.40bn confirmed-opening premium, 94.8% puts. Yet all"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "primal1screams",
+   "url": "https://x.com/primal1screams/status/2113642807151972402",
+   "date": "2026-10-23",
+   "text": "For those who didn’t heed my risk warnings in October or failed to trim their positions in time, there’s no need to lose all confidence just because of this sharp sell-off. While I still believe there is a risk of further downside in the short term, I am actually more optimistic https://t.co/xkJthOwYYq"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "Ozzwick",
+   "url": "https://x.com/Ozzwick/status/2113624422221287746",
+   "date": "2026-10-23",
+   "text": "$AVGO – is UNDERVALUED\n\nStrong business, powerful cash flow, and huge potential ahead.\n\nThe market may be underestimating what Broadcom can become over the next 5–10 years. https://t.co/0py5VERuPA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 46,
+   "user": "LongGameEquity",
+   "url": "https://x.com/LongGameEquity/status/2113709758423142540",
+   "date": "2026-10-23",
+   "text": "CRAMER IS BEARISH $AVGO DID WE BOTTOM? 🚀 https://t.co/XDTU9cUP6Z https://t.co/BlG4okF9xl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Jamesbohn1c",
+   "url": "https://x.com/Jamesbohn1c/status/2113633835003089361",
+   "date": "2026-10-23",
+   "text": "Inflation has stayed above the Fed’s 2% target for 66 months — the 3rd 5+ year stretch in a century, per Bespoke.\n\nMy downside watchlist: $MU, $GOOGL, $TSM, $INTC, $AVGO &amp; $AMD."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 98,
+   "user": "TehLamboX",
+   "url": "https://x.com/TehLamboX/status/2113619103999316234",
+   "date": "2026-10-23",
+   "text": "$AVGO is not fast mover but its only 7-8% move away from our downside target!\n\nCan we see it today?? https://t.co/ZhbzdocBIo https://t.co/335VMngH4o"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SimmoNiu",
+   "url": "https://x.com/SimmoNiu/status/2113752323138994678",
+   "date": "2026-10-23",
+   "text": "One of my most interested stock\n\n$AVGO: $305 to $310 is the next area I’m watching if $QQQ reaches $680 to $685\n\nIts recent beta points to roughly $305 to $308, close to the upper edge of the larger demand zone \n\nI want to see selling slow there. A move back above $330 would give https://t.co/2FomU7qfbD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "fundspec",
+   "url": "https://x.com/fundspec/status/2113676849670709317",
+   "date": "2026-10-23",
+   "text": "Bearish options flow in $AVGO\n$4.6M of Sep 17 2027 $290 calls traded at the bid. 600 contracts against 89 open interest.\n\nSee the option sweeps hedge funds are loading up on, in real time.\nDownload the FundSpec app on the Apple App Store or Google Play Store."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "stockswithtom",
+   "url": "https://x.com/stockswithtom/status/2113624811075207385",
+   "date": "2026-10-23",
+   "text": "Broadcom $AVGO just received a $600 price target from Tigress Financial.\n\nThat's nearly 80% upside from current levels.\n\nI am buying the $AVGO dip, are you?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "EdwardMitcnslr",
+   "url": "https://x.com/EdwardMitcnslr/status/2113655019014885386",
+   "date": "2026-10-23",
+   "text": "My next buy list is simple:\n\n$NVDA near $202\n\n$TSM near $405\n\n$AVGO near $315\n\n$AMZN near $245\n\n$NBIS near $150\n\n$SPCX near $142\n\nI don’t need every winner.\n\nI need entries where upside still outweighs the risk."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Jratin",
+   "url": "https://x.com/Jratin/status/2113655109318332584",
+   "date": "2026-10-23",
+   "text": "My next buy list is simple:\n\n$NVDA near $202\n\n$TSM near $405\n\n$AVGO near $315\n\n$AMZN near $245\n\n$NBIS near $150\n\n$SPCX near $142\n\nI don’t need every winner.\n\nI need entries where upside still outweighs the risk."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "IamSinovuyo",
+   "url": "https://x.com/IamSinovuyo/status/2113720931671810246",
+   "date": "2026-10-23",
+   "text": "👀November. Watch these closely.\n\nThe best setups aren’t guesses — they’re backed by clear logic and asymmetric upside:\n\n• 🔥 $SPCX — $147 → $189  \n• 🔥 $NVDA — $216 → $257  \n• 🔥 $MU — $896 → $1,080  \n• 🔥 $TSM — $425 → $486  \n• 🔥 $AVGO — $323 → $380  \n• 🔥 $NBIS — https://t.co/hLCorwLtrX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "newsinvesting",
+   "url": "https://x.com/newsinvesting/status/2113621061988200635",
+   "date": "2026-10-23",
+   "text": "Mizuho says buy the pullback in Broadcom $AVGO, arguing investor fears over custom-chip share losses and rising competition are overdone. The firm sees Google’s TPU ramp opening a massive opportunity through 2028 — but the size of Broadcom’s potential upside depends on"
+  }
+ ]
+}

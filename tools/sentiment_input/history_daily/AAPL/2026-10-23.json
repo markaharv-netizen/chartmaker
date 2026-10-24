@@ -1,0 +1,237 @@
+{
+ "symbol": "AAPL",
+ "start": "2026-10-23T00:00:00Z",
+ "end": "2026-10-24T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AAPL (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 9,
+   "user": "lukeoncapital",
+   "url": "https://x.com/lukeoncapital/status/2113711139070583122",
+   "date": "2026-10-23",
+   "text": "$AAPL appears balanced to slightly bearish next week.\n\nI would be cautious taking upside as we’re running out of room and time for continuation.\n\nI don’t expect large downside necessarily, but upside is limited."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Pl2Kali",
+   "url": "https://x.com/Pl2Kali/status/2113734375862890546",
+   "date": "2026-10-23",
+   "text": "Think for yourself. Logic beats headlines.\n\nEarnings season is a game of expectations. Good numbers don't always mean a rising stock — and that's where the edge is.\n\n[                                          REMINDER:\n🟢 EASY BETS — Bullish setups\n\n$TSMC, $SKHY , $LLY, $GS, https://t.co/9nmYvUFyEd"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "spxsignals1",
+   "url": "https://x.com/spxsignals1/status/2113603390852964474",
+   "date": "2026-10-23",
+   "text": "📊 $SPX SUPPORT &amp; RESISTANCE LEVELS 📉\n\n🔴 Current Price: 7,663.43 (-1.21%)\n\n🟢 SUPPORT\n⚪ 7,634.87 — Minor Support\n🟡 7,589.06 — Major Support\n\n🔴 RESISTANCE\n⚪ 7,682.97 — Minor Resistance\n🟡 7,730.64 — Major Resistance\n\n🔄 BREAKOUT / BREAKDOWN SCENARIOS\n\n⬆️ Bullish Breakout: If https://t.co/cvbUqpQbQz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2113650402315129010",
+   "date": "2026-10-23",
+   "text": "The MACD Indicator:\nMoving Average Convergence Divergence Indicator-\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2113467446623613150",
+   "date": "2026-10-23",
+   "text": "Descending Triangle - A Bearish Continuation Pattern\nhttps://t.co/czuDQoJ8lf\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2113593024123191690",
+   "date": "2026-10-23",
+   "text": "Abandoned Baby Top A Bearish Reversal Pattern\nhttps://t.co/Rlt44Uy5KY\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2113638220516954116",
+   "date": "2026-10-23",
+   "text": "Dark Cloud Cover:\nA Bearish Reversal Pattern:\nhttps://t.co/fNeWhyMSKZ\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2113510480031736067",
+   "date": "2026-10-23",
+   "text": "Bearish Pennant - A Continuation Pattern in a Downtrend\nhttps://t.co/EPSJBYOAdw\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2113431711144972408",
+   "date": "2026-10-23",
+   "text": "The Shooting Star - A Bearish Reversal at Resistance\nhttps://t.co/VedCElr5rn\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2113429697790919121",
+   "date": "2026-10-23",
+   "text": "Bearish Pennant - A Continuation Pattern in a Downtrend\nhttps://t.co/7HWQOPcZjp…\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "VegaSlpyart78",
+   "url": "https://x.com/VegaSlpyart78/status/2113609702617854393",
+   "date": "2026-10-23",
+   "text": "🚨 $AAPL 0DTE (10/23) Spot: $348 📈\n\n🟢 BULL: &gt; $350 ➡️ Tgt $352.5 🚀\n\n🔴 BEAR: &lt; $343.4 ➡️ Tgt $340 🔻\n\n⚡ Pos GEX / Calm Bullish 🛡️ https://t.co/2CWnuQ4I1Q"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2113420890260279352",
+   "date": "2026-10-23",
+   "text": "Belt-Hold Bullish - A Potential Bullish Trend Change\nhttps://t.co/UbMWz3OD3s\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2113482546205827476",
+   "date": "2026-10-23",
+   "text": "Morning Star Strength Weak, Standard and Strong - A Bullish Reversal Pattern\nhttps://t.co/XWvt4akrIx\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2113437018634272854",
+   "date": "2026-10-23",
+   "text": "Bullish Breakaway Gap   Breaking Away From A Downtrend\nhttps://t.co/iA8iYPH1sH\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2113449578704031961",
+   "date": "2026-10-23",
+   "text": "Bullish Breakaway Gap   Breaking Away From A Downtrend\nhttps://t.co/iA8iYPH1sH\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2113502678659498482",
+   "date": "2026-10-23",
+   "text": "Concealing Baby Swallow A Bullish Reversal Pattern\nhttps://t.co/KojxzXFRBR\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Granvestor",
+   "url": "https://x.com/Granvestor/status/2113638826249797908",
+   "date": "2026-10-23",
+   "text": "While the rest of Big Tech pours hundreds of billions into AI capex, Apple barely joined the race. 🍎\n\n$AAPL in 30 seconds:\niPhone, Mac, iPad, Wearables + Services.\nFY2025 revenue: $416B.\nNew CEO John Ternus since Sep 1.\n\nThe capex gap (2026):\n• $AMZN: ~$220B\n• $MSFT: ~$175B\n•"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "sljosee",
+   "url": "https://x.com/sljosee/status/2113632002163577291",
+   "date": "2026-10-23",
+   "text": "My $AAPL game plan: above $351.73, watch for a confirmed breakout. Between $347 and $352, expect possible consolidation. Below $340, downside risk increases. I’m cautiously bullish, but I’d rather follow price action than chase momentum. #AAPL #Stocks #Trading\n\nFollow me for more https://t.co/Q212MiCSx2"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 32,
+   "user": "alphaticaio",
+   "url": "https://x.com/alphaticaio/status/2113692544026714151",
+   "date": "2026-10-23",
+   "text": "🚨🚨The Alphatica Earnings Quality Signal scores every name before the print.\n\nQ2 2026 Examples:\nTSLA 0/6 BEARISH: −14%\nINTC 0/6 BEARISH: erased a 15% rally\nSNDK 0/6 BEARISH: −7%\nJEF 2/6 BEARISH: −10%\nCAR 2/6 BEARISH: −10.19%\nAAPL 3/6 NEUTRAL: −9%\nAMZN 4/6 BULLISH: +6%\nNOW https://t.co/Wsh6HFllWv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "sljosee",
+   "url": "https://x.com/sljosee/status/2113727632273727913",
+   "date": "2026-10-23",
+   "text": "Apple closed Friday at $346.23 after testing $351.73. Here’s what I’m watching next:\n\n📈 Bullish trigger: A convincing breakout above $351.73 with stronger volume.\n\n👀 Key support: $345-$346.\n\n⚠️ Downside watch: A break below $342-$343 could open the door to a deeper pullback. https://t.co/XEw5wFHGyA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MMECTraining",
+   "url": "https://x.com/MMECTraining/status/2113499693863076330",
+   "date": "2026-10-23",
+   "text": "MMEC Report Scorecard — Oct 22: 5 analyses aligned.\nBearish bias: MRNA -12.28%, CLS -2.14%, META -0.59%, CRWV -0.29%.\nBullish bias: AAPL +0.67%.\nOthers still pending. Educational, not advice.\nhttps://t.co/8ohAaWRjQz https://t.co/jetgGIm8o7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2113507461319516344",
+   "date": "2026-10-23",
+   "text": "Macro Observatory Week 43 Friday Briefing\n\nThursday’s telemetry delivered the exact physical execution anticipated by Wednesday's ceiling test, with Wednesday's Macro Lower-high ceilings snapping shut, unleashing a synchronized liquidation wave across fourteen tickers in Macro"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 80,
+   "user": "enrichtrades",
+   "url": "https://x.com/enrichtrades/status/2113459125770154162",
+   "date": "2026-10-23",
+   "text": "Watchlist for tomorrow, 10/23:\n\nUpside:\n$PFE\n$NOW\n$PLTR\n$AAPL\n$VRT — $BE earnings sympathy watch\n\nDownside:\n$GOOGL\n$MU\n$ARM\n$NVDA\n\nCASH IS A POSITION. You guys will thank me in a few months for telling you to protect what you’ve built.\n\nFavorite names below the 200EMA. No need to"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "reasonus4",
+   "url": "https://x.com/reasonus4/status/2113733258106249660",
+   "date": "2026-10-23",
+   "text": "Reasonus4 Cranky Old Man Indicator updated. The COMI is undefeated. \n\nEbbs and flows but relative outperformance guaranteed … bc I’m not stupid &amp; gullible.\n \nBearish: $MU $DRAM $SPY $QQQ $SNDK $ARM $AMD $INTC $SOXX $TSLA $SPCX $AAPL $NVDA $AVGO \n\nBullish: $GTBIF $TRLV $KWEB $ILF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "TajVincent",
+   "url": "https://x.com/TajVincent/status/2113627232618873098",
+   "date": "2026-10-23",
+   "text": "🤖 FINN HIGH-CONVICTION TRADE IDEAS — Friday, Oct 23 (9:39 AM ET)\n\nThe open is distinctly bearish. Heavy selling across the MAG7 ($SPY, $QQQ, $NVDA, $TSLA, $PLTR high-conviction bearish) with $AAPL the lone high-conviction bullish standout. $SPY is pinned below its open, so the"
+  }
+ ]
+}
