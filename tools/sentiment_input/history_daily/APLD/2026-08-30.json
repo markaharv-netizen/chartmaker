@@ -1,0 +1,57 @@
+{
+ "symbol": "APLD",
+ "start": "2026-08-30T00:00:00Z",
+ "end": "2026-08-31T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "BP_Investments_",
+   "url": "https://x.com/BP_Investments_/status/2094062584424964278",
+   "date": "2026-08-30",
+   "text": "$APLD still has further downside ahead.\n\nTarget zone: $19.38 - $10.86\n\nWe see a sustained trend reversal before this zone is reached as highly unlikely. \n\nPatience remains key. https://t.co/vmShF6bC8s"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Thetechwealth",
+   "url": "https://x.com/Thetechwealth/status/2094202619267096685",
+   "date": "2026-08-30",
+   "text": "JUST IN: TRUMP SAYS DATA CENTERS COULD BE MORE IMPORTANT THAN OIL\n\nBullish for $IREN, $NBIS $CRWV, $CIFR $WULF, and $APLD, etc. https://t.co/TfEIRZrCqr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "Billions777888",
+   "url": "https://x.com/Billions777888/status/2094096300497314003",
+   "date": "2026-08-30",
+   "text": "This is VERY Bullish for $IREN $CIFR $WULF $NBIS $APLD $CORZ - and it's from Elon! https://t.co/Kfs7b3uUla"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "Henry8cj",
+   "url": "https://x.com/Henry8cj/status/2094104141245428084",
+   "date": "2026-08-30",
+   "text": "$APLD \n\nWhile competitors in the AI data center sector are turning to mobile LNG mini-turbines and repurposed jet engine turbines to power facilities while waiting for grid connections, APLD has opted for steam-driven power solutions and direct grid hookups to meet its target https://t.co/wjeaPcyrjn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 831,
+   "user": "Agrippa_Inv",
+   "url": "https://x.com/Agrippa_Inv/status/2094126470054515085",
+   "date": "2026-08-30",
+   "text": "$IREN Q2 (FYQ4): My Biggest Takeaway\n\nOver the past couple of days, I’ve taken the time to rewatch the earnings call several times, go through the 10-K, and dissect every bit of new information we received.\n\nWas it a perfect earnings result / call? No.\n\nThere are several things"
+  }
+ ]
+}

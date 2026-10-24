@@ -1,0 +1,93 @@
+{
+ "symbol": "WULF",
+ "start": "2026-08-25T00:00:00Z",
+ "end": "2026-08-26T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "WULF (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 16,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2092328161082057081",
+   "date": "2026-08-25",
+   "text": "$MARA \n\n$MARA continues to develop nicely following the setup we highlighted several weeks ago, when a bullish engulfing pivot at descending channel support ultimately triggered a breakout above channel resistance. If you took that descending channel breakout, it turned into a https://t.co/m1nw5fWqgx https://t.co/Qz2HeXreq2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2092287947186024938",
+   "date": "2026-08-25",
+   "text": "$BTC: Bitcoin briefly moved above $80,000, its first move above that level since May. The recent rally has been helped by a weaker dollar and renewed concern about long-term currency debasement after the U.S. Treasury’s plans to increase long-dated bond buybacks. \n\nThe second https://t.co/nnIVrp3Uej"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2092292237115916604",
+   "date": "2026-08-25",
+   "text": "$WULF: 482 MW power approval is a major AI infrastructure catalyst\n\nTeraWulf ($WULF) received an important green light from Kentucky regulators for up to 482 MW of power at its Justified Data Campus in Hancock County.\n\nThis is significant because the site is being developed at https://t.co/W5IpZ3dc8g"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "PK_Fund",
+   "url": "https://x.com/PK_Fund/status/2092224803100913731",
+   "date": "2026-08-25",
+   "text": "$WULF $MAAS $CIFR $IREN $NBIS Are these ever gonna have green day again? Sick and tired of any upside being walked down. Takes months and announcements to go up and one hedge fund to drive it down in days."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 104,
+   "user": "PSInvestor",
+   "url": "https://x.com/PSInvestor/status/2092086731499884704",
+   "date": "2026-08-25",
+   "text": "Morgan Stanley just flagged the next catalyst for the PSP (Powered Shell) names.\n\nExisting contracts alone already mark:\n$WULF ≈ $18/share\n$CIFR ≈ $17.50/share\n\nYet both are still trading 15% below those levels ($15.50).\n\nMS expects a wave of new AI data-center leases by https://t.co/BKztg13dTB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Derek7579980408",
+   "url": "https://x.com/Derek7579980408/status/2092039926216876111",
+   "date": "2026-08-25",
+   "text": "$wulf $iren $cifr $hut $keel \nWhen's the overnight bull raid run on data center stocks?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "MikaelXeeland",
+   "url": "https://x.com/MikaelXeeland/status/2092249554808619173",
+   "date": "2026-08-25",
+   "text": "⚡️ UPDATE: Morgan Stanley: High likelihood $WULF signs Muskie by October.\n\nMorgan Stanley believes @TeraWulfInc is positioned to lock in a major contract at its Muskie Data Campus before the end of October. \nIn their base-case framework they apply a conservative ~$11.50 per https://t.co/5EHFpBvnCw https://t.co/0flohC5AR6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "MikaelXeeland",
+   "url": "https://x.com/MikaelXeeland/status/2092227239702393264",
+   "date": "2026-08-25",
+   "text": "⚡️ UPDATE: A smaller ERCOT queue can be more constructive than a larger one.\n\nMorgan Stanley pushed back on Friday’s concern that a stalled Texas 765 kV transmission project would invalidate data center interconnection studies. \n\nTheir read is the opposite: if that line does not https://t.co/XUwTg5hT5Q"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "StragglerLiu",
+   "url": "https://x.com/StragglerLiu/status/2092230877975847267",
+   "date": "2026-08-25",
+   "text": "AI Data Center \"Execution Risk\" Premium: A Hypothesis Being Systematically Disproved\n\nMorgan Stanley analyst Stephen Byrd has a straightforward thesis: AI data center construction is high-risk, so equity discount rates should be high.\n\nIt's a logical framework. The problem: the"
+  }
+ ]
+}

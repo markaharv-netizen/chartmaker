@@ -57,7 +57,7 @@ Tick **Annotations** on the row under the price controls. Markers are dashed lin
 - **Custom** — date, short label (24 characters), optional note. Stored on the Prices saved view as `ann` (same views store as everything else) and in this browser until another Prices view is loaded.
 
 ### Candles + volume (Prices)
-Type **Candles + volume**. One ticker only; the option is disabled while several symbols are in the box. `/api/chart` now also returns `bars`: `[time_ms, open, high, low, close, volume]` from the same Yahoo request as the closes (`points` is unchanged). Works for 1D/5D intraday and the daily/weekly/monthly ranges. Volume sits in a pane under the candles; green is close ≥ open, red is down, on both the candle and its volume bar. Download PNG is the same 1600×900 canvas, both panes. Other types are unchanged.
+Type **Candles + volume**. One ticker only; the option is disabled while several symbols are in the box. `/api/chart` returns `bars`: `[time_ms, open, high, low, close, volume]` beside the close-only `points`. Candle mode chooses the interval so bodies stay wide on the 1600px canvas: 1D is 15-minute regular-session bars (30-minute for 24h `-USD` pairs), 5D is one daily candle per trading session, and longer ranges step from daily to weekly to monthly when the finer bars would turn into hairlines. Body width scales with the free plot width, with a small gap, a floor, and a cap. Price line is unchanged (1D/5D stay 1-minute, including pre/after-hours). Candle mode does not draw extended-hours slivers or overnight gaps. Volume sits under the candles; green is close ≥ open. SMAs (daily closes; off for intraday bars), annotations, earnings markers, and Download PNG use the same 1600×900 canvas. The status line shows the interval actually drawn.
 
 ### Sheets library
 The **Sheets** tab, next to Charts of the day, reads `static/sheets/catalog.json`. Render never calls Google. Search by workbook, tab name, or chart title, then **Open in Sheets**.
@@ -78,6 +78,22 @@ Until that export is on the machine, seed only the tabs that overlap today's Cha
 `python3 scripts/sheets_thumbs.py --from-cotd`
 
 Workbooks: Bot experiments `1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY`, bot experiments 2 `1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ`, My Bot's Sheets `1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU`. All three dumps are required unless you pass `--allow-partial`. The weekly PNG folders are the same ones Charts of the day uses: `1SwZgYGwwHsoL_DXQUuQAYS6lhq5KxFe9`, `1mMUKaB_RbeZhtn5ntuKJV5xZOeo6LzGH`, `1AVfHRo2mJgBhbJoszHhe5vgOscfKhbzT`.
+
+## Price targets
+
+The **Price targets** tab reads `static/price_targets.json`. Render does not call Google. The table is Steve's DCF base value per share against the street consensus mean and the price, sorted by base upside (high to low). Columns match the summary email: Ticker, Steve's Base, PT Change, Consensus, Price, Base Upside, Street Upside, Rating, Why.
+
+Opening the tab loads quotes through the same `/api/chart` path as Prices and recomputes Price, both upsides, and the rating from the price on screen. Rating is BUY above +15% upside to base, SELL below -15%, otherwise HOLD. A ticker whose quote fails keeps the snapshot price; the subtitle names the date in use (Yahoo close, or the snapshot date). Download PNG is the table on a white canvas. Watermark is off unless the box is checked.
+
+`why` is not a sheet column. Edit it in the JSON. Regenerating the file keeps existing `why` lines, and the footer notes if they were edited.
+
+Refresh the snapshot where the sheet can be read:
+
+1. Export Sheet1 `A1:P11` from [DCF price target summary](https://docs.google.com/spreadsheets/d/10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0) as CSV. The link export is 401 unless the sheet is shared.
+2. `python3 scripts/price_targets.py --csv that.csv`
+3. Commit `static/price_targets.json`.
+
+`python3 scripts/price_targets.py` tries that export first. `python3 scripts/price_targets.py --seed` writes the Oct 21 email figures when the sheet cannot be read. The scenario row `SPCX – Elon case (scenario)` is skipped. `python3 scripts/price_targets.py --self-test` checks the parser.
 
 ## Sentiment tab
 
@@ -106,7 +122,7 @@ Ranked bull-vs-bear board (like the "analyst sentiment" boards on X). The app on
   points (`sigma_basis: "own"`). Both sides of that z-score come from the same X-only rules-labeled series, so hand-labeled
   board levels and rules-labeled history levels are never mixed. Today MSTR, TSLA and BTC use "own"; the other 15 board names are cross-sectional.
 - Bear headline is null (shows "No dominant bearish consensus…") when there are fewer than 2 bear items or the bear share is under 15%.
-- Rows are sorted by σ, descending. The ticker box filters the dataset; it can't add tickers that aren't in the json.
+- Rows are sorted by bull share, descending (both in `sentiment.json` and re-sorted by the frontend at render time). The ticker box filters the dataset; it can't add tickers that aren't in the json.
 - Crypto rows: give the input ticker `display`, `logoKey` (e.g. `"c:BTC"`, same crypto logo path as the heatmap) and `kind: "crypto"`;
   they pass through to `sentiment.json`. With more than 12 rows the board switches to a compact layout (no company-name line, short no-bear text) so 18+ rows fit the 1600×900 PNG.
 
@@ -114,7 +130,7 @@ Ranked bull-vs-bear board (like the "analyst sentiment" boards on X). The app on
 
 Sentiment tab → **View: Over time**. Weekly bull share (0–100%) per ticker with its 95% band shaded, a dashed 50% line,
 and an optional dashed price line on a right axis (weekly closes from the normal `/api/chart` path with its usual fallbacks:
-`$` for one ticker, % from start when several are picked). The picker lists only tickers that have history: weekly = **MSTR, TSLA, SPCX, SATA, STRC, BTC-USD**; daily (Points: Daily) = all 26 names. Hover shows window dates, bull %, band, bull/bear counts, posts and the close.
+`$` for one ticker, % from start when several are picked). The picker lists only tickers that have history: weekly = **MSTR, TSLA, SPCX, SATA, STRC, BTC-USD, META**; daily (Points: Daily) = all 26 names. Hover shows window dates, bull %, band, bull/bear counts, posts and the close.
 Hollow dots = thin week (< 8 bull+bear posts). Download PNG is 1600×900; view, picker and price toggle are saved per tab in views.
 Data: `sentiment_history.json` → `series` (served at `/api/sentiment_history`); the board's own daily snapshots sit under `daily`.
 
@@ -130,6 +146,7 @@ Data: `sentiment_history.json` → `series` (served at `/api/sentiment_history`)
 - Windows: 7 days ending Sunday 16:00 UTC (noon ET); a point is plotted at its window end date. Backfill: 26 weeks
   (windows ending 2026-04-19 … 2026-10-11) plus the Oct 11–18 week (MSTR/TSLA/BTC re-label the board snapshot's posts; SPCX/SATA/STRC used the 2 searches).
 - SPCX listed on Nasdaq on Jun 12 2026 (pre-IPO posts were mostly perps/tokens), so its history starts with the window ending Jun 14 (19 points).
+- META was added 2026-10-23: weekly backfill of the 27 windows ending 2026-04-19 … 2026-10-18 (54 X calls; plain query adds `(stock OR shares OR Zuckerberg)` because bare "meta" is a common word). Its rolling-7 points start with the next morning routine.
 - SATA is **Strive's** (ASST) variable-rate preferred, not Strategy's; STRC is Strategy's.
 
 Per-ticker queries (X strips `$`; times are `start_time`/`end_time` in UTC; `max_results` 25, `sort_order` relevancy,
@@ -142,15 +159,16 @@ Per-ticker queries (X strips `$`; times are `start_time`/`end_time` in UTC; `max
 | BTC-USD | `BTC Bitcoin -is:retweet -is:reply lang:en` | `Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
 | STRC | `STRC -is:retweet -is:reply lang:en` | `STRC (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
 | SATA | `SATA (Strive OR ASST OR preferred OR dividend) -is:retweet -is:reply lang:en` | `SATA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
+| META | `META (stock OR shares OR Zuckerberg) -is:retweet -is:reply lang:en` | `META (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
 | SPCX | `SPCX SpaceX -pump -memecoin -is:retweet -is:reply lang:en` | `SPCX (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -pump -memecoin -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
 
 (The very first SATA window, ending Apr 19, used `SATA Strategy -is:retweet -is:reply lang:en` for the plain query.)
 
 ### Daily refresh routine (7:30 AM ET) — exact steps
 
-Do both parts every morning. Budget ≈ 12 X calls for the history + ≈ 3 per board ticker; stay under 30 calls/minute.
+Do both parts every morning. Budget ≈ 14 X calls for the history + ≈ 3 per board ticker; stay under 30 calls/minute.
 
-**A. History points for the 6 history tickers** (MSTR, TSLA, SPCX, SATA, STRC, BTC-USD):
+**A. History points for the 7 history tickers** (MSTR, TSLA, SPCX, SATA, STRC, BTC-USD, META):
 1. Let `END` = now rounded down to the hour in UTC (e.g. `2026-10-19T11:00:00Z`) and `START` = `END` − 7 days.
 2. For each ticker run the 2 searches from the table above with `start_time=START`, `end_time=END`, saving each result to a file
    (connector `write_to_file`). No news.
@@ -169,9 +187,9 @@ For yesterday's UTC day `D` (00:00–24:00Z), per ticker run ONE `search_posts_a
 `<SYM> (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued[ OR mNAV for MSTR | OR par OR yield for STRC/SATA]) [-pump -memecoin for SPCX] -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en`
 (BTC-USD uses `Bitcoin`, ETH-USD uses `Ethereum`, MU uses `MU Micron`), `start_time=D`, `end_time=D+1`, max 25, relevancy, same fields as above; then
 `python3 tools/sentiment_history.py ingest-daily <SYM> <D> <file> --q "<query>"` and re-run `build`. ≈ 26 calls/day.
-**Backfill still open:** target start 2026-07-21 (`DAILY_START`); as of 2026-10-22 (backfill run 6) Sep 1 – Oct 21 are collected, so each ticker has
-43 gap days (Jul 21 – Aug 31, plus Oct 22 until the morning routine; RKLB also Oct 3, whose search returned 0 posts; `daily_gaps` in `sentiment_history.json`). Continue backwards with the same single search per
-ticker-day (≈ 1,092 calls, i.e. ~1–2 more nightly runs of the 1,000/day X budget, ≤ 30/min). Never interpolate gaps. Daily points are thin
+**Backfill still open:** target start 2026-07-21 (`DAILY_START`); as of 2026-10-23 (backfill run 7) Aug 9 – Oct 22 are collected, so each ticker has
+20 gap days (Jul 21 – Aug 8, plus the current day until the morning routine; RKLB also Oct 3 and SATA also Aug 9, whose searches returned 0 posts; `daily_gaps` in `sentiment_history.json`). Continue backwards with the same single search per
+ticker-day (≈ 494 calls, i.e. one more nightly run of the 1,000/day X budget, ≤ 30/min). Never interpolate gaps. Daily points are thin
 (1 search, often < 8 bull+bear posts → hollow dots); read them for turns, not levels.
 
 **C.** Commit `sentiment.json`, `sentiment_history.json`, `tools/sentiment_input/<date>.json` and `tools/sentiment_input/history/` together.

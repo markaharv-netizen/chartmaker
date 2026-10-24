@@ -1,0 +1,48 @@
+{
+ "symbol": "APLD",
+ "start": "2026-08-21T00:00:00Z",
+ "end": "2026-08-22T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2090860737380200803",
+   "date": "2026-08-21",
+   "text": "🌎 Macro tailwind: The U.S. government is increasingly supportive of domestic AI infrastructure. Trump has argued that data centers bring jobs, investment and tax revenue, while states are simultaneously introducing stricter rules around power consumption and development. So the https://t.co/fDuLkG1YS7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "SebFGAM",
+   "url": "https://x.com/SebFGAM/status/2090824768568070655",
+   "date": "2026-08-21",
+   "text": "LISTEN UP!\n\nIF YOU WANT TO OWN UNDERVALUED NEOCLOUD STOCKS, THESE ARE THE 5 BEST ONES:\n\n1. $IREN at $40\n2. $CIFR at $15\n3. $CRWV at $88\n4. $NBIS at $220\n5. $APLD at $27\n\nThese are the best neoclouds to own right now at the valuation they are trading at. \n\nI see these companies"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "EingeLtrade",
+   "url": "https://x.com/EingeLtrade/status/2090916967280415151",
+   "date": "2026-08-21",
+   "text": "We bullish $APLD  or we testing lower prices?\nThe shake is coming either way ⌛ https://t.co/ywVtbeH8RU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 90,
+   "user": "mkfilko",
+   "url": "https://x.com/mkfilko/status/2090825470384443435",
+   "date": "2026-08-21",
+   "text": "Let’s add $BRUN to this list (thanks for making it @HyperTechInvest)\n\nThe list, from cheapest to most expensive:\n\n&gt; $DGXX: $0.5M EV/MW\n&gt; $SLNH: $1.1M\n&gt; $BTDR: $1.5M\n&gt; $HIVE: $1.6M\n&gt; $MARA: $1.9M\n&gt; $CLSK: $2.1M\n&gt; $IREN: $2.9M\n&gt; $KEEL: $3.4M\n&gt; $RIOT: $3.6M\n&gt; $CORZ: $4.0M\n&gt; $WULF: https://t.co/tHaZO9LIIZ"
+  }
+ ]
+}

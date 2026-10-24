@@ -1,0 +1,237 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-08-13T00:00:00Z",
+ "end": "2026-08-14T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "TradeSignals_24",
+   "url": "https://x.com/TradeSignals_24/status/2087779828871360706",
+   "date": "2026-08-13",
+   "text": "🚨 $ETH BREAKDOWN — AS EXPECTED\n\nAs mentioned earlier, even though Ethereum was forming a bullish pattern, I highlighted the possibility of a downside breakdown.\n\nAnd that’s exactly what happened. 📉\n\nETH has now broken below the pattern, and selling pressure has started pushing https://t.co/8r60DaC3ba https://t.co/BG611gvahS"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "TheDogeLair",
+   "url": "https://x.com/TheDogeLair/status/2087882935420514515",
+   "date": "2026-08-13",
+   "text": "#Ethereum (USD) Technical Snapshot:\n\n💲 Price: $1885.91\n📈 RSI: 47.16 — Neutral\n📉 MACD: -0.561526 — Bearish\n💪 ADX: 14.27 — Weak / Ranging\n〽️ MA Votes: 2 Bull / 5 Bear\n\nPrice is below 5 of 7 moving averages. Bearish pressure dominant, avoid new longs. Not investment advice."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 9,
+   "user": "0xAI42exe",
+   "url": "https://x.com/0xAI42exe/status/2088048565125836876",
+   "date": "2026-08-13",
+   "text": "A PERSONAL FINANCE YOUTUBER SPENT EIGHT MINUTES ARGUING ETHEREUM IS STILL UNDERVALUED. THE FULL EPISODE HE CUT IT FROM IS ABOUT $37 TRILLION OF AMERICAN DEBT.\n\nThe video above is that segment from The Iced Coffee Hour with Andrei Jikh. The framing matters more than the https://t.co/AUXFljjNRg https://t.co/0tZMBmwQmr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ojj_joj",
+   "url": "https://x.com/ojj_joj/status/2087864600825827699",
+   "date": "2026-08-13",
+   "text": "📊 Market mood: Cautiously neutral\n\nBitcoin is hovering around the $63.5K area, with recent trading showing consolidation rather than a decisive breakout. BTC was roughly flat to slightly positive over 24 hours while the dollar and U.S. yields were moving higher. \n\n₿ Bitcoin"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 15,
+   "user": "Trade_withali",
+   "url": "https://x.com/Trade_withali/status/2087741407368733058",
+   "date": "2026-08-13",
+   "text": "XAUUSD H1 — Sell Setup\n\nSell Below: 4406\nStop Loss: 4430\nTP1: 4322\nTP2: 4295\nTP3: 4265\n\nPrice is showing weakness around 4406. If H1 breaks and holds below this level, downside momentum can continue toward 4322 → 4295 → 4265.\n\nBearish setup — wait for confirmation and use https://t.co/nBUg6RMnP1"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Marketstudioo",
+   "url": "https://x.com/Marketstudioo/status/2087720904554074573",
+   "date": "2026-08-13",
+   "text": "🚨 ETH/USD Range Breakout Setup 📈\n\nEthereum is showing a potential range breakout setup on the chart.\n\n🎯 Upside Target: 1,894\n🎯 Downside Target: 1,862\n📌 Range Zone: 1,873–1,883\n\nBreakout confirmation could decide the next move. Watch the levels closely! 👀\n\n#ETH #Ethereum https://t.co/nQOvwmSF1J"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "cryptodsignal",
+   "url": "https://x.com/cryptodsignal/status/2087833891625484697",
+   "date": "2026-08-13",
+   "text": "\"Bitcoin treasury company Metaplanet unveils BitBonds with $1.3 million private debt sale\"\n\nBitBonds are clever risk transfer: fiat lenders cap upside at 4.3% while Metaplanet keeps the BTC upside and socializes downside. $1.3M is a rounding error — this is a beta test for https://t.co/N87xDuXZEg"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 64,
+   "user": "CryptoTheBossX",
+   "url": "https://x.com/CryptoTheBossX/status/2087778888302662071",
+   "date": "2026-08-13",
+   "text": "🔷️ $AVAX is sitting at a critical long-term decision zone.\n\nThe weekly chart shows a prolonged bearish structure, with repeated lower highs followed by a sharp decline into the current support area. Price is now consolidating near this base, so the next reaction could be https://t.co/yHuHmQZLL9"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "MRALEX950",
+   "url": "https://x.com/MRALEX950/status/2087881143240515733",
+   "date": "2026-08-13",
+   "text": "🚨 $POOLS LOOKS INSANELY UNDERVALUED AROUND $600K MC 👀🔥\n\nConsidering Uniswap has confirmed, this valuation is definitely worth keeping on the radar.\n\nThe setup is getting interesting, liquidity is building, and the market may not be fully pricing in the potential yet. 📈\n\n💎 https://t.co/XQ7PlmJGDa https://t.co/NvBx7BKRbk"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "CryptoJobsLab",
+   "url": "https://x.com/CryptoJobsLab/status/2087838640713945476",
+   "date": "2026-08-13",
+   "text": "banana-for-scale-2:native  still at risk of another bearish break. H4 structure flashing bearish signals, tiny kumo forming. ⚠️\n\nSame target as yesterday: $0.007500 next stop possible. 📉\n\nOn the other side, ethereum:0x38e68a37e401f7271568cecaac63c6b1e19130b4$BANANA https://t.co/bVZ9TWtGGz https://t.co/IIAeMzlYHR"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "CryptoJobs3",
+   "url": "https://x.com/CryptoJobs3/status/2087837907830665498",
+   "date": "2026-08-13",
+   "text": "Another bearish break looks likely for banana-for-scale-2:native . ⚠️\n\nH4 view shows bearish risk, tiny kumo in play. As shared yesterday, $0.007500 could be the next stop. 📉\n\nMeanwhile ethereum:0x38e68a37e401f7271568cecaac63c6b1e19130b4  shows solid bull potential with a clean https://t.co/xu9jhtlBlQ https://t.co/pFxAorKKlL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "vadim_web3",
+   "url": "https://x.com/vadim_web3/status/2087855497005187280",
+   "date": "2026-08-13",
+   "text": "Another dead L1 is becoming an Ethereum L2.\n\nGnosis Chain is giving up its own validator set and moving settlement to Ethereum.\n\nI’m not even sure if this is bullish or bearish for the Ethereum L2 thesis anymore. https://t.co/pcSI6cpD7S"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "patten1962",
+   "url": "https://x.com/patten1962/status/2087879399144059379",
+   "date": "2026-08-13",
+   "text": "$BTBT\n#bitcoins\n#Ethereum \n#ETH\n#Crypto \nTrying to decipher the earnings. Would love to know who thinks the earnings report is bullish or bearish?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "crypto2424_com",
+   "url": "https://x.com/crypto2424_com/status/2087944518540607747",
+   "date": "2026-08-13",
+   "text": "Ethereum's scalping RSI shows a fresh bullish divergence while price stays below EMA50/200 and MACD is bearish. This looks like short-term momentum exhaustion with limited reversal confirmation from the H1 structure.\n\n#Ethereum #ETH #Crypto2424 https://t.co/gFCwr8AcZK"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 77,
+   "user": "SylvianGuibal",
+   "url": "https://x.com/SylvianGuibal/status/2087857036767752480",
+   "date": "2026-08-13",
+   "text": "🚀 Stellar, DTCC &amp; XLM: The Institutional Bet That Could Change Everything by 2027\n\nThe crypto market recently sent an unusual signal. While Bitcoin, Ethereum and much of the broader digital-asset market were under pressure, Stellar (XLM) delivered a powerful move to the upside. https://t.co/2uUN3DdumQ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "btcusa_news",
+   "url": "https://x.com/btcusa_news/status/2087805526629646817",
+   "date": "2026-08-13",
+   "text": "GSR’s Core3 model portfolio reveals a sharp 2026 bear case, with Solana projected to drop over 40% and heavy Ethereum allocation signaling downside risk. \nhttps://t.co/nxYo1TQfSU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 44,
+   "user": "bigironchris",
+   "url": "https://x.com/bigironchris/status/2087779628584956312",
+   "date": "2026-08-13",
+   "text": "I'm going to hit a 10x on crypto by 2028.\n\nStarted my end-of-bear-market DCA. I plan to buy gradually over the next 60 days. \n\nethereum:0xfe0c30065b384f05761f15d0cc899d4f9f9cc0eb got the biggest portion of my buys today. \n\nI think ETHFI can deliver a liquid 20x by 2028. \n\nI've https://t.co/3Z7LGDXvLB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "iamrahulinc",
+   "url": "https://x.com/iamrahulinc/status/2087914624595505238",
+   "date": "2026-08-13",
+   "text": "🚨𝗘𝗧𝗙 𝗙𝗟𝗢𝗪𝗦 𝗧𝗨𝗥𝗡 𝗕𝗨𝗟𝗟𝗜𝗦𝗛 𝗢𝗡 𝗘𝗧𝗛, 𝗕𝗘𝗔𝗥𝗜𝗦𝗛 𝗢𝗡 𝗕𝗧𝗖!\n\nBitcoin ETFs saw a net outflow of 1,132 BTC ($72.24 M) in the last day and 202 BTC ($12.89 M) over the past week.\n\nEthereum ETFs recorded a net inflow of 3,947 ETH ($7.47 M) in 24 hours and https://t.co/oLj7OcD7kD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 26,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2087905643944391110",
+   "date": "2026-08-13",
+   "text": "😳 A #crypto #Investor had $25.6M in #assets stolen\n\nThe attacker allegedly gained access to a #privateKey and drained two #wallets in just 15 minutes\n\nIn 2023 the same address lost $24M after signing a malicious #approval 🚬\n\n#CryptoMarket #MarketUpdate #Trading #Investing https://t.co/FoaTO0FEec"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Lareb_khan",
+   "url": "https://x.com/Lareb_khan/status/2087827603495543049",
+   "date": "2026-08-13",
+   "text": "ethereum:0x0d8775f648430679a709e98d2b0cb6250d2887ef multi-year downtrend…\n\nBias &amp; Scenarios:\n\n•  Bullish case (channel holds): Strong bounce from 0.055–0.058 targeting 0.10 → 0.15 → upper channel (~0.25+). Weekly close back above 0.07 would be the first sign of life.\n\n• https://t.co/sOXGMjZw4R"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "tenet_research",
+   "url": "https://x.com/tenet_research/status/2087893722973577481",
+   "date": "2026-08-13",
+   "text": "$SBET | Citizens Reiterates SharpLink Gaming at Market Outperform with $30 PT on Ethereum Treasury Value and Execution Upside\n\nCitizens stays bullish as treasury discount, productive ETH deployment, and execution strength drive long-term upside.\n\n@ripster47 | @TENETTRADEGROUP | https://t.co/2StzRC4shg"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 11,
+   "user": "gokhshteinclips",
+   "url": "https://x.com/gokhshteinclips/status/2088009950660284906",
+   "date": "2026-08-13",
+   "text": "Catch JULIE KENNIS live on THE BREAKDOWN with David Gokhshtein 🎙️\n\nIs the market still bearish, or is the next bull run right around the corner? From Bitcoin, memecoins, and new chains to institutional capital entering the space and Robinhood's potential impact on Ethereum, this https://t.co/BgvHjNDf6K"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 88,
+   "user": "CryptoTheBossX",
+   "url": "https://x.com/CryptoTheBossX/status/2087819298068636153",
+   "date": "2026-08-13",
+   "text": "🔷️ $KAS ’s long-term chart is still under pressure, and one structure stands out: an inverted cup-and-handle formation. The breakdown from the major black/grey support area reinforces the bearish structure rather than confirming a reversal.\n\nThe broader trend remains bearish, https://t.co/YvQsSZlWp5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "ANCrypto_",
+   "url": "https://x.com/ANCrypto_/status/2087909090555245026",
+   "date": "2026-08-13",
+   "text": "📰 NEWS COIN UPDATE EVERY HOUR @aave \n\n🔥 $AVAX jumps 4.5% as Aave V4 expands to Avalanche.\n\nAave just picked Avalanche for its first V4 expansion outside Ethereum 👇\n\n📊 KEY NUMBERS\n\n• $AVAX: $6.51\n• Move: +4.5%\n• Key support: $6.21\n• Resistance: $6.80\n\n⚡ WHY IT MATTERS https://t.co/r9YnGA0rp5 https://t.co/WwPVVxRREC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "HCFlowSniper",
+   "url": "https://x.com/HCFlowSniper/status/2087892664037621874",
+   "date": "2026-08-13",
+   "text": "📊 AM Crypto Pulse - August 13, 2026\n\n🪙 Market snapshot (levels)\nBitcoin (BTC): Support $63,000 → $62,000 | Resistance $64,000 → $65,500\nEthereum (ETH): Support $1,880 → $1,800 | Resistance $1,950 → $2,000\nXRP: Support $1.00 → $0.97 | Resistance $1.05 → $1.10\nSolana (SOL): https://t.co/xBQqL1SRAw"
+  }
+ ]
+}

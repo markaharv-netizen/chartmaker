@@ -1,0 +1,409 @@
+{
+ "symbol": "META",
+ "start": "2026-08-23T16:00:00Z",
+ "end": "2026-08-30T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "META (stock OR shares OR Zuckerberg) -is:retweet -is:reply lang:en",
+  "META (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "marketsday",
+   "url": "https://x.com/marketsday/status/2093558125945335835",
+   "date": "2026-08-29",
+   "text": "Nvidia ( $NVDA) CEO Jensen Huang saw his fortune jump nearly $15 billion after the chipmaker’s stock surged following another strong earnings report and bullish guidance.\n\nNvidia shares climbed 8.7% Thursday to $227.98, putting the stock close to its all-time high of $236.54. The https://t.co/PD6sIXFENS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 17,
+   "user": "Benzinga",
+   "url": "https://x.com/Benzinga/status/2093398960757248497",
+   "date": "2026-08-28",
+   "text": "Nvidia ($NVDA) CEO Jensen Huang saw his fortune jump nearly $15 billion after the chipmaker’s stock surged following another strong earnings report and bullish guidance.\n\nNvidia shares climbed 8.7% Thursday to $227.98, putting the stock close to its all-time high of $236.54. The https://t.co/3OiYBzXdOS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "onwrd_",
+   "url": "https://x.com/onwrd_/status/2093728384320717274",
+   "date": "2026-08-29",
+   "text": "The returns from founder led companies with dual-class structures are hard to argue with. Let me explain:\n\nCloudflare under Prince and Zatlyn: 20x since IPO, 54% annualized, revenue still growing 36% in year seven as a public company. Market cap over $100B. When the founders https://t.co/gkOrsBmJ3R"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 711,
+   "user": "StockMKTNewz",
+   "url": "https://x.com/StockMKTNewz/status/2093136842124149210",
+   "date": "2026-08-28",
+   "text": "Mark Zuckerberg will make $717.8 million this year from just dividends on his $META shares https://t.co/o8ANImYZAj https://t.co/j8myAlHCvx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "BlakeBurman",
+   "url": "https://x.com/BlakeBurman/status/2092737602994471175",
+   "date": "2026-08-26",
+   "text": "Meta will pay a $17B settlement to almost every state in the country including Hawaii where Mark Zuckerberg maintains a home. Governor Josh Green (D-HI) joins the show tonight and shares what he plans to say to the Meta CEO when they speak soon @GovJoshGreenMD #Meta #Facebook https://t.co/ae4AF7LoIb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AdamConlon15",
+   "url": "https://x.com/AdamConlon15/status/2093279004933382575",
+   "date": "2026-08-28",
+   "text": "12 billion because Meta for Business and all companies was #neversecure to begin with the encryption keys were handed to elites who funded Mark Zuckerberg from day one .\n\nI warned people about this inquiry months ago working for #redbirdsecurityservices of the court case in https://t.co/kSRBVwZ43Z"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AdamConlon15",
+   "url": "https://x.com/AdamConlon15/status/2093278807515873287",
+   "date": "2026-08-28",
+   "text": "12 billion because Meta for Business and all companies was #neversecure to begin with the encryption keys were handed to elites who funded Mark Zuckerberg from day one .\n\nI warned people about this inquiry months ago working for #redbirdsecurityservices of the court case in https://t.co/q3dwkHq96R"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "zeroshorts",
+   "url": "https://x.com/zeroshorts/status/2092777592030179814",
+   "date": "2026-08-27",
+   "text": "Is #AI the next #Metaverse? Zuckerberg bet that Metaverse was the next revolutionary technology. He even changed FB's name and stock symbol to $META! But it failed disastrously. https://t.co/p3CXAjXy3G"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "IncomeETFDaily",
+   "url": "https://x.com/IncomeETFDaily/status/2093121428606349782",
+   "date": "2026-08-27",
+   "text": "Mark Zuckerberg (BJJ Blue Belt) $META dividends\n\nAt the current quarterly rate, that is $717.8 million a year.\n\nShares beneficially owned: 341,823,978 (Form 4 as of July 31, 2026)\nQuarterly dividend: $0.525 per share on Class A and Class B\nAnnualized: $2.10 per share\n\nPer https://t.co/7TCNBDLSd6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "hwangu120243",
+   "url": "https://x.com/hwangu120243/status/2094042736089579559",
+   "date": "2026-08-30",
+   "text": "Aped this base stock meme\n\n$BBQ\n\n0xb200000000000000000000e520ed0abbc75c5101\n\nZuckerberg went viral for repeatedly saying “Sweet Baby Ray’s”in a BBQ video 😂\n\nThen the same sauce appeared during the 2021 Meta rebrand, turning it into an iconic meme.\n\nhttps://t.co/BEpOXIodIw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "IndrcStocks",
+   "url": "https://x.com/IndrcStocks/status/2093191074323841387",
+   "date": "2026-08-28",
+   "text": "$META results sucked so I'd expect the stock sucks for 3-6 months until Zuckerberg does something to make it not suck and we can all rehash the same arguments from 4 years ago while circlejerking how cool we are for not using Facebook anymore"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "drayinvests",
+   "url": "https://x.com/drayinvests/status/2093836778511778174",
+   "date": "2026-08-29",
+   "text": "When $META reaches all time highs again after the past year of constant pain \n\nYou’ll be hearing it nonstop from me\n\nThe court settlement is more bullish than you realize\n\nFrom the apparent $1.4 trillion worth being sued, it fell all the way down to $26 billion \n\nAs well now https://t.co/sSoPTPczv2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Longbranch1989",
+   "url": "https://x.com/Longbranch1989/status/2091738111008972982",
+   "date": "2026-08-24",
+   "text": "Summary of Mark Zuckerberg and Priscilla Chan’s Relationship\n\nThey met in 2003 at a Harvard fraternity party.\nZuckerberg and Chan stood in line for the bathroom.\nThis was before Facebook existed.\nIt was long before his massive wealth.\nChan supported him through Facebook’s https://t.co/JFuPeNPRgg"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 124,
+   "user": "drayinvests",
+   "url": "https://x.com/drayinvests/status/2093837146553475124",
+   "date": "2026-08-29",
+   "text": "When $META reaches all time highs again after the past year of constant pain \n\nYou’ll be hearing it nonstop from me\n\nThe court settlement is more bullish than you realize\n\nFrom the apparent $1.4 trillion worth being sued, it fell all the way down to $16 billion \n\nAs well now https://t.co/3Mf8XdmuXh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "CathiViveros",
+   "url": "https://x.com/CathiViveros/status/2092614224161714323",
+   "date": "2026-08-26",
+   "text": "so META loses, will pay billions to\nsatisfy the suit. but is any of the\n$$ going to  those who r supposed to have been affected,\nthe kids. but it won't. and since\nthe stock went up, Zuckerberg now has even more $$. what\nwill happen now?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "rooftopdrew",
+   "url": "https://x.com/rooftopdrew/status/2093978451787301294",
+   "date": "2026-08-30",
+   "text": "I've seen stuff in the leftist media comparing  the favorability of Dolly Parton vs Mark Zuckerberg.\n\nLiving in CA, I know about the  Zuckerberg San Francisco General Hospital and Trauma Center (which he gave $75 million to) and his pledge of  99% of his Facebook/Meta"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "posativnrg1120",
+   "url": "https://x.com/posativnrg1120/status/2092697528915673148",
+   "date": "2026-08-26",
+   "text": "META’s AI glasses are as creepy as Zuckerberg. Pedophile &amp; sexual deviants wet dream. He’s trying to add facial recognition. \n\nIf someone wanted to tank META stock &amp; stop these glasses, all they would need to do is start a rumor that ICE is going to have all their agents in plain"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "CarolynWRockey",
+   "url": "https://x.com/CarolynWRockey/status/2092622125571924049",
+   "date": "2026-08-26",
+   "text": "Meta agrees to historic $16.7B settlement over claims social media platforms harm children\nBy Thomas Barrabi\nPublished Aug. 26, 2026, 9:33 a.m. ET\n\nMark Zuckerberg’s Meta has agreed to pay up to $16.68 billion as part of a historic settlement with 29 state attorneys general who https://t.co/JXKFLpIlRz"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 15,
+   "user": "UsArmyspoof_",
+   "url": "https://x.com/UsArmyspoof_/status/2091598418020122853",
+   "date": "2026-08-23",
+   "text": "🚨 BREAKING; \n\n🚀 Elon Musk: Today, SpaceX officially registers Mars as an independent, private sovereignty. Starting next month, any satellite, telescope, or optical beam targeting Martian airspace without a \"Starlink-Mars Subscription\" will face immediate orbital laser jamming. https://t.co/NNaEMrUrqi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "QualCompounders",
+   "url": "https://x.com/QualCompounders/status/2092990528665383144",
+   "date": "2026-08-27",
+   "text": "The best time to buy is when sentiment is poor and the risks have already been priced in. In that scenario, the odds are in your favor. That’s exactly what I see with $SOFI and $META.\n\nThis strategy has worked for me many times in the past:\n\n🔹 $GOOGL — AI disruption fears around https://t.co/Xa5QHA9YGg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Damocles561",
+   "url": "https://x.com/Damocles561/status/2092900050510725324",
+   "date": "2026-08-27",
+   "text": "Meta stock is pumping because this ruling will allow the regulatory burden to widen considerably, further boxing out potential competitors from ever being able to enter the market due to prohibitive compliance costs and therefore further entrenching Zuckerberg's monopoly.\n\nThe https://t.co/dfee3RyutC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "PanicLEAPS",
+   "url": "https://x.com/PanicLEAPS/status/2092448626534666316",
+   "date": "2026-08-26",
+   "text": "$SNAP \n\nSometimes you just get lucky. But you cannot get lucky if you do not position yourself to potentially get lucky. \n\nBullish on $SNAP for it's massively underrated user base. Look at how $RDDT was useful in training AI models. \n\nThe data behind $SNAP is useful too. It has https://t.co/k69LBbmRrG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "faststocknewss",
+   "url": "https://x.com/faststocknewss/status/2092599770137436615",
+   "date": "2026-08-26",
+   "text": "META $META SETTLES FEDERAL SOCIAL MEDIA ADDICTION TRIAL WITH CALIFORNIA AG, OTHERS\n\nShares trade at $596.74 in the premarket, up $26.69 or 4.68% after closing at $570.05. 🟢\n\nMeta agreed to pay a maximum of $16.68B to the states, ending the case in its second week of trial in https://t.co/EDFmsj4iHa"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "KevinJagiah",
+   "url": "https://x.com/KevinJagiah/status/2091606330502942721",
+   "date": "2026-08-23",
+   "text": "👑 MONDAY'S KING NODES ARE READY\n\nAll 12 option chains are mapped for tomorrow:\n$SPY • $QQQ • $TSLA • $NVDA\n$AAPL • $AMD • $AMZN • $META\n$MSFT • $MU • $PLTR • $SPCX\n\nA few battles immediately stand out:\n🎯 $SPY 765–767\n🚗 $TSLA 360\n⚔️ $PLTR 180\n💾 $MU 950–970\n🖥️ $AMD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "spxsignals1",
+   "url": "https://x.com/spxsignals1/status/2092960032019345728",
+   "date": "2026-08-27",
+   "text": "📊 S&amp;P 500 — KEY LEVELS TO WATCH\n\n🎯 RESISTANCE\n⚪ Minor → 7,699.04\n🟡 Major → 7,740.68\n\n🛡️ SUPPORT\n⚪ Minor → 7,664.47\n🟡 Major → 7,630.13\n🟡 Major → 7,598.77\n\n🚨 MARK THESE LEVELS!\nPrice is sitting between key zones — the next breakout or breakdown could set the tone for https://t.co/yqxKtSN0aA"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 11,
+   "user": "Jesucrypto11",
+   "url": "https://x.com/Jesucrypto11/status/2092685732821578099",
+   "date": "2026-08-26",
+   "text": "People think being bullish means being blind and greedy, while being bearish means being realistic.\n\nWhy? Because we instinctively assume that nobody wants to be bearish.\n\nEveryone enters a market expecting—and hoping—the price will go up. So if someone is bearish, there must be https://t.co/BjAD3ll6Ii"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "LEAPSTrading",
+   "url": "https://x.com/LEAPSTrading/status/2094052385383735509",
+   "date": "2026-08-30",
+   "text": "Is $NVDA undervalued? Let’s look at price at 3Y Median P/E, PEG ratios set to 1.0 &amp; EPS &amp; FCF Valuations:\n\nP/E-Based Models\n  3Y Median P/E = $316 (+46%)\n  Trailing PEG = $805.74 (+270%)\n  Forward PEG = $335-$363 (+54%-67%) \n   \nEPS Valuation Model\n  Bear Case = $175 (-20%) https://t.co/S4MAiBWH3d"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ravagelaserbeak",
+   "url": "https://x.com/ravagelaserbeak/status/2093026849509282264",
+   "date": "2026-08-27",
+   "text": "The $NVDA Valuation Paradox: Why Nvidia Is Quantifiably The Cheapest Growth Engine On Earth\n\nNvidia ($NVDA) just delivered another blowout quarter: $96.2B in revenue (+106% YoY), $2.22 EPS, and 75% gross margins, while guiding Q3 revenue to $108B. \n\nYet the stock remains anchored https://t.co/BmB9XzZUy7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 270,
+   "user": "damskotrades",
+   "url": "https://x.com/damskotrades/status/2091674554863173751",
+   "date": "2026-08-23",
+   "text": "You probably feel overwhelmed\n\nEveryone is shilling something else.\n\nHere's how I handle it &amp; what sectors/tokens I like. \n\n1. Allocate your portfolio. \n\nKeep it simple\n\nA large part of my portfolio is and will be slowly deployed into Bitcoin and a few high-conviction tokens. https://t.co/geG3394LDm"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "OptionsPandaHQ",
+   "url": "https://x.com/OptionsPandaHQ/status/2092590232013316100",
+   "date": "2026-08-26",
+   "text": "$WMT is the top of our board this morning, and we refused to publish this exact card three times last week.\n\nEvery time it came up, the card pitched bearish flow building ahead of earnings. Walmart had already reported, on August 20. A catalyst in the past is not a catalyst, so https://t.co/ELaM0Jvvbk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "fundspec",
+   "url": "https://x.com/fundspec/status/2093010662855151804",
+   "date": "2026-08-27",
+   "text": "🚀 Our AI Trading model just locked in a 2.71% win for a BEARISH trade on $META!\nEntry: $586.75 at 10:10 AM EDT\nExit: $570.86 at 11:33 AM EDT\n\nStress test revenue, margin and WACC to see the real upside and downside.\nDownload FundSpec on the Apple App Store or Google Play."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TheMuggZone",
+   "url": "https://x.com/TheMuggZone/status/2093815316405252603",
+   "date": "2026-08-29",
+   "text": "$AVGO \nOne of my top ER watches for this week. Hit its bottom again this past week, could be a great rally forming if ER's &amp; guidance don't disappoint.\nBulls: $16B AI rev guided (3x YoY), $30B+ bookings backlog, six custom-chip customers incl. OpenAI/Meta; Street PTs $482–$530; https://t.co/BwqoN4Mhsb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2092849378125824340",
+   "date": "2026-08-27",
+   "text": "Macro Observatory Week 35 Thursday Briefing\n\nWednesday's telemetry confirms a pivotal structural development: the broad matrix reaches broad attrition as 35 Out of 48 tickers map to Macro Bleed.\n\nWhile surface commentary might see mixed closes and isolated single-stock bounces as"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2092849644686512193",
+   "date": "2026-08-27",
+   "text": "Macro Observatory Week 35 Thursday Briefing\n\nWednesday's telemetry confirms a pivotal structural development: the broad matrix reaches broad attrition as 35 Out of 48 tickers map to Macro Bleed.\n\nWhile surface commentary might see mixed closes and isolated single-stock bounces as"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 204,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2092072941890732201",
+   "date": "2026-08-25",
+   "text": "BTC closed Monday up 1.62%, tagging a fresh local high right at 80,000, but RSI only managed a lower high at 88, so we've got a confirmed bearish divergence layered on top of six straight days overbought. That doesn't mean Bitcoin has to drop today, but I'm watching the fast line https://t.co/nanwdbHJGl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "TheEdgeStock",
+   "url": "https://x.com/TheEdgeStock/status/2092612460415250825",
+   "date": "2026-08-26",
+   "text": "A wild session for $META:\n\nPre-Market &amp; Open: \nShares spiked nearly +4% to +5% pre-market into the $592 level on breaking news of a massive nationwide child safety/privacy settlement with state AGs (removing worst-case legal overhang) alongside bullish AI agent \"Hatch\" catalysts https://t.co/PBr2y4hdYa"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ROR_Traders",
+   "url": "https://x.com/ROR_Traders/status/2093330781049335855",
+   "date": "2026-08-28",
+   "text": "$NVDA got within a hair of 230 yesterday, then bled. Now the puts are stepping in.\n\nHere's the full board for 08/28 and how I am reading the shift 👇\n\n$NVDA: 230 still holds the most OI and it almost tagged it yesterday. But today it bled, and 220, 225, and 222.5P all built. The"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2093709759132074052",
+   "date": "2026-08-29",
+   "text": "Mag7 + NFLX EOD Levels | Friday, August 28, 2026\n\n$SPY 769.41 (−1.69, −0.22%)  \nH/L: 772.36 / 767.16  \nPrev close 771.10. Sideways week; bull gap stayed open. Still treating as wedge breakout — stopped right at 773.40 on the 65-min, resistance held.  \n\n$QQQ 716.43 (−4.68,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2093090065094508866",
+   "date": "2026-08-27",
+   "text": "Mag7 + NFLX Notes | Thu Aug 27, 2026\n\n$SPY\nBroke multi-day wedge consolidation since last Thursday to the upside, opening bull gap while filling bear gap. Key: capture 770, next break 773.40.\n\n$QQQ\nOpened bull gap, filled bear gap. Two bull gaps open, island bottom protected."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2092870661081378857",
+   "date": "2026-08-27",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 (tilting bullish) - 𝗦𝘁𝗿𝗼𝗻𝗴 𝗰𝗮𝗽𝗶𝘁𝗮𝗹 𝗶𝗻𝗳𝗹𝗼𝘄𝘀: U.S. spot crypto ETFs recorded ~ $476 M of net inflows on Aug 26, indicating robust investor appetite. - 𝗦𝗼𝗹𝗮𝗻𝗮 𝗵𝘆𝗽𝗲: Multiple traders are projecting new highs or a https://t.co/qoPVNqx7Aq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "disperxo_inv",
+   "url": "https://x.com/disperxo_inv/status/2093602172394983705",
+   "date": "2026-08-29",
+   "text": "Here’s a snapshot of the latest available data as of Friday, August 28, 2026 (U.S. market hours / late session). Prices move quickly—treat these as approximate late-day levels. Broader market backdrop: S&amp;P 500 around 7,731 (+0.7%), Nasdaq 100 around 29,642 (+1.4%).\n\n### Quick"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 23,
+   "user": "WeeklyWizdom",
+   "url": "https://x.com/WeeklyWizdom/status/2093357430197407776",
+   "date": "2026-08-28",
+   "text": "SpaceX may be one of the most interesting companies on the planet BUT at the current $1.84T valuation, does it already belong above Aramco, META and Samsung?\n\nWhat do you think? Overvalued or Undervalued... https://t.co/SmfCx1kB8T"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "AkinAdemGokhan",
+   "url": "https://x.com/AkinAdemGokhan/status/2092539908216807797",
+   "date": "2026-08-26",
+   "text": "The 10-day bias holds BULLISH at 1.00, but flow velocity at -0.50 is sliding from bull to bear.\n\nAcross the tape 87 of 115 names sit at LAST STOP — breadth is exhausted. TITAN still opened four CALLs, while the biggest directional bet is $TSLA PUT $267M. STATION confirmed 3 of 5. https://t.co/SfO7kCp8sz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2092719489464807831",
+   "date": "2026-08-26",
+   "text": "MAG7 + NFLX + Indexes EOD Levels | Wednesday, August 26th, 2026\n\n$SPY  \n~765.70 −0.02%  \nHeavy compression. 65-min EMAs curling and consolidating. Now under the 9 and 20 on the daily — retested the 9 today, no hold. Watch the 768.15–769.08 bear gap tomorrow; gap over it sets up"
+  }
+ ]
+}

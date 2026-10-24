@@ -1,0 +1,48 @@
+{
+ "symbol": "SATA",
+ "start": "2026-08-11T00:00:00Z",
+ "end": "2026-08-12T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "SATA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "AngryBuhda",
+   "url": "https://x.com/AngryBuhda/status/2087197652374995052",
+   "date": "2026-08-11",
+   "text": "Walking with Cory videos are the medicine we needed while we stroll through this Bear.\n\nConcise, articulate, well reasoned.\n\nCatch up on the rest if you missed the first few. 👍🏻\n\n$BTC $MSTR $ASST $STRC $SATA https://t.co/c9fABZTgfQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 163,
+   "user": "AdamBLiv",
+   "url": "https://x.com/AdamBLiv/status/2087220515685417094",
+   "date": "2026-08-11",
+   "text": "🔥 STRIVE IS BUILDING A LIQUIDITY FORTRESS IN A BITCOIN BEAR MARKET 🔥\n\nThrough August 7, Strive raised $824.7M of gross cash capital in 2026:\n\n• $349.2M through ASST common\n• $475.5M through SATA preferred\n\nCurrent annual SATA dividend run-rate: $101.8M.\n\nThey have already https://t.co/MbaY14t0YG"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 236,
+   "user": "AdamBLiv",
+   "url": "https://x.com/AdamBLiv/status/2087206654823522513",
+   "date": "2026-08-11",
+   "text": "ASST - THE AMPLIFIED BITCOIN TORQUE MACHINE\n\nI AM GIGA-BULLISH ON STRIVE.\n\nStrive’s ASST could turn a Bitcoin recovery into the financial equivalent of shotgunning four gas-station pre-workouts behind an abandoned Kmart.\n\nI break down how ASST’s debt-free Bitcoin treasury, SATA https://t.co/NnUoJv81rW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 265,
+   "user": "AdamBLiv",
+   "url": "https://x.com/AdamBLiv/status/2087281060652405105",
+   "date": "2026-08-11",
+   "text": "🚨 ASST TO $100?!? 🚨\n\nYes. One hundred American Federal Reserve fun coupons.\n\nHere’s the projection - and the hilarious part is that ASST doesn’t need Bitcoin to go to $1 million or Michael Saylor to descend from the heavens carrying stone tablets.\n\nStarting point:\n\nASST: $12.62 https://t.co/ONoQZRaIuq"
+  }
+ ]
+}

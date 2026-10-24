@@ -1,0 +1,48 @@
+{
+ "symbol": "APLD",
+ "start": "2026-08-25T00:00:00Z",
+ "end": "2026-08-26T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "TheStockerMan",
+   "url": "https://x.com/TheStockerMan/status/2092301220283138219",
+   "date": "2026-08-25",
+   "text": "I’ve been looking at a bunch of new stocks over the past month…\n\nInstead of making 14 separate posts, I decided to put them into 4 tiers based on how interesting I currently find the risk/reward, fundamentals, valuation and execution.\n\nIMPORTANT: This is NOT simply a ranking of"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "risenfit",
+   "url": "https://x.com/risenfit/status/2092254821235720459",
+   "date": "2026-08-25",
+   "text": "$APLD Relief bounce but structure hasn’t changed. \n\n🔸 WEEKLY\n\n🔴 Building an unresolved bearish flag pattern at trend line support\n\n🔴 Consolidation pause in a downward structure between $27 - $32 \n\n🟢 Remains inside the channel. https://t.co/a8lq6jzx4Q"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "ThetaTradesHQ",
+   "url": "https://x.com/ThetaTradesHQ/status/2092367181304504452",
+   "date": "2026-08-25",
+   "text": "$APLD \n\n BULLISH — put writing\n\nAPLD — biggest OI moves (confirmed):\nAug. 28, 2026 $24.50 puts  +3.5k — sold at bid, sellers (bullish)\nAug. 28, 2026 $24 puts  +1.8k — sold at bid, sellers (bullish)\nAug. 28, 2026 $25 puts  +1.4k — sold at bid, sellers (bullish)\n\nPin: Aug. 28, 2026"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "JaredLKnudson",
+   "url": "https://x.com/JaredLKnudson/status/2092357532786602033",
+   "date": "2026-08-25",
+   "text": "Based on my own personal research, these are the specific stocks you should be buying right now for 50-300% Upside, based on the recorded price, today around 12 pm MST.\n\n1 YR PROJECTED UPSIDE POTENTIAL (U.P.)\n\nRZLV 270% UP\nFRMI 245% UP\nYSS 168% UP\nFMCC 139% UP\nOKLO 120% UP\nRR"
+  }
+ ]
+}

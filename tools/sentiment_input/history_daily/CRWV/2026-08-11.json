@@ -1,0 +1,219 @@
+{
+ "symbol": "CRWV",
+ "start": "2026-08-11T00:00:00Z",
+ "end": "2026-08-12T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "CRWV (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "LunaTradesax",
+   "url": "https://x.com/LunaTradesax/status/2087267976223547757",
+   "date": "2026-08-11",
+   "text": "GEX price levels I’m watching into tonight:\n\n$SMCI\nBullish: $33.50/$34 → $35\nBearish: lose $30 → $28\n$30 put wall vs $35 call wall.\n$CRWV\nBullish: $95 → $100\nBearish: $85 → $80\n$100 is the big upside wall. $80 is the downside line.\n$LITE\nBullish: $850 → $860 → $870\nBearish:"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "BissiChrissi",
+   "url": "https://x.com/BissiChrissi/status/2087071842800464087",
+   "date": "2026-08-11",
+   "text": "Bullish $NCLD  -  $CRWV earnings today after market close, $NBIS earnings tomorrow after market close. IMO max downside for $CRWV about 23% with price back to 70ish $ and $NBIS about 25% with price back to 140ish $, which would be great entries. Upside on the other hand seems https://t.co/mp2rqJ6UIK"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "BissiChrissi",
+   "url": "https://x.com/BissiChrissi/status/2087077737177518464",
+   "date": "2026-08-11",
+   "text": "Bullish $NCLD  -  $CRWV earnings today after market close, $NBIS earnings tomorrow after market close. IMO max downside for $CRWV about 20% with price back to 70ish $ and $NBIS about 25% with price back to 140ish $, which would be great entries. Upside on the other hand seems https://t.co/mp2rqJ6UIK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "jiwanpark1014",
+   "url": "https://x.com/jiwanpark1014/status/2087276600144629979",
+   "date": "2026-08-11",
+   "text": "$NBIS \nCRWV → NBIS: The Neocloud Read-Through\n\nCoreWeave’s Q2 results reinforce the biggest AI infrastructure thesis:\n\nDemand isn’t the bottleneck anymore. Energized power + cluster deployment are.\n\n$CRWV delivered ~$2.6B Q2 revenue, ~$104B backlog and ~$1.5B adjusted EBITDA."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "pepe_maltese",
+   "url": "https://x.com/pepe_maltese/status/2087124795565437173",
+   "date": "2026-08-11",
+   "text": "I am focusing on the 25% residual value support, because I think that is where Amit's bull and bear cases meet.\n\nThe $500B is capital the institutions may mobilize after underwriting each deal. NVIDIAs real contribution is to improve the collateral: CUDA extends useful life, a https://t.co/ko87er8eVR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "NextPinApp",
+   "url": "https://x.com/NextPinApp/status/2087153032198844804",
+   "date": "2026-08-11",
+   "text": "ES and NQ Levels · Tuesday August 11 · CPI EVE\n\nDay two of the futures notes. Same book, same reads, your prices, and CPI tomorrow at 8:30 outranks everything on this page.\n\nES · offset to SPX +23. The offset drifts a point or two during the day, treat every level as a zone of a"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "ZeekTyt",
+   "url": "https://x.com/ZeekTyt/status/2087292721274724724",
+   "date": "2026-08-11",
+   "text": "No one is bullish enough, demand has become very clear and yet people are bearish on Neos, $CRWV with some crazy numbers ! https://t.co/b1xlQlRxZF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "BrandlyMo",
+   "url": "https://x.com/BrandlyMo/status/2087191580520120827",
+   "date": "2026-08-11",
+   "text": "💎Earnings Afterhours- $CRWV (CoreWeave) $SMCI (Super Micro Computer)  $FLY (Firefly Aerospace) $HYLN (Hyliion Holdings) $VELO (Velo3D) Bullish or Bearish on these Stocks?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "MorningMadness4",
+   "url": "https://x.com/MorningMadness4/status/2087178385642434932",
+   "date": "2026-08-11",
+   "text": "💎Earnings Afterhours- $CRWV (CoreWeave) $SMCI (Super Micro Computer)  $FLY (Firefly Aerospace) $HYLN (Hyliion Holdings) $VELO (Velo3D) Bullish or Bearish on these Stocks?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "time24trader",
+   "url": "https://x.com/time24trader/status/2087227177041379796",
+   "date": "2026-08-11",
+   "text": "$CRWV reports earnings after the close today.\n\nFor me, this quarter is about much more than whether CoreWeave beats revenue estimates.\n\nThe key question is:\n\nIs massive AI demand continuing to translate into stronger backlog, capacity growth and eventually sustainable cash flow?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "DAOJING_",
+   "url": "https://x.com/DAOJING_/status/2087185957842002357",
+   "date": "2026-08-11",
+   "text": "Tuesday market map 🚨\n\n$RIOT +17% on a ~$9B Anthropic AI-compute deal. $ONON -17% after weak sales + cut guidance. $INTC pressured by a $20B share sale. Tonight: $SMCI $CRWV $LITE earnings. CPI Wednesday = major macro risk. Bullish on breakouts; bearish on failed pops."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Source_options",
+   "url": "https://x.com/Source_options/status/2087217235798769782",
+   "date": "2026-08-11",
+   "text": "By the end of tomorrow, everything could change.\n\nEveryone is waiting for CPI, and I’m no different.\nNot because I’m bullish or bearish.\nI’m waiting for one thing: a clean price move I can trust.\n\nWhen it comes, I’ll strike hard.\n\n$SPX With the market in wait-and-see mode, this"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 23,
+   "user": "NextPinApp",
+   "url": "https://x.com/NextPinApp/status/2087148675956973954",
+   "date": "2026-08-11",
+   "text": "SPX Tuesday August 11 · CPI EVE\n\n📌 Today's full map draws on your TradingView chart with alerts armed, free NextPin Pinboard indicator, today's string at the bottom of this post. ES levels ride next to the SPX ones, offset +23.\n\nYesterday's grade first. After two days of the https://t.co/t11WcXRDDT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "wisehw25",
+   "url": "https://x.com/wisehw25/status/2086974699461034193",
+   "date": "2026-08-11",
+   "text": "A TON OF THINGS HAPPENED IN THE STOCK MARKET TODAY.\n\nHere's what actually mattered:\n\nTOP 10 DEVELOPMENTS\n\n1. OIL SURGED ~5% AND HIT RISK ASSETS\n\nBrent +4.99% to 87.72.\n\nWTI +5.05% to 82.13.\n\nIran reiterated that Hormuz will reopen only if the US meets additional demands, reducing"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 41,
+   "user": "funmenati",
+   "url": "https://x.com/funmenati/status/2087306073279471867",
+   "date": "2026-08-11",
+   "text": "$NBIS $IREN $CRWV\n\nBEARS FOLLOWING ME, PLEASE GATHER\n\nNo, seriously now, I need some of my bearish followers to provide me with your updated bear thesis following $CRWV’s call\n\nAnd I am not trying to make fun of you right now. Serious request because I want to hear what can go"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "funmenati",
+   "url": "https://x.com/funmenati/status/2087305869771911169",
+   "date": "2026-08-11",
+   "text": "$NBIS $IREN $CRWV\n\nBEARS FOLLOWING ME, PLEASE GATHER\n\nNo, seriously now, I need some of my bearish followers to provide me your updated bear thesis following $CRWV’s call\n\nAnd I am not trying to make fun of you right now. Serious request because I want to hear what can go wrong"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "WallStJesus",
+   "url": "https://x.com/WallStJesus/status/2087118731797221457",
+   "date": "2026-08-11",
+   "text": "🗣 $CRWV  BULL/BEAR ANALYST COMMENTARY https://t.co/OUyk7ee9EE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "XisionVision",
+   "url": "https://x.com/XisionVision/status/2087012512801923279",
+   "date": "2026-08-11",
+   "text": "CRWV — CoreWeave Earnings Breakdown\n\nCoreWeave (CRWV) reports Q2 2026 earnings on Tuesday, August 11, after market close, with its conference call scheduled for 5:00 PM ET. CoreWeave is an AI-focused cloud infrastructure provider supplying large-scale GPU compute to AI labs,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "WallStJesus",
+   "url": "https://x.com/WallStJesus/status/2087119233125662988",
+   "date": "2026-08-11",
+   "text": "🗣 $CRWV  BULL/BEAR ANALYST COMMENTARY https://t.co/OaCFPwdXXJ https://t.co/OUyk7ee9EE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ETFsinfo",
+   "url": "https://x.com/ETFsinfo/status/2087013327218061394",
+   "date": "2026-08-11",
+   "text": "Direxion Shares ETF Trust files with the SEC-Direxion Daily ANET Bull 2X ETF, Direxion Daily ANET Bear 2X ETF, Direxion Daily CRWV Bull 2X ETF &amp; ...  https://t.co/SLEHBWck7L"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 21,
+   "user": "icooperTrades",
+   "url": "https://x.com/icooperTrades/status/2087201812696739929",
+   "date": "2026-08-11",
+   "text": "#corweave has #earnings after the closing bell today. It's currently trading at $89 and it is a bullish looking chart. So my bias is for the upside but earnings can change everything so I wouldn't trade before that comes out.\nThere is some support and resistance at $85.60 and $94 https://t.co/omMFdaUtav"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Lily_whispers",
+   "url": "https://x.com/Lily_whispers/status/2087284732199415902",
+   "date": "2026-08-11",
+   "text": "U.S. Market Close Update — Tuesday, Aug. 11\n\nThe important new information is the closing structure and CoreWeave’s earnings. The day finished as a tech-led rotation, not broad capitulation.\n\nConfirmed facts\n\n1. Tech weakness persisted into the close, while small caps held up. —"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "TeamTapeX",
+   "url": "https://x.com/TeamTapeX/status/2087164174031864082",
+   "date": "2026-08-11",
+   "text": "GM Team! It is quite difficult to be bearish in this market with $SPY above all moving averages and just dollars away from ATH, but we have multiple namesw that are pulling up into flattening 50day sma or 21day ema and rejecting . I will give a few examples $BE, $IREN, $NBIS,"
+  }
+ ]
+}

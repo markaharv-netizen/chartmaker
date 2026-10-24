@@ -1,0 +1,39 @@
+{
+ "symbol": "SATA",
+ "start": "2026-08-10T00:00:00Z",
+ "end": "2026-08-11T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "SATA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 33,
+   "user": "GrafYves",
+   "url": "https://x.com/GrafYves/status/2086899083965317167",
+   "date": "2026-08-10",
+   "text": "The Bitcoin treasury model is entering a much more interesting phase, despite being in a Bitcoin bear market.\n\nStrategy $MSTR is no longer just issuing capital to buy more Bitcoin.\n\nIt is now actively managing the balance sheet:\n→ Selling Bitcoin to support $STRC\n→ Building a https://t.co/Y5w5UYzK0Q"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2086772850224967900",
+   "date": "2026-08-10",
+   "text": "🚨 $ASST  / SATA (Strive) Q2 2026 Earnings  \nBitcoin accumulation continues…  \nbut large unrealized losses dominate the P&amp;L 👀  \n\n📊 KEY METRICS (Q2 2026)  \n🔹 Revenue: $2.9M (up from $1.5M YoY) 🟢  \n🔹 GAAP Net Loss: $257.6M  \n🔹 Non-GAAP Adjusted Net Loss: $275.0M ($3.65 per"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 41,
+   "user": "matthewkerridge",
+   "url": "https://x.com/matthewkerridge/status/2086919080947114150",
+   "date": "2026-08-10",
+   "text": "In the middle of the Summer doldrums with so many Bitcoin headwinds it’s often hard to remember each and every one the well run Bitcoin Treausry Comoanies are cooking.\n\nThe H100 merger completed. Strive announced their Q2 results and new analytics website, an area Andrew and https://t.co/wa4z9KQvP0 https://t.co/nDzFnUnOce"
+  }
+ ]
+}

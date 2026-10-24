@@ -1,0 +1,138 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-08-27T00:00:00Z",
+ "end": "2026-08-28T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2093092994941645107",
+   "date": "2026-08-27",
+   "text": "📊【XWIN CAPITAL INDEX｜August 28, 2026】\nOverall Score: 82 / 100\n・80–100 = Strong Bullish Environment\n ・60–79 = Bullish Bias\n ・40–59 = Neutral / No Clear Direction\n ・20–39 = Bearish Bias\n ・0–19 = Strong Bearish Environment\n7-Day Moving Average: 83.43 ↓\n14-Day Moving https://t.co/TEctEMA1tQ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "SylvianGuibal",
+   "url": "https://x.com/SylvianGuibal/status/2092872235786588336",
+   "date": "2026-08-27",
+   "text": "🚀 Hyperliquid (HYPE), Ethereum (ETH), Chainlink (LINK) &amp; Stellar (XLM): What’s Next for the Bullish Crypto Market?\n\nThe cryptocurrency market appears to be entering a new phase. After a spectacular acceleration in prices, momentum has started to stabilize, creating a direct https://t.co/u8ilI4H5wK"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "degen_an",
+   "url": "https://x.com/degen_an/status/2092796447720661454",
+   "date": "2026-08-27",
+   "text": "SIGNALS (you might be missing)\n\nhttps://t.co/LMDewr56nA\n\nThought I'd talk about the hidden bearish divergence people might be talking about regarding Bitcoin, or the lower high and the \"dead-cat bounce\" but also thought it'd be good to talk about the lack of bearish divergence"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Crypto_Invest",
+   "url": "https://x.com/Crypto_Invest/status/2092872744975106375",
+   "date": "2026-08-27",
+   "text": "Ξ ETH / USD + BTC\n\n📈 Both old tests worked. $ETH closed above $1,950 and $2,029 eight times. ETH/BTC finished the last completed week at 0.03169, above its weekly 50/100SMA cluster. The breakout is no longer the question\n\n⚠️ Continuation is. ETH/USD daily RSI is 77 after a https://t.co/56zz1oeCvt"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Marketstudioo",
+   "url": "https://x.com/Marketstudioo/status/2092794688462094547",
+   "date": "2026-08-27",
+   "text": "📊 ETH/USD — Range Breakout Setup\n\nEthereum is trading around $2,499 after breaking out of the marked range.\n\n🎯 Upside Target: $2,534\n🛡️ Downside Target: $2,463\n📌 Key Zone: $2,490–$2,510\n\nWatching for confirmation above the range before the next move. 🚀\n\n#Ethereum #ETH #ETHUSD https://t.co/4vNNg3Vy2v"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AsadRaghib",
+   "url": "https://x.com/AsadRaghib/status/2092983466661208262",
+   "date": "2026-08-27",
+   "text": "Took 10 entries in the Blokyz @OriginalBlokyz public raffle 🎟️\n\nRaffle went 388% oversubscribed in hours 29,000+ entries fighting for 7500 spots\n\n10,000 designer collectibles on Ethereum presale already airdropped and unallotted entries are fully refunded Downside = basically https://t.co/ERo0oGkPCU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "GameReqOfficial",
+   "url": "https://x.com/GameReqOfficial/status/2092829742647136432",
+   "date": "2026-08-27",
+   "text": "₿ ETH CHECK\n\nEthereum has been moving.\n\n$ETH: ~$2,462\n\n📈 7D: +28%+\n\nAfter a move like that, the question is:\n\nIs this the beginning of another leg up...\n\nor are we due for a correction? 👀\n\nBullish 🐂 or bearish 🐻?\n\n#Ethereum #ETH #Crypto #Gaming"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "zhaozhao7799",
+   "url": "https://x.com/zhaozhao7799/status/2092832510262784308",
+   "date": "2026-08-27",
+   "text": "$GLD  ethereum:0x68749665ff8d2d112fa859aa293f07a622782f38 \n\nBias: Neutral-to-bullish\nBullish above: $4,573\nBearish below: $4,573\nWhat I’m watching next: Gold found support at $4,583, above the $4,573 monitor level. Holding it keeps $4,737 in play. https://t.co/Hk39Whvhtb https://t.co/o4FK6eT7cl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "sebos77",
+   "url": "https://x.com/sebos77/status/2092850075785400366",
+   "date": "2026-08-27",
+   "text": "2026-08-27: Altseason indicator = Trend indicator (0-bearish to 100-bullish) = 49.4/100 #bitcoin #ethereum #altcoins #krakenfx https://t.co/G7To5ztQFp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "acethebulllly",
+   "url": "https://x.com/acethebulllly/status/2093024987196047705",
+   "date": "2026-08-27",
+   "text": "ethereum:0x514910771af9ca656af840dff83e8264ecf986ca maintains a constructive intraday structure as buyers continue absorbing supply while price holds $11.92. Heavy overhead liquidity sits at $11.95 with 9.6989K asks, $12.00 with 8.7352K, and $12.05 with 15.8841K, creating a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "acethebulllly",
+   "url": "https://x.com/acethebulllly/status/2093025863201620012",
+   "date": "2026-08-27",
+   "text": "ethereum:0x514910771af9ca656af840dff83e8264ecf986ca maintains a constructive intraday structure as buyers continue absorbing supply while price holds $11.92. Heavy overhead liquidity sits at $11.95 with 9.6989K asks, $12.00 with 8.7352K, and $12.05 with 15.8841K, creating a https://t.co/Lz9faR72e3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "wwwxpcom",
+   "url": "https://x.com/wwwxpcom/status/2092895392920953252",
+   "date": "2026-08-27",
+   "text": "🔲 XP MARKET WATCH📊Aug 27 | Top Gainers &amp; Losers\n\n:: Gainers \n➡️ solana:So11111111111111111111111111111111111111112 led today's upside at +4.14%, followed by ethereum:0x1f9840a85d5af5bf1d1762f925bdaddc4201f984 at +1.87% and ethereum:native at +1.14%. https://t.co/7JW2QYS8aH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "paulwealthcap",
+   "url": "https://x.com/paulwealthcap/status/2092932667838771276",
+   "date": "2026-08-27",
+   "text": "Bitcoin and Ethereum are laddering higher step-by-step, no matter what.\n\nRight now, we are witnessing the crypto market form higher highs and higher lows. The uptrend in BTC remains intact, aiming toward $83,000. Although momentum has slowed after such a strong run, this https://t.co/iH1h8ZcFQ0 https://t.co/evGs4MI7hI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 132,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2092808116308189552",
+   "date": "2026-08-27",
+   "text": "Bitcoin closed green today at 0.62%, but I'm watching price stall right below 79,000 with resistance capped near 82K, just above TBO resistance at 81,788. RSI has been confirmed overbought for eight straight days now, which is due for a pullback, even though on-balance volume https://t.co/VJLo7QmYGz"
+  }
+ ]
+}

@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-08-30T00:00:00Z",
+ "end": "2026-08-31T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "Versatile_IND",
+   "url": "https://x.com/Versatile_IND/status/2094005801535123813",
+   "date": "2026-08-30",
+   "text": "$BTC : The Next 24H Setup 📊\n\n#Bitcoin is currently sitting at a critical decision zone around $78K.\n\n🔴 Bearish case — 45%\n$78K → $77K breakdown → $76K → $75–75.5K\n\n🟡 Range — 30%\n$77K–$80K consolidation before the next major move.\n\n🟢 Bullish case — 25%\n$80K reclaim &amp; hold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "unlovabledivine",
+   "url": "https://x.com/unlovabledivine/status/2094178758504948053",
+   "date": "2026-08-30",
+   "text": "🧵 BTC UPDATE \nThe next move could be bigger than it looks.\n\nBitcoin just went through a powerful rebound, pushing above $80K before facing rejection.\n\nNow the question isn't “bull or bear?”\n\nIt's:\n\n👉 Is this consolidation before the next leg up?\n\nHere's my read 👇\n\n1/ 📊 MARKET https://t.co/mtR7dtJX5r"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 214,
+   "user": "blackwidowbtc",
+   "url": "https://x.com/blackwidowbtc/status/2094178959428829275",
+   "date": "2026-08-30",
+   "text": "#Bitcoin history REPORT 📰\n\nEvery single bear market has a triangle 📐 in it at the hotzone \n\nAs you all know by now, our hot zone for this bear is 60K\n\nFalling below it would be the ''bearish'' case\n\nMaking a new high to the 90K area from here would be the ''active bullish'' https://t.co/8kTNBdZrb6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2093957852326924320",
+   "date": "2026-08-30",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟯 / 𝟱 (neutral‐to‐slightly bullish) - 𝗚𝗼𝘃𝗲𝗿𝗻𝗮𝗻𝗰𝗲 𝗻𝗲𝘄𝘀 (𝗦𝗼𝗹𝗮𝗻𝗮) – Validators just passed a proposal to accelerate the decline of SOL inflation, but it cleared by a very thin margin and won’t take effect for another ~4.5 months. https://t.co/ykWS9clglJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "GoldXpertise",
+   "url": "https://x.com/GoldXpertise/status/2093957470737838117",
+   "date": "2026-08-30",
+   "text": "₿ BTC/USD — WEEKLY ANALYSIS | Aug 31–Sep 4\nBitcoin is entering the new week at a critical decision point. After pushing toward 81,455, BTC faced rejection and pulled back sharply into the 76,920–78,234 range shown on the chart.\n\nI’m not interested in chasing the move in either https://t.co/kC6BzI4Eni"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 8,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2094093473573990430",
+   "date": "2026-08-30",
+   "text": "$BTC\n\nSo, despite the possibility of a prolonged bearish phase in the current cycle, I believe Bitcoin could still reach a new ATH after the next halving, potentially in early 2028, as we’ve seen in previous cycles.\n\nAlternatively, Bitcoin could once again break its previous ATH https://t.co/QKrqaBAK4X https://t.co/XXDp1ZacLq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 97,
+   "user": "ChainHubCT",
+   "url": "https://x.com/ChainHubCT/status/2094201212866293933",
+   "date": "2026-08-30",
+   "text": "Bitcoin (Update)\n\nI attached NAS with this update because NAS has more data than BTC.\n\n1) When it comes to BTC and people talking about guarantees in a market that is so manipulative and hard psychologically, this is a sign that people suffer from the illusion of control. They https://t.co/PyBzOuKJ8R"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "TommyTypey",
+   "url": "https://x.com/TommyTypey/status/2094160337088192645",
+   "date": "2026-08-30",
+   "text": "My mom asked me whether to buy $BTC. so I asked my Gemini Investment Agent to summarize 1, 2 and 3 year Bitcoin bull and bear case price targets. Here’s what it said. Wdyt of the targets? Too bullish or too bearish? \n\n[From Gemini]\nHere is a breakdown with 12-month, 24-month, and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AnJew369",
+   "url": "https://x.com/AnJew369/status/2094192870056198653",
+   "date": "2026-08-30",
+   "text": "the U.S. Dollar Index, DXY, is in a structural decline that is likely to continue. I also think we may now be approaching a much more significant leg lower, and that has major implications for Bitcoin. If that view is right, the next five to seven years could be a materially more https://t.co/UU2XbwMxFf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "AnJew369",
+   "url": "https://x.com/AnJew369/status/2094193908054106500",
+   "date": "2026-08-30",
+   "text": "the U.S. Dollar Index, DXY, is in a structural decline that is likely to continue. I also think we may now be approaching a much more significant leg lower, and that has major implications for Bitcoin. If that view is right, the next five to seven years could be a materially more https://t.co/U1QkUwBmOc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "satinvictus",
+   "url": "https://x.com/satinvictus/status/2094141385783841274",
+   "date": "2026-08-30",
+   "text": "bitcoin:native : Normally I dont waste my time worrying whenever a local top occurs 1000 points higher or lower, as when trading time there is really no need to worry about price: you always get the right level. And until September 22, it doesn't really matter. But since there is https://t.co/sJCpGqqpW0"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 303,
+   "user": "virtualbacon",
+   "url": "https://x.com/virtualbacon/status/2094086582232080466",
+   "date": "2026-08-30",
+   "text": "Four days ago I told a live audience that right now is the worst time to be buying Bitcoin, and I got the comments I expected. So let me lay the whole thing out properly, because the one line version makes me sound bearish and I am not.\n\nStart with where price actually is. The"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "satinvictus",
+   "url": "https://x.com/satinvictus/status/2094141808318239094",
+   "date": "2026-08-30",
+   "text": ": Normally I dont waste my time worrying whenever a local top occurs 1000 points higher or lower, as when trading time there is really no need to worry about price: you always get the right level. And until September 22, it doesn't really matter. But since there is a lot of https://t.co/sJCpGqqXLy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "satinvictus",
+   "url": "https://x.com/satinvictus/status/2094141344281166245",
+   "date": "2026-08-30",
+   "text": ": Normally I dont waste my time worrying whenever a local top occurs 1000 points higher or lower, as when trading time there is really no need to worry about price: you always get the right level. And until September 22, it doesn't really matter. But since there is a lot of https://t.co/sJCpGqqpW0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "satinvictus",
+   "url": "https://x.com/satinvictus/status/2094141164895228074",
+   "date": "2026-08-30",
+   "text": "bitcoin:native: Normally I dont waste my time worrying whenever a local top occurs 1000 points higher or lower, as when trading time there is really no need to worry about price: you always get the right level. And until September 22, it doesn't really matter. But since there is https://t.co/sJCpGqqXLy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 25,
+   "user": "satinvictus",
+   "url": "https://x.com/satinvictus/status/2094141857085161515",
+   "date": "2026-08-30",
+   "text": "bitcoin:native : Normally I dont waste my time worrying whenever a local top occurs 1000 points higher or lower, as when trading time there is really no need to worry about price: you always get the right level. And until September 22, it doesn't really matter. But since there is https://t.co/sJCpGqqpW0"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 306,
+   "user": "CryptoPatel",
+   "url": "https://x.com/CryptoPatel/status/2093934237334315323",
+   "date": "2026-08-30",
+   "text": "bitcoin:native HTF UPDATE | THE REJECTION WE WAITED FOR HAS PRINTED 🔻\n\nBitcoin has now reacted exactly from the $81K–$83K HTF resistance zone we identified earlier.\nThe Daily candle closed decisively bearish, showing a strong rejection from this supply area and confirming that https://t.co/BNhTinsMnJ https://t.co/BMxEeNwfZH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 64,
+   "user": "EylemCulculoglu",
+   "url": "https://x.com/EylemCulculoglu/status/2094105282074816886",
+   "date": "2026-08-30",
+   "text": "bitcoin:native MARKET OVERVIEW\n4H total liquidation — Up: $429.55M, Down: $344.60M, Total: $774.15M.\nBTCUSDT shows an upside liquidity pull. Nearest upside $79847.88, downside reference $78279.25. Squeeze risk: LOW.\n\nKEY LEVELS\n- Upside: $79847.88\n- Downside: $78279.25\n- Magnet:"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2094049496086741097",
+   "date": "2026-08-30",
+   "text": "Rekt Capital — Bitcoin — Daily\n\nRekt Capital has flagged a hidden bearish divergence near $80,000. His point is that BTC has produced a lower price high while RSI has produced a higher high, which is a warning that the rebound is losing structural quality despite strong momentum."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "moneyqubit",
+   "url": "https://x.com/moneyqubit/status/2094068071539564767",
+   "date": "2026-08-30",
+   "text": "$BLOX fell roughly 7% Friday while $BTC declined only 2.5%.\n\nWhy the difference?\n\nBecause BLOX is not a spot Bitcoin ETF.\n\nIts major holdings included:\n\n$IREN: -12.6%\n$CIFR: -9.5%\n$RIOT: -9.1%\n$HUT: -8.7%\n$NVDA: -4.6%\n$TSM: -2.3%\n\nBLOX also traded ex its $0.0979 weekly https://t.co/lr3JKXpmQr"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "onehellofarun2",
+   "url": "https://x.com/onehellofarun2/status/2094183804353048643",
+   "date": "2026-08-30",
+   "text": "There are many ways to analyze a bullish or bearish macro trend.\n\nMoving averages on weekly timeframes are one of them. \nHistorically, when bitcoin closes weekly candles above the MA ribbon, after a long bearish trend, the bear market is over. https://t.co/VQrBAQ7xiL"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2094108440226365616",
+   "date": "2026-08-30",
+   "text": "XRP 4H Technical Outlook\n\nXRP remains extremely positive on the 4H timeframe for short-term trading, with a structure very similar to what I’m seeing in ETH.\n\nThe weekly close above $1.40 last week delivered the bullish confirmation I had been waiting for and validated the https://t.co/VENlEjioFR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "MarkTheApe99",
+   "url": "https://x.com/MarkTheApe99/status/2093988991129342005",
+   "date": "2026-08-30",
+   "text": "Sunday Market Update #101 - The Week Ahead\n\nbitcoin:native spent the weekend compressing around $78K, but I don’t read this as healthy consolidation before another immediate leg higher.\n\nThe important move already happened, we swept above $80.4K, failed to hold the highs, printed https://t.co/F6IL13kIYy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "sodav001",
+   "url": "https://x.com/sodav001/status/2094040793337967017",
+   "date": "2026-08-30",
+   "text": "🚨 RSI SAYS $BTC IS STILL IN A BEAR MARKET.\n\nAccording to the RSI indicator, Bitcoin hasn’t officially escaped bearish territory yet.\n\nThe bigger question: does BTC flip bullish before the next major move? https://t.co/l9HJbLm3e8"
+  }
+ ]
+}

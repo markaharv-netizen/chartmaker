@@ -1,0 +1,228 @@
+{
+ "symbol": "COIN",
+ "start": "2026-08-19T00:00:00Z",
+ "end": "2026-08-20T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2089971673717985295",
+   "date": "2026-08-19",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟮 / 𝟱 (leaning bearish) - 𝗕𝗲𝗮𝗿𝗶𝘀𝗵 𝗰𝘂𝗲𝘀 - Repeated references to a 𝘣𝘦𝘢𝘳 𝘮𝘢𝘳𝘬𝘦𝘵 and calls to “build” rather than chase airdrops. - Posts labeling recent price spikes as a 𝘥𝘦𝘢𝘥‐𝘤𝘢𝘵 𝘣𝘰𝘶𝘯𝘤𝘦 and dismissing any “bull https://t.co/8zJWeNzK0s"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2090126146889486624",
+   "date": "2026-08-19",
+   "text": "🚀 $BTC — Liquidity + Short Squeeze Fuel the Crypto Rally\n\n$BTC jumped above $68,000, gaining around 6% in 24 hours after the U.S. Treasury announced it would double the size of its long-term bond buyback operations.\n\nMarkets interpreted the move as a potential liquidity backstop https://t.co/Wq4Ih2Tu5h"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "nftcrypto3",
+   "url": "https://x.com/nftcrypto3/status/2089946219896259037",
+   "date": "2026-08-19",
+   "text": "Top 10 Active Trader's Perspectives (https://t.co/rQaLrSWoaz recap)   2026.8.19\n\n1. Serenity (@aleabitoreddit)【China humanoid hardware race】\n\nCore idea: Serenity compares the rapid improvement of humanoid robots to the early OpenAI model cycle, pointing to Unitree’s claims https://t.co/ZuxUgrh9c5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 32,
+   "user": "BitGod21",
+   "url": "https://x.com/BitGod21/status/2090011609099813347",
+   "date": "2026-08-19",
+   "text": "even if we're in a bear market it's nothing to be sad about. pepe launched into the 2023 bear and hit 1 billion mc while everyone convinced crypto is dead. \n\nit proved the trenches don't need a bull to pay, they just need one coin the timeline can't ignore. \n\nthis recent ansem https://t.co/LEMlxv6AZ1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "1000x_patterns",
+   "url": "https://x.com/1000x_patterns/status/2090073784120136073",
+   "date": "2026-08-19",
+   "text": "Why I think  $TROLL is the clear winner this cycle.\n\nI've been watching this chart for months, and the more I compare it with previous meme cycles, the more convinced I become.\n\nHere's why.\n\n1. It showed strength before the market did.\nThe first thing that caught my attention was https://t.co/JGth9GhU2Y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "McCarthy031",
+   "url": "https://x.com/McCarthy031/status/2090082917087080541",
+   "date": "2026-08-19",
+   "text": "@thissdax caught the downside I caught upside, Two side of a coin, hopefully capital meets this skill set soon.📊📈 https://t.co/t71vUxwXbW https://t.co/8MKK4uKmMN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 14,
+   "user": "asymrisk_",
+   "url": "https://x.com/asymrisk_/status/2090181052417651070",
+   "date": "2026-08-19",
+   "text": "Although I am disgustingly bullish on cash-cat:native I have to say that $INDEX is actually the most undervalued coin on all of Robinhood Chain, by miles."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 14,
+   "user": "Kgb32_",
+   "url": "https://x.com/Kgb32_/status/2090167371155882309",
+   "date": "2026-08-19",
+   "text": "Sometimes I look at what I dropped in here as my personal insight and I tend to think my posts are undervalued, gave warnings about the Solana situation last year when we crossed 200$ and stables high 6figs there all the way to 250 (was 90% out by 220) then the full Hype thesis"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2090109361607811253",
+   "date": "2026-08-19",
+   "text": "🚨 BURAKTHESCALPER LLC — 9 AM PT INTRADAY BATTLE PLAN\nWEDNESDAY • AUGUST 19, 2026\n\n⚔️ BIAS: CAUTIOUSLY BULLISH / RELIEF-RALLY TAPE — FOMC MINUTES RISK AHEAD. Fresh Reuters reporting has Wall Street recovering after Tuesday’s technology-led selloff as Treasury yields retreat. The"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2090081360287355309",
+   "date": "2026-08-19",
+   "text": "📊 $NEAR Overview | 2026-08-19\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🔴 Bearish\nADX 🐌 Weak\n\n⚡ Momentum\nRSI 🔴 Bearish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🔴 Bearish\n\n#NEAR\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "SallyJack3books",
+   "url": "https://x.com/SallyJack3books/status/2089899875651797246",
+   "date": "2026-08-19",
+   "text": "I've been staring at $sling on them migration tab for what feels like weeks but it has only been a day. Coin pumped to 1m, 71% locked til 2095, dude pumped toad to 20m, and follows the KOL supply meta that WhiteWhale started but Ansem popularized. Crash also was at 100k before https://t.co/RNnJgONjST https://t.co/nGmTDD6ieO"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "algoxfloww",
+   "url": "https://x.com/algoxfloww/status/2090117966775898528",
+   "date": "2026-08-19",
+   "text": "$315k OF CALLS HIT MRVL TODAY\n\nThe biggest options bets on the tape:\n\nCALLS BOUGHT (bullish bets) - MRVL, META, MU, NAMS, COIN\nPUTS BOUGHT (bearish bets) - WDC, PLTR\n\nSize is conviction. It is not intent. https://t.co/BI0eedy0dc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Venus_Trapgxts",
+   "url": "https://x.com/Venus_Trapgxts/status/2089870743165112375",
+   "date": "2026-08-19",
+   "text": "18% of Zcash hashrate under one cypherpunk's control? That's a bold flex, but also a serious centralization red flag for a privacy coin. Feels like a \"we had to do it to save it\" moment. Bullish or bearish? #ZEC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2090129341082481083",
+   "date": "2026-08-19",
+   "text": "#Bybit blocked over 30,000 suspicious #withdrawal requests in H1 2026, safeguarding $700M+ in user funds across nearly 20,000 accounts. The #exchange also flagged $212M in potential #fraud blacklisted 10,000+ malicious addresses, and processed 100,000+ #security #alerts using #AI https://t.co/q29rbg9bdA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 269,
+   "user": "iruletrenches",
+   "url": "https://x.com/iruletrenches/status/2090164967588626553",
+   "date": "2026-08-19",
+   "text": "I think it’s time to start paying attention to @base again.\n\nI’ve been monitoring @base lately, and we’ve just had a 700x on base with a cat coin. It feels like @base is moving again and getting ready to claw back some mindshare from RH and BNB and compete.\n\n@cobie seems to be"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2090138170994131227",
+   "date": "2026-08-19",
+   "text": "A major #data #breach in #France exposed income, home addresses, and #property details for 678,000 taxpayers. While #crypto holdings weren't included, #security experts warn the leaked physical data creates massive risks for targeted wrench #attacks and home invasions against https://t.co/XpRuailxYN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2090134703919579434",
+   "date": "2026-08-19",
+   "text": "#US #House #lawyers are drowning in flawed #AI generated #bills from staff using #ChatGPT and #Claude\n\nThe models cite wrong US Code sections, confuse #legal mechanisms, and mess up definitions. One rep's office even left \"Claude responded\" in an official amendment overview. https://t.co/dWPqUF2WYi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2090118515541905887",
+   "date": "2026-08-19",
+   "text": "🇺🇸 The biggest #crypto summit in #WhiteHouse history\n\nToday #Trump will meet with the #SEC chair, #CFTC chair and representatives from #Coinbase #Ripple #Gemini #Polymarket #Kalshi #Nasdaq #NYSE #CMEGroup and #DTCC\n\nSeveral major announcements are expected, potentially giving the https://t.co/tLET5uHKwd"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 58,
+   "user": "ripper0x",
+   "url": "https://x.com/ripper0x/status/2090141806021517587",
+   "date": "2026-08-19",
+   "text": "solana has seen 10 consecutive bearish monthly candles for the first time in its history, but it seems like that's about to change this month.\n\none of the reasons asides the fact that the bullrun is about to start is the SIMD-0550 and 0553 governance proposals looking https://t.co/ztqO2BU4lx"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "iseumathew",
+   "url": "https://x.com/iseumathew/status/2090068781234282938",
+   "date": "2026-08-19",
+   "text": "How I read DXY structure before every session:\n\nI open DXY on the H4 or Daily chart.\nI ask one question: what is the dollar doing?\n\nHigher highs and higher lows = DXY bullish.\nI only look for SELLS on GBP/USD and EUR/USD.\n\nLower highs and lower lows = DXY bearish.\nI only look for"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "RLindaTrade",
+   "url": "https://x.com/RLindaTrade/status/2089989956512940212",
+   "date": "2026-08-19",
+   "text": "#HYPE is forming a local bullish setup. The altcoin is outperforming the broader market, including Bitcoin, and for this reason, the coin has further upside potential\n\nhttps://t.co/2ygqgGf9r2\n\n#hypeusdt #btc #crypto #trading https://t.co/IUTAfyJN2l"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "ShadooowOnX",
+   "url": "https://x.com/ShadooowOnX/status/2090104364245643649",
+   "date": "2026-08-19",
+   "text": "Trader Mayne says his edge was knowing exactly where he was wrong on every trade\n\n\"I call myself a price action trader still to this day. All of my decisions, for the most part, are based on the chart\"\n\n\"I'm not trading narratives, I'm not trading any sort of market consensus https://t.co/tEl6EGqAVR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "2JJRJR",
+   "url": "https://x.com/2JJRJR/status/2090130501990515107",
+   "date": "2026-08-19",
+   "text": "I’m not posting this to fud I’m posting this so people understand why coins can’t go the distance anymore\n\nThis coin has 2,000 holders and counting at a 200k mc, with millions in volume. The PvP is because there is way to many holders at such a low market cap. I’m not sure why https://t.co/San5mxMASt"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 36,
+   "user": "maybe_cmeister",
+   "url": "https://x.com/maybe_cmeister/status/2090062009152712742",
+   "date": "2026-08-19",
+   "text": "Moderna curing cancer should be quite bullish for my ansem the black bull coin holdings"
+  }
+ ]
+}

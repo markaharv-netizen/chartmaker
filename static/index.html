@@ -7,6 +7,7 @@ body{font-family:Inter,Arial,sans-serif;margin:0;background:#f4f4f5;color:#111}
 input,select,button{font-size:14px;padding:6px}
 button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #wrap{padding:16px}#chart{width:1600px;height:900px;background:#fff;transform-origin:0 0}
+#ptcanvas{display:none;width:1600px;max-width:calc(100vw - 32px);height:auto;background:#fff}
 #mode button{background:#e5e7eb;color:#111;margin-right:4px}#mode button.on{background:#111;color:#fff}
 #ftable{margin:0 16px 30px;border-collapse:collapse;font-size:15px;background:#fff}#ftable td,#ftable th{border:1px solid #e5e7eb;padding:4px 10px;text-align:right}#ftable th:first-child,#ftable td:first-child{text-align:left}
 #fnote{margin:0 16px 8px;font-size:14px;color:#374151}
@@ -41,7 +42,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #ctypeNote:empty{display:none}
 #ctl > label input[type=checkbox]{margin:0}
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mVal">Valuation</button><button id="mWatch">Watchlist</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mHeat">Heatmap</button><button id="mTre">Treasury</button><button id="mVal">Valuation</button><button id="mWatch">Watchlist</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -109,6 +110,10 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label><span>Watermark</span><input id="swm" type="checkbox"></label>
 <button id="sgo">Render</button><button id="sreload" title="Re-read sentiment.json from the server">Reload data</button><button id="sdl">Download PNG</button>
 </div>
+<div id="ptctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
+<label><span>Watermark</span><input id="ptwm" type="checkbox"></label>
+<button id="ptgo" title="Fetch fresh prices, bypassing the cache">Refresh prices</button><button id="ptdl">Download PNG</button>
+</div>
 <div id="ctl">
 <label>Tickers (comma)<input id="tickers" size="22"></label>
 <label>Display names (comma, optional)<input id="names" size="22"></label>
@@ -119,7 +124,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Title<input id="title" size="34" placeholder="auto"></label>
 <label>Line color<select id="color"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="wm" type="checkbox"></label>
-<div id="smabox" title="Simple moving averages of daily closes (Price line only, not intraday)"><span>SMA</span>
+<div id="smabox" title="Simple moving averages of daily closes. Price line and candles, not intraday bars."><span>SMA</span>
 <button type="button" id="smaBtn" aria-haspopup="true" aria-expanded="false" aria-controls="smaMenu">SMA: none</button>
 <div id="smaMenu" role="group" aria-label="Simple moving averages" hidden>
 <label><input id="sma20" type="checkbox">20</label>
@@ -143,7 +148,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <div id="annList"></div>
 </div>
 <div id="status"></div>
-<div id="wrap"><div id="chart"></div></div>
+<div id="wrap"><div id="chart"></div><canvas id="ptcanvas" width="1600" height="720" aria-label="Steve's DCF price targets"></canvas></div>
 <div id="cotd"></div>
 <div id="sheets"></div>
 <div id="fnote"></div><table id="ftable"></table>
@@ -167,7 +172,7 @@ function bc(c){return T.dark&&BRIGHT[c]?BRIGHT[c]:c}
 function applyTheme(){T=THEMES[$('theme').value]||THEMES.white;axLabel={fontSize:16,color:T.text};split={lineStyle:{color:T.grid}};
   $('chart').style.background=T.bg;$('tprev').style.background=T.bg;$('tprev').style.color=T.title;
   $('tprev').innerHTML=`Aa <b style="color:${bc('#F7931A')}">■</b><b style="color:${bc('#8B5CF6')}">■</b><b style="color:${bc('#22C55E')}">■</b><b style="color:${bc('#EF4444')}">■</b>`}
-function rerender(){return MODE==='sheets'||MODE==='cotd'?null:MODE==='sent'?sdraw():MODE==='watch'?wdraw():MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
+function rerender(){return MODE==='sheets'||MODE==='cotd'?null:MODE==='pt'?ptdraw():MODE==='sent'?sdraw():MODE==='watch'?wdraw():MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
 
 function rangeParams(){
   const r=$('range').value, now=Math.floor(Date.now()/1000), d=new Date();
@@ -184,8 +189,10 @@ function rangeParams(){
 }
 let FRESH=false;
 async function fetchSym(s,p){
-  const ex=p.rng?`&range=${p.rng}&prepost=1`:'';
-  const res=await fetch(`/api/chart?symbol=${encodeURIComponent(s)}&period1=${p.p1}&period2=${p.p2}&interval=${p.iv}${ex}${FRESH?'&fresh=1':''}`,{cache:'no-store'});
+  // Line charts on 1D/5D pass a Yahoo range and want extended hours. Candle mode sets prepost:false.
+  // p.fresh lets Price targets refresh one quote without the Prices-wide FRESH flag.
+  const ex=p.rng?`&range=${p.rng}${p.prepost!==false?'&prepost=1':''}`:'';
+  const res=await fetch(`/api/chart?symbol=${encodeURIComponent(s)}&period1=${p.p1}&period2=${p.p2}&interval=${p.iv}${ex}${(p.fresh||FRESH)?'&fresh=1':''}`,{cache:'no-store'});
   const j=await res.json(); if(!res.ok||j.error)throw Error(`${s}: ${j.error||res.status}`); return j;
 }
 // YTD baseline = last close of prior year: keep the last point dated before Jan 1, drop earlier ones
@@ -248,6 +255,7 @@ function blankPrice(){
   chart.clear();chart.setOption(o,true);last=null;
 }
 async function render(){
+  if(MODE!=='prices')return;
   const st=$('status'), my=++RSEQ;
   const syms=$('tickers').value.split(',').map(s=>s.trim().toUpperCase()).filter(Boolean);
   if(!syms.length){st.className='';st.textContent='Enter tickers, then Render.';blankPrice();syncPriceUi();return}
@@ -264,19 +272,22 @@ async function render(){
       data.forEach((d,i)=>d.label=barLabel(d,names[i]));
       if(my!==RSEQ||MODE!=='prices')return; return finish(type,data,p,'Drawdown from '+(ath?'all-time high':(p.r==='1D'?"today's high":p.r+' high')))}
     if(dd&&!intra)p.iv='1d'; // drawdowns use daily closes so peaks/troughs aren't smoothed away by weekly/monthly bars
+    if(type==='candle')Object.assign(p,candlePlan(p,syms[0]));
     const data=await Promise.all(syms.map(s=>fetchSym(s,ath&&!intra?{...p,p1:0}:p)));
     data.forEach((d,i)=>{d.label=names[i]||d.symbol.replace('-USD','');if(!(ath&&!intra))d.points=trimYTD(d.points,p.r)});
     if(type==='bar')data.forEach((d,i)=>d.barLabel=barLabel(d,names[i]));
     if(dd)data.forEach(d=>ddCalc(d,ath&&!intra?(p.r==='YTD'?trimYTD(d.points,'YTD')[0][0]:p.p1*1000):-Infinity));
-    const smaOn=type==='line'&&p.iv!=='5m'&&p.iv!=='15m'&&p.iv!=='1h'&&!['1D','5D'].includes(p.r), sl=smaOn?smaList():[];
-    $('smabox').style.opacity=type==='line'&&!['1D','5D'].includes(p.r)?1:0.4;
-    if(sl.length){p.vis=data[0].points[0][0];
-      const ss=await Promise.all(data.map(d=>smaSeries(d.symbol,{...p,vis:d.points[0][0]},sl)));data.forEach((d,i)=>d.smas=ss[i])}
-    if(type==='candle'){const b=trimYTD(data[0].bars||[],p.r);
+    if(type==='candle'){const b=prepCandleBars(data[0].bars,p,data[0].instrumentType);
       if(b.length<2)throw Error(syms[0]+': no OHLC bars in this range');
       data[0].bars=b;data[0].points=b.map(x=>[x[0],x[4]])}
+    // SMAs are daily closes. Price line keeps its old rule (off on 1D/5D). Candles can use them once the bars are daily or coarser.
+    const lineSma=type==='line'&&!['1D','5D'].includes(p.r), candleSma=type==='candle'&&!intradayIv(p.iv);
+    const smaOn=(lineSma&&p.iv!=='5m'&&p.iv!=='15m'&&p.iv!=='1h')||candleSma, sl=smaOn?smaList():[];
+    if(sl.length){p.vis=data[0].points[0][0];
+      const ss=await Promise.all(data.map(d=>smaSeries(d.symbol,{...p,vis:d.points[0][0]},sl)));data.forEach((d,i)=>d.smas=ss[i])}
     p.markers=await collectMarkers(type,syms,p);
     if(my!==RSEQ||MODE!=='prices')return; // a newer render started while this one was fetching; don't overwrite it
+    $('smabox').style.opacity=(lineSma||candleSma)?1:0.4;
     const titleAuto={line:data.map(d=>d.label).join(' vs ')+' price',pct:data.map(d=>d.label).join(' vs ')+' % change',
       candle:(data[0]?data[0].label:'')+' price',
       bar:'Return, '+(p.r==='Custom'?'custom range':p.r),ratio:`${data[0].label} priced in ${data[1]?.label}`,
@@ -322,11 +333,14 @@ function stitchNote(list){const parts=[];list.forEach(d=>(d.stitched||[]).forEac
 function star(lbl){return /\)$/.test(lbl)&&lbl.includes(' (')?lbl.replace(/ \(/,'* ('):lbl+'*'}
 function finish(type,data,p,titleAuto){
   const intra=['1D','5D'].includes(p.r)&&p.iv!=='1d', exp=p.r==='YTD'?Date.UTC(new Date().getUTCFullYear(),0,1)-DAY*1000:p.p1*1000, flagged=[];
+  // Weekly/monthly candles are stamped at the period start, so the first bar can sit a little after period1 without the history actually being short.
+  const slack=(type==='candle'&&p.iv==='1mo'?40:type==='candle'&&p.iv==='1wk'?10:6)*DAY*1000;
   if(!intra&&p.r!=='Max')data.forEach(d=>{const f=d.points[0]?.[0];
-    if(f&&f>exp+6*DAY*1000){d.since=f;flagged.push({sym:d.symbol,date:fmtD(f)});d.label=star(d.label);if(d.barLabel)d.barLabel=star(d.barLabel)}});
+    if(f&&f>exp+slack){d.since=f;flagged.push({sym:d.symbol,date:fmtD(f)});d.label=star(d.label);if(d.barLabel)d.barLabel=star(d.barLabel)}});
   p.flagged=flagged;
   const asOf=Math.max(...data.map(d=>Math.max(d.lastTime||0,d.lastBarTime||0)));
-  $('status').textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv+(p.rng?' · incl. pre/after-hours bars':'')+(type==='candle'?' · OHLC + volume':'');
+  const ext=!!(p.rng&&p.prepost!==false);
+  $('status').textContent='Data as of '+new Date(asOf*1000).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET · interval '+p.iv+(ext?' · incl. pre/after-hours bars':'')+(type==='candle'?' · OHLC + volume':'');
   p.asOf=asOf; last={opt:buildOpt(type,data,$('title').value||titleAuto,p),asOf};
   if(p.drawnMarkers) $('status').textContent+=` · ${p.drawnMarkers} marker`+(p.drawnMarkers>1?'s':'');
   if(p.earnErr) $('status').textContent+=' · earnings unavailable ('+String(p.earnErr).slice(0,90)+')';
@@ -448,47 +462,115 @@ async function collectMarkers(type,syms,p){p.earnErr='';p.earnCount=0;p.earnFetc
     out.push({date:a.date,ts,label:String(a.label).slice(0,24),note:String(a.note||'').slice(0,80),kind:'custom'})}
   return out.filter(m=>!isNaN(m.ts))}
 function fmtVol(v){const a=Math.abs(v);return a>=1e12?(v/1e12).toFixed(1)+'T':a>=1e9?(v/1e9).toFixed(a>=1e10?0:1)+'B':a>=1e6?(v/1e6).toFixed(a>=1e7?0:1)+'M':a>=1e3?(v/1e3).toFixed(0)+'K':String(Math.round(v))}
-function candleTip(label,intra){const esc=x=>String(x).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-  return ps=>{const arr=[].concat(ps),c=arr.find(x=>x.seriesType==='candlestick'),v=arr.find(x=>x.seriesType==='bar');if(!c)return'';
-    const raw=c.data||c.value||[];let t,o,cl,lo,hi;
-    if(raw.length>=5){t=raw[0];o=raw[1];cl=raw[2];lo=raw[3];hi=raw[4]}else{o=raw[0];cl=raw[1];lo=raw[2];hi=raw[3];t=c.axisValue}
-    const when=new Date(t).toLocaleString('en-US',{timeZone:intra?'America/New_York':'UTC',month:'short',day:'numeric',year:'numeric',...(intra?{hour:'numeric',minute:'2-digit'}:{})})+(intra?' ET':'');
-    const vol=v?(Array.isArray(v.data)?v.data[v.data.length-1]:(Array.isArray(v.value)?v.value.at(-1):v.value)):null;
-    const up=cl>=o;
-    return `<div style="font-weight:600;color:${T.title};margin-bottom:4px">${esc(when)}</div><div>${esc(label)}</div>`+
-      `<div>O <b>${fmtNum(o)}</b> · H <b>${fmtNum(hi)}</b></div><div>L <b>${fmtNum(lo)}</b> · C <b style="color:${up?bc('#22C55E'):bc('#EF4444')}">${fmtNum(cl)}</b></div>`+
-      (vol!=null&&vol!==''?`<div>Vol <b>${fmtVol(vol)}</b></div>`:'')}}
+// Candle mode picks a Yahoo interval whose bars stay wide on the 1600px canvas. Price line does not use this.
+const INTRA_IV={'1m':1,'2m':1,'5m':1,'15m':1,'30m':1,'60m':1,'90m':1,'1h':1};
+function intradayIv(iv){return !!INTRA_IV[iv]}
+function candlePlot(){return Math.max(480,(chart.getWidth()||1600)-280)}
+function candlePlan(p,sym){
+  const r=p.r, span=Math.max(DAY,(p.p2||0)-(p.p1||0));
+  const short=r==='1D'||(r==='Custom'&&span<=1.6*DAY);
+  if(short){
+    // 24h pairs have no regular session; 30m keeps a full day fat. Stocks: 15m of the last session.
+    if(/-USD$/i.test(sym||''))return {iv:'30m',rng:'',p1:p.p2-DAY,p2:p.p2,prepost:false,session:false};
+    if(r==='1D')return {iv:'15m',rng:'1d',prepost:false,session:true};
+    return {iv:'15m',rng:'',prepost:false,session:true};
+  }
+  if(r==='5D')return {iv:'1d',rng:'5d',prepost:false,session:false}; // one regular-session candle per trading day
+  const days=span/DAY, maxBars=Math.max(12,Math.floor(candlePlot()/18));
+  const tdays=Math.max(1,Math.round(days*5/7)), weeks=Math.max(1,Math.ceil(days/7));
+  let iv='1mo';
+  if(tdays<=maxBars)iv='1d';
+  else if(weeks<=maxBars)iv='1wk';
+  return {iv,rng:'',prepost:false,session:false};
+}
+function etClock(ts){const g={};for(const x of new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(ts)))g[x.type]=x.value;
+  return {wd:g.weekday,hm:+g.hour*60+(+g.minute)}}
+function inRTH(ts){const {wd,hm}=etClock(ts);return wd!=='Sat'&&wd!=='Sun'&&hm>=570&&hm<960} // 9:30 inclusive, 16:00 exclusive
+function prepCandleBars(raw,p,instrument){
+  let b=(raw||[]).filter(x=>x&&x.length>=5&&[1,2,3,4].every(i=>x[i]!=null&&isFinite(+x[i])));
+  const seen=new Map();
+  for(const x of b){const prev=seen.get(x[0]);if(!prev||(x[5]||0)>(prev[5]||0))seen.set(x[0],x)}
+  b=[...seen.values()].sort((a,c)=>a[0]-c[0]);
+  if(intradayIv(p.iv)){
+    b=b.filter(x=>!(!(x[5]>0)&&x[1]===x[2]&&x[2]===x[3]&&x[3]===x[4])); // flat zero-volume close print
+    const kind=(instrument||'').toUpperCase();
+    if(p.session&&kind!=='CRYPTOCURRENCY'&&kind!=='CURRENCY'){const inside=b.filter(x=>inRTH(x[0]));
+      if(inside.length>=2&&inside.length>=b.length*0.5)b=inside}
+  }
+  return trimYTD(b,p.r)}
+// Pixel width from the free plot width: a small gap, then a cap so one or two bars don't become slabs, and a floor so Max (monthly only) doesn't vanish.
+function candleBody(n){const plot=candlePlot(),band=plot/Math.max(1,n),max=Math.round(plot*0.2);
+  const gap=Math.min(16,Math.max(3,band*0.12));let body=band-gap;
+  if(body>max)body=max;
+  if(body<8)body=Math.max(2,Math.min(8,band*0.75));
+  return Math.round(body)}
+function candleLab(ts,iv){const d=new Date(+ts);
+  if(intradayIv(iv))return d.toLocaleString('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'});
+  if(iv==='1mo')return d.toLocaleDateString('en-US',{timeZone:'UTC',month:'short',year:'numeric'});
+  return d.toLocaleDateString('en-US',{timeZone:'UTC',month:'short',day:'numeric'})}
+function candleWhen(ts,iv){const intra=intradayIv(iv);
+  return new Date(+ts).toLocaleString('en-US',intra?{timeZone:'America/New_York',weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}:{timeZone:'UTC',weekday:'short',month:'short',day:'numeric',year:'numeric'})+(intra?' ET':'')}
+// One SMA value per candle: the daily-close SMA nearest that bar.
+function alignSma(pts,bars){const out=[];let j=0;
+  for(const b of bars){const t=b[0];while(j+1<pts.length&&pts[j+1][0]<=t)j++;
+    let k=j;if(j+1<pts.length&&Math.abs(pts[j+1][0]-t)<Math.abs(pts[j][0]-t))k=j+1;
+    out.push(pts[k]&&Math.abs(pts[k][0]-t)<12*86400e3?pts[k][1]:null)}
+  return out}
+function candleTip(label,bars,iv){const esc=x=>String(x).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  return ps=>{const arr=[].concat(ps),c=arr.find(x=>x.seriesType==='candlestick');if(!c)return'';
+    const b=bars[c.dataIndex];if(!b)return'';
+    const up=b[4]>=b[1],smas=arr.filter(x=>x.seriesType==='line'&&String(x.seriesName||'').indexOf('SMA')===0&&x.value!=null&&x.value!=='-');
+    return `<div style="font-weight:600;color:${T.title};margin-bottom:4px">${esc(candleWhen(b[0],iv))}</div><div>${esc(label)}</div>`+
+      `<div>O <b>${fmtNum(b[1])}</b> · H <b>${fmtNum(b[2])}</b></div><div>L <b>${fmtNum(b[3])}</b> · C <b style="color:${up?bc('#22C55E'):bc('#EF4444')}">${fmtNum(b[4])}</b></div>`+
+      `<div>Vol <b>${fmtVol(b[5]||0)}</b></div>`+
+      smas.map(s=>`<div>${esc(s.seriesName)} <b>${fmtNum(s.value)}</b></div>`).join('')}}
 function candleOpt(o,d,p){
-  const bars=d.bars,intra=['1D','5D'].includes(p.r),upC=bc('#22C55E'),dnC=bc('#EF4444'),last=bars.at(-1);
-  const t0=bars[0][0],t1=last[0],pad=Math.max((t1-t0)*0.008,intra?60e3:DAY*500);
-  o.grid=[{left:90,right:190,top:112,height:548},{left:90,right:190,top:688,height:112}];
+  const bars=d.bars,upC=bc('#22C55E'),dnC=bc('#EF4444'),last=bars.at(-1),n=bars.length,bw=candleBody(n);
+  const cats=bars.map(b=>String(b[0]));
+  const smaLines=(d.smas||[]).filter(m=>m.data&&m.data.length).map((m,j)=>{const col=bc(SMA_COL[m.key]||'#7C3AED'),data=alignSma(m.data,bars);
+    if(!data.some(v=>v!=null))return null;
+    return {type:'line',name:m.key,xAxisIndex:0,yAxisIndex:0,data,showSymbol:false,smooth:false,connectNulls:true,z:4,
+      lineStyle:{width:1.6,color:col,type:j%2?[6,4]:'solid'},itemStyle:{color:col},
+      endLabel:{show:true,fontSize:14,color:col,formatter:q=>`${m.key} ${fmtNum(q.value)}`},labelLayout:{moveOverlap:'shiftY'}}})
+    .filter(Boolean);
+  const top=smaLines.length?132:112;
+  o.grid=[{left:90,right:190,top,height:548-(top-112)},{left:90,right:190,top:688,height:112}];
   o.axisPointer={link:[{xAxisIndex:'all'}],label:{show:false}};
-  const xBase={type:'time',min:t0-pad,max:t1+pad,axisLine:{lineStyle:{color:T.axis}},axisTick:{show:false},splitLine:{show:false}};
-  o.xAxis=[{...xBase,gridIndex:0,axisLabel:{show:false}},{...xBase,gridIndex:1,axisLabel:{...axLabel,hideOverlap:true}}];
+  const lab={...axLabel,hideOverlap:true,interval:n<=10?0:Math.max(0,Math.ceil(n/8)-1),formatter:v=>candleLab(v,p.iv)};
+  const xBase={type:'category',data:cats,boundaryGap:true,axisLine:{lineStyle:{color:T.axis}},axisTick:{show:false},splitLine:{show:false}};
+  o.xAxis=[{...xBase,gridIndex:0,axisLabel:{show:false}},{...xBase,gridIndex:1,axisLabel:lab}];
   o.yAxis=[
     {type:'value',scale:true,gridIndex:0,axisLabel:{...axLabel,formatter:fmtNum},splitLine:split},
     {type:'value',gridIndex:1,min:0,splitNumber:2,axisLabel:{...axLabel,fontSize:12,color:T.src,formatter:fmtVol},splitLine:{show:false},axisLine:{show:false}}];
   const upLast=last[4]>=last[1];
+  const lock={barWidth:bw,barMaxWidth:bw,barMinWidth:bw};
   o.series=[
-    {type:'candlestick',name:d.label,xAxisIndex:0,yAxisIndex:0,barMaxWidth:14,
-      dimensions:['time','open','close','lowest','highest'],encode:{x:'time',y:['open','close','lowest','highest']},
-      data:bars.map(b=>[b[0],b[1],b[4],b[3],b[2]]),
+    {type:'candlestick',name:d.label,xAxisIndex:0,yAxisIndex:0,...lock,
+      data:bars.map(b=>[b[1],b[4],b[3],b[2]]),
       itemStyle:{color:upC,color0:dnC,borderColor:upC,borderColor0:dnC}},
-    {type:'line',name:d.label+' close',xAxisIndex:0,yAxisIndex:0,data:bars.map(b=>[b[0],b[4]]),showSymbol:false,silent:true,z:3,
+    ...smaLines,
+    {type:'line',name:d.label+' close',xAxisIndex:0,yAxisIndex:0,data:bars.map(b=>b[4]),showSymbol:false,silent:true,z:3,
       lineStyle:{width:0,opacity:0},itemStyle:{color:upLast?upC:dnC},
-      endLabel:{show:true,fontSize:17,fontWeight:'bold',color:upLast?upC:dnC,formatter:q=>`${d.label} ${fmtNum(q.value[1])}`},
+      endLabel:{show:true,fontSize:17,fontWeight:'bold',color:upLast?upC:dnC,formatter:q=>`${d.label} ${fmtNum(q.value)}`},
       tooltip:{show:false}},
-    {type:'bar',name:'Volume',xAxisIndex:1,yAxisIndex:1,barMaxWidth:14,
-      data:bars.map(b=>({value:[b[0],b[5]],itemStyle:{color:b[4]>=b[1]?upC:dnC}}))}];
+    {type:'bar',name:'Volume',xAxisIndex:1,yAxisIndex:1,...lock,
+      data:bars.map(b=>({value:b[5]||0,itemStyle:{color:b[4]>=b[1]?upC:dnC}}))}];
+  if(smaLines.length)o.legend={top:78,left:60,data:smaLines.map(s=>s.name),icon:'roundRect',itemWidth:18,itemHeight:3,textStyle:{fontSize:14,color:T.text}};
   o.tooltip={trigger:'axis',confine:true,transitionDuration:0,backgroundColor:T.dark?'rgba(23,26,32,0.95)':'rgba(255,255,255,0.97)',borderColor:T.axis,
     textStyle:{color:T.text,fontSize:14},extraCssText:'box-shadow:0 2px 10px rgba(0,0,0,.25);border-radius:6px',
-    axisPointer:{type:'line',lineStyle:{color:T.axis,width:1,type:'dashed'},label:{show:false}},formatter:candleTip(d.label,intra)};
+    axisPointer:{type:'line',lineStyle:{color:T.axis,width:1,type:'dashed'},label:{show:false}},formatter:candleTip(d.label,bars,p.iv)};
   o.graphic[0].style.text='Source: Yahoo Finance · OHLC + volume';
   return o}
 function attachMarkers(o,data,p){
   const times=[];data.forEach(d=>(d.points||[]).forEach(pt=>times.push(pt[0])));times.sort((a,b)=>a-b);
   if(times.length<2)return;
-  const intra=['1m','2m','5m','15m','30m','60m','1h'].includes(p.iv),lim=intra?6*3600e3:4*86400e3;
+  const xAx=Array.isArray(o.xAxis)?o.xAxis[0]:o.xAxis, cat=!!(xAx&&xAx.type==='category');
+  const intra=['1m','2m','5m','15m','30m','60m','1h'].includes(p.iv);
+  const candle=!!(o.series||[]).some(s=>s.type==='candlestick');
+  // Coarser candle bars sit farther from an earnings date than a daily close does. Line charts keep the old window.
+  let lim=intra?6*3600e3:4*86400e3;
+  if(candle&&p.iv==='1wk')lim=8*86400e3;
+  if(candle&&p.iv==='1mo')lim=32*86400e3;
   const snapped=[];
   for(const m of p.markers||[]){let lo=0,hi=times.length-1;while(hi-lo>1){const mid=(lo+hi)>>1;if(times[mid]<m.ts)lo=mid;else hi=mid}
     const t=Math.abs(times[lo]-m.ts)<=Math.abs(times[hi]-m.ts)?times[lo]:times[hi];
@@ -506,8 +588,8 @@ function attachMarkers(o,data,p){
   if(!ser)return;
   const col={halving:bc('#F7931A'),earn:bc('#8B5CF6'),custom:T.dark?'#93C5FD':'#0369A1'};
   ser.markLine={symbol:['none','none'],silent:true,animation:false,
-    data:groups.map(g=>{const right=(g.ts-t0)/span>0.84;
-      return {xAxis:g.ts,name:g.text,lineStyle:{color:col[g.kind]||col.custom,type:'dashed',width:1.25},
+    data:groups.map(g=>{const right=cat?times.indexOf(g.ts)>=times.length*0.84:(g.ts-t0)/span>0.84;
+      return {xAxis:cat?String(g.ts):g.ts,name:g.text,lineStyle:{color:col[g.kind]||col.custom,type:'dashed',width:1.25},
         label:{show:true,position:'insideEndTop',distance:10,offset:[right?-6:6,g.row*18],align:right?'right':'left',
           formatter:g.text,color:T.title,fontSize:12,fontWeight:600,backgroundColor:T.bg,
           borderColor:col[g.kind]||T.axis,borderWidth:1,borderRadius:3,padding:[2,5]}}})};
@@ -517,7 +599,9 @@ function attachMarkers(o,data,p){
   if(!baseTip)return;
   const notes=groups.map(g=>({ts:g.ts,text:g.text,note:g.note}));
   o.tooltip.formatter=ps=>{const h=baseTip(ps)||'';const arr=[].concat(ps);if(!arr.length||!h)return h;
-    const t=arr[0].axisValue!=null?arr[0].axisValue:(Array.isArray(arr[0].value)?arr[0].value[0]:null);if(t==null)return h;
+    let t=arr[0].axisValue!=null?arr[0].axisValue:(Array.isArray(arr[0].value)?arr[0].value[0]:null);
+    if(cat){const i=arr[0].dataIndex;if(i!=null&&times[i]!=null)t=times[i]}
+    if(t==null||isNaN(+t))return h;t=+t;
     const gap=intra?6*3600e3:3*86400e3,hit=notes.filter(n=>Math.abs(n.ts-t)<=gap);if(!hit.length)return h;
     const esc=x=>String(x).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
     return h+hit.map(n=>`<div style="margin-top:4px"><b style="color:${T.title}">${esc(n.text)}</b>${n.note?`<div style="color:${T.src}">${esc(n.note)}</div>`:''}</div>`).join('')}}
@@ -577,14 +661,16 @@ let MODE='prices', flast=null;
 function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets';
   $('mCotd').classList.toggle('on',m==='cotd');$('cotd').style.display=m==='cotd'?'block':'none';
   $('mSheets').classList.toggle('on',m==='sheets');$('sheets').style.display=m==='sheets'?'block':'none';
-  $('wrap').style.display=lib?'none':'';$('vbar').style.display=lib?'none':'flex';if(typeof vlist==='function')try{vlist()}catch(e){}
+  $('mPt').classList.toggle('on',m==='pt');$('ptctl').style.display=m==='pt'?'flex':'none';
+  $('chart').style.display=m==='pt'?'none':'';$('ptcanvas').style.display=m==='pt'?'block':'none';
+  $('wrap').style.display=lib?'none':'';$('vbar').style.display=lib?'none':'flex';if(!lib&&m!=='pt'){try{chart.resize()}catch(e){}}if(typeof vlist==='function')try{vlist()}catch(e){}
   $('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';$('mSent').classList.toggle('on',m==='sent');$('sctl').style.display=m==='sent'?'flex':'none';
   $('ctl').style.display=m==='prices'?'flex':'none';$('actl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
   $('ftable').innerHTML='';$('fnote').textContent='';
   if(m!=='tre'&&$('chart').style.height&&$('chart').style.height!=='900px'){$('chart').style.height='900px';chart.resize()}
-  chart.clear();$('status').textContent='';
-  if(m==='prices'){syncPriceUi();render()}else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
-$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');
+  if(m!=='pt')chart.clear();$('status').textContent='';
+  if(m==='prices'){syncPriceUi();render()}else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
+$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mPt').onclick=()=>setMode('pt');
 // ---------- Charts of the day: static/cotd/today.json (refreshed daily by Flash via scripts/cotd_build.py) ----------
 async function cotdenter(){const el=$('cotd'),E=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   el.innerHTML='<p>Loading…</p>';
@@ -1008,6 +1094,7 @@ async function sdraw(){wtipHide();if(MODE!=='sent')return;const tv=$('sview').va
   if(!SDATA){chart.clear();return}
   const all=SDATA.tickers||[],want=$('stickers').value.split(/[\s,]+/).map(x=>x.trim().toUpperCase()).filter(Boolean);
   const rows=want.length?all.filter(r=>want.includes(r.symbol)||want.includes(r.display)):all.slice(),miss=want.filter(t=>!all.some(r=>r.symbol===t||r.display===t));
+  rows.sort((a,b)=>(b.bull??-1)-(a.bull??-1));// always rank by bull share, high to low
   const logos={};await Promise.all(rows.map(async r=>{try{logos[r.symbol]=await circLogo(r.logoKey||r.symbol)}catch(e){}}));if(seq!==SSEQ||MODE!=='sent')return;
   const n=Math.max(1,rows.length),top=n>12?96:110,bot=n>12?60:70,rh=Math.min(110,(900-top-bot)/n),G=[],up=bc('#22C55E'),dn=bc('#EF4444');
   const X0=440,X1=1540,BW=X1-X0,fs=Math.round(Math.max(14,Math.min(20,rh*0.24))),cmp=rh<60,bh=Math.max(6,Math.round(rh*0.11)),lg=Math.round(Math.min(40,rh*0.42));
@@ -1098,16 +1185,150 @@ $('sview').onchange=$('sprice').onchange=()=>sdraw();
 $('shgran').onchange=()=>{hpick();sdraw()};
 $('sreload').addEventListener('click',()=>{if($('sview').value==='time'&&!HBUSY){HDATA=null;stime()}});
 
+// ---------- Price targets: static/price_targets.json (scripts/price_targets.py). Live prices use /api/chart. ----------
+const PTC={navy:'#0B1F3A',orange:'#F7931A',green:'#178A45',red:'#D7263D',hold:'#E08A00',text:'#1C2430',muted:'#6B7280',alt:'#F4F6F8',line:'#E6E9EE'};
+let PTDOC=null,PTLIVE={},PTSEQ=0;
+function ptMoney(v){return '$'+Number(v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function ptShown(frac){return Math.round(Number(frac)*1000)/10}
+function ptUpside(frac){
+  if(frac==null||!isFinite(frac))return {text:'—',color:PTC.muted};
+  const s=ptShown(frac);if(!s)return {text:'0.0%',color:PTC.text};
+  return {text:(s>0?'+':'-')+Math.abs(s).toFixed(1)+'%',color:s>0?PTC.green:PTC.red}}
+function ptRate(frac,rule){
+  const buy=((rule&&rule.buyAbove!=null)?rule.buyAbove:0.15)*100,sell=((rule&&rule.sellBelow!=null)?rule.sellBelow:-0.15)*100,s=ptShown(frac);
+  return s>buy?'BUY':s<sell?'SELL':'HOLD'}
+function ptRateColor(rt){return rt==='BUY'?PTC.green:rt==='SELL'?PTC.red:rt==='HOLD'?PTC.hold:PTC.text}
+function ptChgLabel(r){
+  if(r.fromZero||r.previousBase===0){const x=r.baseChange!=null?r.baseChange:r.base;return {text:'▲ new +'+ptMoney(Math.abs(Number(x)||0)),color:PTC.green}}
+  if(r.baseChangePct==null||!isFinite(+r.baseChangePct))return {text:'—',color:PTC.muted};
+  const s=ptShown(r.baseChangePct);if(!s)return {text:'0.0%',color:PTC.text};
+  return {text:(s>0?'▲ +':'▼ -')+Math.abs(s).toFixed(1)+'%',color:s>0?PTC.green:PTC.red}}
+function ptLiveLabel(ts,clock){
+  if(!ts)return 'latest (Yahoo Finance)';
+  const tz='America/New_York',d=new Date(ts*1000);
+  const part=new Intl.DateTimeFormat('en-US',{timeZone:tz,weekday:'short',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',hourCycle:'h23'}).formatToParts(d);
+  const g=k=>{const p=part.find(x=>x.type===k);return p?p.value:''};
+  const date=g('month')+' '+g('day')+', '+g('year'),wd=g('weekday');
+  const hh=parseInt(g('hour'),10)||0,mm=parseInt(g('minute'),10)||0,mins=hh*60+mm;
+  if(!clock||wd==='Sat'||wd==='Sun'||mins<9*60+30||mins>=16*60)return date+' close (Yahoo Finance)';
+  return date+', '+new Intl.DateTimeFormat('en-US',{timeZone:tz,hour:'numeric',minute:'2-digit'}).format(d)+' ET (Yahoo Finance)'}
+function ptViews(doc,live){
+  return (doc.rows||[]).map(r=>{
+    const q=live[r.ticker],ok=q&&isFinite(q.price)&&q.price>0;
+    const price=ok?q.price:+r.price,snap=!ok;
+    const bup=price>0&&isFinite(+r.base)?+r.base/price-1:null;
+    const sup=price>0&&r.consensus!=null&&isFinite(+r.consensus)?+r.consensus/price-1:null;
+    return Object.assign({},r,{price,snap,bup,sup,snapshotRating:r.rating,rating:bup==null?(r.rating||''):ptRate(bup,doc.ratingRule),asOf:ok?q.asOf:null,clock:ok?!!q.clock:false});
+  }).sort((a,b)=>((isFinite(b.bup)?b.bup:-Infinity)-(isFinite(a.bup)?a.bup:-Infinity))||String(a.ticker).localeCompare(b.ticker))}
+function ptPricePhrase(views){
+  const live=views.filter(v=>!v.snap),snap=views.filter(v=>v.snap);
+  const labels=[...new Set(live.map(v=>ptLiveLabel(v.asOf,v.clock)))];
+  const snapLabel=(PTDOC&&PTDOC.priceLabel)||'snapshot';
+  if(!snap.length&&labels.length===1)return labels[0];
+  if(!live.length)return snapLabel+' (snapshot)';
+  const livePart=labels.length===1?labels[0]:'mixed live dates (Yahoo Finance)';
+  return livePart+'; snapshot '+snapLabel+' for '+snap.map(v=>v.ticker).join(', ')}
+function ptWrap(ctx,text,maxW){
+  const words=String(text||'').split(/\s+/).filter(Boolean),lines=[];let cur='';
+  for(const w of words){const t=cur?cur+' '+w:w;if(ctx.measureText(t).width>maxW&&cur){lines.push(cur);cur=w}else cur=t}
+  if(cur)lines.push(cur);return lines.length?lines:['']}
+async function ptQuote(sym,fresh){
+  const now=Math.floor(Date.now()/1000);
+  const j=await fetchSym(sym,{p1:now-14*DAY,p2:now,iv:'1d',fresh:!!fresh});
+  const px=j.lastPrice!=null?+j.lastPrice:(j.points&&j.points.length?+j.points.at(-1)[1]:NaN);
+  if(!isFinite(px)||px<=0)throw Error('no price');
+  const clock=j.lastTime!=null;
+  return {price:px,asOf:j.lastTime||j.lastBarTime||(j.points&&j.points.length?j.points.at(-1)[0]/1000:null),clock}}
+function ptdraw(){
+  if(MODE!=='pt'||!PTDOC)return;
+  const c=$('ptcanvas'),ctx=c.getContext('2d'),W=1600;
+  const views=ptViews(PTDOC,PTLIVE);
+  const title=PTDOC.title||"Steve's DCF Base Case vs Street Consensus vs Price";
+  const sub=[PTDOC.subtitleNote||'Base now includes probability-weighted future bets','Prices: '+ptPricePhrase(views),'Consensus: '+(PTDOC.consensusLabel||'mean analyst target')].filter(Boolean).join(' | ');
+  ctx.font='15px Inter, Arial, sans-serif';
+  const subLines=ptWrap(ctx,sub,W-96);
+  const foot1=PTDOC.ptChangeNote||'';
+  const foot2=PTDOC.ratingNote||'Rating: BUY > +15% upside to Base, SELL < -15%, otherwise HOLD. Not investment advice.';
+  const mixed=views.some(v=>v.snap)&&views.some(v=>!v.snap);
+  const x0=48,tableW=1504,pad=14,headerH=42,rowH=44,orangeH=4;
+  const cols=[{h:'Ticker',w:112,k:'ticker'},{h:"Steve's Base",w:150,k:'base'},{h:'PT Change',w:188,k:'chg'},{h:'Consensus',w:148,k:'cons'},{h:'Price',w:148,k:'price'},{h:'Base Upside',w:148,k:'bup'},{h:'Street Upside',w:156,k:'sup'},{h:'Rating',w:100,k:'rating'},{h:'Why',w:0,k:'why'}];
+  cols[cols.length-1].w=tableW-cols.slice(0,-1).reduce((s,col)=>s+col.w,0);
+  const subH=subLines.length*22,tableY=36+34+14+subH+16;
+  const footY=tableY+headerH+orangeH+Math.max(1,views.length)*rowH+22;
+  const extra=mixed?22:0;
+  c.width=W;c.height=Math.max(640,Math.ceil(footY+22+22+extra+28));
+  ctx.fillStyle='#FFFFFF';ctx.fillRect(0,0,c.width,c.height);
+  ctx.textBaseline='middle';ctx.textAlign='left';
+  ctx.fillStyle=PTC.navy;ctx.font='bold 28px Inter, Arial, sans-serif';ctx.fillText(title,x0,36);
+  ctx.fillStyle=PTC.muted;ctx.font='15px Inter, Arial, sans-serif';
+  subLines.forEach((ln,i)=>ctx.fillText(ln,x0,36+34+14+i*22));
+  ctx.fillStyle=PTC.navy;ctx.fillRect(x0,tableY,tableW,headerH);
+  ctx.fillStyle=PTC.orange;ctx.fillRect(x0,tableY+headerH,tableW,orangeH);
+  ctx.font='bold 13px Inter, Arial, sans-serif';ctx.fillStyle='#FFFFFF';
+  let x=x0;cols.forEach(col=>{ctx.fillText(col.h,x+pad,tableY+headerH/2);x+=col.w});
+  views.forEach((v,i)=>{
+    const y=tableY+headerH+orangeH+i*rowH;
+    if(i%2===1){ctx.fillStyle=PTC.alt;ctx.fillRect(x0,y,tableW,rowH)}
+    const cy=y+rowH/2;let cx=x0;
+    const cells={
+      ticker:{text:v.ticker,font:'bold 15px Inter, Arial, sans-serif',color:PTC.navy},
+      base:{text:ptMoney(v.base),font:'15px Inter, Arial, sans-serif',color:PTC.text},
+      chg:Object.assign({font:'bold 15px Inter, Arial, sans-serif'},ptChgLabel(v)),
+      cons:{text:ptMoney(v.consensus),font:'15px Inter, Arial, sans-serif',color:PTC.text},
+      price:{text:ptMoney(v.price)+(mixed&&v.snap?'*':''),font:'15px Inter, Arial, sans-serif',color:PTC.text},
+      bup:Object.assign({font:'bold 15px Inter, Arial, sans-serif'},ptUpside(v.bup)),
+      sup:Object.assign({font:'bold 15px Inter, Arial, sans-serif'},ptUpside(v.sup)),
+      rating:{text:v.rating||'—',font:'bold 15px Inter, Arial, sans-serif',color:ptRateColor(v.rating)},
+      why:{text:v.why||'',font:'15px Inter, Arial, sans-serif',color:PTC.text}
+    };
+    cols.forEach(col=>{
+      const cell=cells[col.k];ctx.font=cell.font;ctx.fillStyle=cell.color;
+      const max=col.w-pad*2,raw=cell.text;
+      let text=raw;if(ctx.measureText(text).width>max){while(text.length>1&&ctx.measureText(text+'…').width>max)text=text.slice(0,-1);text=text+'…'}
+      ctx.fillText(text,cx+pad,cy);cx+=col.w});
+  });
+  ctx.fillStyle=PTC.muted;ctx.font='13px Inter, Arial, sans-serif';ctx.textAlign='left';
+  if(foot1)ctx.fillText(foot1,x0,footY);
+  ctx.fillText(foot2,x0,footY+22);
+  if(mixed)ctx.fillText('* Snapshot price (live quote unavailable).',x0,footY+44);
+  if($('ptwm').checked){ctx.fillStyle=T.wm;ctx.font='18px Inter, Arial, sans-serif';ctx.textAlign='right';ctx.textBaseline='top';ctx.fillText('@thepowerfulHRV',W-50,28)}
+  const st=$('status');if(MODE==='pt'){
+    const snap=views.filter(v=>v.snap).map(v=>v.ticker);
+    const moved=views.filter(v=>v.snapshotRating&&v.rating&&v.snapshotRating!==v.rating).map(v=>v.ticker+' '+v.snapshotRating+' → '+v.rating);
+    st.className=snap.length?'err':'';
+    st.textContent='Prices: '+ptPricePhrase(views)+' · '+views.length+' names'+(snap.length?' · snapshot fallback: '+snap.join(', '):'')+(moved.length?' · rating vs snapshot: '+moved.join('; '):'')+' · Not investment advice.'}
+  return views}
+async function ptquotes(fresh){
+  if(!PTDOC||MODE!=='pt')return;
+  const seq=++PTSEQ,rows=PTDOC.rows||[],st=$('status');
+  st.className='';st.textContent=fresh?'Fetching fresh prices…':'Fetching live prices…';
+  const got={};
+  await Promise.all(rows.map(async r=>{try{got[r.ticker]=await ptQuote(r.ticker,fresh)}catch(e){got[r.ticker]=null}}));
+  if(seq!==PTSEQ||MODE!=='pt')return;
+  rows.forEach(r=>{if(got[r.ticker])PTLIVE[r.ticker]=got[r.ticker]});
+  ptdraw()}
+async function ptenter(){
+  const st=$('status');st.className='';st.textContent='Loading price targets…';
+  try{
+    if(!PTDOC){const r=await fetch('price_targets.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);PTDOC=await r.json();if(!Array.isArray(PTDOC.rows))throw Error('no rows')}
+  }catch(e){if(MODE==='pt'){st.className='err';st.textContent='Could not load price targets ('+e.message+').'}}
+  if(MODE!=='pt'||!PTDOC)return;
+  ptdraw();ptquotes(false)}
+$('ptwm').onchange=()=>{if(MODE==='pt')ptdraw()};
+$('ptgo').onclick=()=>{if(MODE==='pt'&&PTDOC)ptquotes(true)};
+$('ptdl').onclick=()=>{if(MODE!=='pt'||!PTDOC)return;ptdraw();const a=document.createElement('a');a.href=$('ptcanvas').toDataURL('image/png');a.download='price_targets.png';a.click()};
+window.__ptdraw=ptdraw;
+
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf'];
+const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf','ptwm'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();if(MODE==='prices')o.ann=ANN.map(a=>({date:a.date,label:a.label,note:a.note||''}));return o}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
 // Saved views are per tab: each view carries .mode and only shows/saves/loads in that tab.
-const VMODES=['prices','fin','heat','tre','val','watch','sent'];
+const VMODES=['prices','fin','heat','tre','val','watch','sent','pt'];
 const vmode=x=>VMODES.includes(x&&x.mode)?x.mode:'prices';
 // Fields each tab owns; applying a view only touches its own tab's fields (+ theme), so other tabs are left alone.
-const VOWN={sent:/^(sview|shist|sprice|stickers|stitle|swm)$/,watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase|annOn|annEarn|annHalf)$/};
+const VOWN={sent:/^(sview|shist|sprice|stickers|stitle|swm)$/,watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase|annOn|annEarn|annHalf)$/,pt:/^ptwm$/};
 // Session-only memory of each tab's selected view: a page load/refresh always starts every tab at "— pick a view —".
 const VLASTM={};try{localStorage.removeItem(VLAST)}catch(e){}
 function vremember(name){if(name)VLASTM[MODE]=name;else delete VLASTM[MODE]}
@@ -1144,7 +1365,7 @@ function wlpicklist(){const p=$('wlpick');if(!p)return;const box=$('wlpickbox');
 $('wlpick').onchange=()=>{const p=$('wlpick'),v=p.value,id=WLIN[MODE];p.value='';if(!v||!id)return;
   const x=v==='cur'?{wl:WL}:VIEWS[v];if(!x||!Array.isArray(x.wl)||!x.wl.length)return;
   $(id).value=x.wl.join(',');if(MODE==='heat')$('huni').value='custom';if(MODE==='prices'&&$('names'))$('names').value='';if(MODE==='fin'&&$('fnames'))$('fnames').value='';if(MODE==='val'&&$('vnames'))$('vnames').value='';rerender()};
-const WMID={prices:'wm',fin:'fwm',heat:'hwm',tre:'twm',val:'vwm',watch:'wwm',sent:'swm'};
+const WMID={prices:'wm',fin:'fwm',heat:'hwm',tre:'twm',val:'vwm',watch:'wwm',sent:'swm',pt:'ptwm'};
 function vapply(x){const m=vmode(x),own=VOWN[m];if(m==='prices'){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';$('ddbase').value='range';
   $('annOn').checked=false;$('annHalf').checked=false;$('annEarn').checked=true;
   ANN=(Array.isArray(x.ann)?x.ann:[]).filter(a=>a&&a.date&&a.label).slice(0,40).map(a=>({date:String(a.date),label:String(a.label).slice(0,24),note:String(a.note||'').slice(0,80)}));annsave()}

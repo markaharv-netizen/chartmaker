@@ -1,0 +1,228 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-08-12T00:00:00Z",
+ "end": "2026-08-13T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "JMaxx611",
+   "url": "https://x.com/JMaxx611/status/2087354591382003808",
+   "date": "2026-08-12",
+   "text": "Watch 63! \n\n🚨 CRYPTO OUTLOOK — WEDNESDAY, AUG. 12\n\nTomorrow could be a BIG decision day for crypto. 👀\n\n₿ BTC — $63.7K\n🟡 Neutral → Slightly Bearish\nBTC is still fighting to regain momentum after losing $65K.\n\n📈 Bull case: reclaim $64.5K–$65K → $66K+ becomes possible\n📉 Bear"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "dingding_TW666",
+   "url": "https://x.com/dingding_TW666/status/2087364399640215792",
+   "date": "2026-08-12",
+   "text": "DingDing Cross-Market Technical Analysis (2026/08/12 09:30 UTC+8) #LINK #BNB\n\n【⭐ DingDing Today’s Trading Highlights Quick Summary ⭐】\nToday’s key takeaway:\nThis is not a broad market reversal yet. Strong coins are already breaking higher, while weaker coins are still building"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Marketstudioo",
+   "url": "https://x.com/Marketstudioo/status/2087359048102629420",
+   "date": "2026-08-12",
+   "text": "📊 ETHUSD | Range Breakout Alert 🚨\n\nEthereum has broken out of the marked range with bullish momentum.\n\n🎯 Upside Target: 1892.59\n🎯 Downside Target: 1872.46\n📍 Breakout Zone: ~1880–1885\n\nWatch for confirmation &amp; manage risk carefully. ⚠️\n\n#ETHUSD #Ethereum #ETH #Crypto https://t.co/b3wMS0MQS4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 208,
+   "user": "Cryptoinsightuk",
+   "url": "https://x.com/Cryptoinsightuk/status/2087573414483472844",
+   "date": "2026-08-12",
+   "text": "The most in depth I’ve ever gone into $XRP price.\n\nAn all encompassing analysis covering price, momentum, dominance, XRP/BTC, XRP/ETH, Fibonacci targets, Elliott Waves and more.\n\nEssentially, my complete XRP price analysis sheet, completely free. https://t.co/DdPIb9Zcyf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "wealth_chef",
+   "url": "https://x.com/wealth_chef/status/2087498850487472180",
+   "date": "2026-08-12",
+   "text": "📊 ENS earnings IV setup  | score 66.7\nReports: 2026-08-12 postmarket\nIV rank (1y): 83%\nExpected move: 7.9%  (±$14.75)\nMarketcap: $6.80B\nSector: Industrials\n\nBias: 🔴 BEAR  (high confidence)\n  • Flow 20 alerts: $515K bullish vs $781K bearish\n  • Darkpool 25 prints: $247K buy vs"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 28,
+   "user": "web3_valuescan",
+   "url": "https://x.com/web3_valuescan/status/2087429327738867876",
+   "date": "2026-08-12",
+   "text": "🚨 ethereum:0x99991c6aabba5a096f24f250b73580f5179b9999  Continues Higher After Listing on Anomaly Monitoring Today! ValueScan Precise Capture\n\nPost-signal gain already +10.82%!\n\nThis morning (starting 08:35) consecutive Futures Capital Activity Surges signals were triggered https://t.co/U49AZerNPi"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 106,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2087381949187059936",
+   "date": "2026-08-12",
+   "text": "Bitcoin closed slightly red yesterday, down about 0.58%, but the bigger story is that BTC wicked below the TBO cloud, which is a warning sign even though it isn't a confirmed close. I'm still leaning bearish into August, and I'm watching RSI at 39.44 against the 36.6 support https://t.co/Un9EBDi4IS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TradeSignals_24",
+   "url": "https://x.com/TradeSignals_24/status/2087540995193770334",
+   "date": "2026-08-12",
+   "text": "🚨 11 Years of HODLing… And Now a $5M+ ETH Wallet! 👀💰\nOne of Ethereum’s early investors may have just turned an $831 investment into roughly $5.04 million after more than 11 years of inactivity.\n🔹 ETH Bought: 2,680 ETH\n🔹 Initial Cost: Just $831\n🔹 Current Value: ~$5.04M\n🔹 https://t.co/El90IwQuQ4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 60,
+   "user": "BerrieOrg",
+   "url": "https://x.com/BerrieOrg/status/2087557555417673750",
+   "date": "2026-08-12",
+   "text": "Bitcoin is back at support after giving up its CPI rally.\n\nETH is holding up better. SOL’s breakout failed. BTC is now less than 0.2% from the level that could confirm another move lower.\n\nBerrie Intelligence breaks down what matters next https://t.co/qpTsVFUjwi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "theMarvelCrypto",
+   "url": "https://x.com/theMarvelCrypto/status/2087682794881507432",
+   "date": "2026-08-12",
+   "text": "🚨 6 REVERSAL PATTERNS EVERY TRADER SHOULD KNOW.\n\nBullish Engulfing • Bearish Engulfing • Hammer\nShooting Star • Morning Star • Evening Star 📊\n🔥 Learn the pattern. Wait for confirmation. Then trade.\n\n👉❤️ ethereum:0x5a9610919f5e81183823a2be4bd1beb2b4da2a20🧿 https://t.co/KlCDMV6hHg"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "TheKorbut",
+   "url": "https://x.com/TheKorbut/status/2087454906131046497",
+   "date": "2026-08-12",
+   "text": "🩸Market: traders are massively piling into shorts on $BTC and $ETH .\n\nThe liquidation map shows how much leveraged positions could be forcibly closed at a given asset price.\n\n• If @Bitcoin surges to around $70,330, more than $4.92B worth of short positions could be liquidated. https://t.co/WCyQGDDKK8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "sebos77",
+   "url": "https://x.com/sebos77/status/2087414229271765152",
+   "date": "2026-08-12",
+   "text": "2026-08-12: Altseason indicator = Trend indicator (0-bearish to 100-bullish) = 24.9/100 #bitcoin #ethereum #altcoins #krakenfx https://t.co/CgrDtmoPmm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2087536718735921269",
+   "date": "2026-08-12",
+   "text": "🚨 #Fidelity plans to add #staking and quarterly #cash payouts to its spot #Ethereum \n\nThe asset manager overseeing $7T in #assets is reportedly planning to let #investors #earn staking rewards through its Ethereum ETF\n\nThe move could make #ETH ETFs more attractive to https://t.co/zBa6d8mwi8"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 11,
+   "user": "ARSanto864541",
+   "url": "https://x.com/ARSanto864541/status/2087407622169477137",
+   "date": "2026-08-12",
+   "text": "📊 LIVE CRYPTO MARKET UPDATE 🚀\n\nBTC $63,745 🔻 -0.47%\nETH $1,887 🟢 +0.58%\nSOL $76.25 🟢 +0.24%\nBNB $614.46 🔥 +2.39%\nXRP $1.02 🟢 +0.67%\n\nBNB is showing strong momentum today. 👀🔥\nBullish 🐂 or Bearish 🐻?\n\n#Crypto #Bitcoin #Ethereum #BNB #XRP #Solana #Web3 #CryptoMarket https://t.co/s4ZxgK5Pp5 https://t.co/n9vIhA9IAQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "ANCrypto_",
+   "url": "https://x.com/ANCrypto_/status/2087351149620015482",
+   "date": "2026-08-12",
+   "text": "📰 NEWS COIN UPDATE EVERY HOUR @ethereum \n\n🚨 $ETH loses $1,900 — now $1,850 could decide the next big move.\n\nEthereum dropped 2.6% → ~$1,870 after another failed attempt to break the $1,900–$1,950 resistance zone.\n\nHere’s what matters 👇\n\n📉 Price: ~$1,870\n🔴 Key support: https://t.co/m1qCdgNCJx https://t.co/DAqXU8TqU6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 22,
+   "user": "FUSEBTC",
+   "url": "https://x.com/FUSEBTC/status/2087560241126723938",
+   "date": "2026-08-12",
+   "text": "💎 PEPU BITCOIN could be a golden opportunity at its current level.\n\nRight now, the project remains highly undervalued compared to the ambition it is building toward. 🔥\n\nBut remember: in crypto, the current market cap doesn’t tell the whole story. Look at the development, https://t.co/QvRx1Zc6Uk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "0Kryptexx",
+   "url": "https://x.com/0Kryptexx/status/2087509870098456768",
+   "date": "2026-08-12",
+   "text": "#Chainlink is showing an interesting setup on the 4H chart after recovering strongly from the $8.00 area. \n\nPrice is now around $8.84 and has pushed directly into the highlighted $8.80–$8.90 resistance zone, which has previously acted as a rejection area.\n\nThis is the level I’d https://t.co/8vGAfa1mNU"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "CrypTao_Columbo",
+   "url": "https://x.com/CrypTao_Columbo/status/2087468811662295140",
+   "date": "2026-08-12",
+   "text": "I am a hyperliquid:native holder and bull, but ethereum:0x232ce3bd40fcd6f80f3d55a522d03f25df784ee2 is significantly undervalued. \n\nThere is no stock for either, holding the tokens means you hold equity in the companies and their profits. \n\n@Lighter_xyz has said many times that"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2087540872971685984",
+   "date": "2026-08-12",
+   "text": "🚬 #Spot #trading #volume on #crypto #exchanges has fallen to a two-year low\n\nJuly’s volume reached just $807B, down 31% from June’s $1.17T and below the lows seen this spring\n\nThis is common when #summer trading slows down, but with the #market approaching the end of the cycle https://t.co/cpX4EFrylo"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 108,
+   "user": "VoidOnChain",
+   "url": "https://x.com/VoidOnChain/status/2087552670621982771",
+   "date": "2026-08-12",
+   "text": "🚨 $ETH IS SETTING UP THE LAST TRAP BEFORE $7K\n\nEthereum is sitting around $1,865.\n\nI still think there's one more push higher before the real bottom forms.\n\nIf BTC moves toward $70K-$72K, I expect ETH to follow and push into the $2,000-$2,100 area.\n\nThat's where I think the trap https://t.co/GYT6mUCVZM https://t.co/kVVbk6NtNh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 58,
+   "user": "BerrieOrg",
+   "url": "https://x.com/BerrieOrg/status/2087390896732188675",
+   "date": "2026-08-12",
+   "text": "Introducing Berrie Intelligence Briefs\n\nPowered by ANU, we connect market data with OSINT &amp; world events to understand what matters and what may come next.\n\nPublic access is coming to Berrie, ChatGPT &amp; more. Until then, we’ll publish our briefs here on X. https://t.co/66KgX8v5uu"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "YuriOnchain",
+   "url": "https://x.com/YuriOnchain/status/2087369504099869081",
+   "date": "2026-08-12",
+   "text": "Ethereum $ETH prediction traders are still leaning bullish.\n\nOn @bananagun Predict, ETH above $2,000 is sitting around 81.5c, and $2,250 is still priced at 55.5c before 2027.\n\nThat tells me the market still expects upside, even with all the chop.\n\nNot saying it goes straight https://t.co/adDfLHphrM"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "CryptoPulsarAI",
+   "url": "https://x.com/CryptoPulsarAI/status/2087511185901928692",
+   "date": "2026-08-12",
+   "text": "Silent Accumulation Despite Fear 🧐\n\nMorning brief – 12.08.2026\n• BTC $64,174 🔴 -0.2%, ETH $1,912.74 🟢 +1.3%, SOL $76.80 🟢 +0.9%\n• Top mover: aPriori +89.8%; worst: DAPPOS -30.8%\n• Fear &amp; Greed: 27 – Fear\n• Whales: 126 txns, $3.17B volume; exchanges bled $184.9M net\n\nThin https://t.co/hDfs4yOwgW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "CryptoWaveV",
+   "url": "https://x.com/CryptoWaveV/status/2087412295039103189",
+   "date": "2026-08-12",
+   "text": "$ETH Update\n\nEthereum followed exactly the price action I wasn't expecting, which once again leaves room to interpret the current structure as corrective.\n\nThe most recent move lower can be counted as impulsive, meaning it could either be a Wave C or a new Wave 1. The latter https://t.co/QvFka1HFs4 https://t.co/56N0FGHZNi"
+  }
+ ]
+}

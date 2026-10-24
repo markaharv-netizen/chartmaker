@@ -1,0 +1,409 @@
+{
+ "symbol": "META",
+ "start": "2026-07-19T16:00:00Z",
+ "end": "2026-07-26T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "META (stock OR shares OR Zuckerberg) -is:retweet -is:reply lang:en",
+  "META (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "stocksengine",
+   "url": "https://x.com/stocksengine/status/2079554837193322814",
+   "date": "2026-07-21",
+   "text": "BREAKING: Mark Zuckerberg has surpassed Michael Dell, the founder and chairman of $DELL Technologies, to become the world’s 5th-richest person.\n\nMichael Dell, who holds about 265.7 million Dell shares, saw his net worth cut by $2.9 billion to $220.3 billion, ranking him directly https://t.co/yhHfDqN3n5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "NwudeChris1",
+   "url": "https://x.com/NwudeChris1/status/2079645456657719361",
+   "date": "2026-07-21",
+   "text": "Mark Zuckerberg just reclaimed his spot as the world’s 5th richest person, pushing his net worth to $222.1B as Meta holds steady.\n\nHere's another reminder that you don't need a traditional brokerage to get into $META stock market.\n\nYou can trade Meta stock directly on-chain https://t.co/rIbsMh8bxr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptoPlanet247",
+   "url": "https://x.com/CryptoPlanet247/status/2079903610591182856",
+   "date": "2026-07-22",
+   "text": "META Stock Unease: Zuckerberg Fears His Company Is Slow in Building AI https://t.co/lmAy3sHh1O Vinod Dsouza \n\nThe Nasdaq-listed META stock is in a sticky situation for all the wrong and ‘painfully slow’ reasons in 2026. Reports state that CEO Mark Zucker… https://t.co/MqeP9DWng0"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "CryptoPlanet247",
+   "url": "https://x.com/CryptoPlanet247/status/2080292554109509738",
+   "date": "2026-07-23",
+   "text": "Analyst Predicts META Stock To Crash to $485 https://t.co/9rrG8ZCQsJ Vinod Dsouza \n\nThe Nasdaq-listed META Platforms stock opened Thursday’s trading session at $627 after falling nearly 2.6% the previous day. The dip comes as CEO Mark Zuckerberg is expre… https://t.co/48YXZF1UbQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "pmainpro",
+   "url": "https://x.com/pmainpro/status/2079921275829354700",
+   "date": "2026-07-22",
+   "text": "Meta Platforms CEO Mark Zuckerberg has regained his position as the world's fifth-richest person, following a decline in Dell Technologies shares that reduced the wealth of company founder Michael Dell."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BradPorcellato",
+   "url": "https://x.com/BradPorcellato/status/2079875974888345839",
+   "date": "2026-07-22",
+   "text": "If Mark Zuckerberg Says These Words on July 29, Meta Platforms' Stock Could Skyrocket https://t.co/ZaXmsMIZ19"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BradPorcellato",
+   "url": "https://x.com/BradPorcellato/status/2079571541986009538",
+   "date": "2026-07-21",
+   "text": "Prediction: Mark Zuckerberg Will Make an Announcement on July 29 That Sends Meta Stock Soaring https://t.co/8u0iv0krcY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FirmlyMedia",
+   "url": "https://x.com/FirmlyMedia/status/2080999273760702741",
+   "date": "2026-07-25",
+   "text": "Meta's Louisiana data centre started at $10B. Now it's $50B. Total expected cost: $250B. \n\nZuckerberg wants the most AI compute on the planet. \n\nMeta's stock is down 8.5% this year. Biggest AI bet ever. \n\nBiggest question mark too.\n \n#Meta #Zuckerberg #AI #TechNews #Investing https://t.co/dxAVg449p6"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Forbes_MENA_",
+   "url": "https://x.com/Forbes_MENA_/status/2079517043632505082",
+   "date": "2026-07-21",
+   "text": "Mark Zuckerberg reclaimed his position as the world’s fifth-richest person on Monday, overtaking Michael Dell as shares of Dell Technologies fell 3.7%. Dell’s net worth declined by $2.9 billion to $220.3 billion, placing him just behind Zuckerberg, whose fortune stood at $221.5 https://t.co/KDvu6jpUmL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 26,
+   "user": "robertcobrien",
+   "url": "https://x.com/robertcobrien/status/2080248937118576951",
+   "date": "2026-07-23",
+   "text": "Mark Zuckerberg shares his optimistic view of AI and the future.  I have always said the reason that the US will prevail in the geopolitical contests of today’s world is because of our excellent innovators and entrepreneurs like Mark. https://t.co/zQivNdXDD6  @facebook @Meta"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "kapildevtamkr",
+   "url": "https://x.com/kapildevtamkr/status/2080808884407767500",
+   "date": "2026-07-25",
+   "text": "One of the best things about X for AI is that if you're launching a Ai product or want to stay updated on AI, this is where you should spend time. \n\nEven Mark Zuckerberg shares Meta AI updates here. \n\nThat shows how relevant @X is to the AI world.\n\n@finkd @elonmusk \n\n#Ai #X"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Abdu_F_H",
+   "url": "https://x.com/Abdu_F_H/status/2080518861728743733",
+   "date": "2026-07-24",
+   "text": "Meta is building Meta Compute, an internal division aimed at renting out spare AI infrastructure to outside customers.\n\nMeta shares jumped roughly 9-10% on the news, while chip stocks fell sharply, with the Philadelphia Semiconductor Index dropping over 6% in a single session. https://t.co/I5BmvTX99V"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "HealyWriting",
+   "url": "https://x.com/HealyWriting/status/2079975055925170370",
+   "date": "2026-07-22",
+   "text": "Zuckerberg is in talks with Anthropic for a deal that would make $META a major neocloud player. Should investors buy the stock? \n\nhttps://t.co/waPP24q8hb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "btcframe",
+   "url": "https://x.com/btcframe/status/2079707519019270653",
+   "date": "2026-07-21",
+   "text": "Bold Prediction: Could $META trigger a major stock rally on July 29?\n\nDespite massive AI CapEx pressing down on free cash flow, Meta’s heavy infrastructure build out could turn into its biggest growth driver.\nHere’s the breakdown ahead of earnings:\n• The Prediction: Mark https://t.co/F9of174SC5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "techshotsapp",
+   "url": "https://x.com/techshotsapp/status/2079541202047942924",
+   "date": "2026-07-21",
+   "text": "AI Boom Shakes Up Billionaire Ranks: Zuckerberg Overtakes Michael Dell\n\nMeta CEO Mark Zuckerberg has taken the spot of world's fifth-richest person with a net worth of $222.1 billion, overtaking Dell CEO Michael Dell. A 3.3% drop in Dell stock erased $2 billion from Michael"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "goodmoat",
+   "url": "https://x.com/goodmoat/status/2079583427867656286",
+   "date": "2026-07-21",
+   "text": "- Apple ($AAPL) hits new all-time high — Briefly overtakes Nvidia as most valuable company\n\n- Nvidia (NVDA) added back by NZS Capital Growth Equity Strategy — Second-quarter 2026 letter cites rationale\n\n- Intel (INTC) gains focus after Ultralytics optimizes YOLO26 models for"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "EugenioFierro3",
+   "url": "https://x.com/EugenioFierro3/status/2080269751780016555",
+   "date": "2026-07-23",
+   "text": "Zuckerberg bets big on AI optimism despite the cracks\n\nWhile Meta admits its AI agents are behind schedule, Mark Zuckerberg is doing the opposite of what you'd expect: doubling down and wrapping it all in optimism. This isn't just messaging, it's a strategy with very real https://t.co/ZKhySsZPmv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "_MrDecentralize",
+   "url": "https://x.com/_MrDecentralize/status/2080322365049733318",
+   "date": "2026-07-23",
+   "text": "The Manifesto Expired at Login\n\nIn July 2024, Mark Zuckerberg published a manifesto with a title that read like a promise: \"Open Source AI Is the Path Forward.\" Llama weights were free to download. An entire ecosystem formed on top of them. Startups fine-tuned Llama into legal"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "DerShpiel",
+   "url": "https://x.com/DerShpiel/status/2079954301250679195",
+   "date": "2026-07-22",
+   "text": "Meta CEO Mark Zuckerberg is once again one of the five richest people in the world after Meta’s stock surged 11%, adding nearly $20 billion to his personal fortune in a single day.\n\nThe massive jump pushed Zuckerberg’s net worth to around $222 billion, allowing him to overtake https://t.co/Ooz0VATHhe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 47,
+   "user": "ArkkDaily",
+   "url": "https://x.com/ArkkDaily/status/2079521184077451625",
+   "date": "2026-07-21",
+   "text": "Cathie Wood and Ark Invest bought 28,106 shares of Meta Platforms $META stock yesterday https://t.co/ayAwF2a55Y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "MentoviaX",
+   "url": "https://x.com/MentoviaX/status/2079359883418149264",
+   "date": "2026-07-21",
+   "text": "$META Cathie Wood has acquired a total of 28,106 shares of Meta stock today worth roughly $18 Million dollars. https://t.co/ZWG6I6pXmV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "JungleReportFi",
+   "url": "https://x.com/JungleReportFi/status/2079489964559958403",
+   "date": "2026-07-21",
+   "text": "WE CAN OWN META STOCK AND STILL HAVE ZERO SAY IN HOW META IS RUN.\n\nMark Zuckerberg's Class B shares carry 10 votes each. Ordinary Class A shares, the ones inside every S&amp;P 500 index fund, carry one. He controls a majority of Meta's voting power while owning a minority of its"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2081000153851269549",
+   "date": "2026-07-25",
+   "text": "Macro Observatory Weekly Wrap\n\nFriday's weekly close telemetry has delivered a profound structural milestone: the gravity lock-in confirms the liquid deficit.\n\nThe thinned mid-week parabolic pumps and stop-hunting episodes have been pulverized. As exchanges cleared the final"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "mikalche",
+   "url": "https://x.com/mikalche/status/2080644526310379567",
+   "date": "2026-07-24",
+   "text": "$AMZN  saw a call vertical involving:\n• Buying August $250 calls\n• Selling or closing August $270 calls\nThe net delta change was strongly positive at the lower strike and negative at the upper strike.\nThis is a defined-risk bullish structure targeting recovery while capping"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "DavisChartdva",
+   "url": "https://x.com/DavisChartdva/status/2079177596777144665",
+   "date": "2026-07-20",
+   "text": "$SPOT Pre-Market Update 📊\n\nSpotify ($SPOT) is seeing early weakness in pre-market trading, pulling back around 3.7% after closing near $478. The move appears to be driven by short-term profit-taking as investors reassess high-growth tech valuations.\n\nKey levels to watch today:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "dingding_TW666",
+   "url": "https://x.com/dingding_TW666/status/2079110329515319480",
+   "date": "2026-07-20",
+   "text": "DingDing Cross-Market Technical Analysis (2026/07/20 14:44 UTC+8) #NVDA #AMD #TSM #AVGO #MU #TSLA #MSFT #META #GOOGL #AAPL #AMZN #SOFI #AAL #NU #INTC #PLTR #SMCI #BAC #XOM #NFLX #StockMarket\n\n【⭐ DingDing Today’s Trading Highlights Quick Summary ⭐】\nToday’s key takeaway:\nThis"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "OttoAnalytics",
+   "url": "https://x.com/OttoAnalytics/status/2081042842483626001",
+   "date": "2026-07-25",
+   "text": "Capex up is not automatically bullish. Capex down is not automatically bearish. Next week tells us whether the AI buildout is becoming more productive or merely more financed.\n\nHigh-signal calendar:\n\nMon: Celestica\nTue: American Tower\nWed: Vertiv, Microsoft, Meta, Modine\nThu: https://t.co/tZoLE4lFSJ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "iBuydipss",
+   "url": "https://x.com/iBuydipss/status/2080446318992822396",
+   "date": "2026-07-24",
+   "text": "$META  is presenting a high-conviction technical support setup on the 8 hour chart as buyers step in near the 605.75 dollar mark. With institutional call blocks and sweeps printing heavily on massive strikes like the 07/24/2026 612.50s on the Ask alongside strong bullish https://t.co/rSH3rRVdKE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "TheBotWick",
+   "url": "https://x.com/TheBotWick/status/2080247181119001071",
+   "date": "2026-07-23",
+   "text": "$META 🟢 BotWick Trading Plan | $615.80\nKEY LEVELS\n🟩 Bull trigger: &gt; 620 (daily close)\n🟥 Bear trigger: &lt; 608.88 (daily close)\n🎯 622.65 → 626.15 → 628.98\n🛡️ 608.88–622.43 = demand zone\nEQ 631.58 = discount pivot\nLink in bio · Not financial advice\n\n📈 Critical Levels\n– Most"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2079236091266117920",
+   "date": "2026-07-20",
+   "text": "🐳 $NVDA is 'struggling in 2026' — and a trader just spent $2.6M betting the bears are early.\n\nTHE THESIS\n\nThe bear case on NVDA is getting loud — and the biggest option trade of the morning just called it early.\n\nOn July 20, The Motley Fool ran a piece titled 'Nvidia Stock Is https://t.co/Ymx7ueNk9Z"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 16,
+   "user": "raichutokenized",
+   "url": "https://x.com/raichutokenized/status/2080703898734481487",
+   "date": "2026-07-24",
+   "text": "market is red despite $GOOG and $INTC earnings being bullish for AI-infra. \n\nlower time frames ( &lt; H4 ) are in a downtrend, no question there. however, daily and weekly charts are holding for now, refusing to make a lower low. \n\nmy guess is macro (war escalating, credit for https://t.co/vVUdFQ6I7f"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 14,
+   "user": "chieftokenbased",
+   "url": "https://x.com/chieftokenbased/status/2081271610917687370",
+   "date": "2026-07-26",
+   "text": "The $ANSEM meta is starting to gain serious bullish momentum. This is the leading Solana trenches narrative with massive upside potential, and $BOAR is, in my view, the most promising and undervalued asset. https://t.co/dFqFlWfLFi https://t.co/3B4j73PtLE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "capitalfronts",
+   "url": "https://x.com/capitalfronts/status/2079283509076615174",
+   "date": "2026-07-20",
+   "text": "The Big Short guy is quietly rotating — and it's NOT the signal everyone will assume.\n\nMichael Burry is selling US AI stocks and buying Hong Kong ones. He's said it repeatedly, and one of his longs is $JD (https://t.co/CU0WCRiToW). Now, the knee-jerk reaction is \"Burry's shorting https://t.co/mu6SKsvSX2"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "ashl88789",
+   "url": "https://x.com/ashl88789/status/2079960899746693193",
+   "date": "2026-07-22",
+   "text": "Live Exposure of Massive U.S. Options Trades!\nBig money is moving into tech stocks!\nInstitutions are betting on upside in Amazon, Nvidia, and Tesla, while others are buying long-term puts on Meta.\nBulls and bears are fighting for control.\nAre you bullish or bearish? https://t.co/V1dvagvuKN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2081222396196098127",
+   "date": "2026-07-26",
+   "text": "Salesforce is drawing mixed reactions as Morgan Stanley’s Adam Wood steps in with an Equal-weight rating and a trimmed $185 price target. He argues  $CRM Salesforce has a strong competitive moat and is boldly reinventing itself for the “agentic” AI era, yet investors are still https://t.co/uAcNdiajnD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "RichPeterLi",
+   "url": "https://x.com/RichPeterLi/status/2079087930715607497",
+   "date": "2026-07-20",
+   "text": "$META --- Early July’s biggest market catalyst came from Meta’s plan to launch a cloud computing offering dubbed “Meta Compute,” designed to monetize its surplus AI compute capacity. The announcement marks a pivotal strategic shift that lets Meta convert its massive AI https://t.co/D0FfxnfWUK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 49,
+   "user": "DGMD22",
+   "url": "https://x.com/DGMD22/status/2079366108885241929",
+   "date": "2026-07-21",
+   "text": "The altcoin game has changed. The market is demanding strong fundamentals, revenues that support the valuation. The market caps aren't just memetic and nebulous anymore. This coupled with the rise in popularity of perps where the majority of bidders of alts are trading them on"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 12,
+   "user": "jeremymjacquin",
+   "url": "https://x.com/jeremymjacquin/status/2079755313478041705",
+   "date": "2026-07-22",
+   "text": "🚨 $NBIS Bull Trap Alert: The Nasdaq-100 Pump Was Pure Distribution 🔥  exactly as I stated in previous posts. \n\nYo, that euphoric rip to ~$300 right after the Nasdaq-100 inclusion? Classic smart money exit liquidity play. Retail FOMO’d in on the “AI infra moonshot” narrative"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2079295939131404320",
+   "date": "2026-07-20",
+   "text": "The tape is bullish AI infrastructure — and quietly fading the two names Wall Street loves most: $SHOP and Apple.\n\nTHE SETUP\n\n$549M in tracked premium, 169 prints, and the tape split cleanly in two: aggressive call-selling on the mega-cap names Wall Street keeps upgrading, and https://t.co/fh91XZvQNY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "TokenizeBull",
+   "url": "https://x.com/TokenizeBull/status/2079113714687770919",
+   "date": "2026-07-20",
+   "text": "Fully agree @blknoiz06 🫡\n\nThe bull market is truly ready to ignite, and if you look at the timeline and on-chain data objectively, it was precisely the $ANSEM meta that served as the catalyst kicking off the current meme coin season and flipping the entire market narrative to https://t.co/pUyB8hdMd6 https://t.co/SLnxBteYPD"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "wensontrading",
+   "url": "https://x.com/wensontrading/status/2079559892990365837",
+   "date": "2026-07-21",
+   "text": "🚨 Biggest Wall Street Calls Today 07/21/2026\n\n🟢 Bullish\n\n• $ORCL – Mizuho reiterates Outperform: Shares at multi-year lows offer one of the best risk/reward setups.\n• $NVDA – BofA reiterates Buy: AI leadership and open-source investments continue to strengthen the long-term"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "ROR_Traders",
+   "url": "https://x.com/ROR_Traders/status/2079914956204437913",
+   "date": "2026-07-22",
+   "text": "Where the options positioning says price wants to go today, name by name 👇\n\n$AAPL — 330 is the magnet (call + put OI stacked there). Above it: 332.5, 335 (335 low delta, can shift). Below: 325 gapfill, then yday's low → 320. I'm leaning long — the bigger OI magnets sit above"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "chachaX72",
+   "url": "https://x.com/chachaX72/status/2079597183708561736",
+   "date": "2026-07-21",
+   "text": "🔴 Top 5 Wall Street Downgrades\n\n1️⃣ Shopify ($SHOP ) • Downgraded to Neutral at Rothschild &amp; Co Redburn\n\nPrice Target: $130 (down from $160)\n\nThe Thesis: Redburn warns of escalating competitive pressure from Meta Platforms ($META ), which is expanding its consumer AI assistant"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2080020732633874915",
+   "date": "2026-07-22",
+   "text": "The single largest options ticket today was a $357M bet that $NVDA keeps ripping into 2026. The tape underneath tells a different story.\n\nMARKET-CLOSE SYNTHESIS — JULY 22, 2026\n\nTHE HEADLINE VS THE TAPE\n\n$1.08B in tracked premium across 153 prints, and two-thirds of it lived in https://t.co/IzxL9O7tFD"
+  }
+ ]
+}

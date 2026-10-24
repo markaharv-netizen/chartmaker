@@ -1,0 +1,57 @@
+{
+ "symbol": "ASST",
+ "start": "2026-08-16T00:00:00Z",
+ "end": "2026-08-17T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "ASST (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 105,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2089009034225488127",
+   "date": "2026-08-16",
+   "text": "$ASST will announce another Bitcoin buy on Monday.\n\n$MSTR will announce another Bitcoin sale.\n\nI am somehow bullish on both."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "CryptoHabibi9",
+   "url": "https://x.com/CryptoHabibi9/status/2089027200263807342",
+   "date": "2026-08-16",
+   "text": "The Strive team is phenomenal! A lot ot people in Dubai are noticing $ASST this will easily 10x in the upcoming btc bull market! https://t.co/4kCEnxBGug"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Rescennsse",
+   "url": "https://x.com/Rescennsse/status/2088936746205446591",
+   "date": "2026-08-16",
+   "text": "“The JPM of crypto\" should also then lend or generate interest by lending to other \"crypto\" businesses or better let's make it easier for Bitcoin businesses like $ASST and their digital credit it's time to restart the bull market for the smaller engine the ⚡️\n@saylor @phongle https://t.co/VCEODqC2Ix https://t.co/AUHs9JpVlw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 69,
+   "user": "BitcoinTeacher_",
+   "url": "https://x.com/BitcoinTeacher_/status/2089005601879646251",
+   "date": "2026-08-16",
+   "text": "$ASST buying more bitcoin tomorrow?\n\nI love how well they’ve executed this bear market. Might be time to finally add some. https://t.co/D4HdDEIlNe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 385,
+   "user": "Gmanct1b",
+   "url": "https://x.com/Gmanct1b/status/2089049108569104810",
+   "date": "2026-08-16",
+   "text": "$RKLB - Strong Buy/$80\n$NBIS - Strong Buy/$277\n$AVGO - Strong Buy/$392\n$ASTS - Strong Buy/$70\n$OSCR - Strong Buy/$32\n$ONDS - Strong Buy/$9.24\n$HIMS - Strong Buy$28\n$AAOI - Strong Buy/$150\n$RCAT - Strong Buy/$11.13\n$IREN - Strong Buy/$44\n$PLTR - Strong Buy/$174\n$MRVL - Strong"
+  }
+ ]
+}

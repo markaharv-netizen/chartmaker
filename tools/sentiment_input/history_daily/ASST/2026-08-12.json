@@ -1,0 +1,39 @@
+{
+ "symbol": "ASST",
+ "start": "2026-08-12T00:00:00Z",
+ "end": "2026-08-13T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "ASST (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 135,
+   "user": "GrafYves",
+   "url": "https://x.com/GrafYves/status/2087632665986076794",
+   "date": "2026-08-12",
+   "text": "Strive $ASST really jumps off the page.\n\nNearly 30% of shares outstanding are sold short, with 8.03 days to cover.\n\nThat's more than 3x the short interest of Strategy $MSTR and 10x $IBIT.\n\nThe market has made a very large bet against Strive.\n\nBut look at what Strive is building: https://t.co/BBE6sFODTp"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "I_keepchanging",
+   "url": "https://x.com/I_keepchanging/status/2087613473689935946",
+   "date": "2026-08-12",
+   "text": "ASST is very bouyant.\n\nSomeone or many are building a larger position.\n\nOverall bullish.\n\nBut dont be surpriced if price initially lags Bitcoin when BT  EVENTUALLY goes up again.\nBut that drag will just be shortlived."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 97,
+   "user": "AdamBLiv",
+   "url": "https://x.com/AdamBLiv/status/2087563156755300413",
+   "date": "2026-08-12",
+   "text": "🔥I BOUGHT CALLS ON AMERICAN BITCOIN - DADDY WANTS TO GET RICH - FULL THESIS BREAKDOWN🔥\n\nAbout a month ago, near the bottom, I bought Jan 2028 $ABTC $7.50 calls.\n\nI paid roughly $3.38 per share of option premium, giving me an expiration breakeven around $10.88.\n\nI didn't buy https://t.co/JUc3vnqwOM"
+  }
+ ]
+}

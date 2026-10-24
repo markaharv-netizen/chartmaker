@@ -1,0 +1,219 @@
+{
+ "symbol": "COIN",
+ "start": "2026-08-21T00:00:00Z",
+ "end": "2026-08-22T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2090892351816237165",
+   "date": "2026-08-21",
+   "text": "The biggest options print of the day was $63.8M on $PLTR — and nobody can tell you which way it was pointed.\n\nTHE PRINT NOBODY CAN SIGN\n\nThe loudest tape of the session was a $63.8M sweep in PLTR — 4,395 December $35 calls, deep in the money, hitting at 15:47 ET as a burst of https://t.co/1TIXy3A2Qq"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 406,
+   "user": "trading_axe",
+   "url": "https://x.com/trading_axe/status/2090852973773479960",
+   "date": "2026-08-21",
+   "text": "Jez and I will retire again but this time TENFOLD OVER with the LIT trade.\n\nThe beauty of it is quite simple:\n\nAs I've iterated many times before - funds are not only going to eagerly seek exposure to \"the next best thing to HL\" [similar to SOL being bought as an outperformer to https://t.co/8GTCvxqeN6"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "QuantificS",
+   "url": "https://x.com/QuantificS/status/2090903403127849272",
+   "date": "2026-08-21",
+   "text": "🔔 After the Close\n\nThis week was an amazing one. #Bitcoin gained around 25% in one week. It had been bearish for a while, then all of a sudden, things changed. That gave me the signal I was waiting for to get into $CRCL and $COIN. A lot of the time, when the market gets https://t.co/SdMCEfd5js https://t.co/KWn32uzmto"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "QuantificS",
+   "url": "https://x.com/QuantificS/status/2090898012084043916",
+   "date": "2026-08-21",
+   "text": "🔔 After the Close\n\nThis week was an amazing one. #Bitcoin had been bearish, but I was watching it on and off. I could see it starting to stabilize, but I wasn’t sure when we would actually get a shift to the upside. Then all of a sudden, things changed. Bitcoin gained around 25% https://t.co/bYB8fZhlTs https://t.co/KWn32uzmto"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "QuantificS",
+   "url": "https://x.com/QuantificS/status/2090902700594429958",
+   "date": "2026-08-21",
+   "text": "🔔 After the Close\n\nThis week was an amazing one. #Bitcoin  had been bearish for a while, but I was watching it on and off. I could see it starting to stabilize, but I wasn’t sure when we would actually get a shift to the upside. Then all of a sudden, things changed. Bitcoin https://t.co/QnrUUqadeT https://t.co/KWn32uzmto"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 264,
+   "user": "KyleReidhead",
+   "url": "https://x.com/KyleReidhead/status/2090808126379601940",
+   "date": "2026-08-21",
+   "text": "$COIN is up 30% this week, while $BTC is up 22%\n\nEven $ETH is only up 27% in the same time frame\n\nMost people don't realize that Coinbase continues to be the BEST way to invest in crypto\n\nIt outperformed $ETH by 3x last bull market and $BTC by 2x\n\nCoinbase has the benefit of https://t.co/UALM3jt9ns"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "apedintocrypto",
+   "url": "https://x.com/apedintocrypto/status/2090767533234348439",
+   "date": "2026-08-21",
+   "text": "In this update, we are taking a hard look at traditional markets and why there is a growing probability that stocks are preparing to drag crypto down with them. https://t.co/ynm1OIFna6"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 52,
+   "user": "WatchfulWeb3",
+   "url": "https://x.com/WatchfulWeb3/status/2090754624512827837",
+   "date": "2026-08-21",
+   "text": "There is a man on CT who called the exact bottom of the bear market \n\nHis name is Ansem / @blknoiz06 \n\nI have never seen someone with such a close grip on the market and a feel for what is happening\n\nEverybody else in a bear market leaves or turns ultra bearish and loses all"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "whathoroscope",
+   "url": "https://x.com/whathoroscope/status/2090614501494136960",
+   "date": "2026-08-21",
+   "text": "📢 Crypto WhatHoroscope – August 21, 2026 ✨\n\n🌐 Overview:\nBitcoin is trading at $73,865, reflecting a 3.5% increase as it approaches resistance levels. The market is bullish, with strong buying momentum from the Asian and European sessions.\n\n🌙 Astro Drivers:\nThe Moon in"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "SoonTech_OFCL",
+   "url": "https://x.com/SoonTech_OFCL/status/2090607080663404622",
+   "date": "2026-08-21",
+   "text": "🚨 Crypto Twitter is bullish again. But the real question is: what changed?\n\nBitcoin is back above $70K.\n\nEthereum is moving higher.\n\nAltcoins are waking up.\n\nAnd suddenly, everyone remembers their favorite phrase:\n\n“Bull market is back.”\n\nBut crypto doesn’t usually move in a https://t.co/ZdDInrxrYc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 395,
+   "user": "EchoAnalysis",
+   "url": "https://x.com/EchoAnalysis/status/2090827190183120909",
+   "date": "2026-08-21",
+   "text": "Current market thoughts 👀\n\nOverall another great week and what a streak we are on!\n\nCountless pullbacks nailed to a tee and several charts playing out exactly as expected.\n\nI bought 2 new stocks this week in $UBER and $KRMN. \n\n$UBER already up nearly 5% and poking above the"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 339,
+   "user": "GhostOfTanzCho",
+   "url": "https://x.com/GhostOfTanzCho/status/2090604333511663719",
+   "date": "2026-08-21",
+   "text": "You need to make a decision right now:\n\nTo support your coin, &amp; hold your conviction throughout the volatility, or NOT.\n\nIt’s going to be a Long Ride.\n\nIt comes in Waves.\nBig Move To The Upside.\nBig Move To The Downside.\nBig Move To The Upside.\nBig Move To The Downside.\nBig Move"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 50,
+   "user": "ces921",
+   "url": "https://x.com/ces921/status/2090774663269929334",
+   "date": "2026-08-21",
+   "text": "MORNING MARKET BRIEF\nFriday, August 21, 2026\n\nTL;DR\n\n1/ The bond market is not buying Bessent's buyback: the 30-year at 5.2% after Wednesday's intervention is the tell, and everything else this week -- gold at $4,590, Bitcoin's short-squeeze surge, a bleeding dollar -- is pricing"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 18,
+   "user": "john_obong68966",
+   "url": "https://x.com/john_obong68966/status/2090855015787160017",
+   "date": "2026-08-21",
+   "text": "This is a bullish reason to buy more $WOJAK. There are series of coin on exchanges many got their moon to millions and came crashing drastically. \nWe $WOJAK on Rh still undervalued still pushing hard and still holding strong for weeks. Spot real investment here. @Wojacked_Hard https://t.co/sMJfPFZQy8 https://t.co/22pzrvRe1y"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2090806139180961961",
+   "date": "2026-08-21",
+   "text": "📊 $HBAR Overview | 2026-08-21\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🐌 Weak\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI 🔴 Pullback\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Hedera\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Corcutus",
+   "url": "https://x.com/Corcutus/status/2090904624735584735",
+   "date": "2026-08-21",
+   "text": "$ZBT\n\njust let me know which coin \n\n#BTC #BULLISH #BEARISH #ETH #TOTAL #TOTAL2 #AI #KI #NextTrap https://t.co/bGX3rPOuMQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 52,
+   "user": "itsToghrul",
+   "url": "https://x.com/itsToghrul/status/2090725509395079657",
+   "date": "2026-08-21",
+   "text": "Okay, with this type of move, I'm now 90% sure the bottom is in, and that I was wrong to think we'd go lower.\n\nThis doesn't look like a bull trap to me anymore.\n\nIt looks like the typical aggressive Bitcoin move off a bottom, the same as January 2023, the same as after COVID, the https://t.co/3AAcfqjOmF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "moby_tick",
+   "url": "https://x.com/moby_tick/status/2090725913269096536",
+   "date": "2026-08-21",
+   "text": "$IBIT Broke Above a $1.2B Dark Pool Print &amp; $COIN/Crypto on fire! Smart Money is already in\n\nCrypto is on fire and smart money is already in. $IBIT just traded back above a 29.2M-share dark pool print — $1.26B at $43.16, the single largest block on the shelf. Plus $COIN still https://t.co/AmjvXrYNYX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 59,
+   "user": "BabyBft",
+   "url": "https://x.com/BabyBft/status/2090685073355936211",
+   "date": "2026-08-21",
+   "text": "If you could only hold ONE token through this entire cycle, what is it? 💎🙌\n\nFor me, $BBFT is locked in the vault. ⚡️\nWhy I'm not selling a single coin:\n\n🟢 Unmatched Utility: Actual real-world ecosystem adoption, zero fluff.\n🟢 Hyper-Bullish Tokenomics: Built to reward https://t.co/0WiMK7YuD3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "fundspec",
+   "url": "https://x.com/fundspec/status/2090808649228660868",
+   "date": "2026-08-21",
+   "text": "Bullish options flow in $COIN\n$1.6M of Oct 16 $200 puts swept at the bid across 17 trades. 576 contracts against 955 open interest.\n\nDaily bullish and bearish AI signals on every US stock.\nDownload the FundSpec app on the Apple App Store or Google Play Store."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 254,
+   "user": "CryptoPatel",
+   "url": "https://x.com/CryptoPatel/status/2090763345884500044",
+   "date": "2026-08-21",
+   "text": "🌚➡️💀 MOON TO DEAD COIN | Project Review 49: $BNT \n\nDo you know?\n#BNT (Bancor) INVENTED the AMM, the technology that powers Uniswap and all of DeFi. It raised $153M in 3 HOURS (one of the biggest ICOs ever) and hit $10.72. Then it promised \"100% Impermanent Loss Protection\"… https://t.co/Y9fumtTsK0 https://t.co/3bKR0ZOtQo"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "xstelixxx",
+   "url": "https://x.com/xstelixxx/status/2090812518247682282",
+   "date": "2026-08-21",
+   "text": "The clean formulation: You bought 5 SOL at $70 → total capital at risk: $350.\nYou sold 4 SOL at $90 → cash received: $360.\nResult:Your entire original $350 is fully recovered plus a locked-in +$10 profit.\nThe remaining 1 SOL now sits with a zero (or better-than-zero) cost"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2090806026278711545",
+   "date": "2026-08-21",
+   "text": "Israeli outlet #Israel Hayom reports Israel has reviewed #NATO #Article5 and determined striking #Turkish #forces in #Syria would not trigger an #alliance response. Tensions are escalating as Israel considers strikes on Turkish-backed proxies operating across Syrian territory. https://t.co/nNPjzUnI9r"
+  }
+ ]
+}

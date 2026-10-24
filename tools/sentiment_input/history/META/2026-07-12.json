@@ -1,0 +1,373 @@
+{
+ "symbol": "META",
+ "start": "2026-07-05T16:00:00Z",
+ "end": "2026-07-12T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "META (stock OR shares OR Zuckerberg) -is:retweet -is:reply lang:en",
+  "META (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "goodmoat",
+   "url": "https://x.com/goodmoat/status/2075098877133242554",
+   "date": "2026-07-09",
+   "text": "- Visa Bets It Can Build the Trust Layer for a Market That Doesn’t Trust AI to Buy Anything Yet\n\n- NVDA Stock Ready For A Comeback? Why This Analyst Now Calls Nvidia An ‘Enhanced Buy’\n\n- Mark Zuckerberg Admitted AI Agents \"Hasn't Really Accelerated\" as Meta Stock Dropped 5%\n\n-"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "CHItrader",
+   "url": "https://x.com/CHItrader/status/2075675242622820787",
+   "date": "2026-07-10",
+   "text": "⭐ STOCK SPECIFIC NEWS\n\n🔹 $META: Zuckerberg said Meta's newest AI model outperforms Gemini 3.1 Pro.\n🔹 $DAL: Earnings and guidance beat expectations, but shares weakened as results failed to impress investors.\n🔹 $CRCL: Received final OCC approval to establish a National Trust"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 28,
+   "user": "Newsquawk",
+   "url": "https://x.com/Newsquawk/status/2075559036481622200",
+   "date": "2026-07-10",
+   "text": "🇺🇸US pre-market movers🇺🇸\nES unch NQ -0.3% RTY +0.1%\n\n$META +3.6%: Zuckerberg says new model outperforms Gemini 3.1 Pro\n\n$DAL -0.5%: Earnings &amp; guidance beats fail to impress\n\n$CRCL +10.9%: Received final OCC approval to establish National Trust Bank\n\n$FRMI -11.6%:  Announced its"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 25,
+   "user": "timoassi",
+   "url": "https://x.com/timoassi/status/2075495669704314991",
+   "date": "2026-07-10",
+   "text": "The S&amp;P 500 returns 9% in a good year. META did it before lunch yesterday.\n\nIt opened at $584 and even dipped to $577.\n\nHere is what drove it:\n. Zuckerberg dropped Muse Spark 1.1 mid-session.\n. Meta's most powerful AI model yet.\n. First ever paid API tier. A real monetization https://t.co/uqtUoS1I26"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "0xEgorAI",
+   "url": "https://x.com/0xEgorAI/status/2074647937993658588",
+   "date": "2026-07-08",
+   "text": "120,000 tech jobs cut in 2026. Every memo says AI. The earnings reports say something else.\nRead the revenue lines next to the layoff lines:\nCloudflare cut 20% of staff in the same quarter it reported record revenue, up 34%.\nGoogle Cloud grew 63% past 20 billion and quietly cut"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 34,
+   "user": "RichPeterLi",
+   "url": "https://x.com/RichPeterLi/status/2073976403524231378",
+   "date": "2026-07-06",
+   "text": "$AAOI --- In early July, comments from Meta CEO Mark Zuckerberg about the company's 2026 restructuring challenges, combined with market reports that Meta plans to build a cloud service to sell its excess AI computing capacity, triggered panic across the entire AI infrastructure https://t.co/WHPQscFY7O"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "marketwirenews",
+   "url": "https://x.com/marketwirenews/status/2075778198294479230",
+   "date": "2026-07-11",
+   "text": "$META - Mark Zuckerberg Is Turning Meta Into a Bigger Chipmaker Its Newest InHouse AI Chip Enters Production in September \n\n2026-07-10 23:01:00 ET       Shares of   Meta Platforms     (NASDAQ: META)   rose about 6% on Friday after Reuters reported on Thu… https://t.co/hHml884nwj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "iamAfraemreal",
+   "url": "https://x.com/iamAfraemreal/status/2074142024534491548",
+   "date": "2026-07-06",
+   "text": "Meta AI Agent Stall\nZuckerberg admitted at Meta's July 2 town hall that AI agent development stalled for four months. Meta shares fell 4.9% after the mixed signals from the town hall. https://t.co/yfO8fukYi4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "BarchartNews",
+   "url": "https://x.com/BarchartNews/status/2073887889537044974",
+   "date": "2026-07-05",
+   "text": "Mark Zuckerberg Doubles Down on Raw Computing Power to Challenge $AMZN and $MSFT. What That Means for $META Stock.\n\nhttps://t.co/N6j2NKN9xV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "marketwirenews",
+   "url": "https://x.com/marketwirenews/status/2076224831238910384",
+   "date": "2026-07-12",
+   "text": "$META - Mark Zuckerberg Said Metas AI Bets Havent Come to Fruition Yet as Shares Fell 5 \n\n2026-07-12 04:23:00 ET           Meta Platforms         (NASDAQ: META)   is one of the big spenders in the artificial intelligence (AI) race. Its capital expenditur… https://t.co/rdxUgaA9y8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ELCryptoFX",
+   "url": "https://x.com/ELCryptoFX/status/2075715869813113124",
+   "date": "2026-07-10",
+   "text": "UPDATE: Meta has launched Muse Image, its new AI image generator, bringing advanced image creation and editing.\n\nSo how did a college project become one of the world's most powerful tech companies, and did Mark Zuckerberg betray his own friend?🤔\n\nSuccess came with controversy."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 265,
+   "user": "TruthTrumpPost",
+   "url": "https://x.com/TruthTrumpPost/status/2075702930720653603",
+   "date": "2026-07-10",
+   "text": "UPDATE: Meta has launched Muse Image, its new AI image generator, bringing advanced image creation and editing.\n\nSo how did a college project become one of the world's most powerful tech companies, and did Mark Zuckerberg betray his own friend?🤔\n\nSuccess came with controversy. https://t.co/Cv9nt7uQ9n"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 166,
+   "user": "Sam_Badawi",
+   "url": "https://x.com/Sam_Badawi/status/2076050579827441885",
+   "date": "2026-07-11",
+   "text": "Timeline of events.\n\n$META pushes to new lows every other week.\n\nThe stock can’t meaningfully stay up.\n\nCEO Mark Zuckerberg and the Chief AI Officer start pumping the stock and company on 𝕏 instead of their unsuccessful Meta Threads platform.\n\nThe stock finally breaks above the https://t.co/nUIkJ9Aejx https://t.co/qDlKuhsQap"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 29,
+   "user": "StockWorthyApp",
+   "url": "https://x.com/StockWorthyApp/status/2074564271162200437",
+   "date": "2026-07-07",
+   "text": "$META is up over 3% today after Mark Zuckerberg announced Muse Image and the development of Muse Video. Also, Erste Group upgraded the stock from Hold to Buy.\n\nAre you still buying $META at $620? https://t.co/ObtyOrbUq7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "GeorgeMentz",
+   "url": "https://x.com/GeorgeMentz/status/2075066811348078689",
+   "date": "2026-07-09",
+   "text": "#Investing Mark Zuckerberg Admitted AI Agents “Hasn’t Really Accelerated” as Meta Stock Dropped 5% https://t.co/0tIPouGD26"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CNN25960",
+   "url": "https://x.com/CNN25960/status/2075631400238399595",
+   "date": "2026-07-10",
+   "text": "The Rise of Meta Compute: How Halving AI Infrastructure Costs Sent Meta Stock Flying\nsee more : https://t.co/a14VFHeKbB\n#MetaStock#NASDAQ#WallStreet#StocksToWatch#StockMarket#TradingSignals#BreakingNews#Zuckerberg#TechRally https://t.co/QNyHcgYaTX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 97,
+   "user": "Sam_Badawi",
+   "url": "https://x.com/Sam_Badawi/status/2075289909519413376",
+   "date": "2026-07-09",
+   "text": "$META CEO Mark Zuckerberg is all of a sudden posting on 𝕏 after a decade.\n\nAnd just now Alexander Wang is commenting on the stock price.\n\nMaybe it’s coincidence that the stock bottomed? https://t.co/8tZpL56gcg https://t.co/vzTNOtiAVC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "stonksandcards",
+   "url": "https://x.com/stonksandcards/status/2075308754954748220",
+   "date": "2026-07-09",
+   "text": "Bought a ton of $HIVE common stock\n\nGreen data center narrative will go mainstream soon\n\nEspecially with Mark Zuckerberg poisoning everyone’s water $META"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "BulletBear13",
+   "url": "https://x.com/BulletBear13/status/2075211766376608221",
+   "date": "2026-07-09",
+   "text": "It is striking that everyone except Zuckerberg @finkd and @alexandr_wang has grasped that when Meta curbs spending, the stock rises (+9% last Wednesday), and when it announces increased spending, it falls.\n$Meta drops ~4%.\nThought they were smarter than average people https://t.co/tPHHG5BtHK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "zeroshorts",
+   "url": "https://x.com/zeroshorts/status/2075295687999463550",
+   "date": "2026-07-09",
+   "text": "Yup. #AI will turn out to be another #Metaverse colossal failure, but on steroids. Reminder: Mark Zuckerberg was so sure about the Metaverse being the next big thing in tech that he changed the company name to \"Meta\" and the stock symbol to $META. LoL. https://t.co/rFihnZ1Jwt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2074584900707958874",
+   "date": "2026-07-07",
+   "text": "The biggest option ticket today wasn't NVDA. It was a Latin American telecom nobody's talking about.\n\nTHE SETUP\n\n$528M in premium crossed the tape across 177 trades, and the headline everyone will write tonight is DeepSeek unveiling competing AI silicon and Samsung's https://t.co/AjnCptQYJA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 43,
+   "user": "LeifInvests",
+   "url": "https://x.com/LeifInvests/status/2074979875845513465",
+   "date": "2026-07-08",
+   "text": "NEOCLOUD BOUNCE BACK 🚀💯\n\n$NBIS +11%\n$CRWV +8%\n$IREN +8%\n\nIs $META entering the market bullish or bearish?👇\n\n🐻 Bear Case\n\n• $META renting out excess GPU capacity introduces another major competitor.\n• A key customer becoming a competitor could increase pricing pressure.\n• https://t.co/DhKoPuV5OX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "Volume_Stocks",
+   "url": "https://x.com/Volume_Stocks/status/2075626111728320955",
+   "date": "2026-07-10",
+   "text": "🍽️ Lunch Hour Market Brief — Friday, July 10\n\nMARKETS\nS&amp;P 500: +0.3% | Nasdaq: +0.3% | Dow: +0.3% | VIX: 15.3\n\nTHE BIG PICTURE\n• $SKHYV made a blockbuster Nasdaq debut — its $26.5B ADR offering is the 2nd-largest US listing ever, fueling AI/HBM chip enthusiasm.\n• Top economist"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2075295220422353032",
+   "date": "2026-07-09",
+   "text": "🐳 $META just dropped $145B on AI and the Street panicked. One whale just bought the dip — $9.5M in calls.\n\nTHE THESIS\n\nMeta's $145B AI spend is the bull case, not the bear case. The market spent July 9 arguing about it. One buyer stopped arguing and paid $9.5M to be right.\n\nTHE https://t.co/vte7lNxwqR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MkTrader9",
+   "url": "https://x.com/MkTrader9/status/2074503118230831513",
+   "date": "2026-07-07",
+   "text": "LIVE MARKET READ: The Great Intraday Bifurcation 🚨\nWhile $SPY ($746.59, -0.62%) masks the action near VWAP, a violent sector rotation is happening under the hood. Tech breakdown is concentrated in hardware, while mega-cap software and pharma catch a massive defensive bid.\n\nDon't"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "NoMasFiat",
+   "url": "https://x.com/NoMasFiat/status/2075015995895513500",
+   "date": "2026-07-09",
+   "text": "Is $FOMO Ready to Explode?\n\nIf you are looking for the next micro-cap runner on Solana, you need to look closely at Fearless Of Missing Out ($FOMO). Launched via https://t.co/uIG5Fjqycl, this token is capturing the exact psychological zeitgeist of the current crypto meta.\n​Here https://t.co/8bl6sjfP4E"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "tradingdiff",
+   "url": "https://x.com/tradingdiff/status/2074125749330514050",
+   "date": "2026-07-06",
+   "text": "META 5m Chart 📊\n\nMETA shows a pullback after sweeping a low and medium leverage zone, and it is currently consolidating in a middle ground. ⚖️\n\nTo the upside, a massive accumulation of liquidity remains concentrated at 645.00 USD, functioning as the primary target if buying https://t.co/DoH1YrdzaD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2075672063432376591",
+   "date": "2026-07-10",
+   "text": "The tape is screaming memory shortage through 2030 — and someone just dropped $50M on SNDK calls expiring today to prove it.\n\nMARKET CLOSE — JULY 10, 2026\n\nThe headline number was $912M in tracked premium across 191 prints, but the composition tells the real story. Today was not https://t.co/gTgLfhJo83"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Manmademachinee",
+   "url": "https://x.com/Manmademachinee/status/2074395712452726897",
+   "date": "2026-07-07",
+   "text": "Everyone knows $PEPE is one of the main meme coins of this cycle. When crypto sentiment turns bullish again, liquidity always looks for the next narrative.\n\n$KERMIT is one of the most recognizable characters in meme culture, yet it’s still massively undervalued compared to the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "FindleysFinance",
+   "url": "https://x.com/FindleysFinance/status/2074865017019670544",
+   "date": "2026-07-08",
+   "text": "I'm not a bear because I think crypto is a garbage \"investment\".\n\nI'm massively bullish, fully invested, with massive exposure to undervalued tech and software like $META, $MSFT, $AMZN, $ADBE, $FOUR. https://t.co/oR40ns503l"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "StockMarketZaps",
+   "url": "https://x.com/StockMarketZaps/status/2075551307910299757",
+   "date": "2026-07-10",
+   "text": "Meta to start manufacturing an AI chip from Sept, targeting 14 gigawatts of computing power next year. $META bulls view this as scaling AI infra. Bear case: execution risk and capex. bullish/bearish? Bullish."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NaraInsights",
+   "url": "https://x.com/NaraInsights/status/2075593385126367270",
+   "date": "2026-07-10",
+   "text": "$META just saw notable call selling hit the tape 👇\n\nA CALL SELL worth $853K printed at the 650 strike.\n\nSpot: $671.38\nStrike: 650 (ITM)\nPremium: $853K\nContracts: 265\nNotional Exposure: $17.8M\nCall/Put Ratio: 18.6\n\nThis looks like profit-taking on an existing in-the-money call"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SulkerTrades",
+   "url": "https://x.com/SulkerTrades/status/2075554188570882441",
+   "date": "2026-07-10",
+   "text": "📊 Market Outlook\n$SPY $QQQ $IWM $SPX\n🖥️ Software Takes the Lead, While Semis Remain Weak\n\nSoftware stocks are taking control of the market today, while semiconductors continue to show significant weakness. Keep in mind that this can change from one day to the next, so stay https://t.co/n8Vj0qFljo"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinansTarihi0",
+   "url": "https://x.com/FinansTarihi0/status/2076115827473150342",
+   "date": "2026-07-12",
+   "text": "Meta small timeframe big money\n\nOn the 15-minute timeframe, META is forming a small symmetrical triangle, signaling short-term consolidation ahead of a potential momentum move. Rather than predicting direction, the focus is on letting price confirm the breakout before entering a https://t.co/QGuKvAqyYs"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "bullbear_info",
+   "url": "https://x.com/bullbear_info/status/2075605634083361255",
+   "date": "2026-07-10",
+   "text": "With a bull score of 61.35 and bear score of 70.31, the market sentiment is leaning bearish. The primary driver? Meta insiders selling heavily. Delta 6h: -0.40. What does this insider selling signal?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "CallRank_AI",
+   "url": "https://x.com/CallRank_AI/status/2075972955171893484",
+   "date": "2026-07-11",
+   "text": "Your grandpa hid his bookie's phone number. Your barber is apeing $Fartcoin, parlaying the WorldCup and holding a Polymarket position on whether it rains Thursday - mid haircut.\n\nWelcome to #SpeculatorAmerica.\n\nWhat was once backroom vice is now Seamless. Social. Celebrated."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FiatElpis",
+   "url": "https://x.com/FiatElpis/status/2075219734090416574",
+   "date": "2026-07-09",
+   "text": "1.Meta plans 7GW of computing infrastructure in 2026 and wants to double to 14GW in 2027. With up to $145bn AI infra spend this year, that implies roughly:\n\n145bn/7GW=∼$20.7bn/GW\n\nThat validates the “capex keeps going into 2027” view. It is bad for anyone expecting a near-term"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "junnyBCap",
+   "url": "https://x.com/junnyBCap/status/2074115358093619477",
+   "date": "2026-07-06",
+   "text": "The $RDDT thesis: the internet's last human dataset\n\nReddit at roughly $194 is one of the most polarizing large caps in the market. Bulls see the only scaled repository of authentic human conversation left on an internet filling up with AI content. Bears see a website that Google"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "PoliticsOnX",
+   "url": "https://x.com/PoliticsOnX/status/2074161217292108269",
+   "date": "2026-07-06",
+   "text": "🔥🚨Deep Dive: $ANSEM (The Black Bull) by RugBuddyX – Full Bull Thesis🐂🀄️\nhttps://t.co/ib7vc7GKOD\n\"The Black Bull is charging hard\"\n — one of the strongest and most culturally dominant Solana memecoins in the cycle.\n\n### Token Snapshot (Live RugBuddyX Data – 7/6/2026)\n-"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "Adityaaa6666",
+   "url": "https://x.com/Adityaaa6666/status/2074706043083612611",
+   "date": "2026-07-08",
+   "text": "5 REASON WHY $PUNK SHOULD BE 10M MCAP\n\n1. KOL Redemption Arc with Real Skin in the Game\nMrpunk.eth (171K followers) got handed 65% supply but didn't dump — instead, he airdropped tens of thousands in $PUNK and bought back 155+ SOL. This is rare honesty in memecoins. A trusted https://t.co/is07RsLR0m https://t.co/9VjGYvsQ0m"
+  }
+ ]
+}

@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-08-14T00:00:00Z",
+ "end": "2026-08-15T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088174335915606347",
+   "date": "2026-08-14",
+   "text": "🔻 $TUT  tanking at 8.7%, capitulation or manipulation?\n\n- With the extreme dump and volume spike, this is likely a liquidity grab, but the overall structure is still bearish. More downside is possible if 0.02855 is taken out with conviction.\n- I would NOT short into the hole at https://t.co/o2mJUizLAR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088184817846305254",
+   "date": "2026-08-14",
+   "text": "🔥 +11.1% Pump Detected on $BAS , is it worth to watch?\n\n- This pump is unlikely to be immediately sustainable at this rate — such volume and RSI spikes are classic signs of a possible bull trap or at least a corrective phase incoming.\n- I expect a pullback or consolidation https://t.co/Mf82MIN7K4"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088280786764021949",
+   "date": "2026-08-14",
+   "text": "💎 +4.7% Explosive Move on $ALICE \n\n- Given the overbought conditions, massive volume spike, and quick 4.7% surge in 15 minutes, caution is warranted. This looks like a potential bull trap unless there’s consolidation or a clear bullish reversal after a pullback.\n- I would NOT https://t.co/BjC5O4Ej2H"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088175997174575526",
+   "date": "2026-08-14",
+   "text": "🌊 Double Alert: 4.8% Drop &amp; 3.1x Volume on $US \n\n- The sharp volume spike combined with a massive dump suggests this was likely a stop-hunt/liquidity grab below the most recent swing low (0.020394). There is a risk of further downside if no buyers step in, with next support at https://t.co/N4oM5ePYRa"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088260971873587375",
+   "date": "2026-08-14",
+   "text": "🌟 7.2x Unusual Buying Volume on $NBISB , what's behind this move?\n\n- With such a strong volume anomaly and breakout, I expect further bullish continuation is likely, but a short-term pullback into the 263.5-264.5 zone is possible before any further upside 🌠\n- If price pulls https://t.co/MGLBU0d9hN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088202741709512919",
+   "date": "2026-08-14",
+   "text": "🚀 +5.7% Bull Run Alert on $H , what's next?\n\n- After such a fast +5.7% pump right above the most recent swing high, there is a high probability of a short-term pullback or bull trap, as this is a classic liquidity sweep. The pump is likely driven by late buyers FOMOing in, and https://t.co/nDHWkCVS3i"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088161306935181337",
+   "date": "2026-08-14",
+   "text": "⚡ $CROSS  pumping +5.0% with 2.8x abnormal volume\n\n- After such an explosive move and volume anomaly, I expect short-term volatility and potential profit-taking. Immediate continuation is possible, but a pullback toward 0.10691 or even 0.10388 is likely before any further https://t.co/S3wMnU9RWm"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088157804397748400",
+   "date": "2026-08-14",
+   "text": "$TA 1D\n- With daily trend and indicator momentum bearish, I expect further downside toward 0.05625 unless price quickly reclaims 0.06330–0.06621 with strong bullish confirmation.\n- Short setup: If price retests the 0.06330–0.06621 zone and forms a bearish reversal, consider https://t.co/GNvyb1gGsG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088054013115650265",
+   "date": "2026-08-14",
+   "text": "📉 $LAB  bleeding at 5.3%, bounce incoming?\n\n- After this violent dump and volume spike, I do not recommend blindly shorting here, as the probability of a relief bounce or manipulation wick is increasing. If price bounces up to the 0.1038–0.1048 area or even to 0.1077, watch for https://t.co/cS98JKWC6t"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088215040327348474",
+   "date": "2026-08-14",
+   "text": "💔 Sharp 5.4% Drop on $AVAAI \n\n- After this -5.4% dump, the market may attempt a relief bounce, but the structure is still bearish — this is usually not the absolute bottom, as more downside is likely unless a strong reversal shows up.\n- If price moves up and stalls between https://t.co/5qYzFXXMvE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088174420527374648",
+   "date": "2026-08-14",
+   "text": "🔴 $LAB  just saw 3.0x selling volume, smart money exiting?\n\n- My expectation is continuation to the downside: the strong volume spike and -3.9% drop in 15 minutes signals smart money distribution and/or panic selling rather than a healthy bottom — this is textbook distribution, https://t.co/00KN8rs7MB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088067648642830731",
+   "date": "2026-08-14",
+   "text": "$JUP 1D | Chart Analysis\n- The trend is still bearish, but price is now in an extended move down, near oversold conditions and close to a demand zone.\n- If price sweeps below 0.1635 or drops into the 0.1548–0.1444 range and shows a strong reversal signal (like a daily bullish https://t.co/ily47mu8u7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088270360890200546",
+   "date": "2026-08-14",
+   "text": "$2Z 2h Update: - With the indicators showing increasing bullish momentum but the trend structure still bearish, I expect a possible bounce from the 0.05481 demand zone towards 0.05801 and potentially up to 0.063 if buyers step in with force. \n- If this bounce fails and price https://t.co/dgv8STVPdl"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088367654159389164",
+   "date": "2026-08-14",
+   "text": "$ACH 12h Read: - I expect there is a good chance for a short-term reversal upward, as price has swept liquidity below the most recent swing low and is now hovering around a demand zone (0.00401/0.00392). If bullish confirmation appears, price could first target 0.00421, then https://t.co/jdfan9AR9F"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088060157246779707",
+   "date": "2026-08-14",
+   "text": "$POL 4h Overview\n- Given the deep sweep below the most recent swing low and strong demand at 0.07228, I expect a short-term bounce is likely if buyers step in.\n- My bias is for a possible retracement up to 0.07521, and if momentum persists, towards 0.07627.\n- If there’s no https://t.co/1agRYBdzCy"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088271906336125377",
+   "date": "2026-08-14",
+   "text": "📉 $QNTX  crashing 4.9% with 11.7x volume surge\n\n- I expect a short-term bounce or retracement is possible after such a massive flush, but the overall bias remains bearish unless price reclaims 69.24–70.52 with strong volume. More downside is likely if rejection occurs at https://t.co/s5kogR28Ty"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088192937226121355",
+   "date": "2026-08-14",
+   "text": "⚠️ $BR  hit with 3.1x sell volume spike, is this over or just starting?\n\n- This massive volume spike combined with bearish price action strongly suggests smart money is either distributing or triggering stop losses for liquidity grabs.\n- I expect more downside volatility in the https://t.co/JJT7kIZRSV"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088375786520633803",
+   "date": "2026-08-14",
+   "text": "❄️ $DOLO  hit with 3.2x sell volume spike, is this over or just starting?\n\n- Given the magnitude of the dump and volume spike, I expect further downside unless the price makes a strong reversal at 0.02438 or 0.02209.\n- If price retests 0.02911 and rejects, look for short entries https://t.co/Iao1Q043kt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088245825893699937",
+   "date": "2026-08-14",
+   "text": "🧊 Massive Sell-Side Volume on $BR  at 3.3x\n\n- With the current evidence, I expect the price to continue down or, at best, consolidate below 0.23618. This looks like smart money distribution or a panic-driven move, not a healthy correction.\n- If you’re looking for a trade, a https://t.co/Tdk6OaQPfm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088207733421969479",
+   "date": "2026-08-14",
+   "text": "💪 $BLESS  hit with 4.8x sell volume spike, is this over or just starting?\n\n- Given the 4.8x volume spike and the strong selling wick, I expect further downside unless price can reclaim and hold above 0.010525 (equilibrium).\n- My base scenario: Watch for price to retest the https://t.co/jR0SW3AnkC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088198895692132401",
+   "date": "2026-08-14",
+   "text": "🚨 Massive Sell-Side Volume on $GPS  at 3.0x\n\n- With the current setup, there is a decent possibility that this was a liquidity sweep below the most recent swing low at 0.01070. If price quickly reclaims 0.01070 and shows strength on lower timeframes (e.g., bullish engulfing or https://t.co/K9ldLYTwi7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088175973355094256",
+   "date": "2026-08-14",
+   "text": "📊 9.0x Sell Volume Spike on $4 , distribution or shakeout?\n\n- With this huge volume spike and strong drop, my expectation is for further volatility and potential continued downside unless price quickly reclaims the 0.009926–0.009971 zone. This volume suggests either smart money https://t.co/pFQYdRMsaH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088279519249445118",
+   "date": "2026-08-14",
+   "text": "📉 Massive Sell-Side Volume on $INJ  at 58.5x\n\n- I expect price action to either consolidate a bit here and then attempt a relief bounce up into resistance (4.435–4.527 area), or, if selling remains relentless, to continue down toward 4.177 and potentially 4.065—these are the https://t.co/sPhtmfDF7n"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088159973742154116",
+   "date": "2026-08-14",
+   "text": "⚠️ 4.8x Unusual Selling Volume on $STORJ , what just happened?\n\n- This event looks like classic distribution or large-scale panic selling – but with this kind of volume spike, aftershocks are likely! I expect continued volatility, with the overall directional bias still bearish https://t.co/cH85kT6GpI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2088067356174008325",
+   "date": "2026-08-14",
+   "text": "💹 Hot Alert: +4.2% Pump on $ZEST , opportunity or risk?\n\n- After this big pump and the current overbought RSI, I expect some cooling off or a pullback before continuation. Price is likely to revisit either the 0.15589 or 0.15220 levels to test demand and fill the recent FVG https://t.co/Q79jNxQOte"
+  }
+ ]
+}

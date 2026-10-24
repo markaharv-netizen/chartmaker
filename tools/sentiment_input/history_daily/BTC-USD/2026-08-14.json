@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-08-14T00:00:00Z",
+ "end": "2026-08-15T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "CryptoFrogCalls",
+   "url": "https://x.com/CryptoFrogCalls/status/2088077296121045094",
+   "date": "2026-08-14",
+   "text": "Quick update on the $BTC short term price action…\n\nNot much has changed over the past few days. Bitcoin is still seeing relatively low volume, as per usual this time of year, which has led to some very boring price action.\n\nWe are still in this short term neutral range between https://t.co/TY1azBHvmO https://t.co/hS9gRxz9za"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 150,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2088103848259018785",
+   "date": "2026-08-14",
+   "text": "Bitcoin printed a nasty Doji on the close, and I don't sugarcoat what that means: bulls and bears can't agree on direction right now. The market hates indecision, and I think we're heading toward 63,100 and eventually below 62,275, where a real support band between 62 and 63K https://t.co/FNDmvj1Q79"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "slamwontmiss",
+   "url": "https://x.com/slamwontmiss/status/2088074683207799110",
+   "date": "2026-08-14",
+   "text": "Mayne says market structure is the most important thing to learn during technical analysis. \n\n“Market structure is probably the single most important concept to learn first. Obviously, risk management and all these other things come with time, but if you can learn to read market https://t.co/HKchaPHIbi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "SedarZan52448",
+   "url": "https://x.com/SedarZan52448/status/2088391989989711908",
+   "date": "2026-08-14",
+   "text": "📊 BTC Daily Analysis\n\nBitcoin remains under short-term pressure after rejecting the $64K–$64.5K resistance zone \n\nPrice is now trading around $62.9K, bringing BTC closer to the key downside liquidity and HTF support around $62K–$61.95K — the area we've been watching since the https://t.co/uKzP8pL01T"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "HammadR15616540",
+   "url": "https://x.com/HammadR15616540/status/2088337503535423649",
+   "date": "2026-08-14",
+   "text": "$BTC — CRITICAL DECISION ZONE\n1D bias: Neutral\n🔴 Resistance: $64K–$66.5K\n🟢 Support: $58.5K–$61K\nBullish: Break + strong volume → continuation\nBearish: Rejection + support loss → downside\nEducational purposes only. Not financial advice.\n\n#Bitcoin #Crypto #Trading #AI https://t.co/7eKNlB5m2n"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FinansTarihi0",
+   "url": "https://x.com/FinansTarihi0/status/2088103819284734066",
+   "date": "2026-08-14",
+   "text": "BTCUSD — Smart Money Liquidity Map | 4H Analysis\n\nBitcoin is currently trading around 64,900 and showing bullish momentum toward a major 4H supply/POI zone around 72,300–74,400.\n\nThe chart shows multiple EQH formations and a clear buyside liquidity pool around 67,500, which could https://t.co/fBBs29G9cD"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 421,
+   "user": "rektcapital",
+   "url": "https://x.com/rektcapital/status/2088285598230483443",
+   "date": "2026-08-14",
+   "text": "#BTC \n\nOf course, Bitcoin has downside wicked below the orange $63k level consistently over the past few weeks\n\nAnd so technically, a similar downside wick could also occur this week\n\nBut what's been equally consistent is the weakening rebounds from orange and also the fact that https://t.co/Q44ku4d75O https://t.co/9qQIKeBOV4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "CacheTrading",
+   "url": "https://x.com/CacheTrading/status/2088304499102462185",
+   "date": "2026-08-14",
+   "text": "ethereum:native Wait to Trade, Until This Level Breaks! 🛑\n\nCurrently displaying clear relative strength against BTC on lower time frames, holding inside an ascending channel and triangle pattern while Bitcoin continues to struggle. \n\nThis lower time frame convergence suggests https://t.co/McbgtaHR9e"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 39,
+   "user": "cryptoWZRD_",
+   "url": "https://x.com/cryptoWZRD_/status/2088086701432352961",
+   "date": "2026-08-14",
+   "text": "XRP Daily Technical Outlook:\n$XRP closed indecisively. The intraday chart is trading in a tiny range. Moving above $1.0150 would offer further upside towards $1.0650 which could trigger a long if Bitcoin supports it. A bullish move and then turning bearish could offer a short ⚡️ https://t.co/vwFdeGk98e"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "InvestorJordan",
+   "url": "https://x.com/InvestorJordan/status/2088248774431068401",
+   "date": "2026-08-14",
+   "text": "I’m bearish on $HYPE short term and extremely bullish long term. \n\nMy first entry was around $72 on a heavy short, then I entered again on the intraday around $60. \n\nI don't believe anything has changed in terms of short/mid term direction, $40-$50 is still looking like the most https://t.co/XwUv3f0RRi https://t.co/IA3cEVHRbp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "JMaxx611",
+   "url": "https://x.com/JMaxx611/status/2088340551594844261",
+   "date": "2026-08-14",
+   "text": "🚨 CRYPTO OUTLOOK — SATURDAY, AUG. 15 🚨\n\nWeekend volatility could be coming. BTC is still struggling to regain momentum, so I’m watching the downside first — but a reclaim of resistance could flip things quickly.\n\n₿ BTC — $62.9K\n🔴 Slight bearish bias\nSupport: $62K / $60.5K"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 80,
+   "user": "CryptoFeras",
+   "url": "https://x.com/CryptoFeras/status/2088287102286852577",
+   "date": "2026-08-14",
+   "text": "#USDT dominance\nIMPORTANT CHART ⚠️\nbookmark it. \n\nwhen this dominance is #bullish, overall market gets bearish\nwhen this gets weak, market gets strong\n\nhow is it now?\nafter the bearish retest/rejection at 9.21%\nit retested previous resistance as a support\nRSI reset as well https://t.co/9AzzBE9Wxg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "2bitcrypto_YT",
+   "url": "https://x.com/2bitcrypto_YT/status/2088254652798194081",
+   "date": "2026-08-14",
+   "text": "Bitcoin just lost $63K — despite the macro backdrop getting easier. That divergence matters.\n\n#Bitcoin is around $62.73K, after trading between roughly $62.65K and $63.92K today.\n\nThe bigger pressure is flows.\n\nUS spot BTC ETFs recorded another -$131.1M on August 13, extending https://t.co/fW5spHagGR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "BitFinAi",
+   "url": "https://x.com/BitFinAi/status/2088243467616952828",
+   "date": "2026-08-14",
+   "text": "Historically, the pattern has been:\n\n1064 days of bullish trend\n365 days of bearish trend\n\nThe current cycle appears to be following the same structure.\n\nIf the pattern continues, this bear market could end in October 2026.\n\n#Bitcoin #BTC #Crypto #BitcoinCycle https://t.co/ZLmm9LKJHJ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "chaingull",
+   "url": "https://x.com/chaingull/status/2088254378973290539",
+   "date": "2026-08-14",
+   "text": "Crypto Brief — Aug 14, 13:20 UTC\n\nTOP STORY — impact 70 / 100\n▲ Markets price fewer Fed hikes through mid-2027, lowering policy tightening odds.\n\nBULLISH\n▲ 60 Norway's Government Pension Fund indirectly holds 11,549 BTC, a new all-time high\n▲ 60 By 2025, high-price BTC chips"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2088265603811307991",
+   "date": "2026-08-14",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-08-14 (Late Morning Edition)\n\n**Published:** 2026-08-14 09:04 AM CT\n\nFriday's board is red, with Bitcoin down 1.73% over 24 hours and 3.5% over the week, and the Fear &amp; Greed Index stuck at 29 for a seventh straight day. The lead"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 32,
+   "user": "milkroaddaily",
+   "url": "https://x.com/milkroaddaily/status/2088287172990235061",
+   "date": "2026-08-14",
+   "text": "Bitcoin may already be telling us the bear market is ending.\n\n@Matt_Hougan: \"bear markets die in apathy\", and BTC is now shrugging off bad news that used to send it lower.\n\nHis read: the sellers are exhausted. Volatility is building. \n\nWhen it breaks, he expects it to break UP. https://t.co/QBuHsVBIDN"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 347,
+   "user": "cryptoskullx",
+   "url": "https://x.com/cryptoskullx/status/2088322398164824123",
+   "date": "2026-08-14",
+   "text": "Friends, \n\nthe broader recovery of Bitcoin is still ongoing and I expect us to tap 69-72k range before another big gulag is loading.\n\nThis is the case until Bitcoin breaks above 77k which invalidates every short-term bearish case and the last leg of the bull market will be https://t.co/cXNFOoPfza"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2088099077477069042",
+   "date": "2026-08-14",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 𝟯 / 𝟱 (𝗺𝗼𝗱𝗲𝗿𝗮𝘁𝗲𝗹𝘆 𝗯𝘂𝗹𝗹𝗶𝘀𝗵) - 𝗣𝗿𝗶𝗰𝗲 𝗮𝗰𝘁𝗶𝗼𝗻: Bitcoin is stuck in a tight range around $63 K, indicating no clear directional strength. - 𝗠𝗮𝗰𝗿𝗼 𝗯𝗮𝗰𝗸𝗱𝗿𝗼𝗽: Softer U.S. inflation data lifted risk appetite, but https://t.co/w6PoDVdZkm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ainotesus",
+   "url": "https://x.com/ainotesus/status/2088248736564527374",
+   "date": "2026-08-14",
+   "text": "Increasing on-chain activity is presented as one of the earliest signals of a crypto bull market, even while Bitcoin may still fall toward $50K.\n\nBitcoin is described as being near its 200-week moving average and still in a bear trend, but the current price is presented as a buy"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "zaheir06",
+   "url": "https://x.com/zaheir06/status/2088167353700032984",
+   "date": "2026-08-14",
+   "text": "🚨 BREAKING: THE BIGGEST #BITCOIN BEAR JUST FLIPPED BULLISH! \nAfter closing his $136M BTC short for a $1.65M profit, the whale has now gone LONG:\n₿ 200.82 BTC\n$12.74M position\n40x leverage\nThe bear just became a bull."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "zaheir06",
+   "url": "https://x.com/zaheir06/status/2088167876352156014",
+   "date": "2026-08-14",
+   "text": "🚨 BREAKING: THE BIGGEST #BITCOIN BEAR JUST FLIPPED BULLISH! \nAfter closing his $136M BTC short for a $1.65M profit, the whale has now gone LONG:\n₿ 200.82 BTC\n$12.74M position\n40x leverage\nThe bear just became a bull. https://t.co/J4WgCrX2YV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 10,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2088225579342467384",
+   "date": "2026-08-14",
+   "text": "$UUUU\n\n$UUUU traders who took the setup we shared on August 7 following the bullish Fred Tam reversal signal candle within the wedge, or entered on the subsequent wedge breakout, still haven’t received a confirmed bearish pivot reversal to trigger an exit, so technically the https://t.co/SVCor0yfy6 https://t.co/ldB4f5FJOW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 32,
+   "user": "kuznetsjeka",
+   "url": "https://x.com/kuznetsjeka/status/2088222786628059201",
+   "date": "2026-08-14",
+   "text": "trump media’s crypto gamble is turning into an expensive lesson.\n\naccording to the latest data highlighted by clapp finance, trump media reported a massive quarterly loss, with a significant portion tied to unrealized losses on its bitcoin and crypto-related holdings. while many https://t.co/iuvEWzPJJs"
+  }
+ ]
+}

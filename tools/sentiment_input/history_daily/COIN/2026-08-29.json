@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-08-29T00:00:00Z",
+ "end": "2026-08-30T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2093672433144254962",
+   "date": "2026-08-29",
+   "text": "📈 $TAC's 8.4% 24h divergence from BTC looks primed for bullish follow-through\n\n- My bias is bullish on the 1h, but it’s a counter-trend continuation inside a mixed higher-timeframe backdrop, so I want confirmation before I trust the push 📈\n- The 4H bullish divergence against https://t.co/FScmDgHUbT"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2093669335843656116",
+   "date": "2026-08-29",
+   "text": "📈 $NIL's 3.1% impulse on 1.8x volume reads like real participation.\n\n- My bias is bullish on NILUSDT 1h, and the +3.1% 15-minute impulse with 1.8x volume supports genuine participation rather than a purely illiquid spike. However, with a +20.9% daily move and RSI at 66.3, https://t.co/rV2FRM56GB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "LongTermHold3r",
+   "url": "https://x.com/LongTermHold3r/status/2093516204077887917",
+   "date": "2026-08-29",
+   "text": "🟡 Canton Coin remains in a healthy correction! 📉➡️📈\n\nFollowing the strong rally that continued into the beginning of this week, the 4H chart shows canton-network:native trading within a descending channel. In simple terms, market participants are taking profits, while fresh https://t.co/hCZIRJuvHb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "LongTermHold3r",
+   "url": "https://x.com/LongTermHold3r/status/2093514471985631622",
+   "date": "2026-08-29",
+   "text": "🟡 Canton Coin remains in a healthy correction! 📉➡️📈\n\nFollowing the strong rally into the beginning of this week, the 4H chart shows canton-network:native trading within a descending channel. In simple terms, market participants are taking profits, while fresh buyers continue https://t.co/SYG6I3ndZn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "Anatolii_Volf",
+   "url": "https://x.com/Anatolii_Volf/status/2093517783292067974",
+   "date": "2026-08-29",
+   "text": "🌙 Friday Late Night | Update 📊\n$AKT &amp; $BTC\n\nMy favorite #AKT found support after a hard flush and has already bounced back +3%, currently trading at 0.5227. Price held around 0.5093 and reversed from there on solid volume on the green candles. This is exactly the kind of coin https://t.co/8pq7qkQqad"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2093629818227069314",
+   "date": "2026-08-29",
+   "text": "👀 $COIN -5.2% sweep above 178.69 is trap fuel for more downside\n\n- my bias is bearish here — the 15m wick above 178.69 that closed back below is a liquidity grab against the 1h bearish structure, not a reversal, and I treat it as fuel for continuation lower\n- this 1h short is https://t.co/0JNaqWxiWh"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2093498971926802560",
+   "date": "2026-08-29",
+   "text": "🔻 $ONDO's 4h BTC lower high just added relative weakness to the -6.4% drop\n\n- my bias is bearish here on 1h ONDO — lower highs / lower lows are in control and the 4h coin/BTC lower-high vs a USDT higher-high is extra relative weakness, not a reason to fade the structure\n- this https://t.co/VIlpcvNMmt"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2093673311985082650",
+   "date": "2026-08-29",
+   "text": "⚡ $ONT -0.199% funding has shorts piled in against bullish structure — pure squeeze fuel\n\n- my bias is bullish here — 1h structure is bullish and daily agrees, so the extreme -0.199% funding (crowded shorts paying longs) sits against that trend and I treat it as squeeze fuel, https://t.co/uaHYbJ83mt"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2093822689211261070",
+   "date": "2026-08-29",
+   "text": "⚠️ $DOT swept 0.47% above 0.8448 only to fade — 24h +0.3% keeps the bear structure alive\n\n- my bias is bearish here after the 15m wick above 0.8448 that took resting liquidity and closed back below — that grab fuels the prevailing 1h bearish structure (LH 0.8477 / LL 0.8303), not https://t.co/myD6sI68v7"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2093611604629729379",
+   "date": "2026-08-29",
+   "text": "✅ $ON 16.3x volume validates the +3.9% bullish displacement\n\n- my bias is bullish here — 1h, daily and weekly structure are aligned bullish, and that 16.3x volume spike with the +3.9% impulse is displacement after the 0.2354 liquidity was taken, not a clean bull trap; I treat it https://t.co/o8PvyneAHW"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Lajay99",
+   "url": "https://x.com/Lajay99/status/2093556211933220984",
+   "date": "2026-08-29",
+   "text": "Day 24 of posting @ethereum till I get noticed \n\nETH's around $2,485–2,500 today, holding just below the daily pivot at $2,502.92, with the market showing mixed signals bullish on the daily chart but stalling on shorter timeframes. \nRSI is deep overbought at 75.79, and the wider https://t.co/ITiiQL4zNF https://t.co/wMnZ65OhtJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 141,
+   "user": "Cryptic_Mang",
+   "url": "https://x.com/Cryptic_Mang/status/2093522956219482461",
+   "date": "2026-08-29",
+   "text": "There is still a large portion of CT that thinks community is bs and doesn’t mean anything. \n\nWhat’s interesting is, they are somewhat correct, but also incredibly incorrect, specifically when it comes to opening a long term position in any memecoin that has the probability of a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "grenviksol",
+   "url": "https://x.com/grenviksol/status/2093648445428892103",
+   "date": "2026-08-29",
+   "text": "If the market turns, I want to be holding these 4.\n\nsolana:4N4DnNo3qpPks9aQCkcWkzoir8tnvT6diS4TnnZibonk \n\nFan-based community token powered by delusional fans all over the world. Sitting at just $5M MC and coded for much more. IMO, the upside here is inevitable. Everyone loves https://t.co/YrcmdFntuZ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "grenviksol",
+   "url": "https://x.com/grenviksol/status/2093647925800738832",
+   "date": "2026-08-29",
+   "text": "Perfect time to accumulate these 4 before the market wakes up.\n\nsolana:4N4DnNo3qpPks9aQCkcWkzoir8tnvT6diS4TnnZibonk \n\nFan-based community token powered by delusional fans all over the world. Sitting at just $5M MC and coded for much more. IMO, the upside here is inevitable. https://t.co/10Y4Gt2yLm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 60,
+   "user": "grenviksol",
+   "url": "https://x.com/grenviksol/status/2093648783619858586",
+   "date": "2026-08-29",
+   "text": "If the market turns, I want to be holding these 4.\n\nsolana:7voKerVHPvbXde3bEpyNcdodVEufq17tW6eZLUUkpump  \n\nI remember the days when I’d run home from school, open MSN and Winamp, and glue myself to that ancient PC while it took 10 minutes to process one single thing 💀 MSN https://t.co/ZuNqdTSXDn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "ThejesterVerse",
+   "url": "https://x.com/ThejesterVerse/status/2093638465044857228",
+   "date": "2026-08-29",
+   "text": "🚨 🚨 🚨 🚨 \n\nCrypto is selling off, and the main trigger was macro, not a sudden failure of blockchain fundamentals.\n\nBitcoin was rejected near the $81,000 to $81,500 area before falling below $77,000. The broader crypto market is now around $2.62T, down 1.78% over 24 hours, https://t.co/W251UUzWAB"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2093573444646629788",
+   "date": "2026-08-29",
+   "text": "Based on the Coin Pulse chart for Bitcoin (BTC):\n\nLiquidation Levels: The Liquidation Level Size Short metric is elevated at 96.81 (near the very top of the scale), while Liquidation Level Size Long is compressed near 3.19 (near the absolute bottom). This indicates a heavy https://t.co/sr6xtHmHAd"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 67,
+   "user": "SneakypeekSol",
+   "url": "https://x.com/SneakypeekSol/status/2093665861387338022",
+   "date": "2026-08-29",
+   "text": "I never shill a coin.\n\nI never ask anyone to buy a coin.\n\nAll I'm gonna say is $STONK is very undervalued. \n\nComparing it with $Pons in robinhood  which has same structure as @LaunchOnSF , stonk is highly undervalued. \n\nHere are the stonk stats👇\n- Total rewards distributed is https://t.co/H08ekYTwbh"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2093573145395372193",
+   "date": "2026-08-29",
+   "text": "Based on the Single-Coin Histogram for Bitcoin (BTC) shown on your chart, the short-term setup leans Bearish to Neutral.\n\nRetail Longs vs. Shorts Position: True Retail Longs have spiked near high percentile ranges (53.74%, placed at the 92.6th percentile), showing heavy retail https://t.co/RQvcQLhm40"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2093735112181772477",
+   "date": "2026-08-29",
+   "text": "Based on the combined metrics visible across your Single-Coin Histogram and Coin Pulse widgets for Bitcoin (BTC):\n\nRetail Long Saturation: True Retail Longs remain severely crowded, pushing up to 54.35% (98.76th percentile) on the histogram and climbing to 98.28 on the Coin Pulse https://t.co/sg9vFHgOuv"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 33,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2093716620694700198",
+   "date": "2026-08-29",
+   "text": "📊 $VTHO Overview | 2026-08-29\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI 🔴 Pullback\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Vechain\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2093700245284691994",
+   "date": "2026-08-29",
+   "text": "📊 $RENDER Overview | 2026-08-29\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Render\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2093710320946561523",
+   "date": "2026-08-29",
+   "text": "📊 $DOGE Overview | 2026-08-29\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#DOGECOIN\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "NiklasTheisen",
+   "url": "https://x.com/NiklasTheisen/status/2093705283436531812",
+   "date": "2026-08-29",
+   "text": "📊 $SUI Overview | 2026-08-29\n\n📉 Trend\nEMA200 🔴 Bearish\nSupertrend 🟢 Bullish\nADX 🚀 Strong\n\n⚡ Momentum\nRSI 🟢 Bullish\nMACD 🟢 Bullish\n\n⏱ Timing\nStochRSI ⚪ Neutral\n\n💧 Money Flow\nCMF 🟢 Bullish\n\n#Sui\n\n🔔 Follow for updates!\n👇 Which coin should I cover next?"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2093499543987847293",
+   "date": "2026-08-29",
+   "text": "🐻 $WLD -7.9% BTC divergence aligns with the bearish tape, not a lonely fade\n\n- my bias is bearish here — 1h structure is already in LH/LL, weekly is bearish and BTC is bearish, so this is not a lonely 1h fade; it is aligned with the bigger tape except daily, which is still https://t.co/93q99SHYeV"
+  }
+ ]
+}

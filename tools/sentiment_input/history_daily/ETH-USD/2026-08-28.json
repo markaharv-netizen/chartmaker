@@ -1,0 +1,84 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-08-28T00:00:00Z",
+ "end": "2026-08-29T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 92,
+   "user": "Cryptotarzan19",
+   "url": "https://x.com/Cryptotarzan19/status/2093276139527487794",
+   "date": "2026-08-28",
+   "text": "We will make Ethereum shine again, shine like it has never done before. 🙏\n\nBe prepared, BOOElievers.\n\nThe bear gives you something the bull never will: time.\n\nWhile many disappear, others build, accumulate and discover what was missing.\n\nEthereum today is valued by what people"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "deftsuolol",
+   "url": "https://x.com/deftsuolol/status/2093135284422492525",
+   "date": "2026-08-28",
+   "text": "ethereum:0x57e114b691db790c35207b2e685d4a43181e6061 3D\n\nHigh time frame (HTF) view. If for a moment we operate under the assumption of \"new bull market\" this is the sort of coin you want to bet big on IMO. \n\nAnything sub 0.20 is still within the \"accumulation\" zone and the upside https://t.co/6YWUIeEPOL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptrixLabs",
+   "url": "https://x.com/CryptrixLabs/status/2093385064323088520",
+   "date": "2026-08-28",
+   "text": "ETH is on the radar, not in play — pinned under $2,465 with roughly fifteen times more downside room than upside from here.\n\nOn the daily chart, Ethereum is still in an uptrend but has walked straight into a hard ceiling near $2,465 — only about 1% above current price. The https://t.co/am0bn6GiPU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "dreamchaserjtk",
+   "url": "https://x.com/dreamchaserjtk/status/2093300825191850432",
+   "date": "2026-08-28",
+   "text": "I’M EXPECTING A 15% DECLINE ON ETHEREUM BEFORE THE REAL MOVE BEGINS. 👀\n\nAND HERE’S THE PART I WANT YOU TO REMEMBER…\n\nWHEN THAT 15% CORRECTION HITS ETH — AND BTC ALSO STARTS DUMPING — EVERYBODY WILL START SHOUTING:\n\n“THE BEAR MARKET IS CONTINUING!”\n“THE BULL RUN IS OVER!”\n“WE https://t.co/jnJH4n9Ucv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2093232951089619409",
+   "date": "2026-08-28",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 (𝗕𝘂𝗹𝗹𝗶𝘀𝗵) - 𝗘𝗧𝗙 𝗶𝗻𝗳𝗹𝗼𝘄𝘀: U.S. spot crypto ETFs recorded net inflows on Aug. 27, with Bitcoin, Ethereum, SOL and XRP all seeing buying pressure – a clear sign of fresh capital entering the market. - 𝗜𝗻𝘀𝘁𝗶𝘁𝘂𝘁𝗶𝗼𝗻𝗮𝗹 https://t.co/Gb8HhSMGY0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "hafeezbek89",
+   "url": "https://x.com/hafeezbek89/status/2093286388519366861",
+   "date": "2026-08-28",
+   "text": "🧵 CRYPTO MARKET OUTLOOK — NEXT WEEK\n\nThe crypto market is entering a critical phase.\n\nBitcoin is holding around the $80K area, while institutional flows, U.S. crypto policy, Federal Reserve expectations and global liquidity could determine the next major move.\n\nHere’s what I’m"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Cryptoguruu_12",
+   "url": "https://x.com/Cryptoguruu_12/status/2093261898947162499",
+   "date": "2026-08-28",
+   "text": "$ETH Rejection Setup\n\nEthereum is struggling to reclaim the $2,490 area after facing repeated rejection from the upper range. The latest candles are showing selling pressure, which keeps the short-term structure tilted bearish.\n\nEntry: $2,485 – $2,491\n\nTP1: $2,460\nTP2: $2,420 https://t.co/rIHJmHMnw3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "MCryptoParadise",
+   "url": "https://x.com/MCryptoParadise/status/2093278856585126125",
+   "date": "2026-08-28",
+   "text": "A whale just opened a $40M short against Bitcoin and Ethereum.\n\nOur latest Bitcoin analysis shows why this is interesting.\n\nRetail is buying again.\n\nBut the whale appears to be absorbing that pressure and positioning for downside.\n\nBitcoin still cannot close above $79K.\n\nThe https://t.co/wRvoqufY73"
+  }
+ ]
+}

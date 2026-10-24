@@ -1,0 +1,219 @@
+{
+ "symbol": "AVGO",
+ "start": "2026-08-28T00:00:00Z",
+ "end": "2026-08-29T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AVGO (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2093215334790496397",
+   "date": "2026-08-28",
+   "text": "Macro Observatory Week 35 Friday Briefing\n\nThursday's telemetry registered a mega-cap tech option squeeze clashing against the broad matrix attrition.\n\nMainstream financial commentary might celebrate a sharp rebound in mega-cap technology and semiconductor names, however our"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TradeTheCrowd",
+   "url": "https://x.com/TradeTheCrowd/status/2093339944366272731",
+   "date": "2026-08-28",
+   "text": "CrowdWisdom for $AVGO (SHORT): Testing Resistance Ahead of September Earnings\n\nWhat I'm seeing is a divergence between the fundamental excitement regarding AI-driven custom silicon and the immediate technical reality. Several professional traders I tracked are highlighting that"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ROR_Traders",
+   "url": "https://x.com/ROR_Traders/status/2093330781049335855",
+   "date": "2026-08-28",
+   "text": "$NVDA got within a hair of 230 yesterday, then bled. Now the puts are stepping in.\n\nHere's the full board for 08/28 and how I am reading the shift 👇\n\n$NVDA: 230 still holds the most OI and it almost tagged it yesterday. But today it bled, and 220, 225, and 222.5P all built. The"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "EssKayOne",
+   "url": "https://x.com/EssKayOne/status/2093312026605232170",
+   "date": "2026-08-28",
+   "text": "🟠 Market Signal remains CAUTIOUSLY BEARISH. // Software is back. // Basically all sectors down today except for technology. // Semis $SOXX up but remain below their downtrend. Overall $NVDA with its amazing results failed to ignite a rally in semiconductor stocks. // All the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "fly_welinkBTC",
+   "url": "https://x.com/fly_welinkBTC/status/2093244052879925640",
+   "date": "2026-08-28",
+   "text": "$ALABB (ALABB) AstraLabs Stock Research\n— Portfolio Analysis Report\n\nRating ▲ Buy\nTarget price: $389.95\n\n1/ Core Summary\n\nThe VIX is 14.5, reflecting widespread market complacency;\nat the same time,\nThe 10-year US Treasury yield is close to 4.67%.\nContinued pressure is putting https://t.co/n0XXJoNi4r"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "mpagalavan4028",
+   "url": "https://x.com/mpagalavan4028/status/2093384802863140866",
+   "date": "2026-08-28",
+   "text": "$AVGO as forecasted earlier, previous bullish set up was a trap. if the price action closes below $365(200 EMA) bearish momentum could accelerate towards lower levels. Not financial advice. #AVGO #QQQ https://t.co/GcGGbxlqHC https://t.co/D4XMGdx3LF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "mpagalavan4028",
+   "url": "https://x.com/mpagalavan4028/status/2093325481420681234",
+   "date": "2026-08-28",
+   "text": "$AVGO despite bullish setup, stock is in correction. Resistance seen around $387(50 EMA). Price action indicates, it could be a bull trap. Not financial advice. #AVGO #QQQ https://t.co/hWn8LhHks9 https://t.co/FpPvUo09Lv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "MCreekFutures",
+   "url": "https://x.com/MCreekFutures/status/2093445591196180900",
+   "date": "2026-08-28",
+   "text": "Friday Market Closing Report: Friday, August 28, 2026\n\nClosing Summary\nWall Street finished Friday slightly lower to end a high-volatility week, as investors digested Federal Reserve Chairman Kevin Warsh's inaugural Jackson Hole address and fresh corporate tech scorecards. \n\nThe https://t.co/8U3uIHIDGy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "bullhooves",
+   "url": "https://x.com/bullhooves/status/2093288337540841715",
+   "date": "2026-08-28",
+   "text": "$MRVL The market did not like the print.  Why?\n\nThe tape is treating this as a beat-and-raise that failed a higher bar. After-hours and premarket weakness of about 7–8% is not because the quarter was bad. It is because the Google contract did not get pulled forward into the https://t.co/1KmxJXPWf4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2093339257288933530",
+   "date": "2026-08-28",
+   "text": "🐳 Ken Griffin is buying $AMZN. At 10:00 ET, someone else put $15.6M on the same trade — with leverage.\n\nTHE SETUP\n\nAt 10:00:31 ET, one buyer paid $15.6 million for 25,000 AMZN November 20, 2026 $295 calls at $6.23. Spot was $259.37 — the strike sits roughly 14% out of the money, https://t.co/cszBm7Z5Ua"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 25,
+   "user": "thekriskay",
+   "url": "https://x.com/thekriskay/status/2093325131527471170",
+   "date": "2026-08-28",
+   "text": "$AVGO\n\nBroadcom's D. Engineer is named Michael Jordan, and you're bearish? https://t.co/DGsJmPJvZd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 182,
+   "user": "JEFETRADES",
+   "url": "https://x.com/JEFETRADES/status/2093444845318606923",
+   "date": "2026-08-28",
+   "text": "THIS COULD GET UGLY🚫\n\n$NVDA Dropped over $10 from highs and still has room on the downside from here into the 100ma/gapfill. Names like $AMD + $AVGO are also on the brink of a more significant drop if this doesnt hold...\n\nBIG Setups heading into next week👇 https://t.co/55NQ10ia1G"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MrJosephsIbvbk8",
+   "url": "https://x.com/MrJosephsIbvbk8/status/2093391817290973339",
+   "date": "2026-08-28",
+   "text": "WALL STREET'S TWO LIFELINES:\n\n$NVDA &amp; $AVGO. $NVDA reports earnings today, while $AVGO follows next Wednesday.\n\n$AVGO has already fallen sharply over the past few days. A sustained break below the 0.786 retracement at $333.84 would signal broader weakness.\n\nThis could trigger a https://t.co/yQl5EC2ip3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "stock_duty",
+   "url": "https://x.com/stock_duty/status/2093455846428610787",
+   "date": "2026-08-28",
+   "text": "$NVDA -4.6% (1.6x avg vol) — MICHAEL BURRY BOOKS 50-60% GAIN ON NVIDIA CALLS IN UNDER A DAY, STAYS BEARISH ON AI CAPEX\n\nAlso in play: $AAPL $MSFT $AVGO $MU $AMD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "Tape_Vector",
+   "url": "https://x.com/Tape_Vector/status/2093238450791084136",
+   "date": "2026-08-28",
+   "text": "$AVGO update\n\nThe support zone I was watching has now produced its first meaningful reaction.\n\nThat changes the question.\n\nBefore:\n\nWill buyers react around support?\n\nNow:\n\nCan they retain that reaction and turn it into stabilization?\n\nThe 4H 24H chart tested roughly the $348 to https://t.co/y8eGZSNSbg https://t.co/32006kgtYv"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "AIInfraLedger",
+   "url": "https://x.com/AIInfraLedger/status/2093441082524942761",
+   "date": "2026-08-28",
+   "text": "CATCH-UP (12:30 ET): Bearish $AVGO into Sep. 2 earnings. Q3 guide already assumes ~$29.4B revenue (+84%) and $16B AI-chip sales, so “good” is priced. Friday closed $368.79 below $376.59 on 0.8x volume. I expect $355 by Sep. 4 (65%). Risk: a guide beat. Invalidate &gt;$377. https://t.co/C5S534Gg0K"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AnthonyWidodo_",
+   "url": "https://x.com/AnthonyWidodo_/status/2093276917432717452",
+   "date": "2026-08-28",
+   "text": "MARKET OUTLOOK — Friday, 28 August 2026\n\nGold closed at 4,649.9, a price that sits less than 1.1% below a buy-stop trigger at 4,700.9. A break above that level would activate the next tier of bullish setups; a slip below 4,643.5, the invalidation for that same trigger, would"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "vkingstrade",
+   "url": "https://x.com/vkingstrade/status/2093345002697241021",
+   "date": "2026-08-28",
+   "text": "🚨 FED WARNING — $QQQ $SPY\n\nFed Chair Kevin Warsh warned that further policy action—including possible rate hikes—may be needed if inflation does not move clearly toward 2%.\n\nThis creates pressure on high-growth tech, especially $NVDA, $AMD, $AVGO, $MU and $PLTR.\n\nPuts confirm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "cesarsroy",
+   "url": "https://x.com/cesarsroy/status/2093418456385458587",
+   "date": "2026-08-28",
+   "text": "$AVGO - I agree with this take.\nMaybe not 420 but there will be upside!! \nI must note that I have a horrible track record with earnings plays - you are warned. https://t.co/gJHnKU9prT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Scorum3",
+   "url": "https://x.com/Scorum3/status/2093415822551105910",
+   "date": "2026-08-28",
+   "text": "NVDA blockbuster Q2 sent S&amp;P/Nasdaq futures up — rippling into AI/semis: AVGO gap higher. Watch implied vols and skew: NVDA expected move widens, offer alpha in dispersion vs Broadcom. Macro/Fed risk still caps near-term upside 📈 #NFA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Street_Insider",
+   "url": "https://x.com/Street_Insider/status/2093346686227669472",
+   "date": "2026-08-28",
+   "text": "Mizuho is bullish on Broadcom $AVGO ahead of Sept. 2 earnings, citing 30-quarter streak\n\nhttps://t.co/qjmjStj5st https://t.co/c6yNFbiW1W"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 18,
+   "user": "murtala_faizah",
+   "url": "https://x.com/murtala_faizah/status/2093323873768935701",
+   "date": "2026-08-28",
+   "text": "AVGO Setup $375 Break\n\n$AVGO broke back toward the $375 shelf after yesterday’s bounce to ~$372. If it clears $375 with conviction, the next pocket is $391–$400.\n\nBias: Bullish above $375 🟢 Entry: Break and hold above $375 TP: $391 → $400 SL: Below $368\n\nInvalidation: https://t.co/vJxagtn1eS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "TAnotepad",
+   "url": "https://x.com/TAnotepad/status/2093425797591916829",
+   "date": "2026-08-28",
+   "text": "$AVGO, Broadcom, $367.15, MCAP: $1.77T, Accum. Rating: B, C? correction tests key volume support; bullish insider tilt. AI-capacity financing talks and BMO’s $455 target remain catalysts. https://t.co/p9u45KYsn6"
+  }
+ ]
+}

@@ -1,0 +1,228 @@
+{
+ "symbol": "MSFT",
+ "start": "2026-08-22T00:00:00Z",
+ "end": "2026-08-23T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "MSFT (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 554,
+   "user": "TheProfInvestor",
+   "url": "https://x.com/TheProfInvestor/status/2091307720188293160",
+   "date": "2026-08-22",
+   "text": "Every long term investor buying quality companies at a discount looks stupid in the moment.\n\nAnd looks like a genius in hindsight.\n\nAsk the people who were accumulating $PLTR between $115 and $130 when everyone was calling it overvalued.\n\nAsk the people who bought $MSFT at $360"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "JiahaoLiu1",
+   "url": "https://x.com/JiahaoLiu1/status/2091189638694130078",
+   "date": "2026-08-22",
+   "text": "8/21 Friday Market &amp; Portfolio Update 📊\n\nMy view remains unchanged: after the strong run we’ve had, I still expect a 5–10% correction / consolidation in the broader U.S. market.\n\nThis week I started adding some downside protection:\n\n→ Bought $SPY 9/18 $710 puts\n\nThis is a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "JiahaoLiu1",
+   "url": "https://x.com/JiahaoLiu1/status/2091189062132469899",
+   "date": "2026-08-22",
+   "text": "8/21 Friday Market &amp; Portfolio Update 📊\n\nMy view remains unchanged: after the strong run we’ve had, I still expect a 5–10% correction / consolidation in the broader U.S. market.\n\nThis week I started adding some downside protection:\n\n→ Bought SPY 9/18 $710 puts\n\nThis is a"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "KK12349999",
+   "url": "https://x.com/KK12349999/status/2091133642412102004",
+   "date": "2026-08-22",
+   "text": "In simple words From 2019 to 2022, office and data centers both spent about $60-70B and $10B. Boring.\n\nThen the Fed starts raising rates in March 2022.\n\nOffice construction collapses. It went from $70B to $45B today. No one wants new office with 5% rates and remote work.\n\nData https://t.co/XAiIo1TmR7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "rdd147",
+   "url": "https://x.com/rdd147/status/2091191638505017442",
+   "date": "2026-08-22",
+   "text": "We are 12-18 months away from the largest number of (major) union contract expirations in US history, and you’re bearish?\n $NVDA $SPCX $GOOG $AMZN $MSFT https://t.co/4JDM0PKHPr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "zedryaz",
+   "url": "https://x.com/zedryaz/status/2091269049854599275",
+   "date": "2026-08-22",
+   "text": "here is definitely a bearish side to $NVDA raising AI server prices by 15%+.\n\nThe biggest risk is simple:\n\nMemory costs rise\n→ AI servers become more expensive\n→ hyperscaler CapEx rises further\n→ returns on AI investments become harder to justify\n\n$MSFT / $META / $AMZN / https://t.co/vZBNTRC7qr"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 50,
+   "user": "EchoAnalysis",
+   "url": "https://x.com/EchoAnalysis/status/2091216831600333275",
+   "date": "2026-08-22",
+   "text": "$IGV Be cautious here 👀\n\nPrice has now rejected lower off the 0.887 fib and I expect subwave 3 of Wave C to start here.\n\nThis aligns with the bearish outlook on $MSFT and $PLTR who are the leaders in the software sector.\n\nPatience. https://t.co/JkBoVNWooO https://t.co/QB3OCpIoBE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "GKaparakos",
+   "url": "https://x.com/GKaparakos/status/2091139242164388193",
+   "date": "2026-08-22",
+   "text": "$QQQ Bearish: Cautionary Position $SPY $SPX\n$NVDA $MU $SNDK\n$NVDA $SMH $SKHY\n$NDX $XLK $SOXX\n$AAPL $AMD\n$PLTR $IBM\n$GOOGL\n$AVGO $TSM $MRVL\n$CL $USO $DIA\n$QCOM\n$TSLA $MSFT $NFLX\n$AMZN\n$XLE $CVX $XOM\n$NDX $NQ $IWM\n$ORCL $META\n$MSTR $GBTC $IBIT $GLD $SLV\n$MTUM $CRWD $C $WFC $BAC $GS https://t.co/5Vp1Yu73qE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "GKaparakos",
+   "url": "https://x.com/GKaparakos/status/2091122585589158174",
+   "date": "2026-08-22",
+   "text": "$SPY Bearish: Cautionary Position $SPX\n$NVDA $MU $SNDK\n$NVDA $QQQ $SMH $SKHY\n$NDX $XLK $SOXX\n$AAPL $AMD\n$PLTR $IBM\n$GOOGL\n$AVGO $TSM $MRVL\n$CL $USO $DIA\n$QCOM\n$TSLA $MSFT $NFLX\n$AMZN\n$XLE $CVX $XOM\n$NDX $NQ $IWM\n$ORCL $META\n$MSTR $GBTC $IBIT $GLD $SLV\n$MTUM $CRWD $C $WFC $BAC $GS https://t.co/Zb1Pw4Ie01"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Moreno2625",
+   "url": "https://x.com/Moreno2625/status/2090952886582710422",
+   "date": "2026-08-22",
+   "text": "We little forget that we are analyzing the best companies in the world such as $MSFT , and they do everything possible to continue growing, even with the best numbers always open bearish investors who will look for or find a way to see some weak point in one of those great https://t.co/2afyXsTYtT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "insicapp",
+   "url": "https://x.com/insicapp/status/2091238330318930185",
+   "date": "2026-08-22",
+   "text": "Value vs Growth — same DCF engine, different philosophies.\n\nValue picks:\n1. $PEP — 37% upside · 16× fwd P/E\n2. $T — 22% upside · 10× fwd P/E\n3. $VZ — -13% upside · 9× fwd P/E\n\nGrowth picks:\n1. $MSFT — +18% est. revenue growth · 21× fwd P/E\n#ValueInvesting #GrowthStocks #Investing"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "yunara1champp",
+   "url": "https://x.com/yunara1champp/status/2091059060359762179",
+   "date": "2026-08-22",
+   "text": "Two different ways to play the AI trade: pure hardware (NVDA, AMD) vs. software &amp; cloud infrastructure (MSFT, AMZN, GOOGL). Where do you see the bigger upside long-term? https://t.co/pKbaJQiigN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "insicapp",
+   "url": "https://x.com/insicapp/status/2091181709974757776",
+   "date": "2026-08-22",
+   "text": "3 stocks. Same model. Very different verdicts.\n\n🟡 $MSFT — $483.24 → $591.07 · model sees 22% upside\n   ↳ Fwd P/E below 3Y avg (33×) · Growth accelerating: analysts 17.9% vs 3Y CAGR 16.1%\n\n🟡 $JPM — $351.58 → $339.15 · model says fair\n#DCF #Investing #ValueInvesting"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "mike_h1990",
+   "url": "https://x.com/mike_h1990/status/2090966095263859059",
+   "date": "2026-08-22",
+   "text": "Bullish for both #MSFT and $NVDA https://t.co/UykKQg9FPk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "Yes_BigBoss",
+   "url": "https://x.com/Yes_BigBoss/status/2091173563952697415",
+   "date": "2026-08-22",
+   "text": "$MSFT Bullish engulfing candle, seems ready to move as vol picks up and we see bullish divergence. 536 is my next stop! https://t.co/4DmLFFWXhA https://t.co/Ag8KiJTf24"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "deborah39692606",
+   "url": "https://x.com/deborah39692606/status/2091152605938622901",
+   "date": "2026-08-22",
+   "text": "I’m only saying this once.\nBuilding long term wealth isn’t about hype it’s about positioning early in high-growth trends.\nHere are 10 names with strong upside potential over the next few years:\n$AMZN (Amazon) → Must buy\n$MSFT (Microsoft) → Must buy\n$GOOGL (Alphabet) → Must buy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2091073856374989068",
+   "date": "2026-08-22",
+   "text": "📊 WALL STREET SEES BIG UPSIDE IN THESE STOCKS\n\nBased on average analyst 12-month price targets:\n\n🥇 Palantir $PLTR +66%\n🥈 Vistra $VST +49%\n🥉 DoorDash $DASH +45%\n\nShopify $SHOP +38%\nSpotify $SPOT +37%\nUber $UBER +36%\nMicrosoft $MSFT +33%\nMeta $META +33%\nMercadoLibre $MELI +32%"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 24,
+   "user": "MWi_EW",
+   "url": "https://x.com/MWi_EW/status/2091225818785534406",
+   "date": "2026-08-22",
+   "text": "$MSFT\n\nI still believe we’re in a corrective structure.\n\nPrice is right back in B-wave territory.\n\nI said last time that if bulls flip $453.50 I would consider the bullish path, but I still don’t see it.\n\nI didn’t need to calculate new Fib targets, I just activated the old ones https://t.co/vJLXjREoPm https://t.co/sm4muMXAct"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "buzurke",
+   "url": "https://x.com/buzurke/status/2091249257697484892",
+   "date": "2026-08-22",
+   "text": "Per Bloomberg, $NVDA is seeing AI system price hikes above 15% due to memory costs.\n\n&gt;This is obviously bullish for $DRAM, showing that memory demand is still growing.\n\n&gt;For customers $META $GOOG $NBIS $MSFT $CRWV, CAPEX will increase but demand isn’t slowing, so it’s okay. The https://t.co/4ZNyy26Ajz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "Bearlovesbull",
+   "url": "https://x.com/Bearlovesbull/status/2090983678977421558",
+   "date": "2026-08-22",
+   "text": "🚨THE AI CAPEX BOOM IS NOT 2008 BECAUSE IT IS A CAPACITY CYCLE.\n\nMichael Burry is right to focus on leverage, circular financing, depreciation assumptions and the risk of overbuild.\n\nHe is wrong to make 2008 the primary analogy.\n\nSee guys, the mechanism of failure is completely https://t.co/4Dca0MWUfO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "AgAuElements",
+   "url": "https://x.com/AgAuElements/status/2091147446445322630",
+   "date": "2026-08-22",
+   "text": "Breaking NEWS: Key takeaways from Goldman Sachs’ 3rd Annual Silicon Valley AI Field Trip confirm that enterprise AI is pivoting fast from generic LLMs toward domain context, physical AI, and specialized infrastructure.\n\nWhile everyone focuses on surface-level chat tools, a https://t.co/Ca7a7n5Bap"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "seahorse_anton",
+   "url": "https://x.com/seahorse_anton/status/2091143712591982822",
+   "date": "2026-08-22",
+   "text": "AI Infra &amp; Crypto Mining &amp; Neoclouds _Mega-Cap Tech — Flow Check 8/21\n\n1Y returns tell a story, but money flow tells you who's still buying.\n\nWinners on price, bleeding on flow:\n🔴 CIFR +167% | CMF -0.273 | OBV -1.47σ \n🔴 HUT +278% | CMF -0.247 | OBV -0.80σ \n🔴 APLD +73% | CMF https://t.co/DKWRvHoBvQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "gabz_investor05",
+   "url": "https://x.com/gabz_investor05/status/2091172548025172072",
+   "date": "2026-08-22",
+   "text": "Okay. A lot of you are beating the S&amp;P500 YTD, right? So am I 😅\n\nBut, we are in a raging bull market;\n- Probably near the end of it tho\n\nIf you want to keep beating the other 90% of investors, FOMOing into a hot AI stock won't be enough\n\nThat's why I am balancing my portfolio"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "RaynerWH",
+   "url": "https://x.com/RaynerWH/status/2091311381115240542",
+   "date": "2026-08-22",
+   "text": "🚨Good luck listening to all the Fintwit going all bullish on Neoclouds. High-debt neo-clouds $CRWV $NBIS $IREN are walking straight into a macro death trap,and will be the FIRST to crash when the music stops.🚨\n\nHere is the dead-simple breakdown:\n\n⚠️ 1. The US Govt is Flooding"
+  }
+ ]
+}

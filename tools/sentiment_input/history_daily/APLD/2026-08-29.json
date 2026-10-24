@@ -1,0 +1,39 @@
+{
+ "symbol": "APLD",
+ "start": "2026-08-29T00:00:00Z",
+ "end": "2026-08-30T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "seahorse_anton",
+   "url": "https://x.com/seahorse_anton/status/2093819658633912607",
+   "date": "2026-08-29",
+   "text": "Neoclouds / GPU Cloud Providers, Crypto Mining / AI Data Center Pivots, and Hyperscalers\nSplit tape. Miners/HPC ran. Flow did not.\n\nThis is the opposite of the genomics basket.\n\n1Y price is loud on the left side of the chart — $HUT +200%, $NBIS +190%, $CIFR +116%, $WULF +63%, https://t.co/HGOD6g0xP4"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Linker868",
+   "url": "https://x.com/Linker868/status/2093559351885856887",
+   "date": "2026-08-29",
+   "text": "$APLD On Red days investors may second-guess if the stocks that they own are the best choice or if there are potentially better stocks out there. I say APLD is one of the very best choices, if you can buy lower you are getting even Better value! Bullish https://t.co/iBZqA5Nd1e"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 21,
+   "user": "PSInvestor",
+   "url": "https://x.com/PSInvestor/status/2093756783559049620",
+   "date": "2026-08-29",
+   "text": "This is what it feels like to hold $IREN $APLD $CIFR and still be bullish.\nTime will come ✊ https://t.co/hJ4nQOVzyD https://t.co/Ert3g5EIIj"
+  }
+ ]
+}

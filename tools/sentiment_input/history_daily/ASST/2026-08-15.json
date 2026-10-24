@@ -1,0 +1,30 @@
+{
+ "symbol": "ASST",
+ "start": "2026-08-15T00:00:00Z",
+ "end": "2026-08-16T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "ASST (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "FinovoXT",
+   "url": "https://x.com/FinovoXT/status/2088506103072166180",
+   "date": "2026-08-15",
+   "text": "$IREN  Price has already moved in our favor as mapped.\n\nThe bullish continuation remains intact from current levels. Expect further upside from here.  \n\nBIAS: Bullish while the current structure holds.\n\nShort squeeze Watchlist: $OPEN  $BBAI  $SBET $ASST $NNE https://t.co/W6N6Bc7hLS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 19,
+   "user": "ProtonOgun",
+   "url": "https://x.com/ProtonOgun/status/2088705965646340196",
+   "date": "2026-08-15",
+   "text": "Generational wealth is built during the bear market thru discipline &amp; consistency\n\nGenerational wealth is secured during the bull market thru discipline &amp; consistency\n\nBoth markets require discipline &amp; consistency in order to succeed. But the true key to attaining generational https://t.co/VCHZ9I6Zc6"
+  }
+ ]
+}

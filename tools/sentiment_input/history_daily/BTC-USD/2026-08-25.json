@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-08-25T00:00:00Z",
+ "end": "2026-08-26T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "xwinfinance",
+   "url": "https://x.com/xwinfinance/status/2092369800244994379",
+   "date": "2026-08-25",
+   "text": "📊【XWIN CAPITAL INDEX | August 26, 2026】\nOverall Score: 86 / 100\n・80–100 = Strong Bullish Environment\n・60–79 = Bullish Bias\n・40–59 = Neutral / No Clear Direction\n・20–39 = Bearish Bias\n・0–19 = Strong Bearish Environment\n7-Day Moving Average: 84.00 ↑\n14-Day Moving Average: https://t.co/ChCEaWnmQV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2092145838826877145",
+   "date": "2026-08-25",
+   "text": "𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗚𝗮𝘂𝗴𝗲: 𝟰 / 𝟱 (𝗕𝘂𝗹𝗹𝗶𝘀𝗵, 𝘄𝗶𝘁𝗵 𝗰𝗮𝘂𝘁𝗶𝗼𝗻) - 𝗕𝗶𝘁𝗰𝗼𝗶𝗻 𝗯𝗿𝗲𝗮𝗸𝘁𝗵𝗿𝗼𝘂𝗴𝗵: $80k+ level (first since May) signals strong upward momentum. - 𝗦𝗼𝗹𝗮𝗻𝗮 𝗿𝗮𝗹𝗹𝘆: Back above #100, triggering &gt;#16 M in short liquidations (largest https://t.co/uwS1ajOGLb"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 14,
+   "user": "Greg_TheDuck",
+   "url": "https://x.com/Greg_TheDuck/status/2092138019583127863",
+   "date": "2026-08-25",
+   "text": "B:\nBag / Bagholder — Tokens you still hold, often after a big drop. A bagholder is stuck with them.\n•  Bear market / Bearish — Falling prices, bad mood, people expect more downside.\n•  Bitcoin (BTC) — The first cryptocurrency (2009). Digital gold, proof-of-work, fixed 21"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Greg_TheDuck",
+   "url": "https://x.com/Greg_TheDuck/status/2092137808081080523",
+   "date": "2026-08-25",
+   "text": "Bag / Bagholder — Tokens you still hold, often after a big drop. A bagholder is stuck with them.\n•  Bear market / Bearish — Falling prices, bad mood, people expect more downside.\n•  Bitcoin (BTC) — The first cryptocurrency (2009). Digital gold, proof-of-work, fixed 21 million"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TerpsTrader1",
+   "url": "https://x.com/TerpsTrader1/status/2092333139603407278",
+   "date": "2026-08-25",
+   "text": "Bitcoin Two must watch short term levels \n$82k breaks we are bullish \n$78k break we are bearish \n\nBig levels for ah into tomorrow \n92-95k upside \n68-72k downside \nbitcoin:native #bitcoin #BitcoinRecovery https://t.co/AI0qOnzYML"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2092360140452176364",
+   "date": "2026-08-25",
+   "text": "🚨 Institutional Technical Watch — Ostium Market Outlook #90: BTC and ETH higher-timeframe trend shift\n\nA meaningful new multi-asset technical outlook from Ostium Insights identifies a potentially important higher-timeframe regime change in both Bitcoin and Ethereum. The analysis https://t.co/utEvGFS0dq"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "gulVasikova",
+   "url": "https://x.com/gulVasikova/status/2092294657564921906",
+   "date": "2026-08-25",
+   "text": "$MSTR — the key details investors should know\n\nStrategy is becoming interesting again because Bitcoin’s rally is bringing its entire Bitcoin “flywheel” back to life.\n\nCanaccord: Buy rating, price target raised from $130 → $175.\nBitcoin holdings: roughly 840,000+ BTC.\nAverage BTC https://t.co/aBRfqW7S0n"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "TradingbitAi",
+   "url": "https://x.com/TradingbitAi/status/2092114332356345987",
+   "date": "2026-08-25",
+   "text": "📊 Daily Brief 🟢🟢\n━━━━━━━━━━━━\n[Overall Verdict]\nBULLISH. Dual engines aligned: technical strong_bull (78% confidence, score 1.595) + macro BTC Bull regime. Confidence: high. Price $80,311.6 broke decisively above prior consolidation; momentum, trend and https://t.co/2PjZpcgI43"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2092251787516424573",
+   "date": "2026-08-25",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-08-25 (Late Morning Edition)\n\n**Published:** 2026-08-25 09:03 AM CT\n\nTuesday's tape is all about the debasement trade: Bitcoin is up 21.6% over the past week, and the Fear &amp; Greed Index at 74 (Greed) confirms the mood has shifted"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "sithetrader",
+   "url": "https://x.com/sithetrader/status/2092260170977960387",
+   "date": "2026-08-25",
+   "text": "If you are sidelined from crypto, feeling FOMO and struggling to know who to listen to, my honest advice is to listen to the ones that successfully flipped bullish to bearish late last year, and know how to trade both bull and bear markets profitably. Including @benjamincowen and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 19,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2092243478461739506",
+   "date": "2026-08-25",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• A Billion-Dollar Solana Inflow Is Real Money; A Bitcoin Custody Move Is Not, Yet\n• Stock Futures Climb as Investors Eye Nvidia (NVDA) Earnings and Fed’s Jackson Hole Event\n• BTC Price Reclaims $81,000 as Gold Rally, https://t.co/4uleXfGEjc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "CryptoMatheos",
+   "url": "https://x.com/CryptoMatheos/status/2092329867681661391",
+   "date": "2026-08-25",
+   "text": "Main factor why my short positioning was wrong, I misjudged how traders on perps are positioned.\nThere was very big amount of shorts in the system in general, plus also vs longs ratio.\nOpen interest dropped sharply with market pumping and OI is staying flat (coins nominated) even https://t.co/VTVIKRFzae"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 204,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2092072941890732201",
+   "date": "2026-08-25",
+   "text": "BTC closed Monday up 1.62%, tagging a fresh local high right at 80,000, but RSI only managed a lower high at 88, so we've got a confirmed bearish divergence layered on top of six straight days overbought. That doesn't mean Bitcoin has to drop today, but I'm watching the fast line https://t.co/nanwdbHJGl"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "ProfitLabzX",
+   "url": "https://x.com/ProfitLabzX/status/2092207340334502337",
+   "date": "2026-08-25",
+   "text": "bitcoin:native  Order Flow Update\n\nBTC is showing strong aggressive buying, with 15m POCs consistently migrating higher.\n\nThe issue: price is still struggling to accept above the ~79,470 LVN / VAH.\n\nSo we’re at an important decision point:\n\nBullish Case- Acceptance above 79,470 https://t.co/g6CYa0PU87"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2092070711854546963",
+   "date": "2026-08-25",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-08-24 (Evening Edition)\n\n**Published:** 2026-08-24 09:04 PM CT\n\nBitcoin is up 23.3% over the past week, breaking through $80,000 for the first time in 100 days, and the Fear &amp; Greed Index sits at 74 (Greed) after a 28-point shift"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "LongTermHold3r",
+   "url": "https://x.com/LongTermHold3r/status/2092260392097464784",
+   "date": "2026-08-25",
+   "text": "⚠️ bitcoin:native : An Ascending Broadening Wedge Calls for Caution!\n\nAn ascending broadening wedge is currently forming on bitcoin:native . This pattern is generally considered a bearish reversal setup: buyers keep pushing the price higher, but sellers use those moves to trigger https://t.co/bcqBlvqXXE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "ZenTrader777",
+   "url": "https://x.com/ZenTrader777/status/2092276732133019716",
+   "date": "2026-08-25",
+   "text": "BTC Morning Update! Price is looking a bit sketchy to me. I can see both scenarios. I am still slightly bearish this morning and can see a retracement down to $77,800 area if price wants to get there. Maybe would get some bullish div on the smaller timeframes? To the upside, we"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Invest2Growcom",
+   "url": "https://x.com/Invest2Growcom/status/2092291966704730451",
+   "date": "2026-08-25",
+   "text": "$ASST (Strive, Inc.) is up around 7.35% today to ~$21.48 — surging as the company disclosed in an SEC filing that it purchased 1,110 Bitcoin for approximately $81.5 million between August 17 and August 21, bringing its total treasury to 21,356 BTC — now the 7th largest publicly"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 64,
+   "user": "ordi_brc",
+   "url": "https://x.com/ordi_brc/status/2092376044984521177",
+   "date": "2026-08-25",
+   "text": "🚀 Bitcoin has likely found a bear market bottom\n🚀 We likely have 1-3 years of bull market from here\n🚀 Ordinals defeated BIP110 and are here to stay\n🚀 Bitcoin native assets are severely undervalued\n🚀 $ORDI is the most liquid, highest volume asset and is listed on 58 exchanges https://t.co/gMCpWQ1XVD"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 31,
+   "user": "LintonWorm",
+   "url": "https://x.com/LintonWorm/status/2092293337323905077",
+   "date": "2026-08-25",
+   "text": "🚨 THE BITCOIN LIQUIDATION CASCADE MACRO PARALLEL\n\n$BTC has generated a +21% weekly expansion following a $3.3 Billion short liquidation cascade\n\nComparing structural liquidation mechanics across market cycles:\n\n&gt; Downside Inflection: The Oct 10 downside cascade triggered a 16% https://t.co/wvmnv6Xh8D https://t.co/znFfuWAbIy"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "FelixDeFi7",
+   "url": "https://x.com/FelixDeFi7/status/2092305931329573217",
+   "date": "2026-08-25",
+   "text": "BTC 1H Analysis 📊\n\nBitcoin is currently trading around $79.2K after rejecting the $81.2K area.\n\nOn the 1H chart:\n• Price remains above the 200 MA, keeping the broader structure bullish.\n• The 7 MA and 30 MA are showing some weakness in the short term.\n• RSI ~50 indicates https://t.co/ngwwDUEhLd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RegeneCapital",
+   "url": "https://x.com/RegeneCapital/status/2092260013540610308",
+   "date": "2026-08-25",
+   "text": "₿ Bitcoin — Weekly Market Outlook\n\nDividendChase LTD | Digital Asset Research Desk\nBitcoin staged one of its strongest moves of the year last week. On 19 August 2026, BTC accelerated sharply from the mid‑$64,000 region and rallied toward the $81,000–$82,000 zone, driven by a https://t.co/jR7XARTK16"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 38,
+   "user": "onehellofarun",
+   "url": "https://x.com/onehellofarun/status/2092276423205798385",
+   "date": "2026-08-25",
+   "text": "There are many ways to analyze a bullish or bearish macro trend.\n\nMoving averages on weekly timeframes are one of them. \nHistorically, when bitcoin closes weekly candles above the MA ribbon, after a long bearish trend, the bear market is over.\n\nThe bounce took place at an https://t.co/yjYdk1FERn"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "cryptobravo91",
+   "url": "https://x.com/cryptobravo91/status/2092351995122483240",
+   "date": "2026-08-25",
+   "text": "🟣 TAO | Macro Setup\n\nYou already know my view on TAO. I still consider it one of the most undervalued projects in the market.\n\nThe 3D chart shows a prolonged accumulation phase. For more than two years, price has continued to defend the $180-$195 demand zone, while bearish https://t.co/99vveu0m1q"
+  }
+ ]
+}

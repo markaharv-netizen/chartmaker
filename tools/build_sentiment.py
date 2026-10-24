@@ -55,7 +55,7 @@ def main(path, asof=None):
             r["sigma"], r["sigma_basis"] = round((s[-1]["bull"] - statistics.mean(own)) / statistics.pstdev(own), 2), "own"
         else:
             r["sigma"], r["sigma_basis"] = round((r["bull"] - mu) / sd, 2), "cross"
-    rows.sort(key=lambda r: -r["sigma"])
+    rows.sort(key=lambda r: -r["bull"])  # board ranks by bull share, high to low
     out = {"asOf": asof, "window": B.get("window"), "method": "engagement-weighted bull/(bull+bear) of classified X posts (w=1+ln(1+likes+2*reposts+replies+2*quotes)) and news (w=3); band = 95%% Wilson on Kish effective n; sigma = z-score of the latest X-only history point vs that ticker's own history once it has %d points (sigma_basis own), else cross-sectional z across the board" % OWN_MIN,
            "source": "X posts & news", "tickers": rows}
     json.dump(out, open(OUT, "w"), indent=1); json.dump(H, open(HIST, "w"), indent=1)

@@ -1,0 +1,66 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-08-29T00:00:00Z",
+ "end": "2026-08-30T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 31,
+   "user": "ViolatedNoise",
+   "url": "https://x.com/ViolatedNoise/status/2093625854303563941",
+   "date": "2026-08-29",
+   "text": "‘ One is extremely overvalued, LP paired with NVIDIA on top of the stock market bubble \n\nOne is extremely undervalued on the bottom of the crypto bull market\n\nYour job is to find out which one is the undervalued one and fullport it ‘ - @itwaswrittenlol https://t.co/12vcSOGFzS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "chaingull",
+   "url": "https://x.com/chaingull/status/2093690226967560652",
+   "date": "2026-08-29",
+   "text": "Crypto Brief — Aug 29, 13:20 UTC\n\nTOP STORY — impact 80 / 100\n▼ Fed hawkish tone raises tightening odds and increases downside risk for BTC.\n\nBULLISH\n▲ 65 Bloomberg chief economist warns next week's NFP may be soft, reducing Fed rate hike odds\n▲ 50 South Korean crypto CEX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "arslan373746602",
+   "url": "https://x.com/arslan373746602/status/2093729164016906528",
+   "date": "2026-08-29",
+   "text": "🚨 Bitcoin Bull Run — What’s Next?\n\nBTC is approaching an important level.\n\nCan Bitcoin make a new ATH? What about ETH &amp; SOL?\n\n📊 I explain the key levels and bullish/bearish scenarios in this Urdu/Hinglish analysis.\n\n#Bitcoin #BTC #Crypto #Ethereum #Solana https://t.co/plv3xF0qcm"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Lajay99",
+   "url": "https://x.com/Lajay99/status/2093556211933220984",
+   "date": "2026-08-29",
+   "text": "Day 24 of posting @ethereum till I get noticed \n\nETH's around $2,485–2,500 today, holding just below the daily pivot at $2,502.92, with the market showing mixed signals bullish on the daily chart but stalling on shorter timeframes. \nRSI is deep overbought at 75.79, and the wider https://t.co/ITiiQL4zNF https://t.co/wMnZ65OhtJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2093746363456733645",
+   "date": "2026-08-29",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• XRP spot ETFs hit $110 million weekly inflow, set new 2026 record\n• Bitcoin Shows 0.64% Kimchi Premium in Korean Market on August 30\n• Top 3 Altcoins That Could Deliver Major Long-term Gains\n• Ethereum ETFs Take $226M, https://t.co/NOLZLQux9g"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "CryptoTGlobal",
+   "url": "https://x.com/CryptoTGlobal/status/2093588044594950636",
+   "date": "2026-08-29",
+   "text": "📊 Crypto Analysis — 29 August 2026 (06:00 UTC)\n\n💰 Current price\n• BTC: $77,638 | ETH: $2,439\n\n📊 Market Sentiment\n🤑 Fear &amp; Greed: 68 (Greed) ↓5 (was 73)\n\n💥 Liquidations (24h)\n• Total: $15,103,644\n• Longs: $75,153 (0%) 🔴\n• Shorts: $15,028,491 (100%) 🟢\n⚠️ Massive short"
+  }
+ ]
+}

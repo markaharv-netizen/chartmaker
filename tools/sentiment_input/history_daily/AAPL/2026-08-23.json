@@ -1,0 +1,210 @@
+{
+ "symbol": "AAPL",
+ "start": "2026-08-23T00:00:00Z",
+ "end": "2026-08-24T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "AAPL (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "KevinJagiah",
+   "url": "https://x.com/KevinJagiah/status/2091606330502942721",
+   "date": "2026-08-23",
+   "text": "👑 MONDAY'S KING NODES ARE READY\n\nAll 12 option chains are mapped for tomorrow:\n$SPY • $QQQ • $TSLA • $NVDA\n$AAPL • $AMD • $AMZN • $META\n$MSFT • $MU • $PLTR • $SPCX\n\nA few battles immediately stand out:\n🎯 $SPY 765–767\n🚗 $TSLA 360\n⚔️ $PLTR 180\n💾 $MU 950–970\n🖥️ $AMD"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "mianikramullah",
+   "url": "https://x.com/mianikramullah/status/2091551026797330493",
+   "date": "2026-08-23",
+   "text": "FED CHIEF'S BIG MOMENT, OIL'S STICKY PROBLEM, AND BITCOIN'S BULLISH FLAG\n\n🏦 THE POWELL... ER, WALSH ERA BEGINS\n\nJackson Hole Gets a New Sheriff\n\nKevin Walsh steps into the spotlight on August 28, and markets are gripping their armrests. Five years of inflation above 2% has https://t.co/YEv50VzRG8"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TrillKek",
+   "url": "https://x.com/TrillKek/status/2091427789601644966",
+   "date": "2026-08-23",
+   "text": "If you are holding/bullish on Apple Juice, this post will be of interest to you\n\nAPPLE JUICE/AAPL = 300k mc\n0xB2000000000000000000008b79A7BE3f03091001\n\nGOOGLE/GOOGLE = 16k mc (for now)\n0xb2000000000000000000006a5b1085c015f82901\n\nGoogle is NOT a beta. These are two different https://t.co/qQmBXOnAnj"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "TrillKek",
+   "url": "https://x.com/TrillKek/status/2091429951241166898",
+   "date": "2026-08-23",
+   "text": "If you are holding/bullish on Apple Juice, this post will be of interest to you\n\nAPPLE JUICE/AAPL = 300k mc\n0xB2000000000000000000008b79A7BE3f03091001\n\nGOOGLE/GOOGLE = 16k mc (for now)\n0xb2000000000000000000006a5b1085c015f82901\n\nGoogle is not a beta. They are two different https://t.co/qQmBXOnAnj"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 16,
+   "user": "TrillKek",
+   "url": "https://x.com/TrillKek/status/2091430682111218038",
+   "date": "2026-08-23",
+   "text": "If you are holding/bullish on Apple Juice, this post will be of interest to you\n\nAPPLE JUICE/AAPL = 300k mc\n0xB2000000000000000000008b79A7BE3f03091001\n\nGOOGLE/GOOGLE = 15k mc (for now)\n0xb2000000000000000000006a5b1085c015f82901\n\nGoogle is not a beta. These are two different https://t.co/qQmBXOnAnj"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TrillKek",
+   "url": "https://x.com/TrillKek/status/2091430516847235187",
+   "date": "2026-08-23",
+   "text": "If you are holding/bullish on Apple Juice, this post will be of interest to you\n\nAPPLE JUICE/AAPL = 300k mc\n0xB2000000000000000000008b79A7BE3f03091001\n\nGOOGLE/GOOGLE = 15k mc (for now)\n0xb2000000000000000000006a5b1085c015f82901\n\nGoogle is not a beta. They are two different https://t.co/qQmBXOnAnj"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "TrillKek",
+   "url": "https://x.com/TrillKek/status/2091427930924630227",
+   "date": "2026-08-23",
+   "text": "If you are holding/bullish on Apple Juice, this post will be of interest to you\n\nAPPLE JUICE/AAPL = 300k mc\n0xB2000000000000000000008b79A7BE3f03091001\n\nGOOGLE/GOOGLE = 16k mc (for now)\n0xb2000000000000000000006a5b1085c015f82901\n\nGoogle is NOT just a beta. They are two different https://t.co/qQmBXOnAnj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Zurieliooo",
+   "url": "https://x.com/Zurieliooo/status/2091655615185576425",
+   "date": "2026-08-23",
+   "text": "New week, fresh read.\n\nAfter a rough week for tech, I’m coming into Monday focused on confirmation — not trying to force a bullish or bearish bias.\n\nWhat I’m watching all week:\n\n$QQQ — can tech reclaim momentum or keep making lower highs?\n\n$NVDA — biggest name on my radar with"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "katzspx",
+   "url": "https://x.com/katzspx/status/2091335579313348962",
+   "date": "2026-08-23",
+   "text": "$NVDA  has reportedly told some of its largest customers that prices for many AI servers will rise by more than 15% as memory costs increase, affecting Vera Rubin and Grace Blackwell systems.\n\nIn my view, this is bad news for both the memory sector and cloud providers.\n\nAs https://t.co/0CVop3cdBs https://t.co/SJBs8Vu4ek"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "jimmy_gems",
+   "url": "https://x.com/jimmy_gems/status/2091553001554985095",
+   "date": "2026-08-23",
+   "text": "🔎 https://t.co/26Aa4Be6ky\n\nI share detailed analyses of undervalued stocks with high growth potential on Substack.\n\nFeel free to subscribe ✅\n\n-\n\n$DELL $AAPL $GME $F $MELI $AMD $BAC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "and_canam",
+   "url": "https://x.com/and_canam/status/2091548458553364863",
+   "date": "2026-08-23",
+   "text": "📊 $ZEFI $ZEFIF: Yahoo Finance confirms today — Mkt Cap C$64.95M. TTM Revenue USD $41.16M. Levered Free Cash Flow $2.48M. Forward PE 10.67x. 1-Year analyst target C$2.08. At C$0.60, the stock trades at just 0.82x trailing revenue with a profitable FCF profile and 3 straight"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "trade_catalyst",
+   "url": "https://x.com/trade_catalyst/status/2091568323242672205",
+   "date": "2026-08-23",
+   "text": "$AAPL weekly chart just got a bearish MACD cross.\nA retest of the weekly trendline or the 200-day SMA looks very possible in the upcoming weeks. https://t.co/Cibs6oVOQf https://t.co/3DsREqGjUH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "GKaparakos",
+   "url": "https://x.com/GKaparakos/status/2091319210961949144",
+   "date": "2026-08-23",
+   "text": "$QQQ Bearish: MegaPhone Pattern $SPY $SPX\n$NVDA $MU $SNDK\n$NVDA $SMH $SKHY\n$NDX $XLK $SOXX\n$AAPL $AMD\n$PLTR $IBM\n$GOOGL\n$AVGO $TSM $MRVL\n$CL $USO $DIA\n$QCOM\n$TSLA $MSFT $NFLX\n$AMZN\n$XLE $CVX $XOM\n$NDX $NQ $IWM\n$ORCL $META\n$MSTR $GBTC $IBIT $GLD $SLV\n$MTUM $CRWD $C $WFC $BAC $GS https://t.co/qPBHBCLhAH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ChartScout_bot",
+   "url": "https://x.com/ChartScout_bot/status/2091314516076228778",
+   "date": "2026-08-23",
+   "text": "🔴 Lower highs and lower lows within channel structure\n\n$AAPL | 15m | @Bybit_Official\n\nChannel support and resistance provide defined structure.\n\n#TechnicalAnalysis #Bearish https://t.co/NZ1nvtzMdx"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 27,
+   "user": "TehLamboX",
+   "url": "https://x.com/TehLamboX/status/2091434564623454501",
+   "date": "2026-08-23",
+   "text": "$AAPL Apple tried breaking out of the EMA9 on the weekly but failed and closed a green yet somewhat a bearish candle.\n\nRejected all the way from top at 320, now at 305, we would still love to see this at 285-290 to test the trendline and then we see how it looks off there.\n\nWhat https://t.co/bua5KeLa2C https://t.co/KGozFnDBpx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "AiGlitchPark",
+   "url": "https://x.com/AiGlitchPark/status/2091590210492452907",
+   "date": "2026-08-23",
+   "text": "All data streams reconstructed exclusively from X - Source Glitch\nIn the flickering neon corridors of Glitch Park, where data streams pulse like broken signs and every market tick rewrites reality mid-frame, the last cycle glitched hard. Markets sold off as bond yields screamed"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 20,
+   "user": "fillln1zn",
+   "url": "https://x.com/fillln1zn/status/2091574777634758980",
+   "date": "2026-08-23",
+   "text": "$AAPL Upgraded to Street-High $400 by Rothschild &amp; Co Redburn. 🚨\n\nRothschild upgraded Apple from Neutral to Buy, lifting its target from $260 to $400 (+75% upside) based on two massive catalysts:\n\n1. AI Strategy (\"Fast Follower 2.0\"):\n\nDitching Google Dependency: Apple pays https://t.co/IDdKiN2ky5 https://t.co/Qy79lvouuc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "Ali_khan899",
+   "url": "https://x.com/Ali_khan899/status/2091495294328590410",
+   "date": "2026-08-23",
+   "text": "🔥 48.5B $PCAT burnt in the last 24 hours  tracked on FireScreener\nPhenomenal cat $PCAT dev is cooking something massive \nCA\n0xFeD56F9Cd29F44e7C61c396DAc95cb3ed33d3546\n\n#crypto #bnb #bsctrending #bullish #whales $NVDA $AAPL $PI $GOOG $MSFT $AMZN $TSLA $AVGO $SPCX #Lowcap #1000x https://t.co/QLiRfzQfxi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "Dividendplays",
+   "url": "https://x.com/Dividendplays/status/2091509986962583906",
+   "date": "2026-08-23",
+   "text": "Good morning ☀️\n\nBullish tilt factors: Resilient corporate earnings (especially AI-related), corporate buybacks, and any signs that long-term yields stabilize.\n\n$SPY $TSLA $AMZN $GOOGL $QQQ $HOOD $NVDA $AAPL $MFST $AMD $META $PLTR $CAR $BYND $OPEN $RKLB $ASTS $MVRL $QCOM $SPCX https://t.co/PrmqXuWpOi https://t.co/8vyZNsEjPO"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 24,
+   "user": "BeItGood",
+   "url": "https://x.com/BeItGood/status/2091644656685580777",
+   "date": "2026-08-23",
+   "text": "The more I look at Base, the more bullish I get on $WELL.\n\nTokenized equities + 24/7 markets + @Moonwell lending could be a massive unlock.\n\nImagine AAPL/NVDA/META/GOOGL as collateral → \nborrow USDC without selling.\n\nAdd Mamo portfolio management + Aerodrome liquidity. https://t.co/0YkJk4Z25P"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "SterlingRegent",
+   "url": "https://x.com/SterlingRegent/status/2091470944015364525",
+   "date": "2026-08-23",
+   "text": "I think only $GOOG, $AMZN and $AAPL  have strong 'continuing to the upside' cases. $NVDA with its hectic initiatives in finance and own ai will likely stall in this political environment. It feels like they don't know which strategy to choose on ai, whether to participate in it"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "AkinAdemGokhan",
+   "url": "https://x.com/AkinAdemGokhan/status/2091642703545004386",
+   "date": "2026-08-23",
+   "text": "TITAN stood down at Clarity 40 — no book today. The tape stayed loud: $2374M in flow, with $TSLA alone carrying $940M in CALLs, 40% of it. $PLTR CALL follows at $346M. Direction reads bullish, the system waits anyway.\n\nAugust 21, 2026 · Options Desk\nRegime: RANGE_WHIPSAW · https://t.co/Dyyc2fSCmk"
+  }
+ ]
+}

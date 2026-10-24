@@ -1,0 +1,436 @@
+{
+ "symbol": "META",
+ "start": "2026-09-13T16:00:00Z",
+ "end": "2026-09-20T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "META (stock OR shares OR Zuckerberg) -is:retweet -is:reply lang:en",
+  "META (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "marketsday",
+   "url": "https://x.com/marketsday/status/2099893906217578908",
+   "date": "2026-09-15",
+   "text": "Cathie Wood’s Ark Invest made another major portfolio rotation Monday, continuing to buy Meta ( $META) while selling Amazon ( $AMZN), AMD ( $AMD), Alphabet and Palantir.\n\nArk’s flagship ARKK fund sold 20,000 Amazon shares worth about $5.1 million. The move came as analysts warned"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "Benzinga",
+   "url": "https://x.com/Benzinga/status/2099885704503345318",
+   "date": "2026-09-15",
+   "text": "Cathie Wood’s Ark Invest made another major portfolio rotation Monday, continuing to buy Meta ($META) while selling Amazon ($AMZN), AMD ($AMD), Alphabet and Palantir.\n\nArk’s flagship ARKK fund sold 20,000 Amazon shares worth about $5.1 million. The move came as analysts warned https://t.co/IPLVUDS2JV"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "goodmoat",
+   "url": "https://x.com/goodmoat/status/2100103639998083560",
+   "date": "2026-09-16",
+   "text": "- Amazon posts fastest growth since the pandemic — best quarter in years\n\n- Meta delays Muse AI agent by several months for safety review — Zuckerberg says labs should not ask rivals to slow down\n\n- Marvell faces AI-driven semiconductor sell-off — shares flagged 58% overvalued"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SBRxMeta",
+   "url": "https://x.com/SBRxMeta/status/2101363103296311539",
+   "date": "2026-09-19",
+   "text": "Mark Zuckerberg is handing out shares of meta to holders of sweet baby rays 🔥👀"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Lucky_m_X",
+   "url": "https://x.com/Lucky_m_X/status/2101647489220641112",
+   "date": "2026-09-20",
+   "text": "🚀 Meta ($META) Update: Massive Catalyst Locked for Sept 23! 👁️📈\n\nShares of #Meta closed the week at $665.75, putting its total market cap at a staggering $1.70 Trillion. While the price saw a short-term 2.4% pullback, Wall Street is hyper-focused on the major tech expansion"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "MarketingMind_",
+   "url": "https://x.com/MarketingMind_/status/2101650482465038603",
+   "date": "2026-09-20",
+   "text": "Meta may be closely associated with Mark Zuckerberg, but the company’s ownership is spread across major institutional investors and public shareholders. \nHere’s a look at who holds the biggest stakes in the tech giant.\n\n(Meta, Mark Zuckerberg, Vanguard, BlackRock, Fidelity, Meta https://t.co/XU2v8vfgNb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 25,
+   "user": "ArkkDaily",
+   "url": "https://x.com/ArkkDaily/status/2099853243920830823",
+   "date": "2026-09-15",
+   "text": "MARK ZUCKERBERG SAYS THE BEST DEFENSE AGAINST AI HACKERS IS MORE AI\n\nHe thinks distributing powerful AI could make digital systems more secure, not less:\n\n- Giving everyone access to AI could help users harden their own systems against AI-powered cyberattacks\n- Zuckerberg points https://t.co/5WJGU3w2Xr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "fiftyfly",
+   "url": "https://x.com/fiftyfly/status/2101579712350867697",
+   "date": "2026-09-20",
+   "text": "$META Meta Connect keynote is Wed. 9/23. Zuckerberg will reveal what’s next in AI glasses, VR and AI. Can the next platform move the stock? What is your prediction? @truflation https://t.co/5q2Z52vSna"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "MrSevoMato",
+   "url": "https://x.com/MrSevoMato/status/2099466871221223590",
+   "date": "2026-09-14",
+   "text": "My man Zuckerberg said AI should NOT be paced. \n\nBOOM 💥  $META stock  is up in the premarket.\n\nJust when you think Mark is outplayed… he’s already playing the next move. \n\nThe man plays strategy. $META https://t.co/SYfBGrNPxO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "BlueMoonTrades",
+   "url": "https://x.com/BlueMoonTrades/status/2100000813577892337",
+   "date": "2026-09-15",
+   "text": "This guy is saying so many things tonight but his stock is not moving even by an inch\n\n$META\n\nCEO Mark Zuckerberg says he doesn’t think the AI industry needs a coordinated AI Pace pause. He says each lab should slow down on its own when safety requires it, and that alignment will"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "thesimaximalist",
+   "url": "https://x.com/thesimaximalist/status/2099290473563033980",
+   "date": "2026-09-14",
+   "text": "$META buying time while $NVDA prints money. Zuckerberg wants AI to move faster than his stock can react. It’s not a lab; it’s a casino where he owns the chips and you’re still looking at the menu. ⚡📉\nhttps://t.co/U7ZHWI99l2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 190,
+   "user": "ZeeContrarian1",
+   "url": "https://x.com/ZeeContrarian1/status/2099853671555121354",
+   "date": "2026-09-15",
+   "text": "Zuckerberg refocused $META from the metaverse to its core business, and the stock rose 500%+. Hopefully @evanspiegel does the same at $SNAP. Every second European I meet under 24 uses Snapchat religiously. At a $9B market cap, a shift in perception could easily send it 100%"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "OxfordAnalytics",
+   "url": "https://x.com/OxfordAnalytics/status/2099951647858266623",
+   "date": "2026-09-15",
+   "text": "Nobody will sign up for $META’s new AI subscriptions. The billions that $META has invested in datacenters cannot be fully monetized through Facebook &amp; Instagram. \n\n$META’s best bet is to rent out capacity to third parties like all the other hyperscalers. Join the enterprise cloud"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Gas_9521",
+   "url": "https://x.com/Gas_9521/status/2100471292902162548",
+   "date": "2026-09-17",
+   "text": "$AGRIPPA\n0x82ef09793c78f7cb6a2b6696fcdca8e1c3581e18\n\nZuck named his Meta AI agent Agrippa. Robinhood Chain minted the ticker.\n\nThat’s the whole pitch. No lore, no product. Just a name tied to Zuckerberg, paired with META stock tokens.\n\nNarrative is clean. Attention window is https://t.co/34W9EaTgh9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 45,
+   "user": "jzrdan",
+   "url": "https://x.com/jzrdan/status/2101642916833660961",
+   "date": "2026-09-20",
+   "text": "For me $META is one of those stocks that will always be better five+ years from now.\n\nThe valuation today is definitely attractive, I think it would still be attractive at $800.\n\nZuckerberg might just be the best CEO in the world. The customer base he has built is probably the https://t.co/qmeJzzEKbS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Investwithj25",
+   "url": "https://x.com/Investwithj25/status/2100601073329123348",
+   "date": "2026-09-17",
+   "text": "Why should investors care about the $META connect event coming up next Wed-Thurs?\n\nMark Zuckerberg is expected to give some major announcements surrounding their progress in AI and their project code named \"Watermelon.\"\n\nGiven the recent momentum in the stock following the Muse"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "MoniifyBusiness",
+   "url": "https://x.com/MoniifyBusiness/status/2099371174111412355",
+   "date": "2026-09-14",
+   "text": "OpenAI won't go public in 2026, eyeing a 2027 stock market debut instead.\n\nSam Altman told Fortune it would be \"ill-advised\" given AI safety concerns.\n\nAltman, Anthropic's Dario Amodei, and Elon Mus are now agreeing that AI needs to slow down. Meta's Mark Zuckerberg, is the https://t.co/jsAOyWozlJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "HansCashFlow",
+   "url": "https://x.com/HansCashFlow/status/2101047336906699100",
+   "date": "2026-09-18",
+   "text": "The reason I've flipped even more positive on their spending is because it finally has a destination. For two years Zuckerberg was building compute with no product to justify it. Muse is that product. Meta spent two decades building the world's biggest waiting room, 3.5 billion"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "DJone01",
+   "url": "https://x.com/DJone01/status/2100227021359940001",
+   "date": "2026-09-16",
+   "text": "Why Nvidia Stock Is Rising as Meta’s Zuckerberg Weighs In on AI Safety | Barron’s\n\n#Barrons #Nvidia #Meta #TechStocks\nhttps://t.co/AKZcOs5vWe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "DJone01",
+   "url": "https://x.com/DJone01/status/2100246291271815182",
+   "date": "2026-09-16",
+   "text": "Why Nvidia Stock Is Rising as Meta’s Zuckerberg Weighs In on AI Safety | Barron’s\n\nRead the article on the quoted post.\n\n#Barrons #Nvidia #Meta #TechStocks https://t.co/lfymas6BlE https://t.co/1JeBTxq3VT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "newsinvesting",
+   "url": "https://x.com/newsinvesting/status/2100176640185602469",
+   "date": "2026-09-16",
+   "text": "U.S. stock futures edged higher ahead of a pivotal Fed decision, with markets pricing in a quarter-point rate hike and watching Chair Kevin Warsh for clues on what comes next. Meta $META CEO Mark Zuckerberg also weighed into the AI safety debate, urging independent model"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BrendanTheWhite",
+   "url": "https://x.com/BrendanTheWhite/status/2099373420416995778",
+   "date": "2026-09-14",
+   "text": "Zuckerberg has to give something concrete to the street as to a fundamental change in the business going to print cash from this cap ex spend. \n\nOR \n\nThey start printing growth numbers like crazy without adding more spend \n\nCutting spend drastically at this point with no proof of https://t.co/5sU6tjfE7z"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BrendanTheWhite",
+   "url": "https://x.com/BrendanTheWhite/status/2099373123481239779",
+   "date": "2026-09-14",
+   "text": "Zuckerberg has to give something concrete to the street as to a fundamental change in the business going to print cash from this cap ex spend. \n\nOR \n\nThey start printing growth numbers like crazy without adding more spend \n\nCutting spend drastically at this point with no proof of"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "glocalinvestor",
+   "url": "https://x.com/glocalinvestor/status/2100149692784910639",
+   "date": "2026-09-16",
+   "text": "Empire strikes back: Satya and Mark shares their views\n\nAfter the unholy troika of Musk, Altman and Dario did their best to further fear monger, industry stalwarts have shared their views. \n\nSatya Nadella from $MSFT In the AI-Summit and Mark Zuckerberg from $META (in X) shared https://t.co/hNpqGhrbj7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2100347568194560336",
+   "date": "2026-09-16",
+   "text": "EOD Tape | Indexes + Mag7 | Wednesday, September 16th, 2026\n\nIndexes\n$SPY\n754.13 -3.26 (-0.43%) H/L 761.65 / 749.60\nFilled the bear gap above and the bull gap. Opened with a bull gap, then drilled higher to fill the bear gap after the Fed's 25 basis point hike, but hawkish"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 10,
+   "user": "optionssanta",
+   "url": "https://x.com/optionssanta/status/2101341220001743119",
+   "date": "2026-09-19",
+   "text": "$META  is facing strong resistance around $684 - $692 and has been rejected from this zone again.\n\nBullish: A 4-hour close above $692 could trigger a breakout toward new highs.\n\nBearish: Continued rejection could pull META toward $650- $655. Below that, the open gap around $625 https://t.co/iyx0lt51qs"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "SHAKTIPRABHAKA9",
+   "url": "https://x.com/SHAKTIPRABHAKA9/status/2101544836725924237",
+   "date": "2026-09-20",
+   "text": "#META (META)\n\n💰 #CMP: $660\n🔴 #StopLoss (SL): $545 (17.42% downside)\n🎯 #FirstTarget: $800 (+21.21% upside)\n🎯 #2ndTarget: $1072 (+62.42% upside)\n⏳ #Timeframe: 3–9 Months\n\n#Meta #SocialMedia #AI #Tech #NASDAQ #StockMarket #Investing #Trading #Bullish"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "optionssanta",
+   "url": "https://x.com/optionssanta/status/2100309970319192160",
+   "date": "2026-09-16",
+   "text": "$META  is testing a major resistance zone around $683 - $692 and showing signs of rejection.\n\nBearish: Continued rejection could pull the price toward $660, followed by $640. Below that, watch the $625 - $639 gap fill zone.\n\nBullish: A daily close above $692 could open a move https://t.co/RwscPD5T3E"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "optionssanta",
+   "url": "https://x.com/optionssanta/status/2100945873534349557",
+   "date": "2026-09-18",
+   "text": "$META  briefly broke above the major $684  - $692 resistance zone, but quickly rejected and fell back below it which is a potential failed breakout.\n\nBearish: Continued rejection could push the price toward $640. Watch the $625 - $639 gap fill zone.\n\nBullish: Bulls need to https://t.co/Xs1YkEnejz"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 34,
+   "user": "JesseOlson",
+   "url": "https://x.com/JesseOlson/status/2100245574301954171",
+   "date": "2026-09-16",
+   "text": "$META continues to be ultra bullish aka \"overbought\".\n\nGaps were filled to the upside while leaving small gaps unfilled to the downside. \n\nRetest trending dots/fill gaps or price goes higher? https://t.co/uv3BPuPb51 https://t.co/JJWPBvLNBh"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Ayush_Panda25",
+   "url": "https://x.com/Ayush_Panda25/status/2099497154720997686",
+   "date": "2026-09-14",
+   "text": "Morning Notes, 9/14\nFriday's close auction called this move before the open ever happened. A negative $1,520 bearish print on the close hit the tape, and price followed it down 5.5 handles into the bell. Then, over the weekend, Anthropic CEO Dario Amodei published a 3,800 word"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2099861808966140318",
+   "date": "2026-09-15",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• Tuesday’s Market Highlights: Crypto Stocks Slide While Semiconductor Shares Rebound\n• Coinbase (COIN) Stock Plunges as ARK Invest Exits Crypto Holdings Amid Bitcoin Decline\n• Ripple CEO urges Senate to pass CLARITY Act, https://t.co/uiKSmjL6qX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "jaymesrosenthal",
+   "url": "https://x.com/jaymesrosenthal/status/2100249237728710955",
+   "date": "2026-09-16",
+   "text": "Trade With Me (STREAM REPLAY) - Sept 16, 2026\n\nFOMC Day, RIP Clarity Act, The Bullish Hike Thesis\n\n6:44 - Intro (audio issues first couple min but then fixed), absolute shambles: broken phone, hip appointment, bags bludgeoned, boomers winning again\n13:16 - Hunting a heating oil https://t.co/ErsKMV0OMb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2100586726229959162",
+   "date": "2026-09-17",
+   "text": "🐳 $NVDA rips to $218 and someone just sold $1.8M of calls betting the party stops here.\n\nTHE TRADE\n\nAt 09:41 ET, someone sold 7,501 NVDA September 25 $222 calls in a burst of prints, collecting roughly $1.8M in premium. The stock was $218.25 at the time. That strike is $4 above https://t.co/jsptPpD1Qj"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "stockedgeN",
+   "url": "https://x.com/stockedgeN/status/2101688006046257478",
+   "date": "2026-09-20",
+   "text": "$CRDO the most bullish PT cut to $245 based on RISING estimates but lower multiple of 13x PS prior 15x ( de rating based on sector comps )\n\nBull case of $345 based on 16x PS remains… \n\nThe recent note (\"Fat Tail GB300; Upside 1.6T AEC; Optical Into 2027; Buy Pullback\") is itself"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "MrktRally",
+   "url": "https://x.com/MrktRally/status/2099988583826260256",
+   "date": "2026-09-15",
+   "text": "Here are 5 stocks that are considered way too overvalued by our fair value DCF calculator.\n\nSome of these are extremely dramatic on the downside, but it is fun to look at. \n\n1/5 $META 🔴-62% https://t.co/h0XGVxlc2U"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2100587315861008479",
+   "date": "2026-09-17",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-09-17 (Late Morning Edition)\n\n**Published:** 2026-09-17 09:06 AM CT\n\nBitcoin is grinding higher, up 1.14% over the last 24 hours as the market absorbs the Federal Reserve's 25 basis point rate hike to 3.75%-4.00%. The Fear &amp; Greed"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "cottonfields",
+   "url": "https://x.com/cottonfields/status/2100193038228136365",
+   "date": "2026-09-16",
+   "text": "Yesterday's options flow (15 sep) \nmarkets: hedging \nmag7: unclear \ncrypto: bullish \nbiotech: hedging \nmetals: bullish \nenergy: unclear \nrates: unclear \nrisk-off: unclear \nsemis: unclear f\ninancials: income\n\nMarkets \nPuts took 55.6% of USD 2.22bn confirmed-opening premium on the"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 78,
+   "user": "stockedgeN",
+   "url": "https://x.com/stockedgeN/status/2101688235235725369",
+   "date": "2026-09-20",
+   "text": "$CRDO Mizuho just dropped the most bullish PT cut to $245 ($290 prior)  I’ve ever seen. \n\nIt is based on RISING estimates but lower multiple of 13x PS prior 15x ( de rating based on sector comps )\n\nBull case of $345 based on 16x PS remains… \n\nThe recent note (\"Fat Tail GB300;"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2100726384675242347",
+   "date": "2026-09-17",
+   "text": "EOD Tape | Indexes + Mag7 | Thursday, September 17th, 2026\n\nIndexes\n$SPY\n762.70 +8.65 (+1.15%) H/L 763.57 / 759.96\nLarge bull gap open, broke the 65-minute trendline resistance and pushed above 762. Bear gap still open 763.52 to 764.18, 766 above. Watch the bull gap early"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "EAribisala31797",
+   "url": "https://x.com/EAribisala31797/status/2100308783050244241",
+   "date": "2026-09-16",
+   "text": "⚠️ Disclaimer: this one is LONG. 😂\n\nBut if you hold, trade, or even have $NBIS on your watchlist, you might actually want to read the whole thing.\n\n$NBIS has already shown me something important about how this stock reacts when sentiment gets too bearish.\n\nBack in February, NBIS https://t.co/rXxAPgokYN https://t.co/BXpFssH5TF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2101267009832984611",
+   "date": "2026-09-19",
+   "text": "Macro Observatory Week 38 Wrap\n\nFriday's telemetry closes with a divergence between late-cycle speculative squeezes, and a macro fracture across cyclicals, real estate, and sovereign debt.\n\nWhile superficial equity tape-painting and weekend crypto momentum may give the illusion"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AKtemik",
+   "url": "https://x.com/AKtemik/status/2100566216712589606",
+   "date": "2026-09-17",
+   "text": "🌡️ 5️⃣ $VIX + MAG7 + DESK MAP\n$VIX\n🟢 &lt;17: risk repair\n🟡 17–18: controlled/unstable\n🔴 &gt;18: defensive\n⚡ &gt;20: downside acceleration\n🚨 &gt;22: disorderly conditions\n⭐ $VIX 18 is today's key volatility line.\nMAG7 Catalysts\n🟢 Nvidia $NVDA — &gt;+1% premarket. AI hardware is"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "y0ellen",
+   "url": "https://x.com/y0ellen/status/2099168468067401946",
+   "date": "2026-09-13",
+   "text": "TRADE PLAN - week of 14SEP\n\n📈 EXPIRING OPTIONS:\n\n$AMZN 18SEP 265 Sold Call\n$AMZN 18SEP 250/240 Put Credit Spread (PCS)\n$NFLX 18SEP 78 Sold Call\n$GOOG 18SEP 327.5/317.5 PCS\n$LLY 18SEP 1090/1080 PCS\n$NBIS 18SEP 215 Sold Put\n$HOOD 18SEP 114 Sold Put (ITM)\n$BABA 18SEP 112 Sold Put"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "MktMates",
+   "url": "https://x.com/MktMates/status/2100409172202545296",
+   "date": "2026-09-17",
+   "text": "Zcash explodes after the Fed hike… these altcoins &amp; memecoins fight back.\n\nTimestamps:\n2:22 - Craig returns + the \"Market Mate\" solo-week joke\n2:56 - Rate hike overnight, Arc chain goes live, Trump vs inflation\n4:00 - Three days in bed: Craig's man-flu recap\n5:48 - Clarity Act https://t.co/kzEYeI0KBl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "wsagentai",
+   "url": "https://x.com/wsagentai/status/2099468915315183654",
+   "date": "2026-09-14",
+   "text": "09/14/2026 Morning Briefing\n\nRisk appetite wavers as an AI selloff collides with a Saudi oil shock and near-certain Fed rate hike odds, setting a defensive tone for today’s US session.\n\n📊 Macro\n- S&amp;P futures -0.68%, WTI +2.32% to $102.37 after Saudi East-West pipeline closure"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "robot2trade1",
+   "url": "https://x.com/robot2trade1/status/2101326513333244175",
+   "date": "2026-09-19",
+   "text": "**Weekly Review &amp; Next Week Outlook — September 14-18, 2026**\n*Humble Trader | Gemini Trading*\n\n**This Week's Highlights**\n\nThe ECB, the Fed, and the Bank of Japan all raised rates by 25bp this week — a rare synchronized global tightening move that underscores just how much https://t.co/i72ThNV4nj"
+  }
+ ]
+}

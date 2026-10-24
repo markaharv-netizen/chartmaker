@@ -1,0 +1,192 @@
+{
+ "symbol": "TSLA",
+ "start": "2026-08-17T00:00:00Z",
+ "end": "2026-08-18T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "TSLA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "aituninglab",
+   "url": "https://x.com/aituninglab/status/2089151494021120081",
+   "date": "2026-08-17",
+   "text": "$TSLA Reddit Sentiment — Daily Check\n\n🟢 BULLISH\n\nBulls\n• Friday’s strong move improved the mood significantly, with traders discussing renewed upside momentum and options gains.\n• The redesigned Roadster / SpaceX-thruster demonstration is generating fresh excitement as another"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "KevinJagiah",
+   "url": "https://x.com/KevinJagiah/status/2089393981993943040",
+   "date": "2026-08-17",
+   "text": "👑 MIDDAY KING NODES CHECK\nRemember the levels we mapped BEFORE today's session?\n\nHere's what price has done so far 👇\n\n🚀 $SPCX — the monster 140 magnet → 145 bull trigger → 147 → 150 target\nOpen: 139.98\nHigh: 149.80 🎯🔥\nNearly the ENTIRE bullish roadmap.\n\n💾 $MU We"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 105,
+   "user": "wickedstocks",
+   "url": "https://x.com/wickedstocks/status/2089349479925244298",
+   "date": "2026-08-17",
+   "text": "📺 $TSLA $347 BREAKOUT OR BACK TO THE $290S?\n\nPlease ❤️like and 🔁share with fellow @Tesla traders/investors\n\n#Tesla is almost directly in the middle of a critical $330.66–$346.93 decision range.\n\nThe bigger picture remains unchanged: the settlement below the $380.39 https://t.co/p2rdOTdIXP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "THunt07",
+   "url": "https://x.com/THunt07/status/2089344834020745524",
+   "date": "2026-08-17",
+   "text": "This is your daily reminder we are in a bear market in the $SPY. $TSLA is headed to $700 and $RBLX is headed to $200. $NVDA is 40% overvalued due to the chip cycle of course. Also $AAPL is a short because investors do not realize people hate technology. Everything is so obvious"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "stonksjc",
+   "url": "https://x.com/stonksjc/status/2089331297579581630",
+   "date": "2026-08-17",
+   "text": "$TSLA\n\nWeekly outlook!\n\nBased on where we’re sitting at right now and how lower timeframes starting to turn bearish I’m now keeping an eye on it to see if it’s going to be our local top.\n\n15 minute could be turning bearish this morning, and that could lead to this turning over a https://t.co/oqIJNDX4ho"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "MattssonMin",
+   "url": "https://x.com/MattssonMin/status/2089270561381785668",
+   "date": "2026-08-17",
+   "text": "Positive signal: Tesla's (TSLA) strong institutional investor holdings are highly positive in two ways.\n\nThe impact of institutional ownership (e.g., 50%) (individual-investor margin trading, significantly reduced leverage, minimized downside risk – and unlimited upside potential"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "ThePupOfWallSt",
+   "url": "https://x.com/ThePupOfWallSt/status/2089351246842904586",
+   "date": "2026-08-17",
+   "text": "Morning Update\n\n$ALAB  gapped up to 346, downside support near 321, upside target is 366.\n\n$ASTS  broke the early trigger at 72.35 and is coming into the daily trigger at 74.65. Break that and we could see a 5 to 10 point move.\n\n$MRVL  broke through the 229.30 day trigger and hit https://t.co/ZFYDcIBfeU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "theboredanalyst",
+   "url": "https://x.com/theboredanalyst/status/2089147358038863931",
+   "date": "2026-08-17",
+   "text": "Weekend Review\n$SPY $QQQ $TSLA \n\nWe got Opex 08/21 this week. Next week we got NVDA earnings and Jackson Hole. \n\nTo say the least, it's going to be a bumpy ride to 800 SPY, 750 QQQ and 400 TSLA. I think we'll be surprised at how we get there, days where it'll pop overnight and https://t.co/Xl4LfrvJMn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "nice_nick29974",
+   "url": "https://x.com/nice_nick29974/status/2089360326038872176",
+   "date": "2026-08-17",
+   "text": "I watched it in slow motion. Many TSLA influencers suddenly going silent or bearish on TSLA, then bullish on SPCX! Welp, hope you’re happy!  The principle is people always operate in their best interest, not necessarily from their truth! No judgement, just saying.  I guess I will"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "tradingchartftw",
+   "url": "https://x.com/tradingchartftw/status/2089306469313188305",
+   "date": "2026-08-17",
+   "text": "$TSLA with some heavy bullish flow LW (and some bearish flow), as it steadily fills gap with delivery dates falling into 2027 as orders build. https://t.co/wzP0m9zTPr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 43,
+   "user": "GrindeOptions",
+   "url": "https://x.com/GrindeOptions/status/2089486746568540251",
+   "date": "2026-08-17",
+   "text": "Am I thinking about $TSLA the right way? \n\nThis is how I’m thinking about the stock and the company as of right now (very well could change if certain fundamental key factors are met). \n\nSince 2020, the stock has been up and down but pretty much flat.\n\nOver that same time, Tesla https://t.co/GkQm00K6kP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JaiChotalia",
+   "url": "https://x.com/JaiChotalia/status/2089163719670747345",
+   "date": "2026-08-17",
+   "text": "As of 8/16/2026 a rolling 30 day snapshot:\n\nBullish on $SNDK, $SPY, $SPCX, $SOXX, $CRWV, $CVS, $QQQ, $DELL, $MRVL, and \n\nBearish on $SPX, $MU, $TSLA, $MSFT, $TSM, $GLD, $META, $COHR, $FSLR\n\nInformational use only, directional dollars. https://t.co/PtxzVpoPBC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "JaiChotalia",
+   "url": "https://x.com/JaiChotalia/status/2089164431871926327",
+   "date": "2026-08-17",
+   "text": "As of 8/16/2026 a rolling 30 day snapshot:\n\nBullish on $SNDK, $SPY, $SPCX, $SOXX, $CRWV, $CVS, $QQQ, $DELL, $MRVL, and \n\nBearish on $SPX, $MU, $TSLA, $MSFT, $TSM, $GLD, $META, $COHR, $FSLR\n\nInformational use only, directional dollars ($inM). https://t.co/JF0HPDxSLV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JaiChotalia",
+   "url": "https://x.com/JaiChotalia/status/2089164004593987758",
+   "date": "2026-08-17",
+   "text": "As of 8/16/2026 a rolling 30 day snapshot:\n\nBullish on $SNDK, $SPY, $SPCX, $SOXX, $CRWV, $CVS, $QQQ, $DELL, $MRVL, and \n\nBearish on $SPX, $MU, $TSLA, $MSFT, $TSM, $GLD, $META, $COHR, $FSLR\n\nInformational use only, directional dollars. https://t.co/fFrbIOCs2E"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 32,
+   "user": "mr_kozh",
+   "url": "https://x.com/mr_kozh/status/2089293510054986198",
+   "date": "2026-08-17",
+   "text": "Elon tweets → buy $TSLA\nI finally backtested this “obvious” strategy.\nThe results were ugly.\n\nthe idea sounded obvious:\n\nbullish Tesla post → buy TSLA\nbearish signal → stay out\n\nthen Horizon pulled the posts, turned the idea into actual rules and ran it against historical https://t.co/3eSprf34xD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "spcxGOD",
+   "url": "https://x.com/spcxGOD/status/2089269671979618457",
+   "date": "2026-08-17",
+   "text": "Tesla holders are listening to the wrong role models.\n\nThe first kind are trying to create an echo chamber and prevent any critical voices\n\nThe second kind are pretending like they are some godly professional option trader and are always pushing short term calls/puts and are https://t.co/dhrgo1cEvv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "spxsignals1",
+   "url": "https://x.com/spxsignals1/status/2089327515269759091",
+   "date": "2026-08-17",
+   "text": "🚨 $SPX KEY LEVELS TO WATCH 🚨\n\n🔴 RESISTANCE\n7,795.22 → 7,816.42\n\n🟢 SUPPORT\n7,775.25 → 7,757.27 → 7,739.32\n\n🔄 Breakout/breakdown can flip the broken level into the next Support/Resistance.\n\n🎯 Levels first. Price decides.\n\n👉 Follow @SPXSignals1 for daily $SPX levels &amp; https://t.co/aIcJkz493M"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "KevinJagiah",
+   "url": "https://x.com/KevinJagiah/status/2089321029537517712",
+   "date": "2026-08-17",
+   "text": "👑 MONDAY PREMARKET — KEV'S KING NODES\n\nFutures are green, but several names are opening right around the levels we mapped yesterday. 🎯\n\n🕷️ $SPY 777.20 → sitting directly in our 776–777 battlefield\n\n💻 $QQQ 734.80 → above our 733 bull trigger, with 735 immediately in play\n\n🔥"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 357,
+   "user": "thestockwhale",
+   "url": "https://x.com/thestockwhale/status/2089331145746104797",
+   "date": "2026-08-17",
+   "text": "Here is exactly what's going to happen in the markets. Make sure you do exactly what I say to make millions together over the next two years.\n\n1. $SPY - still remains bullish, however; few more marginal highs would create bearish divergences on the small timeframes. Next buying https://t.co/2nZ0NpOJiR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "janscharts",
+   "url": "https://x.com/janscharts/status/2089473622603686105",
+   "date": "2026-08-17",
+   "text": "$TSLA Stage 4 decline intact but 3rd-push range-bottom exhaustion printed a high-vol low near 300. Weekly bull engulfing 1w ago; latest daily is a bear dojistar (gapped indecision). Key next levels: 365.7 then 387.9 resistance; needs volume follow-through above declining EMAs. https://t.co/5b9TTNpXE1"
+  }
+ ]
+}

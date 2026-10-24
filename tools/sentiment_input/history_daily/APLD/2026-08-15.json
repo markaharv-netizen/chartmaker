@@ -1,0 +1,66 @@
+{
+ "symbol": "APLD",
+ "start": "2026-08-15T00:00:00Z",
+ "end": "2026-08-16T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "trade_catalyst",
+   "url": "https://x.com/trade_catalyst/status/2088651712403743058",
+   "date": "2026-08-15",
+   "text": "$APLD weekly MACD is curling to the bullish side.\nThe longer-term upside target is the upper bound of the channel, currently around $48.64 to $51.12. https://t.co/D1nV1zV1Je https://t.co/OXqwv4ckgu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 46,
+   "user": "J_TradezZ",
+   "url": "https://x.com/J_TradezZ/status/2088671990546616610",
+   "date": "2026-08-15",
+   "text": "$APLD \n\nContinues to make higher lows\n\nFlagging for the next leg \n\nEMA crossover imminent \n\nWatch for a break of $33, plenty of upside room ahead https://t.co/eGTmCdDkyy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "JustinSS55",
+   "url": "https://x.com/JustinSS55/status/2088749443298295811",
+   "date": "2026-08-15",
+   "text": "$KEEL has the same basic recipe; scarce power, large campuses and a crypto-to-AI transition; but it still lacks the ingredient that rerated the others: contracted AI revenue.\n\nAt roughly a $2.1B market cap, a legitimate Panther Creek or Moses Lake anchor tenant could turn KEEL"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "HeavyDiligence",
+   "url": "https://x.com/HeavyDiligence/status/2088646548934512956",
+   "date": "2026-08-15",
+   "text": "$APLD is another one I think may be worth watching next week.\n\n4H price is currently negotiating around the ~31–32 Zone AOA.\n\nFor a bullish trade, I’d want a clear break + acceptance above the zone, not just a wick through it.\n\nThen I’m watching:\n\n34 → 36 Major Daily AOA →"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "HeavyDiligence",
+   "url": "https://x.com/HeavyDiligence/status/2088646727716757987",
+   "date": "2026-08-15",
+   "text": "$APLD is another one I think may be worth watching next week.\n\n4H price is currently negotiating around the ~31–32 Zone AOA.\n\nFor a bullish trade, I’d want a clear break + acceptance above the zone, not just a wick through it.\n\nThen I’m watching:\n\n34 → 36 Major Daily AOA →"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "PSInvestor",
+   "url": "https://x.com/PSInvestor/status/2088541879659069728",
+   "date": "2026-08-15",
+   "text": "My portfolio moved up well recently. Some positions and options plays feel like a small bull run is on.  $AMPG $CIFR $APLD $ACHR $BWEN\nBeing back home, in the office, visiting sites, and getting my feet back in the mud—ah, nothing feels as good as being back and making my son https://t.co/GkEZZJCYDy https://t.co/BlPB9FojWJ"
+  }
+ ]
+}

@@ -1,0 +1,237 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-08-14T00:00:00Z",
+ "end": "2026-08-15T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 150,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2088103848259018785",
+   "date": "2026-08-14",
+   "text": "Bitcoin printed a nasty Doji on the close, and I don't sugarcoat what that means: bulls and bears can't agree on direction right now. The market hates indecision, and I think we're heading toward 63,100 and eventually below 62,275, where a real support band between 62 and 63K https://t.co/FNDmvj1Q79"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "JMaxx611",
+   "url": "https://x.com/JMaxx611/status/2088340551594844261",
+   "date": "2026-08-14",
+   "text": "🚨 CRYPTO OUTLOOK — SATURDAY, AUG. 15 🚨\n\nWeekend volatility could be coming. BTC is still struggling to regain momentum, so I’m watching the downside first — but a reclaim of resistance could flip things quickly.\n\n₿ BTC — $62.9K\n🔴 Slight bearish bias\nSupport: $62K / $60.5K"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "2bitcrypto_YT",
+   "url": "https://x.com/2bitcrypto_YT/status/2088254652798194081",
+   "date": "2026-08-14",
+   "text": "Bitcoin just lost $63K — despite the macro backdrop getting easier. That divergence matters.\n\n#Bitcoin is around $62.73K, after trading between roughly $62.65K and $63.92K today.\n\nThe bigger pressure is flows.\n\nUS spot BTC ETFs recorded another -$131.1M on August 13, extending https://t.co/fW5spHagGR"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "CryptoTotem",
+   "url": "https://x.com/CryptoTotem/status/2088264383419805985",
+   "date": "2026-08-14",
+   "text": "$4T Tokenization Push to Drive LINK to $200: Standard Chartered Forecast\n\n@StanChart just dropped a bullish forecast that's hard to ignore.\n\nTheir analysts predict @chainlink (ethereum:0x514910771af9ca656af840dff83e8264ecf986ca) will surge to $200 by the end of 2030 — a https://t.co/wWA5TMlbGa"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 172,
+   "user": "BitcoinJesusETH",
+   "url": "https://x.com/BitcoinJesusETH/status/2088302343343198455",
+   "date": "2026-08-14",
+   "text": "The SEC's cancellation of today’s planned meeting on crypto regulation could be the most bullish signal for crypto in months, and everyone is missing it.\n\nI DO NOT believe the Chairman of the SEC canceled the open meeting about crypto regulations because of \"an unforeseen https://t.co/GqELSZzXjZ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Marketstudioo",
+   "url": "https://x.com/Marketstudioo/status/2088083538331713888",
+   "date": "2026-08-14",
+   "text": "📊 ETH/USD Range Breakout Setup\n\nETH is testing the range resistance around 1,888–1,890.\n\n🔹 Breakout zone: 1,890\n🎯 Upside target: 1,895\n🎯 Extended target: 1,900\n🔻 Downside target: 1,875\n\nWatch for a clean breakout + volume confirmation before entry.\n\n#ETH #Ethereum #ETHUSD https://t.co/XesoTCCfzO"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "CashXman",
+   "url": "https://x.com/CashXman/status/2088256414481522725",
+   "date": "2026-08-14",
+   "text": "📊 ETH Macro Update — Aug 14\n\n🇺🇸 US July Retail Sales came in -0.6% MoM, vs +0.1% expected.\nCore Retail Sales also dropped -0.4%, vs +0.3% expected.\nAt first glance, weak consumer data sounds bearish for risk assets.\n\nBut for ETH, there’s another side:\n\n📉 Weaker spending → less https://t.co/x4FJ9vk7De"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 53,
+   "user": "unpluggedbtc",
+   "url": "https://x.com/unpluggedbtc/status/2088285902565204417",
+   "date": "2026-08-14",
+   "text": "Btc looking bearish\nethereum:0x249130f5e2dd4cf278180c0df8273f3592ad1247 looking bullish\nBe there https://t.co/ftgPBkDHSJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "sebos77",
+   "url": "https://x.com/sebos77/status/2088139005963436068",
+   "date": "2026-08-14",
+   "text": "2026-08-14: Altseason indicator = Trend indicator (0-bearish to 100-bullish) = 24.1/100 #bitcoin #ethereum #altcoins #krakenfx https://t.co/2IIYp7S0kH"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 24,
+   "user": "ARSanto864541",
+   "url": "https://x.com/ARSanto864541/status/2088127329490927931",
+   "date": "2026-08-14",
+   "text": "📊 LIVE CRYPTO MARKET UPDATE — AUG 14, 2026 🚨\n\n🟠 BTC: ~$63.3K\n🔵 ETH: ~$1.88K\n🟡 BNB: ~$612\n⚡ SOL: ~$75.9\n💠 XRP: ~$1.01\n🐕 DOGE: ~$0.070\n\n🔥 Bullish bounce, more downside, or sideways? 👀\nWhat’s your market prediction today? 👇\n\n#Crypto #Bitcoin #Ethereum #BNB #Solana #XRP https://t.co/zdosTl5Tpf https://t.co/33UBahy8Z8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Lareb_khan",
+   "url": "https://x.com/Lareb_khan/status/2088213392431714542",
+   "date": "2026-08-14",
+   "text": "ethereum:0xb1110919016846972056ab995054d65560d5f05e \n\nSimple plan: NFA!!!\n\nBullish scenario: \nHold 0.0218–0.0224 break the green trendline target 0.027 then the FVG.\n\nBearish scenario: \nLose 0.0218 with volume next stops 0.020 0.018. https://t.co/iOWvVxvH7e"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 29,
+   "user": "kash_bot",
+   "url": "https://x.com/kash_bot/status/2088289828462801343",
+   "date": "2026-08-14",
+   "text": "ethereum:0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce, solana:pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn and catecoin:native all trending on 𝕏 right now. so we made markets on them 💰\n\nweek 4 closes today at 7pm utc, every prediction still counts toward the prize pool.\n\nbullish https://t.co/R46vTpkqlQ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 16,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2088243852448510332",
+   "date": "2026-08-14",
+   "text": "🚬 Another one has given up\n\n#FGNexus has officially ended its #Ethereum strategy after months of accumulating coins\n\nThe #company recorded a $45.2M loss including $41.16M from its #ETH investment while #staking revenue amounted to just $144K\n\nWhen you wanted to make a quick https://t.co/hwHRJQnpLC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "aman_trades",
+   "url": "https://x.com/aman_trades/status/2088360354816635044",
+   "date": "2026-08-14",
+   "text": "ethereum:0x68749665ff8d2d112fa859aa293f07a622782f38 $xauusd UPDATE 🥇\n\nAfter sweeping the liquidity around the trendline and filling the Daily FVG, Gold has shifted its market structure back to bullish.\n\nNow I’m watching for confirmation and continuation. If the bullish structure https://t.co/DMiqf475YZ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 27,
+   "user": "JayJayCZE",
+   "url": "https://x.com/JayJayCZE/status/2088190558757892607",
+   "date": "2026-08-14",
+   "text": "And as discussed, best thing to do right now is treat things as a bearish retests which they are until proven otherwise, in a HTF bear market.\n\nethereum:0x1f9840a85d5af5bf1d1762f925bdaddc4201f984 rejecting from the MTF range highs &amp; now close to be breaking the demand into supply https://t.co/7qGO5EXSdj https://t.co/VuEygeDv5z"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 19,
+   "user": "0xTimmygram",
+   "url": "https://x.com/0xTimmygram/status/2088082037966037452",
+   "date": "2026-08-14",
+   "text": "the most important indicator of whether I want to bet on a project has always been it’s infrastructure and team that leads it.\n\nDIA is currently the most undervalued oracle in the industry, yet delivers a masterclass even in the bear market. \n\nthere is a bigger vision behind https://t.co/kc1UXeCP8r"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 168,
+   "user": "BlockDogg777",
+   "url": "https://x.com/BlockDogg777/status/2088369085289533693",
+   "date": "2026-08-14",
+   "text": "📰DAILY TAPE📰\n\nThe consumer finally cracked.\n\nOil just ripped higher again.\n\nBitcoin ETF flows flipped hard negative.\n\nBTC lost $63K\n\nAnd Wall Street still finished only inches below record highs.\n\nThat mix is getting harder to ignore.\n\n🌍 MACRO:\n\n• 🛍️ July retail sales fell https://t.co/EfBDllN2MG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "MatthewCrypto66",
+   "url": "https://x.com/MatthewCrypto66/status/2088275452012138968",
+   "date": "2026-08-14",
+   "text": "📊 Weekly BTC / ETH Market Recap\n\nThis week was pretty interesting.\n\nBTC pulled back to around $63K after its earlier strength, while ETH continued to trade in the $1.8K–$1.9K range.\n\nWhat’s more interesting is the money flow:\n\n🟢 BTC and ETH ETFs saw solid inflows earlier this https://t.co/R3JtdwvSPX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "PhantomEcho007",
+   "url": "https://x.com/PhantomEcho007/status/2088246242111336775",
+   "date": "2026-08-14",
+   "text": "⚡ ETH 4H Breakout Watch ⚡\n\nETH is coiling near $1,880 after testing $1,889. 🧭\n\nBull trigger: reclaim $1,890, targeting $1,920 then $1,950.\nBear trigger: lose $1,870, opening $1,840.\nInvalidation: failed follow-through back inside the range.\n\nNFA. #ETH #Ethereum #Crypto https://t.co/aIr02tL7RJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "chrisberlin",
+   "url": "https://x.com/chrisberlin/status/2088090514210041944",
+   "date": "2026-08-14",
+   "text": "Incase you missed anything...\n\nInstitutional liquidity is weakening as bitcoin:native enters a potential bear-market phase  \n→ Cool cool cool… exactly what we wanted to hear\n\nCLARITY Act: Senate showdown expected in September over U.S. crypto market-structure legislation\n→ https://t.co/eXev1a9vbF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 159,
+   "user": "CryptoCrewU",
+   "url": "https://x.com/CryptoCrewU/status/2088294577212186700",
+   "date": "2026-08-14",
+   "text": "#ETH has broken below a major trendline that survived multiple bull &amp; bear market cycles.\n\nAnd if Ethereum leads the #altcoin market… what comes next could matter for EVERY altcoin. 👀\n\nWhat do you think?\n\n🟢 Altcoin season is still coming \n🔴 The old altcoin cycle is changing https://t.co/N9dXPGDTfN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "IncrTrades",
+   "url": "https://x.com/IncrTrades/status/2088344800231563338",
+   "date": "2026-08-14",
+   "text": "#FridayReport\n\nMarket Overview:\n\nAnother week is coming to an end, and the bigger picture is becoming increasingly clear.\n\nOur focus has changed significantly compared with a few months ago. We are no longer looking for aggressive shorts across crypto. Instead, we’re using this https://t.co/Yoq2Lcvqw5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "pipmoment",
+   "url": "https://x.com/pipmoment/status/2088118237028348094",
+   "date": "2026-08-14",
+   "text": "📉 Soft US inflation is easing the odds of a Fed rate hike, supporting risk appetite.\n\n⚖️ Risk appetite: Positive but fragile due to the Hormuz and USDJPY 160 risks.\n\n🇺🇸 US markets: Falling rate expectations lifted tech stocks and the S&amp;P 500 closed at a record.\n\n🏦 Fed: The odds"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2088211775296516440",
+   "date": "2026-08-14",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙 \n • Ripple CTO Emeritus Schwartz rejects Bitcoin data limits after BIP-110 failure.\n • BTC Drops Below $63K: Should Investors Start Worrying?.\n • Bitcoin Exchanges Upbit and Bithumb Announce Joint Delisting, Declaring https://t.co/7Dpn3NHegU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "leext34",
+   "url": "https://x.com/leext34/status/2088312080566833338",
+   "date": "2026-08-14",
+   "text": "I’m choosing ETH over BTC in this bear market.\n\nNot because I think Bitcoin is bad.\n\nQuite the opposite.\n\nBTC is probably still the cleanest asset in crypto.\n\nBut if I’m building my portfolio during a bear market, I’m looking for something different: asymmetry.\n\nAnd right now, I https://t.co/PFvnQUxc1K"
+  }
+ ]
+}

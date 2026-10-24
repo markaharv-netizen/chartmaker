@@ -1,0 +1,30 @@
+{
+ "symbol": "SATA",
+ "start": "2026-08-12T00:00:00Z",
+ "end": "2026-08-13T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "SATA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 135,
+   "user": "GrafYves",
+   "url": "https://x.com/GrafYves/status/2087632665986076794",
+   "date": "2026-08-12",
+   "text": "Strive $ASST really jumps off the page.\n\nNearly 30% of shares outstanding are sold short, with 8.03 days to cover.\n\nThat's more than 3x the short interest of Strategy $MSTR and 10x $IBIT.\n\nThe market has made a very large bet against Strive.\n\nBut look at what Strive is building: https://t.co/BBE6sFODTp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FreddyBitcoins",
+   "url": "https://x.com/FreddyBitcoins/status/2087648556979040551",
+   "date": "2026-08-12",
+   "text": "gametime @PunterJeff $SATA  = Bear Spray!! https://t.co/ykuPSdyLzZ"
+  }
+ ]
+}

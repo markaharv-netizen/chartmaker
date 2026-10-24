@@ -1,0 +1,39 @@
+{
+ "symbol": "WULF",
+ "start": "2026-08-29T00:00:00Z",
+ "end": "2026-08-30T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "WULF (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "seahorse_anton",
+   "url": "https://x.com/seahorse_anton/status/2093819658633912607",
+   "date": "2026-08-29",
+   "text": "Neoclouds / GPU Cloud Providers, Crypto Mining / AI Data Center Pivots, and Hyperscalers\nSplit tape. Miners/HPC ran. Flow did not.\n\nThis is the opposite of the genomics basket.\n\n1Y price is loud on the left side of the chart — $HUT +200%, $NBIS +190%, $CIFR +116%, $WULF +63%, https://t.co/HGOD6g0xP4"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2093764501883515189",
+   "date": "2026-08-29",
+   "text": "$MARA \n\n$MARA on the weekly timeframe continues to trade under bearish momentum, with last week’s shooting star reinforcing the weakness as buyers were rejected directly at the 50 EMA. \n\nThat rejection shows overhead supply remains active, with bulls unable to sustain higher https://t.co/13YdSUJBFT https://t.co/tokvPZDQ4u"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 226,
+   "user": "RealSimpleAriel",
+   "url": "https://x.com/RealSimpleAriel/status/2093778843186418078",
+   "date": "2026-08-29",
+   "text": "8/29/2026 Daily Recap: Hiding under the MAGS tree. \n- $AAPL $MSFT $AMZN $GOOGL  were Fridays hiding spot immediately following Warsh hawkish speech. \n- $NVDA not an ideal selloff after its earnings push but that is just typical for that name. \n- $SMH continues to live under the https://t.co/mmpKAZrAci"
+  }
+ ]
+}
