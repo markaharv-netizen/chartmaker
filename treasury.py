@@ -1,8 +1,9 @@
-"""Treasury tab: BitcoinTreasuries.net top 100 public companies by BTC held.
+"""Treasury tab: Mark's BTCTC Top 100 sheet.
 
-Holdings, rank, ticker and the as-of date come from the committed snapshot
-btctop100.json. Refresh that file with scripts/refresh_btctop100.py.
-USD value is BTC times a live Yahoo BTC-USD quote when one is available.
+Holdings, rank, ticker, country and each row's as-of date come from the
+committed snapshot btctop100.json. Refresh that file with
+scripts/refresh_btctop100.py. USD value is BTC times a live Yahoo BTC-USD
+quote when one is available.
 """
 import json, os
 import heat
@@ -36,13 +37,13 @@ def compute(fresh=False):
             raise ValueError("bad BTC holding for " + str(c.get("ticker") or c.get("name")))
         rows.append({
             "rank": c.get("rank"),
-            "marker": c.get("marker"),
             "name": c.get("name"),
             "ticker": c.get("ticker"),
+            "country": c.get("country"),
             "btc": btc,
+            "asOf": c.get("asOf"),
             "usd": btc * price if price else None,
             "pctSupply": btc / supply * 100,
-            "note": c.get("note") or None,
         })
     flags = []
     if not price:
@@ -52,14 +53,15 @@ def compute(fresh=False):
     return {
         "metric": "btctop100",
         "label": "BTCTC top 100",
+        "title": db.get("title") or "Corporate Bitcoin Treasury Holdings",
         "rows": rows,
         "btcPrice": price,
         "btcAsOf": px_at,
         "priceStale": bool(price) and bool(stale),
-        "asOf": db.get("asOf"),
         "fetchedAt": db.get("fetchedAt"),
         "source": db.get("source"),
-        "sourceName": db.get("sourceName") or "BitcoinTreasuries.net",
+        "sourceName": db.get("sourceName") or "My Bot's Sheets",
+        "sheet": db.get("sheet") or "BTCTC Top 100",
         "supply": supply,
         "flags": flags,
     }
