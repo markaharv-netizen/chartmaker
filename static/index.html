@@ -75,12 +75,10 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <button id="hgo" title="Fetch fresh quotes, bypassing the cache">Render</button><button id="hdl">Download PNG</button>
 </div>
 <div id="tctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
-<label>Tickers (comma; blank = all in treasury.json)<input id="ttickers" value="MSTR,ASST,3350.T,SWC.L" size="30"></label>
-<label>Metric<select id="tmetric"><option value="mnav">mNAV (market cap / BTC NAV)</option><option value="amp">Amplification ((debt+pref) / BTC NAV)</option><option value="bps">BTC per share</option><option value="bpk">BTC per 1,000 shares</option></select></label>
-<label>Title<input id="ttitle" size="30" placeholder="auto"></label>
-<label>Bar color<select id="tcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
+<label>Metric<select id="tmetric"><option value="btctop100">BTCTC top 100</option></select></label>
+<label>Title<input id="ttitle" size="36" placeholder="auto"></label>
 <label><span>Watermark</span><input id="twm" type="checkbox"></label>
-<button id="tgo" title="Fresh quotes">Render</button><button id="tdl">Download PNG</button>
+<button id="tgo" title="Fetch a fresh BTC price">Render</button><button id="tdl">Download PNG</button>
 </div>
 <div id="vctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
 <label>View<select id="vview"><option value="snap">Snapshot</option><option value="time">Over time</option></select></label>
@@ -668,7 +666,9 @@ function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets';
   $('wrap').style.display=lib?'none':'';$('vbar').style.display=lib?'none':'flex';if(!lib&&m!=='pt'){try{chart.resize()}catch(e){}}if(typeof vlist==='function')try{vlist()}catch(e){}
   $('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';$('mSent').classList.toggle('on',m==='sent');$('sctl').style.display=m==='sent'?'flex':'none';
   $('ctl').style.display=m==='prices'?'flex':'none';$('actl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
-  $('ftable').innerHTML='';$('fnote').textContent='';if(m!=='pt')chart.clear();$('status').textContent='';
+  $('ftable').innerHTML='';$('fnote').textContent='';
+  if(m!=='tre'&&$('chart').style.height&&$('chart').style.height!=='900px'){$('chart').style.height='900px';chart.resize()}
+  if(m!=='pt')chart.clear();$('status').textContent='';
   if(m==='prices'){syncPriceUi();render()}else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
 $('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mPt').onclick=()=>setMode('pt');
 // ---------- Charts of the day: static/cotd/today.json (refreshed daily by Flash via scripts/cotd_build.py) ----------
@@ -860,37 +860,77 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
   chart.setOption(o,true);last={opt:o,asOf:j.asOf};
   const nts=(j.notes||[]).filter(n=>!/equal-size/.test(n)),miss=(nts.length?' · skipped: '+nts.join('; '):'')+(j.missing.length?' · no quote: '+j.missing.join(', '):'')+(j.eq&&j.eq.length?' · equal-size (no share count): '+j.eq.join(', '):'')+(j.est&&j.est.length?(j.est.length>8?` · mcap = price × shares for ${j.est.length} tickers`+(j.sharesAsOf&&j.sharesAsOf.length?` (shares as of ${j.sharesAsOf.join(', ')})`:''):' · mcap = price × shares: '+j.est.join(', ')):''),nolog=j.rows.filter(d=>!d.logo).map(d=>d.symbol);
   const shs=j.rows.filter(d=>d.since);$('status').className='';$('status').textContent=(shs.length?'⚠ short history: '+shs.map(d=>d.symbol+' starts '+fmtD(d.since*1000)).join(', ')+' · ':'')+`${rows.length}${shN?' '+shN+' of '+j.rows.length:''} tiles · data as of ${etTime(j.asOf)}${miss}${nolog.length?' · no logo: '+nolog.join(', '):''}`}
-// ---------- Treasury mode: /api/treasury (treasury.json holdings + live Yahoo market cap/shares/BTC-USD) ----------
+// ---------- Treasury mode: /api/treasury (btctop100.json + live Yahoo BTC-USD). One metric: BTCTC top 100. ----------
 let tlast=null,TFRESH=false;
-const TMET={mnav:{t:'mNAV',f:r=>r.mnav,fmt:v=>v.toFixed(2)+'x',ax:v=>v+'x',d:'mNAV = market cap / (BTC held × BTC price)'},
-  amp:{t:'Amplification',f:r=>r.amp==null?null:r.amp*100,fmt:v=>v.toFixed(1)+'%',ax:v=>v+'%',d:'amplification = (debt + preferred) / BTC NAV'},
-  bps:{t:'BTC per share',f:r=>r.btcPerShare,fmt:v=>v<0.001?v.toExponential(2):v.toFixed(5),ax:v=>v<0.001&&v?v.toExponential(1):v,d:'BTC per share = BTC held / Yahoo shares outstanding'},
-  bpk:{t:'BTC per 1,000 shares',f:r=>r.btcPerShare==null?null:r.btcPerShare*1000,fmt:v=>v.toFixed(v<0.1?4:3),ax:v=>v,d:'BTC per 1,000 shares = 1,000 × BTC held / Yahoo shares outstanding'}};
+function chartBox(h){const px=h+'px';if($('chart').style.height===px)return;$('chart').style.width='1600px';$('chart').style.height=px;chart.resize()}
+const tAsOf=s=>{if(!s)return '';const d=new Date(String(s).slice(0,10)+'T12:00:00Z');return isNaN(d)?String(s):d.toLocaleDateString('en-US',{timeZone:'UTC',month:'short',day:'numeric',year:'numeric'})};
+const tBtc=v=>Math.round(v).toLocaleString('en-US');
+const tUsd=v=>{if(v==null||!isFinite(v))return '—';const m=v/1e6;if(Math.abs(m)>=1)return '$'+Math.round(m).toLocaleString('en-US')+'M';
+  if(Math.abs(v)>=1000)return '$'+Math.round(v/1000).toLocaleString('en-US')+'K';return '$'+Math.round(v).toLocaleString('en-US')};
+const tUsdTot=v=>{if(v==null||!isFinite(v))return '—';return v>=1e9?'$'+(v/1e9).toFixed(2)+'B':tUsd(v)};
+function tg(x,y,w,h,fill){return {type:'rect',silent:true,shape:{x,y,width:w,height:h},style:{fill}}}
+function tt(x,y,text,opt){opt=opt||{};const st={text:text==null?'':String(text),fill:opt.fill||T.text,fontSize:opt.size||14,fontWeight:opt.bold?'bold':'normal',fontFamily:'Inter, Arial, sans-serif',textAlign:opt.align||'left',textVerticalAlign:opt.valign||'middle'};
+  if(opt.width){st.width=opt.width;st.overflow=opt.wrap?'break':'truncate';st.ellipsis='…';if(opt.wrap)st.lineHeight=opt.lh||Math.round((opt.size||14)*1.35)}
+  return {type:'text',silent:true,x,y,style:st}}
 async function trender(){const st=$('status');st.className='';st.textContent='Loading…';
-  try{const r=await fetch('/api/treasury?tickers='+encodeURIComponent($('ttickers').value)+(TFRESH?'&fresh=1':''),{cache:'no-store'});
-    const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);tlast=j;tdraw()}
+  if($('tmetric').value!=='btctop100')$('tmetric').value='btctop100';
+  try{const r=await fetch('/api/treasury'+(TFRESH?'?fresh=1':''),{cache:'no-store'});
+    const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);if(!j.rows||!j.rows.length)throw Error('empty treasury snapshot');tlast=j;tdraw()}
   catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();tlast=null}}
-function tdraw(){const j=tlast,M=TMET[$('tmetric').value],col=$('tcolor').value;
-  const ok=j.rows.filter(r=>M.f(r)!=null),skip=j.rows.filter(r=>M.f(r)==null).map(r=>r.symbol);
-  if(!ok.length)throw Error('No company has the data for this metric');
-  const rows=ok.map(r=>({label:barLabel({symbol:r.symbol,name:r.name},SHORT[r.symbol]||r.name),v:M.f(r)})).sort((a,b)=>b.v-a.v);
-  const o=base($('ttitle').value||`BTC treasury companies: ${M.t}`,'','twm');
-  o.grid={left:90,right:60,top:130,bottom:110};
-  const AX=barAxisLayout(rows.map(r=>r.label),chart.getWidth()-o.grid.left-o.grid.right);o.grid.bottom=AX.bottom+20;
-  o.xAxis={type:'category',data:AX.data,axisLabel:{...axLabel,fontSize:AX.fontSize,fontWeight:'bold',color:T.title,interval:0,margin:14,lineHeight:AX.lineHeight,rotate:AX.rotate,align:AX.rotate?'right':'center'},axisTick:{show:false},axisLine:{lineStyle:{color:T.axis}}};
-  o.yAxis={type:'value',...headroom(rows.map(r=>r.v)),axisLabel:{...axLabel,formatter:M.ax},splitLine:split};
-  const one=$('tmetric').value==='mnav'?[{yAxis:1,lineStyle:{color:T.axis,type:'dashed'},label:{show:true,formatter:'1.0x',color:T.src,fontSize:15},symbol:'none'}]:[];
-  o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:r.v,itemStyle:{color:bc(col)}})),markLine:one.length?{silent:true,data:one}:undefined,
-    label:{show:true,position:'top',fontSize:Math.max(15,Math.min(20,AX.fontSize+2)),fontWeight:'bold',color:T.title,formatter:q=>M.fmt(q.value)}}];
-  const srcs=[...new Set(ok.map(r=>r.source).filter(Boolean))].join('; ');
-  o.graphic[0].style.text=`${M.d} · BTC $${Math.round(j.btcPrice).toLocaleString('en-US')} & prices: Yahoo Finance, as of ${etTime(j.asOf)} · market cap = ${(j.mcapSrc||[]).join(' / ')||'n/a'}`+(j.stale&&j.stale.length?` · ⚠ cached quote (Yahoo unavailable): ${j.stale.join(', ')}`:'');
-  o.graphic.push({type:'text',left:60,bottom:4,style:{text:`Holdings/debt/pref compiled ${j.compiled}: ${srcs}`+(ok.some(r=>r.sharesSrc&&r.sharesSrc.startsWith('treasury'))?` · shares: Yahoo sharesOutstanding as of ${[...new Set(ok.filter(r=>r.sharesSrc&&r.sharesSrc.startsWith('treasury')).map(r=>r.sharesSrc.match(/(\d{4}-\d\d-\d\d)/)?.[1]))].join(', ')}`:'')+(skip.length?` · excluded (missing data): ${skip.join(', ')}`:''),fontSize:15,fill:T.src}});
-  o.graphic[0].bottom=26;
-  chart.setOption(o,true);last={opt:o,asOf:j.asOf};
-  $('status').textContent=`${rows.length} companies · BTC $${Math.round(j.btcPrice).toLocaleString('en-US')} · as of ${etTime(j.asOf)}`+(j.flags.length?' · ⚠ '+j.flags.join('; '):'')}
+function tdraw(){const j=tlast,rows=j.rows,COLS=2,per=Math.ceil(rows.length/COLS);
+  const margin=28,gap=18,rowH=30,headH=32,titleTop=16,titleH=72;
+  const note=rows.filter(r=>r.note).map(r=>(r.marker||'*')+' '+r.ticker+': '+r.note).join('  ');
+  const footH=note?108:68,H=titleTop+titleH+headH+per*rowH+footH+10;
+  chartBox(H);
+  const W=chart.getWidth()||1600,colW=(W-margin*2-gap*(COLS-1))/COLS;
+  const pad=12,rankR=36,tickW=98,btcW=96,usdW=108,pctW=80;
+  const o=base($('ttitle').value||'Top 100 public companies holding Bitcoin','','twm');
+  o.title.top=titleTop;o.title.left=margin;o.title.textStyle.fontSize=32;
+  delete o.grid;o.series=[];
+  const g=[],stripe=T.dark?'rgba(255,255,255,0.045)':'rgba(17,17,17,0.035)',headBg=T.dark?'#2A2116':'#FFF4E6';
+  const orange=bc('#F7931A');
+  g.push(tt(margin,titleTop+46,'Ranked by bitcoin held · '+((j.sourceName)||'BitcoinTreasuries.net'),{size:16,fill:T.src}));
+  const tableTop=titleTop+titleH;
+  for(let c=0;c<COLS;c++){const x0=margin+c*(colW+gap),right=x0+colW-pad;
+    const pctX=right,usdX=pctX-pctW-10,btcX=usdX-usdW-10,tickX=btcX-btcW-8-tickW,nameX=x0+pad+rankR+8,nameW=Math.max(40,tickX-8-nameX);
+    g.push(tg(x0,tableTop,colW,headH,headBg));
+    g.push(tg(x0,tableTop+headH-2,colW,2,orange));
+    const hy=tableTop+headH/2;
+    g.push(tt(x0+pad+rankR,hy,'#',{align:'right',bold:1,size:13,fill:T.title}));
+    g.push(tt(nameX,hy,'Company',{bold:1,size:13,fill:T.title}));
+    g.push(tt(tickX,hy,'Ticker',{bold:1,size:13,fill:T.title}));
+    g.push(tt(btcX,hy,'BTC',{align:'right',bold:1,size:13,fill:T.title}));
+    g.push(tt(usdX,hy,'USD',{align:'right',bold:1,size:13,fill:T.title}));
+    g.push(tt(pctX,hy,'% of 21M',{align:'right',bold:1,size:13,fill:T.title}));
+    for(let i=0;i<per;i++){const r=rows[c*per+i];if(!r)break;const y=tableTop+headH+i*rowH;
+      if(i%2)g.push(tg(x0,y,colW,rowH,stripe));
+      const cy=y+rowH/2,rk=r.rank==null?(r.marker||'*'):String(r.rank);
+      g.push(tt(x0+pad+rankR,cy,rk,{align:'right',bold:1,size:14,fill:orange}));
+      g.push(tt(nameX,cy,r.name,{size:14,fill:T.title,width:nameW}));
+      g.push(tt(tickX,cy,r.ticker,{size:13,fill:T.src,width:tickW-4}));
+      g.push(tt(btcX,cy,tBtc(r.btc),{align:'right',bold:1,size:14,fill:T.title}));
+      g.push(tt(usdX,cy,tUsd(r.usd),{align:'right',size:14,fill:T.text}));
+      g.push(tt(pctX,cy,r.pctSupply.toFixed(3)+'%',{align:'right',size:13,fill:T.text}));
+    }
+  }
+  const totB=rows.reduce((a,r)=>a+r.btc,0),totU=rows.every(r=>r.usd!=null)?rows.reduce((a,r)=>a+r.usd,0):null,totP=rows.reduce((a,r)=>a+r.pctSupply,0);
+  const px=j.btcPrice?`$${Math.round(j.btcPrice).toLocaleString('en-US')}`:null;
+  const pxWhen=j.btcAsOf?etTime(j.btcAsOf):'';
+  const src1=`Holdings as of ${tAsOf(j.asOf)} · Source: ${j.sourceName||'BitcoinTreasuries.net'} · `+(px?`USD = BTC × ${px} (Yahoo Finance${pxWhen?', '+pxWhen:''}${j.priceStale?', cached quote':''})`:'USD value needs a live BTC-USD quote (Yahoo unavailable)')+` · % of ${(j.supply||21000000).toLocaleString('en-US')} BTC`;
+  const src2=`Top ${rows.length}: ${tBtc(totB)} BTC`+(totU!=null?` · ${tUsdTot(totU)}`:'')+` · ${totP.toFixed(3)}% of 21M supply`;
+  const fy=H-footH+8;
+  g.push(tt(margin,fy+12,src1,{size:14,fill:T.src,width:W-margin*2,wrap:1,valign:'top',lh:18}));
+  g.push(tt(margin,fy+36,src2,{size:14,fill:T.text,bold:1,width:W-margin*2,valign:'top'}));
+  if(note)g.push(tt(margin,fy+58,note,{size:13,fill:T.src,width:W-margin*2,wrap:1,valign:'top',lh:17}));
+  const wm=$('twm').checked;
+  o.graphic=[...(wm?[{type:'text',silent:true,right:margin,top:titleTop+4,style:{text:'@thepowerfulHRV',fontSize:16,fill:T.wm}}]:[]),...g];
+  chart.setOption(o,true);last={opt:o,asOf:j.btcAsOf||Date.parse(String(j.asOf))/1000||Date.now()/1000};
+  $('status').className='';$('status').textContent=`${rows.length} companies · holdings as of ${tAsOf(j.asOf)}`+(px?` · BTC ${px}${pxWhen?' as of '+pxWhen:''}`:' · USD blank, no BTC price')+(j.flags.length?' · '+j.flags.join('; '):'')}
 async function trenderFresh(){TFRESH=true;try{await trender()}finally{TFRESH=false}}
-$('tgo').onclick=trenderFresh;$('tmetric').onchange=()=>tlast&&tdraw();$('tcolor').onchange=()=>tlast&&tdraw();
-$('tdl').onclick=()=>{if(!tlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('ttitle').value||'treasury').replace(/[^\w]+/g,'_')+'.png';a.click()};
+$('tgo').onclick=trenderFresh;
+$('twm').onchange=()=>tlast&&tdraw();
+$('ttitle').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();tlast?tdraw():trenderFresh()}});
+$('tdl').onclick=()=>{if(!tlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('ttitle').value||'btctc_top_100').replace(/[^\w]+/g,'_')+'.png';a.click()};
 // ---------- Valuation mode: /api/valuation (Yahoo quoteSummary, 6h disk cache; stale / SEC-derived fallback) ----------
 let vlast=null,VFRESH=false;
 const vfmt=(m,v)=>m==='mcap'?(v>=1e12?'$'+(v/1e12).toFixed(2)+'T':v>=1e9?'$'+(v/1e9).toFixed(1)+'B':'$'+(v/1e6).toFixed(0)+'M'):m==='dy'?(v*100).toFixed(2)+'%':v.toFixed(v>=100?0:v>=10?1:2)+(m==='peg'?'':'x');
@@ -1280,7 +1320,7 @@ $('ptdl').onclick=()=>{if(MODE!=='pt'||!PTDOC)return;ptdraw();const a=document.c
 window.__ptdraw=ptdraw;
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf','ptwm'];
+const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf','ptwm'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();if(MODE==='prices')o.ann=ANN.map(a=>({date:a.date,label:a.label,note:a.note||''}));return o}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
@@ -1318,7 +1358,7 @@ function vlist(){try{wlpicklist()}catch(e){}const v=$('views');if(!v)return;cons
   v.innerHTML='<option value="">— pick a view —</option>'+own.map(([x,i])=>`<option value="${i}">${String(x.name).replace(/</g,'&lt;')}</option>`).join('');
   const i=VLASTM[MODE]?vfind(VLASTM[MODE]):-1;v.value=i>=0?String(i):''}
 // "Load from Watchlist": copies a Watchlist view's tickers into this tab's ticker box. Read-only; never adds to this tab's saved views.
-const WLIN={prices:'tickers',fin:'ftickers',heat:'htickers',tre:'ttickers',val:'vtickers',sent:'stickers'};
+const WLIN={prices:'tickers',fin:'ftickers',heat:'htickers',val:'vtickers',sent:'stickers'};
 function wlpicklist(){const p=$('wlpick');if(!p)return;const box=$('wlpickbox');box.style.display=WLIN[MODE]?'':'none';
   const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   p.innerHTML='<option value="">— watchlist view —</option><option value="cur">Current watchlist ('+WL.length+')</option>'+VIEWS.map((x,i)=>[x,i]).filter(([x])=>vmode(x)==='watch').map(([x,i])=>Array.isArray(x.wl)&&x.wl.length?`<option value="${i}">${esc(x.name)} (${x.wl.length})</option>`:`<option value="${i}" disabled>${esc(x.name)} (no tickers saved — re-save on Watchlist)</option>`).join('');p.value=''}
@@ -1353,7 +1393,7 @@ $('theme').onchange=()=>{applyTheme();rerender()};
 window.__vapply=vapply;window.__snap=snap;
 
 // ---------- Ticker autocomplete: suggestions for the token being typed in comma-separated ticker inputs ----------
-(function(){const IDS=['tickers','ftickers','htickers','ttickers','vtickers','stickers','wadd'];
+(function(){const IDS=['tickers','ftickers','htickers','vtickers','stickers','wadd'];
   const box=document.createElement('div');box.id='acbox';box.style.cssText='position:absolute;z-index:9999;background:#fff;border:1px solid #d1d5db;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,.15);font:13px system-ui,sans-serif;display:none;min-width:260px;max-width:420px';document.body.appendChild(box);
   let inp=null,items=[],sel=-1,timer=null,seq=0;const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const tok=e=>{const v=e.value,c=e.selectionStart??v.length,a=v.lastIndexOf(',',c-1)+1,bi=v.indexOf(',',c),b=bi<0?v.length:bi;return{a,b,t:v.slice(a,b).trim()}};

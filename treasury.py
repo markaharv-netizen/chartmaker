@@ -1,39 +1,65 @@
-"""Treasury mode: mNAV, amplification, BTC/share for BTC treasury companies.
-Holdings/debt/pref from editable treasury.json; market cap, price, shares from Yahoo; BTC price from Yahoo BTC-USD."""
+"""Treasury tab: BitcoinTreasuries.net top 100 public companies by BTC held.
+
+Holdings, rank, ticker and the as-of date come from the committed snapshot
+btctop100.json. Refresh that file with scripts/refresh_btctop100.py.
+USD value is BTC times a live Yahoo BTC-USD quote when one is available.
+"""
 import json, os
 import heat
-PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "treasury.json")
+
+PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "btctop100.json")
+SUPPLY = 21_000_000
+
 def load():
-    with open(PATH) as f: return json.load(f)
-def compute(tickers=None, fresh=False):
-    db = load(); by = {c["ticker"].upper(): c for c in db["companies"]}
-    syms = [s.strip().upper() for s in (tickers or "").split(",") if s.strip()] or list(by)
-    stale = []
-    q = heat.quotes(syms + ["BTC-USD"], fresh, stale)
-    btc = (q.get("BTC-USD") or {}).get("regularMarketPrice")
-    if not btc: raise ValueError("No live BTC price from Yahoo")
-    fx = heat.fx_to_usd([(q.get(s) or {}).get("currency") for s in syms] + [c.get(k) for c in by.values() for k in ("debt_cur", "pref_cur")], fresh)
-    rows, flags = [], []
-    for s in syms:
-        c, d = by.get(s, {}), q.get(s) or {}
-        cur = d.get("currency") or "USD"; maj, k = heat.MINOR.get(cur, (cur, 1)); r = fx.get(maj)
-        shares, ssrc = d.get("sharesOutstanding"), "Yahoo"
-        if not shares and c.get("shares"): shares, ssrc = c["shares"], f"treasury.json ({c.get('shares_source')}, {c.get('shares_asof')})"
-        if d.get("marketCap") and r: mcap, msrc = d["marketCap"] * r, "Yahoo market cap"
-        elif shares and d.get("regularMarketPrice") and r: mcap, msrc = d["regularMarketPrice"] * k * shares * r, "price x shares"
-        else: mcap, msrc = None, None
-        usd = lambda v, cu: v * 1e6 * fx[cu] if v is not None and cu in fx else None
-        row = {"symbol": s, "name": c.get("name") or d.get("shortName") or s, "btc": c.get("btc"), "shares": shares, "sharesSrc": ssrc if shares else None, "mcapSrc": msrc, "via": d.get("via", "v7"),
-               "mcapUSD": mcap, "debtUSD": usd(c.get("debt_m"), c.get("debt_cur", "USD")), "prefUSD": usd(c.get("pref_m"), c.get("pref_cur", "USD")),
-               "source": c.get("source"), "note": c.get("debt_note")}
-        nav = row["btc"] * btc if row["btc"] else None; row["navUSD"] = nav
-        row["mnav"] = mcap / nav if mcap and nav else None
-        row["amp"] = (row["debtUSD"] + row["prefUSD"]) / nav if nav and row["debtUSD"] is not None and row["prefUSD"] is not None else None
-        row["btcPerShare"] = row["btc"] / row["shares"] if row["btc"] and row["shares"] else None
-        miss = [n for n, v in (("BTC holdings", row["btc"]), ("debt", c.get("debt_m")), ("preferred", c.get("pref_m")), ("Yahoo market cap", mcap), ("shares", row["shares"])) if v is None]
-        if not d: miss.append("Yahoo quote")
-        if miss: flags.append(f"{s}: missing {', '.join(miss)}")
-        rows.append(row)
-    if stale: flags.append("served last cached quote (Yahoo unavailable): " + ", ".join(stale))
-    return {"rows": rows, "flags": flags, "stale": stale, "via": sorted({r["via"] for r in rows}), "mcapSrc": sorted({r["mcapSrc"] for r in rows if r["mcapSrc"]}), "btcPrice": btc, "compiled": db.get("compiled"),
-            "asOf": max([(q.get(s) or {}).get("regularMarketTime") or 0 for s in syms] or [0])}
+    with open(PATH) as f:
+        return json.load(f)
+
+def compute(fresh=False):
+    db = load()
+    companies = db.get("companies") or []
+    if len(companies) != 100:
+        raise ValueError(f"btctop100.json has {len(companies)} companies; expected 100")
+    price, px_at, stale = None, None, []
+    try:
+        q = heat.quotes(["BTC-USD"], fresh, stale)
+        d = q.get("BTC-USD") or {}
+        price, px_at = d.get("regularMarketPrice"), d.get("regularMarketTime")
+    except Exception:
+        price = None
+    supply = db.get("supply") or SUPPLY
+    if supply != SUPPLY:
+        raise ValueError("btctop100.json supply is not 21,000,000")
+    rows = []
+    for c in companies:
+        btc = c.get("btc")
+        if not isinstance(btc, (int, float)) or isinstance(btc, bool) or btc <= 0:
+            raise ValueError("bad BTC holding for " + str(c.get("ticker") or c.get("name")))
+        rows.append({
+            "rank": c.get("rank"),
+            "marker": c.get("marker"),
+            "name": c.get("name"),
+            "ticker": c.get("ticker"),
+            "btc": btc,
+            "usd": btc * price if price else None,
+            "pctSupply": btc / supply * 100,
+            "note": c.get("note") or None,
+        })
+    flags = []
+    if not price:
+        flags.append("no BTC-USD quote, so USD value is blank")
+    elif stale:
+        flags.append("BTC price is a cached Yahoo quote (live quote unavailable)")
+    return {
+        "metric": "btctop100",
+        "label": "BTCTC top 100",
+        "rows": rows,
+        "btcPrice": price,
+        "btcAsOf": px_at,
+        "priceStale": bool(price) and bool(stale),
+        "asOf": db.get("asOf"),
+        "fetchedAt": db.get("fetchedAt"),
+        "source": db.get("source"),
+        "sourceName": db.get("sourceName") or "BitcoinTreasuries.net",
+        "supply": supply,
+        "flags": flags,
+    }
