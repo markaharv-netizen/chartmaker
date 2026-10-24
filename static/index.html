@@ -1054,6 +1054,7 @@ async function sdraw(){wtipHide();if(MODE!=='sent')return;const tv=$('sview').va
   if(!SDATA){chart.clear();return}
   const all=SDATA.tickers||[],want=$('stickers').value.split(/[\s,]+/).map(x=>x.trim().toUpperCase()).filter(Boolean);
   const rows=want.length?all.filter(r=>want.includes(r.symbol)||want.includes(r.display)):all.slice(),miss=want.filter(t=>!all.some(r=>r.symbol===t||r.display===t));
+  rows.sort((a,b)=>(b.bull??-1)-(a.bull??-1));// always rank by bull share, high to low
   const logos={};await Promise.all(rows.map(async r=>{try{logos[r.symbol]=await circLogo(r.logoKey||r.symbol)}catch(e){}}));if(seq!==SSEQ||MODE!=='sent')return;
   const n=Math.max(1,rows.length),top=n>12?96:110,bot=n>12?60:70,rh=Math.min(110,(900-top-bot)/n),G=[],up=bc('#22C55E'),dn=bc('#EF4444');
   const X0=440,X1=1540,BW=X1-X0,fs=Math.round(Math.max(14,Math.min(20,rh*0.24))),cmp=rh<60,bh=Math.max(6,Math.round(rh*0.11)),lg=Math.round(Math.min(40,rh*0.42));

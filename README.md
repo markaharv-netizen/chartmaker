@@ -111,7 +111,7 @@ Ranked bull-vs-bear board (like the "analyst sentiment" boards on X). The app on
   points (`sigma_basis: "own"`). Both sides of that z-score come from the same X-only rules-labeled series, so hand-labeled
   board levels and rules-labeled history levels are never mixed. Today MSTR, TSLA and BTC use "own"; the other 15 board names are cross-sectional.
 - Bear headline is null (shows "No dominant bearish consensus…") when there are fewer than 2 bear items or the bear share is under 15%.
-- Rows are sorted by σ, descending. The ticker box filters the dataset; it can't add tickers that aren't in the json.
+- Rows are sorted by bull share, descending (both in `sentiment.json` and re-sorted by the frontend at render time). The ticker box filters the dataset; it can't add tickers that aren't in the json.
 - Crypto rows: give the input ticker `display`, `logoKey` (e.g. `"c:BTC"`, same crypto logo path as the heatmap) and `kind: "crypto"`;
   they pass through to `sentiment.json`. With more than 12 rows the board switches to a compact layout (no company-name line, short no-bear text) so 18+ rows fit the 1600×900 PNG.
 
