@@ -68,6 +68,22 @@ Until that export is on the machine, seed only the tabs that overlap today's Cha
 
 Workbooks: Bot experiments `1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY`, bot experiments 2 `1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ`, My Bot's Sheets `1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU`. All three dumps are required unless you pass `--allow-partial`. The weekly PNG folders are the same ones Charts of the day uses: `1SwZgYGwwHsoL_DXQUuQAYS6lhq5KxFe9`, `1mMUKaB_RbeZhtn5ntuKJV5xZOeo6LzGH`, `1AVfHRo2mJgBhbJoszHhe5vgOscfKhbzT`.
 
+## Price targets
+
+The **Price targets** tab reads `static/price_targets.json`. Render does not call Google. The table is Steve's DCF base value per share against the street consensus mean and the price, sorted by base upside (high to low). Columns match the summary email: Ticker, Steve's Base, PT Change, Consensus, Price, Base Upside, Street Upside, Rating, Why.
+
+Opening the tab loads quotes through the same `/api/chart` path as Prices and recomputes Price, both upsides, and the rating from the price on screen. Rating is BUY above +15% upside to base, SELL below -15%, otherwise HOLD. A ticker whose quote fails keeps the snapshot price; the subtitle names the date in use (Yahoo close, or the snapshot date). Download PNG is the table on a white canvas. Watermark is off unless the box is checked.
+
+`why` is not a sheet column. Edit it in the JSON. Regenerating the file keeps existing `why` lines, and the footer notes if they were edited.
+
+Refresh the snapshot where the sheet can be read:
+
+1. Export Sheet1 `A1:P11` from [DCF price target summary](https://docs.google.com/spreadsheets/d/10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0) as CSV. The link export is 401 unless the sheet is shared.
+2. `python3 scripts/price_targets.py --csv that.csv`
+3. Commit `static/price_targets.json`.
+
+`python3 scripts/price_targets.py` tries that export first. `python3 scripts/price_targets.py --seed` writes the Oct 21 email figures when the sheet cannot be read. The scenario row `SPCX – Elon case (scenario)` is skipped. `python3 scripts/price_targets.py --self-test` checks the parser.
+
 ## Sentiment tab
 
 Ranked bull-vs-bear board (like the "analyst sentiment" boards on X). The app only reads the static
