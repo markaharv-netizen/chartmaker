@@ -1,0 +1,400 @@
+{
+ "symbol": "META",
+ "start": "2026-05-24T16:00:00Z",
+ "end": "2026-05-31T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "META (stock OR shares OR Zuckerberg) -is:retweet -is:reply lang:en",
+  "META (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "OliStafurik",
+   "url": "https://x.com/OliStafurik/status/2058836076475609463",
+   "date": "2026-05-25",
+   "text": "Rockets, layoffs, and another $60B coding tool. Last week in tech summary:\n\n&gt; SpaceX S-1 dropped Tuesday. $1.75T valuation. Musk's bonus shares only vest if SpaceX builds a Mars colony with 1 million people.\n&gt; Also in the filing: SpaceX pays Anthropic $1.25B a month for compute. https://t.co/PIdPzy3wR7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "agtprpnabsrdty",
+   "url": "https://x.com/agtprpnabsrdty/status/2059335716539089011",
+   "date": "2026-05-26",
+   "text": "Sergey Brin is spending $57 million to defeat a one-time 5 percent wealth tax on a fortune he built almost entirely tax-free\n\nTwo hundred and fifty households own more than half of California's annual economic output and pay, on average, 0.07 percent of their wealth in state"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 29,
+   "user": "SpecialSitsNews",
+   "url": "https://x.com/SpecialSitsNews/status/2060367007569121370",
+   "date": "2026-05-29",
+   "text": "$DELL up 30% on $60 billion in AI server orders\n\nDell just turned in one of the most impressive quarters that Morgan Stanley analysts say they've ever seen in the hardware sector. The analysts have put their prior underweight rating on the stock, as well as their $170 price https://t.co/mwAWhgb6rS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2721,
+   "user": "amitisinvesting",
+   "url": "https://x.com/amitisinvesting/status/2059789322505613532",
+   "date": "2026-05-28",
+   "text": "A TON OF THINGS HAPPENED IN THE STOCK MARKET TODAY.\n\nHere's a full recap:\n\n1. Leopold Aschenbrenner’s Situational Awareness LP, known for its early calls on $BE, $SNDK, and $INTC, disclosed a 5.6% stake in Nebius $NBIS. Aschenbrenner has been a major believer in the neocloud"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CryptoPlanet247",
+   "url": "https://x.com/CryptoPlanet247/status/2060348554346979407",
+   "date": "2026-05-29",
+   "text": "What Next For META Stock as Zuckerberg Hints at Entering Cloud Business https://t.co/d79hoowS7r Vinod Dsouza \n\nAfter firing nearly 8,000 employees globally this year, META CEO Mark Zuckerberg is hinting at entering the Cloud compute business and taking o… https://t.co/UiCvW4Vhuy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "pharris667",
+   "url": "https://x.com/pharris667/status/2059227295185826213",
+   "date": "2026-05-26",
+   "text": "Wednesday - May 27\n Meta Platforms $META holds its annual meeting. The event will give investors a chance to press Mark Zuckerberg and the board on heavy AI and metaverse spending after a volatile stretch for the stock."
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "valuedrift",
+   "url": "https://x.com/valuedrift/status/2059323280386060499",
+   "date": "2026-05-26",
+   "text": "If Mark Zuckerberg dies in a careless helicopter crash, does $META stock go up or down?\n\n(I think you know the answer.) https://t.co/Saedke6eMn"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "goodmoat",
+   "url": "https://x.com/goodmoat/status/2059017916025037180",
+   "date": "2026-05-25",
+   "text": "- $NVDA raises dividend from $0.01 to $0.25 per share — 2,400% increase effective June\n\n- Beijing refuses to approve H200 chip purchases — Nvidia loses $30B in potential China sales\n\n- Oppenheimer raises Marvell price target — analyst Rick Schafer increases target on May 20\n\n-"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "MidlClassMoney",
+   "url": "https://x.com/MidlClassMoney/status/2059264919346798794",
+   "date": "2026-05-26",
+   "text": "Mark Zuckerberg: “it’s like Steve Jobs invented the iPhone, and now they’re just kind of sitting on it 20 years later.”\n\nMeanwhile, $AAPL continues to innovate while their stock hits all time highs.\n\nHow has $META been doing? Frustrating from a shareholder standpoint. https://t.co/PSCVeX1kLl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "thisisinder",
+   "url": "https://x.com/thisisinder/status/2059704068751425684",
+   "date": "2026-05-27",
+   "text": "Everyone saying paid subscriptions will kill Instagram has absolutely no idea how monopolies work.\n\n —Meta owns three billion daily users who are too addicted to leave.\n —Converting just 1% to a $15 monthly fee prints billions in pure cash.\n —This completely bypasses Apple’s https://t.co/Px1lDkATj3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "BourbonCap",
+   "url": "https://x.com/BourbonCap/status/2060339858980184405",
+   "date": "2026-05-29",
+   "text": "$META revenue is expected to grow between 25% to 31% this year, the company is trading close to 20x earnings, and the stock is down almost 20% from ATM. On top of that, Mark Zuckerberg is adding a new subscription revenue\n\nBut investors still mad... wild"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 386,
+   "user": "BourbonCap",
+   "url": "https://x.com/BourbonCap/status/2060340581922898423",
+   "date": "2026-05-29",
+   "text": "$META revenue is expected to grow between 25% and 31% this year, the company is trading close to 20x earnings, and the stock is down almost 20% from ATM. On top of that, Mark Zuckerberg is adding a new subscription revenue\n\nBut investors still mad... wild"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "WesleyRaes",
+   "url": "https://x.com/WesleyRaes/status/2058714064910487591",
+   "date": "2026-05-25",
+   "text": "Meta Super Intelligence, At First Mark Zuckerberg Didn't Want To Build It Out, But Then The Company Would Go Broke I Saw, &amp; With The Stock Crashing 80% Mark Had To Find A Way To Climb Back &amp; Then He Solved All The Preparations, IMO With Upcoming Super Intelligence Could Go 1000X."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "floppyJI",
+   "url": "https://x.com/floppyJI/status/2059279425674309766",
+   "date": "2026-05-26",
+   "text": "Before firing 8,000 people Meta tracked their every keystroke to train the AI that would replace them \nThe tool recorded mouse movements and keystrokes on every work computer. The data trained AI agents capable of doing those same jobs and then 8,000 people got their layoff https://t.co/HMIVKBx3qW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "QualCompounders",
+   "url": "https://x.com/QualCompounders/status/2060889001909719511",
+   "date": "2026-05-31",
+   "text": "$META — The capex concerns are overblown and are creating an attractive buying opportunity.\n\n🔹 2026 Capex Guidance Raised to $125B–$145B (up from $115B–$135B). This spooked the market and sent the stock lower.\n🔹 If Meta’s Family of Apps can’t absorb all the additional compute https://t.co/sUMFqu3vKl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "RetireOnTheta",
+   "url": "https://x.com/RetireOnTheta/status/2059429005904760924",
+   "date": "2026-05-27",
+   "text": "My stock goals for this week: \n\nBuild $NOW to 200 shares\nBuild $META to 10 shares"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9923,
+   "user": "blockchainchick",
+   "url": "https://x.com/blockchainchick/status/2058933356931244427",
+   "date": "2026-05-25",
+   "text": "The SpaceX IPO is the most brazen retail fleecing in modern market history.\n\nNASDAQ has REWRITTEN the index rules specifically for this listing. The 10% minimum free float requirement: gone. The 3 to 12 month seasoning period before index inclusion: cut to 15 trading days."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "thingsnoticed",
+   "url": "https://x.com/thingsnoticed/status/2060085452162416874",
+   "date": "2026-05-28",
+   "text": "Everyone wants to own the five-year compounder, but nobody wants to own the thing that's currently out of favor... which is many times the same stock.\n\n$MSFT went sideways for over a decade under Ballmer. By 2014 it was a punchline... a company that missed mobile, missed social,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Boldinvst",
+   "url": "https://x.com/Boldinvst/status/2059369910824849871",
+   "date": "2026-05-26",
+   "text": "What to expect tomorrow \n\n•Salesforce (CRM) is scheduled to post fiscal first-quarter results after market close, with investors closely watching AI-related demand, cloud spending trends and margin expansion. Wall Street expects the software giant to post earnings of $3.13 per"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BlueCrewViking",
+   "url": "https://x.com/BlueCrewViking/status/2060037729769930785",
+   "date": "2026-05-28",
+   "text": "2 major developments at Meta may have just put a floor in on the struggling stock - Is now the time to step and buy shares of Meta Platforms? Via @CNBC:\nhttps://t.co/7RopMLqtoy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "smart_ai_for_B",
+   "url": "https://x.com/smart_ai_for_B/status/2059933505019064708",
+   "date": "2026-05-28",
+   "text": "🚨 AI News — May 27, 2026\n\nThe week that changed the AI infrastructure map forever.\n\n⚡ OpenAI + NVIDIA just announced the biggest tech partnership in history.$100 billion. 10 gigawatts of compute. For context: 10GW = roughly 1% of total US electricity generation. First systems"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "Imdelo_3",
+   "url": "https://x.com/Imdelo_3/status/2060389690549706966",
+   "date": "2026-05-29",
+   "text": "$META has been stuck between $600 and $650 for weeks. Here’s why and what happens next.\n\nRevenue grew 33% in Q1. Ad impressions up 19%. EPS beat. The business is fine.\n\nThe problem is the $145 billion capex guide. Investors see that number and freeze because Meta has no cloud https://t.co/63EXSnnWXN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2058595212402786727",
+   "date": "2026-05-24",
+   "text": "🧵 Why $META Could Be the Cheapest AI Stock Right Now\n\nMost investors are still sleeping on Meta.\n\nWhile everyone chases NVDA &amp; MSFT, META is quietly building one of the strongest AI positions in big tech — at a more attractive valuation.\n\nNew video is out 👇"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 30,
+   "user": "PJtrader_17",
+   "url": "https://x.com/PJtrader_17/status/2059476700329808229",
+   "date": "2026-05-27",
+   "text": "$META Trade Plan 📊🔥\n\nCurrent Price: 610\n\n🟢 Bullish Above 615\nTargets:\n617.5 → 620 → 625 → 630\n620 is the key control node. Holding above 610 and reclaiming 615 could trigger dealer-driven upside momentum.\n🔴 Bearish Below 610\nTargets:\n607.5 → 605 → 600 → 590\n\nNegative https://t.co/TTR5wNoijX"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2059681507627700660",
+   "date": "2026-05-27",
+   "text": "🚨 12 MOST UNDERVALUED STOCKS – MIXED SESSION WITH NOTABLE OUTLIERS\n\nValue names showing selective strength today, led by big moves in healthcare, fintech, and energy plays. Several high-conviction names bucking broader market rotation.\n\n📊 TODAY’S UNDERVALUED STOCKS SNAPSHOT\n\n🟢 https://t.co/PfRetMJha8"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2059221288212746465",
+   "date": "2026-05-26",
+   "text": "🚨 12 MOST UNDERVALUED STOCKS SNAPSHOT  \n\nA diverse screen blending high-growth disruptors, healthcare innovators, fintech, AI-adjacent plays, and Big Tech names flagged as undervalued. Most names green today amid broad market tone.  \n\n📊 TODAY’S PERFORMANCE SNAPSHOT  \n\n🟢 https://t.co/zXrwLfeTJA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 34,
+   "user": "DeepIceValue",
+   "url": "https://x.com/DeepIceValue/status/2061046282848715185",
+   "date": "2026-05-31",
+   "text": "Just to clarifiy it for people who dont understand what im talking about.. $MU\n\nOnce again, whatever the result of this was, it was not a good BUY, the quality of a buy is not judged when we get a result, but in the moment you make the buy..(upside/downside ratio, opportunity https://t.co/iATwEBEc51"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "StockMarketZaps",
+   "url": "https://x.com/StockMarketZaps/status/2060001234472329579",
+   "date": "2026-05-28",
+   "text": "META signals cloud push if data-center spend overshoots; “definitely on the table.” Bearish/Bullish? Bullish for capex flexibility; potential upside if data-center demand materializes."
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "AkinAdemGokhan",
+   "url": "https://x.com/AkinAdemGokhan/status/2061085744454590479",
+   "date": "2026-05-31",
+   "text": "$META bias flips NO_TRADE→bull, CALL $700 wall thickening 🔭\n\nOld money grew CALL $700 from 23,417→24,774 (+5.8%), fresh money pushed 1,699 vol into CALL $630\nOrganic build at $650 strike — watch structure supportive\nVol skew bearish reprice — put premium rising relative, https://t.co/hF4RX5aKw7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cottonfields",
+   "url": "https://x.com/cottonfields/status/2059240021190668729",
+   "date": "2026-05-26",
+   "text": "Yesterday's options flow (22 may)\n\nmarkets: unclear\nmag7: bullish\ncrypto: bullish\nbiotech: bullish\nmetals: bullish\nenergy: hedging\nrates: bullish\nrisk-off: bullish\nsemis: unclear\nfinancials: unclear\n\nMarkets\nMarkets flow was not a clean risk-on signal: SPX/SPY upside and GLD/TLT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2059580974506086797",
+   "date": "2026-05-27",
+   "text": "📈 1-Year Analyst Price Target Upside  \nTop 25 Largest U.S. Stocks by Market Cap \n\n$ORCL Oracle — +67%  \n$MSFT Microsoft — +58%  \n$NVDA Nvidia — +52%  \n$AVGO Broadcom — +50%  \n$META Meta — +50%  \n$MU Micron — +44%  \n$AMZN Amazon — +33%  \n$AMD AMD — +33%  \n$LLY Eli Lilly — +32%"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2058707097311940747",
+   "date": "2026-05-25",
+   "text": "📈 1-Year Analyst Price Target Upside  \nTop 25 Largest U.S. Stocks by Market Cap \n\n$ORCL Oracle — +67%  \n$MSFT Microsoft — +58%  \n$NVDA Nvidia — +52%  \n$AVGO Broadcom — +50%  \n$META Meta — +50%  \n$MU Micron — +44%  \n$AMZN Amazon — +33%  \n$AMD AMD — +33%  \n$LLY Eli Lilly — +32%"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "GeoGifted",
+   "url": "https://x.com/GeoGifted/status/2058774924731326482",
+   "date": "2026-05-25",
+   "text": "Chart patterns are basically the language of Wall Street 📊🔥\n\nInstitutions use these setups daily to spot:\n• breakouts\n• reversals\n• momentum shifts\n• liquidity traps\n\n📈 Bullish Patterns:\nHead &amp; Shoulders Inverse\nAscending Triangle\nDouble Bottom\nBullish Engulfing\nHammer https://t.co/n1ja5SgPVa"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "GeoGifted",
+   "url": "https://x.com/GeoGifted/status/2058688523545268270",
+   "date": "2026-05-24",
+   "text": "S&amp;P futures are still holding a bullish structure above the key volume shelf zone. 📈🔥\n\nAs long as price stays above ~7,400:\nbulls remain in control and momentum toward new highs stays alive.\n\n📊 Key Tickers:\n$SPX $SPY $ES_F $QQQ $DIA $IWM $NVDA $MSFT $AAPL $AMZN $META\n\n💰 https://t.co/WFyfpT2qM4"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 69,
+   "user": "Divergent7651",
+   "url": "https://x.com/Divergent7651/status/2060129852741894513",
+   "date": "2026-05-28",
+   "text": "I think $700.HK/$TCEHY is interesting here. Framing the idea in terms of downside protection and sources of upside, you get:\n\nDownside protection:\n\n1) Yield. Tencent trades at a ~9.5% FCF yield when you net out the net cash position, current market value of its publicly listed"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Shmanders12",
+   "url": "https://x.com/Shmanders12/status/2059242560422318329",
+   "date": "2026-05-26",
+   "text": "Good Morning X ☕️📈\nWaking up bullish on these three setups today:\n\n$META — Breaking out of a clean downward trend. Price action is coiling tightly with descending volume. Primed for upside explosion if it holds.\n$MSFT — Same story as META. Downtrend break + coiling PA. Watching https://t.co/Z81k48XJBz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "GeoGifted",
+   "url": "https://x.com/GeoGifted/status/2058608321897099525",
+   "date": "2026-05-24",
+   "text": "SPY is sitting at a major decision zone. Bulls still control above 749.52, but if price loses 743.18 support, downside pressure can accelerate quickly across the NYSE. 📉📈\n\n📊 Key Levels:\n$SPY — 743.80\nBull Target → 749.52\nMajor Resistance → 752.47 / 754.77\nBear Support → https://t.co/UhAyWTJoKq"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "DividendBourgoi",
+   "url": "https://x.com/DividendBourgoi/status/2060470501399793723",
+   "date": "2026-05-29",
+   "text": "$META Currently trades around $635, and is down nearly 4% year to date. 38 analysts rate META a Buy as of May 26, 2026, with a median price target substantially above current levels. The bull case targets $893 by May 2027, while even the bear case sits at $743 — both implying https://t.co/l4ARUAQ830"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "kokocodes",
+   "url": "https://x.com/kokocodes/status/2059262525963657666",
+   "date": "2026-05-26",
+   "text": "Some participants may want to go with $MU, $MRVL, or $DELL because AI infrastructure, semiconductors, and enterprise demand remain strong momentum themes.\n\nOthers could consider $ALAB, $APLD, $CRDO, or $NVTS for high-beta AI and data-center infrastructure exposure.\n\nSome may https://t.co/wl5GLF8i4W"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "thingsnoticed",
+   "url": "https://x.com/thingsnoticed/status/2059359921578110997",
+   "date": "2026-05-26",
+   "text": "Everyone's calling bubble right now and I've been trying to read past the headlines on this one. The disagreement isn't really where you'd expect.\n\nThe clean bear case isn't $NVDA or $MSFT being overvalued. It's the ROI gap. According to Futurum, the five biggest - $MSFT, $GOOGL,"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 42,
+   "user": "imposterDiary",
+   "url": "https://x.com/imposterDiary/status/2059200789839823207",
+   "date": "2026-05-26",
+   "text": "I’ve been looking into @PokeRescue and it actually looks pretty solid during this Poke meta\n\nBasically, it’s an AI agent that rescues undervalued graded Pokémon cards. It scans different marketplaces, finds cards listed too cheap, buys them, and then lists them for “adoption” at"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "MMIV_Capital",
+   "url": "https://x.com/MMIV_Capital/status/2060102104203583640",
+   "date": "2026-05-28",
+   "text": "$SIVE / $SIVEF — Investment Thesis (May 28, 2026)\nI’m long $SIVE. DYOR.\n\nCONFIRMED BULLISH\n\n1. Jabil — 1.6T LRO transceiver with Sivers DFB lasers. Fortune 500, $28B revenue. Only announces laser partnerships when validated for volume.\n\n2. CHIPS Act — $5.6M EW, $6M 5G/6G, $6.6M"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 35,
+   "user": "BlockFlow_News",
+   "url": "https://x.com/BlockFlow_News/status/2059573446003306957",
+   "date": "2026-05-27",
+   "text": "Hook Summer is coming?\n\nWhile everyone is focused on AI-related trades, $UPEG has been quietly climbing the chart 🚀\n\nIt is already up +80% over the past 7 days.\n\nICYW, $UPEG is one of the Uniswap V4 hooks meta. Every trade creates a unique on-chain unicorn NFT, making the chain https://t.co/l9YNSwvBHq"
+  }
+ ]
+}

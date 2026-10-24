@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from sentiment_lexicon import classify
 from build_sentiment import score, ROOT, HIST
 HDIR = os.path.join(ROOT, "tools", "sentiment_input", "history")
-HISTORY_TICKERS = ["MSTR", "TSLA", "SPCX", "SATA", "STRC", "BTC-USD"]
+HISTORY_TICKERS = ["MSTR", "TSLA", "SPCX", "SATA", "STRC", "BTC-USD", "META"]
 DDIR = os.path.join(ROOT, "tools", "sentiment_input", "history_daily")
 # Daily points: all 18 board tickers + the 3 history-only names. One UTC day per point, 1 opinion search (<=25 posts).
 DAILY_TICKERS = ["AAPL", "MSFT", "GOOGL", "AMZN", "META", "NVDA", "TSLA", "AVGO", "INTC", "MSTR", "COIN", "BTC-USD", "ETH-USD",

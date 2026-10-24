@@ -119,7 +119,7 @@ Ranked bull-vs-bear board (like the "analyst sentiment" boards on X). The app on
 
 Sentiment tab → **View: Over time**. Weekly bull share (0–100%) per ticker with its 95% band shaded, a dashed 50% line,
 and an optional dashed price line on a right axis (weekly closes from the normal `/api/chart` path with its usual fallbacks:
-`$` for one ticker, % from start when several are picked). The picker lists only tickers that have history: weekly = **MSTR, TSLA, SPCX, SATA, STRC, BTC-USD**; daily (Points: Daily) = all 26 names. Hover shows window dates, bull %, band, bull/bear counts, posts and the close.
+`$` for one ticker, % from start when several are picked). The picker lists only tickers that have history: weekly = **MSTR, TSLA, SPCX, SATA, STRC, BTC-USD, META**; daily (Points: Daily) = all 26 names. Hover shows window dates, bull %, band, bull/bear counts, posts and the close.
 Hollow dots = thin week (< 8 bull+bear posts). Download PNG is 1600×900; view, picker and price toggle are saved per tab in views.
 Data: `sentiment_history.json` → `series` (served at `/api/sentiment_history`); the board's own daily snapshots sit under `daily`.
 
@@ -135,6 +135,7 @@ Data: `sentiment_history.json` → `series` (served at `/api/sentiment_history`)
 - Windows: 7 days ending Sunday 16:00 UTC (noon ET); a point is plotted at its window end date. Backfill: 26 weeks
   (windows ending 2026-04-19 … 2026-10-11) plus the Oct 11–18 week (MSTR/TSLA/BTC re-label the board snapshot's posts; SPCX/SATA/STRC used the 2 searches).
 - SPCX listed on Nasdaq on Jun 12 2026 (pre-IPO posts were mostly perps/tokens), so its history starts with the window ending Jun 14 (19 points).
+- META was added 2026-10-23: weekly backfill of the 27 windows ending 2026-04-19 … 2026-10-18 (54 X calls; plain query adds `(stock OR shares OR Zuckerberg)` because bare "meta" is a common word). Its rolling-7 points start with the next morning routine.
 - SATA is **Strive's** (ASST) variable-rate preferred, not Strategy's; STRC is Strategy's.
 
 Per-ticker queries (X strips `$`; times are `start_time`/`end_time` in UTC; `max_results` 25, `sort_order` relevancy,
@@ -147,15 +148,16 @@ Per-ticker queries (X strips `$`; times are `start_time`/`end_time` in UTC; `max
 | BTC-USD | `BTC Bitcoin -is:retweet -is:reply lang:en` | `Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
 | STRC | `STRC -is:retweet -is:reply lang:en` | `STRC (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
 | SATA | `SATA (Strive OR ASST OR preferred OR dividend) -is:retweet -is:reply lang:en` | `SATA (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
+| META | `META (stock OR shares OR Zuckerberg) -is:retweet -is:reply lang:en` | `META (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
 | SPCX | `SPCX SpaceX -pump -memecoin -is:retweet -is:reply lang:en` | `SPCX (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -pump -memecoin -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en` |
 
 (The very first SATA window, ending Apr 19, used `SATA Strategy -is:retweet -is:reply lang:en` for the plain query.)
 
 ### Daily refresh routine (7:30 AM ET) — exact steps
 
-Do both parts every morning. Budget ≈ 12 X calls for the history + ≈ 3 per board ticker; stay under 30 calls/minute.
+Do both parts every morning. Budget ≈ 14 X calls for the history + ≈ 3 per board ticker; stay under 30 calls/minute.
 
-**A. History points for the 6 history tickers** (MSTR, TSLA, SPCX, SATA, STRC, BTC-USD):
+**A. History points for the 7 history tickers** (MSTR, TSLA, SPCX, SATA, STRC, BTC-USD, META):
 1. Let `END` = now rounded down to the hour in UTC (e.g. `2026-10-19T11:00:00Z`) and `START` = `END` − 7 days.
 2. For each ticker run the 2 searches from the table above with `start_time=START`, `end_time=END`, saving each result to a file
    (connector `write_to_file`). No news.

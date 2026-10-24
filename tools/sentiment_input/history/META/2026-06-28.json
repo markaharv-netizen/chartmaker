@@ -1,0 +1,436 @@
+{
+ "symbol": "META",
+ "start": "2026-06-21T16:00:00Z",
+ "end": "2026-06-28T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "META (stock OR shares OR Zuckerberg) -is:retweet -is:reply lang:en",
+  "META (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "mrcapitalius",
+   "url": "https://x.com/mrcapitalius/status/2069465865435697297",
+   "date": "2026-06-23",
+   "text": "Breaking Daily Recap №131\n\n&gt; Mark Zuckerberg directed Meta to build prediction markets app\n\n&gt; The US House Financial Services Committee will hold a July 17 field hearing on the CLARITY Act\n\n&gt; Chainlink teams up with 47 South Korean, European banks to speed up international money https://t.co/6niY2Ey7fr https://t.co/QCvTZF3ibe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "arnaudmercier",
+   "url": "https://x.com/arnaudmercier/status/2069462160468590789",
+   "date": "2026-06-23",
+   "text": "&lt;p class=\"wp-block-paragraph\"&gt;Elon Musk&amp;#8217;s rocket company &lt;a href=\"https://t.co/mXcpF5R98B\" target=\"_blank\"&gt;SpaceX&lt;/a&gt; made him a trillionaire—the first on the planet. The historic IPO of the company earlier this month, which aims to make humanity a spacefaring civilization,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 71,
+   "user": "timoassi",
+   "url": "https://x.com/timoassi/status/2069647324003827763",
+   "date": "2026-06-24",
+   "text": "Happy Wednesday all! If you missed the past 24 hours in crypto and stocks, here's your full recap:\n\n🚨 Major Headlines &amp; Market Moves 🚨\n\n- US House officially passes bill to ban the Federal Reserve from creating a CBDC until 2030. The Senate previously passed a similar measure, https://t.co/RNWfJnsdbg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1386,
+   "user": "amitisinvesting",
+   "url": "https://x.com/amitisinvesting/status/2069600995772920244",
+   "date": "2026-06-24",
+   "text": "A TON OF THINGS HAPPENED IN THE STOCK MARKET TODAY.\n\nHere's a full recap:\n\n1. Markets were under pressure today, with the S&amp;P $SPY down ~1.5%, largely due to a sharp selloff in South Korea. The KOSPI fell 9.9%, its worst day since March, as fears grow around potential taxes on"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Lamwumkt",
+   "url": "https://x.com/Lamwumkt/status/2069969684313903143",
+   "date": "2026-06-25",
+   "text": "Qualcomm used its Investor Day 2026 in New York on June 24-25 to make the most audacious bet in its history: a full-stack push into AI data center infrastructure, anchored by the Dragonfly C1000 server CPU, a new AI300 inference accelerator family, a $3.9 billion acquisition of"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "latestly",
+   "url": "https://x.com/latestly/status/2069057357867520242",
+   "date": "2026-06-22",
+   "text": "Kunal Shah Steps Down as CRED CEO to Lead WhatsApp Globally at Meta, Replacing Will Cathcart; Mark Zuckerberg Shares Welcome Message\n\nhttps://t.co/6phGeKAjGs\n\n#KunalShah #WhatsApp #MarkZuckerberg #WillCathcart #zuckerberg #CRED @kunalb11"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "FactSet",
+   "url": "https://x.com/FactSet/status/2069486657976385843",
+   "date": "2026-06-23",
+   "text": "StreetAccount Update: Zuckerberg has directed Meta to create a predictions markets app - NY Times ($565.73 +$1.88)\n\n• Per the report, the app is called \"Arena\" and would be an independent app from Facebook or Instagram and could compete with established players Polymarket and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SanjayN31",
+   "url": "https://x.com/SanjayN31/status/2069668067374940521",
+   "date": "2026-06-24",
+   "text": "Mark Zuckerberg shares his excitement about teaming up with Kylie Jenner to release new AI glasses. Meta glasses \nhttps://t.co/qdFm87rJgx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TalkMarkets",
+   "url": "https://x.com/TalkMarkets/status/2069490531495813626",
+   "date": "2026-06-23",
+   "text": "#Meta Stock: Zuckerberg Bets Big On Prediction Markets With New ‘Arena’ App $META https://t.co/N2EWZvTMGL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 69,
+   "user": "Map_Collection",
+   "url": "https://x.com/Map_Collection/status/2071226287021076953",
+   "date": "2026-06-28",
+   "text": "Zuckerberg is spending $145 billion on AI data centers this year.\n\nMost investors are buying Meta.\n\nHere's the important stock: https://t.co/wRpDBp04lk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "LeverageMonkey",
+   "url": "https://x.com/LeverageMonkey/status/2070153942999142765",
+   "date": "2026-06-25",
+   "text": "The thought of me adding to my 13 META shares to bring it to 100 share lot to sell covered call against it to generate income, just the thought of me giving that idiot Zuckerberg more money makes me sick. But I’ll probably have to do it &amp; will make some money. But worst pick IMO! https://t.co/wuPg6XFKls"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "five__talent",
+   "url": "https://x.com/five__talent/status/2069587356857065844",
+   "date": "2026-06-24",
+   "text": "More reasons why I don't own $META outside of major ETFs.\n\n\"I think Zuckerberg wants to play, and wants to compete. I think he should start a new business for his toys. He's playing around in other businesses at investors expense and they don't like it. They don't need to compete https://t.co/829YHitXea"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 23,
+   "user": "DrDatta_AIIMS",
+   "url": "https://x.com/DrDatta_AIIMS/status/2070748724352242044",
+   "date": "2026-06-27",
+   "text": "Wow @kunalb11 is shipping already for @Meta \n\nLoved playing with the new AI feature in WhatsApp!\n\nP.S. Also had to update his contact now! The most approachable and forward looking angel investor in the Indian tech circles is now with Zuckerberg!\n\nThere is saying in Silicon https://t.co/aTxmWMHLiN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TickerNews_",
+   "url": "https://x.com/TickerNews_/status/2069502534646124859",
+   "date": "2026-06-23",
+   "text": "🎯 Mark Zuckerberg is reportedly preparing to challenge Polymarket and Kalshi with a new prediction-markets platform, Arena, signaling Meta’s push into the fast-growing event forecasting space. 🤖 #Meta #StocksToTrade #Investing\n📲Get real-time stock &amp; company news on TickerNews https://t.co/8qSaDIpL35"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "thetradingfeed",
+   "url": "https://x.com/thetradingfeed/status/2069471971646062956",
+   "date": "2026-06-23",
+   "text": "💰 Mark Zuckerberg just told Meta to build a prediction markets app. Wild move for a social platform, but honestly? Betting on outcomes could be the next big engagement play.\nFollow for real time crypto and stock alerts"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "CostaV02",
+   "url": "https://x.com/CostaV02/status/2070535896118530183",
+   "date": "2026-06-26",
+   "text": "meta is green today. feels like we are getting closer to a heads I win, tails I win situation on the stock. they'll rally if Zuckerberg cuts capex and they'll rally if the returns on the capex manifest clearly (which I believe in)"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "dhaka_pulse",
+   "url": "https://x.com/dhaka_pulse/status/2069349566403727680",
+   "date": "2026-06-23",
+   "text": "Indian Fintech Founder Kunal Shah Appointed as WhatsApp's New Global HeadMeta has appointed Indian entrepreneur Kunal Shah, founder of fintech startup CRED, as the new global head of WhatsApp. He succeeds Will Cathcart, who led the messaging platform for nearly seven years and https://t.co/5dxCcGlDW0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "robot2trade1",
+   "url": "https://x.com/robot2trade1/status/2069524889040470288",
+   "date": "2026-06-23",
+   "text": "Breaking: Zuckerberg Directs Meta to Develop Prediction Markets App\n\nAccording to sources reported on CNBC, Meta CEO Mark Zuckerberg has instructed the company to create its own Prediction Markets app. This comes as the sector is exploding with platforms like Polymarket and https://t.co/kSKjgnnoZH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "OxfordAnalytics",
+   "url": "https://x.com/OxfordAnalytics/status/2069485061485834420",
+   "date": "2026-06-23",
+   "text": "$META would be a prime target for an activist investor right now if it weren’t for the Class B shares with 10 votes each which give Zuckerberg 61% voting rights. \n\nHe’s squandering billions and running the company into the ground. Morale is at an all time low as thousands of"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 54,
+   "user": "CryptoTweets",
+   "url": "https://x.com/CryptoTweets/status/2069537458392383618",
+   "date": "2026-06-23",
+   "text": "⚡️DAILY RECAP⚡️\n\n• 🇺🇸 US Senate passes bill to ban the Federal Reserve from creating a Central Bank Digital Currency (CBDC) until at least December 31, 2030.\n\n• 🇺🇸 $1.5 trillion wiped out from the US stock market in 5 minutes after market open.\n\n• 🇰🇷 South Korea's KOSPI stock"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Film__Scoop",
+   "url": "https://x.com/Film__Scoop/status/2071086730648973716",
+   "date": "2026-06-28",
+   "text": "Mark Zuckerberg doesn't want you scrolling anymore.\n\nHe wants you betting on the future.\n\nMeta is reportedly building a brand-new prediction market app called Arena, taking direct aim at fast-growing platforms like Polymarket and Kalshi.\n\nThink of it as the stock market...\n\nBut https://t.co/s777HSUFXf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Gobullish_ai",
+   "url": "https://x.com/Gobullish_ai/status/2069593860637073726",
+   "date": "2026-06-24",
+   "text": "📰 Overnight market headlines\n\n• Largecaps lead profit growth, mid &amp; smallcaps outshine in revenue momentum\n• Meta’s $4.5-billion sandbox: what's at stake for Kunal Shah, WhatsApp and Cred\n• US Stock: S&amp;P, Nasdaq end lower on semiconductor selloff as AI spending concerns mount"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "CHItrader",
+   "url": "https://x.com/CHItrader/status/2069032884061532318",
+   "date": "2026-06-22",
+   "text": "SCHIFF: CALIFORNIA’S BILLIONAIRE TAX WILL TRIGGER MASS EXODUS\n\nEconomist Peter Schiff warned that California’s proposed 5% billionaire wealth tax could trigger a “mass exodus” of wealthy entrepreneurs, including $META CEO Mark Zuckerberg.\n\n🔹 Tax would apply to net worth above"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 96,
+   "user": "GroveXchange",
+   "url": "https://x.com/GroveXchange/status/2069658285410508883",
+   "date": "2026-06-24",
+   "text": "Daily Crypto News \n\n🔹️Bitcoin Dips Below $62K BTC testing two-week lows amid tech stock weakness, ETF outflows, and market caution.\n\n🔹️Ethereum Foundation Major Reset, Vitalik Buterin announces ~40% budget cut this year + staff reduction. \n\n🔹️Meta Building Prediction Market https://t.co/yV15F0sfQp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2069496948592201770",
+   "date": "2026-06-23",
+   "text": "🐳 The biggest $NVDA print today wasn't a buyer. It was someone fading the \"summer rebound\" call.\n\nTHE THESIS\n\nThe consensus take going into this week is that NVDA is a \"screaming buy\" — Motley Fool published exactly that thesis today (June 23), naming NVDA, MSFT, and META as https://t.co/t9EcH9MlvK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "cottonfields",
+   "url": "https://x.com/cottonfields/status/2070458663580455247",
+   "date": "2026-06-26",
+   "text": "Yesterday's options flow (25 jun)\nmarkets: hedging\nmag7: hedging\ncrypto: unclear\nbiotech: bullish\nmetals: unclear\nenergy: unclear\nrates: unclear\nrisk-off: bullish\nsemis: unclear\nfinancials: hedging\n\nMarkets\nBig end-of-day options tape leaned defensive: confirmed opening put"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "cottonfields",
+   "url": "https://x.com/cottonfields/status/2069345078443692127",
+   "date": "2026-06-23",
+   "text": "Yesterday's options flow (22 jun)\nmarkets: hedging\nmag7: unclear\ncrypto: unclear\nbiotech: bullish\nmetals: bearish\nenergy: bearish\nrates: unclear\nrisk-off: unclear\nsemis: bullish\nfinancials: bullish\n\nMarkets\nMarket options flow leaned defensive: confirmed openings were dominated"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "cottonfields",
+   "url": "https://x.com/cottonfields/status/2069768897557839945",
+   "date": "2026-06-24",
+   "text": "Yesterday's options flow (23 jun)\nmarkets: hedging\nmag7: unclear\ncrypto: unclear\nbiotech: unclear\nmetals: unclear\nenergy: unclear\nrates: hedging\nrisk-off: income\nsemis: hedging\nfinancials: bullish\n\nMarkets\nMarkets flow leaned defensive: $SPX/$SPXW, SMH, SPY, QQQ and IWM saw heavy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "Benzinga",
+   "url": "https://x.com/Benzinga/status/2069012518442324299",
+   "date": "2026-06-22",
+   "text": "Meta ended the week at $577, down 27% from its high last year.\n\nIts market value has fallen from about $2 trillion to $1.47 trillion.\n\nThe decline has pushed Meta's trailing price-to-earnings ratio down to 20, its lowest level since February 2023.\n\nIts forward P/E ratio has https://t.co/6wy9zI9yLx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2069511491179413774",
+   "date": "2026-06-23",
+   "text": "Wall Street is bullish AI. The biggest options trade of the day in $TSLA says the Mag 7 floor is about to hold.\n\nTHE SETUP\n\nKorea's KOSPI dropped 10%. The Nikkei fell 3.5%. By the time the US opened, the semiconductor complex was already bleeding from a wound nobody quite https://t.co/silug5y68t"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2069134331046486484",
+   "date": "2026-06-22",
+   "text": "🐳 Wall Street says $NVDA is cheap. The biggest print on the tape today bet against the rally.\n\nTHE THESIS\n\nThe loudest bid for NVDA today came from financial media, not from the option pit. On June 22, Motley Fool and https://t.co/mYHDwS0Qgh both ran the same drum beat: NVDA is https://t.co/qFpRf6MZRD"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 13,
+   "user": "The_Blake_VIC",
+   "url": "https://x.com/The_Blake_VIC/status/2068810247901196789",
+   "date": "2026-06-21",
+   "text": "$META Weekly &amp; Monthly Update: There's absolutely no change to my analysis on META. Both the weekly and monthly are showing signs of accumulation in a HTF, macro uptrend. It has now been consolidating within a massive bull pennant for a year. The move out of this range will be https://t.co/DbRQB40eN2 https://t.co/xi3R59V372"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "harunyakut867",
+   "url": "https://x.com/harunyakut867/status/2070495393909989413",
+   "date": "2026-06-26",
+   "text": "$SPX 𝗣𝗿𝗲-𝗺𝗮𝗿𝗸𝗲𝘁 𝗮𝗻𝗮𝗹𝘆𝘀𝗶𝘀 𝗳𝗼𝗿 𝟮𝟲-𝗝𝘂𝗻\n\n𝗘𝘃𝗲𝗿𝘆 𝗠𝗮𝗴𝗻𝗶𝗳𝗶𝗰𝗲𝗻𝘁 𝗦𝗲𝘃𝗲𝗻 𝘀𝘁𝗼𝗰𝗸 𝗶𝘀 𝗿𝗲𝗱 𝗳𝗼𝗿 𝗝𝘂𝗻𝗲 — 𝗮𝗻𝗱 𝗻𝗼𝘄 𝘁𝗵𝗲𝘆'𝘃𝗲 𝗯𝗲𝗲𝗻 𝗿𝗲𝗻𝗮𝗺𝗲𝗱 𝘁𝗵𝗲 '𝗠𝗮𝗹𝗲𝗳𝗶𝗰𝗲𝗻𝘁 𝟳' 𝘄𝗶𝘁𝗵 𝗮 $𝟮𝟱𝟬 𝗠𝗦𝗙𝗧 𝗱𝗼𝘄𝗻𝘀𝗶𝗱𝗲 https://t.co/ysrzLCTV24"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2069464629835616276",
+   "date": "2026-06-23",
+   "text": "BULLISH ON $META  AND META IS ON MY LIST OF 🔥 14 MOST UNDERVALUED STOCKS RIGHT NOW 🔥\n🟠 $AMZN\n🔵 $ADBE\n🟢 $DLO\n🟣 $IREN\n🔴 $ROOT\n🟡 $FOUR\n🟦 $UNH\n🟩 $FLNC\n🟠 $OSCR\n🟣 $ZETA\n🔵 $HIMS\n🟢 $META\n🟡 $MSFT\n🟣 $NVTS\n🔥 14 Undervalued.\n📈 Long-term upside.\n💡 Market may be https://t.co/vPFRrNvaM5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2069049365583331715",
+   "date": "2026-06-22",
+   "text": "BULLISH THESIS ON  $MSFT  - MICROSOFT REMAINS INTACT AND IT IS ON MY LIST OF 🔥 14 MOST UNDERVALUED STOCKS RIGHT NOW 🔥\n🟠 $AMZN\n🔵 $ADBE\n🟢 $DLO\n🟣 $IREN\n🔴 $ROOT\n🟡 $FOUR\n🟦 $UNH\n🟩 $FLNC\n🟠 $OSCR\n🟣 $ZETA\n🔵 $HIMS\n🟢 $META\n🟡 $MSFT\n🟣 $NVTS\n🔥 14 Undervalued.\n📈 Long-term https://t.co/NhMSOrqMCU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2069421523329233112",
+   "date": "2026-06-23",
+   "text": "🐳 $MU is up 861% in a year. A whale just paid $77M betting the next leg starts at $1,500.\n\nTHE THESIS\n\nThe Micron debate is no longer about whether the memory cycle is real. It's about whether it's STRUCTURAL or just another cyclical sugar high. As of June 23, 2026, the biggest https://t.co/rce5EfHvsq"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2070755112931242405",
+   "date": "2026-06-27",
+   "text": "Bullish thesis on $MSFT remains intact. 💪\n\n$MSFT  Microsoft continues to execute across AI, Azure, Copilot, enterprise software, and cloud infrastructure, reinforcing one of the strongest competitive moats in technology.\n\nIt's still on my list of 🔥 14 MOST UNDERVALUED STOCKS https://t.co/In5NmZjbp9"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2070881387700175074",
+   "date": "2026-06-27",
+   "text": "Bullish thesis on $HIMS  remains intact. 🚀\n\nHims continues to evolve into a leading digital healthcare platform, with growth driven by GLP-1s, primary care, mental health, dermatology, personalized medicine, and its high-margin subscription model.\n\nIt's still on my list of 🔥 14"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2070759261999693994",
+   "date": "2026-06-27",
+   "text": "Bullish thesis on $HIMS  remains intact. 🚀\n\nHims continues to evolve into a leading digital healthcare platform, with growth driven by GLP-1s, primary care, mental health, dermatology, personalized medicine, and its high-margin subscription model.\n\nIt's still on my list of 🔥 14 https://t.co/sdlIPrz1B9"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2070756142469308736",
+   "date": "2026-06-27",
+   "text": "Bullish thesis on $AMZN remains intact. 🚀\n\n$AMZN  Amazon continues to strengthen its position across AWS, AI infrastructure, advertising, robotics, logistics, and global e-commerce, creating multiple long-term growth engines.\n\nIt's still on my list of 🔥 14 MOST UNDERVALUED https://t.co/pwM6Gy7D5f"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2070756930310590595",
+   "date": "2026-06-27",
+   "text": "Bullish thesis on zetachain:native remains intact. 🚀\n\nzetachain:native  Zeta continues to execute with AI-powered marketing, enterprise customer growth, expanding recurring revenue, and improving profitability, strengthening its long-term investment case.\n\nIt's still on my list https://t.co/3r6yIexLWA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2070866939501580621",
+   "date": "2026-06-27",
+   "text": "🔥 Bullish Thesis on $MSFT  Remains Intact\n\nMicrosoft continues to be one of my 14 most undervalued stocks today.\n\nWhy?\n\n☁️ Azure AI growth accelerating\n🤖 Copilot monetization still in its early innings\n💰 Massive free cash flow generation\n📈 Expanding operating margins\n🏰 One"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2070881106551869611",
+   "date": "2026-06-27",
+   "text": "Bullish thesis on $AMZN  remains intact. 🚀\n\nAmazon continues to strengthen its position across AWS, AI infrastructure, advertising, robotics, logistics, and global e-commerce, creating multiple long-term growth engines.\n\nIt's still on my list of 🔥 14 MOST UNDERVALUED STOCKS https://t.co/NfFOSebEpm"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2070544222973837718",
+   "date": "2026-06-26",
+   "text": "🔥 Bullish Thesis on $MSFT - MICROSOFT  Remains Intact\n\n$MSFT  Microsoft continues to be one of my 14 most undervalued stocks today.\n\nWhy?\n\n☁️ Azure AI growth accelerating\n🤖 Copilot monetization still in its early innings\n💰 Massive free cash flow generation\n📈 Expanding https://t.co/In5NmZjbp9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2070661188157923575",
+   "date": "2026-06-27",
+   "text": "🚀 $HIMS remains one of my 14 most undervalued stocks right now.\n\n🔥 14 MOST UNDERVALUED STOCKS\n\n🟠 $AMZN\n🔵 $ADBE\n🟢 $DLO\n🟣 $IREN\n🔴 $ROOT\n🟡 $FOUR\n🟦 $UNH\n🟩 $FLNC\n🟠 $OSCR\n🟣 $ZETA\n🔵 $HIMS\n🟢 $META\n🟡 $MSFT\n🟣 $NVTS\n\n🔥 Undervalued\n📈 Long-term upside\n💡 Market may be"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2070881178559676793",
+   "date": "2026-06-27",
+   "text": "Bullish thesis on zetachain:native  remains intact. 🚀\n\nZeta continues to execute with AI-powered marketing, enterprise customer growth, expanding recurring revenue, and improving profitability, strengthening its long-term investment case.\n\nIt's still on my list of 🔥 14 MOST"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "EmmanuelInvest",
+   "url": "https://x.com/EmmanuelInvest/status/2070758796436103606",
+   "date": "2026-06-27",
+   "text": "Bullish thesis on $HIMS   remains intact. 🚀\n\n$HIMS Hims continues to evolve into a leading digital healthcare platform, with growth driven by GLP-1s, primary care, mental health, dermatology, personalized medicine, and its high-margin subscription model.\n\nIt's still on my list https://t.co/cjsyLZULxO"
+  }
+ ]
+}

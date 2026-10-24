@@ -1,0 +1,454 @@
+{
+ "symbol": "META",
+ "start": "2026-08-30T16:00:00Z",
+ "end": "2026-09-06T16:00:00Z",
+ "src": "x-weekly",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "META (stock OR shares OR Zuckerberg) -is:retweet -is:reply lang:en",
+  "META (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "goodmoat",
+   "url": "https://x.com/goodmoat/status/2094577225710399717",
+   "date": "2026-09-01",
+   "text": "- $NVDA invests $3.5B in MediaTek via convertible bonds — expands AI partnership with Taiwan-based chip designer\n\n- Meta agrees to $17B settlement with states over child-safety claims — avoids Zuckerberg trial testimony\n\n- FTC and 22 states sue Amazon for allegedly manipulating"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "LampObserver",
+   "url": "https://x.com/LampObserver/status/2095590293420806401",
+   "date": "2026-09-03",
+   "text": "Meta Platforms (META) shares rose 4% Thursday after the company opened paid developer access to its new AI model, Muse Spark 1.3. Zuckerberg called it Meta's biggest leap yet in coding and agentic work, with benchmarks topping rival models from OpenAI and Anthropic.\n\nMeta"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 93,
+   "user": "ANIMEGEMSS",
+   "url": "https://x.com/ANIMEGEMSS/status/2094395283836653600",
+   "date": "2026-08-31",
+   "text": "Meet Benny, Mark Zuckerberg’s only publicly known dog and the face of Meta, a Doodle Inu.\n\nCA: 0x1674ad3c2222ab3983d140e72227b2ce5db4e6c6\n\nhttps://t.co/qgBnzu9SXE\n\nIn 2025, the Zuckerberg family said goodbye to Beast, their beloved Hungarian herding dog breed. Benny is the only"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 20,
+   "user": "Crizalcalls",
+   "url": "https://x.com/Crizalcalls/status/2094277185393901754",
+   "date": "2026-08-31",
+   "text": "Meet Benny, Mark Zuckerberg’s only publicly known dog and the face of Meta, a Doodle Inu.\n\nCA: 0x1674ad3c2222ab3983d140e72227b2ce5db4e6c6\n\nhttps://t.co/UQJPwZfpd6\n\nIn 2025, the Zuckerberg family said goodbye to Beast, their beloved Hungarian herding dog breed. Benny is the only https://t.co/R25fGpHmGC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "followfinance_",
+   "url": "https://x.com/followfinance_/status/2095672132248146382",
+   "date": "2026-09-04",
+   "text": "BREAKING: Meta (META) stock surges over 4%, adding more than $70 billion in market cap after Mark Zuckerberg announced Meta’s most powerful AI model yet, Muse Spark 1.3. https://t.co/PUQgZqzkYi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 157,
+   "user": "bennyrbh",
+   "url": "https://x.com/bennyrbh/status/2094270581009195333",
+   "date": "2026-08-31",
+   "text": "Meet Benny, Mark Zuckerberg’s only publicly known dog and the face of Meta, a Doodle Inu.\n\nCA: 0x1674ad3c2222ab3983d140e72227b2ce5db4e6c6\n\nhttps://t.co/A8QLmkwqio\n\nIn 2025, the Zuckerberg family said goodbye to Beast, their beloved Hungarian herding dog breed. Benny is the only https://t.co/EuvyAArwjo"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "JPMinvests",
+   "url": "https://x.com/JPMinvests/status/2096138236275949797",
+   "date": "2026-09-05",
+   "text": "6 stocks, which have IMO a glorious future ahead: 🚀🟢\n\n1/6 Meta Platforms $META \n\nThe stock is very cheap and @finkd (Mark Zuckerberg) runs the company since the beginning and is a genius itself. https://t.co/d0cLUaX5iA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Antibearthesix",
+   "url": "https://x.com/Antibearthesix/status/2096282934600999062",
+   "date": "2026-09-05",
+   "text": "How is Mark Zuckerberg the favorite to become the world’s 2nd trillionaire when $META stock keeps going down? https://t.co/BBNZdnn35q"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "LukeFalasca",
+   "url": "https://x.com/LukeFalasca/status/2095178939195166784",
+   "date": "2026-09-02",
+   "text": "$META might be the cheapest AI winner nobody wants to call cheap.  \n\nThe market is punishing the stock for massive AI spending.  \n\nBut the underlying business is still printing cash while that infrastructure gets built.  \n\nIf Zuckerberg is even mostly right about the returns on https://t.co/SOXvd4yQPY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "LucaF1Lines",
+   "url": "https://x.com/LucaF1Lines/status/2095240680347984342",
+   "date": "2026-09-02",
+   "text": "$META is one of those names where the setup keeps getting cleaner and the skeptics keep running out of arguments. Ad revenue reaccelerating. AI infra actually showing up in engagement metrics. Zuckerberg locked in. This is not a story stock. It is a compounder."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "HighlyLevPod",
+   "url": "https://x.com/HighlyLevPod/status/2095470564492136499",
+   "date": "2026-09-03",
+   "text": "Meta settled with 29 states the day Zuckerberg was due to testify. Price: up to $17.1B, plus a two-hour daily cap for kids, no notifications during school, app locked at night. Trial risk was $1.4 trillion. The stock went up. https://t.co/Jffimoyh2r"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "hamids",
+   "url": "https://x.com/hamids/status/2094495452922286218",
+   "date": "2026-08-31",
+   "text": "The fact that Steve Jobs wasn't $AAPL CEO from 1977 (when it was founded) to 1984 (when he was fired) helped shape the future of silicon valley and founder super-voting powers.\n\nThat one mistake VCs made with Apple (which was a giant mistake) is why Mark Zuckerberg got absolute https://t.co/Quh7YVGpKm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "ZuckasaurusMETA",
+   "url": "https://x.com/ZuckasaurusMETA/status/2095996373543886881",
+   "date": "2026-09-04",
+   "text": "In 2024, Facebook introduced a feature on its site that warned its 1.28 billion users about their current privacy settings.\n\nPosted multiple times as Facebook's new ambassador, some tech writers have taken to calling a Zuckasaurus, after Mark Zuckerberg, Facebook’s co-founder and https://t.co/LaHLpWXXGv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "MikeLongTerm",
+   "url": "https://x.com/MikeLongTerm/status/2094441996874117317",
+   "date": "2026-08-31",
+   "text": "$META $GOOGL ⚔️ on Ad Revenue 🚨🚨🚨\n\nBernstein analyst Mark Shmulik argued that Meta is on track to overtake @Google  Search in ad revenue before the end of 2026, and Alphabet stock dropped more than 2.6% on Monday after the note. Meta also traded lower, down a bit over 1%. https://t.co/u3ogFnuWnm https://t.co/plT9i8IPnk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "ConvictionZMoat",
+   "url": "https://x.com/ConvictionZMoat/status/2095503501598011801",
+   "date": "2026-09-03",
+   "text": "$META I Think $800 Is Possible Within 6 Months\n\nQ3 or Q4 earnings call could be the point where the conversation starts shifting toward what META is earning from that investment.\n\nThe core business is already giving $META a strong foundation. Bernstein now believes $META could"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 110,
+   "user": "hamids",
+   "url": "https://x.com/hamids/status/2094145529936797789",
+   "date": "2026-08-30",
+   "text": "The year: 2022\nThe stock: $META \nMeta Revenues in 2022: ~$115 Billion\n\nAnalysts &amp; the Market's take on Meta: FB and Instagram are losing to Ticktock, YouTube and Snap. Product usage has peaked. Mark Zuckerberg is stubbornly wasting tens of billions on AR/VR with huge losses and https://t.co/JAZZh8H6Jb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Xpress_24_7",
+   "url": "https://x.com/Xpress_24_7/status/2094389594091344087",
+   "date": "2026-08-31",
+   "text": "UPDATE: Meta Platforms shares are rising today, with the stock posting gains that have drawn investor attention. https://t.co/mqUFM5t8Br reports the move and examines potential drivers as traders parse the company's latest signals; further data could clarify momentum. Investors https://t.co/xrcYqgSUP4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "zhaocaidev",
+   "url": "https://x.com/zhaocaidev/status/2096132762499768526",
+   "date": "2026-09-05",
+   "text": "A **penny stock** (“仙股” in Hong‑Kong market slang) refers to low‑priced, small‑cap company shares.\nJINQIA which is the 仙股 meta."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Dev0nSolana",
+   "url": "https://x.com/Dev0nSolana/status/2096544966256292291",
+   "date": "2026-09-06",
+   "text": "STONK MEME META ⚡️⚡️ Hey Trenches LETS cTO A STOCK. Once we own enough shares. We can run the company. \n\nGm 🇺🇸⚡️ https://t.co/oKaYSj4So3 https://t.co/JfZKxMrxI1"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 58,
+   "user": "Pharmdca",
+   "url": "https://x.com/Pharmdca/status/2095952328255995924",
+   "date": "2026-09-04",
+   "text": "Buy $AMZN and $META still cheap. Huge upside from current price. Buy and forget \n\nA strategy I use besides owning shares➡️➡️ Use the dip opportunities to load up on ITM Leaps and when stock rises significantly ➡️➡️ Trim or close to lock profits while holding on to shares."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "goodmoat",
+   "url": "https://x.com/goodmoat/status/2095981478626623827",
+   "date": "2026-09-04",
+   "text": "- NHTSA probes up to 1,000 Tesla Cybercabs for certification compliance — $TSLA falls 6%\n\n- Morgan Stanley raises Broadcom price target to $505 on AI chip demand — AVGO\n\n- Microsoft drops 1.6% as Azure opens $101.9 billion revenue door — MSFT\n\n- Meta cuts AI output prices 95% for"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Starhood_AI",
+   "url": "https://x.com/Starhood_AI/status/2094560868553953302",
+   "date": "2026-08-31",
+   "text": "3 hours left.\n\nThe short version of what a Starhood NFT does: it's a seat that lets you sponsor one creator in the game with $STARHOOD. \nEvery time you do, payment buys tokenized stock — $META, $GOOGL, $RDDT, $SNAP — and that stock goes to you.\n\nFund a creator, hold real shares."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "Starhood_AI",
+   "url": "https://x.com/Starhood_AI/status/2094564355857891726",
+   "date": "2026-08-31",
+   "text": "3 hours left.\n\nThe short version of what a Starhood NFT does: it's a seat that lets you sponsor one creator in the game with $STARHOOD. \nEvery time you do, payment buys tokenized stock — $META, $GOOGL, $RDDT, $SNAP — and that stock goes to you.\n\nFund a creator, hold real shares."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 161,
+   "user": "Brentsketit",
+   "url": "https://x.com/Brentsketit/status/2094456155733201226",
+   "date": "2026-08-31",
+   "text": "think this stock/meme meta keeps running\n\nuntil we giga pump some microcap\n\nand the board mints infinite shares and nukes into us\n\nthat will prolly put an end to it for a bit"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 78,
+   "user": "Starhood_AI",
+   "url": "https://x.com/Starhood_AI/status/2094466218250137855",
+   "date": "2026-08-31",
+   "text": "50% of every Starhood NFT sale and the Pons trading fees earned by $STARHOOD go into a single pool. That pool buys tokenized stock ($META, $GOOGL, $RDDT, $SNAP), and that stock is distributed to Starhood NFT holders.\n\nTokenized shares, on Robinhood Chain, in the hands of the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2094916772709146686",
+   "date": "2026-09-01",
+   "text": "EOD Tape | Indexes + Mag7 | Tuesday, September 1st, 2026\n\nIndexes\n\n$SPY\n761.73 -5.32 (-0.69%) H/L 764.67 / 759.51\nOpened another bear gap and sold toward the island bottom, which is open to 757.67 with the full bull gap fill at 757.67. Bounced just above the open bear gap inside"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Tickeron",
+   "url": "https://x.com/Tickeron/status/2094752487643259088",
+   "date": "2026-09-01",
+   "text": "What Does Wall Street Expect From This Stock? Ask TickeronAI.\n\nA stock may be trading at $100 today.\nBut the more interesting question for a trader may be:\nWhere is it expected to go next?\n\nThat’s one of the ideas behind Tickeron Ask AI — helping retail traders quickly understand"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 8,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2096213255316263089",
+   "date": "2026-09-05",
+   "text": "EOD Tape | Indexes + Mag7 | Friday, September 4th, 2026\n\nIndexes\n$SPY\n769.98 -3.19 (-0.41%) H/L 772.87 / 769.00\nOpened a small bear gap and went sideways; not a clean bear flag but still under the trendline, needs 773.40 to resume bullishness. Breaking the inside day risks a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "FSInvest_CIO",
+   "url": "https://x.com/FSInvest_CIO/status/2094537230530511047",
+   "date": "2026-08-31",
+   "text": "FILTERED OPTIONS FLOW: AUGUST 31, 2026\nflow was dominated $GS with supporting upside flow in $NVDA, $TSLA, $MU, crypto beta, defense, and selected software.  bearish theme was space and semiconductor ETF exposure &amp; downside flow in $META, oil, and broad-market/credit vehicles. https://t.co/6vSJ1Z7Ztx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "defido",
+   "url": "https://x.com/defido/status/2096545857210314775",
+   "date": "2026-09-06",
+   "text": "Solana will win the reflections meta, but there's MUCH more upside on the actual Solana eco coins themselves than the stocks considering we're pairing these at the highest bull run of these stocks in years...\n\nMakes you wonder how undervalued $SOL, https://t.co/nhTzC1LZIq"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 52,
+   "user": "CyclesFan",
+   "url": "https://x.com/CyclesFan/status/2096263923825545478",
+   "date": "2026-09-05",
+   "text": "$META - Closed the week above the 20 week MA. Normally that's a bullish signal that leads to further upside, but in META's case not so much. The last 3 times that happened were followed by a bearish reversal. Will this time be different? https://t.co/HS5iZgRMzy"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "TajVincent",
+   "url": "https://x.com/TajVincent/status/2095142292852023299",
+   "date": "2026-09-02",
+   "text": "Pre-open outlook for Wednesday, September 2: the tape is setting up bearish.\n\nEZPZ Intraday Regime (yesterday's close): SPY -46.7, 36.5% Bearish, Mixed conviction.\n\nThe 1-hour score is the dominant driver at -69.4, which is deeply bearish. The 15-minute score confirms at -36.6."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "_MoarDonuts_",
+   "url": "https://x.com/_MoarDonuts_/status/2095222216849809458",
+   "date": "2026-09-02",
+   "text": "$VST · $141.73\nVistra Corp.:  BUY\n\nExecutive Summary:\nInitiate a starter position in VST at current levels (~$138.08) with a stop-loss at $133.50, limiting initial downside to approximately 3.3%.\n\nThe fundamental case is anchored in contracted 20-year nuclear PPAs with AWS and"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "optionwhalesio",
+   "url": "https://x.com/optionwhalesio/status/2094516231231476146",
+   "date": "2026-08-31",
+   "text": "The biggest options print today wasn't a tech bet — it was $34M shorted against a cruise line staying afloat.\n\nMARKET CLOSE — AUG 31, 2026\n\nTHE TRADE OF THE DAY\n\nThe single loudest print on the tape wasn't AI, wasn't semis, wasn't a Fed reaction. It was a cruise line. At 11:04 https://t.co/gT7COITkVk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2094605765780672542",
+   "date": "2026-09-01",
+   "text": "EOD Tape | Indexes + Mag7 | Monday, August 31st, 2026\n\nIndexes\n$SPY\n767.05 -2.30 (-0.30%) H/L 767.99 / 764.72\nBear gap open and last week’s bull gap filled. Back below 767.25 on low volume with not much action.\n\n$QQQ\n716.76 +0.33 (+0.05%) H/L 717.58 / 713.16\nBounced off the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "NoDegreeAE",
+   "url": "https://x.com/NoDegreeAE/status/2094447255315210436",
+   "date": "2026-08-31",
+   "text": "OPENAI VALUATION: $852 BILLION\nMETA VALUATION: $1.47 TRILLION\n\nCHATGPT ADS RUN RATE: $1 BILLION\nMETA ADS RUN RATE: ~$237 BILLION\n\nMETA GENERATES ROUGHLY 237X MORE AD REVENUE…\n\nSO IS OPENAI MASSIVELY OVERVALUED…\n\nOR IS $META MASSIVELY UNDERVALUED? https://t.co/mNybL3wOwN https://t.co/RI23ForGGa"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ifindsauce",
+   "url": "https://x.com/ifindsauce/status/2094206438491017450",
+   "date": "2026-08-30",
+   "text": "week ahead (31 Aug - 6th Sep) thoughts - \n\ncalendar\n- ISM Manufacturing PMI (Sep 1) \n- Broadcom (AVGO) earnings (Sep 2)\n- ISM Services PMI (Sep 3)\n- NFP (Sep 4)\n-&gt; hot print increases hike-risk (anything above 80k, vice versa anything below 20k)\n\nmacro backdrop\n- one-eightyyyy https://t.co/lDoG2DziHP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Djhottowns",
+   "url": "https://x.com/Djhottowns/status/2094434192889090349",
+   "date": "2026-08-31",
+   "text": "Why a September Rate Hike Would Be a Bigly Mistake | Aug 31 | $QQQ $SPY bitcoin:native $TLT $AVGO $META $GOOGL $PLTR $AXP $JPM $NVDA $PANW $SNOW $MDB \nMarkets started the morning pulling back, with oil spiking after US strikes on Iran's Larak Island in the Strait of Hormuz, https://t.co/4vOCqa6qEy"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "RubenAvalosHQ",
+   "url": "https://x.com/RubenAvalosHQ/status/2094401154822082701",
+   "date": "2026-08-31",
+   "text": "🐂 GOOD MORNING, BULL RING! 🐂\n\nMONDAY — AUGUST 31, 2026\n\nMARKET UPDATE\n\nThe market is starting the final trading day of August with a cautious, risk-off tone.\n\nU.S. stock futures were lower early Monday as renewed tensions between the U.S. and Iran pushed oil prices sharply https://t.co/SRBXvBFdwU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2095254444904464516",
+   "date": "2026-09-02",
+   "text": "EOD Tape | Indexes + Mag7 | Wednesday, September 2nd, 2026\n\nIndexes\n$SPY\n765.20 +3.42 (+0.45%) H/L 766.43 / 761.73\nLooked good overall, bouncing off 760 in the island bottom from yesterday. Did not open a bull gap though it came close, and filled most of the bear gap above, which"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "y0ellen",
+   "url": "https://x.com/y0ellen/status/2094107416216645969",
+   "date": "2026-08-30",
+   "text": "TRADE PLAN - week of 31AUG\n\n📈 EXPIRING OPTIONS:\n\n$HOOD 4SEP 117 Sold Call\n$NFLX 4SEP 82 Sold Call\n 4SEP 7535/7510 PCS\n$NBIS 4SEP 230 Short Put (ITM)\n\n📊 OPEN OPTIONS:\n\nSold PUTS/PCS: $HOOD $META $NFLX $GOOG 🆕 $AMZN 🆕 $LLY 🆕\nSold CALLS/CCS: $NFLX $AMZN\nSold Jade Lizards: $BE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "y0ellen",
+   "url": "https://x.com/y0ellen/status/2094107513662930982",
+   "date": "2026-08-30",
+   "text": "TRADE PLAN - week of 31AUG\n\n📈 EXPIRING OPTIONS:\n\n$HOOD 4SEP 117 Sold Call\n$NFLX 4SEP 82 Sold Call\nsolana:J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr 4SEP 7535/7510 PCS\n$NBIS 4SEP 230 Short Put (ITM)\n\n📊 OPEN OPTIONS:\n\nSold PUTS/PCS: $HOOD $META $NFLX $GOOG 🆕 $AMZN 🆕 $LLY 🆕"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "y0ellen",
+   "url": "https://x.com/y0ellen/status/2094106365820334138",
+   "date": "2026-08-30",
+   "text": "TRADE PLAN - week of 31AUG\n\n📈 EXPIRING OPTIONS:\n\n$HOOD 4SEP 117 Sold Call\n$NFLX 4SEP 82 Sold Call\nsolana:J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr 4SEP 7535/7510 PCS\n$NBIS 4SEP 230 Short Put (ITM)\n\n📊 OPEN OPTIONS:\n\nSold PUTS/PCS: $HOOD $META $NFLX $GOOG 🆕 $AMZN 🆕 $LLY 🆕"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 15,
+   "user": "DreadPirateMOR",
+   "url": "https://x.com/DreadPirateMOR/status/2096338822522884465",
+   "date": "2026-09-05",
+   "text": "Labor Day weekend. Tape is dead. I still opened EZPZ Ezra.\n\n“Dear Ezra, I missed you today. Would you give me a read so I can think about trading with you on Tuesday. Hugs and Kisses, Dread.”\n\nHe did not leave me on read.\n\nFriday closed broadly bearish. Net put premium $110.7M. https://t.co/M8fD4IEbid"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 264,
+   "user": "zerohedge",
+   "url": "https://x.com/zerohedge/status/2095541454080754054",
+   "date": "2026-09-03",
+   "text": "Goldman's own trading desk is undercutting Goldman's own AI bull case. On the research side, Jim Schneider reiterates Buy on Broadcom after management guided AI semi revenue to double to $115bn in FY27(10GW of datacenter deployments) and double again to $230bn (20GW), naming https://t.co/UiwRQNZ5DL"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 10,
+   "user": "Tanner_Invests",
+   "url": "https://x.com/Tanner_Invests/status/2095262055695589875",
+   "date": "2026-09-02",
+   "text": "Uncle update. ‼️👴🏼\n\nA lot of you guys followed after that post so feel like it’s time for an update!: \n\nAs of yesterday, he’s a bit bearish right now. Raising ~50% cash until November. After Warsh speaking this week, he thinks there will be a rate hike + midterm uncertainty. Will"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "cryptoicehouse",
+   "url": "https://x.com/cryptoicehouse/status/2095567500347834560",
+   "date": "2026-09-03",
+   "text": "The OG #Web3‌‌ TCG Fighting to Stay King While the Competition Closes In\n\n$GODS (Gods Unchained) a long‑running blockchain TCG with real players, real NFT card ownership, and an active economy.\n\nPolished gameplay + Immutable scaling give it staying power, but retention + https://t.co/YWP9N41soX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2503,
+   "user": "alphawifhat",
+   "url": "https://x.com/alphawifhat/status/2095463184958386339",
+   "date": "2026-09-03",
+   "text": "GM degens\n\nIt's been a while since my last post, where I felt there was asymmetric upside to HYPE after the announcement of AQAv2. HYPE has doubled since then and I hope you were able to make some money off of my call\n\nThese days I've been going deep into the Robinhood chain,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "JayTraderX",
+   "url": "https://x.com/JayTraderX/status/2095652966954881344",
+   "date": "2026-09-03",
+   "text": "EOD Tape | Indexes + Mag7 | Thursday, September 3rd, 2026\n\nIndexes\n$SPY\n772.78 +7.62 (+1.00%) H/L 773.30 / 767.56\nExtremely strong. Opened an island bottom and filled another bear gap, right to a daily trendline just below 773. Breaking out of that trendline, we'll see 776.81 and"
+  }
+ ]
+}
