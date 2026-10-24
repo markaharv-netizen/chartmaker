@@ -10,7 +10,7 @@ async def main():
     errs=[]; pg.on("pageerror",lambda e:errs.append(str(e)))
     pg.on("dialog",lambda d:asyncio.ensure_future(d.accept(pg.__dict__.get('_ans',''))))
     await pg.goto("http://localhost:18790/"); await pg.wait_for_timeout(2500)
-    await pg.fill("#tickers","NBIS,CRWV,BTC-USD"); await pg.fill("#names","Nebius,CoreWeave,Bitcoin")
+    await pg.fill("#tickers","NBIS,CRWV,BTC-USD")
     for t in THEMES:
       await pg.select_option("#theme",t)
       for typ in ["pct","bar"]:

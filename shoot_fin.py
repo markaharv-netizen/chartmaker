@@ -9,8 +9,8 @@ async def main():
     b=await p.chromium.launch(executable_path='/usr/bin/google-chrome'); pg=await b.new_page(viewport={"width":1800,"height":1400})
     pg.on("console",lambda m:print("console:",m.text))
     await pg.goto("http://localhost:18790/"); await pg.wait_for_timeout(1500); await pg.evaluate("window.__setMode('fin')"); await pg.wait_for_timeout(3000)
-    for n,tk,nm,m,per,y1,t,ti in CASES:
-      await pg.fill("#ftickers",tk); await pg.fill("#fnames",nm); await pg.fill("#ftitle",ti); await pg.fill("#fy1",y1)
+    for n,tk,_nm,m,per,y1,t,ti in CASES:
+      await pg.fill("#ftickers",tk); await pg.fill("#ftitle",ti); await pg.fill("#fy1",y1)
       for sel,v in (("#fmetric",m),("#fperiod",per),("#ftype",t)): await pg.eval_on_selector(sel,f"e=>e.value='{v}'")
       await pg.evaluate("window.__frender()"); await pg.wait_for_timeout(4000)
       print(n,"|",await pg.inner_text("#status"),"|",await pg.inner_text("#fnote"))

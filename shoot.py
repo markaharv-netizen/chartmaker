@@ -7,8 +7,8 @@ async def main():
   async with async_playwright() as p:
     b=await p.chromium.launch(executable_path='/usr/bin/google-chrome'); pg=await b.new_page(viewport={"width":1800,"height":1100})
     await pg.goto("http://localhost:18790/"); await pg.wait_for_timeout(1500)
-    for i,(t,tk,nm,ti) in enumerate(CASES):
-      await pg.fill("#tickers",tk); await pg.fill("#names",nm); await pg.fill("#title",ti)
+    for i,(t,tk,_nm,ti) in enumerate(CASES):
+      await pg.fill("#tickers",tk); await pg.fill("#title",ti)
       await pg.select_option("#type",t); await pg.evaluate("window.__render()"); await pg.wait_for_timeout(2500)
       print(t,tk,await pg.inner_text("#status"))
       url=await pg.evaluate("chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:'#fff'})")
