@@ -52,7 +52,6 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 </div>
 <div id="fctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
 <label>Tickers (comma)<input id="ftickers" size="22"></label>
-<label>Display names (comma, optional)<input id="fnames" size="18"></label>
 <label>Metric<select id="fmetric">
 <option value="revenue">Revenue</option><option value="gross_profit">Gross profit</option><option value="operating_income">Operating income</option><option value="net_income">Net income</option><option value="eps_diluted">EPS (diluted)</option><option value="ocf">Operating cash flow</option><option value="capex">Capex</option><option value="fcf">Free cash flow</option><option value="cash">Cash</option><option value="total_debt">Total debt</option><option value="shares">Shares outstanding</option><option value="rnd">R&amp;D</option><option value="gross_margin">Gross margin %</option><option value="operating_margin">Operating margin %</option><option value="net_margin">Net margin %</option></select></label>
 <label>Period<select id="fperiod"><option value="quarterly">Quarterly</option><option value="annual">Annual</option><option value="ttm">TTM</option></select></label>
@@ -88,7 +87,6 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Metric<select id="vmetric"><option value="pe">Trailing P/E</option><option value="fpe">Forward P/E</option><option value="ps">Price/Sales TTM</option><option value="evebitda">EV/EBITDA</option><option value="evrev">EV/Revenue</option><option value="pb">Price/Book</option><option value="peg">PEG</option><option value="mcap">Market cap USD</option><option value="dy">Dividend yield</option><option value="mnav">mNAV (Over time, SEC BTC holdings)</option></select></label>
 <label id="vrangebox" style="display:none">Range<select id="vrange"><option>1Y</option><option>3Y</option><option selected>5Y</option><option>10Y</option><option>Max</option></select></label>
 <label>Sort<select id="vsort"><option value="desc">High to low</option><option value="asc">Low to high</option></select></label>
-<label>Display names (comma, optional)<input id="vnames" size="18"></label>
 <label>Title<input id="vtitle" size="30" placeholder="auto"></label>
 <label>Bar color<select id="vcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="vwm" type="checkbox"></label>
@@ -118,7 +116,6 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 </div>
 <div id="ctl">
 <label>Tickers (comma)<input id="tickers" size="22"></label>
-<label>Display names (comma, optional)<input id="names" size="22"></label>
 <label>Range<select id="range"><option>1D</option><option>5D</option><option selected>YTD</option><option>1M</option><option>6M</option><option>1Y</option><option>5Y</option><option>Max</option><option>Custom</option></select></label>
 <label>Start<input id="start" type="date"></label><label>End<input id="end" type="date"></label>
 <label id="typebox">Type<span class="type-line"><select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="candle">Candles + volume</option><option value="bar">Bar ranking % return</option><option value="bardd">Bar ranking % drawdown</option><option value="ratio">Ratio A priced in B</option><option value="drawdown">Drawdown from peak</option></select><span id="ctypeNote"></span></span></label>
@@ -263,7 +260,7 @@ async function render(){
   if(!syms.length){st.className='';st.textContent='Enter tickers, then Render.';blankPrice();syncPriceUi();return}
   st.className=''; st.textContent='Loading…';
   try{
-    const names=$('names').value.split(',').map(s=>s.trim());
+    const names=[]; // display-name field removed; empty uses ticker / company defaults
     const type=$('type').value, p=rangeParams();
     if(type==='ratio'&&syms.length!==2)throw Error('Ratio needs exactly two tickers: A,B');
     if(type==='candle'&&syms.length!==1)throw Error('Candles + volume needs one ticker. The option is off while several symbols are selected.');
@@ -646,8 +643,8 @@ document.addEventListener('pointerdown',e=>{if(!$('smabox').contains(e.target))s
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('smaMenu').hidden){smaSet(false);$('smaBtn').focus()}});
 window.addEventListener('resize',()=>{if(!$('smaMenu').hidden)smaPlace()});
 window.addEventListener('scroll',()=>{if(!$('smaMenu').hidden)smaPlace()},true);
-['tickers','names','title','start','end','smac'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();renderFresh()}}));
-['ftickers','fnames','ftitle','fy1','fy2'].forEach(id=>$(id)&&$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();frender()}}));$('dl').onclick=download;
+['tickers','title','start','end','smac'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();renderFresh()}}));
+['ftickers','ftitle','fy1','fy2'].forEach(id=>$(id)&&$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();frender()}}));$('dl').onclick=download;
 ['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf'].forEach(id=>$(id).onchange=()=>{syncPriceUi();render()});
 $('tickers').addEventListener('input',()=>{const n=priceSyms().length;if(n!==1&&$('type').value==='candle')$('status').textContent='Candles + volume needs one ticker.';syncPriceUi()});
 function annAdd(){const date=$('annDate').value,label=$('annLabel').value.trim().slice(0,24),note=$('annNote').value.trim().slice(0,80);
@@ -731,7 +728,7 @@ function blankShell(title,wmId){const o=base(title,'\u00a0',wmId);
 function blankFin(){flast=null;$('ftable').innerHTML='';$('fnote').textContent='';blankShell($('ftitle').value,'fwm')}
 async function frender(){
   const st=$('status');
-  const syms=$('ftickers').value.split(',').map(s=>s.trim().toUpperCase()).filter(Boolean), names=$('fnames').value.split(',').map(s=>s.trim());
+  const syms=$('ftickers').value.split(',').map(s=>s.trim().toUpperCase()).filter(Boolean), names=[];
   if(!syms.length){st.className='';st.textContent='Enter tickers, then Render.';blankFin();return}
   st.className=''; st.textContent='Loading SEC filings…';
   try{
@@ -904,7 +901,7 @@ async function vhrender(){const st=$('status');st.className='';st.textContent='L
     const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);vhlast=j;vhdraw()}
   catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();vhlast=null}}
 function vhdraw(){const j=vhlast,m=j.metric;
-  const syms=$('vtickers').value.split(',').map(x=>x.trim().toUpperCase()).filter(Boolean),nms=$('vnames').value.split(',').map(x=>x.trim());
+  const syms=$('vtickers').value.split(',').map(x=>x.trim().toUpperCase()).filter(Boolean),nms=[];
   const ok=j.series.filter(s=>s.points.some(p=>p[1]!=null)),nm=j.series.filter(s=>!s.points.some(p=>p[1]!=null));
   if(!ok.length){chart.clear();$('status').className='err';$('status').textContent='n/m for all: '+nm.map(s=>s.symbol+' ('+s.nm+')').join('; ');vlast=null;return}
   const pal=ok.length===1?[$('vcolor').value]:PALETTE;
@@ -933,7 +930,7 @@ async function vrender(){const st=$('status');
     const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);vlast=j;vdraw()}
   catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();vlast=null}}
 function vdraw(){const j=vlast,m=j.metric,col=$('vcolor').value,asc=$('vsort').value==='asc';
-  const syms=$('vtickers').value.split(',').map(x=>x.trim().toUpperCase()).filter(Boolean),nms=$('vnames').value.split(',').map(x=>x.trim());
+  const syms=$('vtickers').value.split(',').map(x=>x.trim().toUpperCase()).filter(Boolean),nms=[];
   const disp=s=>{const i=syms.indexOf(s);return i>=0&&nms[i]?nms[i]:SHORT[s]};
   if(!j.rows.length){chart.clear();$('status').className='err';$('status').textContent=`No ${j.label} values (n/m: ${j.nm.map(x=>x.symbol).join(', ')})`+(j.errors.length?' · '+j.errors.join('; '):'');return}
   const rows=j.rows.map(r=>({label:barLabel({symbol:r.symbol,name:r.name},disp(r.symbol)),v:r.value,r})).sort((a,b)=>asc?a.v-b.v:b.v-a.v);
@@ -949,7 +946,7 @@ function vdraw(){const j=vlast,m=j.metric,col=$('vcolor').value,asc=$('vsort').v
   chart.setOption(o,true);last={opt:o,asOf:oldest/1000};
   $('status').className='';$('status').textContent=`${rows.length} ranked · ${srcs} · as of ${etTime(oldest)}`+(j.nm.length?' · n/m: '+j.nm.map(x=>x.symbol+' ('+x.why+')').join(', '):'')+(j.errors.length?' · ⚠ '+j.errors.join('; '):'')}
 async function vrenderFresh(){VFRESH=true;try{await vrender()}finally{VFRESH=false}}
-$('vgo').onclick=vrenderFresh;$('vview').onchange=()=>{vsync();vrender()};$('vrange').onchange=vrender;$('vcsv').onclick=vcsv;vsync();$('vmetric').onchange=vrender;['vsort','vcolor','vnames'].forEach(id=>$(id).onchange=()=>$('vview').value==='time'?vhlast&&vhdraw():vlast&&vdraw());
+$('vgo').onclick=vrenderFresh;$('vview').onchange=()=>{vsync();vrender()};$('vrange').onchange=vrender;$('vcsv').onclick=vcsv;vsync();$('vmetric').onchange=vrender;['vsort','vcolor'].forEach(id=>$(id).onchange=()=>$('vview').value==='time'?vhlast&&vhdraw():vlast&&vdraw());
 $('vdl').onclick=()=>{if(!vlast)return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('vtitle').value||'valuation').replace(/[^\w]+/g,'_')+'.png';a.click()};
 async function hrenderFresh(){HFRESH=true;try{await hrender()}finally{HFRESH=false}}
 $('hgo').onclick=hrenderFresh;$('hsize').onchange=$('hshow').onchange=()=>hlast&&hdraw();
@@ -1008,7 +1005,7 @@ function wvcell(G,r,y,rh,fs){const h=Math.max(8,Math.round(rh*0.4)),y0=Math.roun
   if(over)G.push({type:'polygon',shape:{points:[[x0+w+3,y0-1],[x0+w+3,y0+h+1],[x0+w+3+h*0.6,y]]},style:{fill:yel},silent:true});
   G.push({type:'text',x:WV.tx,y,silent:true,style:{text:Math.round(r.rvol)+'%',fontSize:fs-3,fill:r.volPartial?T.src:T.text,textAlign:'right',textVerticalAlign:'middle'}});
   const html=wvtip(r);G.push({type:'rect',shape:{x:x0-4,y:y-rh/2,width:WV.tx-x0+8,height:rh},style:{fill:'rgba(0,0,0,0)'},z:200,onmousemove:e=>wtipShow(e,html),onmouseout:wtipHide})}
-function wopen(sym){$('tickers').value=sym;$('names').value='';$('type').value='line';setMode('prices')}
+function wopen(sym){$('tickers').value=sym;$('type').value='line';setMode('prices')}
 function wdraw(keepStatus){wtipHide();if(MODE!=='watch')return;
   let rows=WL.map((t,i)=>({...(WROWS[t]||{symbol:t,pending:true}),_i:i}));
   if(WSORT.k){const k=WSORT.k,d=WSORT.d;rows.sort((a,b)=>{let x=k==='name'?shortName(a.name,a.symbol):a[k],y=k==='name'?shortName(b.name,b.symbol):b[k];
@@ -1281,7 +1278,7 @@ window.__ptdraw=ptdraw;
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
 const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','ttickers','tmetric','ttitle','tcolor','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf','ptwm'];
 let VIEWS=[];
-function snap(name){const f={};for(const id of VFIELDS){const e=$(id);f[id]=e.type==='checkbox'?e.checked:e.value}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();if(MODE==='prices')o.ann=ANN.map(a=>({date:a.date,label:a.label,note:a.note||''}));return o}
+function snap(name){const f={};for(const id of VFIELDS){const e=$(id);if(!e)continue;f[id]=e.type==='checkbox'?e.checked:e.value}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();if(MODE==='prices')o.ann=ANN.map(a=>({date:a.date,label:a.label,note:a.note||''}));return o}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
 // Saved views are per tab: each view carries .mode and only shows/saves/loads in that tab.
 const VMODES=['prices','fin','heat','tre','val','watch','sent','pt'];
@@ -1375,15 +1372,13 @@ window.__vapply=vapply;window.__snap=snap;
       else if(ev.key==='Enter'){hide()}},true)}
 })();
 // Deep link only. Absent params leave the empty default.
-// Prices: ?tickers=AAPL,MSFT (optional &names=). Financials: ?ftickers= . Valuation: ?vtickers= .
+// Prices: ?tickers=AAPL,MSFT. Financials: ?ftickers= . Valuation: ?vtickers= .
+// Legacy display-name params (names, fnames, vnames) are ignored.
 function applyPriceQuery(){
   let q;try{q=new URLSearchParams(location.search)}catch(e){return}
   if(q.has('tickers'))$('tickers').value=q.get('tickers')||'';
-  if(q.has('names'))$('names').value=q.get('names')||'';
   if(q.has('ftickers'))$('ftickers').value=q.get('ftickers')||'';
-  if(q.has('fnames'))$('fnames').value=q.get('fnames')||'';
   if(q.has('vtickers'))$('vtickers').value=q.get('vtickers')||'';
-  if(q.has('vnames'))$('vnames').value=q.get('vnames')||'';
 }
 applyTheme();annDraw();vload();applyPriceQuery();
 window.__render=render; window.__frender=frender; window.__setMode=setMode; render();

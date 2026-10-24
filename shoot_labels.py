@@ -11,7 +11,7 @@ async def main():
     await pg.goto("http://localhost:18790/"); await pg.wait_for_timeout(1500)
     await pg.select_option("#theme","cream"); await pg.evaluate("applyTheme()")
     for t,tk,fn in CASES:
-      await pg.fill("#tickers",tk); await pg.fill("#names",""); await pg.select_option("#range","YTD"); await pg.select_option("#type",t)
+      await pg.fill("#tickers",tk); await pg.select_option("#range","YTD"); await pg.select_option("#type",t)
       await pg.evaluate("window.__render()"); await pg.wait_for_timeout(9000)
       print(fn,await pg.inner_text("#status"))
       url=await pg.evaluate("chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:T.bg})")
