@@ -1,106 +1,106 @@
 {
- "date": "2026-10-24",
- "theme": "Bitcoin tests the $80K cost basis of ETFs and treasuries as SpaceX borrows $40B, AI stocks slide, and oil spikes.",
+ "date": "2026-10-25",
+ "theme": "Bitcoin slips under $80K on Iran tensions as the Tesla-SpaceX merger push grows, AI infrastructure stocks slide on debt worries, and a Fed decision and the midterms are days away.",
  "items": [
   {
    "sheet": "bot experiments 2",
-   "tab": "12 ETF vs company BTC cost basis",
-   "title": "Bitcoin price vs what ETFs and public companies paid",
-   "image": "cotd/2026-10-24/01.png",
-   "picked": "Bitcoin is testing $80,000 this weekend after getting rejected near $85,000, and the most-shared posts point out that corporate treasuries and US spot ETFs paid roughly that much on average. This chart plots the price against both groups' average cost.",
-   "matters": "When the price sits on the big holders' cost basis, their whole position is roughly break-even, so this is the level where 'underwater treasuries' headlines start and where dip buyers tend to show up.",
-   "know": "As of Oct 14 (BTC $81,562) the sheet has US spot ETFs at a $76,645 average cost on 1.30M BTC and public companies at $78,881 on 1.30M BTC, a price-to-cost ratio of 1.06 and 1.03. Those are lower than the $80K-$81.5K figures in today's X posts, which use different methods, and the data is weekly and ends Oct 14.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1285597519"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "211 Big Tech debt for AI",
-   "title": "Borrowing for AI: total debt at Big Tech and CoreWeave",
-   "image": "cotd/2026-10-24/02.png",
-   "picked": "SpaceX is closing a $40B debt package led by Apollo and Goldman at around 7.75% to 8.3%, more than a point above its existing bonds, as lenders charge more for AI spending. This chart shows how fast the other big AI spenders have been borrowing.",
-   "matters": "Debt, not just cash flow, is now funding the AI build-out, and rising borrowing costs are what's behind the AI credit-risk worries on X this week.",
-   "know": "In the latest quarter (Jun 2026) the sheet has Amazon at $133.0B of debt, Oracle $129.5B, Alphabet $101.1B, Meta $83.7B, Microsoft $40.3B and CoreWeave $35.6B. Alphabet roughly doubled from $49.1B at FY 2025 and Amazon from $68.8B, while Microsoft's debt fell. SpaceX isn't in this tab, and the data stops at June, before the September-quarter filings.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1307998812"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "318 SPCX price-to-sales",
-   "title": "SPCX price-to-sales since the June IPO",
-   "image": "cotd/2026-10-24/03.png",
-   "picked": "SpaceX's new filing is the talk of X: net income topped $4B in the quarter, helped by a $561M paper gain on its Boring Company stake, and it's lining up a $40B loan. This chart shows what investors pay for each dollar of SpaceX revenue.",
-   "matters": "Even after the selloff, SPCX trades at a sales multiple far above almost any large company, so every earnings line and merger headline gets measured against that price.",
-   "know": "On Oct 20 the sheet has SPCX at $147.79, a $1,948B market cap and 84.6x trailing revenue of $23.04B, down from 109.9x on IPO day (Jun 12) and a peak of 144.4x on Jun 16. The data ends Oct 20, so it misses Thursday's roughly 9% drop, and check whether the $23.04B revenue input includes the new quarter before quoting the multiple.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1948267700"
+   "tab": "1 BTC midterm year",
+   "title": "Bitcoin in midterm years: 2026 vs 2014, 2018 and 2022",
+   "image": "cotd/2026-10-25/01.png",
+   "picked": "Bitcoin fell below $80,000 this weekend on U.S.-Iran tensions, touching about $79,000 and wiping out more than $200 million of leveraged bets in an hour. With the U.S. midterms on Nov 3, this chart lines up 2026 against past midterm years.",
+   "matters": "Past midterm years were brutal for bitcoin because they lined up with its post-halving bear markets. 2026 has held up far better so far, which is the main pushback against 'the cycle says it's over' posts.",
+   "know": "Indexed to the prior year-end close = 100, 2026 stood at 94 on Oct 18 (day 291), down about 6% for the year. On the same day 2014 was at 53, 2018 at 46 and 2022 at 42 (average 47), while the median of all years 2014-2025 was 154. Only three midterm years are in the sample, and the data ends Oct 18, so this weekend's drop isn't in it.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1497466824"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "80 Neocloud stocks 2026 YTD",
-   "title": "Neocloud stocks in 2026 (Dec 31, 2025 = 100)",
-   "image": "cotd/2026-10-24/04.png",
-   "picked": "Nebius is down more than 30% this month and IREN is back near its 2021 IPO price, even as executives say capacity is sold out and Nvidia's Jensen Huang says demand will solve their funding needs. This chart shows how far each neocloud has swung this year.",
-   "matters": "These stocks are the most leveraged way to trade AI demand, so their drop is a quick read on how worried the market is about debt-funded data center growth.",
-   "know": "As of the Oct 16 close, the sheet has Nebius up 98% for the year, TeraWulf up 2%, CoreWeave down 14%, Applied Digital down 26%, IREN down 29% and Cipher down 39%. Nebius was up as much as 236% (index 335.6 on Jun 17). The data ends Oct 16, so this week's further drop isn't in it, and prices come from Yahoo Finance.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=552939387"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "161 Nvidia P-S and P-E",
-   "title": "Nvidia valuation: price-to-sales and trailing P/E",
-   "image": "cotd/2026-10-24/05.png",
-   "picked": "Nvidia has slid about 12% over the past dozen sessions to around $211, and traders on X are watching $200 as the next support. This chart shows how expensive the stock is relative to its sales and earnings.",
-   "matters": "It answers the reply-guy claim that Nvidia is a bubble: the stock has fallen and earnings have grown, so the valuation is the cheapest it's been in years.",
-   "know": "At the October 2026 reading, Nvidia's trailing P/E is 27.0x, the lowest of any month in the sheet going back to June 2019, and price-to-sales is 17.2x. Both peaked in July 2023 at 242.8x and 45.0x. These are month-end values, October's is partial, and the P/E is trailing, not forward.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1547332232"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "193 Stocks vs 200-day average",
-   "title": "S&P 500 and Nasdaq-100 vs their 200-day averages",
-   "image": "cotd/2026-10-24/06.png",
-   "picked": "The S&P 500 is within about 2% of its record, but a Kobeissi Letter post that 59% of its stocks are down 20% or more is trending, and the Nasdaq just had its worst day since June. This chart shows how stretched the two indexes are versus their long-term trend.",
-   "matters": "Distance from the 200-day average is a simple gauge of how much room a selloff has before the trend breaks, and a narrowing gap shows momentum fading.",
-   "know": "On Oct 16 the S&P 500 was 5.3% above its 200-day average and the Nasdaq-100 5.2% above, down from 7.7% and 11.8% a week earlier. The Nasdaq-100 gap was 12.1% on Oct 2. The data is weekly and ends Oct 16, so it misses this week's tech selloff, and the 59% breadth figure comes from the X post, not this tab.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1003143037"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "13 Real oil price",
-   "title": "Oil in today's dollars (WTI, inflation-adjusted)",
-   "image": "cotd/2026-10-24/07.png",
-   "picked": "Oil jumped Friday after Houthi strikes in Saudi Arabia, with Brent settling at $116.72 and WTI at $103.27, the highest since April, and the Dow fell 653 points. This chart puts WTI in inflation-adjusted terms.",
-   "matters": "Oil is feeding straight into the inflation and Fed debate, and the real price shows whether today's level is truly extreme or just high in nominal terms.",
-   "know": "The sheet's latest monthly WTI average is $97.31 for September 2026 ($96.68 in August 2026 dollars), after $102.13 in May. In real terms that's below June 2022's $130.09 and far below the June 2008 record of $205.71. The data is monthly and stops at September, so October's spike isn't in it.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=639374194"
+   "tab": "90 Public cos vs US ETFs BTC",
+   "title": "Bitcoin held: public companies vs US spot ETFs",
+   "image": "cotd/2026-10-25/02.png",
+   "picked": "Glassnode data making the rounds this morning shows bitcoin treasury companies have nearly stopped buying, while ETF outflows added to this weekend's selling. This chart compares the two biggest groups of institutional holders.",
+   "matters": "Companies and ETFs each hold about 1.3M BTC, so when both stop adding at the same time, a big source of steady demand goes quiet.",
+   "know": "As of Oct 18 the sheet has public companies at 1,304,885 BTC and US spot ETFs at 1,283,680. Companies passed ETFs at the June 30 quarter-end, and since Sep 30 they added about 8,200 BTC while ETFs lost about 8,200. Strategy's 848,250 BTC is about 65% of the company total, many companies only report quarterly, and BitcoinTreasuries.net counts a smaller 1,285,230.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=956514556"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "24 Texas robotaxi fleets",
-   "title": "Texas robotaxi registrations: Tesla vs Waymo and others",
-   "image": "cotd/2026-10-24/08.png",
-   "picked": "New Texas DMV filings show Tesla registered 69 more Cybercabs, and Tesla expanded its Austin robotaxi zone to the Grand Prix track area this weekend. This chart compares registered robotaxi fleets in Texas.",
-   "matters": "Fleet size is the cleanest public scoreboard in the Tesla-vs-Waymo robotaxi race, and Cybercabs show Tesla shifting from Model Ys to its purpose-built vehicle.",
-   "know": "As of the sheet's Oct 11 check, Tesla had 739 vehicles registered (420 Model Y and 319 Cybercabs), against Waymo's 1,185, Avride's 344 and Zoox's 63. That's stale: today's posts put Tesla at 420 Cybercabs out of 927. These are registrations, not active vehicles, and the registry doesn't say which city they run in.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=751548644"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "99 MSTR BTC per share",
-   "title": "Strategy: bitcoin per diluted share vs share count",
-   "image": "cotd/2026-10-24/09.png",
-   "picked": "Michael Saylor is making the rounds saying bitcoin per share is Strategy's north star, and Strategy says it now holds 848,517 BTC after another small buy. This chart tracks how many sats each diluted share owns.",
-   "matters": "Bitcoin per share is what MSTR holders actually own, so it shows whether selling new shares to buy bitcoin is adding to or diluting each holder's stake.",
-   "know": "On Oct 12 the sheet has 187,750 sats per diluted share on 451.8M assumed diluted shares and 848,250 BTC. That's below the 220,429 peak on Jun 1, as the share count rose from 382.8M while holdings barely grew, but up from 158,827 in January 2025. The tab ends Oct 12, and diluted shares are an estimate.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1024131985"
+   "tab": "84 STRC buybacks share of volume",
+   "title": "Strategy's STRC buybacks as a share of weekly STRC volume",
+   "image": "cotd/2026-10-25/03.png",
+   "picked": "Posts on Strategy's new capital plan this weekend point to $193.1M of STRC preferred repurchased in a single week and the buyback authorization raised to $3B. This chart shows how much of STRC's trading those buybacks make up.",
+   "matters": "When the issuer itself is a big share of the buying, it props up STRC's price, and that matters for anyone holding the preferred for its yield.",
+   "know": "In the week of Oct 12, Strategy bought back 1,938,780 STRC shares for $193.1M, 19.6% of the 9.91M shares traded. The record was 29.6% in the week of Oct 5, and the total since Jul 20 is 18.9M shares for $1,838.3M. The data comes from weekly 8-Ks and ends with the Oct 12 week. This image was redrawn from the sheet because the Drive export stopped at Oct 5.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=978808662"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "30 Who holds bitcoin",
-   "title": "Who holds the 20.1M bitcoin",
-   "image": "cotd/2026-10-24/10.png",
-   "picked": "The White House is pushing ahead on a strategic bitcoin reserve built from the roughly 328,000 BTC the US already holds, and CME just posted record bitcoin futures volume. This chart shows how the supply splits among exchanges, ETFs, companies and governments.",
-   "matters": "It puts the government reserve in context next to the ETFs and corporate treasuries that have absorbed so much of the supply since 2024.",
-   "know": "As of Oct 14 the sheet has 2.68M BTC on exchanges, 1.30M in US spot ETFs, 1.30M at public companies, 0.60M with governments (US 328,372 as read Oct 11) and an estimated 1.1M for Satoshi, out of 20.1M. The government split is only in the latest row, and Satoshi's coins are an estimate, not a known wallet.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1543869427"
+   "tab": "65 US robotaxi fleets by state",
+   "title": "US robotaxi fleets by company and state",
+   "image": "cotd/2026-10-25/04.png",
+   "picked": "Tesla's Texas robotaxi fleet is nearing 1,000: Texas DMV records show about 970 vehicles, including 463 Cybercabs, nearly triple the 314 it had on Sep 1. This chart shows where that sits against Waymo and the rest of the US field.",
+   "matters": "Tesla is growing fastest, but Waymo is still several times bigger, so this chart is the reality check for 'Tesla has caught up' posts.",
+   "know": "As of Oct 11, the Platform Aeronaut tracker counted Waymo at 4,449 vehicles (California 1,906, Texas 1,185, Arizona 723), Tesla at 921 (Texas 739, California 164, Florida 18) and Avride at 344, out of 6,090 US robotaxis. These are tracker estimates, not company totals, so Tesla's newer Cybercab registrations aren't included, and the counts don't show how many cars run without a safety driver.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=54674006"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "198 Musk Inc vs mega caps",
+   "title": "'Musk Inc.' (Tesla + SpaceX) vs Nvidia, Apple and Microsoft",
+   "image": "cotd/2026-10-25/05.png",
+   "picked": "A retail petition backing a Tesla-SpaceX merger gathered signatures covering more than 17M shares in 48 hours, after both boards set up independent committees to study a combination valued at roughly $3.5-3.7 trillion. This chart shows the two companies' combined market value against the largest stocks.",
+   "matters": "A merged company would rank among the very biggest in the world, so this chart shows the scale of what the committees are weighing.",
+   "know": "On Oct 20 the sheet has Tesla plus SpaceX at $3.42T ($1.48T + $1.95T), behind Nvidia at $5.22T and Apple at $4.95T and just ahead of Microsoft at $3.95T. The combined value peaked at $4.39T on Jun 16. The chart image runs through Oct 16, the data misses last week's SPCX selloff, and simply adding the two caps double-counts Tesla's SpaceX stake.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1771590089"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "319 SpaceX free cash flow",
+   "title": "SpaceX free cash flow (operating cash flow minus capex)",
+   "image": "cotd/2026-10-25/06.png",
+   "picked": "SpaceX's new filing showed net income above $4B for the quarter, helped by a $561M paper gain on its Boring Company stake, as it lines up a $40B debt package. This chart shows the cash side of the same business.",
+   "matters": "Profits look strong, but capex is soaking up far more cash than operations bring in, which explains the borrowing.",
+   "know": "For the 12 months to Sep 30 2026, the sheet has operating cash flow of $15.8B, capex of $55.0B and free cash flow of -$39.2B. That compares with -$14.0B in 2025, -$5.4B in 2024 and +$0.1B in 2023. This image was redrawn from the sheet because the Drive export still showed the 12 months to June.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=467293370"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "227 Private AI lab valuations",
+   "title": "Private AI lab valuations: OpenAI, Anthropic and xAI",
+   "image": "cotd/2026-10-25/07.png",
+   "picked": "Anthropic is heading toward a mid-November IPO, with reported talk of a $1.5-2 trillion valuation, even as two key Claude Code engineers announced their exits this weekend. This chart shows how fast the private AI labs' values have climbed.",
+   "matters": "The IPO will be the first public market price on a frontier AI lab, and it will reset how investors value OpenAI, xAI and the AI chip and cloud names that sell to them.",
+   "know": "As of Sep 2026 the sheet has Anthropic at $965B (since May 2026), OpenAI at $852B (since Mar 2026) and xAI at $250B. Anthropic was $61.5B in Mar 2025, so its value is up about 16x since then. These are reported post-money round values carried forward month to month on a log scale, and the IPO range is from press reports, not this tab.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1459587255"
+  },
+  {
+   "sheet": "bot experiments 2",
+   "tab": "74 Neocloud quarterly revenue",
+   "title": "Neocloud quarterly revenue: CoreWeave, Nebius and IREN",
+   "image": "cotd/2026-10-25/08.png",
+   "picked": "IREN closed at $24.91 on Oct 23, below its 2021 IPO price of $28, while Nebius and CoreWeave slid on worries about debt and cash flow at AI data center builders. This chart shows the revenue those stocks rest on.",
+   "matters": "Revenue is still climbing fast at CoreWeave and Nebius, so the selloff is about funding and margins, not demand. IREN's falling revenue reflects it winding down bitcoin mining before AI cloud revenue ramps up.",
+   "know": "In Q2 2026 CoreWeave had $2,575M of revenue (up from $1,212M a year earlier), Nebius $582.3M (up from $105.1M) and IREN $137M (down from a $240M peak in Q3 2025). The data runs through Q2 and was compiled Oct 12, so Q3 results are still to come (IREN reports Nov 5), and IREN's quarters are mapped from its June fiscal year.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=971499761"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "272 Midterm-year S&P path",
+   "title": "S&P 500 in 2026 vs the average midterm year since 1974",
+   "image": "cotd/2026-10-25/09.png",
+   "picked": "With midterms on Nov 3, charts showing that the S&P 500 has risen in every November-to-June stretch after a midterm since 1942 are trending. This chart shows where 2026 sits on the usual midterm-year path.",
+   "matters": "2026 has bucked the usual midterm slump, so the question is whether the seasonal year-end rally still has room to run from a higher starting point.",
+   "know": "On trading day 199 (Oct 16), 2026 stood at 111.89 (prior year-end = 100), against 97.84 for the average midterm year since 1974 and 106.27 for the average of all years. The average midterm year ends at 101.86, so it gains about 4% from this point. The data ends Oct 16, the averages hide big differences between years, and the 21-for-21 post-midterm stat comes from X posts, not this tab.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1636664411"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "182 Real fed funds rate",
+   "title": "Real fed funds rate (fed funds minus core PCE inflation)",
+   "image": "cotd/2026-10-25/10.png",
+   "picked": "The Fed decides on rates Wednesday, Oct 28, with 94 of 100 economists in a Reuters poll expecting a hold at 3.75-4.00% after September's hike, and September core PCE is due Thursday. This chart shows how tight policy really is once inflation is subtracted.",
+   "matters": "A real rate just above zero means policy is barely restrictive with core inflation near 3%, which is why markets are pricing another hike in December.",
+   "know": "In Aug 2026 the fed funds rate averaged 3.63% and core PCE inflation was 3.01%, giving a real rate of 0.62%, up from a low of 0.47% in May but down from 1.48% in Aug 2025. The data ends in August, so it misses the September 25bp hike, and it uses the monthly average effective rate.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=902803117"
   }
  ]
 }
