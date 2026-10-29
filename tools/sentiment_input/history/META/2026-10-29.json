@@ -1,0 +1,454 @@
+{
+ "symbol": "META",
+ "start": "2026-10-22T11:00:00Z",
+ "end": "2026-10-29T11:00:00Z",
+ "src": "x-rolling7",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "META (stock OR shares OR Zuckerberg) -is:retweet -is:reply lang:en",
+  "META (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Julian_Trades1",
+   "url": "https://x.com/Julian_Trades1/status/2114166694914531698",
+   "date": "2026-10-25",
+   "text": "$META announced a 2-for-1 stock split and will be creating a new class of non-voting shares, Class C, similar to $GOOGL &amp; $GOOG \n\nZuckerberg made a big tax deal to stay in California for 8 years.\n\nWhat are your thoughts on this stock split? Will it affect how the stock trades? https://t.co/xIMMVxyLK2 https://t.co/rAKte03807"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DeJesusMorrobel",
+   "url": "https://x.com/DeJesusMorrobel/status/2114429627057971356",
+   "date": "2026-10-25",
+   "text": "Mark Zuckerberg struck a deal with Meta for a stock split creating non-voting Class C shares, granting him flexibility to sell stock to fund the potential California’s $11B tax bill while maintaining voting control and agreeing to stay in CA for 8 years."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "DecodePulseHQ",
+   "url": "https://x.com/DecodePulseHQ/status/2114206823721091108",
+   "date": "2026-10-25",
+   "text": "Meta just burned cash for the first time since its 2012 IPO.\n\nQ3 AI capex: $34.91B\nQ3 operating cash flow: $32.79B\nFree cash flow: -$2.12B\n\nIts new non-voting \"Class C\" shares let Meta sell billions in stock without Zuckerberg giving up any control. https://t.co/M9b6LPPRA9"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "trusencecom",
+   "url": "https://x.com/trusencecom/status/2114292480581472621",
+   "date": "2026-10-25",
+   "text": "Meta creates non-voting Class C stock, a move tied to Zuckerberg's concerns over California's billionaire tax\n\nThe new shares could let Zuckerberg raise cash for a possible tax bill while keeping his voting control of the company. https://t.co/7XkmKugrMg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 74,
+   "user": "notanotherquant",
+   "url": "https://x.com/notanotherquant/status/2114110909014475035",
+   "date": "2026-10-24",
+   "text": "$META new non voting shares let Zuckerberg keep control while Meta can raise money and he can sell some stock.\n\nLooking more into the filing Meta’s board members did push back on the size of the share dividend. Zuckerberg wanted 20 new shares for every share. The board offered 1 https://t.co/uclyRsjcmi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "NewsTongueX",
+   "url": "https://x.com/NewsTongueX/status/2113820103661777075",
+   "date": "2026-10-24",
+   "text": "🔴 Zuckerberg forced Meta to create stock class to shield him from California wealth tax\n\nMark Zuckerberg threatened to publicly list his Palo Alto home for sale Sept. 13 unless Meta's board approved a stock restructuring by Sept. 9. Meta announced Wednesday it will issue a new https://t.co/ODkZqhKCok"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "ttown1492",
+   "url": "https://x.com/ttown1492/status/2113802645890818497",
+   "date": "2026-10-24",
+   "text": "Prop 40 proves it again: the person you aim a tax at isn't who pays it.\n\nMeta is issuing Zuckerberg new non-voting shares he can sell to cover his Prop 40 bill. New shares dilute every other shareholder. The tax is not paid by the individual it’s paid by everyone who owns Meta https://t.co/bdlcNyv8so"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "Olympusperspect",
+   "url": "https://x.com/Olympusperspect/status/2114002221075431477",
+   "date": "2026-10-24",
+   "text": "🏛️ All I see on X this week is people yelling about California's billionaire tax. The part I find more interesting is how Meta is handling it.\n\n🗳️ Prop 40 is a one-time 5% tax on the net worth of Californians worth over $1 billion. Voters decide Nov 3. For Zuckerberg that could"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "my_friend_jimi",
+   "url": "https://x.com/my_friend_jimi/status/2113813013321114082",
+   "date": "2026-10-24",
+   "text": "TBPN (@tbpn) on @Meta's new Class C stock: one C share for every A or B share at the start of next year. Basically a 2-for-1 split.\n\nDoesn't make Zuckerberg richer, doesn't dilute anyone. Not the first try: Facebook proposed non-voting Class C shares in 2016. $META https://t.co/FJPDdQcoWn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "timeless6500",
+   "url": "https://x.com/timeless6500/status/2113918031630147638",
+   "date": "2026-10-24",
+   "text": "if you own meta you just got demoted from owner to passenger.\n\na stock split creates no new wealth. meta's 2 for 1 doubles your shares and halves the price so your money is worth the same before and after. nothing was created. but the new shares carry no voting rights. so meta"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 109,
+   "user": "Sam_Badawi",
+   "url": "https://x.com/Sam_Badawi/status/2115084080408834544",
+   "date": "2026-10-27",
+   "text": "Meta Platforms $META and Mark Zuckerberg face a new lawsuit from a pension fund challenging the company's stock restructuring, which would allow Zuckerberg to sell billions in shares while retaining voting control.\n\nThe lawsuit raises questions about shareholder fairness as Meta https://t.co/HZK3mZgLyr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "zubiqo",
+   "url": "https://x.com/zubiqo/status/2113950536525660264",
+   "date": "2026-10-24",
+   "text": "NEW: Meta $META board members reportedly threatened to resign over Mark Zuckerberg's demands for a stock-heavy pay raise as AI spending drags the company into a $2.12B negative free cash flow, the WSJ reports.\n\nDocuments show a three-member board negotiation team prepared a https://t.co/VPcUJRklDD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ArenbergPaul",
+   "url": "https://x.com/ArenbergPaul/status/2113951093210128778",
+   "date": "2026-10-24",
+   "text": "🇺🇸 Meta wants its shareholders to pay for its AI race with a new class of non-voting shares that could raise hundreds of billions of dollars, and the market answered by knocking more than 7% off the stock in a single day.\n\nMeta is burning cash for the first time in more than a https://t.co/wsLZ5quZCH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "AlchemyJ_io",
+   "url": "https://x.com/AlchemyJ_io/status/2115261460012204543",
+   "date": "2026-10-28",
+   "text": "$META (Meta): Massive Equity Raise and AI Hardware Push - Boosted planned equity offering to almost $98 billion, consisting of $12.5 billion in preferred shares and a $60 billion At-The-Market share sale program involving Class C nonvoting shares.\n\nPart 1 ($25 billion) was five"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "WBuzzer",
+   "url": "https://x.com/WBuzzer/status/2115119197923533099",
+   "date": "2026-10-27",
+   "text": "https://t.co/qhqHLsv39D\n\nUnder a new share deal Meta would give existing shareholders nonvoting stock. Mark Zuckerberg could sell some of his new shares to fund a possible California wealth-tax bill.\n\n#Meta #Facebook #Instagram #MarkZuckerberg #California https://t.co/HBlTcMXnER"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SavaSavvich",
+   "url": "https://x.com/SavaSavvich/status/2115496368756425038",
+   "date": "2026-10-28",
+   "text": "Mark Zuckerberg $meta had been sued by a pension fund seeking to block a share restructuring, shares class C, that would allow him to sell billions of dollars in stock while maintaining control of the social media company."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DrAStriegel",
+   "url": "https://x.com/DrAStriegel/status/2115512876454813909",
+   "date": "2026-10-28",
+   "text": "Meta will create non-voting shares so Mark Zuckerberg can sell stock to pay California's proposed one-time 5% billionaire tax without losing control. In return, he commits to living in California for eight years. Voters decide on Proposition 40 on Nov. 3.\n\nhttps://t.co/Pa54pny132"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "DannyKPolitics",
+   "url": "https://x.com/DannyKPolitics/status/2115202722622218310",
+   "date": "2026-10-27",
+   "text": "BREAKING: Pension fund sues Zuckerberg over $24 billion Meta stock restructuring\n\nSteamfitters Local 449 Pension Fund has sued Mark Zuckerberg and Meta’s board in Delaware, seeking to block a restructuring that could allow Zuckerberg to sell approximately $24 billion in stock"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Derivdotcom",
+   "url": "https://x.com/Derivdotcom/status/2114926306005491965",
+   "date": "2026-10-27",
+   "text": "$META is asking the market for up to $95B in new stock offerings to fund its AI build-out. It announced this on 26 Oct, days after the shares slid over 7% on worries about that same spending.\n\nMeta raised the lower end of its capex forecast range and the stock fell, Reuters https://t.co/eCVPQoRd7O"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "shoebhakim",
+   "url": "https://x.com/shoebhakim/status/2113582202944725154",
+   "date": "2026-10-23",
+   "text": "Why Meta’s stock restructuring for Zuckerberg is a corporate governance red flag for minority shareholders.\n \nCalifornia voters are deciding on a one-time 5% tax on billionaires. In response, Mark Zuckerberg reportedly considered moving out of the state, and Meta’s board just https://t.co/gqFRp3oINH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Derivdotcom",
+   "url": "https://x.com/Derivdotcom/status/2114928286618824745",
+   "date": "2026-10-27",
+   "text": "$META is asking the market for up to $95B in new stock offerings to fund its AI build-out. It announced this on 26 Oct, days after the shares slid over 7% on worries about that same spending.\n\nMeta raised the lower end of its capex forecast range and the stock fell, Reuters"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AlexVoss88",
+   "url": "https://x.com/AlexVoss88/status/2115192635447238874",
+   "date": "2026-10-27",
+   "text": "Meta fell nearly 2% Monday. Because it told shareholders the truth.\n\nMeta plans to raise up to $95 billion in waves of stock offerings to pay for AI infrastructure. It already hiked its AI spending forecast once and disappointed investors last week. Now it wants shareholders to"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "PiQMarkets",
+   "url": "https://x.com/PiQMarkets/status/2113256103043834207",
+   "date": "2026-10-22",
+   "text": "Meta investors to get free shares if Mark Zuckerberg hits 'extraordinary' targets\n\nMeta Platforms Inc. shareholders will receive free Class C shares if CEO Mark Zuckerberg meets ambitious stock price targets. The company stated in a filing that if its Class C shares double from"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "ZacksResearch",
+   "url": "https://x.com/ZacksResearch/status/2113686433638854658",
+   "date": "2026-10-23",
+   "text": "Meta is creating a new class of nonvoting shares as CEO Mark Zuckerberg commits to remaining in California for eight years amid a proposed billionaire wealth tax.\n\n“Meta plans to issue nonvoting shares to fund AI investments without diluting CEO Mark Zuckerberg's control,” said"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "OctansCapital",
+   "url": "https://x.com/OctansCapital/status/2113635783605104691",
+   "date": "2026-10-23",
+   "text": "Meta ($META) approved a nonvoting Class C stock dividend that lets Mark Zuckerberg sell up to 20% of those new shares, or 10% of his total economic stake, without eroding his roughly 60% voting control. For investors, corporate governance remains firmly tethered to one person."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "eansky1",
+   "url": "https://x.com/eansky1/status/2113260380843843632",
+   "date": "2026-10-22",
+   "text": "Good morning..  ☕️ \n@everyone \n\nPREMARKET BRIEF — OCT. 22, 2026\n\nMARKET\n\n* ESZ26 7,729.50, -0.91%; NQZ26 29,514.75, -1.64%. Tech leads lower. \n* VIX 18.25, +1.57 points: risk-off. 10Y yield 5.04%, down 8 bps: defensive buying, but not helping growth stocks yet. \n* Breadth: https://t.co/Vc7t0l2BJ3"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "Nigellamb",
+   "url": "https://x.com/Nigellamb/status/2114375002925805972",
+   "date": "2026-10-25",
+   "text": "⚡ 3 STOCKS I'M WATCHING FOR NEXT WEEK.\n\nThe next big move may come from the stocks everyone is debating right now.\n\n🔥 $TSLA\nBullish scenario: Reclaim $380 → $390–$395 becomes the next target zone.\nBearish scenario: Lose $365 → $355–$360 comes into focus.\n📉 $META\nBullish"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "TajVincent",
+   "url": "https://x.com/TajVincent/status/2115062918416929034",
+   "date": "2026-10-27",
+   "text": "📊 PRE-MARKET OUTLOOK &amp; KEY LEVELS — Tuesday, October 27, 2026 (8:32 AM Eastern/NYSE)\n\n⚖️ NEUTRAL, PIN-PRONE, CHOP RISK. All three indices closed yesterday in neutral territory, but not the same kind of neutral. $SPY is the cleanest (+1.5, no divergence), $SPXW is sitting right https://t.co/0oME6zZUO8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "surfer_ai",
+   "url": "https://x.com/surfer_ai/status/2115448576323002642",
+   "date": "2026-10-28",
+   "text": "Which setups have actual room to run today?  NFA and it is FOMC.  Probably just watch today🎯📊\n\nRan my \"Expansion Delta Gap\" scan this morning with FINN (EZPZ Trading’s AI connector for TradingView). \n\nTHE RULES:\n1️⃣ Proximity: Within 1.0% of 0D Gamma Flip or VWAP\n2️⃣ Alignment:"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 16,
+   "user": "Bearlovesbull",
+   "url": "https://x.com/Bearlovesbull/status/2114592682349621562",
+   "date": "2026-10-26",
+   "text": "🚨 $QQQ $SPY $SPX: QQQ is testing key demand near $700. Structure remains bearish until $720 is reclaimed.\n\n$QQQ is sitting around $704 after a series of lower highs and lower lows from the $762 peak. Sellers still control the short term structure.\n\n1. $700–704 | KEY DEMAND ZONE https://t.co/Mv8UZIEmR0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "seatrips",
+   "url": "https://x.com/seatrips/status/2115367195039445315",
+   "date": "2026-10-28",
+   "text": "Deep dive: $META NEUTRAL\n\nBase 45% · Bear 30% · Bull 25%\nBullish weekly trend vs bearish daily break after capex shock\nFloor 589, ceiling 633.5-638.1 defines the range\n\nVol watch: FOMC today\n\n#Meta #BigTech\n\nIndependent technical and fundamental research. Not investment advice. https://t.co/vzBHJdhUoX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115202127740223672",
+   "date": "2026-10-27",
+   "text": "Concealing Baby Swallow A Bullish Reversal Pattern \nhttps://t.co/KojxzXGprp\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2114871447805903208",
+   "date": "2026-10-27",
+   "text": "Descending Triangle - A Bearish Continuation Pattern \nhttps://t.co/czuDQoIAvH\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "EthanPX00",
+   "url": "https://x.com/EthanPX00/status/2114996288899146007",
+   "date": "2026-10-27",
+   "text": "🚨 NVIDIA × META: A $3B AI Bet. Bullish or risky?\n\n NVIDIA plans to invest $3B in Meta’s equity offering as the two deepen their AI partnership.\n\n Stock moves on Oct. 26: $NVDA +2.4% | $META −1.9%\n Bull case: More AI infrastructure demand could support NVIDIA’s long-term growth. https://t.co/gJDnEogZE2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115266390806634852",
+   "date": "2026-10-28",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8HeJG\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115519898134970540",
+   "date": "2026-10-28",
+   "text": "Live Walkthrough Gold!\nhttps://t.co/ZfXoE0Ekwx\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115521607292813817",
+   "date": "2026-10-28",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8HeJG\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115513428110442725",
+   "date": "2026-10-28",
+   "text": "Live Walkthrough Gold!\nhttps://t.co/ZfXoE0DMGZ\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115502434361716994",
+   "date": "2026-10-28",
+   "text": "Live Walkthrough Silver! \nhttps://t.co/pHalj3KSlC\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115270198714638693",
+   "date": "2026-10-28",
+   "text": "The Dragonfly Doji\nhttps://t.co/7vdAH4oMrz\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115447493597253914",
+   "date": "2026-10-28",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8HeJG\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115467123120312466",
+   "date": "2026-10-28",
+   "text": "Trading Like Beginner Vs Trading Like a Pro\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115434910915699034",
+   "date": "2026-10-28",
+   "text": "Trading Like Beginner Vs Trading Like a Pro\nhttps://t.co/naJmNAHUgT\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115528024162500780",
+   "date": "2026-10-28",
+   "text": "Live Walkthrough Silver! \nhttps://t.co/yVkE0gfszc\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115519935413961213",
+   "date": "2026-10-28",
+   "text": "The Dragonfly Doji\nhttps://t.co/7vdAH4oMrz\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115518947772772818",
+   "date": "2026-10-28",
+   "text": "Live Walkthrough Silver! \nhttps://t.co/yVkE0gg0oK\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115438182414094341",
+   "date": "2026-10-28",
+   "text": "The Dragonfly Doji\nhttps://t.co/7vdAH4oeC1\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115498429602464202",
+   "date": "2026-10-28",
+   "text": "Live Walkthrough Gold!\nhttps://t.co/ZfXoE0Ekwx\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115471904417153401",
+   "date": "2026-10-28",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8HeJG\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  }
+ ]
+}

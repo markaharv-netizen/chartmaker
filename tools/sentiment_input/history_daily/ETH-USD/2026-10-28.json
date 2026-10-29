@@ -1,0 +1,237 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-28T00:00:00Z",
+ "end": "2026-10-29T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 117,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2115292206194139590",
+   "date": "2026-10-28",
+   "text": "Bitcoin’s first green close after five red days has me feeling bullish reversal energy, but I’m not calling a confirmed turn. BTC remains inside its bull flag and bearish consolidation. Its four-hour TBT bullish divergence carries less weight while the slow line points down; I https://t.co/SPKjpVFbCh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115382923683852590",
+   "date": "2026-10-28",
+   "text": "ethereum:0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce — Shiba Inu 🐕\n\nOver 3 MILLION holders.\n\nNearly 590 TRILLION tokens.\n\nA multibillion-dollar valuation.\n\nAnd an ecosystem that has struggled to turn its enormous community into meaningful on-chain revenue.\n\nEveryone remembers https://t.co/1rFnCDuVcN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "signalcorevip",
+   "url": "https://x.com/signalcorevip/status/2115458687355539754",
+   "date": "2026-10-28",
+   "text": "📊 24H Market Analysis @ October 28, 2026\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nThe dominant price action narrative indicates a market under significant institutional selling pressure, masked by minor intra-day upticks.\n\nDespite BTC and ETH showing slight"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 89,
+   "user": "DrEvilofCrypto",
+   "url": "https://x.com/DrEvilofCrypto/status/2115541149968716244",
+   "date": "2026-10-28",
+   "text": "One of the biggest reasons I'm bullish on ethereum:0x6112c3509a8a787df576028450febb3786a2274d is how @AxonDAO is building an ecosystem that could thrive through different crypto market cycles.\n\nFor example, look at the business models behind the many launchpads in crypto, many of https://t.co/tORaSVhCAS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Asiftahsin10",
+   "url": "https://x.com/Asiftahsin10/status/2115499877983801737",
+   "date": "2026-10-28",
+   "text": "ETH Technical Outlook: Ethereum Faces Selling Pressure Near $2,333 as Support Comes Into Focus\n\nEthereum (ETH) is trading around $2,333 after facing rejection from the $2,385–$2,420 resistance region. Following a strong recovery from the June low near $1,501, ETH has lost https://t.co/l1ABY0n7tc"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 44,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115386172864405596",
+   "date": "2026-10-28",
+   "text": "$PEPE — Pepe 🐸\n\nNo staking yield.\nNo protocol revenue.\nNo claim on a profitable business.\n\nYet $PEPE became one of crypto's most recognizable meme assets.\n\nHere's the uncomfortable question.\n\nIs PEPE an undervalued cultural asset waiting for the next meme-coin cycle, or is its https://t.co/7CKEfV1MpC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115388840408187173",
+   "date": "2026-10-28",
+   "text": "ethereum:0xda5e1988097297dcdc1f90d4dfe7909e847cbef6 — World Liberty Financial 🦅\n\nA Trump-linked crypto project.\n\nA dollar-backed stablecoin.\n\nA multibillion-dollar token valuation.\n\nAnd a governance token that still raises one massive question:\n\nWHO ACTUALLY CAPTURES THE MONEY? https://t.co/9nJDumnr8n"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "simple_crypto7",
+   "url": "https://x.com/simple_crypto7/status/2115368338801197364",
+   "date": "2026-10-28",
+   "text": "TOM LEE JUST DROPPED AN INSANELY BULLISH PREDICTION ON CNBC.\n\nHE SEES Q4 AS THE BEGINNING OF THE BIGGEST BULL MARKET IN HISTORY.\n\nBITCOIN: $200,000\nETHEREUM: $10,000\nSOLANA: $500\n\nTRILLIONS IN POTENTIAL MARKET UPSIDE. https://t.co/GAkqxRoSs3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115393358072025502",
+   "date": "2026-10-28",
+   "text": "ethereum:0xf57e7e7c23978c3caec3c3548e3d615c346e79ff — Immutable 🎮\n\n700+ games building on its infrastructure.\n\nMore than 220 MILLION transactions.\n\nA token trading roughly 98.5% below its all-time high.\n\nAnd a major change to the investment thesis:\n\nThe scheduled token unlock https://t.co/c6wl5Ld7FR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "web3_valuescan",
+   "url": "https://x.com/web3_valuescan/status/2115343728462434784",
+   "date": "2026-10-28",
+   "text": "ethereum:0xc477b6dfd26ec2460b3b92de18837fd476ea7549 $0.00824 (−3.36% 24H)\n\nFirst Alert 10/28 15:00 @ $0.007657 → Max +13.10% | Status: LongSignal tape\n\nAlpha cluster\n\nCurrent $0.00824 — testing resistance after clearing the prior 4H highFlows\n\nContracts: 24H +$2.86M | 12H https://t.co/PKsimnpR1s"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115389138002387413",
+   "date": "2026-10-28",
+   "text": "ethereum:0xb50721bcf8d664c30412cfbc6cf7a15145234ad1 — Arbitrum 🔵\n\nOne of Ethereum's biggest Layer 2 ecosystems.\n\nBillions in secured assets.\n\nMajor DeFi applications.\n\nA recognized institutional scaling narrative.\n\nYet ARB holders face an uncomfortable reality.\n\nThe network can https://t.co/sKRKYt4hhY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115383103091102153",
+   "date": "2026-10-28",
+   "text": "ethereum:0x57e114b691db790c35207b2e685d4a43181e6061 — Ethena 🔥\n\nEthena has built a multibillion-dollar synthetic dollar ecosystem.\n\nBillions in collateral.\nMillions in monthly economic activity.\nA stablecoin designed to generate yield.\n\nYet https://t.co/TKcHoAkSvh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2115534989341208778",
+   "date": "2026-10-28",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• JPMorgan, Coca-Cola, Dell Among 33 Objectors to OKX-ICE Tokenized Shares\n• Mirae Issues Tokenized Notes on Solana to Institutional…\n• https://t.co/onTerbJj48 launches Hyperliquid-powered perpetuals for crypto, stocks and https://t.co/oRsfB3e1iq"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2115336603849925066",
+   "date": "2026-10-28",
+   "text": "ethereum:0x68749665ff8d2d112fa859aa293f07a622782f38 — Triangle Breakdown Signals Bearish Pressure! 🔺📉\n\nethereum:0x68749665ff8d2d112fa859aa293f07a622782f38 is trading near $4,027.71 on the 4H chart, with price breaking below the triangle’s support zone around $4,080.\n\nBears are https://t.co/VNbpcVIuIj"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "ElevenSmitt8",
+   "url": "https://x.com/ElevenSmitt8/status/2115389450796646745",
+   "date": "2026-10-28",
+   "text": "Ethereum is retesting a major support zone after breaking it to the downside. Confirmation is still needed for either a breakdown or a reclaim. Technically it stays bearish until the red zone is recovered. https://t.co/4AYQFXg3cS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115392046861300202",
+   "date": "2026-10-28",
+   "text": "ethereum:0xfe0c30065b384f05761f15d0cc899d4f9f9cc0eb — https://t.co/oOt4q8tNeq 🟣\n\nNearly $5 BILLION in DeFi assets.\n\nMillions in monthly protocol revenue.\n\nAnd a token trading more than 92% below its all-time high.\n\nBut here's what makes ETHFI different.\n\nhttps://t.co/oOt4q8tNeq https://t.co/ovWujNmPnH"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 47,
+   "user": "ZordXBT",
+   "url": "https://x.com/ZordXBT/status/2115380349131984916",
+   "date": "2026-10-28",
+   "text": "$ETH is actually retesting this major area of support after breaking it towards the downside.\n\nWe need some kind of confirmation here for either breakdown or breakout. \n\nTechnically it's bearish until this red zone is re-claimed.\n\n#ethereum #ethusdt https://t.co/aimP3cXYCj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115385695829451225",
+   "date": "2026-10-28",
+   "text": "ethereum:0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3 — Ondo Finance 🏦\n\nOver $4 BILLION in tokenized assets.\n\nHundreds of traditional financial products moving on-chain.\n\nAnd one of crypto's most recognizable RWA brands.\n\nYet ethereum:0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3 https://t.co/oXh9syqDv0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115389378960961815",
+   "date": "2026-10-28",
+   "text": "ethereum:0x56072c95faa701256059aa122697b133aded9279 — Sky Protocol ☁️\n\n$5.5 BILLION in DeFi assets.\n\nNearly $160 MILLION in annualized protocol revenue.\n\nAnd an active mechanism connecting protocol earnings to tokenholders.\n\nYet ethereum:0x56072c95faa701256059aa122697b133aded9279 https://t.co/8Ml5jmzgpg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Web_3_Universe",
+   "url": "https://x.com/Web_3_Universe/status/2115286182032777416",
+   "date": "2026-10-28",
+   "text": "$PLUME — Plume Network\nㅤ\nEveryone is watching $ONDO, $LINK, and $QNT compete for the future of tokenized finance.\nㅤ\nBut what if the real opportunity is a blockchain built specifically for real-world assets?\nㅤ\n$PLUME is betting that tokenized securities, institutional capital, https://t.co/ZmcF0WQ5xU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115390348998644029",
+   "date": "2026-10-28",
+   "text": "layerzero:native — LayerZero 🌐\n\n128 connected blockchains.\n\nOver $16 BILLION in tracked cross-chain assets.\n\nAnd a token with nearly 60% of its maximum supply outside reported circulation.\n\nBut here's what makes ZRO different.\n\nLayerZero has already started using business https://t.co/CfuIrd97ll"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115383873383346350",
+   "date": "2026-10-28",
+   "text": "ethereum:0x4a220e6096b25eadb88358cb44068a3248254675 — Quant Network 🔗\n\nEveryone is betting on $LINK, $XRP, and the next trillion-dollar tokenization narrative.\n\nBut Quant is targeting something most crypto projects barely understand.\n\nThe infrastructure connecting traditional https://t.co/n8GnojQp1j"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115387485941604808",
+   "date": "2026-10-28",
+   "text": "solana:5GgRAEmv8ZxF2PR5hY72Qs5x1bnQ6UK2RbTPoqJ3wSwW — PAX Gold 🥇\n\nCrypto investors spend years searching for the next 100x.\n\nMeanwhile, gold has survived centuries of monetary crises.\n\nPAX Gold brings that traditional asset onto Ethereum.\n\nNo staking emissions.\nNo VC unlock https://t.co/JtBWNcSdZW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "advkunalINDIA",
+   "url": "https://x.com/advkunalINDIA/status/2115507922952458482",
+   "date": "2026-10-28",
+   "text": "🚨 FED VOLATILITY ALERT: GOLD, BTC &amp; ETH DOWNSIDE LEVELS 📉\n\nThe next move could get violent if the US Dollar and bond yields strengthen.\n\n🥇 GOLD (XAUUSD)\n🔻 Support: $4,028\n🎯 Targets: $4,000\n⚠️ Bearish pressure below $4,028\n\n₿ BITCOIN (BTC)\n🔻 Support: $79,844\n🎯 Targets:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115383649663123648",
+   "date": "2026-10-28",
+   "text": "solana:WLDTE73PPdfFFjhpBz8Yuhvx5N45gvgEgyMXqwa3rFn — World Network 👁️\n\nAI is making it cheaper to create fake identities, automated accounts, and convincing digital impersonations.\n\nWorld wants to solve that problem.\n\n18 MILLION verified humans.\n277 MILLION identity proofs https://t.co/fFUX2V4gvv"
+  }
+ ]
+}

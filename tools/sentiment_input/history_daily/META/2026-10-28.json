@@ -1,0 +1,237 @@
+{
+ "symbol": "META",
+ "start": "2026-10-28T00:00:00Z",
+ "end": "2026-10-29T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "META (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "surfer_ai",
+   "url": "https://x.com/surfer_ai/status/2115448576323002642",
+   "date": "2026-10-28",
+   "text": "Which setups have actual room to run today?  NFA and it is FOMC.  Probably just watch today🎯📊\n\nRan my \"Expansion Delta Gap\" scan this morning with FINN (EZPZ Trading’s AI connector for TradingView). \n\nTHE RULES:\n1️⃣ Proximity: Within 1.0% of 0D Gamma Flip or VWAP\n2️⃣ Alignment:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "seatrips",
+   "url": "https://x.com/seatrips/status/2115367195039445315",
+   "date": "2026-10-28",
+   "text": "Deep dive: $META NEUTRAL\n\nBase 45% · Bear 30% · Bull 25%\nBullish weekly trend vs bearish daily break after capex shock\nFloor 589, ceiling 633.5-638.1 defines the range\n\nVol watch: FOMC today\n\n#Meta #BigTech\n\nIndependent technical and fundamental research. Not investment advice. https://t.co/vzBHJdhUoX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115519898134970540",
+   "date": "2026-10-28",
+   "text": "Live Walkthrough Gold!\nhttps://t.co/ZfXoE0Ekwx\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115266390806634852",
+   "date": "2026-10-28",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8HeJG\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115270198714638693",
+   "date": "2026-10-28",
+   "text": "The Dragonfly Doji\nhttps://t.co/7vdAH4oMrz\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115513428110442725",
+   "date": "2026-10-28",
+   "text": "Live Walkthrough Gold!\nhttps://t.co/ZfXoE0DMGZ\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115518947772772818",
+   "date": "2026-10-28",
+   "text": "Live Walkthrough Silver! \nhttps://t.co/yVkE0gg0oK\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115438182414094341",
+   "date": "2026-10-28",
+   "text": "The Dragonfly Doji\nhttps://t.co/7vdAH4oeC1\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115498429602464202",
+   "date": "2026-10-28",
+   "text": "Live Walkthrough Gold!\nhttps://t.co/ZfXoE0Ekwx\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115471904417153401",
+   "date": "2026-10-28",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8HeJG\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115465680019738715",
+   "date": "2026-10-28",
+   "text": "The Dragonfly Doji\nhttps://t.co/7vdAH4oMrz\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115447493597253914",
+   "date": "2026-10-28",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8HeJG\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115502434361716994",
+   "date": "2026-10-28",
+   "text": "Live Walkthrough Silver! \nhttps://t.co/pHalj3KSlC\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115528024162500780",
+   "date": "2026-10-28",
+   "text": "Live Walkthrough Silver! \nhttps://t.co/yVkE0gfszc\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115519935413961213",
+   "date": "2026-10-28",
+   "text": "The Dragonfly Doji\nhttps://t.co/7vdAH4oMrz\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115434910915699034",
+   "date": "2026-10-28",
+   "text": "Trading Like Beginner Vs Trading Like a Pro\nhttps://t.co/naJmNAHUgT\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115519995816067328",
+   "date": "2026-10-28",
+   "text": "Trading Like Beginner Vs Trading Like a Pro\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115467123120312466",
+   "date": "2026-10-28",
+   "text": "Trading Like Beginner Vs Trading Like a Pro\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115521607292813817",
+   "date": "2026-10-28",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8HeJG\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115268799394201759",
+   "date": "2026-10-28",
+   "text": "Trading Like Beginner Vs Trading Like a Pro\nhttps://t.co/naJmNAIs6r\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115470743157002593",
+   "date": "2026-10-28",
+   "text": "Hello everyone, just wanted to provide an update we have over 100!! educational trading and live walkthrough videos posted on youtube and tiktok! Please take a look and help support the GDX trading Community!                        https://t.co/FLhnTJ5xBc https://t.co/JBhtELGKkf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "OceanElevenBets",
+   "url": "https://x.com/OceanElevenBets/status/2115506456141148218",
+   "date": "2026-10-28",
+   "text": "SOME OF YOU NEED TO TAKE A BASIC ECONOMICS CLASS BEFORE PREDICTING WHERE $SPY AND $QQQ ARE HEADING.\n\nThe stock market doesn't move on AI hype alone.\n\nIt moves on earnings, liquidity, interest rates and expectations.\n\nAnd right now, the setup is getting interesting.\n\nLook at the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2115333996934807610",
+   "date": "2026-10-28",
+   "text": "Macro Observatory Mid-Week 44 Briefing\n\nTuesday’s telemetry delivered an air-pocket counter-trend squeeze wave running directly into a hollow structural ceiling, with eight major assets triggering synchronized Macro Squeeze classifications; the tech hardware vanguard staging"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "fundspec",
+   "url": "https://x.com/fundspec/status/2115496335537213447",
+   "date": "2026-10-28",
+   "text": "Bearish options flow in $META\n$7.5M of Dec 18 $800 puts traded at the ask. 400 contracts against 7,334 open interest.\n\nStress test revenue, margin and WACC to see the real upside and downside.\nDownload the FundSpec app on the Apple App Store or Google Play Store."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "EthanO_oZ",
+   "url": "https://x.com/EthanO_oZ/status/2115461670390939869",
+   "date": "2026-10-28",
+   "text": "Google’s earnings are still uncertain. The upside is potentially explosive revenue growth, while the downside is excessive spending. Overall, I’m leaning bullish, and I think it could play out similarly to META."
+  }
+ ]
+}

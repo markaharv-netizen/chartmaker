@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-28T00:00:00Z",
+ "end": "2026-10-29T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115451971146572130",
+   "date": "2026-10-28",
+   "text": "⚠️ $AIN pumps 3.2% on 1.9x volume but 1h bearish structure warns this rally might fade fast\n\n- my bias is neutral-to-cautiously bearish here in the short term, despite the sharp 3.2% pump and volume spike — 1h structure remains bearish, and this move is running directly into https://t.co/BO8vPj8RvW"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115507481384202726",
+   "date": "2026-10-28",
+   "text": "🧐 $GPRO longs are crowded with funding at +0.223% per 8h—can this cautious bull hold above 1.015?\n\n- my bias is cautiously bullish on GPROUSDT.P here, as the 1h market structure is still bullish with higher highs/lows while price holds above 1.015; however, this is a https://t.co/aJawTiZKV4"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 44,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115386172864405596",
+   "date": "2026-10-28",
+   "text": "$PEPE — Pepe 🐸\n\nNo staking yield.\nNo protocol revenue.\nNo claim on a profitable business.\n\nYet $PEPE became one of crypto's most recognizable meme assets.\n\nHere's the uncomfortable question.\n\nIs PEPE an undervalued cultural asset waiting for the next meme-coin cycle, or is its https://t.co/7CKEfV1MpC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115382923683852590",
+   "date": "2026-10-28",
+   "text": "ethereum:0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce — Shiba Inu 🐕\n\nOver 3 MILLION holders.\n\nNearly 590 TRILLION tokens.\n\nA multibillion-dollar valuation.\n\nAnd an ecosystem that has struggled to turn its enormous community into meaningful on-chain revenue.\n\nEveryone remembers https://t.co/1rFnCDuVcN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "moby_tick",
+   "url": "https://x.com/moby_tick/status/2115362385133514972",
+   "date": "2026-10-28",
+   "text": "Massive Institutional Selling In Robinhood &amp; Coinbase stock (HOOD &amp; COIN) - Trade Setups &amp; Analysis\n\nRobinhood (HOOD) takes a heavy hit following its latest earnings report with heavy institutional selling pressure, while Coinbase (COIN) breaks down on elevated volume.\nIn this https://t.co/xrPJDc571I"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "degenscannerx",
+   "url": "https://x.com/degenscannerx/status/2115421705053077817",
+   "date": "2026-10-28",
+   "text": "💨 $FARTCOIN: A $130M market cap doesn’t eliminate downside risk.\n\nOctober 28 market snapshot:\n• Market cap: ~$130.36M\n• 24h volume: ~$22.44M\n• Total supply: ~1 billion tokens\n• Previous ATH: ~$2.61\n\nSource: CoinGecko historical data and CoinMarketCap. &lt;Cite"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Thorfinsss",
+   "url": "https://x.com/Thorfinsss/status/2115522338217496707",
+   "date": "2026-10-28",
+   "text": "If you look at the past of litecoin:native you would see that it likes to SPIKE during bull markets. Not saying other coins don’t do that but the upside from $58 today is large. I expect it to be around $150 per coin at some point next year. \n\nI’ve been talking about Litecoin for https://t.co/Fzaq982ni4"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115535184795734309",
+   "date": "2026-10-28",
+   "text": "🚨 $GOOGL volume triples but 15m and 24h drops confirm sellers tightening noose on price\n\n- my bias is strongly bearish here: the 1h structure is cleanly bearish with confirmed lower highs and lower lows, and this is fully aligned with the daily, weekly, and even BTC trend, so https://t.co/FiVuejSZ0i"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115311177903345695",
+   "date": "2026-10-28",
+   "text": "🔍 $JCT dips 3% on 2.1x volume—strong structure suggests this selloff is just noise, not a breakdown\n\n- my bias remains bullish on JCT here despite the sharp -3% selloff and huge 2.1x volume anomaly — the 1h structure is still bullish, with strong higher-timeframe (daily/weekly) https://t.co/EGQBh6KiHf"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115488382465761677",
+   "date": "2026-10-28",
+   "text": "🔍 $ETH drifts down 0.4% in 24h—no event, but bears still holding the upper hand today\n\n- the current 1h structure is firmly bearish, with price sitting at 2335 and both the most recent swing high (2387) and trend flip level (close &gt; 2387) above, so my bias remains to the https://t.co/wren8pClx7"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115503779210502393",
+   "date": "2026-10-28",
+   "text": "⚠️ $CTR faces fresh selling pressure after a 4.2% drop with volume ticking up—downtrend intact\n\n- my bias stays bearish for CTRUSDT.P as the 1h structure is clearly in a downtrend and that -4.2% dump with a 1.5x volume spike just confirmed fresh supply entering the market\n- this https://t.co/UIAMEVmmtg"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115481970775920897",
+   "date": "2026-10-28",
+   "text": "🔭 $BTC lingers near support with 24h change -0.1%—momentum still favors the bears\n\n- the 1h structure is clearly bearish, with confirmed lower highs and lower lows, and price currently trading at 80,507 — below both the EMA20 and EMA200, showing momentum and regime remain with https://t.co/HOMl8CePjJ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115537751130907032",
+   "date": "2026-10-28",
+   "text": "🛰 NATGAS: 24h down 1.3% amid bearish 4h divergence vs $BTC —rally showing real cracks here\n\n- my bias is bearish here on the 1h: price is in a clear bearish structure with lower highs and lower lows, and the 4h negative divergence vs BTC adds strong confluence — the local rally https://t.co/M3gk1jJxNw"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115513543382442411",
+   "date": "2026-10-28",
+   "text": "⬆️ $IDOL breaks resistance with 9.3% gain and 4.4x volume—buyers clearly running the show\n\n- my bias is bullish here on IDOLUSDT.P in the short-term, as the 1h structure is firmly bullish and price just blasted through multiple resistance layers with heavy volume and strong order https://t.co/BEHivP9NRc"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115367038168223834",
+   "date": "2026-10-28",
+   "text": "📈 ETH steady at +2.7% after holding key zones—bullish trend intact, no signs of slowing down\n\n- my bias remains bullish on ETHUSDT.P in the 1h, with price holding above both recent structure and demand zones and the trend supported by bullish order flow and high relative volume https://t.co/AbV9jQFC8F"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115551842700513309",
+   "date": "2026-10-28",
+   "text": "✅ $COHRB jumps 10.9% on 10.9x volume—smart money moves or short-term hype?\n\n- my bias is cautiously bullish on COHRBUSDT while price holds above 232.87, but this +10.9% pump with a ~9x volume spike following a period of much lower activity is a classic sign of aggressive smart https://t.co/bPJOeZV6pJ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115239304087712084",
+   "date": "2026-10-28",
+   "text": "📈 $BTC up 0.6% in 24h—structure’s climbing, resistance now support; bullish eyes on 81K+ levels\n\n- my bias is bullish here, as the 1h structure is making higher highs/higher lows and price just cleared the 80319 resistance, with the next key upside target sitting at 81065, then https://t.co/e7z76GEvtn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 21,
+   "user": "mikkysol",
+   "url": "https://x.com/mikkysol/status/2115470671077634194",
+   "date": "2026-10-28",
+   "text": "$ANSEM isn't just a bear, but bull with Horns.\n By the way, I got rewarded been an active member of the $ANSEM community. \n  As you can see in the screenshot below too, we are pushing towards a 1,000 verified followers. It is both our interest that we join the project early, so https://t.co/Q2hfzhKvZL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "mikkysol",
+   "url": "https://x.com/mikkysol/status/2115470295788114081",
+   "date": "2026-10-28",
+   "text": "$ANSEM isn't just a bear, but bull with Horns.\n By the way, I got rewarded been an active member of the $ANSEM community. \n  As you can see in the screenshot below too, we are pushing towards a 1,000 verified followers. It is both our interest that we join the project early, so"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115383543589372115",
+   "date": "2026-10-28",
+   "text": "solana:pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn — https://t.co/4zd2MnJCvD 🚀\n\nMost crypto projects promise revenue someday.\n\nhttps://t.co/4zd2MnJCvD is already generating tens of millions of dollars every month.\n\nReal trading volume.\nReal platform fees.\nReal token buybacks. https://t.co/gLXQ4XzcQt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 26,
+   "user": "mikkysol",
+   "url": "https://x.com/mikkysol/status/2115472327278239856",
+   "date": "2026-10-28",
+   "text": "$ANSEM isn't just a bear, but bull with Horns.\n By the way, I got rewarded been an active member of the $ANSEM community. \n  As you can see in the screenshot below too, we are pushing towards a 1,000 verified followers. It is both our interest that we join the project early, so https://t.co/IDpMyndWiS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 600,
+   "user": "cantonmeow",
+   "url": "https://x.com/cantonmeow/status/2115283285660107134",
+   "date": "2026-10-28",
+   "text": "A bit of a long write-up here.\n\n#Bitcoin and $TOTAL3ES (Total crypto market cap without counting stable coins, $BTC and $ETH) are at the beginning of stage 2, which is typically thought as an ideal spot for market participants to enter.\n\nThis cycle's AI narrative darling, $PLTR,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2115534989341208778",
+   "date": "2026-10-28",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• JPMorgan, Coca-Cola, Dell Among 33 Objectors to OKX-ICE Tokenized Shares\n• Mirae Issues Tokenized Notes on Solana to Institutional…\n• https://t.co/onTerbJj48 launches Hyperliquid-powered perpetuals for crypto, stocks and https://t.co/oRsfB3e1iq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "uwgodo",
+   "url": "https://x.com/uwgodo/status/2115543255249310031",
+   "date": "2026-10-28",
+   "text": "Not to put fear in anyone but nothing is guaranteed in this market.\n\nYou can lose the full amount you put in any coin. Meaning the most you can lose at any point in time is 100%.\nThe upside, though, has no ceiling.\n\nA coin like solana:zj1jpp7QMveWHLs61vL9KMZf254KvW7j4AAmBF8ry2k"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2115353277839605803",
+   "date": "2026-10-28",
+   "text": "🔥 TOP 5 MOST COVERED ASSETS — 1H\n\n1. $BTC — 📰 5 stories · 🟢 52% bullish\n🔗 https://t.co/0tFuuDrnrE\n\n2. $ETH — 📰 4 stories · 🟢 61% bullish\n🔗 https://t.co/wsbSCPlkCm\n\n3. $XAU — 📰 2 stories · 🔴 59% bearish\n🔗 https://t.co/1asrsiOoLu\n\n4."
+  }
+ ]
+}
