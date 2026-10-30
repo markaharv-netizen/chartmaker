@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-24T01:13:30Z",
+  "generated": "2026-10-30T14:52:49Z",
   "seeded": false,
   "title": "Steve's DCF Base Case vs Street Consensus vs Price",
   "subtitleNote": "Base now includes probability-weighted future bets",
@@ -9,8 +9,8 @@
     "buyAbove": 0.15,
     "sellBelow": -0.15
   },
-  "consensusLabel": "mean analyst target (StockAnalysis, Oct 21)",
-  "priceLabel": "Oct 21, 2026 close",
+  "consensusLabel": "mean analyst target (StockAnalysis, Oct 21) · mean analyst target (StockAnalysis, Oct 30)",
+  "priceLabel": "Oct 21, 2026 close; Oct 29, 2026 close",
   "source": {
     "name": "DCF price target summary",
     "spreadsheetId": "10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0",
@@ -40,7 +40,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 74.11,
-      "previousDetail": "Prev Base $74.11 -> $128.42 at Oct 22, 2026 future-bets update; unchanged in Oct 23 scan",
+      "previousDetail": "Prev Base $74.11 -> $128.42 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
       "why": "Even with AI bets, price high"
     },
     {
@@ -63,30 +63,30 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 39.07,
-      "previousDetail": "Prev Base $39.07 -> $67.89 at Oct 22, 2026 future-bets update; unchanged in Oct 23 scan",
+      "previousDetail": "Prev Base $39.07 -> $67.89 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
       "why": "Far above bet-adjusted value"
     },
     {
       "ticker": "MSTR",
-      "base": 153.35,
-      "bear": 89.76,
-      "bull": 266.37,
+      "base": 149.42,
+      "bear": 86.95,
+      "bull": 272.11,
       "rating": "HOLD",
       "consensus": 239.27,
-      "analysts": 16,
-      "consensusSource": "StockAnalysis (S&P Global), fetched Oct 21, 2026",
-      "price": 153.48,
-      "priceAsOf": "Oct 21, 2026 close, 4:00 PM ET (Yahoo Finance)",
-      "baseVsPrice": -0.001,
-      "consensusVsPrice": 0.559,
-      "baseVsConsensus": -0.359,
-      "notes": "Oct 22 future bets: forward Base = core $144.80 + $8.55 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. base net pref issuance cut to $0.5B/yr",
-      "baseChange": 8.55,
-      "baseChangePct": 0.059,
-      "baseChangedAt": "2026-10-22",
+      "analysts": 15,
+      "consensusSource": "StockAnalysis (S&P Global), fetched Oct 30, 2026",
+      "price": 141.62,
+      "priceAsOf": "Oct 29, 2026 close, 4:00 PM ET (strategy.com)",
+      "baseVsPrice": 0.055,
+      "consensusVsPrice": 0.69,
+      "baseVsConsensus": -0.376,
+      "notes": "Oct 30 Q3 2026 earnings refresh (v5): forward Base = core $140.94 + $8.48 probability-weighted bets (model Summary FUTURE BETS block); Bull core $250.30 + $21.81 bets; Bear has no bets. Funding mix reset to Q3 call guidance (Base ATM for BTC $2B/yr, new 12% preferred $3B/yr; Bear no ATM for BTC)",
+      "baseChange": -3.93,
+      "baseChangePct": -0.026,
+      "baseChangedAt": "2026-10-30",
       "fromZero": false,
-      "previousBase": 144.8,
-      "previousDetail": "Prev Base $144.80 -> $153.35 at Oct 22, 2026 future-bets update; unchanged in Oct 23 scan",
+      "previousBase": 153.35,
+      "previousDetail": "Prev Base $153.35 (Bear $89.76, Bull $266.37, HOLD) at Oct 22, 2026 future-bets update -> $149.42 (Bear $86.95, Bull $272.11, HOLD) at Oct 30, 2026 Q3 earnings refresh; drop mostly from lower BTC and MSTR prices",
       "why": "Bets priced in; at fair value"
     },
     {
@@ -109,7 +109,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 181.81,
-      "previousDetail": "Prev Base $181.81 -> $189.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23 scan",
+      "previousDetail": "Prev Base $181.81 -> $189.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
       "why": "Just inside HOLD band"
     },
     {
@@ -132,7 +132,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": true,
       "previousBase": 0.0,
-      "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23 scan",
+      "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
       "why": "Debt still exceeds core EV"
     },
     {
@@ -155,7 +155,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 842.81,
-      "previousDetail": "Prev Base $842.81 -> $860.87 at Oct 22, 2026 future-bets update; unchanged in Oct 23 scan",
+      "previousDetail": "Prev Base $842.81 -> $860.87 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
       "why": "HBM upside mostly priced in"
     },
     {
@@ -178,7 +178,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 657.7,
-      "previousDetail": "Prev Base $657.70 -> $687.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23 scan",
+      "previousDetail": "Prev Base $657.70 -> $687.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans (Oct 30: $37.5B equity raise noted, not yet booked; est. -$1.93/sh)",
       "why": "Bets priced in; near fair value"
     },
     {
@@ -201,7 +201,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 12.19,
-      "previousDetail": "Prev Base $12.19 -> $15.47 at Oct 22, 2026 future-bets update; unchanged in Oct 23 scan",
+      "previousDetail": "Prev Base $12.19 -> $15.47 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
       "why": "Far above bet-adjusted value"
     },
     {
@@ -224,7 +224,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 7.2,
-      "previousDetail": "Prev Base $7.20 -> $24.98 at Oct 22, 2026 future-bets update; unchanged in Oct 23 scan",
+      "previousDetail": "Prev Base $7.20 -> $24.98 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
       "why": "Needs full constellation"
     }
   ]
