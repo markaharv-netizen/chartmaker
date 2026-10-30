@@ -823,6 +823,25 @@ function hlabel(d,w,h){const s=Math.min(w,h),tk=d.symbol.replace(/-USD$/,''),pc=
   if(lg)rich.l={align:'center',width:lg,height:lg,backgroundColor:{image:d.logo},lineHeight:lg+f*0.6};
   return{...C,show:true,rich,formatter:(lg?'{l|}\n':'')+'{t|'+tk+'}'+(two?'\n{p|'+pc+'}':'')}}
 function pct2(v){return (v>=0?'+':'−')+Math.abs(v).toFixed(2)+'%'}
+// Signed dollars: +$1.2T, −$412B, +$35M. Under ~$50k rounds to $0.
+function hMoney(v){const a=Math.abs(v);if(a<5e4)return '$0';const s=v>0?'+':'−';
+  let n=a/1e6,u='M';if(a>=1e12){n=a/1e12;u='T'}else if(a>=1e9){n=a/1e9;u='B'}
+  const dig=x=>x>=100?0:x>=10?1:2;let r=+n.toFixed(dig(n));if(r>=1000){r/=1000;u=u==='M'?'B':'T'}
+  return s+'$'+r.toFixed(dig(r)).replace(/(\.\d*?)0+$/,'$1').replace(/\.$/,'')+u}
+// Dollar change over the selected period, shares held fixed: mcap_now - mcap_now/(1+r). `chg` is in percent.
+function hDollar(d,eq){if(!d||d.eqSize||(eq&&eq.has(d.symbol))||!(d.marketCap>0)||d.chg==null||!isFinite(d.chg)||d.chg<=-100)return null;
+  const r=d.chg/100,v=d.marketCap-d.marketCap/(1+r);return isFinite(v)?v:null}
+function hNet(rows,eqList){const eq=new Set(eqList||[]);let up=0,dn=0,n=0;
+  for(const d of rows){const v=hDollar(d,eq);if(v==null)continue;n++;if(v>0)up+=v;else if(v<0)dn+=v}
+  if(!n)return null;const net=hMoney(up+dn),plain='Net '+net+' market cap';
+  const detail=up>=5e4&&dn<=-5e4?'Net '+net+' (gainers '+hMoney(up)+', losers '+hMoney(dn)+')':plain;
+  return {plain,detail}}
+// Keep the net on the source line when it fits; otherwise a second footnote line so the PNG still shows it.
+function hFoot(base,net){if(!net)return {text:base};
+  const max=(chart.getWidth()||1600)-110,w=t=>{MCTX.font='16px Inter, Arial, sans-serif';return MCTX.measureText(t).width};
+  if(w(base+' · '+net.detail)<=max)return {text:base+' · '+net.detail};
+  if(w(base+' · '+net.plain)<=max)return {text:base+' · '+net.plain};
+  return {text:base,line2:net.detail}}
 async function hrender(){
   const st=$('status'),my=++HSEQ;st.className='';st.textContent='Loading quotes…';
   try{const rng=$('hrange').value,uni=$('huni').value;
@@ -847,7 +866,10 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
     levels:grp?[{itemStyle:{borderColor:T.bg,borderWidth:0,gapWidth:4}},{itemStyle:{borderColor:T.bg,borderWidth:1,gapWidth:1}}]:[{itemStyle:{borderColor:T.bg,borderWidth:1,gapWidth:1}}],
     tooltip:{formatter:q=>q.data.d?`${q.data.d.shortName||q.name}<br>${pct2(q.data.d.chg)} · mcap $${(q.data.d.marketCap/1e9).toFixed(0)}B`:q.name}}];
   o.tooltip={};
-  o.graphic[0].style.text=`Source: ${j.source||'Yahoo Finance'} · as of ${etTime(j.asOf)} · size = ${SZ==='eq'?'equal':SZ==='sqrt'?'√ market cap (USD)':'market cap (USD)'}${j.eq&&j.eq.length?' ('+j.eq.join(', ')+' equal-size: no share count)':''} · ${rng==='1D'?(/^Coin/.test(j.source)?'change over 24h':j.cryptoMixed?'stocks vs previous close, crypto over 24h':'change vs previous close'):rng+' % change'}${shN?` · ${shN} only (${rows.length} of ${j.rows.length})`:''}`+shortNote(j.rows.filter(d=>d.since).map(d=>({sym:d.symbol,date:fmtD(d.since*1000)})))+stitchNote(j.rows);
+  const footBase=`Source: ${j.source||'Yahoo Finance'} · as of ${etTime(j.asOf)} · size = ${SZ==='eq'?'equal':SZ==='sqrt'?'√ market cap (USD)':'market cap (USD)'}${j.eq&&j.eq.length?' ('+j.eq.join(', ')+' equal-size: no share count)':''} · ${rng==='1D'?(/^Coin/.test(j.source)?'change over 24h':j.cryptoMixed?'stocks vs previous close, crypto over 24h':'change vs previous close'):rng+' % change'}${shN?` · ${shN} only (${rows.length} of ${j.rows.length})`:''}`+shortNote(j.rows.filter(d=>d.since).map(d=>({sym:d.symbol,date:fmtD(d.since*1000)})))+stitchNote(j.rows);
+  const foot=hFoot(footBase,hNet(rows,j.eq));
+  o.graphic[0].style.text=foot.text;
+  if(foot.line2){o.graphic.push({type:'text',left:60,bottom:8,style:{text:foot.line2,fontSize:16,fill:T.src,fontFamily:'Inter, Arial, sans-serif'}});o.graphic[0].bottom=34;o.series[0].bottom=82}
   if(grp)o.series[0].upperLabel.formatter=q=>q.name;
   chart.setOption(o,true);
   // pass 2: size labels/logos from the actual tile layout
