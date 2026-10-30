@@ -1,106 +1,106 @@
 {
- "date": "2026-10-29",
- "theme": "Big Tech capex misses hit the neoclouds and Alphabet, the 10-year tops 5%, Tesla's Cybercabs take over its Texas fleet, and Strategy reports after a quiet week for bitcoin.",
+ "date": "2026-10-30",
+ "theme": "The Binance hack knocks bitcoin below $77K as Strategy reports a $20.9B bitcoin gain, Big Tech cash flow and AI debt take center stage, and SpaceX's profits fuel merger talk with Tesla.",
  "items": [
   {
    "sheet": "bot experiments 2",
-   "tab": "24 Texas robotaxi fleets",
-   "title": "Texas robotaxi registrations: Tesla vs Waymo, Avride and Zoox",
-   "image": "cotd/2026-10-29/01.png",
-   "picked": "Cybercabs now make up the majority of Tesla's Texas robotaxi registrations, and Tesla shares hit a three-month high on Oct 27 as the fleet passed 1,000. Tesla also widened its Houston service area to about 254 square miles this week.",
-   "matters": "Tesla is closing in on Waymo in Waymo's second-biggest state, and nearly all of its recent additions are the no-steering-wheel Cybercab rather than Model Ys.",
-   "know": "As of Oct 28 the tab has Tesla at 1,080 registered vehicles (573 Cybercabs, 507 Model Ys) against Waymo at 1,207, a gap of 127, with Avride at 344 and Zoox at 63. Waymo's count is from its Oct 19 registry update and Avride and Zoox haven't changed since Oct 11. These are registrations, not cars carrying riders, and this image was redrawn from the sheet because the Drive export was from Oct 19.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=751548644"
+   "tab": "29 BTC on exchanges",
+   "title": "Bitcoin held on exchanges as a % of supply",
+   "image": "cotd/2026-10-30/01.png",
+   "picked": "Binance disclosed a security breach affecting about $6.3B in assets, the largest crypto theft on record, and bitcoin fell below $77,000 overnight before recovering toward $78,000. Binance says it has frozen about $3B, will cover all losses, and has suspended deposits and withdrawals.",
+   "matters": "Hacks like this are the classic argument for keeping coins off exchanges, and the share of supply sitting on exchanges shows how much bitcoin is exposed to that kind of risk.",
+   "know": "The tab has 13.37% of bitcoin supply on exchanges as of Oct 25 2026, close to 13.35% at the end of September and up from a 12.88% low in Apr 2026, which the chart title calls the lowest since May 2018. The Oct 25 point is a flash value and predates the hack, and the image is the Oct 19 export, so it ends with September. Coin Metrics only counts the exchange wallets it has tagged, and that coverage has changed over time.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1379690938"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "37 Waymo paid rides per week",
-   "title": "Waymo paid rides per week, May 2023 to Mar 2026",
-   "image": "cotd/2026-10-29/02.png",
-   "picked": "A chart going viral this morning puts Tesla's Austin robotaxis at 438K miles a week against Waymo's 406K. This chart shows the scale Waymo has reached across all its cities.",
-   "matters": "Waymo's network-wide ride count is the benchmark Tesla has to beat, and it's a useful reality check on single-city comparisons.",
-   "know": "Waymo went from 10,000 paid rides a week in May 2023 to 450,000 in Dec 2025 and 500,000 in Mar 2026, and TechCrunch still reported about 500,000 on Sep 24. Waymo's target is 1 million a week by the end of 2026. The milestones fall on irregular dates and count rides, not miles, so they can't be compared directly with the viral Austin miles chart.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=617854800"
+   "tab": "14 MSTR quarterly BTC gains",
+   "title": "Strategy's bitcoin gain or loss by quarter",
+   "image": "cotd/2026-10-30/02.png",
+   "picked": "Strategy reported Q3 results after the close Thursday, with a $20.91B gain on its bitcoin and diluted EPS of $44.75, well above the $13.86 estimate per Investing.com. Bitcoin has since dropped below $77,000 on the Binance hack.",
+   "matters": "Strategy's earnings swing with the bitcoin price, so this chart shows how much of its reported profit and loss is just mark-to-market on its holdings.",
+   "know": "The tab shows a $20.91B Q3 2026 gain after three losing quarters: -$17.44B in Q4 2025, -$14.455B in Q1 2026 and -$8.315B in Q2 2026. Q3 is still labeled an estimate from the Oct 5 8-K, but Thursday's results reported the same $20.91B. These are unrealized fair-value moves, and Q4 starts with bitcoin well below the $81,200 Strategy used on Oct 23.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=557289630"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "324 Amazon quarterly FCF",
+   "title": "Amazon: operating cash flow, capex and free cash flow per quarter",
+   "image": "cotd/2026-10-30/03.png",
+   "picked": "Amazon fell about 7% premarket after missing on revenue and earnings and reporting negative free cash flow again, per CNBC. It kept its 2026 capex forecast at $220B and signaled more spending next year.",
+   "matters": "Amazon is the biggest capex spender in the tab, and its cash flow shows how much of the AI buildout is being paid for out of operations.",
+   "know": "In the Jun 2026 quarter the tab has operating cash flow of $45.39B, capex of $54.21B and free cash flow of -$8.82B, after -$18.17B in Mar 2026; a year earlier it was +$0.33B. The tab ends with the Jun quarter, so Thursday's Sep-quarter numbers aren't in it yet. Amazon's own free cash flow figure is trailing 12 months, so it won't match these single-quarter numbers.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1778640335"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "326 Big Tech capex vs FCF",
+   "title": "Big Tech 4: quarterly capex vs free cash flow",
+   "image": "cotd/2026-10-30/04.png",
+   "picked": "After this week's results from Microsoft, Alphabet, Meta and Amazon, Nasdaq-100 futures fell about 2.4% on AI spending worries. A Swissquote analyst told Reuters the four spent more than $200B on capex in the third quarter alone.",
+   "matters": "When capex eats nearly all of operating cash flow, there's little left for buybacks, dividends or paying down debt, which is why the market is now focused on returns from AI spending.",
+   "know": "In the Jun 2026 quarter the four companies' capex was $165.05B against $171.76B of operating cash flow, or 96.09%, leaving $6.71B of free cash flow. A year earlier capex was $88.25B and free cash flow $40.22B. The tab ends with the Jun quarter, so the Sep quarter isn't in it yet.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=125248111"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "211 Big Tech debt for AI",
+   "title": "Borrowing for AI: total debt by company, fiscal year ends vs latest quarter",
+   "image": "cotd/2026-10-30/05.png",
+   "picked": "Microsoft raised $25B in a debt sale even as it beat on cash flow, and Reuters says several companies have tapped the bond market to fund AI spending. House Democrats also introduced a resolution opposing taxpayer bailouts for AI firms.",
+   "matters": "Debt is the newer way Big Tech funds the AI buildout, and higher borrowing costs could make that spending harder to justify.",
+   "know": "As of Jun 2026 the tab has Amazon at $133B of debt, Oracle $129.5B, Alphabet $101.1B, Meta $83.7B, Microsoft $40.3B and CoreWeave $35.6B. Alphabet's debt is up from $49.1B and Meta's from $58.7B at their FY 2025 year ends. The latest column is Jun 2026, so Microsoft's new $25B bond and other Sep-quarter borrowing aren't in it, and fiscal years end in different months for each company.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1307998812"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "226 OpenAI vs Anthropic revenue",
+   "title": "Reported revenue run-rates: OpenAI vs Anthropic",
+   "image": "cotd/2026-10-30/06.png",
+   "picked": "Anthropic filed for its US IPO this week, and Bloomberg reports it was SpaceX's largest customer, providing more than a third of SpaceX's Q3 revenue through compute deals.",
+   "matters": "Anthropic's revenue growth is what backs its valuation and its huge compute commitments, which now show up in SpaceX's and the neoclouds' results.",
+   "know": "The tab's latest points, both from Sep 2026, are a $100B annualized run-rate for Anthropic and $70B for OpenAI. Anthropic was at $1B in Dec 2024 and $9B in Dec 2025. These are run-rates from company statements and media reports on irregular dates, not reported annual revenue, and the chart uses a log scale.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1186940001"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "5 MSTR USD reserve vs dividends",
-   "title": "Strategy's USD Reserve vs its yearly preferred dividends and interest",
-   "image": "cotd/2026-10-29/03.png",
-   "picked": "Strategy reports Q3 results today at 5pm ET, a day after shareholders approved daily dividends on STRF, STRC, STRK and STRD with 99.3% in favor, starting with STRC on Nov 1. Last week it bought no bitcoin and spent about $205M buying back STRC.",
-   "matters": "The cash reserve is what lets Strategy pay its preferred dividends without selling bitcoin or new stock, and it's the cushion behind the buybacks.",
-   "know": "On Oct 16 the tab has the USD Reserve at $4,878M against $1,557M of yearly preferred dividends and interest, enough for 37.6 months. The low point was 6.1 months on May 29 2026. The tab ends Oct 16, so it misses the $205M STRC buyback and the $4.83B reserve Strategy reported on Oct 26.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=49428948"
+   "tab": "92 Data center capacity",
+   "title": "Data center capacity by country: operational today plus pipeline (GW)",
+   "image": "cotd/2026-10-30/07.png",
+   "picked": "Epoch AI's post that 72% of the world's AI compute since 2022 has ended up in the US, and 78% of new compute in the first half of 2026, is trending on X. This chart shows the same US lead in data center power.",
+   "matters": "Compute needs powered data center space, so the capacity pipeline shows where AI chips can actually be installed in the next few years.",
+   "know": "The tab has the US at 31.97 GW operational and 70.63 GW in the pipeline (102.6 GW total), against China at 5.49 GW and 2.66 GW. Of the 15 countries listed, the US has about 60% of operational capacity and 71% of the pipeline. The data is a Cushman & Wakefield snapshot published Apr 15 2026, measures power capacity rather than compute, and this image was drawn from the sheet because there's no Drive export for this tab.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1193697114"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "145 BTC implied vs realized vol",
-   "title": "Bitcoin options: implied volatility (Deribit DVOL) vs 30-day realized volatility",
-   "image": "cotd/2026-10-29/04.png",
-   "picked": "Glassnode data trending on X shows bitcoin's one-month realized volatility near 25%, the quietest since mid-2023, with the price stuck around $80,000-81,000 after the Fed held rates. This chart shows how options traders are pricing that calm.",
-   "matters": "Long stretches of low volatility often come before a big move, and the gap between implied and realized vol shows whether options are cheap or expensive.",
-   "know": "On Oct 16 the tab has DVOL implied vol at 37.66% and 30-day realized vol at 36.77%, a gap of +0.89 points, after implied ran below realized every week from Aug 21 to Oct 9. Realized vol peaked at 46.57% on Sep 11. The weekly data ends Oct 16, and Glassnode's ~25% reading is a later, different measure that isn't in the tab.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1589445755"
+   "tab": "317 SpaceX segment profits",
+   "title": "SpaceX operating income by segment: Space, Starlink and AI",
+   "image": "cotd/2026-10-30/08.png",
+   "picked": "A post on X says SpaceX made 3.9x Tesla's Q3 operating profit, $2.79B against $718M, on about half the revenue. SpaceX's Q3 filing puts Starlink at $2.367B of that and its AI segment at $431M.",
+   "matters": "Starlink is the profit engine that pays for SpaceX's rocket and AI spending, and the AI segment's swing to a profit in Q3 is new.",
+   "know": "For the four quarters to Sep 30 2026 the tab has Starlink operating income of $6.488B, against losses of $5.468B in AI and $1.688B in Space, a combined -$0.67B. That compares with $4.423B, -$6.355B and -$0.657B for 2025. The Drive export still showed the older TTM to Jun 2026, so this image was redrawn from the sheet.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=906159148"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "101 SPCX drawdown & vol",
-   "title": "SpaceX after the IPO: drawdown from record close and 10-day volatility vs Tesla",
-   "image": "cotd/2026-10-29/05.png",
-   "picked": "SPCX fell 2.25% to $145.23 on Oct 28, back near the $140 level Yahoo Finance calls support, a week after an unlock of up to 1.3 billion shares sent it down 9.14% on Oct 22. A lawsuit over its Louisiana spaceport tax deal added pressure, while Fitch affirmed its BBB+ rating after the roughly $40B Nvidia GPU lease.",
-   "matters": "The drawdown shows how far SPCX still sits below its June peak, and the volatility lines show it still trades far more wildly than Tesla.",
-   "know": "On Oct 20 SPCX was 30.09% below its record close, with 10-day volatility of 33.75% vs 30.84% for Tesla. Its deepest drawdown was 48.78% on Aug 5 and its shallowest recent one was 18.67% on Oct 6. The data ends Oct 20, so the Oct 22 unlock drop isn't in it.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1314300784"
+   "tab": "107 SpaceX vs Tesla mkt cap",
+   "title": "SpaceX vs Tesla market value since the IPO",
+   "image": "cotd/2026-10-30/09.png",
+   "picked": "Musk called a Tesla-SpaceX merger 'a good idea' and both companies have formed independent board committees to look at it. Prediction markets on X put the odds at about 65% by May 2027.",
+   "matters": "The relative value of the two companies would set the terms of any merger, so the ratio is the number both sets of shareholders will watch.",
+   "know": "On Oct 20 the tab has SpaceX at $1,948B and Tesla at $1,476B, a ratio of 1.32x. The ratio peaked at 1.743x on Jun 16, the IPO week, and fell to 1.029x on Jul 22. The data ends Oct 20, so it misses SPCX's slide toward $140 after last week's share unlock.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=970167937"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "230 Hyperscaler capex by co",
-   "title": "Quarterly capex at Amazon, Alphabet, Microsoft, Meta and Oracle",
-   "image": "cotd/2026-10-29/06.png",
-   "picked": "Microsoft's capex of $45.2B (including finance leases) missed the $50.7B estimate and it trimmed its 2026 plan to about $170B from $175B, citing delayed third-party capacity. Alphabet's $51.36B also came in below the $55.09B expected, though it kept its $195-205B guide.",
-   "matters": "The capex race is the demand engine for Nvidia, the neoclouds and the power trade, so even a timing miss moves all of them.",
-   "know": "In the Jun 2026 quarter the tab has Amazon at $54.21B, Alphabet $44.92B, Microsoft $35.80B, Meta $30.12B and Oracle $16.49B, $181.5B combined vs $97.3B a year earlier. The tab ends with the Jun quarter, so this week's Sep-quarter numbers aren't in it yet. The tab's Microsoft numbers are cash capex without finance leases, so they run below headline figures like the $45.2B.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1983689450"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "323 Alphabet quarterly FCF",
-   "title": "Alphabet: operating cash flow, capex and free cash flow per quarter",
-   "image": "cotd/2026-10-29/07.png",
-   "picked": "Alphabet fell about 10% premarket after missing Q3 revenue and EPS estimates and reporting negative free cash flow of $9.07B, per CNBC. This chart shows how capex overtook cash from operations.",
-   "matters": "Alphabet was one of the biggest cash machines in the market, so negative free cash flow is a big shift and feeds the worry that AI spending is outrunning returns.",
-   "know": "In the Jun 2026 quarter the tab has operating cash flow of $39.07B, capex of $44.92B and free cash flow of -$5.86B, the only negative quarter since 2019, after $10.12B in Mar 2026 and $24.55B in Dec 2025. The tab ends with the Jun quarter, so the Q3 -$9.07B reported Wednesday isn't in it yet.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=711603553"
-  },
-  {
-   "sheet": "bot experiments 2",
-   "tab": "87 Neocloud debt vs market cap",
-   "title": "Neocloud debt as a % of market cap",
-   "image": "cotd/2026-10-29/08.png",
-   "picked": "CoreWeave fell 5.8%, Nebius 6.3%, IREN 5.3% and Applied Digital 4.3% after hours on Microsoft's capex miss, since Microsoft relies on them for extra capacity. CNBC notes their cost of capital is rising as worries about their debt mount.",
-   "matters": "These companies fund their buildouts with borrowing, so the debt load relative to equity value shows which ones are most exposed if lenders pull back or capacity slips.",
-   "know": "Using Oct 21 closing prices, the tab has Cipher at 149.7% ($6.23B debt vs $4.16B market cap), CoreWeave at 115.8% ($39.49B vs $34.09B), Applied Digital 101.2%, TeraWulf 81.8%, IREN 71.5% and Nebius 27.3%. Operating leases (CoreWeave's $16.3B) and undrawn facilities are left out, and share prices have moved since Oct 21.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=185222515"
-  },
-  {
-   "sheet": "bot experiments 2",
-   "tab": "61 AI borrower CDS",
-   "title": "Cost to insure AI borrowers' debt: 5-year CDS spreads",
-   "image": "cotd/2026-10-29/09.png",
-   "picked": "Posts trending on X say at least 18 data center deals now carry double-digit yields and default insurance is at records for Oracle, Meta and SpaceX. Oracle still jumped 10.73% Wednesday on a $225B fiscal 2030 revenue target.",
-   "matters": "CDS spreads are the bond market's live read on credit risk, and they show which AI spenders lenders worry about most.",
-   "know": "The tab has Oracle at 261 bps (Oct 9), SpaceX 197 (Oct 7), Broadcom 136 (Oct 9), Meta 95, Nvidia 89, Amazon 73, Alphabet 72 and Microsoft 52 (all Sep 28), against 55 for the CDX IG index. These levels are quoted from X posts because CDS data is paywalled, the dates differ, it isn't a time series, and any move since early October isn't shown.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1913607487"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "254 10-year term premium",
-   "title": "10-year term premium (ACM model) vs the 10-year Treasury yield",
-   "image": "cotd/2026-10-29/10.png",
-   "picked": "The 10-year Treasury yield closed above 5% on Wednesday at 5.044%, up 5.2 bps, after the Fed held at 3.75-4.00% with two officials preferring a hike. Brent also settled at $115.32.",
-   "matters": "A rising term premium means investors want extra pay to hold long bonds, which pushes up mortgage rates and the borrowing costs of AI builders.",
-   "know": "On Sep 25 2026 the tab has the term premium at 1.02% and the 10-year at 5.17%, the first reading at or above 1% since Apr 2010; it was 0.70% in Jun 2026 and 0.57% in Dec 2025. The data is month-end except that last Sep 25 point, so October is missing, and the ACM premium is a model estimate.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1496859959"
+   "tab": "43 Nasdaq vs S&P ratio",
+   "title": "Tech leadership: Nasdaq Composite ÷ S&P 500",
+   "image": "cotd/2026-10-30/10.png",
+   "picked": "Nasdaq-100 futures fell about 2.4% this morning while S&P 500 futures fell about 1%, after Amazon and Intel results added to AI spending worries. The Nasdaq is on track to break a two-month winning streak in October.",
+   "matters": "The ratio shows whether tech is leading or lagging the broader market, and a falling ratio means money is rotating out of tech.",
+   "know": "The tab's latest weekly point in October is 3.4495 (Nasdaq 26,713.03, S&P 500 7,744.06), down from 3.5209 earlier in the month. The high in the data is 3.5822 in Feb 2021, and it reached 3.5584 in May 2026. The weekly rows are only labeled by month and end before this week's selloff.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1835714359"
   }
  ]
 }
