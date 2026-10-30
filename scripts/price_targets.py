@@ -16,6 +16,11 @@ Usage:
 The scenario row "SPCX – Elon case (scenario)" is skipped. why is not a sheet column:
 existing why text in the JSON is kept, and a ticker with none yet gets the short line in WHY.
 subtitleNote, ptChangeNote, and ratingNote already in the JSON are kept too.
+
+baseChangedAt is YYYY-MM-DD, parsed from "at Mon D, YYYY" in the previous-update
+detail. The table shows a dollar change beside Steve's Base only when that date
+is within the last 7 days. A brand-new ticker (previous base $0) keeps the date
+and the table shows the price only.
 """
 import argparse, csv, io, json, os, re, sys, datetime, urllib.request, urllib.error
 
@@ -41,13 +46,14 @@ WHY = {
 DEFAULTS = {
     "title": "Steve's DCF Base Case vs Street Consensus vs Price",
     "subtitleNote": "Base now includes probability-weighted future bets",
-    "ptChangeNote": "PT change vs Oct 21 update; increases mainly from adding probability-weighted future bets and Q3 refreshes.",
+    "ptChangeNote": "Steve's Base includes the dollar change versus the previous update when that change is within the last 7 days (green up, red down). A new ticker shows the price only.",
     "ratingNote": "Rating: BUY > +15% upside to Base, SELL < -15%, otherwise HOLD. Not investment advice.",
 }
 NOTE = (
     "Offline snapshot. Render does not call Google. Regenerate with scripts/price_targets.py. "
     "Dollar fields are numbers. Percent fields are fractions (0.051 = 5.1%). "
     "why is editable copy and is kept when the snapshot is regenerated. "
+    "baseChangedAt is YYYY-MM-DD, the date the base last changed. "
     "The SPCX Elon-case scenario row is omitted."
 )
 
@@ -86,6 +92,37 @@ def parse_change(s):
 def parse_prev(detail):
     m = re.search(r"Prev(?:ious)? Base\s+\$([0-9,]+(?:\.\d+)?)", str(detail or ""), re.I)
     return parse_money(m.group(1)) if m else None
+
+_MONTHS = {}
+for _i, _name in enumerate(
+    ["January", "February", "March", "April", "May", "June",
+     "July", "August", "September", "October", "November", "December"], 1):
+    _MONTHS[_name.lower()] = _i
+    _MONTHS[_name[:3].lower()] = _i
+
+def parse_change_date(detail):
+    """'at Oct 22, 2026' in the previous-update detail -> '2026-10-22'. None if absent.
+
+    The first 'at Month D, YYYY' is the change. A later 'unchanged in Oct 23 scan'
+    has no year and is not the change date.
+    """
+    m = re.search(r"\bat\s+([A-Za-z]{3,9})\s+(\d{1,2}),\s+(\d{4})", str(detail or ""))
+    if not m: return None
+    mon = _MONTHS.get(m.group(1).lower())
+    if not mon: return None
+    try: return datetime.date(int(m.group(3)), mon, int(m.group(2))).isoformat()
+    except ValueError: return None
+
+def dollar_change(chg, base, prev, pct):
+    """Dollar move vs the previous base.
+
+    The sheet's change cell is often '+$8.55 (+5.9%)'. Prefer that dollar figure.
+    If the cell is only a percent, use base - previous, then previous * percent.
+    """
+    if chg is not None: return q2(chg)
+    if base is not None and prev is not None: return q2(base - prev)
+    if prev not in (None, 0) and pct is not None: return q2(prev * pct)
+    return None
 
 def parse_int(s):
     t = str(s or "").strip().replace(",", "")
@@ -173,6 +210,7 @@ def parse_csv(text):
         chg, chg_pct, from_zero = parse_change(raw[14])
         prev = parse_prev(raw[15])
         if prev is None and from_zero: prev = 0.0
+        detail = " ".join(str(raw[15] or "").split())
         rating = parse_rating(raw[4])
         if rating not in ("BUY", "HOLD", "SELL"):
             sys.exit(f"row {i} {ticker}: rating must be BUY, HOLD, or SELL (got {raw[4]!r})")
@@ -191,11 +229,12 @@ def parse_csv(text):
             "consensusVsPrice": q6(parse_pct(raw[11])),
             "baseVsConsensus": q6(parse_pct(raw[12])),
             "notes": " ".join(str(raw[13] or "").split()),
-            "baseChange": q2(chg),
+            "baseChange": dollar_change(chg, base, prev, chg_pct),
             "baseChangePct": q6(chg_pct),
+            "baseChangedAt": parse_change_date(detail),
             "fromZero": bool(from_zero or prev == 0),
             "previousBase": q2(prev),
-            "previousDetail": " ".join(str(raw[15] or "").split()),
+            "previousDetail": detail,
         })
     seen = set()
     for r in out:
@@ -270,6 +309,7 @@ def seed_rows():
     rows = []
     for t, base, pct, zero, cons, px, bup, sup, rating in raw:
         prev = 0.0 if zero else q2(base / (1 + pct))
+        detail = "Seeded from the Oct 21 email table. Change at Oct 21, 2026."
         rows.append({
             "ticker": t, "base": q2(base), "bear": None, "bull": None, "rating": rating,
             "consensus": q2(cons), "analysts": None,
@@ -277,8 +317,9 @@ def seed_rows():
             "price": q2(px), "priceAsOf": "Oct 21, 2026 close, 4:00 PM ET (Yahoo Finance)",
             "baseVsPrice": q6(bup), "consensusVsPrice": q6(sup), "baseVsConsensus": None,
             "notes": "", "baseChange": q2(base if zero else base - prev),
-            "baseChangePct": None if zero else q6(pct), "fromZero": zero,
-            "previousBase": q2(prev), "previousDetail": "Seeded from the Oct 21 email table.",
+            "baseChangePct": None if zero else q6(pct), "baseChangedAt": parse_change_date(detail),
+            "fromZero": zero,
+            "previousBase": q2(prev), "previousDetail": detail,
         })
     return rows
 
@@ -337,11 +378,18 @@ SPCX,$128.42,-$1.79,$291.02,SELL,$222.71,38,"StockAnalysis (S&P Global), fetched
     m, c, s = rows
     assert m["base"] == 1153.35 and m["consensus"] == 1239.27, m
     assert m["baseChange"] == 8.55 and abs(m["baseChangePct"] - 0.059) < 1e-9, m
+    assert m["baseChangedAt"] == "2026-10-22", m
     assert m["previousBase"] == 144.80 and m["fromZero"] is False, m
     assert m["bear"] == 89.76 and m["rating"] == "HOLD" and m["analysts"] == 16, m
     assert c["fromZero"] is True and c["previousBase"] == 0 and c["baseChangePct"] is None, c
-    assert c["baseChange"] == 23.40 and c["base"] == 23.40, c
-    assert s["bear"] == -1.79 and abs(s["baseVsPrice"] + 0.194) < 1e-9, s
+    assert c["baseChange"] == 23.40 and c["base"] == 23.40 and c["baseChangedAt"] == "2026-10-22", c
+    assert s["bear"] == -1.79 and abs(s["baseVsPrice"] + 0.194) < 1e-9 and s["baseChangedAt"] == "2026-10-22", s
+    assert parse_change_date("Prev Base $144.80 -> $153.35 at Oct 22, 2026 future-bets update; unchanged in Oct 23 scan") == "2026-10-22"
+    assert parse_change_date("at October 22, 2026") == "2026-10-22"
+    assert parse_change_date("at Feb 31, 2026") is None and parse_change_date("no date") is None
+    assert dollar_change(None, 153.35, 144.80, 0.059) == 8.55
+    assert dollar_change(8.55, 1153.35, 144.80, 0.059) == 8.55
+    assert dollar_change(None, None, 144.80, 0.059) == 8.54
     assert "Elon" not in "".join(r["ticker"] for r in rows)
     doc, missing = build_doc(rows, {"rows": [{"ticker": "MSTR", "why": "custom why"}], "ptChangeNote": "kept note"})
     assert doc["rows"][0]["why"] == "custom why", doc["rows"][0]
@@ -354,6 +402,15 @@ SPCX,$128.42,-$1.79,$291.02,SELL,$222.71,38,"StockAnalysis (S&P Global), fetched
     assert len(seeded["rows"]) == 9
     assert all(r["why"] for r in seeded["rows"])
     assert seeded["rows"][6]["ticker"] == "CRWV" and seeded["rows"][6]["fromZero"] is True
+    assert all(r["baseChangedAt"] == "2026-10-21" for r in seeded["rows"])
+    pct_csv = sample.splitlines()[0] + "\n" + (
+        'MSTR,"$153.35",$89.76,$266.37,HOLD,$239.27,16,"StockAnalysis (S&P Global), fetched Oct 21, 2026",'
+        '$153.48,"Oct 21, 2026 close, 4:00 PM ET (Yahoo Finance)",-0.1%,55.9%,-35.9%,note,+5.9%,'
+        '"Prev Base $144.80 -> $153.35 at Oct 22, 2026"\n'
+    )
+    pct_rows, _ = parse_csv(pct_csv)
+    assert pct_rows[0]["baseChange"] == 8.55 and pct_rows[0]["baseChangedAt"] == "2026-10-22", pct_rows[0]
+    assert abs(pct_rows[0]["baseChangePct"] - 0.059) < 1e-9
     assert not any(is_scenario(r["ticker"]) for r in seeded["rows"])
     print("self-test ok")
 
@@ -381,8 +438,9 @@ def main():
     if skipped: print("skipped:", "; ".join(skipped))
     if missing: print("no why text for:", ", ".join(missing))
     for r in rows:
-        chg = "new" if r["fromZero"] else ("" if r["baseChangePct"] is None else f"{r['baseChangePct']*100:+.1f}%")
-        print(f"  {r['ticker']:5} base {r['base']:10.2f}  {chg:>8}  px {r['price']:10.2f}  {r['rating']:4}  {r['why']}")
+        chg = "new" if r["fromZero"] else ("" if r["baseChange"] is None else f"{r['baseChange']:+.2f}")
+        when = r.get("baseChangedAt") or "undated"
+        print(f"  {r['ticker']:5} base {r['base']:10.2f}  {chg:>8}  {when}  px {r['price']:10.2f}  {r['rating']:4}  {r['why']}")
 
 if __name__ == "__main__":
     main()
