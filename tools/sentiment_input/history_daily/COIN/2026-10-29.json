@@ -1,0 +1,228 @@
+{
+ "symbol": "COIN",
+ "start": "2026-10-29T00:00:00Z",
+ "end": "2026-10-30T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115622553058259129",
+   "date": "2026-10-29",
+   "text": "🧊 $MITO sees a brutal 31.7x volume spike with a 4.4% dump—bulls beware or is this just noise?\n\n- my bias is still bearish for MITO #MITOUSDT on the 1h after this -4.4% dump and historic 31.7x volume spike — structure is in full bear alignment across 1h, daily, weekly, and BTC https://t.co/ccxMy5g0bh"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115799707196740015",
+   "date": "2026-10-29",
+   "text": "🔥 TEM shows 10.4x volume with a 2.7% jump in 15m—buyers aren’t just covering, they’re accumulating strong\n\n- my bias is bullish here — the 1h structure is clearly trending up, and the surge in both price and volume suggests aggressive accumulation rather than mere short https://t.co/L0xQLKjLqe"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115792462660645241",
+   "date": "2026-10-29",
+   "text": "🔥 $MERL jumps 3.7% in 15m with 3.6x volume spike—real momentum or just a short fuse blowing out?\n\n- my bias here is bullish on MERL #MERLUSDT.P in the 1h, but with clear caution: the pump is real and structurally backed, yet it's running right into higher-timeframe https://t.co/MsW9mTMNQy"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 12,
+   "user": "RockyTSTH",
+   "url": "https://x.com/RockyTSTH/status/2115878113628545188",
+   "date": "2026-10-29",
+   "text": "$COIN PRE-EARNINGS FLOW 👀\n\nFLOW — Bearish\n• $35.6K calls vs. $3.2M puts.\n• Displayed buying concentrated in December downside puts.\n\nNET PREMIUM — Bearish\n• -$2.63M; positive net puts (~+$2.4M) and negative net calls (~-$259K).\n\nEXPECTED MOVE — ±$10 (~6.3%)\n• Implied range: https://t.co/IDVkNfY3Ky"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115670579290198163",
+   "date": "2026-10-29",
+   "text": "🧊 ETH stands just above recent lows; bearish structure suggests more downside pressure, not a pause.\n\n- my bias is bearish here as 1h structure remains in clear lower high/lower low sequence, with price unable to reclaim recent supply above and hovering just above the last https://t.co/HuLVYaMoAI"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115595615170130394",
+   "date": "2026-10-29",
+   "text": "🛑 $SAMSUNG dips 0.7% below key 179.6 level—liquidity hunt or start of a deeper fall?\n\n- my bias is bearish here: the 1h market structure is confirmed bearish (lower highs/lows), and the recent wick below 179.6 on the 15m was a classic liquidity grab beneath a key level that https://t.co/WVmu8cnP3V"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "saintcryptonft",
+   "url": "https://x.com/saintcryptonft/status/2115727780717486348",
+   "date": "2026-10-29",
+   "text": "🚨 $INIT : +15% UP, BUT IS THE NEXT MOVE BULLISH OR BEARISH?\n\n$INIT has made a strong move, but the chart is showing something every trader needs to understand: a strong pump does not guarantee another rally.\n\n📊 What the chart tells us:\n🟢 Price has gained over 15% in 24 hours. https://t.co/G6tncS1kc6 https://t.co/ckOq6vkpww"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2115873072485958047",
+   "date": "2026-10-29",
+   "text": "🤨 $Q 3.2x volume on the -45.7% drop reads as distribution into weakness\n\n- my bias is bearish here on the 1h: structure is still making lower highs after the dump, and I treat that 3.2x volume spike with the sharp 15m drop as long unwind / distribution into weakness, not a clean https://t.co/Y9gFmUGzt3"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 16,
+   "user": "wick_btc",
+   "url": "https://x.com/wick_btc/status/2115830027690373435",
+   "date": "2026-10-29",
+   "text": "$AIO 1D Updated setup:\n\nI’ve made a few updates to my previous analysis. Here’s the revised post.\n\nIf you remember, I warned about a potential major crash in AIO when it was trading around $0.1200. At the time, I also shared my downside target and accumulation zone at https://t.co/Q19pStrw46"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "AntoineRSX",
+   "url": "https://x.com/AntoineRSX/status/2115813788952023446",
+   "date": "2026-10-29",
+   "text": "Ansem’s Q4 market thoughts — October 28\n\nMain message: he has flipped from bullish to short-term bearish and expects another move toward the range lows.\n\nMarket direction\n- Bearish on BTC, ETH and SOL over the next couple of weeks. He thinks the recent bounce is more likely a https://t.co/SJZ9unXXej"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "1769_alex",
+   "url": "https://x.com/1769_alex/status/2115775908741279975",
+   "date": "2026-10-29",
+   "text": "$SPY daily levels — Thu Oct 29, 2026\n\nQuick read\nCoin flip with a slight lean lower, about 55/45, while SPY stays under its 772.6 flip. Getting back above 772.6 turns it bullish.\n\nKey levels\nResistance: 772.6 · 773.4 · 775\nSupport: 769.2 · 766.8 · 765.5\n\nScenarios\n• Bull: above https://t.co/8X6ebVsEbM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DVLLCGh057",
+   "url": "https://x.com/DVLLCGh057/status/2115784677696880680",
+   "date": "2026-10-29",
+   "text": "Wednesday after the bell, ES ran last week's high to 7819.5… then gave back 69 points in under an hour. That's not a breakout. That's a stop hunt in a nice suit. 👔\n\nThursday map (all times ET, as of 7:56 AM):\n📍 Wed high 7819.5 (swept last week high 7812.25)\n📍 7800 zone: https://t.co/1X2vNcVq3B"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 25,
+   "user": "MRTaruncrypto",
+   "url": "https://x.com/MRTaruncrypto/status/2115764584510292419",
+   "date": "2026-10-29",
+   "text": "A lot of people in crypto aren’t just fighting the market. They’re fighting the deadlines they invented for it.\n\nThey expect a rally by next month.\nAn ATH by December.\nLife-changing money before the year ends.\n\nThen price moves sideways and they feel betrayed.\n\nBut the market"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "racksor_",
+   "url": "https://x.com/racksor_/status/2115678921823752654",
+   "date": "2026-10-29",
+   "text": "No Diddy https://t.co/bGk4I7jKgZ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "LewskiViews",
+   "url": "https://x.com/LewskiViews/status/2115860813143560527",
+   "date": "2026-10-29",
+   "text": "i’m super bullish on $ANT on @LaunchOnSF.\n\nthe $STONK eco looks strong, $ZEC looks strong, and $ANT is paired with zcash.\n\nimo it’s the most undervalued coin on stonk rn. everything is lining up for a strong setup with great r/r potential. https://t.co/s0YA0Ibk7g"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 10,
+   "user": "AzzyXlife",
+   "url": "https://x.com/AzzyXlife/status/2115861370239357353",
+   "date": "2026-10-29",
+   "text": "i’m super bullish on $ANT on @LaunchOnSF.\n\nthe $STONK eco looks strong, $ZEC looks strong, and $ANT is paired with zcash.\n\nimo it’s the most undervalued coin on stonk rn. everything is lining up for a strong setup with great r/r potential. https://t.co/29Pwhfm9ya"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 19,
+   "user": "Kennyakins10",
+   "url": "https://x.com/Kennyakins10/status/2115860627470053812",
+   "date": "2026-10-29",
+   "text": "i’m super bullish on $ANT on @LaunchOnSF.\n\nthe $STONK eco looks strong, $ZEC looks strong, and $ANT is paired with zcash.\n\nimo it’s the most undervalued coin on stonk rn. \n\neverything is lining up for a strong setup with great r/r potential. https://t.co/FWArLEX7Ds"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "RishabhPande28",
+   "url": "https://x.com/RishabhPande28/status/2115867032151605454",
+   "date": "2026-10-29",
+   "text": "i’m super bullish on $ANT on @LaunchOnSF.\n\nthe $STONK eco looks strong, $ZEC looks strong, and $ANT is paired with zcash.\n\nimo it’s the most undervalued coin on stonk rn. everything is lining up for a strong setup with great r/r potential. https://t.co/X0vgvn9Yen"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 131,
+   "user": "Saint10Fourteen",
+   "url": "https://x.com/Saint10Fourteen/status/2115860469919449257",
+   "date": "2026-10-29",
+   "text": "i’m super bullish on $ANT on @LaunchOnSF.\n\nthe $STONK eco looks strong, $ZEC looks strong, and $ANT is paired with zcash.\n\nimo it’s the most undervalued coin on stonk rn. everything is lining up for a strong setup with great r/r potential."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "WAGMIbnbCTO",
+   "url": "https://x.com/WAGMIbnbCTO/status/2115694415884788123",
+   "date": "2026-10-29",
+   "text": "Day 116,\nGive me a coin that has a better upside potential than $WAGMI, and no downside/rug potential (Absolute bottom, Renounced contract, Burned liquidity), I'll happily sell my 1% and get even more and buy that coin!\nBut I don't think anyone can offer something like that!"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "MorningMadness4",
+   "url": "https://x.com/MorningMadness4/status/2115872352676225234",
+   "date": "2026-10-29",
+   "text": "Earnings pt. 2 Afterhours Bullish or Bearish? $MSTR $COIN Coinbase $PINS Pinterest $RDDT Reddit"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "FORECAST_ONE",
+   "url": "https://x.com/FORECAST_ONE/status/2115872478052618520",
+   "date": "2026-10-29",
+   "text": "Earnings pt. 2 Afterhours Bullish or Bearish? $MSTR $COIN Coinbase $PINS Pinterest $RDDT Reddit"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Rodney_crouse1",
+   "url": "https://x.com/Rodney_crouse1/status/2115945450427609302",
+   "date": "2026-10-29",
+   "text": "Earnings pt. 2 Afterhours Bullish or Bearish? $MSTR $COIN Coinbase $PINS Pinterest $RDDT Reddit"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BrandlyMo",
+   "url": "https://x.com/BrandlyMo/status/2115888450897379505",
+   "date": "2026-10-29",
+   "text": "Earnings pt. 2 Afterhours Bullish or Bearish? $MSTR $COIN Coinbase $PINS Pinterest $RDDT Reddit"
+  }
+ ]
+}

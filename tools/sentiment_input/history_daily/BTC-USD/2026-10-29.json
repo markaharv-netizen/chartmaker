@@ -1,0 +1,228 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-10-29T00:00:00Z",
+ "end": "2026-10-30T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AniGLMHooker",
+   "url": "https://x.com/AniGLMHooker/status/2115700680463622550",
+   "date": "2026-10-29",
+   "text": "- 𝗦𝗲𝗻𝘁𝗶𝗺𝗲𝗻𝘁 𝗴𝗮𝘂𝗴𝗲: 2 / 5 - 𝗞𝗲𝘆 𝗯𝗲𝗮𝗿𝗶𝘀𝗵 𝗰𝘂𝗲𝘀: - A major SOL sell‐off of ~$104 M over five days, indicating pressure on the Solana ecosystem. - Bitcoin’s recent pullback and debate over whether it signals a trend reversal, coupled with concerns about https://t.co/T79b4s3TDf"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2115778975200923689",
+   "date": "2026-10-29",
+   "text": "🚨 $BTC ALERT: As $10 billion in bitcoin options near expiry, the tell is in the pricing\n\n🔗 Open on MEXC: https://t.co/0tFuuDrnrE\n\n🟢 Bullish: 25%\n• Most  open  Bitcoin  options  positions  are  concentrated  in  calls  at  $90,000–$100,000  strikes,  indicating  upside"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 638,
+   "user": "Washigorira",
+   "url": "https://x.com/Washigorira/status/2115762576898625970",
+   "date": "2026-10-29",
+   "text": "#Bitcoin Game Over for the Bears.\n\nHistorically, once BTC enters this weekly golden zone, the bear case is on borrowed time.\n\nIt doesn’t always mean immediate upside. Some chop inside the zone is normal.\n\nBut in every cycle, this area has marked the transition from bearish https://t.co/rF6COM5FOK"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "YUSUFBCRYPTO",
+   "url": "https://x.com/YUSUFBCRYPTO/status/2115791899176874106",
+   "date": "2026-10-29",
+   "text": "𝗪𝗵𝗮𝘁 𝗶𝗳 𝘆𝗼𝘂𝗿 𝗕𝗶𝘁𝗰𝗼𝗶𝗻 𝗽𝗿𝗲𝗱𝗶𝗰𝘁𝗶𝗼𝗻 𝗶𝘀 𝘄𝗿𝗼𝗻𝗴 ?\n\nFor today's 𝗤𝘂𝗮𝗻𝘁 𝗔𝗜 𝗗𝗮𝗶𝗹𝘆 𝗘𝗱𝗴𝗲, I built an IF/THEN Trading Map for $BTC instead of betting on a single outcome.\n\nHere's what my research revealed:\n\n🟢 IF bullish: $BTC defends https://t.co/CFNNwqLYz4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115936785700454404",
+   "date": "2026-10-29",
+   "text": "The Dragonfly Doji\nhttps://t.co/7vdAH4oMrz\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115843768343777763",
+   "date": "2026-10-29",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8HeJG\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115838403791192355",
+   "date": "2026-10-29",
+   "text": "Live Walkthrough Silver! \nhttps://t.co/yVkE0gg0oK\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115939779703669113",
+   "date": "2026-10-29",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8HeJG\n\nJoin our supported trading community at:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115938509509034082",
+   "date": "2026-10-29",
+   "text": "Trading Like Beginner Vs Trading Like a Pro\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115799564238114986",
+   "date": "2026-10-29",
+   "text": "Live Walkthrough Silver! \nhttps://t.co/yVkE0gfszc\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115833410988150938",
+   "date": "2026-10-29",
+   "text": "Live Walkthrough Gold!\nhttps://t.co/ZfXoE0Ekwx\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115805603423834243",
+   "date": "2026-10-29",
+   "text": "Trading Like Beginner Vs Trading Like a Pro\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115804596987732223",
+   "date": "2026-10-29",
+   "text": "The Dragonfly Doji\nhttps://t.co/7vdAH4oeC1\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115871789331169478",
+   "date": "2026-10-29",
+   "text": "Live Walkthrough Silver! \nhttps://t.co/yVkE0gg0oK\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115793020503105783",
+   "date": "2026-10-29",
+   "text": "Live Walkthrough Gold!\nhttps://t.co/ZfXoE0DMGZ\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115932373590368585",
+   "date": "2026-10-29",
+   "text": "Live Walkthrough Gold!\nhttps://t.co/ZfXoE0Ekwx\n\nWant to be a part of a trading community?\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115864488717222199",
+   "date": "2026-10-29",
+   "text": "Live Walkthrough Gold!\nhttps://t.co/ZfXoE0Ekwx\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115933841978515729",
+   "date": "2026-10-29",
+   "text": "Live Walkthrough Silver! \nhttps://t.co/yVkE0gg0oK\nWant to be a part of a trading community?\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1446,
+   "user": "KillaXBT",
+   "url": "https://x.com/KillaXBT/status/2115795810461819353",
+   "date": "2026-10-29",
+   "text": "With the amount of bad news and uncertainty being thrown at Bitcoin right now, you’d expect it to be trading a lot lower.\n\nWe’re definitely in the process of establishing a major pivot low soon.\n\nBearish FOMC, with rates held (priced in)\nRising oil prices\nHot CPI data\nGlobal bond"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 268,
+   "user": "AkadexCrypto",
+   "url": "https://x.com/AkadexCrypto/status/2115745491153514900",
+   "date": "2026-10-29",
+   "text": "I just explored $ANSEM (The Black Bull) with @tryquantio and the research reminded me why traders need a plan for more than one market outcome.\n\n✓ Market Context: Quant AI showed $ANSEM in a post-hype distribution phase, trading around $0.0608, down 7.7% in 24 hours and 33.7% https://t.co/NmYSCbdEAJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "signalcorevip",
+   "url": "https://x.com/signalcorevip/status/2115821075380486511",
+   "date": "2026-10-29",
+   "text": "📊 24H Market Analysis @ October 29, 2026\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nThe dominant price action narrative indicates a market under significant institutional selling pressure, masked by minor intra-day upticks.\n\nDespite BTC and ETH showing slight"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 22,
+   "user": "freeearningidea",
+   "url": "https://x.com/freeearningidea/status/2115845038056067103",
+   "date": "2026-10-29",
+   "text": "Bitcoin is testing the bearish outlook. $82K is the line.\n\nA liquidity sweep below $80K was expected. Price may be showing a different path. A confirmed reclaim of $82K opens further upside.\n\nAnother rejection brings downside risk back.\n\nThe sweep is done. The reclaim is not. https://t.co/IB4eHfOZPN https://t.co/B1tm1QygYQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Ehis_Ehiz",
+   "url": "https://x.com/Ehis_Ehiz/status/2115913531396600045",
+   "date": "2026-10-29",
+   "text": "🚨 BTC MARKET UPDATE 📉\n\nBitcoin is trading at $78,912.68, down 2.97% in 24 hours.\n\n📊 Key levels to watch:\n🔻 Support: $78,300–$78,400\n⚠️ Resistance: $79,800–$80,500\n📉 4H momentum: Bearish\n\nWill BTC bounce or break lower?\n\n🐂 Bullish bounce or 🐻 more downside?\n\n#Bitcoin $BTC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 39,
+   "user": "knoah_global",
+   "url": "https://x.com/knoah_global/status/2115871722805301314",
+   "date": "2026-10-29",
+   "text": "Bitcoin dipped below $80,000 today. Crypto futures liquidations hit $337M+ in 24 hours.\n\nYet US spot Bitcoin ETFs recorded another $137M in inflows, marking three consecutive days of buying.\n\nWhat do you think happens next?\nBullish: Institutional demand absorbs the sell-off. https://t.co/38XyOuTCf7"
+  }
+ ]
+}

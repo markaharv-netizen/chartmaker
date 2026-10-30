@@ -1,0 +1,237 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-10-29T00:00:00Z",
+ "end": "2026-10-30T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "signalcorevip",
+   "url": "https://x.com/signalcorevip/status/2115821075380486511",
+   "date": "2026-10-29",
+   "text": "📊 24H Market Analysis @ October 29, 2026\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nThe dominant price action narrative indicates a market under significant institutional selling pressure, masked by minor intra-day upticks.\n\nDespite BTC and ETH showing slight"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2115893108747739635",
+   "date": "2026-10-29",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $BTC — Bitcoin, Ethereum, XRP, Dogecoin Trade Sideways After Fed Rate Hold\n🟢 48% Bullish · 🔴 52% Bearish\n🔗 https://t.co/0tFuuDrVhc\n\n2. $XOM — ExxonMobil, AbbVie On Deck Friday As Energy, Drug Growth Face Test\n🟢 55% Bullish · 🔴 45% Bearish\n🔗"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2115772418975473768",
+   "date": "2026-10-29",
+   "text": "ethereum:0x0000000000085d4780b73119b644ae5ecd22b376 — Rectangle Pattern: Breakout or Breakdown Ahead? ⚠️📊\n\nethereum:0x0000000000085d4780b73119b644ae5ecd22b376 is trading near $0.9997 on the 4H chart, consolidating in a tight range. A breakout above resistance could open the door https://t.co/35KcoBxMpd"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 91,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2115630928156570074",
+   "date": "2026-10-29",
+   "text": "Bitcoin is in a tug of war: a bull flag and rising TBO slow line versus bearish consolidation inside the cloud. I'm still leaning bullish after BTC tested the fast line near 81,000, but a wick is not a breakout. I want a close above the cloud and stronger volume before calling https://t.co/DF9vWOjA9C"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "PhasedWealth",
+   "url": "https://x.com/PhasedWealth/status/2115838287063756984",
+   "date": "2026-10-29",
+   "text": "Nope.\n\n$BLOX = BEAR\nThe trailing yield looks fat near 45%, but this is the usual high-distribution crypto product that keeps the number high by spending its own NAV. Price closed at $11.55 on October 28 after a long slide from the mid-20s, and the weekly checks have been"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "racksor_",
+   "url": "https://x.com/racksor_/status/2115678921823752654",
+   "date": "2026-10-29",
+   "text": "No Diddy https://t.co/bGk4I7jKgZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115747289583268029",
+   "date": "2026-10-29",
+   "text": "ethereum:0xaea46a60368a7bd060eec7df8cba43b7ef41ad85 — Artificial Superintelligence Alliance 🤖\n\n$430 MILLION market cap.\n\n$490 MILLION fully diluted valuation.\n\nAnd a decentralized AI ecosystem competing in one of technology's fastest-growing markets.\n\nThe Artificial https://t.co/a53sCEEuJm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115741179312754990",
+   "date": "2026-10-29",
+   "text": "filecoin:native — Filecoin 🌐\n\nA $750 MILLION market cap.\n\nNearly 840 MILLION FIL circulating.\n\nAnd a decentralized storage network targeting the future of AI data infrastructure.\n\nFilecoin has spent years building an alternative to centralized cloud storage.\n\nBut there's a https://t.co/ydEnI0TmmW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115741539121205544",
+   "date": "2026-10-29",
+   "text": "cardano:native — Cardano 🔵\n\n$7.6 BILLION market cap.\n\n45 BILLION maximum token supply.\n\nBut only $58 MILLION in DeFi liquidity.\n\nCardano has spent years developing a research-driven blockchain ecosystem.\n\nNow the real question is whether its technology and governance can https://t.co/d4QAbexSAR"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "alfa_hedge",
+   "url": "https://x.com/alfa_hedge/status/2115663669270859892",
+   "date": "2026-10-29",
+   "text": "U.S. spot Ethereum ETFs saw $60.2M in net outflows alongside $43.1M in derivatives liquidations, reported by FXStreet.\n\nDaily Asset Strength for $ETH reads Bearish at 30.3, worsening as downside pressure persists across the wider market."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2115705560029081797",
+   "date": "2026-10-29",
+   "text": "ethereum:0x68749665ff8d2d112fa859aa293f07a622782f38 / USDT 👀📉\n\nXAUT is forming a Rising Wedge on the 1H chart! Price is struggling near $4,030 after a broader decline, and weakening momentum could trigger another bearish move. 🔥\n\n🎯 Downside target: $3,960\n🚧 Resistance: https://t.co/AQZyiUMjX3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115733284995100811",
+   "date": "2026-10-29",
+   "text": "ethereum:0x25931894a86d47441213199621f1f2994e1c39aa — ChainGPT 🤖\n\nA $19 MILLION market cap.\n\nMore than 93% of its maximum supply circulating.\n\nAnd an AI ecosystem built specifically for Web3.\n\nWhile newer AI tokens face years of major unlocks, ChainGPT has already released most https://t.co/fossLQ0dHC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "HCFlowSniper",
+   "url": "https://x.com/HCFlowSniper/status/2115798653223010343",
+   "date": "2026-10-29",
+   "text": "📊 AM Crypto Pulse — Thu Oct 29, 2026\n\n🪙 Market snapshot \n\nBitcoin (BTC): Support $80,000 → $78,500 | Resistance $81,500 → $82,500\nEthereum (ETH): Support $2,300 → $2,250 | Resistance $2,375 → $2,425\nXRP: Support $1.30 → $1.27 | Resistance $1.34 → $1.38\nSolana (SOL): https://t.co/AwseLMQzSw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2115913374139629626",
+   "date": "2026-10-29",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $GOOGL — Top News Today: Stocks Fall as Alphabet Slide Dents AI Optimism\n🟢 10% Bullish · 🔴 90% Bearish\n🔗 https://t.co/fC66AvCM3G\n\n2. $TWLO — Twilio Stock Tumbles on Q3 Earnings\n🟢 42% Bullish · 🔴 58% Bearish\n🔗 https://t.co/bNfMMBYiAm\n\n3. $SUI — Sui:"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2115716497138147512",
+   "date": "2026-10-29",
+   "text": "solana:HUMA1821qVDKta3u2ovmfDQeW2fSQouSKE8fkF44wvGw — Huma Finance 💳\n\n$376M in DeFi liquidity.\n\nNearly $3M in monthly fees.\n\nAnd a token with a market cap below $50M.\n\nSounds undervalued?\n\nNot so fast.\n\nHuma is building infrastructure for one of crypto's biggest opportunities: https://t.co/nmucGxza94"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2115883000336359744",
+   "date": "2026-10-29",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $WTI — Crude Oil Dips As JD Vance Pushes For Diplomacy To End U.S.-Iran Crisis\n🟢 25% Bullish · 🔴 75% Bearish\n🔗 https://t.co/cJDva6T8Nr\n\n2. ethereum:0x455e53cbb86018ac2b8092fdcd39d8444affc3f6 — Polymarket pauses trading after $2.65 million exploit, says"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2115950287995244900",
+   "date": "2026-10-29",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $BNB — Binance hack rattles crypto markets as BNB falls 7%, Bitcoin slides\n🟢 10% Bullish · 🔴 90% Bearish\n🔗 https://t.co/2TF3wE9aoz\n\n2. ethereum:0x455e53cbb86018ac2b8092fdcd39d8444affc3f6 — Polymarket Confirms $2.65M Exploit Tied to Third-Party Provider"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2115687501793021955",
+   "date": "2026-10-29",
+   "text": "$ETH / USDT ⚠️\n\nEthereum is printing a Head &amp; Shoulders pattern on the 4H chart 👀 Sellers are pressuring the neckline near $2,320, signaling weakening bullish momentum.\n\n📉 Neckline support: $2,320\n🎯 Bearish target: $1,800\n🚀 Resistance: $2,500–$2,600\nA confirmed breakdown https://t.co/9VUZjH1sio"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2115866671923486903",
+   "date": "2026-10-29",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $GOOGL — Alphabet's AI Spending Avalanche Sparks Fresh Fears As Analyst Warns of Profit Squeeze\n🟢 38% Bullish · 🔴 62% Bearish\n🔗 https://t.co/fC66AvCM3G\n\n2. $AMZN — Amazon Stock Dips Ahead of Q3 Earnings: What's Going On?\n🟢 52% Bullish · 🔴 48% Bearish"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "greedyhunter1",
+   "url": "https://x.com/greedyhunter1/status/2115616119654617440",
+   "date": "2026-10-29",
+   "text": "Ethereum Daily Update\n\nPrice: $2,346 (below MA50)\nMA200 holding at $2,161\nRSI 37.6 (weak)\nBollinger width \\~10%\n\nBullish: Hold $2,296 → reclaim $2.5k  \nBearish: Break $2,296 → test $2.0k\n\n#Ethereum #ETH #Crypto #ETHUSD https://t.co/x8bR7bDaQj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2115735680920035631",
+   "date": "2026-10-29",
+   "text": "ethereum:0x455e53cbb86018ac2b8092fdcd39d8444affc3f6 — Rectangle Pattern in Play 👀📈\n\nethereum:0x455e53cbb86018ac2b8092fdcd39d8444affc3f6 is consolidating between $0.088 and $0.0975, with buyers repeatedly defending support. This rectangle formation signals a potential breakout https://t.co/ga7nKvuObA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "arel_btc",
+   "url": "https://x.com/arel_btc/status/2115795938497462765",
+   "date": "2026-10-29",
+   "text": "🚀 Crypto prediction: BTC could make a big move soon! 👀📈\n\nPatience today, opportunities tomorrow. 💎🔥\n\n🐂 Bullish or 🐻 bearish?\n\n#BTC #Bitcoin #Crypto #ETH #ethereum #nft #bnb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2115690565191049463",
+   "date": "2026-10-29",
+   "text": "ethereum:0x925206b8a707096ed26ae47c84747fe0bb734f59 / USDT 👀⚠️\n\nWhiteBIT Coin is forming a Double Top on the 1H chart! Sellers are defending the $78.5–$78.7 resistance zone, showing repeated rejection and weakening bullish momentum.\n\n🛡️ Support: $76.0–$76.3\n🚧 Resistance: https://t.co/ZtWkJsUn0m"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "LevelsMapForYou",
+   "url": "https://x.com/LevelsMapForYou/status/2115628878177980425",
+   "date": "2026-10-29",
+   "text": "#Ethereum #ETH \nOctober 29, 2026\n\n&gt;$2,700 daily close  \n🟢 Uptrend / breakout\n\n$2,600–2,700  \n🟢 Bullish test zone\n\n$2,500–2,600  \n🟡 Sideways / range\n\n$2,400–2,500  \n🟠 Weakening\n\n&lt;$2,350 daily close  \n🔴 Downtrend risk\n\n&lt;$2,250–2,300  \n🔴 Strong bearish confirmation"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 13,
+   "user": "GannOptionChart",
+   "url": "https://x.com/GannOptionChart/status/2115865356392964135",
+   "date": "2026-10-29",
+   "text": "#Ethereum \n#eth \n\nVibration zone has done its part \nWhen the timecycles is bearish , it pushes price down \nwhen the timecycle is Bullish it pushes price up .\neach time major 1-2% one way moves \n\nAlwyas trade using time and price . \n\n#gann https://t.co/divhgPSQxd https://t.co/1OuUUnt3qB"
+  }
+ ]
+}
