@@ -879,10 +879,9 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
   chart.setOption(o,true);last={opt:o,asOf:j.asOf};
   const nts=(j.notes||[]).filter(n=>!/equal-size/.test(n)),miss=(nts.length?' · skipped: '+nts.join('; '):'')+(j.missing.length?' · no quote: '+j.missing.join(', '):'')+(j.eq&&j.eq.length?' · equal-size (no share count): '+j.eq.join(', '):'')+(j.est&&j.est.length?(j.est.length>8?` · mcap = price × shares for ${j.est.length} tickers`+(j.sharesAsOf&&j.sharesAsOf.length?` (shares as of ${j.sharesAsOf.join(', ')})`:''):' · mcap = price × shares: '+j.est.join(', ')):''),nolog=j.rows.filter(d=>!d.logo).map(d=>d.symbol);
   const shs=j.rows.filter(d=>d.since);$('status').className='';$('status').textContent=(shs.length?'⚠ short history: '+shs.map(d=>d.symbol+' starts '+fmtD(d.since*1000)).join(', ')+' · ':'')+`${rows.length}${shN?' '+shN+' of '+j.rows.length:''} tiles · data as of ${etTime(j.asOf)}${miss}${nolog.length?' · no logo: '+nolog.join(', '):''}`}
-// ---------- Treasury mode: /api/treasury (btctop100.json + live Yahoo BTC-USD). One metric: BTCTC top 100. ----------
+// ---------- Treasury mode: /api/treasury (btctop100.json from Mark's sheet + live Yahoo BTC-USD). One metric: BTCTC top 100. ----------
 let tlast=null,TFRESH=false;
 function chartBox(h){const px=h+'px';if($('chart').style.height===px)return;$('chart').style.width='1600px';$('chart').style.height=px;chart.resize()}
-const tAsOf=s=>{if(!s)return '';const d=new Date(String(s).slice(0,10)+'T12:00:00Z');return isNaN(d)?String(s):d.toLocaleDateString('en-US',{timeZone:'UTC',month:'short',day:'numeric',year:'numeric'})};
 const tBtc=v=>Math.round(v).toLocaleString('en-US');
 const tUsd=v=>{if(v==null||!isFinite(v))return '—';const m=v/1e6;if(Math.abs(m)>=1)return '$'+Math.round(m).toLocaleString('en-US')+'M';
   if(Math.abs(v)>=1000)return '$'+Math.round(v/1000).toLocaleString('en-US')+'K';return '$'+Math.round(v).toLocaleString('en-US')};
@@ -897,54 +896,57 @@ async function trender(){const st=$('status');st.className='';st.textContent='Lo
     const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);if(!j.rows||!j.rows.length)throw Error('empty treasury snapshot');tlast=j;tdraw()}
   catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();tlast=null}}
 function tdraw(){const j=tlast,rows=j.rows,COLS=2,per=Math.ceil(rows.length/COLS);
-  const margin=28,gap=18,rowH=30,headH=32,titleTop=16,titleH=72;
-  const note=rows.filter(r=>r.note).map(r=>(r.marker||'*')+' '+r.ticker+': '+r.note).join('  ');
-  const footH=note?108:68,H=titleTop+titleH+headH+per*rowH+footH+10;
+  const margin=20,gap=12,rowH=30,headH=32,titleTop=14,titleH=68;
+  const footH=72,H=titleTop+titleH+headH+per*rowH+footH+8;
   chartBox(H);
   const W=chart.getWidth()||1600,colW=(W-margin*2-gap*(COLS-1))/COLS;
-  const pad=12,rankR=36,tickW=98,btcW=96,usdW=108,pctW=80;
-  const o=base($('ttitle').value||'Top 100 public companies holding Bitcoin','','twm');
-  o.title.top=titleTop;o.title.left=margin;o.title.textStyle.fontSize=32;
+  const pad=8,rankW=28,tickW=74,ctryW=52,btcW=64,usdW=72,pctW=62,dateW=74;
+  const o=base($('ttitle').value||j.title||'Corporate Bitcoin Treasury Holdings','','twm');
+  o.title.top=titleTop;o.title.left=margin;o.title.textStyle.fontSize=28;
   delete o.grid;o.series=[];
   const g=[],stripe=T.dark?'rgba(255,255,255,0.045)':'rgba(17,17,17,0.035)',headBg=T.dark?'#2A2116':'#FFF4E6';
   const orange=bc('#F7931A');
-  g.push(tt(margin,titleTop+46,'Ranked by bitcoin held · '+((j.sourceName)||'BitcoinTreasuries.net'),{size:16,fill:T.src}));
+  g.push(tt(margin,titleTop+44,'Ranked by bitcoin held · '+(j.sheet||'BTCTC Top 100')+' · '+(j.sourceName||"My Bot's Sheets"),{size:15,fill:T.src,width:W-margin*2-180}));
   const tableTop=titleTop+titleH;
   for(let c=0;c<COLS;c++){const x0=margin+c*(colW+gap),right=x0+colW-pad;
-    const pctX=right,usdX=pctX-pctW-10,btcX=usdX-usdW-10,tickX=btcX-btcW-8-tickW,nameX=x0+pad+rankR+8,nameW=Math.max(40,tickX-8-nameX);
+    const dateR=right,pctR=dateR-dateW-6,usdR=pctR-pctW-6,btcR=usdR-usdW-6;
+    const ctryX=btcR-btcW-8-ctryW,tickX=ctryX-6-tickW,nameX=x0+pad+rankW+6,nameW=Math.max(36,tickX-6-nameX);
     g.push(tg(x0,tableTop,colW,headH,headBg));
     g.push(tg(x0,tableTop+headH-2,colW,2,orange));
     const hy=tableTop+headH/2;
-    g.push(tt(x0+pad+rankR,hy,'#',{align:'right',bold:1,size:13,fill:T.title}));
-    g.push(tt(nameX,hy,'Company',{bold:1,size:13,fill:T.title}));
-    g.push(tt(tickX,hy,'Ticker',{bold:1,size:13,fill:T.title}));
-    g.push(tt(btcX,hy,'BTC',{align:'right',bold:1,size:13,fill:T.title}));
-    g.push(tt(usdX,hy,'USD',{align:'right',bold:1,size:13,fill:T.title}));
-    g.push(tt(pctX,hy,'% of 21M',{align:'right',bold:1,size:13,fill:T.title}));
+    g.push(tt(x0+pad+rankW,hy,'#',{align:'right',bold:1,size:12,fill:T.title}));
+    g.push(tt(nameX,hy,'Company',{bold:1,size:12,fill:T.title}));
+    g.push(tt(tickX,hy,'Ticker',{bold:1,size:12,fill:T.title}));
+    g.push(tt(ctryX,hy,'Country',{bold:1,size:11,fill:T.title,width:ctryW}));
+    g.push(tt(btcR,hy,'BTC',{align:'right',bold:1,size:12,fill:T.title}));
+    g.push(tt(usdR,hy,'USD',{align:'right',bold:1,size:12,fill:T.title}));
+    g.push(tt(pctR,hy,'% of 21M',{align:'right',bold:1,size:11,fill:T.title}));
+    g.push(tt(dateR,hy,'As of',{align:'right',bold:1,size:12,fill:T.title}));
     for(let i=0;i<per;i++){const r=rows[c*per+i];if(!r)break;const y=tableTop+headH+i*rowH;
       if(i%2)g.push(tg(x0,y,colW,rowH,stripe));
-      const cy=y+rowH/2,rk=r.rank==null?(r.marker||'*'):String(r.rank);
-      g.push(tt(x0+pad+rankR,cy,rk,{align:'right',bold:1,size:14,fill:orange}));
+      const cy=y+rowH/2;
+      g.push(tt(x0+pad+rankW,cy,String(r.rank),{align:'right',bold:1,size:13,fill:orange}));
       g.push(tt(nameX,cy,r.name,{size:14,fill:T.title,width:nameW}));
-      g.push(tt(tickX,cy,r.ticker,{size:13,fill:T.src,width:tickW-4}));
-      g.push(tt(btcX,cy,tBtc(r.btc),{align:'right',bold:1,size:14,fill:T.title}));
-      g.push(tt(usdX,cy,tUsd(r.usd),{align:'right',size:14,fill:T.text}));
-      g.push(tt(pctX,cy,r.pctSupply.toFixed(3)+'%',{align:'right',size:13,fill:T.text}));
+      g.push(tt(tickX,cy,r.ticker,{size:12,fill:T.src,width:tickW-2}));
+      g.push(tt(ctryX,cy,r.country||'',{size:12,fill:T.text,width:ctryW}));
+      g.push(tt(btcR,cy,tBtc(r.btc),{align:'right',bold:1,size:13,fill:T.title}));
+      g.push(tt(usdR,cy,tUsd(r.usd),{align:'right',size:12,fill:T.text}));
+      g.push(tt(pctR,cy,r.pctSupply.toFixed(3)+'%',{align:'right',size:12,fill:T.text}));
+      g.push(tt(dateR,cy,r.asOf||'',{align:'right',size:12,fill:T.src}));
     }
   }
   const totB=rows.reduce((a,r)=>a+r.btc,0),totU=rows.every(r=>r.usd!=null)?rows.reduce((a,r)=>a+r.usd,0):null,totP=rows.reduce((a,r)=>a+r.pctSupply,0);
   const px=j.btcPrice?`$${Math.round(j.btcPrice).toLocaleString('en-US')}`:null;
   const pxWhen=j.btcAsOf?etTime(j.btcAsOf):'';
-  const src1=`Holdings as of ${tAsOf(j.asOf)} · Source: ${j.sourceName||'BitcoinTreasuries.net'} · `+(px?`USD = BTC × ${px} (Yahoo Finance${pxWhen?', '+pxWhen:''}${j.priceStale?', cached quote':''})`:'USD value needs a live BTC-USD quote (Yahoo unavailable)')+` · % of ${(j.supply||21000000).toLocaleString('en-US')} BTC`;
+  const src1=`Source: ${j.sourceName||"My Bot's Sheets"}${j.sheet?' · '+j.sheet:''} · `+(px?`USD = BTC × ${px} (Yahoo Finance${pxWhen?', '+pxWhen:''}${j.priceStale?', cached quote':''})`:'USD value needs a live BTC-USD quote (Yahoo unavailable)')+` · % of ${(j.supply||21000000).toLocaleString('en-US')} BTC`;
   const src2=`Top ${rows.length}: ${tBtc(totB)} BTC`+(totU!=null?` · ${tUsdTot(totU)}`:'')+` · ${totP.toFixed(3)}% of 21M supply`;
-  const fy=H-footH+8;
-  g.push(tt(margin,fy+12,src1,{size:14,fill:T.src,width:W-margin*2,wrap:1,valign:'top',lh:18}));
+  const fy=H-footH+6;
+  g.push(tt(margin,fy+10,src1,{size:14,fill:T.src,width:W-margin*2,wrap:1,valign:'top',lh:18}));
   g.push(tt(margin,fy+36,src2,{size:14,fill:T.text,bold:1,width:W-margin*2,valign:'top'}));
-  if(note)g.push(tt(margin,fy+58,note,{size:13,fill:T.src,width:W-margin*2,wrap:1,valign:'top',lh:17}));
   const wm=$('twm').checked;
   o.graphic=[...(wm?[{type:'text',silent:true,right:margin,top:titleTop+4,style:{text:'@thepowerfulHRV',fontSize:16,fill:T.wm}}]:[]),...g];
-  chart.setOption(o,true);last={opt:o,asOf:j.btcAsOf||Date.parse(String(j.asOf))/1000||Date.now()/1000};
-  $('status').className='';$('status').textContent=`${rows.length} companies · holdings as of ${tAsOf(j.asOf)}`+(px?` · BTC ${px}${pxWhen?' as of '+pxWhen:''}`:' · USD blank, no BTC price')+(j.flags.length?' · '+j.flags.join('; '):'')}
+  chart.setOption(o,true);last={opt:o,asOf:j.btcAsOf||Date.now()/1000};
+  $('status').className='';$('status').textContent=`${rows.length} companies · ${j.title||'BTCTC top 100'}`+(px?` · BTC ${px}${pxWhen?' as of '+pxWhen:''}`:' · USD blank, no BTC price')+(j.flags&&j.flags.length?' · '+j.flags.join('; '):'')}
 async function trenderFresh(){TFRESH=true;try{await trender()}finally{TFRESH=false}}
 $('tgo').onclick=trenderFresh;
 $('twm').onchange=()=>tlast&&tdraw();
