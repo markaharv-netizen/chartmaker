@@ -11,7 +11,7 @@ Render on Prices, Heatmap, Treasury, and Valuation fetches fresh data (the separ
 
 ## Treasury tab
 
-One metric: **BTCTC top 100**. The table is Mark's sheet tab of that name in the workbook "My Bot's Sheets" (`1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU`, gid 73825060), not a BitcoinTreasuries.net scrape. The chart title is the sheet title (Corporate Bitcoin Treasury Holdings). Columns: rank, company, ticker, country, BTC, USD, % of 21M, and each row's as-of date. Holdings are the committed snapshot `btctop100.json`. USD = BTC × a live Yahoo `BTC-USD` quote when that quote is available; if it is not, the USD column stays blank. Watermark is off unless the box is checked. Download PNG is the chart canvas.
+One metric: **BTCTC top 100**. The table is Mark's sheet tab of that name in the workbook "My Bot's Sheets" (`1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU`, gid 73825060), not a BitcoinTreasuries.net scrape. The chart title is the sheet title (Corporate Bitcoin Treasury Holdings). Columns: rank, company, ticker, country, BTC, Change, USD, and % of 21M. Change is the sheet's Change cell as displayed (a leading + or - stays); positive is green, negative is red, and an empty cell is an em dash. Each row's as-of date stays in the snapshot and is not a column. Holdings are the committed snapshot `btctop100.json`. USD = BTC × a live Yahoo `BTC-USD` quote when that quote is available; if it is not, the USD column stays blank. Watermark is off unless the box is checked. Download PNG is the chart canvas.
 
 Refresh the snapshot (then commit `btctop100.json`). The script reads the sheet with Google credentials, and falls back to a CSV export:
 

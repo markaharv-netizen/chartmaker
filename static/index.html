@@ -883,6 +883,11 @@ function hdraw(){const j=hlast,rng=j.range,cap={'1D':3,'5D':6,'1M':10,'6M':25,YT
 let tlast=null,TFRESH=false;
 function chartBox(h){const px=h+'px';if($('chart').style.height===px)return;$('chart').style.width='1600px';$('chart').style.height=px;chart.resize()}
 const tBtc=v=>Math.round(v).toLocaleString('en-US');
+function tChg(v){if(v==null||v==='')return {t:'—',fill:T.src};
+  const raw=typeof v==='number'?(v>0?'+':v<0?'-':'')+(Number.isInteger(Math.abs(v))?Math.abs(v).toLocaleString('en-US'):String(Math.abs(v))):String(v).trim();
+  if(!raw||raw==='—'||raw==='-'||raw==='–'||raw==='−')return {t:'—',fill:T.src};
+  const n=typeof v==='number'?v:Number(String(raw).replace(/,/g,''));
+  return {t:raw,fill:!isFinite(n)||n===0?T.text:n>0?bc('#22C55E'):bc('#EF4444')}}
 const tUsd=v=>{if(v==null||!isFinite(v))return '—';const m=v/1e6;if(Math.abs(m)>=1)return '$'+Math.round(m).toLocaleString('en-US')+'M';
   if(Math.abs(v)>=1000)return '$'+Math.round(v/1000).toLocaleString('en-US')+'K';return '$'+Math.round(v).toLocaleString('en-US')};
 const tUsdTot=v=>{if(v==null||!isFinite(v))return '—';return v>=1e9?'$'+(v/1e9).toFixed(2)+'B':tUsd(v)};
@@ -900,7 +905,7 @@ function tdraw(){const j=tlast,rows=j.rows,COLS=2,per=Math.ceil(rows.length/COLS
   const footH=72,H=titleTop+titleH+headH+per*rowH+footH+8;
   chartBox(H);
   const W=chart.getWidth()||1600,colW=(W-margin*2-gap*(COLS-1))/COLS;
-  const pad=8,rankW=28,tickW=74,ctryW=52,btcW=64,usdW=72,pctW=62,dateW=74;
+  const pad=8,rankW=28,tickW=74,ctryW=52,btcW=64,chgW=58,usdW=72,pctW=62;
   const o=base($('ttitle').value||j.title||'Corporate Bitcoin Treasury Holdings','','twm');
   o.title.top=titleTop;o.title.left=margin;o.title.textStyle.fontSize=28;
   delete o.grid;o.series=[];
@@ -909,7 +914,7 @@ function tdraw(){const j=tlast,rows=j.rows,COLS=2,per=Math.ceil(rows.length/COLS
   g.push(tt(margin,titleTop+44,'Ranked by bitcoin held · '+(j.sheet||'BTCTC Top 100')+' · '+(j.sourceName||"My Bot's Sheets"),{size:15,fill:T.src,width:W-margin*2-180}));
   const tableTop=titleTop+titleH;
   for(let c=0;c<COLS;c++){const x0=margin+c*(colW+gap),right=x0+colW-pad;
-    const dateR=right,pctR=dateR-dateW-6,usdR=pctR-pctW-6,btcR=usdR-usdW-6;
+    const pctR=right,usdR=pctR-pctW-6,chgR=usdR-usdW-6,btcR=chgR-chgW-6;
     const ctryX=btcR-btcW-8-ctryW,tickX=ctryX-6-tickW,nameX=x0+pad+rankW+6,nameW=Math.max(36,tickX-6-nameX);
     g.push(tg(x0,tableTop,colW,headH,headBg));
     g.push(tg(x0,tableTop+headH-2,colW,2,orange));
@@ -919,9 +924,9 @@ function tdraw(){const j=tlast,rows=j.rows,COLS=2,per=Math.ceil(rows.length/COLS
     g.push(tt(tickX,hy,'Ticker',{bold:1,size:12,fill:T.title}));
     g.push(tt(ctryX,hy,'Country',{bold:1,size:11,fill:T.title,width:ctryW}));
     g.push(tt(btcR,hy,'BTC',{align:'right',bold:1,size:12,fill:T.title}));
+    g.push(tt(chgR,hy,'Change',{align:'right',bold:1,size:12,fill:T.title}));
     g.push(tt(usdR,hy,'USD',{align:'right',bold:1,size:12,fill:T.title}));
     g.push(tt(pctR,hy,'% of 21M',{align:'right',bold:1,size:11,fill:T.title}));
-    g.push(tt(dateR,hy,'As of',{align:'right',bold:1,size:12,fill:T.title}));
     for(let i=0;i<per;i++){const r=rows[c*per+i];if(!r)break;const y=tableTop+headH+i*rowH;
       if(i%2)g.push(tg(x0,y,colW,rowH,stripe));
       const cy=y+rowH/2;
@@ -930,9 +935,10 @@ function tdraw(){const j=tlast,rows=j.rows,COLS=2,per=Math.ceil(rows.length/COLS
       g.push(tt(tickX,cy,r.ticker,{size:12,fill:T.src,width:tickW-2}));
       g.push(tt(ctryX,cy,r.country||'',{size:12,fill:T.text,width:ctryW}));
       g.push(tt(btcR,cy,tBtc(r.btc),{align:'right',bold:1,size:13,fill:T.title}));
+      const ch=tChg(r.change);
+      g.push(tt(chgR,cy,ch.t,{align:'right',bold:1,size:12,fill:ch.fill}));
       g.push(tt(usdR,cy,tUsd(r.usd),{align:'right',size:12,fill:T.text}));
       g.push(tt(pctR,cy,r.pctSupply.toFixed(3)+'%',{align:'right',size:12,fill:T.text}));
-      g.push(tt(dateR,cy,r.asOf||'',{align:'right',size:12,fill:T.src}));
     }
   }
   const totB=rows.reduce((a,r)=>a+r.btc,0),totU=rows.every(r=>r.usd!=null)?rows.reduce((a,r)=>a+r.usd,0):null,totP=rows.reduce((a,r)=>a+r.pctSupply,0);
