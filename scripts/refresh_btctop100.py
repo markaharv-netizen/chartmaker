@@ -15,7 +15,9 @@ credentials from the environment (the same kind of env credentials the app
 already uses for GitHub), and falls back to a CSV export when those
 credentials are absent or the API call fails. Displayed values are what
 the tab shows (BTC rounded the way the sheet rounds it, dates as formatted).
-Source Link formulas are read separately so the URL is kept.
+Change is kept as displayed, sign included ("+810", "-336"); an empty
+Change cell is null. Source Link formulas are read separately so the URL
+is kept.
 
 Credential order:
   GOOGLE_ACCESS_TOKEN or CHARTMAKER_GOOGLE_TOKEN
@@ -186,6 +188,19 @@ def parse_num(cell):
     return float(s)
 
 
+# Change is whatever the sheet shows: a leading + stays, thousands separators stay.
+_CHANGE_TEXT = re.compile(r"^[+-]?(?:\d{1,3}(?:,\d{3})*|\d+)(?:\.\d+)?$")
+
+
+def parse_change(cell):
+    s = " ".join(str(cell or "").split())
+    if s in ("", "—", "-", "–", "−"):
+        return None
+    if not _CHANGE_TEXT.fullmatch(s):
+        raise ValueError("bad change: " + s)
+    return s
+
+
 def parse_date(cell):
     s = str(cell or "").strip()
     if not s:
@@ -268,7 +283,7 @@ def build(grid):
         "link": col("source link"),
         "notes": col("notes"),
     }
-    missing = [k for k in ("rank", "name", "ticker", "country", "btc", "asOf") if ix[k] is None]
+    missing = [k for k in ("rank", "name", "ticker", "country", "change", "btc", "asOf") if ix[k] is None]
     if missing:
         raise SystemExit("header missing " + ", ".join(missing))
     title = title_from(grid, header_i)
@@ -298,7 +313,10 @@ def build(grid):
         except ValueError as e:
             raise SystemExit(f"{ticker}: {e}")
         url, label = parse_link(cell(row, ix["link"]))
-        change = parse_num(cell(row, ix["change"])) if ix["change"] is not None else None
+        try:
+            change = parse_change(cell(row, ix["change"]))
+        except ValueError as e:
+            raise SystemExit(f"{ticker}: {e}")
         notes = " ".join(str(cell(row, ix["notes"])).split()) or None
         source = " ".join(str(cell(row, ix["source"])).split()) or None
         companies.append({
@@ -306,7 +324,7 @@ def build(grid):
             "name": name,
             "ticker": ticker,
             "country": country,
-            "change": json_num(change) if change is not None else None,
+            "change": change,
             "btc": json_num(btc),
             "asOf": as_of,
             "source": source,
@@ -357,6 +375,9 @@ def validate(doc):
             raise SystemExit(f"row {i} asOf must be YYYY-MM or YYYY-MM-DD")
         if not re.fullmatch(r"[A-Z]{2}", c.get("country") or ""):
             raise SystemExit(f"row {i} bad country")
+        chg = c.get("change", "")
+        if chg is not None and (not isinstance(chg, str) or not _CHANGE_TEXT.fullmatch(chg)):
+            raise SystemExit(f"row {i} change must be the sheet's displayed number or empty")
         if prev is not None and c["btc"] > prev + 1e-6:
             raise SystemExit(f"row {i} ({c.get('ticker')}) is not in descending BTC order")
         prev = c["btc"]
@@ -387,6 +408,15 @@ def self_test():
     assert url == "https://example.com/a" and label == "SEC 8-K", (url, label)
     assert parse_num("848,517") == 848517
     assert json_num(848517.0) == 848517 and json_num(63.7) == 63.7
+    assert parse_change("+810") == "+810" and parse_change("-336") == "-336" and parse_change("+1") == "+1"
+    assert parse_change("1,234") == "1,234" and parse_change("20") == "20"
+    assert parse_change("") is None and parse_change("—") is None and parse_change("-") is None and parse_change("  ") is None
+    try:
+        parse_change("n/a")
+    except ValueError:
+        pass
+    else:
+        raise SystemExit("bad change text should be rejected")
     rows = list(csv.reader(formula.splitlines()))
     header_i, headers = find_header(rows)
     assert header_i == 1 and "btc holdings" in headers and title_from(rows, header_i) == "Corporate Bitcoin Treasury Holdings"
@@ -396,6 +426,20 @@ def self_test():
         assert "expected 100" in str(e), e
     else:
         raise SystemExit("short fixture should have been rejected")
+    proto = list(rows[3])
+    grid = rows[:2]
+    for n in range(1, 101):
+        r = list(proto)
+        r[1], r[2], r[3] = str(n), f"Co {n}", f"T{n:03d}"
+        r[5] = "+810" if n == 1 else ("-336" if n == 2 else "")
+        r[6] = str(20000 - n)
+        r[8] = "2026-10-18"
+        grid.append(r)
+    doc = build(grid)
+    assert doc["companies"][0]["change"] == "+810", doc["companies"][0]
+    assert doc["companies"][1]["change"] == "-336"
+    assert doc["companies"][2]["change"] is None
+    validate(doc)
     print("self-test ok")
 
 
@@ -446,7 +490,8 @@ def main():
     print(f"wrote {OUT}")
     print(f"{how}: {doc['title']!r}, {len(doc['companies'])} companies, {btc:,.0f} BTC")
     for c in doc["companies"][:5]:
-        print(f"  {c['rank']:>3}  {c['ticker']:<12} {c['country']}  {c['btc']:>12}  {c['asOf']}  {c['name']}")
+        chg = c["change"] if c.get("change") else "—"
+        print(f"  {c['rank']:>3}  {c['ticker']:<12} {c['country']}  {chg:>8}  {c['btc']:>12}  {c['asOf']}  {c['name']}")
     print(f"  {doc['companies'][-1]['rank']:>3}  {doc['companies'][-1]['ticker']:<12} {doc['companies'][-1]['btc']}")
 
 

@@ -1,9 +1,10 @@
 """Treasury tab: Mark's BTCTC Top 100 sheet.
 
-Holdings, rank, ticker, country and each row's as-of date come from the
-committed snapshot btctop100.json. Refresh that file with
-scripts/refresh_btctop100.py. USD value is BTC times a live Yahoo BTC-USD
-quote when one is available.
+Holdings, rank, ticker, country, the sheet's Change text, and each row's
+as-of date come from the committed snapshot btctop100.json. Refresh that
+file with scripts/refresh_btctop100.py. Change is the sheet's displayed
+text ("+810", "-336") or null when the cell is empty. USD value is BTC
+times a live Yahoo BTC-USD quote when one is available.
 """
 import json, os
 import heat
@@ -41,6 +42,7 @@ def compute(fresh=False):
             "ticker": c.get("ticker"),
             "country": c.get("country"),
             "btc": btc,
+            "change": c.get("change"),
             "asOf": c.get("asOf"),
             "usd": btc * price if price else None,
             "pctSupply": btc / supply * 100,
