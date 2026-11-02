@@ -48,7 +48,7 @@ views.json is never shipped in the zip, so updates don't overwrite saved views. 
 ## Hosting / password (v4)
 Env vars: `APP_PASSWORD` (if set, every route incl. /api requires login; login page at /login, logout at /logout),
 `SECRET_KEY` (HMAC key for the session cookie; random per start if unset), `VIEWS_STORE=browser` (saved views live in browser localStorage
-instead of views.json), `PORT` (overrides CLI port; binds 0.0.0.0), `GOOGLE_SERVICE_ACCOUNT_JSON` (optional; full-size Sheets chart PNGs, see Sheets library).
+instead of views.json), `PORT` (overrides CLI port; binds 0.0.0.0).
 Session cookie: `cm_session`, signed HMAC-SHA256, HttpOnly, Secure, SameSite=Lax, 30 days. Login throttling: after 5 failures per IP, lockout 30s doubling up to 15 min.
 With no APP_PASSWORD (local PC) behavior is unchanged. Render: `render.yaml` Blueprint (free plan, `python server.py`).
 
@@ -65,23 +65,19 @@ Tick **Annotations** on the row under the price controls. Markers are dashed lin
 Type **Candles + volume**. One ticker only; the option is disabled while several symbols are in the box. `/api/chart` returns `bars`: `[time_ms, open, high, low, close, volume]` beside the close-only `points`. Candle mode chooses the interval so bodies stay wide on the 1600px canvas: 1D is 15-minute regular-session bars (30-minute for 24h `-USD` pairs), 5D is one daily candle per trading session, and longer ranges step from daily to weekly to monthly when the finer bars would turn into hairlines. Body width scales with the free plot width, with a small gap, a floor, and a cap. Price line is unchanged (1D/5D stay 1-minute, including pre/after-hours). Candle mode does not draw extended-hours slivers or overnight gaps. Volume sits under the candles; green is close ≥ open. SMAs (daily closes; off for intraday bars), annotations, earnings markers, and Download PNG use the same 1600×900 canvas. The status line shows the interval actually drawn.
 
 ### Sheets library
-The **Sheets** tab, next to Charts of the day, reads `static/sheets/catalog.json` for the tab list. Search by workbook, tab name, or chart title, then **Open in Sheets**.
+The **Sheets** tab, next to Charts of the day, reads `static/sheets/catalog.json` for the tab list. Search by workbook, tab name, or chart title, then **Open in Sheets**. Render does not call Google.
 
-With the search box empty, the list is text only. After you type a search, a result shows a chart preview when that tab has a thumbnail. Tabs without one still appear, and a missing file does not leave a broken image. Thumbnails are small JPEGs in `static/sheets/thumbs/` (at most 480×270). **View PNG**, **Download PNG**, and the preview image open the full-size chart through `/api/sheet-png`. The grid keeps the JPEG.
+With the search box empty, the list is text only. After you type a search, a result shows a chart preview when that tab has a thumbnail. Tabs without one still appear, and a missing file does not leave a broken image. Thumbnails are small JPEGs in `static/sheets/thumbs/` (at most 480×270). The grid keeps that JPEG.
 
-`/api/sheet-png?book=bot1&gid=123` looks up the tab in the catalog, finds the newest matching file in that workbook's Drive folder, and returns the PNG. Names follow the tab (`001 BTC vol vs VIX.png`); a leading number may be zero-padded and a trailing `YYYY-MM-DD` is ignored. Duplicate names: newest date in the name, then newest `modifiedTime`. The folder listing is cached for one hour. Each PNG is cached on disk until that Drive file's id or modified time changes, and the browser may reuse it for an hour (`ETag`, `Cache-Control: private`). `download=1` sends it as an attachment named after the tab.
+**View PNG**, **Download PNG**, and the preview image open `static/sheets/full/<book>/<gid>.png` when that file is in the repo. If it is missing, those links open the thumbnail instead.
 
-The weekly export folders are private, the same ones Charts of the day uses:
+Import the weekly export (files named like the tab, optional trailing `YYYY-MM-DD`, newest date then newest file time wins) on a machine that has the PNGs, then commit `static/sheets/full/`:
 
-- Bot experiments: `1SwZgYGwwHsoL_DXQUuQAYS6lhq5KxFe9`
-- bot experiments 2: `1mMUKaB_RbeZhtn5ntuKJV5xZOeo6LzGH`
-- My Bot's Sheets: `1AVfHRo2mJgBhbJoszHhe5vgOscfKhbzT`
+```
+python3 scripts/import_full_pngs.py --from-dir /path/to/exported-pngs
+```
 
-Render's blueprint env vars are `APP_PASSWORD`, `SECRET_KEY`, `VIEWS_STORE`, `GITHUB_TOKEN`, `VIEWS_REPO`, `VIEWS_BRANCH`, and `PYTHON_VERSION`. None of them can read Drive, and each weekly run uploads new file ids, so the full images stay out of git. This environment has no Render API token, so dashboard-only overrides beyond the blueprint could not be listed; the blueprint and the app have no Google credential today.
-
-Set one Render env var, `GOOGLE_SERVICE_ACCOUNT_JSON`, to the JSON key of a service account with the Drive API enabled. Share the three folders above with that key's `client_email` as Viewer. The server requests `https://www.googleapis.com/auth/drive.readonly`. Chartmaker still serves every other tab when the variable is empty; View PNG then returns 503 naming `GOOGLE_SERVICE_ACCOUNT_JSON`.
-
-These existing names also work when the token includes Drive read access: `GOOGLE_ACCESS_TOKEN` (or `CHARTMAKER_GOOGLE_TOKEN`); `GOOGLE_CLIENT_ID` + `GOOGLE_CLIENT_SECRET` + `GOOGLE_REFRESH_TOKEN` (and the `CHARTMAKER_GOOGLE_*` aliases); or a key file path in `GOOGLE_APPLICATION_CREDENTIALS` / `CHARTMAKER_GOOGLE_CREDENTIALS`. `SHEETS_PNG_DIR`, when it is a directory of exported PNGs, is used instead of Drive (tests and a local export; leave it unset on Render).
+Put each workbook in its own subfolder (`bot1`, the spreadsheet id, or the workbook title) to limit matches to that book. Repeat `--from-dir` for several folders. `--dry-run` prints matches without writing. `--no-optimize` copies the bytes unchanged. Otherwise the script uses `oxipng` or `optipng` when one is on PATH, otherwise `pngquant` (kept only when the file shrinks), otherwise Pillow's lossless optimize when Pillow is installed.
 
 Refresh the tab list and thumbnails on a machine that can read the workbooks:
 
@@ -90,7 +86,9 @@ Refresh the tab list and thumbnails on a machine that can read the workbooks:
    This rewrites the tab list and **keeps** a thumbnail already recorded for a book and gid when that JPEG is still on disk.
 3. Point `scripts/sheets_thumbs.py` at a local folder of the weekly chart export (not at Render). The export names files after the tab, with the number sometimes zero-padded and a date on the end (`090 TSLA gross margin vs price 2026-10-21.png`). Duplicate names: the script keeps the newest date, then the newest file time.
    `python3 scripts/sheets_thumbs.py --from-dir /path/to/exported-pngs`
-4. Commit `static/sheets/catalog.json` and `static/sheets/thumbs/`. Do not commit the source PNGs.
+4. Commit `static/sheets/catalog.json` and `static/sheets/thumbs/`. Do not commit the source folder itself.
+5. `python3 scripts/import_full_pngs.py --from-dir /path/to/exported-pngs`  
+   Then commit `static/sheets/full/`. The script prints `matched N, unmatched M, ambiguous A`.
 
 Until that export is on the machine, seed only the tabs that overlap today's Charts of the day:
 
