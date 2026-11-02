@@ -216,6 +216,8 @@ def self_test():
                 {"book": "bot1", "tab": "01 BTC vol vs VIX", "gid": 1546024641, "charts": []},
                 {"book": "bot2", "tab": "MSTR Volume", "gid": 30, "charts": ["MSTR 30-day volume"]},
                 {"book": "bot1", "tab": "90 TSLA gross margin vs price", "gid": 10, "charts": []},
+                {"book": "bot1", "tab": "173 Continuing/initial claims", "gid": 173, "charts": []},
+                {"book": "bot1", "tab": "285 Ethereum L2s: Base leads", "gid": 285, "charts": []},
             ],
         }
         with open(os.path.join(repo, "static", "sheets", "catalog.json"), "w", encoding="utf-8") as f:
@@ -227,7 +229,9 @@ def self_test():
         noise = os.path.join(b1, "not a chart.png")
         tsla_old = os.path.join(b1, "090 TSLA gross margin vs price 2026-10-19.png")
         tsla_new = os.path.join(b1, "090 TSLA gross margin vs price 2026-10-21.png")
-        for path, blob in ((older, old_bytes), (dated, new_bytes), (noise, old_bytes), (tsla_old, old_bytes), (tsla_new, new_bytes)):
+        slash = os.path.join(b1, "173 Continuing-initial claims.png")
+        colon = os.path.join(b1, "285 Ethereum L2s- Base leads.png")
+        for path, blob in ((slash, new_bytes), (colon, new_bytes), (older, old_bytes), (dated, new_bytes), (noise, old_bytes), (tsla_old, old_bytes), (tsla_new, new_bytes)):
             with open(path, "wb") as f:
                 f.write(blob)
         os.utime(dated, (1_700_000_000, 1_700_000_000))  # older mtime, newer date in the name
@@ -242,12 +246,14 @@ def self_test():
         with open(stray, "wb") as f:
             f.write(old_bytes)
         n, u, a = run(repo, [src], optimize_png=False, dry=False)
-        assert n == 3, n
+        assert n == 5, n
         assert u == 2, u  # noise.png and the stray in bot2
         assert a == 0, a
         got = open(os.path.join(repo, "static", "sheets", "full", "bot1", "1546024641.png"), "rb").read()
         assert got == new_bytes, "dated export should win over a newer mtime"
         assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "10.png"), "rb").read() == new_bytes
+        assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "173.png"), "rb").read() == new_bytes
+        assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "285.png"), "rb").read() == new_bytes
         assert open(os.path.join(repo, "static", "sheets", "full", "bot2", "30.png"), "rb").read() == old_bytes
         # optimize() keeps a valid PNG and does not grow a tiny file into garbage.
         out, tool = optimize(tiny)
