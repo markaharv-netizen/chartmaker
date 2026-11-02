@@ -901,7 +901,7 @@ async function trender(){const st=$('status');st.className='';st.textContent='Lo
     const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);if(!j.rows||!j.rows.length)throw Error('empty treasury snapshot');tlast=j;tdraw()}
   catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();tlast=null}}
 function tdraw(){const j=tlast,rows=j.rows,COLS=2,per=Math.ceil(rows.length/COLS);
-  const margin=20,gap=12,rowH=30,headH=32,titleTop=14,titleH=68;
+  const margin=20,gap=12,rowH=30,headH=32,titleTop=14,titleH=46;
   const footH=72,H=titleTop+titleH+headH+per*rowH+footH+8;
   chartBox(H);
   const W=chart.getWidth()||1600,colW=(W-margin*2-gap*(COLS-1))/COLS;
@@ -911,7 +911,6 @@ function tdraw(){const j=tlast,rows=j.rows,COLS=2,per=Math.ceil(rows.length/COLS
   delete o.grid;o.series=[];
   const g=[],stripe=T.dark?'rgba(255,255,255,0.045)':'rgba(17,17,17,0.035)',headBg=T.dark?'#2A2116':'#FFF4E6';
   const orange=bc('#F7931A');
-  g.push(tt(margin,titleTop+44,'Ranked by bitcoin held · '+(j.sheet||'BTCTC Top 100')+' · '+(j.sourceName||"My Bot's Sheets"),{size:15,fill:T.src,width:W-margin*2-180}));
   const tableTop=titleTop+titleH;
   for(let c=0;c<COLS;c++){const x0=margin+c*(colW+gap),right=x0+colW-pad;
     const pctR=right,usdR=pctR-pctW-6,chgR=usdR-usdW-6,btcR=chgR-chgW-6;
