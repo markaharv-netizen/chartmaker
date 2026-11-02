@@ -1,0 +1,66 @@
+{
+ "symbol": "WULF",
+ "start": "2026-11-01T00:00:00Z",
+ "end": "2026-11-02T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "WULF (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "KingHeupel",
+   "url": "https://x.com/KingHeupel/status/2116940723274797412",
+   "date": "2026-11-01",
+   "text": "Below is an earnings calendar for this week of tickers I am looking forward to hearing from and reading through their reports. A few highlights of themes/individual names I am interested in:\n\n(1) AI infrastructure: Multiple high beta, small cap, names report this week with the https://t.co/HeNphStrhD"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 17,
+   "user": "CK_Cryptoklepto",
+   "url": "https://x.com/CK_Cryptoklepto/status/2116874420450951607",
+   "date": "2026-11-01",
+   "text": "I asked @grok to analyze \"Price to Book\" ratio utilizing Q2 2026 earnings data and live Bitcoin price\n\nNot only is $MARA undervalued vs the pack, but when you factor in the $694 million that the 35,577 $BTC has increased in value since Q2 then MARA is only at 1.07x Price to Book https://t.co/bfdSKOqjof https://t.co/NMU05dV0RV"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Liesrunsprints",
+   "url": "https://x.com/Liesrunsprints/status/2117013537239494866",
+   "date": "2026-11-01",
+   "text": "$WULF is extremely oversold after the breakdown, but oversold does not mean a bottom.\nThree out of four downside targets have already been reached.\nNo other signs of a reversal as of yet. https://t.co/dK0kIrtKNQ"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2116701609451253937",
+   "date": "2026-11-01",
+   "text": "$MARA\n\n$MARA bears remain in control since the pivot high reversal I shared in my post below, and even then we were already under bearish momentum. Last week gave us a doji candle, showing indecision, but it still printed a lower high, a lower low and a lower close.\n\nPrice https://t.co/gntBd3MoD6 https://t.co/Vm5C5qjarc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "IntradayRider",
+   "url": "https://x.com/IntradayRider/status/2116873864001270065",
+   "date": "2026-11-01",
+   "text": "Binance hack in simple language\n— Hackers took about $6.3B from Binance, the biggest crypto theft on record\n— Binance says a hacked engineer laptop may have let the attacker send withdrawals\n— About $3B is frozen, with Tether and Circle freezing stablecoins\n— North Korea-linked https://t.co/v28XfBEYcT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ArieousInvest",
+   "url": "https://x.com/ArieousInvest/status/2116984984020144220",
+   "date": "2026-11-01",
+   "text": "📊Earnings Breakdown – Upcoming Reports for Week of November 2, 2026 📊\n\n$APP,$PLTR,$AMD,$ANET,$ARM,$ALAB,$AAPL,$UBER,$DDOG,$NET,$IREN,$CORZ,$IONQ,$VST,$OKLO,$SMCI,$SHOP,$CRCL,$COHR,$LITE,$WULF,$CIFR,$AFRM,$ETN,$QCOM,$GFS,$TLN,$EOSE,$TEM,$RIOT\n\nJoin Bull Rush Options for FREE. https://t.co/ytxJ0p9RRi"
+  }
+ ]
+}

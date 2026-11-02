@@ -1,0 +1,237 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-11-01T00:00:00Z",
+ "end": "2026-11-02T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 63,
+   "user": "Errecck",
+   "url": "https://x.com/Errecck/status/2116993058810237378",
+   "date": "2026-11-01",
+   "text": "$ETH \n\nWe need to be mindful of the bearish thesis in the quoted post.\n\nBut the bull thesis  is the fact the market had a melt down Friday yet Ethereum had a very bullish close.\n\nHammer candle on the daily  off of..\n\n50% fib for wave\n200 day moving average\nDaily demand\n\nDaily BSI https://t.co/6ZCgJesSBa https://t.co/5zmI2zoXwD"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "AlphaLensCrypto",
+   "url": "https://x.com/AlphaLensCrypto/status/2116894130110369963",
+   "date": "2026-11-01",
+   "text": "📊 THE CRYPTO EDGE | DAILY MARKET BRIEF\n📅 November 1, 2026\n\n🚨 BINANCE HACK AFTERSHOCKS &amp; ETH NEGATIVE FUNDING BOTTOM SIGNAL: IS $71K–$73K NEXT? 🚨\nBitcoin is retesting critical weekly EMA ribbon support following the massive Binance hack, while Ethereum funding rates crash to https://t.co/jYK0QllwZY"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 7,
+   "user": "hey_munna",
+   "url": "https://x.com/hey_munna/status/2116705683806752826",
+   "date": "2026-11-01",
+   "text": "Hello Traders! 👋\n\nWhat are your thoughts on ETHEREUM?\n\nEthereum has broken out of its ascending channel, signaling a weakening bullish structure and increasing selling pressure.\n\nFollowing the price reaching the 0.5 Fibonacci support level, a supportive reaction has emerged, https://t.co/KTqmPsX07z"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "MalkoMarkets",
+   "url": "https://x.com/MalkoMarkets/status/2116887876344455515",
+   "date": "2026-11-01",
+   "text": "ethereum:native :\n\nThe $2,251 area was a weak support for Ethereum and broke to the downside following the hack-related news. However, during the weekend price action, ETH reclaimed this level and has been gradually moving toward $2,302.\n\nWe could see another move toward $2,302 https://t.co/3Z3Pg2hnGT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Asiftahsin10",
+   "url": "https://x.com/Asiftahsin10/status/2116946278080999692",
+   "date": "2026-11-01",
+   "text": "ETH Technical Outlook: Ethereum Breaks Below Key EMAs as Bears Pressure $2,265 Support\n\nEthereum is currently trading around $2,269, facing renewed selling pressure after failing to sustain its recovery toward the $2,475–$2,500 resistance zone. ETH has pulled back from its recent https://t.co/JW9L884EuV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "marketowleu",
+   "url": "https://x.com/marketowleu/status/2116759016156090804",
+   "date": "2026-11-01",
+   "text": "📉 BTC &amp; ETH: Sellers Remain in Control — Key Levels to Watch\n\nOur latest Advanced Market Heatmap analysis (November 1, 2026) shows bearish pressure across both BTC and ETH on higher and lower timeframes.\n\n🔶 BTC — $77,832\n\nBTC is trading below its Realized Price, POC, and HTF https://t.co/ISg3IPzIOv"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Jon_sens",
+   "url": "https://x.com/Jon_sens/status/2116816362626777334",
+   "date": "2026-11-01",
+   "text": "$ETH BULLS ARE BACK IN ACTION! IS ETHEREUM PREPARING FOR A BIG BREAKOUT TOWARD $2,300?** 🚀📈\n\nEthereum is heating up, and the bulls are starting to make some serious noise! 👀🔥\n\n$ETH is currently trading around **$2,273.46**, showing a solid **+1.52% gain over the last 24 https://t.co/a06XRNXxJ7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2116908747914191134",
+   "date": "2026-11-01",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• The Market Has Crashed Many Times. People Who Did This One Thing Came Out Richer\n• 3 Altcoins with Significant Upside Momentum — NEAR, TAO, BNB\n• Binance resumes USDT, USDC withdrawals on Ethereum and BNB Smart Chain\n• https://t.co/xCYO7MSghR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 29,
+   "user": "Ismiles29",
+   "url": "https://x.com/Ismiles29/status/2116963918862221325",
+   "date": "2026-11-01",
+   "text": "ethereum:0x84ca8bc7997272c7cfb4d0cd3d55cd942b3c9419 bulls are finally pushing back but the real test starts at $0.150.\n\nOn the weekly, DIA is showing its first signs of stabilization after last week’s sell-off but bulls still have resistance to clear.\n\nKey levels:\nResistance: https://t.co/iMrUdrTJg7"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 23,
+   "user": "Jamyies",
+   "url": "https://x.com/Jamyies/status/2116765903706521718",
+   "date": "2026-11-01",
+   "text": "My Ethereum long plan comes with a bearish warning.\n\n$ETH entry 2,174, target 2,387, stop 2,135. The AI is calling short or no trade, so I’m watching the downside risk.\n\nNot financial advice. https://t.co/M4kH5T6rRb https://t.co/lPJSv08H2G"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2116692937933193271",
+   "date": "2026-11-01",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $USDT — Tether-Backed FASE Foundation Targets Scams and Stablecoin Aid\n🟢 58% Bullish · 🔴 42% Bearish\n\n2. $LINK — Chainlink Launches CustodySync With Anchorage to Link Custody and DeFi Loans\n🟢 75% Bullish · 🔴 25% Bearish\n🔗 https://t.co/hYb7TJ6EZL\n\n3."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 32,
+   "user": "Cryptech_Sam",
+   "url": "https://x.com/Cryptech_Sam/status/2116978872491364546",
+   "date": "2026-11-01",
+   "text": "Among the projects mentioned below, the MOST UNDERVALUED and MOST UNDERRATED #RWA project is undoubtedly ethereum:0xfc209eeba3d744aa741cc5c2a73ebf9c977b5f82 @Brickken. 🚀\n\nIf you aren't studying ethereum:0xfc209eeba3d744aa741cc5c2a73ebf9c977b5f82 right now, you might miss an https://t.co/jIxBXAPQ57"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SleazyMinks",
+   "url": "https://x.com/SleazyMinks/status/2116819086013587722",
+   "date": "2026-11-01",
+   "text": "MINKS RADAR · what's trending and why\n\nethereum:0x232ce3bd40fcd6f80f3d55a522d03f25df784ee2  · #2 most searched, talk bullish\n$SOL · #3 most searched, sentiment turning bearish ('hack')\n$BNB · #13 most searched, talk bearish\n$LINK · #11 most searched, talk bullish https://t.co/2hJLFfCPKv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 127,
+   "user": "HamzaTayyab_",
+   "url": "https://x.com/HamzaTayyab_/status/2116782761524752465",
+   "date": "2026-11-01",
+   "text": "#ETH|USDT\nMedium Count:\nLooks bottom to me. Might be it will sweep lows one more time but ultimately I am expecting some relief rally from here.\nDownside move is completed in form of complete impulse. Now I am expected ABC relief correction towards Upside.\n#Ethereum #BinanceHack https://t.co/NO7kePTSFB"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "NOVATRADINGTEAM",
+   "url": "https://x.com/NOVATRADINGTEAM/status/2116795176404550039",
+   "date": "2026-11-01",
+   "text": "🌏 NOVA MORNING BRIEF | NOV 1\n\n₿ CRYPTO MARKET\n🟢 BTC $77,735 (+0.74%)\n🟢 ETH $2,264 (+1.07%)\n🔴 SOL $95.44 (-0.65%)\n🟢 XRP $1.250 (+0.54%)\n\nBTC is stabilizing after its sharp drop toward $76.3K, but convincing buying pressure is still missing.\n\n📍 BTC KEY LEVELS\n🔴 $80–80.5K — https://t.co/K2PB2UOLPy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 28,
+   "user": "RunaCryptoX",
+   "url": "https://x.com/RunaCryptoX/status/2116919349911167241",
+   "date": "2026-11-01",
+   "text": "Is this the beginning of a recovery or just another temporary bounce?\n\nBitcoin is back near $78K, ethereum is holding above $2.2K, and some major altcoins are showing signs of recovery.\n\nBut with market sentiment still in fear territory, I'm not convinced that bullish momentum https://t.co/hVqMqQYbcn https://t.co/7i4daMrWe1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 29,
+   "user": "CGT_Trader",
+   "url": "https://x.com/CGT_Trader/status/2116987617409744949",
+   "date": "2026-11-01",
+   "text": "$ETH \n\nFrom a purely technical perspective, Ethereum doesn't look bullish on the daily.\n\nPrice has formed a head and shoulders pattern and already broken below the neckline.\n\nIf the pattern reaches its projected target, we're looking at a move toward $1.9K.\n\nInterestingly, that https://t.co/7MO4bmTOJf"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "1heavenlyslime",
+   "url": "https://x.com/1heavenlyslime/status/2116778691015639272",
+   "date": "2026-11-01",
+   "text": "#ETHEREUM AND $XRP ARE GOING TO ZERO?!📉\n\nIs this the beginning of a massive crypto collapse, or just another wave of FUD?\n\nThe market is testing everyone’s patience!\n\nBULLISH OR BEARISH?\n\n#XRP #ETH #Crypto #Bitcoin #Ripple #XRPL #XRPArmy #Altcoins #CryptoNews #CryptoTwitter https://t.co/bCPnqm58s2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2116694264134398037",
+   "date": "2026-11-01",
+   "text": "🚨 $ETH ALERT: U.S. Spot Ethereum ETFs Hit Record 23-Day Net Outflow Streak Since Launch\n\n📈 Trade Futures: https://t.co/wsbSCPlkCm\n\n🟢 Bullish: 10%\n\n🔴 Bearish: 90%\n• U.S.  spot  Ethereum  ETFs  recorded  23  consecutive  trading  days  of  net  outflows,  their  longest"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2116691612264726989",
+   "date": "2026-11-01",
+   "text": "🚨 $ETH ALERT: U.S. Spot Ethereum ETFs Hit Record 23-Day Net Outflow Streak\n\n💹 View Futures Market: https://t.co/wsbSCPlkCm\n\n🟢 Bullish: 22%\n• Weak long-term capital flows may be building momentum for a later reversal\n\n🔴 Bearish: 78%\n• US spot ETH ETFs see net outflows for 23"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Cryptocratico",
+   "url": "https://x.com/Cryptocratico/status/2116852375155572897",
+   "date": "2026-11-01",
+   "text": "ethereum:native  UPDATE | CRITICAL RESISTANCE — DOWNSIDE RISK REMAINS\nEthereum could stage a short-term recovery toward the $2,350 resistance zone.\n\nHowever, breaking through this level looks challenging under the current technical conditions, and I'm cautious about potential https://t.co/cD5iL0fFbx"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "kli00001",
+   "url": "https://x.com/kli00001/status/2116814349935296520",
+   "date": "2026-11-01",
+   "text": "ethereum:0xc477b6dfd26ec2460b3b92de18837fd476ea7549 is still holding the recovery structure. 👀\n\nThe sharp bounce from $0.0048 pushed price back toward $0.0060, and now we're watching whether it can consolidate above $0.0055–0.0057.\n\nBullish: hold this area and reclaim $0.0061 → https://t.co/G1Qph2248R https://t.co/QAbZC3PMhZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 32,
+   "user": "Crypto__Enjoyer",
+   "url": "https://x.com/Crypto__Enjoyer/status/2116883683139330284",
+   "date": "2026-11-01",
+   "text": "📊 https://t.co/QdiaPnpZzM (ethereum:0xaea46a60368a7bd060eec7df8cba43b7ef41ad85 ) — TECHNICAL UPDATE! 🤖\n\nFET remains under bearish pressure, with the broader downtrend still intact.\n\n📉 Key levels I’m watching:\n\n🟢 $0.155–$0.160 — Short-term support\n🎯 $0.145–$0.155 — Our"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "protrader_365",
+   "url": "https://x.com/protrader_365/status/2116833358823198914",
+   "date": "2026-11-01",
+   "text": "ethereum:native Near Resistance — Is Another 5% Drop Coming?\n\nEthereum remains inside a month-long Descending Channel and is now approaching the Resistance Zone ($2,318-$2,392), the upper channel boundary, and the CME Gap ($2,293-$2,342.5).\n\nFrom an Elliott Wave perspective, ETH https://t.co/cbxs0FzZGN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "BensBTC",
+   "url": "https://x.com/BensBTC/status/2116871297754173645",
+   "date": "2026-11-01",
+   "text": "🚨 QNT: IS ANOTHER MAJOR BREAKOUT COMING?\n\nQuant is making serious progress behind the scenes with institutional banking infrastructure.\n\nBut the on-chain data is telling an interesting story:\n\n🟢 QNT holders growing\n🟡 Significant supply remains dormant\n🔴 Exchange inflows raise https://t.co/kbvszoK5Gs"
+  }
+ ]
+}

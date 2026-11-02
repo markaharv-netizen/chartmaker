@@ -1,0 +1,237 @@
+{
+ "symbol": "MSTR",
+ "start": "2026-11-01T00:00:00Z",
+ "end": "2026-11-02T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "MSTR (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR mNAV) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "mDataAgent",
+   "url": "https://x.com/mDataAgent/status/2116731413114360293",
+   "date": "2026-11-01",
+   "text": "1-HOUR REPORT\nWritten: 2026-11-01T03:17:49Z (UTC)\nWindow: 2026-11-01T00:17:33Z to 2026-11-01T03:17:33Z (UTC)\n\nPENNY\n\n- INO: Bullish sentiment, strength 3/5, basis both, moving from heating up to peaking over the hour, with a Monday/intraday horizon. StockTwits users expected"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2117027450290884890",
+   "date": "2026-11-01",
+   "text": "$COIN\n\n$COIN has nothing bullish here on the weekly timeframe. We are low basing, below the moving averages, and last week closed with a bearish continuation candle at support at $143.54, down 12.72%.\n\nThis one is on breakdown watch.\n\nWant my levels on $COIN in a centralized https://t.co/oRnAxPRl1b"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 89,
+   "user": "spotgamma",
+   "url": "https://x.com/spotgamma/status/2116943703969239496",
+   "date": "2026-11-01",
+   "text": "This is how our BuySide Open Interest changed on Friday. \n\nTLDR: net long.\n\nSum of the top 50 most-active names (est.): \n+$27.0B long delta, −$609M gamma per 1% move, +$8.6M vega per vol point.\n\n$SPY &amp; $QQQ long calls on net, while SPX biggest change was put shorts\n\nNoticeable https://t.co/FvftTAz1MQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2116968709252407774",
+   "date": "2026-11-01",
+   "text": "🚨 SUNDAY 6 PM PDT — WE’RE GOING LIVE!\n\nTonight we build the BURAKTHESCALPER LLC WEEKLY BATTLE PLAN. 📊🔥\n\nWe’re cleaning the charts, marking the levels and preparing BEFORE Monday opens.\n\n🎯 ON THE BOARD\n$ES_F $NQ_F $SPY $QQQ $IWM\n$NVDA $TSLA $AAPL $AMZN $META\n$AMD $MSFT $PLTR https://t.co/bJIx9ahxHv"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2116912231073902775",
+   "date": "2026-11-01",
+   "text": "$MSTR\n\nFollowing my last post, the outlook on $MSTR has not changed. $MSTR continues to trade within its descending channel under bearish momentum on the weekly timeframe.\n\nWe have built more of a small bull flag here, but the flag sits right below decent resistance, with the 50 https://t.co/lSmeriniTy https://t.co/1WbKMELBTp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "VeteranEgo",
+   "url": "https://x.com/VeteranEgo/status/2116920249027346926",
+   "date": "2026-11-01",
+   "text": "Bull signal.  MSTR announcing to the bear market “Was that the best you got!” https://t.co/VdggpdvHC7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "VivekChirps",
+   "url": "https://x.com/VivekChirps/status/2116745939734196641",
+   "date": "2026-11-01",
+   "text": "Strategy ($MSTR ) recent earnings at a glance\n\nExecutive Summary\n\n🔹 Strategy Inc. achieved its largest quarter in corporate history with Q3 FY2026 income from operations reaching $20,910M, driven by a $20,912M fair-value gain on digital assets.\n🔹 Diluted earnings per share https://t.co/cEvzATidzF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "ithinkimsteven",
+   "url": "https://x.com/ithinkimsteven/status/2116734242550149348",
+   "date": "2026-11-01",
+   "text": "They’re calling it the McRib dip\n\nBy they I mean me\n\nAlso everyone scared of MSTR for how they handle their btc holdings it seems to me that’s part of the Mnav issue"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "OrangePilled",
+   "url": "https://x.com/OrangePilled/status/2116894614926065682",
+   "date": "2026-11-01",
+   "text": "Bitcoin Treasury Leaderboard, 2026 YTD:\n\n$MSTR -𝟏𝟒.𝟏%\nMetaplanet -𝟑𝟗.𝟖%\n$XXI -𝟑𝟕.𝟒%\n$ASST +𝟓𝟎.𝟒%\n$MARA -𝟐𝟒.𝟔%\n\n$BTC -𝟏𝟏.𝟖%\n\nTop 5 by BTC held. As of Oct 30 close. mNAV in chart.\n\nMy take: only $ASST is beating $BTC in 2026. Three trade under 1x mNAV. https://t.co/qiRr5IH5yY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "TheCycleProf",
+   "url": "https://x.com/TheCycleProf/status/2116999145105883225",
+   "date": "2026-11-01",
+   "text": "MARKET ANALYSIS\n\nThe last two weeks of this market correction have been extremely brutal.\n\nWhat stands out to me is how little real bear market narrative we have seen, especially in the AI complex. The damage under the surface has been severe, many names are already deep into"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "RosannaInvests",
+   "url": "https://x.com/RosannaInvests/status/2116992731784581567",
+   "date": "2026-11-01",
+   "text": "People ask what \"digital credit\" even is. Simple. Three layers, one asset. 💡\n\n🟠 DIGITAL CAPITAL: bitcoin. ~$77,700. No yield. No counterparty. The reserve asset.\n\n📈 DIGITAL EQUITY: the treasury common. $MSTR $ASST. Leveraged exposure to bitcoin per share.\n$MSTR: 848,517 BTC, https://t.co/jtGIWOyUiF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "FindStockFast",
+   "url": "https://x.com/FindStockFast/status/2116904176437362730",
+   "date": "2026-11-01",
+   "text": "On market value alone, all seven crypto treasuries in this week's check trade below the crypto they hold.\n\nAdd debt and preferred stock, subtract cash, and only two stay above 1.0x: $MSTR at 1.06x and $ASST at 1.32x.\n\nStrategy holds $66.09B in bitcoin. Its stock market value is https://t.co/ZkikgCY5CK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2116712794200371372",
+   "date": "2026-11-01",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-10-31 (Evening Edition)\n\n**Published:** 2026-10-31 09:03 PM CT\n\nBitcoin is grinding sideways on a Saturday, up 0.39% over 24 hours but still 3.0% lower over seven days and 8.1% lower over 30 days, with Fear &amp; Greed at 34 for a third"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "brianfires",
+   "url": "https://x.com/brianfires/status/2117009309447967216",
+   "date": "2026-11-01",
+   "text": "Don't Mistake Priority for Safety Though. $SATA Holders Face Brutal Downside Too. Strive’s Bitcoin is NOT Formally Collateralized to Back SATA Or SATS. If the Cash Buffer Melts, the Board Can Halt Daily Payouts, Stopping SATA's 15% Cash Dividends Won't Become An IOU.\n$MSTR $DJT https://t.co/7Z9JiIIitF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "brianfires",
+   "url": "https://x.com/brianfires/status/2117006403542167986",
+   "date": "2026-11-01",
+   "text": "Strive’s B/S Relies on Flawed Financial Engineering.\nTo Outrun Mounting BTC/Sh Decay, Mgmt is Aggressively Diluting $ASST W/Its New $1B SATS ATM Shelf. This Expensive Leverage Loop Eats ASST Upside. Fixed Daily Obligations Can't Be Sustained By Cyclical Unhedged Bitcoin.\n$MSTR https://t.co/nqpOVcZbtV"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 12,
+   "user": "thebullishdiv",
+   "url": "https://x.com/thebullishdiv/status/2116970789366808806",
+   "date": "2026-11-01",
+   "text": "$MSTR \n\nHaven't seen a yellow monthly diamond on MSTR since September of 2025, which is more then a year ago.\n\nUnfortunate monthly rejection again at $170 in October.\n\nGood support at $120. But could see lower.\n\nWill update when the bullish skies open. https://t.co/BPwEPTYBJ3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "BrunoRinarelli",
+   "url": "https://x.com/BrunoRinarelli/status/2116778372378357947",
+   "date": "2026-11-01",
+   "text": "Macro &amp; RWA / Commodities Pulse\n\n​Macro desk check heading into Sunday night futures. ✅️\n\nFriday's brutal tech de-risking and margin-driven liquidations across hard assets left deep technical marks into the monthly close:\n\n​• $NVDA: $204.64 (-4.22% Friday close)\n• $SPCX: https://t.co/IPtSGJ6kZQ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 222,
+   "user": "cryptogoos",
+   "url": "https://x.com/cryptogoos/status/2116874501170319871",
+   "date": "2026-11-01",
+   "text": "🇺🇸 Michael Saylor just hinted at Strategy $MSTR buying more Bitcoin.\n\nBullish! https://t.co/IkK2LlByW6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "thebullishdiv",
+   "url": "https://x.com/thebullishdiv/status/2116970638439031148",
+   "date": "2026-11-01",
+   "text": "$MSTR \n\nHaven't seen a yellow monthly diamond on MSTR since September of 2025, which is more then a year.\n\nUnfortunate monthly rejection again at $170.\n\nGood support at $120. But could see lower.\n\nWill update when the bullish skies open. https://t.co/2sOSuyT6qR"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 11,
+   "user": "Aslanomic",
+   "url": "https://x.com/Aslanomic/status/2116940796439974254",
+   "date": "2026-11-01",
+   "text": "Bitcoin updates:\n\nPossible scenario as the upper AVWAP (pink line) got broken with an impulsive candle with a possibility to tap liquidity at the below AVWAP.\n\nHTF I am very bullish and holding my MSTR position, unless proven otherwise!\n\n$BTC https://t.co/lKMhnwS530"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "DenisD777444",
+   "url": "https://x.com/DenisD777444/status/2116941076003192938",
+   "date": "2026-11-01",
+   "text": "People who have spent hundredths of hours studying Bitcoin and money, are now more bullish than ever, despite us only having had an average 5 year CAGR of ~5%. ~2M BTC for sale on exchanges (Lowest in many years), and &lt;894K left to mine over the next century. BTC/MSTR/STRC FTW!"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "LeaderInvests",
+   "url": "https://x.com/LeaderInvests/status/2116890501928652945",
+   "date": "2026-11-01",
+   "text": "$MSTR all eyes on bitcoin:native \n\nCould be wave 4 with one more wave 5 extension up, but losing every EMA on both weekly and daily isn't bullish. \n\nGEX $125 got touched last week, which could hint at a reversal, but taking this one slow and waiting to see what Bitcoin does https://t.co/mjdhwUzbvu"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 429,
+   "user": "ZynxBTC",
+   "url": "https://x.com/ZynxBTC/status/2116884159016882341",
+   "date": "2026-11-01",
+   "text": "Well that answers it.\n\n$MSTR common stock will continue to be issued at a premium to buy more Bitcoin.\n\nWhile the goal is for STRC to be the primary driver going forward, Strategy will always try to capture some of the premium to increase net Bitcoin per share.\n\nBullish. https://t.co/F3bRev7Xqg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "brianfires",
+   "url": "https://x.com/brianfires/status/2116902177579164092",
+   "date": "2026-11-01",
+   "text": "The Bitcoin Bull Thesis Is Forever Broken. \nYou Can Deny It or Ignore It but Facts Are Facts.\n$MSTR $ASST $ABTC https://t.co/amKUrjOU2W"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "TaylorK88114500",
+   "url": "https://x.com/TaylorK88114500/status/2116845082246803598",
+   "date": "2026-11-01",
+   "text": "$MSTR $Asst #bitcoin \n\nNo Uptober unfortunately,\nBut RSI is above 50 for the 3rd month in a row,\nSignaling the birth of a new bull market. https://t.co/DWw8anZsb5"
+  }
+ ]
+}

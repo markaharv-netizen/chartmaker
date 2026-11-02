@@ -1,0 +1,57 @@
+{
+ "symbol": "APLD",
+ "start": "2026-11-01T00:00:00Z",
+ "end": "2026-11-02T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "APLD (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "theravengate",
+   "url": "https://x.com/theravengate/status/2116905089894129772",
+   "date": "2026-11-01",
+   "text": "Of the top 5 for upside vs downside on my list, four are already VETO, $INBX (under 12 months of cash), $FPS (chart still falling), $OUST (earnings Tue) and APLD (chart still falling).\n\nThe other one, MRAM, is WAIT. MRAM is a small cap, under $1B.\n\nI hold none of these 5 https://t.co/MEtsZH1JTz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "SulkerTrades",
+   "url": "https://x.com/SulkerTrades/status/2116983795534733775",
+   "date": "2026-11-01",
+   "text": "TSLA &amp; Neoclouds – Potential Sell-Off Following the Midterm Election Results\n\n1. $TSLA – Key Levels: $400, $350 and $300\n\n$400 is a major resistance level for TSLA. If the stock fails to break above it, we could see a potential sell-off, potentially amplified by the market https://t.co/zSa7NEo8fq"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "ValueCroc",
+   "url": "https://x.com/ValueCroc/status/2116977037697257619",
+   "date": "2026-11-01",
+   "text": "The market sold $APLD as just another neocloud. Perhaps it was afraid of Coreweave and overall tech bearish sentiment.\n\nAPLD owns no GPUs. It collects rent on 15-year take-or-pay leases. The question may be less about what it builds and more about who pays for it, and today"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 6,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2116701609451253937",
+   "date": "2026-11-01",
+   "text": "$MARA\n\n$MARA bears remain in control since the pivot high reversal I shared in my post below, and even then we were already under bearish momentum. Last week gave us a doji candle, showing indecision, but it still printed a lower high, a lower low and a lower close.\n\nPrice https://t.co/gntBd3MoD6 https://t.co/Vm5C5qjarc"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "StelliumTape",
+   "url": "https://x.com/StelliumTape/status/2116999187380220073",
+   "date": "2026-11-01",
+   "text": "$APLD ▲ A+ bullish flow into the next session\n\n$680K of aggressive call buying, 43% one-sided, 90% into fresh contracts.\n\nWatching a break above $18.44 · flow magnet $18.3\n\nHOURLY Chart setting up with basing at $17\nMTF to MTF from 18.3 &gt;20.7&gt;24.17\n\nAn idea, not advice. Follow https://t.co/DxOgaga3Vw"
+  }
+ ]
+}
