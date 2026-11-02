@@ -56,7 +56,9 @@ DATE_SUFFIX = re.compile(r"\s+(\d{4}-\d{2}-\d{2})$")
 GID_NAME = re.compile(r"^(?:(?P<pre>.+?)__)?(?P<gid>\d+)$")
 
 def norm_tab(s):
-    s = re.sub(r"\s+", " ", str(s).replace("\u00a0", " ").strip().lower())
+    # Drive export names replace "/", ":" and "\\" in tab names with "-".
+    s = re.sub(r"[/:\\]", "-", str(s).replace("\u00a0", " "))
+    s = re.sub(r"\s+", " ", s.strip().lower())
     return re.sub(r"^0+(\d+)\b", r"\1", s)
 
 def norm_book(s):
