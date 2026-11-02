@@ -20,7 +20,7 @@ HISTORY_TICKERS = ["MSTR", "TSLA", "SPCX", "SATA", "STRC", "BTC-USD", "META"]
 DDIR = os.path.join(ROOT, "tools", "sentiment_input", "history_daily")
 # Daily points: all 18 board tickers + the 3 history-only names. One UTC day per point, 1 opinion search (<=25 posts).
 DAILY_TICKERS = ["AAPL", "MSFT", "GOOGL", "AMZN", "META", "NVDA", "TSLA", "AVGO", "INTC", "MSTR", "COIN", "BTC-USD", "ETH-USD",
-                 "CRWV", "NBIS", "IREN", "CIFR", "WULF", "ASST", "MU", "SPCX", "RKLB", "ASTS", "SATA", "STRC"]
+                 "CRWV", "NBIS", "IREN", "CIFR", "ASST", "MU", "SPCX", "RKLB", "ASTS", "SATA", "STRC"]
 DAILY_START = "2026-07-21"  # target backfill start (~3 months)
 
 def load_raw(path):
