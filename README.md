@@ -65,18 +65,30 @@ Tick **Annotations** on the row under the price controls. Markers are dashed lin
 Type **Candles + volume**. One ticker only; the option is disabled while several symbols are in the box. `/api/chart` returns `bars`: `[time_ms, open, high, low, close, volume]` beside the close-only `points`. Candle mode chooses the interval so bodies stay wide on the 1600px canvas: 1D is 15-minute regular-session bars (30-minute for 24h `-USD` pairs), 5D is one daily candle per trading session, and longer ranges step from daily to weekly to monthly when the finer bars would turn into hairlines. Body width scales with the free plot width, with a small gap, a floor, and a cap. Price line is unchanged (1D/5D stay 1-minute, including pre/after-hours). Candle mode does not draw extended-hours slivers or overnight gaps. Volume sits under the candles; green is close ≥ open. SMAs (daily closes; off for intraday bars), annotations, earnings markers, and Download PNG use the same 1600×900 canvas. The status line shows the interval actually drawn.
 
 ### Sheets library
-The **Sheets** tab, next to Charts of the day, reads `static/sheets/catalog.json`. Render never calls Google. Search by workbook, tab name, or chart title, then **Open in Sheets**.
+The **Sheets** tab, next to Charts of the day, reads `static/sheets/catalog.json` for the tab list. Search by workbook, tab name, or chart title, then **Open in Sheets**. Render does not call Google.
 
-With the search box empty, the list is text only. After you type a search, a result shows a chart preview when that tab has a thumbnail. Tabs without one still appear, and a missing file does not leave a broken image. Thumbnails are small JPEGs in `static/sheets/thumbs/`. The full-resolution PNG library stays on Drive and is not committed.
+With the search box empty, the list is text only. After you type a search, a result shows a chart preview when that tab has a thumbnail. Tabs without one still appear, and a missing file does not leave a broken image. Thumbnails are small JPEGs in `static/sheets/thumbs/` (at most 480×270). The grid keeps that JPEG.
 
-Refresh on a machine that can read the workbooks (not on Render):
+**View PNG**, **Download PNG**, and the preview image open `static/sheets/full/<book>/<gid>.png` when that file is in the repo. If it is missing, those links open the thumbnail instead.
+
+Import the weekly export (files named like the tab, optional trailing `YYYY-MM-DD`, newest date then newest file time wins) on a machine that has the PNGs, then commit `static/sheets/full/`:
+
+```
+python3 scripts/import_full_pngs.py --from-dir /path/to/exported-pngs
+```
+
+Put each workbook in its own subfolder (`bot1`, the spreadsheet id, or the workbook title) to limit matches to that book. Repeat `--from-dir` for several folders. `--dry-run` prints matches without writing. `--no-optimize` copies the bytes unchanged. Otherwise the script uses `oxipng` or `optipng` when one is on PATH, otherwise `pngquant` (kept only when the file shrinks), otherwise Pillow's lossless optimize when Pillow is installed.
+
+Refresh the tab list and thumbnails on a machine that can read the workbooks:
 
 1. Save each spreadsheet's metadata JSON (`spreadsheets.get` / the Sheets `get_spreadsheet` response: sheetId, title, chart titles).
 2. `python3 scripts/sheets_catalog.py bot1.json bot2.json bot3.json`  
    This rewrites the tab list and **keeps** a thumbnail already recorded for a book and gid when that JPEG is still on disk.
 3. Point `scripts/sheets_thumbs.py` at a local folder of the weekly chart export (not at Render). The export names files after the tab, with the number sometimes zero-padded and a date on the end (`090 TSLA gross margin vs price 2026-10-21.png`). Duplicate names: the script keeps the newest date, then the newest file time.
    `python3 scripts/sheets_thumbs.py --from-dir /path/to/exported-pngs`
-4. Commit `static/sheets/catalog.json` and `static/sheets/thumbs/`. Do not commit the source PNGs.
+4. Commit `static/sheets/catalog.json` and `static/sheets/thumbs/`. Do not commit the source folder itself.
+5. `python3 scripts/import_full_pngs.py --from-dir /path/to/exported-pngs`  
+   Then commit `static/sheets/full/`. The script prints `matched N, unmatched M, ambiguous A`.
 
 Until that export is on the machine, seed only the tabs that overlap today's Charts of the day:
 

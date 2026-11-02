@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Build Chartmaker's offline Sheets library catalog. Runs on a box with workbook metadata, not on Render.
 
-Render has no Google credentials. The Sheets tab reads static/sheets/catalog.json only.
+The Sheets tab reads static/sheets/catalog.json for the tab list. Full-size PNGs live at
+static/sheets/full/<book>/<gid>.png, written by scripts/import_full_pngs.py.
 
 Usage:
   python3 scripts/sheets_catalog.py bot1.json bot2.json bot3.json
@@ -21,7 +22,8 @@ All three known workbooks must be present unless --allow-partial is set.
 This script does not copy chart images. An existing tab thumbnail (static/sheets/thumbs/<book>/<gid>.jpg)
 is kept when that book and gid are still in the new snapshot and the file is still on disk.
 Build or replace thumbnails with scripts/sheets_thumbs.py from a local folder of Drive-exported PNGs.
-The app shows a thumbnail only while the Sheets search box has a query. Full-size PNGs are not committed.
+The app shows a thumbnail only while the Sheets search box has a query. View PNG opens
+static/sheets/full/<book>/<gid>.png when that file is committed, and the thumbnail otherwise.
 """
 import argparse, json, os, re, sys, datetime
 
@@ -32,10 +34,11 @@ BOOKS = [
 ]
 BY_ID = {sid: (bid, name) for bid, name, sid in BOOKS}
 NOTE = (
-    "Offline snapshot. Render does not call Google. Regenerate tabs with scripts/sheets_catalog.py. "
-    "Search previews are optional compressed thumbnails under static/sheets/thumbs/, built by scripts/sheets_thumbs.py "
-    "from a local folder of chart PNGs. The Sheets tab shows a thumbnail only while the search box has a query. "
-    "Full-resolution chart PNGs stay on Drive and are not committed."
+    "Offline tab list. Regenerate tabs with scripts/sheets_catalog.py. "
+    "Search previews are compressed thumbnails under static/sheets/thumbs/, built by scripts/sheets_thumbs.py. "
+    "The Sheets tab shows a thumbnail only while the search box has a query. "
+    "View PNG and Download PNG open static/sheets/full/<book>/<gid>.png when that file is committed, "
+    "and the thumbnail otherwise. Import full PNGs with scripts/import_full_pngs.py."
 )
 # book id + gid, relative to static/. Rejects anything that could escape the thumbs directory.
 THUMB_REL = re.compile(r"^sheets/thumbs/([A-Za-z0-9][A-Za-z0-9_-]{0,24})/(\d+)\.jpg$")
