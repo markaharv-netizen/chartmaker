@@ -1,5 +1,5 @@
 """Chartmaker backend: stdlib-only proxy for Yahoo Finance chart API + static frontend."""
-import urllib.error, fin, heat, watch, treasury, valuation, valhist, json, os, sys, time, hmac, hashlib, secrets, threading, html, http.cookiejar, urllib.request, urllib.parse
+import urllib.error, fin, heat, watch, treasury, valuation, valhist, sheets_png, json, os, sys, time, hmac, hashlib, secrets, threading, html, http.cookiejar, urllib.request, urllib.parse
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
 PORT = int(os.environ.get("PORT", sys.argv[1] if len(sys.argv) > 1 else 8791))
@@ -349,6 +349,18 @@ class H(SimpleHTTPRequestHandler):
             if not b: return s.send_json({"error": "no logo"}, 404)
             s.send_response(200); s.send_header("Content-Type", "image/webp" if b[:4] == b"RIFF" else "image/jpeg" if b[:2] == b"\xff\xd8" else "image/png"); s.send_header("Cache-Control", "public, max-age=604800")
             s.send_header("Content-Length", len(b)); s.end_headers(); s.wfile.write(b); return
+        if u.path == "/api/sheet-png":
+            try:
+                status, hdrs, body = sheets_png.serve(qs.get("book", [""])[0], qs.get("gid", [""])[0], qs.get("download", ["0"])[0] in ("1", "true", "yes"), s.headers.get("If-None-Match") or "")
+            except sheets_png.PngError as e:
+                return s.send_json({"error": str(e)}, e.status)
+            except Exception as e:
+                return s.send_json({"error": "sheet png failed: " + str(e)}, 502)
+            s.send_response(status)
+            for k, v in hdrs: s.send_header(k, v)
+            s.end_headers()
+            if body: s.wfile.write(body)
+            return
         if u.path in ("/api/sentiment", "/api/sentiment_history"):
             fn = "sentiment.json" if u.path == "/api/sentiment" else "sentiment_history.json"
             try:

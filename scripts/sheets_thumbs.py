@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Build compressed Sheets-library search thumbnails. Runs beside the catalog refresh, not on Render.
 
-Render only serves static files. It does not call Google. Full-size chart PNGs stay on Drive
-(or in a local export folder) and are never written into the repo.
+Render serves these JPEGs as the search-grid preview. Full-size PNGs stay on Drive and are
+fetched one chart at a time by /api/sheet-png (sheets_png.py). They are never written into the repo.
 
 Usage:
   python3 scripts/sheets_thumbs.py --from-dir /path/to/exported-pngs

@@ -15,6 +15,10 @@ services:
         value: server
       - key: GITHUB_TOKEN
         sync: false
+      # Full-size Sheets chart PNGs. Paste a Drive-readonly service-account key JSON.
+      # Share the three chart PNG folders with that service account's client_email as Viewer.
+      - key: GOOGLE_SERVICE_ACCOUNT_JSON
+        sync: false
       - key: VIEWS_REPO
         value: markaharv-netizen/chartmaker
       - key: VIEWS_BRANCH

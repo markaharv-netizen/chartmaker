@@ -1,6 +1,6 @@
 {
  "generated": "2026-10-23T15:23:32Z",
- "note": "Offline snapshot. Render does not call Google. Regenerate tabs with scripts/sheets_catalog.py. Search previews are optional compressed thumbnails under static/sheets/thumbs/, built by scripts/sheets_thumbs.py from a local folder of chart PNGs. The Sheets tab shows a thumbnail only while the search box has a query. Full-resolution chart PNGs stay on Drive and are not committed.",
+ "note": "Offline tab list. Regenerate tabs with scripts/sheets_catalog.py. Search previews are compressed thumbnails under static/sheets/thumbs/, built by scripts/sheets_thumbs.py. The Sheets tab shows a thumbnail only while the search box has a query. View PNG and Download PNG serve the full-size weekly Drive export through /api/sheet-png (cached on the server). Full-resolution chart PNGs are not committed.",
  "thumbsGenerated": "2026-10-23T18:50:23Z",
  "books": [
   {

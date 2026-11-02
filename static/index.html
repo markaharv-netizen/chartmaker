@@ -679,12 +679,13 @@ async function cotdenter(){const el=$('cotd'),E=t=>String(t??'').replace(/[&<>"]
 <div class="src">${E(x.sheet)} · ${E(x.tab)}${safe(x.sheet_url)?` · <a href="${E(x.sheet_url)}" target="_blank" rel="noopener">open in sheet</a>`:''}</div>
 <div class="sec"><b>Why it was picked today</b>${E(x.picked)}</div><div class="sec"><b>Why it matters</b>${E(x.matters)}</div><div class="sec"><b>What you should know</b>${E(x.know)}</div></div>`).join('');
   }catch(e){el.innerHTML='<p style="color:#EF4444">Could not load today\'s charts ('+E(e.message)+').</p>'}}
-// ---------- Sheets library: static/sheets/catalog.json (scripts/sheets_catalog.py). No live Google call. ----------
+// ---------- Sheets library: static/sheets/catalog.json (scripts/sheets_catalog.py). ----------
 // Thumbnails are optional catalog fields (static/sheets/thumbs/...). Shown only while the search box has a query.
-// View PNG and Download PNG use that same JPEG. Full-resolution chart PNGs stay on Drive.
+// View PNG and Download PNG call /api/sheet-png, the full-size weekly Drive export (cached). The grid keeps the JPEG.
 let SHEETS=null;
 function sheetThumb(t){const p=String(t&&t.thumb||'');return /^sheets\/thumbs\/[A-Za-z0-9][A-Za-z0-9_-]{0,24}\/\d+\.jpg$/.test(p)?p:''}
-function sheetFile(tab){const n=String(tab||'').replace(/[^\w]+/g,'_').replace(/^_+|_+$/g,'');return (n||'chart')+'.jpg'}
+function sheetPngUrl(t,dl){const u='/api/sheet-png?book='+encodeURIComponent(t.book)+'&gid='+encodeURIComponent(t.gid);return dl?u+'&download=1':u}
+function sheetFile(tab){const n=String(tab||'').replace(/[^\w]+/g,'_').replace(/^_+|_+$/g,'');return (n||'chart')+'.png'}
 async function sheetsEnter(){const el=$('sheets'),E=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   el.innerHTML='<p>Loading…</p>';
   try{
@@ -693,7 +694,7 @@ async function sheetsEnter(){const el=$('sheets'),E=t=>String(t??'').replace(/[&
     const books=SHEETS.books||[],tabs=SHEETS.tabs||[];
     const bookBy=Object.fromEntries(books.map(b=>[b.id,b]));
     const when=SHEETS.generated?new Date(SHEETS.generated).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'';
-    el.innerHTML=`<h2>Sheets library</h2><p class="theme">Search ${tabs.length} tabs across ${books.map(b=>E(b.name)).join(', ')}. Opens the Google Sheet. Type a search to see a chart preview beside each result that has one. The full list stays text-only, and a tab with no thumbnail is still listed.${when?' Catalog '+E(when)+'.':''}</p>
+    el.innerHTML=`<h2>Sheets library</h2><p class="theme">Search ${tabs.length} tabs across ${books.map(b=>E(b.name)).join(', ')}. Opens the Google Sheet. Type a search to see a chart preview beside each result that has one. View PNG and Download PNG open the full-size chart, and the preview stays the small thumbnail. The full list stays text-only, and a tab with no thumbnail is still listed.${when?' Catalog '+E(when)+'.':''}</p>
 <div class="bar"><input id="shq" type="search" size="28" placeholder="Search tabs or chart titles" autocomplete="off">
 <select id="shbook"><option value="">All workbooks</option>${books.map(b=>`<option value="${E(b.id)}">${E(b.name)}</option>`).join('')}</select>
 <label style="display:flex;flex-direction:row;align-items:center;gap:4px;font-size:13px"><input id="shcharts" type="checkbox"> Has a chart</label></div>
@@ -707,8 +708,9 @@ async function sheetsEnter(){const el=$('sheets'),E=t=>String(t??'').replace(/[&
         const im=q?sheetThumb(t):'';
         const safeUrl=/^https:\/\/docs\.google\.com\/spreadsheets\/d\/[A-Za-z0-9_-]+\/edit#gid=\d+$/.test(url)?url:'';
         const open=safeUrl?`<a class="open" href="${E(safeUrl)}" target="_blank" rel="noopener">Open in Sheets</a>`:'';
-        const png=im?`<span data-png>${open?' · ':''}<a class="open" href="${E(im)}" target="_blank" rel="noopener">View PNG</a> · <a class="open" href="${E(im)}" download="${E(sheetFile(t.tab))}">Download PNG</a></span>`:'';
-        return `<div class="row"><div class="meta"><div class="book">${E(b.name)}</div><h3>${E(t.tab)}</h3>${(t.charts||[]).length?`<div class="charts">${(t.charts||[]).map(E).join(' · ')}</div>`:''}${open||png?`<div style="margin-top:6px">${open}${png}</div>`:''}</div>${im?`<a href="${E(im)}" target="_blank" rel="noopener"><img src="${E(im)}" alt="${E(t.tab)}" loading="lazy" onerror="var row=this.closest('.row');var a=this.closest('a');if(a)a.remove();var x=row&&row.querySelector('[data-png]');if(x)x.remove()"></a>`:''}</div>`}).join('')||'<p>No tabs match.</p>'};
+        const full=im?sheetPngUrl(t,false):'';
+        const png=im?`<span data-png>${open?' · ':''}<a class="open" href="${E(full)}" target="_blank" rel="noopener">View PNG</a> · <a class="open" href="${E(sheetPngUrl(t,true))}" download="${E(sheetFile(t.tab))}">Download PNG</a></span>`:'';
+        return `<div class="row"><div class="meta"><div class="book">${E(b.name)}</div><h3>${E(t.tab)}</h3>${(t.charts||[]).length?`<div class="charts">${(t.charts||[]).map(E).join(' · ')}</div>`:''}${open||png?`<div style="margin-top:6px">${open}${png}</div>`:''}</div>${im?`<a href="${E(full)}" target="_blank" rel="noopener"><img src="${E(im)}" alt="${E(t.tab)}" loading="lazy" onerror="var row=this.closest('.row');var a=this.closest('a');if(a)a.remove();var x=row&&row.querySelector('[data-png]');if(x)x.remove()"></a>`:''}</div>`}).join('')||'<p>No tabs match.</p>'};
     $('shq').addEventListener('input',draw);$('shq').addEventListener('search',draw);$('shbook').onchange=$('shcharts').onchange=draw;draw();
   }catch(e){el.innerHTML='<p style="color:#EF4444">Could not load the Sheets catalog ('+E(e.message)+').</p>'}}
 const MUNIT={eps_diluted:'eps',shares:'sh',gross_margin:'%',operating_margin:'%',net_margin:'%'};
