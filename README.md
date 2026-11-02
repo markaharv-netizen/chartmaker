@@ -117,7 +117,7 @@ Refresh the snapshot where the sheet can be read:
 Ranked bull-vs-bear board (like the "analyst sentiment" boards on X). The app only reads the static
 `sentiment.json` (served at `/api/sentiment`); nothing is scraped on Render.
 
-**Board tickers (24):** AAPL, MSFT, GOOGL, AMZN, META, NVDA, TSLA, AVGO, INTC, **MU**, MSTR, COIN, BTC-USD, **ETH-USD**, CRWV, NBIS, IREN, APLD, CIFR, WULF, **ASST**, **SPCX**, **RKLB**, **ASTS**. Added 2026-10-21: RKLB (Rocket Lab; news "Rocket Lab RKLB stock"), ASTS (AST SpaceMobile; news "AST SpaceMobile ASTS stock") — both tickers are unambiguous on X, so plain `RKLB`/`ASTS` queries; ETH-USD (Ethereum; crypto row like BTC-USD: `display` "ETH", `logoKey` "c:ETH", `kind` "crypto"; X queries use `Ethereum ...`; news "Ethereum price"), ASST (Strive; news "Strive ASST stock"), MU (Micron; X queries use `MU Micron ...` because bare "MU" is ambiguous; news "Micron stock"), SPCX (SpaceX, so every DCF-model stock — TSLA, SPCX, MSTR — is on the board; news "SpaceX SPCX stock"; plain query `SPCX SpaceX -pump -memecoin ...`). The daily input file must list all 24; they first appear on the board at the next daily refresh (no board snapshot is fabricated for them before that).
+**Board tickers (21):** AAPL, MSFT, GOOGL, AMZN, META, NVDA, TSLA, INTC, **MU**, MSTR, COIN, BTC-USD, **ETH-USD**, CRWV, NBIS, IREN, CIFR, **ASST**, **SPCX**, **RKLB**, **ASTS**. Added 2026-10-21: RKLB (Rocket Lab; news "Rocket Lab RKLB stock"), ASTS (AST SpaceMobile; news "AST SpaceMobile ASTS stock") — both tickers are unambiguous on X, so plain `RKLB`/`ASTS` queries; ETH-USD (Ethereum; crypto row like BTC-USD: `display` "ETH", `logoKey` "c:ETH", `kind` "crypto"; X queries use `Ethereum ...`; news "Ethereum price"), ASST (Strive; news "Strive ASST stock"), MU (Micron; X queries use `MU Micron ...` because bare "MU" is ambiguous; news "Micron stock"), SPCX (SpaceX, so every DCF-model stock — TSLA, SPCX, MSTR — is on the board; news "SpaceX SPCX stock"; plain query `SPCX SpaceX -pump -memecoin ...`). The daily input file must list all 24; they first appear on the board at the next daily refresh (no board snapshot is fabricated for them before that).
 
 **Data pipeline (daily refresh)**
 1. An agent with the X connector collects the last 7 days per ticker (≈3 calls/ticker):
@@ -195,11 +195,11 @@ Do both parts every morning. Budget ≈ 14 X calls for the history + ≈ 3 per b
    Never hand-edit labels in history files: the series must stay one consistent labeler.
 4. `python3 tools/sentiment_history.py build` → rewrites `series` in `sentiment_history.json` from every saved file.
 
-**B. Board snapshot** (the 24 board tickers listed above, incl. ETH-USD, ASST, MU, SPCX, RKLB, ASTS): steps 1–3 of "Data pipeline" above, then
+**B. Board snapshot** (the 21 board tickers listed above, incl. ETH-USD, ASST, MU, SPCX, RKLB, ASTS): steps 1–3 of "Data pipeline" above, then
 `python3 tools/build_sentiment.py tools/sentiment_input/<YYYY-MM-DD>.json` **after** A.4 (so MSTR/TSLA/BTC σ uses today's history point).
 It writes `sentiment.json` and adds `daily[<date>]` to `sentiment_history.json` without touching `series`.
 
-**A2. Daily points (all 26 names: the 24 board tickers + SATA, STRC)** — `series_daily`, shown with Over time → Points: Daily.
+**A2. Daily points (all 26 names: the 21 board tickers + SATA, STRC)** — `series_daily`, shown with Over time → Points: Daily.
 For yesterday's UTC day `D` (00:00–24:00Z), per ticker run ONE `search_posts_all` with the opinion query
 `<SYM> (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued[ OR mNAV for MSTR | OR par OR yield for STRC/SATA]) [-pump -memecoin for SPCX] -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en`
 (BTC-USD uses `Bitcoin`, ETH-USD uses `Ethereum`, MU uses `MU Micron`), `start_time=D`, `end_time=D+1`, max 25, relevancy, same fields as above; then
