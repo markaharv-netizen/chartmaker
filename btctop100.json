@@ -6,7 +6,7 @@
   "sheet": "BTCTC Top 100",
   "gid": 73825060,
   "description": "Top 100 corporate bitcoin holdings from the BTCTC Top 100 tab of My Bot's Sheets. USD value is BTC times a live BTC price and is not part of this file.",
-  "fetchedAt": "2026-10-24T02:09:21Z",
+  "fetchedAt": "2026-11-02T17:51:29Z",
   "supply": 21000000,
   "companies": [
     {
@@ -15,12 +15,12 @@
       "ticker": "MSTR",
       "country": "US",
       "change": "+810",
-      "btc": 848517,
-      "asOf": "2026-10-18",
-      "source": "SEC Form 8-K (filed 2026-10-19)",
+      "btc": 849327,
+      "asOf": "2026-11-01",
+      "source": "SEC Form 8-K (filed 2026-11-02)",
       "sourceLabel": "SEC 8-K",
-      "sourceUrl": null,
-      "notes": "Acquired 267 BTC Oct 12-18, 2026 (~$22.1M, avg $82,900)."
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526442707/mstr-20261102.htm",
+      "notes": "Bought 811 BTC Oct 26-Nov 1, 2026 (avg ~$80,846)."
     },
     {
       "rank": 2,
@@ -32,7 +32,7 @@
       "asOf": "2026-09-30",
       "source": "TSE timely disclosure 'Notice of Additional Purchase of Bitcoin' (2026-10-05, via metaplanet.jp disclosures)",
       "sourceLabel": "TSE disclosure",
-      "sourceUrl": null,
+      "sourceUrl": "https://contents.xj-storage.jp/xcontents/33500/4b5f0c2e/ab52/4d40/9d89/e2aa6e3f3524/140120261005546274.pdf",
       "notes": "Q3 2026 net +1,000 BTC (sold 10,000 and repurchased 11,000 to demonstrate liquidity). Announced Aug 18 2026 it will contribute 2,100 BTC to Super League ('Superplanet'); may reduce directly held BTC."
     },
     {
@@ -45,7 +45,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-11)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2070457/000121390026087471/ea0299640-10q_twentyone.htm",
       "notes": null
     },
     {
@@ -54,12 +54,12 @@
       "ticker": "ASST",
       "country": "US",
       "change": "+124",
-      "btc": 36818,
-      "asOf": "2026-10-16",
-      "source": "Strive 8-K (2026-10-19)",
+      "btc": 43124,
+      "asOf": "2026-10-30",
+      "source": "Strive 8-K (2026-11-02)",
       "sourceLabel": "SEC 8-K",
-      "sourceUrl": null,
-      "notes": "Bought 4,045 BTC Oct 12-16, 2026 (avg ~$82,803)."
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1920406/000162828026068660/asst-20261102.htm",
+      "notes": "Bought 124 BTC Oct 24-30, 2026 (avg ~$80,526)."
     },
     {
       "rank": 5,
@@ -71,7 +71,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-06)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1507605/000150760526000022/mara-20260630.htm",
       "notes": "Includes 9,270 BTC loaned/pledged (receivable); 26,307 held directly."
     },
     {
@@ -84,7 +84,7 @@
       "asOf": "2026-09-30",
       "source": "SEC Form 10-Q Q3 2026 (filed 2026-10-22)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
       "notes": null
     },
     {
@@ -97,7 +97,7 @@
       "asOf": "2026-06-30",
       "source": "Bullish 2Q 2026 earnings presentation (IR), 'Digital Asset Balances' units table",
       "sourceLabel": "Earnings release",
-      "sourceUrl": null,
+      "sourceUrl": "https://investors.bullish.com/static-files/265a2005-84a9-4e2a-9e9a-690ee43c19ab",
       "notes": "Treasury-only figure (BTC held as intangible assets). Total BTC incl. inventory, receivables and ETF investments is 23,800."
     },
     {
@@ -106,11 +106,11 @@
       "ticker": "COIN",
       "country": "US",
       "change": null,
-      "btc": 17311,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-07-30)",
+      "btc": 17954,
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-10-29)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000122/coin-20260930.htm",
       "notes": "BTC held for investment only; excludes BTC held for operations/collateral."
     },
     {
@@ -123,7 +123,7 @@
       "asOf": "2026-07-31",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-10), subsequent-event disclosure",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1849635/000143774926026777/djt20260630_10q.htm",
       "notes": "Figure from 10-Q subsequent-events note (7/31/26); includes BTC in yield/option program."
     },
     {
@@ -136,7 +136,7 @@
       "asOf": "2026-09-30",
       "source": "Company press release (IR) - September 2026 Operational Update, 2026-10-09",
       "sourceLabel": "Press release",
-      "sourceUrl": null,
+      "sourceUrl": "https://investors.cleanspark.com/news/news-details/2026/CleanSpark-Releases-September-2026-Operational-Update/default.aspx",
       "notes": "Monthly update; includes 3,475 BTC posted as collateral or receivable (derivatives). 10-Q showed 12,205 at 6/30/26."
     },
     {
@@ -149,7 +149,7 @@
       "asOf": "2026-09-30",
       "source": "SEC Form 10-Q Q3 2026 (filed 2026-10-22)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066775/tsla-20260930.htm",
       "notes": null
     },
     {
@@ -162,7 +162,7 @@
       "asOf": "2026-06-30",
       "source": "SEC 8-K Ex.99.1 Q2 2026 results (filed 2026-08-10)",
       "sourceLabel": "SEC 8-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926093406/riot-20260810xex99d1.htm",
       "notes": "Includes 5,821 BTC held as collateral."
     },
     {
@@ -175,7 +175,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-04), consolidated BTC less American Bitcoin's 8,002 BTC",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090025/hut-20260630x10q.htm",
       "notes": "Adjusted: 10-Q consolidated 17,316 BTC includes majority-owned American Bitcoin's 8,002 BTC; shown ex-ABTC (17,316 - 8,002) to avoid double counting with ABTC."
     },
     {
@@ -188,7 +188,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-05)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1512673/000162828026053368/xyz-20260630.htm",
       "notes": null
     },
     {
@@ -201,7 +201,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-03)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1755953/000119312526329472/abtc-20260630.htm",
       "notes": "Majority-owned by Hut 8 (excluded from Hut 8's figure). Includes 3,090 BTC pledged to Bitmain."
     },
     {
@@ -214,7 +214,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-14)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1641398/000121390026090150/ea0301332-10q_gdculture.htm",
       "notes": null
     },
     {
@@ -227,7 +227,7 @@
       "asOf": "2026-06-30",
       "source": "Galaxy Q2 2026 earnings release (SEC 8-K Ex.99.1, filed 2026-08-05), p.7 'Treasury & Corporate Net Digital Asset and Investment Exposure' (Bitcoin $400M); units derived using 10-Q BTC price $58,559",
       "sourceLabel": "SEC 8-K earnings release",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000084/glxy-20260630xpressrelease.htm",
       "notes": "Treasury-only, DERIVED: Galaxy discloses only a USD value for its Treasury & Corporate bitcoin exposure ($400M, Q2 2026 earnings release p.7); ~6,831 BTC = $400M / $58,559 (6/30/26 BTC price in the 10-Q). It is net exposure (spot, derivatives, hedges, wrapped BTC, BTC funds), not a spot count. Gross holdings incl. trading/lending/collateral: 21,084 BTC (10-Q)."
     },
     {
@@ -240,7 +240,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-07-24)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1784970/000121390026081419/ea0298994-10q_next.htm",
       "notes": null
     },
     {
@@ -253,7 +253,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-13)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2055592/000205559226000065/gemi-20260630.htm",
       "notes": null
     },
     {
@@ -266,7 +266,7 @@
       "asOf": "2026-09-22",
       "source": "Silvia press release (2026-09-23)",
       "sourceLabel": "Press release",
-      "sourceUrl": null,
+      "sourceUrl": "https://investors.cfosilvia.com/news-releases/news-release-details/silvia-repurchases-additional-23-shares-outstanding-bringing",
       "notes": "Approximately 5,130 BTC per press release; down from 5,355 at 6/30."
     },
     {
@@ -279,7 +279,7 @@
       "asOf": "2026-09-21",
       "source": "HKEXnews voluntary announcement 'Purchase of Bitcoin' (2026-09-21, Chinese version)",
       "sourceLabel": "HKEX filing",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0921/2026092101390_c.pdf",
       "notes": null
     },
     {
@@ -292,7 +292,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-13)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1946573/000149315226037603/form10-q.htm",
       "notes": "3,805 BTC pledged as loan collateral."
     },
     {
@@ -305,7 +305,7 @@
       "asOf": "2026-09-20",
       "source": "CVM/B3 Comunicado ao Mercado 'Negociações de Tesouraria' (period 13-20 Sep 2026)",
       "sourceLabel": "CVM filing",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.rad.cvm.gov.br/ENETWeb/frmDownloadDocumento.aspx?CodigoInstituicao=1&Tela=ext&descTipo=IPE&numProtocolo=1569751",
       "notes": null
     },
     {
@@ -318,7 +318,7 @@
       "asOf": "2026-09-28",
       "source": "Company press release (cptlb.com), 2026-09-28",
       "sourceLabel": "Press release",
-      "sourceUrl": null,
+      "sourceUrl": "https://cptlb.com/wp-content/uploads/2026/09/rbZj2RjXHd/20260928-Capital-B-CP-28-septembre-2026-EN-FINAL.pdf",
       "notes": null
     },
     {
@@ -331,7 +331,7 @@
       "asOf": "2026-08-10",
       "source": "Company press release via MFN (2026-08-10)",
       "sourceLabel": "MFN release",
-      "sourceUrl": null,
+      "sourceUrl": "https://storage.mfn.se/7768a89c-b5a3-45e0-984f-f3fce221f90a/h100-completes-acquisition-increasing-bitcoin-holdings-to-3-506-bitcoin.pdf",
       "notes": null
     },
     {
@@ -344,7 +344,7 @@
       "asOf": "2026-09-30",
       "source": "SEC Form 8-K (filed 2026-10-01)",
       "sourceLabel": "SEC 8-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1862463/000149315226045296/form8-k.htm",
       "notes": "PIPE closed 9/30/26: investors delivered 3,170 BTC to wholly-owned subsidiary AMOD Tech Pte. Ltd. (Singapore)."
     },
     {
@@ -357,7 +357,7 @@
       "asOf": "2026-09-02",
       "source": "SEC Form 6-K Ex.99.1 1H2026 results press release (filed 2026-09-02)",
       "sourceLabel": "SEC 6-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1808110/000121390026096455/ea030422501ex99-1.htm",
       "notes": null
     },
     {
@@ -370,7 +370,7 @@
       "asOf": "2026-06-30",
       "source": "SEC 8-K Ex.99.1 Q2 2026 results (filed 2026-08-19)",
       "sourceLabel": "SEC 8-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2007691/000200769126000007/ionicdigitalq22026ex991.htm",
       "notes": null
     },
     {
@@ -383,7 +383,7 @@
       "asOf": "2026-10-23",
       "source": "Company RNS 'Bitcoin Purchase' (2026-10-23)",
       "sourceLabel": "RNS",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.investegate.co.uk/announcement/rns/the-smarter-web-company-plc--swc/bitcoin-purchase/9837639",
       "notes": null
     },
     {
@@ -396,7 +396,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 6-K Ex.99.2 Q2 2026 MD&A (filed 2026-08-13)",
       "sourceLabel": "SEC 6-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1888274/000121390026089211/ea030127001ex99-2.htm",
       "notes": "Group figure incl. Valour; largely backs ETP obligations, not an unencumbered treasury."
     },
     {
@@ -409,7 +409,7 @@
       "asOf": "2026-06-30",
       "source": "SEC 8-K Ex.99.1 Q2 2026 results press release (filed 2026-08-12)",
       "sourceLabel": "SEC 8-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1740604/000174060426000048/btgo-exhibit991_2026xq2.htm",
       "notes": "Corporate treasury BTC only; balance sheet shows more BTC incl. trading/collateral."
     },
     {
@@ -422,7 +422,7 @@
       "asOf": "2026-08-17",
       "source": "SEC Form 6-K Ex.99.2 PIPE closing (filed 2026-08-17)",
       "sourceLabel": "SEC 6-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1966750/000121390026090530/ea030233201ex99-2.htm",
       "notes": null
     },
     {
@@ -435,7 +435,7 @@
       "asOf": "2026-09-30",
       "source": "SEC Form 6-K Ex.99.1 September 2026 production update (filed 2026-10-15)",
       "sourceLabel": "SEC 6-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1780652/000110465926116011/tm2627656d1_ex99-1.htm",
       "notes": null
     },
     {
@@ -448,7 +448,7 @@
       "asOf": "2026-08-07",
       "source": "SEC 8-K Ex.99.1 Q2 2026 results press release (filed 2026-08-10)",
       "sourceLabel": "SEC 8-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1812477/000181247726000021/a202689finalprkeelq22026ea.htm",
       "notes": null
     },
     {
@@ -461,7 +461,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-07-31)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1592386/000159238626000028/virt-20260630.htm",
       "notes": null
     },
     {
@@ -474,7 +474,7 @@
       "asOf": "2021-04-28",
       "source": "Company IR release 'Purchase of Bitcoin' (TSE timely disclosure, 2021-04-28)",
       "sourceLabel": "TSE disclosure",
-      "sourceUrl": null,
+      "sourceUrl": "https://pdf.irpocket.com/C3659/BbNL/qYha/U32j.pdf",
       "notes": "Stale: only unit disclosure is the April 2021 purchase; not re-confirmed since."
     },
     {
@@ -487,7 +487,7 @@
       "asOf": "2026-10-05",
       "source": "TSE timely disclosure (remixpoint.co.jp IR news, 2026-10-05)",
       "sourceLabel": "TSE disclosure",
-      "sourceUrl": null,
+      "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS08938/77b15ea0/62ba/4e71/86dd/3d0737d899bd/140120261002545562.pdf",
       "notes": "Holdings as of 10/5/26 10am JST; includes BTC lent out, which earns monthly lending fees paid in BTC."
     },
     {
@@ -500,7 +500,7 @@
       "asOf": "2026-08-31",
       "source": "TSE timely disclosure (JPX TDnet PDF, 2026-09-11)",
       "sourceLabel": "TDnet filing",
-      "sourceUrl": null,
+      "sourceUrl": "https://www2.jpx.co.jp/disc/31890/140120260911534955.pdf",
       "notes": "Includes 50.19 BTC lent to HashKey Japan."
     },
     {
@@ -513,7 +513,7 @@
       "asOf": "2026-09-30",
       "source": "SEC Form 6-K Ex.99.1 September 2026 update (filed 2026-10-13)",
       "sourceLabel": "SEC 6-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1921158/000121390026109072/ea030842601ex99-1.htm",
       "notes": null
     },
     {
@@ -526,24 +526,11 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-13)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1527613/000149315226037866/form10-q.htm",
       "notes": null
     },
     {
       "rank": 41,
-      "name": "Empery Digital",
-      "ticker": "EMPD",
-      "country": "US",
-      "change": null,
-      "btc": 1144,
-      "asOf": "2026-09-15",
-      "source": "SEC DEFA14A proxy material (filed 2026-10-08)",
-      "sourceLabel": "SEC DEFA14A",
-      "sourceUrl": null,
-      "notes": "Proxy material: \"1,144 BTC + $66M cash as of September 15, 2026\"; company trimmed BTC holdings to fund AI data center investments."
-    },
-    {
-      "rank": 42,
       "name": "Treasury",
       "ticker": "TRSR",
       "country": "NL",
@@ -552,11 +539,11 @@
       "asOf": "2025-09-18",
       "source": "Company press release (treasury-btc.com, 2025-09-18)",
       "sourceLabel": "Press release",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.treasury-btc.com/news/treasury-acquires-additional-111-bitcoin",
       "notes": "Stale (Sep 2025) and listing status unverified (was pursuing Euronext Amsterdam listing)."
     },
     {
-      "rank": 43,
+      "rank": 42,
       "name": "Cango Inc",
       "ticker": "CANG",
       "country": "US",
@@ -565,11 +552,11 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 6-K Ex.99.1 1H2026 results (filed 2026-08-31)",
       "sourceLabel": "SEC 6-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1725123/000149315226040816/ex99-1.htm",
       "notes": null
     },
     {
-      "rank": 44,
+      "rank": 43,
       "name": "ZOOZ Power",
       "ticker": "ZOOZ",
       "country": "IL",
@@ -578,21 +565,34 @@
       "asOf": "2026-08-23",
       "source": "SEC Form 6-K Ex.99.1 interim financial statements, subsequent events note (filed 2026-08-25)",
       "sourceLabel": "SEC 6-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1992818/000149315226040046/ex99-1.htm",
       "notes": null
     },
     {
-      "rank": 45,
+      "rank": 44,
       "name": "USBC, Inc.",
       "ticker": "USBC",
       "country": "US",
       "change": null,
       "btc": 1029,
-      "asOf": "2026-08-24",
-      "source": "SEC Form S-1/A (filed 2026-08-27)",
+      "asOf": "2026-10-23",
+      "source": "SEC Form S-1/A (filed 2026-10-29)",
       "sourceLabel": "SEC S-1/A",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1074828/000107482826000089/usbc-20261029.htm",
       "notes": "479 BTC pledged as loan collateral."
+    },
+    {
+      "rank": 45,
+      "name": "Empery Digital",
+      "ticker": "EMPD",
+      "country": "US",
+      "change": null,
+      "btc": 1018,
+      "asOf": "2026-10-23",
+      "source": "SEC 8-K Ex.99.1 press release (filed 2026-10-26)",
+      "sourceLabel": "SEC 8-K",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1829794/000168316826008071/empery_ex9901.htm",
+      "notes": "\"1,018 bitcoin, approximately $70 million in cash and approximately $35 million in debt\" as of October 23, 2026; company has been trimming BTC to fund AI data center investments."
     },
     {
       "rank": 46,
@@ -604,7 +604,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-14)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1894525/000121390026090120/ea0300242-10q_apimeds.htm",
       "notes": null
     },
     {
@@ -617,7 +617,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-07-28)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000014/core-20260630.htm",
       "notes": null
     },
     {
@@ -630,7 +630,7 @@
       "asOf": "2025-02-28",
       "source": "SEC Form 20-F (filed 2026-08-17) - describes 500 BTC (Jan 2025) + 333 BTC (Feb 2025) purchases",
       "sourceLabel": "SEC 20-F",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1956166/000149315226038558/form20-f.htm",
       "notes": "Derived from disclosed purchases (500 + 333); no explicit current balance stated."
     },
     {
@@ -643,7 +643,7 @@
       "asOf": "2026-06",
       "source": "SEC Form 6-K Ex.99.1 interim report for six months ended 2026-06-30 (filed 2026-10-07)",
       "sourceLabel": "SEC 6-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1346610/000121390026107574/ea030605701ex99-1.htm",
       "notes": "Unchanged since 12/31/25 (802.77 BTC at both 12/31/25 and 6/30/26 per interim FS); company ceased crypto mining in H1 2026."
     },
     {
@@ -656,7 +656,7 @@
       "asOf": "2025-07-01",
       "source": "Company Q2 2025 CEO letter (akerasa.com), July 2025",
       "sourceLabel": "CEO letter",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.akerasa.com/about/ceo-letter/2025/second-quarter-2025",
       "notes": "Stale (Jul 2025); held via 90%-owned Seetee. 2026 reports give value only."
     },
     {
@@ -669,37 +669,24 @@
       "asOf": "2026-09-30",
       "source": "Company news release (Newsfile) 'September Update on Normal Course Issuer Bid', 2026-10-06",
       "sourceLabel": "Press release",
-      "sourceUrl": null,
+      "sourceUrl": "https://btctcorp.com/bitcoin-treasury-corporation-provides-september-update-on-normal-course-issuer-bid/",
       "notes": "Includes principal amount of BTC loaned; excludes accrued and unpaid interest."
     },
     {
       "rank": 52,
-      "name": "Cipher Digital",
-      "ticker": "CIFR",
-      "country": "US",
-      "change": "-336",
-      "btc": 646,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-04)",
-      "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
-      "notes": null
-    },
-    {
-      "rank": 53,
       "name": "Alliance Resource Partners, L.P.",
       "ticker": "ARLP",
       "country": "US",
       "change": null,
-      "btc": 646,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-06)",
-      "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "btc": 673,
+      "asOf": "2026-09-30",
+      "source": "SEC 8-K Ex.99.1 Q3 2026 results (filed 2026-10-26)",
+      "sourceLabel": "SEC 8-K",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1086600/000110465926118616/arlp-ex99d1.htm",
       "notes": null
     },
     {
-      "rank": 54,
+      "rank": 53,
       "name": "Méliuz",
       "ticker": "MLIZY",
       "country": "BR",
@@ -708,11 +695,11 @@
       "asOf": "2026-06-30",
       "source": "Company 2T26 earnings release (ri.meliuz.com.br)",
       "sourceLabel": "Earnings release",
-      "sourceUrl": null,
+      "sourceUrl": "https://ri.meliuz.com.br/Download.aspx?Arquivo=V1tAeyItoaaTPQFAaelN8Q==",
       "notes": null
     },
     {
-      "rank": 55,
+      "rank": 54,
       "name": "Exodus Movement, Inc",
       "ticker": "EXOD",
       "country": "US",
@@ -721,11 +708,11 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-11)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1821534/000162828026055453/exod-20260630.htm",
       "notes": null
     },
     {
-      "rank": 56,
+      "rank": 55,
       "name": "Phoenix Group PLC",
       "ticker": "PHX.AD",
       "country": "AE",
@@ -734,11 +721,11 @@
       "asOf": "2026-06-30",
       "source": "Phoenix Group PLC H1 2026 reviewed interim FS (Note 8), company website",
       "sourceLabel": "Interim report",
-      "sourceUrl": null,
+      "sourceUrl": "https://phoenixbucket.blob.core.windows.net/files/phoenix-website/documents/PHOENIX%20GROUP%20PLC%20Financial%20Results%20for%20the%20Period%20Ended%20June%2030,2026.pdf",
       "notes": "All BTC pledged as collateral with Binance."
     },
     {
-      "rank": 57,
+      "rank": 56,
       "name": "bitmax",
       "ticker": "377030.KQ",
       "country": "KR",
@@ -747,11 +734,11 @@
       "asOf": "2026-05-15",
       "source": "KRX/DART Q1 2026 quarterly report (bitmax)",
       "sourceLabel": "DART filing",
-      "sourceUrl": null,
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/05/15/001922/20260515004270/11013.htm",
       "notes": "Held as of Q1 report filing date (May 2026)."
     },
     {
-      "rank": 58,
+      "rank": 57,
       "name": "3U Holding AG",
       "ticker": "UUU",
       "country": "DE",
@@ -760,11 +747,11 @@
       "asOf": "2026-09-01",
       "source": "3U Holding AG IR page 'Bitcoin-Investment' / factsheet Sept 2026",
       "sourceLabel": "IR page",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.3u.net/3u-holding-ag-der-konzern/bitcoin-investment/",
       "notes": null
     },
     {
-      "rank": 59,
+      "rank": 58,
       "name": "Neptune Digital Assets",
       "ticker": "NDA.V",
       "country": "CA",
@@ -773,11 +760,11 @@
       "asOf": "2026-07-31",
       "source": "Neptune Digital Assets press release (Q3 FY2026 results)",
       "sourceLabel": "Press release",
-      "sourceUrl": null,
+      "sourceUrl": "https://neptunedigitalassets.com/neptune-releases-third-quarter-2026-financial-results/",
       "notes": null
     },
     {
-      "rank": 60,
+      "rank": 59,
       "name": "DMG Blockchain Solutions Inc.",
       "ticker": "DMGI.V",
       "country": "CA",
@@ -786,11 +773,11 @@
       "asOf": "2026-06-30",
       "source": "DMG Q3 FY2026 MD&A (SEDAR+ filing, via OTC Markets)",
       "sourceLabel": "SEDAR+ MD&A",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.otcmarkets.com/filing/589404/content",
       "notes": null
     },
     {
-      "rank": 61,
+      "rank": 60,
       "name": "Net Holding A.S.",
       "ticker": "NTHOL.IS",
       "country": "TR",
@@ -799,11 +786,11 @@
       "asOf": "2026-03-31",
       "source": "Net Holding Q1 2026 consolidated FS & notes (company IR PDF), crypto quantity table",
       "sourceLabel": "Financial statements",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.netholding.com/wp-content/uploads/2026/06/2026-03-31-finansal-tablolar-ve-dipnotlari.pdf",
       "notes": null
     },
     {
-      "rank": 62,
+      "rank": 61,
       "name": "The9 Limited",
       "ticker": "NCTY",
       "country": "CN",
@@ -812,11 +799,11 @@
       "asOf": "2026-08-24",
       "source": "SEC Form 6-K Ex.99.1 press release (filed 2026-08-24)",
       "sourceLabel": "SEC 6-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1296774/000110465926099964/tm2623121d2_ex99-1.htm",
       "notes": null
     },
     {
-      "rank": 63,
+      "rank": 62,
       "name": "Figure Technology Solutions, Inc",
       "ticker": "FIGR",
       "country": "US",
@@ -825,8 +812,21 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-14)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2064124/000162828026057061/figr-20260630.htm",
       "notes": "Borrower collateral recognized on balance sheet, not a proprietary treasury."
+    },
+    {
+      "rank": 63,
+      "name": "Cipher Digital",
+      "ticker": "CIFR",
+      "country": "US",
+      "change": "-336",
+      "btc": 310,
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-02)",
+      "sourceLabel": "SEC 10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000050/cifr-20260930.htm",
+      "notes": "Approximately 310 BTC per 10-Q; company has been selling mined BTC."
     },
     {
       "rank": 64,
@@ -838,7 +838,7 @@
       "asOf": "2026-06-30",
       "source": "SEC 8-K Ex.99.1 Q2 2026 results (filed 2026-08-04) / 10-Q",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1865200/000186520026000068/angx-20260804xex99d1.htm",
       "notes": null
     },
     {
@@ -851,7 +851,7 @@
       "asOf": "2025-12-31",
       "source": "SEC Form 6-K Ex.99.2 interim report for six months ended 2025-12-31 (filed 2026-06-10)",
       "sourceLabel": "SEC 6-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1807389/000121390026067098/ea0294088ex99-2.htm",
       "notes": "Stale: interim report as of 12/31/25; no later disclosure found."
     },
     {
@@ -864,7 +864,7 @@
       "asOf": "2026-06-30",
       "source": "DART half-year report (2026.06), notes - virtual asset table",
       "sourceLabel": "DART filing",
-      "sourceUrl": null,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003703",
       "notes": null
     },
     {
@@ -877,7 +877,7 @@
       "asOf": "2026-09-25",
       "source": "S-Crypto Energy (formerly S-Science) TSE disclosure re 11th stock acquisition rights (company PDF, English translation)",
       "sourceLabel": "TSE disclosure",
-      "sourceUrl": null,
+      "sourceUrl": "https://s-cryptoenergy.jp/wp/wp-content/uploads/2026/09/2b0e9963db15a6325a08ea68470c144c.pdf",
       "notes": "Company renamed S-Crypto Energy; unchanged since Oct 2025."
     },
     {
@@ -890,7 +890,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-10)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1830081/000121390026087311/ea0301267-10q_rumgroup.htm",
       "notes": null
     },
     {
@@ -903,7 +903,7 @@
       "asOf": "2026-07-31",
       "source": "DigitalX ASX June 2026 Quarterly Activities Report",
       "sourceLabel": "ASX report",
-      "sourceUrl": null,
+      "sourceUrl": "https://clients3.weblink.com.au/pdf/DCC/03114828.pdf",
       "notes": "364 BTC at 6/30/26; sold 80 afterwards, retaining 'more than 283'."
     },
     {
@@ -916,7 +916,7 @@
       "asOf": "2026-05-12",
       "source": "LQWD press release (Newsfile)",
       "sourceLabel": "Press release",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.newsfilecorp.com/release/297167/LQWD-Technologies-Increases-Bitcoin-Treasury-and-Expands-Productive-Network-Capital-on-Lightning",
       "notes": null
     },
     {
@@ -929,7 +929,7 @@
       "asOf": "2026-03-31",
       "source": "KRX/DART Q1 2026 quarterly report, digital asset quantity note (consolidated)",
       "sourceLabel": "DART filing",
-      "sourceUrl": null,
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/05/15/003103/20260515007084/11013.htm",
       "notes": "As of 3/31/26 (Q1); consolidated (parent-only 215)."
     },
     {
@@ -942,7 +942,7 @@
       "asOf": "2026-06-30",
       "source": "Phoenix Digital Assets (Gibraltar) PLC interim results H1 2026, Note 6 digital assets table (RNS, 2026-09-30)",
       "sourceLabel": "RNS",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.investegate.co.uk/announcement/rns/phoenix-digital-assets-plc--pnix/half-year-financial-report/9797724",
       "notes": "Also holds 64,038 HYPE; sold digital assets in H1 2026 to fund tax/financing obligations."
     },
     {
@@ -955,7 +955,7 @@
       "asOf": "2026-06-30",
       "source": "DART half-year report (2026.06), consolidated notes - virtual asset holdings table",
       "sourceLabel": "DART filing",
-      "sourceUrl": null,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814004194",
       "notes": null
     },
     {
@@ -968,7 +968,7 @@
       "asOf": "2026-06-29",
       "source": "Vanadi Coffee BME Growth 'Otra Información Relevante' (company-hosted PDF)",
       "sourceLabel": "BME filing",
-      "sourceUrl": null,
+      "sourceUrl": "https://vanadi.es/wp-content/uploads/2026/06/05716_OtraInfRelev_20260629.pdf",
       "notes": null
     },
     {
@@ -981,7 +981,7 @@
       "asOf": "2026-10-04",
       "source": "Hyperscale Data press release (PR Newswire), 2026-10-06",
       "sourceLabel": "Press release",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.prnewswire.com/news-releases/hyperscale-data-held-approximately-56-4-million-of-bitcoin-cash-and-restricted-cash-as-of-october-4--2026--302899186.html",
       "notes": "Weekly update; sold ~686 BTC in Aug 2026."
     },
     {
@@ -990,11 +990,11 @@
       "ticker": "BMNR",
       "country": "US",
       "change": "+1",
-      "btc": 215,
-      "asOf": "2026-10-18",
-      "source": "SEC 8-K Ex.99.1 holdings update (filed 2026-10-19)",
+      "btc": 216,
+      "asOf": "2026-11-01",
+      "source": "SEC 8-K Ex.99.1 holdings update (filed 2026-11-02)",
       "sourceLabel": "SEC 8-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1829311/000149315226049572/ex99-1.htm",
       "notes": "Primarily an ETH treasury company."
     },
     {
@@ -1007,7 +1007,7 @@
       "asOf": "2026-09-03",
       "source": "BTCS S.A. ESPI current report (republished on pb.pl)",
       "sourceLabel": "ESPI report",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.pb.pl/gielda/btcs-s-a-zakonczenie-programu-udostepnienia-plynnosci-dla-ekosystemu-bitcoin-layer-2-l2-rozliczenie-koncowe-po-6-miesiacach-oraz-informacja-o-stanie-posiadania-bitcoin-btc-9191725",
       "notes": null
     },
     {
@@ -1020,7 +1020,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q quarter ended 2026-06-30 (filed 2026-08-14)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1720424/000106299326004434/form10q.htm",
       "notes": "Plus options to repurchase 212 pledged BTC."
     },
     {
@@ -1033,7 +1033,7 @@
       "asOf": "2026-06-30",
       "source": "Coinsilium H1 2026 unaudited interim FS (RNS via EQS)",
       "sourceLabel": "RNS",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.eqs-news.com/news/uk-regulatory/coinsilium-group-limited-unaudited-consolidated-interim-financial-statements-for-the-six-month-period-ended-30-june-2026/ebd6a3c5-b7da-425d-948e-52ec6c945f7c",
       "notes": null
     },
     {
@@ -1046,7 +1046,7 @@
       "asOf": "2026-09-25",
       "source": "BTC AB (Bitcoin Treasury Capital) regulatory press release (Cision)",
       "sourceLabel": "Press release",
-      "sourceUrl": null,
+      "sourceUrl": "https://news.cision.com/btc-ab/r/btc-ab-redeems-approximately-5-percent-of-the-b-shares-for-sek-4-7-million-at-sek-121-43-per-share--,c4400989",
       "notes": null
     },
     {
@@ -1059,7 +1059,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-05)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1579878/000162828026053348/fig-20260630.htm",
       "notes": "Direct BTC only; also holds a bitcoin ETF position (~$49M) not counted."
     },
     {
@@ -1072,7 +1072,7 @@
       "asOf": "2026-09-23",
       "source": "SEC Form 424B3 prospectus (filed 2026-09-29)",
       "sourceLabel": "SEC 424B3",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1889123/000121390026104294/ea0301910-02.htm",
       "notes": "Investment treasury only; ~77 more BTC in rewards treasury matched to customer liabilities."
     },
     {
@@ -1085,7 +1085,7 @@
       "asOf": "2026-07-31",
       "source": "Matador Q3 FY2026 interim MD&A (SEDAR+ filing, via OTC Markets)",
       "sourceLabel": "SEDAR+ MD&A",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.otcmarkets.com/filing/595882/content",
       "notes": "138.22 BTC pledged as collateral."
     },
     {
@@ -1098,7 +1098,7 @@
       "asOf": "2026-06-30",
       "source": "K33 AB Q2 2026 interim report (MFN)",
       "sourceLabel": "MFN release",
-      "sourceUrl": null,
+      "sourceUrl": "https://storage.mfn.se/048117ec-4723-42f4-9f33-f5373db0938d/q2-report-2026-k33-ab-publ.pdf",
       "notes": "Effective exposure' incl. look-through via ~46% stake in Sixty-Six Capital (partial double count); direct count not disclosed."
     },
     {
@@ -1108,10 +1108,10 @@
       "country": "UK",
       "change": null,
       "btc": 167,
-      "asOf": "2026-09-03",
-      "source": "B HODL RNS/Aquis announcement 'Bitcoin Purchase, ATM 2 Complete, ATM 3 Launch' (Investegate)",
+      "asOf": "2026-10-27",
+      "source": "B HODL RNS 'Annual Results and Notice of AGM' (2026-10-28)",
       "sourceLabel": "RNS",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.investegate.co.uk/announcement/rns/b-hodl-plc--hodl/annual-results-and-notice-of-agm/9844604",
       "notes": null
     },
     {
@@ -1124,7 +1124,7 @@
       "asOf": "2025-06-30",
       "source": "Brooker Group SET filing: Q2 2025 FS explanation incl. 'Digital Assets Status' table",
       "sourceLabel": "SET filing",
-      "sourceUrl": null,
+      "sourceUrl": "https://market.sec.or.th/public/idisc/Download?FILEID=dat%2Fnews%2F202508%2F0634NWS140820251854142290E.pdf",
       "notes": "Stale: latest unit table found is 6/30/25."
     },
     {
@@ -1137,7 +1137,7 @@
       "asOf": "2025-08-31",
       "source": "FRMO Corp Q1 FY2026 conference call transcript (company website) citing Note 5 Digital Assets",
       "sourceLabel": "Earnings call",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.frmocorp.com/_content/letters/2026_Q1_FRMO_Transcript.pdf",
       "notes": "Stale (Aug 2025); direct BTC only - most BTC exposure is via Grayscale ETF shares."
     },
     {
@@ -1150,7 +1150,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-13)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/88000/000119312526349320/hkhc-20260630.htm",
       "notes": "Excludes 1,912 BTC held in consolidated client investment products."
     },
     {
@@ -1163,7 +1163,7 @@
       "asOf": "2026-07-31",
       "source": "gumi Q1 FY2027 results presentation (TSE/TDnet, 2026-09-11), crypto holdings table as of 7/31/26",
       "sourceLabel": "TSE disclosure",
-      "sourceUrl": null,
+      "sourceUrl": "https://www2.jpx.co.jp/disc/39030/140120260911534783.pdf",
       "notes": "Group holdings excl. funds. Company plans to migrate crypto holdings toward XRP; 144.14 BTC consolidated at 4/30/26 (annual securities report)."
     },
     {
@@ -1176,7 +1176,7 @@
       "asOf": "2026-04-30",
       "source": "SEC Form 6-K/A Ex.99.1 interim FS for six months ended 2026-04-30 (filed 2026-07-24), Note 12 crypto assets",
       "sourceLabel": "SEC 6-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1816172/000121390026081367/ea029916001ex99-1.htm",
       "notes": "100 BTC received 1/12/26 as share consideration; fiscal year ends Oct 31."
     },
     {
@@ -1189,7 +1189,7 @@
       "asOf": "2026-10-01",
       "source": "Vaultz Capital RNS '£3.0 Million Investment in AI Infrastructure Technology' (2026-10-02)",
       "sourceLabel": "RNS",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.investegate.co.uk/announcement/prn/vaultz-capital-plc--v3tc/-3m-investment-in-ai-infrastructure-technolog-/9803269",
       "notes": "Sold 47 BTC to fund a £3.0M AI-infrastructure investment; company states 86 BTC held after the disposal. Shareholders approved dropping the BTC treasury policy (Jul 2026)."
     },
     {
@@ -1202,7 +1202,7 @@
       "asOf": "2026-06-30",
       "source": "Winland quarterly report for period ending 2026-06-30 (OTC Markets disclosure), mined crypto holdings table",
       "sourceLabel": "OTC quarterly report",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.otcmarkets.com/file/company/financial-report/582458/content",
       "notes": "OTC Pink alternative-reporting company (not an SEC filer)."
     },
     {
@@ -1215,7 +1215,7 @@
       "asOf": "2026-10-05",
       "source": "Connecting Excellence Group RNS 'Completion of James Gray Recruitment acquisition' (2026-10-05)",
       "sourceLabel": "RNS",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.investegate.co.uk/announcement/rns/connecting-excellence-group-plc--xce/completion-of-james-gray-recruitment-acquisition/9805337",
       "notes": "Includes 10 BTC linked to BTC-denominated convertible bond programme and 8.216 BTC acquired with James Gray Recruitment (10/5/26); a portion is held as security under a new BitGo revolving credit facility."
     },
     {
@@ -1228,7 +1228,7 @@
       "asOf": "2026-03-05",
       "source": "London BTC Company RNS 'Gold Hedging Strategy Update' (2026-03-05)",
       "sourceLabel": "RNS",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.investegate.co.uk/announcement/rns/london-btc-company-limited--btc/gold-hedging-strategy-update/9459050",
       "notes": "Stale (Mar 2026): latest stated treasury count; annual report showed 80.16 BTC at 2/28/26. Miner output since may change total."
     },
     {
@@ -1241,7 +1241,7 @@
       "asOf": "2026-06-30",
       "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-05), Details of Digital Assets table",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1876042/000187604226000248/crcl-20260630.htm",
       "notes": "Includes Circle-wrapped bitcoin (cirBTC)."
     },
     {
@@ -1254,7 +1254,7 @@
       "asOf": "2026-10-06",
       "source": "RSXYZ company Investor Relations page 'Bitcoin Holdings - BTC Count' (last updated 2026-10-06)",
       "sourceLabel": "Company website",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.rsxyz.com/investor-relations",
       "notes": "Precision refresh, not a purchase: same holding as the 74.97 BTC announced Oct 2025, now shown to 8 decimals on the company IR page."
     },
     {
@@ -1267,7 +1267,7 @@
       "asOf": "2026-08-12",
       "source": "Bitcoin Well Q2 2026 MD&A (SEDAR+ filing, via OTC Markets)",
       "sourceLabel": "SEDAR+ MD&A",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.otcmarkets.com/filing/585148/content",
       "notes": "Approximate (\"net investment of approximately 69 bitcoin\" as at 8/12/26)."
     },
     {
@@ -1280,7 +1280,7 @@
       "asOf": "2026-04-13",
       "source": "Stack BTC RNS 'Bitcoin Purchase' (2026-04-13)",
       "sourceLabel": "RNS",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.investegate.co.uk/announcement/prn/stack-btc-plc--stak/bitcoin-purchase/9515972",
       "notes": "Latest stated count (Apr 2026)."
     },
     {
@@ -1293,7 +1293,7 @@
       "asOf": "2026-06-30",
       "source": "DART half-year report (2026.06), consolidated notes - virtual asset quantity table",
       "sourceLabel": "DART filing",
-      "sourceUrl": null,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003736",
       "notes": "Consolidated; down from 94 at start of 2026."
     },
     {
@@ -1306,7 +1306,7 @@
       "asOf": "2026-09-30",
       "source": "SEC 8-K Ex.99.1 September 2026 production update (filed 2026-10-08)",
       "sourceLabel": "SEC 8-K",
-      "sourceUrl": null,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1640384/000119312526417469/lmfa-ex99_1.htm",
       "notes": "Monthly update (\"63.7 BTC at September 30, 2026\"). 267.4 BTC applied in Sept 2026 to repay the Arch BTC-backed facility in full; all pledged BTC released."
     }
   ]
