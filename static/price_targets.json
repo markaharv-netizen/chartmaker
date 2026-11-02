@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-30T14:52:49Z",
+  "generated": "2026-11-02T13:47:08Z",
   "seeded": false,
   "title": "Steve's DCF Base Case vs Street Consensus vs Price",
   "subtitleNote": "Base now includes probability-weighted future bets",
@@ -40,30 +40,30 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 74.11,
-      "previousDetail": "Prev Base $74.11 -> $128.42 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
+      "previousDetail": "Prev Base $74.11 -> $128.42 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans",
       "why": "Even with AI bets, price high"
     },
     {
       "ticker": "TSLA",
-      "base": 67.89,
-      "bear": 2.4,
-      "bull": 149.97,
+      "base": 297.79,
+      "bear": 4.24,
+      "bull": 513.12,
       "rating": "SELL",
       "consensus": 397.83,
       "analysts": 44,
       "consensusSource": "StockAnalysis (S&P Global), fetched Oct 21, 2026",
       "price": 386.47,
       "priceAsOf": "Oct 21, 2026 close, 4:00 PM ET (Yahoo Finance)",
-      "baseVsPrice": -0.824,
+      "baseVsPrice": -0.229,
       "consensusVsPrice": 0.029,
-      "baseVsConsensus": -0.829,
-      "notes": "Oct 22 future bets: forward Base = core $39.07 + $28.82 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. per-mile Robotaxi build + FSD increment (v4)",
-      "baseChange": 28.82,
-      "baseChangePct": 0.738,
-      "baseChangedAt": "2026-10-22",
+      "baseVsConsensus": -0.251,
+      "notes": "Nov 1 v7 (Mark's assumption, sourced from ARK 2031 model): robotaxi bet = ARK 8.1M fleet by 2031 at 50% Base (Bull ARK 10M at 65%), net of 325k already in Base, our $60k rev x 50% EBITDA x 15x. Forward Base = core $41.64 + $256.14 bets (robotaxi $248.82); Bull core $97.00 + $416.12; Bear no bets. Sensitivity at ARK ~$93k/vehicle: forward Base ~$434.6 (HOLD). vs $399.81 Oct 30 close: -25.5%. Also v6 FSD $149/mo from 2030E",
+      "baseChange": 227.33,
+      "baseChangePct": 3.23,
+      "baseChangedAt": "2026-11-02",
       "fromZero": false,
-      "previousBase": 39.07,
-      "previousDetail": "Prev Base $39.07 -> $67.89 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
+      "previousBase": 70.46,
+      "previousDetail": "Prev Base $70.46 (Bear $4.24, Bull $153.59, SELL) at Nov 1, 2026 v6 FSD price update -> $297.79 (Bear $4.24, Bull $513.12, SELL) at Nov 1, 2026 v7 ARK robotaxi fleet (Mark's assumption); unchanged in Nov 2 scan",
       "why": "Far above bet-adjusted value"
     },
     {
@@ -86,7 +86,7 @@
       "baseChangedAt": "2026-10-30",
       "fromZero": false,
       "previousBase": 153.35,
-      "previousDetail": "Prev Base $153.35 (Bear $89.76, Bull $266.37, HOLD) at Oct 22, 2026 future-bets update -> $149.42 (Bear $86.95, Bull $272.11, HOLD) at Oct 30, 2026 Q3 earnings refresh; drop mostly from lower BTC and MSTR prices",
+      "previousDetail": "Prev Base $153.35 (Bear $89.76, Bull $266.37, HOLD) at Oct 22, 2026 future-bets update -> $149.42 (Bear $86.95, Bull $272.11, HOLD) at Oct 30, 2026 Q3 earnings refresh; drop mostly from lower BTC and MSTR prices; unchanged in Nov 2 scan",
       "why": "Bets priced in; at fair value"
     },
     {
@@ -109,7 +109,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 181.81,
-      "previousDetail": "Prev Base $181.81 -> $189.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
+      "previousDetail": "Prev Base $181.81 -> $189.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans",
       "why": "Just inside HOLD band"
     },
     {
@@ -132,7 +132,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": true,
       "previousBase": 0.0,
-      "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
+      "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans",
       "why": "Debt still exceeds core EV"
     },
     {
@@ -155,7 +155,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 842.81,
-      "previousDetail": "Prev Base $842.81 -> $860.87 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
+      "previousDetail": "Prev Base $842.81 -> $860.87 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans",
       "why": "HBM upside mostly priced in"
     },
     {
@@ -178,7 +178,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 657.7,
-      "previousDetail": "Prev Base $657.70 -> $687.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans (Oct 30: $37.5B equity raise noted, not yet booked; est. -$1.93/sh)",
+      "previousDetail": "Prev Base $657.70 -> $687.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans (Oct 30: $37.5B equity raise noted, not yet booked; est. -$1.93/sh; Nov 2: S&P 2027 capex forecast >$225B noted, capex not changed pending Q4 guide)",
       "why": "Bets priced in; near fair value"
     },
     {
@@ -201,7 +201,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 12.19,
-      "previousDetail": "Prev Base $12.19 -> $15.47 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
+      "previousDetail": "Prev Base $12.19 -> $15.47 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans",
       "why": "Far above bet-adjusted value"
     },
     {
@@ -224,7 +224,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 7.2,
-      "previousDetail": "Prev Base $7.20 -> $24.98 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
+      "previousDetail": "Prev Base $7.20 -> $24.98 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans",
       "why": "Needs full constellation"
     }
   ]
