@@ -11,14 +11,19 @@ Render on Prices, Heatmap, Treasury, and Valuation fetches fresh data (the separ
 
 ## Treasury tab
 
-One metric: **BTCTC top 100** — the top 100 public companies by bitcoin held, in the same order BitcoinTreasuries.net publishes (rank, company, ticker, BTC, USD, % of 21M). Holdings are the committed snapshot `btctop100.json`, not a live scrape. USD = BTC × a live Yahoo `BTC-USD` quote when that quote is available; if it is not, the USD column stays blank. The chart shows the snapshot as-of date. Watermark is off unless the box is checked. Download PNG is the chart canvas.
+One metric: **BTCTC top 100**. The table is Mark's sheet tab of that name in the workbook "My Bot's Sheets" (`1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU`, gid 73825060), not a BitcoinTreasuries.net scrape. The chart title is the sheet title (Corporate Bitcoin Treasury Holdings). Columns: rank, company, ticker, country, BTC, USD, % of 21M, and each row's as-of date. Holdings are the committed snapshot `btctop100.json`. USD = BTC × a live Yahoo `BTC-USD` quote when that quote is available; if it is not, the USD column stays blank. Watermark is off unless the box is checked. Download PNG is the chart canvas.
 
-Refresh the snapshot (then commit `btctop100.json`):
+Refresh the snapshot (then commit `btctop100.json`). The script reads the sheet with Google credentials, and falls back to a CSV export:
 
 ```
 python3 scripts/refresh_btctop100.py
+python3 scripts/refresh_btctop100.py --csv btctc100.csv
 python3 scripts/refresh_btctop100.py --check
-``` Watchlist still updates only from its Refresh button. Financials has no quote-cache bypass. Financials and Valuation open with an empty ticker box and a blank chart until tickers are entered. Deep links: `?tickers=` and `&names=` (Prices), `?ftickers=` and `&fnames=` (Financials), `?vtickers=` and `&vnames=` (Valuation). Prices SMA is a multi-select menu (20, 50, 100, 200, 200W, plus a custom length).
+```
+
+Credentials, first match: `GOOGLE_ACCESS_TOKEN` or `CHARTMAKER_GOOGLE_TOKEN`; or `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, and `GOOGLE_REFRESH_TOKEN` (`CHARTMAKER_GOOGLE_*` names work too); or a service-account JSON in `GOOGLE_APPLICATION_CREDENTIALS` or `CHARTMAKER_GOOGLE_CREDENTIALS`. The sheet is private. `--csv` or `BTCTC_CSV` is the fallback.
+
+Watchlist still updates only from its Refresh button. Financials has no quote-cache bypass. Financials and Valuation open with an empty ticker box and a blank chart until tickers are entered. Deep links: `?tickers=` and `&names=` (Prices), `?ftickers=` and `&fnames=` (Financials), `?vtickers=` and `&vnames=` (Valuation). Prices SMA is a multi-select menu (20, 50, 100, 200, 200W, plus a custom length).
 
 Notes: YTD baseline = last close of prior year. 5Y uses weekly bars, Max monthly. Ratio aligns A to the latest B bar at or before each date.
 Re-run samples: `python3 shoot.py` (uses /usr/bin/google-chrome).
