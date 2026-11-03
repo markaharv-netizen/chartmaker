@@ -42,7 +42,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #ctypeNote:empty{display:none}
 #ctl > label input[type=checkbox]{margin:0}
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mPrices" class="on">Prices</button><button id="mFin">Financials</button><button id="mVal">Valuation</button><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mWatch">Watchlist</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mWatch" class="on">Watchlist</button><button id="mPrices">Prices</button><button id="mFin">Financials</button><button id="mVal">Valuation</button><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -1510,5 +1510,7 @@ function applyPriceQuery(){
   if(q.has('vtickers'))$('vtickers').value=q.get('vtickers')||'';
 }
 applyTheme();annDraw();vload();applyPriceQuery();
-window.__render=render; window.__frender=frender; window.__setMode=setMode; render();
+window.__render=render; window.__frender=frender; window.__setMode=setMode;
+{let q;try{q=new URLSearchParams(location.search)}catch(e){q=new URLSearchParams()} // deep links keep their tab; otherwise open on Watchlist
+  setMode(q.has('tickers')?'prices':q.has('ftickers')?'fin':q.has('vtickers')?'val':'watch')}
 </script><script>try{syncCustomDates()}catch(e){}</script></body></html>
