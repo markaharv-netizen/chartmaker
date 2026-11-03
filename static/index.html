@@ -642,6 +642,36 @@ function annAdd(){const date=$('annDate').value,label=$('annLabel').value.trim()
   ANN=ANN.filter(a=>!(a.date===date&&a.label===label));ANN.push({date,label,note});ANN.sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:0);
   if(ANN.length>40)ANN=ANN.slice(-40);$('annLabel').value='';$('annNote').value='';annsave();if(MODE==='prices')render()}
 $('annAdd').onclick=annAdd;
+// Right-click on the Prices chart: small menu with "Add Annotation", snapped to the nearest plotted date.
+const ctxMenu=document.createElement('div');ctxMenu.id='ctxMenu';ctxMenu.hidden=true;
+ctxMenu.style.cssText='position:fixed;z-index:2147483000;background:#fff;color:#111;border:1px solid #ccc;border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,.18);padding:4px 0;font-size:14px;min-width:170px';
+ctxMenu.innerHTML='<div id="ctxDate" style="padding:4px 12px;color:#6B7280;font-size:12px"></div><div id="ctxAdd" role="menuitem" tabindex="0" style="padding:8px 12px;cursor:pointer">Add Annotation</div>';
+document.body.appendChild(ctxMenu);
+const ctxTipCss=document.createElement('style');document.head.appendChild(ctxTipCss);
+const ctxHide=()=>{ctxMenu.hidden=true;ctxTipCss.textContent=''};
+$('ctxAdd').onmouseenter=e=>e.target.style.background='#f3f4f6';$('ctxAdd').onmouseleave=e=>e.target.style.background='';
+function ctxSnap(px,py){const o=chart.getOption();if(!o||!o.xAxis||!o.xAxis.length)return null;const xa=o.xAxis[0];
+  if(!chart.containPixel({gridIndex:0},[px,py]))return null;
+  const times=[];if(xa.type==='category')(xa.data||[]).forEach(v=>{const t=+(v&&v.value!=null?v.value:v);if(!isNaN(t)&&t>1e11)times.push(t)});
+  else if(xa.type==='time')(o.series||[]).forEach(se=>(se.data||[]).forEach(d=>{const t=Array.isArray(d)?+d[0]:NaN;if(!isNaN(t))times.push(t)}));
+  if(!times.length)return null;
+  const v=chart.convertFromPixel({gridIndex:0},[px,py]);let x=Array.isArray(v)?v[0]:v;
+  if(xa.type==='category'){const i=Math.max(0,Math.min((xa.data||[]).length-1,Math.round(x)));const c=xa.data[i];x=+(c&&c.value!=null?c.value:c)}
+  let best=times[0];for(const t of times)if(Math.abs(t-x)<Math.abs(best-x))best=t;
+  return new Date(best).toLocaleDateString('en-CA',{timeZone:'America/New_York'})}
+let ctxDateVal='';
+$('chart').addEventListener('contextmenu',e=>{if(MODE!=='prices'||!last)return;const t=$('type').value;if(t==='bar'||t==='bardd')return;
+  const r=$('chart').getBoundingClientRect(),d=ctxSnap(e.clientX-r.left,e.clientY-r.top);if(!d)return;
+  e.preventDefault();chart.dispatchAction({type:'hideTip'});ctxDateVal=d;$('ctxDate').textContent=new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  ctxMenu.hidden=false;ctxTipCss.textContent='#chart>div:not(:first-child){visibility:hidden!important}';ctxMenu.style.left=Math.min(e.clientX,innerWidth-190)+'px';ctxMenu.style.top=Math.min(e.clientY,innerHeight-80)+'px'});
+function ctxAddAnn(){ctxHide();const label=(prompt('Annotation label for '+ctxDateVal+' (max 24 characters)','')||'').trim();if(!label)return;
+  $('annDate').value=ctxDateVal;$('annLabel').value=label.slice(0,24);$('annNote').value='';
+  if(!$('annOn').checked){$('annOn').checked=true;syncPriceUi()}annAdd()}
+$('ctxAdd').onclick=ctxAddAnn;$('ctxAdd').addEventListener('keydown',e=>{if(e.key==='Enter')ctxAddAnn()});
+document.addEventListener('mousedown',e=>{if(!ctxMenu.hidden&&!ctxMenu.contains(e.target))ctxHide()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')ctxHide()});
+addEventListener('scroll',ctxHide,true);addEventListener('blur',ctxHide);
+
 ['annLabel','annNote'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();annAdd()}}));
 $('annList').onclick=e=>{const a=e.target.closest('a');if(!a)return;e.preventDefault();ANN.splice(+a.dataset.rm,1);annsave();if(MODE==='prices'&&$('annOn').checked)render()};
 
