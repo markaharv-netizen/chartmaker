@@ -117,7 +117,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <div id="ctl">
 <label>Tickers (comma)<input id="tickers" size="22"></label>
 <label>Range<select id="range"><option>1D</option><option>5D</option><option selected>YTD</option><option>1M</option><option>6M</option><option>1Y</option><option>5Y</option><option>Max</option><option>Custom</option></select></label>
-<label>Start<input id="start" type="date"></label><label>End<input id="end" type="date"></label>
+<label id="startbox">Start<input id="start" type="date"></label><label id="endbox">End<input id="end" type="date"></label>
 <label id="typebox">Type<span class="type-line"><select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="candle">Candles + volume</option><option value="bar">Bar ranking % return</option><option value="bardd">Bar ranking % drawdown</option><option value="ratio">Ratio A priced in B</option><option value="drawdown">Drawdown from peak</option></select><span id="ctypeNote"></span></span></label>
 <label id="ddbox" title="Drawdown = % below the running high of daily closes">Peak from<select id="ddbase"><option value="range">Start of range</option><option value="ath">All-time high (full history)</option></select></label>
 <label>Title<input id="title" size="34" placeholder="auto"></label>
@@ -254,7 +254,7 @@ function blankPrice(){
   chart.clear();chart.setOption(o,true);last=null;
 }
 async function render(){
-  if(MODE!=='prices')return;
+  if(MODE!=='prices')return;syncCustomDates();
   const st=$('status'), my=++RSEQ;
   const syms=$('tickers').value.split(',').map(s=>s.trim().toUpperCase()).filter(Boolean);
   if(!syms.length){st.className='';st.textContent='Enter tickers, then Render.';blankPrice();syncPriceUi();return}
@@ -437,7 +437,8 @@ function annDraw(){const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<'
   $('annList').innerHTML=ANN.map((a,i)=>`<span style="background:#e5e7eb;border-radius:4px;padding:3px 6px;display:inline-flex;gap:4px;align-items:center"><b>${esc(a.date)}</b> ${esc(a.label)}${a.note?` <span style="color:#6B7280">${esc(a.note)}</span>`:''}<a href="#" data-rm="${i}" title="Remove" style="color:#EF4444;text-decoration:none">×</a></span>`).join('');
   syncPriceUi()}
 function priceSyms(){return $('tickers').value.split(',').map(s=>s.trim()).filter(Boolean)}
-function syncPriceUi(){smaSummary();const n=priceSyms().length,t=$('type').value,bar=t==='bar'||t==='bardd';
+function syncCustomDates(){const c=$('range').value==='Custom';$('startbox').style.display=c?'':'none';$('endbox').style.display=c?'':'none'}
+function syncPriceUi(){syncCustomDates();smaSummary();const n=priceSyms().length,t=$('type').value,bar=t==='bar'||t==='bardd';
   const opt=[...$('type').options].find(o=>o.value==='candle');if(opt)opt.disabled=n!==1;
   $('ctypeNote').textContent=t==='candle'?'One ticker · volume below':n!==1?'Candles need one ticker':'';
   $('actl').style.opacity=bar?'0.45':'1';
@@ -1466,6 +1467,7 @@ function vapply(x){const m=vmode(x),own=VOWN[m];if(m==='prices'){for(const id of
   // Watermark defaults off. A view that omits the field keeps that default; an explicit true/false still wins.
   if(WMID[m])$(WMID[m]).checked=false;
   for(const [id,val] of Object.entries(x.fields||{})){if(id!=='theme'&&!own.test(id))continue;const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
+  if(m==='prices')syncCustomDates();
   if(m==='watch'&&Array.isArray(x.wl)&&x.wl.length){WL=x.wl.slice();wsave()}
   applyTheme();vsync();setMode(m)}
 const vmsg=t=>{$('status').className='';$('status').textContent=t};
@@ -1520,4 +1522,4 @@ function applyPriceQuery(){
 }
 applyTheme();annDraw();vload();applyPriceQuery();
 window.__render=render; window.__frender=frender; window.__setMode=setMode; render();
-</script></body></html>
+</script><script>try{syncCustomDates()}catch(e){}</script></body></html>
