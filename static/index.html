@@ -569,17 +569,23 @@ function attachMarkers(o,data,p){
   const groups=[];
   for(const m of snapped.sort((a,b)=>a.ts-b.ts)){const g=groups.length&&groups.at(-1).ts===m.ts?groups.at(-1):null;
     if(g){g.items.push(m);g.kind=g.kind===m.kind?m.kind:'custom'}else groups.push({ts:m.ts,items:[m],kind:m.kind})}
-  const t0=times[0],span=Math.max(1,times.at(-1)-t0);let lastPx=[-1e9,-1e9,-1e9,-1e9];
-  for(const g of groups){const px=(g.ts-t0)/span*1300;let row=0;while(row<3&&px-lastPx[row]<96)row++;if(row>2)row=2;lastPx[row]=px;g.row=row;
+  const t0=times[0],span=Math.max(1,times.at(-1)-t0);
+  for(const g of groups)g.text=g.items.map(m=>m.label).join(' · ').replace(/[{}]/g,'').slice(0,36);
+  // horizontal labels: stagger rows by estimated pixel extent so close markers don't overlap
+  const PW=1300,occ=[];
+  for(const g of groups){const f=cat?times.indexOf(g.ts)/Math.max(1,times.length-1):(g.ts-t0)/span,px=f*PW,w=g.text.length*7.2+18;
+    g.right=f>0.84;const a=g.right?px-w:px,b=g.right?px:px+w;let row=0;
+    while(row<5&&(occ[row]||[]).some(([x,y])=>a<y+6&&b>x-6))row++;if(row>4)row=4;(occ[row]=occ[row]||[]).push([a,b]);g.row=row}
+  for(const g of groups){
     g.text=g.items.map(m=>m.label).join(' · ').replace(/[{}]/g,'').slice(0,36);
     g.note=g.items.map(m=>m.note?m.label+(m.note?': '+m.note:''):'').filter(Boolean).join(' · ')}
   const ser=(o.series||[]).find(s=>s.type==='candlestick')||(o.series||[]).find(s=>s.type==='line'&&s.lineStyle&&s.lineStyle.width!==0);
   if(!ser)return;
   const col={halving:bc('#F7931A'),earn:bc('#8B5CF6'),custom:T.dark?'#93C5FD':'#0369A1'};
   ser.markLine={symbol:['none','none'],silent:true,animation:false,
-    data:groups.map(g=>{const right=cat?times.indexOf(g.ts)>=times.length*0.84:(g.ts-t0)/span>0.84;
+    data:groups.map(g=>{const right=g.right;
       return {xAxis:cat?String(g.ts):g.ts,name:g.text,lineStyle:{color:col[g.kind]||col.custom,type:'dashed',width:1.25},
-        label:{show:true,position:'insideEndTop',distance:10,offset:[right?-6:6,g.row*18],align:right?'right':'left',
+        label:{show:true,position:'insideEndTop',rotate:0,distance:0,offset:[right?-4:4,6+g.row*22],align:right?'right':'left',verticalAlign:'top',
           formatter:g.text,color:T.title,fontSize:12,fontWeight:600,backgroundColor:T.bg,
           borderColor:col[g.kind]||T.axis,borderWidth:1,borderRadius:3,padding:[2,5]}}})};
   if(o.graphic&&o.graphic[0]&&o.graphic[0].style)o.graphic[0].style.text+=' · event markers';
