@@ -1,86 +1,106 @@
 {
- "date": "2026-11-02",
- "theme": "Saylor teases a buy with bitcoin barely above Strategy's cost, the midterms put election-cycle charts in focus for bitcoin and stocks, SpaceX and Tesla study a merger as SpaceX's AI capex balloons, Tesla adds Fort Worth, Palantir reports tonight, and Big Tech's capex runs past its cash flow while neoclouds wait for earnings.",
+ "date": "2026-11-03",
+ "theme": "Election Day: Strategy spends more on STRC buybacks than bitcoin, ETF outflows hit bitcoin near $77K, the VIX sits near 20 as the Nasdaq-100 enters a correction, Big Tech's unbooked leases top $1 trillion while net cash splits the AI spenders, Drax plans a UK gigawatt campus, SpaceX trades near its IPO price, and Tesla adds Fort Worth.",
  "items": [
   {
-   "sheet": "Bot experiments",
-   "tab": "94 MSTR BTC holdings & cost",
-   "title": "Strategy: bitcoin held vs its average purchase cost",
-   "image": "cotd/2026-11-02/01.png",
-   "picked": "Michael Saylor posted 'We found room for even more orange' on Sunday, the tease that usually comes before a Monday purchase filing, and Strategy is one modest buy away from 850,000 BTC, per Yonhap Infomax and AInvest. Bitcoin was trading near $77,750 on Monday morning, per Fortune.",
-   "matters": "When bitcoin trades close to Strategy's average cost, the company's paper gain on its whole stack nearly disappears, which matters for its premium and its ability to keep raising money.",
-   "know": "On the tab's latest weekly point, Oct 30 2026, bitcoin was $77,191 against Strategy's average cost of $75,446, only about 2% above it, with 848,500 BTC held. Bitcoin was below Strategy's cost in Feb to Apr 2026 and again from Jun 5 to Aug 14 2026, when it got as low as about $60,000. The data is weekly and doesn't include any purchase filed today.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=779854179"
+   "sheet": "bot experiments 2",
+   "tab": "84 STRC buybacks share of volume",
+   "title": "Strategy's STRC buybacks as a share of weekly STRC volume",
+   "image": "cotd/2026-11-03/01.png",
+   "picked": "Strategy's Monday 8-K said it bought back 2,092,035 STRC shares for $208.2 million last week, more than three times the $65.5 million it spent on 811 BTC. That brings its holdings to 849,327 BTC, per the filing and Cointelegraph.",
+   "matters": "Buying back its own preferred stock supports STRC's price near par, but money spent on buybacks is money that doesn't buy bitcoin. This chart shows how big a share of STRC's trading those buybacks have become.",
+   "know": "In the latest week in the tab, the week of Oct 19 2026, Strategy repurchased 2,068,459 STRC shares for $204.9 million, 27.7% of the shares traded. The high was 29.6% in the week of Oct 5, and the 14 weeks from Jul 20 total $2,043.2 million. The tab doesn't yet include the Oct 26 or Nov 2 8-K weeks, so it is about two weeks stale. The image was redrawn from the tab because the export showed the Total and Source rows as bars.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=978808662"
   },
   {
-   "sheet": "bot experiments 2",
-   "tab": "1 BTC midterm year",
-   "title": "Bitcoin in midterm years: 2026 vs 2014, 2018 and 2022",
-   "image": "cotd/2026-11-02/02.png",
-   "picked": "With the US midterms on Tuesday, a story trending on X has bitcoin traders arguing that past cycle lows came 71, 39 and 13 days after the 2014, 2018 and 2022 midterms, while skeptics say the 2026 low already happened in July.",
-   "matters": "In all three midterm years in the tab bitcoin lost more than half its value, so this chart shows how far 2026 has strayed from that script.",
-   "know": "Indexed to the prior year-end close, the tab has 2026 at 89.4 on day 305 (Nov 1), down about 11% for the year, while the midterm-year average was 44.8 on the same day. The 2014, 2018 and 2022 paths hit their lows for the year late, on days 364, 349 and 325. The 2026 low so far is 66.9 on day 181. Three past midterms is a tiny sample, and the image is the Oct 19 export, which ends around day 290.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1497466824"
-  },
-  {
-   "sheet": "bot experiments 2",
-   "tab": "64 BTC vs altcoins in BTC",
-   "title": "Since the COVID low: bitcoin up, altcoins down in BTC",
-   "image": "cotd/2026-11-02/03.png",
-   "picked": "A story trending on X says the altcoin market cap (the OTHERS index) just printed its first monthly bullish cross since 2023, with traders calling for altcoins to outperform in November.",
-   "matters": "Altcoin rallies are usually measured in dollars, but priced in bitcoin most of the 2020 field has lost ground, which is the real test of whether alts beat just holding BTC.",
-   "know": "The tab, refreshed Nov 1, has bitcoin up 1,459% in dollars since Mar 16 2020 ($5,013 to $78,135), while the median of 34 large 2020 altcoins is down 90% in BTC terms (index 10.4). Only 7 of the 34 are above their start in BTC: BNB, ZEC, DOGE, OKB, TRX, ETH and XMR. The basket drops dead coins, which flatters the result, and the image is the Oct 19 export.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1048971421"
+   "sheet": "My Bot's Sheets",
+   "tab": "Bitcoin ETF Inflows and Outflows",
+   "title": "US spot bitcoin ETF daily net flows",
+   "image": "cotd/2026-11-03/02.png",
+   "picked": "A story trending on X says BlackRock's IBIT had a $405.3 million outflow on Nov 2, its biggest in over four months, with about $399 million leaving US spot bitcoin ETFs overall as bitcoin tested $76,800 on Election Day.",
+   "matters": "ETF flows are the clearest daily read on US institutional demand for bitcoin. A run of large outflows usually lines up with weak prices.",
+   "know": "The tab's latest day is Oct 30 2026, a net outflow of $643.2 million, the largest since $691.7 million on Jun 25. October came to a net outflow of $515.9 million over 22 trading days, the first negative month since June's $4.51 billion. The tab, sourced from Farside, doesn't yet include the Nov 2 outflow.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1898876351"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "316 SpaceX capex by segment",
-   "title": "SpaceX capex by segment: AI dwarfs rockets and Starlink",
-   "image": "cotd/2026-11-02/05.png",
-   "picked": "SpaceX spent $19.6B on capex in Q3, $16.4B of it on its AI segment, and guided to $35-40B for Q4, per The Motley Fool. On Oct 26 it also agreed a sale-leaseback of about $40B of Nvidia hardware with an Apollo subsidiary.",
-   "matters": "Spending at this scale is the main risk in the SpaceX story: the AI revenue only pays off if the compute it is buying keeps earning more than it costs.",
-   "know": "For the four quarters to Sep 30 2026 the tab has $54.96B of capex: $44.65B in AI (xAI and X), $5.47B in Starlink and $4.85B in Space. For 2025 it was $20.74B, including $12.73B in AI, and in 2023 just $4.42B. The image was redrawn from the tab because the Drive export still showed the year to June.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=501922147"
+   "tab": "283 Crypto since 2024 election",
+   "title": "Crypto since the Nov 5 2024 US election: bitcoin, ether, Solana and XRP",
+   "image": "cotd/2026-11-03/03.png",
+   "picked": "With the midterms underway, stories trending on X have bitcoin traders weighing past post-midterm drops against gains a year later, while bitcoin holds near $77,000.",
+   "matters": "The 2024 election kicked off a big crypto rally, and this chart shows how much of that move each major coin has kept two years on.",
+   "know": "Indexed to Nov 5 2024 = 100, the tab's latest weekly point (Oct 30 2026) has bitcoin at 111.3, ether at 92.5, Solana at 57.7 and XRP at 244.0. Bitcoin peaked at 176.3 in the week of Oct 3 2025 and bottomed at 86.5 on Jun 26 2026. The data is weekly and ends Oct 30, before this week's dip.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=100216645"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "27 Robotaxi coverage table",
-   "title": "Where Tesla Robotaxi runs",
-   "image": "cotd/2026-11-02/06.png",
-   "picked": "Tesla's @robotaxi account said rides open in Fort Worth at 6am today, its fourth Texas city, per TeslaNorth. Tesla's first safety report also lists Las Vegas, Jacksonville, Phoenix and San Antonio as coming soon, per Driverless.news.",
-   "matters": "Coverage is the simplest way to track whether robotaxi is turning into a national business or staying a few test zones.",
-   "know": "The table lists six metros running unsupervised (Austin, Dallas, Houston, Miami, Orlando and Tampa), the SF Bay Area with safety drivers under a California TCP permit, and Las Vegas and Phoenix with preparations underway. It was built Oct 9 2026, so it doesn't include Fort Worth or the later launch list, and 'ramping unsupervised' is the tab's label from Tesla's Jul 22 Q2 update, not a fleet count.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1670158709"
+   "tab": "VIX vs S&P 500",
+   "title": "VIX vs S&P 500: ten years of weekly closes",
+   "image": "cotd/2026-11-03/04.png",
+   "picked": "US stock futures were mixed on Election Day, and the Nasdaq-100 closed more than 10% below its record on Monday, in a correction, per Reuters. CNBC says a Democratic sweep could hit AI stocks on Wednesday.",
+   "matters": "The VIX is the market's price for S&P 500 volatility over the next 30 days. It tends to rise before events like elections and fall once the results are known.",
+   "know": "On the tab's latest weekly close, Oct 30 2026, the S&P 500 was at 7,580.07, 3.0% below its Oct 9 record weekly close of 7,811.54, and the VIX was 19.42. The VIX closed near 19.4 to 20 in each of the last three weeks, its highest weekly closes since Jun 5 (21.51), but well below the 2026 high of 31.05 on Mar 27. The image was redrawn from the tab with VIX on its own axis, because the export plotted it on the S&P scale.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1373480110"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "321 Capex % of cash flow, qtrly",
-   "title": "Capex as a share of operating cash flow: Microsoft, Alphabet, Amazon and Meta",
-   "image": "cotd/2026-11-02/08.png",
-   "picked": "A story trending on X says Amazon, Alphabet, Meta and Microsoft spent a record $201.9B on capex in Q3 and that only Microsoft had positive free cash flow. Hedge funds also sold about $20B of US tech stocks in two weeks in October, per Goldman Sachs data cited in another trending story.",
-   "matters": "When a company spends more than 100% of its operating cash flow on capex, it has to fund the rest from its cash pile or borrowing, which is the core of the AI spending worry.",
-   "know": "In the Jun 2026 quarter the tab has Amazon at 119.4% and Alphabet at 115.0%, both above 100%, with Meta at 94.5% and Microsoft at 64.6%. Two years earlier, in Jun 2024, all four were at 70% or less. The tab ends with the Jun quarter, so it doesn't include the Sep-quarter results reported last week.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1363241271"
+   "tab": "156 Nasdaq dot-com vs AI era",
+   "title": "Nasdaq: the dot-com run vs the AI run",
+   "image": "cotd/2026-11-03/05.png",
+   "picked": "Reuters reports the Nasdaq-100 closed more than 10% below its all-time closing high on Monday, confirming a correction as investors question Big Tech's AI spending. Apple fell premarket on a memory-cost warning.",
+   "matters": "Comparisons to 1999 come back every time AI stocks fall, and this chart lines up both runs by trading days since their start.",
+   "know": "Indexed to 100 at the start, the AI-era Nasdaq (from Nov 30 2022) was at 231.51 on trading day 980, the tab's latest point, down from its high of 240.14 on day 965. At the same point the dot-com run (from Aug 9 1995) was at 258.92, and it didn't peak until day 1,155, at 482.32. The tab samples every five trading days, so this week's moves aren't in it.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1796631140"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "79 Neocloud valuation table",
-   "title": "Neocloud valuation vs revenue run-rate",
-   "image": "cotd/2026-11-02/09.png",
-   "picked": "Jim Cramer warned that anti-data-center policies after the midterms could hit neocloud stocks, per a story trending on X, after neoclouds fell when Microsoft trimmed its capex outlook. CoreWeave and Nebius report on Nov 10 and Nov 12.",
-   "matters": "Neoclouds trade on very different multiples of their revenue, so this table shows which ones the market is paying up for ahead of earnings.",
-   "know": "At Oct 30 closes the tab has CoreWeave at a $30.3B market cap, 2.9x its $10.3B revenue run-rate, with a $103.7B backlog, while Nebius is at $41.9B, or 18.0x. IREN is at 17.3x, and TeraWulf and Cipher are above 30x but still earn mostly from bitcoin mining. Run-rate is the latest quarter times four, and market cap is equity value, so debt isn't included.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=4940912"
+   "tab": "22 Big Tech unbooked leases by co",
+   "title": "Signed, not yet on the books: Big Tech's data-center leases",
+   "image": "cotd/2026-11-03/06.png",
+   "picked": "A story trending on X says filings show $3.3 trillion of off-balance-sheet AI commitments at Big Tech, led by Alphabet at $1.06 trillion, and investors are pulling back from tech stocks.",
+   "matters": "Leases that are signed but haven't started don't show up as debt yet, but they are fixed future payments for data centers. They will hit the balance sheets as the buildings come online.",
+   "know": "At Sep 30 2026 the tab has $1.02 trillion of leases not yet commenced: Microsoft $364.6B, Meta $355.7B, Amazon $164.9B and Alphabet $130.5B, up from $282B a year earlier. This counts leases only, so it is smaller than the $3.3 trillion figure, which includes other commitments, and Oracle (tab 18: $288B at Aug 31) is excluded. The image was redrawn from the tab because the export's title still said $830B (Jun 2026).",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=2055282175"
+  },
+  {
+   "sheet": "My Bot's Sheets",
+   "tab": "Hyperscaler Net Cash",
+   "title": "Hyperscaler net cash: who still has more cash than debt",
+   "image": "cotd/2026-11-03/07.png",
+   "picked": "Reuters notes several tech companies have tapped the bond market to fund AI spending, and Amazon reported negative free cash flow of $42.4 billion over 12 months, per The Washington Times.",
+   "matters": "Net cash shows how much room each company has to keep spending before it has to borrow more. It has started to separate the AI spenders.",
+   "know": "On the latest balance sheets in the tab (Sep 30 2026, Oracle Aug 31), Alphabet has $139.0B of net cash, SpaceX $52.0B and Microsoft $29.0B. Meta is about even at -$1.3B, while Amazon (-$66.1B) and Oracle (-$88.2B) are in net debt. The tab leaves out operating and finance leases, which would push every figure lower.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1120646409"
+  },
+  {
+   "sheet": "bot experiments 2",
+   "tab": "92 Data center capacity",
+   "title": "Data center capacity by country: operational vs pipeline",
+   "image": "cotd/2026-11-03/08.png",
+   "picked": "Brookfield, Drax and the neocloud Radiant plan a gigawatt-scale AI data center at Drax's North Yorkshire power station, starting with 100 MW by early 2028, per CNBC and The Guardian. Drax shares rose 8%.",
+   "matters": "Power and buildings are the bottleneck for AI compute, and this chart shows how far ahead the US is in both live and planned capacity.",
+   "know": "The tab has the US at 31.97 GW operational with 70.63 GW more in the pipeline, against 5.49 GW operational in China. The UK has 1.76 GW operational and 2.36 GW in the pipeline, so a 1 GW Drax campus would be large for the UK. The source is Cushman & Wakefield's 2026 comparison as analysed in April, so it isn't a live count.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1193697114"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "272 Midterm-year S&P path",
-   "title": "The midterm-year pattern: the S&P 500 in 2026 vs the average midterm year",
-   "image": "cotd/2026-11-02/10.png",
-   "picked": "With Tuesday's midterms ahead, a story trending on X notes the S&P 500 has risen in the 12 months after all 19 midterms since 1950. Stock futures were higher this morning after last week's tech selloff.",
-   "matters": "Midterm years are usually weak until the election and then rally, so it helps to know where 2026 stands against that pattern.",
-   "know": "On trading day 209 the tab has the S&P 500 at 110.7 (prior year-end = 100) versus 98.0 for the average midterm year since 1974 and 105.8 for all years since 1971. By year-end the midterm average reaches 101.9 and the all-years average 110.1. The image is the Oct 19 export, so it ends about ten trading days earlier.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1636664411"
+   "tab": "101 SPCX drawdown & vol",
+   "title": "SpaceX since the IPO: drawdown from peak and 10-day volatility vs Tesla",
+   "image": "cotd/2026-11-03/09.png",
+   "picked": "SpaceX fell 6.37% on Friday to $134.72, just below its $135 IPO price, then rose 1.22% to $136.37 on Monday on a report that it is in talks to buy EchoStar's Boost Mobile, per The Washington Times and The Motley Fool.",
+   "matters": "Drawdown and volatility show how rough holding SPCX has been since its June IPO, and how much more it swings than Tesla.",
+   "know": "On the tab's latest day, Oct 30 2026, SPCX was 36.27% below its record close, with 10-day realized volatility of 74.43% against Tesla's 43.0%. Its deepest drawdown was 48.78% on Aug 5. The tab ends Oct 30, so it doesn't include Monday's bounce.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1314300784"
+  },
+  {
+   "sheet": "bot experiments 2",
+   "tab": "24 Texas robotaxi fleets",
+   "title": "Texas robotaxi registrations: Tesla vs Waymo",
+   "image": "cotd/2026-11-03/10.png",
+   "picked": "Tesla opened unsupervised Robotaxi rides in Fort Worth on Nov 2, its seventh unsupervised city and fourth in Texas, with a 143-square-mile geofence, per Not a Tesla App and Fort Worth Report.",
+   "matters": "Registered vehicles are a public, regularly updated read on how fast Tesla is adding cars to its robotaxi fleet compared with Waymo.",
+   "know": "As of Oct 31 2026 the tab has 1,204 Tesla vehicles on the Texas registry (631 Model Y and 573 Cybercab) against 1,259 for Waymo, with Avride at 344 and Zoox at 63. These are registered vehicles, not cars giving rides, and the registry doesn't assign them to cities, so the Fort Worth fleet size isn't known. The image was redrawn from the tab because the export's title still showed the Oct 28 counts.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=751548644"
   }
  ]
 }
