@@ -783,7 +783,7 @@ async function frender(){
       const ser=ok.map((d,i)=>{const m=Object.fromEntries(d.rows.map(r=>[r.label,r.value]));return{label:d.label,color:d.col||c[i%c.length],ax:d.ax||0,dash:!!d.dash&&tks.length>1,f:d.u===u2&&cmp&&d.m===m2?F2:F,data:cats.map(k=>k in m?m[k]:null)}});
       o.xAxis={type:'category',data:cats,axisLabel:{...axLabel,hideOverlap:true},axisLine:{lineStyle:{color:T.axis}},axisTick:{show:false}};
       o.yAxis={type:'value',axisLabel:{...axLabel,formatter:F},splitLine:split};
-      if(cmp&&right){o.yAxis=[o.yAxis,{type:'value',position:'right',axisLabel:{...axLabel,inside:true,margin:16,formatter:F2,color:tks.length===1?bc(ok.find(d=>d.ax)?.col||T.text):axLabel.color},splitLine:{show:false}}]}
+      if(cmp&&right){o.yAxis=[o.yAxis,{type:'value',position:'right',axisLabel:{...axLabel,margin:12,formatter:F2,color:tks.length===1?bc(ok.find(d=>d.ax)?.col||T.text):axLabel.color},splitLine:{show:false}}]}
       if(cmp&&right&&tks.length===1)o.yAxis[0].axisLabel.color=bc($('fcolor').value);
       if(cmp&&!right&&u2!==u)o.yAxis.axisLabel.formatter=v=>v;
       if(cmp)o.legend={top:80,left:60,icon:'roundRect',itemWidth:18,itemHeight:4,textStyle:{fontSize:16,color:T.text}},o.grid.top=Math.max(o.grid.top||0,130);
@@ -796,6 +796,10 @@ async function frender(){
         o.series=ser.map((s,i)=>({type:'bar',name:s.label,yAxisIndex:s.ax,data:s.data,itemStyle:{color:bc(s.color),opacity:s.dash?0.6:1},barMaxWidth:60,
           label:{show:cats.length*ok.length<=16,position:'top',fontSize:15,color:T.title,formatter:p=>s.f(p.value)}}));}
     }
+    if(cmp&&right&&type!=='rank'&&Array.isArray(o.yAxis)){ // right-axis ticks sit outside the plot; line end labels get their own lane between plot and axis
+      const ser2=o.series||[], endW=type==='line'?Math.max(0,...ser2.map(x=>{const v=x.data.filter(y=>y!=null).at(-1);return v==null?0:((x.endLabel&&x.endLabel.formatter?x.endLabel.formatter({value:v}):'')).length}))*8.5+18:0;
+      const tickW=Math.max(...[o.yAxis[1].min,o.yAxis[1].max].filter(v=>v!=null).map(v=>F2(v).length),5)*9+24;
+      o.yAxis[1].offset=endW;o.grid.right=endW+tickW}
     chart.setOption(o,true);
     if(type==='rank'&&m2)msgs.push('Compare with is for line/bar charts over time (ignored for ranking)');
     flast={ok,q,u,cur,cats,title:$('ftitle').value||titleAuto,mLabel};
