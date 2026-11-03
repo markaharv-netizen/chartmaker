@@ -1,0 +1,363 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-11-02T00:00:00Z",
+ "end": "2026-11-03T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 111,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2117078570292183534",
+   "date": "2026-11-02",
+   "text": "Bitcoin's recovery setup faces a fresh warning: an open long on combined USDT and USDC dominance. That's bullish confirmation for stablecoin dominance, not for BTC, and it puts me on defense even though the daily slow line still points down. I compare that conflict with earlier https://t.co/3IMzJ0u3R1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "signalcorevip",
+   "url": "https://x.com/signalcorevip/status/2117270626515779974",
+   "date": "2026-11-02",
+   "text": "📊 24H Market Analysis @ November 2, 2026\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nThe dominant price action narrative indicates a market under significant institutional selling pressure, masked by minor intra-day upticks.\n\nDespite BTC and ETH showing slight"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "fraterxyz",
+   "url": "https://x.com/fraterxyz/status/2117264482061713591",
+   "date": "2026-11-02",
+   "text": "ETH is holding above $2,250. But is there enough strength behind the price to call this a recovery? \n\nI used Quant AI to investigate Ethereum's market conditions, looking beyond the price chart to understand what volume, derivatives data and market sentiment are revealing. https://t.co/wJxoUBqf31"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2117107219418239082",
+   "date": "2026-11-02",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $BTC — Bitcoin Spot ETFs Saw $203 Million Net Outflows Last Week, Ethereum Spot ETFs Saw $432 Million Net Outflows\n🟢 10% Bullish · 🔴 90% Bearish\n🔗 https://t.co/0tFuuDrnrE\n\n2. solana:kLqMvUm1p4pRbxU4r8kWCTVAuWMJLtcTJqGb4b5pump — Goldman Sachs raises oil"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Jacksonmilbi",
+   "url": "https://x.com/Jacksonmilbi/status/2117358688172470349",
+   "date": "2026-11-02",
+   "text": "Cryptocurrency Price Predictions and Forecasts\nWe use technical indicators to make cryptocurrency price predictions and estimate cryptocurrency prices in the future. The technical indicators used include popular indicators such as moving averages, RSI and MACD.\n\n#NamePrice5D"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117163961426886748",
+   "date": "2026-11-02",
+   "text": "ethereum:0xf8f173e20e15f3b6cb686fb64724d370689de083 — Heima Network 🔥\n⠀\n$8.1 MILLION MARKET CAP.\n⠀\n100 MILLION MAXIMUM SUPPLY.\n⠀\nAND A CROSS-CHAIN INFRASTRUCTURE NARRATIVE.\n⠀\nHeima Network is building infrastructure designed to make trading across different blockchains feel https://t.co/rCA2tbrM4X"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117160188847538491",
+   "date": "2026-11-02",
+   "text": "ethereum:0x086f405146ce90135750bbec9a063a8b20a8bffb — Brevis 🔥\n⠀\nA $20 MILLION MARKET CAP.\n⠀\nA LIVE ZERO-KNOWLEDGE COMPUTE NETWORK.\n⠀\nAND 75% OF THE TOTAL TOKEN SUPPLY NOT YET REPORTED AS CIRCULATING.\n⠀\nBrevis is building infrastructure that allows blockchains and https://t.co/GNAYcKGT7h"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117183093341901114",
+   "date": "2026-11-02",
+   "text": "ethereum:0x643c4e15d7d62ad0abec4a9bd4b001aa3ef52d66 — Maple Finance 🔥\n⠀\n$190M MARKET CAP.\n⠀\n$2.5 BILLION IN TVL.\n⠀\n$1.3 MILLION IN 30-DAY PROTOCOL REVENUE.\n⠀\nMaple Finance is one of the established players in institutional onchain lending.\n⠀\nUnlike many RWA projects built https://t.co/H24Cexm3yn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117164311353368854",
+   "date": "2026-11-02",
+   "text": "ethereum:native — Ethereum 🔥\n⠀\n$280 BILLION MARKET CAP.\n⠀\n$44 BILLION IN DEFI TVL.\n⠀\nAND $141 BILLION IN STABLECOINS.\n⠀\nEthereum remains one of the most important financial infrastructure networks in crypto.\n⠀\nIt powers decentralized finance, stablecoins, tokenized assets https://t.co/dbOLQs3uAY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117184092865282349",
+   "date": "2026-11-02",
+   "text": "ethereum:0xec53bf9167f50cdeb3ae105f56099aaab9061f83 — EigenCloud 🔥\n⠀\n$186M MARKET CAP.\n⠀\n$5.9 BILLION IN RESTAKED ASSETS.\n⠀\nAND A $7M+ TOKEN UNLOCK APPROACHING.\n⠀\nEigenLayer helped create one of Ethereum's biggest infrastructure narratives: restaking.\n⠀\nNow operating under https://t.co/5p0Zjf4Zjx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117176770734743837",
+   "date": "2026-11-02",
+   "text": "ethereum:0x7420b4b9a0110cdc71fb720908340c03f9bc03ec — JasmyCoin 🔥\n⠀\n$188M MARKET CAP.\n⠀\n98.9% OF MAX SUPPLY IN CIRCULATION.\n⠀\nAND A MAJOR EXCHANGE DELISTING CONTROVERSY.\n⠀\nJasmy is a Japan-based crypto project focused on personal data ownership, IoT and decentralized https://t.co/8GXDQKHdHW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117175763028042038",
+   "date": "2026-11-02",
+   "text": "ethereum:0xc00e94cb662c3520282e6f5717214004a7f26888 — Compound Finance 🔥\n⠀\n$200M MARKET CAP.\n⠀\n$1.41 BILLION IN TVL.\n⠀\n$2.75 MILLION IN 30-DAY FEES.\n⠀\nCompound is one of DeFi's established lending protocols.\n⠀\nIt allows users to supply crypto assets, earn interest and https://t.co/oZO8sGR1tX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "CryptoDreams68",
+   "url": "https://x.com/CryptoDreams68/status/2117288361732038761",
+   "date": "2026-11-02",
+   "text": "🚨 Bitcoin steadies near $77.5K, but the storm isn't over! ₿\n\n📉 $643M in BTC ETF outflows, $4.72B in Binance net withdrawals, and major economic catalysts ahead.\n\n🔥 Is crypto finding its footing or preparing for another drop?\n\n#Bitcoin #CryptoCatalyst https://t.co/cfAyVd8Vzf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117176492790837644",
+   "date": "2026-11-02",
+   "text": "ethereum:0x0d8775f648430679a709e98d2b0cb6250d2887ef — Basic Attention Token 🔥\n⠀\n$200 MILLION MARKET CAP.\n⠀\n117M+ BRAVE MONTHLY USERS REPORTED IN JUNE.\n⠀\nAND OVER 99% OF BAT SUPPLY IN CIRCULATION.\n⠀\nBAT is one of crypto's longest-running attempts to connect a real consumer https://t.co/o5iQdeWYRm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117171054359818440",
+   "date": "2026-11-02",
+   "text": "$CFX — Conflux Network 🔥\n⠀\n$243 MILLION MARKET CAP.\n⠀\n$6.22 MILLION IN DEFI TVL.\n⠀\nAND JUST $4,442 IN DAILY DEX VOLUME.\n⠀\nConflux is a Layer 1 blockchain built around a hybrid Proof-of-Work and Proof-of-Stake system.\n⠀\nIts strongest narrative is connecting blockchain https://t.co/8fU6SPLugl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117168221426180114",
+   "date": "2026-11-02",
+   "text": "gnosis:native — Gnosis 🔥\n⠀\n$277 MILLION MARKET CAP.\n⠀\n$86 MILLION IN DEFI TVL.\n⠀\nAND A MAJOR TRANSITION TOWARD ETHEREUM ZK ROLLUP INFRASTRUCTURE.\n⠀\nGnosis is one of crypto's established infrastructure ecosystems.\n⠀\nIt combines blockchain security, decentralized governance, https://t.co/HivgaxhABk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Rina_BingX",
+   "url": "https://x.com/Rina_BingX/status/2117174995801751759",
+   "date": "2026-11-02",
+   "text": "📉 Crypto Market Overview (Nov.2) \nPrice Action, Macro, Fund Flows, Today's Key Points 🍂 \n\n■ Bitcoin, Ethereum, Hyperliquid, Altcoin Sentiment \n\n🟠 BTC is trading around 78,125 USDT, up roughly 0.24% on the day. After dipping to ~77,600 USDT in early Asia hours, it's been https://t.co/T38c1n2d4S https://t.co/xzuEXM7aNN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117182424912462039",
+   "date": "2026-11-02",
+   "text": "ethereum:0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b — Convex Finance 🔥\n⠀\n$186M MARKET CAP.\n⠀\n$518M IN TOTAL VALUE LOCKED.\n⠀\n$752K IN OCTOBER HOLDER REVENUE.\n⠀\nConvex Finance is one of DeFi's established yield optimization protocols.\n⠀\nIt helps liquidity providers earn https://t.co/gJh6JsoFVE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117163809362366799",
+   "date": "2026-11-02",
+   "text": "moonriver:native — Moonriver 🔥\n⠀\n$13.7 MILLION MARKET CAP.\n⠀\n12.5 MILLION TOKENS IN CIRCULATION.\n⠀\nAND A COMPLETE MIGRATION TO BASE.\n⠀\nMoonriver was once an Ethereum-compatible parachain in the Polkadot ecosystem.\n⠀\nBut in July 2026, its team announced a fundamental change. https://t.co/oxQLk5eTXO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117171563674157325",
+   "date": "2026-11-02",
+   "text": "ethereum:0xf57e7e7c23978c3caec3c3548e3d615c346e79ff — Immutable 🔥\n⠀\n$111 MILLION REPORTED MARKET CAP.\n⠀\n$246 MILLION FULLY DILUTED VALUATION.\n⠀\nAND A MAJOR GAMING INFRASTRUCTURE MIGRATION COMPLETED IN 2026.\n⠀\nImmutable is building blockchain infrastructure for gaming, https://t.co/VobZKg39TW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117176281934766263",
+   "date": "2026-11-02",
+   "text": "neo:native — Neo Smart Economy 🔥\n⠀\n$138 MILLION MARKET CAP.\n⠀\n100 MILLION FIXED TOKEN SUPPLY.\n⠀\nBUT LESS THAN $1 MILLION IN TRACKED N3 DEFI TVL.\n⠀\nNEO was once one of the biggest names in crypto.\n⠀\nOriginally launched as Antshares, it became known for its vision of a smart https://t.co/exf1nbJyuV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117174023180472611",
+   "date": "2026-11-02",
+   "text": "ethereum:0xbb0e17ef65f82ab018d8edd776e8dd940327b28b — Axie Infinity 🔥\n⠀\n$150 MILLION MARKET CAP.\n⠀\n$113K IN 30-DAY PROTOCOL REVENUE.\n⠀\nAND 94.4 MILLION UNLOCKED AXS STILL OUTSIDE REPORTED CIRCULATION.\n⠀\nAxie Infinity helped introduce millions of players to blockchain gaming. https://t.co/yiekELBOf8"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2117182253793230971",
+   "date": "2026-11-02",
+   "text": "ethereum:0x455e53cbb86018ac2b8092fdcd39d8444affc3f6 / USDT 👀\n\nPrinting a Bearish Pennant formation on the 1H chart! Price has broken below the pennant support after consolidation, signaling sellers are regaining control. 📉\n\nA sustained move below $0.0890 could open the door https://t.co/nyWtL6dnrz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117164588865376528",
+   "date": "2026-11-02",
+   "text": "ethereum:0x43dfc4159d86f3a37a5a4b3d4580b888ad7d4ddd — DODO Exchange 🔥\n⠀\n$23 MILLION MARKET CAP.\n⠀\n$518 MILLION IN 30-DAY DEX VOLUME.\n⠀\nAND 100% OF TOKEN SUPPLY ALREADY UNLOCKED.\n⠀\nDODO is an established decentralized exchange built around its Proactive Market Maker https://t.co/pabMmT0C0s"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "sucodautroc",
+   "url": "https://x.com/sucodautroc/status/2117238980328722663",
+   "date": "2026-11-02",
+   "text": "Most NFT dashboards tell you what happened.\n@NFTkek_ tells you who stayed.\nI went deep on KPR — and the holder data is far more interesting than the floor price suggests. \n\nKPR is a 10,000-supply Ethereum PFP collection built around hand-painted traits and a broader “Keeper” https://t.co/ePT0ujMcVC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "GroyPunited",
+   "url": "https://x.com/GroyPunited/status/2117067126913761418",
+   "date": "2026-11-02",
+   "text": "people online arguing whether it’s a bull or bear market \nit’s obviously a dinosaur 🦖 market ethereum:0x9ac9468e7e3e1d194080827226b45d0b892c77fd @YeeErc20 https://t.co/H8YS0AA3OY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "TIQCrypto",
+   "url": "https://x.com/TIQCrypto/status/2117044835391824214",
+   "date": "2026-11-02",
+   "text": "Daily Crypto Market Report: 2026-11-01 - BTC Up 1.02%\n\nMarket overview: The market closed on November 1, 2026, with a slightly positive breadth as 110 out of 189 liquid USDT pairs ended the session in green, representing 58% of the tracked assets. While top performers like https://t.co/kv0tq0jq2I"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "CryptoDreams68",
+   "url": "https://x.com/CryptoDreams68/status/2117063785265664351",
+   "date": "2026-11-02",
+   "text": "🚨 BITCOIN BOUNCES, BUT IS THE CRISIS REALLY OVER? ₿👀\n\nBTC climbs near $78.4K as Binance resumes withdrawals, but nearly $799M in Friday ETF outflows keeps traders cautious.\n\n📊 Can BTC reclaim $80K?\n\n#Bitcoin #BTC #CryptoCatalyst https://t.co/HUOQEvZPK3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "miKryptoAmigo",
+   "url": "https://x.com/miKryptoAmigo/status/2117065633191919884",
+   "date": "2026-11-02",
+   "text": "The Market Recap 🧢🧢\n\nethereum:0x163f8c2467924be0ae7b5347228cabf260318753  15-min\n\nThis #crypto Expanded to the Upside after leaving the NY opening range behing, last Friday but then it came back to the range and Built sideways https://t.co/xeHqcmP1B3 https://t.co/ITff8gnBNi"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "GroyPunited",
+   "url": "https://x.com/GroyPunited/status/2117067016117031334",
+   "date": "2026-11-02",
+   "text": "Bullish for ethereum:0x9ac9468e7e3e1d194080827226b45d0b892c77fd too ? https://t.co/B93PzHivx0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "CryptoHamsterIO",
+   "url": "https://x.com/CryptoHamsterIO/status/2117059683445776714",
+   "date": "2026-11-02",
+   "text": "𝐇𝐲𝐩𝐞𝐫𝐍𝐞𝐰𝐬 – 𝐍𝐨𝐯𝐞𝐦𝐛𝐞𝐫 𝟎𝟏, 𝟐𝟎𝟐𝟔\n\nBinance’s phased reopening is easing immediate market stress, but the hack’s scale and the withdrawals that followed keep confidence fragile.\n\n𝐌𝐚𝐫𝐤𝐞𝐭 𝐎𝐯𝐞𝐫𝐯𝐢𝐞𝐰\n\nCrypto markets attempted a cautious rebound after https://t.co/j7G7VHuZiA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "smandal718",
+   "url": "https://x.com/smandal718/status/2117051974986367319",
+   "date": "2026-11-02",
+   "text": "ethereum:0x232ce3bd40fcd6f80f3d55a522d03f25df784ee2 held the 20W SMA like a champ to put in a beautiful bullish hammer candle. https://t.co/g81cDhBU49"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "baka_capital",
+   "url": "https://x.com/baka_capital/status/2117075354414428316",
+   "date": "2026-11-02",
+   "text": "Why I think @Starknet L1 could be the most bullish development in crypto.\n\nAnd why I think ethereum:0xca14007eff0db1f8135f4c25b34de49ab0d42766 could absolutely explode from here.\n\nMy price target is at the end. 🧵"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "smandal718",
+   "url": "https://x.com/smandal718/status/2117047555922227518",
+   "date": "2026-11-02",
+   "text": "No change ethereum:0x68bbed6a47194eff1cf514b50ea91895597fc91e. It is still consolidating in a very clean bull flag. https://t.co/wUkNU1HBaF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Neome_com",
+   "url": "https://x.com/Neome_com/status/2117059749724205102",
+   "date": "2026-11-02",
+   "text": "CRYPTO BREAKING NEWS: Only the latest. No repeats 💙\n\n• XRP holds at $1.25 despite reported Binance hack, DonAlt cites bullish signal\n• Luxxfolio Signs Letter of Intent with Greywick to Explore Institutional Liquidity for cLTC on Canton\n• Digital Euro: What It Is, When It Is https://t.co/e5hVrkNt1J"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Dogegodgod",
+   "url": "https://x.com/Dogegodgod/status/2117060929720635542",
+   "date": "2026-11-02",
+   "text": "bear markets don't end with an announcement. one day the memes are just funny again Doge-Pepe- Yee , ethereum:0x9ac9468e7e3e1d194080827226b45d0b892c77fd @YeeErc20 🦖🦖🦖🦖🐸🐶 https://t.co/fxeOt29vRZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 216,
+   "user": "SalsaTekila",
+   "url": "https://x.com/SalsaTekila/status/2117060620583616571",
+   "date": "2026-11-02",
+   "text": "Am I allowed to say something without everyone getting mad, but even Ethereum below $2.3k seems like a bargain?\n\nThis is the bull market equivalent of BTC at 58K$."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 30,
+   "user": "TheGrungieNFTs",
+   "url": "https://x.com/TheGrungieNFTs/status/2117077617127944304",
+   "date": "2026-11-02",
+   "text": "🧑‍💻🔥\n\nFlare is EVM-compatible. Developers can bring familiar Solidity skills and Ethereum tooling into an environment with native data protocols.\n\nThat combination makes me VERY bullish.\n\nFamiliar tools make it easier to get started. Access to data gives builders more"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cexscan",
+   "url": "https://x.com/cexscan/status/2117045314322387084",
+   "date": "2026-11-02",
+   "text": "Last 15m - #Binance Spot (USDT Trades)\n\n📈 Top 3 Gainers:\n$HOT (Holo) : ↑2.45%\n$SOPH (Sophon) : ↑2.0%\n$LSK (Lisk) : ↑1.89%\n\n📉 Top 3 Losers:\n$LITEB (Lumentum (bStocks)) : ↓-1.46%\n$GTC (Gitcoin) : ↓-1.1%\n$SKDDB (GraniteShares 2x Short SK Hynix Daily ETF (bStocks)) : ↓-1.03%"
+  }
+ ]
+}
