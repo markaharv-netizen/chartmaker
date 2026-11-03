@@ -14,9 +14,6 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #cotd{display:none;padding:16px 16px 40px;max-width:1240px}#cotd h2{margin:0 0 4px;font-size:22px}#cotd .theme{color:#374151;margin:0 0 18px;font-size:15px}
 #cotd .card{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:14px;margin-bottom:18px}#cotd .card img{width:100%;max-width:1200px;display:block;cursor:zoom-in;border:1px solid #f0f0f0}
 #cotd .card h3{margin:0 0 8px;font-size:17px}#cotd .src{font-size:12px;color:#6B7280;margin:6px 0 10px}#cotd .src a{color:#2563eb}#cotd .sec{margin:6px 0;font-size:14px;line-height:1.45}#cotd .sec b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:#6B7280}
-#actl{display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px}
-#actl label{font-size:13px;flex-direction:row;align-items:center;gap:4px}
-#annList{display:flex;flex-wrap:wrap;gap:4px;width:100%}
 #sheets{display:none;padding:16px 16px 48px;max-width:1100px}#sheets h2{margin:0 0 4px;font-size:22px}#sheets .theme{color:#374151;margin:0 0 14px;font-size:15px;line-height:1.45}
 #sheets .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}#sheets .count{font-size:13px;color:#6B7280;margin:0 0 10px}
 #sheets .row{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start}
@@ -135,14 +132,6 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 </div></div>
 <button id="go" title="Fetch fresh prices, bypassing the cache">Render</button><button id="dl">Download PNG</button>
 </div>
-<div id="actl">
-<label title="Vertical event lines on the shared time axis. Off for bar charts. Saved with the Prices view."><input id="annOn" type="checkbox"> Annotations</label>
-<label>Date <input id="annDate" type="date"></label>
-<label>Label <input id="annLabel" size="14" maxlength="24" placeholder="e.g. ETF approval"></label>
-<label>Note <input id="annNote" size="18" maxlength="80" placeholder="optional, hover only"></label>
-<button id="annAdd" type="button">Add marker</button>
-<span id="annHint" style="color:#6B7280">Shared time axis.</span>
-<div id="annList"></div>
 </div>
 <div id="status"></div>
 <div id="wrap"><div id="chart"></div><canvas id="ptcanvas" width="1600" height="720" aria-label="Steve's DCF price targets"></canvas></div>
@@ -431,21 +420,17 @@ const HALVINGS=[
 const ANLS='chartmaker_ann';
 let ANN=[];try{const a=JSON.parse(localStorage.getItem(ANLS)||'[]');if(Array.isArray(a))ANN=a.filter(x=>x&&x.date&&x.label).slice(0,40)}catch(e){}
 function annsave(){try{localStorage.setItem(ANLS,JSON.stringify(ANN))}catch(e){}annDraw()}
-function annDraw(){const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  $('annList').innerHTML=ANN.map((a,i)=>`<span style="background:#e5e7eb;border-radius:4px;padding:3px 6px;display:inline-flex;gap:4px;align-items:center"><b>${esc(a.date)}</b> ${esc(a.label)}${a.note?` <span style="color:#6B7280">${esc(a.note)}</span>`:''}<a href="#" data-rm="${i}" title="Remove" style="color:#EF4444;text-decoration:none">×</a></span>`).join('');
-  syncPriceUi()}
+function annDraw(){}
 function priceSyms(){return $('tickers').value.split(',').map(s=>s.trim()).filter(Boolean)}
 function syncCustomDates(){const c=$('range').value==='Custom';$('startbox').style.display=c?'':'none';$('endbox').style.display=c?'':'none'}
 function syncPriceUi(){syncCustomDates();smaSummary();const n=priceSyms().length,t=$('type').value,bar=t==='bar'||t==='bardd';
   const opt=[...$('type').options].find(o=>o.value==='candle');if(opt)opt.disabled=n!==1;
   $('ctypeNote').textContent=t==='candle'?'One ticker · volume below':n!==1?'Candles need one ticker':'';
-  $('actl').style.opacity=bar?'0.45':'1';
-  const hid=ANN.length&&!$('annOn').checked&&!bar;
-  $('annHint').textContent=(bar?'Annotations stay off on bar charts. ':(hid?ANN.length+' custom marker'+(ANN.length>1?'s':'')+' hidden — tick Annotations. ':''))+'Shared time axis.'}
+}
 function qLabel(e){const q=e.quarter&&e.quarter!=='Earn'&&e.quarter!=='Next'?e.quarter:'';const yy=e.date&&e.date.length>=4?" '"+e.date.slice(2,4):'';
   if(q)return q+yy;return e.upcoming?'Next earn':'Earn'}
 async function collectMarkers(type,syms,p){p.earnErr='';p.earnCount=0;p.earnFetched=false;p.drawnMarkers=0;p.earnDrawn=0;
-  if(type==='bar'||type==='bardd'||!$('annOn').checked)return [];
+  if(type==='bar'||type==='bardd')return [];
   const out=[];
   for(const a of ANN){if(!a||!a.date||!a.label)continue;const ts=Date.parse(String(a.date)+'T00:00:00Z');if(isNaN(ts))continue;
     out.push({date:a.date,ts,label:String(a.label).slice(0,24),note:String(a.note||'').slice(0,80),kind:'custom'})}
@@ -641,21 +626,20 @@ window.addEventListener('resize',()=>{if(!$('smaMenu').hidden)smaPlace()});
 window.addEventListener('scroll',()=>{if(!$('smaMenu').hidden)smaPlace()},true);
 ['tickers','title','start','end','smac'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();renderFresh()}}));
 ['ftickers','ftitle','fy1','fy2'].forEach(id=>$(id)&&$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();frender()}}));$('dl').onclick=download;
-['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn'].forEach(id=>$(id).onchange=()=>{syncPriceUi();render()});
+['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'].forEach(id=>$(id).onchange=()=>{syncPriceUi();render()});
 $('tickers').addEventListener('input',()=>{const n=priceSyms().length;if(n!==1&&$('type').value==='candle')$('status').textContent='Candles + volume needs one ticker.';syncPriceUi()});
-function annAdd(){const date=$('annDate').value,label=$('annLabel').value.trim().slice(0,24),note=$('annNote').value.trim().slice(0,80);
-  if(!date||!label){$('status').className='';$('status').textContent='A marker needs a date and a short label.';return}
+function annAdd(date,label,note=''){label=String(label||'').trim().slice(0,24);note=String(note||'').trim().slice(0,80);
+  if(!date||!label)return;
   ANN=ANN.filter(a=>!(a.date===date&&a.label===label));ANN.push({date,label,note});ANN.sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:0);
-  if(ANN.length>40)ANN=ANN.slice(-40);$('annLabel').value='';$('annNote').value='';annsave();if(MODE==='prices')render()}
-$('annAdd').onclick=annAdd;
+  if(ANN.length>40)ANN=ANN.slice(-40);annsave();if(MODE==='prices')render()}
 // Right-click on the Prices chart: small menu with "Add Annotation", snapped to the nearest plotted date.
 const ctxMenu=document.createElement('div');ctxMenu.id='ctxMenu';ctxMenu.hidden=true;
 ctxMenu.style.cssText='position:fixed;z-index:2147483000;background:#fff;color:#111;border:1px solid #ccc;border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,.18);padding:4px 0;font-size:14px;min-width:170px';
-ctxMenu.innerHTML='<div id="ctxDate" style="padding:4px 12px;color:#6B7280;font-size:12px"></div><div id="ctxAdd" role="menuitem" tabindex="0" style="padding:8px 12px;cursor:pointer">Add Annotation</div>';
+ctxMenu.innerHTML='<div id="ctxDate" style="padding:4px 12px;color:#6B7280;font-size:12px"></div><div id="ctxAdd" role="menuitem" tabindex="0" style="padding:8px 12px;cursor:pointer">Add Annotation</div><div id="ctxDel" role="menuitem" tabindex="0" style="padding:8px 12px;cursor:pointer;color:#B91C1C" hidden>Delete annotation</div>';
 document.body.appendChild(ctxMenu);
 const ctxTipCss=document.createElement('style');document.head.appendChild(ctxTipCss);
 const ctxHide=()=>{ctxMenu.hidden=true;ctxTipCss.textContent=''};
-$('ctxAdd').onmouseenter=e=>e.target.style.background='#f3f4f6';$('ctxAdd').onmouseleave=e=>e.target.style.background='';
+for(const id of ['ctxAdd','ctxDel']){$(id).onmouseenter=e=>e.target.style.background='#f3f4f6';$(id).onmouseleave=e=>e.target.style.background=''}
 function ctxSnap(px,py){const o=chart.getOption();if(!o||!o.xAxis||!o.xAxis.length)return null;const xa=o.xAxis[0];
   if(!chart.containPixel({gridIndex:0},[px,py]))return null;
   const times=[];if(xa.type==='category')(xa.data||[]).forEach(v=>{const t=+(v&&v.value!=null?v.value:v);if(!isNaN(t)&&t>1e11)times.push(t)});
@@ -663,23 +647,25 @@ function ctxSnap(px,py){const o=chart.getOption();if(!o||!o.xAxis||!o.xAxis.leng
   if(!times.length)return null;
   const v=chart.convertFromPixel({gridIndex:0},[px,py]);let x=Array.isArray(v)?v[0]:v;
   if(xa.type==='category'){const i=Math.max(0,Math.min((xa.data||[]).length-1,Math.round(x)));const c=xa.data[i];x=+(c&&c.value!=null?c.value:c)}
-  let best=times[0];for(const t of times)if(Math.abs(t-x)<Math.abs(best-x))best=t;
-  return new Date(best).toLocaleDateString('en-CA',{timeZone:'America/New_York'})}
-let ctxDateVal='';
+  const near=v=>{let b=times[0];for(const t of times)if(Math.abs(t-v)<Math.abs(b-v))b=t;return b};
+  const best=near(x),toPx=t=>{const c=xa.type==='category'?(xa.data||[]).findIndex(q=>+(q&&q.value!=null?q.value:q)===t):t;return c<0?NaN:chart.convertToPixel({gridIndex:0},[xa.type==='category'?c:t,0])[0]};
+  // existing marker closest to the click, within 10px
+  let hit=-1,hd=10;ANN.forEach((a,i)=>{const ts=Date.parse(a.date+'T00:00:00Z');if(isNaN(ts))return;const dpx=Math.abs(toPx(near(ts))-px);if(dpx<=hd){hd=dpx;hit=i}});
+  return {date:new Date(best).toLocaleDateString('en-CA',{timeZone:'America/New_York'}),hit}}
+let ctxDateVal='',ctxHit=-1;
 $('chart').addEventListener('contextmenu',e=>{if(MODE!=='prices'||!last)return;const t=$('type').value;if(t==='bar'||t==='bardd')return;
-  const r=$('chart').getBoundingClientRect(),d=ctxSnap(e.clientX-r.left,e.clientY-r.top);if(!d)return;
+  const r=$('chart').getBoundingClientRect(),sn=ctxSnap(e.clientX-r.left,e.clientY-r.top);if(!sn)return;const d=sn.date;ctxHit=sn.hit;$('ctxDel').hidden=ctxHit<0;if(ctxHit>=0)$('ctxDel').textContent='Delete annotation \u201c'+ANN[ctxHit].label+'\u201d';
   e.preventDefault();chart.dispatchAction({type:'hideTip'});ctxDateVal=d;$('ctxDate').textContent=new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
   ctxMenu.hidden=false;ctxTipCss.textContent='#chart>div:not(:first-child){visibility:hidden!important}';ctxMenu.style.left=Math.min(e.clientX,innerWidth-190)+'px';ctxMenu.style.top=Math.min(e.clientY,innerHeight-80)+'px'});
 function ctxAddAnn(){ctxHide();const label=(prompt('Annotation label for '+ctxDateVal+' (max 24 characters)','')||'').trim();if(!label)return;
-  $('annDate').value=ctxDateVal;$('annLabel').value=label.slice(0,24);$('annNote').value='';
-  if(!$('annOn').checked){$('annOn').checked=true;syncPriceUi()}annAdd()}
+  annAdd(ctxDateVal,label)}
+function ctxDelAnn(){ctxHide();if(ctxHit<0||!ANN[ctxHit])return;ANN.splice(ctxHit,1);ctxHit=-1;annsave();if(MODE==='prices')render()}
+$('ctxDel').onclick=ctxDelAnn;$('ctxDel').addEventListener('keydown',e=>{if(e.key==='Enter')ctxDelAnn()});
 $('ctxAdd').onclick=ctxAddAnn;$('ctxAdd').addEventListener('keydown',e=>{if(e.key==='Enter')ctxAddAnn()});
 document.addEventListener('mousedown',e=>{if(!ctxMenu.hidden&&!ctxMenu.contains(e.target))ctxHide()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')ctxHide()});
 addEventListener('scroll',ctxHide,true);addEventListener('blur',ctxHide);
 
-['annLabel','annNote'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();annAdd()}}));
-$('annList').onclick=e=>{const a=e.target.closest('a');if(!a)return;e.preventDefault();ANN.splice(+a.dataset.rm,1);annsave();if(MODE==='prices'&&$('annOn').checked)render()};
 
 // ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------
 let MODE='prices', flast=null;
@@ -690,7 +676,7 @@ function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets';
   $('chart').style.display=m==='pt'?'none':'';$('ptcanvas').style.display=m==='pt'?'block':'none';
   $('wrap').style.display=lib?'none':'';$('vbar').style.display=lib?'none':'flex';if(!lib&&m!=='pt'){try{chart.resize()}catch(e){}}if(typeof vlist==='function')try{vlist()}catch(e){}
   $('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';$('mSent').classList.toggle('on',m==='sent');$('sctl').style.display=m==='sent'?'flex':'none';
-  $('ctl').style.display=m==='prices'?'flex':'none';$('actl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
+  $('ctl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
   $('ftable').innerHTML='';$('fnote').textContent='';
   if(m!=='tre'&&$('chart').style.height&&$('chart').style.height!=='900px'){$('chart').style.height='900px';chart.resize()}
   if(m!=='pt')chart.clear();$('status').textContent='';
@@ -1440,7 +1426,7 @@ $('ptdl').onclick=()=>{if(MODE!=='pt'||!PTDOC)return;ptdraw();const a=document.c
 window.__ptdraw=ptdraw;
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fmetric2','faxis2','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','ptwm'];
+const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fmetric2','faxis2','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','ptwm'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);if(!e)continue;f[id]=e.type==='checkbox'?e.checked:e.value}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();if(MODE==='prices')o.ann=ANN.map(a=>({date:a.date,label:a.label,note:a.note||''}));return o}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
@@ -1448,7 +1434,7 @@ let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
 const VMODES=['prices','fin','heat','tre','val','watch','sent','pt'];
 const vmode=x=>VMODES.includes(x&&x.mode)?x.mode:'prices';
 // Fields each tab owns; applying a view only touches its own tab's fields (+ theme), so other tabs are left alone.
-const VOWN={sent:/^(sview|shist|sprice|stickers|stitle|swm)$/,watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase|annOn)$/,pt:/^ptwm$/};
+const VOWN={sent:/^(sview|shist|sprice|stickers|stitle|swm)$/,watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase)$/,pt:/^ptwm$/};
 // Session-only memory of each tab's selected view: a page load/refresh always starts every tab at "— pick a view —".
 const VLASTM={};try{localStorage.removeItem(VLAST)}catch(e){}
 function vremember(name){if(name)VLASTM[MODE]=name;else delete VLASTM[MODE]}
@@ -1487,7 +1473,6 @@ $('wlpick').onchange=()=>{const p=$('wlpick'),v=p.value,id=WLIN[MODE];p.value=''
   $(id).value=x.wl.join(',');if(MODE==='heat')$('huni').value='custom';if(MODE==='prices'&&$('names'))$('names').value='';if(MODE==='fin'&&$('fnames'))$('fnames').value='';if(MODE==='val'&&$('vnames'))$('vnames').value='';rerender()};
 const WMID={prices:'wm',fin:'fwm',heat:'hwm',tre:'twm',val:'vwm',watch:'wwm',sent:'swm',pt:'ptwm'};
 function vapply(x){const m=vmode(x),own=VOWN[m];if(m==='prices'){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';$('ddbase').value='range';
-  $('annOn').checked=false;
   ANN=(Array.isArray(x.ann)?x.ann:[]).filter(a=>a&&a.date&&a.label).slice(0,40).map(a=>({date:String(a.date),label:String(a.label).slice(0,24),note:String(a.note||'').slice(0,80)}));annsave()}
   // Watermark defaults off. A view that omits the field keeps that default; an explicit true/false still wins.
   if(WMID[m])$(WMID[m]).checked=false;
