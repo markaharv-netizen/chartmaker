@@ -54,6 +54,8 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Tickers (comma)<input id="ftickers" size="22"></label>
 <label>Metric<select id="fmetric">
 <option value="revenue">Revenue</option><option value="gross_profit">Gross profit</option><option value="operating_income">Operating income</option><option value="net_income">Net income</option><option value="eps_diluted">EPS (diluted)</option><option value="ocf">Operating cash flow</option><option value="capex">Capex</option><option value="fcf">Free cash flow</option><option value="cash">Cash</option><option value="total_debt">Total debt</option><option value="shares">Shares outstanding</option><option value="rnd">R&amp;D</option><option value="gross_margin">Gross margin %</option><option value="operating_margin">Operating margin %</option><option value="net_margin">Net margin %</option></select></label>
+<label title="Plot a second metric on the same chart, e.g. Revenue + Capex">Compare with<select id="fmetric2"><option value="">None</option><option value="revenue">Revenue</option><option value="gross_profit">Gross profit</option><option value="operating_income">Operating income</option><option value="net_income">Net income</option><option value="eps_diluted">EPS (diluted)</option><option value="ocf">Operating cash flow</option><option value="capex">Capex</option><option value="fcf">Free cash flow</option><option value="cash">Cash</option><option value="total_debt">Total debt</option><option value="shares">Shares outstanding</option><option value="rnd">R&amp;D</option><option value="gross_margin">Gross margin %</option><option value="operating_margin">Operating margin %</option><option value="net_margin">Net margin %</option></select></label>
+<label id="faxbox" title="Auto puts the 2nd metric on a right-hand axis when units differ or scales are far apart">2nd metric axis<select id="faxis2"><option value="auto">Auto</option><option value="same">Same axis</option><option value="right">Right axis</option></select></label>
 <label>Period<select id="fperiod"><option value="quarterly">Quarterly</option><option value="annual">Annual</option><option value="ttm">TTM</option></select></label>
 <label>From year<input id="fy1" type="number" value="2019" style="width:80px"></label><label>To year<input id="fy2" type="number" placeholder="latest" style="width:80px"></label>
 <label>Chart<select id="ftype"><option value="line">Line over time</option><option value="bars">Grouped bars over time</option><option value="rank">Latest-period ranking</option></select></label>
@@ -119,6 +121,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label id="typebox">Type<span class="type-line"><select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="candle">Candles + volume</option><option value="bar">Bar ranking % return</option><option value="bardd">Bar ranking % drawdown</option><option value="ratio">Ratio A priced in B</option><option value="drawdown">Drawdown from peak</option></select><span id="ctypeNote"></span></span></label>
 <label id="ddbox" title="Drawdown = % below the running high of daily closes">Peak from<select id="ddbase"><option value="range">Start of range</option><option value="ath">All-time high (full history)</option></select></label>
 <label>Title<input id="title" size="34" placeholder="auto"></label>
+<label id="raxbox" title="Price line with two tickers: give the 2nd ticker its own right-hand axis (e.g. MSTR vs BTC)"><span>2nd ticker right axis</span><input id="raxis" type="checkbox"></label>
 <label>Line color<select id="color"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="wm" type="checkbox"></label>
 <div id="smabox" title="Simple moving averages of daily closes. Price line and candles, not intraday bars."><span>SMA</span>
@@ -438,7 +441,7 @@ function priceSyms(){return $('tickers').value.split(',').map(s=>s.trim()).filte
 function syncPriceUi(){smaSummary();const n=priceSyms().length,t=$('type').value,bar=t==='bar'||t==='bardd';
   const opt=[...$('type').options].find(o=>o.value==='candle');if(opt)opt.disabled=n!==1;
   $('ctypeNote').textContent=t==='candle'?'One ticker · volume below':n!==1?'Candles need one ticker':'';
-  $('actl').style.opacity=bar?'0.45':'1';
+  $('actl').style.opacity=bar?'0.45':'1';$('raxbox').style.opacity=t==='line'&&n===2?'1':'0.4';
   const who=(priceSyms()[0]||'').toUpperCase();$('annEarnWho').textContent=who?'('+who+')':'';
   const hid=ANN.length&&!$('annOn').checked&&!bar;
   $('annHint').textContent=(bar?'Annotations stay off on bar charts. ':(hid?ANN.length+' custom marker'+(ANN.length>1?'s':'')+' hidden — tick Annotations. ':''))+'Shared time axis. Earnings use the first ticker.'}
@@ -605,7 +608,12 @@ function attachMarkers(o,data,p){
 function marked(o,data,p){if(p.markers&&p.markers.length)attachMarkers(o,data,p);return o}
 function buildOpt(type,data,title,p){
   const o=base(title), c=colors(data.length);
-  if(type==='line')return marked(lineOpt(o,data.map((d,i)=>({label:d.label,color:c[i%c.length],data:d.points,smas:d.smas})),fmtNum),data,p);
+  if(type==='line'){const o2=lineOpt(o,data.map((d,i)=>({label:d.label,color:c[i%c.length],data:d.points,smas:d.smas})),fmtNum);
+    if($('raxis').checked&&data.length===2){const L=o2.yAxis;o2.yAxis=[{...L,axisLabel:{...L.axisLabel,color:bc(c[0])}},{type:'value',scale:true,position:'right',axisLabel:{...axLabel,inside:true,margin:16,formatter:fmtNum,color:bc(c[1])},splitLine:{show:false}}];
+      o2.series.forEach(s=>{if(s.name===data[1].label||s.name.startsWith(data[1].label+' '))s.yAxisIndex=1});
+      o2.legend={top:80,left:60,icon:'roundRect',itemWidth:18,itemHeight:4,textStyle:{fontSize:16,color:T.text}};
+      o2.legend.formatter=n=>n===data[0].label?n+' (left axis)':n===data[1].label?n+' (right axis)':n;o2.grid.top=Math.max(o2.grid.top||0,130)}
+    return marked(o2,data,p)}
   if(type==='pct'){const s=data.map((d,i)=>{const b=p.r==='1D'&&d.chartPreviousClose?(d.prevClose||d.chartPreviousClose):d.points[0][1];return{label:d.label,color:c[i%c.length],data:d.points.map(q=>[q[0],(q[1]/b-1)*100])}});
     const o2=lineOpt(o,s,v=>pct(v)); o2.yAxis.scale=false; return marked(o2,data,p)}
   if(type==='drawdown')return marked(ddOpt(o,data,c,p),data,p);
@@ -643,7 +651,7 @@ window.addEventListener('resize',()=>{if(!$('smaMenu').hidden)smaPlace()});
 window.addEventListener('scroll',()=>{if(!$('smaMenu').hidden)smaPlace()},true);
 ['tickers','title','start','end','smac'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();renderFresh()}}));
 ['ftickers','ftitle','fy1','fy2'].forEach(id=>$(id)&&$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();frender()}}));$('dl').onclick=download;
-['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf'].forEach(id=>$(id).onchange=()=>{syncPriceUi();render()});
+['range','type','color','wm','raxis','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf'].forEach(id=>$(id).onchange=()=>{syncPriceUi();render()});
 $('tickers').addEventListener('input',()=>{const n=priceSyms().length;if(n!==1&&$('type').value==='candle')$('status').textContent='Candles + volume needs one ticker.';syncPriceUi()});
 function annAdd(){const date=$('annDate').value,label=$('annLabel').value.trim().slice(0,24),note=$('annNote').value.trim().slice(0,80);
   if(!date||!label){$('status').className='';$('status').textContent='A marker needs a date and a short label.';return}
@@ -741,8 +749,20 @@ async function frender(){
     const data=res.filter(r=>r.status==='fulfilled').map(r=>r.value);
     data.forEach(d=>{d.label=names[syms.indexOf(d.ticker)]||d.ticker});
     const msgs=[...errs,...data.filter(d=>d.message).map(d=>d.message)];
-    const ok=data.filter(d=>d.rows.length);
+    let ok=data.filter(d=>d.rows.length);
     if(!ok.length)throw Error(msgs.join(' · ')||'No data');
+    const m2=$('fmetric2').value, cmp=!!m2&&m2!==q.m&&type!=='rank', u2=MUNIT[m2]||'$', m1L=$('fmetric').selectedOptions[0].text, m2L=m2?$('fmetric2').selectedOptions[0].text:'';
+    $('faxbox').style.opacity=cmp?1:0.4;
+    let right=false;
+    if(cmp){const r2=await Promise.allSettled(ok.map(d=>fetchFin(d.ticker,{...q,m:m2})));
+      r2.forEach(r=>{if(r.status==='rejected')msgs.push(r.reason.message);else if(r.value.message)msgs.push(r.value.message)});
+      const ok2=r2.filter(r=>r.status==='fulfilled'&&r.value.rows.length).map(r=>r.value);
+      ok.forEach(d=>{d.m=q.m;d.u=u;d.ax=0;d.dash=false;d.tk=d.label;d.label=ok.length>1?d.label+' '+m1L:m1L});
+      ok2.forEach(d=>{d.m=m2;d.u=u2;d.dash=true;d.tk=d.ticker;d.label=ok.length>1?d.ticker+' '+m2L:m2L});
+      const mx=a=>Math.max(...a.flatMap(d=>d.rows.map(r=>Math.abs(r.value||0))),1e-9), ax=$('faxis2').value;
+      right=ok2.length>0&&(ax==='right'||(ax==='auto'&&(u2!==u||Math.max(mx(ok)/mx(ok2),mx(ok2)/mx(ok))>6)));
+      ok2.forEach(d=>d.ax=right?1:0);
+      ok=ok.flatMap(d=>[d,...ok2.filter(e=>e.tk===d.tk)]);}
     const curs=[...new Set(ok.map(d=>d.currency))];
     const mLabel=$('fmetric').selectedOptions[0].text, pLabel={quarterly:'quarterly',annual:'annual',ttm:'trailing 12 months'}[q.p];
     const have=[...new Set(ok.flatMap(d=>d.rows.map(r=>r.label)))].sort(), cats=[];
@@ -751,9 +771,13 @@ async function frender(){
       for(let i=idx(have[0]);i<=idx(have.at(-1));i++)cats.push(lab(i)); }
     const foreign=ok.some(d=>d.foreign);
     const src='Source: SEC filings (10-K/10-Q'+(foreign?', 20-F':'')+')'+(ok.some(d=>d.rows.some(r=>(r.derived||'').includes('weighted-avg')))?' · weighted-avg basic shares':'');
-    const titleAuto=type==='rank'?`${mLabel}, ${pLabel} (latest)`:(ok.length>1?ok.map(d=>d.label).join(' vs ')+' ':ok[0].label+' ')+mLabel.toLowerCase().replace('r&d','R&D').replace('eps','EPS')+', '+pLabel;
+    const tks=[...new Set(ok.map(d=>d.tk||d.label))];
+    const titleAuto=cmp?tks.join(' vs ')+' '+m1L.toLowerCase().replace('r&d','R&D').replace('eps','EPS')+' vs '+m2L.toLowerCase().replace('r&d','R&D').replace('eps','EPS')+', '+pLabel:type==='rank'?`${mLabel}, ${pLabel} (latest)`:(ok.length>1?ok.map(d=>d.label).join(' vs ')+' ':ok[0].label+' ')+mLabel.toLowerCase().replace('r&d','R&D').replace('eps','EPS')+', '+pLabel;
     const o=base($('ftitle').value||titleAuto,src,'fwm'), c=ok.length===1?[$('fcolor').value]:PALETTE, cur=curs.length===1?curs[0]:'USD';
-    const F=v=>fmtFin(v,u,cur);
+    const F=v=>fmtFin(v,u,cur), F2=v=>fmtFin(v,u2,cur);
+    if(cmp){const tc={};tks.forEach((t,i)=>tc[t]=tks.length===1?null:PALETTE[i%PALETTE.length]);
+      const alt=$('fcolor').value==='#F7931A'?'#8B5CF6':'#F7931A';
+      ok.forEach(d=>d.col=tks.length===1?(d.dash?alt:$('fcolor').value):tc[d.tk])}
     if(type==='rank'){
       const rows=ok.map(d=>({label:d.label,r:d.rows.at(-1)})).sort((a,b)=>b.r.value-a.r.value);
       o.grid={left:110,right:60,top:130,bottom:115};
@@ -762,17 +786,24 @@ async function frender(){
       o.series=[{type:'bar',barMaxWidth:120,data:rows.map(x=>({value:x.r.value,itemStyle:{color:bc(x.r.value>=0?$('fcolor').value:'#EF4444')},
         label:{show:true,position:x.r.value>=0?'top':'bottom',fontSize:18,fontWeight:'bold',color:T.title,formatter:p=>F(p.value)}}))}];
     }else{
-      const ser=ok.map((d,i)=>{const m=Object.fromEntries(d.rows.map(r=>[r.label,r.value]));return{label:d.label,color:c[i%c.length],data:cats.map(k=>k in m?m[k]:null)}});
+      const ser=ok.map((d,i)=>{const m=Object.fromEntries(d.rows.map(r=>[r.label,r.value]));return{label:d.label,color:d.col||c[i%c.length],ax:d.ax||0,dash:!!d.dash&&tks.length>1,f:d.u===u2&&cmp&&d.m===m2?F2:F,data:cats.map(k=>k in m?m[k]:null)}});
       o.xAxis={type:'category',data:cats,axisLabel:{...axLabel,hideOverlap:true},axisLine:{lineStyle:{color:T.axis}},axisTick:{show:false}};
       o.yAxis={type:'value',axisLabel:{...axLabel,formatter:F},splitLine:split};
-      if(type==='line'){o.series=ser.map(s=>({type:'line',name:s.label,data:s.data,connectNulls:false,showSymbol:cats.length<=24||s.data.includes(null),symbolSize:7,
-          lineStyle:{width:3,color:bc(s.color)},itemStyle:{color:bc(s.color)},
-          endLabel:{show:true,fontSize:17,fontWeight:'bold',color:bc(s.color),formatter:p=>`${ok.length>1?s.label+' ':''}${F(p.value)}`},labelLayout:{moveOverlap:'shiftY'}}));o.tooltip=hoverTip(F,false);}
+      if(cmp&&right){o.yAxis=[o.yAxis,{type:'value',position:'right',axisLabel:{...axLabel,inside:true,margin:16,formatter:F2,color:tks.length===1?bc(ok.find(d=>d.ax)?.col||T.text):axLabel.color},splitLine:{show:false}}]}
+      if(cmp&&right&&tks.length===1)o.yAxis[0].axisLabel.color=bc($('fcolor').value);
+      if(cmp&&!right&&u2!==u)o.yAxis.axisLabel.formatter=v=>v;
+      if(cmp)o.legend={top:80,left:60,icon:'roundRect',itemWidth:18,itemHeight:4,textStyle:{fontSize:16,color:T.text}},o.grid.top=Math.max(o.grid.top||0,130);
+      if(type==='line'){o.series=ser.map(s=>({type:'line',name:s.label,yAxisIndex:s.ax,data:s.data,connectNulls:false,showSymbol:cats.length<=24||s.data.includes(null),symbolSize:7,
+          lineStyle:{width:3,color:bc(s.color),type:s.dash?[8,5]:'solid'},itemStyle:{color:bc(s.color)},
+          endLabel:{show:true,fontSize:17,fontWeight:'bold',color:bc(s.color),formatter:p=>`${ok.length>1?s.label+' ':''}${s.f(p.value)}`},labelLayout:{moveOverlap:'shiftY'}}));o.tooltip=hoverTip(cmp?(v=>v):F,false);
+          if(cmp)o.tooltip.formatter=ps=>{ps=[].concat(ps);return `<b>${ps[0]?.axisValue??''}</b>`+ps.map(x=>x.value==null?'':`<div>${x.marker}${x.seriesName}: <b>${ser[x.seriesIndex].f(x.value)}</b></div>`).join('')};}
       else{Object.assign(o.yAxis,headroom(ser.flatMap(s=>s.data)));o.xAxis.axisLine={onZero:false,lineStyle:{color:T.axis}};o.grid.right=60;if(ok.length>1)o.legend={top:80,left:60,textStyle:{fontSize:17,color:T.text},itemWidth:18,itemHeight:12};o.grid.top=ok.length>1?130:120;
-        o.series=ser.map((s,i)=>({type:'bar',name:s.label,data:s.data,itemStyle:{color:bc(s.color)},barMaxWidth:60,
-          label:{show:cats.length*ok.length<=16,position:'top',fontSize:15,color:T.title,formatter:p=>F(p.value)}}));}
+        if(cmp&&right)Object.assign(o.yAxis[1],headroom(ser.filter(s=>s.ax).flatMap(s=>s.data))),Object.assign(o.yAxis[0],headroom(ser.filter(s=>!s.ax).flatMap(s=>s.data)));
+        o.series=ser.map((s,i)=>({type:'bar',name:s.label,yAxisIndex:s.ax,data:s.data,itemStyle:{color:bc(s.color),opacity:s.dash?0.6:1},barMaxWidth:60,
+          label:{show:cats.length*ok.length<=16,position:'top',fontSize:15,color:T.title,formatter:p=>s.f(p.value)}}));}
     }
     chart.setOption(o,true);
+    if(type==='rank'&&m2)msgs.push('Compare with is for line/bar charts over time (ignored for ranking)');
     flast={ok,q,u,cur,cats,title:$('ftitle').value||titleAuto,mLabel};
     ftable(); 
     const gaps=ok.reduce((n,d)=>n+cats.length-d.rows.length,0);
@@ -784,17 +815,18 @@ async function frender(){
 function ftable(){const {ok,cats,u,cur}=flast;
   const M=ok.map(d=>Object.fromEntries(d.rows.map(r=>[r.label,r])));
   let h='<tr><th>Period</th>'+ok.map(d=>`<th>${d.label}</th>`).join('')+'</tr>';
-  for(const k of [...cats].reverse())h+=`<tr><td>${k}</td>`+M.map(m=>{const r=m[k];return r?`<td title="${r.start||''} → ${r.end} · ${r.form} · ${r.tag}${r.derived?' · '+r.derived:''}">${fmtFin(r.value,u,cur)}${r.derived?'*':''}</td>`:'<td style="color:#9CA3AF">—</td>'}).join('')+'</tr>';
+  const d0u=ok.map(d=>d.u);
+  for(const k of [...cats].reverse())h+=`<tr><td>${k}</td>`+M.map((m,i)=>{const r=m[k];return r?`<td title="${r.start||''} → ${r.end} · ${r.form} · ${r.tag}${r.derived?' · '+r.derived:''}">${fmtFin(r.value,d0u[i]||u,cur)}${r.derived?'*':''}</td>`:'<td style="color:#9CA3AF">—</td>'}).join('')+'</tr>';
   $('ftable').innerHTML=h}
 function fcsv(){if(!flast)return;const {ok,cats,q}=flast;
   const lines=[['ticker','company','metric','period_type','period','start','end','value','currency_or_unit','form','xbrl_tag','derived'].join(',')];
   for(const d of ok)for(const k of cats){const r=d.rows.find(x=>x.label===k);
-    lines.push([d.ticker,d.name,q.m,q.p,k,r?.start||'',r?.end||'',r?r.value:'',r?.cur||'',r?.form||'',r?.tag||'',r?(r.derived||''):'not reported'].map(v=>`"${String(v).replace(/"/g,'""')}"`).join(','))}
+    lines.push([d.ticker,d.name,d.m||q.m,q.p,k,r?.start||'',r?.end||'',r?r.value:'',r?.cur||'',r?.form||'',r?.tag||'',r?(r.derived||''):'not reported'].map(v=>`"${String(v).replace(/"/g,'""')}"`).join(','))}
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([lines.join('\n')],{type:'text/csv'}));a.download=flast.title.replace(/[^\w]+/g,'_')+'.csv';a.click()}
 function fdownload(){if(!flast)return;const url=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});
   const a=document.createElement('a');a.href=url;a.download=flast.title.replace(/[^\w]+/g,'_')+'.png';a.click()}
 $('fgo').onclick=frender;$('fdl').onclick=fdownload;$('fcsv').onclick=fcsv;
-['fmetric','fperiod','ftype','fcolor','fwm'].forEach(id=>$(id).onchange=frender);
+['fmetric','fmetric2','faxis2','fperiod','ftype','fcolor','fwm'].forEach(id=>$(id).onchange=frender);
 
 // ---------- Heatmap mode: market-cap treemap colored by % change (/api/heatmap, logos via /api/logo proxy) ----------
 let hlast=null,HSEQ=0,HFRESH=false;const LOGO={};
@@ -1384,7 +1416,7 @@ $('ptdl').onclick=()=>{if(MODE!=='pt'||!PTDOC)return;ptdraw();const a=document.c
 window.__ptdraw=ptdraw;
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf','ptwm'];
+const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','raxis','ftickers','fnames','fmetric','fmetric2','faxis2','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf','ptwm'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);if(!e)continue;f[id]=e.type==='checkbox'?e.checked:e.value}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();if(MODE==='prices')o.ann=ANN.map(a=>({date:a.date,label:a.label,note:a.note||''}));return o}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
