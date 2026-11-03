@@ -433,7 +433,7 @@ async function collectMarkers(type,syms,p){p.earnErr='';p.earnCount=0;p.earnFetc
   if(type==='bar'||type==='bardd')return [];
   const out=[];
   for(const a of ANN){if(!a||!a.date||!a.label)continue;const ts=Date.parse(String(a.date)+'T00:00:00Z');if(isNaN(ts))continue;
-    out.push({date:a.date,ts,label:String(a.label).slice(0,24),note:String(a.note||'').slice(0,80),kind:'custom'})}
+    out.push({date:a.date,ts,label:String(a.label).slice(0,48),note:String(a.note||'').slice(0,80),kind:'custom'})}
   return out.filter(m=>!isNaN(m.ts))}
 function fmtVol(v){const a=Math.abs(v);return a>=1e12?(v/1e12).toFixed(1)+'T':a>=1e9?(v/1e9).toFixed(a>=1e10?0:1)+'B':a>=1e6?(v/1e6).toFixed(a>=1e7?0:1)+'M':a>=1e3?(v/1e3).toFixed(0)+'K':String(Math.round(v))}
 // Candle mode picks a Yahoo interval whose bars stay wide on the 1600px canvas. Price line does not use this.
@@ -555,14 +555,13 @@ function attachMarkers(o,data,p){
   for(const m of snapped.sort((a,b)=>a.ts-b.ts)){const g=groups.length&&groups.at(-1).ts===m.ts?groups.at(-1):null;
     if(g){g.items.push(m);g.kind=g.kind===m.kind?m.kind:'custom'}else groups.push({ts:m.ts,items:[m],kind:m.kind})}
   const t0=times[0],span=Math.max(1,times.at(-1)-t0);
-  for(const g of groups)g.text=g.items.map(m=>m.label).join(' · ').replace(/[{}]/g,'').slice(0,36);
+  for(const g of groups)g.text=g.items.map(m=>m.label).join(' · ').replace(/[{}]/g,'').slice(0,72);
   // horizontal labels: stagger rows by estimated pixel extent so close markers don't overlap
-  const PW=1300,occ=[];
+  const PW=Math.max(480,(chart.getWidth()||1600)*0.8),occ=[];
   for(const g of groups){const f=cat?times.indexOf(g.ts)/Math.max(1,times.length-1):(g.ts-t0)/span,px=f*PW,w=g.text.length*7.2+18;
-    g.right=f>0.84;const a=g.right?px-w:px,b=g.right?px:px+w;let row=0;
+    g.right=px+w>PW&&px-w>=0;const a=g.right?px-w:px,b=g.right?px:px+w;let row=0;
     while(row<5&&(occ[row]||[]).some(([x,y])=>a<y+6&&b>x-6))row++;if(row>4)row=4;(occ[row]=occ[row]||[]).push([a,b]);g.row=row}
   for(const g of groups){
-    g.text=g.items.map(m=>m.label).join(' · ').replace(/[{}]/g,'').slice(0,36);
     g.note=g.items.map(m=>m.note?m.label+(m.note?': '+m.note:''):'').filter(Boolean).join(' · ')}
   const ser=(o.series||[]).find(s=>s.type==='candlestick')||(o.series||[]).find(s=>s.type==='line'&&s.lineStyle&&s.lineStyle.width!==0);
   if(!ser)return;
@@ -628,7 +627,7 @@ window.addEventListener('scroll',()=>{if(!$('smaMenu').hidden)smaPlace()},true);
 ['ftickers','ftitle','fy1','fy2'].forEach(id=>$(id)&&$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();frender()}}));$('dl').onclick=download;
 ['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase'].forEach(id=>$(id).onchange=()=>{syncPriceUi();render()});
 $('tickers').addEventListener('input',()=>{const n=priceSyms().length;if(n!==1&&$('type').value==='candle')$('status').textContent='Candles + volume needs one ticker.';syncPriceUi()});
-function annAdd(date,label,note=''){label=String(label||'').trim().slice(0,24);note=String(note||'').trim().slice(0,80);
+function annAdd(date,label,note=''){label=String(label||'').trim().slice(0,48);note=String(note||'').trim().slice(0,80);
   if(!date||!label)return;
   ANN=ANN.filter(a=>!(a.date===date&&a.label===label));ANN.push({date,label,note});ANN.sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:0);
   if(ANN.length>40)ANN=ANN.slice(-40);annsave();if(MODE==='prices')render()}
@@ -657,7 +656,7 @@ $('chart').addEventListener('contextmenu',e=>{if(MODE!=='prices'||!last)return;c
   const r=$('chart').getBoundingClientRect(),sn=ctxSnap(e.clientX-r.left,e.clientY-r.top);if(!sn)return;const d=sn.date;ctxHit=sn.hit;$('ctxDel').hidden=ctxHit<0;if(ctxHit>=0)$('ctxDel').textContent='Delete annotation \u201c'+ANN[ctxHit].label+'\u201d';
   e.preventDefault();chart.dispatchAction({type:'hideTip'});ctxDateVal=d;$('ctxDate').textContent=new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
   ctxMenu.hidden=false;ctxTipCss.textContent='#chart>div:not(:first-child){visibility:hidden!important}';ctxMenu.style.left=Math.min(e.clientX,innerWidth-190)+'px';ctxMenu.style.top=Math.min(e.clientY,innerHeight-80)+'px'});
-function ctxAddAnn(){ctxHide();const label=(prompt('Annotation label for '+ctxDateVal+' (max 24 characters)','')||'').trim();if(!label)return;
+function ctxAddAnn(){ctxHide();const label=(prompt('Annotation label for '+ctxDateVal+' (max 48 characters)','')||'').trim();if(!label)return;
   annAdd(ctxDateVal,label)}
 function ctxDelAnn(){ctxHide();if(ctxHit<0||!ANN[ctxHit])return;ANN.splice(ctxHit,1);ctxHit=-1;annsave();if(MODE==='prices')render()}
 $('ctxDel').onclick=ctxDelAnn;$('ctxDel').addEventListener('keydown',e=>{if(e.key==='Enter')ctxDelAnn()});
@@ -1473,7 +1472,7 @@ $('wlpick').onchange=()=>{const p=$('wlpick'),v=p.value,id=WLIN[MODE];p.value=''
   $(id).value=x.wl.join(',');if(MODE==='heat')$('huni').value='custom';if(MODE==='prices'&&$('names'))$('names').value='';if(MODE==='fin'&&$('fnames'))$('fnames').value='';if(MODE==='val'&&$('vnames'))$('vnames').value='';rerender()};
 const WMID={prices:'wm',fin:'fwm',heat:'hwm',tre:'twm',val:'vwm',watch:'wwm',sent:'swm',pt:'ptwm'};
 function vapply(x){const m=vmode(x),own=VOWN[m];if(m==='prices'){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';$('ddbase').value='range';
-  ANN=(Array.isArray(x.ann)?x.ann:[]).filter(a=>a&&a.date&&a.label).slice(0,40).map(a=>({date:String(a.date),label:String(a.label).slice(0,24),note:String(a.note||'').slice(0,80)}));annsave()}
+  ANN=(Array.isArray(x.ann)?x.ann:[]).filter(a=>a&&a.date&&a.label).slice(0,40).map(a=>({date:String(a.date),label:String(a.label).slice(0,48),note:String(a.note||'').slice(0,80)}));annsave()}
   // Watermark defaults off. A view that omits the field keeps that default; an explicit true/false still wins.
   if(WMID[m])$(WMID[m]).checked=false;
   for(const [id,val] of Object.entries(x.fields||{})){if(id!=='theme'&&!own.test(id))continue;const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
