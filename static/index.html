@@ -137,13 +137,11 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 </div>
 <div id="actl">
 <label title="Vertical event lines on the shared time axis. Off for bar charts. Saved with the Prices view."><input id="annOn" type="checkbox"> Annotations</label>
-<label title="Yahoo gives the last 4 reported quarters plus the next date for the first ticker. Older dates: add a custom marker. Crypto usually has none."><input id="annEarn" type="checkbox" checked> Earnings <span id="annEarnWho" style="color:#6B7280"></span></label>
-<label title="The four historical Bitcoin halvings (2012, 2016, 2020, 2024). Shared timeline, not tied to one series."><input id="annHalf" type="checkbox"> Halvings</label>
 <label>Date <input id="annDate" type="date"></label>
 <label>Label <input id="annLabel" size="14" maxlength="24" placeholder="e.g. ETF approval"></label>
 <label>Note <input id="annNote" size="18" maxlength="80" placeholder="optional, hover only"></label>
 <button id="annAdd" type="button">Add marker</button>
-<span id="annHint" style="color:#6B7280">Shared time axis. Earnings use the first ticker.</span>
+<span id="annHint" style="color:#6B7280">Shared time axis.</span>
 <div id="annList"></div>
 </div>
 <div id="status"></div>
@@ -442,22 +440,13 @@ function syncPriceUi(){syncCustomDates();smaSummary();const n=priceSyms().length
   const opt=[...$('type').options].find(o=>o.value==='candle');if(opt)opt.disabled=n!==1;
   $('ctypeNote').textContent=t==='candle'?'One ticker · volume below':n!==1?'Candles need one ticker':'';
   $('actl').style.opacity=bar?'0.45':'1';
-  const who=(priceSyms()[0]||'').toUpperCase();$('annEarnWho').textContent=who?'('+who+')':'';
   const hid=ANN.length&&!$('annOn').checked&&!bar;
-  $('annHint').textContent=(bar?'Annotations stay off on bar charts. ':(hid?ANN.length+' custom marker'+(ANN.length>1?'s':'')+' hidden — tick Annotations. ':''))+'Shared time axis. Earnings use the first ticker.'}
+  $('annHint').textContent=(bar?'Annotations stay off on bar charts. ':(hid?ANN.length+' custom marker'+(ANN.length>1?'s':'')+' hidden — tick Annotations. ':''))+'Shared time axis.'}
 function qLabel(e){const q=e.quarter&&e.quarter!=='Earn'&&e.quarter!=='Next'?e.quarter:'';const yy=e.date&&e.date.length>=4?" '"+e.date.slice(2,4):'';
   if(q)return q+yy;return e.upcoming?'Next earn':'Earn'}
 async function collectMarkers(type,syms,p){p.earnErr='';p.earnCount=0;p.earnFetched=false;p.drawnMarkers=0;p.earnDrawn=0;
   if(type==='bar'||type==='bardd'||!$('annOn').checked)return [];
   const out=[];
-  if($('annHalf').checked)for(const h of HALVINGS)out.push({date:h.date,ts:Date.parse(h.date+'T00:00:00Z'),label:h.label,note:h.note,kind:'halving'});
-  if($('annEarn').checked&&syms[0]){p.earnFetched=true;
-    try{const r=await fetch('/api/earnings?symbol='+encodeURIComponent(syms[0]),{cache:'no-store'});const j=await r.json();
-      if(!r.ok||j.error)p.earnErr=(j&&j.error)||('HTTP '+r.status);
-      const ev=Array.isArray(j.events)?j.events:[];p.earnCount=ev.length;const multi=syms.length>1,pre=syms[0].replace(/-USD$/,'');
-      for(const e of ev){if(!e||!e.date)continue;const ts=Date.parse(e.date+'T00:00:00Z');if(isNaN(ts))continue;
-        out.push({date:e.date,ts,label:(multi?pre+' ':'')+qLabel(e),note:e.note||'',kind:'earn'})}}
-    catch(e){p.earnErr=e.message||'fetch failed'}}
   for(const a of ANN){if(!a||!a.date||!a.label)continue;const ts=Date.parse(String(a.date)+'T00:00:00Z');if(isNaN(ts))continue;
     out.push({date:a.date,ts,label:String(a.label).slice(0,24),note:String(a.note||'').slice(0,80),kind:'custom'})}
   return out.filter(m=>!isNaN(m.ts))}
@@ -646,7 +635,7 @@ window.addEventListener('resize',()=>{if(!$('smaMenu').hidden)smaPlace()});
 window.addEventListener('scroll',()=>{if(!$('smaMenu').hidden)smaPlace()},true);
 ['tickers','title','start','end','smac'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();renderFresh()}}));
 ['ftickers','ftitle','fy1','fy2'].forEach(id=>$(id)&&$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();frender()}}));$('dl').onclick=download;
-['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf'].forEach(id=>$(id).onchange=()=>{syncPriceUi();render()});
+['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn'].forEach(id=>$(id).onchange=()=>{syncPriceUi();render()});
 $('tickers').addEventListener('input',()=>{const n=priceSyms().length;if(n!==1&&$('type').value==='candle')$('status').textContent='Candles + volume needs one ticker.';syncPriceUi()});
 function annAdd(){const date=$('annDate').value,label=$('annLabel').value.trim().slice(0,24),note=$('annNote').value.trim().slice(0,80);
   if(!date||!label){$('status').className='';$('status').textContent='A marker needs a date and a short label.';return}
@@ -1415,7 +1404,7 @@ $('ptdl').onclick=()=>{if(MODE!=='pt'||!PTDOC)return;ptdraw();const a=document.c
 window.__ptdraw=ptdraw;
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fmetric2','faxis2','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf','ptwm'];
+const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fmetric2','faxis2','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','ptwm'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);if(!e)continue;f[id]=e.type==='checkbox'?e.checked:e.value}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();if(MODE==='prices')o.ann=ANN.map(a=>({date:a.date,label:a.label,note:a.note||''}));return o}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
@@ -1423,7 +1412,7 @@ let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
 const VMODES=['prices','fin','heat','tre','val','watch','sent','pt'];
 const vmode=x=>VMODES.includes(x&&x.mode)?x.mode:'prices';
 // Fields each tab owns; applying a view only touches its own tab's fields (+ theme), so other tabs are left alone.
-const VOWN={sent:/^(sview|shist|sprice|stickers|stitle|swm)$/,watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase|annOn|annEarn|annHalf)$/,pt:/^ptwm$/};
+const VOWN={sent:/^(sview|shist|sprice|stickers|stitle|swm)$/,watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase|annOn)$/,pt:/^ptwm$/};
 // Session-only memory of each tab's selected view: a page load/refresh always starts every tab at "— pick a view —".
 const VLASTM={};try{localStorage.removeItem(VLAST)}catch(e){}
 function vremember(name){if(name)VLASTM[MODE]=name;else delete VLASTM[MODE]}
@@ -1462,7 +1451,7 @@ $('wlpick').onchange=()=>{const p=$('wlpick'),v=p.value,id=WLIN[MODE];p.value=''
   $(id).value=x.wl.join(',');if(MODE==='heat')$('huni').value='custom';if(MODE==='prices'&&$('names'))$('names').value='';if(MODE==='fin'&&$('fnames'))$('fnames').value='';if(MODE==='val'&&$('vnames'))$('vnames').value='';rerender()};
 const WMID={prices:'wm',fin:'fwm',heat:'hwm',tre:'twm',val:'vwm',watch:'wwm',sent:'swm',pt:'ptwm'};
 function vapply(x){const m=vmode(x),own=VOWN[m];if(m==='prices'){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';$('ddbase').value='range';
-  $('annOn').checked=false;$('annHalf').checked=false;$('annEarn').checked=true;
+  $('annOn').checked=false;
   ANN=(Array.isArray(x.ann)?x.ann:[]).filter(a=>a&&a.date&&a.label).slice(0,40).map(a=>({date:String(a.date),label:String(a.label).slice(0,24),note:String(a.note||'').slice(0,80)}));annsave()}
   // Watermark defaults off. A view that omits the field keeps that default; an explicit true/false still wins.
   if(WMID[m])$(WMID[m]).checked=false;
