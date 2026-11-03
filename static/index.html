@@ -121,7 +121,6 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label id="typebox">Type<span class="type-line"><select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="candle">Candles + volume</option><option value="bar">Bar ranking % return</option><option value="bardd">Bar ranking % drawdown</option><option value="ratio">Ratio A priced in B</option><option value="drawdown">Drawdown from peak</option></select><span id="ctypeNote"></span></span></label>
 <label id="ddbox" title="Drawdown = % below the running high of daily closes">Peak from<select id="ddbase"><option value="range">Start of range</option><option value="ath">All-time high (full history)</option></select></label>
 <label>Title<input id="title" size="34" placeholder="auto"></label>
-<label id="raxbox" title="Price line with two tickers: give the 2nd ticker its own right-hand axis (e.g. MSTR vs BTC)"><span>2nd ticker right axis</span><input id="raxis" type="checkbox"></label>
 <label>Line color<select id="color"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
 <label><span>Watermark</span><input id="wm" type="checkbox"></label>
 <div id="smabox" title="Simple moving averages of daily closes. Price line and candles, not intraday bars."><span>SMA</span>
@@ -441,7 +440,7 @@ function priceSyms(){return $('tickers').value.split(',').map(s=>s.trim()).filte
 function syncPriceUi(){smaSummary();const n=priceSyms().length,t=$('type').value,bar=t==='bar'||t==='bardd';
   const opt=[...$('type').options].find(o=>o.value==='candle');if(opt)opt.disabled=n!==1;
   $('ctypeNote').textContent=t==='candle'?'One ticker · volume below':n!==1?'Candles need one ticker':'';
-  $('actl').style.opacity=bar?'0.45':'1';$('raxbox').style.opacity=t==='line'&&n===2?'1':'0.4';
+  $('actl').style.opacity=bar?'0.45':'1';
   const who=(priceSyms()[0]||'').toUpperCase();$('annEarnWho').textContent=who?'('+who+')':'';
   const hid=ANN.length&&!$('annOn').checked&&!bar;
   $('annHint').textContent=(bar?'Annotations stay off on bar charts. ':(hid?ANN.length+' custom marker'+(ANN.length>1?'s':'')+' hidden — tick Annotations. ':''))+'Shared time axis. Earnings use the first ticker.'}
@@ -608,12 +607,7 @@ function attachMarkers(o,data,p){
 function marked(o,data,p){if(p.markers&&p.markers.length)attachMarkers(o,data,p);return o}
 function buildOpt(type,data,title,p){
   const o=base(title), c=colors(data.length);
-  if(type==='line'){const o2=lineOpt(o,data.map((d,i)=>({label:d.label,color:c[i%c.length],data:d.points,smas:d.smas})),fmtNum);
-    if($('raxis').checked&&data.length===2){const L=o2.yAxis;o2.yAxis=[{...L,axisLabel:{...L.axisLabel,color:bc(c[0])}},{type:'value',scale:true,position:'right',axisLabel:{...axLabel,inside:true,margin:16,formatter:fmtNum,color:bc(c[1])},splitLine:{show:false}}];
-      o2.series.forEach(s=>{if(s.name===data[1].label||s.name.startsWith(data[1].label+' '))s.yAxisIndex=1});
-      o2.legend={top:80,left:60,icon:'roundRect',itemWidth:18,itemHeight:4,textStyle:{fontSize:16,color:T.text}};
-      o2.legend.formatter=n=>n===data[0].label?n+' (left axis)':n===data[1].label?n+' (right axis)':n;o2.grid.top=Math.max(o2.grid.top||0,130)}
-    return marked(o2,data,p)}
+  if(type==='line')return marked(lineOpt(o,data.map((d,i)=>({label:d.label,color:c[i%c.length],data:d.points,smas:d.smas})),fmtNum),data,p);
   if(type==='pct'){const s=data.map((d,i)=>{const b=p.r==='1D'&&d.chartPreviousClose?(d.prevClose||d.chartPreviousClose):d.points[0][1];return{label:d.label,color:c[i%c.length],data:d.points.map(q=>[q[0],(q[1]/b-1)*100])}});
     const o2=lineOpt(o,s,v=>pct(v)); o2.yAxis.scale=false; return marked(o2,data,p)}
   if(type==='drawdown')return marked(ddOpt(o,data,c,p),data,p);
@@ -651,7 +645,7 @@ window.addEventListener('resize',()=>{if(!$('smaMenu').hidden)smaPlace()});
 window.addEventListener('scroll',()=>{if(!$('smaMenu').hidden)smaPlace()},true);
 ['tickers','title','start','end','smac'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();renderFresh()}}));
 ['ftickers','ftitle','fy1','fy2'].forEach(id=>$(id)&&$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();frender()}}));$('dl').onclick=download;
-['range','type','color','wm','raxis','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf'].forEach(id=>$(id).onchange=()=>{syncPriceUi();render()});
+['range','type','color','wm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf'].forEach(id=>$(id).onchange=()=>{syncPriceUi();render()});
 $('tickers').addEventListener('input',()=>{const n=priceSyms().length;if(n!==1&&$('type').value==='candle')$('status').textContent='Candles + volume needs one ticker.';syncPriceUi()});
 function annAdd(){const date=$('annDate').value,label=$('annLabel').value.trim().slice(0,24),note=$('annNote').value.trim().slice(0,80);
   if(!date||!label){$('status').className='';$('status').textContent='A marker needs a date and a short label.';return}
@@ -1416,7 +1410,7 @@ $('ptdl').onclick=()=>{if(MODE!=='pt'||!PTDOC)return;ptdraw();const a=document.c
 window.__ptdraw=ptdraw;
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','raxis','ftickers','fnames','fmetric','fmetric2','faxis2','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf','ptwm'];
+const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fmetric2','faxis2','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','annOn','annEarn','annHalf','ptwm'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);if(!e)continue;f[id]=e.type==='checkbox'?e.checked:e.value}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();if(MODE==='prices')o.ann=ANN.map(a=>({date:a.date,label:a.label,note:a.note||''}));return o}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
