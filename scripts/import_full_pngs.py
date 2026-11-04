@@ -45,11 +45,21 @@ import sheets_catalog
 import sheets_thumbs
 
 PNG_MAGIC = b"\x89PNG\r\n\x1a\n"
-FULL_REL = re.compile(r"^sheets/full/([A-Za-z0-9][A-Za-z0-9_-]{0,24})/(\d+)\.png$")
+FULL_REL = re.compile(r"^sheets/full/([A-Za-z0-9][A-Za-z0-9_-]{0,24})/(\d+)(?:_([2-9]|[1-9]\d))?\.png$")
+# The export names extra charts on a tab "<tab> (2).png", "<tab> (3).png", ... (before any date).
+CHART_SUFFIX = re.compile(r"\s+\((\d{1,2})\)(?=(?:\s+\d{4}-\d{2}-\d{2})?\.png$)", re.I)
 
 
-def dest_for(repo, book, gid):
-    rel = "sheets/full/%s/%d.png" % (book, int(gid))
+def split_chart_n(name):
+    """Return (name without ' (n)', n). n is 1 when there is no suffix."""
+    m = CHART_SUFFIX.search(name)
+    if not m or int(m.group(1)) < 2:
+        return name, 1
+    return name[:m.start()] + name[m.end():], int(m.group(1))
+
+
+def dest_for(repo, book, gid, n=1):
+    rel = "sheets/full/%s/%d%s.png" % (book, int(gid), "" if int(n) <= 1 else "_%d" % int(n))
     if not FULL_REL.fullmatch(rel):
         raise SystemExit("refusing unsafe path " + rel)
     root = os.path.realpath(os.path.join(repo, "static", "sheets", "full"))
@@ -146,7 +156,9 @@ def collect(dirs):
 
 def publish(repo, chosen, unmatched, ambiguous, optimize_png, dry):
     n = 0
-    for (book, gid), cands in sorted(chosen.items(), key=lambda kv: (kv[0][0], kv[0][1])):
+    for key, cands in sorted(chosen.items(), key=lambda kv: kv[0]):
+        book, gid = key[0], key[1]
+        cn = key[2] if len(key) > 2 else 1
         src = cands[0]["path"]
         data = open(src, "rb").read()
         if not data.startswith(PNG_MAGIC):
@@ -161,7 +173,7 @@ def publish(repo, chosen, unmatched, ambiguous, optimize_png, dry):
                 print("skip %s (%s)" % (src, e))
                 unmatched.append(src)
                 continue
-        path, rel = dest_for(repo, book, gid)
+        path, rel = dest_for(repo, book, gid, cn)
         if dry:
             print("match %s  %s  <= %s  (%s)" % (cands[0]["how"], rel, os.path.basename(src), tool))
         else:
@@ -184,7 +196,17 @@ def run(repo, dirs, optimize_png, dry):
     doc, _path = sheets_thumbs.load_catalog(repo)
     books, tabs = doc.get("books") or [], doc.get("tabs") or []
     files, skipped = collect(dirs)
-    chosen, unmatched, ambiguous = sheets_thumbs.match_files(files, books, tabs) if files else ({}, [], [])
+    groups = {}
+    for f in files:
+        base, n = split_chart_n(f["name"])
+        groups.setdefault(n, []).append(dict(f, name=base))
+    chosen, unmatched, ambiguous = {}, [], []
+    for n, group in sorted(groups.items()):
+        c, u, a = sheets_thumbs.match_files(group, books, tabs)
+        for (book, gid), cands in c.items():
+            chosen[(book, gid, n)] = cands
+        unmatched += list(u)
+        ambiguous += list(a)
     unmatched = list(unmatched) + skipped
     return publish(repo, chosen, unmatched, ambiguous, optimize_png, dry)
 
@@ -262,6 +284,10 @@ def self_test():
     finally:
         shutil.rmtree(repo, ignore_errors=True)
         shutil.rmtree(src, ignore_errors=True)
+    assert split_chart_n("STRC Volume (3).png") == ("STRC Volume.png", 3)
+    assert split_chart_n("013 BTC cost basis by holder (2) 2026-11-09.png") == ("013 BTC cost basis by holder 2026-11-09.png", 2)
+    assert split_chart_n("STRC Volume.png") == ("STRC Volume.png", 1)
+    assert FULL_REL.fullmatch("sheets/full/bot3/1770358701_4.png") and not FULL_REL.fullmatch("sheets/full/bot3/1_1.png")
     print("self-test ok")
 
 
