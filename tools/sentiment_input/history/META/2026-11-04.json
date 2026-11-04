@@ -1,0 +1,859 @@
+{
+ "symbol": "META",
+ "start": "2026-10-28T12:00:00Z",
+ "end": "2026-11-04T12:00:00Z",
+ "src": "x-rolling7",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "META (stock OR shares OR Zuckerberg) -is:retweet -is:reply lang:en",
+  "META (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FloodTakes",
+   "url": "https://x.com/FloodTakes/status/2117039526761889846",
+   "date": "2026-11-01",
+   "text": "Oct. 21, 2026: Meta filed a new Class C stock plan. Mark Zuckerberg can \"immediately sell or transfer up to 20%\" of those shares \"for any reason, including so that he may pay his potential tax liability under California Proposition 40.\"\n\nA whole new class of stock, and the filing https://t.co/8U2A95ZqgM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 33,
+   "user": "OwenGregorian",
+   "url": "https://x.com/OwenGregorian/status/2116886110127169837",
+   "date": "2026-11-01",
+   "text": "Meta CEO Mark Zuckerberg Threatens to Leave California if Wealth Tax Passes | Lucas Nolan, Breitbart\n\nMeta disclosed this week that CEO Mark Zuckerberg could leave California if voters approve a billionaire wealth tax this November, prompting the company to offer him a financial https://t.co/6SBsfag8VL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "aniriddha",
+   "url": "https://x.com/aniriddha/status/2117361105974788419",
+   "date": "2026-11-02",
+   "text": "Meta announced its first stock offering since 2013, worth $95B.\n\nAbout $60B comes from newly created nonvoting shares.\n\nThe structure lets Mark Zuckerberg raise cash without diluting his control.\n\nThe money funds its AI buildout.\n\nhttps://t.co/bRjPDLVaPl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "Law360",
+   "url": "https://x.com/Law360/status/2117444152765927602",
+   "date": "2026-11-03",
+   "text": "The Delaware Chancery Court allowed a stockholder claim over R1 RCM's $8.9 billion buyout to proceed, while Meta investors sued to block a stock restructuring they say would let Mark Zuckerberg sell billions of dollars in shares without giving up control of the company. https://t.co/NR4OZY7Sua"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "delarosaseqaqx",
+   "url": "https://x.com/delarosaseqaqx/status/2116129925619224588",
+   "date": "2026-10-30",
+   "text": "Meta is going all in on AI, planning to raise up to $95B through stock sales. The company expects $135B–$145B in 2026 capital spending, while Nvidia, AMD, and Broadcom may buy up to $5B in Meta shares. Is Zuckerberg overspending on AI? https://t.co/jMc1ULyKHq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2116226922846044397",
+   "date": "2026-10-30",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $BTC — Binance Hacked: CFTC Chair Says Blockchain Gives ‘A Very Good Shot’ At Tracing Stolen Funds\n🟢 15% Bullish · 🔴 85% Bearish\n🔗 https://t.co/0tFuuDrVhc\n\n2. $BNB — Mark Zuckerberg Meta AI Predicts a Wild BNB Price Amid Ongoing Binance Hack\n🟢 20%"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "SavaSavvich",
+   "url": "https://x.com/SavaSavvich/status/2115496368756425038",
+   "date": "2026-10-28",
+   "text": "Mark Zuckerberg $meta had been sued by a pension fund seeking to block a share restructuring, shares class C, that would allow him to sell billions of dollars in stock while maintaining control of the social media company."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DrAStriegel",
+   "url": "https://x.com/DrAStriegel/status/2115512876454813909",
+   "date": "2026-10-28",
+   "text": "Meta will create non-voting shares so Mark Zuckerberg can sell stock to pay California's proposed one-time 5% billionaire tax without losing control. In return, he commits to living in California for eight years. Voters decide on Proposition 40 on Nov. 3.\n\nhttps://t.co/Pa54pny132"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "YL9104",
+   "url": "https://x.com/YL9104/status/2115790768837464262",
+   "date": "2026-10-29",
+   "text": "Zuckerberg is raising $95 billion to build AI. Huang just bought $3 billion of it — the chipmaker funding its own customer.\n\nMeta's first tranche, about $35 billion, closes today: $25 billion of common stock at $625 a share plus $12.5 billion of depositary shares. Nvidia is"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Vesper7786",
+   "url": "https://x.com/Vesper7786/status/2115419582576136612",
+   "date": "2026-10-28",
+   "text": "Mark Zuckerberg insists Meta's investments are paying off, but Wall Street just got hit with the bill. Meta shares dropped 11% over the past week as investors digested a massive reality check on artificial intelligence spending. While third quarter revenue rose 26% to $64.6 https://t.co/q0j5YAjgJV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TaxLadyT",
+   "url": "https://x.com/TaxLadyT/status/2117362019590639682",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/pXhVK4gBgf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Atg_Advisors",
+   "url": "https://x.com/Atg_Advisors/status/2117362002779934910",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/e2fsoJyCTc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "KameikaJohnson",
+   "url": "https://x.com/KameikaJohnson/status/2117361951399711173",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/FbfUNWHYge"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "atpulsehq",
+   "url": "https://x.com/atpulsehq/status/2116871382646612442",
+   "date": "2026-11-01",
+   "text": "Anthropic says its Claude Mythos 5 tried to slip malware into a real open-source project during a UK AI Security Institute test. When a developer pushed back, it made up a persona to vouch for the code. https://t.co/iYkeQuLcvZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "gcataxcom",
+   "url": "https://x.com/gcataxcom/status/2117362018021945835",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/sF3v7rG3HY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JCCPA",
+   "url": "https://x.com/JCCPA/status/2117361991627211259",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/kqyzVXuV2g"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "npllpcpa",
+   "url": "https://x.com/npllpcpa/status/2117361984522125518",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/KpbMYcCrZO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BMRLLP",
+   "url": "https://x.com/BMRLLP/status/2117361955786912191",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/5dckzFNheV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ahliles",
+   "url": "https://x.com/ahliles/status/2117361929723469958",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/Fkb0GbMXTl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RobSDTP",
+   "url": "https://x.com/RobSDTP/status/2117361919313199313",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/uUdUBX70Qm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "tarrafcpa",
+   "url": "https://x.com/tarrafcpa/status/2117362022648369197",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/KwrP7inFvD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AYBSolutions",
+   "url": "https://x.com/AYBSolutions/status/2117361998816293100",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/XUX6USoBj5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Ibrahim60586180",
+   "url": "https://x.com/Ibrahim60586180/status/2117361958634848601",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/VH4m1OQ3A2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Shanli85",
+   "url": "https://x.com/Shanli85/status/2117362014733627631",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/OdL5Nf5YXq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "aactax",
+   "url": "https://x.com/aactax/status/2117361963470881063",
+   "date": "2026-11-02",
+   "text": "Meta is creating non-voting shares that could help Mark Zuckerberg pay a proposed California billionaire tax while retaining control of the company.\n\nhttps://t.co/AdsTWu902h"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "mikekarnj",
+   "url": "https://x.com/mikekarnj/status/2115417267433340942",
+   "date": "2026-10-28",
+   "text": "Meta is raising $97.5B in stock to pay for AI.\n\n- $25B of common at $625/share, about 5x oversubscribed\n- $12.5B of convertible preferred at a 6.5% dividend\n- Up to $60B more in new non-voting shares starting 2027\n- Nvidia put in $3B, AMD $1B\n- Last quarter: ~$34B of capex vs."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Aaron_Harme",
+   "url": "https://x.com/Aaron_Harme/status/2115419570705985559",
+   "date": "2026-10-28",
+   "text": "Jio Platforms offered only a small slice of itself in India's largest IPO, so a $78 billion order book, counting the large funds that committed before the sale opened, chased very few shares, and the stock rose 21.5% on its first day.\n\nInstitutions bid 70.55 times the shares set https://t.co/ODtfyjxBCy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 75,
+   "user": "skygecko_",
+   "url": "https://x.com/skygecko_/status/2115418330542547162",
+   "date": "2026-10-28",
+   "text": "10 Fortune 500 giants I'd like to see bring their stocks onchain, and why ⤵️\n\n1. Berkshire Hathaway\nIts high priced Class A shares make fractional ownership an obvious use case. Tokenization could make access more flexible.\n\n2. Apple\nA global investor base deserves better access https://t.co/3cmDmfpxEE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "nextbrief",
+   "url": "https://x.com/nextbrief/status/2115418879652471048",
+   "date": "2026-10-28",
+   "text": "🇺🇸 Meta and Snap go on trial in Los Angeles today, accused of designing addictive apps that harmed two teens' mental health.\n\nIt's only the second trial of its kind, after a March verdict of $6M against social media firms. Zuckerberg is expected to testify. #Meta\n\nvia Reuters https://t.co/8EqRbuUex0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RocketTerminal",
+   "url": "https://x.com/RocketTerminal/status/2115413279254491204",
+   "date": "2026-10-28",
+   "text": "NVIDIA $NVDA AND META $META ARE DOUBLING DOWN ON AI AGENTS 🤖\n\nJensen Huang says “AI agents represent a new computing paradigm” as NVIDIA expands its partnership with Meta to power Muse agents for billions of users.\n\nThe goal? Mark Zuckerberg wants Muse to generate more revenue https://t.co/u8xjfab2wp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "dailythen",
+   "url": "https://x.com/dailythen/status/2115413772299100311",
+   "date": "2026-10-28",
+   "text": "Facebook changed its corporate name to Meta on October 28, 2021 (5 years ago today).\n\nMark Zuckerberg unveiled the rebrand as the company bet heavily on the metaverse, virtual reality and immersive digital worlds. Facebook, Instagram and WhatsApp kept their individual names. https://t.co/MmR3op7Ksk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 44,
+   "user": "feelgoodtale",
+   "url": "https://x.com/feelgoodtale/status/2115414023911120935",
+   "date": "2026-10-28",
+   "text": "Mark Zuckerberg laid off 1400 people in Seattle a few days ago.\nAnd the same day he cut these jobs, his enormous yacht arrived in Seattle as well. The massive 300-million-dollar vessel reminds the world that, yes, Zuckerberg is a pretty bad person. Because bringing that yacht https://t.co/jKSgfBiOBp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "MatterFactAI",
+   "url": "https://x.com/MatterFactAI/status/2115417298039099436",
+   "date": "2026-10-28",
+   "text": "For fifteen years the deal online was simple: you post, the platforms sell ads next to it. This week two of the biggest quietly rewrote their side of it, and the podcasts spent the week working out who pays now.\n\nAt Meta Connect, hosts on The Best One Yet described Zuckerberg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FINANCIERNEWS",
+   "url": "https://x.com/FINANCIERNEWS/status/2115416892835766507",
+   "date": "2026-10-28",
+   "text": "Jio Platforms Shares Surge 21% on Trading Debut After $3.2 Billion Record IPO, Backed by Meta and Google, in India's Largest-Ever Listing $META #Earnings #AI https://t.co/SXDnYYdBqN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "HernanCMO",
+   "url": "https://x.com/HernanCMO/status/2115414049706180933",
+   "date": "2026-10-28",
+   "text": "Stop dropping new ads into ad sets that are already running.\n⠀\nMeta is momentum based. The old ads already have data so they eat the budget, and your new creative never gets a fair shot.\n⠀\nLaunch new creatives in a NEW ad set inside your testing campaign. Fresh ad set, fair"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "YPProj",
+   "url": "https://x.com/YPProj/status/2115413722709860681",
+   "date": "2026-10-28",
+   "text": "Meta just sold $25B of new stock, ~5x oversubscribed, to fund AI data centers. If you own an index fund, your slice just got smaller. Not financial advice. Sources: Bloomberg, Reuters, Meta Q3 (as of Oct 27, 2026) https://t.co/jyiEomMhBw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "InsiderWatchAI",
+   "url": "https://x.com/InsiderWatchAI/status/2115418382363218257",
+   "date": "2026-10-28",
+   "text": "Meta has increased its planned stock offering to fund AI infrastructure, and AMD will take $1 billion of it. This follows the Nvidia $3 billion investment we already flagged; what is new is the larger raise and AMD's participation.\n\nExposed: $META and Advanced Micro Devices. https://t.co/EGXBWjO87q"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "WallStMonk",
+   "url": "https://x.com/WallStMonk/status/2115415330407559531",
+   "date": "2026-10-28",
+   "text": "🙏 $AMD is no longer the spare chip at Meta.\nHelios racks are installed and being tested at Meta, EPYC powers the Muse agent, and the pair already has a GPU deal worth up to 6 gigawatts.\nThe stock answered with +5.2% Tuesday.\nSo the second supplier moved in."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "X_Lee_Mi",
+   "url": "https://x.com/X_Lee_Mi/status/2115413414361407826",
+   "date": "2026-10-28",
+   "text": "Meta stock slid ~20% from highs while planning huge AI spend + a massive equity raise.\n\nPlain English:\n• Earnings can look strong and the stock still falls\n• Markets are pricing dilution + capex risk now\n• “AI bet” ≠ automatic upside for shareholders\n\nIf you invest or build:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "DanielsalomaoB",
+   "url": "https://x.com/DanielsalomaoB/status/2115415787859022010",
+   "date": "2026-10-28",
+   "text": "$META: after 4 consecutive daily declines, the stock is near its 61.8% Fibonacci retracement (~$622) and has filled September’s upside gap. An area to watch on the daily chart, but no confirmed reversal yet. Not investment advice. https://t.co/MQCua3sLAv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "7wData",
+   "url": "https://x.com/7wData/status/2115413423726940577",
+   "date": "2026-10-28",
+   "text": "Anthropic's S-1 shows two customers pay a quarter of its revenue. (Reuters 2026)\n\nI think that cuts both ways: Meta sold $95B in stock the same week.\n\nWhat's in your AI vendor contract?\n\nThe daily read on AI and data: https://t.co/GBWgGyFdIp https://t.co/IiGyy2IByl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "biconnections",
+   "url": "https://x.com/biconnections/status/2115413511140520411",
+   "date": "2026-10-28",
+   "text": "Anthropic's S-1 shows two customers pay a quarter of its revenue. (Reuters 2026)\n\nI think that cuts both ways: Meta sold $95B in stock the same week.\n\nWhat's in your AI vendor contract?\n\nThe daily read on AI and data: https://t.co/ZkqOsjRlYL https://t.co/9XxMuPAvNu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "YvesMulkers",
+   "url": "https://x.com/YvesMulkers/status/2115413499329360012",
+   "date": "2026-10-28",
+   "text": "Anthropic's S-1 shows two customers pay a quarter of its revenue. (Reuters 2026)\n\nI think that cuts both ways: Meta sold $95B in stock the same week.\n\nWhat's in your AI vendor contract?\n\nThe daily read on AI and data: https://t.co/6aKLFu8fAc https://t.co/q70Mora9gr"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "chasers24k",
+   "url": "https://x.com/chasers24k/status/2115418822064660916",
+   "date": "2026-10-28",
+   "text": "nvidia's last 48 hours:\n\n→ google TPUs coming to oracle cloud, first time outside google\n→ openai reportedly buying TPUs outright\n→ meta raising up to $97.5B in stock to pay for compute\n\nthe moat was never just the chip. it was being the only thing you could buy. that's"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "piman7555",
+   "url": "https://x.com/piman7555/status/2115414007884759137",
+   "date": "2026-10-28",
+   "text": "📅 Daily Brief (EN) — Oct 28, 2026\nGlobal AI, education and markets, plus Korea news that rarely makes it into English.\n\n🌍 Global\n1. Anthropic opens Claude to US state and local governments at 40% off\nAn expanded deal with the GSA, the federal purchasing agency, covers Claude https://t.co/fAWpqr2vqe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 65,
+   "user": "1inch",
+   "url": "https://x.com/1inch/status/2115416997290779010",
+   "date": "2026-10-28",
+   "text": "The challenge isn’t finding RWAs anymore. \n\nIt’s giving users seamless access across chains and issuers. https://t.co/ujZraGz4dz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "AnotherCodingX",
+   "url": "https://x.com/AnotherCodingX/status/2115414032920494229",
+   "date": "2026-10-28",
+   "text": "An internal Claude model chained exploits across Chrome, Safari, Android, Windows and Linux, DeepMind introduced Genie 4, OpenAI confidentially filed a draft S-1 and launched CodexMax, and SK Hynix posted a record quarter on AI memory. Another day in AI. https://t.co/etqfPJ6vPW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "frodomodo1",
+   "url": "https://x.com/frodomodo1/status/2116058772464337317",
+   "date": "2026-10-30",
+   "text": "Macro Observatory Week 44 Friday Briefing\n\nThursday’s telemetry delivered the precise mechanical execution anticipated by Wednesday's ceiling strikes, with the Macro Lower-high ceilings snapping shut, unleashing a liquidation cascade across big tech, physical commodities, and the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "surfer_ai",
+   "url": "https://x.com/surfer_ai/status/2115448576323002642",
+   "date": "2026-10-28",
+   "text": "Which setups have actual room to run today?  NFA and it is FOMC.  Probably just watch today🎯📊\n\nRan my \"Expansion Delta Gap\" scan this morning with FINN (EZPZ Trading’s AI connector for TradingView). \n\nTHE RULES:\n1️⃣ Proximity: Within 1.0% of 0D Gamma Flip or VWAP\n2️⃣ Alignment:"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116612419539906986",
+   "date": "2026-10-31",
+   "text": "Why Traders Choose Our Content and Community! \nJoin us at: https://t.co/uFgJFwj3IQ\nhttps://t.co/YEh1cCTH9m\n\n$XLE $OXY $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116570465909285006",
+   "date": "2026-10-31",
+   "text": "New Video! \nBearish Engulfing - Where is the proof?!\nhttps://t.co/SctIDwRY92\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116354218193830372",
+   "date": "2026-10-31",
+   "text": "Why Traders Choose Our Content and Community! \nJoin us at: https://t.co/uFgJFwivTi\n\nhttps://t.co/YEh1cCT9jO\n\n$XLE $OXY $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116643969757237471",
+   "date": "2026-10-31",
+   "text": "Why Traders Choose Our Content and Community!\nJoin us at: \nhttps://t.co/Vgi3TdVNT6\n\n$XLE $OXY $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116373847666524407",
+   "date": "2026-10-31",
+   "text": "Trading Like Beginner Vs Trading Like a Pro\nJoin us actionable trade alerts at:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116571027899904387",
+   "date": "2026-10-31",
+   "text": "Why Traders Choose Our Content and Community! \nCome join us! \nhttps://t.co/uFgJFwj3IQ\n\nhttps://t.co/YEh1cCTH9m\n\n$XLE $OXY $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116634595387117895",
+   "date": "2026-10-31",
+   "text": "New Video! Bearish Engulfing - Where is the proof?!\nhttps://t.co/2NI1R5aEYh\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116363026211238133",
+   "date": "2026-10-31",
+   "text": "Live Walkthrough Silver! \nhttps://t.co/yVkE0gfszc\nWant to be a part of a trading community?\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116357238185169246",
+   "date": "2026-10-31",
+   "text": "Live Walkthrough Gold!\nhttps://t.co/ZfXoE0Ekwx\n\nWant to be a part of a trading community?\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116381648921223230",
+   "date": "2026-10-31",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8HeJG\n\nJoin our supported trading community at:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116614684782784964",
+   "date": "2026-10-31",
+   "text": "New Video!\nS&amp;P 500 vs Gold\nhttps://t.co/TW2k1Z258W\nWant to learn the mindset in a supported community?\nJoin us at: https://t.co/uFgJFwj3IQ\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116569587206767014",
+   "date": "2026-10-31",
+   "text": "New Video!\nS&amp;P 500 vs Gold\nhttps://t.co/TW2k1Z258W\nWant to learn the mindset in a supported community?\nJoin us at: https://t.co/uFgJFwj3IQ\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116365796008186288",
+   "date": "2026-10-31",
+   "text": "The Dragonfly Doji\nhttps://t.co/7vdAH4oMrz\n\nJoin us, where ever trade is tracked so you can learn how it's done at:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116582220639146467",
+   "date": "2026-10-31",
+   "text": "Why Traders Choose Our Content and Community!\nJoin us at: https://t.co/uFgJFwj3IQ\n\nhttps://t.co/Vgi3TdVNT6\n$XLE $OXY $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116643800647111024",
+   "date": "2026-10-31",
+   "text": "Why Traders Choose Our Content and Community!\nJoin us at: https://t.co/uFgJFwj3IQ\n\nhttps://t.co/Vgi3TdVNT6\n$XLE $OXY $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116644030897598953",
+   "date": "2026-10-31",
+   "text": "New! The Bullish Hammer Breakdown!\n60-70%+ Success rate when parried with confluence signals.\nThe Setup is easy to find and easy to trade.\nYou have the video at: https://t.co/LtDQE4GOB3\nYou have a real chart found within the last 2 years.\n\n$XLE $OXY $QQQ $SPY $DIA $XLF $XBI $GLD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116706288159834176",
+   "date": "2026-11-01",
+   "text": "New Video!\nBearish Engulfing - Where is the proof?!\nhttps://t.co/SctIDwRY92\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116336350513463530",
+   "date": "2026-10-31",
+   "text": "Why Traders Choose Our Content and Community!\nJoin us at: https://t.co/uFgJFwj3IQ\n\nhttps://t.co/FLhnTJ5xBc\n\nhttps://t.co/Vgi3TdVNT6\n$XLE $OXY $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116579388913484035",
+   "date": "2026-10-31",
+   "text": "New Video!\nThe Bullish Hammer Candlestick:\n60-70%+ Success rate when parried with confluence signals.\nThe Setup is easy to find and easy to trade.\nYou have the video at: https://t.co/LtDQE4GOB3\nYou have a real chart found within the last 2 years.\n\n$XLE $OXY $QQQ $SPY $DIA $XLF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116706791539032198",
+   "date": "2026-11-01",
+   "text": "Bearish Engulfing - Where is the proof?!\nhttps://t.co/2NI1R5a78J\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwivTi\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116643582471991777",
+   "date": "2026-10-31",
+   "text": "New Video! Inside Bars and how to read them.\nhttps://t.co/2HIQUtx1YW\n\nJoin us, where ever trade is tracked so you can learn how it's done at:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116345410189242385",
+   "date": "2026-10-31",
+   "text": "#Copper Weekly Chart Live Walkthrough\nhttps://t.co/GorwSlRQ02\nWant help finding the setup, want to see how to create an edge join us at: \nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2116968767817195695",
+   "date": "2026-11-01",
+   "text": "Bearish Engulfing - Where is the proof?!\nhttps://t.co/2NI1R5a78J\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwivTi\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115438182414094341",
+   "date": "2026-10-28",
+   "text": "The Dragonfly Doji\nhttps://t.co/7vdAH4oeC1\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115447493597253914",
+   "date": "2026-10-28",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8HeJG\n\nJoin us for more:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto #PriceAction"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115434910915699034",
+   "date": "2026-10-28",
+   "text": "Trading Like Beginner Vs Trading Like a Pro\nhttps://t.co/naJmNAHUgT\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Nigellamb",
+   "url": "https://x.com/Nigellamb/status/2115426126118146536",
+   "date": "2026-10-28",
+   "text": "🚨 TUESDAY WATCHLIST: THE AI TRADE ISN'T OUT OF THE WOODS YET.\n\nMarkets are heading into a critical earnings and Fed week. Oil is easing, but investors still want proof that massive AI spending can deliver real returns.\n\nHere's my watchlist:\n\n🤖 $NVDA — Last close: $216.00\n📈"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "KimizqSmile",
+   "url": "https://x.com/KimizqSmile/status/2115442274272457116",
+   "date": "2026-10-28",
+   "text": "Big Tech is heading into a critical earnings window. 👀Here’s what I’m watching:\n$NVDA — AI expectations remain sky-high. \n$GOOGL — Can cloud growth and AI spending deliver? $AAPL — Trading near highs leaves little room for disappointment. \n$META — Closer to its long-term trend, https://t.co/egMrSo1lSH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Pynvestment",
+   "url": "https://x.com/Pynvestment/status/2115429316624355583",
+   "date": "2026-10-28",
+   "text": "🚨Scan Golden Cross (50vs200)\n \nBullish (days, change)\nPG (2, -0.4%)\nMETA (22, -16.1%)\nCRM (43, -5.8%)\nPLTR (49, +17.2%)\nMSFT (58, +4.7%)\n\nBearish (days, change)\nGE (2, +3.2%)\nGOOG (2, +0.8%)\nGS (2, +2.1%)\nKLAC (2, +3.0%)\nCAT (7, -3.6%)"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "HyperTracker",
+   "url": "https://x.com/HyperTracker/status/2115444058386522554",
+   "date": "2026-10-28",
+   "text": "Happy FOMC Day.\n\nIn the last 24h, unprofitable wallets on Hyperliquid have been opening new longs, while profitable wallets have been flat/slightly more short.\n\nAs of today, the Highest OI is on bitcoin:native, the most Bullish asset is $AAPL, and the most bearish is $META https://t.co/nk9hC0sa9A"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "genzcashlog",
+   "url": "https://x.com/genzcashlog/status/2115421070757167520",
+   "date": "2026-10-28",
+   "text": "🧵 This week in $SPCX (Oct 20–28): Q3 blowout, $40B GPU financing, Tesla merger chatter, Starlink geopolitics, EasyJet Wi-Fi, 80k cell sites, India retail access &amp; a wave of analyst PT hikes. Quick list + takeaway 👇\n\n1/ India retail: Groww, Zerodha (beta) &amp; Angel One are opening https://t.co/2BFiLj3gyl"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "spxsignals1",
+   "url": "https://x.com/spxsignals1/status/2115423254336979281",
+   "date": "2026-10-28",
+   "text": "📊 $SPX SUPPORT &amp; RESISTANCE LEVELS 📈\n\n🔴 Current Price: 7,722.60\n\n🟢 SUPPORT LEVELS\n▪️ 7,707.38 — Minor Support\n🟡 7,665.98 — Major Support\n\n🔴 RESISTANCE LEVELS\n▪️ 7,749.34 — Minor Resistance\n🟡 7,787.85 — Major Resistance\n\n📈 BULLISH SCENARIO: A confirmed breakout above https://t.co/vppCTLqin4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "luckswaminathan",
+   "url": "https://x.com/luckswaminathan/status/2115445435573629223",
+   "date": "2026-10-28",
+   "text": "takes on instinct @ 30B\n\nbull: consumer agents are primarily a product, meaning its possible for any company to win with suboptimal models. its all about distribution and momentum\n\nbear: instinct is competing with the best product company of all time\n\nbear: monetizing will be"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2115428375799939396",
+   "date": "2026-10-28",
+   "text": "Live Walkthrough Gold Oct. 26th\nhttps://t.co/6EfJV7dT82\n\nJoin us for more:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver #crypto"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 51,
+   "user": "luckswaminathan",
+   "url": "https://x.com/luckswaminathan/status/2115446085879488809",
+   "date": "2026-10-28",
+   "text": "takes on instinct @ 30B\n\nbull: consumer agents are primarily a product, meaning its possible for any company to win with suboptimal models. its all about distribution and momentum\n\nbear: instinct is competing against both the best product company of all time and the best model"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "1_xiaoa_0",
+   "url": "https://x.com/1_xiaoa_0/status/2115420062366797940",
+   "date": "2026-10-28",
+   "text": "Big Tech Q3 earnings week is here ($TSLA $GOOGL $MSFT $META $AMZN $AAPL).\n\nStop spending 3 hours reading 50-page 10-Qs, and stop asking AI for a generic \"summary\"—press releases only show what management wants you to see.\n\nInstead, I built a \"Wall Street Forensic Analyst\" Prompt. https://t.co/ldg7C3gFMh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "dustintroy23",
+   "url": "https://x.com/dustintroy23/status/2115437284694847626",
+   "date": "2026-10-28",
+   "text": "Let's be honest:\n\nEvery 10x stock looked overvalued at some point.\n\n$AMZN (1999): \"Amazon.bomb\"\n$GOOGL (2004): \"Overpriced IPO\"\n$NFLX (2010): \"Bubble P/E\"\n$META (2012): \"$104B? Absurd.\"\n$TSLA (2013–2019): \"Going bankrupt\"\n$NVDA (2016): \"Just a gaming chip company\""
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "LiteProfitLab",
+   "url": "https://x.com/LiteProfitLab/status/2115435895289430254",
+   "date": "2026-10-28",
+   "text": "📊 DAILY WATCHLIST | 10/28/26 ⚡\n\n$QQQ — Hold $724: $725 / $727+ | Reject: $722 / $720 / $718\n\n$SPY — Hold $771: $773 / $775 | Reject: downside\n\n$NVDA — Reject $220: $217.50 / $215 | Break above: $222.50\n\n$META — Reject $623: $620 | Break above: $630+\n\n$AAPL — Reject $347: $345 /"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Joelbodker",
+   "url": "https://x.com/Joelbodker/status/2115444415393157576",
+   "date": "2026-10-28",
+   "text": "$META 615P 11/20/2026 ∘ $𝟓.𝟒𝐌 𝐁𝐞𝐚𝐫𝐢𝐬𝐡 𝐏𝐫𝐞𝐦𝐢𝐮𝐦\ndata @_marketmono https://t.co/rugdgr1BXt"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "fidget_flow",
+   "url": "https://x.com/fidget_flow/status/2115446776824209841",
+   "date": "2026-10-28",
+   "text": "$1.76M bought in $META $630 puts exp Jan 2027, filled at/above ask at 9:30 AM ET — a single 7-figure print. Stock at $622.68 — at the money.\n\nMETA tide as of 10:10 AM ET: puts net bought $18.1M, calls net sold $7.9M — hard bearish. This buy rides with that tide. https://t.co/BD5Vj6cKt0"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "bent801trade",
+   "url": "https://x.com/bent801trade/status/2115438553312162184",
+   "date": "2026-10-28",
+   "text": "Bearish on #META today just waiting for a good setup\n\nWith #DELL having a ton of momentum yesterday I think it could go a bit higher maybe past the 50 day SMA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 105,
+   "user": "LongGameEquity",
+   "url": "https://x.com/LongGameEquity/status/2115439944336314583",
+   "date": "2026-10-28",
+   "text": "$META DOWN FROM $780 TO $620. Am I annoyed or panicking? Absolutely not.\n\nMy fair value is $1,100. I trust Zuck. Meta is already proving it can monetize AI through its core business.\n\nYes, the planned $95B capital raise is a risk, and dilution matters. But I believe the long-term https://t.co/RDrFADxZyK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "OnchainIns5699",
+   "url": "https://x.com/OnchainIns5699/status/2115435100716335597",
+   "date": "2026-10-28",
+   "text": "The quarterly cash flow from long-term debt for Meta, Amazon, Oracle, Alphabet, SpaceX and CoreWeave has surged to its highest levels in the chart's history, peaking near $140B in the latest quarter, while five-year CDS spreads on Oracle, SpaceX and other hyperscalers are at or https://t.co/bHGwH8if8F"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "jumpingjunebugg",
+   "url": "https://x.com/jumpingjunebugg/status/2115426926697574840",
+   "date": "2026-10-28",
+   "text": "Pre-market Decision-making\n\n$META: Meta is under pressure, so I’d wait for buyers to step in and confirm a recovery before considering an entry.\n\n$CRWV: CoreWeave is showing strong momentum, but I’d be cautious about chasing a sharp move given its financing and execution risks."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "OptionKing666",
+   "url": "https://x.com/OptionKing666/status/2115444897763266658",
+   "date": "2026-10-28",
+   "text": "Celestica ($CLS) raised its FY27 revenue guidance to $40B, reflecting 90% YoY growth that accelerates more than 20 percentage points above its FY26 rate on surging demand from hyperscalers and frontier AI labs. The revised target follows a strong Q3 with revenue reaching $5.8B"
+  }
+ ]
+}

@@ -1,0 +1,246 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-11-03T00:00:00Z",
+ "end": "2026-11-04T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "42traders",
+   "url": "https://x.com/42traders/status/2117735161286541771",
+   "date": "2026-11-03",
+   "text": "📊 ethereum:0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c / SP500 | DAILY OUTLOOK | Wednesday, November 4, 2026 | MIDTERM ELECTION RESULTS – ELEVATED EVENT RISK 🚨\n\nFollowing the US Midterm Elections, SP500 enters Wednesday with a broadly supportive positioning structure, but https://t.co/5JQhGi06g2"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2117741477254304009",
+   "date": "2026-11-03",
+   "text": "🚨 ETHEREUM WARNING: IS THE MARKET SETTING A MASSIVE BEAR TRAP? 🐻🔥\n\n$ETH is showing something VERY interesting on the 1D timeframe, and I believe many retail traders could get trapped here! 👀\n\n📉 ETH has broken below the 200 EMA on the daily chart. This is a serious technical https://t.co/wj0QInN65T"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TheRingGroup",
+   "url": "https://x.com/TheRingGroup/status/2117714436257390594",
+   "date": "2026-11-03",
+   "text": "#RINGRepost 📬\n\n🎤 @BitQua states “Why did bitcoin:native drop only 7% after the largest #crypto exchange hack ever recorded, outperforming non-crypto assets? Because #Bitcoin is in a bull market, currently in its “bottoming range” phase.” The attached chart is a long-term https://t.co/c3E3QMnbtd"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "TheRingGroup",
+   "url": "https://x.com/TheRingGroup/status/2117714581384499363",
+   "date": "2026-11-03",
+   "text": "#RINGRepost 📬\n\n🎤 @BitQua states “Why did bitcoin:native drop only 7% after the largest #crypto exchange hack ever recorded, outperforming non-crypto assets? Because #Bitcoin is in a bull market, currently in its “bottoming range” phase.” The attached chart is a long-term https://t.co/c3E3QMnbtd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "signalcorevip",
+   "url": "https://x.com/signalcorevip/status/2117633018265272534",
+   "date": "2026-11-03",
+   "text": "📊 24H Market Analysis @ November 3, 2026\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nThe dominant price action narrative indicates a market under significant institutional selling pressure, masked by minor intra-day upticks.\n\nDespite BTC and ETH showing slight"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "hercules69x",
+   "url": "https://x.com/hercules69x/status/2117480107824889912",
+   "date": "2026-11-03",
+   "text": "⚠️ ETHEREUM PRICE ALERT: BEARS TARGET $2,196! 📉\nEthereum (ethereum:native) is struggling to regain bullish momentum, currently trading around $2,256 on the 30-minute chart. Sellers remain active, and another downside move is possible.\n\n📊 Key Levels to Watch:\n\n🔵 Current Price: https://t.co/1vyPAfzazS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 77,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2117447131632140642",
+   "date": "2026-11-03",
+   "text": "Bitcoin has lost support as stocks sell off. Will crypto's recovery survive a deeper TradFi slide? I weigh SPX's confirmed TBO open short against October's stronger PMI and a rising slow line. I'm still leaning toward a broader recovery, but that longer-term outlook doesn't erase https://t.co/ARFEFvTE6X"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "hercules69x",
+   "url": "https://x.com/hercules69x/status/2117469157633523741",
+   "date": "2026-11-03",
+   "text": "🔥 GOLD (XAUUSD): BULLISH RECOVERY SETUP – $4,025 NEXT? 📈\n\nGold is showing signs of a potential bullish rebound on the 30-minute chart after finding support near the $3,930 zone.\n\n📊 Key Levels to Watch:\n\n🟢 Resistance 1: $4,005\n🟢 Resistance 2: $4,025\n🔵 Key Support: $3,930\n🔴 https://t.co/060zUCGZ8S"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 33,
+   "user": "Crypto__Enjoyer",
+   "url": "https://x.com/Crypto__Enjoyer/status/2117551573186293942",
+   "date": "2026-11-03",
+   "text": "🚨 https://t.co/QdiaPnpZzM (ethereum:0xaea46a60368a7bd060eec7df8cba43b7ef41ad85 )— MARKET UPDATE! 📉🤖\n\nFET has dropped towards $0.154, losing around 4% in the last 24 hours.\n\nOur previously discussed accumulation zone of $0.145–$0.155 has now been reached! 🎯\n\n📊 Key levels to"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2117590096727744532",
+   "date": "2026-11-03",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $ETH — Tom Lee Sees a Bull Market in the Binance Hack. Stablecoin Data Disagrees\n🟢 40% Bullish · 🔴 60% Bearish\n🔗 https://t.co/wsbSCPlkCm\n\n2. $ETH — ETHGas wants to bring Wall Street to public Ethereum by selling advance block reservations\n🟢 75%"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ainotesus",
+   "url": "https://x.com/ainotesus/status/2117625461677170989",
+   "date": "2026-11-03",
+   "text": "Daily crypto corner 🟢 bullish\nBitcoin faces a downside sweep before the post-midterm rebound many expect.\n\n🟢 Ivan on Tech — Sees fear and liquidations as a bull-trend shakeout, with oil turning supportive.\n🟡 Crypto Banter — Expects a downside flush first, then trades a"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TheDonH91",
+   "url": "https://x.com/TheDonH91/status/2117719553127976981",
+   "date": "2026-11-03",
+   "text": "📊 CYCLE NAVIGATOR #32\nNovember 2–8, 2026\n\n🎯 LAST WEEK | CN #31\n\n✅ Price range coverage: 100% (8/8)\n📐 Weighted precision: 81.17%\nPrevious week: 82.72%\n\nBTC: 81.03% | ETH: 81.31%\n\nThe precision score includes both weekly and intraday ranges.\n\nWEEKLY FORECAST → ACTUAL\n\nBTC: https://t.co/KOXvH6uFRO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117514130416624126",
+   "date": "2026-11-03",
+   "text": "ethereum:0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3 — ONDO FINANCE\n\nEveryone is talking about $LINK, $AAVE, and the trillion-dollar RWA opportunity.\n\nBut one project already has approximately $3.19 BILLION in tracked real-world asset AUM.\n\nOver 470 tokenized assets.\n\nAnd roughly https://t.co/B5qH8TXbaE"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "TheRingGroup",
+   "url": "https://x.com/TheRingGroup/status/2117707118165786955",
+   "date": "2026-11-03",
+   "text": "#RINGRepost 📬\n\n🎤 @1000xgirl posts “#ALTCOINS ALTSEASON 2026 IS REAL 🤑 BULL RUN HAS STARTED 🐂🔥🚀” alongside a chart of Altcoins Market Cap showing historical massive falling wedge patterns, a confirmed bullish breakout with upward trajectory arrow, and an inset “VERY #Bullish https://t.co/w3VMZMp93F"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2117473324129571139",
+   "date": "2026-11-03",
+   "text": "ethereum:0x6c6ee5e31d828de241282b9606c8e98ea48526e2 — Holo 🔥\n⠀\n$77M MARKET CAP.\n⠀\n177.6 BILLION HOT IN CIRCULATION.\n⠀\nAND HOLOFUEL JUST WENT LIVE.\n⠀\nAfter years of development, Holo reached a major milestone on November 1, 2026.\n⠀\nHoloFuel is now available, allowing users https://t.co/CYHeuGhbrd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "AlphaLensCrypto",
+   "url": "https://x.com/AlphaLensCrypto/status/2117608332416463028",
+   "date": "2026-11-03",
+   "text": "📊 THE CRYPTO EDGE | DAILY MARKET BRIEF\n📅 November 3, 2026\n\n🚨 US MIDTERMS IN 24H &amp; $73K 200-DMA \"ALL-IN\" ZONE: IS $83K SHORT SQUEEZE NEXT? 🚨\nBitcoin is retesting key weekly spring-point support ahead of US Midterm elections and Middle East tensions, setting up a final https://t.co/KVL7GO0muY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Rina_BingX",
+   "url": "https://x.com/Rina_BingX/status/2117554687734165569",
+   "date": "2026-11-03",
+   "text": "📉 Crypto Market Overview (Nov.3) \nPrice Action, Macro, Fund Flows, Today's Key Points 🍂 \n\n■ Bitcoin, Ethereum, Hyperliquid, Altcoin Sentiment \n\n🟠 BTC: Currently 76,874 USDT, down ~1.6% on the day. Broke below 80,000 overnight and dipped as low as 76,354, now consolidating in https://t.co/10xlai8zBq https://t.co/SzhWkbj7KR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 218,
+   "user": "cryptoklotz",
+   "url": "https://x.com/cryptoklotz/status/2117629869416644888",
+   "date": "2026-11-03",
+   "text": "it's worth noting\n\nevery cycle, near the bottom of the bear,\n\nthere's a period of time where the threat to crypto *feels* existential, in a credible way.\n\ni don't think it's a real bear market, nor do we get a real bull market, until something like this flushes out \"tourists\" (as https://t.co/B6FoIoE5MG"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2117501019546693725",
+   "date": "2026-11-03",
+   "text": "$ETH / USDT – 4H\n\nEthereum is forming a textbook Head &amp; Shoulders pattern 👀 Bearish momentum is building as sellers continue to pressure the neckline around $2,300.\n\nA breakdown below neckline support could accelerate downside momentum, with a potential target near $1,800 📉🔥 https://t.co/L2XExLpswM"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "armandhull90",
+   "url": "https://x.com/armandhull90/status/2117491815037407499",
+   "date": "2026-11-03",
+   "text": "Good morning #Asia ☀️ $ETH.X remains bearish below 2,526.6, with wave (iv) likely complete and the downside sequence still unfolding.\n\n🎯 Near-term targets: 2,215 → 2,260-2,270 rebound → 2,170\n\nMore at 🔗 https://t.co/iEDUlSnzdq\n\n#ETH #Ethereum #Crypto #ElliottWave #Trading https://t.co/tU69nJmdhA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TIQCrypto",
+   "url": "https://x.com/TIQCrypto/status/2117407688980312324",
+   "date": "2026-11-03",
+   "text": "Daily Close: 2026-11-02 BTC -1.94%\n\nMarket overview: On the daily close of 2026-11-02 (00:00 UTC), overall market breadth remained very weak as only 53 out of 259 liquid USDT pairs closed green, representing roughly 20% of the market. Top daily gainers were led by ARIA up 36.4%, https://t.co/cWhTqicObX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2117546025002913936",
+   "date": "2026-11-03",
+   "text": "ethereum:0xa3eb7a9e57fca4e40b79e394ed5eb37fed205a24 / USDT – 1D\n\nethereum:0xa3eb7a9e57fca4e40b79e394ed5eb37fed205a24 is trading inside a clear Rectangle Pattern 👀, with price repeatedly bouncing between the $0.9980 support and $1.0000 resistance zone.\n\nBuyers and sellers are https://t.co/7Qml9RHtW7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "jaypaul",
+   "url": "https://x.com/jaypaul/status/2117673742000103497",
+   "date": "2026-11-03",
+   "text": "Saying you're bullish on Ethereum but bearish on ethereum:native  is the same as saying, \"I'm bullish on Earth but bearish on water.\""
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2117620887243370794",
+   "date": "2026-11-03",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $XAU — As markets sway, safe havens shine. Except gold: McGeever\n🟢 35% Bullish · 🔴 65% Bearish\n🔗 https://t.co/1asrsiOoLu\n\n2. $ETH — Ethereum Layer 2 Aztec gets Tierra V6 upgrade to support faster private apps\n🟢 75% Bullish · 🔴 25% Bearish\n🔗"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 29,
+   "user": "thecryptobasic",
+   "url": "https://x.com/thecryptobasic/status/2117555642659434828",
+   "date": "2026-11-03",
+   "text": "Analyst ZenTrades Warns #Cardano ( $ADA) Could Fall to $0.1537 as Downtrend Continues.\n\nZenTrades warns that Cardano could fall further after losing 21% in October and dropping below $0.20. When he published his analysis, ADA was trading at $0.1925. His chart identified $0.1894"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "selenasui12",
+   "url": "https://x.com/selenasui12/status/2117406797233533028",
+   "date": "2026-11-03",
+   "text": "Today's market snapshot places Bitcoin firmly on top, trading at $76,707.  \n\nEthereum sits at $2,249 (-1.04%), USDT $0.999 (-0.05%), BNB $698 (-1.93%), and Solana $91.83 (-2.76%).  \n\nOverall, the top ten remain stable, but the week‑trend hints at modest downside pressure. https://t.co/MMnl02XEuH"
+  }
+ ]
+}
