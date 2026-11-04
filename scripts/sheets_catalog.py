@@ -100,6 +100,16 @@ def chart_titles(sheet):
         if len(out) >= 6: break
     return out
 
+def chart_list(sheet):
+    """Every chart in sheet order: [{"n": 1, "title": ...}]. n matches the PNG export's (n) suffix."""
+    out = []
+    for i, ch in enumerate(sheet.get("charts") or [], 1):
+        spec = ch.get("spec") or {}
+        title = spec.get("title") if isinstance(spec, dict) else ""
+        if isinstance(title, dict): title = title.get("text") or ""
+        out.append({"n": i, "title": " ".join(str(title or "").split())})
+    return out
+
 def one(doc):
     sid = str(doc.get("spreadsheetId") or "").strip()
     if not sid: sys.exit("dump is missing spreadsheetId")
@@ -116,7 +126,7 @@ def one(doc):
         title = str(p.get("title") or "").strip()
         gid = p.get("sheetId")
         if not title or gid is None: continue
-        row = {"book": bid, "tab": title, "gid": int(gid), "charts": chart_titles(s)}
+        row = {"book": bid, "tab": title, "gid": int(gid), "charts": chart_titles(s), "chartList": chart_list(s)}
         tabs.append(row)
     return {"id": bid, "name": name, "spreadsheetId": sid,
             "url": f"https://docs.google.com/spreadsheets/d/{sid}/edit"}, tabs, hidden
