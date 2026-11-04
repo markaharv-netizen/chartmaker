@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-03T13:55:13Z",
+  "generated": "2026-11-04T14:44:47Z",
   "seeded": false,
   "title": "Steve's DCF Base Case vs Street Consensus vs Price",
   "subtitleNote": "Base now includes probability-weighted future bets",
@@ -9,7 +9,7 @@
     "buyAbove": 0.15,
     "sellBelow": -0.15
   },
-  "consensusLabel": "mean analyst target (StockAnalysis, Oct 21) · mean analyst target (StockAnalysis, Oct 30) · mean analyst target (StockAnalysis, Nov 2)",
+  "consensusLabel": "mean analyst target (StockAnalysis, Oct 21) · mean analyst target (StockAnalysis, Oct 30) · mean analyst target (StockAnalysis, Nov 2) · mean analyst target (StockAnalysis, Nov 3)",
   "priceLabel": "Oct 21, 2026 close; Oct 29, 2026 close; Nov 2, 2026 close",
   "source": {
     "name": "DCF price target summary",
@@ -40,7 +40,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 74.11,
-      "previousDetail": "Prev Base $74.11 -> $128.42 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans",
+      "previousDetail": "Prev Base $74.11 -> $128.42 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans",
       "why": "Even with AI bets, price high"
     },
     {
@@ -63,7 +63,7 @@
       "baseChangedAt": "2026-11-02",
       "fromZero": false,
       "previousBase": 70.46,
-      "previousDetail": "Prev Base $70.46 (Bear $4.24, Bull $153.59, SELL) at Nov 1, 2026 v6 FSD price update -> $297.79 (Bear $4.24, Bull $513.12, SELL) at Nov 1, 2026 v7 ARK robotaxi fleet (Mark's assumption); unchanged in Nov 2 scan",
+      "previousDetail": "Prev Base $70.46 (Bear $4.24, Bull $153.59, SELL) at Nov 1, 2026 v6 FSD price update -> $297.79 (Bear $4.24, Bull $513.12, SELL) at Nov 1, 2026 v7 ARK robotaxi fleet (Mark's assumption); unchanged in Nov 2 and Nov 4 scans",
       "why": "Far above bet-adjusted value"
     },
     {
@@ -86,7 +86,7 @@
       "baseChangedAt": "2026-10-30",
       "fromZero": false,
       "previousBase": 153.35,
-      "previousDetail": "Prev Base $153.35 (Bear $89.76, Bull $266.37, HOLD) at Oct 22, 2026 future-bets update -> $149.42 (Bear $86.95, Bull $272.11, HOLD) at Oct 30, 2026 Q3 earnings refresh; drop mostly from lower BTC and MSTR prices; unchanged in Nov 2 scan",
+      "previousDetail": "Prev Base $153.35 (Bear $89.76, Bull $266.37, HOLD) at Oct 22, 2026 future-bets update -> $149.42 (Bear $86.95, Bull $272.11, HOLD) at Oct 30, 2026 Q3 earnings refresh; drop mostly from lower BTC and MSTR prices; unchanged in Nov 2 and Nov 4 scans (Nov 4: Q3 10-Q filed Nov 2, 9M Historicals H14:I25 filled; valuation unchanged)",
       "why": "Bets priced in; at fair value"
     },
     {
@@ -109,7 +109,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 181.81,
-      "previousDetail": "Prev Base $181.81 -> $189.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans",
+      "previousDetail": "Prev Base $181.81 -> $189.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans",
       "why": "Just inside HOLD band"
     },
     {
@@ -132,7 +132,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": true,
       "previousBase": 0.0,
-      "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans",
+      "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans",
       "why": "Debt still exceeds core EV"
     },
     {
@@ -155,7 +155,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 842.81,
-      "previousDetail": "Prev Base $842.81 -> $860.87 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans",
+      "previousDetail": "Prev Base $842.81 -> $860.87 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans",
       "why": "HBM upside mostly priced in"
     },
     {
@@ -178,7 +178,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 657.7,
-      "previousDetail": "Prev Base $657.70 -> $687.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans (Oct 30: $37.5B equity raise noted, not yet booked; est. -$1.93/sh; Nov 2: S&P 2027 capex forecast >$225B noted, capex not changed pending Q4 guide)",
+      "previousDetail": "Prev Base $657.70 -> $687.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans (Oct 30: $37.5B equity raise noted, not yet booked; est. -$1.93/sh; Nov 2: S&P 2027 capex forecast >$225B noted, capex not changed pending Q4 guide; Nov 4: $15.0B senior notes 5.85-7.53% priced Nov 3, cash/debt neutral)",
       "why": "Bets priced in; near fair value"
     },
     {
@@ -201,7 +201,7 @@
       "baseChangedAt": "2026-11-03",
       "fromZero": false,
       "previousBase": 15.47,
-      "previousDetail": "Prev Base $15.47 (Bear $6.33, Bull $25.33, SELL) at Oct 22, 2026 future-bets update -> $21.02 (Bear $6.60, Bull $35.33, SELL) at Nov 2, 2026 v3 rebuild",
+      "previousDetail": "Prev Base $15.47 (Bear $6.33, Bull $25.33, SELL) at Oct 22, 2026 future-bets update -> $21.02 (Bear $6.60, Bull $35.33, SELL) at Nov 2, 2026 v3 rebuild; unchanged in Nov 4 scan",
       "why": "Far above bet-adjusted value"
     },
     {
@@ -224,8 +224,77 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 7.2,
-      "previousDetail": "Prev Base $7.20 -> $24.98 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans",
+      "previousDetail": "Prev Base $7.20 -> $24.98 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans",
       "why": "Needs full constellation"
+    },
+    {
+      "ticker": "ASST",
+      "base": 18.26,
+      "bear": 1.4,
+      "bull": 69.52,
+      "rating": "HOLD",
+      "consensus": 41.0,
+      "analysts": 5,
+      "consensusSource": "StockAnalysis (S&P Global), fetched Nov 3, 2026",
+      "price": 20.8,
+      "priceAsOf": "Nov 2, 2026 close, 4:00 PM ET (Yahoo Finance)",
+      "baseVsPrice": -0.122,
+      "consensusVsPrice": 0.971,
+      "baseVsConsensus": -0.555,
+      "notes": "Nov 3 v1 initial full model: forward Base = core $18.97 - $0.71 probability-weighted bets; Bull core $67.09 + $2.43; Bear no bets. BTC-treasury NAV roll-forward to 2030 (43,124 BTC, SATA $1.40B + SATS $0.70B prefs at stated value, ke 16.76%); bets: mNAV 1.5x, pref issuance $2B/yr, BTC bear downside. Doc 1LU4lki4I3serDsSiXKptH7ua2Iu3ztpfyJMOqwc6BQo",
+      "baseChange": null,
+      "baseChangePct": null,
+      "baseChangedAt": null,
+      "fromZero": false,
+      "previousBase": null,
+      "previousDetail": "New model added Nov 3, 2026 (v1); no previous update",
+      "why": "Price 12% above Base"
+    },
+    {
+      "ticker": "MSFT",
+      "base": 588.88,
+      "bear": 295.81,
+      "bull": 948.44,
+      "rating": "BUY",
+      "consensus": 633.13,
+      "analysts": 57,
+      "consensusSource": "StockAnalysis (S&P Global), fetched Nov 3, 2026",
+      "price": 507.12,
+      "priceAsOf": "Nov 2, 2026 close, 4:00 PM ET (Yahoo Finance)",
+      "baseVsPrice": 0.161,
+      "consensusVsPrice": 0.248,
+      "baseVsConsensus": -0.07,
+      "notes": "Nov 3 v1 initial full model: forward Base = core $566.87 + $22.01 probability-weighted bets; Bull core $902.75 + $45.69; Bear no bets. DCF FY27-FY36, WACC 9.73%, capex 53%->16% of rev, ~45% op margin; bets: OpenAI stake above book, Azure AI beyond Base (RPO $677B), Copilot/agents, capex-overbuild downside. Doc 1JQuXS7z-SulqIj1AKA4LwkgydkmfnUSZjSzeJoicwyg",
+      "baseChange": null,
+      "baseChangePct": null,
+      "baseChangedAt": null,
+      "fromZero": false,
+      "previousBase": null,
+      "previousDetail": "New model added Nov 3, 2026 (v1); no previous update",
+      "why": "Base 16% above price"
+    },
+    {
+      "ticker": "GOOG",
+      "base": 375.87,
+      "bear": 185.44,
+      "bull": 606.61,
+      "rating": "BUY",
+      "consensus": 400.37,
+      "analysts": 58,
+      "consensusSource": "StockAnalysis (S&P Global), fetched Nov 3, 2026",
+      "price": 278.04,
+      "priceAsOf": "Nov 2, 2026 close, 4:00 PM ET (Yahoo Finance)",
+      "baseVsPrice": 0.352,
+      "consensusVsPrice": 0.44,
+      "baseVsConsensus": -0.061,
+      "notes": "Nov 3 v1 initial full model: forward Base = core $367.86 + $8.01 probability-weighted bets; Bull core $586.65 + $19.96; Bear no bets. DCF 2027-2036, WACC 9.73%, capex 45%->14% of rev, op margin 30%->34%, $135B non-mkt stakes at book; bets: Waymo, external TPU systems, Cloud AI backlog, search-disruption downside. Doc 1D4E9NV9PnC1sxWONbtwJpsvCQPnclS-emvq0So3MTkg",
+      "baseChange": null,
+      "baseChangePct": null,
+      "baseChangedAt": null,
+      "fromZero": false,
+      "previousBase": null,
+      "previousDetail": "New model added Nov 3, 2026 (v1); no previous update",
+      "why": "Base 35% above price"
     }
   ]
 }
