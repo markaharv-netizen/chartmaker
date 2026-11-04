@@ -946,7 +946,7 @@ async function trender(){const st=$('status');st.className='';st.textContent='Lo
   catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();tlast=null}}
 function tdraw(){const j=tlast,rows=j.rows,COLS=2,per=Math.ceil(rows.length/COLS);
   const margin=20,gap=12,rowH=30,headH=32,titleTop=14,titleH=46;
-  const footH=72,H=titleTop+titleH+headH+per*rowH+footH+8;
+  const footH=44,H=titleTop+titleH+headH+per*rowH+footH+8;
   chartBox(H);
   const W=chart.getWidth()||1600,colW=(W-margin*2-gap*(COLS-1))/COLS;
   const pad=8,rankW=28,tickW=74,ctryW=52,btcW=64,chgW=58,usdW=72,pctW=62;
@@ -987,11 +987,9 @@ function tdraw(){const j=tlast,rows=j.rows,COLS=2,per=Math.ceil(rows.length/COLS
   const totB=rows.reduce((a,r)=>a+r.btc,0),totU=rows.every(r=>r.usd!=null)?rows.reduce((a,r)=>a+r.usd,0):null,totP=rows.reduce((a,r)=>a+r.pctSupply,0);
   const px=j.btcPrice?`$${Math.round(j.btcPrice).toLocaleString('en-US')}`:null;
   const pxWhen=j.btcAsOf?etTime(j.btcAsOf):'';
-  const src1=`Source: ${j.sourceName||"My Bot's Sheets"}${j.sheet?' · '+j.sheet:''} · `+(px?`USD = BTC × ${px} (Yahoo Finance${pxWhen?', '+pxWhen:''}${j.priceStale?', cached quote':''})`:'USD value needs a live BTC-USD quote (Yahoo unavailable)')+` · % of ${(j.supply||21000000).toLocaleString('en-US')} BTC`;
   const src2=`Top ${rows.length}: ${tBtc(totB)} BTC`+(totU!=null?` · ${tUsdTot(totU)}`:'')+` · ${totP.toFixed(3)}% of 21M supply`;
   const fy=H-footH+6;
-  g.push(tt(margin,fy+10,src1,{size:14,fill:T.src,width:W-margin*2,wrap:1,valign:'top',lh:18}));
-  g.push(tt(margin,fy+36,src2,{size:14,fill:T.text,bold:1,width:W-margin*2,valign:'top'}));
+  g.push(tt(margin,fy+10,src2,{size:14,fill:T.text,bold:1,width:W-margin*2,valign:'top'}));
   const wm=$('twm').checked;
   o.graphic=[...(wm?[{type:'text',silent:true,right:margin,top:titleTop+4,style:{text:'@thepowerfulHRV',fontSize:16,fill:T.wm}}]:[]),...g];
   chart.setOption(o,true);last={opt:o,asOf:j.btcAsOf||Date.now()/1000};
