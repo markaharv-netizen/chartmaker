@@ -6,7 +6,7 @@
   "sheet": "BTCTC Top 100",
   "gid": 73825060,
   "description": "Top 100 corporate bitcoin holdings from the BTCTC Top 100 tab of My Bot's Sheets. USD value is BTC times a live BTC price and is not part of this file.",
-  "fetchedAt": "2026-11-04T14:19:30Z",
+  "fetchedAt": "2026-11-04T16:55:08Z",
   "supply": 21000000,
   "companies": [
     {
@@ -154,58 +154,45 @@
     },
     {
       "rank": 12,
-      "name": "Riot Platforms, Inc.",
-      "ticker": "RIOT",
-      "country": "US",
-      "change": null,
-      "btc": 11380,
-      "asOf": "2026-06-30",
-      "source": "SEC 8-K Ex.99.1 Q2 2026 results (filed 2026-08-10)",
-      "sourceLabel": "SEC 8-K",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926093406/riot-20260810xex99d1.htm",
-      "notes": "Includes 5,821 BTC held as collateral."
-    },
-    {
-      "rank": 13,
-      "name": "Hut 8 Mining Corp",
-      "ticker": "HUT",
-      "country": "US",
-      "change": null,
-      "btc": 9314,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-04), consolidated BTC less American Bitcoin's 8,002 BTC",
-      "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090025/hut-20260630x10q.htm",
-      "notes": "Adjusted: 10-Q consolidated 17,316 BTC includes majority-owned American Bitcoin's 8,002 BTC; shown ex-ABTC (17,316 - 8,002) to avoid double counting with ABTC."
-    },
-    {
-      "rank": 14,
       "name": "Block, Inc.",
       "ticker": "XYZ",
       "country": "US",
-      "change": null,
-      "btc": 9117,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-05)",
+      "change": "+120",
+      "btc": 9237,
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-03)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1512673/000162828026053368/xyz-20260630.htm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1512673/000162828026069524/xyz-20260930.htm",
       "notes": null
     },
     {
-      "rank": 15,
+      "rank": 13,
       "name": "American Bitcoin Corp",
       "ticker": "ABTC",
       "country": "US",
-      "change": null,
-      "btc": 8002,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-03)",
-      "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1755953/000119312526329472/abtc-20260630.htm",
-      "notes": "Majority-owned by Hut 8 (excluded from Hut 8's figure). Includes 3,090 BTC pledged to Bitmain."
+      "change": "+425",
+      "btc": 8427,
+      "asOf": "2026-09-30",
+      "source": "Parent Hut 8 Form 10-Q Q3 2026 (filed 2026-11-04)",
+      "sourceLabel": "SEC 10-Q (Hut 8)",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1964789/000119312526446146/hut-20260930.htm",
+      "notes": "Majority-owned by Hut 8 (excluded from Hut 8's figure). Includes 3,090 BTC pledged to Bitmain. ABTC's own Q3 10-Q not yet filed."
     },
     {
-      "rank": 16,
+      "rank": 14,
+      "name": "Hut 8 Mining Corp",
+      "ticker": "HUT",
+      "country": "US",
+      "change": "-954",
+      "btc": 8360,
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-04), BTC held by Hut 8 excluding American Bitcoin",
+      "sourceLabel": "SEC 10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1964789/000119312526446146/hut-20260930.htm",
+      "notes": "10-Q: ~16,787 BTC consolidated = ~8,360 held by Hut 8 + ~8,427 held by American Bitcoin; shown ex-ABTC to avoid double counting. 10-Q also says Hut 8 sold ~2,148 BTC in Oct 2026 for buybacks (no updated total stated)."
+    },
+    {
+      "rank": 15,
       "name": "GD Culture Group",
       "ticker": "GDC",
       "country": "US",
@@ -218,7 +205,7 @@
       "notes": null
     },
     {
-      "rank": 17,
+      "rank": 16,
       "name": "Galaxy Digital Holdings Ltd",
       "ticker": "GLXY",
       "country": "US",
@@ -231,7 +218,7 @@
       "notes": "Treasury-only, DERIVED: Galaxy discloses only a USD value for its Treasury & Corporate bitcoin exposure ($400M, Q2 2026 earnings release p.7); ~6,831 BTC = $400M / $58,559 (6/30/26 BTC price in the 10-Q). It is net exposure (spot, derivatives, hedges, wrapped BTC, BTC funds), not a spot count. Gross holdings incl. trading/lending/collateral: 21,084 BTC (10-Q)."
     },
     {
-      "rank": 18,
+      "rank": 17,
       "name": "Next Technology Holding Inc.",
       "ticker": "NXTT",
       "country": "CN",
@@ -244,7 +231,7 @@
       "notes": null
     },
     {
-      "rank": 19,
+      "rank": 18,
       "name": "Gemini Space Station Inc",
       "ticker": "GEMI",
       "country": "US",
@@ -257,7 +244,7 @@
       "notes": null
     },
     {
-      "rank": 20,
+      "rank": 19,
       "name": "Silvia, Inc.",
       "ticker": "SVIA",
       "country": "US",
@@ -270,7 +257,7 @@
       "notes": "Approximately 5,130 BTC per press release; down from 5,355 at 6/30."
     },
     {
-      "rank": 21,
+      "rank": 20,
       "name": "Boyaa Interactive International Limited",
       "ticker": "0434.HK",
       "country": "HK",
@@ -283,7 +270,7 @@
       "notes": null
     },
     {
-      "rank": 22,
+      "rank": 21,
       "name": "Nakamoto Inc",
       "ticker": "NAKA",
       "country": "US",
@@ -296,7 +283,7 @@
       "notes": "3,805 BTC pledged as loan collateral."
     },
     {
-      "rank": 23,
+      "rank": 22,
       "name": "OranjeBTC",
       "ticker": "OBTC3.SA",
       "country": "BR",
@@ -309,7 +296,7 @@
       "notes": null
     },
     {
-      "rank": 24,
+      "rank": 23,
       "name": "Capital B",
       "ticker": "ALCPB.PA",
       "country": "FR",
@@ -322,7 +309,7 @@
       "notes": null
     },
     {
-      "rank": 25,
+      "rank": 24,
       "name": "H100 Group",
       "ticker": "H100",
       "country": "SE",
@@ -335,7 +322,7 @@
       "notes": null
     },
     {
-      "rank": 26,
+      "rank": 25,
       "name": "Alpha Modus Holdings, Inc.",
       "ticker": "AMOD",
       "country": "US",
@@ -348,7 +335,7 @@
       "notes": "PIPE closed 9/30/26: investors delivered 3,170 BTC to wholly-owned subsidiary AMOD Tech Pte. Ltd. (Singapore)."
     },
     {
-      "rank": 27,
+      "rank": 26,
       "name": "DDC Enterprise Limited",
       "ticker": "DDC",
       "country": "US",
@@ -361,7 +348,7 @@
       "notes": null
     },
     {
-      "rank": 28,
+      "rank": 27,
       "name": "Ionic Digital Inc.",
       "ticker": "IOND",
       "country": "US",
@@ -374,7 +361,7 @@
       "notes": null
     },
     {
-      "rank": 29,
+      "rank": 28,
       "name": "The Smarter Web Company PLC",
       "ticker": "SWC.L",
       "country": "UK",
@@ -387,7 +374,7 @@
       "notes": null
     },
     {
-      "rank": 30,
+      "rank": 29,
       "name": "DeFi Technologies",
       "ticker": "DEFI.NE",
       "country": "CA",
@@ -400,7 +387,7 @@
       "notes": "Group figure incl. Valour; largely backs ETP obligations, not an unencumbered treasury."
     },
     {
-      "rank": 31,
+      "rank": 30,
       "name": "BitGo Holdings, Inc.",
       "ticker": "BTGO",
       "country": "US",
@@ -411,6 +398,19 @@
       "sourceLabel": "SEC 8-K",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1740604/000174060426000048/btgo-exhibit991_2026xq2.htm",
       "notes": "Corporate treasury BTC only; balance sheet shows more BTC incl. trading/collateral."
+    },
+    {
+      "rank": 31,
+      "name": "Riot Platforms, Inc.",
+      "ticker": "RIOT",
+      "country": "US",
+      "change": "-8,962",
+      "btc": 2418,
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-04)",
+      "sourceLabel": "SEC 10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926122417/riot-20260930x10q.htm",
+      "notes": "Sold 20,264 BTC in the nine months to 9/30/2026 (data center build-out, credit facility repaid); no restricted BTC at 9/30."
     },
     {
       "rank": 32,
@@ -492,19 +492,6 @@
     },
     {
       "rank": 38,
-      "name": "Anap Holdings Inc.",
-      "ticker": "3189.T",
-      "country": "JP",
-      "change": null,
-      "btc": 1432,
-      "asOf": "2026-08-31",
-      "source": "TSE timely disclosure (JPX TDnet PDF, 2026-09-11)",
-      "sourceLabel": "TDnet filing",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/31890/140120260911534955.pdf",
-      "notes": "Includes 50.19 BTC lent to HashKey Japan."
-    },
-    {
-      "rank": 39,
       "name": "BitFuFu Inc.",
       "ticker": "FUFU",
       "country": "SG",
@@ -515,6 +502,19 @@
       "sourceLabel": "SEC 6-K",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1921158/000121390026109072/ea030842601ex99-1.htm",
       "notes": null
+    },
+    {
+      "rank": 39,
+      "name": "Anap Holdings Inc.",
+      "ticker": "3189.T",
+      "country": "JP",
+      "change": "-66",
+      "btc": 1366,
+      "asOf": "2026-11-02",
+      "source": "TSE timely disclosure (JPX TDnet PDF, 2026-11-04)",
+      "sourceLabel": "TDnet filing",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/31890/140120261104563555.pdf",
+      "notes": "Paid 65.85 BTC in kind for a 19.96% stake in Japan Bitcoin Industry on 11/2. The 9/11 disclosure said 50.19 BTC was lent to HashKey Japan."
     },
     {
       "rank": 40,
@@ -1236,12 +1236,12 @@
       "name": "Circle Internet Group, Inc.",
       "ticker": "CRCL",
       "country": "US",
-      "change": null,
-      "btc": 76,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-05), Details of Digital Assets table",
+      "change": "+1",
+      "btc": 77,
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-04), Details of Digital Assets table",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1876042/000187604226000248/crcl-20260630.htm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1876042/000187604226000311/crcl-20260930.htm",
       "notes": "Includes Circle-wrapped bitcoin (cirBTC)."
     },
     {
