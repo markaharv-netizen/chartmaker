@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-04T14:44:47Z",
+  "generated": "2026-11-05T16:12:13Z",
   "seeded": false,
   "title": "Steve's DCF Base Case vs Street Consensus vs Price",
   "subtitleNote": "Base now includes probability-weighted future bets",
@@ -10,12 +10,12 @@
     "sellBelow": -0.15
   },
   "consensusLabel": "mean analyst target (StockAnalysis, Oct 21) · mean analyst target (StockAnalysis, Oct 30) · mean analyst target (StockAnalysis, Nov 2) · mean analyst target (StockAnalysis, Nov 3)",
-  "priceLabel": "Oct 21, 2026 close; Oct 29, 2026 close; Nov 2, 2026 close",
+  "priceLabel": "Oct 21, 2026 close; Oct 29, 2026 close; Nov 2, 2026 close; Nov 5, 2026 ~10:01 AM ET (Yahoo Finance, IPO day)",
   "source": {
     "name": "DCF price target summary",
     "spreadsheetId": "10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0",
     "sheet": "Sheet1",
-    "range": "A1:P11",
+    "range": "A1:P30",
     "url": "https://docs.google.com/spreadsheets/d/10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0/edit"
   },
   "note": "Offline snapshot. Render does not call Google. Regenerate with scripts/price_targets.py. Dollar fields are numbers. Percent fields are fractions (0.051 = 5.1%). why is editable copy and is kept when the snapshot is regenerated. baseChangedAt is YYYY-MM-DD, the date the base last changed. The SPCX Elon-case scenario row is omitted.",
@@ -60,7 +60,7 @@
       "notes": "Nov 1 v7 (Mark's assumption, sourced from ARK 2031 model): robotaxi bet = ARK 8.1M fleet by 2031 at 50% Base (Bull ARK 10M at 65%), net of 325k already in Base, our $60k rev x 50% EBITDA x 15x. Forward Base = core $41.64 + $256.14 bets (robotaxi $248.82); Bull core $97.00 + $416.12; Bear no bets. Sensitivity at ARK ~$93k/vehicle: forward Base ~$434.6 (HOLD). vs $399.81 Oct 30 close: -25.5%. Also v6 FSD $149/mo from 2030E",
       "baseChange": 227.33,
       "baseChangePct": 3.23,
-      "baseChangedAt": "2026-11-02",
+      "baseChangedAt": "2026-11-01",
       "fromZero": false,
       "previousBase": 70.46,
       "previousDetail": "Prev Base $70.46 (Bear $4.24, Bull $153.59, SELL) at Nov 1, 2026 v6 FSD price update -> $297.79 (Bear $4.24, Bull $513.12, SELL) at Nov 1, 2026 v7 ARK robotaxi fleet (Mark's assumption); unchanged in Nov 2 and Nov 4 scans",
@@ -198,7 +198,7 @@
       "notes": "Nov 2 v3 forward-looking rebuild: forward Base = core $14.74 + $6.28 probability-weighted bets (Iridium 85% w/ full cash+share math, Neutron beyond Base, own constellation, SDA/Golden Dome, space solar); Bull core $27.46 + $7.87; Bear no bets. WACC 12.63% (blended beta 1.665, ERP 4.41%), stable-phase Gordon terminal, horizon to 2040. Doc 1mmHiOEydhU3spv1HHqWUUXSM754SR2dy_5WttG3Syl8",
       "baseChange": 5.55,
       "baseChangePct": 0.359,
-      "baseChangedAt": "2026-11-03",
+      "baseChangedAt": "2026-11-02",
       "fromZero": false,
       "previousBase": 15.47,
       "previousDetail": "Prev Base $15.47 (Bear $6.33, Bull $25.33, SELL) at Oct 22, 2026 future-bets update -> $21.02 (Bear $6.60, Bull $35.33, SELL) at Nov 2, 2026 v3 rebuild; unchanged in Nov 4 scan",
@@ -295,6 +295,29 @@
       "previousBase": null,
       "previousDetail": "New model added Nov 3, 2026 (v1); no previous update",
       "why": "Base 35% above price"
+    },
+    {
+      "ticker": "AGLT",
+      "base": 10.11,
+      "bear": 1.48,
+      "bull": 37.07,
+      "rating": "HOLD",
+      "consensus": null,
+      "analysts": null,
+      "consensusSource": "",
+      "price": 9.4,
+      "priceAsOf": "Nov 5, 2026 ~10:01 AM ET (Yahoo Finance, IPO day)",
+      "baseVsPrice": 0.076,
+      "consensusVsPrice": null,
+      "baseVsConsensus": null,
+      "notes": "Nov 5 v1 initial full model: forward Base = core $9.94 + $0.17 probability-weighted bets; Bull core $34.86 + $2.21; Bear no bets ($1.48 diluted-survival residual). Digit fleet / RaaS unit-economics DCF 2027-36, WACC 14.99% (beta 2.20), FD shares 269.56M, net cash $420M. Bets: Digit 5 on time, $300M order, second OEM, RoboFab 10k, Arc ARPU, Digit 5 slip downside. Sheet 16pe4nq4a3RZLkRB3rDA0khFUZABdCEUTyehWubPqEfU",
+      "baseChange": null,
+      "baseChangePct": null,
+      "baseChangedAt": null,
+      "fromZero": false,
+      "previousBase": null,
+      "previousDetail": "New model added Nov 5, 2026 (v1)",
+      "why": "IPO day; no street coverage"
     }
   ]
 }

@@ -5,7 +5,9 @@ Render has no Google credentials. The Price targets tab reads static/price_targe
 
 Sheet: "DCF price target summary"
   https://docs.google.com/spreadsheets/d/10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0
-  tab Sheet1, range A1:P11. Cells are formatted text ($ and %), which this script parses.
+  tab Sheet1, range A1:P30. Cells are formatted text ($ and %), which this script parses.
+  A blank Street consensus, analyst count, consensus-vs-price, or base-vs-consensus
+  is stored as null (IPO-day names such as AGLT). Base and price are still required.
 
 Usage:
   python3 scripts/price_targets.py                 # link CSV export (401 if the sheet is private)
@@ -17,20 +19,21 @@ The scenario row "SPCX – Elon case (scenario)" is skipped. why is not a sheet 
 existing why text in the JSON is kept, and a ticker with none yet gets the short line in WHY.
 subtitleNote, ptChangeNote, and ratingNote already in the JSON are kept too.
 
-baseChangedAt is YYYY-MM-DD, parsed from "at Mon D, YYYY" in the previous-update
-detail. The table shows a dollar change beside Steve's Base only when that date
-is within the last 7 days. A brand-new ticker (previous base $0) keeps the date
-and the table shows the price only.
+baseChangedAt is YYYY-MM-DD, parsed from the last "at Mon D, YYYY" in the
+previous-update detail (the new base's date when the cell names both). The table
+shows a dollar change beside Steve's Base only when that date is within the last
+7 days. A brand-new ticker (previous base $0) keeps the date and the table shows
+the price only.
 """
 import argparse, csv, io, json, os, re, sys, datetime, urllib.request, urllib.error
 
 SHEET_ID = "10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0"
 SHEET_NAME = "DCF price target summary"
-RANGE = "A1:P11"
+RANGE = "A1:P30"
 TAB = "Sheet1"
 EXPORTS = [
     f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid=0",
-    f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={TAB}&range=A1:P11",
+    f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={TAB}&range={RANGE}",
 ]
 WHY = {
     "MSTR": "Bets priced in; at fair value",
@@ -42,6 +45,7 @@ WHY = {
     "CRWV": "Debt still exceeds core EV",
     "RKLB": "Far above bet-adjusted value",
     "TSLA": "Far above bet-adjusted value",
+    "AGLT": "IPO day; no street coverage",
 }
 DEFAULTS = {
     "title": "Steve's DCF Base Case vs Street Consensus vs Price",
@@ -101,16 +105,19 @@ for _i, _name in enumerate(
     _MONTHS[_name[:3].lower()] = _i
 
 def parse_change_date(detail):
-    """'at Oct 22, 2026' in the previous-update detail -> '2026-10-22'. None if absent.
+    """Last 'at Month D, YYYY' in the previous-update detail -> 'YYYY-MM-DD'.
 
-    The first 'at Month D, YYYY' is the change. A later 'unchanged in Oct 23 scan'
-    has no year and is not the change date.
+    'Prev Base $153.35 at Oct 22, 2026 -> $149.42 at Oct 30, 2026' names the
+    previous base first and the new base second, so the last dated phrase is
+    the change. A later 'unchanged in Oct 23 scan' has no year and is ignored.
+    One dated phrase is unchanged. None if no dated phrase is present.
     """
-    m = re.search(r"\bat\s+([A-Za-z]{3,9})\s+(\d{1,2}),\s+(\d{4})", str(detail or ""))
-    if not m: return None
-    mon = _MONTHS.get(m.group(1).lower())
+    found = re.findall(r"\bat\s+([A-Za-z]{3,9})\s+(\d{1,2}),\s+(\d{4})", str(detail or ""))
+    if not found: return None
+    name, day, year = found[-1]
+    mon = _MONTHS.get(name.lower())
     if not mon: return None
-    try: return datetime.date(int(m.group(3)), mon, int(m.group(2))).isoformat()
+    try: return datetime.date(int(year), mon, int(day)).isoformat()
     except ValueError: return None
 
 def dollar_change(chg, base, prev, pct):
@@ -205,8 +212,8 @@ def parse_csv(text):
             skipped.append(ticker); continue
         base, price = parse_money(raw[1]), parse_money(raw[8])
         consensus = parse_money(raw[5])
-        if base is None or price is None or consensus is None:
-            sys.exit(f"row {i} {ticker}: base, consensus, and price are required")
+        if base is None or price is None:
+            sys.exit(f"row {i} {ticker}: base and price are required")
         chg, chg_pct, from_zero = parse_change(raw[14])
         prev = parse_prev(raw[15])
         if prev is None and from_zero: prev = 0.0
@@ -385,6 +392,8 @@ SPCX,$128.42,-$1.79,$291.02,SELL,$222.71,38,"StockAnalysis (S&P Global), fetched
     assert c["baseChange"] == 23.40 and c["base"] == 23.40 and c["baseChangedAt"] == "2026-10-22", c
     assert s["bear"] == -1.79 and abs(s["baseVsPrice"] + 0.194) < 1e-9 and s["baseChangedAt"] == "2026-10-22", s
     assert parse_change_date("Prev Base $144.80 -> $153.35 at Oct 22, 2026 future-bets update; unchanged in Oct 23 scan") == "2026-10-22"
+    assert parse_change_date("Prev Base $153.35 at Oct 22, 2026 future-bets update -> $149.42 at Oct 30, 2026 Q3 earnings refresh") == "2026-10-30"
+    assert parse_change_date("Prev Base $15.47 at Oct 22, 2026 -> $21.02 at Nov 2, 2026 v3 rebuild; unchanged in Nov 4 scan") == "2026-11-02"
     assert parse_change_date("at October 22, 2026") == "2026-10-22"
     assert parse_change_date("at Feb 31, 2026") is None and parse_change_date("no date") is None
     assert dollar_change(None, 153.35, 144.80, 0.059) == 8.55
@@ -412,11 +421,32 @@ SPCX,$128.42,-$1.79,$291.02,SELL,$222.71,38,"StockAnalysis (S&P Global), fetched
     assert pct_rows[0]["baseChange"] == 8.55 and pct_rows[0]["baseChangedAt"] == "2026-10-22", pct_rows[0]
     assert abs(pct_rows[0]["baseChangePct"] - 0.059) < 1e-9
     assert not any(is_scenario(r["ticker"]) for r in seeded["rows"])
+    ipo = sample.splitlines()[0] + "\n" + (
+        'AGLT,$10.11,$1.48,$37.07,HOLD,,,,$9.40,"Nov 5, 2026 ~10:01 AM ET (Yahoo Finance, IPO day)",7.6%,,,IPO day,new,'
+        '"New model added Nov 5, 2026 (v1)"\n'
+    )
+    ipo_rows, ipo_skipped = parse_csv(ipo)
+    assert ipo_skipped == [], ipo_skipped
+    a = ipo_rows[0]
+    assert a["ticker"] == "AGLT" and a["base"] == 10.11 and a["bear"] == 1.48 and a["bull"] == 37.07, a
+    assert a["price"] == 9.40 and a["rating"] == "HOLD", a
+    assert a["consensus"] is None and a["analysts"] is None, a
+    assert a["consensusVsPrice"] is None and a["baseVsConsensus"] is None, a
+    assert abs(a["baseVsPrice"] - 0.076) < 1e-9, a
+    assert a["consensusSource"] == "" and a["baseChange"] is None and a["previousBase"] is None, a
+    ipo_doc, ipo_missing = build_doc(ipo_rows, {})
+    assert ipo_doc["rows"][0]["why"] == WHY["AGLT"] and ipo_missing == [], ipo_doc["rows"][0]
+    assert RANGE == "A1:P30" and all("A1:P11" not in u for u in EXPORTS)
+    try:
+        parse_csv(sample.splitlines()[0] + "\n" + 'NOPE,,$1,$2,HOLD,$3,1,src,$9,asof,1%,2%,3%,n,new,detail\n')
+        raise AssertionError("blank base should exit")
+    except SystemExit as e:
+        assert "base and price" in str(e), e
     print("self-test ok")
 
 def main():
     ap = argparse.ArgumentParser(description="Build static/price_targets.json")
-    ap.add_argument("--csv", help="Sheet1 CSV export (A1:P11). Used instead of the network export.")
+    ap.add_argument("--csv", help=f"Sheet1 CSV export ({RANGE}). Used instead of the network export.")
     ap.add_argument("--seed", action="store_true", help="Write the email-image seed (no sheet).")
     ap.add_argument("--repo", default=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     ap.add_argument("--self-test", action="store_true")
