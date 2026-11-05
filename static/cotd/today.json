@@ -1,86 +1,106 @@
 {
- "date": "2026-11-04",
- "theme": "Day after the midterms: Democrats win Congress, bitcoin bounces near $78K in a midterm year that has held up better than most, Strategy's cash reserve covers 38 months, ETH/BTC tests a breakout, Tesla and SpaceX slide premarket on the Texas flip, voters back data center bans, Oracle dilutes, neocloud debt is in focus, and the term premium sits near a 16-year high.",
+ "date": "2026-11-05",
+ "theme": "STRC hits $100 par and Saylor says 'We're back,' bitcoin holds near $80K, VanEck calls AI-pivot miners oversold after Riot's $28B lease, Musk floats space data centers as Texas AI builds face pushback, Microsoft flags DC delays, Meta sells AI bonds, neoclouds slide, and the S&P's post-midterm pattern is in focus.",
  "items": [
   {
-   "sheet": "bot experiments 2",
-   "tab": "1 BTC midterm year",
-   "title": "Bitcoin in midterm years: 2026 vs 2014, 2018 and 2022",
-   "image": "cotd/2026-11-04/01.png",
-   "picked": "Democrats won both the House and Senate in Tuesday's midterms. Bitcoin briefly fell to about $75,700 as the results came in, then climbed back near $78,000, per CoinDesk. A story trending on X notes bitcoin rose in the 12 months after each of the last three midterms.",
-   "matters": "Bitcoin has had a weak midterm year every cycle so far, and traders are now looking at whether the post-election pattern repeats. This chart puts 2026 next to the three earlier midterm years on the same calendar.",
-   "know": "Indexed to the prior year-end close = 100, 2026 was at 89.41 on day 305 (Nov 1), the tab's latest point, so bitcoin was about 11% down for the year. The average of 2014, 2018 and 2022 was at 44.79 on the same day and ended those years at 35.41, so 2026 is holding up far better than past midterm years. The median of all years 2014-2025 on day 305 was 166.53.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1497466824"
+   "sheet": "My Bot's Sheets",
+   "tab": "STRC ATM",
+   "title": "Strategy's STRC preferred: weekly ATM estimate when it trades at or above par",
+   "image": "cotd/2026-11-05/01.png",
+   "picked": "Strategy's STRC preferred hit its $100 par on Nov 4 for the first time since May, and Michael Saylor posted 'We're ₿ack,' a story trending on X and covered by CoinDesk. At or above par, Strategy can sell STRC again to fund bitcoin buys after months of buybacks.",
+   "matters": "STRC is Strategy's main preferred funding line. How much volume trades above $100 decides whether it can raise cash for more bitcoin without selling common stock.",
+   "know": "Mark's STRC ATM tab has $209.4M of total USD volume on Wed Nov 4, of which 19% ($38.9M) traded above $100. At the tab's 59% capture rate and 2.5% commission, that implies about $22.4M of ATM proceeds and about 279 bitcoin at the day's $80,207 average. Mon and Tue showed 0% above $100. The tab refreshes volume automatically; Thu and Fri are still blank.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=996995418"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "16 Strategy vs other corp BTC",
-   "title": "Strategy vs every other public company holding bitcoin",
-   "image": "cotd/2026-11-04/02.png",
-   "picked": "Tether CEO Paolo Ardoino said Tether now holds about 150,000 BTC, a story trending on X, and Strategy's Monday 8-K took its stack to 849,327 BTC after buying 811 more, per The Block.",
-   "matters": "Strategy is still the giant among corporate bitcoin holders, and this chart shows how its share has held up as hundreds of new treasury companies bought in.",
-   "know": "The tab's latest point, Oct 14 2026, has Strategy at 848,250 BTC and all other public companies at 455,468 BTC, so Strategy holds 65.1% of the 1.30M BTC public companies own. Its share hit a low of 59.4% at Q4 2025. The tab was last refreshed Oct 19 and excludes private companies such as Tether, ETFs and governments; the image's title still says Oct 7.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=757276361"
-  },
-  {
-   "sheet": "bot experiments 2",
-   "tab": "5 MSTR USD reserve vs dividends",
-   "title": "Strategy's USD reserve vs its yearly dividend and interest bill",
-   "image": "cotd/2026-11-04/03.png",
-   "picked": "Strategy spent $43.4 million of cash on preferred dividends last week and said its USD Reserve now stands at $4.79 billion, per its Nov 2 8-K and Unchained. STRC dividends also moved to daily payments starting Nov 1.",
-   "matters": "The reserve is the cash buffer that lets Strategy pay preferred dividends and debt interest without selling bitcoin or issuing stock. How many months it covers is the key number for preferred holders.",
-   "know": "In the week ending Oct 30 2026, the tab's latest row, the reserve was $4,833 million against $1,509 million a year of dividends and interest, enough for 38.4 months, the highest in the tab. That is up from 6.1 months on May 29, when the reserve dropped to $871 million. The tab doesn't yet include the Nov 2 8-K's $4.79 billion figure.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=49428948"
+   "tab": "3 MSTR capital raised",
+   "title": "Strategy capital raised by quarter: common, preferred, converts and bitcoin sold",
+   "image": "cotd/2026-11-05/02.png",
+   "picked": "CEO Phong Le wrote on X that Strategy ranks fourth among US companies selling stock in 2026, behind SpaceX, Alphabet and Intel, calling it a 'Bitcoin capital cycle' as Strategy shares rose about 7% with bitcoin after the midterms, per TIKR.",
+   "matters": "How Strategy funds its bitcoin pile — common equity, preferred or converts — sets the dilution and the fixed preferred dividend bill that preferred holders watch.",
+   "know": "The tab has $7.4B raised in Q1 2026, $8.5B in Q2 and $5.8B in Q3, or about $21.7B year to date. Q3 was all common stock ($5.4B) plus $0.4B of bitcoin sold; preferred raised $0. Preferred raised $5.5B in Q2 at the peak. Q3 uses weekly 8-K ATM proceeds rather than the 10-Q cash-flow lines used for earlier quarters.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1095486377"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "02 ETH-BTC ratio",
-   "title": "Ether priced in bitcoin: the ETH/BTC ratio since 2019",
-   "image": "cotd/2026-11-04/04.png",
-   "picked": "A story trending on X says the ETH/BTC ratio broke a multi-month downtrend near 0.0295 on Nov 3, with traders calling it a possible start of a rotation into altcoins. DeFi tokens led the crypto bounce after the midterms, per CoinDesk.",
-   "matters": "ETH/BTC is the cleanest read on whether money is moving from bitcoin into ether and the wider altcoin market. It has been falling for most of the past five years.",
-   "know": "On the tab's latest weekly point, Oct 30 2026, the ratio was 0.0290, with ether at $2,241.69. Its 2026 high was 0.0347 in the week of Jan 2 and its low 0.0260 on Jun 5, and the all-time high in the tab is 0.084 in December 2021. The data ends Oct 30, so this week's move isn't in it.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1169775304"
+   "tab": "99 MSTR BTC per share",
+   "title": "Strategy: bitcoin per diluted share vs share count",
+   "image": "cotd/2026-11-05/03.png",
+   "picked": "As STRC returns to par and Strategy talks about stacking again, TIKR notes bitcoin per share is still down about 3.7% year to date because the share count grew faster than holdings, and MSCI's Nov 11 index decision is the next test.",
+   "matters": "Bitcoin per share is what a common shareholder actually owns. When the diluted share count rises faster than the bitcoin pile, holders get diluted even as total holdings climb.",
+   "know": "On Oct 26 2026, the tab's latest point, Strategy held 848,517 BTC on 451.9M assumed diluted shares, or 187,751 sats per diluted share. That is flat vs Oct 19 and well below the Jun 1 2026 peak of about 220,429 sats when the share count was about 382.8M. The share count is the tab's own diluted estimate at each 8-K, and the ledger ends Oct 26, so it misses the Nov 2 8-K's 849,327 BTC.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1024131985"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "83 TSLA drawdown",
-   "title": "Tesla's drawdown from its record close vs the Nasdaq-100",
-   "image": "cotd/2026-11-04/05.png",
-   "picked": "Tesla and SpaceX were down heavily premarket after Democrats flipped Texas's Senate seat and governorship and won Congress, per CNBC. Tesla had already fallen 1.32% to $398.50 on Election Day.",
-   "matters": "Drawdown shows how far Tesla is from its record close and how much harder it falls than the Nasdaq-100 when sentiment turns.",
-   "know": "On the tab's latest weekly close, Oct 30 2026, Tesla was 18.39% below its record close while the Nasdaq-100 was 9.09% below its own. That was Tesla's smallest drawdown since July 10, and well off its 2026 low of 36.47% on Jul 31. The data is weekly and ends Oct 30, so it doesn't include this week's election-day drop.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=450495048"
+   "tab": "144 BTC miners AI pivot",
+   "title": "Bitcoin miners that pivoted to AI vs MARA and bitcoin",
+   "image": "cotd/2026-11-05/04.png",
+   "picked": "VanEck said on Nov 5 that AI-pivot bitcoin miners look oversold after a 35% October drop, and Riot Platforms announced a $28B AI data-center lease that sent its shares up more than 14%, per CoinDesk and X news. IREN and CIFR still fell hard after the midterms on Texas data-center fears.",
+   "matters": "The chart separates miners that leased power and space to AI from a pure miner like MARA, so you can see whether the AI pivot is being rewarded or punished.",
+   "know": "Indexed to Dec 29 2023 = 100, the equal-weight IREN/CIFR/WULF basket was at 333.41 on Oct 30 2026, the tab's latest weekly close, down from a 601.89 peak on Sep 18. MARA was at 28.82 and bitcoin at 183.37 on the same day. The image and tab stop at Oct 30, so they miss this week's election-driven moves and Riot's lease news.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1414734123"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "319 SpaceX free cash flow",
-   "title": "SpaceX free cash flow: operating cash flow minus capex",
-   "image": "cotd/2026-11-04/06.png",
-   "picked": "SpaceX was lower premarket after the Texas results, per CNBC. It had risen 3.62% to $141.31 on Tuesday on talks to buy EchoStar's Boost Mobile, and on its third-quarter call guided fourth-quarter capex to $35 billion to $40 billion for its AI compute build.",
-   "matters": "Free cash flow shows whether SpaceX's AI and Starship spending is paid for by its own operations or needs outside funding. Capex is now growing much faster than operating cash.",
-   "know": "Over the 12 months to September 2026, the tab has operating cash flow of $15.76 billion and capex of $54.96 billion, for free cash flow of -$39.20 billion. That compares with -$13.95 billion in 2025, -$5.39 billion in 2024 and +$0.11 billion in 2023. The image's footnote still says TTM to Jun 30 2026, but the bar is labeled TTM Sep '26, matching the tab.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=467293370"
+   "tab": "316 SpaceX capex by segment",
+   "title": "SpaceX capex by segment: Space, Starlink and AI",
+   "image": "cotd/2026-11-05/05.png",
+   "picked": "Elon Musk posted that data centers in space are looking appealing after midterm results raised fresh hurdles for ground builds, a story trending on X. SpaceX has filed for up to a million solar-powered AI satellites, and Arthur Hayes warned of SpaceX share unlock dilution into 2027.",
+   "matters": "Capex shows where SpaceX is actually putting money. AI spend now dwarfs Starlink and launch, which is why orbital compute talk lands as more than a meme.",
+   "know": "On a trailing twelve months to Sep 2026, the tab has AI (xAI and X) capex of $44.65B, Starlink $5.47B and Space $4.85B. AI was $12.73B in 2025 and $5.63B in 2024. The image matches the TTM Sep '26 bar; ground data-center politics are the news hook, not a change in these book numbers.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=501922147"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "82 TSLA vs Mag 7",
+   "title": "Tesla vs the other Magnificent 7 and the Nasdaq-100 since end-2022",
+   "image": "cotd/2026-11-05/06.png",
+   "picked": "Tesla fell about 5% after Democrats flipped Texas and Congress, per CoinDesk, while broader markets rallied. Tesla also joined other Mag 7 names objecting to third-party tokenized stock listings on an OKX-ICE venue, per X news.",
+   "matters": "Tesla often moves with Mag 7 AI sentiment, but this chart shows whether it is keeping up with the other six and with the Nasdaq-100 on the same base.",
+   "know": "Indexed to Dec 30 2022 = 100, Tesla was at 324.57 on Oct 30 2026, the tab's latest weekly close, against 499.59 for the equal-weight other Mag 7 and 259.47 for the Nasdaq-100. Tesla jumped from 287.97 on Oct 16 to 324.57 by Oct 30. The weekly series ends Oct 30, so it does not include this week's election drop.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=762190162"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "322 Microsoft quarterly FCF",
+   "title": "Microsoft quarterly free cash flow: operating cash flow minus capex",
+   "image": "cotd/2026-11-05/07.png",
+   "picked": "Microsoft cut its full-year capex outlook after third-party data-center delays from providers such as IREN, spending about $5B less than expected in the quarter, a story trending on X on Nov 5. IREN shares fell more than 11%.",
+   "matters": "Free cash flow shows how much of Microsoft's cash generation is left after AI and cloud capex. When capex slips because of power and build delays, the AI timeline slips with it.",
+   "know": "In the quarter to Jun 30 2026, the tab's latest point, Microsoft had $55.44B of operating cash flow and $35.80B of capex, for free cash flow of $19.64B, up from $15.80B in the March quarter. Capex has roughly doubled from $17.08B in the June 2025 quarter. The tab stops at Jun 2026, so it does not yet include the September quarter reported Oct 28.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=664060481"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "211 Big Tech debt for AI",
+   "title": "Big Tech and CoreWeave debt balances used to fund AI builds",
+   "image": "cotd/2026-11-05/08.png",
+   "picked": "Meta raised about $20–25B of dollar and euro bonds for AI data centers, drawing huge orders even after an S&P outlook cut, per X news. Hyperscaler and neocloud debt remains the core worry as Citrini and others warn AI infrastructure spending may be peaking.",
+   "matters": "Debt is how much of the AI build is funded with borrowed money rather than free cash flow. Rising balances raise the cost of any slowdown in AI demand.",
+   "know": "At the tab's latest point, labeled Jun 2026, Meta had $83.7B of debt, Amazon $133.0B, Alphabet $101.1B, Oracle $129.5B, Microsoft $40.3B and CoreWeave $35.6B. Meta was $58.7B in FY 2025 and $0 in FY 2021. This week's Meta bond sale is not in the tab yet.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1307998812"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "21 Oracle share count",
-   "title": "Oracle's share count jumped after a $20 billion stock sale",
-   "image": "cotd/2026-11-04/08.png",
-   "picked": "Oracle priced $20 billion of new stock and bonds late Monday, selling 86.2 million shares at $116 plus $10 billion of notes to fund AI data centers, a story trending on X. Its shares fell more than 5%.",
-   "matters": "Oracle is funding its AI buildout partly by issuing stock, which dilutes existing holders. This chart shows how fast its share count has grown.",
-   "know": "Oracle's cover-page share count was 3,024 million on Sep 7 2026, up from 2,880 million on Jun 12 2026 and 2,714 million in June 2023. The tab notes Oracle used its full $20 billion at-the-market program, issuing 141 million shares, in the quarter to Aug 31. This week's 86.2 million share sale isn't in the tab yet.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=503606624"
+   "tab": "80 Neocloud stocks 2026 YTD",
+   "title": "Neocloud stocks in 2026: CRWV, NBIS, IREN, APLD, WULF and CIFR",
+   "image": "cotd/2026-11-05/09.png",
+   "picked": "AI data-center names IREN and CIFR plunged after Democratic midterm wins and Texas data-center pushback, with IREN down more than 11% and CIFR nearly 20% in Wednesday's session per X news, even as the broad market rallied. Nebius has dropped about 40% in a month on Citrini's short call.",
+   "matters": "Neoclouds are the purest listed bets on rented AI compute. This chart shows how far each has come or fallen in 2026 on the same base.",
+   "know": "Indexed to Dec 31 2025 = 100, the tab's Oct 30 2026 close has NBIS at 184.1 (+84%), WULF at 102.1 (+2%), CRWV at 76.6 (−23%), APLD at 72.7 (−27%), IREN at 63.4 (−37%) and CIFR at 49.4 (−51%). The series was refreshed Nov 2 and ends Oct 30, so it misses this week's election session.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=552939387"
   },
   {
-   "sheet": "bot experiments 2",
-   "tab": "77 Neocloud debt vs cash",
-   "title": "Neocloud debt vs cash",
-   "image": "cotd/2026-11-04/09.png",
-   "picked": "CoreWeave fell 8.6% to $50.15 on Monday on debt worries, then bounced about 6% Tuesday after Oracle's raise, per Investing.com. The Motley Fool notes its bonds yield 14% to 16%, and it reports earnings Nov 10.",
-   "matters": "The neoclouds borrowed heavily to build AI capacity, and the gap between their debt and their cash shows who is most exposed if funding gets tighter.",
-   "know": "The tab has CoreWeave with $35.6 billion of debt against $5.5 billion of cash, far more than Nebius ($8.5B debt, $8.0B cash), IREN ($7.6B, $5.9B), Applied Digital ($6.3B, $3.0B), Cipher ($5.4B, $0.8B) and TeraWulf ($3.1B, $2.6B). Most figures are as of Jun 30 2026 (Applied Digital Aug 31, TeraWulf Mar 31), so they are a quarter or more old, and CoreWeave's lease liabilities aren't included.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1479637352"
+   "sheet": "Bot experiments",
+   "tab": "272 Midterm-year S&P path",
+   "title": "S&P 500 path in midterm years vs the average of all years",
+   "image": "cotd/2026-11-05/10.png",
+   "picked": "A story trending on X notes the S&P 500 has risen in the 12 months after every midterm since 1942, averaging about 13%, and Democrats' sweep set up divided government with President Trump. SPY jumped about 1.65% to $766.81 on Nov 4 as markets cheered the results.",
+   "matters": "Midterm years are often weak into the vote and stronger after. Putting 2026 on the same calendar as past midterms shows whether this cycle is following that script.",
+   "know": "Indexed to the prior year-end = 100, 2026 was at 110.73 on trading day 209, the tab's latest 2026 point, against 97.99 for the average midterm year (1974–2022) and 105.81 for the average of all years (1971–2025) on that day. So 2026 is still well ahead of the typical midterm path. The 2026 series stops at day 209 (late October) and does not include this week's post-election rally.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1636664411"
   }
  ]
 }
