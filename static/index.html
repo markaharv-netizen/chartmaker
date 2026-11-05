@@ -7,7 +7,7 @@ body{font-family:Inter,Arial,sans-serif;margin:0;background:#f4f4f5;color:#111}
 input,select,button{font-size:14px;padding:6px}
 button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #wrap{padding:16px}#chart{width:1600px;height:900px;background:#fff;transform-origin:0 0}
-#ptcanvas{display:none;width:1600px;max-width:calc(100vw - 32px);height:auto;background:#fff}
+#ptcanvas{display:none;max-width:calc(100vw - 32px);height:auto;background:#fff}
 #mode button{background:#e5e7eb;color:#111;margin-right:4px}#mode button.on{background:#111;color:#fff}
 #ftable{margin:0 16px 30px;border-collapse:collapse;font-size:15px;background:#fff}#ftable td,#ftable th{border:1px solid #e5e7eb;padding:4px 10px;text-align:right}#ftable th:first-child,#ftable td:first-child{text-align:left}
 #fnote{margin:0 16px 8px;font-size:14px;color:#374151}
@@ -1262,6 +1262,10 @@ $('sreload').addEventListener('click',()=>{if($('sview').value==='time'&&!HBUSY)
 const PTC={navy:'#0B1F3A',orange:'#F7931A',green:'#178A45',red:'#D7263D',hold:'#E08A00',text:'#1C2430',muted:'#6B7280',alt:'#F4F6F8',line:'#E6E9EE'};
 let PTDOC=null,PTLIVE={},PTSEQ=0;
 function ptMoney(v){return '$'+Number(v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function ptConsCell(v){
+  const font='15px Inter, Arial, sans-serif';
+  if(v.consensus==null||!isFinite(+v.consensus))return {text:'—',font,color:PTC.muted};
+  return {text:ptMoney(v.consensus),font,color:PTC.text}}
 function ptShown(frac){return Math.round(Number(frac)*1000)/10}
 function ptUpside(frac){
   if(frac==null||!isFinite(frac))return {text:'—',color:PTC.muted};
@@ -1343,10 +1347,10 @@ function ptPricePhrase(views){
   if(!live.length)return snapLabel+' (snapshot)';
   const livePart=labels.length===1?labels[0]:'mixed live dates (Yahoo Finance)';
   return livePart+'; snapshot '+snapLabel+' for '+snap.map(v=>v.ticker).join(', ')}
-function ptWrap(ctx,text,maxW){
-  const words=String(text||'').split(/\s+/).filter(Boolean),lines=[];let cur='';
-  for(const w of words){const t=cur?cur+' '+w:w;if(ctx.measureText(t).width>maxW&&cur){lines.push(cur);cur=w}else cur=t}
-  if(cur)lines.push(cur);return lines.length?lines:['']}
+function ptTextWidth(ctx,cell){
+  const parts=(cell.parts&&cell.parts.length)?cell.parts:[{text:cell.text||'',font:cell.font}];
+  let w=0;for(const p of parts){ctx.font=p.font||cell.font||'15px Inter, Arial, sans-serif';w+=ctx.measureText(p.text||'').width}
+  return w}
 async function ptQuote(sym,fresh){
   const now=Math.floor(Date.now()/1000);
   const j=await fetchSym(sym,{p1:now-14*DAY,p2:now,iv:'1d',fresh:!!fresh});
@@ -1356,51 +1360,55 @@ async function ptQuote(sym,fresh){
   return {price:px,asOf:j.lastTime||j.lastBarTime||(j.points&&j.points.length?j.points.at(-1)[0]/1000:null),clock}}
 function ptdraw(){
   if(MODE!=='pt'||!PTDOC)return;
-  const c=$('ptcanvas'),ctx=c.getContext('2d'),W=1600;
+  const c=$('ptcanvas'),ctx=c.getContext('2d');
   const views=ptViews(PTDOC,PTLIVE);
   const title=PTDOC.title||"Steve's DCF Base Case vs Street Consensus vs Price";
-  const sub=[PTDOC.subtitleNote||'Base now includes probability-weighted future bets','Prices: '+ptPricePhrase(views),'Consensus: '+(PTDOC.consensusLabel||'mean analyst target')].filter(Boolean).join(' | ');
-  ctx.font='15px Inter, Arial, sans-serif';
-  const subLines=ptWrap(ctx,sub,W-96);
   const foot1=PTDOC.ptChangeNote||'';
   const foot2=PTDOC.ratingNote||'Rating: BUY > +15% upside to Base, SELL < -15%, otherwise HOLD. Not investment advice.';
   const mixed=views.some(v=>v.snap)&&views.some(v=>!v.snap);
-  const x0=48,tableW=1504,pad=14,headerH=42,rowH=44,orangeH=4;
-  const cols=[{h:'Ticker',w:112,k:'ticker'},{h:"Steve's Base",w:250,k:'base'},{h:'Consensus',w:148,k:'cons'},{h:'Price',w:148,k:'price'},{h:'Base Upside',w:148,k:'bup'},{h:'Rating',w:100,k:'rating'},{h:'Why',w:0,k:'why'}];
-  cols[cols.length-1].w=tableW-cols.slice(0,-1).reduce((s,col)=>s+col.w,0);
-  const subH=subLines.length*22,tableY=36+34+14+subH+16;
-  const footY=tableY+headerH+orangeH+Math.max(1,views.length)*rowH+22;
-  const extra=mixed?22:0;
-  c.width=W;c.height=Math.max(640,Math.ceil(footY+22+22+extra+28));
+  const x0=48,pad=14,headerH=42,rowH=44,orangeH=4,headerFont='bold 13px Inter, Arial, sans-serif';
+  const spec=[{h:'Ticker',k:'ticker'},{h:"Steve's Base",k:'base'},{h:'Consensus',k:'cons'},{h:'Price',k:'price'},{h:'Base Upside',k:'bup'},{h:'Rating',k:'rating'},{h:'Why',k:'why'}];
+  const rowCells=views.map(v=>({
+    ticker:{text:v.ticker,font:'bold 15px Inter, Arial, sans-serif',color:PTC.navy},
+    base:ptBaseCell(v),
+    cons:ptConsCell(v),
+    price:{text:ptMoney(v.price)+(mixed&&v.snap?'*':''),font:'15px Inter, Arial, sans-serif',color:PTC.text},
+    bup:Object.assign({font:'bold 15px Inter, Arial, sans-serif'},ptUpside(v.bup)),
+    rating:{text:v.rating||'—',font:'bold 15px Inter, Arial, sans-serif',color:ptRateColor(v.rating)},
+    why:{text:v.why||'',font:'15px Inter, Arial, sans-serif',color:PTC.text}
+  }));
+  const cols=spec.map(col=>{
+    ctx.font=headerFont;let w=ctx.measureText(col.h).width;
+    for(const cells of rowCells)w=Math.max(w,ptTextWidth(ctx,cells[col.k]));
+    return {h:col.h,k:col.k,w:Math.ceil(w)+pad*2+2}});
+  const tableW=cols.reduce((s,col)=>s+col.w,0);
+  ctx.font='bold 28px Inter, Arial, sans-serif';
+  const titleW=ctx.measureText(title).width;
+  ctx.font='13px Inter, Arial, sans-serif';
+  const footNote=mixed?'* Snapshot price (live quote unavailable).':'';
+  const footW=Math.max(ctx.measureText(foot1).width,ctx.measureText(foot2).width,ctx.measureText(footNote).width);
+  let wmExtra=0;if($('ptwm').checked){ctx.font='18px Inter, Arial, sans-serif';wmExtra=Math.ceil(ctx.measureText('@thepowerfulHRV').width)+16}
+  const W=Math.ceil(Math.max(x0+titleW+48+wmExtra,x0+tableW+48,x0+footW+48));
+  const tableY=68,footY=tableY+headerH+orangeH+Math.max(1,views.length)*rowH+22,extra=mixed?22:0;
+  c.width=W;c.height=Math.ceil(footY+22+extra+28);
   ctx.fillStyle='#FFFFFF';ctx.fillRect(0,0,c.width,c.height);
   ctx.textBaseline='middle';ctx.textAlign='left';
   ctx.fillStyle=PTC.navy;ctx.font='bold 28px Inter, Arial, sans-serif';ctx.fillText(title,x0,36);
-  ctx.fillStyle=PTC.muted;ctx.font='15px Inter, Arial, sans-serif';
-  subLines.forEach((ln,i)=>ctx.fillText(ln,x0,36+34+14+i*22));
   ctx.fillStyle=PTC.navy;ctx.fillRect(x0,tableY,tableW,headerH);
   ctx.fillStyle=PTC.orange;ctx.fillRect(x0,tableY+headerH,tableW,orangeH);
   ctx.font='bold 13px Inter, Arial, sans-serif';ctx.fillStyle='#FFFFFF';
   let x=x0;cols.forEach(col=>{ctx.fillText(col.h,x+pad,tableY+headerH/2);x+=col.w});
-  views.forEach((v,i)=>{
+  rowCells.forEach((cells,i)=>{
     const y=tableY+headerH+orangeH+i*rowH;
     if(i%2===1){ctx.fillStyle=PTC.alt;ctx.fillRect(x0,y,tableW,rowH)}
     const cy=y+rowH/2;let cx=x0;
-    const cells={
-      ticker:{text:v.ticker,font:'bold 15px Inter, Arial, sans-serif',color:PTC.navy},
-      base:ptBaseCell(v),
-      cons:{text:ptMoney(v.consensus),font:'15px Inter, Arial, sans-serif',color:PTC.text},
-      price:{text:ptMoney(v.price)+(mixed&&v.snap?'*':''),font:'15px Inter, Arial, sans-serif',color:PTC.text},
-      bup:Object.assign({font:'bold 15px Inter, Arial, sans-serif'},ptUpside(v.bup)),
-      rating:{text:v.rating||'—',font:'bold 15px Inter, Arial, sans-serif',color:ptRateColor(v.rating)},
-      why:{text:v.why||'',font:'15px Inter, Arial, sans-serif',color:PTC.text}
-    };
     cols.forEach(col=>{ptDrawCell(ctx,cells[col.k],cx+pad,cy,col.w-pad*2);cx+=col.w});
   });
   ctx.fillStyle=PTC.muted;ctx.font='13px Inter, Arial, sans-serif';ctx.textAlign='left';
   if(foot1)ctx.fillText(foot1,x0,footY);
   ctx.fillText(foot2,x0,footY+22);
   if(mixed)ctx.fillText('* Snapshot price (live quote unavailable).',x0,footY+44);
-  if($('ptwm').checked){ctx.fillStyle=T.wm;ctx.font='18px Inter, Arial, sans-serif';ctx.textAlign='right';ctx.textBaseline='top';ctx.fillText('@thepowerfulHRV',W-50,28)}
+  if($('ptwm').checked){ctx.fillStyle=T.wm;ctx.font='18px Inter, Arial, sans-serif';ctx.textAlign='right';ctx.textBaseline='top';ctx.fillText('@thepowerfulHRV',c.width-24,16)}
   const st=$('status');if(MODE==='pt'){
     const snap=views.filter(v=>v.snap).map(v=>v.ticker);
     const moved=views.filter(v=>v.snapshotRating&&v.rating&&v.snapshotRating!==v.rating).map(v=>v.ticker+' '+v.snapshotRating+' → '+v.rating);

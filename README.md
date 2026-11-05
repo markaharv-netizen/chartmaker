@@ -98,15 +98,15 @@ Workbooks: Bot experiments `1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY`, bot e
 
 ## Price targets
 
-The **Price targets** tab reads `static/price_targets.json`. Render does not call Google. The table is Steve's DCF base value per share against the street consensus mean and the price, sorted by base upside (high to low). Columns: Ticker, Steve's Base, Consensus, Price, Base Upside, Rating, Why. Steve's Base shows the dollar change versus the previous update, in parentheses, when `baseChangedAt` is within the last 7 days (green up, red down). A new ticker shows the price only.
+The **Price targets** tab reads `static/price_targets.json`. Render does not call Google. The table is Steve's DCF base value per share against the street consensus mean and the price, sorted by base upside (high to low). Columns: Ticker, Steve's Base, Consensus, Price, Base Upside, Rating, Why. Steve's Base shows the dollar change versus the previous update, in parentheses, when `baseChangedAt` is within the last 7 days (green up, red down). A new ticker shows the price only. A blank Street consensus (an IPO-day name with no analyst coverage) is stored as null, and the Consensus column shows a dash.
 
-Opening the tab loads quotes through the same `/api/chart` path as Prices and recomputes Price, base upside, and the rating from the price on screen. Rating is BUY above +15% upside to base, SELL below -15%, otherwise HOLD. A ticker whose quote fails keeps the snapshot price; the subtitle names the date in use (Yahoo close, or the snapshot date). Download PNG is the table on a white canvas. Watermark is off unless the box is checked.
+Opening the tab loads quotes through the same `/api/chart` path as Prices and recomputes Price, base upside, and the rating from the price on screen. Rating is BUY above +15% upside to base, SELL below -15%, otherwise HOLD. A ticker whose quote fails keeps the snapshot price; the status line names the date in use (Yahoo close, or the snapshot date). Columns are as wide as their text, and the table is not stretched to the page. Download PNG is that same table. Watermark is off unless the box is checked.
 
 `why` is not a sheet column. Edit it in the JSON. Regenerating the file keeps existing `why` lines, and the footer notes if they were edited.
 
 Refresh the snapshot where the sheet can be read:
 
-1. Export Sheet1 `A1:P11` from [DCF price target summary](https://docs.google.com/spreadsheets/d/10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0) as CSV. The link export is 401 unless the sheet is shared.
+1. Export Sheet1 `A1:P30` from [DCF price target summary](https://docs.google.com/spreadsheets/d/10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0) as CSV. The link export is 401 unless the sheet is shared.
 2. `python3 scripts/price_targets.py --csv that.csv`
 3. Commit `static/price_targets.json`.
 
