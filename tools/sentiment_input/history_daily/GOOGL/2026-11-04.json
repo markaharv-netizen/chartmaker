@@ -1,0 +1,237 @@
+{
+ "symbol": "GOOGL",
+ "start": "2026-11-04T00:00:00Z",
+ "end": "2026-11-05T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "GOOGL (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "thecrowdtape",
+   "url": "https://x.com/thecrowdtape/status/2117823924327321949",
+   "date": "2026-11-04",
+   "text": "AI-bull talk still needs confirmation in the feed. 2 bullish vs 1 bearish tracked account on $GOOGL over the past day (11 posts). https://t.co/jJ3eQTiUsS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 11,
+   "user": "ElevatingTrader",
+   "url": "https://x.com/ElevatingTrader/status/2117859389692432642",
+   "date": "2026-11-04",
+   "text": "Eggsy AI on $GOOGL Weekly after last week’s sell-off 👇\n\n📉 Price: ~$279, pulling back from recent highs\n\n🔴 Resistance: $300 / $320\n🟢 Support: $270 / $250\nBull (buy the dip): hold $270 + bullish candle → SL $260 → TP $300/$320\nBear: break $270 → SL $280 → TP $250/$240\n\nRSI https://t.co/SQpT9LB6WG"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 5,
+   "user": "surfer_ai",
+   "url": "https://x.com/surfer_ai/status/2118130725476003896",
+   "date": "2026-11-04",
+   "text": "My AI scan said $ARM  was bullish.\n\nSo why did I make +67% buying puts?\n\nEvery morning at  AM, I have FINN AI (https://t.co/1MemgHpCOp connector for TradingView) scan my playbook. \n\nToday at  AM, it ranked 3 names: AMZN, ARM, and GOOGL. All three flagged bullish.\n\nARM was ranked https://t.co/QDst2YwvFX"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "EWAnalysis",
+   "url": "https://x.com/EWAnalysis/status/2117917110588326130",
+   "date": "2026-11-04",
+   "text": "$GOOGL hit our projected downside target! Incomplete bearish sequences called the decline perfectly.\nRead the analysis: https://t.co/labxqGIyiI\n#GOOGL #ElliottWave"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "ElliottForecast",
+   "url": "https://x.com/ElliottForecast/status/2118032186339205510",
+   "date": "2026-11-04",
+   "text": "🚨 $GOOGL: Bearish Elliott Wave sequences called the decline! 📉\n\nOur analysis identified further downside from $384.57, targeting the $306.98–$271.66 zone. Price has now reached that target area after breaking to fresh lows.\n\nAnother bearish forecast delivered! 🎯 https://t.co/k3J7U2uegt"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "StockMatrixAI",
+   "url": "https://x.com/StockMatrixAI/status/2117979792813568217",
+   "date": "2026-11-04",
+   "text": "AI calls going into the Dem sweep (Tue close, 90-day targets):\n\nNVDA Bullish 60%, $242\nAMD Bullish 72%, $565\nMU Bullish 65%, $1,010\nMSFT Bullish 65%, $565\nMETA Bearish 68%, $548\nGOOGL Bearish 70%, $258\n\nFutures flipped green overnight. Does a data center fight change them? NFA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2118049195131064638",
+   "date": "2026-11-04",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. solana:kLqMvUm1p4pRbxU4r8kWCTVAuWMJLtcTJqGb4b5pump — Gasoline refining margins jump\n🟢 85% Bullish · 🔴 15% Bearish\n🔗 https://t.co/gTtTOZskLA\n\n2. $BTC — Bitwise CIO highlights crypto maturity as election-linked tokens plunge\n🟢 65% Bullish · 🔴 35%"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 14,
+   "user": "JusTADax",
+   "url": "https://x.com/JusTADax/status/2117971962567803297",
+   "date": "2026-11-04",
+   "text": "$GOOGL Weekly Chart · 6 Confluences\n\nLower boundary of the Descending Channel + back on the March support box + AVWAP holding underneath at 275.72 + Hidden Bullish Divergence forming + RSI extended to the downside + Volume Spike on earnings week\n\nA green weekly close confirms the https://t.co/jYG51iOzSt"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "IncBulls",
+   "url": "https://x.com/IncBulls/status/2118070833725997135",
+   "date": "2026-11-04",
+   "text": "0DTE flow across the big names 👇\n\n• $SPY · Nov 4 · 0DTE\n  – Gross call premium: $90.46M\n  – Gross put premium: $93.27M\n  – Net flow sentiment: bearish 2.7% 🔴\n\n• $QQQ · Nov 4 · 0DTE\n  – Gross call premium: $89.83M\n  – Gross put premium: $90.92M\n  – Net flow sentiment: bearish"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "IncBulls",
+   "url": "https://x.com/IncBulls/status/2118025422575427762",
+   "date": "2026-11-04",
+   "text": "0DTE flow across the big names 👇\n\n• $SPY · Nov 4 · 0DTE\n  – Gross call premium: $70.68M\n  – Gross put premium: $61.75M\n  – Net flow sentiment: bearish 5.1% 🔴\n\n• $QQQ · Nov 4 · 0DTE\n  – Gross call premium: $67.17M\n  – Gross put premium: $65.17M\n  – Net flow sentiment: bearish"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Pynvestment",
+   "url": "https://x.com/Pynvestment/status/2117981038634778951",
+   "date": "2026-11-04",
+   "text": "🚨Scan Golden Cross (50vs200)\n \nBullish (days, change)\nPG (9, +1.3%)\nMETA (29, -15.9%)\nCRM (50, -13.1%)\nPLTR (56, +3.5%)\nMSFT (65, +2.7%)\n\nBearish (days, change)\nVZ (1, 0.0%)\nGOOGL (6, -1.3%)\nRTX (6, +2.2%)\nGEV (7, +4.6%)\nGE (9, +11.2%)"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "WallStreetFlows",
+   "url": "https://x.com/WallStreetFlows/status/2118029255736963539",
+   "date": "2026-11-04",
+   "text": "Our Shorting Bot Report publishes again this week. Count 63, highest in 31 tracked weeks. Volatility trigger fires again. Second straight publish of this correction stretch.\n\n63 is well past our publish threshold on the raw count. Volatility trigger confirms the elevated reading"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 303,
+   "user": "RealMattMoney",
+   "url": "https://x.com/RealMattMoney/status/2118037397577326982",
+   "date": "2026-11-04",
+   "text": "Post-election take… and I stated this on @Futurenvesting show just last week… \n\nSlower AI capex is bullish, not bearish.\n\nHarder to build data centers means… \n- GPU prices flatten\n- Compute Spot rents climb\n- Capex falls\n- Margins expand\n- FCF flips faster\n\nScarcity doesn't"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "IncBulls",
+   "url": "https://x.com/IncBulls/status/2117804210578444492",
+   "date": "2026-11-04",
+   "text": "🚨 $GOOGL - Potential bounce setup given the data.\n\nDespite the sharp selloff, options premium sentiment is 57% bullish, while data shows a 27% positive positioning tilt and 25% upside flow pressure. \n\nA much more constructive setup than the previous two sessions, despite price https://t.co/OhMrvWRcHX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BurakTheScalper",
+   "url": "https://x.com/BurakTheScalper/status/2117778915074977951",
+   "date": "2026-11-04",
+   "text": "🚨 TONIGHT— LIVE ON X 🔴\n\nThe market has spoken. Now we break it down.\n\n📊 MARKET RECAP + CHARTING SESSION\n⚡ What worked today\n🔍 What failed\n📈 Bullish &amp; bearish scenarios\n🎯 Key support / resistance\n🧠 What today’s price action is telling us\n🔥 What matters heading into https://t.co/AeHyOew6sj"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2117998292302971165",
+   "date": "2026-11-04",
+   "text": "The tickers X are buzzing about right now:\n\n1. Cipher Mining Inc. $CIFR is down 16.7%\n\n🟢 Sentiment: 51% bullish, 26% bearish, 23% neutral\n\nCipher posted Q3 revenue of $26.7 million, a 63% drop from last year, and four banks cut price targets on Nov 3. The stock fell 16.7% https://t.co/8pUnIp4p7T"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Muldenson",
+   "url": "https://x.com/Muldenson/status/2117881845677457764",
+   "date": "2026-11-04",
+   "text": "My price predictions (12 Month Range):\n\nBase Fair Value: $494.20\nBull Case Target: $626.50\nBear Case Target: $323.75\n\n$GOOGL https://t.co/KSnrB2IdvR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "BullBear_Beacon",
+   "url": "https://x.com/BullBear_Beacon/status/2117905846684524826",
+   "date": "2026-11-04",
+   "text": "11/3 flow\n$EWZ bullish risk reversal 👀\n$FRVO calls\n$GOOG calls + sold puts\n$GOOGL calls + sold puts\n$INSM call roll\n$INTC calls 👀\n$MLYS sold calls\n$MSTR calls\n$NFLX call spread (small bull lean)\n$SG call roll\n$TAN calls\n$TXN put profit take + sold puts\n$ZS sold calls https://t.co/T0bDWxd1PY"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "janscharts",
+   "url": "https://x.com/janscharts/status/2118102250371330155",
+   "date": "2026-11-04",
+   "text": "$GOOGL Stage 4 declining (weekly BEAR engulfing). Daily crashed on 4.5x vol; last candle BULL Harami stalls momentum near 280. Next levels: res 329/347/360. Needs trend+vol confirm. https://t.co/iT9YnCweEM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "SPXplays",
+   "url": "https://x.com/SPXplays/status/2118006864332120086",
+   "date": "2026-11-04",
+   "text": "Looks like $SPX 7690 is our chop range today \n\nWatch for the bear gap fills above to 7721 and 7748, if bulls can't fill them today we will likely move back lower to test the bull gap.  \n\n$SPY $QQQ $AAPL $META $GOOGL $AMD $NVDA https://t.co/Hz2qOQmcqk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Y120631278553",
+   "url": "https://x.com/Y120631278553/status/2117874127797403814",
+   "date": "2026-11-04",
+   "text": "🚨 robinhood:0x86923f96303d656e4aa86d9d42d1e57ad2023fdc 's $1.07 BILLION Surprise: What's the Real Cost of Winning AI Chip Deals?\n\nAMD just reported impressive earnings.\n\nBut Reuters highlighted something investors shouldn't overlook:\n\nAMD recognized approximately $1.07 billion https://t.co/pdhMIiwaHL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "traderonthestrm",
+   "url": "https://x.com/traderonthestrm/status/2117982602883748002",
+   "date": "2026-11-04",
+   "text": "🚨 $SPY $SPX — KNOW WHAT REALLY MOVES THE S&amp;P 500!\n\nBefore predicting market direction, WATCH THE HEAVYWEIGHTS! 📊\n\nTOP S&amp;P 500 WEIGHTS:\n🔹 $NVDA — 7.27%\n🔹 $AAPL — 7.01%\n🔹 $MSFT — 5.67%\n🔹 $GOOGL + $GOOG — 5.01%\n🔹 $AMZN — 4.01%\n🔹 $META — 2.37%\n🔹 $AVGO — 2.31%\n🔹 $TSLA —"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 63,
+   "user": "StockWorthyApp",
+   "url": "https://x.com/StockWorthyApp/status/2117776589559648300",
+   "date": "2026-11-04",
+   "text": "12 OVERSOLD STOCKS TO WATCH! 🚨\nThese major stocks have an RSI below 30, signaling potentially oversold conditions! Ranked from lowest to highest RSI:\nWhich one are you buying the dip on?\n\n🔴 $GOOGL Alphabet — 22.60\n🔴 $VALE Vale — 22.64\n🔴 $INTC Intel — 23.78\n🔴 $HSBC HSBC https://t.co/gXIaNYS8lE"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "avinash_gr8",
+   "url": "https://x.com/avinash_gr8/status/2117778107616882906",
+   "date": "2026-11-04",
+   "text": "📉 $MAGS | THE WEAKNESS IN MAG7 STARTED WITH MOMENTUM\n\nThe deterioration followed a clear sequence:\n1. Bearish RSI divergence appeared first.\n2. RSI broke below 60 while price initially held the breakout level.\n3. Price bounced, but RSI was rejected at its moving average.\n4. https://t.co/HbdQFnzX6M"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TMA_MarketIntel",
+   "url": "https://x.com/TMA_MarketIntel/status/2117773739169615976",
+   "date": "2026-11-04",
+   "text": "🚨 GOLDMAN SACHS WARNS: 60% OF S&amp;P 500 STOCKS ARE ALREADY IN BEAR MARKET TERRITORY.\n\nYet the S&amp;P 500 itself remains just 3% below its record high.\n\nGoldman Sachs trader Bobby Molavi calls it a \"stealth bear market.\"\n\nTHE BIG NUMBERS:\n\n• 60%: S&amp;P 500 companies in bear market"
+  }
+ ]
+}
