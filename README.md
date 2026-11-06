@@ -109,8 +109,27 @@ Refresh the snapshot where the sheet can be read:
 1. Export Sheet1 `A1:P30` from [DCF price target summary](https://docs.google.com/spreadsheets/d/10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0) as CSV. The link export is 401 unless the sheet is shared.
 2. `python3 scripts/price_targets.py --csv that.csv`
 3. Commit `static/price_targets.json`.
+4. `python3 scripts/paper_trading.py` and commit `static/paper_trading.json` in the same update. The paper book reads the ratings this file just wrote.
 
 `python3 scripts/price_targets.py` tries that export first. `python3 scripts/price_targets.py --seed` writes the Oct 21 email figures when the sheet cannot be read. The scenario row `SPCX – Elon case (scenario)` is skipped. `python3 scripts/price_targets.py --self-test` checks the parser.
+
+## Paper trading
+
+The **Paper trading** tab is a long-only book of the ratings in `static/price_targets.json`. It does not use the live upside the Price targets tab recomputes. BUY is a long. HOLD and SELL stay in cash. There are no shorts, no leverage, and no fees.
+
+The book starts with $100,000 at the Friday, November 6, 2026 open. Each name covered that morning has a slot of 1/N of that $100,000 (N is frozen at inception). A BUY invests its slot. A HOLD or SELL leaves the slot in cash. Slots change only when a name enters or leaves BUY: the sell or the buy fills at the next regular-session open after the change is detected. A move between HOLD and SELL does not trade. The morning job runs around 8:30 AM ET, before the 9:30 open, so a change it sees is filled at that day's open once the daily bar exists (the next run, or any run after 9:30). A run at or after 9:30 ET waits for the following session.
+
+A name added after inception buys one inception-sized slot from cash at the next open. Names already held are not resized. If cash is under $1, the buy is logged as unfunded and is not retried until the rating changes again. A name that leaves the sheet is sold at the next open if it is long.
+
+Until the November 6 open is in the price history, the longs show "pending open" and the portfolio is still $100,000. Daily marks use closing prices and are stored in `static/paper_trading.json`. The tab adds a live point from the latest quote. The chart compares the book with the S&P 500 (SPY), both indexed to the November 6 open. Open the tab at `/?tab=paper`.
+
+The page reads the saved book, then `GET /api/paper` reconciles it in memory with Yahoo daily bars through the same `yahoo()` helper as `/api/chart`. That request does not write the file. The nightly job persists the book:
+
+```
+python3 scripts/paper_trading.py
+```
+
+Run that from the repo root after `price_targets.json` is updated, then commit `static/paper_trading.json`. `python3 scripts/paper_trading.py --self-test` runs the trade tests. Rules that should be easy to change (stake, inception date, open and close, the BUY rating, the minimum cash to invest) are `CONFIG` at the top of `scripts/paper_trading.py`.
 
 ## Sentiment tab
 
