@@ -1,0 +1,480 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-11-05T00:00:00Z",
+ "end": "2026-11-06T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "TheRingGroup",
+   "url": "https://x.com/TheRingGroup/status/2118412636727746829",
+   "date": "2026-11-05",
+   "text": "#RINGRepost 📬\n\n🎤 @thelegionmaster posts “🚨 THE FINAL BIG SHORT UPDATE #BTC” stating #Bitcoin is approaching a critical support zone at $75,100. Failure to hold could trigger another leg lower toward $68K first target and $62K deeper extension. The update cites growing #AI https://t.co/GAbeNXUaty https://t.co/qcEsyNe9oW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2118311381099282443",
+   "date": "2026-11-05",
+   "text": "🚨 $BTC $HUT $CORZ $CRWV ALERT: Bitcoin miners are oversold following 35% October rout, VanEck says\n\n🔗 Open on MEXC: https://t.co/0tFuuDrnrE\n\n🟢 Bullish: 75%\n• VanEck considers AI-focused Bitcoin mining stocks significantly undervalued relative to their fundamentals.\n•"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Pr0fitconscious",
+   "url": "https://x.com/Pr0fitconscious/status/2118222566116433965",
+   "date": "2026-11-05",
+   "text": "$BTC DOMINANCE ANALYSIS\n\n$BTC Dominance is trading below the horizontal supply zone of the ascending triangle pattern and is currently moving within the Ichimoku cloud, indicating indecision in the market.\n\nA rejection from the supply zone could trigger further downside in https://t.co/sQs6te6am8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118443297203273915",
+   "date": "2026-11-05",
+   "text": "New Video! Bullish Reversal Patterns  Where Sellers Stop and Buyers Take Over!\nhttps://t.co/hmNsSRIZLK\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118356132905603429",
+   "date": "2026-11-05",
+   "text": "New Video! Bearish Engulfing - Where is the proof?!\nhttps://t.co/2NI1R5aEYh\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118189058509668782",
+   "date": "2026-11-05",
+   "text": "Gold Vs Silver\nhttps://t.co/o4TYaNckTX…\nJoin our supported trading community at:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118348120249524261",
+   "date": "2026-11-05",
+   "text": "New Video! Where to Place Your Stops! \nhttps://t.co/WnVfUIL0hu\nJoin our supported trading community at:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118290980403376282",
+   "date": "2026-11-05",
+   "text": "New Video! Where to Place Your Stops! \nhttps://t.co/467Kr3k9zJ…\nJoin our supported trading community at:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118159111078768790",
+   "date": "2026-11-05",
+   "text": "The Triple Bottom Three Lows on one Floor, Then a Close Above the Neckline\nhttps://t.co/1BJNb0J29P\n\nJoin our supported trading community at:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118235111699202235",
+   "date": "2026-11-05",
+   "text": "Trading Like Beginner Vs Trading Like a Pro\nJoin us actionable trade alerts at:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118421813034430710",
+   "date": "2026-11-05",
+   "text": "New Video! Bullish Reversal Patterns  Where Sellers Stop and Buyers Take Over!\nhttps://t.co/hmNsSRIZLK\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118475193983369434",
+   "date": "2026-11-05",
+   "text": "New Video! Bearish Engulfing - Where is the proof?!\nhttps://t.co/4ebOq5iLvM…\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118263549323567463",
+   "date": "2026-11-05",
+   "text": "New Video! Breakout or Trap!\nhttps://t.co/bu5NJF5EMQ…\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwivTi\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118174210585739492",
+   "date": "2026-11-05",
+   "text": "The Triple Bottom Three Lows on one Floor, Then a Close Above the Neckline\nhttps://t.co/zWafORbVzc…\n\nJoin our supported trading community at:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118250211390677006",
+   "date": "2026-11-05",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8GGU8\n\nJoin our supported trading community at:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118297019856880003",
+   "date": "2026-11-05",
+   "text": "New Video! Inside Bars and how to read them.\nhttps://t.co/oMVV8Rbg16…\n\nJoin us, where ever trade is tracked so you can learn how it's done at:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118219760626504158",
+   "date": "2026-11-05",
+   "text": "The Dragonfly Doji\nhttps://t.co/7vdAH4oMrz\n\nJoin us, where ever trade is tracked so you can learn how it's done at:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118174210652545203",
+   "date": "2026-11-05",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8GGU8\nJoin our supported trading community at:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118430901885694295",
+   "date": "2026-11-05",
+   "text": "New Video! Bullish Reversal Patterns  Where Sellers Stop and Buyers Take Over!\nhttps://t.co/hmNsSRIZLK\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118405244975792600",
+   "date": "2026-11-05",
+   "text": "New Video! Bullish Reversal Patterns  Where Sellers Stop and Buyers Take Over!\nhttps://t.co/hmNsSRIZLK\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118397656993341731",
+   "date": "2026-11-05",
+   "text": "New Video! Break Even Points After a Loss\nhttps://t.co/OugvEhkkWP\nJoin our supported trading community at:\nJoin us at: https://t.co/uFgJFwj3IQ\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118398886675144704",
+   "date": "2026-11-05",
+   "text": "New Video! Bullish Reversal Patterns  Where Sellers Stop and Buyers Take Over!\nhttps://t.co/hmNsSRIZLK\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118478828909830507",
+   "date": "2026-11-05",
+   "text": "New Video! Bullish Reversal Patterns  Where Sellers Stop and Buyers Take Over!\nhttps://t.co/hmNsSRIZLK\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118463031701340468",
+   "date": "2026-11-05",
+   "text": "Live Walkthrough - Recap Nov  4th #Gold + #WTI\nhttps://t.co/pYge7Sjwjc\nWant to learn the mindset in a supported community?\nJoin us at: https://t.co/uFgJFwj3IQ\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118204661219971395",
+   "date": "2026-11-05",
+   "text": "Diamond Top - Wide Swings Then Tight Swings let the Breakdown Confirm\nhttps://t.co/2bR48lUPM4\n\nJoin us, where ever trade is tracked so you can learn how it's done at:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118144011550531953",
+   "date": "2026-11-05",
+   "text": "The If Then Trade Plan Decide Before Price Gets there, then Follow it!\nhttps://t.co/FVN9jb8iOE\n\nJoin us, where ever trade is tracked so you can learn how it's done at:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118150051889365049",
+   "date": "2026-11-05",
+   "text": "New Video! Live Walkthrough Nov. 3rd $BTC Moved and so did $COIN $MARA $RIOT\nhttps://t.co/u46950r1hg\nWant to learn the mindset in a supported community? \nJoin us at: https://t.co/uFgJFwivTi\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118134329515929905",
+   "date": "2026-11-05",
+   "text": "New Video! Live Walkthrough Nov. 3rd $BTC Moved and so did $COIN $MARA $RIOT\nhttps://t.co/QrD6r5SBak\nWant to learn the mindset in a supported community? \nJoin us at: https://t.co/uFgJFwj3IQ\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118153574673002807",
+   "date": "2026-11-05",
+   "text": "The Doji's Setup Breakdown!\n\nHow to increase your success rate with confluence signals.\nEasy to find and easy to trade.\nYou have the video at: https://t.co/rdieTRuYys…\nYou have a real chart found within the last 2 years. \n\n$XLE $OXY $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 14,
+   "user": "tradingdiff",
+   "url": "https://x.com/tradingdiff/status/2118138987751571544",
+   "date": "2026-11-05",
+   "text": "BTC on #Hyperliquid 15m Chart 📊   \n\nBitcoin is trading around 80,560 USD, sustaining a strong recovery following a bounce from the lower range and now consolidating in the upper zone. 📈   \n\nTo the upside, the key liquidation zone sits at 82,750 USD, acting as an immediate https://t.co/lBDmIuasOp"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118153574496735369",
+   "date": "2026-11-05",
+   "text": "The Bullish Hammer A Potential Reversal Signal\nhttps://t.co/FyBFMK9Qlv\n\nWant help finding the setup, join us at:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "CryptoLab000",
+   "url": "https://x.com/CryptoLab000/status/2118134443298709791",
+   "date": "2026-11-05",
+   "text": "🚨 BITCOIN: $75K OR $87K — WHICH LEVEL COMES FIRST?\n\nBitcoin’s recovery is facing a major test.\n\nAccording to recent technical analysis:\n\n🔴 $75,500 — Potential downside target.\n🟡 $73,188 — Next support reference.\n🟢 $87,319 — Level that could weaken the bearish outlook.\n\nBut"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 203,
+   "user": "BitcoinArchive",
+   "url": "https://x.com/BitcoinArchive/status/2118143634772218033",
+   "date": "2026-11-05",
+   "text": "\"Historically, whenever sentiment gets extremely bullish or bearish, the market moves the opposite way.\n\nSo, I personally think 2027 will be bullish for Bitcoin.\"\n\n— Shubh Varma, HyBlock Capital CEO https://t.co/6t4NpaQvwY"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Wazzup_Crypto",
+   "url": "https://x.com/Wazzup_Crypto/status/2118155273571573955",
+   "date": "2026-11-05",
+   "text": "HyBlock Capital CEO Shubh Varma predicts 2027 will flip consensus sentiment and be bullish for Bitcoin, betting against extreme market extremes. Bullish or bearish? #Bitcoin #BTC #Crypto https://t.co/oVgsJ7SOSg"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 494,
+   "user": "cantonmeow",
+   "url": "https://x.com/cantonmeow/status/2118145343435264148",
+   "date": "2026-11-05",
+   "text": "#Bitcoin daily bearish parabola broken\nBullish MACD cross spotted https://t.co/LmsbsR5udv"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "YessahBlessahCC",
+   "url": "https://x.com/YessahBlessahCC/status/2118147354767532500",
+   "date": "2026-11-05",
+   "text": "#Bitcoin daily bearish parabola broken\nBullish MACD cross spotted\n\n$CC $BTC $UNI $ZEC $ETH $SUI $EDEL $HANDL $BROKER https://t.co/WzgkcTRp3r"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "chaingull",
+   "url": "https://x.com/chaingull/status/2118151350974554495",
+   "date": "2026-11-05",
+   "text": "Crypto Brief — Nov 5, 01:20 UTC\n\nTOP STORY — impact 90 / 100\n▼ North Korean hackers launder Binance loot through THORChain as RUNE rises over 10%.\n\nBULLISH\n▲ 40 JPMorgan adds Bitcoin to 2027 long-term assumptions, forecasts 10% annualized return\n\nBEARISH\n▼ 70 Coinbase says 99%"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 44,
+   "user": "mstrinvestor",
+   "url": "https://x.com/mstrinvestor/status/2118132397808271425",
+   "date": "2026-11-05",
+   "text": "$MSTR opened Q4 at $153. That's the key resistance level to break right now. I'm still bearish despite all of the bullish chatter. \n\nBitcoin needs to push past 83k to flip green in Q4 as well.\n\nIt's too early to tell right now but the MSCI delisting drama will start on the 11th."
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2118149355400004065",
+   "date": "2026-11-05",
+   "text": "🚨 $BTC ALERT: Cryptocurrencies Gain as Midterm Dust Settles — Market Talk\n\n💹 View Futures Market: https://t.co/0tFuuDrnrE\n\n🟢 Bullish: 65%\n• Bitcoin gained 0.7% to $80,704.\n• Bitcoin remains above the psychological $80,000 level.\n• Banks, asset managers and ETFs have"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "CryptoDad_DDC",
+   "url": "https://x.com/CryptoDad_DDC/status/2118141272070246634",
+   "date": "2026-11-05",
+   "text": "🚨 BITCOIN: Is the cycle bottom really in?\n\nThe data says we’re not out of the woods yet.\n\n📊 BTC Cycle Model — Nov 4, 2026\n\n72% evidence weight: Cycle TOP already occurred\n52%: Cycle BOTTOM already occurred\n48%: Next major extreme could still be a new BOTTOM\n\n⚠️ Liquidity"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 506,
+   "user": "RAFAELA_RIGO_",
+   "url": "https://x.com/RAFAELA_RIGO_/status/2118135944431747582",
+   "date": "2026-11-05",
+   "text": ".\n$BTC BULL SEASON 🐂 \n\nMonthly &amp; 2M\nCLOSED BULLISH tonight 🟢\n\nIt’s a GREEN NOVEMBER  for the king 🟢\n\nToday marks the official beginning of the bull season in my macro analyses, after bitcoin flipped bullish on the monthly time frame \n\nLet’s fuckng go! 💰\n\nReady for happy days, https://t.co/frSfqN3lI7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Imwazosky",
+   "url": "https://x.com/Imwazosky/status/2118156073945502144",
+   "date": "2026-11-05",
+   "text": "A Bitcoin miner just signed a $28 billion AI deal. ⚡\n\n@RiotPlatforms is leasing its entire Corsicana, Texas campus to a frontier AI lab, and its new 10-Q filing names the tenant: @AnthropicAI.\n\n1. The deal: a 15-year triple-net powered land lease covering 910 MW of critical IT https://t.co/uNtqswEovW"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "NOVATRADINGTEAM",
+   "url": "https://x.com/NOVATRADINGTEAM/status/2118146471237496969",
+   "date": "2026-11-05",
+   "text": "[BTC VIEW UPDATE] - SHIFTING BULLISH!\n\nThe focus is now on LONG setups. 📈\n\n✅ Daily SMA support confirmed\n✅ Strong volume-backed breakout above the downtrend line\n✅ $76K may have marked the correction low\n\n🎯 BTC $81,200–81,300 remains a common upside target across multiple https://t.co/CSGfzJwax8"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "whathoroscope",
+   "url": "https://x.com/whathoroscope/status/2118140941592649857",
+   "date": "2026-11-05",
+   "text": "📢 Crypto WhatHoroscope – November 5, 2026 ✨\n\n🌐 Overview: \nBitcoin is currently trading around $80,699, showing strong resilience and a bullish sentiment as the market transitions through various sessions.\n\n🌙 Astro Drivers: \nMoon in Virgo opposes Neptune, creating some"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "LiquidityAlpha",
+   "url": "https://x.com/LiquidityAlpha/status/2118141148946735433",
+   "date": "2026-11-05",
+   "text": "I’m calling it now.\n\n#Bitcoin won’t bottom until late 2027\n\nThis could be the longest bear market in Bitcoin’s history\n\nThe majority of investors simply aren’t mentally prepared for what’s coming\n\nThey’re still treating every relief rally as the beginning of the next bull run"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 67,
+   "user": "MrPresentable2",
+   "url": "https://x.com/MrPresentable2/status/2118133073397051467",
+   "date": "2026-11-05",
+   "text": "You had the entire last two weeks to get positioned.\n\n99% of CT was bearish.\n\nI was telling you to accumulate.\n\nThe smart accounts were telling you to accumulare.\n\nI told you within .1% where to long on bitcoin.\n\nNever financial advice, just a statement as always, but here we are"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118138475094458619",
+   "date": "2026-11-05",
+   "text": "Best Trading Times You Should Know!\nhttps://t.co/Ku3ZUpM7Sf\n\nLearn the mindset at:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118152316608041189",
+   "date": "2026-11-05",
+   "text": "8 Key Principles for Selling Successfully\nhttps://t.co/aioZGJnVNl\n\nJoin our discord at:\nhttps://t.co/HFB0U0EhoN\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118137216778305811",
+   "date": "2026-11-05",
+   "text": "Doji Candlestick Pattern - Market Indecision at Key Levels\nhttps://t.co/QS66SiK52m\n\nJoin our discord at:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "cexscan",
+   "url": "https://x.com/cexscan/status/2118131251051954370",
+   "date": "2026-11-05",
+   "text": "Last 60m - #Binance Spot (USDT Trades)\n\n📈 Top 3 Gainers:\n$SKDDB (GraniteShares 2x Short SK Hynix Daily ETF (bStocks)) : ↑4.4%\n$SOXSB (Direxion Semiconductor Bear 3X ETF (bStocks)) : ↑2.57%\n$SOLV (Solv Protocol) : ↑1.4%\n\n📉 Top 3 Losers:\n$SKUUB (GraniteShares 2x Long SK Hynix"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 27,
+   "user": "gaah_im",
+   "url": "https://x.com/gaah_im/status/2118131244815008161",
+   "date": "2026-11-05",
+   "text": "Day 928 Today after the 🟢4th Halving\n\nFrom perspective of time cycles and #Bitcoin Halvings, the bottom bear market has already been established. https://t.co/duUvvUtdtD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 10,
+   "user": "BecauseBitcoin",
+   "url": "https://x.com/BecauseBitcoin/status/2118131238514856260",
+   "date": "2026-11-05",
+   "text": "\"Consolidations on the high time frames always look the scariest before they reverse\" - @lil_louieT \n\nThe Bear Trap blue print Louie discussed on Monday could be in Full affect as Bitcoin closes the day above 80k today 👀 https://t.co/UNSkRQFV2l"
+  }
+ ]
+}

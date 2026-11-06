@@ -1,0 +1,264 @@
+{
+ "symbol": "COIN",
+ "start": "2026-11-05T00:00:00Z",
+ "end": "2026-11-06T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "0xMtey",
+   "url": "https://x.com/0xMtey/status/2118317803287556384",
+   "date": "2026-11-05",
+   "text": "$BTC is battling with 80.5k S/R, which had held pretty well in the recent past\n\nThe PA has also formed a symmetrical triangle, so almost a coin flip at this point. However, there are a couple of important points:\n\n1) the bull flag we've put in yesterday didn't see a follow up, so https://t.co/N8mCuGn9TH"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118256499516490055",
+   "date": "2026-11-05",
+   "text": "🛑 FIL lags BTC with a 0.5% drop in 24h—relative weakness signals more downside ahead\n\n- my bias is bearish on FILUSDT.P here as the 1h trend is clearly down, with both daily and weekly structure also bearish, despite BTC itself holding a bullish trend—this puts FIL at heightened https://t.co/8l6prOg3g3"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118253643950334175",
+   "date": "2026-11-05",
+   "text": "🔥 $ETH steady at +4.6% 24h, holding key zones—momentum’s real, not just noise\n\n- my bias is bullish here on the 1h as the structure is clearly trending up and price is holding above all key demand zones 🚀\n- price is consolidating after a strong impulse move, sitting above 2410 https://t.co/rGHe9hH5lQ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118447392353865975",
+   "date": "2026-11-05",
+   "text": "Live Walkthrough Nov. 3rd $BTC Moved and so did $COIN $MARA $RIOT\nhttps://t.co/aE6lgW5rQT\nWant to learn the mindset in a supported community?\nJoin us at: https://t.co/uFgJFwj3IQ\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118459327392674261",
+   "date": "2026-11-05",
+   "text": "Live Walkthrough Nov. 3rd $BTC Moved and so did $COIN $MARA $RIOT\nhttps://t.co/aE6lgW5rQT\nWant to learn the mindset in a supported community?\nJoin us at: https://t.co/uFgJFwj3IQ\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118134329515929905",
+   "date": "2026-11-05",
+   "text": "New Video! Live Walkthrough Nov. 3rd $BTC Moved and so did $COIN $MARA $RIOT\nhttps://t.co/QrD6r5SBak\nWant to learn the mindset in a supported community? \nJoin us at: https://t.co/uFgJFwj3IQ\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118340325291000067",
+   "date": "2026-11-05",
+   "text": "New Video! Live Walkthrough Nov. 3rd $BTC Moved and so did $COIN $MARA $RIOT\nhttps://t.co/YYwIpWAinO…\nWant to learn the mindset in a supported community? \nJoin us at: https://t.co/uFgJFwj3IQ\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118179354018709697",
+   "date": "2026-11-05",
+   "text": "New Video! Live Walkthrough Nov. 3rd $BTC Moved and so did $COIN $MARA $RIOT\nhttps://t.co/YYwIpWAinO…\nWant to learn the mindset in a supported community? \nJoin us at: https://t.co/uFgJFwj3IQ\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118150051889365049",
+   "date": "2026-11-05",
+   "text": "New Video! Live Walkthrough Nov. 3rd $BTC Moved and so did $COIN $MARA $RIOT\nhttps://t.co/u46950r1hg\nWant to learn the mindset in a supported community? \nJoin us at: https://t.co/uFgJFwivTi\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118221678203322759",
+   "date": "2026-11-05",
+   "text": "🎯 $ESPORTS jumps 4.1% on 2.2x volume spike—buying pressure hints at short squeeze, but bears still lurk.\n\n- The 2.2x volume spike and +4.1% jump suggest aggressive buying, likely a mix of short covering and potential smart money triggering an impulse from a prior liquidity https://t.co/palEFw5Ukz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118452946551939177",
+   "date": "2026-11-05",
+   "text": "Live Walkthrough Nov. 3rd $BTC Moved and so did $COIN $MARA $RIOT\nhttps://t.co/aE6lgW5rQT\nWant to learn the mindset in a supported community?\nJoin us at: https://t.co/uFgJFwj3IQ\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "BORNbjs",
+   "url": "https://x.com/BORNbjs/status/2118165028138611192",
+   "date": "2026-11-05",
+   "text": "🚨 CRYPTO MARKET REPORT — NOVEMBER 4, 2026 🚨\n\n📊 BITCOIN REBOUNDS. ETHEREUM SURGES. ALTCOINS FIGHT FOR SURVIVAL.\n\nThe crypto market is showing signs of recovery after a brutal selloff, but don't mistake one green day for the beginning of another bull run.\n\nLet's break it down. https://t.co/cDT0xv4Ge4"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118353998142980491",
+   "date": "2026-11-05",
+   "text": "📉 TQQQ dumps 4.3% on 10x volume spike—smart money unloading, not retail panic\n\n- my bias is bearish here: the 1h trend is confirmed bearish and this -4.3% dump with a massive 10x+ volume spike signals strong supply and likely smart money distribution, not panic retail selling\n- https://t.co/pAlvpbj2Ss"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118314463631700436",
+   "date": "2026-11-05",
+   "text": "🔻 $HUMA slips 3% in 15m with 1.4x volume—are we just seeing more sell pressure or a reset?\n\n- my bias is still bearish on HUMA here, as the 1h trend, daily, and weekly structure are all firmly bearish and price just broke lower with a high-volume flush 🚨\n- the -3% 15min dump https://t.co/wAO7QFeXX9"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118354151138590943",
+   "date": "2026-11-05",
+   "text": "🐻 $PENGB dives 5.4% on 15x volume—momentum’s gone cold, is this capitulation or just noise?\n\n- my bias remains bearish on PENGBUSDT here; the 1h trend is confirmed bearish, with both the most recent lower high at 47.70 and lower low at 46.31 taken out by a violent -5.4% dump and https://t.co/aTs2bcJZlN"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118418013393199405",
+   "date": "2026-11-05",
+   "text": "🐱 1000CAT volume spikes 5.3x with 9.6% 24h gain—momentum finally catching up to price?\n\n- my bias is bullish here, with the 1h structure showing clear higher highs and higher lows and price trending above both EMAs 🚀\n- the recent explosive 5.3x volume spike and sharp +2.6% move https://t.co/KjCdgbkk5K"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Just2Trade",
+   "url": "https://x.com/Just2Trade/status/2118463496522285139",
+   "date": "2026-11-05",
+   "text": "SanDisk ($SNDK) — down 19.1% today, and the broader picture is even grimmer.\n\nX account @KobeissiLetter (2.7M followers) highlights that $SNDK has plunged 66% from its peak, topping a list of major tech names now deep in bear market territory — alongside $ARM (-64%), $COIN https://t.co/9FvxfdhtkI"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118315758924988551",
+   "date": "2026-11-05",
+   "text": "🕓 $BTC steady at +2.7% 24h with higher highs shaping a clear bullish path ahead\n\n- my bias is bullish here on the 1h as the short-term structure is clearly making higher highs and higher lows, with price well above both the EMA20 and EMA200 and steady bullish pressure dominating https://t.co/9n7GUz2fqy"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118353330577584617",
+   "date": "2026-11-05",
+   "text": "🧊 $RUM dives 5.4% in 15m on 26.5x volume spike—dump fueled, keep selling pressure in focus\n\n- my bias remains bearish for RUMUSDT.P here: the 1h structure is clearly in a downtrend with lower highs and lower lows, and price just flushed through support on massive abnormal https://t.co/ng8DSKu5NZ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118219890154713108",
+   "date": "2026-11-05",
+   "text": "⚡ UNITREE shorts jammed on heavy negative funding — ready for a bullish squeeze despite 2.3% 24h gain?\n\n- my bias is bullish here: the 1h structure is firmly bullish, with higher highs and higher lows, and this aligns with both the daily trend and BTC’s own bullish structure – https://t.co/iLr1dgBbGA"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118195344525681058",
+   "date": "2026-11-05",
+   "text": "🧐 $XMR 4h BTC divergence is weakness to respect, not a reason to ditch the 1.6% bullish structure\n\n- my bias is bullish here — 1h structure is bullish and aligned with daily, weekly, and BTC, so the 4h coin/BTC lower-high (USDT HH vs ratio LH) is relative weakness to respect, https://t.co/z8r8cG6mzl"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118330590416011633",
+   "date": "2026-11-05",
+   "text": "🔥 $MAGMA down 5.9% in 15m on 2.8x volume spike—selling pressure confirms the downtrend isn’t done yet\n\n- my bias remains bearish here as the 1h structure is clearly in a downtrend, with lower highs and lower lows locked in and price trading below both EMA20 and EMA200 🟥\n- the https://t.co/hEm05IprYn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "Jimmyy_yyyy",
+   "url": "https://x.com/Jimmyy_yyyy/status/2118278929090048153",
+   "date": "2026-11-05",
+   "text": "$LTC: Down 87%. Fucking Brutal.\n\nLitecoin still gets used at checkout, and its next halving is expected in 2027. The question is whether people have a reason to hold LTC between payments.\n\nNO.1 WHAT IS LTC?\n\nLitecoin is a proof-of-work network for sending money. It targets a new https://t.co/tQ3rVzL0Xw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Jimmyy_yyyy",
+   "url": "https://x.com/Jimmyy_yyyy/status/2118280553275556350",
+   "date": "2026-11-05",
+   "text": "$PUMP: $500M Bought Back and Burned. Fucking Massive.\n\nhttps://t.co/BL8OfMt4N4 turns Solana memecoin trading into fees, then uses part of its revenue to buy and burn PUMP. The test is whether that buying can keep up as team and investor tokens vest.\n\nNO.1 WHAT IS PUMP?\n\nPUMP is https://t.co/wMfuQBLaOF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118134253493920169",
+   "date": "2026-11-05",
+   "text": "⚡ $NATGAS shrugging off BTC on 4h with 1.7% and structure still clean for higher\n\n- my bias is bullish here on the 1h — HH/HL structure still holds and I expect a reclaim toward 2.975 then the 3.005 liquidity high first, with 3.078 as the stretch if that high is taken cleanly\n- https://t.co/hqfUU2tig6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118132004617109611",
+   "date": "2026-11-05",
+   "text": "🕓 $ETH +6.6% keeps the 1h bullish structure alive above the swing low\n\n- my bias is bullish here on the 1h while structure holds above the last swing low — this is a counter-trend bounce versus the daily bearish frame, so I want a clean sweep-and-reclaim or a bullish engulfing https://t.co/PdNrIHgTCy"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2118133488217887044",
+   "date": "2026-11-05",
+   "text": "✅ $BTC +3.9% and holding the swing low — 1h structure supports bullish continuation\n\n- my bias is bullish here on the 1h while structure still prints higher highs and holds above the last confirmed swing low — this is a counter-trend bounce versus the daily bearish structure, so https://t.co/peIlYzobhO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "zeki893",
+   "url": "https://x.com/zeki893/status/2118133780808626673",
+   "date": "2026-11-05",
+   "text": "📊 KDJ Oversold Screener — 2026-11-04 | Total oversold: 388\n\nI applied the `webull-kdj` skill's ranking and confirmation rules to today's snapshot.\n- **Breadth contracted hard: 388 vs. 453 actual on 11/02 — −65 / −14.3%.** (Feed's stated 452 is close enough.) That ends the"
+  }
+ ]
+}

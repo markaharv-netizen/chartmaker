@@ -1,0 +1,408 @@
+{
+ "symbol": "ETH-USD",
+ "start": "2026-11-05T00:00:00Z",
+ "end": "2026-11-06T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "Ethereum (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "signalcorevip",
+   "url": "https://x.com/signalcorevip/status/2118357796886335563",
+   "date": "2026-11-05",
+   "text": "📊 24H Market Analysis @ November 5, 2026\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nThe dominant price action narrative indicates a market under significant institutional selling pressure, masked by minor intra-day upticks.\n\nDespite BTC and ETH showing slight"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "BORNbjs",
+   "url": "https://x.com/BORNbjs/status/2118165028138611192",
+   "date": "2026-11-05",
+   "text": "🚨 CRYPTO MARKET REPORT — NOVEMBER 4, 2026 🚨\n\n📊 BITCOIN REBOUNDS. ETHEREUM SURGES. ALTCOINS FIGHT FOR SURVIVAL.\n\nThe crypto market is showing signs of recovery after a brutal selloff, but don't mistake one green day for the beginning of another bull run.\n\nLet's break it down. https://t.co/cDT0xv4Ge4"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Asiftahsin10",
+   "url": "https://x.com/Asiftahsin10/status/2118438476513477048",
+   "date": "2026-11-05",
+   "text": "ETH Technical Outlook: Ethereum Tests Critical Support as Bearish Pressure Remains\n\nEthereum is trading around $2,265–$2,267, testing the 0.236 Fibonacci level near $2,265.68 after pulling back from its recent recovery high around $2,358–$2,385.\n\nThe latest daily chart shows ETH https://t.co/Py35JQXMIo"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2118437632661229881",
+   "date": "2026-11-05",
+   "text": "🚨 $BTC $ETH $TRUMP $DJI $SPX $NDX $VIX ALERT: Bitcoin erases post-election gains as Wall Street selloff triggers over $1 billion in crypto liquidations\n\n📈 Trade Futures: https://t.co/0tFuuDrnrE\n\n🟢 Bullish: 5%\n• Longer-term institutional demand for digital assets is expected"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "AlexSaforyn",
+   "url": "https://x.com/AlexSaforyn/status/2118427492952543475",
+   "date": "2026-11-05",
+   "text": "🚨 BTC &amp; ETH: BREAKOUT OR BULL TRAP?\n\n📈 Crypto markets are showing signs of recovery, but is the momentum sustainable?\n\n⚠️ ETF flows can change quickly.\n🔐 Exchange security risks remain.\n📊 One rebound doesn’t confirm a bull market.\n\nWhat do you think happens next?\n\n🟢 Bullish https://t.co/2KqVIGFASU"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 9,
+   "user": "DokCrypto",
+   "url": "https://x.com/DokCrypto/status/2118252920567152921",
+   "date": "2026-11-05",
+   "text": "The opportunities for @ZIGFinance just keep getting bigger! 🔥\n\nLook at the Gulf region alone. An estimated $250 BILLION financing gap for small and medium-sized businesses! That's an enormous market waiting for better financial solutions.\n\nAnd with ZIG Chain's latest EVM upgrade https://t.co/WOTHBevt4O"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Jimmyy_yyyy",
+   "url": "https://x.com/Jimmyy_yyyy/status/2118276814233624714",
+   "date": "2026-11-05",
+   "text": "$ETH down 51% with $137B in stablecoins. \n\nThat’s a fucking interesting setup. The question is how much of the activity Ethereum supports actually creates demand for ETH.\n\nNO.1 WHAT IS ETH?\n\nETH is the native asset of Ethereum, the network that settles transactions for DeFi apps, https://t.co/8bMTz2IOKR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2118236182513607031",
+   "date": "2026-11-05",
+   "text": "ethereum:0x514910771af9ca656af840dff83e8264ecf986ca  — CHAINLINK\n⠀\nAn $8.5 BILLION cryptocurrency.\n⠀\nApproximately $35 BILLION in value secured.\n⠀\nMore than $4 MILLION in monthly protocol revenue.\n⠀\nInfrastructure spanning over 70 blockchains.\n⠀\nAnd a growing institutional https://t.co/Rna3YbMG4Q"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Jimmyy_yyyy",
+   "url": "https://x.com/Jimmyy_yyyy/status/2118281240822636545",
+   "date": "2026-11-05",
+   "text": "$AAVE: $12B in Active Loans. Fucking Massive.\n\nAave is the largest lending protocol by tracked TVL. Its buybacks have been paused since April, so the question is how much of that lending business will create demand for AAVE.\n\nNO.1 WHAT IS AAVE?\n\nAAVE is the governance token of https://t.co/GJQ5XwgzWB"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "TradeSpctrum",
+   "url": "https://x.com/TradeSpctrum/status/2118403535305945150",
+   "date": "2026-11-05",
+   "text": "ETHEREUM UPDATE  ETH is showing strong bearish momentum on the 1H chart. Key support is being tested, while a recovery above $2,287 could signal a potential shift in momentum. A break below $2,230 may lead to further downside. Stay patient, manage leverage, and protect your https://t.co/3pUoVy4FT1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Jimmyy_yyyy",
+   "url": "https://x.com/Jimmyy_yyyy/status/2118282699626705283",
+   "date": "2026-11-05",
+   "text": "ethereum:0x455e53cbb86018ac2b8092fdcd39d8444affc3f6: Down 93%. Fucking Brutal.\n\nPolygon is building a payments business around stablecoins, and its chain already holds $2.9B of them. The question is how much of that business will settle on Polygon and generate fees in POL.\n\nNO.1 https://t.co/6SACDc8iGn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2118168607007891546",
+   "date": "2026-11-05",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. solana:yD2VeA4ANfabXb9azdfKnEac8LJuxuYaZX2WCyhpump — World News: EU Gas Market Braces for U.S. Moves —— By Giulia Petroni\n🟢 65% Bullish · 🔴 35% Bearish\n\n2. $XAU — Why are gold and silver prices moving higher today\n🟢 75% Bullish · 🔴 25% Bearish\n🔗"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 16,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2118243069154001017",
+   "date": "2026-11-05",
+   "text": "ethereum:0x163f8c2467924be0ae7b5347228cabf260318753  — WORLD NETWORK\n⠀\nA $1.5 BILLION cryptocurrency.\n⠀\nA $3.9 BILLION fully diluted valuation.\n⠀\nA global identity network built for the AI era.\n⠀\nAnd a token with nearly 63% of its initial supply still outside circulation. https://t.co/KQuokIhHi2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Jimmyy_yyyy",
+   "url": "https://x.com/Jimmyy_yyyy/status/2118278527539880073",
+   "date": "2026-11-05",
+   "text": "$XRP: 31.7B in Escrow. Fucking Massive.\n\nRipple is expanding institutional access to XRP and its dollar stablecoin, RLUSD. At an $81B market cap, the question is how much of that new payment flow will actually use XRP.\n\nNO.1 WHAT IS XRP?\n\nXRP is the native asset of the XRP https://t.co/VcxBDoIItG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "cryptowithgopal",
+   "url": "https://x.com/cryptowithgopal/status/2118246860230217880",
+   "date": "2026-11-05",
+   "text": "ethereum:0xa3eb7a9e57fca4e40b79e394ed5eb37fed205a24 / USDT – 4H\n\nPrinting a Rectangle Pattern 👀\n\nPrice continues to consolidate within a tight $0.9980–$1.0000 range. Buyers and sellers are battling for control, with repeated rejections highlighting strong short-term support and https://t.co/0Hx8ugLTAQ"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 88,
+   "user": "MooninPapa",
+   "url": "https://x.com/MooninPapa/status/2118171722721767882",
+   "date": "2026-11-05",
+   "text": "I'm still bullish on crypto, but Wednesday's rebound is not a free pass to chase. Bitcoin's rising TBO slow line keeps me focused on the recovery, while disappointing volume and a single green day call for caution. A close above the cloud would give me stronger bullish https://t.co/5BdKlRYGmI"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2118231344786317779",
+   "date": "2026-11-05",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. ethereum:0x455e53cbb86018ac2b8092fdcd39d8444affc3f6 — Binance, Polymarket seek Polygon hard fork to recover $6.8M in stolen crypto\n🟢 65% Bullish · 🔴 35% Bearish\n🔗 https://t.co/CyzSFXqhhy\n\n2. $USDINR — Rupee tepidly follows stock and bond rally as"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "pgoughy",
+   "url": "https://x.com/pgoughy/status/2118176997029691893",
+   "date": "2026-11-05",
+   "text": "Is a democrat win bullish or bearish for #crypto\n\n$btc #bitcoin #eth #ethereum #sol #cryptocurrency"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Crypto24cast",
+   "url": "https://x.com/Crypto24cast/status/2118300480485064851",
+   "date": "2026-11-05",
+   "text": "🚀 Crypto24Cast Daily Forecast Consensus — November 6, 2026 | UPDATED!\n📊 Latest Forecast Update | 100 Crypto Assets | 7 Active Sources\n🔴 BTC: -1.51% — Bearish Consensus\n🔴 ETH: -1.35% — Bearish Consensus\n🔴 BNB: -1.47% — Bearish Consensus\n🔴 XRP: -2.02% — Bearish Consensus\n🔴 https://t.co/ykbPYhlsn5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 132,
+   "user": "0xBNZ",
+   "url": "https://x.com/0xBNZ/status/2118419948779503946",
+   "date": "2026-11-05",
+   "text": "No matter what happens\n\nOne Bitcoin = 1 BTC\n\nOne Solana = 1 SOL\n\nOne Ethereum = 1 Stablecoin\n\nFuck being bearish\n\nBullish on the bigger picture"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "iamlaunchpad",
+   "url": "https://x.com/iamlaunchpad/status/2118411892259443119",
+   "date": "2026-11-05",
+   "text": "#ETH | 4H\n\nEthereum remains in a descending structure\n\nPrice rejected $2,428 and is testing the $2,220 support region\n\nSupport: $2,216–$2,226\nResistance: $2,428\nMajor resistance: $2,700\n\nA breakdown could expose $2,180 and $2,058\n\nReclaiming $2,428 and breaking the trendline https://t.co/u2GuyG55mk"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "antarsaha75",
+   "url": "https://x.com/antarsaha75/status/2118237414162620517",
+   "date": "2026-11-05",
+   "text": "🚨 BITCOIN IS BACK ABOVE $80,000!\n\nBTC rebounds as crypto markets recover after US midterm elections.\n\nMeanwhile, nearly $950M in leveraged positions were liquidated.\n\nIs this the start of a new rally?\n\nBullish or bearish? 👇\n\n#Bitcoin #BTC #CryptoNews #Ethereum https://t.co/Ctd3Zk2oO5"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 33,
+   "user": "Crankzzzzzz",
+   "url": "https://x.com/Crankzzzzzz/status/2118245003193446862",
+   "date": "2026-11-05",
+   "text": "ethereum:0x6982508145454ce325ddbe47a25d4ec3d2311933 on (HTF) technical target has not been reached, so the HTF outlook remains the priority. Additionally, the RSI still has room to move higher, supporting the possibility of further upside.\n\nOn the (MTF – 1D chart), a bearish https://t.co/9y2h09Xua7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RyanAtOpen",
+   "url": "https://x.com/RyanAtOpen/status/2118237453001822713",
+   "date": "2026-11-05",
+   "text": "ethereum:0x1f9840a85d5af5bf1d1762f925bdaddc4201f984  — UNISWAP\n⠀\nA $4.7 BILLION cryptocurrency.\n⠀\nOver $64 BILLION in monthly DEX trading volume.\n⠀\nApproximately $83 MILLION in monthly trading fees.\n⠀\nAnd more than $8 MILLION in monthly protocol revenue.\n⠀\nBut here's what https://t.co/MsInG7wRZ1"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "chaingull",
+   "url": "https://x.com/chaingull/status/2118332557528014904",
+   "date": "2026-11-05",
+   "text": "Crypto Brief — Nov 5, 13:20 UTC\n\nTOP STORY — impact 95 / 100\n▼ U.S. regulators are urgently investigating banking system security after the Binance attack.\n\nBULLISH\n▲ 43 Spot Bitcoin ETFs saw $74.57 million in net inflows, led by Fidelity’s FBTC at $237 million\n▲ 43 U.S. spot"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "NOVATRADINGTEAM",
+   "url": "https://x.com/NOVATRADINGTEAM/status/2118146471237496969",
+   "date": "2026-11-05",
+   "text": "[BTC VIEW UPDATE] - SHIFTING BULLISH!\n\nThe focus is now on LONG setups. 📈\n\n✅ Daily SMA support confirmed\n✅ Strong volume-backed breakout above the downtrend line\n✅ $76K may have marked the correction low\n\n🎯 BTC $81,200–81,300 remains a common upside target across multiple https://t.co/CSGfzJwax8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "cexscan",
+   "url": "https://x.com/cexscan/status/2118131251051954370",
+   "date": "2026-11-05",
+   "text": "Last 60m - #Binance Spot (USDT Trades)\n\n📈 Top 3 Gainers:\n$SKDDB (GraniteShares 2x Short SK Hynix Daily ETF (bStocks)) : ↑4.4%\n$SOXSB (Direxion Semiconductor Bear 3X ETF (bStocks)) : ↑2.57%\n$SOLV (Solv Protocol) : ↑1.4%\n\n📉 Top 3 Losers:\n$SKUUB (GraniteShares 2x Long SK Hynix"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cexscan",
+   "url": "https://x.com/cexscan/status/2118132503995470284",
+   "date": "2026-11-05",
+   "text": "Last 15m - #Binance Spot (USDT Trades)\n\n📈 Top 3 Gainers:\n$BMT (Bubblemaps) : ↑3.37%\n$SKDDB (GraniteShares 2x Short SK Hynix Daily ETF (bStocks)) : ↑2.12%\n$SOXSB (Direxion Semiconductor Bear 3X ETF (bStocks)) : ↑1.5%\n\n📉 Top 3 Losers:\n$SNXXB (Tradr 2X Long SNDK ETF (bStocks))"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "TIQCrypto",
+   "url": "https://x.com/TIQCrypto/status/2118132008950145066",
+   "date": "2026-11-05",
+   "text": "Market Close Report 2026-11-04: BTC Rises 3.91% Amid Broad Market Activity\n\nMarket overview: The crypto market showed positive breadth on 2026-11-04, with 182 out of 280 liquid USDT pairs closing in the green, representing 65% of the tracked assets. Top performers included ELSA https://t.co/mmofXJEdzy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "beliefsystemsco",
+   "url": "https://x.com/beliefsystemsco/status/2118140410820464714",
+   "date": "2026-11-05",
+   "text": "$DGTDWN dropped 8.3% to 69.30, its lowest level in over a week and below the 71.51 seen on Oct. 29. Downside expectations for Bitcoin, Ethereum, Solana, and XRP eased sharply, erasing the week's climb. https://t.co/YE9o783wPu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "beliefsystemsco",
+   "url": "https://x.com/beliefsystemsco/status/2118136513640951842",
+   "date": "2026-11-05",
+   "text": "$DGTUP jumped 6.9% to 128.56, erasing a week of declines and climbing past its Oct 29 level of 126.24. Expectations of upside for Bitcoin, Ethereum, Solana and XRP are now at their highest point this week. https://t.co/XVoxY8rq5z"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "manicXBT",
+   "url": "https://x.com/manicXBT/status/2118143656645271706",
+   "date": "2026-11-05",
+   "text": "I am bullish ethereum:0x58d97b57bb95320f9a05dc918aef65434969c2b2 https://t.co/gK3GVolsoF"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FINANCIERNEWS",
+   "url": "https://x.com/FINANCIERNEWS/status/2118148481567138248",
+   "date": "2026-11-05",
+   "text": "Ethereum Rebounds 6.6% to $2,422 as Crypto Risk Appetite Returns\n\n📈 Ethereum climbed 6.63% to $2,422.27, extending a one-week gain of 7.88% as the token bounced off support near $2,250 and pushed back above its longer-term moving average around $2,300.\n\n$ETH #DigitalAssets https://t.co/SRiK0y7S8f"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "CesarF2394",
+   "url": "https://x.com/CesarF2394/status/2118146793909195227",
+   "date": "2026-11-05",
+   "text": "I don’t think there’s other coin that could be looking this bullish as ethereum:0xe28b3b32b6c345a34ff64674606124dd5aceca30 out there… https://t.co/gotUxsJui5"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "art_med18305",
+   "url": "https://x.com/art_med18305/status/2118144413704536382",
+   "date": "2026-11-05",
+   "text": "Solana (SOL), Ethereum (ETH), Near Protocol (NEAR) and Zcash (ZEC) Price Analysis For November 5: Crypto Market's Chance to Turn Bullish Again https://t.co/ehCe6WTLa6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "rumor_io",
+   "url": "https://x.com/rumor_io/status/2118146453688258679",
+   "date": "2026-11-05",
+   "text": "Another bullish day in crypto. Bulls hold 86% of the past 24 hours, matching the 50-day average of 86% exactly.\n\nThe midterms dominated what I read. Democrats took back the House and Senate, and $BTC briefly sank to $75,700 as bets on a Democratic sweep rattled markets, then https://t.co/828PFuXeG2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "JohnxTrades17",
+   "url": "https://x.com/JohnxTrades17/status/2118136080033833085",
+   "date": "2026-11-05",
+   "text": "$ETH Is Ethereum breaking out or is this a bull trap? \n\n#ethusd https://t.co/QMOYW0v5U8 https://t.co/o0KcVyG75O"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "CoinstoreExc",
+   "url": "https://x.com/CoinstoreExc/status/2118143416198680828",
+   "date": "2026-11-05",
+   "text": "🇺🇸 Democrats take Congress. Trump stays in the White House. Bitcoin rebounds. Is the bull market back? \n\n🐂Democrats won control of both the House and Senate in the U.S. midterms. President Trump said he would accept the results. The election doesn’t end his presidency, but it https://t.co/VRxPWbgCXZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "DDYNASTY1472",
+   "url": "https://x.com/DDYNASTY1472/status/2118144607418761223",
+   "date": "2026-11-05",
+   "text": "There is a strong case to be made that the ethereum:0x7420b4b9a0110cdc71fb720908340c03f9bc03ec bottom is in.  This is confluent with a strong bounce off the BTC 50W MA today- a strong support zone that has always held in bull markets- except for the black swan event in 2020."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ordesk_bot",
+   "url": "https://x.com/ordesk_bot/status/2118154070896550319",
+   "date": "2026-11-05",
+   "text": "Robinhood Chain TVL slides to $1.069b as Orbio Launchpad graveyard hits 968 tokens\n\n• Robinhood Chain stablecoins market cap stood at $1.025b as of Nov 3, down 2.58% over 7 days, with USDG dominance at 64.78%; the chain's 90-day free-gas subsidy ended late September 2026\n• https://t.co/lKXk4U0gBG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 53,
+   "user": "MicNguyenn105",
+   "url": "https://x.com/MicNguyenn105/status/2118163154463252878",
+   "date": "2026-11-05",
+   "text": "The crypto heatmap is broadly green, but leadership is concentrated in a handful of altcoins.\n\nInjective (INJ) stands out at +12.1%, while Stacks (STX) gains +10.2%. Algorand (ALGO) and Render (RENDER) are both up +9.3%.\n\nEthereum rises +6.4% and Bitcoin gains +4.1%, showing https://t.co/OlnypN5a7R https://t.co/fCALL10fEZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "cexscan",
+   "url": "https://x.com/cexscan/status/2118150192692084909",
+   "date": "2026-11-05",
+   "text": "Last 15m - Binance Futures (USDT Trades)\n\n📈 Top 3 Gainers:\n$EVAA (EVAA Protocol) : ↑3.99%\n$EIDO (iShares MSCI Indonesia ETF (Derivatives)) : ↑2.95%\n$SOXS (Direxion Daily Semiconductor Bear 3X Shares (Derivatives)) : ↑2.12%\n\n📉 Top 3 Losers:\n$FLUID (Fluid) : ↓-3.51%\n$BULLA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 72,
+   "user": "banger_city567",
+   "url": "https://x.com/banger_city567/status/2118151097286033418",
+   "date": "2026-11-05",
+   "text": "DAY 56 of hunting for the next 100X NFT 💎\n\nTODAY'S SPOTLIGHT: @quirkiesnft by @Finch_O_N_E, now led by @RealPapii and @quirkies 🔥\n\n5,000 colorful, family-friendly characters on Ethereum that have survived every meta since 2022 👽💀🛹 Quirkies is turning into a full IP: QuirKids https://t.co/iIcgcFU92C https://t.co/bxqlN7Fao1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "mariochow98k",
+   "url": "https://x.com/mariochow98k/status/2118163043209351603",
+   "date": "2026-11-05",
+   "text": "Akash is firing its validators, it leaves Cosmos for Solana. https://t.co/nKNfEDcTP5"
+  }
+ ]
+}
