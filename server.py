@@ -305,7 +305,7 @@ def paper_view(fresh=False):
     if bench not in seen:
         symbols.append(bench)
     tz = ZoneInfo(cfg.get("timezone") or "America/New_York")
-    inception = cfg.get("inception") or mod.CONFIG["inception"]
+    inception = cfg.get("historyStart") or cfg.get("inception") or mod.CONFIG.get("historyStart") or "2026-11-01"
     p1 = int(datetime.datetime.fromisoformat(inception).replace(tzinfo=tz).timestamp()) - 10 * 86400
     p2 = int(time.time()) + 86400
     prices, last = {}, {}
