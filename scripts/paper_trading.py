@@ -18,7 +18,10 @@ does not book a second trade.
 Until a non-zero weight appears, the book is $100,000 in cash and the tab says
 it is waiting for weights. The first time weights appear, those targets trade
 at the next session open (today's open if this runs before 9:30 ET, otherwise
-the following session). A later weight change resizes, opens, closes, or flips
+the following session). Pass --inception YYYY-MM-DD once to fill that first
+book at a session open that has already passed (the daily bar's Open). The
+flag is ignored once the book has started, so a later run keeps those fills
+and that inception date. A later weight change resizes, opens, closes, or flips
 that name at the next open. Rating is stored for the table and does not size
 the book.
 
@@ -529,7 +532,21 @@ def _mark(book, prices, date):
     return {"date": date, "nav": money(nav), "spyClose": spy}
 
 
-def update_book(book, rows, prices, now, config=None):
+def _apply_inception(book, inception):
+    """Point an unfilled first book at a session open that has already passed.
+
+    Ignored once the book has started, so a later run cannot re-trade the open.
+    """
+    if not inception or book.get("started"):
+        return
+    pending = book.get("pending")
+    if not pending:
+        return
+    pending["executeOn"] = str(inception)
+    pending["reason"] = "inception"
+
+
+def update_book(book, rows, prices, now, config=None, inception=None):
     """Apply weight changes and append fills and daily close marks. Does not mutate `book`."""
     cfg = dict(CONFIG)
     if config:
@@ -549,6 +566,7 @@ def update_book(book, rows, prices, now, config=None):
         book["config"]["summary"] = summary_text(book["config"])
     spec = weight_spec(rows, book["config"]["grossCap"])
     _sync_weights(book, spec, now)
+    _apply_inception(book, inception)
     prices = prices or {}
     dates = _dates_of(prices)
     fillable = lambda date: session_fillable(date, now, book["config"])
@@ -702,7 +720,7 @@ def build_prices(symbols, start_date, offline=None, cfg=None):
     return prices, last
 
 
-def run_once(targets_path, out_path, now=None, offline=None, write=True):
+def run_once(targets_path, out_path, now=None, offline=None, write=True, inception=None):
     doc = load_json(targets_path)
     rows = doc.get("rows") if isinstance(doc, dict) else doc
     book = load_book(out_path)
@@ -722,7 +740,7 @@ def run_once(targets_path, out_path, now=None, offline=None, write=True):
                 symbols.insert(0, ticker)
     prices, _last = build_prices(symbols, start, offline=offline, cfg=CONFIG)
     moment = now if isinstance(now, datetime.datetime) else now_et(now)
-    updated = update_book(book, rows, prices, moment)
+    updated = update_book(book, rows, prices, moment, inception=inception)
     changed = True
     if os.path.exists(out_path):
         try:
@@ -775,6 +793,8 @@ def main():
     parser.add_argument("--out", help="defaults to static/paper_trading.json")
     parser.add_argument("--prices", help="offline sessions JSON, {TICKER: [{date, open, close}]}")
     parser.add_argument("--as-of", help="clock in America/New_York (ISO). Default: now")
+    parser.add_argument("--inception", metavar="YYYY-MM-DD",
+                        help="fill the first book at this session's open, even if that open has passed. Ignored once the book has started")
     parser.add_argument("--dry-run", action="store_true", help="compute the book and print it, do not write")
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
@@ -785,8 +805,15 @@ def main():
     targets = args.targets or os.path.join(repo, "static", "price_targets.json")
     out = args.out or os.path.join(repo, "static", "paper_trading.json")
     offline = load_json(args.prices) if args.prices else None
+    inception = None
+    if args.inception:
+        try:
+            datetime.date.fromisoformat(args.inception)
+        except ValueError:
+            parser.error("--inception must be YYYY-MM-DD")
+        inception = args.inception
     now = now_et(args.as_of) if args.as_of else now_et()
-    updated, changed = run_once(targets, out, now=now, offline=offline, write=not args.dry_run)
+    updated, changed = run_once(targets, out, now=now, offline=offline, write=not args.dry_run, inception=inception)
     print(describe(updated))
     if args.dry_run:
         print("dry-run (not written)")
