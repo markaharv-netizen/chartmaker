@@ -1458,7 +1458,7 @@ $('ptgo').onclick=()=>{if(MODE==='pt'&&PTDOC)ptquotes(true)};
 $('ptdl').onclick=()=>{if(MODE!=='pt'||!PTDOC)return;ptdraw();const a=document.createElement('a');a.href=$('ptcanvas').toDataURL('image/png');a.download='price_targets.png';a.click()};
 window.__ptdraw=ptdraw;
 
-// ---------- Paper trading: static/paper_trading.json + /api/paper (scripts/paper_trading.py). Long only. ----------
+// ---------- Paper trading: static/paper_trading.json + /api/paper (scripts/paper_trading.py). Sized by paperWeight. ----------
 let PAPER=null,PAPERCHART=null,PAPERSEQ=0;
 function paperEsc(t){return String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function paperMoney(v){if(v==null||!isFinite(+v))return '—';const n=+v;return (n<0?'-':'')+'$'+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}
