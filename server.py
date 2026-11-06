@@ -272,6 +272,58 @@ def yahoo_earnings(sym):
     except Exception as e:
         out = {**base, "error": str(e)}
         _EARN[sym] = (time.time(), 120, out); return out
+_PAPER = None
+def paper_mod():
+    global _PAPER
+    if _PAPER is None:
+        import importlib.util
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts", "paper_trading.py")
+        spec = importlib.util.spec_from_file_location("chartmaker_paper", path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        _PAPER = mod
+    return _PAPER
+def paper_view(fresh=False):
+    """Reconcile the saved book with Yahoo daily bars. Does not write the file.
+
+    Prices come from yahoo(), the same helper /api/chart uses.
+    """
+    import datetime
+    from zoneinfo import ZoneInfo
+    mod = paper_mod()
+    root = os.path.dirname(os.path.abspath(__file__))
+    doc = mod.load_json(os.path.join(root, "static", "price_targets.json"))
+    rows = doc.get("rows") if isinstance(doc, dict) else doc
+    book = mod.load_book(os.path.join(root, "static", "paper_trading.json"))
+    cfg = (book or {}).get("config") or mod.CONFIG
+    symbols, seen = [], set()
+    for row in rows or []:
+        ticker = str((row or {}).get("ticker") or "").strip().upper()
+        if ticker and ticker not in seen:
+            seen.add(ticker); symbols.append(ticker)
+    bench = cfg.get("benchmark") or mod.CONFIG["benchmark"]
+    if bench not in seen:
+        symbols.append(bench)
+    tz = ZoneInfo(cfg.get("timezone") or "America/New_York")
+    inception = cfg.get("inception") or mod.CONFIG["inception"]
+    p1 = int(datetime.datetime.fromisoformat(inception).replace(tzinfo=tz).timestamp()) - 10 * 86400
+    p2 = int(time.time()) + 86400
+    prices, last = {}, {}
+    for sym in symbols:
+        try:
+            quote = yahoo(sym, p1, p2, "1d", fresh=fresh)
+        except Exception:
+            prices[sym] = []
+            continue
+        prices[sym] = mod.sessions_from_ms_bars(quote.get("bars"), cfg.get("timezone"))
+        px = quote.get("lastPrice")
+        if px is None and quote.get("points"):
+            px = quote["points"][-1][1]
+        if px is not None:
+            last[sym] = px
+    updated = mod.update_book(book, rows, prices, mod.now_et())
+    return {"book": mod.export_book(updated), "prices": last}
+
 class H(SimpleHTTPRequestHandler):
     def __init__(s, *a, **k): super().__init__(*a, directory=ROOT, **k)
     def log_message(s, *a): pass
@@ -344,6 +396,9 @@ class H(SimpleHTTPRequestHandler):
         qs = urllib.parse.parse_qs(u.query)
         if u.path == "/api/search": return s.send_json(ysearch(qs.get("q", [""])[0]))
         if u.path == "/api/earnings": return s.send_json(yahoo_earnings(qs.get("symbol", [""])[0]))
+        if u.path == "/api/paper":
+            try: return s.send_json(paper_view(qs.get("fresh", [""])[0] == "1"))
+            except Exception as e: return s.send_json({"error": str(e)}, 502)
         if u.path == "/api/logo":
             b = heat.logo(qs.get("symbol", [""])[0])
             if not b: return s.send_json({"error": "no logo"}, 404)

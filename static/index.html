@@ -20,6 +20,16 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #sheets .row .meta{flex:1;min-width:0}#sheets .book{font-size:11px;letter-spacing:.4px;text-transform:uppercase;color:#6B7280}
 #sheets .row h3{margin:2px 0 4px;font-size:16px}#sheets .charts{font-size:13px;color:#374151;line-height:1.4}
 #sheets .row a.open{color:#2563eb;font-size:13px;white-space:nowrap}#sheets .row img{width:240px;max-width:42%;height:auto;border:1px solid #f0f0f0;border-radius:4px;background:#fff;cursor:zoom-in}
+#paper{display:none;padding:16px 16px 48px;max-width:1200px}#paper h2{margin:0 0 4px;font-size:22px}#paper h3{margin:18px 0 8px;font-size:16px}
+#paper .theme{color:#374151;margin:0;font-size:15px;line-height:1.45}#paper .head{display:flex;gap:16px;align-items:flex-start;justify-content:space-between}
+#paper .pending{margin:12px 0 0;font-size:14px;color:#374151}#paper .stats{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+#paper .stat{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:10px 14px;min-width:128px}#paper .stat b{display:block;font-size:18px;font-variant-numeric:tabular-nums}#paper .stat span{font-size:12px;color:#6B7280}
+#paper .up{color:#178A45}#paper .down{color:#D7263D}#paper .buy{color:#178A45}#paper .sell{color:#D7263D}#paper .hold{color:#E08A00}
+#paperChart{display:none;width:100%;height:360px;background:#fff;border:1px solid #e5e7eb;border-radius:6px}
+#paper .note{margin:8px 0 0;font-size:13px;color:#6B7280}#paper .scroll{overflow-x:auto;background:#fff;border:1px solid #e5e7eb;border-radius:6px}
+#paper table{border-collapse:collapse;width:100%;font-size:14px;background:#fff}#paper th,#paper td{padding:6px 10px;border-bottom:1px solid #e5e7eb;text-align:right;white-space:nowrap}
+#paper th:first-child,#paper td:first-child{text-align:left}#paper th{font-size:12px;color:#6B7280;font-weight:600;background:#fff}
+#paper tr:last-child td{border-bottom:0}#paper .muted{color:#6B7280}
 #status{padding:4px 12px;font-size:13px}#status.err{color:#EF4444;font-weight:bold}
 #smabox{position:relative;z-index:30;font-size:12px;display:flex;flex-direction:column;gap:3px;align-items:flex-start}
 #smaBtn{background:#fff;color:#111;border:1px solid #767676;border-radius:2px;padding:6px 26px 6px 8px;text-align:left;min-width:9.5em;line-height:1.2;position:relative;white-space:nowrap}
@@ -39,7 +49,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #ctypeNote:empty{display:none}
 #ctl > label input[type=checkbox]{margin:0}
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mWatch" class="on">Watchlist</button><button id="mPrices">Prices</button><button id="mFin">Financials</button><button id="mVal">Valuation</button><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mWatch" class="on">Watchlist</button><button id="mPrices">Prices</button><button id="mFin">Financials</button><button id="mVal">Valuation</button><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mPaper" title="Long-only paper book of Steve's ratings">Paper trading</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -137,6 +147,17 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <div id="wrap"><div id="chart"></div><canvas id="ptcanvas" width="1600" height="720" aria-label="Steve's DCF price targets"></canvas></div>
 <div id="cotd"></div>
 <div id="sheets"></div>
+<div id="paper">
+<div class="head"><div><h2>Paper trading</h2><p class="theme" id="paperBlurb"></p></div><button id="paperGo" type="button" title="Fetch fresh quotes">Refresh prices</button></div>
+<p class="pending" id="paperPending"></p>
+<div class="stats" id="paperStats"></div>
+<div id="paperChart"></div>
+<p class="note" id="paperChartNote"></p>
+<h3>Positions</h3>
+<div class="scroll"><table id="paperPos"></table></div>
+<h3>Trade log</h3>
+<div class="scroll"><table id="paperTrades"></table></div>
+</div>
 <div id="fnote"></div><table id="ftable"></table>
 <script>
 const $=id=>document.getElementById(id);
@@ -158,7 +179,7 @@ function bc(c){return T.dark&&BRIGHT[c]?BRIGHT[c]:c}
 function applyTheme(){T=THEMES[$('theme').value]||THEMES.white;axLabel={fontSize:16,color:T.text};split={lineStyle:{color:T.grid}};
   $('chart').style.background=T.bg;$('tprev').style.background=T.bg;$('tprev').style.color=T.title;
   $('tprev').innerHTML=`Aa <b style="color:${bc('#F7931A')}">■</b><b style="color:${bc('#8B5CF6')}">■</b><b style="color:${bc('#22C55E')}">■</b><b style="color:${bc('#EF4444')}">■</b>`}
-function rerender(){return MODE==='sheets'||MODE==='cotd'?null:MODE==='pt'?ptdraw():MODE==='sent'?sdraw():MODE==='watch'?wdraw():MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
+function rerender(){return MODE==='paper'?paperDraw():MODE==='sheets'||MODE==='cotd'?null:MODE==='pt'?ptdraw():MODE==='sent'?sdraw():MODE==='watch'?wdraw():MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
 
 function rangeParams(){
   const r=$('range').value, now=Math.floor(Date.now()/1000), d=new Date();
@@ -621,7 +642,7 @@ $('smaBtn').addEventListener('click',e=>{e.stopPropagation();smaSet()});
 $('smac').addEventListener('input',smaSummary);
 document.addEventListener('pointerdown',e=>{if(!$('smabox').contains(e.target))smaSet(false)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('smaMenu').hidden){smaSet(false);$('smaBtn').focus()}});
-window.addEventListener('resize',()=>{if(!$('smaMenu').hidden)smaPlace()});
+window.addEventListener('resize',()=>{if(!$('smaMenu').hidden)smaPlace();if(window.PAPERCHART)PAPERCHART.resize()});
 window.addEventListener('scroll',()=>{if(!$('smaMenu').hidden)smaPlace()},true);
 ['tickers','title','start','end','smac'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();renderFresh()}}));
 ['ftickers','ftitle','fy1','fy2'].forEach(id=>$(id)&&$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();frender()}}));$('dl').onclick=download;
@@ -668,9 +689,10 @@ addEventListener('scroll',ctxHide,true);addEventListener('blur',ctxHide);
 
 // ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------
 let MODE='prices', flast=null;
-function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets';
+function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='paper';
   $('mCotd').classList.toggle('on',m==='cotd');$('cotd').style.display=m==='cotd'?'block':'none';
   $('mSheets').classList.toggle('on',m==='sheets');$('sheets').style.display=m==='sheets'?'block':'none';
+  $('mPaper').classList.toggle('on',m==='paper');$('paper').style.display=m==='paper'?'block':'none';
   $('mPt').classList.toggle('on',m==='pt');$('ptctl').style.display=m==='pt'?'flex':'none';
   $('chart').style.display=m==='pt'?'none':'';$('ptcanvas').style.display=m==='pt'?'block':'none';
   $('wrap').style.display=lib?'none':'';$('vbar').style.display=lib?'none':'flex';if(!lib&&m!=='pt'){try{chart.resize()}catch(e){}}if(typeof vlist==='function')try{vlist()}catch(e){}
@@ -679,8 +701,8 @@ function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets';
   $('ftable').innerHTML='';$('fnote').textContent='';
   if(m!=='tre'&&$('chart').style.height&&$('chart').style.height!=='900px'){$('chart').style.height='900px';chart.resize()}
   if(m!=='pt')chart.clear();$('status').textContent='';
-  if(m==='prices'){syncPriceUi();render()}else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
-$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mPt').onclick=()=>setMode('pt');
+  if(m==='prices'){syncPriceUi();render()}else if(m==='paper')paperEnter();else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
+$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mPt').onclick=()=>setMode('pt');$('mPaper').onclick=()=>setMode('paper');
 // ---------- Charts of the day: static/cotd/today.json (refreshed daily by Flash via scripts/cotd_build.py) ----------
 async function cotdenter(){const el=$('cotd'),E=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   el.innerHTML='<p>Loading…</p>';
@@ -1436,6 +1458,42 @@ $('ptgo').onclick=()=>{if(MODE==='pt'&&PTDOC)ptquotes(true)};
 $('ptdl').onclick=()=>{if(MODE!=='pt'||!PTDOC)return;ptdraw();const a=document.createElement('a');a.href=$('ptcanvas').toDataURL('image/png');a.download='price_targets.png';a.click()};
 window.__ptdraw=ptdraw;
 
+// ---------- Paper trading: static/paper_trading.json + /api/paper (scripts/paper_trading.py). Long only. ----------
+let PAPER=null,PAPERCHART=null,PAPERSEQ=0;
+function paperEsc(t){return String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function paperMoney(v){if(v==null||!isFinite(+v))return '—';const n=+v;return (n<0?'-':'')+'$'+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function paperPx(v){if(v==null||!isFinite(+v))return '—';return '$'+(+v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function paperPct(v){if(v==null||!isFinite(+v))return '—';return ((+v)>0?'+':'')+((+v)*100).toFixed(2)+'%'}
+function paperShares(v){if(v==null||!isFinite(+v))return '—';return (+v).toLocaleString('en-US',{maximumFractionDigits:4})}
+function paperDate(s){if(!s)return '—';const [y,m,d]=String(s).split('-').map(Number);if(!y||!m||!d)return paperEsc(s);return new Date(Date.UTC(y,m-1,d)).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'})}
+function paperNyToday(){const part=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const g=k=>part.find(p=>p.type===k).value;return g('year')+'-'+g('month')+'-'+g('day')}
+function paperPositions(book){const p=book&&book.positions;if(Array.isArray(p))return p;const order=(book&&book.order)||Object.keys(p||{});return order.map(t=>p[t]).filter(Boolean)}
+function paperCls(v){if(v==null||!isFinite(+v)||Math.abs(+v)<1e-9)return '';return +v>0?'up':'down'}
+function paperNav(book,prices){if(!book||!book.started)return +book.config.startingCash;let nav=+book.cash;for(const p of paperPositions(book)){if(p.side!=='long'||p.status!=='open'||!(+p.shares>0))continue;const px=prices&&prices[p.ticker];const mark=(px!=null&&isFinite(+px))?+px:+p.entryPrice;nav+=+p.notional+(+p.shares)*(mark-+p.entryPrice)}return nav}
+function paperOpenPnl(p,prices){if(!p||p.side!=='long'||p.status!=='open'||!(+p.shares>0))return null;const px=prices&&prices[p.ticker];if(px==null||!isFinite(+px)||!(+p.entryPrice>0))return null;return (+p.shares)*(+px-+p.entryPrice)}
+function paperPendingNote(book){const pending=book.pending||[];if(!pending.length)return '';if(pending.every(p=>p.reason==='inception')){const buys=pending.filter(p=>p.action==='buy').map(p=>p.ticker);return 'Pending the '+paperDate(book.config.inception)+' open'+(buys.length?': '+buys.join(', ')+' buy one slot each.':'')+' HOLD and SELL stay in cash.'}return 'Pending: '+pending.map(p=>p.ticker+' '+(p.action==='buy'?'buys':p.action==='sell'?'sells':'moves to cash')+' at the '+paperDate(p.executeOn)+' open').join(' · ')}
+function paperChartPts(book,prices){if(!book||!book.started)return [];const start=+book.config.startingCash,base=book.spyInceptionOpen,inc=book.config.inception;const pts=[{date:inc,ret:0,spyRet:base!=null?0:null}];for(const m of book.marks||[])pts.push({date:m.date,ret:m.nav/start-1,spyRet:(base&&m.spyClose!=null)?m.spyClose/base-1:null});const today=paperNyToday(),last=(book.marks&&book.marks.length)?book.marks[book.marks.length-1].date:null;if(!last||last<today){const nav=paperNav(book,prices),spy=prices&&prices[book.config.benchmark];pts.push({date:today,ret:nav/start-1,spyRet:(base&&spy!=null&&isFinite(+spy))?+spy/base-1:null})}return pts}
+function paperDrawChart(pts){const el=$('paperChart');if(!pts||pts.length<2){el.style.display='none';if(PAPERCHART){try{PAPERCHART.clear()}catch(e){}}return}el.style.display='block';if(!PAPERCHART)PAPERCHART=echarts.init(el,null,{renderer:'canvas'});window.PAPERCHART=PAPERCHART;const spy=pts.some(p=>p.spyRet!=null);PAPERCHART.setOption({animation:false,grid:{left:68,right:24,top:36,bottom:32},legend:{top:6,textStyle:{color:'#374151',fontSize:13},data:spy?['Paper book','S&P 500']:['Paper book']},tooltip:{trigger:'axis',confine:true,valueFormatter:v=>paperPct(v)},xAxis:{type:'category',data:pts.map(p=>p.date),axisLabel:{color:'#6B7280',fontSize:12},axisLine:{lineStyle:{color:'#E5E7EB'}}},yAxis:{type:'value',axisLabel:{color:'#6B7280',fontSize:12,formatter:v=>(v*100).toFixed(1)+'%'},splitLine:{lineStyle:{color:'#EEEEEE'}}},series:[{name:'Paper book',type:'line',showSymbol:pts.length<24,data:pts.map(p=>p.ret),lineStyle:{width:2,color:'#0B1F3A'},itemStyle:{color:'#0B1F3A'}},...(spy?[{name:'S&P 500',type:'line',showSymbol:pts.length<24,data:pts.map(p=>p.spyRet),lineStyle:{width:2,color:'#F7931A'},itemStyle:{color:'#F7931A'}}]:[])]},true);try{PAPERCHART.resize()}catch(e){}}
+function paperDraw(){const book=PAPER&&PAPER.book;if(MODE!=='paper'||!book)return;const prices=PAPER.prices||{},E=paperEsc,positions=paperPositions(book),start=+book.config.startingCash,nav=paperNav(book,prices),ret=book.started?nav/start-1:0;const open=positions.reduce((s,p)=>{const v=paperOpenPnl(p,prices);return v==null?s:s+v},0);const realized=(book.trades||[]).reduce((s,t)=>s+(+t.realized||0),0);const spyBase=book.spyInceptionOpen,spyPx=prices[book.config.benchmark],spyRet=(book.started&&spyBase&&spyPx!=null&&isFinite(+spyPx))?+spyPx/spyBase-1:null;const pendingBy={};(book.pending||[]).forEach(p=>{pendingBy[p.ticker]=p});
+  $('paperBlurb').textContent=book.config.summary||'';
+  const note=paperPendingNote(book);$('paperPending').textContent=note;$('paperPending').style.display=note?'block':'none';
+  const stat=(label,value,cls)=>`<div class="stat"><b class="${cls||''}">${value}</b><span>${E(label)}</span></div>`;
+  $('paperStats').innerHTML=stat('Portfolio value',paperMoney(nav))+stat('Total return',paperPct(book.started?ret:0),paperCls(book.started?ret:0))+stat('Cash',paperMoney(book.cash))+stat('Open P&L',book.started?paperMoney(open):'—',paperCls(book.started?open:null))+stat('Realized P&L',paperMoney(realized),paperCls(realized))+stat(book.config.benchmarkLabel||'S&P 500',spyRet==null?'—':paperPct(spyRet),paperCls(spyRet));
+  const head='<tr><th>Ticker</th><th>Rating</th><th>Side</th><th>Entry date</th><th>Entry price</th><th>Shares</th><th>Current price</th><th>Open P&amp;L $</th><th>Open P&amp;L %</th><th>Realized P&amp;L</th></tr>';
+  $('paperPos').innerHTML=head+positions.map(p=>{const pend=pendingBy[p.ticker],live=prices[p.ticker],pnl=paperOpenPnl(p,prices),waiting=p.status==='pending'&&pend&&pend.action==='buy';const entry=waiting?'pending open':paperPx(p.entryPrice);const shares=waiting?'pending open':(p.side==='long'?paperShares(p.shares):'—');const cur=(live!=null&&isFinite(+live))?paperPx(live):(p.status==='open'&&p.side==='long'?paperPx(p.entryPrice):'—');const pct=(pnl!=null&&+p.notional)?pnl/+p.notional:null;const side=p.side==='long'?'Long':'Cash';const rate=String(p.rating||'');const rc=rate==='BUY'?'buy':rate==='SELL'?'sell':rate==='HOLD'?'hold':'';
+    return `<tr><td><b>${E(p.ticker)}</b></td><td class="${rc}">${E(rate||'—')}</td><td>${side}</td><td>${waiting?'—':paperDate(p.entryDate)}</td><td>${entry}</td><td>${shares}</td><td>${cur}</td><td class="${paperCls(pnl)}">${pnl==null?'—':paperMoney(pnl)}</td><td class="${paperCls(pct)}">${pct==null?'—':paperPct(pct)}</td><td class="${paperCls(p.realized)}">${paperMoney(p.realized||0)}</td></tr>`}).join('')||'<tr><td>No positions</td></tr>';
+  const trades=[].concat(book.trades||[]).reverse();
+  $('paperTrades').innerHTML='<tr><th>Date</th><th>Ticker</th><th>Action</th><th>Rating</th><th>Price</th><th>Shares</th><th>Notional</th><th>Realized</th><th>Reason</th></tr>'+(trades.length?trades.map(t=>{const act={buy:'Buy',sell:'Sell',cash:'Cash',unfunded:'Unfunded'}[t.action]||t.action;return `<tr><td>${paperDate(t.date)}</td><td><b>${E(t.ticker)}</b></td><td>${E(act)}</td><td>${E(t.rating||'—')}</td><td>${paperPx(t.price)}</td><td>${t.action==='cash'?'—':paperShares(t.shares)}</td><td>${t.notional?paperMoney(t.notional):'—'}</td><td class="${paperCls(t.realized)}">${t.realized==null?'—':paperMoney(t.realized)}</td><td>${E(t.reason||'')}</td></tr>`}).join(''):'<tr><td colspan="9" class="muted">No trades yet. Buys fill at the '+paperDate(book.config.inception)+' open. HOLD and SELL stay in cash.</td></tr>');
+  const pts=paperChartPts(book,prices);$('paperChartNote').textContent=pts.length>=2?'Return from the '+paperDate(book.config.inception)+' open. Closes are saved by the nightly script; the last point is the live quote.':'The book starts at the '+paperDate(book.config.inception)+' open. The chart fills in once that session is on the tape, against '+(book.config.benchmarkLabel||'the S&P 500')+' ('+(book.config.benchmark||'SPY')+').';paperDrawChart(pts);
+  const st=$('status');if(MODE!=='paper')return;const openLong=positions.filter(p=>p.side==='long'&&p.status==='open').length,pendLong=positions.filter(p=>p.side==='long'&&p.status!=='open').length,cashN=positions.filter(p=>p.side==='cash').length;st.className=PAPER.error?'err':'';st.textContent=(PAPER.error?PAPER.error+' · ':'')+positions.length+' names · '+(pendLong?pendLong+' long pending open · ':'')+openLong+' long · '+cashN+' in cash'+(book.config.weight?' · slot '+book.config.weight:'')+' · Not investment advice.'}
+async function paperQuotes(book){const symbols=paperPositions(book).map(p=>p.ticker);const bench=book.config&&book.config.benchmark;if(bench)symbols.push(bench);const now=Math.floor(Date.now()/1000),prices={};await Promise.all(symbols.map(async sym=>{try{const j=await fetchSym(sym,{p1:now-20*DAY,p2:now,iv:'1d'});const px=j.lastPrice!=null?+j.lastPrice:(j.points&&j.points.length?+j.points.at(-1)[1]:NaN);if(isFinite(px))prices[sym]=px}catch(e){}}));return prices}
+async function paperEnter(fresh){if(MODE!=='paper')return;const seq=++PAPERSEQ,st=$('status');st.className='';st.textContent=PAPER?'Refreshing prices…':'Loading paper book…';
+  try{if(!PAPER||!PAPER.book){const r=await fetch('paper_trading.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const book=await r.json();if(!book||!book.config)throw Error('empty book');if(seq!==PAPERSEQ||MODE!=='paper')return;PAPER={book,prices:{},error:''};paperDraw()}}
+  catch(e){if(seq!==PAPERSEQ||MODE!=='paper')return;st.className='err';st.textContent='Could not load the paper book ('+e.message+').';return}
+  try{const r=await fetch('/api/paper'+(fresh?'?fresh=1':''),{cache:'no-store'});const j=await r.json();if(seq!==PAPERSEQ||MODE!=='paper')return;if(!r.ok||j.error||!j.book)throw Error(j.error||('HTTP '+r.status));PAPER={book:j.book,prices:j.prices||{},error:''};paperDraw();return}
+  catch(e){if(seq!==PAPERSEQ||MODE!=='paper')return;try{const prices=await paperQuotes(PAPER.book);if(seq!==PAPERSEQ||MODE!=='paper')return;PAPER.prices=Object.assign({},PAPER.prices,prices);PAPER.error='Live book unavailable ('+e.message+'). Showing the saved book.'}catch(err){PAPER.error='Live quotes unavailable ('+e.message+').'}paperDraw()}}
+$('paperGo').onclick=()=>{if(MODE==='paper')paperEnter(true)};
+
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
 const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fmetric2','faxis2','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','ptwm'];
 let VIEWS=[];
@@ -1544,5 +1602,5 @@ function applyPriceQuery(){
 applyTheme();annDraw();vload();applyPriceQuery();
 window.__render=render; window.__frender=frender; window.__setMode=setMode;
 {let q;try{q=new URLSearchParams(location.search)}catch(e){q=new URLSearchParams()} // deep links keep their tab; otherwise open on Watchlist
-  setMode(q.has('tickers')?'prices':q.has('ftickers')?'fin':q.has('vtickers')?'val':'watch')}
+  setMode(q.get('tab')==='paper'?'paper':q.has('tickers')?'prices':q.has('ftickers')?'fin':q.has('vtickers')?'val':'watch')}
 </script><script>try{syncCustomDates()}catch(e){}</script></body></html>
