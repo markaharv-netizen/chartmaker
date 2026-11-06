@@ -145,6 +145,39 @@ class PaperWeightTest(unittest.TestCase):
         self.assertAlmostEqual(pos(later, "AAA")["shares"], 100, places=6)
         self.assertEqual(pos(later, "AAA")["entryPrice"], 100)
 
+    def test_inception_backfill_fills_that_open_and_later_runs_keep_it(self):
+        prices = bars(
+            AAA=[("2026-11-06", 100, 110), ("2026-11-09", 130, 140)],
+            SPY=[("2026-11-06", 500, 510), ("2026-11-09", 520, 530)],
+        )
+        rows = [row("AAA", 10, "BUY")]
+        late = run(rows, prices, "2026-11-06T10:00:00")
+        self.assertFalse(late["started"])
+        self.assertEqual(late["pending"]["executeOn"], "2026-11-07")
+        monday = run(rows, prices, "2026-11-09T10:00:00", late)
+        self.assertEqual(monday["inception"], "2026-11-09")
+        self.assertEqual(pos(monday, "AAA")["entryPrice"], 130)
+
+        back = pt.update_book(None, rows, prices, at("2026-11-06T10:00:00"), inception="2026-11-06")
+        self.assertTrue(back["started"])
+        self.assertIsNone(back["pending"])
+        self.assertEqual(back["inception"], "2026-11-06")
+        self.assertEqual(pos(back, "AAA")["entryPrice"], 100)
+        self.assertEqual(pos(back, "AAA")["entryDate"], "2026-11-06")
+        self.assertAlmostEqual(pos(back, "AAA")["shares"], 100, places=6)
+        self.assertEqual(back["marks"], [])
+        nxt = run(rows, prices, "2026-11-07T21:00:00", back)
+        self.assertEqual(nxt["inception"], "2026-11-06")
+        self.assertEqual(len(nxt["trades"]), len(back["trades"]))
+        self.assertEqual(pos(nxt, "AAA")["shares"], pos(back, "AAA")["shares"])
+        self.assertEqual(pos(nxt, "AAA")["entryPrice"], 100)
+        self.assertEqual(nxt["cash"], back["cash"])
+        self.assertEqual([m["date"] for m in nxt["marks"]], ["2026-11-06"])
+        flagged = pt.update_book(nxt, rows, prices, at("2026-11-09T10:00:00"), inception="2026-11-06")
+        self.assertEqual(len(flagged["trades"]), len(back["trades"]))
+        self.assertEqual(flagged["inception"], "2026-11-06")
+        self.assertEqual(pos(flagged, "AAA")["entryPrice"], 100)
+
     def test_rerun_does_not_double_trade(self):
         prices = bars(AAA=[("2026-11-06", 100, 110)], BBB=[("2026-11-06", 50, 40)], SPY=[("2026-11-06", 500, 505)])
         rows = [row("AAA", 10, "BUY"), row("BBB", -5, "HOLD")]

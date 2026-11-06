@@ -41,6 +41,7 @@
       "fromZero": false,
       "previousBase": 74.11,
       "previousDetail": "Prev Base $74.11 -> $128.42 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans",
+      "paperWeight": 0.0,
       "why": "Even with AI bets, price high"
     },
     {
@@ -64,6 +65,7 @@
       "fromZero": false,
       "previousBase": 70.46,
       "previousDetail": "Prev Base $70.46 (Bear $4.24, Bull $153.59, SELL) at Nov 1, 2026 v6 FSD price update -> $297.79 (Bear $4.24, Bull $513.12, SELL) at Nov 1, 2026 v7 ARK robotaxi fleet (Mark's assumption); unchanged in Nov 2 and Nov 4 scans",
+      "paperWeight": 0.0,
       "why": "Far above bet-adjusted value"
     },
     {
@@ -87,6 +89,7 @@
       "fromZero": false,
       "previousBase": 153.35,
       "previousDetail": "Prev Base $153.35 (Bear $89.76, Bull $266.37, HOLD) at Oct 22, 2026 future-bets update -> $149.42 (Bear $86.95, Bull $272.11, HOLD) at Oct 30, 2026 Q3 earnings refresh; drop mostly from lower BTC and MSTR prices; unchanged in Nov 2 and Nov 4 scans (Nov 4: Q3 10-Q filed Nov 2, 9M Historicals H14:I25 filled; valuation unchanged)",
+      "paperWeight": 12.0,
       "why": "Bets priced in; at fair value"
     },
     {
@@ -110,6 +113,7 @@
       "fromZero": false,
       "previousBase": 181.81,
       "previousDetail": "Prev Base $181.81 -> $189.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans",
+      "paperWeight": 0.0,
       "why": "Just inside HOLD band"
     },
     {
@@ -133,6 +137,7 @@
       "fromZero": true,
       "previousBase": 0.0,
       "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans",
+      "paperWeight": -7.0,
       "why": "Debt still exceeds core EV"
     },
     {
@@ -156,6 +161,7 @@
       "fromZero": false,
       "previousBase": 842.81,
       "previousDetail": "Prev Base $842.81 -> $860.87 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans",
+      "paperWeight": 18.0,
       "why": "HBM upside mostly priced in"
     },
     {
@@ -179,6 +185,7 @@
       "fromZero": false,
       "previousBase": 657.7,
       "previousDetail": "Prev Base $657.70 -> $687.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans (Oct 30: $37.5B equity raise noted, not yet booked; est. -$1.93/sh; Nov 2: S&P 2027 capex forecast >$225B noted, capex not changed pending Q4 guide; Nov 4: $15.0B senior notes 5.85-7.53% priced Nov 3, cash/debt neutral)",
+      "paperWeight": 14.0,
       "why": "Bets priced in; near fair value"
     },
     {
@@ -202,6 +209,7 @@
       "fromZero": false,
       "previousBase": 15.47,
       "previousDetail": "Prev Base $15.47 (Bear $6.33, Bull $25.33, SELL) at Oct 22, 2026 future-bets update -> $21.02 (Bear $6.60, Bull $35.33, SELL) at Nov 2, 2026 v3 rebuild; unchanged in Nov 4 scan",
+      "paperWeight": -7.0,
       "why": "Far above bet-adjusted value"
     },
     {
@@ -225,6 +233,7 @@
       "fromZero": false,
       "previousBase": 7.2,
       "previousDetail": "Prev Base $7.20 -> $24.98 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans",
+      "paperWeight": -5.0,
       "why": "Needs full constellation"
     },
     {
@@ -248,6 +257,7 @@
       "fromZero": false,
       "previousBase": null,
       "previousDetail": "New model added Nov 3, 2026 (v1); no previous update",
+      "paperWeight": 0.0,
       "why": "Price 12% above Base"
     },
     {
@@ -271,6 +281,7 @@
       "fromZero": false,
       "previousBase": null,
       "previousDetail": "New model added Nov 3, 2026 (v1); no previous update",
+      "paperWeight": 12.0,
       "why": "Base 16% above price"
     },
     {
@@ -294,6 +305,7 @@
       "fromZero": false,
       "previousBase": null,
       "previousDetail": "New model added Nov 3, 2026 (v1); no previous update",
+      "paperWeight": 20.0,
       "why": "Base 35% above price"
     },
     {
@@ -317,6 +329,7 @@
       "fromZero": false,
       "previousBase": null,
       "previousDetail": "New model added Nov 5, 2026 (v1)",
+      "paperWeight": 0.0,
       "why": "IPO day; no street coverage"
     }
   ]
