@@ -6,7 +6,7 @@
   "sheet": "BTCTC Top 100",
   "gid": 73825060,
   "description": "Top 100 corporate bitcoin holdings from the BTCTC Top 100 tab of My Bot's Sheets. USD value is BTC times a live BTC price and is not part of this file.",
-  "fetchedAt": "2026-11-05T17:23:16Z",
+  "fetchedAt": "2026-11-06T17:21:03Z",
   "supply": 21000000,
   "companies": [
     {
@@ -56,10 +56,10 @@
       "change": null,
       "btc": 43124,
       "asOf": "2026-10-30",
-      "source": "Strive 8-K (2026-11-02)",
-      "sourceLabel": "SEC 8-K",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1920406/000162828026068660/asst-20261102.htm",
-      "notes": "Bought 124 BTC Oct 24-30, 2026 (avg ~$80,526)."
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-06)",
+      "sourceLabel": "SEC 10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1920406/000162828026071332/asst-20260930.htm",
+      "notes": "Company-stated total 43,124 as of Oct 30, 2026 (10-Q subsequent event)."
     },
     {
       "rank": 5,
@@ -224,10 +224,10 @@
       "country": "CN",
       "change": null,
       "btc": 5833,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-07-24)",
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-06)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1784970/000121390026081419/ea0298994-10q_next.htm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1784970/000121390026116604/ea0310815-10q_next.htm",
       "notes": null
     },
     {
@@ -336,19 +336,6 @@
     },
     {
       "rank": 26,
-      "name": "Ionic Digital Inc.",
-      "ticker": "IOND",
-      "country": "US",
-      "change": "+72",
-      "btc": 2954,
-      "asOf": "2026-09-30",
-      "source": "SEC 8-K Ex.99.1 Q3 2026 results (filed 2026-11-04)",
-      "sourceLabel": "SEC 8-K",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2007691/000200769126000020/ionicdigitalq32026ex991.htm",
-      "notes": "Company says it sold ~25% of its bitcoin after quarter end (no updated count stated)."
-    },
-    {
-      "rank": 27,
       "name": "DDC Enterprise Limited",
       "ticker": "DDC",
       "country": "US",
@@ -361,7 +348,7 @@
       "notes": null
     },
     {
-      "rank": 28,
+      "rank": 27,
       "name": "The Smarter Web Company PLC",
       "ticker": "SWC.L",
       "country": "UK",
@@ -374,7 +361,7 @@
       "notes": null
     },
     {
-      "rank": 29,
+      "rank": 28,
       "name": "DeFi Technologies",
       "ticker": "DEFI.NE",
       "country": "CA",
@@ -387,7 +374,7 @@
       "notes": "Group figure incl. Valour; largely backs ETP obligations, not an unencumbered treasury."
     },
     {
-      "rank": 30,
+      "rank": 29,
       "name": "BitGo Holdings, Inc.",
       "ticker": "BTGO",
       "country": "US",
@@ -400,7 +387,7 @@
       "notes": "Corporate treasury BTC only; balance sheet shows more BTC incl. trading/collateral."
     },
     {
-      "rank": 31,
+      "rank": 30,
       "name": "Riot Platforms, Inc.",
       "ticker": "RIOT",
       "country": "US",
@@ -413,7 +400,7 @@
       "notes": "Sold 20,264 BTC in the nine months to 9/30/2026 (data center build-out, credit facility repaid); no restricted BTC at 9/30."
     },
     {
-      "rank": 32,
+      "rank": 31,
       "name": "Zhibao Technology Inc",
       "ticker": "ZBAO",
       "country": "CN",
@@ -424,6 +411,19 @@
       "sourceLabel": "SEC 6-K",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1966750/000121390026090530/ea030233201ex99-2.htm",
       "notes": null
+    },
+    {
+      "rank": 32,
+      "name": "Ionic Digital Inc.",
+      "ticker": "IOND",
+      "country": "US",
+      "change": "-737",
+      "btc": 2217,
+      "asOf": "2026-11-04",
+      "source": "Ionic IR presentation '3Q26 Earnings Update & Investor Overview' (2026-11-04)",
+      "sourceLabel": "IR presentation",
+      "sourceUrl": "https://investors.ionicdigital.com/static-files/ecb2f368-07da-4b61-a25a-11039a8f1a5f",
+      "notes": "Post-quarter sale of 737 BTC (~25%); company states updated holdings of 2,217."
     },
     {
       "rank": 33,
@@ -469,7 +469,7 @@
       "name": "Remixpoint",
       "ticker": "3825.T",
       "country": "JP",
-      "change": "+2",
+      "change": null,
       "btc": 1511,
       "asOf": "2026-11-05",
       "source": "TSE timely disclosure (JPX TDnet PDF, 2026-11-05)",
@@ -482,12 +482,12 @@
       "name": "BitFuFu Inc.",
       "ticker": "FUFU",
       "country": "SG",
-      "change": null,
-      "btc": 1388,
-      "asOf": "2026-09-30",
-      "source": "SEC Form 6-K Ex.99.1 September 2026 update (filed 2026-10-13)",
+      "change": "+66",
+      "btc": 1454,
+      "asOf": "2026-10-31",
+      "source": "SEC Form 6-K Ex.99.1 October 2026 update (filed 2026-11-06)",
       "sourceLabel": "SEC 6-K",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1921158/000121390026109072/ea030842601ex99-1.htm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1921158/000121390026116602/ea031104401ex99-1.htm",
       "notes": null
     },
     {
@@ -638,7 +638,7 @@
       "name": "Bitcoin Treasury Corp",
       "ticker": "BTCT.V",
       "country": "CA",
-      "change": "-5",
+      "change": null,
       "btc": 732,
       "asOf": "2026-10",
       "source": "Company news release 'October Update on Normal Course Issuer Bid', 2026-11-04",
