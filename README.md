@@ -83,7 +83,7 @@ Refresh the tab list and thumbnails on a machine that can read the workbooks:
 
 1. Save each spreadsheet's metadata JSON (`spreadsheets.get` / the Sheets `get_spreadsheet` response: sheetId, title, chart titles).
 2. `python3 scripts/sheets_catalog.py bot1.json bot2.json bot3.json`  
-   This rewrites the tab list and **keeps** a thumbnail already recorded for a book and gid when that JPEG is still on disk.
+   This rewrites the tab list and **keeps** a thumbnail already recorded for a book and gid when that JPEG is still on disk. `EXCLUDED_TABS` in that script (Bot experiments gid 333185169, "87 TSLA beta to Nasdaq") stays out even when the sheet tab still exists with no chart.
 3. Point `scripts/sheets_thumbs.py` at a local folder of the weekly chart export (not at Render). The export names files after the tab, with the number sometimes zero-padded and a date on the end (`090 TSLA gross margin vs price 2026-10-21.png`). Duplicate names: the script keeps the newest date, then the newest file time.
    `python3 scripts/sheets_thumbs.py --from-dir /path/to/exported-pngs`
 4. Commit `static/sheets/catalog.json` and `static/sheets/thumbs/`. Do not commit the source folder itself.

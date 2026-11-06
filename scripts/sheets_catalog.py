@@ -33,6 +33,11 @@ BOOKS = [
     ("bot3", "My Bot's Sheets", "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU"),
 ]
 BY_ID = {sid: (bid, name) for bid, name, sid in BOOKS}
+# Workbook tabs that must not re-enter the catalog. The sheet can still exist.
+# ("bot1", 333185169) is "87 TSLA beta to Nasdaq": Mark deleted its only chart
+# on 2026-11-06 (chartId 1193590693). Columns A–C stay on the tab. A later
+# spreadsheets.get rebuild would otherwise add that chartless tab back.
+EXCLUDED_TABS = {("bot1", 333185169)}
 NOTE = (
     "Offline tab list. Regenerate tabs with scripts/sheets_catalog.py. "
     "Search previews are compressed thumbnails under static/sheets/thumbs/, built by scripts/sheets_thumbs.py. "
@@ -119,17 +124,20 @@ def one(doc):
         bid = "x" + sid[:8]
     sheets = doc.get("sheets") or []
     sheets = sorted(sheets, key=lambda s: (s.get("properties") or {}).get("index") or 0)
-    tabs, hidden = [], 0
+    tabs, hidden, excluded = [], 0, 0
     for s in sheets:
         p = s.get("properties") or {}
         if p.get("hidden"): hidden += 1; continue
         title = str(p.get("title") or "").strip()
         gid = p.get("sheetId")
         if not title or gid is None: continue
+        if (bid, int(gid)) in EXCLUDED_TABS:
+            excluded += 1
+            continue
         row = {"book": bid, "tab": title, "gid": int(gid), "charts": chart_titles(s), "chartList": chart_list(s)}
         tabs.append(row)
     return {"id": bid, "name": name, "spreadsheetId": sid,
-            "url": f"https://docs.google.com/spreadsheets/d/{sid}/edit"}, tabs, hidden
+            "url": f"https://docs.google.com/spreadsheets/d/{sid}/edit"}, tabs, hidden, excluded
 
 def main():
     ap = argparse.ArgumentParser()
@@ -141,11 +149,12 @@ def main():
     seen = set()
     for path in a.dumps:
         doc = json.load(open(path, encoding="utf-8"))
-        book, rows, hidden = one(doc)
+        book, rows, hidden, excluded = one(doc)
         if book["spreadsheetId"] in seen: sys.exit("duplicate spreadsheet " + book["spreadsheetId"])
         seen.add(book["spreadsheetId"])
         books.append(book); tabs.extend(rows)
-        print(f"{book['name']}: {len(rows)} tabs ({hidden} hidden skipped)")
+        extra = f", {excluded} excluded" if excluded else ""
+        print(f"{book['name']}: {len(rows)} tabs ({hidden} hidden skipped{extra})")
     missing = [name for bid, name, sid in BOOKS if sid not in seen]
     if missing and not a.allow_partial: sys.exit("missing workbook dumps: " + ", ".join(missing))
     order = {bid: i for i, (bid, _, _) in enumerate(BOOKS)}
