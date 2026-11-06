@@ -1,8 +1,4 @@
-"""Trade rules for the long-only paper book.
-
-BUY is a long. HOLD and SELL are cash. A rating change trades at the next
-session open. Tests pass prices in; nothing here talks to the network.
-"""
+"""Paper book sized by paperWeight. No network."""
 import datetime
 import os
 import sys
@@ -11,6 +7,7 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "scripts"))
 import paper_trading as pt
+import price_targets
 
 ET = ZoneInfo("America/New_York")
 
@@ -19,271 +16,153 @@ def at(text):
     return datetime.datetime.fromisoformat(text).replace(tzinfo=ET)
 
 
-def rows(*pairs):
-    return [{"ticker": ticker, "rating": rating} for ticker, rating in pairs]
-
-
 def bars(**named):
-    out = {}
-    for symbol, seq in named.items():
-        out[symbol] = [{"date": date, "open": opened, "close": closed} for date, opened, closed in seq]
-    return out
+    return {symbol: [{"date": d, "open": o, "close": c} for d, o, c in seq] for symbol, seq in named.items()}
 
 
-def book_of(*pairs, prices, now, book=None):
-    return pt.update_book(book, rows(*pairs), prices, at(now))
+def row(ticker, weight, rating="HOLD"):
+    return {"ticker": ticker, "rating": rating, "paperWeight": weight}
+
+
+def run(rows, prices, now, book=None):
+    return pt.update_book(book, rows, prices, at(now))
+
+
+def opened(rows, prices, morning="2026-11-06T08:30:00", later="2026-11-06T16:30:00"):
+    """Weights are seen before the open, then the book is run again once that open can fill."""
+    return run(rows, prices, later, run(rows, prices, morning))
 
 
 def pos(book, ticker):
     return book["positions"][ticker]
 
 
-def actions(book):
-    return [trade["action"] for trade in book["trades"]]
-
-
-class PaperTradingTest(unittest.TestCase):
-    def assert_no_shorts(self, book):
-        self.assertFalse(any(trade["action"] in ("short", "cover") for trade in book["trades"]))
-        for item in book["positions"].values():
-            if item.get("shares") is not None:
-                self.assertGreaterEqual(item["shares"], 0)
-            self.assertIn(item.get("side"), ("long", "cash"))
-
-    def test_inception_waits_for_the_open(self):
-        prices = bars(AAA=[("2026-11-05", 10, 11)], BBB=[("2026-11-05", 20, 21)], SPY=[("2026-11-05", 500, 505)])
-        book = book_of(("AAA", "BUY"), ("BBB", "SELL"), ("CCC", "HOLD"), prices=prices, now="2026-11-05T19:00:00")
+class PaperWeightTest(unittest.TestCase):
+    def test_missing_weight_keeps_the_book_in_cash(self):
+        prices = bars(AAA=[("2026-11-06", 100, 110)], SPY=[("2026-11-06", 500, 505)])
+        book = run([{"ticker": "AAA", "rating": "SELL"}], prices, "2026-11-06T16:30:00")
+        self.assertTrue(book["waiting"])
         self.assertFalse(book["started"])
         self.assertEqual(book["trades"], [])
         self.assertEqual(book["cash"], 100000)
-        self.assertEqual(book["config"]["weight"], "1/3")
-        self.assertAlmostEqual(pos(book, "AAA")["targetWeight"], 1 / 3)
-        self.assertAlmostEqual(pos(book, "BBB")["targetWeight"], 1 / 3)
-        self.assertEqual(pos(book, "AAA")["side"], "long")
-        self.assertEqual(pos(book, "AAA")["status"], "pending")
-        self.assertIsNone(pos(book, "AAA")["shares"])
-        self.assertEqual(pos(book, "BBB")["side"], "cash")
-        self.assertEqual(pos(book, "CCC")["side"], "cash")
-        self.assertEqual(book["pending"][0]["executeOn"], "2026-11-06")
-        self.assert_no_shorts(book)
+        self.assertEqual(pos(book, "AAA")["side"], "cash")
+        self.assertEqual(pos(book, "AAA")["rating"], "SELL")
+        self.assertEqual(pos(book, "AAA")["shares"], 0)
 
-    def test_inception_fills_buys_and_leaves_hold_and_sell_in_cash(self):
+    def test_first_weights_fill_at_the_next_open(self):
+        prices = bars(AAA=[("2026-11-06", 100, 110)], SPY=[("2026-11-06", 500, 510)])
+        early = run([row("AAA", 10, "BUY")], prices, "2026-11-06T08:30:00")
+        self.assertFalse(early["started"])
+        self.assertEqual(early["pending"]["executeOn"], "2026-11-06")
+        self.assertEqual(pos(early, "AAA")["status"], "pending")
+        done = run([row("AAA", 10, "BUY")], prices, "2026-11-06T10:00:00", early)
+        self.assertTrue(done["started"])
+        self.assertIsNone(done["pending"])
+        self.assertEqual(pos(done, "AAA")["side"], "long")
+        self.assertEqual(pos(done, "AAA")["entryPrice"], 100)
+        self.assertAlmostEqual(pos(done, "AAA")["shares"], 100, places=6)
+        self.assertAlmostEqual(done["cash"], 90000, places=2)
+        self.assertEqual(done["inception"], "2026-11-06")
+        self.assertEqual(done["spyInceptionOpen"], 500)
+
+    def test_weight_resize_adds_at_the_next_open(self):
         prices = bars(
-            AAA=[("2026-11-06", 100, 110)],
-            BBB=[("2026-11-06", 50, 40)],
-            CCC=[("2026-11-06", 20, 10)],
-            SPY=[("2026-11-06", 500, 510)],
+            AAA=[("2026-11-06", 100, 100), ("2026-11-09", 110, 110)],
+            SPY=[("2026-11-06", 500, 500), ("2026-11-09", 500, 500)],
         )
-        book = book_of(("AAA", "BUY"), ("BBB", "SELL"), ("CCC", "HOLD"), prices=prices, now="2026-11-06T10:00:00")
-        self.assertTrue(book["started"])
-        self.assertEqual(pos(book, "AAA")["side"], "long")
-        self.assertEqual(pos(book, "AAA")["entryDate"], "2026-11-06")
-        self.assertEqual(pos(book, "AAA")["entryPrice"], 100)
-        self.assertAlmostEqual(pos(book, "AAA")["shares"], pos(book, "AAA")["notional"] / 100, places=6)
-        self.assertAlmostEqual(pos(book, "AAA")["notional"], round(100000 / 3, 2), places=2)
-        self.assertEqual(pos(book, "BBB")["side"], "cash")
-        self.assertEqual(pos(book, "BBB")["shares"], 0)
-        self.assertEqual(pos(book, "CCC")["side"], "cash")
-        self.assertEqual(pos(book, "CCC")["shares"], 0)
-        self.assertEqual(actions(book).count("buy"), 1)
-        self.assertEqual(actions(book).count("cash"), 2)
-        self.assertNotIn("sell", actions(book))
-        # Two cash slots still uninvested. The long is marked at the open, so NAV is the stake.
-        nav = pt.portfolio_nav(book, {"AAA": 100, "BBB": 40, "CCC": 10}.get)
-        self.assertAlmostEqual(nav, 100000, places=2)
-        self.assertGreater(book["cash"], 100000 * 2 / 3 - 0.02)
-        self.assertLess(book["cash"], 100000)
-        self.assert_no_shorts(book)
+        book = opened([row("AAA", 10)], prices)
+        queued = run([row("AAA", 20)], prices, "2026-11-09T08:30:00", book)
+        self.assertEqual(queued["pending"]["executeOn"], "2026-11-09")
+        self.assertAlmostEqual(pos(queued, "AAA")["shares"], 100, places=6)
+        done = run([row("AAA", 20)], prices, "2026-11-10T08:30:00", queued)
+        # NAV at the Nov 9 open is 90,000 + 100*110 = 101,000. 20% is 20,200.
+        self.assertAlmostEqual(pos(done, "AAA")["shares"] * 110, 20200, places=2)
+        self.assertAlmostEqual(pos(done, "AAA")["entryPrice"], 19200 / pos(done, "AAA")["shares"], places=4)
+        self.assertAlmostEqual(done["cash"] + pos(done, "AAA")["shares"] * 110, 101000, places=2)
+        self.assertGreater(pos(done, "AAA")["shares"], 100)
 
-    def test_long_pnl_uses_the_close(self):
-        prices = bars(AAA=[("2026-11-06", 100, 110)], SPY=[("2026-11-06", 500, 505)])
-        book = book_of(("AAA", "BUY"), prices=prices, now="2026-11-06T10:00:00")
-        self.assertEqual(book["marks"], [])
-        book = book_of(("AAA", "BUY"), prices=prices, now="2026-11-07T08:30:00", book=book)
-        self.assertEqual(len(book["marks"]), 1)
-        self.assertEqual(book["marks"][0]["date"], "2026-11-06")
-        self.assertAlmostEqual(book["marks"][0]["nav"], 110000, places=2)
-        self.assertEqual(book["marks"][0]["spyClose"], 505)
-        self.assertEqual(book["spyInceptionOpen"], 500)
-        self.assertAlmostEqual(pt.portfolio_nav(book, {"AAA": 110}.get) - 100000, 10000, places=2)
-
-    def test_sell_and_hold_do_not_profit_when_price_falls(self):
+    def test_long_to_short_flip_covers_then_shorts(self):
         prices = bars(
-            AAA=[("2026-11-06", 100, 100)],
-            BBB=[("2026-11-06", 50, 20)],
+            AAA=[("2026-11-06", 100, 100), ("2026-11-09", 120, 100)],
+            SPY=[("2026-11-06", 500, 500), ("2026-11-09", 500, 500)],
+        )
+        book = opened([row("AAA", 10, "BUY")], prices)
+        queued = run([row("AAA", -10, "SELL")], prices, "2026-11-09T08:30:00", book)
+        self.assertEqual(queued["pending"]["executeOn"], "2026-11-09")
+        self.assertEqual(pos(queued, "AAA")["side"], "long")
+        done = run([row("AAA", -10, "SELL")], prices, "2026-11-10T08:30:00", queued)
+        self.assertEqual(pos(done, "AAA")["side"], "short")
+        self.assertLess(pos(done, "AAA")["shares"], 0)
+        self.assertEqual(pos(done, "AAA")["entryPrice"], 120)
+        self.assertEqual(pos(done, "AAA")["entryDate"], "2026-11-09")
+        actions = [t["action"] for t in done["trades"]]
+        self.assertEqual(actions, ["buy", "sell", "short"])
+        sell = done["trades"][1]
+        self.assertAlmostEqual(sell["realized"], 2000, places=2)
+        # Pre-trade NAV 102,000. Short 10% is -10,200, which is 85 shares at 120.
+        self.assertAlmostEqual(pos(done, "AAA")["shares"], -85, places=4)
+        self.assertAlmostEqual(pt.portfolio_nav(done, {"AAA": 120}.get), 102000, places=2)
+        # Price falls to 100: short P&L is (120-100)*85.
+        self.assertAlmostEqual(pos(done, "AAA")["shares"] * (100 - 120), 1700, places=2)
+        self.assertAlmostEqual(pt.portfolio_nav(done, {"AAA": 100}.get), 103700, places=2)
+
+    def test_short_mark_uses_the_close(self):
+        prices = bars(AAA=[("2026-11-06", 100, 80)], SPY=[("2026-11-06", 500, 490)])
+        book = opened([row("AAA", -10, "SELL")], prices, later="2026-11-07T08:30:00")
+        self.assertEqual(pos(book, "AAA")["side"], "short")
+        self.assertAlmostEqual(book["marks"][0]["nav"], 102000, places=2)
+        self.assertGreater(book["marks"][0]["nav"], 100000)
+
+    def test_gross_cap_scales_every_weight(self):
+        spec = pt.weight_spec([row("AAA", 80), row("BBB", -40)], cap=100)
+        self.assertTrue(spec["scaled"])
+        self.assertAlmostEqual(spec["grossRequested"], 120, places=4)
+        self.assertAlmostEqual(abs(spec["effective"]["AAA"]) + abs(spec["effective"]["BBB"]), 100, places=4)
+        self.assertAlmostEqual(spec["effective"]["AAA"] / 80, spec["scale"], places=4)
+        self.assertLess(spec["effective"]["BBB"], 0)
+        prices = bars(
+            AAA=[("2026-11-06", 50, 50)],
+            BBB=[("2026-11-06", 25, 25)],
             SPY=[("2026-11-06", 500, 500)],
         )
-        book = book_of(("AAA", "SELL"), ("BBB", "HOLD"), prices=prices, now="2026-11-07T08:30:00")
-        self.assertEqual(pos(book, "AAA")["shares"], 0)
-        self.assertEqual(pos(book, "BBB")["shares"], 0)
-        self.assertAlmostEqual(book["marks"][0]["nav"], 100000, places=2)
-        self.assertAlmostEqual(book["cash"], 100000, places=2)
-        self.assert_no_shorts(book)
+        book = opened([row("AAA", 80), row("BBB", -40)], prices)
+        long_mv = pos(book, "AAA")["shares"] * 50
+        short_mv = pos(book, "BBB")["shares"] * 25
+        self.assertAlmostEqual(long_mv, 100000 * spec["effective"]["AAA"] / 100, places=2)
+        self.assertAlmostEqual(short_mv, 100000 * spec["effective"]["BBB"] / 100, places=2)
+        self.assertAlmostEqual(abs(long_mv) + abs(short_mv), 100000, places=2)
+        self.assertAlmostEqual(book["cash"] + long_mv + short_mv, 100000, places=2)
+        self.assertTrue(book["gross"]["warning"])
 
-    def test_downgrade_sells_at_the_next_open(self):
+    def test_change_after_the_open_waits_for_the_next_session(self):
         prices = bars(
-            AAA=[("2026-11-06", 100, 100), ("2026-11-09", 120, 121)],
-            SPY=[("2026-11-06", 500, 500), ("2026-11-09", 510, 512)],
-        )
-        book = book_of(("AAA", "BUY"), prices=prices, now="2026-11-06T16:30:00")
-        # Detected before the open, and today's bar is already in the fixture. Do not fill it yet.
-        early = book_of(("AAA", "HOLD"), prices=prices, now="2026-11-09T08:30:00", book=book)
-        self.assertTrue(pt._held(pos(early, "AAA")))
-        pending = early["pending"]
-        self.assertEqual(len(pending), 1)
-        self.assertEqual(pending[0]["action"], "sell")
-        self.assertEqual(pending[0]["executeOn"], "2026-11-09")
-        # The next morning the Nov 9 open is a past session. Exit is 120, not the old entry.
-        done = book_of(("AAA", "HOLD"), prices=prices, now="2026-11-10T08:30:00", book=early)
-        self.assertFalse(pt._held(done["positions"].get("AAA")))
-        self.assertEqual(pos(done, "AAA")["side"], "cash")
-        self.assertEqual(pos(done, "AAA")["shares"], 0)
-        sell = next(trade for trade in done["trades"] if trade["action"] == "sell")
-        self.assertEqual(sell["price"], 120)
-        self.assertEqual(sell["date"], "2026-11-09")
-        self.assertAlmostEqual(sell["realized"], 20000, places=2)
-        self.assertAlmostEqual(done["cash"], 120000, places=2)
-        self.assert_no_shorts(done)
-
-    def test_downgrade_after_the_open_waits_for_the_following_session(self):
-        prices = bars(
-            AAA=[("2026-11-06", 100, 100), ("2026-11-09", 120, 121)],
-            SPY=[("2026-11-06", 500, 500), ("2026-11-09", 510, 512)],
-        )
-        book = book_of(("AAA", "BUY"), prices=prices, now="2026-11-06T16:30:00")
-        later = book_of(("AAA", "SELL"), prices=prices, now="2026-11-09T10:00:00", book=book)
-        self.assertTrue(pt._held(pos(later, "AAA")))
-        self.assertEqual(later["pending"][0]["action"], "sell")
-        self.assertEqual(later["pending"][0]["executeOn"], "2026-11-10")
-        self.assertNotIn("sell", actions(later))
-        self.assert_no_shorts(later)
-
-    def test_upgrade_buys_at_the_next_open(self):
-        prices = bars(
-            AAA=[("2026-11-06", 80, 80), ("2026-11-09", 90, 90)],
+            AAA=[("2026-11-06", 100, 100), ("2026-11-09", 130, 130)],
             SPY=[("2026-11-06", 500, 500), ("2026-11-09", 500, 500)],
         )
-        book = book_of(("AAA", "HOLD"), prices=prices, now="2026-11-06T16:30:00")
-        self.assertEqual(pos(book, "AAA")["shares"], 0)
-        queued = book_of(("AAA", "BUY"), prices=prices, now="2026-11-09T08:30:00", book=book)
-        self.assertEqual(queued["pending"][0]["action"], "buy")
-        self.assertEqual(queued["pending"][0]["executeOn"], "2026-11-09")
-        self.assertEqual(pos(queued, "AAA")["shares"], 0)
-        done = book_of(("AAA", "BUY"), prices=prices, now="2026-11-10T08:30:00", book=queued)
-        self.assertEqual(pos(done, "AAA")["side"], "long")
-        self.assertEqual(pos(done, "AAA")["entryPrice"], 90)
-        self.assertEqual(pos(done, "AAA")["entryDate"], "2026-11-09")
-        self.assertGreater(pos(done, "AAA")["shares"], 0)
-        self.assert_no_shorts(done)
+        book = opened([row("AAA", 10)], prices)
+        later = run([row("AAA", 25)], prices, "2026-11-09T10:00:00", book)
+        self.assertEqual(later["pending"]["executeOn"], "2026-11-10")
+        self.assertAlmostEqual(pos(later, "AAA")["shares"], 100, places=6)
+        self.assertEqual(pos(later, "AAA")["entryPrice"], 100)
 
-    def test_hold_to_sell_is_not_a_trade(self):
-        prices = bars(AAA=[("2026-11-06", 10, 12)], SPY=[("2026-11-06", 500, 500)])
-        book = book_of(("AAA", "HOLD"), prices=prices, now="2026-11-06T16:30:00")
-        before = len(book["trades"])
-        cash = book["cash"]
-        moved = book_of(("AAA", "SELL"), prices=prices, now="2026-11-09T10:00:00", book=book)
-        self.assertEqual(len(moved["trades"]), before)
-        self.assertEqual(moved["pending"], [])
-        self.assertEqual(pos(moved, "AAA")["rating"], "SELL")
-        self.assertEqual(pos(moved, "AAA")["side"], "cash")
-        self.assertEqual(pos(moved, "AAA")["shares"], 0)
-        self.assertEqual(moved["cash"], cash)
-
-    def test_sell_to_hold_is_not_a_trade(self):
-        prices = bars(AAA=[("2026-11-06", 10, 4)], SPY=[("2026-11-06", 500, 500)])
-        book = book_of(("AAA", "SELL"), prices=prices, now="2026-11-06T16:30:00")
-        moved = book_of(("AAA", "HOLD"), prices=prices, now="2026-11-09T15:00:00", book=book)
-        self.assertEqual(actions(moved), ["cash"])
-        self.assertEqual(pos(moved, "AAA")["shares"], 0)
-        self.assertAlmostEqual(moved["cash"], 100000, places=2)
-
-    def test_running_twice_does_not_double_fill(self):
-        prices = bars(AAA=[("2026-11-06", 100, 110)], BBB=[("2026-11-06", 50, 55)], SPY=[("2026-11-06", 500, 505)])
-        book = book_of(("AAA", "BUY"), ("BBB", "SELL"), prices=prices, now="2026-11-07T08:30:00")
-        again = book_of(("AAA", "BUY"), ("BBB", "SELL"), prices=prices, now="2026-11-07T08:30:00", book=book)
+    def test_rerun_does_not_double_trade(self):
+        prices = bars(AAA=[("2026-11-06", 100, 110)], BBB=[("2026-11-06", 50, 40)], SPY=[("2026-11-06", 500, 505)])
+        rows = [row("AAA", 10, "BUY"), row("BBB", -5, "HOLD")]
+        book = opened(rows, prices, later="2026-11-07T08:30:00")
+        again = run(rows, prices, "2026-11-07T08:30:00", book)
         self.assertEqual(len(again["trades"]), len(book["trades"]))
-        self.assertEqual(len(again["marks"]), 1)
         self.assertEqual(again["cash"], book["cash"])
         self.assertEqual(pos(again, "AAA")["shares"], pos(book, "AAA")["shares"])
+        self.assertEqual(len(again["marks"]), 1)
 
-    def test_later_name_is_funded_from_cash_without_resizing(self):
-        prices = bars(
-            AAA=[("2026-11-06", 100, 100), ("2026-11-09", 100, 100)],
-            BBB=[("2026-11-06", 50, 50), ("2026-11-09", 50, 50)],
-            CCC=[("2026-11-09", 25, 25)],
-            SPY=[("2026-11-06", 500, 500), ("2026-11-09", 500, 500)],
-        )
-        book = book_of(("AAA", "BUY"), ("BBB", "HOLD"), prices=prices, now="2026-11-06T16:30:00")
-        held = pos(book, "AAA")["shares"]
-        queued = book_of(
-            ("AAA", "BUY"), ("BBB", "HOLD"), ("CCC", "BUY"),
-            prices=prices, now="2026-11-09T08:30:00", book=book,
-        )
-        self.assertEqual(pos(queued, "CCC")["status"], "pending")
-        self.assertEqual(queued["pending"][0]["executeOn"], "2026-11-09")
-        self.assertEqual(pos(queued, "AAA")["shares"], held)
-        added = book_of(
-            ("AAA", "BUY"), ("BBB", "HOLD"), ("CCC", "BUY"),
-            prices=prices, now="2026-11-10T08:30:00", book=queued,
-        )
-        self.assertEqual(pos(added, "AAA")["shares"], held)
-        self.assertEqual(pos(added, "CCC")["entryPrice"], 25)
-        self.assertEqual(pos(added, "CCC")["entryDate"], "2026-11-09")
-        self.assertAlmostEqual(pos(added, "CCC")["targetWeight"], 0.5)
-        self.assertAlmostEqual(pos(added, "CCC")["notional"], 50000, places=2)
-        self.assertGreaterEqual(added["cash"], 0)
-        self.assert_no_shorts(added)
-
-    def test_no_leverage_when_cash_is_gone(self):
-        prices = bars(
-            AAA=[("2026-11-06", 100, 100), ("2026-11-09", 100, 100)],
-            BBB=[("2026-11-09", 10, 10)],
-            SPY=[("2026-11-06", 500, 500), ("2026-11-09", 500, 500)],
-        )
-        book = book_of(("AAA", "BUY"), prices=prices, now="2026-11-06T16:30:00")
-        self.assertAlmostEqual(book["cash"], 0, places=2)
-        queued = book_of(("AAA", "BUY"), ("BBB", "BUY"), prices=prices, now="2026-11-09T08:30:00", book=book)
-        self.assertEqual(queued["pending"][0]["action"], "buy")
-        self.assertEqual(queued["pending"][0]["executeOn"], "2026-11-09")
-        added = book_of(("AAA", "BUY"), ("BBB", "BUY"), prices=prices, now="2026-11-10T08:30:00", book=queued)
-        self.assertEqual(pos(added, "BBB")["status"], "unfunded")
-        self.assertEqual(pos(added, "BBB")["shares"], 0)
-        self.assertGreaterEqual(added["cash"], 0)
-        self.assertEqual(pos(added, "AAA")["shares"], pos(book, "AAA")["shares"])
-        self.assert_no_shorts(added)
-
-    def test_change_after_the_friday_close_uses_monday_open(self):
-        prices = bars(
-            AAA=[("2026-11-06", 100, 101), ("2026-11-09", 130, 128)],
-            SPY=[("2026-11-06", 500, 501), ("2026-11-09", 520, 518)],
-        )
-        book = book_of(("AAA", "BUY"), prices=prices, now="2026-11-06T16:30:00")
-        friday = book_of(("AAA", "HOLD"), prices=prices, now="2026-11-06T18:00:00", book=book)
-        self.assertTrue(pt._held(pos(friday, "AAA")))
-        self.assertEqual(friday["pending"][0]["executeOn"], "2026-11-07")
-        self.assertNotIn("sell", actions(friday))
-        monday = book_of(("AAA", "HOLD"), prices=prices, now="2026-11-09T10:00:00", book=friday)
-        sell = next(trade for trade in monday["trades"] if trade["action"] == "sell")
-        self.assertEqual(sell["date"], "2026-11-09")
-        self.assertEqual(sell["price"], 130)
-        self.assert_no_shorts(monday)
-
-    def test_removed_long_is_sold_at_the_next_open(self):
-        prices = bars(
-            AAA=[("2026-11-06", 40, 40), ("2026-11-09", 42, 43)],
-            SPY=[("2026-11-06", 500, 500), ("2026-11-09", 500, 500)],
-        )
-        book = book_of(("AAA", "BUY"), ("BBB", "HOLD"), prices=prices, now="2026-11-06T16:30:00")
-        queued = book_of(("BBB", "HOLD"), prices=prices, now="2026-11-09T08:30:00", book=book)
-        self.assertEqual(queued["pending"][0]["action"], "sell")
-        self.assertEqual(queued["pending"][0]["executeOn"], "2026-11-09")
-        self.assertIn("AAA", queued["positions"])
-        gone = book_of(("BBB", "HOLD"), prices=prices, now="2026-11-10T08:30:00", book=queued)
-        self.assertNotIn("AAA", gone["positions"])
-        sell = next(trade for trade in gone["trades"] if trade["ticker"] == "AAA" and trade["action"] == "sell")
-        self.assertEqual(sell["price"], 42)
-        self.assertGreaterEqual(gone["cash"], 0)
-        self.assert_no_shorts(gone)
+    def test_sheet_column_missing_or_blank_is_zero(self):
+        header = "Ticker,My Base value/share,Bear,Bull,Rating (Base vs price),Street consensus PT (mean),# analysts,Consensus source / date,Current price,Price as-of (ET),Base vs price %,Consensus vs price %,Base vs consensus %,Notes,Base change vs previous update,Previous update detail"
+        body = 'AAA,$10,$1,$20,SELL,$12,1,src,$11,asof,-9%,9%,-16%,n,+$1,"Prev Base $9 at Nov 1, 2026"'
+        rows, _ = price_targets.parse_csv(header + "\n" + body + "\n")
+        self.assertEqual(rows[0]["paperWeight"], 0)
+        weighted, _ = price_targets.parse_csv(header + ",Paper weight %\n" + body + ",\n" + body.replace("AAA", "BBB", 1) + ",-5%\n")
+        self.assertEqual([r["paperWeight"] for r in weighted], [0.0, -5.0])
+        self.assertIsNone(price_targets.weight_column(header.split(",")))
 
     def test_bar_dates_follow_new_york(self):
         stamp = datetime.datetime(2026, 11, 5, 14, 30, tzinfo=datetime.timezone.utc).timestamp() * 1000

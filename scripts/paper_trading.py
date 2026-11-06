@@ -1,66 +1,64 @@
 #!/usr/bin/env python3
-"""Paper book for Steve's ratings. Long only. No new scheduler.
+"""Paper book sized by each name's paperWeight. Long and short. No new scheduler.
 
-The Price targets tab reads static/price_targets.json. This script reads that
-file, pulls daily opens and closes from the same Yahoo chart endpoint as
-/api/chart, and writes static/paper_trading.json.
+static/price_targets.json may carry paperWeight, a signed percent of NAV
+(10 = 10% long, -5 = 5% short, 0 or missing = cash). The nightly price-targets
+refresh copies that from the sheet column "Paper weight %".
 
-Nightly, after price_targets.json is updated, from the repo root:
+This script reads that file, pulls daily opens and closes from the same Yahoo
+chart endpoint as /api/chart, and writes static/paper_trading.json.
+
+After any update to price_targets.json, from the repo root:
 
     python3 scripts/paper_trading.py
 
-Then commit static/paper_trading.json with the price-targets update.
+Then commit static/paper_trading.json. Running it again with the same weights
+does not book a second trade.
 
-Rules live in CONFIG. BUY is a long of one equal-weight slot. HOLD and SELL
-are cash. A move between HOLD and SELL does not trade. Leaving or entering
-BUY trades at the next session open after the change is detected (the 9:30
-ET open; a run at or after 9:30 waits for the following session). The
-inception buys are the exception: they fill at the 2026-11-06 open, and
-stay pending until that open is in the price history.
+Until a non-zero weight appears, the book is $100,000 in cash and the tab says
+it is waiting for weights. The first time weights appear, those targets trade
+at the next session open (today's open if this runs before 9:30 ET, otherwise
+the following session). A later weight change resizes, opens, closes, or flips
+that name at the next open. Rating is stored for the table and does not size
+the book.
 
-A name that shows up later takes one inception-sized slot from cash and
-does not resize names already held. Cash below CONFIG["minCash"] is left
-uninvested until a later rating change. No leverage, no fees, no shorts.
+Gross exposure, the sum of absolute weights, is capped at 100%. Above that,
+every weight is scaled down by the same factor. Short sales credit entry times
+shares to cash and reserve those proceeds so they cannot fund another
+position. NAV = cash + sum(signed shares * price), which is cash plus long
+market value minus short market value. No fees.
 """
 import argparse, copy, datetime, json, os, sys, time, urllib.parse, urllib.request
 from zoneinfo import ZoneInfo
 
 CONFIG = {
     "startingCash": 100_000.0,
-    "inception": "2026-11-06",
+    "historyStart": "2026-11-01",
     "benchmark": "SPY",
     "benchmarkLabel": "S&P 500",
     "timezone": "America/New_York",
     "marketOpen": "09:30",
     "marketClose": "16:00",
-    "minCash": 1.0,
-    "longRating": "BUY",
-    "cashRatings": ("HOLD", "SELL"),
+    "grossCap": 100.0,
+    "minTrade": 1.0,
 }
 
-FROZEN = ("startingCash", "inception", "inceptionCount", "inceptionTickers", "slice")
 NOTE = (
-    "Long-only paper book of the ratings in static/price_targets.json. "
-    "BUY buys one equal-weight slot at the next open. HOLD and SELL stay in cash. "
-    "No shorts, no leverage, no fees. "
-    "Nightly, after updating price_targets.json: python3 scripts/paper_trading.py"
+    "Paper book sized by paperWeight on static/price_targets.json. "
+    "paperWeight is a signed percent of NAV (10 = 10% long, -5 = 5% short, 0 or missing = cash), "
+    "copied from the sheet column \"Paper weight %\". "
+    "Gross exposure is capped at 100%. No leverage, no fees. "
+    "After any price_targets.json update: python3 scripts/paper_trading.py"
 )
 
 
 def summary_text(cfg):
-    n = cfg.get("inceptionCount")
-    slot = ""
-    if n:
-        slot = f" Inception slots: 1/{n} of ${cfg['startingCash']:,.0f} each."
-    cash = " and ".join(cfg.get("cashRatings") or ())
     return (
-        f"Virtual ${cfg['startingCash']:,.0f}, long only, no fees and no leverage. "
-        f"Starts at the {cfg['inception']} open. "
-        f"{cfg['longRating']} buys one equal-weight slot; {cash} leave that slot in cash. "
-        f"A change into or out of {cfg['longRating']} trades at the next session open "
-        f"({cfg['marketOpen']} America/New_York). "
-        f"Compared with {cfg['benchmarkLabel']} ({cfg['benchmark']})."
-        f"{slot} Not investment advice."
+        f"Virtual ${cfg['startingCash']:,.0f}. Each name is sized by its paper weight, "
+        f"a signed percent of NAV (10 = 10% long, -5 = 5% short, 0 = cash). "
+        f"Gross exposure is capped at {cfg['grossCap']:.0f}%. No leverage, no fees. "
+        f"Weight changes trade at the next session open ({cfg['marketOpen']} America/New_York). "
+        f"Compared with {cfg['benchmarkLabel']} ({cfg['benchmark']}). Not investment advice."
     )
 
 
@@ -90,21 +88,8 @@ def money(v):
     return round(float(v) + 1e-9, 2)
 
 
-def normalize_rating(value, cfg=None):
-    cfg = cfg or CONFIG
-    t = str(value or "").strip().upper()
-    if not t:
-        return None
-    if t == cfg["longRating"] or t.startswith(cfg["longRating"] + " ") or t.startswith(cfg["longRating"] + "("):
-        return cfg["longRating"]
-    for name in cfg["cashRatings"]:
-        if t == name or t.startswith(name + " ") or t.startswith(name + "("):
-            return name
-    return None
-
-
-def wants_long(rating, cfg):
-    return rating == cfg["longRating"]
+def q4(v):
+    return float(f"{float(v):.4f}")
 
 
 def not_before(now, cfg):
@@ -137,226 +122,141 @@ def session_complete(date, now, cfg):
 
 
 def blank_book(cfg=None):
-    cfg = dict(CONFIG if cfg is None else cfg)
-    cfg.setdefault("cashRatings", CONFIG["cashRatings"])
+    cfg = dict(CONFIG if cfg is None else {**CONFIG, **cfg})
     book = {
-        "version": 1,
+        "version": 2,
         "generated": None,
         "note": NOTE,
         "config": {
             "startingCash": float(cfg["startingCash"]),
-            "inception": cfg["inception"],
+            "historyStart": cfg.get("historyStart") or CONFIG["historyStart"],
             "benchmark": cfg["benchmark"],
             "benchmarkLabel": cfg["benchmarkLabel"],
             "timezone": cfg["timezone"],
             "marketOpen": cfg["marketOpen"],
             "marketClose": cfg["marketClose"],
-            "minCash": float(cfg["minCash"]),
-            "longRating": cfg["longRating"],
-            "cashRatings": list(cfg["cashRatings"]),
-            "inceptionCount": None,
-            "inceptionTickers": [],
-            "slice": None,
-            "weight": None,
+            "grossCap": float(cfg["grossCap"]),
+            "minTrade": float(cfg["minTrade"]),
             "summary": "",
         },
         "cash": float(cfg["startingCash"]),
+        "started": False,
+        "seenWeights": False,
+        "waiting": True,
+        "inception": None,
         "order": [],
         "positions": {},
-        "ratings": {},
-        "pending": [],
+        "applied": {},
+        "pending": None,
         "trades": [],
         "marks": [],
         "spyInceptionOpen": None,
-        "started": False,
+        "gross": {"requested": 0.0, "effective": 0.0, "scaled": False, "scale": 1.0, "cap": float(cfg["grossCap"]), "warning": ""},
     }
     book["config"]["summary"] = summary_text(book["config"])
     return book
 
 
-def _apply_config(book, cfg):
-    """Refresh operational knobs. Inception size stays on the book once set."""
-    saved = book.get("config") or {}
-    merged = blank_book(cfg)["config"]
-    for key in FROZEN:
-        if saved.get(key) not in (None, [], ""):
-            merged[key] = saved[key]
-    if merged.get("inceptionCount") and not merged.get("slice"):
-        merged["slice"] = float(merged["startingCash"]) / int(merged["inceptionCount"])
-    if merged.get("inceptionCount"):
-        merged["weight"] = f"1/{int(merged['inceptionCount'])}"
-    merged["summary"] = summary_text(merged)
-    book["config"] = merged
-    book["note"] = NOTE
-    return book
+def _import_positions(book):
+    positions = book.get("positions")
+    if isinstance(positions, list):
+        order = book.get("order") or [pos.get("ticker") for pos in positions if pos.get("ticker")]
+        book["positions"] = {pos["ticker"]: pos for pos in positions if pos.get("ticker")}
+        book["order"] = [ticker for ticker in order if ticker in book["positions"]]
+    elif not isinstance(positions, dict):
+        book["positions"] = {}
+    if not isinstance(book.get("applied"), dict):
+        book["applied"] = {}
 
 
-def parse_targets(rows, cfg):
-    out, seen = [], set()
+def weight_spec(rows, cap=100.0):
+    """Requested paperWeight values, scaled so the sum of absolute weights is at most `cap`."""
+    requested, ratings, order = {}, {}, []
     for raw in rows or []:
         if not isinstance(raw, dict):
             continue
         ticker = str(raw.get("ticker") or "").strip().upper()
         if not ticker or "elon case" in ticker.lower():
             continue
-        rating = normalize_rating(raw.get("rating"), cfg)
-        if rating is None:
-            continue
-        if ticker in seen:
+        if ticker in requested:
             raise ValueError("duplicate ticker " + ticker)
-        seen.add(ticker)
-        out.append((ticker, rating))
-    if not out:
-        raise ValueError("price targets have no BUY, HOLD, or SELL rows")
-    return out
-
-
-def _held(pos):
-    return bool(pos and pos.get("status") == "open" and pos.get("side") == "long" and (pos.get("shares") or 0) > 0)
-
-
-def _blank_pos(ticker, rating, cfg):
-    n = int(cfg["inceptionCount"])
-    slot = float(cfg["slice"])
+        try:
+            weight = float(raw.get("paperWeight") or 0)
+        except (TypeError, ValueError):
+            weight = 0.0
+        requested[ticker] = q4(weight)
+        ratings[ticker] = str(raw.get("rating") or "").strip().upper() or None
+        order.append(ticker)
+    gross = sum(abs(w) for w in requested.values())
+    cap = float(cap)
+    scaled = gross > cap + 1e-9 and gross > 0
+    scale = (cap / gross) if scaled else 1.0
+    effective = {ticker: q4(weight * scale) for ticker, weight in requested.items()}
+    # Keep the scaled gross on the cap when rounding drifts by a hair.
+    if scaled:
+        drift = q4(sum(abs(w) for w in effective.values()) - cap)
+        if abs(drift) >= 0.0001 and effective:
+            ticker = max(effective, key=lambda t: abs(effective[t]))
+            sign = 1 if effective[ticker] >= 0 else -1
+            effective[ticker] = q4(effective[ticker] - sign * drift)
+    warning = ""
+    if scaled:
+        warning = (
+            f"Requested gross weight is {gross:.2f}%, above the {cap:.0f}% cap. "
+            f"Every weight is scaled by {scale:.4f} so gross exposure is {cap:.0f}%."
+        )
     return {
-        "ticker": ticker,
-        "rating": rating,
-        "side": "long" if wants_long(rating, cfg) else "cash",
-        "status": "pending",
-        "entryDate": None,
-        "entryPrice": None,
-        "shares": None,
-        "notional": 0.0,
-        "targetNotional": slot,
-        "targetWeight": 1.0 / n,
-        "realized": 0.0,
+        "requested": requested,
+        "effective": effective,
+        "ratings": ratings,
+        "order": order,
+        "grossRequested": q4(gross),
+        "grossEffective": q4(min(gross, cap) if gross else 0.0),
+        "scaled": scaled,
+        "scale": scale,
+        "cap": cap,
+        "warning": warning,
+        "any": any(abs(w) > 1e-6 for w in requested.values()),
     }
 
 
-def _take_pending(book, ticker):
-    kept, found = [], None
-    for order in book["pending"]:
-        if order["ticker"] == ticker and found is None:
-            found = order
-        elif order["ticker"] != ticker:
-            kept.append(order)
-    book["pending"] = kept
-    return found
+def _weights_equal(left, right):
+    keys = set(left or {}) | set(right or {})
+    for key in keys:
+        if abs(float((left or {}).get(key) or 0) - float((right or {}).get(key) or 0)) > 1e-4:
+            return False
+    return True
 
 
-def _queue(book, ticker, rating, action, execute_on, now, reason):
-    book["pending"].append({
+def _shares(pos):
+    if not pos or pos.get("shares") is None:
+        return 0.0
+    return float(pos["shares"])
+
+
+def _blank_pos(ticker):
+    return {
         "ticker": ticker,
-        "rating": rating,
-        "action": action,
-        "detected": now.date().isoformat(),
-        "detectedAt": now.isoformat(timespec="seconds"),
-        "executeOn": execute_on,
-        "reason": reason,
-    })
+        "rating": None,
+        "side": "cash",
+        "status": "cash",
+        "shares": 0.0,
+        "entryPrice": None,
+        "entryDate": None,
+        "realized": 0.0,
+        "weight": 0.0,
+        "weightRequested": 0.0,
+    }
 
 
-def _needed_action(want_long, held):
-    if want_long and not held:
-        return "buy"
-    if not want_long and held:
-        return "sell"
-    if not want_long and not held:
-        return "cash"
-    return None
-
-
-def _reconcile(book, ticker, rating, now, is_new):
-    cfg = book["config"]
+def _ensure(book, ticker):
     pos = book["positions"].get(ticker)
     if pos is None:
-        pos = _blank_pos(ticker, rating, cfg)
+        pos = _blank_pos(ticker)
         book["positions"][ticker] = pos
         if ticker not in book["order"]:
             book["order"].append(ticker)
-    existing = _take_pending(book, ticker)
-    prev = book["ratings"].get(ticker)
-    held = _held(pos)
-    want_long = wants_long(rating, cfg)
-    action = _needed_action(want_long, held)
-    inception_name = ticker in set(cfg.get("inceptionTickers") or [])
-    rating_changed = prev is not None and prev != rating
-
-    if (not book.get("started")) and inception_name and not held:
-        action = "buy" if want_long else "cash"
-        if existing and existing["action"] == action and existing.get("reason") == "inception":
-            existing["rating"] = rating
-            book["pending"].append(existing)
-        else:
-            _queue(book, ticker, rating, action, cfg["inception"], now, "inception")
-        pos["status"] = "pending"
-        pos["side"] = "long" if want_long else "cash"
-        pos["shares"] = None
-        pos["notional"] = 0.0
-        pos["entryPrice"] = None
-        pos["entryDate"] = None
-        pos["rating"] = rating
-        book["ratings"][ticker] = rating
-        return
-
-    if action == "buy" and pos.get("status") == "unfunded" and not is_new and not rating_changed:
-        pos["rating"] = rating
-        book["ratings"][ticker] = rating
-        return
-
-    if action is None:
-        # Already long, and the rating is still BUY. Drop a stale sell if the rating flipped back.
-        pos["rating"] = rating
-        pos["side"] = "long"
-        pos["status"] = "open"
-        book["ratings"][ticker] = rating
-        return
-
-    if action == "cash" and not is_new and not held and pos.get("status") in ("open", "unfunded"):
-        # HOLD <-> SELL, a settled cash slot, or a buy that could not be funded. No trade.
-        pos["rating"] = rating
-        pos["side"] = "cash"
-        if pos.get("status") == "open" and pos.get("shares") is None:
-            pos["shares"] = 0
-        book["ratings"][ticker] = rating
-        return
-
-    if existing and existing["action"] == action:
-        existing["rating"] = rating
-        book["pending"].append(existing)
-        pos["rating"] = rating
-        book["ratings"][ticker] = rating
-        return
-
-    reason = "added" if is_new else "rating"
-    execute = not_before(now, cfg)
-    _queue(book, ticker, rating, action, execute, now, reason)
-    pos["rating"] = rating
-    book["ratings"][ticker] = rating
-    if action == "buy" and pos.get("status") != "open":
-        pos["status"] = "pending"
-        pos["side"] = "long"
-    elif action == "cash":
-        pos["status"] = "pending"
-        pos["side"] = "cash"
-
-
-def _remove_ticker(book, ticker, now):
-    pos = book["positions"].get(ticker)
-    existing = _take_pending(book, ticker)
-    if _held(pos):
-        if existing and existing["action"] == "sell":
-            existing["reason"] = "removed"
-            book["pending"].append(existing)
-        else:
-            cfg = book["config"]
-            _queue(book, ticker, pos.get("rating") or cfg["longRating"], "sell", not_before(now, cfg), now, "removed")
-        book["ratings"][ticker] = "OUT"
-        return
-    book["positions"].pop(ticker, None)
-    book["ratings"].pop(ticker, None)
-    if ticker in book["order"]:
-        book["order"].remove(ticker)
+    return pos
 
 
 def _log(book, **row):
@@ -374,77 +274,104 @@ def _log(book, **row):
     })
 
 
-def _apply(book, order, price, date):
-    cfg = book["config"]
-    ticker = order["ticker"]
-    pos = book["positions"].get(ticker)
-    if pos is None:
-        return True
-    action = order["action"]
-    if action == "sell":
-        if not _held(pos):
-            return True
-        if price is None or price <= 0:
-            return False
-        pnl = pos["shares"] * (price - pos["entryPrice"])
-        book["cash"] = money(book["cash"] + pos["notional"] + pnl)
-        realized = money(pnl)
-        pos["realized"] = money((pos.get("realized") or 0) + pnl)
-        _log(book, date=date, ticker=ticker, action="sell", rating=pos.get("rating"),
-             price=price, shares=pos["shares"], notional=pos["notional"], realized=realized,
-             reason=order.get("reason"))
-        pos["shares"] = 0
-        pos["notional"] = 0.0
-        pos["entryPrice"] = None
-        pos["entryDate"] = date
-        pos["side"] = "cash"
+def _flatten(pos):
+    pos["shares"] = 0.0
+    pos["entryPrice"] = None
+    pos["entryDate"] = None
+    pos["side"] = "cash"
+    pos["status"] = "cash"
+
+
+def _close_qty(book, pos, qty, price, date, reason):
+    sh = _shares(pos)
+    qty = min(float(qty), abs(sh))
+    if qty <= 1e-12:
+        return
+    entry = float(pos["entryPrice"])
+    if sh > 0:
+        pnl = qty * (price - entry)
+        delta = -qty
+        action = "sell"
+    else:
+        pnl = qty * (entry - price)
+        delta = qty
+        action = "cover"
+    book["cash"] = money(book["cash"] - delta * price)
+    pos["realized"] = money((pos.get("realized") or 0) + pnl)
+    new_sh = sh + delta
+    _log(book, date=date, ticker=pos["ticker"], action=action, rating=pos.get("rating"),
+         price=price, shares=qty, notional=money(qty * price), realized=money(pnl), reason=reason)
+    if abs(new_sh) < 1e-8:
+        _flatten(pos)
+    else:
+        pos["shares"] = new_sh
+        pos["side"] = "long" if new_sh > 0 else "short"
         pos["status"] = "open"
-        if book["ratings"].get(ticker) == "OUT":
-            book["positions"].pop(ticker, None)
-            book["ratings"].pop(ticker, None)
-            if ticker in book["order"]:
-                book["order"].remove(ticker)
-        return True
-    if action == "buy":
-        if _held(pos):
-            return True
-        if price is None or price <= 0:
-            return False
-        deploy = money(min(float(pos["targetNotional"]), book["cash"]))
-        if deploy < float(cfg["minCash"]):
-            pos["status"] = "unfunded"
-            pos["side"] = "cash"
-            pos["shares"] = 0
-            pos["notional"] = 0.0
-            pos["entryPrice"] = None
-            pos["entryDate"] = date
-            pos["rating"] = order["rating"]
-            _log(book, date=date, ticker=ticker, action="unfunded", rating=order["rating"],
-                 price=price, shares=0, notional=0, realized=None, reason=order.get("reason"))
-            return True
-        shares = deploy / price
-        book["cash"] = money(book["cash"] - deploy)
-        pos["status"] = "open"
-        pos["side"] = "long"
-        pos["rating"] = order["rating"]
-        pos["shares"] = shares
-        pos["notional"] = deploy
+
+
+def _open_to(book, pos, target_shares, price, date, reason):
+    sh = _shares(pos)
+    delta = target_shares - sh
+    if abs(delta) < 1e-12:
+        return
+    book["cash"] = money(book["cash"] - delta * price)
+    if abs(sh) < 1e-12:
         pos["entryPrice"] = price
         pos["entryDate"] = date
-        _log(book, date=date, ticker=ticker, action="buy", rating=order["rating"],
-             price=price, shares=shares, notional=deploy, realized=None, reason=order.get("reason"))
-        return True
-    # cash settle: the slot stays in cash. No shares, no short.
+    else:
+        pos["entryPrice"] = (abs(sh) * float(pos["entryPrice"]) + abs(delta) * price) / abs(target_shares)
+    pos["shares"] = target_shares
+    pos["side"] = "long" if target_shares > 0 else "short"
     pos["status"] = "open"
-    pos["side"] = "cash"
-    pos["rating"] = order["rating"]
-    pos["shares"] = 0
-    pos["notional"] = 0.0
-    pos["entryPrice"] = None
-    pos["entryDate"] = date
-    _log(book, date=date, ticker=ticker, action="cash", rating=order["rating"],
-         price=None, shares=0, notional=0, realized=None, reason=order.get("reason"))
+    action = "buy" if target_shares > 0 else "short"
+    _log(book, date=date, ticker=pos["ticker"], action=action, rating=pos.get("rating"),
+         price=price, shares=abs(delta), notional=money(abs(delta) * price), realized=None, reason=reason)
+
+
+def rebalance_ticker(book, ticker, target_mv, price, date, reason):
+    """Move one name to a signed market value at `price`. Returns False if the price is missing."""
+    if price is None or price <= 0:
+        return False
+    pos = _ensure(book, ticker)
+    min_trade = float(book["config"]["minTrade"])
+    sh = _shares(pos)
+    cur_mv = sh * price
+    if abs(sh) < 1e-12 and abs(target_mv) < min_trade:
+        _flatten(pos)
+        return True
+    if abs(sh) > 1e-12 and abs(target_mv) >= min_trade and (sh > 0) != (target_mv > 0):
+        _close_qty(book, pos, abs(sh), price, date, reason)
+        _open_to(book, pos, target_mv / price, price, date, reason)
+        return True
+    if abs(target_mv) < min_trade:
+        if abs(sh) > 1e-12:
+            _close_qty(book, pos, abs(sh), price, date, reason)
+        return True
+    target_shares = target_mv / price
+    if abs(sh) > 1e-12 and abs(target_shares) < abs(sh) - 1e-12:
+        _close_qty(book, pos, abs(sh) - abs(target_shares), price, date, reason)
+        return True
+    if abs((target_shares - _shares(pos)) * price) < min_trade:
+        return True
+    _open_to(book, pos, target_shares, price, date, reason)
     return True
+
+
+def _open_on(prices, symbol, date):
+    for bar in prices.get(symbol) or []:
+        if bar.get("date") == date and bar.get("open") not in (None, "") and bar["open"] > 0:
+            return float(bar["open"])
+    return None
+
+
+def _close_on(prices, symbol, date):
+    best = None
+    for bar in sorted(prices.get(symbol) or [], key=lambda b: b.get("date") or ""):
+        if not bar.get("date") or bar["date"] > date:
+            break
+        if bar.get("close") is not None:
+            best = float(bar["close"])
+    return best
 
 
 def _dates_of(prices):
@@ -456,131 +383,193 @@ def _dates_of(prices):
     return sorted(found)
 
 
-def _first_open(prices, symbol, start, fillable):
-    bars = [b for b in (prices.get(symbol) or []) if b.get("date") and b.get("open") not in (None, "")]
-    bars.sort(key=lambda b: b["date"])
-    for bar in bars:
-        if bar["date"] < start:
-            continue
-        if not fillable(bar["date"]):
-            continue
-        if bar["open"] is None or bar["open"] <= 0:
-            continue
-        return bar
-    return None
-
-
-def _exec_point(order, prices, dates, fillable):
-    if order["action"] in ("buy", "sell"):
-        bar = _first_open(prices, order["ticker"], order["executeOn"], fillable)
-        if not bar:
-            return None, None
-        return bar["date"], bar["open"]
-    for date in dates:
-        if date >= order["executeOn"] and fillable(date):
-            return date, None
-    return None, None
-
-
-def _close_on(prices, symbol, date):
-    best = None
-    bars = sorted((prices.get(symbol) or []), key=lambda b: b.get("date") or "")
-    for bar in bars:
-        if not bar.get("date") or bar["date"] > date:
-            break
-        if bar.get("close") is not None:
-            best = bar["close"]
-    return best
-
-
 def portfolio_nav(book, price_of):
-    """Cash plus long market value. Shorts are not a state this book can be in."""
+    """Cash plus signed market value. A short's negative shares subtract its market value."""
     if not book.get("started"):
         return float(book["config"]["startingCash"])
     nav = float(book["cash"])
     positions = book["positions"]
     seq = positions.values() if isinstance(positions, dict) else positions
     for pos in seq:
-        if not _held(pos):
+        sh = _shares(pos)
+        if not sh:
             continue
         px = price_of(pos["ticker"])
         if px is None:
-            px = pos["entryPrice"]
-        nav += float(pos["notional"]) + float(pos["shares"]) * (float(px) - float(pos["entryPrice"]))
+            px = pos.get("entryPrice")
+        if px is None:
+            continue
+        nav += sh * float(px)
     return nav
+
+
+def _desired(book, spec):
+    names = list(spec["order"])
+    for ticker, pos in book["positions"].items():
+        if ticker not in spec["effective"] and abs(_shares(pos)) > 1e-12 and ticker not in names:
+            names.append(ticker)
+    return {ticker: q4(spec["effective"].get(ticker, 0.0)) for ticker in names}
+
+
+def _sync_weights(book, spec, now):
+    cfg = book["config"]
+    book["gross"] = {
+        "requested": spec["grossRequested"],
+        "effective": spec["grossEffective"],
+        "scaled": spec["scaled"],
+        "scale": spec["scale"],
+        "cap": spec["cap"],
+        "warning": spec["warning"],
+    }
+    book["order"] = list(spec["order"])
+    for ticker in spec["order"]:
+        pos = _ensure(book, ticker)
+        pos["rating"] = spec["ratings"].get(ticker)
+        pos["weightRequested"] = spec["requested"].get(ticker, 0.0)
+    if spec["any"]:
+        book["seenWeights"] = True
+    book["waiting"] = not book.get("seenWeights")
+    if book["waiting"]:
+        book["pending"] = None
+        return
+    desired = _desired(book, spec)
+    pending = book.get("pending")
+    if pending and _weights_equal(pending.get("weights") or {}, desired):
+        return
+    if book.get("started") and _weights_equal(desired, book.get("applied") or {}):
+        book["pending"] = None
+        return
+    reason = "inception" if not book.get("started") else "weight"
+    book["pending"] = {
+        "executeOn": not_before(now, cfg),
+        "detected": now.date().isoformat(),
+        "detectedAt": now.isoformat(timespec="seconds"),
+        "weights": desired,
+        "reason": reason,
+    }
+
+
+def _needs_price(book, weights):
+    needed = []
+    for ticker, weight in weights.items():
+        pos = book["positions"].get(ticker)
+        if abs(weight) > 1e-6 or abs(_shares(pos)) > 1e-12:
+            needed.append(ticker)
+    return needed
+
+
+def _try_fill(book, prices, date):
+    pending = book.get("pending")
+    if not pending:
+        return False
+    weights = pending["weights"]
+    needed = _needs_price(book, weights)
+    opens = {ticker: _open_on(prices, ticker, date) for ticker in needed}
+    if any(px is None for px in opens.values()):
+        return False
+    nav = float(book["cash"])
+    for ticker, pos in list(book["positions"].items()):
+        sh = _shares(pos)
+        if not sh:
+            continue
+        px = opens.get(ticker) or _open_on(prices, ticker, date)
+        if px is None:
+            return False
+        nav += sh * px
+    reason = pending.get("reason") or "weight"
+    for ticker in needed:
+        _ensure(book, ticker)
+        if not rebalance_ticker(book, ticker, nav * float(weights[ticker]) / 100.0, opens[ticker], date, reason):
+            return False
+    book["applied"] = {ticker: q4(weight) for ticker, weight in weights.items()}
+    book["pending"] = None
+    book["started"] = True
+    book["waiting"] = False
+    if not book.get("inception"):
+        book["inception"] = date
+    if book.get("spyInceptionOpen") is None:
+        spy = _open_on(prices, book["config"]["benchmark"], date)
+        if spy is not None:
+            book["spyInceptionOpen"] = spy
+    # Drop names that are flat and no longer in the sheet.
+    for ticker in list(book["positions"]):
+        if ticker not in book["order"] and abs(_shares(book["positions"][ticker])) < 1e-12:
+            book["positions"].pop(ticker, None)
+    return True
+
+
+def _refresh_display(book, spec):
+    pending = book.get("pending") or {}
+    target = pending.get("weights") or book.get("applied") or {}
+    for ticker in list(book["order"]):
+        pos = _ensure(book, ticker)
+        pos["rating"] = spec["ratings"].get(ticker)
+        pos["weightRequested"] = spec["requested"].get(ticker, 0.0)
+        pos["weight"] = q4(float(target.get(ticker, spec["effective"].get(ticker, 0.0)) or 0))
+        sh = _shares(pos)
+        if abs(sh) > 1e-12:
+            pos["side"] = "long" if sh > 0 else "short"
+            pos["status"] = "open"
+        elif pending and abs(float(pending.get("weights", {}).get(ticker) or 0)) > 1e-6:
+            w = float(pending["weights"][ticker])
+            pos["side"] = "long" if w > 0 else "short"
+            pos["status"] = "pending"
+            pos["shares"] = None
+            pos["entryPrice"] = None
+            pos["entryDate"] = None
+        else:
+            _flatten(pos)
+            pos["weight"] = q4(float(target.get(ticker, 0) or 0))
+            pos["weightRequested"] = spec["requested"].get(ticker, 0.0)
 
 
 def _mark(book, prices, date):
     nav = portfolio_nav(book, lambda ticker: _close_on(prices, ticker, date))
     spy = _close_on(prices, book["config"]["benchmark"], date)
-    return {"date": date, "nav": money(nav), "spyClose": None if spy is None else float(spy)}
+    return {"date": date, "nav": money(nav), "spyClose": spy}
 
 
 def update_book(book, rows, prices, now, config=None):
-    """Apply rating changes and append fills and daily close marks. Does not mutate `book`."""
+    """Apply weight changes and append fills and daily close marks. Does not mutate `book`."""
     cfg = dict(CONFIG)
     if config:
         cfg.update(config)
     now = now_et(now, cfg)
-    if book is None:
+    if not book or book.get("version") != 2:
         book = blank_book(cfg)
     else:
         book = copy.deepcopy(book)
         _import_positions(book)
-    _apply_config(book, cfg)
-    cfg = book["config"]
-    parsed = parse_targets(rows, cfg)
-    if not cfg.get("inceptionCount"):
-        cfg["inceptionCount"] = len(parsed)
-        cfg["inceptionTickers"] = [ticker for ticker, _rating in parsed]
-        cfg["slice"] = float(cfg["startingCash"]) / float(cfg["inceptionCount"])
-        cfg["weight"] = f"1/{cfg['inceptionCount']}"
-        cfg["summary"] = summary_text(cfg)
-    current = {ticker for ticker, _rating in parsed}
-    known = set(book["ratings"]) | set(book["positions"])
-    for ticker, rating in parsed:
-        _reconcile(book, ticker, rating, now, is_new=ticker not in known)
-    for ticker in list(book["ratings"]):
-        if ticker not in current:
-            _remove_ticker(book, ticker, now)
-
+        saved = book.get("config") or {}
+        fresh = blank_book(cfg)["config"]
+        fresh["startingCash"] = float(saved.get("startingCash") or fresh["startingCash"])
+        fresh["historyStart"] = saved.get("historyStart") or fresh["historyStart"]
+        book["config"] = fresh
+        book["note"] = NOTE
+        book["config"]["summary"] = summary_text(book["config"])
+    spec = weight_spec(rows, book["config"]["grossCap"])
+    _sync_weights(book, spec, now)
+    prices = prices or {}
     dates = _dates_of(prices)
-    fillable = lambda date: session_fillable(date, now, cfg)
-    complete = lambda date: session_complete(date, now, cfg)
-    if book.get("spyInceptionOpen") is None:
-        bar = _first_open(prices or {}, cfg["benchmark"], cfg["inception"], fillable)
-        if bar:
-            book["spyInceptionOpen"] = float(bar["open"])
+    fillable = lambda date: session_fillable(date, now, book["config"])
+    complete = lambda date: session_complete(date, now, book["config"])
     last_mark = book["marks"][-1]["date"] if book["marks"] else None
-    visit = [date for date in dates if date >= cfg["inception"]]
-    for date in visit:
+    for date in dates:
         if last_mark and date <= last_mark:
             continue
-        kept = []
-        for order in book["pending"]:
-            when, price = _exec_point(order, prices or {}, dates, fillable)
-            if when != date:
-                kept.append(order)
-                continue
-            if _apply(book, order, price, date):
-                book["started"] = True
-            else:
-                kept.append(order)
-        book["pending"] = kept
-        if book.get("started") and complete(date) and not any(mark["date"] == date for mark in book["marks"]):
-            book["marks"].append(_mark(book, prices or {}, date))
-    cfg["summary"] = summary_text(cfg)
+        if book.get("pending") and book["pending"]["executeOn"] <= date and fillable(date):
+            _try_fill(book, prices, date)
+        # A session we still need for a fill stays unmarked so a later run can trade it.
+        stuck = book.get("pending") and book["pending"]["executeOn"] <= date and fillable(date)
+        if stuck:
+            continue
+        if book.get("started") and book.get("inception") and date >= book["inception"] and complete(date):
+            if not any(mark["date"] == date for mark in book["marks"]):
+                book["marks"].append(_mark(book, prices, date))
+    _refresh_display(book, spec)
+    book["waiting"] = not book.get("seenWeights")
+    book["config"]["summary"] = summary_text(book["config"])
     return book
-
-
-def _import_positions(book):
-    positions = book.get("positions")
-    if isinstance(positions, list):
-        order = book.get("order") or [pos["ticker"] for pos in positions if pos.get("ticker")]
-        book["positions"] = {pos["ticker"]: pos for pos in positions if pos.get("ticker")}
-        book["order"] = [ticker for ticker in order if ticker in book["positions"]]
-    elif positions is None:
-        book["positions"] = {}
 
 
 def export_book(book):
@@ -697,10 +686,8 @@ def repo_of(script_path=None):
 
 
 def build_prices(symbols, start_date, offline=None, cfg=None):
-    """Return (sessions_by_symbol, last_price_by_symbol)."""
     if offline is not None:
-        prices = {symbol: list(offline.get(symbol) or []) for symbol in symbols}
-        return prices, {}
+        return {symbol: list(offline.get(symbol) or []) for symbol in symbols}, {}
     prices, last = {}, {}
     for symbol in symbols:
         try:
@@ -720,21 +707,22 @@ def run_once(targets_path, out_path, now=None, offline=None, write=True):
     rows = doc.get("rows") if isinstance(doc, dict) else doc
     book = load_book(out_path)
     cfg = book["config"] if book else CONFIG
-    start = (cfg or CONFIG)["inception"]
+    start = cfg.get("historyStart") or cfg.get("inception") or CONFIG["historyStart"]
     symbols = []
     for row in rows or []:
         ticker = str((row or {}).get("ticker") or "").strip().upper()
         if ticker and ticker not in symbols:
             symbols.append(ticker)
-    benchmark = (book or {}).get("config", {}).get("benchmark") or CONFIG["benchmark"]
+    benchmark = cfg.get("benchmark") or CONFIG["benchmark"]
     if benchmark not in symbols:
         symbols.append(benchmark)
-    if book:
-        for ticker in list(book.get("positions") or {}):
+    if book and isinstance(book.get("positions"), dict):
+        for ticker in book["positions"]:
             if ticker not in symbols:
                 symbols.insert(0, ticker)
     prices, _last = build_prices(symbols, start, offline=offline, cfg=CONFIG)
-    updated = update_book(book, rows, prices, now_et(now) if not isinstance(now, datetime.datetime) else now)
+    moment = now if isinstance(now, datetime.datetime) else now_et(now)
+    updated = update_book(book, rows, prices, moment)
     changed = True
     if os.path.exists(out_path):
         try:
@@ -748,22 +736,24 @@ def run_once(targets_path, out_path, now=None, offline=None, write=True):
 
 
 def describe(book):
-    cfg = book["config"]
-    lines = [cfg.get("summary") or summary_text(cfg)]
+    lines = [book["config"].get("summary") or ""]
+    if book.get("waiting"):
+        lines.append("waiting for weights")
+    if book.get("gross", {}).get("warning"):
+        lines.append(book["gross"]["warning"])
+    pending = book.get("pending")
+    when = pending["executeOn"] if pending else "—"
     lines.append(
         f"cash {book['cash']:.2f}  started {bool(book.get('started'))}  "
-        f"pending {len(book.get('pending') or [])}  trades {len(book.get('trades') or [])}  "
-        f"marks {len(book.get('marks') or [])}"
+        f"pending {when}  trades {len(book.get('trades') or [])}  marks {len(book.get('marks') or [])}"
     )
     positions = book["positions"]
     seq = [positions[t] for t in book.get("order") or [] if t in positions] if isinstance(positions, dict) else positions
     for pos in seq:
-        pending = next((p for p in book.get("pending") or [] if p["ticker"] == pos["ticker"]), None)
-        flag = f"  pending {pending['action']} {pending['executeOn']}" if pending else ""
         shares = "—" if pos.get("shares") is None else f"{pos['shares']:.4f}"
         lines.append(
             f"  {pos['ticker']:6} {str(pos.get('rating') or '—'):4} {str(pos.get('side') or '—'):5} "
-            f"{str(pos.get('status') or '—'):9} shares {shares}{flag}"
+            f"w {float(pos.get('weight') or 0):8.2f}  {str(pos.get('status') or '—'):8} shares {shares}"
         )
     return "\n".join(lines)
 
@@ -779,7 +769,7 @@ def self_test():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Update static/paper_trading.json from price targets and Yahoo daily bars")
+    parser = argparse.ArgumentParser(description="Update static/paper_trading.json from paperWeight and Yahoo daily bars")
     parser.add_argument("--repo", default=repo_of())
     parser.add_argument("--targets", help="defaults to static/price_targets.json")
     parser.add_argument("--out", help="defaults to static/paper_trading.json")

@@ -5,9 +5,11 @@ Render has no Google credentials. The Price targets tab reads static/price_targe
 
 Sheet: "DCF price target summary"
   https://docs.google.com/spreadsheets/d/10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0
-  tab Sheet1, range A1:P30. Cells are formatted text ($ and %), which this script parses.
+  tab Sheet1, range A1:Q30. Cells are formatted text ($ and %), which this script parses.
   A blank Street consensus, analyst count, consensus-vs-price, or base-vs-consensus
   is stored as null (IPO-day names such as AGLT). Base and price are still required.
+  Column Q, header "Paper weight %", is optional. It is stored as paperWeight, a signed
+  percent of NAV (10 = 10% long, -5 = 5% short). A missing column or a blank cell is 0.
 
 Usage:
   python3 scripts/price_targets.py                 # link CSV export (401 if the sheet is private)
@@ -29,7 +31,7 @@ import argparse, csv, io, json, os, re, sys, datetime, urllib.request, urllib.er
 
 SHEET_ID = "10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0"
 SHEET_NAME = "DCF price target summary"
-RANGE = "A1:P30"
+RANGE = "A1:Q30"
 TAB = "Sheet1"
 EXPORTS = [
     f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid=0",
@@ -146,6 +148,32 @@ def is_scenario(ticker):
     t = str(ticker or "").lower().replace("–", "-").replace("—", "-").replace("−", "-")
     return "elon case" in t
 
+def weight_column(headers):
+    """Index of an optional 'Paper weight %' column, or None when the sheet has no such header."""
+    for i, header in enumerate(headers or []):
+        name = " ".join(str(header or "").strip().lower().replace("%", " ").split())
+        if "paper" in name and "weight" in name:
+            return i
+    return None
+
+def parse_paper_weight(s):
+    """'10', '10%', '-5%', '+10.5 %', blank -> signed percent. Blank is 0. Not a fraction."""
+    if s is None:
+        return 0.0
+    t = str(s).strip()
+    if t == "" or t.lower() in ("—", "–", "-", "n/a", "na"):
+        return 0.0
+    neg = t.startswith("(") and t.endswith(")")
+    t = t.strip("()").replace("%", "").replace(",", "").replace(" ", "")
+    if t == "" or t in ("+", "-"):
+        return 0.0
+    if t.startswith("+"):
+        t = t[1:]
+    v = float(t)
+    if neg:
+        v = -abs(v)
+    return float(f"{v:.4f}")
+
 def headers_ok(headers):
     h = [str(x or "").strip().lower() for x in headers]
     if len(h) < 16: return False
@@ -202,6 +230,7 @@ def parse_csv(text):
     headers, body = rows_in[0], rows_in[1:]
     if not headers_ok(headers):
         sys.exit("CSV header is not Sheet1 A:P of the DCF price target summary (got: " + " | ".join(headers) + ")")
+    weight_at = weight_column(headers)
     out, skipped = [], []
     for i, raw in enumerate(body, start=2):
         if not any(str(c).strip() for c in raw): continue
@@ -221,6 +250,14 @@ def parse_csv(text):
         rating = parse_rating(raw[4])
         if rating not in ("BUY", "HOLD", "SELL"):
             sys.exit(f"row {i} {ticker}: rating must be BUY, HOLD, or SELL (got {raw[4]!r})")
+        if weight_at is None:
+            paper_weight = 0.0
+        else:
+            cell = raw[weight_at] if weight_at < len(raw) else ""
+            try:
+                paper_weight = parse_paper_weight(cell)
+            except ValueError:
+                sys.exit(f"row {i} {ticker}: Paper weight % must be a number or blank (got {cell!r})")
         out.append({
             "ticker": ticker,
             "base": q2(base),
@@ -242,6 +279,7 @@ def parse_csv(text):
             "fromZero": bool(from_zero or prev == 0),
             "previousBase": q2(prev),
             "previousDetail": detail,
+            "paperWeight": paper_weight,
         })
     seen = set()
     for r in out:
@@ -327,6 +365,7 @@ def seed_rows():
             "baseChangePct": None if zero else q6(pct), "baseChangedAt": parse_change_date(detail),
             "fromZero": zero,
             "previousBase": q2(prev), "previousDetail": detail,
+            "paperWeight": 0.0,
         })
     return rows
 
@@ -436,7 +475,23 @@ SPCX,$128.42,-$1.79,$291.02,SELL,$222.71,38,"StockAnalysis (S&P Global), fetched
     assert a["consensusSource"] == "" and a["baseChange"] is None and a["previousBase"] is None, a
     ipo_doc, ipo_missing = build_doc(ipo_rows, {})
     assert ipo_doc["rows"][0]["why"] == WHY["AGLT"] and ipo_missing == [], ipo_doc["rows"][0]
-    assert RANGE == "A1:P30" and all("A1:P11" not in u for u in EXPORTS)
+    assert all(r["paperWeight"] == 0 for r in rows), rows
+    weighted = sample.splitlines()[0] + ",Paper weight %\n" + "\n".join(
+        line + extra for line, extra in zip(sample.splitlines()[1:], [",10%", ",0", ",-5", ",\"\""])
+    ) + "\n"
+    wrows, _ = parse_csv(weighted)
+    # Elon-case row is skipped, so the weights that remain are MSTR 10%, CRWV -5%, SPCX blank.
+    assert [r["paperWeight"] for r in wrows] == [10.0, -5.0, 0.0], wrows
+    assert parse_paper_weight("  +10.5 % ") == 10.5
+    assert parse_paper_weight("") == 0 and parse_paper_weight(None) == 0 and parse_paper_weight("—") == 0
+    assert weight_column(["Ticker", "Paper weight %"]) == 1
+    assert weight_column(["Ticker", "Rating"]) is None
+    try:
+        parse_csv(sample.splitlines()[0] + ",Paper weight %\n" + sample.splitlines()[1] + ",nope\n")
+        raise AssertionError("bad paper weight should exit")
+    except SystemExit as e:
+        assert "Paper weight" in str(e), e
+    assert RANGE == "A1:Q30" and all("A1:P11" not in u for u in EXPORTS)
     try:
         parse_csv(sample.splitlines()[0] + "\n" + 'NOPE,,$1,$2,HOLD,$3,1,src,$9,asof,1%,2%,3%,n,new,detail\n')
         raise AssertionError("blank base should exit")
