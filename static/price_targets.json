@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05T16:12:13Z",
+  "generated": "2026-11-07T13:53:15Z",
   "seeded": false,
   "title": "Steve's DCF Base Case vs Street Consensus vs Price",
   "subtitleNote": "Base now includes probability-weighted future bets",
@@ -15,7 +15,7 @@
     "name": "DCF price target summary",
     "spreadsheetId": "10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0",
     "sheet": "Sheet1",
-    "range": "A1:P30",
+    "range": "A1:Q30",
     "url": "https://docs.google.com/spreadsheets/d/10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0/edit"
   },
   "note": "Offline snapshot. Render does not call Google. Regenerate with scripts/price_targets.py. Dollar fields are numbers. Percent fields are fractions (0.051 = 5.1%). why is editable copy and is kept when the snapshot is regenerated. baseChangedAt is YYYY-MM-DD, the date the base last changed. The SPCX Elon-case scenario row is omitted.",
