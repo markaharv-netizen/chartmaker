@@ -1,96 +1,106 @@
 {
- "date": "2026-11-06",
- "theme": "Democrats sweep the midterms and AI-rule fears hit stocks: the Nasdaq has its worst day since April 2025, chips, Tesla and SpaceX drop about 10%, Korea and Taiwan tumble, bitcoin ETFs see outflows but BTC holds $75K, and Anthropic's $895B commitments are in focus.",
+ "date": "2026-11-07",
+ "theme": "After the worst week for chips since 2001: Nvidia's valuation hits a low, H200 China licenses draw scrutiny, leverage and the 200-day line are in focus, India rallies as Asia sells off, bitcoin sits on Strategy's cost basis amid $1.28B of ETF outflows, Musk says SpaceX barely needs government revenue, Tesla trades Cybertrucks for Cybercabs, and data center lenders get nervous.",
  "items": [
   {
    "sheet": "bot experiments 2",
-   "tab": "73 US ETF BTC holdings",
-   "title": "How much bitcoin US spot ETFs hold, by fund",
-   "image": "cotd/2026-11-06/01.png",
-   "picked": "US bitcoin and ether ETFs saw about $530M of outflows on Nov 5 as the Nasdaq fell 5.5%, with BlackRock among the sellers, per stories trending on X. Bitcoin still held above $75,000 after the Binance hack and the midterm selloff.",
-   "matters": "ETF holdings are the biggest pool of bitcoin demand from regular investors. Outflows show how much of that demand leaves when stocks sell off.",
-   "know": "The tab has 1,283,681 BTC across 12 US spot ETFs as of Oct 16, 2026, down from 1,292,081 in April. BlackRock's IBIT holds 803,871 BTC and Fidelity's FBTC 177,542. The data is about three weeks old and does not include this week's outflows.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=817552047"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "148 BTC-Nasdaq correlation",
-   "title": "Bitcoin vs Nasdaq: 90-day correlation of daily returns",
-   "image": "cotd/2026-11-06/02.png",
-   "picked": "The Nasdaq had its worst day since April 2025 on Nov 5 on fears of AI rules after the Democratic midterm sweep. Bitcoin dipped but held above $75,000, and X posts called it resilient.",
-   "matters": "The more bitcoin moves with tech stocks, the less it works as a diversifier. A tech selloff then tends to pull it down too.",
-   "know": "The 90-day correlation was 0.408 in the week of Oct 29, 2026. It was 0.433 on Oct 9 and 0.076 in January 2019. The data ends Oct 29, before this week's selloff.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=556824671"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "318 SPCX price-to-sales",
-   "title": "SpaceX (SPCX) price-to-sales since its listing",
-   "image": "cotd/2026-11-06/04.png",
-   "picked": "SpaceX closed at $123.62 on Nov 5, below its $135 IPO price, after a roughly 9% drop. ARK Invest bought shares on the dip, per stories trending on X.",
-   "matters": "Price-to-sales shows how much investors pay for each dollar of SpaceX revenue. It tracks how much growth is priced in as the stock swings.",
-   "know": "On Oct 30, 2026, the tab has SPCX at $134.72, a $1,775.85B market cap and $23.04B of trailing 4-quarter revenue, or 77.08x sales. That is down from 131.47x on Jun 15. The data ends Oct 30, before this week's drop below $124.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1948267700"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "226 OpenAI vs Anthropic revenue",
-   "title": "OpenAI vs Anthropic: reported annualized revenue run-rate",
-   "image": "cotd/2026-11-06/05.png",
-   "picked": "Anthropic's amended IPO filing, trending on X, lists $895B of compute and data center commitments. That puts its revenue growth next to its spending.",
-   "matters": "Revenue at the AI labs is what pays for the data center buildout behind Nvidia, the neoclouds and the hyperscalers.",
-   "know": "The tab has Anthropic's reported run-rate at $100B in Sep 2026, up from $1B in Dec 2024 and $9B in Dec 2025. OpenAI's latest entry is $70B in Sep 2026, up from $20B in Dec 2025. These are reported run-rates, and the dates are uneven.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1186940001"
+   "tab": "13 BTC cost basis by holder",
+   "title": "Bitcoin's price vs what ETFs, companies and Strategy paid for theirs",
+   "image": "cotd/2026-11-07/01.png",
+   "picked": "Bitcoin dipped under $75,000 on Friday and was near $76,000 early Saturday, per a story trending on X. Peter Schiff and others are pointing out that the price is now right around Strategy's average cost of $75,451 per coin.",
+   "matters": "When bitcoin trades near the average price that big holders paid, their paper profits disappear. That level is now being watched as a floor, and as a test of nerves for ETF holders and treasury companies.",
+   "know": "On Oct 14 2026, the tab's latest snapshot with bitcoin at $81,562, the average cost was $76,645 for US spot ETFs, $78,881 for all public companies, $80,382 for treasury companies, $75,444 for Strategy and $81,126 for BlackRock's IBIT. At about $76,000 today, IBIT holders and treasury companies as a group would be under water on average. The tab is about three weeks old, so this week's ETF outflows aren't in it.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1078237833"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "19 Nvidia supply commitments",
-   "title": "Nvidia's supply and capacity commitments by fiscal quarter",
-   "image": "cotd/2026-11-06/06.png",
-   "picked": "Nvidia closed at $181.60 on Nov 5, down over 9%, on fears of slower AI data center spending, then rose about 5% premarket on Nov 6, per X.",
-   "matters": "Supply commitments are what Nvidia has promised to buy from suppliers. They show how big a buildout it is planning for, and what it is on the hook for if demand slows.",
-   "know": "The tab has $279B of supply and capacity commitments at the Jul 26, 2026 quarter end, up from $119B in April and $95.2B in January. That is about 9x the $30.8B in January 2025. The next 10-Q is not in the tab yet.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1229225245"
+   "tab": "90 Public cos vs US ETFs BTC",
+   "title": "Bitcoin held by public companies vs US spot ETFs",
+   "image": "cotd/2026-11-07/02.png",
+   "picked": "Spot bitcoin ETFs had $1.28 billion of net outflows this week, their biggest in 19 weeks, led by BlackRock's IBIT. Meanwhile Strive reported a $509 million third-quarter profit and said it now holds 43,124 BTC, the second-largest corporate stack after Strategy, per stories trending on X.",
+   "matters": "For most of the ETF era, the funds held far more bitcoin than companies did. Companies have now caught up, so treasury buying matters as much as ETF flows for demand.",
+   "know": "Public companies held 1,304,885 BTC on the tab's latest reading, Oct 18 2026, slightly ahead of 1,283,680 BTC in US spot ETFs. They first passed the ETFs at the Jun 30 2026 quarter-end, 1,282,273 vs 1,210,299, up from 308,039 vs 837,279 in March 2024. The tab predates this week's outflows and Strive's October buys (it shows Strive at 35,595 BTC).",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=956514556"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "223 Micron revenue & margin",
-   "title": "Micron quarterly revenue and gross margin",
-   "image": "cotd/2026-11-06/07.png",
-   "picked": "Micron fell more than 17% on Nov 5 and was up over 9% premarket on Nov 6. Investors on X are debating whether memory makers' long-term supply deals will hold up in a downturn.",
-   "matters": "Memory is the most cyclical part of the AI chip trade. Margins this high have not lasted in past cycles.",
-   "know": "The tab has quarterly revenue of $54.23B with an 86.8% gross margin for Sep 2026, up from $11.32B and 44.67% in Sep 2025. In the 2016 trough, margins were under 20%. The latest quarter is Sep 2026.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1584345646"
+   "tab": "315 SpaceX revenue by segment",
+   "title": "SpaceX revenue by segment: Starlink is the business",
+   "image": "cotd/2026-11-07/03.png",
+   "picked": "Musk said on X that SpaceX's government revenue will fall below 10% this quarter and under 5% soon, offering to cancel any contracts Democrats don't want after their midterm wins. The post is one of the most-discussed stories on X this morning.",
+   "matters": "How much SpaceX relies on government launches shapes its political risk. This chart shows that commercial Starlink, not launch, now drives most of the revenue.",
+   "know": "Over the 12 months to September 2026, the tab has Starlink connectivity at $16.02 billion, the AI segment (xAI and X) at $11.86 billion and space at $4.16 billion. Space revenue, which includes government launch work, barely grew from $3.56 billion in 2023, while Starlink quadrupled from $3.87 billion. The tab doesn't split out government revenue, and the image's footnote still says TTM to Jun 30 2026 while the bar is labeled TTM Sep '26.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=399190070"
+  },
+  {
+   "sheet": "bot experiments 2",
+   "tab": "25 Cybercab registrations",
+   "title": "Tesla Cybercabs on the Texas robotaxi registry",
+   "image": "cotd/2026-11-07/04.png",
+   "picked": "Musk called it the end of an era as Tesla said it will wind down Cybertruck production at Giga Texas around mid-2027 to make room for more Cybercabs, per a story trending on X. Tesla also raised Cybertruck prices again on Nov 6.",
+   "matters": "Freeing up Cybertruck lines only matters if Cybercab output keeps ramping. Texas registrations are the most direct public count of how many are on the road.",
+   "know": "Cybercabs registered in Texas rose from 45 on Aug 31 to 573 on Oct 31 2026, the tab's latest check, including 544 on Oct 27. That's more than 12 times as many in two months. The data stops Oct 31, and the image's title still says 45 to 319, from an earlier build.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1601417155"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "154 Semis vs S&P 500",
-   "title": "Semiconductors vs the S&P 500, and the SOXX drawdown",
-   "image": "cotd/2026-11-06/08.png",
-   "picked": "Chip stocks led Thursday's rout, with AMD and Micron down more than 17%. Edward Dowd's post that semis are down 32% from June peaks is trending on X.",
-   "matters": "Semis have led this market. When they lose ground to the S&P 500, the AI trade is losing momentum.",
-   "know": "The tab has semis vs the S&P 500 at 237.89 in Oct 2026 (Jul 2001 = 100), down from 327.76 in June. The SOXX total-return drawdown was -26.37% at end of October. The data is monthly through October, so it does not include this week's drop.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=2061031585"
+   "tab": "161 Nvidia P-S and P-E",
+   "title": "Nvidia's valuation: price-to-sales and trailing P/E",
+   "image": "cotd/2026-11-07/05.png",
+   "picked": "Nvidia closed near $182 on Friday after a 9% drop and five straight down weeks, and a story trending on X calls it the cheapest forward valuation in a decade. The SOX chip index fell 21.8% in five days through Nov 5, its worst run since 2001.",
+   "matters": "The selloff is happening while Nvidia's earnings keep growing, so its multiples are shrinking fast. This chart shows how far the valuation has come down from the 2023-2024 peaks.",
+   "know": "At the Oct 30 2026 month-end, the tab's latest point, Nvidia traded at 16.41 times trailing sales and 25.76 times trailing earnings, the lowest trailing P/E in the tab, which starts in June 2019. The P/E peaked at 242.76 in July 2023 and was 57.36 a year ago. The data is month-end, so it doesn't include this week's drop, which would push both lower.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1547332232"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "158 Korea & Taiwan vs S&P",
-   "title": "South Korea and Taiwan stocks relative to the S&P 500",
-   "image": "cotd/2026-11-06/09.png",
-   "picked": "Korea's Kospi fell 8.8% and Taiwan's TAIEX 9% after the US tech selloff, led by Samsung, SK Hynix and TSMC, per X news.",
-   "matters": "Korea and Taiwan are the chip and memory supply chain. They are the purest overseas bets on AI hardware.",
-   "know": "The tab has Korea vs the S&P 500 at 161.58 in Oct 2026 (Jan 2001 = 100), down from 218.41 in May. Taiwan was at 101.35, down from 112.14 in September. The data is monthly through October, before this week's drop.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1791345316"
+   "tab": "202 Nvidia revenue by geography",
+   "title": "Where Nvidia bills its sales: share by customer location",
+   "image": "cotd/2026-11-07/06.png",
+   "picked": "The New York Times reported that US licenses to sell Nvidia's H200 chips went to Chinese firms with empty offices and ties to blacklisted companies, a story Mark's news watch flagged this morning.",
+   "matters": "China access is one of the biggest swing factors for Nvidia's sales and for its political risk. This chart shows how much its China share has shrunk under export limits.",
+   "know": "In the tab's latest quarter, dated Jun 30 2026, China including Hong Kong was 8.19% of Nvidia's revenue, up from 4.49% two quarters earlier but far below 24.57% in early 2021. The US share was 62.43%, down from 78.13% the quarter before, while Taiwan rose to 28.04%. Billing location isn't the same as where chips end up.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=643299192"
+  },
+  {
+   "sheet": "bot experiments 2",
+   "tab": "87 Neocloud debt vs market cap",
+   "title": "Neocloud debt as a share of market cap",
+   "image": "cotd/2026-11-07/07.png",
+   "picked": "ING is auctioning about $500 million of loans tied to a dozen data centers, including part of a Stargate site, and Oracle issued a force majeure notice to one developer, per stories trending on X. CoreWeave reports earnings Nov 10.",
+   "matters": "When lenders start trimming data center exposure, the most indebted AI cloud companies are the most exposed. Debt compared with equity value shows who has the least cushion.",
+   "know": "Using Oct 30 2026 closing prices, the tab has Cipher's debt at 187.5% of its market cap, CoreWeave 130.5% ($39.49 billion of debt vs $30.26 billion), Applied Digital 119.2%, TeraWulf 89.0%, IREN 83.1% and Nebius 30.4%. Neocloud stocks have dropped since then, so these ratios are likely higher now. Debt figures are mostly as of Jun 30 plus later note sales, and exclude operating leases (CoreWeave has $16.3 billion).",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=185222515"
   },
   {
    "sheet": "Bot experiments",
-   "tab": "41 VIX term structure",
-   "title": "VIX term structure: 3-month VIX divided by VIX",
-   "image": "cotd/2026-11-06/10.png",
-   "picked": "Thursday's 4.4% S&P 500 drop sent volatility higher. Traders are watching today's October jobs report to see if Friday's chip rebound holds.",
-   "matters": "When the ratio falls below 1, near-term fear is above longer-term fear. That has often marked stress peaks.",
-   "know": "The tab's last October reading is 1.126, with VIX at 17.2 and VIX3M at 19.37. An earlier October reading hit 1.053 with VIX at 19.45. The data ends in late October and does not include this week's selloff.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=100750083"
+   "tab": "199 Margin debt vs S&P",
+   "title": "Leverage check: margin debt growth vs the S&P 500",
+   "image": "cotd/2026-11-07/08.png",
+   "picked": "Investors put a record $9.5 billion into leveraged US ETFs last month, $7 billion of it into the 3x chip fund SOXL, which then lost about 60% as chips crashed this week, per a story trending on X.",
+   "matters": "Borrowed money makes selloffs faster, because falling prices force sales. Margin debt is the broadest measure of how much leverage retail and hedge fund accounts are carrying.",
+   "know": "In September 2026, the tab's latest month, margin debt was up 31.39% from a year earlier while the S&P 500 was up 14.4%. In August 2026 dollars, margin debt was $1,470.5 billion, just under its June record of $1,509.1 billion. The FINRA data comes with a lag, so it doesn't show any deleveraging from this week.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=626951791"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "193 Stocks vs 200-day average",
+   "title": "How stretched are stocks? S&P 500 and Nasdaq-100 vs their 200-day average",
+   "image": "cotd/2026-11-07/09.png",
+   "picked": "The S&P 500 fell 2.68% this week to 7,376.86 and traders on X are watching whether SPY holds its 200-day moving average, after a 4.41% drop Thursday and a small bounce Friday.",
+   "matters": "The 200-day average is a widely watched line between an uptrend and a deeper correction. The gap to it shows how much cushion the market had left heading into this week.",
+   "know": "On the tab's latest weekly point, Oct 30 2026, the S&P 500 was 3.70% above its 200-day average and the Nasdaq-100 just 1.64% above. That was down from 12.12% for the Nasdaq-100 on Oct 2. The last time both were below the line was March to early April 2026, when the S&P bottomed at 4.01% below. The data ends Oct 30, before this week's selloff.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1003143037"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "121 India vs China stocks",
+   "title": "India vs China stocks in US dollars",
+   "image": "cotd/2026-11-07/10.png",
+   "picked": "India's Nifty 50 rose about 8% this week, its best week since early 2021, while Japan, South Korea and Taiwan sold off on AI worries, per a story trending on X. India has little exposure to the AI chip trade.",
+   "matters": "Money leaving crowded AI and chip markets in Asia has to go somewhere, and India has been the main beneficiary. This ratio shows how India has done relative to China since 2012.",
+   "know": "At the Oct 30 2026 month-end, the tab's latest point, the India-to-China ratio was 150.81 (Feb 2012 = 100), its highest of 2026 but well below its July 2024 peak of 223.28. INDA was at 211.4 and MCHI at 140.18 on the same base, so the gain came mostly from China falling. The data ends Oct 30, so this week's Indian rally isn't in it.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=614337209"
   }
  ]
 }
