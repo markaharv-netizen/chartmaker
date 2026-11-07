@@ -704,6 +704,7 @@ function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='p
   if(m==='prices'){syncPriceUi();render()}else if(m==='paper')paperEnter();else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
 $('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mPt').onclick=()=>setMode('pt');$('mPaper').onclick=()=>setMode('paper');
 // ---------- Charts of the day: static/cotd/today.json (refreshed daily by Flash via scripts/cotd_build.py) ----------
+// Each new edition is 20 charts. Render every item in the file; there is no display cap.
 async function cotdenter(){const el=$('cotd'),E=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   el.innerHTML='<p>Loading…</p>';
   try{const r=await fetch('cotd/today.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const j=await r.json();if(MODE!=='cotd')return;

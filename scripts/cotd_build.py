@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Build a "Charts of the day" edition for Chartmaker.  Runs on the box, not on Render.
 
+Each edition is exactly 20 charts. A shorter or longer list is an error. Every item is
+published; the script does not truncate the list (the old gate required exactly 10).
+
 Usage:  python3 scripts/cotd_build.py picks.json [--repo /workspace/chartmaker] [--keep-old N]
 
 picks.json:
 {
   "date": "2026-10-21",                      # edition date (YYYY-MM-DD)
   "theme": "one-line theme",
-  "items": [                                  # exactly 10
+  "items": [                                  # exactly 20
     {"spreadsheetId": "...", "sheet": "Bot experiments", "tab": "315 SpaceX revenue by segment",
      "gid": 399190070,                        # tab sheetId (for the 'open in sheet' link)
      "png": "/workspace/cotd_src/01.png",     # chart PNG already on the box (see COTD_README.md)
@@ -23,6 +26,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sheets_catalog
 
 W, H = 1600, 900
+# Future editions are 20 charts. The Charts of the day tab renders every item in today.json.
+EDITION_SIZE = 20
 
 def check(im, path):
     from PIL import ImageStat
@@ -55,35 +60,23 @@ def pick_excluded(item):
         return False
     return sheets_catalog.tab_excluded(pair[0], gid)
 
-def self_test():
-    bot1 = "1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY"
-    assert pick_excluded({"spreadsheetId": bot1, "gid": 1547332232})
-    assert pick_excluded({"spreadsheetId": bot1, "gid": 643299192})
-    assert pick_excluded({"spreadsheetId": bot1, "gid": 333185169})
-    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1476428159})
-    assert not pick_excluded({"spreadsheetId": bot1, "gid": ""})
-    print("self-test ok")
-
-def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("picks", nargs="?"); ap.add_argument("--repo", default=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    ap.add_argument("--keep-old", type=int, default=7, help="keep this many dated edition folders (0 = keep all)")
-    ap.add_argument("--self-test", action="store_true")
-    a = ap.parse_args()
-    if a.self_test:
-        self_test(); return
-    if not a.picks: ap.error("pass picks.json")
-    P = json.load(open(a.picks))
-    d = P["date"]
-    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", d): sys.exit("date must be YYYY-MM-DD")
-    items = P["items"]
-    if len(items) != 10: sys.exit(f"need exactly 10 items, got {len(items)}")
+def validate(items):
+    """Reject anything other than one full edition, including the retired 10-chart size."""
+    if len(items) != EDITION_SIZE:
+        sys.exit(f"need exactly {EDITION_SIZE} items, got {len(items)}")
     req = ["spreadsheetId", "sheet", "tab", "png", "title", "picked", "matters", "know"]
     for i, x in enumerate(items, 1):
         miss = [k for k in req if not str(x.get(k, "")).strip()]
         if miss: sys.exit(f"item {i} missing {miss}")
         if pick_excluded(x):
             sys.exit(f"item {i} is an excluded tab ({x.get('tab')} gid {x.get('gid')}) and cannot be published")
-    root = os.path.join(a.repo, "static", "cotd"); out = os.path.join(root, d)
+
+def publish(P, repo, keep_old):
+    d = P["date"]
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", d): sys.exit("date must be YYYY-MM-DD")
+    items = P["items"]
+    validate(items)
+    root = os.path.join(repo, "static", "cotd"); out = os.path.join(root, d)
     tmp = out + ".tmp"; shutil.rmtree(tmp, ignore_errors=True); os.makedirs(tmp)
     rows = []
     for i, x in enumerate(items, 1):
@@ -97,9 +90,124 @@ def main():
     t = os.path.join(root, "today.json")
     with open(t + ".tmp", "w") as f: json.dump(doc, f, indent=1, ensure_ascii=False)
     os.replace(t + ".tmp", t)
-    if a.keep_old:
+    if keep_old:
         ed = sorted(x for x in os.listdir(root) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", x))
-        for old in ed[:-a.keep_old]: shutil.rmtree(os.path.join(root, old)); print("removed old edition", old)
+        for old in ed[:-keep_old]: shutil.rmtree(os.path.join(root, old)); print("removed old edition", old)
     print("wrote", t)
+    return doc
+
+def self_test():
+    import tempfile
+    bot1 = "1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY"
+    assert EDITION_SIZE == 20
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1547332232})
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 643299192})
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 333185169})
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1476428159})
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": ""})
+    live = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    # Retired charts stay out of the published edition and the sheet catalog.
+    # 1024131985 is Strategy tab 99 (MSTR BTC per share), removed in PR #34.
+    for rel in ("static/cotd/today.json", "static/sheets/catalog.json"):
+        with open(os.path.join(live, rel), encoding="utf-8") as f:
+            blob = f.read()
+        for gid in (1547332232, 643299192, 333185169, 1024131985):
+            assert str(gid) not in blob, (rel, gid)
+
+    def item(i, **kw):
+        row = {"spreadsheetId": bot1, "sheet": "Bot experiments", "tab": f"sample tab {i}",
+               "gid": 900000 + i, "png": f"/tmp/cotd-sample-{i}.png", "title": f"Chart {i:02d}",
+               "picked": f"picked note {i} " + ("quality " * 12),
+               "matters": f"matters note {i}",
+               "know": f"know note {i} with a figure 12.5 and date 2026-11-01"}
+        row.update(kw)
+        return row
+
+    def rejected(items, needle):
+        try:
+            validate(items)
+        except SystemExit as e:
+            if needle not in str(e):
+                raise SystemExit(f"expected {needle!r} in {e}")
+            return
+        raise SystemExit("expected rejection, validation passed")
+
+    for n in (0, 8, 10, 19, 21):
+        rejected([item(i) for i in range(1, n + 1)], f"need exactly {EDITION_SIZE} items, got {n}")
+    for gid, tab in (
+        (1547332232, "161 Nvidia P-S and P-E"),
+        (643299192, "202 Nvidia revenue by geography"),
+        (333185169, "87 TSLA beta to Nasdaq"),
+    ):
+        items = [item(i) for i in range(1, EDITION_SIZE + 1)]
+        items[4] = item(5, gid=gid, tab=tab, spreadsheetId=bot1)
+        rejected(items, f"gid {gid}")
+
+    src = os.path.join(tempfile.mkdtemp(prefix="cotd-src-"), "chart.png")
+    os.makedirs(os.path.dirname(src), exist_ok=True)
+    from PIL import Image
+    im = Image.new("RGB", (64, 36))
+    px = im.load()
+    for y in range(im.height):
+        for x in range(im.width):
+            px[x, y] = ((x * 17 + y * 3) % 256, (x * 5 + y * 13) % 256, (x * y + 40) % 256)
+    im.save(src)
+    repo = tempfile.mkdtemp(prefix="cotd-repo-")
+    try:
+        short = {"date": "2099-01-15", "theme": "ten should fail", "items": [item(i, png=src) for i in range(1, 11)]}
+        try:
+            publish(short, repo, 0)
+        except SystemExit as e:
+            assert "need exactly 20 items, got 10" in str(e), e
+        else:
+            raise SystemExit("a 10-item edition was published")
+        assert not os.path.exists(os.path.join(repo, "static", "cotd", "today.json"))
+        blocked = [item(i, png=src) for i in range(1, EDITION_SIZE + 1)]
+        blocked[7] = item(8, png=src, gid=643299192, tab="202 Nvidia revenue by geography")
+        try:
+            publish({"date": "2099-01-15", "theme": "excluded", "items": blocked}, repo, 0)
+        except SystemExit as e:
+            assert "gid 643299192" in str(e), e
+        else:
+            raise SystemExit("an excluded gid was published")
+        assert not os.path.exists(os.path.join(repo, "static", "cotd", "today.json"))
+        extra = {"date": "2099-01-15", "theme": "too many", "items": [item(i, png=src) for i in range(1, 22)]}
+        try:
+            publish(extra, repo, 0)
+        except SystemExit as e:
+            assert "need exactly 20 items, got 21" in str(e), e
+        else:
+            raise SystemExit("21 items were published")
+        assert not os.path.exists(os.path.join(repo, "static", "cotd", "today.json"))
+        assert not os.path.isdir(os.path.join(repo, "static", "cotd", "2099-01-15"))
+        picks = [item(i, png=src) for i in range(1, EDITION_SIZE + 1)]
+        doc = publish({"date": "2099-01-15", "theme": " twenty charts ", "items": picks}, repo, 0)
+        assert doc["theme"] == "twenty charts"
+        assert len(doc["items"]) == 20, len(doc["items"])
+        titles = [row["title"] for row in doc["items"]]
+        assert titles == [f"Chart {i:02d}" for i in range(1, 21)], titles
+        assert doc["items"][19]["know"].startswith("know note 20 ")
+        assert "quality" in doc["items"][0]["picked"]
+        folder = os.path.join(repo, "static", "cotd", "2099-01-15")
+        names = sorted(os.listdir(folder))
+        assert names == [f"{i:02d}.png" for i in range(1, 21)], names
+        with open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8") as f:
+            saved = json.load(f)
+        assert [row["image"] for row in saved["items"]] == [f"cotd/2099-01-15/{i:02d}.png" for i in range(1, 21)]
+    finally:
+        shutil.rmtree(repo, ignore_errors=True)
+        shutil.rmtree(os.path.dirname(src), ignore_errors=True)
+    print("self-test ok")
+
+def main():
+    ap = argparse.ArgumentParser(); ap.add_argument("picks", nargs="?"); ap.add_argument("--repo", default=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    ap.add_argument("--keep-old", type=int, default=7, help="keep this many dated edition folders (0 = keep all)")
+    ap.add_argument("--self-test", action="store_true")
+    a = ap.parse_args()
+    if a.self_test:
+        self_test(); return
+    if not a.picks: ap.error("pass picks.json")
+    P = json.load(open(a.picks))
+    publish(P, a.repo, a.keep_old)
 
 if __name__ == "__main__": main()
