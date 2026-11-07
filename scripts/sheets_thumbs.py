@@ -102,6 +102,8 @@ class Index:
         self.by_title, self.by_book_title = {}, {}
         for t in tabs:
             gid = int(t["gid"])
+            if sheets_catalog.tab_excluded(t.get("book"), gid):
+                continue
             self.by_gid[gid] = t
             k = norm_tab(t["tab"])
             self.by_key.setdefault(k, []).append(t)
@@ -288,6 +290,9 @@ def cotd_files(repo, books, tabs):
         bid = by_name.get(str(it.get("sheet") or "").strip().lower())
         tab = by_tab.get((bid, str(it.get("tab") or "").strip().lower())) if bid else None
         img = str(it.get("image") or "")
+        if tab and sheets_catalog.tab_excluded(tab.get("book"), tab.get("gid")):
+            print("cotd item excluded:", it.get("sheet"), "/", it.get("tab"))
+            continue
         if not tab or not img.startswith("cotd/") or ".." in img.split("/"):
             print("cotd item not in the catalog:", it.get("sheet"), "/", it.get("tab"))
             continue
@@ -299,9 +304,13 @@ def cotd_files(repo, books, tabs):
                       "mtime": os.path.getmtime(src), "explicit": {"book": tab["book"], "gid": tab["gid"]}})
     return files
 
+def visible_tabs(tabs):
+    """Catalog rows an image refresh is allowed to publish. Excluded gids stay out."""
+    return [t for t in tabs or [] if not sheets_catalog.tab_excluded(t.get("book"), t.get("gid"))]
+
 def publish(repo, chosen, dry):
     doc, dest = load_catalog(repo)
-    tabs = doc.get("tabs") or []
+    tabs = visible_tabs(doc.get("tabs") or [])
     root = os.path.join(repo, "static", "sheets", "thumbs")
     tmp = root + ".building"
     if not dry:
@@ -382,7 +391,7 @@ def publish(repo, chosen, dry):
 
 def collect(repo, dirs, use_cotd):
     doc, _path = load_catalog(repo)
-    books, tabs = doc.get("books") or [], doc.get("tabs") or []
+    books, tabs = doc.get("books") or [], visible_tabs(doc.get("tabs") or [])
     files = []
     for d in dirs:
         if not os.path.isdir(d): sys.exit("not a folder: " + d)
@@ -415,6 +424,10 @@ def self_test():
         {"book": "bot3", "tab": "MSTR Volume", "gid": 30, "charts": ["MSTR 30-day volume"]},
         {"book": "bot1", "tab": "Same Chart Title", "gid": 40, "charts": ["Shared title"]},
         {"book": "bot2", "tab": "Other Chart Title", "gid": 41, "charts": ["Shared title"]},
+        {"book": "bot1", "tab": "161 Nvidia P-S and P-E", "gid": 1547332232,
+         "charts": ["Nvidia valuation: price-to-sales and trailing P/E (month-end)"]},
+        {"book": "bot1", "tab": "201 Nvidia data center revenue", "gid": 1476428159,
+         "charts": ["Nvidia became a data-center company: quarterly revenue, data center vs everything else"]},
     ]
     def f(path, parent, mtime, explicit=None):
         return {"path": path, "name": os.path.basename(path), "parent": parent, "mtime": mtime, "explicit": explicit}
@@ -429,6 +442,8 @@ def self_test():
         f("/e/sheetBOT2__26.png", "", 50, None),
         f("/e/custom.png", "", 200, {"gid": 30}),
         f("/e/Shared title.png", "", 10, None),
+        f("/e/161 Nvidia P-S and P-E.png", "", 10, None),
+        f("/e/201 Nvidia data center revenue.png", "", 10, None),
     ]
     # The second MSTR file is a different path; basename collides in this list on purpose.
     files[5]["path"] = "/wrong/MSTR Volume.png"
@@ -445,6 +460,9 @@ def self_test():
     assert ("bot1", 40) not in chosen and ("bot2", 41) not in chosen
     assert any(p.endswith("Shared title.png") for p, _w in ambiguous)
     assert any(p.startswith("/wrong/") for p in unmatched)
+    assert ("bot1", 1547332232) not in chosen
+    assert any(p.endswith("161 Nvidia P-S and P-E.png") for p in unmatched)
+    assert winner(1476428159)[1] == "tab"
     # Newest mtime when the date is the same.
     files2 = [
         f("/e/MSTR Volume 2026-10-21.png", "", 10, None),
