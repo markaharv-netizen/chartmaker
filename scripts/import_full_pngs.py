@@ -194,7 +194,8 @@ def publish(repo, chosen, unmatched, ambiguous, optimize_png, dry):
 
 def run(repo, dirs, optimize_png, dry):
     doc, _path = sheets_thumbs.load_catalog(repo)
-    books, tabs = doc.get("books") or [], doc.get("tabs") or []
+    books = doc.get("books") or []
+    tabs = sheets_thumbs.visible_tabs(doc.get("tabs") or [])
     files, skipped = collect(dirs)
     groups = {}
     for f in files:
@@ -277,6 +278,40 @@ def self_test():
         assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "173.png"), "rb").read() == new_bytes
         assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "285.png"), "rb").read() == new_bytes
         assert open(os.path.join(repo, "static", "sheets", "full", "bot2", "30.png"), "rb").read() == old_bytes
+        # A catalog row for a deleted tab must not be refreshed from an export of the same name.
+        catalog["tabs"].append({
+            "book": "bot1", "tab": "161 Nvidia P-S and P-E", "gid": 1547332232,
+            "charts": ["Nvidia valuation: price-to-sales and trailing P/E (month-end)"],
+        })
+        catalog["tabs"].append({
+            "book": "bot1", "tab": "202 Nvidia revenue by geography", "gid": 643299192,
+            "charts": ["Where Nvidia bills its sales: revenue share by customer billing location (quarterly)"],
+        })
+        with open(os.path.join(repo, "static", "sheets", "catalog.json"), "w", encoding="utf-8") as f:
+            json.dump(catalog, f)
+        blocked = os.path.join(b1, "161 Nvidia P-S and P-E.png")
+        blocked2 = os.path.join(b1, "202 Nvidia revenue by geography (2).png")
+        kept = os.path.join(b1, "201 Nvidia data center revenue.png")
+        with open(blocked, "wb") as f:
+            f.write(new_bytes)
+        with open(blocked2, "wb") as f:
+            f.write(new_bytes)
+        # Neighbor Nvidia chart is not excluded; give it a catalog row and confirm it still imports.
+        catalog["tabs"].append({
+            "book": "bot1", "tab": "201 Nvidia data center revenue", "gid": 1476428159, "charts": [],
+        })
+        with open(os.path.join(repo, "static", "sheets", "catalog.json"), "w", encoding="utf-8") as f:
+            json.dump(catalog, f)
+        with open(kept, "wb") as f:
+            f.write(old_bytes)
+        n2, u2, a2 = run(repo, [src], optimize_png=False, dry=False)
+        assert n2 == 6, n2  # the original five, plus the kept Nvidia tab; the two excluded tabs are not written
+        assert u2 == 4, u2  # noise, stray, and the two excluded exports
+        assert a2 == 0, a2
+        assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1547332232.png"))
+        assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "643299192.png"))
+        assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "643299192_2.png"))
+        assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "1476428159.png"), "rb").read() == old_bytes
         # optimize() keeps a valid PNG and does not grow a tiny file into garbage.
         out, tool = optimize(tiny)
         assert out.startswith(PNG_MAGIC), tool

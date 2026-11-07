@@ -21,7 +21,7 @@ The Chartmaker tab **Charts of the day** reads `static/cotd/today.json` (fetched
    - **matters:** why it matters.
    - **know:** what you should know. Use the chart's actual latest values and dates, and flag stale data.
    - Each text is plain and factual, 2-3 sentences, with no invented numbers.
-5. **Write the picks JSON** to `/workspace/cotd_src/picks.json`. Use the format in the `scripts/cotd_build.py` docstring. Each tab's `gid` comes from Sheets `get_spreadsheet`, as the tab's `sheetId`.
+5. **Write the picks JSON** to `/workspace/cotd_src/picks.json`. Use the format in the `scripts/cotd_build.py` docstring. Each tab's `gid` comes from Sheets `get_spreadsheet`, as the tab's `sheetId`. Do not pick a gid in `sheets_catalog.EXCLUDED_TABS`. `cotd_build.py` refuses those tabs (deleted charts must not be republished).
 6. **Build:** `python3 scripts/cotd_build.py /workspace/cotd_src/picks.json`
    - It checks that each image isn't blank and fits it to 1600x900 on white.
    - It writes `static/cotd/<date>/01..10.png` and `static/cotd/today.json`, and keeps the last 7 editions.

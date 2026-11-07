@@ -18,11 +18,14 @@ Each PNG is checked (not blank / not a single colour), fitted onto a white 1600x
 written to static/cotd/<date>/NN.png; static/cotd/today.json is then rewritten.
 """
 import argparse, json, os, re, shutil, sys
-from PIL import Image, ImageStat
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sheets_catalog
 
 W, H = 1600, 900
 
 def check(im, path):
+    from PIL import ImageStat
     g = im.convert("L"); sd = ImageStat.Stat(g).stddev[0]
     cols = im.convert("RGB").getcolors(1 << 22) or []
     if sd < 5 or len(cols) < 12:
@@ -30,6 +33,7 @@ def check(im, path):
                          "Combo charts often export blank from Apps Script; use the fallback PNG (see README).")
 
 def fit(src, dst):
+    from PIL import Image
     im = Image.open(src); im.load()
     if im.mode in ("RGBA", "LA", "P"):
         im = im.convert("RGBA"); bg = Image.new("RGBA", im.size, "white"); bg.alpha_composite(im); im = bg
@@ -40,10 +44,35 @@ def fit(src, dst):
     c.save(dst, optimize=True)
     return os.path.getsize(dst)
 
+def pick_excluded(item):
+    """True when this Charts of the day pick is a tab the library must not publish."""
+    sid = str(item.get("spreadsheetId") or "").strip()
+    gid = item.get("gid")
+    if gid in (None, ""):
+        return False
+    pair = sheets_catalog.BY_ID.get(sid)
+    if not pair:
+        return False
+    return sheets_catalog.tab_excluded(pair[0], gid)
+
+def self_test():
+    bot1 = "1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY"
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1547332232})
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 643299192})
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 333185169})
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1476428159})
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": ""})
+    print("self-test ok")
+
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("picks"); ap.add_argument("--repo", default=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    ap = argparse.ArgumentParser(); ap.add_argument("picks", nargs="?"); ap.add_argument("--repo", default=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     ap.add_argument("--keep-old", type=int, default=7, help="keep this many dated edition folders (0 = keep all)")
-    a = ap.parse_args(); P = json.load(open(a.picks))
+    ap.add_argument("--self-test", action="store_true")
+    a = ap.parse_args()
+    if a.self_test:
+        self_test(); return
+    if not a.picks: ap.error("pass picks.json")
+    P = json.load(open(a.picks))
     d = P["date"]
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", d): sys.exit("date must be YYYY-MM-DD")
     items = P["items"]
@@ -52,6 +81,8 @@ def main():
     for i, x in enumerate(items, 1):
         miss = [k for k in req if not str(x.get(k, "")).strip()]
         if miss: sys.exit(f"item {i} missing {miss}")
+        if pick_excluded(x):
+            sys.exit(f"item {i} is an excluded tab ({x.get('tab')} gid {x.get('gid')}) and cannot be published")
     root = os.path.join(a.repo, "static", "cotd"); out = os.path.join(root, d)
     tmp = out + ".tmp"; shutil.rmtree(tmp, ignore_errors=True); os.makedirs(tmp)
     rows = []

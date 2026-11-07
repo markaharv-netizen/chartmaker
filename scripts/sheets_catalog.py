@@ -7,6 +7,7 @@ static/sheets/full/<book>/<gid>.png, written by scripts/import_full_pngs.py.
 Usage:
   python3 scripts/sheets_catalog.py bot1.json bot2.json bot3.json
   python3 scripts/sheets_catalog.py --repo /workspace/chartmaker dump.json [...]
+  python3 scripts/sheets_catalog.py --self-test
 
 Each JSON file is one spreadsheets.get response (the Google Sheets `get_spreadsheet` tool returns this shape):
   spreadsheetId, properties.title, sheets[].properties.{sheetId,title,index,hidden}, sheets[].charts[].spec.title
@@ -37,7 +38,24 @@ BY_ID = {sid: (bid, name) for bid, name, sid in BOOKS}
 # ("bot1", 333185169) is "87 TSLA beta to Nasdaq": Mark deleted its only chart
 # on 2026-11-06 (chartId 1193590693). Columns A–C stay on the tab. A later
 # spreadsheets.get rebuild would otherwise add that chartless tab back.
-EXCLUDED_TABS = {("bot1", 333185169)}
+# ("bot1", 1547332232) is "161 Nvidia P-S and P-E": chart
+# "Nvidia valuation: price-to-sales and trailing P/E (month-end)"
+# (chartId 727606877). Mark deleted the tab on 2026-11-07.
+# ("bot1", 643299192) is "202 Nvidia revenue by geography": chart
+# "Where Nvidia bills its sales: revenue share by customer billing location (quarterly)"
+# (chartId 2093032125). Mark deleted the tab on 2026-11-07.
+EXCLUDED_TABS = {
+    ("bot1", 333185169),
+    ("bot1", 1547332232),
+    ("bot1", 643299192),
+}
+
+def tab_excluded(book, gid):
+    """True when a catalog or image refresh must not keep this workbook tab."""
+    try:
+        return (str(book), int(gid)) in EXCLUDED_TABS
+    except (TypeError, ValueError):
+        return False
 NOTE = (
     "Offline tab list. Regenerate tabs with scripts/sheets_catalog.py. "
     "Search previews are compressed thumbnails under static/sheets/thumbs/, built by scripts/sheets_thumbs.py. "
@@ -94,6 +112,34 @@ def prune_thumbs(repo, tabs):
             except OSError: pass
     return removed
 
+def prune_excluded_assets(repo):
+    """Delete thumb, full, and per-chart PNGs for tabs that must stay out of the library."""
+    removed = []
+    sheets = os.path.realpath(os.path.join(repo, "static", "sheets"))
+    if not os.path.isdir(sheets):
+        return removed
+    for book, gid in sorted(EXCLUDED_TABS):
+        gid = int(gid)
+        rels = [
+            "sheets/thumbs/%s/%d.jpg" % (book, gid),
+            "sheets/full/%s/%d.png" % (book, gid),
+        ]
+        full_dir = os.path.join(repo, "static", "sheets", "full", str(book))
+        if os.path.isdir(full_dir):
+            prefix = "%d_" % gid
+            for fn in os.listdir(full_dir):
+                stem = fn[len(prefix):-4] if fn.startswith(prefix) and fn.lower().endswith(".png") else ""
+                if stem.isdigit():
+                    rels.append("sheets/full/%s/%s" % (book, fn))
+        for rel in rels:
+            path = os.path.realpath(os.path.join(repo, "static", rel))
+            if os.path.commonpath([sheets, path]) != sheets:
+                continue
+            if os.path.isfile(path):
+                os.remove(path)
+                removed.append(rel)
+    return removed
+
 def chart_titles(sheet):
     out = []
     for ch in sheet.get("charts") or []:
@@ -131,7 +177,7 @@ def one(doc):
         title = str(p.get("title") or "").strip()
         gid = p.get("sheetId")
         if not title or gid is None: continue
-        if (bid, int(gid)) in EXCLUDED_TABS:
+        if tab_excluded(bid, gid):
             excluded += 1
             continue
         row = {"book": bid, "tab": title, "gid": int(gid), "charts": chart_titles(s), "chartList": chart_list(s)}
@@ -139,12 +185,115 @@ def one(doc):
     return {"id": bid, "name": name, "spreadsheetId": sid,
             "url": f"https://docs.google.com/spreadsheets/d/{sid}/edit"}, tabs, hidden, excluded
 
+def self_test():
+    import shutil, tempfile
+    sid = "1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY"
+    def sheet(title, gid, chart=None, hidden=False):
+        props = {"title": title, "sheetId": gid, "index": 0}
+        if hidden:
+            props["hidden"] = True
+        charts = [{"spec": {"title": chart}}] if chart else []
+        return {"properties": props, "charts": charts}
+    doc = {
+        "spreadsheetId": sid,
+        "properties": {"title": "Bot experiments"},
+        "sheets": [
+            sheet("87 TSLA beta to Nasdaq", 333185169, "Tesla beta"),
+            sheet("161 Nvidia P-S and P-E", 1547332232,
+                  "Nvidia valuation: price-to-sales and trailing P/E (month-end)"),
+            sheet("202 Nvidia revenue by geography", 643299192,
+                  "Where Nvidia bills its sales: revenue share by customer billing location (quarterly)"),
+            sheet("201 Nvidia data center revenue", 1476428159,
+                  "Nvidia became a data-center company: quarterly revenue, data center vs everything else"),
+            sheet("194 Nvidia vs Cisco 2000", 999, "Is Nvidia the new Cisco?"),
+            sheet("hidden junk", 5, "nope", hidden=True),
+        ],
+    }
+    _book, tabs, hidden, excluded = one(doc)
+    gids = [t["gid"] for t in tabs]
+    assert gids == [1476428159, 999], gids
+    assert hidden == 1 and excluded == 3, (hidden, excluded)
+    assert ("bot1", 333185169) in EXCLUDED_TABS
+    assert tab_excluded("bot1", 1547332232) and tab_excluded("bot1", 643299192)
+    assert not tab_excluded("bot1", 1476428159)
+    titles = [c for t in tabs for c in t["charts"]]
+    assert not any("trailing P/E" in c or "billing location" in c for c in titles)
+    assert any("data-center company" in c for c in titles)
+    repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    cat = json.load(open(os.path.join(repo, "static", "sheets", "catalog.json"), encoding="utf-8"))
+    live = {(t["book"], t["gid"]) for t in cat["tabs"]}
+    for gid in (333185169, 1547332232, 643299192):
+        assert ("bot1", gid) not in live, gid
+    blob = json.dumps(cat)
+    assert "Nvidia valuation: price-to-sales and trailing P/E (month-end)" not in blob
+    assert "Where Nvidia bills its sales: revenue share by customer billing location (quarterly)" not in blob
+    assert "161 Nvidia P-S and P-E" not in blob
+    assert "202 Nvidia revenue by geography" not in blob
+    names = {t["tab"] for t in cat["tabs"]}
+    for keep in (
+        "201 Nvidia data center revenue",
+        "194 Nvidia vs Cisco 2000",
+        "151 Big Tech capex vs Nvidia",
+        "225 Nvidia inventory & DSO",
+        "229 Nvidia vs country GDPs",
+        "334 Nvidia top-customer share",
+        "19 Nvidia supply commitments",
+        "23 Nvidia commitments table",
+    ):
+        assert keep in names, keep
+    today = json.load(open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8"))
+    today_blob = json.dumps(today)
+    assert "1547332232" not in today_blob and "643299192" not in today_blob
+    assert "161 Nvidia P-S and P-E" not in today_blob
+    assert "202 Nvidia revenue by geography" not in today_blob
+    for rel in (
+        "static/sheets/full/bot1/1547332232.png",
+        "static/sheets/full/bot1/643299192.png",
+        "static/sheets/thumbs/bot1/1547332232.jpg",
+        "static/sheets/thumbs/bot1/643299192.jpg",
+        "static/cotd/2026-11-07/05.png",
+        "static/cotd/2026-11-07/06.png",
+    ):
+        assert not os.path.isfile(os.path.join(repo, rel)), rel
+    full = os.path.join(repo, "static", "sheets", "full", "bot1")
+    for fn in os.listdir(full):
+        assert not fn.startswith("1547332232") and not fn.startswith("643299192"), fn
+    scratch = tempfile.mkdtemp(prefix="excluded-assets-")
+    try:
+        for rel in (
+            "static/sheets/thumbs/bot1/1547332232.jpg",
+            "static/sheets/full/bot1/1547332232.png",
+            "static/sheets/full/bot1/1547332232_2.png",
+            "static/sheets/full/bot1/1476428159.png",
+            "static/sheets/thumbs/bot1/333185169.jpg",
+            "static/sheets/full/bot1/643299192.png",
+        ):
+            path = os.path.join(scratch, rel)
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            with open(path, "wb") as f:
+                f.write(b"x")
+        gone = prune_excluded_assets(scratch)
+        assert not os.path.exists(os.path.join(scratch, "static/sheets/full/bot1/1547332232.png"))
+        assert not os.path.exists(os.path.join(scratch, "static/sheets/full/bot1/1547332232_2.png"))
+        assert not os.path.exists(os.path.join(scratch, "static/sheets/thumbs/bot1/1547332232.jpg"))
+        assert os.path.isfile(os.path.join(scratch, "static/sheets/full/bot1/1476428159.png"))
+        assert any("643299192" in r for r in gone) and any("333185169" in r for r in gone)
+    finally:
+        shutil.rmtree(scratch, ignore_errors=True)
+    print("self-test ok")
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("dumps", nargs="+")
+    ap.add_argument("dumps", nargs="*")
     ap.add_argument("--repo", default=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     ap.add_argument("--allow-partial", action="store_true")
+    ap.add_argument("--self-test", action="store_true")
     a = ap.parse_args()
+    if a.self_test:
+        self_test()
+        return
+    if not a.dumps:
+        ap.error("pass one or more spreadsheet dumps")
     books, tabs = [], []
     seen = set()
     for path in a.dumps:
@@ -176,6 +325,8 @@ def main():
     dest = os.path.join(a.repo, "static", "sheets", "catalog.json")
     write_catalog(dest, doc)
     dropped = prune_thumbs(a.repo, grouped)
-    print(f"wrote {dest} ({len(grouped)} tabs, {n_thumb} thumbs kept, {dropped} orphan thumbs removed)")
+    dropped_ex = prune_excluded_assets(a.repo)
+    extra = f", {len(dropped_ex)} excluded assets removed" if dropped_ex else ""
+    print(f"wrote {dest} ({len(grouped)} tabs, {n_thumb} thumbs kept, {dropped} orphan thumbs removed{extra})")
 
 if __name__ == "__main__": main()
