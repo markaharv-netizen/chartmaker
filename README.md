@@ -96,6 +96,10 @@ Until that export is on the machine, seed only the tabs that overlap today's Cha
 
 Workbooks: Bot experiments `1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY`, bot experiments 2 `1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ`, My Bot's Sheets `1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU`. All three dumps are required unless you pass `--allow-partial`. The weekly PNG folders are the same ones Charts of the day uses: `1SwZgYGwwHsoL_DXQUuQAYS6lhq5KxFe9`, `1mMUKaB_RbeZhtn5ntuKJV5xZOeo6LzGH`, `1AVfHRo2mJgBhbJoszHhe5vgOscfKhbzT`.
 
+## Charts of the day
+
+The **Charts of the day** tab reads `static/cotd/today.json` and shows every chart in that file. Each new edition is 20 charts. `scripts/cotd_build.py` requires exactly 20 items, writes `01.png` through `20.png`, and refuses a gid in `sheets_catalog.EXCLUDED_TABS`. The daily steps are in `scripts/COTD_README.md`.
+
 ## Price targets
 
 The **Price targets** tab reads `static/price_targets.json`. Render does not call Google. The table is Steve's DCF base value per share against the street consensus mean and the price, sorted by base upside (high to low). Columns: Ticker, Steve's Base, Consensus, Price, Base Upside, Rating, Why. Steve's Base shows the dollar change versus the previous update, in parentheses, when `baseChangedAt` is within the last 7 days (green up, red down). A new ticker shows the price only. A blank Street consensus (an IPO-day name with no analyst coverage) is stored as null, and the Consensus column shows a dash.
