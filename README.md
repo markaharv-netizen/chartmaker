@@ -69,7 +69,9 @@ The **Sheets** tab, next to Charts of the day, reads `static/sheets/catalog.json
 
 With the search box empty, the list is text only. After you type a search, a result shows a chart preview when that tab has a thumbnail. Tabs without one still appear, and a missing file does not leave a broken image. Thumbnails are small JPEGs in `static/sheets/thumbs/` (at most 480×270). The grid keeps that JPEG.
 
-**View PNG**, **Download PNG**, and the preview image open `static/sheets/full/<book>/<gid>.png` when that file is in the repo. If it is missing, those links open the thumbnail instead.
+**View PNG**, **Download PNG**, and the preview image open `static/sheets/full/<book>/<gid>.png` when that file is in the repo (chart 2 and later use `<gid>_2.png`, `<gid>_3.png`, …). If it is missing, those links open the thumbnail for chart 1. Later charts on the same tab have no thumbnail of their own.
+
+**Favorites.** Each chart has a star (☆ / ★). A tab with several charts has one star per chart, keyed as `book/gid/chartNumber`, so two charts on one tab stay distinct. Charts of the day shows a star only when the card maps to exactly one library chart: the tab has a single chart, or the card title matches exactly one chart on a multi-chart tab. A card with no library tab, or a tab with several charts and no unique title match, has no star. **Favorites** on the Sheets tab lists the starred charts with the same Open in Sheets, View PNG, and Download PNG actions. Stars live in this browser's `localStorage` key `chartmaker_sheet_favs` (at most 200). They stay on this browser and device only: Chartmaker has no per-person account, and favorites are not written to `views.json` or synced. A stored favorite is removed when that chart is gone from `catalog.json`, or when a different chart title now sits at that chart number. Removed charts are not shown and are not brought back. Clearing site data, or opening the app in another browser, starts with an empty list.
 
 Import the weekly export (files named like the tab, optional trailing `YYYY-MM-DD`, newest date then newest file time wins) on a machine that has the PNGs, then commit `static/sheets/full/`:
 
