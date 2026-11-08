@@ -723,11 +723,12 @@ function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='p
   if(m!=='pt')chart.clear();$('status').textContent='';
   if(m==='prices'){syncPriceUi();render()}else if(m==='paper')paperEnter();else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
 $('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mPt').onclick=()=>setMode('pt');$('mPaper').onclick=()=>setMode('paper');
-// ---------- Favorites: this browser's localStorage only. No account and no server copy. ----------
+// ---------- Favorites: shared by everyone signed in to this Chartmaker. No per-person accounts. ----------
 // Identity is book/gid/chartNumber (chart 1 is <gid>.png, chart n is <gid>_n.png). At most FAV_MAX.
-// A stored row is dropped when that chart is gone from the catalog, or when a different non-empty title now sits at that number.
+// The server keeps the list in the same store as saved views. This browser also keeps a copy and any
+// clicks that have not been confirmed, so a failed sync can be retried without pretending it was saved.
 const FAVK='chartmaker_sheet_favs',FAV_MAX=200,FAV_RE=/^([A-Za-z0-9][A-Za-z0-9_-]{0,24})\/(\d+)\/([1-9]\d?)$/;
-let FAV=[],FAV_OK=true,FAV_MSG='',FAV_DROPPED=0,FAV_VIEW=false,SHEETS=null,SHEETS_P=null;
+let FAV=[],FAV_SYNCED=[],FAV_PENDING=[],FAV_REV=null,FAV_MIGRATED=false,FAV_OK=true,FAV_MSG='',FAV_DROPPED=0,FAV_VIEW=false,FAV_MODE='',FAV_SYNCING=false,FAV_AGAIN=false,SHEETS=null,SHEETS_P=null;
 function escHtml(t){return String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function normTitle(s){return String(s||'').replace(/\s+/g,' ').trim()}
 function sheetCharts(t){
@@ -739,28 +740,64 @@ function sheetCharts(t){
     out.push({n,title,label:title&&seen[title]===1?title:'Chart '+n})});
   return out}
 function sheetChartList(t){return sheetCharts(t).map(c=>({n:c.n,label:c.label}))}
-function favLoad(){
-  FAV=[];FAV_OK=true;FAV_MSG='';
-  let raw=null;
-  try{raw=localStorage.getItem(FAVK)}catch(e){FAV_OK=false;FAV_MSG='Favorites are unavailable because this browser blocked storage.';return}
-  if(raw==null||raw==='')return;
-  let data;try{data=JSON.parse(raw)}catch(e){FAV_OK=false;FAV_MSG='Favorites saved in this browser could not be read, so they are not shown. They were left untouched.';return}
-  const items=Array.isArray(data)?data:(data&&Array.isArray(data.items)?data.items:null);
-  if(!items){FAV_OK=false;FAV_MSG='Favorites saved in this browser could not be read, so they are not shown. They were left untouched.';return}
+function favKeep(list){
   const out=[];
-  for(const item of items){
+  for(const item of list||[]){
     if(out.length>=FAV_MAX)break;
     if(typeof item==='string'&&FAV_RE.test(item))out.push({k:item,title:''});
     else if(item&&typeof item.k==='string'&&FAV_RE.test(item.k))out.push({k:item.k,title:normTitle(item.title)});
   }
-  FAV=out;
-  if(items.length>FAV_MAX)FAV_MSG='This browser keeps the first '+FAV_MAX+' favorites. The rest were left out.';
-  const text=JSON.stringify({v:1,items:FAV});
-  if(FAV_OK&&text!==raw){try{localStorage.setItem(FAVK,text)}catch(e){FAV_MSG='Favorites could not be updated in this browser.'}}
+  return out}
+function favOps(list){
+  const out=[];
+  for(const op of list||[]){
+    if(!op||(op.op!=='add'&&op.op!=='remove')||!FAV_RE.test(op.k||''))continue;
+    out.push({op:op.op,k:op.k,title:normTitle(op.title)});
+    if(out.length>=FAV_MAX)break;
+  }
+  return out}
+function favDisplay(){
+  const map=new Map(FAV_SYNCED.map(x=>[x.k,x]));
+  for(const op of FAV_PENDING){if(op.op==='remove')map.delete(op.k);else map.set(op.k,{k:op.k,title:op.title||''})}
+  return [...map.values()]}
+function favLoad(){
+  FAV_SYNCED=[];FAV_PENDING=[];FAV_REV=null;FAV_MIGRATED=false;FAV=[];FAV_OK=true;FAV_MSG='';
+  let raw=null;
+  try{raw=localStorage.getItem(FAVK)}catch(e){FAV_OK=false;FAV_MSG='Favorites are unavailable because this browser blocked storage.';return}
+  if(raw==null||raw==='')return;
+  let data;try{data=JSON.parse(raw)}catch(e){FAV_OK=false;FAV_MSG='Favorites saved in this browser could not be read, so they are not shown. They were left untouched.';return}
+  if(Array.isArray(data)||(data&&Array.isArray(data.items)&&data.v!==2)){
+    const items=Array.isArray(data)?data:data.items;
+    FAV_SYNCED=favKeep(items);
+    if(items.length>FAV_MAX)FAV_MSG='This browser keeps the first '+FAV_MAX+' favorites. The rest were left out.';
+  }else if(data&&data.v===2&&(Array.isArray(data.synced)||Array.isArray(data.items))){
+    FAV_SYNCED=favKeep(data.synced||data.items);
+    FAV_PENDING=favOps(data.pending);
+    FAV_REV=Number.isInteger(data.rev)&&data.rev>=0?data.rev:null;
+    FAV_MIGRATED=!!data.migrated&&FAV_REV!==null;
+  }else{FAV_OK=false;FAV_MSG='Favorites saved in this browser could not be read, so they are not shown. They were left untouched.';return}
+  FAV=favDisplay();
+  favSave();
 }
 function favSave(){
   if(!FAV_OK)return false;
-  try{localStorage.setItem(FAVK,JSON.stringify({v:1,items:FAV}));return true}catch(e){return false}
+  const doc={v:2,rev:FAV_REV,migrated:!!FAV_MIGRATED,synced:FAV_SYNCED,pending:FAV_PENDING,items:favDisplay()};
+  try{localStorage.setItem(FAVK,JSON.stringify(doc));return true}catch(e){return false}
+}
+function favScopeText(){
+  if(!FAV_OK)return 'Favorites are unavailable because this browser blocked storage. They are not stored on the server.';
+  const tail=' A saved favorite is removed for everyone when that chart is no longer in the library, or when a different chart now occupies that same chart number.';
+  if(FAV_MODE==='github')return 'Favorites are shared by everyone who signs in to this Chartmaker. There are no separate accounts. They are stored with saved views on the private GitHub branch views-data, so a redeploy does not erase them, and every signed-in browser sees the same stars. Up to '+FAV_MAX+'.'+tail;
+  if(FAV_MODE==='file')return 'Favorites are shared by everyone using this server. There are no separate accounts. They are stored in views.json on this server. That file survives a restart when the disk does. A redeploy on a host with an ephemeral disk loses them unless GITHUB_TOKEN is set. Up to '+FAV_MAX+'.'+tail;
+  if(FAV_MODE==='off')return 'Favorites stay in this browser only. They are not stored on the server and do not sync to other browsers or devices. Up to '+FAV_MAX+'.';
+  if(FAV_MODE==='down')return 'Favorites could not sync. This list is the copy in this browser and is not stored on the server until sync works again.';
+  return 'Favorites are shared by everyone who signs in to this Chartmaker. There are no separate accounts. Up to '+FAV_MAX+'.';
+}
+function favQueue(op,k,title){
+  FAV_PENDING=FAV_PENDING.filter(x=>x.k!==k);
+  const onServer=FAV_SYNCED.some(x=>x.k===k);
+  if((op==='add')===onServer)return;
+  FAV_PENDING.push({op,k,title:normTitle(title)});
 }
 function favResolve(item,cat){
   const m=FAV_RE.exec(item&&item.k||'');
@@ -777,19 +814,28 @@ function favResolve(item,cat){
 }
 function favReconcile(cat){
   if(!FAV_OK||!cat||!Array.isArray(cat.tabs)||!cat.tabs.length)return;
-  const keep=[];let drop=0;
-  for(const item of FAV){if(favResolve(item,cat))keep.push(item);else drop++}
-  FAV_DROPPED=drop;
-  if(!drop){favPaint();return}
-  FAV=keep;
+  const dropped=[];
+  for(const item of FAV){if(!favResolve(item,cat))dropped.push(item)}
+  FAV_DROPPED=dropped.length;
+  if(!dropped.length){favPaint();return}
+  for(const item of dropped)favQueue('remove',item.k,item.title);
+  FAV=favDisplay();
   if(!favSave())FAV_MSG='Some favorites are no longer in the library, but this browser blocked saving that update.';
   favPaint();
+  if(FAV_MODE!=='off')favSync();
 }
 function favMsg(){
   const parts=[];
   if(FAV_MSG)parts.push(FAV_MSG);
   if(FAV_DROPPED)parts.push(FAV_DROPPED+' favorite'+(FAV_DROPPED===1?' is':'s are')+' no longer in the library and '+(FAV_DROPPED===1?'was':'were')+' removed.');
   return parts.join(' ');
+}
+function favStarTitle(on){
+  if(!FAV_OK)return 'Favorites are unavailable in this browser.';
+  if(FAV_PENDING.length)return on?'On this device, not synced yet.':'Not synced yet.';
+  if(FAV_MODE==='github'||FAV_MODE==='file')return on?'Remove from the shared favorites. Everyone signed in sees this.':'Add to the shared favorites. Everyone signed in sees this.';
+  if(FAV_MODE==='off'||FAV_MODE==='down')return on?'Remove from favorites on this browser. Not synced.':'Add to favorites on this browser. Not synced.';
+  return on?'Remove from favorites.':'Add to favorites.';
 }
 function favPaint(){
   const msg=favMsg();
@@ -799,30 +845,82 @@ function favPaint(){
     b.setAttribute('aria-pressed',on?'true':'false');
     b.textContent=on?'★':'☆';
     b.setAttribute('aria-label',(on?'Remove from favorites: ':'Add to favorites: ')+name);
-    b.title=on?'Remove from favorites. Saved in this browser only.':'Add to favorites. Saved in this browser only.';
+    b.title=favStarTitle(on);
     b.disabled=!FAV_OK;
   });
   const chip=$('shfav');
   if(chip)chip.textContent=FAV.length?('Favorites · '+FAV.length):'Favorites';
+  const local=$('favlocal'),cotdLocal=$('cotdfavlocal');
+  const scope=favScopeText();
+  if(local){local.textContent=scope;local.dataset.sync=FAV_MODE||'';}
+  if(cotdLocal)cotdLocal.textContent=scope;
   document.querySelectorAll('[data-favmsg]').forEach(el=>{el.textContent=msg});
 }
 function favButton(book,gid,ch){
   const k=book+'/'+gid+'/'+ch.n,on=FAV.some(x=>x.k===k),name=ch.label||'chart';
-  return '<button type="button" class="fav" data-fav="'+escHtml(k)+'" data-favtitle="'+escHtml(ch.title)+'" data-favlabel="'+escHtml(name)+'" aria-pressed="'+(on?'true':'false')+'" aria-label="'+escHtml((on?'Remove from favorites: ':'Add to favorites: ')+name)+'" title="'+escHtml(on?'Remove from favorites. Saved in this browser only.':'Add to favorites. Saved in this browser only.')+'"'+(FAV_OK?'':' disabled')+'>'+(on?'★':'☆')+'</button>';
+  return '<button type="button" class="fav" data-fav="'+escHtml(k)+'" data-favtitle="'+escHtml(ch.title)+'" data-favlabel="'+escHtml(name)+'" aria-pressed="'+(on?'true':'false')+'" aria-label="'+escHtml((on?'Remove from favorites: ':'Add to favorites: ')+name)+'" title="'+escHtml(favStarTitle(on))+'"'+(FAV_OK?'':' disabled')+'>'+(on?'★':'☆')+'</button>';
 }
 function favToggle(k,title){
   if(!FAV_OK||!FAV_RE.test(k||''))return;
-  const prev=FAV.map(x=>({k:x.k,title:x.title}));
-  const i=FAV.findIndex(x=>x.k===k);
-  if(i>=0)FAV.splice(i,1);
-  else{
-    if(FAV.length>=FAV_MAX){FAV_MSG='This browser can keep '+FAV_MAX+' favorites. Unstar one to add another.';favPaint();return}
-    FAV.push({k,title:normTitle(title)});
-  }
-  if(!favSave()){FAV=prev;FAV_MSG='Could not save favorites in this browser. The change was not kept.'}
-  else FAV_MSG='';
+  const prevSynced=FAV_SYNCED.map(x=>({k:x.k,title:x.title})),prevPending=FAV_PENDING.map(x=>({op:x.op,k:x.k,title:x.title}));
+  const on=FAV.some(x=>x.k===k);
+  if(!on&&FAV.length>=FAV_MAX){FAV_MSG='This browser can keep '+FAV_MAX+' favorites. Unstar one to add another.';favPaint();return}
+  favQueue(on?'remove':'add',k,title);
+  FAV=favDisplay();
+  if(!favSave()){FAV_SYNCED=prevSynced;FAV_PENDING=prevPending;FAV=favDisplay();FAV_MSG='Could not save favorites in this browser. The change was not kept.';favPaint();return}
+  FAV_MSG=FAV_MODE==='off'?'':(FAV_PENDING.length?'Saving the shared favorite…':'');
   favPaint();
   if(FAV_VIEW&&typeof window.__sheetsDraw==='function')window.__sheetsDraw();
+  if(FAV_MODE!=='off')favSync();
+}
+function favApplyServer(doc,sent){
+  const skipped=Array.isArray(doc.skipped)?doc.skipped:[];
+  const skipKey=new Set(skipped.map(x=>x.k));
+  FAV_SYNCED=(doc.items||[]).filter(x=>x&&FAV_RE.test(x.k||'')).map(x=>({k:x.k,title:normTitle(x.title)}));
+  FAV_REV=Number.isInteger(doc.rev)?doc.rev:FAV_REV;
+  FAV_MIGRATED=true;
+  FAV_MODE=doc.sync||FAV_MODE;
+  FAV_PENDING=FAV_PENDING.filter(op=>!sent.some(s=>s.op===op.op&&s.k===op.k));
+  FAV_PENDING=FAV_PENDING.filter(op=>!(op.op==='add'&&skipKey.has(op.k)));
+  FAV=favDisplay();
+  const notes=[];
+  const removed=skipped.filter(x=>x.reason==='removed').length;
+  const retired=skipped.filter(x=>x.reason==='retired').length;
+  const capped=skipped.filter(x=>x.reason==='cap').length;
+  if(removed)notes.push(removed+' favorite'+(removed===1?' was':'s were')+' already removed from the shared list, so '+(removed===1?'it was':'they were')+' not added back.');
+  if(retired)notes.push('A retired chart was not added.');
+  if(capped)notes.push('The shared list is full at '+FAV_MAX+'.');
+  if(FAV_PENDING.length)notes.push('A change on this device is not on the server yet.');
+  FAV_MSG=notes.join(' ');
+  favSave();
+}
+async function favSync(){
+  if(!FAV_OK||FAV_MODE==='off')return;
+  if(FAV_SYNCING){FAV_AGAIN=true;return}
+  FAV_SYNCING=true;
+  const sent=FAV_PENDING.map(x=>({op:x.op,k:x.k,title:x.title}));
+  const migrate=!FAV_MIGRATED?FAV_SYNCED.map(x=>({k:x.k,title:x.title})):[];
+  try{
+    const res=await fetch('/api/favorites',{method:'POST',cache:'no-store',headers:{'Content-Type':'application/json'},body:JSON.stringify({baseRev:FAV_REV,migrate,ops:sent})});
+    if(res.status===410||res.status===404){FAV_MODE='off';if(!FAV_MSG)FAV_MSG='';favSave();favPaint();return}
+    const doc=await res.json().catch(()=>null);
+    if(!res.ok||!doc||!Array.isArray(doc.items)){
+      FAV_MODE='down';
+      FAV_MSG=FAV_PENDING.length?'This change is on this device only. Chartmaker could not sync it, so other browsers do not have it yet.':'Could not refresh shared favorites. Showing the last copy on this device.';
+      favPaint();return;
+    }
+    favApplyServer(doc,sent);
+    if(SHEETS)favReconcile(SHEETS);
+    else favPaint();
+    if(FAV_VIEW&&typeof window.__sheetsDraw==='function'&&MODE==='sheets')window.__sheetsDraw();
+  }catch(e){
+    FAV_MODE='down';
+    FAV_MSG=FAV_PENDING.length?'This change is on this device only. Chartmaker could not sync it, so other browsers do not have it yet.':'Could not refresh shared favorites. Showing the last copy on this device.';
+    favPaint();
+  }finally{
+    FAV_SYNCING=false;
+    if(FAV_AGAIN){FAV_AGAIN=false;favSync()}
+  }
 }
 function cotdChart(item,cat){
   if(!item||!cat)return null;
@@ -844,6 +942,10 @@ function cotdFavBtn(item,cat){const hit=cotdChart(item,cat);return hit?favButton
 document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('button.fav');if(!b||b.disabled)return;e.preventDefault();favToggle(b.dataset.fav,b.dataset.favtitle||'')});
 window.addEventListener('storage',e=>{if(!e||e.key!==FAVK)return;favLoad();if(SHEETS)favReconcile(SHEETS);if(MODE==='sheets'&&typeof window.__sheetsDraw==='function')window.__sheetsDraw();else favPaint()});
 favLoad();
+favSync();
+setInterval(()=>{if(document.visibilityState==='visible'&&FAV_MODE!=='off')favSync()},4000);
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&FAV_MODE!=='off')favSync()});
+window.addEventListener('focus',()=>{if(FAV_MODE!=='off')favSync()});
 async function sheetsCatalog(){
   if(SHEETS)return SHEETS;
   if(!SHEETS_P){
@@ -868,7 +970,7 @@ async function cotdenter(){const el=$('cotd'),E=escHtml;
     const d=j.date?new Date(j.date+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'}):'';
     const safe=u=>/^https:\/\//.test(u||'')?u:'';
     const starred=!!(cat&&(j.items||[]).some(x=>cotdChart(x,cat)));
-    const note=starred?'<p class="local">A star on a card saves that chart as a favorite in this browser on this device only. It is not stored on the server.</p>':'';
+    const note=starred?'<p class="local" id="cotdfavlocal">'+E(favScopeText())+'</p>':'';
     el.innerHTML=`<h2>Charts of the day · ${E(d)}</h2><p class="theme">${E(j.theme)}</p>${note}<p data-favmsg class="local"></p>`+(j.items||[]).map((x,i)=>`<div class="card"><div class="cardtop"><h3>${i+1}. ${E(x.title)}</h3>${cotdFavBtn(x,cat)}</div>
 <a href="${E(x.image)}" target="_blank" rel="noopener"><img src="${E(x.image)}" alt="${E(x.title)}" loading="lazy"></a>
 <div class="src">${E(x.sheet)} · ${E(x.tab)}${safe(x.sheet_url)?` · <a href="${E(x.sheet_url)}" target="_blank" rel="noopener">open in sheet</a>`:''}</div>
@@ -899,8 +1001,8 @@ async function sheetsEnter(){const el=$('sheets'),E=escHtml;
 <div class="bar"><input id="shq" type="search" size="28" placeholder="Search tabs or chart titles" aria-label="Search tabs or chart titles" autocomplete="off">
 <select id="shbook" aria-label="Workbook"><option value="">All workbooks</option>${books.map(b=>`<option value="${E(b.id)}">${E(b.name)}</option>`).join('')}</select>
 <label style="display:flex;flex-direction:row;align-items:center;gap:4px;font-size:13px"><input id="shcharts" type="checkbox"> Has a chart</label>
-<button type="button" class="chip" id="shfav" aria-pressed="${FAV_VIEW?'true':'false'}" aria-controls="shlist" aria-describedby="favlocal" title="Show charts you starred. Saved in this browser only.">Favorites</button></div>
-<p class="local" id="favlocal">Stars are saved in this browser on this device only (up to ${FAV_MAX}). They are not stored on the server and do not sync to other browsers or devices. A saved favorite is removed when that chart is no longer in the library, or when a different chart now occupies that same chart number.</p>
+<button type="button" class="chip" id="shfav" aria-pressed="${FAV_VIEW?'true':'false'}" aria-controls="shlist" aria-describedby="favlocal" title="Show the shared favorites. Everyone who signs in sees the same list.">Favorites</button></div>
+<p class="local" id="favlocal" data-sync="${E(FAV_MODE)}">${E(favScopeText())}</p>
 <p id="favmsg" data-favmsg role="status" aria-live="polite"></p>
 <p class="count" id="shcount" aria-live="polite"></p><div id="shlist"></div>`;
     const draw=async()=>{const seq=++SHSEQ,q=($('shq').value||'').trim().toLowerCase(),book=$('shbook').value,need=$('shcharts').checked,favOnly=FAV_VIEW;
