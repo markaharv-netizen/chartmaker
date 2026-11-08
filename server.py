@@ -1,8 +1,13 @@
 """Chartmaker backend: stdlib-only proxy for Yahoo Finance chart API + static frontend."""
-import urllib.error, fin, heat, watch, treasury, valuation, valhist, json, os, sys, time, hmac, hashlib, secrets, threading, html, http.cookiejar, urllib.request, urllib.parse
+import urllib.error, fin, heat, watch, treasury, valuation, valhist, json, os, re, sys, time, hmac, hashlib, secrets, threading, html, http.cookiejar, urllib.request, urllib.parse
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
-PORT = int(os.environ.get("PORT", sys.argv[1] if len(sys.argv) > 1 else 8791))
+def _port():
+    env = os.environ.get("PORT")
+    if env: return int(env)
+    if len(sys.argv) > 1 and sys.argv[1].isdigit(): return int(sys.argv[1])
+    return 8791
+PORT = _port()
 CACHE = {}
 VIEWS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "views.json")
 PASSWORD = os.environ.get("APP_PASSWORD") or ""
@@ -52,11 +57,171 @@ GH_TOKEN = os.environ.get("GITHUB_TOKEN") or ""
 VIEWS_REPO = os.environ.get("VIEWS_REPO") or "markaharv-netizen/chartmaker"
 VIEWS_BRANCH = os.environ.get("VIEWS_BRANCH") or "views-data"
 _VS = {"doc": None, "sha": None, "at": 0}; _VLOCK = threading.Lock()
+# Shared favorites live in the same document as saved views. One password, one list:
+# every signed-in browser sees the same stars. There are no per-person accounts.
+FAV_MAX, FAV_TOMBSTONES = 200, 500
+FAV_KEY_RE = re.compile(r"^([A-Za-z0-9][A-Za-z0-9_-]{0,24})/(\d+)/([1-9]\d?)$")
+# Permanent retired charts. 1024131985 is Strategy tab 99, kept out of the catalog
+# by cotd_build even though it is not in sheets_catalog.EXCLUDED_TABS.
+def _favorite_retired():
+    pairs = {
+        ("bot1", 1547332232),
+        ("bot1", 643299192),
+        ("bot1", 333185169),
+        ("bot1", 1024131985),
+    }
+    try:
+        scripts = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts")
+        if scripts not in sys.path: sys.path.insert(0, scripts)
+        import sheets_catalog
+        pairs.update(tuple(x) for x in getattr(sheets_catalog, "EXCLUDED_TABS", ()))
+    except Exception:
+        pass
+    return pairs
+FAV_RETIRED = _favorite_retired()
+def _fav_title(title):
+    if not isinstance(title, str): return ""
+    return " ".join(title.split())[:400]
+def _fav_retired(key):
+    m = FAV_KEY_RE.fullmatch(key or "")
+    if not m: return True
+    return (m.group(1), int(m.group(2))) in FAV_RETIRED
+def _norm_fav(raw):
+    """Canonical favorites document. Drops retired keys and keeps a bounded tombstone list."""
+    if not isinstance(raw, dict): raw = {}
+    try: rev = int(raw.get("rev") or 0)
+    except (TypeError, ValueError): rev = 0
+    if rev < 0: rev = 0
+    items, seen = [], set()
+    for item in raw.get("items") or []:
+        if not isinstance(item, dict): continue
+        k = item.get("k")
+        if not isinstance(k, str) or not FAV_KEY_RE.fullmatch(k) or k in seen or _fav_retired(k): continue
+        try: added = int(item.get("rev") or 0)
+        except (TypeError, ValueError): added = 0
+        if added < 0: added = 0
+        items.append({"k": k, "title": _fav_title(item.get("title")), "rev": added})
+        seen.add(k)
+        if len(items) >= FAV_MAX: break
+    items.sort(key=lambda x: (x["rev"], x["k"]))
+    removed, rseen = [], set()
+    for item in raw.get("removed") or []:
+        if not isinstance(item, dict): continue
+        k = item.get("k")
+        if not isinstance(k, str) or not FAV_KEY_RE.fullmatch(k) or k in seen or k in rseen or _fav_retired(k): continue
+        try: r = int(item.get("rev") or 0)
+        except (TypeError, ValueError): r = 0
+        if r < 0: r = 0
+        removed.append({"k": k, "rev": r}); rseen.add(k)
+    removed.sort(key=lambda x: (-x["rev"], x["k"]))
+    return {"rev": rev, "items": items, "removed": removed[:FAV_TOMBSTONES]}
 def _norm(d):
     if isinstance(d, list): d = {"views": d}
     if not isinstance(d, dict): d = {}
     v = d.get("views"); w = d.get("watchlist")
-    return {"views": v if isinstance(v, list) else [], "watchlist": w if isinstance(w, dict) and isinstance(w.get("list"), list) else None}
+    return {"views": v if isinstance(v, list) else [],
+            "watchlist": w if isinstance(w, dict) and isinstance(w.get("list"), list) else None,
+            "favorites": _norm_fav(d.get("favorites"))}
+def favorites_mode():
+    """Where a successful write actually lives. file is the server disk; github survives a redeploy."""
+    if VIEWS_STORE == "browser": return "off"
+    if GH_TOKEN: return "github"
+    return "file"
+FAV_SCOPE = {
+    "github": "Favorites are shared by everyone who signs in to this Chartmaker. There are no separate accounts. They are stored with saved views on the private GitHub branch views-data, so a redeploy does not erase them.",
+    "file": "Favorites are shared by everyone using this server. There are no separate accounts. They are stored in views.json on this server's disk. That survives a restart when the disk does. A host whose disk is wiped on deploy loses them unless GITHUB_TOKEN is set.",
+    "off": "Favorites stay in this browser only. They are not stored on the server and do not sync to other browsers.",
+}
+def favorites_public(fav, skipped=None):
+    mode = favorites_mode()
+    return {"rev": fav["rev"], "items": [{"k": x["k"], "title": x["title"]} for x in fav["items"]],
+            "sync": mode, "shared": mode != "off", "scope": FAV_SCOPE[mode], "skipped": skipped or []}
+def favorites_change(doc, body):
+    """Merge one client's explicit changes into the current document.
+
+    migrate only adds keys and never deletes. A tombstone blocks migrate, so an old
+    browser cannot put a removed star back just by still having it saved locally.
+    ops are clicks since that browser's snapshot. An add is refused when a newer
+    removal happened after baseRev. A remove is refused when the star was added
+    again after baseRev. Neither path replaces the whole list.
+    """
+    if not isinstance(body, dict): raise ValueError("favorites body must be an object")
+    base = body.get("baseRev", None)
+    if base is None: base = -1
+    elif isinstance(base, bool) or not isinstance(base, int) or base < 0 or base > 2_000_000_000:
+        raise ValueError("baseRev must be a non-negative integer")
+    migrate, ops = body.get("migrate") or [], body.get("ops") or []
+    if not isinstance(migrate, list) or not isinstance(ops, list): raise ValueError("migrate and ops must be lists")
+    if len(migrate) > FAV_MAX or len(ops) > FAV_MAX: raise ValueError("too many favorite changes")
+    fav = _norm_fav(doc.get("favorites"))
+    start_rev = fav["rev"]
+    by_k = {x["k"]: dict(x) for x in fav["items"]}
+    tomb = {x["k"]: x["rev"] for x in fav["removed"]}
+    skipped, changed = [], False
+    def bump():
+        fav["rev"] += 1
+        return fav["rev"]
+    def add_item(k, title, force):
+        nonlocal changed
+        if not isinstance(k, str) or not FAV_KEY_RE.fullmatch(k):
+            skipped.append({"k": str(k)[:80], "reason": "invalid"}); return
+        if _fav_retired(k):
+            skipped.append({"k": k, "reason": "retired"}); return
+        title = _fav_title(title)
+        if k in by_k:
+            if title and by_k[k]["title"] != title and not by_k[k]["title"]:
+                by_k[k]["title"] = title; changed = True
+            return
+        trev = tomb.get(k, -1)
+        if not force and trev >= 0:
+            skipped.append({"k": k, "reason": "removed"}); return
+        if force and trev > base:
+            skipped.append({"k": k, "reason": "removed"}); return
+        if len(by_k) >= FAV_MAX:
+            skipped.append({"k": k, "reason": "cap"}); return
+        rev = bump()
+        by_k[k] = {"k": k, "title": title, "rev": rev}
+        tomb.pop(k, None); changed = True
+    def remove_item(k):
+        nonlocal changed
+        if not isinstance(k, str) or not FAV_KEY_RE.fullmatch(k):
+            skipped.append({"k": str(k)[:80], "reason": "invalid"}); return
+        item = by_k.get(k)
+        if item is None: return
+        if item["rev"] > base:
+            skipped.append({"k": k, "reason": "newer"}); return
+        rev = bump()
+        del by_k[k]; tomb[k] = rev; changed = True
+    for item in migrate:
+        if isinstance(item, str): add_item(item, "", False)
+        elif isinstance(item, dict): add_item(item.get("k"), item.get("title"), False)
+        else: raise ValueError("migrate entries must be objects")
+    for op in ops:
+        if not isinstance(op, dict): raise ValueError("op must be an object")
+        kind = op.get("op")
+        if kind == "add": add_item(op.get("k"), op.get("title"), True)
+        elif kind == "remove": remove_item(op.get("k"))
+        else: raise ValueError("op must be add or remove")
+    if not changed: return doc, skipped
+    if fav["rev"] == start_rev: fav["rev"] += 1
+    removed = [{"k": k, "rev": r} for k, r in tomb.items()]
+    removed.sort(key=lambda x: (-x["rev"], x["k"]))
+    fav["items"] = sorted(by_k.values(), key=lambda x: (x["rev"], x["k"]))
+    fav["removed"] = removed[:FAV_TOMBSTONES]
+    out = dict(doc); out["favorites"] = fav
+    return out, skipped
+def favorites_read():
+    if favorites_mode() == "off": return None
+    return store_read(fresh=True)["favorites"]
+def favorites_write(body):
+    if favorites_mode() == "off": return None
+    skipped = []
+    def fn(d):
+        nonlocal skipped
+        d, skipped = favorites_change(d, body)
+        return d
+    doc = store_update(fn, fresh=True)
+    return favorites_public(doc["favorites"], skipped)
 def _gh(method, body=None):
     url = f"https://api.github.com/repos/{VIEWS_REPO}/contents/views.json" + ("" if body else f"?ref={urllib.parse.quote(VIEWS_BRANCH)}")
     rq = urllib.request.Request(url, method=method, data=json.dumps(body).encode() if body else None, headers={
@@ -76,22 +241,30 @@ def store_read(fresh=False):
             except (OSError, ValueError): return _norm({})
         if fresh or _VS["doc"] is None or time.time() - _VS["at"] > 60: _VS["doc"], _VS["sha"] = _gh_load(); _VS["at"] = time.time()
         return json.loads(json.dumps(_VS["doc"]))
-def store_update(fn):
-    """Apply fn(doc)->doc and persist. On GitHub, a 409/422 (sha moved) reloads and retries."""
+def store_update(fn, fresh=False):
+    """Apply fn(doc)->doc and persist. On GitHub, a 409/422 (sha moved) reloads and retries.
+
+    fresh=True reloads before the first attempt so a favorites poll sees another process's write.
+    """
     import base64
     with _VLOCK:
         if not GH_TOKEN:
             try:
                 with open(VIEWS, encoding="utf-8") as f: doc = _norm(json.load(f))
-            except (OSError, ValueError): doc = _norm({})
+            except OSError:
+                if os.path.exists(VIEWS): raise
+                doc = _norm({})
+            except ValueError: doc = _norm({})
             doc = _norm(fn(doc)); tmp = VIEWS + ".tmp"
             with open(tmp, "w", encoding="utf-8") as f: json.dump(doc, f, indent=1)
             os.replace(tmp, VIEWS); return doc
+        need = fresh
         for attempt in range(4):
-            if _VS["doc"] is None or attempt: _VS["doc"], _VS["sha"] = _gh_load(); _VS["at"] = time.time()
+            if _VS["doc"] is None or attempt or need: _VS["doc"], _VS["sha"] = _gh_load(); _VS["at"] = time.time(); need = False
             doc = _norm(fn(json.loads(json.dumps(_VS["doc"]))))
             if doc == _VS["doc"]: return doc
-            body = {"message": f"Chartmaker views update ({len(doc['views'])} views) [skip ci] [skip render]", "branch": VIEWS_BRANCH,
+            n_fav = len((doc.get("favorites") or {}).get("items") or [])
+            body = {"message": f"Chartmaker data update ({len(doc['views'])} views, {n_fav} favorites) [skip ci] [skip render]", "branch": VIEWS_BRANCH,
                     "committer": {"name": "Chartmaker Bot", "email": "bot@chartmaker"},
                     "content": base64.b64encode(json.dumps(doc, indent=1).encode()).decode()}
             if _VS["sha"]: body["sha"] = _VS["sha"]
@@ -351,6 +524,35 @@ class H(SimpleHTTPRequestHandler):
         if path.startswith("/api/"): s.send_json({"error": "login required"}, 401)
         else: s.send_login(code=401)
         return False
+    def same_origin(s):
+        """Block cross-site writes. A missing Origin is allowed so non-browser clients and same-origin navigation still work. SameSite=Lax on the session cookie is the other half."""
+        site = (s.headers.get("Sec-Fetch-Site") or "").lower()
+        if site in ("cross-site", "same-site"): return False
+        origin = s.headers.get("Origin")
+        if not origin: return True
+        host = (s.headers.get("Host") or "").split(",")[0].strip()
+        return urllib.parse.urlparse(origin).netloc == host
+    def favorites_get(s):
+        if favorites_mode() == "off":
+            return s.send_json({"error": "favorites stay in the browser on this server", "sync": "off", "shared": False, "scope": FAV_SCOPE["off"]}, 410)
+        try: fav = favorites_read()
+        except Exception: return s.send_json({"error": "storage unavailable"}, 502)
+        return s.send_json(favorites_public(fav))
+    def favorites_post(s):
+        if favorites_mode() == "off":
+            return s.send_json({"error": "favorites stay in the browser on this server", "sync": "off", "shared": False}, 410)
+        if not s.same_origin(): return s.send_json({"error": "cross-site favorite changes are refused"}, 403)
+        ctype = (s.headers.get("Content-Type") or "").split(";")[0].strip().lower()
+        if ctype != "application/json": return s.send_json({"error": "content type must be application/json"}, 415)
+        try:
+            n = int(s.headers.get("Content-Length", 0) or 0)
+            if n > 200_000: raise ValueError("too large")
+            body = json.loads(s.rfile.read(n) or b"null")
+            out = favorites_write(body)
+        except urllib.error.URLError: return s.send_json({"error": "storage unavailable"}, 502)
+        except OSError: return s.send_json({"error": "storage unavailable"}, 502)
+        except Exception as e: return s.send_json({"error": str(e)[:300]}, 400)
+        return s.send_json(out)
     def do_login(s):
         ip = s.client_ip()
         if throttled(ip): return s.send_login("Too many attempts. Try again in a few minutes.", 429)
@@ -364,6 +566,7 @@ class H(SimpleHTTPRequestHandler):
         path = urllib.parse.urlparse(s.path).path
         if PASSWORD and path == "/login": return s.do_login()
         if not s.gate(path): return
+        if path == "/api/favorites": return s.favorites_post()
         if VIEWS_STORE == "browser" and path == "/api/views": return s.send_json({"error": "views are stored in the browser on this server"}, 410)
         if VIEWS_STORE == "browser" and path.startswith("/api/views"): return s.send_json({"error": "views are stored in the browser on this server"}, 410)
         if path not in ("/api/views", "/api/views/merge", "/api/views/watchlist"): return s.send_json({"error": "not found"}, 404)
@@ -387,7 +590,8 @@ class H(SimpleHTTPRequestHandler):
         if PASSWORD and u.path == "/login": return s.redirect("/") if s.authed() else s.send_login()
         if PASSWORD and u.path == "/logout": return s.redirect("/", f"{COOKIE}=; Max-Age=0; Path=/; HttpOnly; Secure; SameSite=Lax")
         if not s.gate(u.path): return
-        if u.path == "/api/config": return s.send_json({"viewsStore": VIEWS_STORE, "auth": bool(PASSWORD)})
+        if u.path == "/api/config": return s.send_json({"viewsStore": VIEWS_STORE, "auth": bool(PASSWORD), "favoritesSync": favorites_mode()})
+        if u.path == "/api/favorites": return s.favorites_get()
         if u.path in ("/api/views", "/api/views/all"):
             if VIEWS_STORE == "browser": return s.send_json([] if u.path == "/api/views" else _norm({}))
             try: d = store_read(fresh=u.path == "/api/views/all")

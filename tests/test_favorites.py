@@ -234,7 +234,7 @@ class FavoritesTest(unittest.TestCase):
         absent = next(c for c in cards if c["title"].startswith("1. "))
         self.assertEqual(absent["key"], "")
         note = self.cdp.evaluate("document.getElementById('cotd').innerText")
-        self.assertIn("this browser on this device only", note)
+        self.assertTrue("this browser" in note or "no separate accounts" in note, note)
         for gid in RETIRED:
             self.assertNotIn(gid, note)
         for tab in RETIRED_TABS:
@@ -319,7 +319,7 @@ class FavoritesTest(unittest.TestCase):
         self.assertEqual(self.cdp.evaluate(
             "document.querySelector('button.fav').getAttribute('aria-pressed')"), "true")
         stored = json.loads(self.cdp.evaluate("localStorage.getItem(%s)" % json.dumps(FAVK)))
-        self.assertEqual(stored["v"], 1)
+        self.assertEqual(stored["v"], 2)
         self.assertEqual(stored["items"][0]["k"], ONE + "/1")
         self.cdp.evaluate("localStorage.setItem(%s,%s)" % (
             json.dumps(FAVK), json.dumps(json.dumps({"v": 1, "items": packed["items"]}))))
