@@ -14,12 +14,32 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #cotd{display:none;padding:16px 16px 40px;max-width:1240px}#cotd h2{margin:0 0 4px;font-size:22px}#cotd .theme{color:#374151;margin:0 0 18px;font-size:15px}
 #cotd .card{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:14px;margin-bottom:18px}#cotd .card img{width:100%;max-width:1200px;display:block;cursor:zoom-in;border:1px solid #f0f0f0}
 #cotd .card h3{margin:0 0 8px;font-size:17px}#cotd .src{font-size:12px;color:#6B7280;margin:6px 0 10px}#cotd .src a{color:#2563eb}#cotd .sec{margin:6px 0;font-size:14px;line-height:1.45}#cotd .sec b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:#6B7280}
+#cotd .cardtop{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}#cotd .cardtop h3{flex:1;min-width:0}
+#cotd .local{font-size:13px;color:#6B7280;margin:0 0 14px;line-height:1.45}
+#cotd [data-favmsg]:empty{display:none}
 #sheets{display:none;padding:16px 16px 48px;max-width:1100px}#sheets h2{margin:0 0 4px;font-size:22px}#sheets .theme{color:#374151;margin:0 0 14px;font-size:15px;line-height:1.45}
 #sheets .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}#sheets .count{font-size:13px;color:#6B7280;margin:0 0 10px}
 #sheets .row{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start}
 #sheets .row .meta{flex:1;min-width:0}#sheets .book{font-size:11px;letter-spacing:.4px;text-transform:uppercase;color:#6B7280}
 #sheets .row h3{margin:2px 0 4px;font-size:16px}#sheets .charts{font-size:13px;color:#374151;line-height:1.4}
-#sheets .row a.open{color:#2563eb;font-size:13px;white-space:nowrap}#sheets .row img{width:240px;max-width:42%;height:auto;border:1px solid #f0f0f0;border-radius:4px;background:#fff;cursor:zoom-in}
+#sheets .row a.open{color:#2563eb;font-size:14px;white-space:nowrap}#sheets .row img{width:240px;max-width:42%;height:auto;border:1px solid #f0f0f0;border-radius:4px;background:#fff;cursor:zoom-in}
+#sheets .local{font-size:13px;color:#6B7280;margin:0 0 10px;line-height:1.45}
+#sheets #favmsg{font-size:13px;color:#92400E;margin:0 0 10px;line-height:1.45}#sheets #favmsg:empty{display:none}
+#sheets .chartline{display:flex;align-items:center;gap:2px;margin-top:2px}#sheets .chartline span{flex:1;min-width:0;font-size:13px;color:#374151;line-height:1.35}
+#sheets .acts{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-top:8px}
+#sheets .empty{background:#fff;border:1px dashed #D1D5DB;border-radius:6px;padding:16px;color:#374151;font-size:14px;line-height:1.45}
+#sheets .empty b{display:block;color:#111;font-size:16px;margin-bottom:4px}
+#sheets button.chip{background:#fff;color:#111;border:1px solid #D1D5DB;border-radius:999px;padding:6px 14px;min-height:40px;font-weight:600}
+#sheets button.chip[aria-pressed=true]{background:#111;color:#fff;border-color:#111}
+#sheets button.fav,#cotd button.fav{background:transparent;color:#4B5563;border:1px solid transparent;border-radius:8px;min-width:44px;min-height:44px;padding:0;font-size:22px;line-height:1;flex:none}
+#sheets button.fav[aria-pressed=true],#cotd button.fav[aria-pressed=true]{color:#B45309}
+#sheets button.fav:hover,#cotd button.fav:hover{background:#F3F4F6}
+#sheets button.fav:disabled,#cotd button.fav:disabled{opacity:.45;cursor:not-allowed}
+#sheets button.chip:focus-visible,#sheets button.fav:focus-visible,#cotd button.fav:focus-visible{outline:2px solid #111;outline-offset:2px}
+@media (max-width:640px){
+  #sheets .row{flex-direction:column}
+  #sheets .row img{width:100%;max-width:none}
+}
 #paper{display:none;padding:16px 16px 48px;max-width:1200px}#paper h2{margin:0 0 4px;font-size:22px}#paper h3{margin:18px 0 8px;font-size:16px}
 #paper .theme{color:#374151;margin:0;font-size:15px;line-height:1.45}#paper .head{display:flex;gap:16px;align-items:flex-start;justify-content:space-between}
 #paper .pending{margin:12px 0 0;font-size:14px;color:#374151}#paper .stats{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
@@ -703,45 +723,208 @@ function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='p
   if(m!=='pt')chart.clear();$('status').textContent='';
   if(m==='prices'){syncPriceUi();render()}else if(m==='paper')paperEnter();else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
 $('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mPt').onclick=()=>setMode('pt');$('mPaper').onclick=()=>setMode('paper');
+// ---------- Favorites: this browser's localStorage only. No account and no server copy. ----------
+// Identity is book/gid/chartNumber (chart 1 is <gid>.png, chart n is <gid>_n.png). At most FAV_MAX.
+// A stored row is dropped when that chart is gone from the catalog, or when a different non-empty title now sits at that number.
+const FAVK='chartmaker_sheet_favs',FAV_MAX=200,FAV_RE=/^([A-Za-z0-9][A-Za-z0-9_-]{0,24})\/(\d+)\/([1-9]\d?)$/;
+let FAV=[],FAV_OK=true,FAV_MSG='',FAV_DROPPED=0,FAV_VIEW=false,SHEETS=null,SHEETS_P=null;
+function escHtml(t){return String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function normTitle(s){return String(s||'').replace(/\s+/g,' ').trim()}
+function sheetCharts(t){
+  const raw=Array.isArray(t&&t.chartList)&&t.chartList.length?t.chartList:(t&&t.charts||[]).map((x,i)=>({n:i+1,title:x}));
+  const seen={};
+  raw.forEach(c=>{const k=normTitle(c&&c.title);if(k)seen[k]=(seen[k]||0)+1});
+  const out=[];
+  raw.forEach((c,i)=>{const n=Number(c&&c.n)||i+1;if(!(n>=1&&n<=99))return;const title=normTitle(c&&c.title);
+    out.push({n,title,label:title&&seen[title]===1?title:'Chart '+n})});
+  return out}
+function sheetChartList(t){return sheetCharts(t).map(c=>({n:c.n,label:c.label}))}
+function favLoad(){
+  FAV=[];FAV_OK=true;FAV_MSG='';
+  let raw=null;
+  try{raw=localStorage.getItem(FAVK)}catch(e){FAV_OK=false;FAV_MSG='Favorites are unavailable because this browser blocked storage.';return}
+  if(raw==null||raw==='')return;
+  let data;try{data=JSON.parse(raw)}catch(e){FAV_OK=false;FAV_MSG='Favorites saved in this browser could not be read, so they are not shown. They were left untouched.';return}
+  const items=Array.isArray(data)?data:(data&&Array.isArray(data.items)?data.items:null);
+  if(!items){FAV_OK=false;FAV_MSG='Favorites saved in this browser could not be read, so they are not shown. They were left untouched.';return}
+  const out=[];
+  for(const item of items){
+    if(out.length>=FAV_MAX)break;
+    if(typeof item==='string'&&FAV_RE.test(item))out.push({k:item,title:''});
+    else if(item&&typeof item.k==='string'&&FAV_RE.test(item.k))out.push({k:item.k,title:normTitle(item.title)});
+  }
+  FAV=out;
+  if(items.length>FAV_MAX)FAV_MSG='This browser keeps the first '+FAV_MAX+' favorites. The rest were left out.';
+  const text=JSON.stringify({v:1,items:FAV});
+  if(FAV_OK&&text!==raw){try{localStorage.setItem(FAVK,text)}catch(e){FAV_MSG='Favorites could not be updated in this browser.'}}
+}
+function favSave(){
+  if(!FAV_OK)return false;
+  try{localStorage.setItem(FAVK,JSON.stringify({v:1,items:FAV}));return true}catch(e){return false}
+}
+function favResolve(item,cat){
+  const m=FAV_RE.exec(item&&item.k||'');
+  if(!m||!cat)return null;
+  const bookId=m[1],gid=Number(m[2]),n=Number(m[3]);
+  const tab=(cat.tabs||[]).find(t=>t.book===bookId&&Number(t.gid)===gid);
+  if(!tab)return null;
+  const ch=sheetCharts(tab).find(c=>c.n===n);
+  if(!ch)return null;
+  const stored=normTitle(item.title),current=normTitle(ch.title);
+  if(stored&&current&&stored!==current)return null;
+  const book=(cat.books||[]).find(b=>b.id===bookId)||{};
+  return {item,tab,ch,book};
+}
+function favReconcile(cat){
+  if(!FAV_OK||!cat||!Array.isArray(cat.tabs)||!cat.tabs.length)return;
+  const keep=[];let drop=0;
+  for(const item of FAV){if(favResolve(item,cat))keep.push(item);else drop++}
+  FAV_DROPPED=drop;
+  if(!drop){favPaint();return}
+  FAV=keep;
+  if(!favSave())FAV_MSG='Some favorites are no longer in the library, but this browser blocked saving that update.';
+  favPaint();
+}
+function favMsg(){
+  const parts=[];
+  if(FAV_MSG)parts.push(FAV_MSG);
+  if(FAV_DROPPED)parts.push(FAV_DROPPED+' favorite'+(FAV_DROPPED===1?' is':'s are')+' no longer in the library and '+(FAV_DROPPED===1?'was':'were')+' removed.');
+  return parts.join(' ');
+}
+function favPaint(){
+  const msg=favMsg();
+  document.querySelectorAll('button.fav').forEach(b=>{
+    const on=FAV.some(x=>x.k===b.dataset.fav);
+    const name=b.dataset.favlabel||'chart';
+    b.setAttribute('aria-pressed',on?'true':'false');
+    b.textContent=on?'★':'☆';
+    b.setAttribute('aria-label',(on?'Remove from favorites: ':'Add to favorites: ')+name);
+    b.title=on?'Remove from favorites. Saved in this browser only.':'Add to favorites. Saved in this browser only.';
+    b.disabled=!FAV_OK;
+  });
+  const chip=$('shfav');
+  if(chip)chip.textContent=FAV.length?('Favorites · '+FAV.length):'Favorites';
+  document.querySelectorAll('[data-favmsg]').forEach(el=>{el.textContent=msg});
+}
+function favButton(book,gid,ch){
+  const k=book+'/'+gid+'/'+ch.n,on=FAV.some(x=>x.k===k),name=ch.label||'chart';
+  return '<button type="button" class="fav" data-fav="'+escHtml(k)+'" data-favtitle="'+escHtml(ch.title)+'" data-favlabel="'+escHtml(name)+'" aria-pressed="'+(on?'true':'false')+'" aria-label="'+escHtml((on?'Remove from favorites: ':'Add to favorites: ')+name)+'" title="'+escHtml(on?'Remove from favorites. Saved in this browser only.':'Add to favorites. Saved in this browser only.')+'"'+(FAV_OK?'':' disabled')+'>'+(on?'★':'☆')+'</button>';
+}
+function favToggle(k,title){
+  if(!FAV_OK||!FAV_RE.test(k||''))return;
+  const prev=FAV.map(x=>({k:x.k,title:x.title}));
+  const i=FAV.findIndex(x=>x.k===k);
+  if(i>=0)FAV.splice(i,1);
+  else{
+    if(FAV.length>=FAV_MAX){FAV_MSG='This browser can keep '+FAV_MAX+' favorites. Unstar one to add another.';favPaint();return}
+    FAV.push({k,title:normTitle(title)});
+  }
+  if(!favSave()){FAV=prev;FAV_MSG='Could not save favorites in this browser. The change was not kept.'}
+  else FAV_MSG='';
+  favPaint();
+  if(FAV_VIEW&&typeof window.__sheetsDraw==='function')window.__sheetsDraw();
+}
+function cotdChart(item,cat){
+  if(!item||!cat)return null;
+  const url=String(item.sheet_url||'');
+  const hit=url.match(/\/spreadsheets\/d\/([A-Za-z0-9_-]+)\/[^#]*#gid=(\d+)/i)||url.match(/\/spreadsheets\/d\/([A-Za-z0-9_-]+)\/[^#]*[?&]gid=(\d+)/i);
+  if(!hit)return null;
+  const book=(cat.books||[]).find(b=>b.spreadsheetId===hit[1]);
+  if(!book)return null;
+  const tab=(cat.tabs||[]).find(t=>t.book===book.id&&Number(t.gid)===Number(hit[2]));
+  if(!tab)return null;
+  const charts=sheetCharts(tab);
+  if(charts.length===1)return {tab,ch:charts[0],book};
+  const want=normTitle(item.title).toLowerCase();
+  if(!want||charts.length<2)return null;
+  const hits=charts.filter(c=>normTitle(c.title).toLowerCase()===want||normTitle(c.label).toLowerCase()===want);
+  return hits.length===1?{tab,ch:hits[0],book}:null;
+}
+function cotdFavBtn(item,cat){const hit=cotdChart(item,cat);return hit?favButton(hit.tab.book,hit.tab.gid,hit.ch):''}
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('button.fav');if(!b||b.disabled)return;e.preventDefault();favToggle(b.dataset.fav,b.dataset.favtitle||'')});
+window.addEventListener('storage',e=>{if(!e||e.key!==FAVK)return;favLoad();if(SHEETS)favReconcile(SHEETS);if(MODE==='sheets'&&typeof window.__sheetsDraw==='function')window.__sheetsDraw();else favPaint()});
+favLoad();
+async function sheetsCatalog(){
+  if(SHEETS)return SHEETS;
+  if(!SHEETS_P){
+    SHEETS_P=(async()=>{
+      const r=await fetch('sheets/catalog.json?t='+Date.now(),{cache:'no-store'});
+      if(!r.ok)throw Error('HTTP '+r.status);
+      const j=await r.json();
+      if(!j||!Array.isArray(j.tabs))throw Error('bad catalog');
+      SHEETS=j;favReconcile(SHEETS);return SHEETS;
+    })();
+    SHEETS_P.then(()=>{},()=>{SHEETS_P=null});
+  }
+  return SHEETS_P;
+}
 // ---------- Charts of the day: static/cotd/today.json (refreshed daily by Flash via scripts/cotd_build.py) ----------
 // Each new edition is 20 charts. Render every item in the file; there is no display cap.
-async function cotdenter(){const el=$('cotd'),E=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+async function cotdenter(){const el=$('cotd'),E=escHtml;
   el.innerHTML='<p>Loading…</p>';
   try{const r=await fetch('cotd/today.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const j=await r.json();if(MODE!=='cotd')return;
+    let cat=null;try{cat=await sheetsCatalog()}catch(e){cat=null}
+    if(MODE!=='cotd')return;
     const d=j.date?new Date(j.date+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'}):'';
     const safe=u=>/^https:\/\//.test(u||'')?u:'';
-    el.innerHTML=`<h2>Charts of the day · ${E(d)}</h2><p class="theme">${E(j.theme)}</p>`+(j.items||[]).map((x,i)=>`<div class="card"><h3>${i+1}. ${E(x.title)}</h3>
+    const starred=!!(cat&&(j.items||[]).some(x=>cotdChart(x,cat)));
+    const note=starred?'<p class="local">A star on a card saves that chart as a favorite in this browser on this device only. It is not stored on the server.</p>':'';
+    el.innerHTML=`<h2>Charts of the day · ${E(d)}</h2><p class="theme">${E(j.theme)}</p>${note}<p data-favmsg class="local"></p>`+(j.items||[]).map((x,i)=>`<div class="card"><div class="cardtop"><h3>${i+1}. ${E(x.title)}</h3>${cotdFavBtn(x,cat)}</div>
 <a href="${E(x.image)}" target="_blank" rel="noopener"><img src="${E(x.image)}" alt="${E(x.title)}" loading="lazy"></a>
 <div class="src">${E(x.sheet)} · ${E(x.tab)}${safe(x.sheet_url)?` · <a href="${E(x.sheet_url)}" target="_blank" rel="noopener">open in sheet</a>`:''}</div>
 <div class="sec"><b>Why it was picked today</b>${E(x.picked)}</div><div class="sec"><b>Why it matters</b>${E(x.matters)}</div><div class="sec"><b>What you should know</b>${E(x.know)}</div></div>`).join('');
+    favPaint();
   }catch(e){el.innerHTML='<p style="color:#EF4444">Could not load today\'s charts ('+E(e.message)+').</p>'}}
 // ---------- Sheets library: static/sheets/catalog.json (scripts/sheets_catalog.py). ----------
 // Thumbnails are optional catalog fields (static/sheets/thumbs/...). Shown only while the search box has a query.
-// View PNG and Download PNG open sheets/full/<book>/<gid>.png (chart 1) or <gid>_n.png (chart n) when that file exists, else the thumbnail. The grid keeps the JPEG.
-let SHEETS=null,FULL_OK=new Map(),SHSEQ=0;
+// View PNG and Download PNG open sheets/full/<book>/<gid>.png (chart 1) or <gid>_n.png (chart n) when that file exists, else the thumbnail for chart 1. The grid keeps the JPEG.
+let FULL_OK=new Map(),SHSEQ=0;
 function sheetThumb(t){const p=String(t&&t.thumb||'');return /^sheets\/thumbs\/[A-Za-z0-9][A-Za-z0-9_-]{0,24}\/\d+\.jpg$/.test(p)?p:''}
 function sheetFull(t,n){n=Number(n)||1;const book=String(t&&t.book||''),gid=String(t&&t.gid!=null?t.gid:'');const p='sheets/full/'+book+'/'+gid+(n>1?'_'+n:'')+'.png';return /^sheets\/full\/[A-Za-z0-9][A-Za-z0-9_-]{0,24}\/\d+(?:_(?:[2-9]|[1-9]\d))?\.png$/.test(p)?p:''}
-// One entry per chart on the tab: chart 1 is <gid>.png, chart n is <gid>_n.png. Label is the chart title, or "Chart n" when untitled or duplicated.
-function sheetChartList(t){const raw=Array.isArray(t&&t.chartList)&&t.chartList.length?t.chartList:(t&&t.charts||[]).map((x,i)=>({n:i+1,title:x}));const seen={};raw.forEach(c=>{const k=String(c&&c.title||'').trim();if(k)seen[k]=(seen[k]||0)+1});
-  return raw.map((c,i)=>{const n=Number(c&&c.n)||i+1,ti=String(c&&c.title||'').trim();return {n,label:ti&&seen[ti]===1?ti:'Chart '+n}})}
 function sheetFile(tab,ext){const n=String(tab||'').replace(/[^\w]+/g,'_').replace(/^_+|_+$/g,'');return (n||'chart')+(ext||'.png')}
+function sheetOpen(book,tab){const url='https://docs.google.com/spreadsheets/d/'+encodeURIComponent(book&&book.spreadsheetId||'')+'/edit#gid='+(tab&&tab.gid!=null?tab.gid:'');
+  return /^https:\/\/docs\.google\.com\/spreadsheets\/d\/[A-Za-z0-9_-]+\/edit#gid=\d+$/.test(url)?url:''}
 async function sheetFullOk(url){if(FULL_OK.has(url))return FULL_OK.get(url);let ok=false;try{const r=await fetch(url,{method:'HEAD',cache:'no-store'});ok=r.ok}catch(e){ok=false}FULL_OK.set(url,ok);return ok}
-async function sheetsEnter(){const el=$('sheets'),E=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+async function sheetFileFor(t,n){const full=sheetFull(t,n);if(full&&await sheetFullOk(full))return {href:full,ext:'.png'};
+  if(Number(n)===1){const im=sheetThumb(t);if(im)return {href:im,ext:'.jpg'}}return null}
+async function sheetsEnter(){const el=$('sheets'),E=escHtml;
   el.innerHTML='<p>Loading…</p>';
   try{
-    if(!SHEETS){const r=await fetch('sheets/catalog.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);SHEETS=await r.json()}
+    const cat=await sheetsCatalog();
     if(MODE!=='sheets')return;
-    const books=SHEETS.books||[],tabs=SHEETS.tabs||[];
+    const books=cat.books||[],tabs=cat.tabs||[];
     const bookBy=Object.fromEntries(books.map(b=>[b.id,b]));
-    const when=SHEETS.generated?new Date(SHEETS.generated).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'';
-    el.innerHTML=`<h2>Sheets library</h2><p class="theme">Search ${tabs.length} tabs across ${books.map(b=>E(b.name)).join(', ')}. Opens the Google Sheet. Type a search to see a chart preview beside each result that has one. View PNG and Download PNG open the full-size chart when it is in the library, and the thumbnail when it is not. The preview stays the small thumbnail. The full list stays text-only, and a tab with no thumbnail is still listed.${when?' Catalog '+E(when)+'.':''}</p>
-<div class="bar"><input id="shq" type="search" size="28" placeholder="Search tabs or chart titles" autocomplete="off">
-<select id="shbook"><option value="">All workbooks</option>${books.map(b=>`<option value="${E(b.id)}">${E(b.name)}</option>`).join('')}</select>
-<label style="display:flex;flex-direction:row;align-items:center;gap:4px;font-size:13px"><input id="shcharts" type="checkbox"> Has a chart</label></div>
-<p class="count" id="shcount"></p><div id="shlist"></div>`;
-    const draw=async()=>{const seq=++SHSEQ,q=($('shq').value||'').trim().toLowerCase(),book=$('shbook').value,need=$('shcharts').checked;
-      const rows=tabs.filter(t=>{if(book&&t.book!==book)return false;if(need&&!(t.charts||[]).length)return false;
-        if(!q)return true;const blob=(t.tab+' '+(t.charts||[]).join(' ')+' '+(bookBy[t.book]||{}).name).toLowerCase();return blob.includes(q)});
+    const when=cat.generated?new Date(cat.generated).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'';
+    el.innerHTML=`<h2>Sheets library</h2><p class="theme">Search ${tabs.length} tabs across ${books.map(b=>E(b.name)).join(', ')}. Opens the Google Sheet. Type a search to see a chart preview beside each result that has one. View PNG and Download PNG open the full-size chart when it is in the library, and the thumbnail when it is not. The preview stays the small thumbnail. The full list stays text-only, and a tab with no thumbnail is still listed. Star a chart to keep it under Favorites. Each chart on a tab has its own star.${when?' Catalog '+E(when)+'.':''}</p>
+<div class="bar"><input id="shq" type="search" size="28" placeholder="Search tabs or chart titles" aria-label="Search tabs or chart titles" autocomplete="off">
+<select id="shbook" aria-label="Workbook"><option value="">All workbooks</option>${books.map(b=>`<option value="${E(b.id)}">${E(b.name)}</option>`).join('')}</select>
+<label style="display:flex;flex-direction:row;align-items:center;gap:4px;font-size:13px"><input id="shcharts" type="checkbox"> Has a chart</label>
+<button type="button" class="chip" id="shfav" aria-pressed="${FAV_VIEW?'true':'false'}" aria-controls="shlist" aria-describedby="favlocal" title="Show charts you starred. Saved in this browser only.">Favorites</button></div>
+<p class="local" id="favlocal">Stars are saved in this browser on this device only (up to ${FAV_MAX}). They are not stored on the server and do not sync to other browsers or devices. A saved favorite is removed when that chart is no longer in the library, or when a different chart now occupies that same chart number.</p>
+<p id="favmsg" data-favmsg role="status" aria-live="polite"></p>
+<p class="count" id="shcount" aria-live="polite"></p><div id="shlist"></div>`;
+    const draw=async()=>{const seq=++SHSEQ,q=($('shq').value||'').trim().toLowerCase(),book=$('shbook').value,need=$('shcharts').checked,favOnly=FAV_VIEW;
+      if(favOnly){
+        let picks=[];
+        for(const item of FAV){const hit=favResolve(item,cat);if(hit)picks.push(hit)}
+        if(book)picks=picks.filter(h=>h.tab.book===book);
+        if(q)picks=picks.filter(h=>{const blob=(h.tab.tab+' '+h.ch.label+' '+(h.ch.title||'')+' '+(h.book.name||'')).toLowerCase();return blob.includes(q)});
+        const ready=await Promise.all(picks.map(async h=>({h,file:await sheetFileFor(h.tab,h.ch.n)})));
+        if(seq!==SHSEQ||MODE!=='sheets')return;
+        $('shcount').textContent=ready.length+' favorite'+(ready.length===1?'':'s');
+        $('shlist').innerHTML=ready.map(({h,file})=>{
+          const openUrl=sheetOpen(h.book,h.tab);
+          const open=openUrl?`<a class="open" href="${E(openUrl)}" target="_blank" rel="noopener">Open in Sheets</a>`:'';
+          const png=file?`<a class="open" href="${E(file.href)}" target="_blank" rel="noopener">View PNG</a><a class="open" href="${E(file.href)}" download="${E(sheetFile(h.tab.tab+(h.ch.n>1?' '+h.ch.n:''),file.ext))}">Download PNG</a>`:'';
+          const nofile=file?'':'<div class="charts">No PNG in the library for this chart.</div>';
+          const preview=h.ch.n===1?sheetThumb(h.tab):'';
+          const href=file?file.href:(preview||'');
+          const img=preview?`<a href="${E(href||preview)}" target="_blank" rel="noopener"><img src="${E(preview)}" alt="${E(h.ch.label)}" loading="lazy" onerror="var a=this.closest('a');if(a)a.remove()"></a>`:'';
+          return `<div class="row" data-favrow="${E(h.item.k)}"><div class="meta"><div class="book">${E(h.book.name||'')}</div><h3>${E(h.tab.tab)}</h3><div class="chartline">${favButton(h.tab.book,h.tab.gid,h.ch)}<span>${E(h.ch.label)}</span></div>${nofile}${open||png?`<div class="acts">${open}${png}</div>`:''}</div>${img}</div>`}).join('')||(q||book?'<div class="empty"><b>No favorites match.</b><p>None of the starred charts match this search or workbook.</p></div>':(FAV_DROPPED&&!FAV.length?'<div class="empty"><b>No favorites in the library.</b><p>The charts you starred are no longer in the library. They were removed and are not shown.</p></div>':'<div class="empty"><b>No favorites yet.</b><p>Turn Favorites off and star a chart, or star one on Charts of the day when that card is a single chart in the library. A tab with several charts is starred here, one star per chart.</p></div>'));
+        favPaint();return;
+      }
+      const rows=tabs.filter(t=>{if(book&&t.book!==book)return false;if(need&&!sheetCharts(t).length)return false;
+        if(!q)return true;const blob=(t.tab+' '+(t.charts||[]).join(' ')+' '+sheetCharts(t).map(c=>c.label+' '+c.title).join(' ')+' '+(bookBy[t.book]||{}).name).toLowerCase();return blob.includes(q)});
       const withThumb=q?rows.filter(t=>sheetThumb(t)).length:0;
       $('shcount').textContent=rows.length+' tab'+(rows.length===1?'':'s')+(q?(withThumb?` · ${withThumb} with a preview`:' · no previews'):'');
       const ready=await Promise.all(rows.map(async t=>{const im=q?sheetThumb(t):'';const full=im?sheetFull(t):'';const useFull=!!(full&&await sheetFullOk(full));
@@ -749,13 +932,18 @@ async function sheetsEnter(){const el=$('sheets'),E=t=>String(t??'').replace(/[&
         if(list.length>1){for(const c of list){const p=sheetFull(t,c.n);if(p&&await sheetFullOk(p))pairs.push({label:c.label,href:p,ext:'.png',n:c.n});else if(c.n===1)pairs.push({label:c.label,href:im,ext:'.jpg',n:1})}}
         return {t,im,href:useFull?full:im,ext:useFull?'.png':'.jpg',pairs}}));
       if(seq!==SHSEQ||MODE!=='sheets')return;
-      $('shlist').innerHTML=ready.map(({t,im,href,ext,pairs})=>{const b=bookBy[t.book]||{},url=`https://docs.google.com/spreadsheets/d/${encodeURIComponent(b.spreadsheetId||'')}/edit#gid=${t.gid}`;
-        const safeUrl=/^https:\/\/docs\.google\.com\/spreadsheets\/d\/[A-Za-z0-9_-]+\/edit#gid=\d+$/.test(url)?url:'';
-        const open=safeUrl?`<a class="open" href="${E(safeUrl)}" target="_blank" rel="noopener">Open in Sheets</a>`:'';
-        const png=!im?'':pairs.length>1?`<span data-png>${pairs.map(c=>`<div style="margin-top:4px">${E(c.label)}: <a class="open" href="${E(c.href)}" target="_blank" rel="noopener">View PNG</a> · <a class="open" href="${E(c.href)}" download="${E(sheetFile(t.tab+(c.n>1?' '+c.n:''),c.ext))}">Download PNG</a></div>`).join('')}</span>`:`<span data-png>${open?' · ':''}<a class="open" href="${E(href)}" target="_blank" rel="noopener">View PNG</a> · <a class="open" href="${E(href)}" download="${E(sheetFile(t.tab,ext))}">Download PNG</a></span>`;
-        return `<div class="row"><div class="meta"><div class="book">${E(b.name)}</div><h3>${E(t.tab)}</h3>${(t.charts||[]).length?`<div class="charts">${(t.charts||[]).map(E).join(' · ')}</div>`:''}${open||png?`<div style="margin-top:6px">${open}${png}</div>`:''}</div>${im?`<a href="${E(href)}" target="_blank" rel="noopener"><img src="${E(im)}" alt="${E(t.tab)}" loading="lazy" onerror="var row=this.closest('.row');var a=this.closest('a');if(a)a.remove();var x=row&&row.querySelector('[data-png]');if(x)x.remove()"></a>`:''}</div>`}).join('')||'<p>No tabs match.</p>'};
+      $('shlist').innerHTML=ready.map(({t,im,href,ext,pairs})=>{const b=bookBy[t.book]||{};
+        const openUrl=sheetOpen(b,t);
+        const open=openUrl?`<a class="open" href="${E(openUrl)}" target="_blank" rel="noopener">Open in Sheets</a>`:'';
+        const lines=sheetCharts(t);
+        const charts=lines.length?`<div class="charts">${lines.map(ch=>`<div class="chartline">${favButton(t.book,t.gid,ch)}<span>${E(ch.label)}</span></div>`).join('')}</div>`:'';
+        const png=!im?'':pairs.length>1?`<span data-png>${pairs.map(c=>`<div class="pngline">${E(c.label)}: <a class="open" href="${E(c.href)}" target="_blank" rel="noopener">View PNG</a> <a class="open" href="${E(c.href)}" download="${E(sheetFile(t.tab+(c.n>1?' '+c.n:''),c.ext))}">Download PNG</a></div>`).join('')}</span>`:`<span data-png><a class="open" href="${E(href)}" target="_blank" rel="noopener">View PNG</a> <a class="open" href="${E(href)}" download="${E(sheetFile(t.tab,ext))}">Download PNG</a></span>`;
+        return `<div class="row"><div class="meta"><div class="book">${E(b.name)}</div><h3>${E(t.tab)}</h3>${charts}${open||png?`<div class="acts">${open}${png}</div>`:''}</div>${im?`<a href="${E(href)}" target="_blank" rel="noopener"><img src="${E(im)}" alt="${E(t.tab)}" loading="lazy" onerror="var row=this.closest('.row');var a=this.closest('a');if(a)a.remove();var x=row&&row.querySelector('[data-png]');if(x)x.remove()"></a>`:''}</div>`}).join('')||'<p>No tabs match.</p>';
+      favPaint()};
+    window.__sheetsDraw=draw;
+    $('shfav').onclick=()=>{FAV_VIEW=$('shfav').getAttribute('aria-pressed')!=='true';$('shfav').setAttribute('aria-pressed',FAV_VIEW?'true':'false');draw()};
     $('shq').addEventListener('input',draw);$('shq').addEventListener('search',draw);$('shbook').onchange=$('shcharts').onchange=draw;draw();
-  }catch(e){el.innerHTML='<p style="color:#EF4444">Could not load the Sheets catalog ('+E(e.message)+').</p>'}}
+  }catch(e){el.innerHTML='<p style="color:#EF4444">Could not load the Sheets catalog ('+escHtml(e.message)+').</p>'}}
 const MUNIT={eps_diluted:'eps',shares:'sh',gross_margin:'%',operating_margin:'%',net_margin:'%'};
 function fmtFin(v,u,cur){if(v==null||isNaN(v))return '';const a=Math.abs(v),sg=v<0?'-':'';
   if(u==='%')return v.toFixed(1)+'%'; if(u==='eps')return sg+'$'+a.toFixed(2);
@@ -1100,7 +1288,7 @@ window.__hrender=hrender;
 const WDEF=['MSTR','BTC-USD','TSLA','NVDA','COIN','SPY'],WLS='chartmaker_watchlist';
 let WL=(()=>{try{const a=JSON.parse(localStorage.getItem(WLS));if(Array.isArray(a)&&a.length)return a}catch(e){}return WDEF.slice()})();
 let WROWS={},WAT=0,WSRC='Yahoo Finance',WSORT={k:null,d:-1},WBUSY=false;
-let WLUP=localStorage.getItem(WLS+'_updated')||'';
+let WLUP='';try{WLUP=localStorage.getItem(WLS+'_updated')||''}catch(e){}
 // Watchlist is cached in this browser and, when views are server-stored, synced to the server (newest wins).
 const wsave=(sync=true)=>{localStorage.setItem(WLS,JSON.stringify(WL));if(sync){WLUP=new Date().toISOString();localStorage.setItem(WLS+'_updated',WLUP);
   if(window.__VSTORE==='server')fetch('/api/views/watchlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({list:WL,updated:WLUP})}).catch(e=>console.warn('watchlist not synced',e))}
