@@ -1,86 +1,206 @@
 {
- "date": "2026-11-07",
- "theme": "After the worst week for chips since 2001, leverage and the 200-day line are in focus, India rallies as Asia sells off, bitcoin sits on Strategy's cost basis amid $1.28B of ETF outflows, Musk says SpaceX barely needs government revenue, Tesla trades Cybertrucks for Cybercabs, and data center lenders get nervous.",
+ "date": "2026-11-08",
+ "theme": "Sunday after the AI-led selloff: Anthropic locks in 1.7 GW of Caterpillar generators and a rising SpaceX compute bill, the jumbo AI bond pipeline is open again, bitcoin sits on Strategy's cost basis after a $1.28 billion ETF outflow week, Starlink's subscriber ramp feeds a $1T debate, CoreWeave reports Nov 10, and Tesla keeps adding Cybercabs.",
  "items": [
   {
-   "sheet": "bot experiments 2",
-   "tab": "13 BTC cost basis by holder",
-   "title": "Bitcoin's price vs what ETFs, companies and Strategy paid for theirs",
-   "image": "cotd/2026-11-07/01.png",
-   "picked": "Bitcoin dipped under $75,000 on Friday and was near $76,000 early Saturday, per a story trending on X. Peter Schiff and others are pointing out that the price is now right around Strategy's average cost of $75,451 per coin.",
-   "matters": "When bitcoin trades near the average price that big holders paid, their paper profits disappear. That level is now being watched as a floor, and as a test of nerves for ETF holders and treasury companies.",
-   "know": "On Oct 14 2026, the tab's latest snapshot with bitcoin at $81,562, the average cost was $76,645 for US spot ETFs, $78,881 for all public companies, $80,382 for treasury companies, $75,444 for Strategy and $81,126 for BlackRock's IBIT. At about $76,000 today, IBIT holders and treasury companies as a group would be under water on average. The tab is about three weeks old, so this week's ETF outflows aren't in it.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1078237833"
+   "sheet": "My Bot's Sheets",
+   "tab": "Anthropic Revenue vs Compute",
+   "title": "Anthropic's revenue versus what it spends on compute",
+   "image": "cotd/2026-11-08/01.png",
+   "picked": "The FT reported this morning that Anthropic agreed in late September to pay $3.4 billion for 1.7 GW of Caterpillar gas-fired generators, taking over San Antonio OnePWR Solutions orders, and that its monthly SpaceX compute-lease payments are expected to reach $3.1 billion by year-end. This tab, built from Anthropic's Nov 2 amended S-1, is the cleanest public look at how fast that compute bill is already growing.",
+   "matters": "If an AI lab's compute bill rises faster than its revenue, the business depends more on huge prepaid cloud and power contracts. The ratio of revenue to compute spend shows whether scale is still improving.",
+   "know": "Anthropic's Q3 2026 revenue was $16.956 billion against $9.863 billion of compute and infrastructure expense, or $1.72 of revenue per $1 of compute, down from 2.08x in Q2 when revenue was $11.555 billion and compute was $5.558 billion. In Q1 2025 the ratio was only 0.40x ($0.376 billion of revenue on $0.944 billion of compute). The figures are company-wide compute expense from the Nov 2 2026 amended S-1, not a breakout of the SpaceX lease. The image is a fallback render from the live sheet because the weekly Drive export has no PNG for this newer tab.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=978356289"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "226 OpenAI vs Anthropic revenue",
+   "title": "Reported revenue run-rates: OpenAI vs Anthropic",
+   "image": "cotd/2026-11-08/02.png",
+   "picked": "Anthropic is in today's headlines for the generator deal and for IPO talk that has cut informal valuation targets as low as $1.1 trillion from about $2 trillion after last week's AI selloff. The run-rate the company and the press have been citing is the other half of that story.",
+   "matters": "Investors are trying to judge whether Anthropic's growth can support a trillion-dollar listing. Media-reported run-rates are the only public time series that puts it next to OpenAI.",
+   "know": "The tab's latest Anthropic point is a $100 billion annualized run-rate on Sep 15 2026, up from $65 billion on Jul 31, $47 billion on May 28 and $1 billion at the end of 2024. OpenAI's latest point is $70 billion on Sep 29 2026, up from $40 billion on Aug 13 and $20 billion at the end of 2025. These are company statements and media reports of annualized run-rates, not the quarterly revenue in Anthropic's S-1, and both series are about six weeks old.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1186940001"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "337 US power sales by sector",
+   "title": "US electricity sales growth by sector: commercial leads",
+   "image": "cotd/2026-11-08/03.png",
+   "picked": "The FT called Anthropic's 1.7 GW generator purchase the largest known single buy of power-generation equipment by an AI lab, a sign that data-center operators are not waiting on the grid. Commercial electricity demand is where those loads show up.",
+   "matters": "If commercial power use is rising while homes and factories are flat, the extra demand is coming from businesses — including data centers — not from a broad economic boom. That is why labs are writing billion-dollar checks for their own generators.",
+   "know": "In the 12 months through July 2026, the tab's latest month, US commercial electricity sales were up 3.11% from a year earlier, versus 0.06% for residential, 0.34% for industrial and 1.25% for all sectors. Commercial growth has been the leader all year and was 2.93% in December 2025. The EIA figures lag by a few months, so they do not include any load from equipment ordered this fall.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1965360503"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "340 Data center vs power build",
+   "title": "Building for AI: US construction spending on data centers vs electric power",
+   "image": "cotd/2026-11-08/04.png",
+   "picked": "Anthropic is buying generators because new power plants and transmission take years. This chart shows how far data-center building has pulled ahead of building the grid that is supposed to feed them.",
+   "matters": "When data-center construction sprints and power-system construction crawls, someone has to bring their own electricity. That is the constraint behind on-site gas turbines.",
+   "know": "In August 2026, the tab's latest month, US construction spending on data centers was running at $63.04 billion, up from $49.74 billion in December 2025 and $1.80 billion in December 2014. Spending on electric power generation and the grid was $133.16 billion, only about double its $69.97 billion level at the end of 2014. The Census figures are monthly and lag, so they stop in August.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=571274868"
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "90 Public cos vs US ETFs BTC",
-   "title": "Bitcoin held by public companies vs US spot ETFs",
-   "image": "cotd/2026-11-07/02.png",
-   "picked": "Spot bitcoin ETFs had $1.28 billion of net outflows this week, their biggest in 19 weeks, led by BlackRock's IBIT. Meanwhile Strive reported a $509 million third-quarter profit and said it now holds 43,124 BTC, the second-largest corporate stack after Strategy, per stories trending on X.",
-   "matters": "For most of the ETF era, the funds held far more bitcoin than companies did. Companies have now caught up, so treasury buying matters as much as ETF flows for demand.",
-   "know": "Public companies held 1,304,885 BTC on the tab's latest reading, Oct 18 2026, slightly ahead of 1,283,680 BTC in US spot ETFs. They first passed the ETFs at the Jun 30 2026 quarter-end, 1,282,273 vs 1,210,299, up from 308,039 vs 837,279 in March 2024. The tab predates this week's outflows and Strive's October buys (it shows Strive at 35,595 BTC).",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=956514556"
+   "tab": "92 Data center capacity",
+   "title": "Data center capacity: the US versus everyone else",
+   "image": "cotd/2026-11-08/05.png",
+   "picked": "Anthropic's 1.7 GW of generators is easier to size against how much data-center capacity is already running. The United States is in a different league from every other country on this list.",
+   "matters": "A 1.7 GW block is a meaningful slice of today's operating fleet, and most of the world's planned additions are also in the United States. Power, not just chips, is now a scarce input.",
+   "know": "The tab, from Cushman & Wakefield's Global Data Center Market Comparison 2026, puts US operational capacity at 31.97 GW with another 70.63 GW in the pipeline, for 102.6 GW in total. China is next at 5.49 GW operating and 8.15 GW including its pipeline. The figures are from that 2026 report rather than a monthly series, so they are a snapshot, not a live feed of this week's orders.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1193697114"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "20 AI equipment capex",
+   "title": "AI capex: information-processing equipment investment as a share of GDP",
+   "image": "cotd/2026-11-08/06.png",
+   "picked": "A $3.4 billion Caterpillar order is one invoice in a much larger equipment boom. US spending on information-processing equipment is back to a share of the economy it has not held in years.",
+   "matters": "When equipment investment jumps this fast relative to GDP, it shows up in growth itself, in the bond market that finances it, and in shortages of turbines and chips. It is the real-economy side of the AI trade.",
+   "know": "In the third quarter of 2026, dated July 1 on the tab, information-processing equipment investment was 6.21% of GDP and up 19.96% from a year earlier. That share was 5.13% in the fourth quarter of 2024 and 5.58% a year ago. The series is quarterly BEA data, so the latest point is Q3 2026.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1114766401"
   },
   {
    "sheet": "Bot experiments",
    "tab": "315 SpaceX revenue by segment",
    "title": "SpaceX revenue by segment: Starlink is the business",
-   "image": "cotd/2026-11-07/03.png",
-   "picked": "Musk said on X that SpaceX's government revenue will fall below 10% this quarter and under 5% soon, offering to cancel any contracts Democrats don't want after their midterm wins. The post is one of the most-discussed stories on X this morning.",
-   "matters": "How much SpaceX relies on government launches shapes its political risk. This chart shows that commercial Starlink, not launch, now drives most of the revenue.",
-   "know": "Over the 12 months to September 2026, the tab has Starlink connectivity at $16.02 billion, the AI segment (xAI and X) at $11.86 billion and space at $4.16 billion. Space revenue, which includes government launch work, barely grew from $3.56 billion in 2023, while Starlink quadrupled from $3.87 billion. The tab doesn't split out government revenue, and the image's footnote still says TTM to Jun 30 2026 while the bar is labeled TTM Sep '26.",
+   "image": "cotd/2026-11-08/07.png",
+   "picked": "The same FT report that detailed Anthropic's generator buy said Anthropic's monthly payments to lease SpaceX compute are expected to reach $3.1 billion by year-end. Separately, a Starlink-to-$1 trillion compounding chart from @spcxGOD was one of this morning's in-lane viral posts.",
+   "matters": "SpaceX now has three different growth engines — Starlink, the AI/xAI segment, and traditional space — and the mix tells you how much of the company is satellites versus compute versus launches.",
+   "know": "Over the 12 months to September 2026, the tab has Starlink connectivity at $16.023 billion, the AI segment (labeled xAI and X) at $11.863 billion and space at $4.157 billion. Starlink has gone from $3.869 billion in 2023; space has barely moved from $3.557 billion. The AI bar is not a breakout of Anthropic's lease, and the image footnote still says TTM to Jun 30 2026 while the last bar is labeled TTM Sep '26.",
    "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=399190070"
   },
   {
+   "sheet": "Bot experiments",
+   "tab": "313 Starlink subscribers",
+   "title": "Starlink subscribers have climbed from 2.3 million to 13.6 million",
+   "image": "cotd/2026-11-08/08.png",
+   "picked": "A chart from @spcxGOD arguing Starlink can hit $1 trillion of revenue in about six years if it keeps doubling, versus Ron Baron's 10-year model, was circulating in the SpaceX crowd this morning. Subscriber growth is the volume side of that debate.",
+   "matters": "Revenue doubling at large scale only works if the subscriber base and usage keep compounding. The official subscriber counts are the hard numbers behind those scenarios.",
+   "know": "Starlink ended September 2026 with 13.6 million subscribers, up from 12.0 million at the end of June, 8.9 million at the end of 2025 and 2.3 million at the end of 2023. That is roughly a million new customers a quarter this year. The chart image's title still says \"2.3m at end-2023, 12.0m by June 2026\" and does not mention the September figure.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=884128402"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "211 Big Tech debt for AI",
+   "title": "Borrowing for AI: Big Tech's total debt",
+   "image": "cotd/2026-11-08/09.png",
+   "picked": "An AI investment-grade issuance timeline from @zerohedge was this morning's most-viewed in-lane chart, showing 26 jumbo deals totaling $428.1 billion and a restart in October and November after a September freeze, including Meta's $15 billion and Oracle's $10 billion this month.",
+   "matters": "The companies building AI data centers have gone from cash-rich to large bond issuers. The stock of debt already on the balance sheet is the starting point for this year's wave of new issuance.",
+   "know": "As of June 2026, the tab's latest reading, Amazon had $133 billion of total debt, Oracle $129.5 billion, Alphabet $101.1 billion, Meta $83.7 billion, Microsoft $40.3 billion and CoreWeave $35.6 billion. A year earlier, in FY 2025, those figures were $68.8 billion, $92.6 billion, $49.1 billion, $58.7 billion, $43.2 billion and $21.6 billion. The snapshot predates Microsoft's $25 billion October deal and this month's Meta $15 billion and Oracle $10 billion sales.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1307998812"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "209 Oracle cash burn",
+   "title": "Oracle's AI build-out: cash from operations versus capex",
+   "image": "cotd/2026-11-08/10.png",
+   "picked": "Oracle sold $10 billion of investment-grade bonds this past week, part of the jumbo-issuance wave on X this morning. The reason it needs the money is on this chart.",
+   "matters": "When capex outruns operating cash flow, a company has to issue debt or equity or both. Oracle has become the clearest example of an AI builder that no longer funds the build from cash on hand.",
+   "know": "For the 12 months ended Sep 30 2026, Oracle's operating cash flow was $46.94 billion and capex was $75.66 billion, leaving free cash flow at −$28.72 billion. Trailing free cash flow first turned negative in the year to June 2025 (−$0.39 billion) and was −$23.69 billion in the year to June 2026. These figures are through fiscal Q1 (September) and do not include the November bond sale.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=949971563"
+  },
+  {
    "sheet": "bot experiments 2",
-   "tab": "25 Cybercab registrations",
-   "title": "Tesla Cybercabs on the Texas robotaxi registry",
-   "image": "cotd/2026-11-07/04.png",
-   "picked": "Musk called it the end of an era as Tesla said it will wind down Cybertruck production at Giga Texas around mid-2027 to make room for more Cybercabs, per a story trending on X. Tesla also raised Cybertruck prices again on Nov 6.",
-   "matters": "Freeing up Cybertruck lines only matters if Cybercab output keeps ramping. Texas registrations are the most direct public count of how many are on the road.",
-   "know": "Cybercabs registered in Texas rose from 45 on Aug 31 to 573 on Oct 31 2026, the tab's latest check, including 544 on Oct 27. That's more than 12 times as many in two months. The data stops Oct 31, and the image's title still says 45 to 319, from an earlier build.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1601417155"
+   "tab": "13 BTC cost basis by holder",
+   "title": "Bitcoin's price versus what ETFs, companies and Strategy paid",
+   "image": "cotd/2026-11-08/11.png",
+   "picked": "Bitcoin is hovering around $75,700 this Sunday, right next to Strategy's widely cited $75,451 average cost, and that level is still being argued about on X. This tab compares what each big holder cohort actually paid.",
+   "matters": "When the market price sits on a cohort's average cost, their paper profits disappear and that price becomes a psychological line. ETF holders, treasury companies and Strategy each have a different line.",
+   "know": "On Oct 14 2026, the tab's latest snapshot with bitcoin at $81,562, average cost was $76,645 for US spot ETFs (1,296,599 BTC), $78,881 for public companies (1,303,718 BTC), $80,382 for treasury companies, $75,444 for Strategy (848,250 BTC) and $81,126 for IBIT (807,401 BTC). At about $75,700 today, IBIT holders and treasury companies as a group would be under water on those averages. The tab is about three weeks old and predates Strategy's subsequent November filing.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1078237833"
+  },
+  {
+   "sheet": "bot experiments 2",
+   "tab": "16 Strategy vs other corp BTC",
+   "title": "Strategy still holds most of the corporate bitcoin stack",
+   "image": "cotd/2026-11-08/12.png",
+   "picked": "A Bitcoin-treasury year-to-date horse race from @andysmith_asap, showing only Strive and The Smarter Web Company beating bitcoin this year as of the Nov 6 close, was one of this morning's featured charts. Strategy's share of the corporate pile is the structural fact behind that race.",
+   "matters": "If Strategy is about two-thirds of all public-company bitcoin, its buying, selling or premium drives the whole treasury-company complex. Everyone else is still a satellite.",
+   "know": "On Oct 14 2026 the tab has Strategy at 848,250 BTC and all other public companies at 455,468 BTC, or 65.1% for Strategy of a 1,303,718 BTC corporate total. Its share was 59.4% at the end of 2025 (672,502 versus 460,175). The chart title still cites 848,000 of 1.30 million BTC as of Oct 7, one week earlier than the last data row.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=757276361"
+  },
+  {
+   "sheet": "bot experiments 2",
+   "tab": "90 Public cos vs US ETFs BTC",
+   "title": "Bitcoin held by public companies versus US spot ETFs",
+   "image": "cotd/2026-11-08/13.png",
+   "picked": "US spot bitcoin ETFs just had a $1.28 billion outflow week, their worst in 19 weeks, while the treasury-company debate is about who is still adding coins. Companies and the ETFs are now roughly the same size.",
+   "matters": "For most of the ETF era the funds held far more bitcoin than companies did. Once companies caught up, treasury buying and ETF creations became equal forces on the demand side.",
+   "know": "Public companies held 1,304,885 BTC on the tab's latest reading, dated Oct 18 2026, slightly ahead of 1,283,680 BTC in US spot ETFs. They first passed the ETFs at the Jun 30 2026 quarter-end, 1,282,273 versus 1,210,299, up from 308,039 versus 837,279 in March 2024. The tab predates this week's outflows and still shows Strive at 35,595 BTC.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=956514556"
+  },
+  {
+   "sheet": "My Bot's Sheets",
+   "tab": "Bitcoin ETF Inflows and Outflows",
+   "title": "US spot bitcoin ETFs just posted another heavy outflow week",
+   "image": "cotd/2026-11-08/14.png",
+   "picked": "After $1.28 billion left US spot bitcoin ETFs in the week of Nov 2 through Nov 6, the worst week since June, the daily tape is what people are pointing to alongside bitcoin sitting on Strategy's cost basis.",
+   "matters": "Persistent ETF outflows mean the largest regulated buyer of the last two years has flipped to a seller, which matters more when corporate treasuries are the other big source of demand.",
+   "know": "The tab's latest five sessions are −$398.6 million on Nov 2, −$115.6 million on Nov 3, +$74.6 million on Nov 4, −$430.2 million on Nov 5 and −$411.9 million on Nov 6, which add up to −$1,281.7 million. Oct 30 was also weak, at −$643.2 million. The Drive PNG from the Nov 2 weekly export stops before this week, so the image is a fallback render from the live sheet through Nov 6.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1898876351"
   },
   {
    "sheet": "bot experiments 2",
    "tab": "87 Neocloud debt vs market cap",
    "title": "Neocloud debt as a share of market cap",
-   "image": "cotd/2026-11-07/07.png",
-   "picked": "ING is auctioning about $500 million of loans tied to a dozen data centers, including part of a Stargate site, and Oracle issued a force majeure notice to one developer, per stories trending on X. CoreWeave reports earnings Nov 10.",
-   "matters": "When lenders start trimming data center exposure, the most indebted AI cloud companies are the most exposed. Debt compared with equity value shows who has the least cushion.",
-   "know": "Using Oct 30 2026 closing prices, the tab has Cipher's debt at 187.5% of its market cap, CoreWeave 130.5% ($39.49 billion of debt vs $30.26 billion), Applied Digital 119.2%, TeraWulf 89.0%, IREN 83.1% and Nebius 30.4%. Neocloud stocks have dropped since then, so these ratios are likely higher now. Debt figures are mostly as of Jun 30 plus later note sales, and exclude operating leases (CoreWeave has $16.3 billion).",
+   "image": "cotd/2026-11-08/15.png",
+   "picked": "CoreWeave reports earnings Nov 10, and last week's AI-infrastructure selloff hit the most leveraged neoclouds again. Debt compared with what the equity market now says they are worth is the simplest solvency check going into the print.",
+   "matters": "A company whose debt already exceeds its market cap has little cushion if lenders tighten or if the stock keeps falling. That is the risk investors will take into Tuesday's report.",
+   "know": "Using Oct 30 2026 closing prices, the tab has Cipher's debt at 187.5% of market cap, CoreWeave at 130.5% ($39.49 billion of debt versus $30.26 billion of equity), Applied Digital at 119.2%, TeraWulf at 89.0%, IREN at 83.1% and Nebius at 30.4%. Neocloud stocks have dropped since Oct 30, so these ratios are likely higher now. Debt figures are mostly as of June 30 plus later note sales, and exclude operating leases.",
    "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=185222515"
   },
   {
+   "sheet": "bot experiments 2",
+   "tab": "75 CoreWeave backlog vs revenue",
+   "title": "CoreWeave: backlog versus quarterly revenue",
+   "image": "cotd/2026-11-08/16.png",
+   "picked": "CoreWeave reports Nov 10, two days from now. The backlog is what bulls will want to see hold up after last week's infrastructure selloff.",
+   "matters": "Remaining performance obligations tell you how much contracted revenue is already on the books relative to what the company billed last quarter. A shrinking multiple would be the warning; a rising one is the bull case.",
+   "know": "At the end of Q2 2026 the tab has CoreWeave's backlog at $103.7 billion against $2.58 billion of quarterly revenue, about 40 times that quarter's sales. The backlog was $14.7 billion in Q1 2025 and $60.7 billion at the end of 2025. The series stops at Q2, so Tuesday's report will be the first look at Q3.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=530554790"
+  },
+  {
    "sheet": "Bot experiments",
-   "tab": "199 Margin debt vs S&P",
-   "title": "Leverage check: margin debt growth vs the S&P 500",
-   "image": "cotd/2026-11-07/08.png",
-   "picked": "Investors put a record $9.5 billion into leveraged US ETFs last month, $7 billion of it into the 3x chip fund SOXL, which then lost about 60% as chips crashed this week, per a story trending on X.",
-   "matters": "Borrowed money makes selloffs faster, because falling prices force sales. Margin debt is the broadest measure of how much leverage retail and hedge fund accounts are carrying.",
-   "know": "In September 2026, the tab's latest month, margin debt was up 31.39% from a year earlier while the S&P 500 was up 14.4%. In August 2026 dollars, margin debt was $1,470.5 billion, just under its June record of $1,509.1 billion. The FINRA data comes with a lag, so it doesn't show any deleveraging from this week.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=626951791"
+   "tab": "154 Semis vs S&P 500",
+   "title": "Chip stocks versus the S&P 500",
+   "image": "cotd/2026-11-08/17.png",
+   "picked": "The SOX had its worst five-day run since 2001 through Nov 5, and Nvidia finished Friday near $182 after a roughly 9% drop. This ratio shows how far the whole chip group had already come off its summer peak before that week.",
+   "matters": "Semiconductors led the market up and are now leading it down. How they stand relative to the S&P tells you whether last week was a one-off smash or more of a slide that started months ago.",
+   "know": "On Oct 30 2026, the tab's latest month-end, the SOXX-to-SPY total-return ratio was 237.89 (July 2001 = 100) and SOXX itself was 26.37% below its peak. The ratio peaked at 327.76 at the end of June. The data ends Oct 30, so it does not include last week's crash.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=2061031585"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "201 Nvidia data center revenue",
+   "title": "Nvidia became a data-center company",
+   "image": "cotd/2026-11-08/18.png",
+   "picked": "Nvidia reports around Nov 17, and last week's chip smash was about whether the data-center boom is still on. This is the chart of how completely Nvidia already is that boom.",
+   "matters": "If data-center revenue is more than 90% of the company, every question about AI capex, export rules or customer concentration hits almost the entire income statement.",
+   "know": "In the quarter ended Jun 30 2026, Nvidia's data-center segment did $89.02 billion of revenue, 92.52% of the total, up 116.62% from a year earlier. Everything else was $7.20 billion. Data center was 45.32% of revenue in the quarter ended Jun 30 2020. The series stops in June, one print before the mid-November earnings.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1476428159"
   },
   {
    "sheet": "Bot experiments",
    "tab": "193 Stocks vs 200-day average",
-   "title": "How stretched are stocks? S&P 500 and Nasdaq-100 vs their 200-day average",
-   "image": "cotd/2026-11-07/09.png",
-   "picked": "The S&P 500 fell 2.68% this week to 7,376.86 and traders on X are watching whether SPY holds its 200-day moving average, after a 4.41% drop Thursday and a small bounce Friday.",
-   "matters": "The 200-day average is a widely watched line between an uptrend and a deeper correction. The gap to it shows how much cushion the market had left heading into this week.",
-   "know": "On the tab's latest weekly point, Oct 30 2026, the S&P 500 was 3.70% above its 200-day average and the Nasdaq-100 just 1.64% above. That was down from 12.12% for the Nasdaq-100 on Oct 2. The last time both were below the line was March to early April 2026, when the S&P bottomed at 4.01% below. The data ends Oct 30, before this week's selloff.",
+   "title": "How stretched are stocks? Distance from the 200-day average",
+   "image": "cotd/2026-11-08/19.png",
+   "picked": "After Thursday's drop and a small bounce Friday, traders on X are watching whether the S&P holds its 200-day moving average. This chart shows how little room there was heading into the week.",
+   "matters": "The 200-day average is a widely watched line between an uptrend and a deeper correction. A market that has already come back close to it has less cushion.",
+   "know": "On the tab's latest weekly point, Oct 30 2026, the S&P 500 was 3.70% above its 200-day average and the Nasdaq-100 just 1.64% above. That was down from 12.12% for the Nasdaq-100 on Oct 2. The last time both were below the line was March to early April 2026. The data ends Oct 30, before last week's selloff.",
    "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1003143037"
   },
   {
-   "sheet": "Bot experiments",
-   "tab": "121 India vs China stocks",
-   "title": "India vs China stocks in US dollars",
-   "image": "cotd/2026-11-07/10.png",
-   "picked": "India's Nifty 50 rose about 8% this week, its best week since early 2021, while Japan, South Korea and Taiwan sold off on AI worries, per a story trending on X. India has little exposure to the AI chip trade.",
-   "matters": "Money leaving crowded AI and chip markets in Asia has to go somewhere, and India has been the main beneficiary. This ratio shows how India has done relative to China since 2012.",
-   "know": "At the Oct 30 2026 month-end, the tab's latest point, the India-to-China ratio was 150.81 (Feb 2012 = 100), its highest of 2026 but well below its July 2024 peak of 223.28. INDA was at 211.4 and MCHI at 140.18 on the same base, so the gain came mostly from China falling. The data ends Oct 30, so this week's Indian rally isn't in it.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=614337209"
+   "sheet": "bot experiments 2",
+   "tab": "25 Cybercab registrations",
+   "title": "Tesla Cybercabs on the Texas robotaxi registry",
+   "image": "cotd/2026-11-08/20.png",
+   "picked": "Tesla said last week it will wind down Cybertruck production at Giga Texas around mid-2027 to free space for Cybercabs, and Musk called it the end of an era. Registrations are the public count of how many Cybercabs are actually appearing.",
+   "matters": "Clearing the truck line only pays off if Cybercab output is ramping. Texas registrations are the most direct public tally of vehicles on the road, not a production target.",
+   "know": "Cybercabs registered in Texas rose from 45 on Aug 31 to 573 on Oct 31 2026, the tab's latest check, including 544 on Oct 27. That is more than twelve times as many in two months. The data stops Oct 31, and the image title still says 45 to 319, from an earlier build.",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1601417155"
   }
  ]
 }

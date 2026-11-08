@@ -4,7 +4,7 @@ The Chartmaker tab **Charts of the day** reads `static/cotd/today.json` (fetched
 
 ## Daily steps (on the box)
 1. **Sync:** `cd /workspace/chartmaker && timeout 30 git fetch origin && git reset --hard origin/main`
-2. **Pick 20 charts** from the three sheets. Base the picks on today's news and X trends in Mark's areas: MSTR/Bitcoin, Tesla/robotaxi, SpaceX (SPCX), AI/neoclouds/data centers, and markets. Only pick charts with reasonably current data.
+2. **Pick up to 20 charts** (target 20; ship fewer if that is the honest count — never pad) from the three sheets. Base the picks on today's news and X trends in Mark's areas: MSTR/Bitcoin, Tesla/robotaxi, SpaceX (SPCX), AI/neoclouds/data centers, and markets. Only pick charts with reasonably current data.
    - Bot experiments: `1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY`
    - bot experiments 2: `1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ`
    - My Bot's Sheets: `1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU`
@@ -24,7 +24,7 @@ The Chartmaker tab **Charts of the day** reads `static/cotd/today.json` (fetched
 5. **Write the picks JSON** to `/workspace/cotd_src/picks.json`. Use the format in the `scripts/cotd_build.py` docstring. Each tab's `gid` comes from Sheets `get_spreadsheet`, as the tab's `sheetId`. Do not pick a gid in `sheets_catalog.EXCLUDED_TABS`. `cotd_build.py` refuses those tabs (deleted charts must not be republished).
 6. **Build:** `python3 scripts/cotd_build.py /workspace/cotd_src/picks.json`
    - It checks that each image isn't blank and fits it to 1600x900 on white.
-   - It requires exactly 20 items and writes every one to `static/cotd/<date>/01..20.png` and `static/cotd/today.json`. A list of any other length, including the old size of 10, is an error. The script does not drop extra charts.
+   - It accepts 1 through 20 items (target 20) and writes every one to `static/cotd/<date>/01..N.png` and `static/cotd/today.json`. Fewer than 20 is allowed so a short list is never padded. More than 20 is an error. The script does not drop extra charts.
    - It keeps the last 7 editions.
    - It stops with an error on any blank image, missing field, or excluded gid.
 7. **Check locally** (optional): run `VIEWS_STORE=browser python3 server.py 18799`, then open http://localhost:18799/ and go to the "Charts of the day" tab.
