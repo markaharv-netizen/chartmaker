@@ -725,6 +725,8 @@ function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='p
 $('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mPt').onclick=()=>setMode('pt');$('mPaper').onclick=()=>setMode('paper');
 // ---------- Favorites: shared by everyone signed in to this Chartmaker. No per-person accounts. ----------
 // Identity is book/gid/chartNumber (chart 1 is <gid>.png, chart n is <gid>_n.png). At most FAV_MAX.
+// A tab with no chart (a table) is one favorite, book/gid/1, labeled with the tab name. That is the
+// same file as the tab thumbnail and <gid>.png. Tabs that already have charts keep their chart numbers.
 // The server keeps the list in the same store as saved views. This browser also keeps a copy and any
 // clicks that have not been confirmed, so a failed sync can be retried without pretending it was saved.
 const FAVK='chartmaker_sheet_favs',FAV_MAX=200,FAV_RE=/^([A-Za-z0-9][A-Za-z0-9_-]{0,24})\/(\d+)\/([1-9]\d?)$/;
@@ -738,6 +740,8 @@ function sheetCharts(t){
   const out=[];
   raw.forEach((c,i)=>{const n=Number(c&&c.n)||i+1;if(!(n>=1&&n<=99))return;const title=normTitle(c&&c.title);
     out.push({n,title,label:title&&seen[title]===1?title:'Chart '+n})});
+  // A chartless tab (a table) is one item, n=1, labeled with the tab name. Key book/gid/1 matches <gid>.png.
+  if(!out.length){const title=normTitle(t&&t.tab);if(title)out.push({n:1,title,label:title,synthetic:true})}
   return out}
 function sheetChartList(t){return sheetCharts(t).map(c=>({n:c.n,label:c.label}))}
 function favKeep(list){
@@ -923,6 +927,10 @@ async function favSync(){
   }
 }
 function cotdChart(item,cat){
+  // chart_n is 1-based and follows catalog chartList order (same number as <gid>.png / <gid>_n.png).
+  // Use it when that chart exists. If that position is not on the tab, do not substitute another
+  // chart number. With no chart_n, a single chart or a table maps to its one item, and a multi-chart
+  // tab maps only on a unique title match. Never guess chart 1 when neither is present.
   if(!item||!cat)return null;
   const url=String(item.sheet_url||'');
   const hit=url.match(/\/spreadsheets\/d\/([A-Za-z0-9_-]+)\/[^#]*#gid=(\d+)/i)||url.match(/\/spreadsheets\/d\/([A-Za-z0-9_-]+)\/[^#]*[?&]gid=(\d+)/i);
@@ -932,7 +940,10 @@ function cotdChart(item,cat){
   const tab=(cat.tabs||[]).find(t=>t.book===book.id&&Number(t.gid)===Number(hit[2]));
   if(!tab)return null;
   const charts=sheetCharts(tab);
-  if(charts.length===1)return {tab,ch:charts[0],book};
+  const stated=item.chart_n,n=Number(stated);
+  const hasN=typeof stated==='number'&&Number.isInteger(n)&&n>=1&&n<=99;
+  if(hasN){const ch=charts.find(c=>c.n===n);if(ch)return {tab,ch,book}}
+  if(!hasN&&charts.length===1)return {tab,ch:charts[0],book};
   const want=normTitle(item.title).toLowerCase();
   if(!want||charts.length<2)return null;
   const hits=charts.filter(c=>normTitle(c.title).toLowerCase()===want||normTitle(c.label).toLowerCase()===want);
@@ -997,7 +1008,7 @@ async function sheetsEnter(){const el=$('sheets'),E=escHtml;
     const books=cat.books||[],tabs=cat.tabs||[];
     const bookBy=Object.fromEntries(books.map(b=>[b.id,b]));
     const when=cat.generated?new Date(cat.generated).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'';
-    el.innerHTML=`<h2>Sheets library</h2><p class="theme">Search ${tabs.length} tabs across ${books.map(b=>E(b.name)).join(', ')}. Opens the Google Sheet. Type a search to see a chart preview beside each result that has one. View PNG and Download PNG open the full-size chart when it is in the library, and the thumbnail when it is not. The preview stays the small thumbnail. The full list stays text-only, and a tab with no thumbnail is still listed. Star a chart to keep it under Favorites. Each chart on a tab has its own star.${when?' Catalog '+E(when)+'.':''}</p>
+    el.innerHTML=`<h2>Sheets library</h2><p class="theme">Search ${tabs.length} tabs across ${books.map(b=>E(b.name)).join(', ')}. Opens the Google Sheet. Type a search to see a chart preview beside each result that has one. View PNG and Download PNG open the full-size chart when it is in the library, and the thumbnail when it is not. The preview stays the small thumbnail. The full list stays text-only, and a tab with no thumbnail is still listed. Star a chart to keep it under Favorites. Each chart on a tab has its own star. A tab with no chart, such as a table, has one star, labeled with the tab name.${when?' Catalog '+E(when)+'.':''}</p>
 <div class="bar"><input id="shq" type="search" size="28" placeholder="Search tabs or chart titles" aria-label="Search tabs or chart titles" autocomplete="off">
 <select id="shbook" aria-label="Workbook"><option value="">All workbooks</option>${books.map(b=>`<option value="${E(b.id)}">${E(b.name)}</option>`).join('')}</select>
 <label style="display:flex;flex-direction:row;align-items:center;gap:4px;font-size:13px"><input id="shcharts" type="checkbox"> Has a chart</label>
@@ -1022,10 +1033,10 @@ async function sheetsEnter(){const el=$('sheets'),E=escHtml;
           const preview=h.ch.n===1?sheetThumb(h.tab):'';
           const href=file?file.href:(preview||'');
           const img=preview?`<a href="${E(href||preview)}" target="_blank" rel="noopener"><img src="${E(preview)}" alt="${E(h.ch.label)}" loading="lazy" onerror="var a=this.closest('a');if(a)a.remove()"></a>`:'';
-          return `<div class="row" data-favrow="${E(h.item.k)}"><div class="meta"><div class="book">${E(h.book.name||'')}</div><h3>${E(h.tab.tab)}</h3><div class="chartline">${favButton(h.tab.book,h.tab.gid,h.ch)}<span>${E(h.ch.label)}</span></div>${nofile}${open||png?`<div class="acts">${open}${png}</div>`:''}</div>${img}</div>`}).join('')||(q||book?'<div class="empty"><b>No favorites match.</b><p>None of the starred charts match this search or workbook.</p></div>':(FAV_DROPPED&&!FAV.length?'<div class="empty"><b>No favorites in the library.</b><p>The charts you starred are no longer in the library. They were removed and are not shown.</p></div>':'<div class="empty"><b>No favorites yet.</b><p>Turn Favorites off and star a chart, or star one on Charts of the day when that card is a single chart in the library. A tab with several charts is starred here, one star per chart.</p></div>'));
+          return `<div class="row" data-favrow="${E(h.item.k)}"><div class="meta"><div class="book">${E(h.book.name||'')}</div><h3>${E(h.tab.tab)}</h3><div class="chartline">${favButton(h.tab.book,h.tab.gid,h.ch)}<span>${E(h.ch.label)}</span></div>${nofile}${open||png?`<div class="acts">${open}${png}</div>`:''}</div>${img}</div>`}).join('')||(q||book?'<div class="empty"><b>No favorites match.</b><p>None of the starred charts match this search or workbook.</p></div>':(FAV_DROPPED&&!FAV.length?'<div class="empty"><b>No favorites in the library.</b><p>The charts you starred are no longer in the library. They were removed and are not shown.</p></div>':'<div class="empty"><b>No favorites yet.</b><p>Turn Favorites off and star a chart or a table, or star one on Charts of the day when that card is one chart or a table in the library. A tab with several charts is starred here, one star per chart. On Charts of the day a multi-chart tab is starred only when the card records that chart or its title matches one chart.</p></div>'));
         favPaint();return;
       }
-      const rows=tabs.filter(t=>{if(book&&t.book!==book)return false;if(need&&!sheetCharts(t).length)return false;
+      const rows=tabs.filter(t=>{if(book&&t.book!==book)return false;if(need&&!sheetCharts(t).some(c=>!c.synthetic))return false;
         if(!q)return true;const blob=(t.tab+' '+(t.charts||[]).join(' ')+' '+sheetCharts(t).map(c=>c.label+' '+c.title).join(' ')+' '+(bookBy[t.book]||{}).name).toLowerCase();return blob.includes(q)});
       const withThumb=q?rows.filter(t=>sheetThumb(t)).length:0;
       $('shcount').textContent=rows.length+' tab'+(rows.length===1?'':'s')+(q?(withThumb?` · ${withThumb} with a preview`:' · no previews'):'');

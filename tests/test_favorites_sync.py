@@ -133,6 +133,23 @@ class SyncStoreTest(unittest.TestCase):
         self.assertNotIn("1547332232", on_disk)
         self.assertNotIn("1024131985", on_disk)
 
+    def test_table_key_is_stored_beside_a_chart_key(self):
+        table = "bot2/1714490525/1"
+        out = server.favorites_write({"ops": [
+            {"op": "add", "k": table, "title": "9 MSTR preferreds table"},
+            {"op": "add", "k": ONE, "title": "OpenAI"},
+        ], "baseRev": 0})
+        self.assertEqual(self.keys(out), [table, ONE])
+        self.assertEqual(out["skipped"], [])
+        on_disk = json.load(open(server.VIEWS, encoding="utf-8"))
+        items = on_disk["favorites"]["items"]
+        self.assertEqual([(x["k"], x["title"]) for x in items], [
+            (table, "9 MSTR preferreds table"),
+            (ONE, "OpenAI"),
+        ])
+        again = server.favorites_read()
+        self.assertEqual([x["k"] for x in again["items"]], [table, ONE])
+
     def test_github_retry_does_not_drop_the_other_writers_star(self):
         state = {"sha": "aaa", "puts": 0, "doc": {
             "views": [{"name": "Keep me", "mode": "prices"}], "watchlist": None,
