@@ -4,7 +4,9 @@ Holdings, rank, ticker, country, the sheet's Change text, and each row's
 as-of date come from the committed snapshot btctop100.json. Refresh that
 file with scripts/refresh_btctop100.py. Change is the sheet's displayed
 text ("+810", "-336") or null when the cell is empty. USD value is BTC
-times a live Yahoo BTC-USD quote when one is available.
+times a live Yahoo BTC-USD quote when one is available. pctSupply is BTC
+divided by the 21,000,000 supply. The chart does not display either field.
+The weekday sync rewrites the snapshot only and does not add those columns.
 """
 import json, os
 import heat
