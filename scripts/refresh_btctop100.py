@@ -26,7 +26,11 @@ Credential order:
   GOOGLE_APPLICATION_CREDENTIALS or CHARTMAKER_GOOGLE_CREDENTIALS
     (service-account JSON; signed with openssl)
 
-USD value is not stored. The app multiplies BTC by a live BTC-USD quote.
+USD value and % of 21M are not stored. The app can still multiply BTC by a
+live BTC-USD quote for /api/treasury, but the Treasury chart does not draw
+a USD column or a % of 21M column. This script only rewrites btctop100.json.
+Do not add those fields to the snapshot, and do not edit the chart to show
+them again.
 
 Usage:
   python3 scripts/refresh_btctop100.py
@@ -439,6 +443,8 @@ def self_test():
     assert doc["companies"][0]["change"] == "+810", doc["companies"][0]
     assert doc["companies"][1]["change"] == "-336"
     assert doc["companies"][2]["change"] is None
+    for c in doc["companies"]:
+        assert "usd" not in c and "pctSupply" not in c, c
     validate(doc)
     print("self-test ok")
 
