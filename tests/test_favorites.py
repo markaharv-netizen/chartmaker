@@ -19,6 +19,10 @@ STATIC = os.path.join(ROOT, "static")
 FAVK = "chartmaker_sheet_favs"
 MULTI = "bot2/1078237833"  # 13 BTC cost basis by holder, two charts
 ONE = "bot1/1186940001"  # 226 OpenAI vs Anthropic revenue, one chart
+TABLE = "bot2/1714490525"  # 9 MSTR preferreds table, no charts
+ROBOTAXI = "bot2/1670158709"  # CotD #1, Robotaxi coverage table
+STARSHIP = "bot2/746117712"  # CotD #7, Starship flight test history
+STRATEGY = "bot1/779854179"  # CotD #5, one chart: 94 MSTR BTC holdings & cost
 RETIRED = ("1547332232", "643299192", "333185169", "1024131985", "1791345316", "1370617918")
 RETIRED_TABS = (
     "161 Nvidia P-S and P-E",
@@ -139,7 +143,29 @@ class FavoritesTest(unittest.TestCase):
         self.cdp.evaluate("document.getElementById('shfav').click()")
         self.wait("document.querySelectorAll('#shlist .row').length", lambda n: isinstance(n, int) and n > 400)
         rows = self.search("9 MSTR preferreds table")
-        self.assertEqual(rows, [{"tab": "9 MSTR preferreds table", "keys": []}])
+        self.assertEqual(rows, [{"tab": "9 MSTR preferreds table", "keys": [TABLE + "/1"]}])
+        label = self.cdp.evaluate("document.querySelector('button.fav').getAttribute('aria-label')")
+        self.assertTrue(label.startswith("Add to favorites"))
+        self.assertIn("9 MSTR preferreds table", label)
+        self.cdp.evaluate("document.querySelector('button.fav').click()")
+        self.wait("localStorage.getItem(%s)||''" % json.dumps(FAVK), lambda raw: TABLE in (raw or ""))
+        stored = json.loads(self.cdp.evaluate("localStorage.getItem(%s)" % json.dumps(FAVK)))
+        self.assertEqual(stored["items"][0]["k"], TABLE + "/1")
+        self.assertEqual(stored["items"][0]["title"], "9 MSTR preferreds table")
+        self.show_favorites()
+        fav = self.cdp.evaluate(r"""(() => {
+          const r = document.querySelector('#shlist .row');
+          const png = r.querySelector('a[href*=".png"]');
+          return {key: r.getAttribute('data-favrow'),
+            label: (r.querySelector('button.fav') || {}).getAttribute('aria-label') || '',
+            href: png ? png.getAttribute('href') : ''};
+        })()""")
+        self.assertEqual(fav["key"], TABLE + "/1")
+        self.assertIn("9 MSTR preferreds table", fav["label"])
+        self.assertIn("1714490525.png", fav["href"])
+        self.assertNotIn("_2", fav["href"])
+        self.cdp.evaluate("document.getElementById('shfav').click()")
+        self.wait("document.querySelectorAll('#shlist .row').length", lambda n: n == 1)
         self.cdp.evaluate("document.getElementById('shcharts').click()")
         self.wait(
             "document.querySelectorAll('#shlist .row').length",
@@ -173,21 +199,52 @@ class FavoritesTest(unittest.TestCase):
           const bot3='1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU';
           const url=(sid,gid)=>'https://docs.google.com/spreadsheets/d/'+sid+'/edit#gid='+gid;
           const n=hit=>hit&&hit.ch.n;
+          const multi=url(bot2,1078237833);
+          const table=cotdChart({title:'editorial table',sheet_url:url(bot2,1670158709)}, SHEETS);
+          const pref=SHEETS.tabs.find(t=>t.book==='bot2'&&t.gid===1714490525);
+          const prefCharts=sheetCharts(pref);
+          const held=sheetCharts(SHEETS.tabs.find(t=>t.gid===1078237833)).map(c=>c.n);
           return {
             one: n(cotdChart({title:'editorial title',sheet_url:url(bot1,1186940001)}, SHEETS)),
-            editorial: cotdChart({title:"Bitcoin's price versus what ETFs, companies and Strategy paid",sheet_url:url(bot2,1078237833)}, SHEETS),
-            exact: n(cotdChart({title:'Average acquisition cost: treasury companies vs. miners',sheet_url:url(bot2,1078237833)}, SHEETS)),
+            editorial: cotdChart({title:"Bitcoin's price versus what ETFs, companies and Strategy paid",sheet_url:multi}, SHEETS),
+            byN: n(cotdChart({title:"Bitcoin's price versus what ETFs, companies and Strategy paid",chart_n:1,sheet_url:multi}, SHEETS)),
+            byN2: n(cotdChart({title:'not a chart title',chart_n:2,sheet_url:multi}, SHEETS)),
+            missN: cotdChart({title:'not a chart title',chart_n:9,sheet_url:multi}, SHEETS),
+            missNTitle: n(cotdChart({title:'Average acquisition cost: treasury companies vs. miners',chart_n:9,sheet_url:multi}, SHEETS)),
+            missOnSingle: cotdChart({title:'editorial title',chart_n:9,sheet_url:url(bot1,1186940001)}, SHEETS),
+            exact: n(cotdChart({title:'Average acquisition cost: treasury companies vs. miners',sheet_url:multi}, SHEETS)),
+            exactOverridden: n(cotdChart({title:'Average acquisition cost: treasury companies vs. miners',chart_n:1,sheet_url:multi}, SHEETS)),
             missing: cotdChart({title:'Anthropic',sheet_url:url(bot3,978356289)}, SHEETS),
             retired: cotdChart({title:'retired',sheet_url:url(bot1,1547332232)}, SHEETS),
-            dup: cotdChart({title:'Strive denominated in BTC (ASST/BTC)',sheet_url:url(bot3,1045685066)}, SHEETS)
+            dup: cotdChart({title:'Strive denominated in BTC (ASST/BTC)',sheet_url:url(bot3,1045685066)}, SHEETS),
+            tableN: table&&table.ch.n,
+            tableLabel: table&&table.ch.label,
+            tableKey: table&&(table.tab.book+'/'+table.tab.gid+'/'+table.ch.n),
+            prefN: prefCharts.length,
+            prefLabel: prefCharts[0]&&prefCharts[0].label,
+            prefSynthetic: !!(prefCharts[0]&&prefCharts[0].synthetic),
+            held: held
           };
         })()""")
         self.assertEqual(ident["one"], 1)
         self.assertIsNone(ident["editorial"])
+        self.assertEqual(ident["byN"], 1)
+        self.assertEqual(ident["byN2"], 2)
+        self.assertIsNone(ident["missN"])
+        self.assertEqual(ident["missNTitle"], 2)
+        self.assertIsNone(ident["missOnSingle"])
         self.assertEqual(ident["exact"], 2)
+        self.assertEqual(ident["exactOverridden"], 1)
         self.assertIsNone(ident["missing"])
         self.assertIsNone(ident["retired"])
         self.assertIsNone(ident["dup"])
+        self.assertEqual(ident["tableN"], 1)
+        self.assertEqual(ident["tableLabel"], "27 Robotaxi coverage table")
+        self.assertEqual(ident["tableKey"], ROBOTAXI + "/1")
+        self.assertEqual(ident["prefN"], 1)
+        self.assertEqual(ident["prefLabel"], "9 MSTR preferreds table")
+        self.assertTrue(ident["prefSynthetic"])
+        self.assertEqual(ident["held"], [1, 2])
 
         self.cdp.call("Page.reload", {"ignoreCache": True})
         self.wait("document.readyState==='complete' && typeof setMode==='function'", lambda v: v is True)
@@ -225,40 +282,54 @@ class FavoritesTest(unittest.TestCase):
           return [...document.querySelectorAll('#cotd .card')].map(c => ({
             title: c.querySelector('h3').textContent,
             key: (c.querySelector('button.fav')||{}).dataset ? c.querySelector('button.fav').dataset.fav : '',
-            pressed: (c.querySelector('button.fav')||{}).getAttribute ? c.querySelector('button.fav').getAttribute('aria-pressed') : ''
+            pressed: (c.querySelector('button.fav')||{}).getAttribute ? c.querySelector('button.fav').getAttribute('aria-pressed') : '',
+            label: (c.querySelector('button.fav')||{}).getAttribute ? (c.querySelector('button.fav').getAttribute('aria-label') || '') : ''
           }));
         })()""")
-        ambiguous = next(c for c in cards if "Bitcoin's price versus what ETFs" in c["title"])
-        self.assertEqual(ambiguous["key"], "")
-        single = next(c for c in cards if "Reported revenue run-rates" in c["title"])
-        self.assertEqual(single["key"], ONE + "/1")
+        robot = next(c for c in cards if c["title"].startswith("1. "))
+        self.assertEqual(robot["key"], ROBOTAXI + "/1")
+        self.assertEqual(robot["pressed"], "false")
+        self.assertIn("27 Robotaxi coverage table", robot["label"])
+        btc = next(c for c in cards if "Bitcoin's price vs what ETFs" in c["title"])
+        self.assertEqual(btc["key"], MULTI + "/1")
+        self.assertEqual(btc["pressed"], "true")
+        self.assertIn("spot ETFs", btc["label"])
+        self.assertNotIn("miners", btc["label"])
+        ship = next(c for c in cards if "Starship's 14 flight tests" in c["title"])
+        self.assertEqual(ship["key"], STARSHIP + "/1")
+        self.assertEqual(ship["pressed"], "false")
+        self.assertIn("41 Starship flight test history", ship["label"])
+        anth = next(c for c in cards if "Anthropic's revenue" in c["title"])
+        self.assertEqual(anth["key"], "")
+        single = next(c for c in cards if "bitcoin held vs its average" in c["title"])
+        self.assertEqual(single["key"], STRATEGY + "/1")
         self.assertEqual(single["pressed"], "false")
-        absent = next(c for c in cards if c["title"].startswith("1. "))
-        self.assertEqual(absent["key"], "")
         note = self.cdp.evaluate("document.getElementById('cotd').innerText")
         self.assertTrue("this browser" in note or "no separate accounts" in note, note)
         for gid in RETIRED:
             self.assertNotIn(gid, note)
         for tab in RETIRED_TABS:
             self.assertNotIn(tab, note)
-        self.cdp.evaluate("document.querySelector('#cotd button.fav[data-fav=%s]').click()" % json.dumps(ONE + "/1"))
-        self.wait("localStorage.getItem(%s)||''" % json.dumps(FAVK), lambda raw: ONE in (raw or ""))
+        self.cdp.evaluate("document.querySelector('#cotd button.fav[data-fav=%s]').click()" % json.dumps(STRATEGY + "/1"))
+        self.wait("localStorage.getItem(%s)||''" % json.dumps(FAVK), lambda raw: STRATEGY in (raw or ""))
         self.cdp.evaluate("document.getElementById('mSheets').click()")
         self.wait("document.querySelectorAll('#shlist .row').length", lambda n: isinstance(n, int) and n > 0)
         self.show_favorites()
         keys = json.loads(self.cdp.evaluate(
             "JSON.stringify([...document.querySelectorAll('#shlist .row')].map(r=>r.getAttribute('data-favrow')))"))
-        self.assertIn(ONE + "/1", keys)
-        self.cdp.evaluate("document.querySelector('#shlist button.fav[data-fav=%s]').click()" % json.dumps(ONE + "/1"))
+        self.assertIn(STRATEGY + "/1", keys)
+        self.assertIn(MULTI + "/1", keys)
+        self.cdp.evaluate("document.querySelector('#shlist button.fav[data-fav=%s]').click()" % json.dumps(STRATEGY + "/1"))
         self.wait(
             "JSON.stringify([...document.querySelectorAll('#shlist .row')].map(r=>r.getAttribute('data-favrow')))",
-            lambda raw: ONE not in (raw or ""))
+            lambda raw: STRATEGY not in (raw or ""))
         self.cdp.evaluate("document.getElementById('mCotd').click()")
         self.wait("document.querySelectorAll('#cotd .card').length", lambda n: n == 18)
         pressed_again = self.cdp.evaluate(
-            "document.querySelector('#cotd button.fav[data-fav=%s]').getAttribute('aria-pressed')" % json.dumps(ONE + "/1"))
+            "document.querySelector('#cotd button.fav[data-fav=%s]').getAttribute('aria-pressed')" % json.dumps(STRATEGY + "/1"))
         self.assertEqual(pressed_again, "false")
-        self.assertNotIn(ONE + "/1", self.stored_keys())
+        self.assertNotIn(STRATEGY + "/1", self.stored_keys())
+        self.assertIn(MULTI + "/1", self.stored_keys())
 
     def test_missing_retired_and_retitled_charts_are_not_shown(self):
         self.open_sheets()

@@ -22,9 +22,11 @@ The Chartmaker tab **Charts of the day** reads `static/cotd/today.json` (fetched
    - **know:** what you should know. Use the chart's actual latest values and dates, and flag stale data.
    - Each text is plain and factual, 2-3 sentences, with no invented numbers.
 5. **Write the picks JSON** to `/workspace/cotd_src/picks.json`. Use the format in the `scripts/cotd_build.py` docstring. Each tab's `gid` comes from Sheets `get_spreadsheet`, as the tab's `sheetId`. Do not pick a gid in `sheets_catalog.EXCLUDED_TABS` (bot1 `333185169`, `1547332232`, `643299192`, `1791345316`, `1370617918`, `1024131985`) or in `cotd_build.COTD_EXCLUDED` (bot2 `645072508`, tab "69 Mark MSTR red dot tracker", BX2-069). The red-dot tracker stays in the sheet catalog and is left off Charts of the day only. `cotd_build.py` refuses those tabs (deleted charts must not be republished).
+   - When the tab has more than one chart, set `chart_n` to the 1-based position of the panel in the PNG. That number is the catalog `chartList` order: chart 1 is `<gid>.png`, chart 2 is `<gid>_2.png`. Leave `chart_n` off when you do not know which panel it is. Do not put `1` there as a guess.
 6. **Build:** `python3 scripts/cotd_build.py /workspace/cotd_src/picks.json`
    - It checks that each image isn't blank and fits it to 1600x900 on white.
    - It accepts 1 through 20 items (target 20) and writes every one to `static/cotd/<date>/01..N.png` and `static/cotd/today.json`. Fewer than 20 is allowed so a short list is never padded. More than 20 is an error. The script does not drop extra charts.
+   - It writes `chart_n` on a card when the pick includes a position that exists on that tab, when the tab has a single chart, when the tab is a table with no charts (`chart_n` 1, the same key as the tab thumbnail and `<gid>.png`), or when the card title matches exactly one chart. It omits `chart_n` when a multi-chart tab has no `chart_n` and no unique title match, and when a tab is not in the catalog unless the pick itself set `chart_n`. A `chart_n` that is not on a catalogued tab is an error. It does not guess chart 1.
    - It keeps the last 7 editions.
    - It stops with an error on any blank image, missing field, or excluded gid.
 7. **Check locally** (optional): run `VIEWS_STORE=browser python3 server.py 18799`, then open http://localhost:18799/ and go to the "Charts of the day" tab.
