@@ -61,14 +61,18 @@ _VS = {"doc": None, "sha": None, "at": 0}; _VLOCK = threading.Lock()
 # every signed-in browser sees the same stars. There are no per-person accounts.
 FAV_MAX, FAV_TOMBSTONES = 200, 500
 FAV_KEY_RE = re.compile(r"^([A-Za-z0-9][A-Za-z0-9_-]{0,24})/(\d+)/([1-9]\d?)$")
-# Permanent retired charts. 1024131985 is Strategy tab 99, kept out of the catalog
-# by cotd_build even though it is not in sheets_catalog.EXCLUDED_TABS.
+# Permanent retired charts. These stay rejected even if sheets_catalog cannot be
+# imported. EXCLUDED_TABS is unioned in when that module loads. 1024131985 is
+# Strategy tab 99 (PR #34) and is in EXCLUDED_TABS as well. 1791345316 and
+# 1370617918 are the Korea/Taiwan and supercore tabs Mark deleted on 2026-11-09.
 def _favorite_retired():
     pairs = {
         ("bot1", 1547332232),
         ("bot1", 643299192),
         ("bot1", 333185169),
         ("bot1", 1024131985),
+        ("bot1", 1791345316),
+        ("bot1", 1370617918),
     }
     try:
         scripts = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts")

@@ -21,7 +21,7 @@ The Chartmaker tab **Charts of the day** reads `static/cotd/today.json` (fetched
    - **matters:** why it matters.
    - **know:** what you should know. Use the chart's actual latest values and dates, and flag stale data.
    - Each text is plain and factual, 2-3 sentences, with no invented numbers.
-5. **Write the picks JSON** to `/workspace/cotd_src/picks.json`. Use the format in the `scripts/cotd_build.py` docstring. Each tab's `gid` comes from Sheets `get_spreadsheet`, as the tab's `sheetId`. Do not pick a gid in `sheets_catalog.EXCLUDED_TABS`. `cotd_build.py` refuses those tabs (deleted charts must not be republished).
+5. **Write the picks JSON** to `/workspace/cotd_src/picks.json`. Use the format in the `scripts/cotd_build.py` docstring. Each tab's `gid` comes from Sheets `get_spreadsheet`, as the tab's `sheetId`. Do not pick a gid in `sheets_catalog.EXCLUDED_TABS` (bot1 `333185169`, `1547332232`, `643299192`, `1791345316`, `1370617918`, `1024131985`) or in `cotd_build.COTD_EXCLUDED` (bot2 `645072508`, tab "69 Mark MSTR red dot tracker", BX2-069). The red-dot tracker stays in the sheet catalog and is left off Charts of the day only. `cotd_build.py` refuses those tabs (deleted charts must not be republished).
 6. **Build:** `python3 scripts/cotd_build.py /workspace/cotd_src/picks.json`
    - It checks that each image isn't blank and fits it to 1600x900 on white.
    - It accepts 1 through 20 items (target 20) and writes every one to `static/cotd/<date>/01..N.png` and `static/cotd/today.json`. Fewer than 20 is allowed so a short list is never padded. More than 20 is an error. The script does not drop extra charts.
