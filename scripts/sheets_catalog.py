@@ -44,10 +44,23 @@ BY_ID = {sid: (bid, name) for bid, name, sid in BOOKS}
 # ("bot1", 643299192) is "202 Nvidia revenue by geography": chart
 # "Where Nvidia bills its sales: revenue share by customer billing location (quarterly)"
 # (chartId 2093032125). Mark deleted the tab on 2026-11-07.
+# ("bot1", 1791345316) is "158 Korea & Taiwan vs S&P": chart
+# "Asia's AI chip exporters: Korea (EWY) and Taiwan (EWT) vs the S&P 500"
+# (chartId 1633932513). Mark deleted the tab on 2026-11-09.
+# ("bot1", 1370617918) is "163 Supercore vs core CPI": chart
+# "The Fed's 'supercore': services ex-shelter inflation vs core and headline CPI"
+# (chartId 1771336871). Mark deleted the tab on 2026-11-09.
+# ("bot1", 1024131985) is Strategy tab 99 "99 MSTR BTC per share": chart
+# "Strategy: bitcoin per diluted share vs share count (at each 8-K)"
+# (chartId 878632585). Removed in PR #34. Mark deleted the tab. It was missing
+# from this set and was only checked by the Charts of the day self-test.
 EXCLUDED_TABS = {
     ("bot1", 333185169),
     ("bot1", 1547332232),
     ("bot1", 643299192),
+    ("bot1", 1791345316),
+    ("bot1", 1370617918),
+    ("bot1", 1024131985),
 }
 
 def tab_excluded(book, gid):
@@ -206,29 +219,50 @@ def self_test():
             sheet("201 Nvidia data center revenue", 1476428159,
                   "Nvidia became a data-center company: quarterly revenue, data center vs everything else"),
             sheet("194 Nvidia vs Cisco 2000", 999, "Is Nvidia the new Cisco?"),
+            sheet("158 Korea & Taiwan vs S&P", 1791345316,
+                  "Asia's AI chip exporters: Korea (EWY) and Taiwan (EWT) vs the S&P 500"),
+            sheet("163 Supercore vs core CPI", 1370617918,
+                  "The Fed's 'supercore': services ex-shelter inflation vs core and headline CPI"),
+            sheet("99 MSTR BTC per share", 1024131985,
+                  "Strategy: bitcoin per diluted share vs share count (at each 8-K)"),
+            sheet("160 China vs Mexico vs Taiwan", 171599627,
+                  "Where US imports come from: China, Mexico and Taiwan (AI servers) shares, rolling 12 months"),
             sheet("hidden junk", 5, "nope", hidden=True),
         ],
     }
     _book, tabs, hidden, excluded = one(doc)
     gids = [t["gid"] for t in tabs]
-    assert gids == [1476428159, 999], gids
-    assert hidden == 1 and excluded == 3, (hidden, excluded)
+    assert gids == [1476428159, 999, 171599627], gids
+    assert hidden == 1 and excluded == 6, (hidden, excluded)
     assert ("bot1", 333185169) in EXCLUDED_TABS
     assert tab_excluded("bot1", 1547332232) and tab_excluded("bot1", 643299192)
+    assert tab_excluded("bot1", 1791345316) and tab_excluded("bot1", 1370617918)
+    assert tab_excluded("bot1", 1024131985)
     assert not tab_excluded("bot1", 1476428159)
+    assert not tab_excluded("bot1", 171599627)
+    assert not tab_excluded("bot2", 645072508)
     titles = [c for t in tabs for c in t["charts"]]
     assert not any("trailing P/E" in c or "billing location" in c for c in titles)
     assert any("data-center company" in c for c in titles)
     repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     cat = json.load(open(os.path.join(repo, "static", "sheets", "catalog.json"), encoding="utf-8"))
     live = {(t["book"], t["gid"]) for t in cat["tabs"]}
-    for gid in (333185169, 1547332232, 643299192):
+    for gid in (333185169, 1547332232, 643299192, 1791345316, 1370617918, 1024131985):
         assert ("bot1", gid) not in live, gid
+    assert ("bot1", 171599627) in live
+    assert ("bot2", 645072508) in live
+    assert len(cat["tabs"]) == 497, len(cat["tabs"])
     blob = json.dumps(cat)
     assert "Nvidia valuation: price-to-sales and trailing P/E (month-end)" not in blob
     assert "Where Nvidia bills its sales: revenue share by customer billing location (quarterly)" not in blob
     assert "161 Nvidia P-S and P-E" not in blob
     assert "202 Nvidia revenue by geography" not in blob
+    assert "Asia's AI chip exporters: Korea (EWY) and Taiwan (EWT) vs the S&P 500" not in blob
+    assert "The Fed's 'supercore': services ex-shelter inflation vs core and headline CPI" not in blob
+    assert "158 Korea & Taiwan vs S&P" not in blob
+    assert "163 Supercore vs core CPI" not in blob
+    assert "99 MSTR BTC per share" not in blob
+    assert "Strategy: bitcoin per diluted share vs share count (at each 8-K)" not in blob
     names = {t["tab"] for t in cat["tabs"]}
     for keep in (
         "201 Nvidia data center revenue",
@@ -243,9 +277,18 @@ def self_test():
         assert keep in names, keep
     today = json.load(open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8"))
     today_blob = json.dumps(today)
+    assert len(today["items"]) == 18, len(today["items"])
     assert "1547332232" not in today_blob and "643299192" not in today_blob
+    assert "1791345316" not in today_blob and "1370617918" not in today_blob
     assert "161 Nvidia P-S and P-E" not in today_blob
     assert "202 Nvidia revenue by geography" not in today_blob
+    assert "158 Korea & Taiwan vs S&P" not in today_blob
+    assert "163 Supercore vs core CPI" not in today_blob
+    assert "Taiwan's chip stocks surge" not in today["theme"]
+    assert "October CPI is due Tuesday" not in today["theme"]
+    images = [it["image"] for it in today["items"]]
+    assert "cotd/2026-11-09/18.png" not in images and "cotd/2026-11-09/20.png" not in images
+    assert "cotd/2026-11-09/17.png" in images and "cotd/2026-11-09/19.png" in images
     for rel in (
         "static/sheets/full/bot1/1547332232.png",
         "static/sheets/full/bot1/643299192.png",
@@ -253,11 +296,22 @@ def self_test():
         "static/sheets/thumbs/bot1/643299192.jpg",
         "static/cotd/2026-11-07/05.png",
         "static/cotd/2026-11-07/06.png",
+        "static/sheets/full/bot1/1791345316.png",
+        "static/sheets/full/bot1/1370617918.png",
+        "static/sheets/thumbs/bot1/1791345316.jpg",
+        "static/sheets/thumbs/bot1/1370617918.jpg",
+        "static/cotd/2026-11-09/18.png",
+        "static/cotd/2026-11-09/20.png",
     ):
         assert not os.path.isfile(os.path.join(repo, rel)), rel
+    assert os.path.isfile(os.path.join(repo, "static/sheets/full/bot2/645072508.png"))
+    assert os.path.isfile(os.path.join(repo, "static/sheets/thumbs/bot2/645072508.jpg"))
+    assert os.path.isfile(os.path.join(repo, "static/sheets/full/bot1/171599627.png"))
     full = os.path.join(repo, "static", "sheets", "full", "bot1")
     for fn in os.listdir(full):
         assert not fn.startswith("1547332232") and not fn.startswith("643299192"), fn
+        assert not fn.startswith("1791345316") and not fn.startswith("1370617918"), fn
+        assert not fn.startswith("1024131985"), fn
     scratch = tempfile.mkdtemp(prefix="excluded-assets-")
     try:
         for rel in (
@@ -267,6 +321,12 @@ def self_test():
             "static/sheets/full/bot1/1476428159.png",
             "static/sheets/thumbs/bot1/333185169.jpg",
             "static/sheets/full/bot1/643299192.png",
+            "static/sheets/full/bot1/1791345316.png",
+            "static/sheets/full/bot1/1791345316_2.png",
+            "static/sheets/thumbs/bot1/1370617918.jpg",
+            "static/sheets/full/bot1/1024131985.png",
+            "static/sheets/full/bot1/171599627.png",
+            "static/sheets/full/bot2/645072508.png",
         ):
             path = os.path.join(scratch, rel)
             os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -277,7 +337,15 @@ def self_test():
         assert not os.path.exists(os.path.join(scratch, "static/sheets/full/bot1/1547332232_2.png"))
         assert not os.path.exists(os.path.join(scratch, "static/sheets/thumbs/bot1/1547332232.jpg"))
         assert os.path.isfile(os.path.join(scratch, "static/sheets/full/bot1/1476428159.png"))
+        assert os.path.isfile(os.path.join(scratch, "static/sheets/full/bot1/171599627.png"))
+        assert os.path.isfile(os.path.join(scratch, "static/sheets/full/bot2/645072508.png"))
+        assert not os.path.exists(os.path.join(scratch, "static/sheets/full/bot1/1791345316.png"))
+        assert not os.path.exists(os.path.join(scratch, "static/sheets/full/bot1/1791345316_2.png"))
+        assert not os.path.exists(os.path.join(scratch, "static/sheets/thumbs/bot1/1370617918.jpg"))
+        assert not os.path.exists(os.path.join(scratch, "static/sheets/full/bot1/1024131985.png"))
         assert any("643299192" in r for r in gone) and any("333185169" in r for r in gone)
+        assert any("1791345316" in r for r in gone) and any("1370617918" in r for r in gone)
+        assert any("1024131985" in r for r in gone)
     finally:
         shutil.rmtree(scratch, ignore_errors=True)
     print("self-test ok")

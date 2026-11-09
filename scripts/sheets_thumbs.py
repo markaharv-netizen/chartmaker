@@ -428,6 +428,16 @@ def self_test():
          "charts": ["Nvidia valuation: price-to-sales and trailing P/E (month-end)"]},
         {"book": "bot1", "tab": "201 Nvidia data center revenue", "gid": 1476428159,
          "charts": ["Nvidia became a data-center company: quarterly revenue, data center vs everything else"]},
+        {"book": "bot1", "tab": "158 Korea & Taiwan vs S&P", "gid": 1791345316,
+         "charts": ["Asia's AI chip exporters: Korea (EWY) and Taiwan (EWT) vs the S&P 500"]},
+        {"book": "bot1", "tab": "163 Supercore vs core CPI", "gid": 1370617918,
+         "charts": ["The Fed's 'supercore': services ex-shelter inflation vs core and headline CPI"]},
+        {"book": "bot1", "tab": "99 MSTR BTC per share", "gid": 1024131985,
+         "charts": ["Strategy: bitcoin per diluted share vs share count (at each 8-K)"]},
+        {"book": "bot1", "tab": "160 China vs Mexico vs Taiwan", "gid": 171599627,
+         "charts": ["Where US imports come from: China, Mexico and Taiwan (AI servers) shares, rolling 12 months"]},
+        {"book": "bot2", "tab": "69 Mark MSTR red dot tracker", "gid": 645072508,
+         "charts": ["Mark's Red Dot Tracker: MSTR"]},
     ]
     def f(path, parent, mtime, explicit=None):
         return {"path": path, "name": os.path.basename(path), "parent": parent, "mtime": mtime, "explicit": explicit}
@@ -444,6 +454,11 @@ def self_test():
         f("/e/Shared title.png", "", 10, None),
         f("/e/161 Nvidia P-S and P-E.png", "", 10, None),
         f("/e/201 Nvidia data center revenue.png", "", 10, None),
+        f("/e/158 Korea & Taiwan vs S&P.png", "", 10, None),
+        f("/e/163 Supercore vs core CPI.png", "", 10, None),
+        f("/e/99 MSTR BTC per share.png", "", 10, None),
+        f("/e/160 China vs Mexico vs Taiwan.png", "", 10, None),
+        f("/e/69 Mark MSTR red dot tracker.png", "bot experiments 2", 10, None),
     ]
     # The second MSTR file is a different path; basename collides in this list on purpose.
     files[5]["path"] = "/wrong/MSTR Volume.png"
@@ -463,6 +478,15 @@ def self_test():
     assert ("bot1", 1547332232) not in chosen
     assert any(p.endswith("161 Nvidia P-S and P-E.png") for p in unmatched)
     assert winner(1476428159)[1] == "tab"
+    for gid, name in (
+        (1791345316, "158 Korea & Taiwan vs S&P.png"),
+        (1370617918, "163 Supercore vs core CPI.png"),
+        (1024131985, "99 MSTR BTC per share.png"),
+    ):
+        assert ("bot1", gid) not in chosen
+        assert any(p.endswith(name) for p in unmatched), name
+    assert winner(171599627)[1] == "tab"
+    assert winner(645072508)[1] == "tab"
     # Newest mtime when the date is the same.
     files2 = [
         f("/e/MSTR Volume 2026-10-21.png", "", 10, None),

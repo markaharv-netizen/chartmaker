@@ -26,12 +26,16 @@ RETIRED = (
     "643299192",   # 202 Nvidia revenue by geography
     "333185169",   # 87 TSLA beta to Nasdaq
     "1024131985",  # 99 MSTR BTC per share (Strategy)
+    "1791345316",  # 158 Korea & Taiwan vs S&P
+    "1370617918",  # 163 Supercore vs core CPI
 )
 RETIRED_TABS = (
     "161 Nvidia P-S and P-E",
     "202 Nvidia revenue by geography",
     "87 TSLA beta to Nasdaq",
     "99 MSTR BTC per share",
+    "158 Korea & Taiwan vs S&P",
+    "163 Supercore vs core CPI",
 )
 
 

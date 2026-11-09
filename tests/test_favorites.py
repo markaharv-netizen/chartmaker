@@ -19,12 +19,14 @@ STATIC = os.path.join(ROOT, "static")
 FAVK = "chartmaker_sheet_favs"
 MULTI = "bot2/1078237833"  # 13 BTC cost basis by holder, two charts
 ONE = "bot1/1186940001"  # 226 OpenAI vs Anthropic revenue, one chart
-RETIRED = ("1547332232", "643299192", "333185169", "1024131985")
+RETIRED = ("1547332232", "643299192", "333185169", "1024131985", "1791345316", "1370617918")
 RETIRED_TABS = (
     "161 Nvidia P-S and P-E",
     "202 Nvidia revenue by geography",
     "87 TSLA beta to Nasdaq",
     "99 MSTR BTC per share",
+    "158 Korea & Taiwan vs S&P",
+    "163 Supercore vs core CPI",
 )
 
 
@@ -218,7 +220,7 @@ class FavoritesTest(unittest.TestCase):
         self.assertNotIn("1078237833.png", second["note"])
 
         self.cdp.evaluate("document.getElementById('mCotd').click()")
-        self.wait("document.querySelectorAll('#cotd .card').length", lambda n: n == 20)
+        self.wait("document.querySelectorAll('#cotd .card').length", lambda n: n == 18)
         cards = self.cdp.evaluate(r"""(() => {
           return [...document.querySelectorAll('#cotd .card')].map(c => ({
             title: c.querySelector('h3').textContent,
@@ -252,7 +254,7 @@ class FavoritesTest(unittest.TestCase):
             "JSON.stringify([...document.querySelectorAll('#shlist .row')].map(r=>r.getAttribute('data-favrow')))",
             lambda raw: ONE not in (raw or ""))
         self.cdp.evaluate("document.getElementById('mCotd').click()")
-        self.wait("document.querySelectorAll('#cotd .card').length", lambda n: n == 20)
+        self.wait("document.querySelectorAll('#cotd .card').length", lambda n: n == 18)
         pressed_again = self.cdp.evaluate(
             "document.querySelector('#cotd button.fav[data-fav=%s]').getAttribute('aria-pressed')" % json.dumps(ONE + "/1"))
         self.assertEqual(pressed_again, "false")
@@ -435,7 +437,7 @@ class FavoritesTest(unittest.TestCase):
         self.cdp.evaluate("setMode('paper')")
         self.assertEqual(self.cdp.evaluate("getComputedStyle(document.getElementById('paper')).display"), "block")
         self.cdp.evaluate("setMode('cotd')")
-        self.wait("document.querySelectorAll('#cotd .card').length", lambda n: n == 20)
+        self.wait("document.querySelectorAll('#cotd .card').length", lambda n: n == 18)
 
 
 if __name__ == "__main__":

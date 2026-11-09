@@ -32,6 +32,12 @@ W, H = 1600, 900
 EDITION_MIN = 1
 EDITION_MAX = 20
 EDITION_SIZE = EDITION_MAX
+# Charts of the day only. These tabs stay in the sheet catalog, full PNGs, and thumbnails.
+# ("bot2", 645072508) is BX2-069, tab "69 Mark MSTR red dot tracker", chart
+# "Mark's Red Dot Tracker: MSTR". The tab still exists. It is retired from this edition only.
+COTD_EXCLUDED = {
+    ("bot2", 645072508),
+}
 
 def check(im, path):
     from PIL import ImageStat
@@ -54,7 +60,7 @@ def fit(src, dst):
     return os.path.getsize(dst)
 
 def pick_excluded(item):
-    """True when this Charts of the day pick is a tab the library must not publish."""
+    """True when this Charts of the day pick must not be published."""
     sid = str(item.get("spreadsheetId") or "").strip()
     gid = item.get("gid")
     if gid in (None, ""):
@@ -62,7 +68,13 @@ def pick_excluded(item):
     pair = sheets_catalog.BY_ID.get(sid)
     if not pair:
         return False
-    return sheets_catalog.tab_excluded(pair[0], gid)
+    book = pair[0]
+    if sheets_catalog.tab_excluded(book, gid):
+        return True
+    try:
+        return (book, int(gid)) in COTD_EXCLUDED
+    except (TypeError, ValueError):
+        return False
 
 def validate(items):
     """Accept 1 through 20 items; reject an empty list or anything over the cap."""
@@ -104,20 +116,36 @@ def publish(P, repo, keep_old):
 def self_test():
     import tempfile
     bot1 = "1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY"
+    bot2 = "1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ"
     assert EDITION_MIN == 1 and EDITION_MAX == 20
+    assert ("bot2", 645072508) in COTD_EXCLUDED
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1547332232})
     assert pick_excluded({"spreadsheetId": bot1, "gid": 643299192})
     assert pick_excluded({"spreadsheetId": bot1, "gid": 333185169})
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1791345316})
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1370617918})
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1024131985})
+    assert pick_excluded({"spreadsheetId": bot2, "gid": 645072508})
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1476428159})
+    # Neighbor of the deleted Korea/Taiwan tab: "160 China vs Mexico vs Taiwan".
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 171599627})
     assert not pick_excluded({"spreadsheetId": bot1, "gid": ""})
     live = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     # Retired charts stay out of the published edition and the sheet catalog.
     # 1024131985 is Strategy tab 99 (MSTR BTC per share), removed in PR #34.
+    # 1791345316 and 1370617918 were deleted on 2026-11-09.
+    # 645072508 stays in the catalog (Charts of the day only) and is not in this list.
     for rel in ("static/cotd/today.json", "static/sheets/catalog.json"):
         with open(os.path.join(live, rel), encoding="utf-8") as f:
             blob = f.read()
-        for gid in (1547332232, 643299192, 333185169, 1024131985):
+        for gid in (1547332232, 643299192, 333185169, 1024131985, 1791345316, 1370617918):
             assert str(gid) not in blob, (rel, gid)
+    with open(os.path.join(live, "static/sheets/catalog.json"), encoding="utf-8") as f:
+        catalog_blob = f.read()
+    with open(os.path.join(live, "static/cotd/today.json"), encoding="utf-8") as f:
+        today_blob = f.read()
+    assert "645072508" in catalog_blob
+    assert "645072508" not in today_blob
 
     def item(i, **kw):
         row = {"spreadsheetId": bot1, "sheet": "Bot experiments", "tab": f"sample tab {i}",
@@ -141,14 +169,21 @@ def self_test():
         rejected([item(i) for i in range(1, n + 1)], f"need 1 to {EDITION_MAX} items, got {n}")
     validate([item(i) for i in range(1, 11)])
     validate([item(i) for i in range(1, 20)])
-    for gid, tab in (
-        (1547332232, "161 Nvidia P-S and P-E"),
-        (643299192, "202 Nvidia revenue by geography"),
-        (333185169, "87 TSLA beta to Nasdaq"),
+    for gid, tab, sid in (
+        (1547332232, "161 Nvidia P-S and P-E", bot1),
+        (643299192, "202 Nvidia revenue by geography", bot1),
+        (333185169, "87 TSLA beta to Nasdaq", bot1),
+        (1791345316, "158 Korea & Taiwan vs S&P", bot1),
+        (1370617918, "163 Supercore vs core CPI", bot1),
+        (1024131985, "99 MSTR BTC per share", bot1),
+        (645072508, "69 Mark MSTR red dot tracker", bot2),
     ):
         items = [item(i) for i in range(1, EDITION_MAX + 1)]
-        items[4] = item(5, gid=gid, tab=tab, spreadsheetId=bot1)
+        items[4] = item(5, gid=gid, tab=tab, spreadsheetId=sid)
         rejected(items, f"gid {gid}")
+    neighbor = [item(i) for i in range(1, 4)]
+    neighbor[1] = item(2, gid=171599627, tab="160 China vs Mexico vs Taiwan", spreadsheetId=bot1)
+    validate(neighbor)
 
     src = os.path.join(tempfile.mkdtemp(prefix="cotd-src-"), "chart.png")
     os.makedirs(os.path.dirname(src), exist_ok=True)
@@ -169,6 +204,15 @@ def self_test():
             assert "gid 643299192" in str(e), e
         else:
             raise SystemExit("an excluded gid was published")
+        assert not os.path.exists(os.path.join(repo, "static", "cotd", "today.json"))
+        red_dot = [item(i, png=src) for i in range(1, 6)]
+        red_dot[1] = item(2, png=src, gid=645072508, tab="69 Mark MSTR red dot tracker", spreadsheetId=bot2)
+        try:
+            publish({"date": "2099-01-15", "theme": "cotd only", "items": red_dot}, repo, 0)
+        except SystemExit as e:
+            assert "gid 645072508" in str(e), e
+        else:
+            raise SystemExit("a Charts-of-the-day-only gid was published")
         assert not os.path.exists(os.path.join(repo, "static", "cotd", "today.json"))
         extra = {"date": "2099-01-15", "theme": "too many", "items": [item(i, png=src) for i in range(1, 22)]}
         try:

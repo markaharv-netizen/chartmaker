@@ -292,26 +292,50 @@ def self_test():
         blocked = os.path.join(b1, "161 Nvidia P-S and P-E.png")
         blocked2 = os.path.join(b1, "202 Nvidia revenue by geography (2).png")
         kept = os.path.join(b1, "201 Nvidia data center revenue.png")
-        with open(blocked, "wb") as f:
-            f.write(new_bytes)
-        with open(blocked2, "wb") as f:
-            f.write(new_bytes)
-        # Neighbor Nvidia chart is not excluded; give it a catalog row and confirm it still imports.
-        catalog["tabs"].append({
-            "book": "bot1", "tab": "201 Nvidia data center revenue", "gid": 1476428159, "charts": [],
-        })
+        korea = os.path.join(b1, "158 Korea & Taiwan vs S&P.png")
+        korea2 = os.path.join(b1, "158 Korea & Taiwan vs S&P (2).png")
+        supercore = os.path.join(b1, "163 Supercore vs core CPI.png")
+        strategy = os.path.join(b1, "99 MSTR BTC per share.png")
+        china = os.path.join(b1, "160 China vs Mexico vs Taiwan.png")
+        red_dot = os.path.join(mstr_dir, "69 Mark MSTR red dot tracker.png")
+        for path in (blocked, blocked2, korea, korea2, supercore, strategy):
+            with open(path, "wb") as f:
+                f.write(new_bytes)
+        # Neighbor charts are not excluded; give them catalog rows and confirm they still import.
+        # BX2-069 stays importable: it is Charts-of-the-day-only, not EXCLUDED_TABS.
+        catalog["tabs"].extend([
+            {"book": "bot1", "tab": "201 Nvidia data center revenue", "gid": 1476428159, "charts": []},
+            {"book": "bot1", "tab": "158 Korea & Taiwan vs S&P", "gid": 1791345316,
+             "charts": ["Asia's AI chip exporters: Korea (EWY) and Taiwan (EWT) vs the S&P 500"]},
+            {"book": "bot1", "tab": "163 Supercore vs core CPI", "gid": 1370617918,
+             "charts": ["The Fed's 'supercore': services ex-shelter inflation vs core and headline CPI"]},
+            {"book": "bot1", "tab": "99 MSTR BTC per share", "gid": 1024131985,
+             "charts": ["Strategy: bitcoin per diluted share vs share count (at each 8-K)"]},
+            {"book": "bot1", "tab": "160 China vs Mexico vs Taiwan", "gid": 171599627, "charts": []},
+            {"book": "bot2", "tab": "69 Mark MSTR red dot tracker", "gid": 645072508,
+             "charts": ["Mark's Red Dot Tracker: MSTR"]},
+        ])
         with open(os.path.join(repo, "static", "sheets", "catalog.json"), "w", encoding="utf-8") as f:
             json.dump(catalog, f)
-        with open(kept, "wb") as f:
-            f.write(old_bytes)
+        for path in (kept, china, red_dot):
+            with open(path, "wb") as f:
+                f.write(old_bytes)
         n2, u2, a2 = run(repo, [src], optimize_png=False, dry=False)
-        assert n2 == 6, n2  # the original five, plus the kept Nvidia tab; the two excluded tabs are not written
-        assert u2 == 4, u2  # noise, stray, and the two excluded exports
+        # original five, plus data center, China/Mexico/Taiwan, and the red-dot tracker
+        assert n2 == 8, n2
+        # noise, stray, two Nvidia exports, Korea, Korea chart 2, supercore, Strategy
+        assert u2 == 8, u2
         assert a2 == 0, a2
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1547332232.png"))
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "643299192.png"))
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "643299192_2.png"))
+        assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1791345316.png"))
+        assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1791345316_2.png"))
+        assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1370617918.png"))
+        assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1024131985.png"))
         assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "1476428159.png"), "rb").read() == old_bytes
+        assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "171599627.png"), "rb").read() == old_bytes
+        assert open(os.path.join(repo, "static", "sheets", "full", "bot2", "645072508.png"), "rb").read() == old_bytes
         # optimize() keeps a valid PNG and does not grow a tiny file into garbage.
         out, tool = optimize(tiny)
         assert out.startswith(PNG_MAGIC), tool
