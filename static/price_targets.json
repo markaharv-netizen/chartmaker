@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T13:53:15Z",
+  "generated": "2026-11-09T13:54:53Z",
   "seeded": false,
   "title": "Steve's DCF Base Case vs Street Consensus vs Price",
   "subtitleNote": "Base now includes probability-weighted future bets",
@@ -251,12 +251,12 @@
       "consensusVsPrice": 0.971,
       "baseVsConsensus": -0.555,
       "notes": "Nov 3 v1 initial full model: forward Base = core $18.97 - $0.71 probability-weighted bets; Bull core $67.09 + $2.43; Bear no bets. BTC-treasury NAV roll-forward to 2030 (43,124 BTC, SATA $1.40B + SATS $0.70B prefs at stated value, ke 16.76%); bets: mNAV 1.5x, pref issuance $2B/yr, BTC bear downside. Doc 1LU4lki4I3serDsSiXKptH7ua2Iu3ztpfyJMOqwc6BQo",
-      "baseChange": null,
+      "baseChange": 0.0,
       "baseChangePct": null,
       "baseChangedAt": null,
       "fromZero": false,
       "previousBase": null,
-      "previousDetail": "New model added Nov 3, 2026 (v1); no previous update",
+      "previousDetail": "New model added Nov 3, 2026 (v1). Nov 9, 2026: Q3 2026 results (8-K + 10-Q filed Nov 6) processed; the Oct 30 balance sheet (cash $490.4M, STRC $50.1M, SATA 14.03M / SATS 7.00M sh, 43,124 BTC) was already in the model from the Nov 2 8-K, so no input changed. Q3 call (Nov 13, 7 AM ET) still to be checked.",
       "paperWeight": 0.0,
       "why": "Price 12% above Base"
     },
