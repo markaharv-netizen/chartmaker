@@ -6,7 +6,7 @@
   "sheet": "BTCTC Top 100",
   "gid": 73825060,
   "description": "Top 100 corporate bitcoin holdings from the BTCTC Top 100 tab of My Bot's Sheets. USD value is BTC times a live BTC price and is not part of this file.",
-  "fetchedAt": "2026-11-06T17:21:03Z",
+  "fetchedAt": "2026-11-09T16:16:35Z",
   "supply": 21000000,
   "companies": [
     {
@@ -14,13 +14,13 @@
       "name": "Strategy",
       "ticker": "MSTR",
       "country": "US",
-      "change": null,
-      "btc": 849327,
-      "asOf": "2026-11-01",
-      "source": "SEC Form 8-K (filed 2026-11-02)",
+      "change": "+1,037",
+      "btc": 850364,
+      "asOf": "2026-11-08",
+      "source": "SEC Form 8-K (filed 2026-11-09)",
       "sourceLabel": "SEC 8-K",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526442707/mstr-20261102.htm",
-      "notes": "Bought 811 BTC Oct 26-Nov 1, 2026 (avg ~$80,846)."
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526452693/mstr-20261109.htm",
+      "notes": "Bought 1,036 BTC Nov 2-8, 2026 (avg ~$79,012)."
     },
     {
       "rank": 2,
@@ -53,13 +53,13 @@
       "name": "Strive",
       "ticker": "ASST",
       "country": "US",
-      "change": null,
-      "btc": 43124,
-      "asOf": "2026-10-30",
-      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-06)",
-      "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1920406/000162828026071332/asst-20260930.htm",
-      "notes": "Company-stated total 43,124 as of Oct 30, 2026 (10-Q subsequent event)."
+      "change": "+29",
+      "btc": 43153,
+      "asOf": "2026-11-06",
+      "source": "SEC Form 8-K (filed 2026-11-09)",
+      "sourceLabel": "SEC 8-K",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1920406/000162828026071888/asst-20261109.htm",
+      "notes": "Company-stated total 43,153 as of Nov 6, 2026 (bought 29 BTC Oct 31-Nov 6)."
     },
     {
       "rank": 5,
@@ -417,7 +417,7 @@
       "name": "Ionic Digital Inc.",
       "ticker": "IOND",
       "country": "US",
-      "change": "-737",
+      "change": null,
       "btc": 2217,
       "asOf": "2026-11-04",
       "source": "Ionic IR presentation '3Q26 Earnings Update & Investor Overview' (2026-11-04)",
@@ -482,7 +482,7 @@
       "name": "BitFuFu Inc.",
       "ticker": "FUFU",
       "country": "SG",
-      "change": "+66",
+      "change": null,
       "btc": 1454,
       "asOf": "2026-10-31",
       "source": "SEC Form 6-K Ex.99.1 October 2026 update (filed 2026-11-06)",
@@ -947,19 +947,6 @@
     },
     {
       "rank": 73,
-      "name": "Hyperscale Data",
-      "ticker": "GPUS",
-      "country": "US",
-      "change": null,
-      "btc": 220,
-      "asOf": "2026-10-04",
-      "source": "Hyperscale Data press release (PR Newswire), 2026-10-06",
-      "sourceLabel": "Press release",
-      "sourceUrl": "https://www.prnewswire.com/news-releases/hyperscale-data-held-approximately-56-4-million-of-bitcoin-cash-and-restricted-cash-as-of-october-4--2026--302899186.html",
-      "notes": "Weekly update; sold ~686 BTC in Aug 2026."
-    },
-    {
-      "rank": 74,
       "name": "BitMine Immersion Technologies, Inc.",
       "ticker": "BMNR",
       "country": "US",
@@ -970,6 +957,19 @@
       "sourceLabel": "SEC 8-K",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1829311/000149315226049572/ex99-1.htm",
       "notes": "Primarily an ETH treasury company."
+    },
+    {
+      "rank": 74,
+      "name": "Hyperscale Data",
+      "ticker": "GPUS",
+      "country": "US",
+      "change": "-8",
+      "btc": 211,
+      "asOf": "2026-11-01",
+      "source": "Hyperscale Data press release (PR Newswire), 2026-11-03",
+      "sourceLabel": "Press release",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/hyperscale-data-held-approximately-50-6-million-of-bitcoin-cash-and-restricted-cash-as-of-november-1--2026--302927361.html",
+      "notes": "Weekly update; sold ~686 BTC in Aug 2026."
     },
     {
       "rank": 75,
