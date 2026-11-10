@@ -25,8 +25,12 @@ picks.json:
 }
 Each PNG is checked (not blank / not a single colour), fitted onto a white 1600x900 canvas, and
 written to static/cotd/<date>/NN.png; static/cotd/today.json is then rewritten.
+The same run writes static/cotd/<date>/cards.json (book, gid, chart_n, tab, title). When the
+edition date is D, a chart that appears in D-1, D-2, or D-3 is refused. A missing cards.json
+for one of those days excludes nothing. Identity is book + gid + chart_n when both sides
+record chart_n, and book + gid when either side does not.
 """
-import argparse, json, os, re, shutil, sys
+import argparse, datetime, json, os, re, shutil, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sheets_catalog
@@ -79,6 +83,104 @@ def pick_excluded(item):
         return (book, int(gid)) in COTD_EXCLUDED
     except (TypeError, ValueError):
         return False
+
+def book_gid_of(item):
+    """(book, gid) from a pick's spreadsheetId, or None when this is not a known workbook tab."""
+    sid = str(item.get("spreadsheetId") or "").strip()
+    pair = sheets_catalog.BY_ID.get(sid)
+    if not pair or item.get("gid") in (None, ""):
+        return None
+    try:
+        return pair[0], int(item.get("gid"))
+    except (TypeError, ValueError):
+        return None
+
+def pick_chart_key(item):
+    """(book, gid, chart_n or None), or None when the workbook tab is unknown."""
+    base = book_gid_of(item)
+    if not base:
+        return None
+    n = parse_chart_n(item.get("chart_n"))
+    return base[0], base[1], None if n in (None, "bad") else n
+
+def cards_path(repo, date):
+    return os.path.join(repo, "static", "cotd", date, "cards.json")
+
+def load_cards(repo, date):
+    """Cards recorded for one edition. A missing or unreadable file excludes nothing."""
+    path = cards_path(repo, date)
+    if not os.path.isfile(path):
+        return []
+    try:
+        with open(path, encoding="utf-8") as f:
+            doc = json.load(f)
+    except (OSError, ValueError):
+        return []
+    items = doc.get("items") if isinstance(doc, dict) else None
+    if not isinstance(items, list):
+        return []
+    out = []
+    for it in items:
+        if not isinstance(it, dict):
+            continue
+        book = str(it.get("book") or "").strip()
+        try:
+            gid = int(it.get("gid"))
+        except (TypeError, ValueError):
+            continue
+        if not book:
+            continue
+        n = parse_chart_n(it.get("chart_n"))
+        out.append({"date": date, "book": book, "gid": gid, "chart_n": None if n in (None, "bad") else n,
+                     "tab": it.get("tab") or ""})
+    return out
+
+def recent_charts(repo, date):
+    """Charts published on D-1, D-2, and D-3. A day with no cards.json contributes nothing."""
+    day = datetime.date.fromisoformat(date)
+    found = []
+    for delta in (1, 2, 3):
+        found.extend(load_cards(repo, (day - datetime.timedelta(days=delta)).isoformat()))
+    return found
+
+def repeated_recent(item, recent):
+    """The prior card when this pick repeats one from the previous 3 editions."""
+    key = pick_chart_key(item)
+    if not key:
+        return None
+    book, gid, n = key
+    for prev in recent or []:
+        if prev["book"] != book or prev["gid"] != gid:
+            continue
+        if n is None or prev["chart_n"] is None or prev["chart_n"] == n:
+            return prev
+    return None
+
+def card_record(item):
+    """One cards.json row. chart_n is omitted when this pick does not know it."""
+    card = {}
+    key = pick_chart_key(item)
+    if key:
+        card["book"] = key[0]
+        card["gid"] = key[1]
+        if key[2] is not None:
+            card["chart_n"] = key[2]
+    card["tab"] = item.get("tab") or ""
+    card["title"] = item.get("title") or ""
+    return card
+
+def cards_from_published(doc):
+    """Card list for an edition already stored as today.json (sheet_url carries the gid)."""
+    items = []
+    for it in doc.get("items") or []:
+        if not isinstance(it, dict):
+            continue
+        url = str(it.get("sheet_url") or "")
+        m = re.search(r"/spreadsheets/d/([^/]+)/[^#]*#gid=(\d+)", url)
+        row = {"spreadsheetId": m.group(1) if m else "", "gid": int(m.group(2)) if m else "",
+               "chart_n": it.get("chart_n"), "tab": it.get("tab") or "", "title": it.get("title") or ""}
+        items.append(card_record(row))
+    return {"date": doc.get("date"), "items": items}
 
 def norm_title(s):
     return " ".join(str(s or "").split())
@@ -209,8 +311,8 @@ def assign_chart_ns(items, catalog):
         else:
             x["chart_n"] = n
 
-def validate(items):
-    """Accept 1 through 20 items; reject an empty list or anything over the cap."""
+def validate(items, recent=None):
+    """Accept 1 through 20 items; reject an empty list, anything over the cap, or a recent repeat."""
     n = len(items)
     if n < EDITION_MIN or n > EDITION_MAX:
         sys.exit(f"need 1 to {EDITION_MAX} items, got {n}")
@@ -220,16 +322,23 @@ def validate(items):
         if miss: sys.exit(f"item {i} missing {miss}")
         if pick_excluded(x):
             sys.exit(f"item {i} is an excluded tab ({x.get('tab')} gid {x.get('gid')}) and cannot be published")
+        prev = repeated_recent(x, recent)
+        if prev:
+            chart = x.get("chart_n")
+            extra = (" chart %s" % chart) if chart else ""
+            sys.exit("item %d repeats a chart from %s (%s gid %s%s) and cannot be published"
+                     % (i, prev["date"], x.get("tab"), x.get("gid"), extra))
 
 def publish(P, repo, keep_old):
     d = P["date"]
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", d): sys.exit("date must be YYYY-MM-DD")
     items = P["items"]
-    validate(items)
+    # Resolve chart_n before the repeat check so a single-chart tab matches chart 1 in history.
     assign_chart_ns(items, load_catalog(repo))
+    validate(items, recent_charts(repo, d))
     root = os.path.join(repo, "static", "cotd"); out = os.path.join(root, d)
     tmp = out + ".tmp"; shutil.rmtree(tmp, ignore_errors=True); os.makedirs(tmp)
-    rows = []
+    rows, card_items = [], []
     for i, x in enumerate(items, 1):
         fn = f"{i:02d}.png"; n = fit(x["png"], os.path.join(tmp, fn))
         url = f"https://docs.google.com/spreadsheets/d/{x['spreadsheetId']}/edit" + (f"#gid={x['gid']}" if x.get("gid") not in (None, "") else "")
@@ -238,7 +347,11 @@ def publish(P, repo, keep_old):
         if x.get("chart_n"):
             row["chart_n"] = x["chart_n"]
         rows.append(row)
+        card_items.append(card_record(x))
         print(f"{fn}  {n//1024} KB  {x['sheet']} / {x['tab']}")
+    with open(os.path.join(tmp, "cards.json"), "w", encoding="utf-8") as f:
+        json.dump({"date": d, "items": card_items}, f, indent=1, ensure_ascii=False)
+        f.write("\n")
     shutil.rmtree(out, ignore_errors=True); os.rename(tmp, out)
     doc = {"date": d, "theme": P["theme"].strip(), "items": rows}
     t = os.path.join(root, "today.json")
@@ -263,26 +376,46 @@ def self_test():
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1370617918})
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1024131985})
     assert pick_excluded({"spreadsheetId": bot2, "gid": 645072508})
+    # Retired by Mark on 2026-11-10. Adding a gid to EXCLUDED_TABS is enough for this check.
+    for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621):
+        assert pick_excluded({"spreadsheetId": bot1, "gid": gid}), gid
+    assert pick_excluded({"spreadsheetId": bot2, "gid": 418894352})
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1476428159})
-    # Neighbor of the deleted Korea/Taiwan tab: "160 China vs Mexico vs Taiwan".
+    # Neighbors that stay: Korea/Taiwan's neighbor, CoreWeave backlog, CPI charts, tariff rate, real yield.
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 171599627})
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 200447618})  # 52 Core goods vs services
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 829703707})  # 18 Electricity vs CPI
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 972156540})  # 67 Effective tariff rate
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1167074374})  # 299 Real yield vs breakeven
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1027143376})  # 97 MSTR vol vs BTC vol
+    assert not pick_excluded({"spreadsheetId": bot2, "gid": 530554790})  # 75 CoreWeave backlog vs revenue
     assert not pick_excluded({"spreadsheetId": bot1, "gid": ""})
     live = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     # Retired charts stay out of the published edition and the sheet catalog.
     # 1024131985 is Strategy tab 99 (MSTR BTC per share), removed in PR #34.
     # 1791345316 and 1370617918 were deleted on 2026-11-09.
     # 645072508 stays in the catalog (Charts of the day only) and is not in this list.
+    # The 2026-11-10 gids are the charts Mark deleted that day.
+    retired_live = (1547332232, 643299192, 333185169, 1024131985, 1791345316, 1370617918,
+                    292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621, 418894352)
     for rel in ("static/cotd/today.json", "static/sheets/catalog.json"):
         with open(os.path.join(live, rel), encoding="utf-8") as f:
             blob = f.read()
-        for gid in (1547332232, 643299192, 333185169, 1024131985, 1791345316, 1370617918):
+        for gid in retired_live:
             assert str(gid) not in blob, (rel, gid)
     with open(os.path.join(live, "static/sheets/catalog.json"), encoding="utf-8") as f:
         catalog_blob = f.read()
     with open(os.path.join(live, "static/cotd/today.json"), encoding="utf-8") as f:
-        today_blob = f.read()
+        today_doc = json.load(f)
+        today_blob = json.dumps(today_doc)
     assert "645072508" in catalog_blob
     assert "645072508" not in today_blob
+    for gid in (530554790, 200447618, 829703707, 972156540, 1167074374, 978356289, 1459587255):
+        assert str(gid) in catalog_blob, gid
+    assert len(today_doc["items"]) == 13, len(today_doc["items"])
+    cards_live = json.load(open(os.path.join(live, "static/cotd/2026-11-10/cards.json"), encoding="utf-8"))
+    assert cards_live == cards_from_published(today_doc)
+    assert all(it.get("book") and it.get("gid") for it in cards_live["items"])
     bot3 = "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU"
     live_cat = load_catalog(live)
     assert live_cat, "live catalog"
@@ -299,8 +432,10 @@ def self_test():
     assert resolved(gid=1078237833, title="Average acquisition cost: treasury companies vs. miners") == 2
     assert resolved(gid=1078237833, title="editorial", chart_n=1) == 1
     assert resolved(gid=1078237833, title="Average acquisition cost: spot ETFs vs. companies", chart_n=2) == 2
-    assert resolved(spreadsheetId=bot1, gid=1186940001, title="editorial title") == 1
-    assert resolved(spreadsheetId=bot3, gid=978356289, title="Anthropic") is None
+    # 200447618 is "52 Core goods vs services", a single chart that stays in the catalog.
+    assert resolved(spreadsheetId=bot1, gid=200447618, title="editorial title") == 1
+    # 978356289 is one chart ("Anthropic Revenue vs Compute") and stays in the library.
+    assert resolved(spreadsheetId=bot3, gid=978356289, title="Anthropic") == 1
     assert resolved(spreadsheetId=bot3, gid=1045685066, title="Strive denominated in BTC (ASST/BTC)") is None
     assert resolved(spreadsheetId=bot3, gid=1045685066, title="Chart 2") == 2
     assert resolve_chart_n({"spreadsheetId": bot2, "gid": 1078237833, "title": "editorial"}, None) is None
@@ -348,6 +483,13 @@ def self_test():
         (1370617918, "163 Supercore vs core CPI", bot1),
         (1024131985, "99 MSTR BTC per share", bot1),
         (645072508, "69 Mark MSTR red dot tracker", bot2),
+        (292208014, "98 MSTR vs BTC drawdowns", bot1),
+        (418894352, "81 CoreWeave margins", bot2),
+        (2119398138, "151 Big Tech capex vs Nvidia", bot1),
+        (1584345646, "223 Micron revenue & margin", bot1),
+        (1186940001, "226 OpenAI vs Anthropic revenue", bot1),
+        (501919598, "263 Tariff pass-through", bot1),
+        (579853621, "12 Breakeven vs CPI", bot1),
     ):
         items = [item(i) for i in range(1, EDITION_MAX + 1)]
         items[4] = item(5, gid=gid, tab=tab, spreadsheetId=sid)
@@ -355,6 +497,11 @@ def self_test():
     neighbor = [item(i) for i in range(1, 4)]
     neighbor[1] = item(2, gid=171599627, tab="160 China vs Mexico vs Taiwan", spreadsheetId=bot1)
     validate(neighbor)
+    kept_cpi = [item(i) for i in range(1, 4)]
+    kept_cpi[0] = item(1, gid=200447618, tab="52 Core goods vs services", spreadsheetId=bot1)
+    kept_cpi[1] = item(2, gid=972156540, tab="67 Effective tariff rate", spreadsheetId=bot1)
+    kept_cpi[2] = item(3, gid=1167074374, tab="299 Real yield vs breakeven", spreadsheetId=bot1)
+    validate(kept_cpi)
 
     src = os.path.join(tempfile.mkdtemp(prefix="cotd-src-"), "chart.png")
     os.makedirs(os.path.dirname(src), exist_ok=True)
@@ -398,21 +545,26 @@ def self_test():
         doc10 = publish(short, repo, 0)
         assert len(doc10["items"]) == 10, len(doc10["items"])
         picks = [item(i, png=src) for i in range(1, EDITION_MAX + 1)]
-        doc = publish({"date": "2099-01-16", "theme": " twenty charts ", "items": picks}, repo, 0)
+        doc = publish({"date": "2099-01-20", "theme": " twenty charts ", "items": picks}, repo, 0)
         assert doc["theme"] == "twenty charts"
         assert len(doc["items"]) == 20, len(doc["items"])
         titles = [row["title"] for row in doc["items"]]
         assert titles == [f"Chart {i:02d}" for i in range(1, 21)], titles
         assert doc["items"][19]["know"].startswith("know note 20 ")
         assert "quality" in doc["items"][0]["picked"]
-        folder = os.path.join(repo, "static", "cotd", "2099-01-16")
+        folder = os.path.join(repo, "static", "cotd", "2099-01-20")
         names = sorted(os.listdir(folder))
-        assert names == [f"{i:02d}.png" for i in range(1, 21)], names
+        assert names == [f"{i:02d}.png" for i in range(1, 21)] + ["cards.json"], names
         with open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8") as f:
             saved = json.load(f)
-        assert [row["image"] for row in saved["items"]] == [f"cotd/2099-01-16/{i:02d}.png" for i in range(1, 21)]
+        assert [row["image"] for row in saved["items"]] == [f"cotd/2099-01-20/{i:02d}.png" for i in range(1, 21)]
+        with open(os.path.join(folder, "cards.json"), encoding="utf-8") as f:
+            saved_cards = json.load(f)
+        assert saved_cards["date"] == "2099-01-20"
+        assert saved_cards["items"][0]["book"] == "bot1" and saved_cards["items"][0]["gid"] == 900001
+        assert "chart_n" not in saved_cards["items"][0]
         assert all("chart_n" not in row for row in doc["items"])
-        stated = publish({"date": "2099-01-17", "theme": "stated position", "items": [item(1, png=src, chart_n=2)]}, repo, 0)
+        stated = publish({"date": "2099-01-24", "theme": "stated position", "items": [item(1, png=src, chart_n=2)]}, repo, 0)
         assert stated["items"][0]["chart_n"] == 2
         cat_dir = os.path.join(repo, "static", "sheets")
         os.makedirs(cat_dir, exist_ok=True)
@@ -440,7 +592,7 @@ def self_test():
             item(8, png=src, gid=910099, tab="missing tab", title="not in catalog"),
             item(9, png=src, gid=910099, tab="missing tab", title="not in catalog", chart_n=4),
         ]
-        placed_doc = publish({"date": "2099-01-18", "theme": "positions", "items": placed}, repo, 0)
+        placed_doc = publish({"date": "2099-01-28", "theme": "positions", "items": placed}, repo, 0)
         got = [row.get("chart_n") for row in placed_doc["items"]]
         assert got == [1, 1, 2, None, 1, None, 2, None, 4], got
         for idx in (3, 5, 7):
@@ -454,7 +606,7 @@ def self_test():
             raise SystemExit("a chart_n that is not on the tab was published")
         with open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8") as f:
             still = json.load(f)
-        assert still["date"] == "2099-01-18", still["date"]
+        assert still["date"] == "2099-01-28", still["date"]
         try:
             publish({"date": "2099-01-19", "theme": "bad table", "items": [
                 item(1, png=src, gid=910002, tab="a table", title="table", chart_n=2)]}, repo, 0)
@@ -462,6 +614,50 @@ def self_test():
             assert "chart_n 2" in str(e), e
         else:
             raise SystemExit("chart 2 was accepted on a table")
+        hist = tempfile.mkdtemp(prefix="cotd-recent-")
+        try:
+            def write_cards(date, rows):
+                folder = os.path.join(hist, "static", "cotd", date)
+                os.makedirs(folder, exist_ok=True)
+                with open(os.path.join(folder, "cards.json"), "w", encoding="utf-8") as f:
+                    json.dump({"date": date, "items": rows}, f)
+            # 2099-03-05 looks back at 03-04, 03-03, and 03-02. 03-01 is four days back.
+            write_cards("2099-03-01", [{"book": "bot1", "gid": 111, "chart_n": 1, "tab": "old", "title": "A"}])
+            write_cards("2099-03-02", [{"book": "bot1", "gid": 222, "chart_n": 1, "tab": "d3", "title": "B"}])
+            write_cards("2099-03-04", [
+                {"book": "bot2", "gid": 333, "chart_n": 2, "tab": "d1", "title": "C"},
+                {"book": "bot1", "gid": 444, "tab": "no-n", "title": "D"},
+            ])
+            recent = recent_charts(hist, "2099-03-05")
+            assert {(r["book"], r["gid"]) for r in recent} == {("bot1", 222), ("bot2", 333), ("bot1", 444)}, recent
+            assert repeated_recent({"spreadsheetId": bot1, "gid": 222, "chart_n": 1, "tab": "d3"}, recent)
+            assert not repeated_recent({"spreadsheetId": bot1, "gid": 111, "chart_n": 1, "tab": "old"}, recent)
+            assert repeated_recent({"spreadsheetId": bot2, "gid": 333, "chart_n": 2, "tab": "d1"}, recent)
+            assert not repeated_recent({"spreadsheetId": bot2, "gid": 333, "chart_n": 1, "tab": "d1"}, recent)
+            assert repeated_recent({"spreadsheetId": bot1, "gid": 444, "chart_n": 2, "tab": "no-n"}, recent)
+            assert not repeated_recent({"spreadsheetId": bot1, "gid": 555, "chart_n": 1, "tab": "new"}, recent)
+            broken = os.path.join(hist, "static", "cotd", "2099-03-03")
+            os.makedirs(broken)
+            with open(os.path.join(broken, "cards.json"), "w", encoding="utf-8") as f:
+                f.write("{")
+            assert len(recent_charts(hist, "2099-03-05")) == 3
+            blocked_recent = [item(i, png=src) for i in range(1, 4)]
+            blocked_recent[1] = item(2, png=src, gid=222, tab="d3", spreadsheetId=bot1, chart_n=1)
+            try:
+                publish({"date": "2099-03-05", "theme": "repeat", "items": blocked_recent}, hist, 0)
+            except SystemExit as e:
+                assert "2099-03-02" in str(e) and "gid 222" in str(e), e
+            else:
+                raise SystemExit("a chart from the previous 3 days was published")
+            assert not os.path.exists(os.path.join(hist, "static", "cotd", "today.json"))
+            fresh = publish({"date": "2099-03-05", "theme": "fresh", "items": [
+                item(1, png=src, gid=333, tab="other chart", spreadsheetId=bot2, chart_n=1)]}, hist, 0)
+            assert fresh["items"][0]["chart_n"] == 1
+            saved_recent = json.load(open(os.path.join(hist, "static", "cotd", "2099-03-05", "cards.json"), encoding="utf-8"))
+            assert saved_recent["items"][0]["book"] == "bot2" and saved_recent["items"][0]["gid"] == 333
+            assert saved_recent["items"][0]["chart_n"] == 1
+        finally:
+            shutil.rmtree(hist, ignore_errors=True)
     finally:
         shutil.rmtree(repo, ignore_errors=True)
         shutil.rmtree(os.path.dirname(src), ignore_errors=True)

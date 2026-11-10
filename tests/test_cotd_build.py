@@ -28,6 +28,13 @@ RETIRED = (
     "1024131985",  # 99 MSTR BTC per share (Strategy)
     "1791345316",  # 158 Korea & Taiwan vs S&P
     "1370617918",  # 163 Supercore vs core CPI
+    "292208014",   # 98 MSTR vs BTC drawdowns
+    "2119398138",  # 151 Big Tech capex vs Nvidia
+    "1584345646",  # 223 Micron revenue & margin
+    "1186940001",  # 226 OpenAI vs Anthropic revenue
+    "501919598",   # 263 Tariff pass-through
+    "579853621",   # 12 Breakeven vs CPI
+    "418894352",   # 81 CoreWeave margins (bot2)
 )
 RETIRED_TABS = (
     "161 Nvidia P-S and P-E",
@@ -36,6 +43,13 @@ RETIRED_TABS = (
     "99 MSTR BTC per share",
     "158 Korea & Taiwan vs S&P",
     "163 Supercore vs core CPI",
+    "98 MSTR vs BTC drawdowns",
+    "151 Big Tech capex vs Nvidia",
+    "223 Micron revenue & margin",
+    "226 OpenAI vs Anthropic revenue",
+    "263 Tariff pass-through",
+    "12 Breakeven vs CPI",
+    "81 CoreWeave margins",
 )
 
 

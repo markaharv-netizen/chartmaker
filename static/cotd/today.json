@@ -1,6 +1,6 @@
 {
  "date": "2026-11-10",
- "theme": "Tuesday: October CPI lands this morning, CoreWeave reports after the close, Anthropic's IPO roadshow rolls on, Nvidia and Micron drop off BofA's US 1 List, stocks just had their best day since April while bitcoin sits below its 50-week average, and SpaceX plans a $24B Starbase power plant as Tesla's robotaxi zone grows.",
+ "theme": "Tuesday: October CPI lands this morning, CoreWeave reports after the close, stocks just had their best day since April while bitcoin sits below its 50-week average, and SpaceX plans a $24B Starbase power plant as Tesla's robotaxi zone grows.",
  "items": [
   {
    "sheet": "Bot experiments",
@@ -11,28 +11,6 @@
    "matters": "Goods inflation has been fading while services stay sticky, so the services line decides whether core inflation can keep cooling. That is what the Fed is watching.",
    "know": "In September 2026, the tab's latest month, core goods CPI was up 0.71% from a year earlier and core services 3.16%. Core goods was 1.41% last December and core services 3.03%, so goods have cooled while services have edged up. October 2025 is missing because of last year's government shutdown, and today's October print is not in the chart yet.",
    "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=200447618",
-   "chart_n": 1
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "263 Tariff pass-through",
-   "title": "Are tariffs showing up in prices? Import-heavy goods vs core CPI",
-   "image": "cotd/2026-11-10/02.png",
-   "picked": "With October CPI out this morning, the tariff question is back: are import-heavy goods pushing prices up faster than everything else? This tab tracks apparel, toys and new cars against core CPI since January 2025.",
-   "matters": "If tariffed goods rise faster than core, tariffs are feeding through to shoppers. If they track core or lag it, the pass-through is smaller than feared.",
-   "know": "Indexed to January 2025 = 100, September 2026 readings were toys 107.8, apparel 104.94, core CPI 104.39 and new vehicles 100.6. Toys jumped from 103.47 in August, while new car prices are almost flat since the start of 2025. The data stops at September, so today's October numbers are not included.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=501919598",
-   "chart_n": 1
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "12 Breakeven vs CPI",
-   "title": "Actual inflation vs the bond market's 10-year expectation",
-   "image": "cotd/2026-11-10/03.png",
-   "picked": "Today's CPI print lands with headline inflation well above what bond investors expect over the next decade. This chart shows that gap.",
-   "matters": "When actual inflation runs far above breakevens, the market is betting the spike is temporary. If prints stay hot, that bet gets tested and long yields can reprice.",
-   "know": "In September 2026, headline CPI was up 3.72% from a year earlier versus a 2.35% 10-year breakeven. CPI peaked this year at 4.17% in May and was 2.39% in January. The chart title still reads \"Inflation 3.35% vs market's 10-year expectation 2.29%\", the August values, so it is one month behind the data, and today's October print is not included.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=579853621",
    "chart_n": 1
   },
   {
@@ -103,17 +81,6 @@
   },
   {
    "sheet": "Bot experiments",
-   "tab": "98 MSTR vs BTC drawdowns",
-   "title": "Strategy vs bitcoin: drawdown from record close",
-   "image": "cotd/2026-11-10/10.png",
-   "picked": "Michael Saylor highlighted Strategy's 848,327 BTC after another buy of more than 1,000 coins, while bitcoin trades near Strategy's average cost and below its 50-week average. MSTR holders feel that move with leverage.",
-   "matters": "MSTR tends to fall further than bitcoin in drawdowns, so the gap between the two lines shows how much extra pain the equity wrapper adds.",
-   "know": "In the tab's latest weekly reading, dated Nov 6 2026, MSTR was 72.79% below its record close and bitcoin 39.18% below its own. Both were better in early October, when MSTR was down 66.23% and bitcoin 32.27% on Oct 2. The data does not include this week.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=292208014",
-   "chart_n": 1
-  },
-  {
-   "sheet": "Bot experiments",
    "tab": "144 BTC miners AI pivot",
    "title": "Bitcoin miners that pivoted to AI vs MARA and bitcoin",
    "image": "cotd/2026-11-10/11.png",
@@ -121,17 +88,6 @@
    "matters": "Miners that turned their power sites into AI data centers have traded like AI infrastructure stocks, not like bitcoin. MARA has stayed tied to bitcoin and is now selling coins.",
    "know": "Indexed to Dec 29 2023 = 100, the equal-weighted IREN, CIFR and WULF basket was 311.63 in the tab's latest reading, dated Nov 6 2026, down from a peak of 917.55 on Jun 18 2026. MARA was 27.04 and bitcoin 179.92. The data predates MARA's sale announcement.",
    "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1414734123",
-   "chart_n": 1
-  },
-  {
-   "sheet": "bot experiments 2",
-   "tab": "81 CoreWeave margins",
-   "title": "CoreWeave's gross and operating margins",
-   "image": "cotd/2026-11-10/12.png",
-   "picked": "CoreWeave reports Q3 results after the close today, with Wall Street expecting about $3.54 billion of revenue and an interest bill of $860–940 million, per a trending X preview. Margins are the line that decides whether growth is turning into profit.",
-   "matters": "CoreWeave's growth is not in doubt. The question is whether it can earn more than its depreciation and interest, and the operating margin answers that.",
-   "know": "Through Q2 2026, the tab's latest quarter, CoreWeave's gross margin was 65.9% and its operating margin −1.9%, after −6.9% in Q1. Gross margin was 74.2% in Q2 2025. The figures come from the Q2 10-Q filed Aug 12 2026, so tonight's Q3 results are not included, and gross margin excludes depreciation.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=418894352",
    "chart_n": 1
   },
   {
@@ -165,39 +121,6 @@
    "matters": "A big share of cloud backlog now comes from a few AI labs. If one of them stumbles, the backlog is less solid than it looks.",
    "know": "Microsoft's commercial RPO was $677 billion at Sep 30 2026, with $250 billion tied to OpenAI and $30 billion to Anthropic. Oracle had $664 billion at Aug 31 ($300 billion OpenAI), Amazon $578 billion at Sep 30 ($138 billion OpenAI and $100 billion Anthropic), and Google Cloud $560.8 billion with no lab amounts broken out. The AI lab figures are announced multi-year contract values, the data was pulled Nov 2, and the title says \"as of October 30\" even though Oracle's quarter ended Aug 31.",
    "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1020524065",
-   "chart_n": 1
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "151 Big Tech capex vs Nvidia",
-   "title": "AI spending loop: Big Tech capex vs Nvidia revenue",
-   "image": "cotd/2026-11-10/16.png",
-   "picked": "Nvidia shares are down about 14% since the midterms and the board's probe into Jensen Huang, and Bank of America dropped Nvidia and Micron from its US 1 List this morning while keeping Buy ratings, per trending X stories. Nvidia reports Nov 17.",
-   "matters": "Nvidia's sales mostly depend on how much the biggest cloud companies spend. As long as their capex keeps growing, Nvidia's revenue has room to follow.",
-   "know": "In the four quarters to Jun 30 2026, Microsoft, Alphabet, Amazon and Meta spent $510.7 billion on capex, up from $291.35 billion a year earlier. Nvidia's revenue over the same span was $302.97 billion, or 59.32% of that capex. The tab stops at the June quarter, so it does not include the September-quarter capex reports.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=2119398138",
-   "chart_n": 1
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "223 Micron revenue & margin",
-   "title": "The AI memory boom: Micron revenue and gross margin",
-   "image": "cotd/2026-11-10/17.png",
-   "picked": "Bank of America removed Micron from its US 1 List this morning along with Nvidia and Lam Research, while keeping a Buy rating. The memory boom behind Micron's run is on this chart.",
-   "matters": "Memory used to be a boom-and-bust business. High-bandwidth memory for AI chips has pushed Micron's margin to levels it has never reached before.",
-   "know": "In the quarter dated Sep 30 2026 on the tab, Micron's revenue was $54.23 billion and its gross margin 86.8%. A year earlier the figures were $11.32 billion and 44.67%, and in 2023 the margin was negative. That Sep 30 2026 point is the latest on the tab.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1584345646",
-   "chart_n": 1
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "226 OpenAI vs Anthropic revenue",
-   "title": "Reported revenue run-rates: OpenAI vs Anthropic",
-   "image": "cotd/2026-11-10/18.png",
-   "picked": "Anthropic's IPO roadshow is under way, with Nasdaq trading under the ticker ANT possible as soon as next week, per a trending X story. Its reported revenue run-rate is the number buyers are being asked to pay up for.",
-   "matters": "Anthropic has passed OpenAI in reported run-rate, which is a big part of why its listing is being talked about at around $1 trillion.",
-   "know": "The tab's latest Anthropic point is a $100 billion annualized run-rate on Sep 15 2026, up from $47 billion on May 28 and $9 billion at the end of 2025. OpenAI's latest point is $70 billion on Sep 29 2026, up from $20 billion at the end of 2025. These are company statements and media reports, not audited quarterly revenue, and both points are about six weeks old.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1186940001",
    "chart_n": 1
   },
   {

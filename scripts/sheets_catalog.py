@@ -54,6 +54,26 @@ BY_ID = {sid: (bid, name) for bid, name, sid in BOOKS}
 # "Strategy: bitcoin per diluted share vs share count (at each 8-K)"
 # (chartId 878632585). Removed in PR #34. Mark deleted the tab. It was missing
 # from this set and was only checked by the Charts of the day self-test.
+# Mark deleted the following tabs on 2026-11-10. Add another ("book", gid) here
+# when he retires a tab. Catalog rebuild, thumbnail refresh, full-PNG import,
+# Charts of the day, and favorites all read this set.
+# ("bot2", 418894352) "81 CoreWeave margins", chart "CoreWeave margins (%)"
+# (chartId 1921376754).
+# ("bot1", 292208014) "98 MSTR vs BTC drawdowns", chart
+# "Strategy vs bitcoin: drawdown from record close" (chartId 1252176570).
+# ("bot1", 2119398138) "151 Big Tech capex vs Nvidia", chart
+# "AI spending loop: Microsoft+Alphabet+Amazon+Meta capex vs Nvidia revenue (trailing 4 quarters)"
+# (chartId 140779756).
+# ("bot1", 1584345646) "223 Micron revenue & margin", chart
+# "The AI memory boom (HBM): Micron quarterly revenue and gross margin" (chartId 1400358015).
+# ("bot1", 1186940001) "226 OpenAI vs Anthropic revenue", chart
+# "Reported revenue run-rates: OpenAI vs Anthropic (company statements & media; log scale)"
+# (chartId 118363695).
+# ("bot1", 501919598) "263 Tariff pass-through", chart
+# "Are tariffs showing up in prices? Import-heavy goods CPI vs core CPI (Jan 2025 = 100)"
+# (chartId 1223359242).
+# ("bot1", 579853621) "12 Breakeven vs CPI", chart
+# "Inflation 3.35% vs market's 10-year expectation 2.29%" (chartId 905132998).
 EXCLUDED_TABS = {
     ("bot1", 333185169),
     ("bot1", 1547332232),
@@ -61,6 +81,13 @@ EXCLUDED_TABS = {
     ("bot1", 1791345316),
     ("bot1", 1370617918),
     ("bot1", 1024131985),
+    ("bot2", 418894352),
+    ("bot1", 292208014),
+    ("bot1", 2119398138),
+    ("bot1", 1584345646),
+    ("bot1", 1186940001),
+    ("bot1", 501919598),
+    ("bot1", 579853621),
 }
 
 def tab_excluded(book, gid):
@@ -227,30 +254,66 @@ def self_test():
                   "Strategy: bitcoin per diluted share vs share count (at each 8-K)"),
             sheet("160 China vs Mexico vs Taiwan", 171599627,
                   "Where US imports come from: China, Mexico and Taiwan (AI servers) shares, rolling 12 months"),
+            sheet("98 MSTR vs BTC drawdowns", 292208014,
+                  "Strategy vs bitcoin: drawdown from record close"),
+            sheet("151 Big Tech capex vs Nvidia", 2119398138,
+                  "AI spending loop: Microsoft+Alphabet+Amazon+Meta capex vs Nvidia revenue (trailing 4 quarters)"),
+            sheet("223 Micron revenue & margin", 1584345646,
+                  "The AI memory boom (HBM): Micron quarterly revenue and gross margin"),
+            sheet("226 OpenAI vs Anthropic revenue", 1186940001,
+                  "Reported revenue run-rates: OpenAI vs Anthropic (company statements & media; log scale)"),
+            sheet("263 Tariff pass-through", 501919598,
+                  "Are tariffs showing up in prices? Import-heavy goods CPI vs core CPI (Jan 2025 = 100)"),
+            sheet("12 Breakeven vs CPI", 579853621,
+                  "Inflation 3.35% vs market's 10-year expectation 2.29%"),
+            sheet("97 MSTR vol vs BTC vol", 1027143376,
+                  "Strategy vs bitcoin: 30-day realized volatility"),
+            sheet("52 Core goods vs services", 200447618,
+                  "Core goods vs core services inflation (CPI, YoY)"),
+            sheet("67 Effective tariff rate", 972156540,
+                  "US effective tariff rate: customs duties as % of goods imports"),
             sheet("hidden junk", 5, "nope", hidden=True),
         ],
     }
     _book, tabs, hidden, excluded = one(doc)
     gids = [t["gid"] for t in tabs]
-    assert gids == [1476428159, 999, 171599627], gids
-    assert hidden == 1 and excluded == 6, (hidden, excluded)
+    assert gids == [1476428159, 999, 171599627, 1027143376, 200447618, 972156540], gids
+    assert hidden == 1 and excluded == 12, (hidden, excluded)
     assert ("bot1", 333185169) in EXCLUDED_TABS
     assert tab_excluded("bot1", 1547332232) and tab_excluded("bot1", 643299192)
     assert tab_excluded("bot1", 1791345316) and tab_excluded("bot1", 1370617918)
     assert tab_excluded("bot1", 1024131985)
+    for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621):
+        assert tab_excluded("bot1", gid), gid
+    assert tab_excluded("bot2", 418894352)
     assert not tab_excluded("bot1", 1476428159)
     assert not tab_excluded("bot1", 171599627)
+    assert not tab_excluded("bot1", 1027143376)
+    assert not tab_excluded("bot1", 200447618)
+    assert not tab_excluded("bot1", 829703707)   # 18 Electricity vs CPI
+    assert not tab_excluded("bot1", 972156540)
+    assert not tab_excluded("bot1", 1167074374)  # 299 Real yield vs breakeven
+    assert not tab_excluded("bot1", 1254747964)  # 152 Capex as % of cash flow
+    assert not tab_excluded("bot1", 1238930141)  # 153 Big Tech capex intensity
+    assert not tab_excluded("bot1", 1328859831)  # 213 Chip gross margins
+    assert not tab_excluded("bot1", 1459587255)  # 227 Private AI lab valuations
     assert not tab_excluded("bot2", 645072508)
+    assert not tab_excluded("bot2", 530554790)   # 75 CoreWeave backlog vs revenue
+    assert not tab_excluded("bot3", 978356289)   # Anthropic Revenue vs Compute
     titles = [c for t in tabs for c in t["charts"]]
     assert not any("trailing P/E" in c or "billing location" in c for c in titles)
     assert any("data-center company" in c for c in titles)
     repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     cat = json.load(open(os.path.join(repo, "static", "sheets", "catalog.json"), encoding="utf-8"))
     live = {(t["book"], t["gid"]) for t in cat["tabs"]}
-    for gid in (333185169, 1547332232, 643299192, 1791345316, 1370617918, 1024131985):
-        assert ("bot1", gid) not in live, gid
-    assert ("bot1", 171599627) in live
+    for book, gid in EXCLUDED_TABS:
+        assert (book, gid) not in live, (book, gid)
+    for gid in (171599627, 1027143376, 200447618, 829703707, 972156540, 1167074374,
+                1254747964, 1238930141, 1328859831, 1459587255):
+        assert ("bot1", gid) in live, gid
     assert ("bot2", 645072508) in live
+    assert ("bot2", 530554790) in live
+    assert ("bot3", 978356289) in live
     assert len(cat["tabs"]) == 497, len(cat["tabs"])
     blob = json.dumps(cat)
     assert "Nvidia valuation: price-to-sales and trailing P/E (month-end)" not in blob
@@ -263,32 +326,68 @@ def self_test():
     assert "163 Supercore vs core CPI" not in blob
     assert "99 MSTR BTC per share" not in blob
     assert "Strategy: bitcoin per diluted share vs share count (at each 8-K)" not in blob
+    assert "81 CoreWeave margins" not in blob
+    assert "CoreWeave margins (%)" not in blob
+    assert "98 MSTR vs BTC drawdowns" not in blob
+    assert "Strategy vs bitcoin: drawdown from record close" not in blob
+    assert "151 Big Tech capex vs Nvidia" not in blob
+    assert "223 Micron revenue & margin" not in blob
+    assert "226 OpenAI vs Anthropic revenue" not in blob
+    assert "263 Tariff pass-through" not in blob
+    assert "Are tariffs showing up in prices? Import-heavy goods CPI vs core CPI (Jan 2025 = 100)" not in blob
+    assert "12 Breakeven vs CPI" not in blob
     names = {t["tab"] for t in cat["tabs"]}
     for keep in (
         "201 Nvidia data center revenue",
         "194 Nvidia vs Cisco 2000",
-        "151 Big Tech capex vs Nvidia",
         "225 Nvidia inventory & DSO",
         "229 Nvidia vs country GDPs",
         "334 Nvidia top-customer share",
         "19 Nvidia supply commitments",
         "23 Nvidia commitments table",
+        "75 CoreWeave backlog vs revenue",
+        "97 MSTR vol vs BTC vol",
+        "92 MSTR priced in BTC",
+        "52 Core goods vs services",
+        "18 Electricity vs CPI",
+        "67 Effective tariff rate",
+        "299 Real yield vs breakeven",
+        "152 Capex as % of cash flow",
+        "153 Big Tech capex intensity",
+        "213 Chip gross margins",
+        "227 Private AI lab valuations",
+        "Anthropic Revenue vs Compute",
     ):
         assert keep in names, keep
     today = json.load(open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8"))
     today_blob = json.dumps(today)
-    assert len(today["items"]) == 18, len(today["items"])
+    assert len(today["items"]) == 13, len(today["items"])
     assert "1547332232" not in today_blob and "643299192" not in today_blob
     assert "1791345316" not in today_blob and "1370617918" not in today_blob
+    for gid in (292208014, 418894352, 2119398138, 1584345646, 1186940001, 501919598, 579853621):
+        assert str(gid) not in today_blob, gid
     assert "161 Nvidia P-S and P-E" not in today_blob
     assert "202 Nvidia revenue by geography" not in today_blob
     assert "158 Korea & Taiwan vs S&P" not in today_blob
     assert "163 Supercore vs core CPI" not in today_blob
+    assert "81 CoreWeave margins" not in today_blob
+    assert "98 MSTR vs BTC drawdowns" not in today_blob
+    assert "151 Big Tech capex vs Nvidia" not in today_blob
+    assert "223 Micron revenue & margin" not in today_blob
+    assert "226 OpenAI vs Anthropic revenue" not in today_blob
+    assert "263 Tariff pass-through" not in today_blob
+    assert "12 Breakeven vs CPI" not in today_blob
     assert "Taiwan's chip stocks surge" not in today["theme"]
     assert "October CPI is due Tuesday" not in today["theme"]
+    assert "Anthropic's IPO roadshow" not in today["theme"]
+    assert "Nvidia and Micron drop off BofA" not in today["theme"]
+    assert "October CPI lands this morning" in today["theme"]
+    assert "CoreWeave reports after the close" in today["theme"]
     images = [it["image"] for it in today["items"]]
-    assert "cotd/2026-11-09/18.png" not in images and "cotd/2026-11-09/20.png" not in images
-    assert "cotd/2026-11-09/17.png" in images and "cotd/2026-11-09/19.png" in images
+    for name in ("02.png", "03.png", "10.png", "12.png", "16.png", "17.png", "18.png"):
+        assert "cotd/2026-11-10/" + name not in images, name
+    for name in ("01.png", "04.png", "09.png", "11.png", "13.png", "15.png", "19.png", "20.png"):
+        assert "cotd/2026-11-10/" + name in images, name
     for rel in (
         "static/sheets/full/bot1/1547332232.png",
         "static/sheets/full/bot1/643299192.png",
@@ -304,48 +403,63 @@ def self_test():
         "static/cotd/2026-11-09/20.png",
     ):
         assert not os.path.isfile(os.path.join(repo, rel)), rel
-    assert os.path.isfile(os.path.join(repo, "static/sheets/full/bot2/645072508.png"))
-    assert os.path.isfile(os.path.join(repo, "static/sheets/thumbs/bot2/645072508.jpg"))
-    assert os.path.isfile(os.path.join(repo, "static/sheets/full/bot1/171599627.png"))
-    full = os.path.join(repo, "static", "sheets", "full", "bot1")
-    for fn in os.listdir(full):
-        assert not fn.startswith("1547332232") and not fn.startswith("643299192"), fn
-        assert not fn.startswith("1791345316") and not fn.startswith("1370617918"), fn
-        assert not fn.startswith("1024131985"), fn
+    for name in ("02.png", "03.png", "10.png", "12.png", "16.png", "17.png", "18.png"):
+        assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-10", name)), name
+    for name in ("01.png", "04.png", "11.png", "13.png", "15.png", "19.png", "20.png"):
+        assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-10", name)), name
+    for book, gid in EXCLUDED_TABS:
+        for rel in (
+            "static/sheets/full/%s/%d.png" % (book, gid),
+            "static/sheets/thumbs/%s/%d.jpg" % (book, gid),
+        ):
+            assert not os.path.isfile(os.path.join(repo, rel)), rel
+        full_dir = os.path.join(repo, "static", "sheets", "full", book)
+        if os.path.isdir(full_dir):
+            prefix = "%d" % gid
+            for fn in os.listdir(full_dir):
+                stem = fn[:-4] if fn.lower().endswith(".png") else ""
+                assert stem != prefix and not stem.startswith(prefix + "_"), (book, fn)
+    for rel in (
+        "static/sheets/full/bot2/645072508.png",
+        "static/sheets/thumbs/bot2/645072508.jpg",
+        "static/sheets/full/bot2/530554790.png",
+        "static/sheets/thumbs/bot2/530554790.jpg",
+        "static/sheets/full/bot1/171599627.png",
+        "static/sheets/full/bot1/1027143376.png",
+        "static/sheets/full/bot1/200447618.png",
+        "static/sheets/full/bot1/829703707.png",
+        "static/sheets/full/bot1/972156540.png",
+        "static/sheets/full/bot1/1167074374.png",
+        "static/sheets/full/bot3/978356289.png",
+    ):
+        assert os.path.isfile(os.path.join(repo, rel)), rel
     scratch = tempfile.mkdtemp(prefix="excluded-assets-")
     try:
-        for rel in (
-            "static/sheets/thumbs/bot1/1547332232.jpg",
-            "static/sheets/full/bot1/1547332232.png",
-            "static/sheets/full/bot1/1547332232_2.png",
+        keep_rels = [
             "static/sheets/full/bot1/1476428159.png",
-            "static/sheets/thumbs/bot1/333185169.jpg",
-            "static/sheets/full/bot1/643299192.png",
-            "static/sheets/full/bot1/1791345316.png",
-            "static/sheets/full/bot1/1791345316_2.png",
-            "static/sheets/thumbs/bot1/1370617918.jpg",
-            "static/sheets/full/bot1/1024131985.png",
             "static/sheets/full/bot1/171599627.png",
+            "static/sheets/full/bot1/972156540.png",
+            "static/sheets/full/bot1/1167074374.png",
             "static/sheets/full/bot2/645072508.png",
-        ):
+            "static/sheets/full/bot2/530554790.png",
+        ]
+        drop_rels = []
+        for book, gid in sorted(EXCLUDED_TABS):
+            drop_rels.append("static/sheets/full/%s/%d.png" % (book, gid))
+            drop_rels.append("static/sheets/full/%s/%d_2.png" % (book, gid))
+            drop_rels.append("static/sheets/thumbs/%s/%d.jpg" % (book, gid))
+        for rel in keep_rels + drop_rels:
             path = os.path.join(scratch, rel)
             os.makedirs(os.path.dirname(path), exist_ok=True)
             with open(path, "wb") as f:
                 f.write(b"x")
         gone = prune_excluded_assets(scratch)
-        assert not os.path.exists(os.path.join(scratch, "static/sheets/full/bot1/1547332232.png"))
-        assert not os.path.exists(os.path.join(scratch, "static/sheets/full/bot1/1547332232_2.png"))
-        assert not os.path.exists(os.path.join(scratch, "static/sheets/thumbs/bot1/1547332232.jpg"))
-        assert os.path.isfile(os.path.join(scratch, "static/sheets/full/bot1/1476428159.png"))
-        assert os.path.isfile(os.path.join(scratch, "static/sheets/full/bot1/171599627.png"))
-        assert os.path.isfile(os.path.join(scratch, "static/sheets/full/bot2/645072508.png"))
-        assert not os.path.exists(os.path.join(scratch, "static/sheets/full/bot1/1791345316.png"))
-        assert not os.path.exists(os.path.join(scratch, "static/sheets/full/bot1/1791345316_2.png"))
-        assert not os.path.exists(os.path.join(scratch, "static/sheets/thumbs/bot1/1370617918.jpg"))
-        assert not os.path.exists(os.path.join(scratch, "static/sheets/full/bot1/1024131985.png"))
-        assert any("643299192" in r for r in gone) and any("333185169" in r for r in gone)
-        assert any("1791345316" in r for r in gone) and any("1370617918" in r for r in gone)
-        assert any("1024131985" in r for r in gone)
+        for rel in keep_rels:
+            assert os.path.isfile(os.path.join(scratch, rel)), rel
+        for rel in drop_rels:
+            assert not os.path.exists(os.path.join(scratch, rel)), rel
+        for book, gid in EXCLUDED_TABS:
+            assert any(str(gid) in r for r in gone), gid
     finally:
         shutil.rmtree(scratch, ignore_errors=True)
     print("self-test ok")

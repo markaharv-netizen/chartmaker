@@ -21,7 +21,7 @@ import server
 from test_cotd_build import Chrome
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ONE = "bot1/1186940001/1"
+ONE = "bot1/200447618/1"
 OTHER = "bot1/1965360503/1"
 RETIRED = "bot1/1547332232/1"
 
@@ -125,13 +125,22 @@ class SyncStoreTest(unittest.TestCase):
             thread.join()
         self.assertEqual(errors, [])
         self.assertEqual(sorted(self.keys(server.favorites_public(server.favorites_read()))), ["bot1/10/1", "bot1/11/2"])
-        retired = server.favorites_write({"ops": [{"op": "add", "k": RETIRED, "title": "no"}, {"op": "add", "k": "bot1/1024131985/1", "title": "no"}], "baseRev": 0})
+        retired = server.favorites_write({"ops": [
+            {"op": "add", "k": RETIRED, "title": "no"},
+            {"op": "add", "k": "bot1/1024131985/1", "title": "no"},
+            {"op": "add", "k": "bot1/501919598/1", "title": "no"},
+            {"op": "add", "k": "bot2/418894352/1", "title": "no"},
+        ], "baseRev": 0})
         self.assertNotIn(RETIRED, self.keys(retired))
         self.assertNotIn("bot1/1024131985/1", self.keys(retired))
+        self.assertNotIn("bot1/501919598/1", self.keys(retired))
+        self.assertNotIn("bot2/418894352/1", self.keys(retired))
         self.assertTrue(all(row["reason"] == "retired" for row in retired["skipped"]))
         on_disk = json.dumps(json.load(open(server.VIEWS, encoding="utf-8")))
         self.assertNotIn("1547332232", on_disk)
         self.assertNotIn("1024131985", on_disk)
+        self.assertNotIn("501919598", on_disk)
+        self.assertNotIn("418894352", on_disk)
 
     def test_table_key_is_stored_beside_a_chart_key(self):
         table = "bot2/1714490525/1"
@@ -289,7 +298,7 @@ class TwoBrowserSyncTest(unittest.TestCase):
     def open_chart(self, cdp):
         cdp.evaluate("document.getElementById('mSheets').click()")
         self.wait(cdp, "document.getElementById('favlocal') && document.getElementById('favlocal').dataset.sync", lambda v: v == "file")
-        cdp.evaluate("""(()=>{const i=document.getElementById('shq');i.value='226 OpenAI vs Anthropic revenue';i.dispatchEvent(new Event('input'));})()""")
+        cdp.evaluate("""(()=>{const i=document.getElementById('shq');i.value='52 Core goods vs services';i.dispatchEvent(new Event('input'));})()""")
         self.wait(cdp, "!!document.querySelector('button.fav[data-fav=%s]')" % json.dumps(ONE), lambda v: v is True)
 
     def test_star_on_a_shows_on_b_and_unstar_comes_back(self):

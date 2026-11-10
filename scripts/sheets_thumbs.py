@@ -438,6 +438,21 @@ def self_test():
          "charts": ["Where US imports come from: China, Mexico and Taiwan (AI servers) shares, rolling 12 months"]},
         {"book": "bot2", "tab": "69 Mark MSTR red dot tracker", "gid": 645072508,
          "charts": ["Mark's Red Dot Tracker: MSTR"]},
+        {"book": "bot2", "tab": "81 CoreWeave margins", "gid": 418894352,
+         "charts": ["CoreWeave margins (%)"]},
+        {"book": "bot1", "tab": "98 MSTR vs BTC drawdowns", "gid": 292208014,
+         "charts": ["Strategy vs bitcoin: drawdown from record close"]},
+        {"book": "bot1", "tab": "151 Big Tech capex vs Nvidia", "gid": 2119398138, "charts": []},
+        {"book": "bot1", "tab": "223 Micron revenue & margin", "gid": 1584345646, "charts": []},
+        {"book": "bot1", "tab": "226 OpenAI vs Anthropic revenue", "gid": 1186940001, "charts": []},
+        {"book": "bot1", "tab": "263 Tariff pass-through", "gid": 501919598, "charts": []},
+        {"book": "bot1", "tab": "12 Breakeven vs CPI", "gid": 579853621, "charts": []},
+        {"book": "bot2", "tab": "75 CoreWeave backlog vs revenue", "gid": 530554790, "charts": []},
+        {"book": "bot1", "tab": "97 MSTR vol vs BTC vol", "gid": 1027143376, "charts": []},
+        {"book": "bot1", "tab": "52 Core goods vs services", "gid": 200447618, "charts": []},
+        {"book": "bot1", "tab": "67 Effective tariff rate", "gid": 972156540, "charts": []},
+        {"book": "bot1", "tab": "299 Real yield vs breakeven", "gid": 1167074374, "charts": []},
+        {"book": "bot1", "tab": "18 Electricity vs CPI", "gid": 829703707, "charts": []},
     ]
     def f(path, parent, mtime, explicit=None):
         return {"path": path, "name": os.path.basename(path), "parent": parent, "mtime": mtime, "explicit": explicit}
@@ -459,6 +474,19 @@ def self_test():
         f("/e/99 MSTR BTC per share.png", "", 10, None),
         f("/e/160 China vs Mexico vs Taiwan.png", "", 10, None),
         f("/e/69 Mark MSTR red dot tracker.png", "bot experiments 2", 10, None),
+        f("/e/81 CoreWeave margins.png", "bot experiments 2", 10, None),
+        f("/e/98 MSTR vs BTC drawdowns.png", "", 10, None),
+        f("/e/151 Big Tech capex vs Nvidia.png", "", 10, None),
+        f("/e/223 Micron revenue & margin.png", "", 10, None),
+        f("/e/226 OpenAI vs Anthropic revenue.png", "", 10, None),
+        f("/e/263 Tariff pass-through.png", "", 10, None),
+        f("/e/12 Breakeven vs CPI.png", "", 10, None),
+        f("/e/75 CoreWeave backlog vs revenue.png", "bot experiments 2", 10, None),
+        f("/e/97 MSTR vol vs BTC vol.png", "", 10, None),
+        f("/e/52 Core goods vs services.png", "", 10, None),
+        f("/e/67 Effective tariff rate.png", "", 10, None),
+        f("/e/299 Real yield vs breakeven.png", "", 10, None),
+        f("/e/18 Electricity vs CPI.png", "", 10, None),
     ]
     # The second MSTR file is a different path; basename collides in this list on purpose.
     files[5]["path"] = "/wrong/MSTR Volume.png"
@@ -487,6 +515,24 @@ def self_test():
         assert any(p.endswith(name) for p in unmatched), name
     assert winner(171599627)[1] == "tab"
     assert winner(645072508)[1] == "tab"
+    for gid, name in (
+        (418894352, "81 CoreWeave margins.png"),
+        (292208014, "98 MSTR vs BTC drawdowns.png"),
+        (2119398138, "151 Big Tech capex vs Nvidia.png"),
+        (1584345646, "223 Micron revenue & margin.png"),
+        (1186940001, "226 OpenAI vs Anthropic revenue.png"),
+        (501919598, "263 Tariff pass-through.png"),
+        (579853621, "12 Breakeven vs CPI.png"),
+    ):
+        book = "bot2" if gid == 418894352 else "bot1"
+        assert (book, gid) not in chosen, gid
+        assert any(p.endswith(name) for p in unmatched), name
+    assert winner(530554790)[1] == "tab"
+    assert winner(1027143376)[1] == "tab"
+    assert winner(200447618)[1] == "tab"
+    assert winner(972156540)[1] == "tab"
+    assert winner(1167074374)[1] == "tab"
+    assert winner(829703707)[1] == "tab"
     # Newest mtime when the date is the same.
     files2 = [
         f("/e/MSTR Volume 2026-10-21.png", "", 10, None),
