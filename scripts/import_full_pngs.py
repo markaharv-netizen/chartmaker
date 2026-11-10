@@ -314,17 +314,56 @@ def self_test():
             {"book": "bot1", "tab": "160 China vs Mexico vs Taiwan", "gid": 171599627, "charts": []},
             {"book": "bot2", "tab": "69 Mark MSTR red dot tracker", "gid": 645072508,
              "charts": ["Mark's Red Dot Tracker: MSTR"]},
+            {"book": "bot2", "tab": "81 CoreWeave margins", "gid": 418894352,
+             "charts": ["CoreWeave margins (%)"]},
+            {"book": "bot1", "tab": "98 MSTR vs BTC drawdowns", "gid": 292208014,
+             "charts": ["Strategy vs bitcoin: drawdown from record close"]},
+            {"book": "bot1", "tab": "151 Big Tech capex vs Nvidia", "gid": 2119398138, "charts": []},
+            {"book": "bot1", "tab": "223 Micron revenue & margin", "gid": 1584345646, "charts": []},
+            {"book": "bot1", "tab": "226 OpenAI vs Anthropic revenue", "gid": 1186940001, "charts": []},
+            {"book": "bot1", "tab": "263 Tariff pass-through", "gid": 501919598, "charts": []},
+            {"book": "bot1", "tab": "12 Breakeven vs CPI", "gid": 579853621, "charts": []},
+            {"book": "bot2", "tab": "75 CoreWeave backlog vs revenue", "gid": 530554790, "charts": []},
+            {"book": "bot1", "tab": "97 MSTR vol vs BTC vol", "gid": 1027143376, "charts": []},
+            {"book": "bot1", "tab": "52 Core goods vs services", "gid": 200447618, "charts": []},
+            {"book": "bot1", "tab": "67 Effective tariff rate", "gid": 972156540, "charts": []},
+            {"book": "bot1", "tab": "299 Real yield vs breakeven", "gid": 1167074374, "charts": []},
+            {"book": "bot1", "tab": "18 Electricity vs CPI", "gid": 829703707, "charts": []},
         ])
         with open(os.path.join(repo, "static", "sheets", "catalog.json"), "w", encoding="utf-8") as f:
             json.dump(catalog, f)
+        blocked_new = [
+            os.path.join(mstr_dir, "81 CoreWeave margins.png"),
+            os.path.join(b1, "98 MSTR vs BTC drawdowns.png"),
+            os.path.join(b1, "151 Big Tech capex vs Nvidia.png"),
+            os.path.join(b1, "223 Micron revenue & margin.png"),
+            os.path.join(b1, "226 OpenAI vs Anthropic revenue.png"),
+            os.path.join(b1, "263 Tariff pass-through.png"),
+            os.path.join(b1, "263 Tariff pass-through (2).png"),
+            os.path.join(b1, "12 Breakeven vs CPI.png"),
+        ]
+        kept_new = [
+            (os.path.join(mstr_dir, "75 CoreWeave backlog vs revenue.png"), "bot2", "530554790.png"),
+            (os.path.join(b1, "97 MSTR vol vs BTC vol.png"), "bot1", "1027143376.png"),
+            (os.path.join(b1, "52 Core goods vs services.png"), "bot1", "200447618.png"),
+            (os.path.join(b1, "67 Effective tariff rate.png"), "bot1", "972156540.png"),
+            (os.path.join(b1, "299 Real yield vs breakeven.png"), "bot1", "1167074374.png"),
+            (os.path.join(b1, "18 Electricity vs CPI.png"), "bot1", "829703707.png"),
+        ]
         for path in (kept, china, red_dot):
             with open(path, "wb") as f:
                 f.write(old_bytes)
+        for path in blocked_new:
+            with open(path, "wb") as f:
+                f.write(new_bytes)
+        for path, _book, _name in kept_new:
+            with open(path, "wb") as f:
+                f.write(old_bytes)
         n2, u2, a2 = run(repo, [src], optimize_png=False, dry=False)
-        # original five, plus data center, China/Mexico/Taiwan, and the red-dot tracker
-        assert n2 == 8, n2
-        # noise, stray, two Nvidia exports, Korea, Korea chart 2, supercore, Strategy
-        assert u2 == 8, u2
+        # original five, plus data center, China/Mexico/Taiwan, the red-dot tracker, and six neighbors
+        assert n2 == 14, n2
+        # prior eight unmatched, plus seven retired exports and the tariff chart-2 file
+        assert u2 == 16, u2
         assert a2 == 0, a2
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1547332232.png"))
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "643299192.png"))
@@ -336,6 +375,13 @@ def self_test():
         assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "1476428159.png"), "rb").read() == old_bytes
         assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "171599627.png"), "rb").read() == old_bytes
         assert open(os.path.join(repo, "static", "sheets", "full", "bot2", "645072508.png"), "rb").read() == old_bytes
+        for gid in (418894352,):
+            assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot2", "%d.png" % gid))
+        for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621):
+            assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "%d.png" % gid)), gid
+        assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "501919598_2.png"))
+        for _path, book, name in kept_new:
+            assert open(os.path.join(repo, "static", "sheets", "full", book, name), "rb").read() == old_bytes, name
         # optimize() keeps a valid PNG and does not grow a tiny file into garbage.
         out, tool = optimize(tiny)
         assert out.startswith(PNG_MAGIC), tool
