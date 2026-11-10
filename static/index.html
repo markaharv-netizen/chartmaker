@@ -972,8 +972,9 @@ async function sheetsCatalog(){
   }
   return SHEETS_P;
 }
-// ---------- Charts of the day: static/cotd/today.json (refreshed daily by Flash via scripts/cotd_build.py) ----------
-// Each new edition is 20 charts. Render every item in the file; there is no display cap.
+// ---------- Charts of the day: static/cotd/today.json (scripts/cotd_build.py draws up to 20 catalog charts at random) ----------
+// Render every item in the file; there is no display cap. A random edition says how many charts were drawn.
+// Each card is the chart, its title, and the source workbook and tab.
 async function cotdenter(){const el=$('cotd'),E=escHtml;
   el.innerHTML='<p>Loading…</p>';
   try{const r=await fetch('cotd/today.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const j=await r.json();if(MODE!=='cotd')return;
@@ -983,10 +984,12 @@ async function cotdenter(){const el=$('cotd'),E=escHtml;
     const safe=u=>/^https:\/\//.test(u||'')?u:'';
     const starred=!!(cat&&(j.items||[]).some(x=>cotdChart(x,cat)));
     const note=starred?'<p class="local" id="cotdfavlocal">'+E(favScopeText())+'</p>':'';
-    el.innerHTML=`<h2>Charts of the day · ${E(d)}</h2><p class="theme">${E(j.theme)}</p>${note}<p data-favmsg class="local"></p>`+(j.items||[]).map((x,i)=>`<div class="card"><div class="cardtop"><h3>${i+1}. ${E(x.title)}</h3>${cotdFavBtn(x,cat)}</div>
+    const count=(j.items||[]).length;
+    const blurb=j.draw==='random'?`<p class="theme">${E(j.theme||(count+' '+(count===1?'chart':'charts')+' drawn at random from the catalog.'))}</p>`:'';
+    el.innerHTML=`<h2>Charts of the day · ${E(d)}</h2>${blurb}${note}<p data-favmsg class="local"></p>`+(j.items||[]).map((x,i)=>`<div class="card"><div class="cardtop"><h3>${i+1}. ${E(x.title)}</h3>${cotdFavBtn(x,cat)}</div>
 <a href="${E(x.image)}" target="_blank" rel="noopener"><img src="${E(x.image)}" alt="${E(x.title)}" loading="lazy"></a>
 <div class="src">${E(x.sheet)} · ${E(x.tab)}${safe(x.sheet_url)?` · <a href="${E(x.sheet_url)}" target="_blank" rel="noopener">open in sheet</a>`:''}</div>
-<div class="sec"><b>Why it was picked today</b>${E(x.picked)}</div><div class="sec"><b>Why it matters</b>${E(x.matters)}</div><div class="sec"><b>What you should know</b>${E(x.know)}</div></div>`).join('');
+</div>`).join('');
     favPaint();
   }catch(e){el.innerHTML='<p style="color:#EF4444">Could not load today\'s charts ('+E(e.message)+').</p>'}}
 // ---------- Sheets library: static/sheets/catalog.json (scripts/sheets_catalog.py). ----------

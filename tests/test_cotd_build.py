@@ -1,11 +1,13 @@
-"""Charts of the day editions are 20 charts, and retired gids stay unpublished.
+"""Charts of the day draws 20 catalog charts at random, and retired gids stay unpublished.
 
 The builder self-test writes a temporary edition. This module also opens the
-Charts of the day tab and checks that every card in the file is shown.
+Charts of the day tab and checks that every card in the file is shown, without
+the old note sections.
 """
 import base64
 import json
 import os
+import random
 import shutil
 import socket
 import struct
@@ -19,6 +21,8 @@ import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+import cotd_build
 SCRIPT = os.path.join(ROOT, "scripts", "cotd_build.py")
 INDEX = os.path.join(ROOT, "static", "index.html")
 RETIRED = (
@@ -51,6 +55,17 @@ RETIRED_TABS = (
     "12 Breakeven vs CPI",
     "81 CoreWeave margins",
 )
+
+
+def _write_chart_png(path):
+    from PIL import Image
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    im = Image.new("RGB", (64, 36))
+    px = im.load()
+    for y in range(im.height):
+        for x in range(im.width):
+            px[x, y] = ((x * 17 + y * 3) % 256, (x * 5 + y * 13) % 256, (x * y + 40) % 256)
+    im.save(path)
 
 
 def cotd_source():
@@ -91,6 +106,174 @@ class CotdBuildTest(unittest.TestCase):
         cotd_css = "\n".join(line for line in css.splitlines() if "#cotd" in line)
         self.assertNotIn("nth-child", cotd_css)
         self.assertNotIn("max-height", cotd_css)
+        self.assertNotIn("Why it was picked", body)
+        self.assertNotIn("Why it matters", body)
+        self.assertNotIn("What you should know", body)
+        self.assertNotIn("recommended", body.lower())
+        self.assertIn("drawn at random", body)
+
+    def test_random_draw_skips_exclusions_and_recent_charts_and_draws_twenty(self):
+        bot1 = "1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY"
+        bot2 = "1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ"
+        date = "2099-04-01"
+        refused = subprocess.run([sys.executable, SCRIPT, "picks.json"], capture_output=True, text=True)
+        self.assertNotEqual(refused.returncode, 0)
+        self.assertIn("python3 scripts/cotd_build.py", refused.stderr)
+        with tempfile.TemporaryDirectory(prefix="cotd-draw-") as repo:
+            tabs = []
+
+            def add(book, gid, title, charts, png=True):
+                if png:
+                    for n, _title in charts:
+                        suffix = "" if n <= 1 else "_%d" % n
+                        _write_chart_png(os.path.join(repo, "static", "sheets", "full", book, "%d%s.png" % (gid, suffix)))
+                tabs.append({
+                    "book": book, "tab": title, "gid": gid,
+                    "charts": [title for _n, title in charts],
+                    "chartList": [{"n": n, "title": title} for n, title in charts],
+                })
+
+            for i in range(6, 25):
+                add("bot1", 720000 + i, "sample %02d" % i, [(1, "Chart %02d" % i)])
+            add("bot1", 720001, "sample 01", [(1, "Chart 01")])
+            add("bot1", 720002, "sample 02", [(1, "Chart 02")])
+            add("bot1", 720003, "sample 03", [(1, "Chart 03")])
+            add("bot1", 720004, "sample 04", [(1, "Chart 04"), (2, "Chart 04 panel 2")])
+            add("bot1", 720005, "sample 05", [(1, "Chart 05")])
+            add("bot1", 720200, "two panels", [(1, "Panel A"), (2, "Panel B")])
+            add("bot1", 720300, "missing png", [(1, "No file")], png=False)
+            add("bot1", 1547332232, "161 Nvidia P-S and P-E", [(1, "retired nvidia")])
+            add("bot1", 333185169, "87 TSLA beta to Nasdaq", [(1, "retired beta")])
+            add("bot2", 418894352, "81 CoreWeave margins", [(1, "retired margins")])
+            add("bot2", 645072508, "69 Mark MSTR red dot tracker", [(1, "red dot")])
+            tabs.append({"book": "bot1", "tab": "a table", "gid": 720100, "charts": [], "chartList": []})
+            os.makedirs(os.path.join(repo, "static", "sheets"), exist_ok=True)
+            with open(os.path.join(repo, "static", "sheets", "catalog.json"), "w", encoding="utf-8") as f:
+                json.dump({
+                    "books": [
+                        {"id": "bot1", "name": "Bot experiments", "spreadsheetId": bot1},
+                        {"id": "bot2", "name": "bot experiments 2", "spreadsheetId": bot2},
+                    ],
+                    "tabs": tabs,
+                }, f)
+            history = {
+                "2099-03-31": [
+                    {"book": "bot1", "gid": 720001, "chart_n": 1, "tab": "sample 01", "title": "Chart 01"},
+                    {"book": "bot1", "gid": 720200, "chart_n": 2, "tab": "two panels", "title": "Panel B"},
+                ],
+                "2099-03-29": [
+                    {"book": "bot1", "gid": 720003, "chart_n": 1, "tab": "sample 03", "title": "Chart 03"},
+                    {"book": "bot1", "gid": 720004, "tab": "sample 04", "title": "Chart 04"},
+                ],
+                "2099-03-28": [
+                    {"book": "bot1", "gid": 720005, "chart_n": 1, "tab": "sample 05", "title": "Chart 05"},
+                ],
+            }
+            for day, rows in history.items():
+                folder = os.path.join(repo, "static", "cotd", day)
+                os.makedirs(folder)
+                with open(os.path.join(folder, "cards.json"), "w", encoding="utf-8") as f:
+                    json.dump({"date": day, "items": rows}, f)
+            broken = os.path.join(repo, "static", "cotd", "2099-03-30")
+            os.makedirs(broken)
+            with open(os.path.join(broken, "cards.json"), "w", encoding="utf-8") as f:
+                f.write("{")
+
+            pool = cotd_build.eligible_charts(repo, date)
+            ids = {(c["book"], c["gid"], c["chart_n"]) for c in pool}
+            self.assertEqual(len(pool), 22, sorted(ids))
+            for blocked in (
+                ("bot1", 1547332232, 1),
+                ("bot1", 333185169, 1),
+                ("bot2", 418894352, 1),
+                ("bot2", 645072508, 1),
+                ("bot1", 720001, 1),
+                ("bot1", 720003, 1),
+                ("bot1", 720004, 1),
+                ("bot1", 720004, 2),
+                ("bot1", 720200, 2),
+                ("bot1", 720100, 1),
+                ("bot1", 720300, 1),
+            ):
+                self.assertNotIn(blocked, ids, blocked)
+            self.assertIn(("bot1", 720002, 1), ids)
+            self.assertIn(("bot1", 720005, 1), ids)
+            self.assertIn(("bot1", 720200, 1), ids)
+            panel = next(c for c in pool if c["gid"] == 720200)
+            self.assertEqual(panel["chart_n"], 1)
+            self.assertTrue(panel["png"].endswith("/720200.png"), panel["png"])
+            self.assertEqual(cotd_build.EDITION_SIZE, 20)
+            drawn = cotd_build.choose_charts(pool, cotd_build.EDITION_SIZE, cotd_build.edition_rng(date))
+            self.assertEqual(len(drawn), 20)
+            self.assertEqual(len({(c["book"], c["gid"], c["chart_n"]) for c in drawn}), 20)
+            mirror = random.Random()
+            mirror.seed(date)
+            self.assertEqual(drawn, mirror.sample(list(pool), 20))
+
+            run = subprocess.run(
+                [sys.executable, SCRIPT, "--repo", repo, "--date", date, "--keep-old", "0"],
+                capture_output=True, text=True)
+            self.assertEqual(run.returncode, 0, run.stdout + "\n" + run.stderr)
+            with open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8") as f:
+                doc = json.load(f)
+            self.assertEqual(doc["draw"], "random")
+            self.assertEqual(doc["theme"], "20 charts drawn at random from the catalog.")
+            self.assertEqual(len(doc["items"]), 20)
+            self.assertEqual([row["title"] for row in doc["items"]], [c["title"] for c in drawn])
+            published = set()
+            for row in doc["items"]:
+                self.assertNotIn("picked", row)
+                self.assertNotIn("matters", row)
+                self.assertNotIn("know", row)
+                self.assertIn(row["sheet"], ("Bot experiments", "bot experiments 2"))
+                self.assertTrue(row["tab"])
+                self.assertGreaterEqual(row["chart_n"], 1)
+                gid = int(row["sheet_url"].rsplit("gid=", 1)[1])
+                published.add((gid, row["chart_n"]))
+                self.assertNotIn(str(gid), RETIRED)
+                self.assertNotIn(row["tab"], RETIRED_TABS)
+            self.assertNotIn((720001, 1), published)
+            self.assertNotIn((720003, 1), published)
+            self.assertNotIn((720004, 1), published)
+            self.assertNotIn((720004, 2), published)
+            self.assertNotIn((720200, 2), published)
+            self.assertNotIn((645072508, 1), published)
+            with open(os.path.join(repo, "static", "cotd", date, "cards.json"), encoding="utf-8") as f:
+                cards = json.load(f)
+            self.assertEqual(cards["date"], date)
+            self.assertEqual(len(cards["items"]), 20)
+            self.assertTrue(all(it.get("book") and it.get("gid") and it.get("chart_n") for it in cards["items"]))
+            names = sorted(os.listdir(os.path.join(repo, "static", "cotd", date)))
+            self.assertEqual(names, ["%02d.png" % i for i in range(1, 21)] + ["cards.json"])
+
+    def test_random_draw_publishes_every_remaining_chart_when_fewer_than_twenty(self):
+        bot1 = "1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY"
+        date = "2099-05-01"
+        with tempfile.TemporaryDirectory(prefix="cotd-short-") as repo:
+            tabs = []
+            for i in range(1, 8):
+                gid = 730000 + i
+                _write_chart_png(os.path.join(repo, "static", "sheets", "full", "bot1", "%d.png" % gid))
+                tabs.append({
+                    "book": "bot1", "tab": "short %d" % i, "gid": gid,
+                    "charts": ["Short %d" % i], "chartList": [{"n": 1, "title": "Short %d" % i}],
+                })
+            os.makedirs(os.path.join(repo, "static", "sheets"), exist_ok=True)
+            with open(os.path.join(repo, "static", "sheets", "catalog.json"), "w", encoding="utf-8") as f:
+                json.dump({
+                    "books": [{"id": "bot1", "name": "Bot experiments", "spreadsheetId": bot1}],
+                    "tabs": tabs,
+                }, f)
+            run = subprocess.run(
+                [sys.executable, SCRIPT, "--repo", repo, "--date", date, "--keep-old", "0"],
+                capture_output=True, text=True)
+            self.assertEqual(run.returncode, 0, run.stdout + "\n" + run.stderr)
+            with open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8") as f:
+                doc = json.load(f)
+            self.assertEqual(len(doc["items"]), 7)
+            self.assertEqual(doc["theme"], "7 charts drawn at random from the catalog.")
+            self.assertEqual({row["title"] for row in doc["items"]}, {"Short %d" % i for i in range(1, 8)})
+            self.assertTrue(all("picked" not in row and row["chart_n"] == 1 for row in doc["items"]))
 
 
 class CotdDisplayTest(unittest.TestCase):
@@ -113,13 +296,19 @@ class CotdDisplayTest(unittest.TestCase):
                     "tab": f"sample tab {i}",
                     "title": f"Fixture chart {i:02d}",
                     "image": f"cotd/2099-01-15/{i:02d}.png",
+                    "chart_n": 1,
                     "picked": f"picked note {i} " + ("quality " * 8),
                     "matters": f"matters note {i}",
                     "know": know,
                     "sheet_url": f"https://docs.google.com/spreadsheets/d/sheet/edit#gid={900000 + i}",
                 })
             with open(os.path.join(fixture, "cotd", "today.json"), "w", encoding="utf-8") as f:
-                json.dump({"date": "2099-01-15", "theme": "fixture of twenty", "items": items}, f)
+                json.dump({
+                    "date": "2099-01-15",
+                    "draw": "random",
+                    "theme": "20 charts drawn at random from the catalog.",
+                    "items": items,
+                }, f)
             roots = {"fixture": fixture, "real": os.path.join(ROOT, "static")}
             server = _serve(roots)
             port = server.server_address[1]
@@ -135,10 +324,18 @@ class CotdDisplayTest(unittest.TestCase):
                     self.assertEqual(shown["titles"][10], "11. Fixture chart 11")
                     self.assertEqual(shown["titles"][19], "20. Fixture chart 20")
                     self.assertEqual(shown["imgs"], 20)
+                    self.assertEqual(shown["stars"], 0)
+                    self.assertIn("20 charts drawn at random from the catalog.", shown["text"])
+                    self.assertIn("Bot experiments", shown["text"])
+                    self.assertIn("sample tab 1", shown["text"])
+                    self.assertIn("sample tab 20", shown["text"])
+                    self.assertNotIn("Why it was picked", shown["text"])
+                    self.assertNotIn("Why it matters", shown["text"])
+                    self.assertNotIn("What you should know", shown["text"])
+                    self.assertNotIn("picked note 20", shown["text"])
+                    self.assertNotIn("matters note 1", shown["text"])
                     for know in notes:
-                        self.assertIn(know, shown["text"])
-                    self.assertIn("picked note 20", shown["text"])
-                    self.assertIn("matters note 1", shown["text"])
+                        self.assertNotIn(know, shown["text"])
                     narrow = browser.cards(f"{host}/fixture/index.html", width=390, height=800, mobile=True)
                     self.assertEqual(narrow["n"], 20, narrow)
                     self.assertEqual(narrow["hidden"], 0, narrow)
@@ -147,6 +344,14 @@ class CotdDisplayTest(unittest.TestCase):
                     live = browser.cards(f"{host}/real/index.html")
                     self.assertEqual(live["n"], len(saved["items"]), live["titles"])
                     self.assertEqual(live["hidden"], 0)
+                    self.assertEqual(live["stars"], live["n"], live["titles"])
+                    self.assertNotIn("Why it was picked", live["text"])
+                    self.assertNotIn("Why it matters", live["text"])
+                    self.assertNotIn("What you should know", live["text"])
+                    self.assertNotIn(saved["theme"], live["text"])
+                    self.assertNotIn(saved["items"][0]["picked"][:60], live["text"])
+                    self.assertIn(saved["items"][0]["sheet"], live["text"])
+                    self.assertIn(saved["items"][0]["tab"], live["text"])
                     for gid in RETIRED:
                         self.assertNotIn(gid, live["text"])
                     for tab in RETIRED_TABS:
@@ -263,6 +468,7 @@ _CARD_JS = r"""
     display: getComputedStyle(root).display,
     titles: cards.map(c => c.querySelector('h3').textContent),
     imgs: root.querySelectorAll('img').length,
+    stars: root.querySelectorAll('button.fav').length,
     hidden: cards.filter(c => getComputedStyle(c).display === 'none' || c.offsetHeight === 0).length,
     text: root.innerText,
   };
