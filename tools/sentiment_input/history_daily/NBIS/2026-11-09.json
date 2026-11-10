@@ -1,0 +1,246 @@
+{
+ "symbol": "NBIS",
+ "start": "2026-11-09T00:00:00Z",
+ "end": "2026-11-10T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "NBIS (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "OKARUNZO",
+   "url": "https://x.com/OKARUNZO/status/2119759179091239028",
+   "date": "2026-11-09",
+   "text": "this market is a pure gamble \nthe broadcom ceo is right\n\nwhether you are a bull or a bear\n\nconviction and thesis is bullshit\n\nits all delusion\n\nno matter what headlines hit, nothing is bearish for bulls, they can always flip it bullish and find selective evidence\n\n\"oh this is"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "aiinvestor2",
+   "url": "https://x.com/aiinvestor2/status/2119877561916219442",
+   "date": "2026-11-09",
+   "text": "📊 Trader Position Alert | Mon Nov 9, 2026, 2:36 PM ET\n\n🧠 My read\n$SPY 752.39 (+2.3% vs Fri close 735.29), day range 741.03 to 753.38, trading near the high. $QQQ 677.50 (+3.3% vs 656.10), high 678.85. $IWM 282.24 (+3.1%). VIX 20.25, down from 25.64 Friday. This is a clean trend https://t.co/kCI2OoOnLq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JonosTake",
+   "url": "https://x.com/JonosTake/status/2119587375835746391",
+   "date": "2026-11-09",
+   "text": "𝗠𝗔𝗥𝗞𝗘𝗧 𝗢𝗨𝗧𝗟𝗢𝗢𝗞 · 𝗪𝗘𝗘𝗞 𝗢𝗙 𝗡𝗢𝗩 𝟵\n=========\n🔴 𝗕𝗶𝗮𝘀: 𝗠𝗶𝗹𝗱 𝗕𝗲𝗮𝗿 𝟮𝟴 · low confidence · ↓ from 30 last Sunday\n🔁 Flips bull on a daily reclaim and hold over 𝗤𝗤𝗤 about $681\n────────────────\n𝗠𝘆 𝗥𝗲𝗮𝗱:\nFourth straight losing"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 32,
+   "user": "pepe_maltese",
+   "url": "https://x.com/pepe_maltese/status/2119775302201004395",
+   "date": "2026-11-09",
+   "text": "The AI trade basically has 2 possible futures from here and the funny thing is both start with the same observation. Demand is insane. \n\n$AMD, $QCOM, $LITE, $IREN, everyone is telling you the same thing. The disagreement is about whether the financial system can keep paying for https://t.co/6XqXknDTCt"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2119760286739546332",
+   "date": "2026-11-09",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $BTC — Democrat Blue Wave Bad News for Cryptocurrencies — Market Talk\n🟢 20% Bullish · 🔴 80% Bearish\n🔗 https://t.co/TLSMOXw5hu\n\n2. $BTC — Nvidia-led tech selloff weighs on crypto majors\n🟢 15% Bullish · 🔴 85% Bearish\n🔗 https://t.co/VFKB4uOY72\n\n3."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 178,
+   "user": "oguzerkan",
+   "url": "https://x.com/oguzerkan/status/2119816928000663920",
+   "date": "2026-11-09",
+   "text": "Both $NBIS and $CRWV are up nicely today and I think this is just the beginning.\n\nAI dominance is not just an economic issue, it’s a national security problem and preserving the dominance requires more compute, more data centers.\n\nPlus, data centers have been the top job creator https://t.co/y0sl7Y9IiN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "seahorse_anton",
+   "url": "https://x.com/seahorse_anton/status/2119722214903742597",
+   "date": "2026-11-09",
+   "text": "Most of this AI + data center complex is bleeding liquidity. \nOnly real standout:\n$RIOT  — CMF +0.116 (inflow) + OBV +2.00σ (bullish accumulation) + VPT bullish expansion\nNearly everything else is flat-to-negative on CMF with bearish volume trends:\n$NVDA  , $META , $GOOGL, $ORCL https://t.co/c8jHcbZNFn"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "aiinvestor2",
+   "url": "https://x.com/aiinvestor2/status/2119597338943451252",
+   "date": "2026-11-09",
+   "text": "📊 Sunday Futures Plan | Nov 8, 2026\n\nES 7,412 (+0.14%) | NQ 27,069.75 (-0.06%) | Dow +0.35% | Russell +0.34%.\nCNBC quotes around 7:53 PM ET; delay unspecified. Earlier dip mostly recovered, but tech still lags. This is not confirmation of a recovery or breakdown.\n\n🎯 Monday cash"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 178,
+   "user": "EchoAnalysis",
+   "url": "https://x.com/EchoAnalysis/status/2119773248271319227",
+   "date": "2026-11-09",
+   "text": "For months I got hated for calling lower on some of the market's hottest names.\n\n\"You're too bearish.\" \"You're missing out.\"\n\nHere's how those calls played out 👇\n\n$FLNC: textbook Wave B at $24. Now $5.27\n$NBIS: not chasing at $277. Now $129\n$IREN: new low at $24 expected. Now https://t.co/HPfNPV29Ts"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 92,
+   "user": "StockChaser_",
+   "url": "https://x.com/StockChaser_/status/2119903994575564906",
+   "date": "2026-11-09",
+   "text": "$NBIS is rallied today on financing\n\nReuters reported today that Nebius explored a high-yield bond sale in September and decided against it in October\n\nNebius separately secured a $3.5B, 364-day Citi facility that month, initially priced at Term SOFR + 2.75%\n\nWith earnings this https://t.co/4XIpSt2Gsk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 721,
+   "user": "daniel_koss",
+   "url": "https://x.com/daniel_koss/status/2119792123298062520",
+   "date": "2026-11-09",
+   "text": "I still see $900+ per share for $NBIS as plausible in 2027.\n\nI know that sounds crazy, especially after the recent drawdown. It's an upside of over 600%.\n\nBut consider this:\n\nLatest known ARR: ~$3B\nMy base case for end 2027: $42.6B\nThat's roughly 14x.\n\nSo this price target https://t.co/yZNbgCLeDV"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "JonosTake",
+   "url": "https://x.com/JonosTake/status/2119909795662614796",
+   "date": "2026-11-09",
+   "text": "𝗘𝗡𝗗 𝗢𝗙 𝗗𝗔𝗬 𝗥𝗘𝗣𝗢𝗥𝗧 — 𝗠𝗢𝗡, 𝗡𝗢𝗩 𝟵\n=========\n🔴 Bias: Mild Bear 34 · low confidence · ↑ from 33\n🔁 Flips bull over 𝗤𝗤𝗤 about 684\nMy read: Big relief day. Iran deal hopes and a 4–6% drop in oil ripped 𝗤𝗤𝗤 3.5% even with 𝗡𝗩𝗗𝗔 down 4%, as chip money"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "aiinvestor2",
+   "url": "https://x.com/aiinvestor2/status/2119902074620056014",
+   "date": "2026-11-09",
+   "text": "📊 End of Day Market Review | Mon Nov 9, 2026, 4:15 PM ET\n\n🧠 My read\n$SPY closed 752.64, up 2.36% from Friday's 735.29 (O 741.95, H 755.42, L 741.09). $QQQ closed 679.35, up 3.54% (O 662.68, H 681.70, L 662.02). $IWM 282.47, up 3.21%. VIX about 20.01, down roughly 22% from https://t.co/KNuzNelIOY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 109,
+   "user": "FrancisCashFlow",
+   "url": "https://x.com/FrancisCashFlow/status/2119827847007064447",
+   "date": "2026-11-09",
+   "text": "$NBIS  filled the gap at 141.52 ahead of earnings. It's typical to see an initial reversal after a gap fill, so ideally we consolidate below 141.86 before reclaiming and breaking above it\n\nEarnings are Thursday. If we get a positive reaction, the upside levels to watch are: https://t.co/VeqpOaI6yk"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 88,
+   "user": "ether_monk",
+   "url": "https://x.com/ether_monk/status/2119855802718814550",
+   "date": "2026-11-09",
+   "text": "Watched this twice over the past few days and it reminded me why I’m so bullish on $DGXX.\n\nMy average is around $3. Still down 7 figs, still holding and trusting the team to execute. I still believe this can become a multibillion-dollar company if they deliver.\n\nSentiment around https://t.co/3ul1pL8g4B"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "TajVincent",
+   "url": "https://x.com/TajVincent/status/2119784058158829735",
+   "date": "2026-11-09",
+   "text": "📅 EARNINGS WEEK — HIGH-CONVICTION TRADE PLAN — Week of November 9, 2026\n\nThis week's most anticipated earnings calendar is quoted below. I ran the list through EZRA, EZPZ Trading's AI. Only two names cleared with real data, so this week's plan is short and honest.\n\n$AMAT — Thu https://t.co/SaDrgrUCI5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "STONKSENTRY",
+   "url": "https://x.com/STONKSENTRY/status/2119605013274341729",
+   "date": "2026-11-09",
+   "text": "Hot jobs didn't fix AI financing. CPI and neo-cloud earnings decide whether Friday's bounce lasts. 👀\n\nCATALYST\nTuesday: October CPI, then CRWV earnings.\nThursday: NBIS before the open; CSCO and AMAT after the close.\n\nBEAR CASE\nSticky inflation keeps hike odds high. Expensive"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "JayIKyle",
+   "url": "https://x.com/JayIKyle/status/2119930593211281642",
+   "date": "2026-11-09",
+   "text": "Goldman: US Equities Color: Everything Rally\n\n\"On our HT pad, it was constructive to see a mix of covering / long buying across Tech today (ex- $NVDA on weekend headlines) though mkt hesitant to give the ALL CLEAR ahead of CPI tomorrow (GIR at +16bps for Core M/M) and $CRWV /"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "aiinvestor2",
+   "url": "https://x.com/aiinvestor2/status/2119775269900927049",
+   "date": "2026-11-09",
+   "text": "🌅 PREMARKET BRIEF — Mon Nov 9, 2026 (~7:50 AM ET)\n\nFutures bounce into the open while $NVDA digests the Huang probe. Breadth is bid; AI leadership is not.\n\n📊 FUTURES / MACRO\n$ES 7454.5 (+0.71%) | sess ~7363.75–7459\n$NQ 27262 (+0.65%) | sess ~26751–27319\n$YM ~+1.0% | $RTY ~+1.2%"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 255,
+   "user": "MelvinInvests",
+   "url": "https://x.com/MelvinInvests/status/2119830380786360668",
+   "date": "2026-11-09",
+   "text": "I genuinely believe people are still massively underestimating just how big $NBIS could become over the next several years.\n\nAccording to estimates from William Blair, Nebius is projected to grow its annualized revenue run rate from $1.25 billion in 2025 to an astonishing $71.7 https://t.co/0jLkAlMEpN"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "XCapitalBuilder",
+   "url": "https://x.com/XCapitalBuilder/status/2119790197533520364",
+   "date": "2026-11-09",
+   "text": "🚨 STOCK MARKET ALERT — 14 MAJOR TECH STOCKS DEEP IN BEAR MARKET TERRITORY! 🚨📉🩸\n\nWall Street’s technology selloff has been absolutely BRUTAL!\n\nSome of the biggest names in AI, semiconductors, cloud computing and next-generation technology have experienced staggering declines. https://t.co/lHmGOxaA4o"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "BrolicBitcoins",
+   "url": "https://x.com/BrolicBitcoins/status/2119614699058725341",
+   "date": "2026-11-09",
+   "text": "I swing better than your weird old neighbors who are tired of their sex life\n\n$MRNX $83 - $228\n\nANYWAYS... MONDAY WATCHLIST\n\n$NVDA tomorrow probably a short - but market makers are weird and cynical so maybe they say - fuck yea, we love cheaters PUMP IT? IDK wait for volume and https://t.co/tEBebIlQWc"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Endicottcoin",
+   "url": "https://x.com/Endicottcoin/status/2119612923681083506",
+   "date": "2026-11-09",
+   "text": "$NBIS: Not a fan of low liquidity secondary markets\n\nI will wait until the next formal round to see what the \"valuation\" might be.\n\n56B is overvalued but then again, the entire private market is egregious . https://t.co/rW4aeh017s"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Dr_Tripps",
+   "url": "https://x.com/Dr_Tripps/status/2119581903443681293",
+   "date": "2026-11-09",
+   "text": "What are the odds this news drops the same time as midterms? 🤔 \n\nThe CEO of the largest AI company on the planet had an affair with a Chinese spy? I mean cmon this is just ridiculous \n\nSomehow all this bearish AI news hits at the same exact time. How convenient \n\nSome will say https://t.co/k6EKMnLbyd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "Ethan__Trader",
+   "url": "https://x.com/Ethan__Trader/status/2119584713832817054",
+   "date": "2026-11-09",
+   "text": "The CEO of the world’s largest company, Larry Fink, is calling for a 12‑month bull run ahead……    \n\nPreviously in April he nailed:\n$NBIS at $73\n$MU at $315\n$NOW at $81\n$SNDK at $540    \n\nNow he’s calling out:  \n1 \n$NVDA at $210 https://t.co/qzWWVDXOUT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "eklein18",
+   "url": "https://x.com/eklein18/status/2119585830029131831",
+   "date": "2026-11-09",
+   "text": "The CEO of the world’s largest company, Larry Fink, is calling for a 12‑month bull run ahead……    \n\nPreviously in April he nailed:\n$NBIS at $73\n$MU at $315\n$NOW at $81\n$SNDK at $540    \n\nNow he’s calling out:  \n1\n$NVDA  at $210 https://t.co/Q1W8gGwBUt"
+  }
+ ]
+}

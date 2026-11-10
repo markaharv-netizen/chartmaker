@@ -1,0 +1,318 @@
+{
+ "symbol": "COIN",
+ "start": "2026-11-09T00:00:00Z",
+ "end": "2026-11-10T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2119772720523010224",
+   "date": "2026-11-09",
+   "text": "📉 ETH down 5% in 24h with no surprise—structure screams lower lows and no relief in sight\n\n- my bias is bearish here as the 1h market structure remains firmly bearish with lower highs and lower lows, and both the 1h and daily trends are aligned to the downside 📉\n- price is https://t.co/mgf3ZZKuOT"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2119892471773536550",
+   "date": "2026-11-09",
+   "text": "⚖️ $ANTHROPIC up 2.8% vs BTC —bullish on 1h, but daily and weekly charts say stay cautious\n\n- my bias is still short-term bullish here while price holds above 1350, as the 1h structure remains bullish (higher highs/higher lows), but I’m cautious since this move is running counter https://t.co/yg4nOvuoJ6"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2119738817867288621",
+   "date": "2026-11-09",
+   "text": "🔥 NATGAS long crowd is paying +0.5% per 8h funding—bullish momentum strong but who’s paying the price?\n\n- my bias is bullish here as the 1h structure remains firmly bullish, with clear higher highs/lows and price holding above both EMA20 and EMA200, but I am cautious due to the https://t.co/99hBBQDYJ6"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2119771359840530613",
+   "date": "2026-11-09",
+   "text": "🔻 $BTC drifts down 1.5% in 24h, structure locked in lower highs—bearish pressure mounting. | https://t.co/hO0k18QZWU\n\n- my bias is bearish here on the 1h, with structure confirming lower highs/lows and price currently sitting beneath key resistance zones and the last confirmed https://t.co/PKqTC53PPq"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2119900239263895561",
+   "date": "2026-11-09",
+   "text": "🧊 $HIMS slides 7.2% in 15m on 4.5x volume spike—volume says real, structure screams caution | https://t.co/hO0k18QZWU\n\n- my bias is firmly bearish here as the structure is in strong downtrend across the 1h, daily, and weekly, all confirmed by the violent breakdown and sustained https://t.co/DY4cIUNgUF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2119752984439496795",
+   "date": "2026-11-09",
+   "text": "🔥 $ZIL climbs 3.3% in 15m with 2.4x volume surge—bullish momentum looks ready to push higher\n\n- my bias remains bullish on ZIL here in the short-term, as the 1h structure is cleanly bullish with a strong confirmed swing higher and price trading well above both EMA20/EMA200 📈 https://t.co/U3bPQvVJE5"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 30,
+   "user": "Slingtoshi",
+   "url": "https://x.com/Slingtoshi/status/2119786583909925243",
+   "date": "2026-11-09",
+   "text": "$75K was a major support level.\n\nIt's no coincidence that once we broke below it, we saw a massive sell-off and $1 billion in liquidations.\n\nFor those wondering why that red candle was so aggressive, here's how it works.\n\nWhen someone opens a long position, they're essentially https://t.co/Hiy8eiMin9 https://t.co/QFik1tIO5a"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2119639637060714891",
+   "date": "2026-11-09",
+   "text": "🚨 $BTC ALERT: US Money Supply Hits $23.34 Trillion: Why Is Bitcoin Not Following?\n\nRead on NewsSignalsAI: https://t.co/X5F5dxlFVa\n\n🟢 Bullish: 35%\n• US M2 reached a record $23.34 trillion, up 5.7% year over year.\n• Bitcoin's fixed 21 million coin supply reinforces its scarcity"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2119885671640805633",
+   "date": "2026-11-09",
+   "text": "🧐 $BTC drifts down 1.3% in 24h—bearish structure intact but no fresh triggers yet | https://t.co/hO0k18QZWU\n\n- my bias is still bearish here on BTC 1h, as the current market structure shows clear lower highs and lower lows, and price remains below both EMA20 and EMA200  \n- price https://t.co/FhsTWbMmV7"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2119775999348904044",
+   "date": "2026-11-09",
+   "text": "🔥 ZORA volume surges 22.7x with 2.8% 15m gain—real buying power or just the start? | https://t.co/hO0k18QZWU\n\n- my bias is bullish here on ZORAUSDT.P 1h, as the short-term trend is confirmed bullish with a powerful volume-based impulsive move and clear strong buying pressure 🟢 https://t.co/xT1boSul2X"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2119614733749715341",
+   "date": "2026-11-09",
+   "text": "🎯 MVLLB sees 5.1x volume spike with 2.7% uptick—momentum or just noise in a downtrend? | https://t.co/hO0k18QZWU\n\n- my bias is still bearish overall on $MVLLBUSDT here, as the 1h structure remains in a confirmed downtrend with lower highs and lower lows, and both the daily trend https://t.co/5B3NnNyN2T"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "TimothyonCrypto",
+   "url": "https://x.com/TimothyonCrypto/status/2119762454452560325",
+   "date": "2026-11-09",
+   "text": "Remember we are coming to an end to bear market \nActually what I’m seeing now is \n\nI’m the only one that called October and November correctly so far \n\nReality is people think we are going to have a bearish q1-q2 2027 the inverse is happening \n\nThey will be bullish \n\nSome coins"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2119596136243646895",
+   "date": "2026-11-09",
+   "text": "🟢 $BEB volume jumps 64.5x with a 3.5% 15m spike—are we seeing serious accumulation or just hype?\n\n- my bias is bullish here on BEBUSDT 1h after the massive 64.5x volume surge paired with a strong +3.5% price jump in 15 minutes — this type of volume anomaly is rare and strongly https://t.co/j9wdd56WaT"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 74,
+   "user": "0xSkirk",
+   "url": "https://x.com/0xSkirk/status/2119754494263087126",
+   "date": "2026-11-09",
+   "text": "$LUNC is trading at $0.000039.\n\nAnd this might be one of the most controversial charts on my watchlist.\n\nRemember when $LUNC was trading above $0.0006?\n\nSince then, it's lost more than 93% of its value.\n\nYears of selling. Failed breakouts. Almost no excitement left.\n\nBut look at https://t.co/YL4qEtjX0I"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2119778583316934779",
+   "date": "2026-11-09",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $AVAX — NYSE to Settle Tokenized Stocks on Avalanche Blockchain\n🟢 90% Bullish · 🔴 10% Bearish\n🔗 https://t.co/lFL5xddAx9\n\n2. $TRX — Trump says he knows ‘nothing’ about World Liberty’s UAE ties as Justin Sun challenges filings\n🟢 20% Bullish · 🔴 80%"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2119889882122207424",
+   "date": "2026-11-09",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $BTC — Bitcoin CPI Preview: Three Tests for a Fragile Crypto Market\n🟢 30% Bullish · 🔴 70% Bearish\n🔗 https://t.co/W62IXeP0nP\n\n2. $SOL — Formation Securities plans Solana stock trading venue under SEC exemption\n🟢 85% Bullish · 🔴 15% Bearish\n🔗"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2119736436865876125",
+   "date": "2026-11-09",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $XAU — Gold gains as lower oil prices temper inflation fears; US inflation in focus\n🟢 65% Bullish · 🔴 35% Bearish\n🔗 https://t.co/nx83KAV7sv\n\n2. $NVDA — Stocks edge up but Nvidia woes pose a fresh test, oil falls\n🟢 40% Bullish · 🔴 60% Bearish\n🔗"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 65,
+   "user": "xcalebonsolana",
+   "url": "https://x.com/xcalebonsolana/status/2119862909560037389",
+   "date": "2026-11-09",
+   "text": "There are many reasons why I'm bullish on $NETWORK Coin and you should be too:\n\n- Near ATH's in holders\n- One of the STRONGEST community coins right now\n- Simple but effective narrative, endless catalysts\n- Extremely undervalued at current price\n- Has already survived a 90% drop https://t.co/xsDEX2gC6f"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2119810275553742963",
+   "date": "2026-11-09",
+   "text": "The tickers buzzing on X right now:\n\n1. https://t.co/3d7iDcuGcR $AMZN is up 4.7%\n\n🟢 Sentiment: 62% bullish, 3% bearish, 35% neutral\n\nAmazon rose about 5% on cloud‑AI news and an Uber Eats deal. Bullish sentiment reflects AI hype.\n\nWhat people are saying about AMZN:\n\"AMZN and https://t.co/Iw9kPKxb4L"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 26,
+   "user": "Mr_LeverageX",
+   "url": "https://x.com/Mr_LeverageX/status/2119762115355447340",
+   "date": "2026-11-09",
+   "text": "BITCOIN UNDER $60,000 SOUNDS CRAZY. IT'S ABOUT 20% AWAY. IN FEBRUARY IT DROPPED 28.8% IN 7 DAYS...\n\n$BTC hit 73,510 on Sunday night, the lowest since August. That's 41.8% under the 126,200 top.\n\nThe weekly candle closed at 74,851: five red weeks in a row. Binance has seen a run https://t.co/QyP1CeR87n"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2119742257301528860",
+   "date": "2026-11-09",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $COIN — Coinbase wins final OCC approval for national trust bank charter\n🟢 85% Bullish · 🔴 15% Bearish\n🔗 https://t.co/cBdUi5HFK2\n\n2. $CYPH — Why Greenfire Resources Shares Are Up Over 25%; 20 Stocks Moving Premarket\n🟢 35% Bullish · 🔴 65% Bearish\n🔗"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "lborderpulse",
+   "url": "https://x.com/lborderpulse/status/2119829607662944532",
+   "date": "2026-11-09",
+   "text": "BTC Coin Pulse Analysis (Last 8 Hour)\nOverall Bias: Bullish\n\nLiquidation Level Size Long vs Short: Liquidation size tracks rising short-side volume near local resistance levels, creating an upward liquidity target for price expansion.\n\nTrue Retail Longs and Shorts Accounts: https://t.co/g9SMxhVT8n"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 64,
+   "user": "jussy_world",
+   "url": "https://x.com/jussy_world/status/2119737009208222177",
+   "date": "2026-11-09",
+   "text": "Jensen (Nvidia CEO) admitted to cheating on his wife, and here's how CT traded it 😭\n\n- CT launched $PUSSY the same night, it's now a $2.4M coin\n- FLOAT ENJOYER put $1.6K into it, now worth $46K\n\nYou can read his thesis below\n\n- shootingguard went $1.5M long $NVDA at 20x: \"High T https://t.co/hW3HkUKDqc"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "phythorn",
+   "url": "https://x.com/phythorn/status/2119664457265623124",
+   "date": "2026-11-09",
+   "text": "Tbh was biased with sells but saw something like this, then got scared, LTF was bullish, HTF was bearish, so it felt like coin flip https://t.co/AyYU6c3Oda https://t.co/r7zBP99EeL"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2119589396324229524",
+   "date": "2026-11-09",
+   "text": "⚠️ $BTC slips 0.9% in 24h, stuck below key resistance—bearish tone remains intact | https://t.co/hO0k18QZWU\n\n- current 1h structure is bearish, with lower highs and lower lows setting the tone; price sits at 75037, having recently bounced but staying well below the 76168 swing https://t.co/wzxqL9Mzaw"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2119590765122785741",
+   "date": "2026-11-09",
+   "text": "🔻 $ETH down 4.6% in 24h, structure confirms a clear bearish slide—buyers beware.\n\n- my bias is bearish here on ETH as the 1h structure is clearly trending down, with both the 1h and daily showing confirmed lower highs and lower lows, and price trading well below both EMAs 👀\n- https://t.co/UoHvq7MGAd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 113,
+   "user": "bilxlmir",
+   "url": "https://x.com/bilxlmir/status/2119592781496950987",
+   "date": "2026-11-09",
+   "text": "wait i get it so... Alon covered up the @kimchi1x scandal by starting the @Pumpfun Squads competition forcing FOMO to make a move (david dobrik halloween party) this enrages @villainmonkey. He wants to remain the gateway to crypto for celebrities. At the time he successfully"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "marketphase",
+   "url": "https://x.com/marketphase/status/2119586505685692748",
+   "date": "2026-11-09",
+   "text": "Last week's bearish readings on QQQ and SPY's bars carried on this week, and the SPY and SOL lines flipped red. BTC and HYPE show pullbacks within longer-term uptrends. XMR, a privacy coin, is the exception, still in an uptrend since about Aug."
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 47,
+   "user": "deecayz",
+   "url": "https://x.com/deecayz/status/2119591946091983245",
+   "date": "2026-11-09",
+   "text": "Hey @Pumpfun, it’s really simple to hype trenches back up\n\nInstead of shilling bearish viruses like hantavirus, random fresh verified coins and hard bundled coins where 96,4% of holders have just lost between 72% and 94% (and some left because of no more money)\n\nCan you bring https://t.co/qxxhcUMoII"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 41,
+   "user": "ShadowCrypo1r",
+   "url": "https://x.com/ShadowCrypo1r/status/2119587597840416865",
+   "date": "2026-11-09",
+   "text": "🔥 Just burned 600,000 $BPF tokens! 🔥\n\nWhy? Because we’re tired of Pump fun and believe in what the $BPF movement stands for! 💪🐳\n\nThis is bigger than just another meme coin. It’s a community taking a stand, reducing supply, and building something together.\n\nI’m BULLISH on this https://t.co/eq6JEExBw4"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2119582741310185621",
+   "date": "2026-11-09",
+   "text": "#BITCOIN \n\n#BITCOIN printed a bearish continuation candle on Sunday as we continue to grind lower inside a descending channel, now trading below both the 50 and 200 EMAs. \n\nThat type of candle shows sellers remaining in control after last Thursday nasty reversal, with no https://t.co/w2VOLeLPHP"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "GucciKuchi",
+   "url": "https://x.com/GucciKuchi/status/2119589682199794104",
+   "date": "2026-11-09",
+   "text": "They're gunna run up Ansem coin now after the Sling Big Titty dump, to mind mog you into forgetting y'all were hating on the Black Bull yesterday"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 110,
+   "user": "PalmAuraX",
+   "url": "https://x.com/PalmAuraX/status/2119590758499926527",
+   "date": "2026-11-09",
+   "text": "1/\n\nWHY DO I BELIEVE robinhood:0x6354a37799e96ed6ccaecffbe1c100fa7f30cec8 IS A $1B MCAP COIN?\n\nI've been in crypto long enough to understand one thing.\n\nDuring peak bull markets, projects worth tens or even hundreds of millions get picked up by big YouTubers and influencers, and https://t.co/zu2jZ8Gq4a https://t.co/4BnWjaGShm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "darthvalidator_",
+   "url": "https://x.com/darthvalidator_/status/2119590985038459354",
+   "date": "2026-11-09",
+   "text": "$BTC: \n\nAfter a long weekend of reflecting on last weeks price action and letting my nerves cool a bit after giving back $300k, I’m going to add back into the market 50% this week. \n\nThe Binance hack was the largest crypto hack in history, price only moved 5% on news. On top of"
+  }
+ ]
+}

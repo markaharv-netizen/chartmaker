@@ -1,826 +1,785 @@
 {
- "asOf": "2026-11-02T17:30-05:00",
+ "asOf": "2026-11-10T16:05:00-05:00",
  "window": {
-  "start": "2026-10-26T22:00:00Z",
-  "end": "2026-11-02T22:00:00Z"
+  "start": "2026-11-03T20:00:00Z",
+  "end": "2026-11-10T20:00:00Z"
  },
  "method": "engagement-weighted bull/(bull+bear) of classified X posts (w=1+ln(1+likes+2*reposts+replies+2*quotes)) and news (w=3); band = 95% Wilson on Kish effective n; sigma = z-score of the latest X-only history point vs that ticker's own history once it has 20 points (sigma_basis own), else cross-sectional z across the board",
  "source": "X posts & news",
  "tickers": [
   {
-   "symbol": "MSFT",
-   "name": "Microsoft",
-   "bull": 0.972,
-   "lo": 0.7435,
-   "hi": 0.9976,
-   "bull_headline": "Azure growth of 48% beats expectations",
+   "symbol": "META",
+   "name": "Meta",
+   "bull": 1.0,
+   "lo": 0.2065,
+   "hi": 1.0,
+   "bull_headline": "Meta builds an enterprise AI sales team with Accenture and Deloitte",
    "bear_headline": null,
-   "posts": 133,
-   "news": 2,
-   "classified": 18,
-   "n_bull": 17,
-   "n_bear": 1,
-   "n_eff": 14.0,
-   "sources": [
-    {
-     "label": "bull",
-     "user": "Dhruv_Sniper",
-     "url": "https://x.com/Dhruv_Sniper/status/2114918168192057534"
-    },
-    {
-     "label": "bull",
-     "user": "FLOWKINGOPTIONS",
-     "url": "https://x.com/FLOWKINGOPTIONS/status/2114896746459611646"
-    },
-    {
-     "label": "bear",
-     "user": "janscharts",
-     "url": "https://x.com/janscharts/status/2114840844947575065"
-    }
-   ],
-   "sigma": 1.98,
-   "sigma_basis": "cross"
-  },
-  {
-   "symbol": "SPCX",
-   "name": "SpaceX",
-   "bull": 0.9605,
-   "lo": 0.7229,
-   "hi": 0.9956,
-   "bull_headline": "Strong Q3 and large AI compute deals",
-   "bear_headline": null,
-   "posts": 106,
-   "news": 3,
-   "classified": 22,
-   "n_bull": 20,
-   "n_bear": 2,
-   "n_eff": 13.6,
-   "sources": [
-    {
-     "label": "bull",
-     "user": "realpeteyb123",
-     "url": "https://x.com/realpeteyb123/status/2114839925593948639"
-    },
-    {
-     "label": "bull",
-     "user": "SPCX100T",
-     "url": "https://x.com/SPCX100T/status/2115041778944647487"
-    },
-    {
-     "label": "bear",
-     "user": "Finora_EN",
-     "url": "https://x.com/Finora_EN/status/2115816329001259195"
-    },
-    {
-     "label": "bear",
-     "user": "Source_options",
-     "url": "https://x.com/Source_options/status/2116990913520205834"
-    }
-   ],
-   "sigma": -1.0,
-   "sigma_basis": "own"
-  },
-  {
-   "symbol": "TSLA",
-   "name": "Tesla",
-   "bull": 0.8102,
-   "lo": 0.5999,
-   "hi": 0.9239,
-   "bull_headline": "Shares hold near $400 through the tech selloff",
-   "bear_headline": "AI valuation worries spill over to Musk companies",
-   "posts": 136,
-   "news": 4,
-   "classified": 27,
-   "n_bull": 21,
-   "n_bear": 6,
-   "n_eff": 20.9,
-   "sources": [
-    {
-     "label": "bull",
-     "user": "CoinUpOfficials",
-     "url": "https://x.com/CoinUpOfficials/status/2114930090916102149"
-    },
-    {
-     "label": "bull",
-     "user": "0xSett",
-     "url": "https://x.com/0xSett/status/2114943949240709488"
-    },
-    {
-     "label": "bear",
-     "user": "Dehix_Trades",
-     "url": "https://x.com/Dehix_Trades/status/2115065007511630241"
-    },
-    {
-     "label": "bear",
-     "user": "OptionKing33996",
-     "url": "https://x.com/OptionKing33996/status/2115061648260309349"
-    }
-   ],
-   "sigma": 0.95,
-   "sigma_basis": "own"
-  },
-  {
-   "symbol": "STRC",
-   "name": "Strategy STRC",
-   "bull": 0.81,
-   "lo": 0.494,
-   "hi": 0.949,
-   "bull_headline": "Strategy buys back STRC below par as price nears $100",
-   "bear_headline": "Yield and par-stability doubts after MSTR selloff",
-   "posts": 122,
-   "news": 3,
-   "classified": 13,
-   "n_bull": 9,
-   "n_bear": 4,
-   "n_eff": 9.6,
-   "sources": [
-    {
-     "label": "bull",
-     "user": "ZynxBTC",
-     "url": "https://x.com/ZynxBTC/status/2115501020012826978"
-    },
-    {
-     "label": "bull",
-     "user": "RoaringRagnar",
-     "url": "https://x.com/RoaringRagnar/status/2116331426891088332"
-    },
-    {
-     "label": "bear",
-     "user": "RhoRider",
-     "url": "https://x.com/RhoRider/status/2116048911643160823"
-    },
-    {
-     "label": "bear",
-     "user": "chaingull",
-     "url": "https://x.com/chaingull/status/2114889862990221770"
-    }
-   ],
-   "sigma": 1.41,
-   "sigma_basis": "own"
-  },
-  {
-   "symbol": "COIN",
-   "name": "Coinbase",
-   "bull": 0.8059,
-   "lo": 0.5768,
-   "hi": 0.9267,
-   "bull_headline": "Q3 profit of $719 million and record Base activity",
-   "bear_headline": "Pre-earnings options flow skews to puts",
-   "posts": 136,
-   "news": 4,
-   "classified": 24,
-   "n_bull": 20,
-   "n_bear": 4,
-   "n_eff": 17.9,
-   "sources": [
-    {
-     "label": "bull",
-     "user": "DeItaone",
-     "url": "https://x.com/DeItaone/status/2116137395225501960"
-    },
-    {
-     "label": "bull",
-     "user": "0xVertix",
-     "url": "https://x.com/0xVertix/status/2114871099691336027"
-    },
-    {
-     "label": "bear",
-     "user": "fearbringschaos",
-     "url": "https://x.com/fearbringschaos/status/2116054422577176943"
-    },
-    {
-     "label": "bear",
-     "user": "RockyTSTH",
-     "url": "https://x.com/RockyTSTH/status/2115878113628545188"
-    }
-   ],
-   "sigma": 0.72,
-   "sigma_basis": "cross"
-  },
-  {
-   "symbol": "RKLB",
-   "name": "Rocket Lab",
-   "bull": 0.7931,
-   "lo": 0.4968,
-   "hi": 0.9371,
-   "bull_headline": "Neutron progress and the 100th Electron rollout",
-   "bear_headline": "Valuation debate near $60",
-   "posts": 68,
-   "news": 3,
-   "classified": 13,
-   "n_bull": 11,
-   "n_bear": 2,
-   "n_eff": 10.9,
-   "sources": [
-    {
-     "label": "bull",
-     "user": "Prime___Capital",
-     "url": "https://x.com/Prime___Capital/status/2114957684395102309"
-    },
-    {
-     "label": "bull",
-     "user": "Gykiwi03",
-     "url": "https://x.com/Gykiwi03/status/2114841168051847331"
-    },
-    {
-     "label": "bear",
-     "user": "cyberprince_rwo",
-     "url": "https://x.com/cyberprince_rwo/status/2116631648473391205"
-    },
-    {
-     "label": "bear",
-     "user": "SI__ME",
-     "url": "https://x.com/SI__ME/status/2114860637600018769"
-    }
-   ],
-   "sigma": 0.62,
-   "sigma_basis": "cross"
-  },
-  {
-   "symbol": "NBIS",
-   "name": "Nebius",
-   "bull": 0.7703,
-   "lo": 0.5534,
-   "hi": 0.9007,
-   "bull_headline": "Long-term AI cloud valuation upside",
-   "bear_headline": "Put flow and downside targets near $150",
-   "posts": 130,
+   "posts": 142,
    "news": 5,
-   "classified": 26,
-   "n_bull": 19,
-   "n_bear": 7,
-   "n_eff": 20.2,
+   "classified": 1,
+   "n_bull": 1,
+   "n_bear": 0,
+   "n_eff": 1.0,
+   "sources": [],
+   "sigma": -1.15,
+   "sigma_basis": "own"
+  },
+  {
+   "symbol": "ASST",
+   "name": "Strive",
+   "bull": 0.9145,
+   "lo": 0.6604,
+   "hi": 0.9833,
+   "bull_headline": "Strive reports a $509 million Q3 profit and adds thousands of bitcoin",
+   "bear_headline": null,
+   "posts": 65,
+   "news": 5,
+   "classified": 17,
+   "n_bull": 15,
+   "n_bear": 2,
+   "n_eff": 13.4,
    "sources": [
     {
      "label": "bull",
-     "user": "ren_stocks",
-     "url": "https://x.com/ren_stocks/status/2114842925502759163"
+     "user": "diglloyd",
+     "url": "https://x.com/diglloyd/status/2118748387772428776"
     },
     {
      "label": "bull",
-     "user": "thekriskay",
-     "url": "https://x.com/thekriskay/status/2115511962461233605"
+     "user": "diglloyd",
+     "url": "https://x.com/diglloyd/status/2118751402499699027"
     },
     {
      "label": "bear",
-     "user": "chad_ventures",
-     "url": "https://x.com/chad_ventures/status/2116002400419078535"
+     "user": "TaylorK88114500",
+     "url": "https://x.com/TaylorK88114500/status/2119508277704925197"
     },
     {
      "label": "bear",
-     "user": "FLOWKINGOPTIONS",
-     "url": "https://x.com/FLOWKINGOPTIONS/status/2114893352072360132"
+     "user": "AsymmetricRam",
+     "url": "https://x.com/AsymmetricRam/status/2119584186143219768"
     }
    ],
-   "sigma": 0.45,
+   "sigma": 1.25,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "CIFR",
+   "name": "Cipher",
+   "bull": 0.9125,
+   "lo": 0.6001,
+   "hi": 0.9864,
+   "bull_headline": "Cipher shares jump as first HPC lease revenue appears in the results",
+   "bear_headline": null,
+   "posts": 97,
+   "news": 5,
+   "classified": 12,
+   "n_bull": 11,
+   "n_bear": 1,
+   "n_eff": 9.4,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "ACInvestorBlog",
+     "url": "https://x.com/ACInvestorBlog/status/2117710593151094899"
+    },
+    {
+     "label": "bull",
+     "user": "Cantal_Capital",
+     "url": "https://x.com/Cantal_Capital/status/2118058407265747268"
+    }
+   ],
+   "sigma": 1.23,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "ASTS",
+   "name": "AST SpaceMobile",
+   "bull": 0.8981,
+   "lo": 0.6416,
+   "hi": 0.9775,
+   "bull_headline": "Rakuten and AST SpaceMobile launch a Japan satellite venture with government backing",
+   "bear_headline": null,
+   "posts": 57,
+   "news": 5,
+   "classified": 16,
+   "n_bull": 14,
+   "n_bear": 2,
+   "n_eff": 13.4,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "corleoneinvests",
+     "url": "https://x.com/corleoneinvests/status/2118829362690564462"
+    },
+    {
+     "label": "bull",
+     "user": "DrTomsLens",
+     "url": "https://x.com/DrTomsLens/status/2117715591322587634"
+    },
+    {
+     "label": "bear",
+     "user": "YodaStockInvest",
+     "url": "https://x.com/YodaStockInvest/status/2119535430316232807"
+    },
+    {
+     "label": "bear",
+     "user": "OSTradez",
+     "url": "https://x.com/OSTradez/status/2119778647691125126"
+    }
+   ],
+   "sigma": 1.16,
    "sigma_basis": "cross"
   },
   {
    "symbol": "IREN",
    "name": "IREN",
-   "bull": 0.7415,
-   "lo": 0.5448,
-   "hi": 0.873,
-   "bull_headline": "Bounce off weekly support after a 40%+ slide",
-   "bear_headline": "Downtrend persists ahead of earnings",
-   "posts": 134,
+   "bull": 0.8894,
+   "lo": 0.523,
+   "hi": 0.9833,
+   "bull_headline": "IREN shares rise on strong AI cloud growth and a larger backlog",
+   "bear_headline": null,
+   "posts": 94,
    "news": 5,
-   "classified": 30,
-   "n_bull": 21,
-   "n_bear": 9,
-   "n_eff": 24.6,
+   "classified": 10,
+   "n_bull": 8,
+   "n_bear": 2,
+   "n_eff": 7.1,
    "sources": [
     {
      "label": "bull",
-     "user": "Bearlovesbull",
-     "url": "https://x.com/Bearlovesbull/status/2116514384017039685"
+     "user": "TheTechInvest",
+     "url": "https://x.com/TheTechInvest/status/2117933941860507996"
     },
     {
      "label": "bull",
-     "user": "howellnatoyi",
-     "url": "https://x.com/howellnatoyi/status/2114962872883433912"
+     "user": "TheFinGodFather",
+     "url": "https://x.com/TheFinGodFather/status/2117848025955709144"
     },
     {
      "label": "bear",
-     "user": "belbeleggers",
-     "url": "https://x.com/belbeleggers/status/2114967832966709352"
+     "user": "OSTradez",
+     "url": "https://x.com/OSTradez/status/2117980032333214018"
     },
     {
      "label": "bear",
-     "user": "DollarCostAvg",
-     "url": "https://x.com/DollarCostAvg/status/2114908565471215638"
+     "user": "Till1M",
+     "url": "https://x.com/Till1M/status/2119868417142608380"
     }
    ],
-   "sigma": 0.23,
+   "sigma": 1.11,
    "sigma_basis": "cross"
   },
   {
-   "symbol": "MU",
-   "name": "Micron",
-   "bull": 0.7395,
-   "lo": 0.3949,
-   "hi": 0.9251,
-   "bull_headline": "Memory seen as the next AI bottleneck",
-   "bear_headline": "Chart watchers flag a distribution top",
-   "posts": 91,
-   "news": 1,
-   "classified": 9,
-   "n_bull": 6,
-   "n_bear": 3,
-   "n_eff": 7.7,
+   "symbol": "COIN",
+   "name": "Coinbase",
+   "bull": 0.8496,
+   "lo": 0.4495,
+   "hi": 0.9751,
+   "bull_headline": "Coinbase receives a full U.S. federal trust bank charter",
+   "bear_headline": null,
+   "posts": 131,
+   "news": 5,
+   "classified": 6,
+   "n_bull": 5,
+   "n_bear": 1,
+   "n_eff": 5.9,
    "sources": [
     {
      "label": "bull",
-     "user": "PTIMardanOff",
-     "url": "https://x.com/PTIMardanOff/status/2115129791238332598"
+     "user": "godcandle7810",
+     "url": "https://x.com/godcandle7810/status/2117795661550870786"
+    },
+    {
+     "label": "bear",
+     "user": "PolarBerAI",
+     "url": "https://x.com/PolarBerAI/status/2117751014480638382"
+    }
+   ],
+   "sigma": 0.89,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "GOOGL",
+   "name": "Alphabet",
+   "bull": 0.775,
+   "lo": 0.486,
+   "hi": 0.9262,
+   "bull_headline": "Alphabet shares rebound after an earnings dip, led by cloud growth",
+   "bear_headline": "A bearish wave count from the $385 peak keeps dip-buying cautious",
+   "posts": 126,
+   "news": 5,
+   "classified": 16,
+   "n_bull": 11,
+   "n_bear": 5,
+   "n_eff": 11.5,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "deathv1per",
+     "url": "https://x.com/deathv1per/status/2120032286439559247"
     },
     {
      "label": "bull",
-     "user": "JustinThyme29",
-     "url": "https://x.com/JustinThyme29/status/2114884893603963346"
+     "user": "HKIStrategies",
+     "url": "https://x.com/HKIStrategies/status/2119278741574852670"
     },
     {
      "label": "bear",
-     "user": "meddie",
-     "url": "https://x.com/meddie/status/2115144162857095402"
+     "user": "ElliottForecast",
+     "url": "https://x.com/ElliottForecast/status/2119279208031498245"
     },
     {
      "label": "bear",
-     "user": "Hlono1",
-     "url": "https://x.com/Hlono1/status/2116518276780212482"
+     "user": "AIRewardrop",
+     "url": "https://x.com/AIRewardrop/status/2118922674663559659"
     }
    ],
-   "sigma": 0.21,
+   "sigma": 0.49,
    "sigma_basis": "cross"
+  },
+  {
+   "symbol": "STRC",
+   "name": "Strategy STRC",
+   "bull": 0.7745,
+   "lo": 0.5083,
+   "hi": 0.9194,
+   "bull_headline": "Strategy's STRC preferred stock returns to $100 par",
+   "bear_headline": "Critics say STRC buybacks diluted common shareholders to defend par",
+   "posts": 107,
+   "news": 5,
+   "classified": 21,
+   "n_bull": 17,
+   "n_bear": 4,
+   "n_eff": 13.6,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "zaidlikesmstr",
+     "url": "https://x.com/zaidlikesmstr/status/2119421101583339810"
+    },
+    {
+     "label": "bull",
+     "user": "AlexesNakamoto",
+     "url": "https://x.com/AlexesNakamoto/status/2119019313935872511"
+    },
+    {
+     "label": "bear",
+     "user": "CryptoKaleo",
+     "url": "https://x.com/CryptoKaleo/status/2118373603833970935"
+    },
+    {
+     "label": "bear",
+     "user": "mstrinvestor",
+     "url": "https://x.com/mstrinvestor/status/2119046728263585989"
+    }
+   ],
+   "sigma": -0.24,
+   "sigma_basis": "own"
   },
   {
    "symbol": "ETH-USD",
    "name": "Ethereum",
-   "bull": 0.736,
-   "lo": 0.512,
-   "hi": 0.881,
-   "bull_headline": "Record-low funding rates set up a possible short squeeze",
-   "bear_headline": "Channel breakdown and ETF outflows after the Binance hack",
-   "posts": 98,
+   "bull": 0.7653,
+   "lo": 0.5706,
+   "hi": 0.8889,
+   "bull_headline": "The ETH/BTC pair breaks above a multi-month trendline",
+   "bear_headline": "Ethereum dips below $2,100 as ETF outflows and liquidations mount",
+   "posts": 129,
    "news": 5,
-   "classified": 27,
-   "n_bull": 20,
-   "n_bear": 7,
-   "n_eff": 19.1,
+   "classified": 36,
+   "n_bull": 27,
+   "n_bear": 9,
+   "n_eff": 24.8,
    "display": "ETH",
    "logoKey": "c:ETH",
    "kind": "crypto",
    "sources": [
     {
      "label": "bull",
-     "user": "BTCZAYRO",
-     "url": "https://x.com/BTCZAYRO/status/2115003384038056087"
+     "user": "CryptoPatel",
+     "url": "https://x.com/CryptoPatel/status/2119074896173256839"
     },
     {
      "label": "bull",
-     "user": "Daviddye01",
-     "url": "https://x.com/Daviddye01/status/2114964045308498361"
+     "user": "BSCNews",
+     "url": "https://x.com/BSCNews/status/2117712417903784018"
     },
     {
      "label": "bear",
-     "user": "Cross0verX",
-     "url": "https://x.com/Cross0verX/status/2114919945989476461"
+     "user": "AlexSaforyn",
+     "url": "https://x.com/AlexSaforyn/status/2119154727569277057"
     },
     {
      "label": "bear",
-     "user": "mediasnet_defi",
-     "url": "https://x.com/mediasnet_defi/status/2115310063191491021"
+     "user": "Asiftahsin10",
+     "url": "https://x.com/Asiftahsin10/status/2118438476513477048"
     }
    ],
-   "sigma": 0.19,
-   "sigma_basis": "cross"
-  },
-  {
-   "symbol": "ASST",
-   "name": "Strive",
-   "bull": 0.7262,
-   "lo": 0.387,
-   "hi": 0.9177,
-   "bull_headline": "6,182 BTC purchase lifts holdings to 43,000",
-   "bear_headline": "mNAV compression and dilution worries",
-   "posts": 92,
-   "news": 2,
-   "classified": 11,
-   "n_bull": 8,
-   "n_bear": 3,
-   "n_eff": 7.9,
-   "sources": [
-    {
-     "label": "bull",
-     "user": "BTCoptioneer",
-     "url": "https://x.com/BTCoptioneer/status/2115173185968558338"
-    },
-    {
-     "label": "bull",
-     "user": "TheBTCKnight",
-     "url": "https://x.com/TheBTCKnight/status/2116560838857543964"
-    },
-    {
-     "label": "bear",
-     "user": "strategydocs",
-     "url": "https://x.com/strategydocs/status/2116235760420409729"
-    },
-    {
-     "label": "bear",
-     "user": "risenfit",
-     "url": "https://x.com/risenfit/status/2114894863242268799"
-    }
-   ],
-   "sigma": 0.11,
+   "sigma": 0.43,
    "sigma_basis": "cross"
   },
   {
    "symbol": "AMZN",
    "name": "Amazon",
-   "bull": 0.7214,
-   "lo": 0.4167,
-   "hi": 0.9037,
-   "bull_headline": "AWS growth accelerates on AI demand",
-   "bear_headline": "Heavy AI spending weighs on shares after earnings",
-   "posts": 123,
+   "bull": 0.7442,
+   "lo": 0.4231,
+   "hi": 0.9203,
+   "bull_headline": "Amazon shares rebound as AWS growth stands out in the quarter",
+   "bear_headline": "A weekly topping pattern and bearish engulfing keep downside levels in focus",
+   "posts": 146,
+   "news": 5,
+   "classified": 12,
+   "n_bull": 8,
+   "n_bear": 4,
+   "n_eff": 9.1,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "slava_invests",
+     "url": "https://x.com/slava_invests/status/2119120629345423811"
+    },
+    {
+     "label": "bull",
+     "user": "kholov23",
+     "url": "https://x.com/kholov23/status/2117715241911885825"
+    },
+    {
+     "label": "bear",
+     "user": "swingtrader52",
+     "url": "https://x.com/swingtrader52/status/2118860356055437523"
+    },
+    {
+     "label": "bear",
+     "user": "QuantCore_ai",
+     "url": "https://x.com/QuantCore_ai/status/2117730297617756160"
+    }
+   ],
+   "sigma": 0.32,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "SPCX",
+   "name": "SpaceX",
+   "bull": 0.7308,
+   "lo": 0.4444,
+   "hi": 0.902,
+   "bull_headline": "Alphabet lifts its SpaceX stake to $83.7 billion; an analyst keeps a Buy rating",
+   "bear_headline": "SpaceX shares drop below the IPO price after midterm regulatory concerns",
+   "posts": 60,
+   "news": 5,
+   "classified": 18,
+   "n_bull": 16,
+   "n_bear": 2,
+   "n_eff": 11.6,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "spcxGOD",
+     "url": "https://x.com/spcxGOD/status/2118348869733908498"
+    },
+    {
+     "label": "bull",
+     "user": "Finora_EN",
+     "url": "https://x.com/Finora_EN/status/2120013578438652220"
+    },
+    {
+     "label": "bear",
+     "user": "DeItaone",
+     "url": "https://x.com/DeItaone/status/2117962826991968702"
+    }
+   ],
+   "sigma": -1.04,
+   "sigma_basis": "own"
+  },
+  {
+   "symbol": "MSFT",
+   "name": "Microsoft",
+   "bull": 0.6495,
+   "lo": 0.3344,
+   "hi": 0.8724,
+   "bull_headline": "Microsoft's market value tops $4 trillion after a 7% advance",
+   "bear_headline": "A backlog comparison with Oracle fuels talk that the shares are expensive",
+   "posts": 105,
    "news": 5,
    "classified": 13,
    "n_bull": 9,
    "n_bear": 4,
-   "n_eff": 10.1,
+   "n_eff": 8.6,
    "sources": [
     {
      "label": "bull",
-     "user": "EliteOptions2",
-     "url": "https://x.com/EliteOptions2/status/2114869781497037189"
+     "user": "AIAgentUpdate",
+     "url": "https://x.com/AIAgentUpdate/status/2119400354936668656"
     },
     {
      "label": "bull",
-     "user": "OptionKing33996",
-     "url": "https://x.com/OptionKing33996/status/2114929227623788593"
+     "user": "AIAgentUpdate",
+     "url": "https://x.com/AIAgentUpdate/status/2118871351456879029"
     },
     {
      "label": "bear",
-     "user": "jandertung",
-     "url": "https://x.com/jandertung/status/2115369761769189838"
+     "user": "b_brito",
+     "url": "https://x.com/b_brito/status/2118877111805210996"
     },
     {
      "label": "bear",
-     "user": "DH_GameStudio",
-     "url": "https://x.com/DH_GameStudio/status/2114912468245844192"
+     "user": "marketides",
+     "url": "https://x.com/marketides/status/2119563639908626858"
     }
    ],
-   "sigma": 0.08,
-   "sigma_basis": "cross"
-  },
-  {
-   "symbol": "NVDA",
-   "name": "NVIDIA",
-   "bull": 0.698,
-   "lo": 0.4319,
-   "hi": 0.8755,
-   "bull_headline": "Long-term uptrend support near $210 holds",
-   "bear_headline": "Weekly bearish divergence amid AI spending doubts",
-   "posts": 140,
-   "news": 3,
-   "classified": 20,
-   "n_bull": 15,
-   "n_bear": 5,
-   "n_eff": 13.3,
-   "sources": [
-    {
-     "label": "bull",
-     "user": "cantonmeow",
-     "url": "https://x.com/cantonmeow/status/2114849296625320288"
-    },
-    {
-     "label": "bull",
-     "user": "ArtificiallyInu",
-     "url": "https://x.com/ArtificiallyInu/status/2115360421691490725"
-    },
-    {
-     "label": "bear",
-     "user": "InvestingAngles",
-     "url": "https://x.com/InvestingAngles/status/2115669489006313636"
-    },
-    {
-     "label": "bear",
-     "user": "ElliottForecast",
-     "url": "https://x.com/ElliottForecast/status/2114842630550933941"
-    }
-   ],
-   "sigma": -0.1,
-   "sigma_basis": "cross"
-  },
-  {
-   "symbol": "ASTS",
-   "name": "AST SpaceMobile",
-   "bull": 0.691,
-   "lo": 0.4411,
-   "hi": 0.8637,
-   "bull_headline": "Analyst upgrade and Brazil spectrum approval",
-   "bear_headline": "Chart breakdown below the $42 level",
-   "posts": 108,
-   "news": 4,
-   "classified": 19,
-   "n_bull": 12,
-   "n_bear": 7,
-   "n_eff": 15.2,
-   "sources": [
-    {
-     "label": "bull",
-     "user": "Eeinbysinm",
-     "url": "https://x.com/Eeinbysinm/status/2116578513881079967"
-    },
-    {
-     "label": "bull",
-     "user": "SpacBobby",
-     "url": "https://x.com/SpacBobby/status/2116231074061939128"
-    },
-    {
-     "label": "bear",
-     "user": "HKIStrategies",
-     "url": "https://x.com/HKIStrategies/status/2114884789756932498"
-    },
-    {
-     "label": "bear",
-     "user": "acethebulllly",
-     "url": "https://x.com/acethebulllly/status/2115875844019118180"
-    }
-   ],
-   "sigma": -0.16,
-   "sigma_basis": "cross"
-  },
-  {
-   "symbol": "CRWV",
-   "name": "CoreWeave",
-   "bull": 0.6727,
-   "lo": 0.3801,
-   "hi": 0.8733,
-   "bull_headline": "Short-term bounce on heavy volume",
-   "bear_headline": "Financing concerns and a price target cut",
-   "posts": 118,
-   "news": 1,
-   "classified": 13,
-   "n_bull": 8,
-   "n_bear": 5,
-   "n_eff": 10.6,
-   "sources": [
-    {
-     "label": "bull",
-     "user": "Finora_EN",
-     "url": "https://x.com/Finora_EN/status/2115078500281434424"
-    },
-    {
-     "label": "bull",
-     "user": "JoshTradeOption",
-     "url": "https://x.com/JoshTradeOption/status/2117304480249045006"
-    },
-    {
-     "label": "bear",
-     "user": "KK12349999",
-     "url": "https://x.com/KK12349999/status/2116384424178663668"
-    },
-    {
-     "label": "bear",
-     "user": "chorusmcp",
-     "url": "https://x.com/chorusmcp/status/2116473281540710622"
-    }
-   ],
-   "sigma": -0.3,
+   "sigma": -0.2,
    "sigma_basis": "cross"
   },
   {
    "symbol": "MSTR",
    "name": "Strategy",
-   "bull": 0.6194,
-   "lo": 0.3109,
-   "hi": 0.8545,
-   "bull_headline": "Mizuho keeps Outperform after record Q3 profit",
-   "bear_headline": "Large put bets and talk of a drop toward $100",
-   "posts": 62,
+   "bull": 0.6288,
+   "lo": 0.4059,
+   "hi": 0.8077,
+   "bull_headline": "Siebert reiterates a Buy rating and a $350 target, citing more bitcoin purchases",
+   "bear_headline": "Index-removal risk and a deep drawdown from the high weigh on the shares",
+   "posts": 116,
    "news": 5,
-   "classified": 11,
-   "n_bull": 6,
-   "n_bear": 5,
-   "n_eff": 8.6,
-   "sources": [
-    {
-     "label": "bull",
-     "user": "TheBTCKnight",
-     "url": "https://x.com/TheBTCKnight/status/2116560838857543964"
-    },
-    {
-     "label": "bull",
-     "user": "chad_ventures",
-     "url": "https://x.com/chad_ventures/status/2116016744389337137"
-    },
-    {
-     "label": "bear",
-     "user": "CryptoNautyy",
-     "url": "https://x.com/CryptoNautyy/status/2114843322330366014"
-    },
-    {
-     "label": "bear",
-     "user": "BITCOINCREEKBAY",
-     "url": "https://x.com/BITCOINCREEKBAY/status/2116597436332573033"
-    }
-   ],
-   "sigma": -1.78,
-   "sigma_basis": "own"
-  },
-  {
-   "symbol": "AAPL",
-   "name": "Apple",
-   "bull": 0.6146,
-   "lo": 0.2325,
-   "hi": 0.8936,
-   "bull_headline": "Apple overtakes Nvidia as most valuable company near $5 trillion",
-   "bear_headline": "Options signals lean bearish ahead of earnings",
-   "posts": 85,
-   "news": 3,
-   "classified": 6,
-   "n_bull": 4,
-   "n_bear": 2,
-   "n_eff": 4.7,
-   "sources": [
-    {
-     "label": "bull",
-     "user": "Techmoneypress",
-     "url": "https://x.com/Techmoneypress/status/2115421509980131464"
-    },
-    {
-     "label": "bull",
-     "user": "FilingFlows",
-     "url": "https://x.com/FilingFlows/status/2116341680131407932"
-    },
-    {
-     "label": "bear",
-     "user": "JesseOlson",
-     "url": "https://x.com/JesseOlson/status/2114866162953511397"
-    },
-    {
-     "label": "bear",
-     "user": "SandersBetty07",
-     "url": "https://x.com/SandersBetty07/status/2114864127805935792"
-    }
-   ],
-   "sigma": -0.74,
-   "sigma_basis": "cross"
-  },
-  {
-   "symbol": "GOOGL",
-   "name": "Alphabet",
-   "bull": 0.6026,
-   "lo": 0.3245,
-   "hi": 0.8271,
-   "bull_headline": "Dip buyers bet on Google AI and cloud strength",
-   "bear_headline": "Q3 operating income misses estimates; analyst downgrade",
-   "posts": 108,
-   "news": 5,
-   "classified": 16,
-   "n_bull": 10,
+   "classified": 27,
+   "n_bull": 21,
    "n_bear": 6,
-   "n_eff": 10.9,
+   "n_eff": 18.6,
    "sources": [
     {
      "label": "bull",
-     "user": "FLOWKINGOPTIONS",
-     "url": "https://x.com/FLOWKINGOPTIONS/status/2114895707975065707"
+     "user": "BTCtreasuries",
+     "url": "https://x.com/BTCtreasuries/status/2118400972733231114"
     },
     {
      "label": "bull",
-     "user": "Till1M",
-     "url": "https://x.com/Till1M/status/2115122038985953633"
+     "user": "vivekrajan1380",
+     "url": "https://x.com/vivekrajan1380/status/2117947430528491619"
     },
     {
      "label": "bear",
-     "user": "cletusEllijah",
-     "url": "https://x.com/cletusEllijah/status/2116245028263588133"
+     "user": "timel9379",
+     "url": "https://x.com/timel9379/status/2117719120447987796"
     },
     {
      "label": "bear",
-     "user": "InsiderFinancex",
-     "url": "https://x.com/InsiderFinancex/status/2116541208918913031"
+     "user": "mstrinvestor",
+     "url": "https://x.com/mstrinvestor/status/2117933895975104814"
     }
    ],
-   "sigma": -0.83,
-   "sigma_basis": "cross"
-  },
-  {
-   "symbol": "CIFR",
-   "name": "Cipher",
-   "bull": 0.5481,
-   "lo": 0.2584,
-   "hi": 0.8085,
-   "bull_headline": "Morgan Stanley keeps Overweight with $51.50 target",
-   "bear_headline": "Shares down about 70% in three months",
-   "posts": 112,
-   "news": 1,
-   "classified": 11,
-   "n_bull": 7,
-   "n_bear": 4,
-   "n_eff": 8.8,
-   "sources": [
-    {
-     "label": "bull",
-     "user": "howellnatoyi",
-     "url": "https://x.com/howellnatoyi/status/2115012564405125569"
-    },
-    {
-     "label": "bull",
-     "user": "hard_work_ever",
-     "url": "https://x.com/hard_work_ever/status/2114866064559636507"
-    },
-    {
-     "label": "bear",
-     "user": "CryptoPatel",
-     "url": "https://x.com/CryptoPatel/status/2114922536874004504"
-    },
-    {
-     "label": "bear",
-     "user": "chad_ventures",
-     "url": "https://x.com/chad_ventures/status/2115228881838125481"
-    }
-   ],
-   "sigma": -1.25,
-   "sigma_basis": "cross"
+   "sigma": -0.26,
+   "sigma_basis": "own"
   },
   {
    "symbol": "BTC-USD",
    "name": "Bitcoin",
-   "bull": 0.4567,
-   "lo": 0.253,
-   "hi": 0.676,
-   "bull_headline": "Election-cycle bottom thesis and liquidity tailwinds",
-   "bear_headline": "Binance hack drives a slide below $78,000",
-   "posts": 121,
-   "news": 4,
-   "classified": 28,
-   "n_bull": 12,
-   "n_bear": 16,
-   "n_eff": 17.5,
+   "bull": 0.6059,
+   "lo": 0.4111,
+   "hi": 0.7721,
+   "bull_headline": "Treasury buyers including Strategy and Strive keep adding bitcoin",
+   "bear_headline": "Bitcoin loses the 50-week average and tests support in the mid-$70,000s",
+   "posts": 144,
+   "news": 5,
+   "classified": 31,
+   "n_bull": 18,
+   "n_bear": 13,
+   "n_eff": 24.5,
    "display": "BTC",
    "logoKey": "c:BTC",
    "kind": "crypto",
    "sources": [
     {
      "label": "bull",
-     "user": "realpeteyb123",
-     "url": "https://x.com/realpeteyb123/status/2114839925593948639"
+     "user": "crypt0_n0va",
+     "url": "https://x.com/crypt0_n0va/status/2118998337085112517"
     },
     {
      "label": "bull",
-     "user": "cozypront",
-     "url": "https://x.com/cozypront/status/2114880077800583350"
+     "user": "CryptoThro",
+     "url": "https://x.com/CryptoThro/status/2117713875986747801"
     },
     {
      "label": "bear",
-     "user": "StarPlatinum_",
-     "url": "https://x.com/StarPlatinum_/status/2115045117916532996"
+     "user": "AlphaChain11",
+     "url": "https://x.com/AlphaChain11/status/2117902315080573111"
     },
     {
      "label": "bear",
-     "user": "KavianCoin",
-     "url": "https://x.com/KavianCoin/status/2114874820307640802"
+     "user": "0xbeehive",
+     "url": "https://x.com/0xbeehive/status/2118720177411924194"
     }
    ],
-   "sigma": -0.46,
+   "sigma": -0.14,
    "sigma_basis": "own"
   },
   {
-   "symbol": "META",
-   "name": "Meta",
-   "bull": 0.4521,
-   "lo": 0.1594,
-   "hi": 0.7822,
-   "bull_headline": "Ad revenue overtakes Google search revenue",
-   "bear_headline": "Up to $95 billion in stock sales and a shareholder lawsuit",
-   "posts": 97,
-   "news": 4,
-   "classified": 8,
-   "n_bull": 5,
-   "n_bear": 3,
-   "n_eff": 6.0,
+   "symbol": "NBIS",
+   "name": "Nebius",
+   "bull": 0.5332,
+   "lo": 0.331,
+   "hi": 0.725,
+   "bull_headline": "Dip buyers argue the shares are cheap relative to the ClickHouse stake",
+   "bear_headline": "A short report and Texas data-center regulation fears hit the stock",
+   "posts": 128,
+   "news": 5,
+   "classified": 30,
+   "n_bull": 16,
+   "n_bear": 14,
+   "n_eff": 20.8,
    "sources": [
     {
      "label": "bull",
-     "user": "KazzYuzaNFT",
-     "url": "https://x.com/KazzYuzaNFT/status/2115007382225076312"
+     "user": "JonahLupton",
+     "url": "https://x.com/JonahLupton/status/2119445039516393724"
     },
     {
      "label": "bull",
-     "user": "EthanPX00",
-     "url": "https://x.com/EthanPX00/status/2114996288899146007"
+     "user": "bmcneely08",
+     "url": "https://x.com/bmcneely08/status/2118069632770969887"
     },
     {
      "label": "bear",
-     "user": "Sam_Badawi",
-     "url": "https://x.com/Sam_Badawi/status/2115084080408834544"
+     "user": "ZaStocks",
+     "url": "https://x.com/ZaStocks/status/2119094222896648200"
+    },
+    {
+     "label": "bear",
+     "user": "TehLamboX",
+     "url": "https://x.com/TehLamboX/status/2118633525436182722"
     }
    ],
-   "sigma": -1.91,
+   "sigma": -0.83,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "CRWV",
+   "name": "CoreWeave",
+   "bull": 0.4828,
+   "lo": 0.2016,
+   "hi": 0.7754,
+   "bull_headline": "CoreWeave partners with Wayve to train self-driving models on Blackwell GPUs",
+   "bear_headline": "Upcoming earnings put AI demand and a heavy interest-expense load in focus",
+   "posts": 70,
+   "news": 5,
+   "classified": 9,
+   "n_bull": 4,
+   "n_bear": 5,
+   "n_eff": 7.8,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "CryptoBankz_65",
+     "url": "https://x.com/CryptoBankz_65/status/2120210880805666876"
+    },
+    {
+     "label": "bull",
+     "user": "WorthSetupLab",
+     "url": "https://x.com/WorthSetupLab/status/2120160456908386421"
+    },
+    {
+     "label": "bear",
+     "user": "RapidTrading",
+     "url": "https://x.com/RapidTrading/status/2119451882900836642"
+    },
+    {
+     "label": "bear",
+     "user": "iWatchUSleeeep",
+     "url": "https://x.com/iWatchUSleeeep/status/2117770675314131374"
+    }
+   ],
+   "sigma": -1.1,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "RKLB",
+   "name": "Rocket Lab",
+   "bull": 0.4817,
+   "lo": 0.2031,
+   "hi": 0.7721,
+   "bull_headline": "Rocket Lab reports record revenue and a new Mars mission milestone",
+   "bear_headline": "Shares drop below $50 after a Neutron delay and a broader sector selloff",
+   "posts": 57,
+   "news": 5,
+   "classified": 10,
+   "n_bull": 4,
+   "n_bear": 6,
+   "n_eff": 8.0,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "HKIStrategies",
+     "url": "https://x.com/HKIStrategies/status/2118131184236441714"
+    },
+    {
+     "label": "bull",
+     "user": "RockyTSTH",
+     "url": "https://x.com/RockyTSTH/status/2119889458334159310"
+    },
+    {
+     "label": "bear",
+     "user": "RapidTrading",
+     "url": "https://x.com/RapidTrading/status/2119451882900836642"
+    },
+    {
+     "label": "bear",
+     "user": "OSTradez",
+     "url": "https://x.com/OSTradez/status/2119777651040624682"
+    }
+   ],
+   "sigma": -1.11,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "AAPL",
+   "name": "Apple",
+   "bull": 0.4793,
+   "lo": 0.1921,
+   "hi": 0.7809,
+   "bull_headline": "Apple reports record quarterly revenue of $114.5 billion",
+   "bear_headline": "Some traders call the shares expensive and lean toward a pullback",
+   "posts": 200,
+   "news": 5,
+   "classified": 8,
+   "n_bull": 4,
+   "n_bear": 4,
+   "n_eff": 7.2,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "StackyStackz",
+     "url": "https://x.com/StackyStackz/status/2118896086224187597"
+    },
+    {
+     "label": "bull",
+     "user": "nathanlevigam",
+     "url": "https://x.com/nathanlevigam/status/2119369963249299883"
+    },
+    {
+     "label": "bear",
+     "user": "prosperousguy",
+     "url": "https://x.com/prosperousguy/status/2119504214573326478"
+    },
+    {
+     "label": "bear",
+     "user": "Delta_Desk",
+     "url": "https://x.com/Delta_Desk/status/2118879087087497697"
+    }
+   ],
+   "sigma": -1.12,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "MU",
+   "name": "Micron",
+   "bull": 0.4735,
+   "lo": 0.2651,
+   "hi": 0.6915,
+   "bull_headline": "Micron shares rebound after a steep drop, with the AI memory thesis still cited",
+   "bear_headline": "The stock plunges as much as 34% on data-center and midterm worries",
+   "posts": 82,
+   "news": 5,
+   "classified": 22,
+   "n_bull": 9,
+   "n_bear": 13,
+   "n_eff": 17.2,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "crypt_shprd",
+     "url": "https://x.com/crypt_shprd/status/2117949989662151003"
+    },
+    {
+     "label": "bull",
+     "user": "RobertDMelillo",
+     "url": "https://x.com/RobertDMelillo/status/2119853097682088315"
+    },
+    {
+     "label": "bear",
+     "user": "WallStConqueror",
+     "url": "https://x.com/WallStConqueror/status/2118024872160804966"
+    },
+    {
+     "label": "bear",
+     "user": "PatrickPielrfa",
+     "url": "https://x.com/PatrickPielrfa/status/2118036183112622444"
+    }
+   ],
+   "sigma": -1.15,
+   "sigma_basis": "cross"
+  },
+  {
+   "symbol": "TSLA",
+   "name": "Tesla",
+   "bull": 0.4314,
+   "lo": 0.17,
+   "hi": 0.7375,
+   "bull_headline": "Tesla jumps 5.5% as unsupervised Robotaxi service expands to San Antonio",
+   "bear_headline": "The shares drop about 10% after midterm results raise regulatory concerns",
+   "posts": 145,
+   "news": 5,
+   "classified": 11,
+   "n_bull": 5,
+   "n_bear": 6,
+   "n_eff": 7.9,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "LunarOptimus",
+     "url": "https://x.com/LunarOptimus/status/2119222936058134534"
+    },
+    {
+     "label": "bull",
+     "user": "PresidentNoble_",
+     "url": "https://x.com/PresidentNoble_/status/2119072943758057958"
+    },
+    {
+     "label": "bear",
+     "user": "kpak82",
+     "url": "https://x.com/kpak82/status/2117715124819816449"
+    },
+    {
+     "label": "bear",
+     "user": "gtafastnews",
+     "url": "https://x.com/gtafastnews/status/2117719178262032775"
+    }
+   ],
+   "sigma": -0.21,
    "sigma_basis": "own"
+  },
+  {
+   "symbol": "NVDA",
+   "name": "NVIDIA",
+   "bull": 0.3731,
+   "lo": 0.1224,
+   "hi": 0.7175,
+   "bull_headline": "ARK Invest buys about $16 million of Nvidia shares on the decline",
+   "bear_headline": "The stock trades at a decade-low valuation after a five-week slide",
+   "posts": 107,
+   "news": 5,
+   "classified": 8,
+   "n_bull": 2,
+   "n_bear": 6,
+   "n_eff": 6.6,
+   "sources": [
+    {
+     "label": "bull",
+     "user": "StockOptionCole",
+     "url": "https://x.com/StockOptionCole/status/2118107267983958267"
+    },
+    {
+     "label": "bear",
+     "user": "DavidMPontes",
+     "url": "https://x.com/DavidMPontes/status/2119799747695231113"
+    },
+    {
+     "label": "bear",
+     "user": "janscharts",
+     "url": "https://x.com/janscharts/status/2117740321257717819"
+    }
+   ],
+   "sigma": -1.7,
+   "sigma_basis": "cross"
   }
  ]
 }
