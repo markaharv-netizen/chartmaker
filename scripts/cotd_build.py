@@ -1,43 +1,37 @@
 #!/usr/bin/env python3
-"""Build a "Charts of the day" edition for Chartmaker.  Runs on the box, not on Render.
+"""Build a "Charts of the day" edition for Chartmaker. Runs on the box, not on Render.
 
-Each edition targets 20 charts and accepts 1 through 20 items inclusive. A shorter
-list is allowed so the edition is never padded with missing or inadequate charts.
-More than 20 items is an error. Every item is published; the script does not
-truncate the list (the old gate required exactly 10, then exactly 20).
+Each edition is a uniform random sample of 20 items from the sheet catalog.
+An item is one chart (a catalog chartList entry) or one chartless table tab.
+There is no ranking and no written note about why an item was chosen. When fewer
+than 20 items are eligible, the edition contains however many remain. More than
+20 is an error.
 
-Usage:  python3 scripts/cotd_build.py picks.json [--repo /workspace/chartmaker] [--keep-old N]
+Usage:  python3 scripts/cotd_build.py [--repo /workspace/chartmaker] [--date YYYY-MM-DD] [--keep-old N]
 
-picks.json:
-{
-  "date": "2026-10-21",                      # edition date (YYYY-MM-DD)
-  "theme": "one-line theme",
-  "items": [                                  # 1 through 20 inclusive (target 20)
-    {"spreadsheetId": "...", "sheet": "Bot experiments", "tab": "315 SpaceX revenue by segment",
-     "gid": 399190070,                        # tab sheetId (for the 'open in sheet' link)
-     "chart_n": 1,                            # optional. 1-based chart on that tab (catalog chartList
-                                              # order; chart 1 is <gid>.png, chart 2 is <gid>_2.png).
-                                              # Set it when the tab has more than one chart and you know
-                                              # which panel the PNG is. Omitted when it cannot be known.
-     "png": "/workspace/cotd_src/01.png",     # chart PNG already on the box (see COTD_README.md)
-     "title": "...", "picked": "...", "matters": "...", "know": "..."}
-  ]
-}
-Each PNG is checked (not blank / not a single colour), fitted onto a white 1600x900 canvas, and
-written to static/cotd/<date>/NN.png; static/cotd/today.json is then rewritten.
-The same run writes static/cotd/<date>/cards.json (book, gid, chart_n, tab, title). When the
-edition date is D, a chart that appears in D-1, D-2, or D-3 is refused. A missing cards.json
-for one of those days excludes nothing. Identity is book + gid + chart_n when both sides
-record chart_n, and book + gid when either side does not.
+The edition date defaults to today in America/New_York. The draw is seeded with
+that date, so a second run on the same day, with the same catalog and the same
+three previous editions, writes the same 20 items. Pass --seed only to reproduce
+a draw in a test.
+
+Each chosen chart or table uses a library preview when one exists:
+static/sheets/full/<book>/<gid>.png (chart n uses <gid>_n.png), otherwise the
+tab thumbnail for chart 1 or a table. The image is fitted onto a white 1600x900
+canvas and written to static/cotd/<date>/NN.png. A table with no preview is still
+a card, with a link to the tab. static/cotd/today.json is then rewritten.
+The same run writes static/cotd/<date>/cards.json (book, gid, chart_n, tab, title).
+When the edition date is D, an item that appears in D-1, D-2, or D-3 is left out
+of the pool. A missing cards.json for one of those days excludes nothing.
+Identity is book + gid + chart_n when both sides record chart_n, and book + gid
+when either side does not.
 """
-import argparse, datetime, json, os, re, shutil, sys
+import argparse, datetime, hashlib, json, os, random, re, shutil, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sheets_catalog
 
 W, H = 1600, 900
-# Target 20 charts. Accept 1 through 20 so a short, honest list is never padded.
-EDITION_MIN = 1
+# Draw this many items. Publish fewer when the eligible pool is smaller.
 EDITION_MAX = 20
 EDITION_SIZE = EDITION_MAX
 # Charts of the day only. These tabs stay in the sheet catalog, full PNGs, and thumbnails.
@@ -96,12 +90,23 @@ def book_gid_of(item):
         return None
 
 def pick_chart_key(item):
-    """(book, gid, chart_n or None), or None when the workbook tab is unknown."""
+    """(book, gid, chart_n or None), or None when the workbook tab is unknown.
+
+    A catalog row already carries book. A hand-built row is resolved from its
+    spreadsheet id through the known workbooks.
+    """
+    n = parse_chart_n(item.get("chart_n"))
+    n = None if n in (None, "bad") else n
+    book = str(item.get("book") or "").strip()
+    if book and item.get("gid") not in (None, ""):
+        try:
+            return book, int(item.get("gid")), n
+        except (TypeError, ValueError):
+            pass
     base = book_gid_of(item)
     if not base:
         return None
-    n = parse_chart_n(item.get("chart_n"))
-    return base[0], base[1], None if n in (None, "bad") else n
+    return base[0], base[1], n
 
 def cards_path(repo, date):
     return os.path.join(repo, "static", "cotd", date, "cards.json")
@@ -167,6 +172,8 @@ def card_record(item):
             card["chart_n"] = key[2]
     card["tab"] = item.get("tab") or ""
     card["title"] = item.get("title") or ""
+    if item.get("kind") in ("chart", "table"):
+        card["kind"] = item["kind"]
     return card
 
 def cards_from_published(doc):
@@ -179,21 +186,28 @@ def cards_from_published(doc):
         m = re.search(r"/spreadsheets/d/([^/]+)/[^#]*#gid=(\d+)", url)
         row = {"spreadsheetId": m.group(1) if m else "", "gid": int(m.group(2)) if m else "",
                "chart_n": it.get("chart_n"), "tab": it.get("tab") or "", "title": it.get("title") or ""}
+        if it.get("kind") in ("chart", "table"):
+            row["kind"] = it["kind"]
         items.append(card_record(row))
     return {"date": doc.get("date"), "items": items}
 
 def norm_title(s):
     return " ".join(str(s or "").split())
 
-def load_catalog(repo):
-    """Book id by spreadsheet id, and tabs by (book, gid). None when this repo has no catalog."""
+def load_catalog_doc(repo):
+    """The catalog file as written. None when this repo has no readable catalog."""
     path = os.path.join(repo, "static", "sheets", "catalog.json")
     try:
         with open(path, encoding="utf-8") as f:
             doc = json.load(f)
     except (OSError, ValueError):
         return None
-    if not isinstance(doc, dict):
+    return doc if isinstance(doc, dict) else None
+
+def load_catalog(repo):
+    """Book id by spreadsheet id, and tabs by (book, gid). None when this repo has no catalog."""
+    doc = load_catalog_doc(repo)
+    if not doc:
         return None
     books = {}
     for b in doc.get("books") or []:
@@ -311,12 +325,116 @@ def assign_chart_ns(items, catalog):
         else:
             x["chart_n"] = n
 
+def library_preview(repo, book, gid, chart_n):
+    """Full PNG for this chart, else the tab thumbnail for chart 1 or a table.
+
+    Chart 2 and later never borrow chart 1's thumbnail. A missing file is no preview.
+    """
+    n = chart_n or 1
+    full_name = "%d.png" % gid if n == 1 else "%d_%d.png" % (gid, n)
+    full = os.path.join(repo, "static", "sheets", "full", str(book), full_name)
+    if os.path.isfile(full) and os.path.getsize(full) > 0:
+        return full
+    if n == 1:
+        thumb = os.path.join(repo, "static", "sheets", "thumbs", str(book), "%d.jpg" % gid)
+        if os.path.isfile(thumb) and os.path.getsize(thumb) > 0:
+            return thumb
+    return None
+
+def try_fit(src, dst):
+    """Fit one library preview. A blank or unreadable file is skipped, not fatal."""
+    try:
+        fit(src, dst)
+    except (SystemExit, OSError, ValueError):
+        if os.path.isfile(dst):
+            try:
+                os.remove(dst)
+            except OSError:
+                pass
+        return False
+    return True
+
+def pool_items(catalog):
+    """Every eligible chart, plus one item per chartless table tab.
+
+    Order is (book, gid, chart_n) so the dated draw does not depend on catalog order.
+    EXCLUDED_TABS and COTD_EXCLUDED are not in the pool. A tab with several charts
+    contributes one item per chart, each with its own chart_n.
+    """
+    if not catalog:
+        return []
+    books = {}
+    for b in catalog.get("books") or []:
+        if isinstance(b, dict) and b.get("id"):
+            books[str(b["id"])] = b
+    out = []
+    for tab in catalog.get("tabs") or []:
+        if not isinstance(tab, dict):
+            continue
+        book = str(tab.get("book") or "").strip()
+        try:
+            gid = int(tab.get("gid"))
+        except (TypeError, ValueError):
+            continue
+        if not book or sheets_catalog.tab_excluded(book, gid) or (book, gid) in COTD_EXCLUDED:
+            continue
+        meta = books.get(book) or {}
+        charts = chart_rows(tab)
+        if not charts:
+            continue
+        for c in charts:
+            kind = "table" if c.get("synthetic") else "chart"
+            title = norm_title(tab.get("tab")) if kind == "table" else c["label"]
+            if not title:
+                continue
+            out.append({
+                "book": book,
+                "spreadsheetId": str(meta.get("spreadsheetId") or "").strip(),
+                "sheet": meta.get("name") or book,
+                "tab": tab.get("tab") or "",
+                "gid": gid,
+                "chart_n": c["n"],
+                "title": title,
+                "kind": kind,
+            })
+    out.sort(key=lambda it: (it["book"], it["gid"], it["chart_n"], it["kind"], it["title"]))
+    return out
+
+def draw_seed(date, seed=None):
+    """Stable integer seed. The default is the edition date."""
+    text = str(date if seed is None else seed)
+    digest = hashlib.sha256(("cotd-v1\n" + text).encode("utf-8")).digest()
+    return int.from_bytes(digest[:16], "big")
+
+def today_et():
+    """Calendar date of an 8 AM ET refresh. America/New_York, not the host's UTC date."""
+    from zoneinfo import ZoneInfo
+    return datetime.datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+
+def theme_line(n):
+    noun = "item" if n == 1 else "items"
+    return "%d %s drawn at random from the sheet library." % (n, noun)
+
+def select_edition(repo, date, seed=None, size=None):
+    """Uniform sample of up to `size` eligible items. The list order is the draw order."""
+    catalog = load_catalog_doc(repo)
+    if not catalog:
+        sys.exit("missing static/sheets/catalog.json")
+    recent = recent_charts(repo, date)
+    eligible = [it for it in pool_items(catalog) if not repeated_recent(it, recent)]
+    k = EDITION_SIZE if size is None else int(size)
+    k = max(0, min(k, len(eligible)))
+    if k < 1:
+        return []
+    rng = random.Random(draw_seed(date, seed))
+    return rng.sample(eligible, k)
+
 def validate(items, recent=None):
-    """Accept 1 through 20 items; reject an empty list, anything over the cap, or a recent repeat."""
+    """Accept 0 through 20 items. Reject anything over the cap, an excluded tab, or a recent repeat."""
     n = len(items)
-    if n < EDITION_MIN or n > EDITION_MAX:
-        sys.exit(f"need 1 to {EDITION_MAX} items, got {n}")
-    req = ["spreadsheetId", "sheet", "tab", "png", "title", "picked", "matters", "know"]
+    if n > EDITION_MAX:
+        sys.exit("need at most %d items, got %d" % (EDITION_MAX, n))
+    req = ["spreadsheetId", "sheet", "tab", "title"]
     for i, x in enumerate(items, 1):
         miss = [k for k in req if not str(x.get(k, "")).strip()]
         if miss: sys.exit(f"item {i} missing {miss}")
@@ -340,34 +458,70 @@ def publish(P, repo, keep_old):
     tmp = out + ".tmp"; shutil.rmtree(tmp, ignore_errors=True); os.makedirs(tmp)
     rows, card_items = [], []
     for i, x in enumerate(items, 1):
-        fn = f"{i:02d}.png"; n = fit(x["png"], os.path.join(tmp, fn))
-        url = f"https://docs.google.com/spreadsheets/d/{x['spreadsheetId']}/edit" + (f"#gid={x['gid']}" if x.get("gid") not in (None, "") else "")
-        row = {"sheet": x["sheet"], "tab": x["tab"], "title": x["title"], "image": f"cotd/{d}/{fn}",
-               "picked": x["picked"].strip(), "matters": x["matters"].strip(), "know": x["know"].strip(), "sheet_url": x.get("sheet_url") or url}
+        key = pick_chart_key(x)
+        src = str(x.get("png") or "").strip()
+        from_library = False
+        if not src and key:
+            src = library_preview(repo, key[0], key[1], key[2] or 1) or ""
+            from_library = bool(src)
+        fn = f"{i:02d}.png"
+        image = ""
+        nbytes = 0
+        if src:
+            dest = os.path.join(tmp, fn)
+            if from_library:
+                if try_fit(src, dest):
+                    image = f"cotd/{d}/{fn}"
+                    nbytes = os.path.getsize(dest)
+            else:
+                nbytes = fit(src, dest)
+                image = f"cotd/{d}/{fn}"
+        sid = str(x.get("spreadsheetId") or "").strip()
+        url = ""
+        if sid:
+            url = f"https://docs.google.com/spreadsheets/d/{sid}/edit" + (f"#gid={x['gid']}" if x.get("gid") not in (None, "") else "")
+        row = {"sheet": x["sheet"], "tab": x["tab"], "title": x["title"],
+               "sheet_url": x.get("sheet_url") or url}
+        if image:
+            row["image"] = image
+        if x.get("kind") in ("chart", "table"):
+            row["kind"] = x["kind"]
         if x.get("chart_n"):
             row["chart_n"] = x["chart_n"]
         rows.append(row)
         card_items.append(card_record(x))
-        print(f"{fn}  {n//1024} KB  {x['sheet']} / {x['tab']}")
+        if image:
+            print(f"{fn}  {nbytes//1024} KB  {x['sheet']} / {x['tab']}")
+        else:
+            print(f"--  no preview  {x['sheet']} / {x['tab']}")
     with open(os.path.join(tmp, "cards.json"), "w", encoding="utf-8") as f:
         json.dump({"date": d, "items": card_items}, f, indent=1, ensure_ascii=False)
         f.write("\n")
     shutil.rmtree(out, ignore_errors=True); os.rename(tmp, out)
-    doc = {"date": d, "theme": P["theme"].strip(), "items": rows}
+    doc = {"date": d, "theme": (P.get("theme") or "").strip(), "items": rows}
+    if P.get("random"):
+        doc["random"] = True
     t = os.path.join(root, "today.json")
     with open(t + ".tmp", "w") as f: json.dump(doc, f, indent=1, ensure_ascii=False)
     os.replace(t + ".tmp", t)
     if keep_old:
         ed = sorted(x for x in os.listdir(root) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", x))
         for old in ed[:-keep_old]: shutil.rmtree(os.path.join(root, old)); print("removed old edition", old)
-    print("wrote", t)
+    print("wrote", t, "(%d items)" % len(rows))
     return doc
+
+def publish_random(repo, date, keep_old, seed=None):
+    """Draw the edition and write it. This is the daily path."""
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
+        sys.exit("date must be YYYY-MM-DD")
+    items = select_edition(repo, date, seed)
+    return publish({"date": date, "theme": theme_line(len(items)), "random": True, "items": items}, repo, keep_old)
 
 def self_test():
     import tempfile
     bot1 = "1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY"
     bot2 = "1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ"
-    assert EDITION_MIN == 1 and EDITION_MAX == 20
+    assert EDITION_MAX == 20 and EDITION_SIZE == 20
     assert ("bot2", 645072508) in COTD_EXCLUDED
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1547332232})
     assert pick_excluded({"spreadsheetId": bot1, "gid": 643299192})
@@ -471,8 +625,8 @@ def self_test():
             return
         raise SystemExit("expected rejection, validation passed")
 
-    for n in (0, 21):
-        rejected([item(i) for i in range(1, n + 1)], f"need 1 to {EDITION_MAX} items, got {n}")
+    rejected([item(i) for i in range(1, 22)], "need at most %d items, got 21" % EDITION_MAX)
+    validate([])
     validate([item(i) for i in range(1, 11)])
     validate([item(i) for i in range(1, 20)])
     for gid, tab, sid in (
@@ -536,7 +690,7 @@ def self_test():
         try:
             publish(extra, repo, 0)
         except SystemExit as e:
-            assert "need 1 to 20 items, got 21" in str(e), e
+            assert "need at most 20 items, got 21" in str(e), e
         else:
             raise SystemExit("21 items were published")
         assert not os.path.exists(os.path.join(repo, "static", "cotd", "today.json"))
@@ -550,8 +704,8 @@ def self_test():
         assert len(doc["items"]) == 20, len(doc["items"])
         titles = [row["title"] for row in doc["items"]]
         assert titles == [f"Chart {i:02d}" for i in range(1, 21)], titles
-        assert doc["items"][19]["know"].startswith("know note 20 ")
-        assert "quality" in doc["items"][0]["picked"]
+        assert "picked" not in doc["items"][0] and "matters" not in doc["items"][0] and "know" not in doc["items"][19]
+        assert "picked" not in doc["items"][19] and "random" not in doc
         folder = os.path.join(repo, "static", "cotd", "2099-01-20")
         names = sorted(os.listdir(folder))
         assert names == [f"{i:02d}.png" for i in range(1, 21)] + ["cards.json"], names
@@ -661,17 +815,108 @@ def self_test():
     finally:
         shutil.rmtree(repo, ignore_errors=True)
         shutil.rmtree(os.path.dirname(src), ignore_errors=True)
+    random_self_test()
     print("self-test ok")
 
+def random_self_test():
+    """Exclusions, table eligibility, a draw of 20, and the 3-day no-repeat rule."""
+    import tempfile
+    bot1 = "1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY"
+    bot2 = "1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ"
+    catalog = {
+        "books": [
+            {"id": "bot1", "name": "Bot experiments", "spreadsheetId": bot1},
+            {"id": "bot2", "name": "bot experiments 2", "spreadsheetId": bot2},
+        ],
+        "tabs": [
+            {"book": "bot1", "tab": "161 Nvidia P-S and P-E", "gid": 1547332232, "charts": ["retired"], "chartList": [{"n": 1, "title": "retired"}]},
+            {"book": "bot2", "tab": "69 Mark MSTR red dot tracker", "gid": 645072508, "charts": ["red"], "chartList": [{"n": 1, "title": "red"}]},
+            {"book": "bot1", "tab": "a table", "gid": 910002, "charts": [], "chartList": []},
+            {"book": "bot1", "tab": "two", "gid": 910003, "charts": ["Alpha", "Beta"],
+             "chartList": [{"n": 1, "title": "Alpha"}, {"n": 2, "title": "Beta"}]},
+        ],
+    }
+    for i in range(1, 21):
+        catalog["tabs"].append({
+            "book": "bot1", "tab": "chart %02d" % i, "gid": 920000 + i,
+            "charts": ["Chart %02d" % i], "chartList": [{"n": 1, "title": "Chart %02d" % i}],
+        })
+    pool = pool_items(catalog)
+    keys = {(it["book"], it["gid"], it["chart_n"]) for it in pool}
+    assert ("bot1", 1547332232, 1) not in keys
+    assert ("bot2", 645072508, 1) not in keys
+    tables = [it for it in pool if it["kind"] == "table"]
+    assert len(tables) == 1 and tables[0]["gid"] == 910002 and tables[0]["chart_n"] == 1, tables
+    assert ("bot1", 910003, 1) in keys and ("bot1", 910003, 2) in keys
+    assert len(pool) == 23, len(pool)  # 20 single charts + 2 panels + 1 table
+    repo = tempfile.mkdtemp(prefix="cotd-random-")
+    try:
+        cat_dir = os.path.join(repo, "static", "sheets")
+        os.makedirs(cat_dir)
+        with open(os.path.join(cat_dir, "catalog.json"), "w", encoding="utf-8") as f:
+            json.dump(catalog, f)
+        # 2099-05-05 looks at 05-04, 05-03, 05-02. Block the table, chart 01, and only panel 2.
+        for date, rows in (
+            ("2099-05-02", [{"book": "bot1", "gid": 920001, "chart_n": 1, "tab": "chart 01", "title": "Chart 01"}]),
+            ("2099-05-03", [{"book": "bot1", "gid": 910003, "chart_n": 2, "tab": "two", "title": "Beta"}]),
+            ("2099-05-04", [{"book": "bot1", "gid": 910002, "chart_n": 1, "tab": "a table", "title": "a table", "kind": "table"}]),
+        ):
+            folder = os.path.join(repo, "static", "cotd", date)
+            os.makedirs(folder)
+            with open(os.path.join(folder, "cards.json"), "w", encoding="utf-8") as f:
+                json.dump({"date": date, "items": rows}, f)
+        drawn = select_edition(repo, "2099-05-05")
+        assert len(drawn) == 20, len(drawn)
+        got = {(it["book"], it["gid"], it["chart_n"]) for it in drawn}
+        assert ("bot1", 920001, 1) not in got
+        assert ("bot1", 910003, 2) not in got
+        assert ("bot1", 910002, 1) not in got
+        assert ("bot1", 1547332232, 1) not in got
+        assert ("bot2", 645072508, 1) not in got
+        assert ("bot1", 910003, 1) in got  # the other panel on a repeated tab stays eligible
+        assert drawn == select_edition(repo, "2099-05-05")
+        assert select_edition(repo, "2099-05-05", seed="other") != drawn
+        # Fewer than 20 eligible: publish that many, including a table, and do not invent notes.
+        short_cat = {
+            "books": catalog["books"],
+            "tabs": [
+                {"book": "bot1", "tab": "only", "gid": 930001, "charts": ["Only"], "chartList": [{"n": 1, "title": "Only"}]},
+                {"book": "bot1", "tab": "plain table", "gid": 930002, "charts": [], "chartList": []},
+                {"book": "bot1", "tab": "161 Nvidia P-S and P-E", "gid": 1547332232, "charts": [], "chartList": []},
+            ],
+        }
+        with open(os.path.join(cat_dir, "catalog.json"), "w", encoding="utf-8") as f:
+            json.dump(short_cat, f)
+        short = select_edition(repo, "2099-06-01")
+        assert len(short) == 2, short
+        assert {it["kind"] for it in short} == {"chart", "table"}
+        doc = publish_random(repo, "2099-06-01", 0)
+        assert doc["random"] is True
+        assert doc["theme"] == "2 items drawn at random from the sheet library."
+        assert len(doc["items"]) == 2
+        for row in doc["items"]:
+            assert "picked" not in row and "matters" not in row and "know" not in row
+            assert row.get("chart_n") == 1
+        kinds = {row["kind"] for row in doc["items"]}
+        assert kinds == {"chart", "table"}, kinds
+        table = next(row for row in doc["items"] if row["kind"] == "table")
+        assert table["title"] == "plain table" and "image" not in table
+        again = publish_random(repo, "2099-06-01", 0)
+        assert [row["title"] for row in again["items"]] == [row["title"] for row in doc["items"]]
+    finally:
+        shutil.rmtree(repo, ignore_errors=True)
+
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("picks", nargs="?"); ap.add_argument("--repo", default=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    ap = argparse.ArgumentParser(description="Draw a Charts of the day edition at random from the sheet catalog.")
+    ap.add_argument("--repo", default=here)
+    ap.add_argument("--date", default=None, help="Edition date YYYY-MM-DD. Default: today in America/New_York.")
+    ap.add_argument("--seed", default=None, help="Override the draw seed. Default: the edition date.")
     ap.add_argument("--keep-old", type=int, default=7, help="keep this many dated edition folders (0 = keep all)")
     ap.add_argument("--self-test", action="store_true")
     a = ap.parse_args()
     if a.self_test:
         self_test(); return
-    if not a.picks: ap.error("pass picks.json")
-    P = json.load(open(a.picks))
-    publish(P, a.repo, a.keep_old)
+    publish_random(a.repo, a.date or today_et(), a.keep_old, seed=a.seed)
 
 if __name__ == "__main__": main()
