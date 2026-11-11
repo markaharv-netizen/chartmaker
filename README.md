@@ -6,8 +6,9 @@ Start: `cd /workspace/chartmaker && nohup python3 server.py 18790 > server.log 2
 
 Use: tickers (comma-separated, e.g. `NBIS,CRWV,BTC-USD`), optional display names, range (1D/5D intraday, YTD, 1M, 6M, 1Y, 5Y, Max, Custom),
 type (price line, % change indexed to start, candles + volume for one ticker, bar ranking of % return, ratio A/B with exactly two tickers), title, color, watermark toggle.
+Line color on Charts, the one-series color on Financials, and bar color on Valuation share one list. Orange (`#F7931A`) is still the default and violet (`#8B5CF6`) is still the second choice. The list also includes the comparison palette (sky, green, red, ink, pink, teal) plus blue, olive, magenta, and brown. The control is one dropdown; Custom shows a color input and hex field only after that option is chosen. One series uses the picked color. Several series keep the old palette order for the first eight, then the extra hues. A saved view stores the hex, so an older orange or violet choice still applies. `?color=`, `?fcolor=`, and `?vcolor=` set the same hex. Dark themes brighten the named colors, and a custom hex is lightened or darkened only when it would vanish. Download PNG uses the color on screen.
 "Download PNG" exports 1600x900 at 2x (3200x1800). Status bar shows "data as of" (ET); fetch failures show an error and render nothing.
-Render on Prices, Heatmap, Treasury, and Valuation fetches fresh data (the separate Refresh button is gone).
+Render on Charts, Heatmap, Treasury, and Valuation fetches fresh data (the separate Refresh button is gone). The Charts tab is the old Prices tab: `?tab=prices` and `?tab=charts` both open it, and `?tickers=` still does too.
 
 ## Treasury tab
 
@@ -23,7 +24,7 @@ python3 scripts/refresh_btctop100.py --check
 
 Credentials, first match: `GOOGLE_ACCESS_TOKEN` or `CHARTMAKER_GOOGLE_TOKEN`; or `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, and `GOOGLE_REFRESH_TOKEN` (`CHARTMAKER_GOOGLE_*` names work too); or a service-account JSON in `GOOGLE_APPLICATION_CREDENTIALS` or `CHARTMAKER_GOOGLE_CREDENTIALS`. The sheet is private. `--csv` or `BTCTC_CSV` is the fallback.
 
-Watchlist still updates only from its Refresh button. Financials has no quote-cache bypass. Financials and Valuation open with an empty ticker box and a blank chart until tickers are entered. Deep links: `?tickers=` and `&names=` (Prices), `?ftickers=` and `&fnames=` (Financials), `?vtickers=` and `&vnames=` (Valuation). Prices SMA is a multi-select menu (20, 50, 100, 200, 200W, plus a custom length).
+Watchlist still updates only from its Refresh button. Financials has no quote-cache bypass. Financials and Valuation open with an empty ticker box and a blank chart until tickers are entered. Deep links: `?tickers=` and `&names=` (Charts), `?ftickers=` and `&fnames=` (Financials), `?vtickers=` and `&vnames=` (Valuation). Charts SMA is a multi-select menu (20, 50, 100, 200, 200W, plus a custom length).
 
 Notes: YTD baseline = last close of prior year. 5Y uses weekly bars, Max monthly. Ratio aligns A to the latest B bar at or before each date.
 Re-run samples: `python3 shoot.py` (uses /usr/bin/google-chrome).
@@ -55,14 +56,14 @@ Saved views and shared favorites use the same store. With `GITHUB_TOKEN` set the
 
 ## Annotations, candles, Sheets library
 
-### Event markers (Prices)
+### Event markers (Charts)
 Tick **Annotations** on the row under the price controls. Markers are dashed lines on the shared time axis, so a multi-ticker chart gets one timeline (earnings belong to the **first** ticker). Bar-ranking charts ignore them. Labels are short pills inside the plot so they stay on the 1600×900 PNG; the optional note shows on hover, not on the image.
 
 - **Earnings** — `/api/earnings` reads Yahoo `quoteSummary` (crumb, no API key): the last 4 reported quarters plus the next date. Yahoo's chart `events=earn` feed no longer returns a history. Older dates are custom markers. Crypto and some listings come back empty; the status line says so and the price chart still draws.
 - **Halvings** — four historical Bitcoin halvings: 2012-11-28, 2016-07-09, 2020-05-11, 2024-04-20 UTC (block 840,000). No estimated future date.
-- **Custom** — date, short label (24 characters), optional note. Stored on the Prices saved view as `ann` (same views store as everything else) and in this browser until another Prices view is loaded.
+- **Custom** — date, short label (24 characters), optional note. Stored on the Charts saved view as `ann` (same views store as everything else) and in this browser until another Charts view is loaded.
 
-### Candles + volume (Prices)
+### Candles + volume (Charts)
 Type **Candles + volume**. One ticker only; the option is disabled while several symbols are in the box. `/api/chart` returns `bars`: `[time_ms, open, high, low, close, volume]` beside the close-only `points`. Candle mode chooses the interval so bodies stay wide on the 1600px canvas: 1D is 15-minute regular-session bars (30-minute for 24h `-USD` pairs), 5D is one daily candle per trading session, and longer ranges step from daily to weekly to monthly when the finer bars would turn into hairlines. Body width scales with the free plot width, with a small gap, a floor, and a cap. Price line is unchanged (1D/5D stay 1-minute, including pre/after-hours). Candle mode does not draw extended-hours slivers or overnight gaps. Volume sits under the candles; green is close ≥ open. SMAs (daily closes; off for intraday bars), annotations, earnings markers, and Download PNG use the same 1600×900 canvas. The status line shows the interval actually drawn.
 
 ### Sheets library
@@ -111,7 +112,7 @@ The **Charts of the day** tab reads `static/cotd/today.json` and shows every ite
 
 The **Price targets** tab reads `static/price_targets.json`. Render does not call Google. The table is Steve's DCF base value per share against the street consensus mean and the price, sorted by base upside (high to low). Columns: Ticker, Steve's Base, Consensus, Price, Base Upside, Rating, Why. Steve's Base shows the dollar change versus the previous update, in parentheses, when `baseChangedAt` is within the last 7 days (green up, red down). A new ticker shows the price only. A blank Street consensus (an IPO-day name with no analyst coverage) is stored as null, and the Consensus column shows a dash.
 
-Opening the tab loads quotes through the same `/api/chart` path as Prices and recomputes Price, base upside, and the rating from the price on screen. Rating is BUY above +15% upside to base, SELL below -15%, otherwise HOLD. A ticker whose quote fails keeps the snapshot price; the status line names the date in use (Yahoo close, or the snapshot date). Columns are as wide as their text, and the table is not stretched to the page. Download PNG is that same table. Watermark is off unless the box is checked.
+Opening the tab loads quotes through the same `/api/chart` path as Charts and recomputes Price, base upside, and the rating from the price on screen. Rating is BUY above +15% upside to base, SELL below -15%, otherwise HOLD. A ticker whose quote fails keeps the snapshot price; the status line names the date in use (Yahoo close, or the snapshot date). Columns are as wide as their text, and the table is not stretched to the page. Download PNG is that same table. Watermark is off unless the box is checked.
 
 `why` is not a sheet column. Edit it in the JSON. Regenerating the file keeps existing `why` lines, and the footer notes if they were edited.
 
@@ -144,7 +145,7 @@ Then commit `static/paper_trading.json`. `python3 scripts/paper_trading.py --sel
 
 ## Daily briefing
 
-The **Daily briefing** tab is the page the app opens on: price targets, sentiment, BTC treasury holdings, the paper book's saved NAV, and charts of the day. `?tab=` still opens that tab (`?tab=watch` is Watchlist, `?tab=paper` is the paper book, and the same for the others). `?tickers=`, `?ftickers=`, and `?vtickers=` still open Prices, Financials, and Valuation.
+The **Daily briefing** tab is the page the app opens on: price targets, sentiment, BTC treasury holdings, the paper book's saved NAV, and charts of the day. `?tab=` still opens that tab (`?tab=watch` is Watchlist, `?tab=paper` is the paper book, `?tab=prices` and `?tab=charts` are Charts, and the same for the others). `?tickers=`, `?ftickers=`, and `?vtickers=` still open Charts, Financials, and Valuation.
 
 `GET /api/briefing` builds the page from the files those tabs already use. No new scheduled job. Render does not call Google or X.
 
