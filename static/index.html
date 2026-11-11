@@ -21,6 +21,12 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #cotd .cardtop{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}#cotd .cardtop h3{flex:1;min-width:0}
 #cotd .local{font-size:13px;color:#6B7280;margin:0 0 14px;line-height:1.45}
 #cotd [data-favmsg]:empty{display:none}
+#cotd h3.sec{margin:22px 0 12px;font-size:18px}
+#cotd .card.pick{padding:18px 18px 16px;margin-bottom:22px;border-color:#d1d5db}
+#cotd .card.pick h3{font-size:20px}
+#cotd .card .desc{margin:10px 0 0;font-size:15px;line-height:1.5;color:#1f2937}
+#cotd .card .why{margin:8px 0 0;font-size:14px;line-height:1.45;color:#374151}
+#cotd .card .why b{display:block;font-size:12px;color:#6B7280;font-weight:600;margin-bottom:2px}
 #sheets{display:none;padding:16px 16px 48px;max-width:1100px}#sheets h2{margin:0 0 4px;font-size:22px}#sheets .theme{color:#374151;margin:0 0 14px;font-size:15px;line-height:1.45}
 #sheets .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}#sheets .count{font-size:13px;color:#6B7280;margin:0 0 10px}
 #sheets .row{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start}
@@ -95,6 +101,8 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #brief .card h4{margin:0 0 4px;font-size:14px;line-height:1.35}
 #brief .card h4 a{color:#111;text-decoration:none}#brief .card h4 a:hover{text-decoration:underline}
 #brief .card .src{font-size:12px;color:#6B7280;margin:0}#brief .card .src a{color:#2563eb}
+#brief .card .why{margin:4px 0 0;font-size:12px;line-height:1.4;color:#374151}
+#brief .card .why b{font-weight:600;color:#111}
 @media (max-width:640px){
   #brief{padding:12px 12px 40px}
   #brief .grid{grid-template-columns:1fr}
@@ -1134,17 +1142,27 @@ async function sheetsCatalog(){
   }
   return SHEETS_P;
 }
-// ---------- Charts of the day: static/cotd/today.json (scripts/cotd_build.py draws 20 items at random) ----------
-// Render every item. A card is a title, the source workbook, and a chart image or a table link.
-function cotdCard(x,i,cat){
+// ---------- Charts of the day: static/cotd/today.json (scripts/cotd_build.py) ----------
+// A picks array is "Today's picks", then items are "Random from the library".
+// An edition with only items (no picks) stays one list. Render every card.
+function cotdCard(x,i,cat,pick){
   const E=escHtml,safe=u=>/^https:\/\//.test(u||'')?u:'';
   const url=safe(x.sheet_url),table=x.kind==='table',kind=table?'table':'chart';
   const sheetLink=url?`<a href="${E(url)}" target="_blank" rel="noopener">open in sheet</a>`:'';
   const img=x.image?`<a href="${E(x.image)}" target="_blank" rel="noopener"><img src="${E(x.image)}" alt="${E(x.title||'')}" loading="lazy"></a>`:'';
   const badge=table&&img?'<div class="kindline">Table</div>':'';
   const bare=!img?`<div class="tablepreview"><span class="kind">${table?'Table':'Chart'}</span><p>${E(x.tab||x.title||'')}</p>${url?`<a href="${E(url)}" target="_blank" rel="noopener">${table?'Open this table':'open in sheet'}</a>`:''}</div>`:'';
-  return `<div class="card" data-kind="${kind}"><div class="cardtop"><h3>${i+1}. ${E(x.title||'')}</h3>${cotdFavBtn(x,cat)}</div>${badge}${img}${bare}
-<div class="src">${E(x.sheet||'')} · ${E(x.tab||'')}${sheetLink?` · ${sheetLink}`:''}</div></div>`;
+  const about=pick?`${x.description?`<p class="desc">${E(x.description)}</p>`:''}${x.reason?`<p class="why"><b>Why it was picked</b>${E(x.reason)}</p>`:''}`:'';
+  return `<div class="card${pick?' pick':''}" data-kind="${kind}"><div class="cardtop"><h3>${i+1}. ${E(x.title||'')}</h3>${cotdFavBtn(x,cat)}</div>${badge}${img}${bare}
+${about}<div class="src">${E(x.sheet||'')} · ${E(x.tab||'')}${sheetLink?` · ${sheetLink}`:''}</div></div>`;
+}
+function cotdSplit(j){
+  const items=Array.isArray(j.items)?j.items:[];
+  const declared=Array.isArray(j.picks)?j.picks:[];
+  if(declared.length)return {split:true,picks:declared,random:items.filter(x=>!x||x.section!=='picks')};
+  const embedded=items.filter(x=>x&&x.section==='picks');
+  if(embedded.length)return {split:true,picks:embedded,random:items.filter(x=>!x||x.section!=='picks')};
+  return {split:false,picks:[],random:items};
 }
 async function cotdenter(){const el=$('cotd'),E=escHtml;
   el.innerHTML='<p>Loading…</p>';
@@ -1152,10 +1170,14 @@ async function cotdenter(){const el=$('cotd'),E=escHtml;
     let cat=null;try{cat=await sheetsCatalog()}catch(e){cat=null}
     if(MODE!=='cotd')return;
     const d=j.date?new Date(j.date+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'}):'';
-    const starred=!!(cat&&(j.items||[]).some(x=>cotdChart(x,cat)));
+    const parts=cotdSplit(j);
+    const starred=!!(cat&&parts.picks.concat(parts.random).some(x=>cotdChart(x,cat)));
     const note=starred?'<p class="local" id="cotdfavlocal">'+E(favScopeText())+'</p>':'';
     const theme=j.random&&j.theme?`<p class="theme">${E(j.theme)}</p>`:'';
-    el.innerHTML=`<h2>Charts of the day · ${E(d)}</h2>${theme}${note}<p data-favmsg class="local"></p>`+(j.items||[]).map((x,i)=>cotdCard(x,i,cat)).join('');
+    const body=parts.split
+      ?`<h3 class="sec">Today's picks</h3>`+parts.picks.map((x,i)=>cotdCard(x,i,cat,true)).join('')+`<h3 class="sec">Random from the library</h3>`+parts.random.map((x,i)=>cotdCard(x,i,cat)).join('')
+      :(j.items||[]).map((x,i)=>cotdCard(x,i,cat)).join('');
+    el.innerHTML=`<h2>Charts of the day · ${E(d)}</h2>${theme}${note}<p data-favmsg class="local"></p>`+body;
     favPaint();
   }catch(e){el.innerHTML='<p style="color:#EF4444">Could not load today\'s charts ('+E(e.message)+').</p>'}}
 // ---------- Sheets library: static/sheets/catalog.json (scripts/sheets_catalog.py). ----------
@@ -2102,11 +2124,16 @@ function briefRender(doc){const E=escHtml,pt=doc.priceTargets||{},paper=doc.pape
   const sameBody=(tre.changes||[]).map(holdRow).join('')||'<div class="empty">No holding changes within the same as-of date.</div>';
   const fileBody=(tre.filings||[]).length?`<p class="group">Updated filings</p>${tre.filings.map(filingRow).join('')}`:'';
   const treBody=tre.empty?`<div class="empty">${E(tre.emptyMessage||'No treasury changes.')}</div>`:`<p class="group">Same as-of date</p>${sameBody}${fileBody}`+flow(tre.entered,'Entered the top 100')+flow(tre.left,'Left the top 100');
-  const cards=(charts.items||[]).map(item=>{const img=item.image?`<a class="shot" href="${E(item.href)}"><img src="${E(item.image)}" alt="${E(item.title)}" loading="lazy"></a>`:'';
-    return `<div class="card">${img}<div class="cap"><h4><a href="${E(item.href)}">${E(item.title)}</a></h4><p class="src">${E(item.sheet||'')} · ${E(item.tab||'')}${item.href&&item.href!==item.tabHref?` · <a href="${E(item.href)}">open chart</a>`:''}</p></div></div>`}).join('');
+  const briefCard=(item,pick)=>{const img=item.image?`<a class="shot" href="${E(item.href)}"><img src="${E(item.image)}" alt="${E(item.title)}" loading="lazy"></a>`:'';
+    const note=pick&&(item.description||item.reason)?`<p class="why">${item.description?E(item.description):''}${item.description&&item.reason?' ':''}${item.reason?`<b>Why it was picked.</b> ${E(item.reason)}`:''}</p>`:'';
+    return `<div class="card${pick?' pick':''}">${img}<div class="cap"><h4><a href="${E(item.href)}">${E(item.title)}</a></h4><p class="src">${E(item.sheet||'')} · ${E(item.tab||'')}${item.href&&item.href!==item.tabHref?` · <a href="${E(item.href)}">open chart</a>`:''}</p>${note}</div></div>`};
+  const pickCards=(charts.picks||[]).map(item=>briefCard(item,true)).join('');
+  const cards=(charts.items||[]).map(item=>briefCard(item,false)).join('');
   const chWhen=`Edition ${E(charts.asOfLabel||'—')}`;
   const theme=charts.theme?`<p class="asof">${E(charts.theme)}</p>`:'';
-  const chBody=charts.empty?`<div class="empty">${E(charts.emptyMessage||'No charts of the day.')}</div>`:`<div class="grid">${cards}</div>`;
+  const chBody=charts.empty?`<div class="empty">${E(charts.emptyMessage||'No charts of the day.')}</div>`
+    :(charts.picks||[]).length?`<p class="group">Today's picks</p><div class="grid">${pickCards}</div><p class="group">Random from the library</p><div class="grid">${cards}</div>`
+    :`<div class="grid">${cards}</div>`;
   return `<h2>Daily briefing</h2><p class="lede">What changed in price targets, sentiment, bitcoin treasuries, and charts of the day.</p>`
     +briefSection('Price targets',pt.href||'/?tab=pt',ptWhen)+paperLine+ptBody+'</section>'
     +briefSection('Sentiment',sent.href||'/?tab=sent',sentWhen)+sentBody+'</section>'

@@ -225,11 +225,67 @@ class ChartsTest(unittest.TestCase):
         bad = next(item for item in section["items"] if item["title"] == "Bad image")
         self.assertEqual(bad["image"], "")
         self.assertTrue(bad["href"].startswith("https://"))
+        self.assertEqual(section["picks"], [])
 
     def test_missing_edition_names_the_file(self):
         section = briefing.charts_section(None)
         self.assertTrue(section["empty"])
+        self.assertEqual(section["picks"], [])
         self.assertIn("static/cotd/today.json", section["emptyMessage"])
+
+    def test_picks_come_first_and_keep_their_notes(self):
+        doc = {
+            "date": "2026-11-12",
+            "theme": "5 picks, plus 1 item drawn at random from the sheet library.",
+            "picks": [
+                {"title": "Picked chart", "sheet": "Bot experiments", "tab": "52 Core goods",
+                 "description": "Core goods against services.",
+                 "reason": "The gap widened.",
+                 "section": "picks",
+                 "image": "cotd/2026-11-12/01.png",
+                 "sheet_url": "https://docs.google.com/spreadsheets/d/x/edit#gid=200447618"},
+                {"title": "Retired pick", "sheet": "Bot experiments", "tab": "87 TSLA beta",
+                 "description": "Should drop.", "reason": "Excluded.",
+                 "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=333185169"},
+            ],
+            "items": [
+                {"title": "Picked chart", "section": "picks", "sheet": "Bot experiments", "tab": "52 Core goods",
+                 "sheet_url": "https://docs.google.com/spreadsheets/d/x/edit#gid=200447618"},
+                {"title": "Random chart", "section": "random", "sheet": "Bot experiments", "tab": "kept",
+                 "image": "cotd/2026-11-12/02.png",
+                 "sheet_url": "https://docs.google.com/spreadsheets/d/x/edit#gid=2"},
+            ],
+        }
+        section = briefing.charts_section(doc)
+        self.assertEqual([item["title"] for item in section["picks"]], ["Picked chart"])
+        self.assertEqual(section["picks"][0]["description"], "Core goods against services.")
+        self.assertEqual(section["picks"][0]["reason"], "The gap widened.")
+        self.assertEqual(section["picks"][0]["section"], "picks")
+        self.assertEqual([item["title"] for item in section["items"]], ["Random chart"])
+        self.assertNotIn("description", section["items"][0])
+        self.assertFalse(section["empty"])
+        embedded = {"date": "2026-11-12", "items": [
+            {"title": "From items", "section": "picks", "description": "A table of holdings.",
+             "reason": "It was updated.", "sheet": "Bot", "tab": "t",
+             "sheet_url": "https://docs.google.com/spreadsheets/d/x/edit#gid=3"},
+            {"title": "Still random", "sheet": "Bot", "tab": "u",
+             "sheet_url": "https://docs.google.com/spreadsheets/d/x/edit#gid=4"},
+        ]}
+        split = briefing.charts_section(embedded)
+        self.assertEqual([item["title"] for item in split["picks"]], ["From items"])
+        self.assertEqual(split["picks"][0]["reason"], "It was updated.")
+        self.assertEqual([item["title"] for item in split["items"]], ["Still random"])
+
+    def test_briefing_page_names_both_sections(self):
+        with open(INDEX, encoding="utf-8") as handle:
+            html = handle.read()
+        start = html.find("function briefRender")
+        end = html.find("async function briefEnter")
+        body = html[start:end]
+        self.assertIn("Today's picks", body)
+        self.assertIn("Random from the library", body)
+        self.assertIn("Why it was picked", body)
+        self.assertIn("charts.picks", body.replace(" ", ""))
 
 
 class PaperTest(unittest.TestCase):
@@ -283,6 +339,7 @@ class LiveFilesTest(unittest.TestCase):
             self.assertLess(swing["classified"], briefing.THIN_ITEMS)
         charts = doc["charts"]["items"]
         self.assertEqual(len(charts), 16)
+        self.assertEqual(doc["charts"].get("picks"), [])
         self.assertEqual(doc["charts"].get("theme"), "16 items drawn at random from the sheet library.")
         titles = " ".join(item["title"] for item in charts)
         for gone in (
