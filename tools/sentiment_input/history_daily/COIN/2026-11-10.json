@@ -1,0 +1,237 @@
+{
+ "symbol": "COIN",
+ "start": "2026-11-10T00:00:00Z",
+ "end": "2026-11-11T00:00:00Z",
+ "src": "x-daily",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "COIN (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2120302859468066883",
+   "date": "2026-11-10",
+   "text": "🧊 TWST extreme negative funding at -0.374% per 8h confirms crowded shorts but bears still control the daily trend\n\n- despite the extreme negative funding rate signaling aggressive short positioning, the 1h structure remains firmly bearish, with both the daily and BTC trends https://t.co/m0gva98Z0W"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2120007136155500546",
+   "date": "2026-11-10",
+   "text": "🔻 $BTC edges down 0.5% in 24h, but the stubborn downtrend says this fade isn’t over yet\n\n- my bias is bearish on BTC here as the 1h structure remains in a clear downtrend with lower highs and lower lows, and price sits beneath both EMA20 and EMA200 🕳️\n- the most recent confirmed https://t.co/NkRjoi9PdP"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "tradingchartftw",
+   "url": "https://x.com/tradingchartftw/status/2119968234367553834",
+   "date": "2026-11-10",
+   "text": "Daily Flow after Monday’s close (normally only for pinned post): the strongest message is not simply that Flow was bullish. Bullish Flow was broad, economically coherent—and price largely confirmed it—while the tiny bearish pocket was rejected.\nSemiconductors, storage, optics, https://t.co/uuMcOSPonv"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2120129817177637018",
+   "date": "2026-11-10",
+   "text": "📌 ETH holds steady with a slight 1.4% dip—structure warns, but no chaos yet.\n\n- my bias here is still bearish as the 1h market structure shows clear lower highs and lower lows, with price firmly below both short- and long-term EMAs and the latest confirmed swing high far above https://t.co/ebH1vaRzDK"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2120180964366143717",
+   "date": "2026-11-10",
+   "text": "🔥 $QI climbs 20.4% in 24h with volume doubling—real momentum or just getting started?\n\n- my bias is bullish here in the short term, as the 1h trend structure remains clearly bullish and the recent pump was supported by a notable 2x volume spike, indicating genuine buying rather https://t.co/dSEacCkvSN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "torvale1953",
+   "url": "https://x.com/torvale1953/status/2120246631425863828",
+   "date": "2026-11-10",
+   "text": "Shares of Sea Ltd. (SE + $4.40 to $82.36) are moving higher this morning after the Singapore-based global technology conglomerate reported Q3 EPS of $0.78 ($0.03 miss) on Q3 revenue that increased 43.37% year-over-year (YoY) to $8.582B (above the $8.045B expected) as gross"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2120191273445232907",
+   "date": "2026-11-10",
+   "text": "⬇️ $SSV volume spikes 272x amid selling pressure—echoes of a deeper downtrend or just noise? | https://t.co/hO0k18QZWU\n\n- my bias remains firmly bearish here — the 1h, daily, and weekly structure are all in strong alignment to the downside, and BTC is also trending bearish; https://t.co/MaOtyM1e1b"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2119946396954497399",
+   "date": "2026-11-10",
+   "text": "📉 $BTC holds a weak 0.9% gain but lower highs hint at more downside ahead\n\n- my bias remains bearish on BTCUSDT.P here, as the 1h structure is still printing lower highs and lower lows; price is trading just below the most recent confirmed lower high at 75547.7 and the trend https://t.co/zgSSyh2pmU"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2120045410882347371",
+   "date": "2026-11-10",
+   "text": "📈 UNITREE shorts bleeding with -0.844% funding but price still climbs—bullish structure says more upside ahead\n\n- my bias is bullish here: market structure on the 1h is clearly bullish (higher highs/higher lows), and the trend flip level is a good distance below at 97.88, giving https://t.co/40kzQSrHmF"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2120251380208144487",
+   "date": "2026-11-10",
+   "text": "🔻 ETH lingers under key EMAs with a 3.7% dip—downtrend pressure isn’t easing anytime soon | https://t.co/hO0k18QZWU\n\n- my bias is bearish here as the 1h structure remains in a clear downtrend with confirmed lower highs and lower lows, and price trading below both EMA20 and https://t.co/dAqBKbvkOR"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 13,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2120067770570191170",
+   "date": "2026-11-10",
+   "text": "🔍 $BTC up 1.3% in 24h but bearish structure says don’t buy the bounce just yet | https://t.co/hO0k18QZWU\n\n- my bias is still bearish here on the 1h as the structure remains in a clear downtrend, with price making lower highs and lower lows; the immediate trend is reinforced by https://t.co/yXTH6QZRNX"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2120121152970355003",
+   "date": "2026-11-10",
+   "text": "#BITCOIN\n\n#BITCOIN is putting in another bearish continuation candle so far as bears maintain momentum since breaking below the 200 EMA near $76,423, a close that shows sellers pressing from the open and buyers failing to take the candle back. We are slowly grinding lower along https://t.co/bobyj3DgfX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "risenfit",
+   "url": "https://x.com/risenfit/status/2120240801175478516",
+   "date": "2026-11-10",
+   "text": "$BTC $MSTR $COIN\nBITCOIN: SIX-WEEK RETRACEMENT SEQUENCES\n\n🔸 Four distinct sequences averaging approximately six weeks of declining price action, each following a significant price peak.\n\n🔸 WHAT THE SIX-WEEK BTC RETRACEMENT TELLS US:\n\n• The first three sequences establish a https://t.co/xW1XLR3bTM https://t.co/Bmlqngp5B0"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2120165312670658677",
+   "date": "2026-11-10",
+   "text": "⚠️ RKLBB rallies 6% with 5.7x volume spike—strong move or setup for a swift reversal? | https://t.co/hO0k18QZWU\n\n- my bias here is cautious short-term bullish for a tactical long, but only with strict confirmation, as this +6% pump with a multi-x volume surge suggests either https://t.co/yt8189G8a1"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "Finora_EN",
+   "url": "https://x.com/Finora_EN/status/2120164285410144399",
+   "date": "2026-11-10",
+   "text": "🛑 $QCOM sneaks just below 169.2 in a liquidity sweep—bulls on edge while bears hold the upper hand | https://t.co/hO0k18QZWU\n\n- the 1h structure is still clearly bearish, with confirmed lower highs and lower lows — my bias remains bearish here while price stays below 176.48 🛑\n- https://t.co/5rrl5oF0RJ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 128,
+   "user": "0xmakesense",
+   "url": "https://x.com/0xmakesense/status/2120130106454601840",
+   "date": "2026-11-10",
+   "text": "$PEPE is trading at $0.0000053.\n\nAnd something interesting is starting to develop on the weekly chart.\n\nAfter losing more than 80% from its previous highs, $PEPE spent months trading near the bottom of its range.\n\nEvery recovery attempt was sold.\n\nEvery bounce seemed temporary. https://t.co/jCT8aRjl49"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 7,
+   "user": "uppinfun",
+   "url": "https://x.com/uppinfun/status/2120014881672073275",
+   "date": "2026-11-10",
+   "text": "Downside is live on UPPIN.\n\nUpside lets buyers claim a coin above a target price. Downside is the other side, on the same coin.\n\nWriters lock USDC and pick a price below the market. Buyers pay a small price now for the right to sell at that level. If the coin ends below it, https://t.co/43yeJ2IjQc"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2120046503943123332",
+   "date": "2026-11-10",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $JPN225 — Asian stocks rally on US tech rebound; China trade surplus hits $105B in October\n🟢 78% Bullish · 🔴 22% Bearish\n🔗 https://t.co/hj3MNWQzxb\n\n2. $EV — Myanmar lobbies US to invest in its rare earths sector, dominated by China\n🟢 65% Bullish · 🔴"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "0xMooni3",
+   "url": "https://x.com/0xMooni3/status/2120184755740447127",
+   "date": "2026-11-10",
+   "text": "$hype from the most bullish coin to the most bearish coin, all the good news got wiped out, what a shitshow"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "viral_stocks",
+   "url": "https://x.com/viral_stocks/status/2119961364924084295",
+   "date": "2026-11-10",
+   "text": "The tickers X are buzzing about right now:\n\n1. Hims &amp; Hers Health $HIMS is down 3.4% today after falling 11.8% in the regular session\n\n🟢 Sentiment: 40% bullish, 28% bearish, 32% neutral\n\nThe company reported a Q3 earnings miss and cut its full‑year guidance, sending the stock https://t.co/MnEX6MLzcz"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2120206044701823361",
+   "date": "2026-11-10",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $BTC — Franklin Templeton's new Bitcoin ETFs cap crypto exposure at 5%\n🟢 65% Bullish · 🔴 35% Bearish\n🔗 https://t.co/6kz9vfK09p\n\n2. $SPX — US yields rise, stocks fall as inflation data boosts odds of larger December rate hike\n🟢 15% Bullish · 🔴 85%"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 37,
+   "user": "clocktoss",
+   "url": "https://x.com/clocktoss/status/2120200291286991311",
+   "date": "2026-11-10",
+   "text": "I got tricked by the Trump bitcoin:native exit scam pump for around 2 weeks but realized it was all fake and gay very quickly\n\nAsked bulls why there would be a bullish continuation and none could give an answer, but I could give a bearish argument.\n\nTrump killed crypto. Pump https://t.co/MdgqmhdCam"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 28,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2120189999257628747",
+   "date": "2026-11-10",
+   "text": "#Visa added ##Monad to its list of supported blockchains for #stablecoin settlement. The integration expands Visa's #crypto #payment #infrastructure, allowing institutional partners to settle transactions on Monad's high-throughput layer 1 network.\n\n#MarketUpdate #StockMarket https://t.co/A4czJnVelz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Cryptoloudev",
+   "url": "https://x.com/Cryptoloudev/status/2120079514650751257",
+   "date": "2026-11-10",
+   "text": "To be honest, the only coin still looking strong and bullish to me is bitcoin:native .\n\nEvery other coin, including SOL, XRP and the rest of the altcoins, is looking bearish.\n\nIf Bitcoin wasn't looking good on the Weekly and Monthly timeframes, I would have sold my entire"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 27,
+   "user": "whitee_rhinoo",
+   "url": "https://x.com/whitee_rhinoo/status/2120184111952281672",
+   "date": "2026-11-10",
+   "text": "#US #October #CPI came in hotter than expected at 0.4% MoM vs 0.3% forecast. Core #inflation held steady at 0.3%, also topping estimates. Year-over-year figures are missing entirely due to the 2025 #government shutdown leaving no baseline for comparison.\n\n#MarketUpdate https://t.co/EYFGosfKQu"
+  }
+ ]
+}

@@ -1,0 +1,463 @@
+{
+ "symbol": "BTC-USD",
+ "start": "2026-11-04T12:00:00Z",
+ "end": "2026-11-11T12:00:00Z",
+ "src": "x-rolling7",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "BTC Bitcoin -is:retweet -is:reply lang:en",
+  "Bitcoin (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 100,
+   "user": "crypt0_n0va",
+   "url": "https://x.com/crypt0_n0va/status/2118998337085112517",
+   "date": "2026-11-07",
+   "text": "🚀 BULLISH: Strive ($ASST) is making a massive move in the Bitcoin race!\n\nThe company reportedly acquired approximately $1.25 BILLION worth of Bitcoin in October alone! 🟠\n\nIts treasury now stands at 43,124 BTC, putting it just 876 BTC behind Metaplanet in the race for the #2 https://t.co/OXOCeTVoXA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Eminweb3",
+   "url": "https://x.com/Eminweb3/status/2119078525781033233",
+   "date": "2026-11-07",
+   "text": "𝗕𝗧𝗖 𝗔𝗻𝗱 𝗪𝗕𝗧𝗖 𝗕𝗿𝗶𝗻𝗴 𝗕𝗶𝘁𝗰𝗼𝗶𝗻 𝗜𝗻𝘁𝗼 𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝘁 𝗕𝗹𝗼𝗰𝗸𝗰𝗵𝗮𝗶𝗻 𝗘𝗰𝗼𝘀𝘆𝘀𝘁𝗲𝗺𝘀\n\nBitcoin has a native home, but its utility is no longer limited to the Bitcoin network.\n\nUnderstanding the difference between BTC and WBTC helps explain how https://t.co/N6BFwuUi38"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Andy_Luigino",
+   "url": "https://x.com/Andy_Luigino/status/2118986513866178672",
+   "date": "2026-11-07",
+   "text": "𝐁𝐓𝐂 𝐀𝐧𝐝 𝐖𝐁𝐓𝐂 𝐀𝐫𝐞 𝐍𝐨𝐭 𝐓𝐡𝐞 𝐒𝐚𝐦𝐞 𝐓𝐡𝐢𝐧𝐠\n\nI still see people mix these up every single day, so let me clear it up.\n\n𝐁𝐓𝐂 𝐢𝐬 𝐭𝐡𝐞 𝐧𝐚𝐭𝐢𝐯𝐞 𝐚𝐬𝐬𝐞𝐭 𝐨𝐟 𝐭𝐡𝐞 𝐁𝐢𝐭𝐜𝐨𝐢𝐧 𝐧𝐞𝐭𝐰𝐨𝐫𝐤.\n\n𝐖𝐁𝐓𝐂 𝐫𝐞𝐩𝐫𝐞𝐬𝐞𝐧𝐭𝐬 𝐁𝐓𝐂 𝐨𝐧 𝐨𝐭𝐡𝐞𝐫 https://t.co/9CtfchkC35"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "tdinh077",
+   "url": "https://x.com/tdinh077/status/2119161322168348815",
+   "date": "2026-11-07",
+   "text": "How much leverage is sitting on Binance Bitcoin perps right now? Open interest is 96.25K BTC on BINANCE:BTCUSDT.P — total Bitcoin open interest across exchanges is $51.09B (674.13K BTC) on CoinGlass, down 2.20% in 24h. BTC at $75,751. #bitcoin #btc\nDo your own research, no blame https://t.co/K5YlmcRIgC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "SpeedAmbassador",
+   "url": "https://x.com/SpeedAmbassador/status/2119098767823528219",
+   "date": "2026-11-07",
+   "text": "Day 373, asking Tesla to accept Bitcoin again.\nLong-time Tesla shareholder, Model Y owner, and Bitcoin advocate here.\n@elonmusk has said Bitcoin is energy money — and that Tesla would resume BTC payments once mining hit ~50% clean energy.\nWe're there.\n@Square accepts Bitcoin for"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "doge_law",
+   "url": "https://x.com/doge_law/status/2118856279921926280",
+   "date": "2026-11-07",
+   "text": "BITCOIN ACCUMULATION CONTINUES! Strive reveals it bought 15,124 BTC in October, bringing reported holdings to 43,124 BTC. Corporate Bitcoin conviction remains strong despite market volatility.\n\n#Bitcoin #BTC #Crypto #InstitutionalAdoption #BitcoinTreasury #HODL #Bullish https://t.co/QICFu5s0p5"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "Mrgem03",
+   "url": "https://x.com/Mrgem03/status/2118980325061939200",
+   "date": "2026-11-07",
+   "text": "🚀 STRIVE POSTS $509M Q3 PROFIT — BTC HOLDINGS REACH 43,124\n\nBitcoin treasury firm Strive (Nasdaq: ASST) released Q3 2026 results on Nov 6. Unrealized gains on its bitcoin holdings drove its GAAP profit, while the company continued buying in October.\n\n📌 Q3 GAAP net income: https://t.co/NGXsRuYJcb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "CryptoNewsScout",
+   "url": "https://x.com/CryptoNewsScout/status/2119049475414995321",
+   "date": "2026-11-07",
+   "text": "Bitcoin slips below $75K as hiring jumps, pairing a price decline with stronger hiring.\n\nAre Bitcoin bulls early, or is hiring proving them wrong?\n\n#BTC #Crypto #Bitcoin $BTC 👇"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TobsladFi",
+   "url": "https://x.com/TobsladFi/status/2119213436508709031",
+   "date": "2026-11-07",
+   "text": "Bitcoin could be approaching a recovery! 👀\nBTC is nearing a possible 50-day and 100-day MA crossover. In past cycles, Bitcoin often found its bottom before this signal appeared.\nCould BTC have already hit its bottom?\nWorth watching!\n#BTC #Bitcoin #Crypto https://t.co/h9z6T6M3Ti"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "matiasmolinaNFT",
+   "url": "https://x.com/matiasmolinaNFT/status/2119131992574853472",
+   "date": "2026-11-07",
+   "text": "Bitcoin in perspective\n\n$BTC #BTC #Bitcoin https://t.co/lrahEzE7vY"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "lukasz_wydra",
+   "url": "https://x.com/lukasz_wydra/status/2119018738758438993",
+   "date": "2026-11-07",
+   "text": "Bitcoin (BTC) Update 📊\n\n🔹 Bitcoin Exchange Whale Netflow: Whale inflows to exchanges reached 1.17K BTC over the past 24 hours.\n\n🔹 Bitcoin Exchange Netflow: Total inflows across all market participants amounted to 2.23K BTC over the same period.\n\nOverall, these readings point https://t.co/C9FPwStxJ7 https://t.co/X0InTEVoem"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "hearnpaige01",
+   "url": "https://x.com/hearnpaige01/status/2119134250066690224",
+   "date": "2026-11-07",
+   "text": "BITCOIN DEV WANTS QUANTUM THIEVES TO STAKE THEIR OWN BTC Bitcoin Core dev Cory Fields just floated “quantum landmines” on the mailing list. Steal 1 old BTC with a quantum computer and you must lock up another 1 BTC of your own for 30 days. Owner reveals a pre-set proof and takes https://t.co/hEtSnECXZh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Woo_Minkyu",
+   "url": "https://x.com/Woo_Minkyu/status/2119084539087888802",
+   "date": "2026-11-07",
+   "text": "Where did the Bitcoin go? 🐋\n\nLast 2 weeks:\n• 10k+ BTC holders: +49.4K BTC\n• 1k–10k BTC: -37.2K BTC\n\nSince Feb, 100–1k BTC wallets added +130K BTC. Mid-size whales keep stacking.\n\n#Bitcoin #BTC #OnChain https://t.co/fHWBkZPkET"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "BitDecoder",
+   "url": "https://x.com/BitDecoder/status/2119102501668450455",
+   "date": "2026-11-07",
+   "text": "🏢 Top Bitcoin holders · 6 Nov 2026 close\n\n1. Strategy (MSTR) — $54.5B (849,327 BTC) +811 · 2 Nov\n2. Metaplanet (3350.T) — $1.92B (44,000 BTC) +1,000 · 30 Sep\n3. Twenty One (XXI) — $3.08B (43,514 BTC)\n4. Strive (ASST) — $2.73B (43,124 BTC) +124 · 2 Nov\n\n#Bitcoin #BTC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 19,
+   "user": "COACHCHADC",
+   "url": "https://x.com/COACHCHADC/status/2118921229860225454",
+   "date": "2026-11-07",
+   "text": "🚨 HOW MUCH BITCOIN DOES IT REALLY TAKE TO ACHIEVE FINANCIAL FREEDOM BEFORE 65 OR 70?‼️🔥Could owning 0.1 BTC, 0.5 BTC, or 1 FULL BITCOIN change your retirement future?\n\nLet’s talk long-term wealth, financial independence, and generational freedom.⚠️💰🚀\n\n#Bitcoin #BTC #Crypto https://t.co/KlXY3f5DKh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 732,
+   "user": "Crypto_Neuz",
+   "url": "https://x.com/Crypto_Neuz/status/2119185141935595855",
+   "date": "2026-11-07",
+   "text": "🚨 DIWALI BTC GIVEAWAY! 🪔🎁\n\nWe're giving away $100 WORTH OF BITCOIN ( $BTC ) to celebrate Diwali with our community! ❤️\n\nWant FREE $BTC? Don't miss this one! 👀\n\n🎁 TO PARTICIPATE:\n\n- Follow @Crypto_Neuz\n- Like + RT\n- Tag 3 friends\n- Drop your Bitcoin wallet address\n\nOne https://t.co/dnj170ShHb"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "michelekiby625",
+   "url": "https://x.com/michelekiby625/status/2118979108369539525",
+   "date": "2026-11-07",
+   "text": "🚨 HOW MUCH BITCOIN DOES IT REALLY TAKE TO ACHIEVE FINANCIAL FREEDOM BEFORE 65–70?\n\n0.5 BTC? 1 BTC? 2 BTC? 👀\n\nHOW MUCH WOULD YOU WANT TO OWN TO HAVE THE OPTION OF RETIRING EARLY?\n\nDROP YOUR NUMBER BELOW! 👇\n\n#Bitcoin #BTC #Crypto #FinancialFreedom https://t.co/RRTSbHsBNf"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "hezbema",
+   "url": "https://x.com/hezbema/status/2119395800552034466",
+   "date": "2026-11-08",
+   "text": "Bitcoin needs more than leverage; it needs sustainable long-term strategies. @2FactorFinance combines BTC-Jr exposure with BTC-Sr yield to rethink how Bitcoin capital works.\n\nhttps://t.co/iEdUaAmlyK\n\n#BITCOIN #DEFI #BTC #CRYPTO"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "PresidentNoble_",
+   "url": "https://x.com/PresidentNoble_/status/2119249900726796751",
+   "date": "2026-11-08",
+   "text": "💰 Strive Q3: $509M profit on Bitcoin\n\nUnrealized BTC gains: $533.7M\n Stack: 43,124 BTC (~$3.25B)\n +15,124 BTC in October alone\n #4 public treasury, just 876 BTC from #2 👀\n BTC yield: 18.5%\n\nASST still -31% in 30 days ⚠️\n\n#Strive #ASST #Bitcoin #BTC #BitcoinTreasury. https://t.co/aBTtlYiM6e"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "cryptofalcon37",
+   "url": "https://x.com/cryptofalcon37/status/2118935899698569425",
+   "date": "2026-11-07",
+   "text": "BITCOIN GIVEAWAY IS HERE! \n\nI made a promise: If $BTC dropped to $75,000, I would give away $20,000 worth of Bitcoin to 5 lucky winners.\n\nBitcoin hit the target, and now it's time to keep my word! 🎉\n\n$20,000 in BTC\n 5 Lucky Winners\n $4,000 worth of Bitcoin each https://t.co/IkrKcsrb6v"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "PresidentNoble_",
+   "url": "https://x.com/PresidentNoble_/status/2119249925548429770",
+   "date": "2026-11-08",
+   "text": "💰 Strive Q3: $509M profit on Bitcoin\n\nUnrealized BTC gains: $533.7M\n Stack: 43,124 BTC (~$3.25B)\n +15,124 BTC in October alone\n #4 public treasury, just 876 BTC from #2 👀\n BTC yield: 18.5%\n\nASST still -31% in 30 days ⚠️\n\n#Strive #ASST #Bitcoin #BTC #BitcoinTreasury https://t.co/eqW1dxY6FU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "PresidentNoble_",
+   "url": "https://x.com/PresidentNoble_/status/2119249855247790133",
+   "date": "2026-11-08",
+   "text": "💰 Strive Q3: $509M profit on Bitcoin\n\nUnrealized BTC gains: $533.7M\n Stack: 43,124 BTC (~$3.25B)\n +15,124 BTC in October alone\n #4 public treasury, just 876 BTC from #2 👀\n BTC yield: 18.5%\n\nASST still -31% in 30 days ⚠️\n\n#Strive #ASST #Bitcoin #BTC #BitcoinTreasury. https://t.co/PUHKrYOR1N"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "BitDecoder",
+   "url": "https://x.com/BitDecoder/status/2119536561528185124",
+   "date": "2026-11-08",
+   "text": "💼 Bitcoin treasuries · 6 Nov 2026 close\n\n1. Apple (AAPL)\n   $4.98T · 0 BTC\n\n2. Strategy (MSTR)\n   $54.5B · 849,327 BTC (+811 · 2 Nov)\n\n3. Strive (ASST)\n   $2.73B · 43,124 BTC (+124 · 2 Nov)\n\n#Bitcoin #BTC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Cryptoc80166370",
+   "url": "https://x.com/Cryptoc80166370/status/2119338955485130997",
+   "date": "2026-11-08",
+   "text": "🚨 Bitcoin is just ~$315 above Strategy's average purchase price.\n\nBTC: ~$75,766\nStrategy: $75,451 per BTC across 849,327 BTC (Nov 2 filing).\n\nThat is NOT a liquidation price.\n\nWatch MSCI's Nov 11 index review. A potential removal would mean index funds selling MSTR shares, not https://t.co/k4McQ3CLaX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "PresidentNoble_",
+   "url": "https://x.com/PresidentNoble_/status/2119071157513273695",
+   "date": "2026-11-07",
+   "text": "💣 Bitcoin developer Cory Fields pitched \"quantum landmines\"\n\nTo steal 1 BTC, post 1 BTC collateral. A prepared owner could reclaim both.\n\nThought experiment — NOT an upgrade. \n\nHonest holders would need collateral too.\n\n#Bitcoin #BTC #Quantum #Security #Crypto https://t.co/W4QtOSZbpe"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "Souravp1992",
+   "url": "https://x.com/Souravp1992/status/2118595347769696430",
+   "date": "2026-11-06",
+   "text": "👀✅ Lets today talk about real facts about Bitcoin what did last 2 years vs Sp500..\n\n👉 Whenever Sp500 1y average return give posetive Bitcoin performance never disappointing.. 2013-2024\n\n👀👉 But 2025-26.  2 consecutive year very long period of time  Btc performence against https://t.co/y9JnakzkHd https://t.co/ZFZx23kofC"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 8,
+   "user": "CryptoCoachLuis",
+   "url": "https://x.com/CryptoCoachLuis/status/2120293320278634852",
+   "date": "2026-11-10",
+   "text": "A lot of people are calling for new lows on Bitcoin again, or at the very least worrying about it.\n\nLet’s be logical. Who is selling or shorting Bitcoin long term after 10 months of uninterrupted downside for a new low? Nobody smart. The time for that was above $100K. \n\nThe only https://t.co/8Yua3MR6Cj"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "GDXTrader",
+   "url": "https://x.com/GDXTrader/status/2119517290529976432",
+   "date": "2026-11-08",
+   "text": "$NOK\n\nMember Request\n\n$NOK remains in a clear downtrend on the daily timeframe, with bearish continuation candles dominating the recent daily action. Despite Friday's bounce, price is still below both the 50 and 200 EMA, and lagging indicators such as the MACD remain weak.\n\nThe https://t.co/DzcIKP2JkK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 117,
+   "user": "TheVictorBuilds",
+   "url": "https://x.com/TheVictorBuilds/status/2119739696611983638",
+   "date": "2026-11-09",
+   "text": "The current setup skews heavily toward rangebound consolidation or downside expansion, leaving bulls with only a 15% probability of a clean breakout before year end. \n  Three distinct regimes define the Bitcoin playbook through December 31:\n\n+ Base Case (50% Probability | $73,200 https://t.co/wsxj4T7IOZ https://t.co/zhQ3va9XZu"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "KhonshuArc",
+   "url": "https://x.com/KhonshuArc/status/2119476914276504061",
+   "date": "2026-11-08",
+   "text": "$BTC 🩸 (𝗠𝗔𝗥𝗞𝗘𝗧 𝗨𝗣𝗗𝗔𝗧𝗘)\n\nBitcoin is showing further weakness, and the structure is becoming increasingly difficult for buyers to defend.\n\nAfter losing the 80K–81.5K region, price has continued to grind lower. What stands out now is that recovery attempts are getting https://t.co/M4nkQyZelM https://t.co/bkYna8DgKj"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "TheRingGroup",
+   "url": "https://x.com/TheRingGroup/status/2118412636727746829",
+   "date": "2026-11-05",
+   "text": "#RINGRepost 📬\n\n🎤 @thelegionmaster posts “🚨 THE FINAL BIG SHORT UPDATE #BTC” stating #Bitcoin is approaching a critical support zone at $75,100. Failure to hold could trigger another leg lower toward $68K first target and $62K deeper extension. The update cites growing #AI https://t.co/GAbeNXUaty https://t.co/qcEsyNe9oW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 38,
+   "user": "level941",
+   "url": "https://x.com/level941/status/2120313212532924564",
+   "date": "2026-11-11",
+   "text": "INSIDER NOTE FROM HEDGE FUND\n\nThe latest reports I’ve found say traders are pricing a December rate hike as nearly certain: roughly 90% now for a quarter-point increase and 10% for a half-point increase. traders briefly pushed the probability of a 50 bp December hike to about https://t.co/KfFQBYHWA0"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "fly_welinkBTC",
+   "url": "https://x.com/fly_welinkBTC/status/2119740448646533131",
+   "date": "2026-11-09",
+   "text": "Continue to firmly buy the dip in $BTC and other cryptocurrency assets you are bullish on.\nI'm gradually increasing the proportion of my personal funds allocated to the cryptocurrency market.\nThere are three main reasons worth considering.\n\nFirst, the market may have entered a https://t.co/N7sCYi9i2S"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2118934465695072548",
+   "date": "2026-11-07",
+   "text": "🚨 $BTC $SPX $NDX ALERT: Mike McGlone Doubles Down On $10K Bitcoin Doom Call: 'Stock Bear Market Has Started'\n\n📈 Trade Futures: https://t.co/0tFuuDrnrE\n\n🟢 Bullish: 15%\n• Bitcoin has so far held substantially above the $10,000 downside target despite equity-market weakness.\n•"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 59,
+   "user": "GMartin_0",
+   "url": "https://x.com/GMartin_0/status/2118744192620839135",
+   "date": "2026-11-06",
+   "text": "Since I mentioned the #Bitcoin 2023 chop period before the parabolic run, I went back to look at that range.\n\nI remember thinking the $23K–$25K support looked extremely fragile, and that breaking it could trigger a big pullback toward $20K or lower.\nBut most HTF momentum https://t.co/4vYY6086fD https://t.co/6soVBgp4rL"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "Sivam_kumar_Rai",
+   "url": "https://x.com/Sivam_kumar_Rai/status/2119296162234851800",
+   "date": "2026-11-08",
+   "text": "📊 Next Week’s bitcoin:native Scenarios\n\n🔴Bearish: Weekly close below the $75K zone.\n\n🟢Bullish: A sweep below $75K and  weekly close above it.\n\nThat downside wick could be the ultimate bear trap. 👀\n\nBut BITCOIN? I’M NOT SELLING.\n\n#Bitcoin #Crypto #BullRun"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2118311381099282443",
+   "date": "2026-11-05",
+   "text": "🚨 $BTC $HUT $CORZ $CRWV ALERT: Bitcoin miners are oversold following 35% October rout, VanEck says\n\n🔗 Open on MEXC: https://t.co/0tFuuDrnrE\n\n🟢 Bullish: 75%\n• VanEck considers AI-focused Bitcoin mining stocks significantly undervalued relative to their fundamentals.\n•"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Jemi2n",
+   "url": "https://x.com/Jemi2n/status/2120410376974028846",
+   "date": "2026-11-11",
+   "text": "$BTC DOMINANCE ANALYSIS\n\nBTC Dominance is trading inside the horizontal supply zone of the ascending triangle pattern and is currently moving within the Ichimoku cloud, indicating indecision in the market.\n\nA rejection from the supply zone could trigger further downside in https://t.co/Kx0C33ReT8"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Pr0fitconscious",
+   "url": "https://x.com/Pr0fitconscious/status/2118222566116433965",
+   "date": "2026-11-05",
+   "text": "$BTC DOMINANCE ANALYSIS\n\n$BTC Dominance is trading below the horizontal supply zone of the ascending triangle pattern and is currently moving within the Ichimoku cloud, indicating indecision in the market.\n\nA rejection from the supply zone could trigger further downside in https://t.co/sQs6te6am8"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 25,
+   "user": "0xbeehive",
+   "url": "https://x.com/0xbeehive/status/2118720177411924194",
+   "date": "2026-11-06",
+   "text": "DON'T IGNORE THIS $BTC BEARISH SCENARIO\n\nLet me be clear: I'm still LONG-TERM BULLISH on Bitcoin\n\nBut that doesn't mean we should ignore the downside scenario\n\nLook at the pattern\n\nWe've already seen three similar bearish channels, each followed by a breakdown\n\nAnd right now, BTC https://t.co/FawsqgC1C2"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 5,
+   "user": "JAINTAFA",
+   "url": "https://x.com/JAINTAFA/status/2120462812573241505",
+   "date": "2026-11-11",
+   "text": "Bitcoin is pumping. Everyone becomes a bull. 🐂\n\nBitcoin starts dumping. Suddenly, everyone becomes a bear. 🐻😂\n\nBut do you actually understand what makes a candle bullish or bearish?\n\nLet's learn.\n\n🧠 CRYPTO MASTERY 1000+ | DAY 03\n\nBULLISH vs BEARISH CANDLES\n\nThere are two https://t.co/0rId3k0XqM https://t.co/mROw4x4LQU"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "BigBull_BTC",
+   "url": "https://x.com/BigBull_BTC/status/2119878941414670522",
+   "date": "2026-11-09",
+   "text": "🚨 BIG BULL VIP | BTC WEEKLY CHART ANALYSIS\n\nBTC Breaks Weekly 50 SMA - Critical Support Confluence Under Pressure\n\nBitcoin recorded its first weekly close below the 50 SMA (75,550) in seven weeks, closing at 74,850. The same candle also retested the 20 EMA Weekly (74,400) for https://t.co/cDbuZyTkMF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "ALPHA_MARKET3",
+   "url": "https://x.com/ALPHA_MARKET3/status/2119176583286300857",
+   "date": "2026-11-07",
+   "text": "🚨🔥 SOXXUSDT PRICE PREDICTION: MASSIVE BULLISH REVERSAL INCOMING? RSI AT EXTREME OVERSOLD LEVELS! 🚀🐂\n\n📊 SOXX/USDT Daily Technical Analysis | Alpha Market\n🔥 I'M WATCHING SOXX FOR A POTENTIALLY EXPLOSIVE UPSIDE REVERSAL!\n\nSOXX has experienced an extraordinary sell-off, and its https://t.co/Vg70Fq2xGm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118952337935052923",
+   "date": "2026-11-07",
+   "text": "New Video! Bearish Engulfing - Where is the proof?!\nhttps://t.co/2NI1R5aEYh\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "ederwerneck",
+   "url": "https://x.com/ederwerneck/status/2119560065850175592",
+   "date": "2026-11-08",
+   "text": "🐂🐻 Crypto market bias today: leaning bearish.\n\n533 Binance futures coins: 17 bullish (3%), 310 bearish (58%), 206 no bias (39%).\n\nBull or bear? 👇\n\nI built Crypto Radar to read the whole market at once, not a signal. Link in bio.\n\n#Bitcoin https://t.co/inxw6QSZ6C"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2119478806843211949",
+   "date": "2026-11-08",
+   "text": "Gold Vs Silver\nhttps://t.co/bR9hZ8HeJG\nJoin our supported trading community at:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest #stocks #gold #Silver"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2119186380068917590",
+   "date": "2026-11-07",
+   "text": "New Video! Bearish Engulfing - Where is the proof?!\nhttps://t.co/2NI1R5aEYh\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwj3IQ\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2119240234894291133",
+   "date": "2026-11-08",
+   "text": "New Video! Bearish Engulfing - Where is the proof?!\nhttps://t.co/2NI1R5a78J\nWant help finding the setup, want to see how to create an edge join us at:\nhttps://t.co/uFgJFwivTi\n\n$BHP $QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 25,
+   "user": "MitchellHeins",
+   "url": "https://x.com/MitchellHeins/status/2119067346979676320",
+   "date": "2026-11-07",
+   "text": "📉 5+ RED WEEKS IN BTC: HISTORY SAYS WATCH THE NEXT 6 MONTHS\n\nBitcoin is sitting near $76K, down roughly 40% from its $126K ATH.\n\nBut here’s what matters 👇\n\n🔴 2018: 5 red weeks → capitulation → nearly +95% over 6 months\n🔴 2022: 7–9 red weeks → systemic collapse → further"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FinancializeTAM",
+   "url": "https://x.com/FinancializeTAM/status/2118944331222622227",
+   "date": "2026-11-07",
+   "text": "New Video! Where to Place Your Stops! \nhttps://t.co/WnVfUILy72\nJoin our supported trading community at:\nhttps://t.co/HFB0U0EPel\n\n$QQQ $SPY $DIA $XLF $XBI $GLD $SLV $BTC $ETH $XRP $GOOG $META $AMZN $TSLA $NVDA $AAPL $NFLX #Markets #Trading #investment #commoditiy #Trade #invest"
+  }
+ ]
+}

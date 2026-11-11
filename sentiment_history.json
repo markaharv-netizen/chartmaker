@@ -61,6 +61,29 @@
    "RKLB": 0.4817,
    "ASTS": 0.8981,
    "STRC": 0.7745
+  },
+  "2026-11-11": {
+   "AAPL": 0.5778,
+   "MSFT": 0.6307,
+   "GOOGL": 0.6364,
+   "AMZN": 0.7301,
+   "META": 1.0,
+   "NVDA": 0.5832,
+   "TSLA": 0.5659,
+   "MU": 0.3698,
+   "MSTR": 0.6904,
+   "COIN": 0.5882,
+   "BTC-USD": 0.6499,
+   "ETH-USD": 0.7904,
+   "CRWV": 0.5962,
+   "NBIS": 0.4931,
+   "IREN": 0.4429,
+   "CIFR": 0.5417,
+   "ASST": 0.9119,
+   "SPCX": 0.6739,
+   "RKLB": 0.6606,
+   "ASTS": 0.8758,
+   "STRC": 0.658
   }
  },
  "series": {
@@ -595,6 +618,19 @@
     "n_bull": 22,
     "n_bear": 8,
     "n_eff": 21.0,
+    "src": "x-rolling7",
+    "thin": false
+   },
+   {
+    "t": "2026-11-11",
+    "start": "2026-11-04",
+    "bull": 0.5475,
+    "lo": 0.281,
+    "hi": 0.7893,
+    "posts": 46,
+    "n_bull": 10,
+    "n_bear": 5,
+    "n_eff": 10.9,
     "src": "x-rolling7",
     "thin": false
    }
@@ -1132,6 +1168,19 @@
     "n_eff": 4.6,
     "src": "x-rolling7",
     "thin": false
+   },
+   {
+    "t": "2026-11-11",
+    "start": "2026-11-04",
+    "bull": 0.5,
+    "lo": 0.0,
+    "hi": 1.0,
+    "posts": 49,
+    "n_bull": 0,
+    "n_bear": 0,
+    "n_eff": 0,
+    "src": "x-rolling7",
+    "thin": true
    }
   ],
   "SPCX": [
@@ -1561,6 +1610,19 @@
     "n_bull": 15,
     "n_bear": 6,
     "n_eff": 13.1,
+    "src": "x-rolling7",
+    "thin": false
+   },
+   {
+    "t": "2026-11-11",
+    "start": "2026-11-04",
+    "bull": 0.6428,
+    "lo": 0.3777,
+    "hi": 0.8421,
+    "posts": 50,
+    "n_bull": 14,
+    "n_bear": 6,
+    "n_eff": 12.9,
     "src": "x-rolling7",
     "thin": false
    }
@@ -2098,6 +2160,19 @@
     "n_eff": 6.0,
     "src": "x-rolling7",
     "thin": true
+   },
+   {
+    "t": "2026-11-11",
+    "start": "2026-11-04",
+    "bull": 1.0,
+    "lo": 0.6223,
+    "hi": 1.0,
+    "posts": 47,
+    "n_bull": 8,
+    "n_bear": 0,
+    "n_eff": 6.3,
+    "src": "x-rolling7",
+    "thin": false
    }
   ],
   "STRC": [
@@ -2631,6 +2706,19 @@
     "n_bull": 15,
     "n_bear": 5,
     "n_eff": 12.6,
+    "src": "x-rolling7",
+    "thin": false
+   },
+   {
+    "t": "2026-11-11",
+    "start": "2026-11-04",
+    "bull": 0.7239,
+    "lo": 0.4229,
+    "hi": 0.9037,
+    "posts": 49,
+    "n_bull": 12,
+    "n_bear": 3,
+    "n_eff": 10.4,
     "src": "x-rolling7",
     "thin": false
    }
@@ -3168,6 +3256,19 @@
     "n_eff": 23.2,
     "src": "x-rolling7",
     "thin": false
+   },
+   {
+    "t": "2026-11-11",
+    "start": "2026-11-04",
+    "bull": 0.4524,
+    "lo": 0.2016,
+    "hi": 0.73,
+    "posts": 50,
+    "n_bull": 6,
+    "n_bear": 6,
+    "n_eff": 9.8,
+    "src": "x-rolling7",
+    "thin": false
    }
   ],
   "META": [
@@ -3636,6 +3737,19 @@
     "n_bull": 2,
     "n_bear": 2,
     "n_eff": 3.2,
+    "src": "x-rolling7",
+    "thin": true
+   },
+   {
+    "t": "2026-11-11",
+    "start": "2026-11-04",
+    "bull": 0.5,
+    "lo": 0.0,
+    "hi": 1.0,
+    "posts": 50,
+    "n_bull": 0,
+    "n_bear": 0,
+    "n_eff": 0,
     "src": "x-rolling7",
     "thin": true
    }
@@ -4735,6 +4849,19 @@
     "n_eff": 0,
     "src": "x-daily",
     "thin": true
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.161,
+    "lo": 0.025,
+    "hi": 0.5891,
+    "posts": 23,
+    "n_bull": 1,
+    "n_bear": 5,
+    "n_eff": 5.1,
+    "src": "x-daily",
+    "thin": true
    }
   ],
   "MSFT": [
@@ -5829,6 +5956,19 @@
     "n_eff": 9.8,
     "src": "x-daily",
     "thin": false
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.4004,
+    "lo": 0.1234,
+    "hi": 0.7601,
+    "posts": 25,
+    "n_bull": 3,
+    "n_bear": 4,
+    "n_eff": 5.4,
+    "src": "x-daily",
+    "thin": true
    }
   ],
   "GOOGL": [
@@ -6921,6 +7061,19 @@
     "n_bull": 7,
     "n_bear": 9,
     "n_eff": 9.9,
+    "src": "x-daily",
+    "thin": false
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.4418,
+    "lo": 0.2118,
+    "hi": 0.6997,
+    "posts": 23,
+    "n_bull": 7,
+    "n_bear": 9,
+    "n_eff": 12.1,
     "src": "x-daily",
     "thin": false
    }
@@ -8017,6 +8170,19 @@
     "n_eff": 1.0,
     "src": "x-daily",
     "thin": true
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.4889,
+    "lo": 0.1379,
+    "hi": 0.8511,
+    "posts": 25,
+    "n_bull": 3,
+    "n_bear": 2,
+    "n_eff": 3.7,
+    "src": "x-daily",
+    "thin": true
    }
   ],
   "META": [
@@ -9111,6 +9277,19 @@
     "n_eff": 0,
     "src": "x-daily",
     "thin": true
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.6585,
+    "lo": 0.2496,
+    "hi": 0.9179,
+    "posts": 25,
+    "n_bull": 5,
+    "n_bear": 3,
+    "n_eff": 4.3,
+    "src": "x-daily",
+    "thin": false
    }
   ],
   "NVDA": [
@@ -10205,6 +10384,19 @@
     "n_eff": 6.3,
     "src": "x-daily",
     "thin": false
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.6677,
+    "lo": 0.2309,
+    "hi": 0.9308,
+    "posts": 23,
+    "n_bull": 3,
+    "n_bear": 2,
+    "n_eff": 3.6,
+    "src": "x-daily",
+    "thin": true
    }
   ],
   "TSLA": [
@@ -11297,6 +11489,19 @@
     "n_bull": 0,
     "n_bear": 0,
     "n_eff": 0,
+    "src": "x-daily",
+    "thin": true
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.0,
+    "lo": 0.0,
+    "hi": 0.6901,
+    "posts": 25,
+    "n_bull": 0,
+    "n_bear": 2,
+    "n_eff": 1.7,
     "src": "x-daily",
     "thin": true
    }
@@ -12393,6 +12598,19 @@
     "n_eff": 8.9,
     "src": "x-daily",
     "thin": false
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.5652,
+    "lo": 0.2502,
+    "hi": 0.835,
+    "posts": 25,
+    "n_bull": 7,
+    "n_bear": 3,
+    "n_eff": 7.3,
+    "src": "x-daily",
+    "thin": false
    }
   ],
   "COIN": [
@@ -13485,6 +13703,19 @@
     "n_bull": 10,
     "n_bear": 10,
     "n_eff": 14.3,
+    "src": "x-daily",
+    "thin": false
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.2764,
+    "lo": 0.1082,
+    "hi": 0.546,
+    "posts": 25,
+    "n_bull": 6,
+    "n_bear": 11,
+    "n_eff": 13.1,
     "src": "x-daily",
     "thin": false
    }
@@ -14581,6 +14812,19 @@
     "n_eff": 11.7,
     "src": "x-daily",
     "thin": false
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.2625,
+    "lo": 0.0578,
+    "hi": 0.6738,
+    "posts": 25,
+    "n_bull": 1,
+    "n_bear": 5,
+    "n_eff": 5.0,
+    "src": "x-daily",
+    "thin": true
    }
   ],
   "ETH-USD": [
@@ -15673,6 +15917,19 @@
     "n_bull": 19,
     "n_bear": 8,
     "n_eff": 18.0,
+    "src": "x-daily",
+    "thin": false
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.4256,
+    "lo": 0.1681,
+    "hi": 0.7309,
+    "posts": 25,
+    "n_bull": 3,
+    "n_bear": 6,
+    "n_eff": 8.1,
     "src": "x-daily",
     "thin": false
    }
@@ -16769,6 +17026,19 @@
     "n_eff": 2.9,
     "src": "x-daily",
     "thin": true
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.4364,
+    "lo": 0.1554,
+    "hi": 0.7653,
+    "posts": 25,
+    "n_bull": 3,
+    "n_bear": 4,
+    "n_eff": 6.4,
+    "src": "x-daily",
+    "thin": true
    }
   ],
   "NBIS": [
@@ -17863,6 +18133,19 @@
     "n_eff": 4.7,
     "src": "x-daily",
     "thin": true
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.588,
+    "lo": 0.2854,
+    "hi": 0.836,
+    "posts": 25,
+    "n_bull": 5,
+    "n_bear": 5,
+    "n_eff": 8.6,
+    "src": "x-daily",
+    "thin": false
    }
   ],
   "IREN": [
@@ -18955,6 +19238,19 @@
     "n_bull": 6,
     "n_bear": 7,
     "n_eff": 10.0,
+    "src": "x-daily",
+    "thin": false
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.3002,
+    "lo": 0.103,
+    "hi": 0.616,
+    "posts": 25,
+    "n_bull": 4,
+    "n_bear": 8,
+    "n_eff": 9.1,
     "src": "x-daily",
     "thin": false
    }
@@ -20051,6 +20347,19 @@
     "n_eff": 6.8,
     "src": "x-daily",
     "thin": false
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.7788,
+    "lo": 0.4179,
+    "hi": 0.9452,
+    "posts": 20,
+    "n_bull": 6,
+    "n_bear": 2,
+    "n_eff": 7.2,
+    "src": "x-daily",
+    "thin": false
    }
   ],
   "ASST": [
@@ -21143,6 +21452,19 @@
     "n_bull": 5,
     "n_bear": 1,
     "n_eff": 5.3,
+    "src": "x-daily",
+    "thin": true
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 1.0,
+    "lo": 0.4613,
+    "hi": 1.0,
+    "posts": 10,
+    "n_bull": 4,
+    "n_bear": 0,
+    "n_eff": 3.3,
     "src": "x-daily",
     "thin": true
    }
@@ -22239,6 +22561,19 @@
     "n_eff": 2.8,
     "src": "x-daily",
     "thin": true
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.7012,
+    "lo": 0.3185,
+    "hi": 0.9218,
+    "posts": 17,
+    "n_bull": 4,
+    "n_bear": 2,
+    "n_eff": 5.7,
+    "src": "x-daily",
+    "thin": true
    }
   ],
   "SPCX": [
@@ -23333,6 +23668,19 @@
     "n_eff": 9.4,
     "src": "x-daily",
     "thin": false
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.5928,
+    "lo": 0.2838,
+    "hi": 0.8425,
+    "posts": 22,
+    "n_bull": 6,
+    "n_bear": 5,
+    "n_eff": 8.2,
+    "src": "x-daily",
+    "thin": false
    }
   ],
   "RKLB": [
@@ -24414,6 +24762,19 @@
     "n_eff": 5.3,
     "src": "x-daily",
     "thin": true
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.7222,
+    "lo": 0.3524,
+    "hi": 0.9255,
+    "posts": 24,
+    "n_bull": 7,
+    "n_bear": 3,
+    "n_eff": 6.4,
+    "src": "x-daily",
+    "thin": false
    }
   ],
   "ASTS": [
@@ -25508,6 +25869,19 @@
     "n_eff": 3.3,
     "src": "x-daily",
     "thin": true
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 0.8397,
+    "lo": 0.4926,
+    "hi": 0.9658,
+    "posts": 25,
+    "n_bull": 8,
+    "n_bear": 2,
+    "n_eff": 8.0,
+    "src": "x-daily",
+    "thin": false
    }
   ],
   "SATA": [
@@ -26587,6 +26961,19 @@
     "n_bull": 1,
     "n_bear": 0,
     "n_eff": 1.0,
+    "src": "x-daily",
+    "thin": true
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 1.0,
+    "lo": 0.3394,
+    "hi": 1.0,
+    "posts": 9,
+    "n_bull": 2,
+    "n_bear": 0,
+    "n_eff": 2.0,
     "src": "x-daily",
     "thin": true
    }
@@ -27681,6 +28068,19 @@
     "n_bull": 4,
     "n_bear": 5,
     "n_eff": 6.3,
+    "src": "x-daily",
+    "thin": false
+   },
+   {
+    "t": "2026-11-10",
+    "start": "2026-11-10",
+    "bull": 1.0,
+    "lo": 0.663,
+    "hi": 1.0,
+    "posts": 25,
+    "n_bull": 10,
+    "n_bear": 0,
+    "n_eff": 7.6,
     "src": "x-daily",
     "thin": false
    }
