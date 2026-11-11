@@ -109,22 +109,29 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #ctypeNote{font-size:11px;line-height:1.2;color:#6B7280;font-weight:400;white-space:nowrap}
 #ctypeNote:empty{display:none}
 #ctl > label input[type=checkbox]{margin:0}
-/* One-series color: named swatches plus a hex / native custom color. The bar stays inside the viewport on a phone. */
-label.colorlab{font-size:12px;display:flex;flex-direction:column;gap:4px;align-items:flex-start;max-width:min(460px,calc(100vw - 24px))}
-.colorline{display:flex;flex-wrap:wrap;align-items:center;gap:6px;width:100%}
-.colorline select{max-width:100%}
-.colorline .swatches{display:flex;flex-wrap:wrap;gap:4px;width:100%}
-.colorline .custom{display:flex;align-items:center;gap:4px}
-.colorline .cname{font-size:12px;color:#374151}
-.colorline button.swatch{width:26px;height:26px;padding:0;border:1px solid rgba(0,0,0,.35);border-radius:4px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28);flex:none;line-height:0}
-.colorline button.swatch[aria-pressed=true]{outline:2px solid #111;outline-offset:1px}
-.colorline input[type=color]{width:36px;height:28px;padding:0 2px;border:1px solid #767676;border-radius:4px;background:#fff;cursor:pointer;flex:none}
-.colorline input.hex{width:7.4em;border:1px solid #767676;border-radius:2px;padding:6px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+/* One compact color dropdown. Custom hex appears only after Custom is chosen. */
+.colorlab{font-size:12px;display:flex;flex-direction:column;gap:3px;align-items:flex-start}
+.cbox{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.cbox select{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.cbtn{background:#fff;color:#111;border:1px solid #767676;border-radius:2px;padding:6px 26px 6px 8px;text-align:left;min-width:9.5em;min-height:32px;line-height:1.2;position:relative;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.cbtn:hover,.cbtn[aria-expanded=true]{border-color:#111}
+.cbtn:focus-visible{outline:2px solid #111;outline-offset:2px}
+.cbtn::after{content:"";position:absolute;right:9px;top:50%;margin-top:-2px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid #333;pointer-events:none}
+.cmenu{position:absolute;z-index:50;top:calc(100% + 2px);left:0;background:#fff;color:#111;border:1px solid #ccc;border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,.18);min-width:100%;max-width:calc(100vw - 16px);padding:4px 0;max-height:min(70vh,640px);overflow:auto}
+.cmenu[hidden]{display:none !important}
+.cmenu [role=option]{box-sizing:border-box;display:flex;align-items:center;gap:8px;font-size:14px;padding:8px 12px;cursor:pointer;white-space:nowrap;min-height:40px}
+.cmenu [role=option].on,.cmenu [role=option]:hover{background:#e5e7eb}
+.cmenu [role=option][aria-selected=true]{font-weight:600}
+.chip{width:14px;height:14px;border-radius:3px;border:1px solid rgba(0,0,0,.35);flex:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.ccustom{display:flex;align-items:center;gap:4px}
+.ccustom[hidden]{display:none !important}
+.ccustom input[type=color]{width:36px;height:28px;padding:0 2px;border:1px solid #767676;border-radius:4px;background:#fff;cursor:pointer;flex:none}
+.ccustom input.hex{width:7.4em;border:1px solid #767676;border-radius:2px;padding:6px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 @media (max-width:640px){
-  label.colorlab{max-width:calc(100vw - 24px)}
-  .colorline button.swatch{width:36px;height:36px}
-  .colorline input[type=color]{width:44px;height:40px}
-  .colorline input.hex{min-height:40px;font-size:16px;width:8.2em}
+  .cbtn{min-height:40px}
+  .cmenu [role=option]{min-height:44px}
+  .ccustom input[type=color]{width:44px;height:40px}
+  .ccustom input.hex{min-height:40px;font-size:16px;width:8.2em}
 }
 </style></head><body>
 <div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mBrief" class="on" title="What changed across price targets, sentiment, treasuries, and charts">Daily briefing</button><button id="mWatch">Watchlist</button><button id="mPrices" title="Price lines, percent change, candles, and ratios">Charts</button><button id="mFin">Financials</button><button id="mVal">Valuation</button><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mPaper" title="Paper book sized by Steve's paper weights">Paper trading</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
@@ -145,7 +152,7 @@ label.colorlab{font-size:12px;display:flex;flex-direction:column;gap:4px;align-i
 <label>From year<input id="fy1" type="number" value="2019" style="width:80px"></label><label>To year<input id="fy2" type="number" placeholder="latest" style="width:80px"></label>
 <label>Chart<select id="ftype"><option value="line">Line over time</option><option value="bars">Grouped bars over time</option><option value="rank">Latest-period ranking</option></select></label>
 <label>Title<input id="ftitle" size="30" placeholder="auto"></label>
-<label class="colorlab" title="One series. Several series keep the shared palette.">Color (1 ticker)<span class="colorline"><select id="fcolor"></select><span class="swatches" id="fcolorSwatches"></span><span class="custom"><span class="cname">Custom</span><input type="color" id="fcolorPick" value="#F7931A" aria-label="Custom series color" title="Custom color"><input class="hex" id="fcolorHex" value="#F7931A" maxlength="7" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Series color hex" placeholder="#RRGGBB"></span></span></label>
+<span class="colorlab" title="One series. Several series keep the shared palette.">Color (1 ticker)<span class="cbox" id="fcolorBox"><select id="fcolor" aria-hidden="true" tabindex="-1"></select><span class="ccustom" id="fcolorCustom" hidden><input type="color" id="fcolorPick" value="#F7931A" aria-label="Custom series color" title="Custom color"><input class="hex" id="fcolorHex" value="#F7931A" maxlength="7" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Series color hex" placeholder="#RRGGBB"></span></span></span>
 <label><span>Watermark</span><input id="fwm" type="checkbox"></label>
 <button id="fgo">Render</button><button id="fdl">Download PNG</button><button id="fcsv">Download CSV</button>
 </div>
@@ -173,7 +180,7 @@ label.colorlab{font-size:12px;display:flex;flex-direction:column;gap:4px;align-i
 <label id="vrangebox" style="display:none">Range<select id="vrange"><option>1Y</option><option>3Y</option><option selected>5Y</option><option>10Y</option><option>Max</option></select></label>
 <label>Sort<select id="vsort"><option value="desc">High to low</option><option value="asc">Low to high</option></select></label>
 <label>Title<input id="vtitle" size="30" placeholder="auto"></label>
-<label class="colorlab" title="One series or the snapshot bars. Several series keep the shared palette.">Bar color<span class="colorline"><select id="vcolor"></select><span class="swatches" id="vcolorSwatches"></span><span class="custom"><span class="cname">Custom</span><input type="color" id="vcolorPick" value="#F7931A" aria-label="Custom bar color" title="Custom color"><input class="hex" id="vcolorHex" value="#F7931A" maxlength="7" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Bar color hex" placeholder="#RRGGBB"></span></span></label>
+<span class="colorlab" title="One series or the snapshot bars. Several series keep the shared palette.">Bar color<span class="cbox" id="vcolorBox"><select id="vcolor" aria-hidden="true" tabindex="-1"></select><span class="ccustom" id="vcolorCustom" hidden><input type="color" id="vcolorPick" value="#F7931A" aria-label="Custom bar color" title="Custom color"><input class="hex" id="vcolorHex" value="#F7931A" maxlength="7" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Bar color hex" placeholder="#RRGGBB"></span></span></span>
 <label><span>Watermark</span><input id="vwm" type="checkbox"></label>
 <button id="vgo" title="Bypass the 6h fundamentals cache">Render</button><button id="vdl">Download PNG</button><button id="vcsv" style="display:none">Download CSV</button>
 </div>
@@ -206,7 +213,7 @@ label.colorlab{font-size:12px;display:flex;flex-direction:column;gap:4px;align-i
 <label id="typebox">Type<span class="type-line"><select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="candle">Candles + volume</option><option value="bar">Bar ranking % return</option><option value="bardd">Bar ranking % drawdown</option><option value="ratio">Ratio A priced in B</option><option value="drawdown">Drawdown from peak</option></select><span id="ctypeNote"></span></span></label>
 <label id="ddbox" title="Drawdown = % below the running high of daily closes">Peak from<select id="ddbase"><option value="range">Start of range</option><option value="ath">All-time high (full history)</option></select></label>
 <label>Title<input id="title" size="34" placeholder="auto"></label>
-<label class="colorlab" title="One series. Several series keep the shared palette.">Line color<span class="colorline"><select id="color"></select><span class="swatches" id="colorSwatches"></span><span class="custom"><span class="cname">Custom</span><input type="color" id="colorPick" value="#F7931A" aria-label="Custom line color" title="Custom color"><input class="hex" id="colorHex" value="#F7931A" maxlength="7" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Line color hex" placeholder="#RRGGBB"></span></span></label>
+<span class="colorlab" title="One series. Several series keep the shared palette.">Line color<span class="cbox" id="colorBox"><select id="color" aria-hidden="true" tabindex="-1"></select><span class="ccustom" id="colorCustom" hidden><input type="color" id="colorPick" value="#F7931A" aria-label="Custom line color" title="Custom color"><input class="hex" id="colorHex" value="#F7931A" maxlength="7" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Line color hex" placeholder="#RRGGBB"></span></span></span>
 <label><span>Watermark</span><input id="wm" type="checkbox"></label>
 <div id="smabox" title="Simple moving averages of daily closes. Price line and candles, not intraday bars."><span>SMA</span>
 <button type="button" id="smaBtn" aria-haspopup="true" aria-expanded="false" aria-controls="smaMenu">SMA: none</button>
@@ -273,27 +280,72 @@ function sinkHex(hex){let c=hex;for(let i=0;i<8;i++){if(contrast(c,'#FFFFFF')>=2
 // Named colors keep their exact hex on light backgrounds and the BRIGHT map on dark ones (PNG included).
 // A custom hex is nudged only when it would disappear on the theme backgrounds.
 function bc(c){const hex=canonHex(c);if(!hex)return c;if(T.dark)return BRIGHT[hex]||liftHex(hex);if(NAMED[hex])return hex;return sinkHex(hex)}
-function colorEls(id){return {sel:$(id),pick:$(id+'Pick'),hex:$(id+'Hex'),sw:$(id+'Swatches')}}
+const COLOR_IDS=['color','fcolor','vcolor'];
+const COLOR_LABEL={color:'Line color',fcolor:'Series color',vcolor:'Bar color'};
+const COLOR_BAR={color:'ctl',fcolor:'fctl',vcolor:'vctl'};
+function colorEls(id){return {sel:$(id),pick:$(id+'Pick'),hex:$(id+'Hex'),btn:$(id+'Btn'),menu:$(id+'Menu'),chip:$(id+'Chip'),lbl:$(id+'Lbl'),custom:$(id+'Custom')}}
 function lineColor(id){const sel=$(id);if(!sel)return '#F7931A';
   if(sel.value==='__custom')return canonHex(sel.dataset.hex)||canonHex($(id+'Hex')&&$(id+'Hex').value)||'#F7931A';
   return canonHex(sel.value)||'#F7931A'}
-function syncColorUi(id){const {sel,pick,hex,sw}=colorEls(id);if(!sel)return;const cur=lineColor(id);
+function colorName(id){const sel=$(id);if(!sel||sel.value==='__custom')return 'Custom';
+  const hit=LINE_COLORS.find(([v])=>v===sel.value);return hit?hit[1]:'Custom'}
+function syncColorUi(id){const {sel,pick,hex,btn,menu,chip,lbl,custom}=colorEls(id);if(!sel)return;const cur=lineColor(id),customOn=sel.value==='__custom';
   sel.dataset.hex=cur;if(pick)pick.value=cur.toLowerCase();if(hex&&document.activeElement!==hex)hex.value=cur;
-  if(sw)sw.querySelectorAll('.swatch').forEach(b=>b.setAttribute('aria-pressed',canonHex(b.dataset.c)===cur?'true':'false'))}
+  if(custom)custom.hidden=!customOn;if(chip)chip.style.background=cur;
+  const name=customOn?'Custom':colorName(id);if(lbl)lbl.textContent=name;
+  if(btn)btn.setAttribute('aria-label',COLOR_LABEL[id]+', '+(customOn?'Custom '+cur:name));
+  if(menu)menu.querySelectorAll('[role=option]').forEach(o=>o.setAttribute('aria-selected',o.dataset.c===(customOn?'__custom':cur)?'true':'false'))}
 function setLineColor(id,raw){const {sel,hex}=colorEls(id);if(!sel)return false;const cur=canonHex(raw);if(!cur)return false;
   const known=LINE_COLORS.find(([v])=>v.toUpperCase()===cur);sel.value=known?known[0]:'__custom';sel.dataset.hex=cur;if(hex)hex.value=cur;syncColorUi(id);return true}
 function pairColor(hex){const h=canonHex(hex)||'#F7931A';if(h==='#F7931A')return '#8B5CF6';if(h==='#8B5CF6')return '#F7931A';
   const i=PALETTE.findIndex(c=>c.toUpperCase()===h);return PALETTE[i<0?0:(i+1)%PALETTE.length]}
+function colorActive(id,opt){const menu=$(id+'Menu');if(!menu||!opt)return;
+  menu.querySelectorAll('[role=option]').forEach(o=>o.classList.toggle('on',o===opt));
+  menu.setAttribute('aria-activedescendant',opt.id);try{opt.scrollIntoView({block:'nearest'})}catch(e){}}
+function placeColorMenu(id){const menu=$(id+'Menu');if(!menu)return;menu.style.left='0';menu.style.right='auto';menu.style.top='';menu.style.bottom='';
+  let r=menu.getBoundingClientRect();const pad=8,vw=window.innerWidth,vh=window.innerHeight;
+  if(r.right>vw-pad){menu.style.left='auto';menu.style.right='0';r=menu.getBoundingClientRect()}
+  if(r.left<pad){menu.style.right='auto';menu.style.left='0'}
+  r=menu.getBoundingClientRect();
+  if(r.bottom>vh-pad&&r.top>vh/2){menu.style.top='auto';menu.style.bottom='calc(100% + 2px)'}}
+function colorMenuOpen(id,open){const {menu,btn}=colorEls(id);if(!menu||!btn)return;
+  if(open)COLOR_IDS.forEach(other=>{if(other!==id)colorMenuOpen(other,false)});
+  menu.hidden=!open;btn.setAttribute('aria-expanded',open?'true':'false');
+  const bar=$(COLOR_BAR[id]);if(bar){bar.style.position='relative';bar.style.zIndex=open?'40':''}
+  if(!open)return;placeColorMenu(id);
+  const cur=menu.querySelector('[aria-selected=true]')||menu.querySelector('[role=option]');
+  colorActive(id,cur);menu.focus()}
+function chooseColorOption(id,opt){const {sel,hex,btn}=colorEls(id);if(!opt||!sel)return;
+  if(opt.dataset.c==='__custom'){const cur=canonHex(sel.dataset.hex)||lineColor(id);sel.value='__custom';sel.dataset.hex=cur;if(hex)hex.value=cur;syncColorUi(id);colorMenuOpen(id,false);sel.dispatchEvent(new Event('change',{bubbles:true}))}
+  else{setLineColor(id,opt.dataset.c);colorMenuOpen(id,false);sel.dispatchEvent(new Event('change',{bubbles:true}));if(btn)btn.focus()}}
 function installColorPickers(){const opts=LINE_COLORS.map(([v,n])=>`<option value="${v}">${n}</option>`).join('')+'<option value="__custom">Custom…</option>';
-  for(const id of ['color','fcolor','vcolor']){const {sel,sw,pick,hex}=colorEls(id);if(!sel)continue;
+  const chip=c=>`<span class="chip" style="background:${c}"></span>`;
+  for(const id of COLOR_IDS){const {sel,pick,hex,custom}=colorEls(id);if(!sel)continue;
     sel.innerHTML=opts;sel.value='#F7931A';
-    if(sw)sw.innerHTML=LINE_COLORS.map(([v,n])=>`<button type="button" class="swatch" data-c="${v}" aria-label="${n}" title="${n}" style="background:${v}"></button>`).join('');
+    const btn=document.createElement('button');btn.type='button';btn.className='cbtn';btn.id=id+'Btn';btn.setAttribute('aria-haspopup','listbox');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-controls',id+'Menu');
+    btn.innerHTML=chip('#F7931A').replace('class="chip"','class="chip" id="'+id+'Chip"')+'<span class="clabel" id="'+id+'Lbl">Orange</span>';
+    sel.insertAdjacentElement('beforebegin',btn);
+    const menu=document.createElement('div');menu.className='cmenu';menu.id=id+'Menu';menu.setAttribute('role','listbox');menu.setAttribute('aria-label',COLOR_LABEL[id]);menu.tabIndex=-1;menu.hidden=true;
+    menu.innerHTML=LINE_COLORS.map(([v,n],i)=>`<div role="option" id="${id}Opt${i}" data-c="${v}" aria-selected="${v==='#F7931A'?'true':'false'}">${chip(v)}${n}</div>`).join('')
+      +`<div role="option" id="${id}OptCustom" data-c="__custom" aria-selected="false"><span class="chip" style="background:conic-gradient(#F7931A,#4D7C0F,#0EA5E9,#8B5CF6,#EC4899,#EF4444,#F7931A)"></span>Custom…</div>`;
+    btn.insertAdjacentElement('afterend',menu);
     syncColorUi(id);
     sel.addEventListener('change',()=>{if(sel.value==='__custom'){const cur=canonHex(sel.dataset.hex)||'#F7931A';sel.dataset.hex=cur;if(hex)hex.value=cur;syncColorUi(id);if(hex){hex.focus();hex.select()}}else syncColorUi(id)});
-    if(sw)sw.addEventListener('click',e=>{const b=e.target.closest('button.swatch');if(!b)return;e.preventDefault();setLineColor(id,b.dataset.c);sel.dispatchEvent(new Event('change',{bubbles:true}))});
+    btn.addEventListener('click',()=>colorMenuOpen(id,menu.hidden));
+    btn.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowUp'||e.key==='Enter'||e.key===' '){e.preventDefault();colorMenuOpen(id,true)}});
+    menu.addEventListener('click',e=>{const opt=e.target.closest('[role=option]');if(opt)chooseColorOption(id,opt)});
+    menu.addEventListener('keydown',e=>{const list=[...menu.querySelectorAll('[role=option]')];let i=list.findIndex(o=>o.classList.contains('on'));if(i<0)i=0;
+      if(e.key==='ArrowDown'||e.key==='ArrowUp'||e.key==='Home'||e.key==='End'){e.preventDefault();
+        const n=e.key==='ArrowDown'?Math.min(list.length-1,i+1):e.key==='ArrowUp'?Math.max(0,i-1):e.key==='Home'?0:list.length-1;colorActive(id,list[n])}
+      else if(e.key==='Enter'||e.key===' '){e.preventDefault();if(list[i])chooseColorOption(id,list[i])}
+      else if(e.key==='Escape'){e.preventDefault();colorMenuOpen(id,false);btn.focus()}
+      else if(e.key==='Tab'){colorMenuOpen(id,false)}
+      else if(e.key.length===1&&/\S/.test(e.key)){const q=e.key.toLowerCase();const hit=list.find(o=>(o.textContent||'').trim().toLowerCase().startsWith(q));if(hit)colorActive(id,hit)}});
     if(pick)pick.addEventListener('change',()=>{setLineColor(id,pick.value);sel.dispatchEvent(new Event('change',{bubbles:true}))});
     const applyHex=()=>{const c=canonHex(hex.value);if(!c){hex.value=lineColor(id);return}setLineColor(id,c);sel.dispatchEvent(new Event('change',{bubbles:true}))};
     if(hex){hex.addEventListener('change',applyHex);hex.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();applyHex()}})}}}
+document.addEventListener('pointerdown',e=>{if(e.target.closest&&e.target.closest('.cbox'))return;COLOR_IDS.forEach(id=>colorMenuOpen(id,false))});
+window.addEventListener('resize',()=>COLOR_IDS.forEach(id=>{const m=$(id+'Menu');if(m&&!m.hidden)placeColorMenu(id)}));
 installColorPickers();
 function applyTheme(){T=THEMES[$('theme').value]||THEMES.white;axLabel={fontSize:16,color:T.text};split={lineStyle:{color:T.grid}};
   $('chart').style.background=T.bg;$('tprev').style.background=T.bg;$('tprev').style.color=T.title;

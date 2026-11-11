@@ -120,7 +120,12 @@ class LineColorSourceTest(unittest.TestCase):
         self.assertIn("prices:'prices'", html)
         self.assertIn("charts:'prices'", html)
         self.assertIn("q.has('tickers')?'prices'", html)
-        for piece in ("id=\"colorPick\"", "id=\"colorHex\"", "id=\"fcolorPick\"", "id=\"vcolorHex\"", "Custom…"):
+        self.assertNotIn("colorSwatches", html)
+        self.assertNotIn('class="swatches"', html)
+        self.assertIn('id="colorCustom" hidden', html)
+        self.assertIn('id="fcolorCustom" hidden', html)
+        self.assertIn('id="vcolorCustom" hidden', html)
+        for piece in ("id=\"colorPick\"", "id=\"colorHex\"", "id=\"fcolorPick\"", "id=\"vcolorHex\"", "Custom…", "setAttribute('role','listbox')"):
             self.assertIn(piece, html)
 
 
@@ -158,7 +163,8 @@ class LineColorBrowserTest(unittest.TestCase):
         ui = self.ev(r"""
 (() => {
   const names = [...document.getElementById('color').options].map(o => [o.value, o.text]);
-  const pressed = [...document.querySelectorAll('#colorSwatches .swatch')].filter(b => b.getAttribute('aria-pressed')==='true').map(b => b.dataset.c);
+  const menu = document.getElementById('colorMenu');
+  const opts = [...menu.querySelectorAll('[role=option]')].map(o => [o.dataset.c, o.textContent.trim(), !!o.querySelector('.chip')]);
   return {
     tab: document.getElementById('mPrices').textContent,
     on: document.getElementById('mPrices').classList.contains('on'),
@@ -167,8 +173,13 @@ class LineColorBrowserTest(unittest.TestCase):
     value: lineColor('color'),
     fvalue: lineColor('fcolor'),
     vvalue: lineColor('vcolor'),
-    names, pressed,
-    swatches: document.querySelectorAll('#colorSwatches .swatch').length,
+    names, opts,
+    menuHidden: menu.hidden,
+    customHidden: document.getElementById('colorCustom').hidden,
+    fCustomHidden: document.getElementById('fcolorCustom').hidden,
+    vCustomHidden: document.getElementById('vcolorCustom').hidden,
+    swatches: document.querySelectorAll('.swatch').length,
+    label: document.getElementById('colorLbl').textContent,
     multi: colors(9).slice(0, 9)
   };
 })()
@@ -183,14 +194,24 @@ class LineColorBrowserTest(unittest.TestCase):
         self.assertEqual(ui["names"][0], ["#F7931A", "Orange"])
         self.assertIn(["#8B5CF6", "Violet"], ui["names"])
         self.assertEqual(ui["names"][-1][0], "__custom")
-        self.assertEqual(ui["pressed"], ["#F7931A"])
-        self.assertEqual(ui["swatches"], 12)
+        self.assertTrue(ui["menuHidden"])
+        self.assertTrue(ui["customHidden"])
+        self.assertTrue(ui["fCustomHidden"])
+        self.assertTrue(ui["vCustomHidden"])
+        self.assertEqual(ui["swatches"], 0)
+        self.assertEqual(ui["label"], "Orange")
+        self.assertEqual(ui["opts"][0][0], "#F7931A")
+        self.assertTrue(all(chip for _, _, chip in ui["opts"]))
+        self.assertEqual(ui["opts"][-1][0], "__custom")
+        self.assertEqual(ui["opts"][-1][1], "Custom…")
         self.assertEqual(ui["multi"][:8], OLD_PALETTE)
         self.assertEqual(ui["multi"][8], "#1D4ED8")
 
         picked = self.ev(r"""
 (() => {
-  document.querySelector('#colorSwatches button[data-c="#1D4ED8"]').click();
+  document.getElementById('colorBtn').click();
+  const open = !document.getElementById('colorMenu').hidden;
+  document.querySelector('#colorMenu [data-c="#1D4ED8"]').click();
   $('theme').value = 'white'; applyTheme();
   const light = bc('#1D4ED8');
   $('theme').value = 'black'; applyTheme();
@@ -198,12 +219,17 @@ class LineColorBrowserTest(unittest.TestCase):
   const ink = bc('#111827');
   const orange = bc('#F7931A');
   $('theme').value = 'white'; applyTheme();
-  return {value: lineColor('color'), text: $('color').selectedOptions[0].text, light, dark, ink, orange,
+  return {open, value: lineColor('color'), text: $('color').selectedOptions[0].text, label: $('colorLbl').textContent,
+    menuHidden: $('colorMenu').hidden, customHidden: $('colorCustom').hidden, light, dark, ink, orange,
     pairOrange: pairColor('#F7931A'), pairViolet: pairColor('#8B5CF6'), pairBlue: pairColor('#1D4ED8')};
 })()
 """)
+        self.assertTrue(picked["open"])
         self.assertEqual(picked["value"], "#1D4ED8")
         self.assertEqual(picked["text"], "Blue")
+        self.assertEqual(picked["label"], "Blue")
+        self.assertTrue(picked["menuHidden"])
+        self.assertTrue(picked["customHidden"])
         self.assertEqual(picked["light"], "#1D4ED8")
         self.assertEqual(picked["dark"], "#6183E4")
         self.assertEqual(picked["ink"], "#E5E7EB")
@@ -222,17 +248,21 @@ class LineColorBrowserTest(unittest.TestCase):
   setLineColor('vcolor', 'abc');
   vapply({name:'violet', mode:'prices', fields:{color:'#8B5CF6'}});
   const restored = lineColor('color');
+  const violetHidden = $('colorCustom').hidden;
   vapply({name:'custom', mode:'prices', fields:{color:'#123456'}});
-  return {old: old.fields.color, custom: custom.fields.color, restored,
-    again: lineColor('color'), select: $('color').value, f: lineColor('fcolor'), v: lineColor('vcolor'),
+  return {old: old.fields.color, custom: custom.fields.color, restored, violetHidden,
+    again: lineColor('color'), select: $('color').value, customShown: !$('colorCustom').hidden,
+    f: lineColor('fcolor'), v: lineColor('vcolor'),
     bad: setLineColor('color', 'nope')};
 })()
 """)
         self.assertEqual(saved["old"], "#8B5CF6")
         self.assertEqual(saved["custom"], "#123456")
         self.assertEqual(saved["restored"], "#8B5CF6")
+        self.assertTrue(saved["violetHidden"])
         self.assertEqual(saved["again"], "#123456")
         self.assertEqual(saved["select"], "__custom")
+        self.assertTrue(saved["customShown"])
         self.assertEqual(saved["f"], "#4D7C0F")
         self.assertEqual(saved["v"], "#AABBCC")
         self.assertFalse(saved["bad"])
@@ -312,20 +342,37 @@ class LineColorBrowserTest(unittest.TestCase):
         self.open("?tab=charts", width=390, height=800, mobile=False)
         box = self.ev(r"""
 (() => {
-  const lab = document.getElementById('color').closest('label');
-  const r = lab.getBoundingClientRect();
-  const sw = [...document.querySelectorAll('#colorSwatches .swatch')];
-  const rows = new Set(sw.map(b => Math.round(b.getBoundingClientRect().top)));
-  return {left: r.left, right: r.right, inner: window.innerWidth, rows: rows.size,
-    swatch: sw[0].getBoundingClientRect().width, hex: document.getElementById('colorHex').getBoundingClientRect().height,
+  const btn = document.getElementById('colorBtn');
+  const closed = btn.getBoundingClientRect();
+  btn.dispatchEvent(new KeyboardEvent('keydown', {key:'ArrowDown', bubbles:true}));
+  const menu = document.getElementById('colorMenu');
+  const opened = !menu.hidden;
+  menu.dispatchEvent(new KeyboardEvent('keydown', {key:'ArrowDown', bubbles:true}));
+  menu.dispatchEvent(new KeyboardEvent('keydown', {key:'Enter', bubbles:true}));
+  const keyed = lineColor('color');
+  btn.click();
+  const mr = menu.getBoundingClientRect();
+  const opt = menu.querySelector('[role=option]').getBoundingClientRect();
+  menu.dispatchEvent(new KeyboardEvent('keydown', {key:'End', bubbles:true}));
+  menu.dispatchEvent(new KeyboardEvent('keydown', {key:'Enter', bubbles:true}));
+  return {left: closed.left, right: closed.right, inner: window.innerWidth,
+    menuLeft: mr.left, menuRight: mr.right, opened, optH: opt.height, keyed,
+    afterCustom: lineColor('color'), customShown: !document.getElementById('colorCustom').hidden,
+    menuClosed: menu.hidden, hex: document.getElementById('colorHex').getBoundingClientRect().height,
     tab: document.getElementById('mPrices').textContent};
 })()
 """)
         self.assertEqual(box["tab"], "Charts")
         self.assertGreaterEqual(box["left"], -1)
-        self.assertLessEqual(box["right"], box["inner"] + 1)
-        self.assertGreaterEqual(box["rows"], 2, box)
-        self.assertGreaterEqual(box["swatch"], 32)
+        self.assertLessEqual(box["right"], box["inner"] + 1, box)
+        self.assertTrue(box["opened"])
+        self.assertEqual(box["keyed"], "#78350F")
+        self.assertGreaterEqual(box["menuLeft"], -1)
+        self.assertLessEqual(box["menuRight"], box["inner"] + 1, box)
+        self.assertGreaterEqual(box["optH"], 40)
+        self.assertEqual(box["afterCustom"], "#78350F")
+        self.assertTrue(box["customShown"])
+        self.assertTrue(box["menuClosed"])
         self.assertGreaterEqual(box["hex"], 36)
 
         self.open("?tab=prices")
