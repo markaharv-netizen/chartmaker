@@ -42,6 +42,9 @@ RETIRED = (
     "501919598",   # 263 Tariff pass-through
     "579853621",   # 12 Breakeven vs CPI
     "418894352",   # 81 CoreWeave margins (bot2)
+    "1308503061",  # 122 Bond vol vs stock vol
+    "748431671",   # 232 Quits vs wage growth
+    "254001772",   # 162 Factory construction boom
 )
 RETIRED_TABS = (
     "161 Nvidia P-S and P-E",
@@ -57,6 +60,9 @@ RETIRED_TABS = (
     "263 Tariff pass-through",
     "12 Breakeven vs CPI",
     "81 CoreWeave margins",
+    "122 Bond vol vs stock vol",
+    "232 Quits vs wage growth",
+    "162 Factory construction boom",
 )
 
 
@@ -86,6 +92,9 @@ class CotdBuildTest(unittest.TestCase):
             self.assertNotIn(gid, blob)
         for tab in RETIRED_TABS:
             self.assertNotIn(tab, blob)
+        self.assertNotIn("Chart 2", blob)
+        self.assertNotIn("1536200109", blob)
+        self.assertNotIn("Bitcoin correlation with gold", blob)
 
     def test_ui_source_renders_every_item(self):
         body = cotd_source()
@@ -220,8 +229,13 @@ class CotdDisplayTest(unittest.TestCase):
                     self.assertEqual(live["n"], len(saved["items"]), live["titles"])
                     self.assertEqual(live["hidden"], 0)
                     self.assertEqual(live["imgs"], len(saved["items"]))
-                    self.assertNotIn(saved["theme"][:48], live["text"])
-                    self.assertNotIn(saved["items"][0]["picked"][:48], live["text"])
+                    if saved.get("random"):
+                        self.assertIn(saved["theme"], live["text"])
+                    else:
+                        self.assertNotIn(saved["theme"][:48], live["text"])
+                    picked = saved["items"][0].get("picked") or ""
+                    if picked:
+                        self.assertNotIn(picked[:48], live["text"])
                     self.assertNotIn("Why it was picked", live["text"])
                     self.assertNotIn("Why it matters", live["text"])
                     self.assertNotIn("What you should know", live["text"])
@@ -370,8 +384,9 @@ class CotdRandomTest(unittest.TestCase):
             im.save(thumb, "JPEG")
             doc = cotd_build.publish_random(repo, "2099-08-01", 0)
             self.assertTrue(doc["random"])
-            self.assertEqual(len(doc["items"]), 6, doc["items"])
-            self.assertEqual(doc["theme"], "6 items drawn at random from the sheet library.")
+            # The white PNG is a blank chart, so it is not drawn. The other five are.
+            self.assertEqual(len(doc["items"]), 5, doc["items"])
+            self.assertEqual(doc["theme"], "5 items drawn at random from the sheet library.")
             by_gid = {}
             for row in doc["items"]:
                 self.assertNotIn("picked", row)
@@ -380,10 +395,10 @@ class CotdRandomTest(unittest.TestCase):
                 self.assertGreaterEqual(row["chart_n"], 1)
                 gid = int(row["sheet_url"].rsplit("gid=", 1)[1])
                 by_gid[(gid, row["chart_n"])] = row
-            self.assertEqual(set(by_gid), {(810001, 1), (810002, 1), (810003, 1), (810004, 1), (810005, 1), (810005, 2)})
+            self.assertEqual(set(by_gid), {(810001, 1), (810003, 1), (810004, 1), (810005, 1), (810005, 2)})
+            self.assertNotIn((810002, 1), by_gid)
             self.assertEqual(by_gid[(810001, 1)]["kind"], "chart")
             self.assertTrue(by_gid[(810001, 1)]["image"].endswith(".png"))
-            self.assertNotIn("image", by_gid[(810002, 1)])
             self.assertEqual(by_gid[(810003, 1)]["kind"], "table")
             self.assertTrue(by_gid[(810003, 1)]["image"].endswith(".png"))
             self.assertEqual(by_gid[(810004, 1)]["kind"], "table")
@@ -403,7 +418,8 @@ class CotdRandomTest(unittest.TestCase):
             self.assertEqual(run.returncode, 0, run.stdout + run.stderr)
             with open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8") as f:
                 saved = json.load(f)
-            self.assertEqual(len(saved["items"]), 6)
+            self.assertEqual(len(saved["items"]), 5)
+            self.assertNotIn("810002", json.dumps(saved))
             refused = subprocess.run(
                 [sys.executable, SCRIPT, os.path.join(repo, "picks.json")],
                 capture_output=True, text=True)
