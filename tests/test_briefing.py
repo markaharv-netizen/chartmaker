@@ -237,14 +237,15 @@ class LiveFilesTest(unittest.TestCase):
         self.assertTrue(doc["priceTargets"]["asOf"])
         self.assertTrue(doc["sentiment"]["previous"] or doc["sentiment"]["empty"])
 
-    def test_page_keeps_briefing_off_the_landing_tab(self):
+    def test_briefing_is_the_landing_tab(self):
         with open(INDEX, encoding="utf-8") as handle:
             html = handle.read()
-        self.assertIn('id="mBrief"', html)
+        self.assertIn('id="mBrief" class="on"', html)
         self.assertIn("/api/briefing", html)
         self.assertIn("briefing:'briefing'", html)
-        self.assertIn(":'watch')", html)
-        self.assertIn("It is not the landing page", html)
+        self.assertIn("watch:'watch'", html)
+        self.assertIn(":'briefing')", html)
+        self.assertNotIn(":'watch')", html)
 
 
 if __name__ == "__main__":

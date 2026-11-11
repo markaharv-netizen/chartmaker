@@ -144,7 +144,7 @@ Then commit `static/paper_trading.json`. `python3 scripts/paper_trading.py --sel
 
 ## Daily briefing
 
-The **Daily briefing** tab is one page for the overnight changes: price targets, sentiment, BTC treasury holdings, the paper book's saved NAV, and charts of the day. It is a separate tab. The app still opens on Watchlist. Open the briefing at `/?tab=briefing`. To make that the landing page, change the final `setMode` fallback in `static/index.html` from `watch` to `briefing`.
+The **Daily briefing** tab is the page the app opens on: price targets, sentiment, BTC treasury holdings, the paper book's saved NAV, and charts of the day. `?tab=` still opens that tab (`?tab=watch` is Watchlist, `?tab=paper` is the paper book, and the same for the others). `?tickers=`, `?ftickers=`, and `?vtickers=` still open Prices, Financials, and Valuation.
 
 `GET /api/briefing` builds the page from the files those tabs already use. No new scheduled job. Render does not call Google or X.
 
