@@ -1,149 +1,187 @@
 {
- "date": "2026-11-10",
- "theme": "Tuesday: October CPI lands this morning, CoreWeave reports after the close, stocks just had their best day since April while bitcoin sits below its 50-week average, and SpaceX plans a $24B Starbase power plant as Tesla's robotaxi zone grows.",
+ "date": "2026-11-11",
+ "theme": "20 items drawn at random from the sheet library.",
  "items": [
   {
    "sheet": "Bot experiments",
-   "tab": "52 Core goods vs services",
-   "title": "Core goods vs core services inflation",
-   "image": "cotd/2026-11-10/01.png",
-   "picked": "October CPI is out at 8:30 a.m. ET today, the last big inflation print before the Fed's December meeting, with economists expecting 0.2% for core. The split between goods and services is the first thing traders will check.",
-   "matters": "Goods inflation has been fading while services stay sticky, so the services line decides whether core inflation can keep cooling. That is what the Fed is watching.",
-   "know": "In September 2026, the tab's latest month, core goods CPI was up 0.71% from a year earlier and core services 3.16%. Core goods was 1.41% last December and core services 3.03%, so goods have cooled while services have edged up. October 2025 is missing because of last year's government shutdown, and today's October print is not in the chart yet.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=200447618",
+   "tab": "122 Bond vol vs stock vol",
+   "title": "Bond market fear vs stock market fear: MOVE ÷ VIX",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1308503061",
+   "image": "cotd/2026-11-11/01.png",
+   "kind": "chart",
    "chart_n": 1
   },
   {
    "sheet": "Bot experiments",
-   "tab": "18 Electricity vs CPI",
-   "title": "Power bills vs inflation: electricity CPI vs headline",
-   "image": "cotd/2026-11-10/04.png",
-   "picked": "Texas governor-elect Gina Hinojosa is pledging to freeze residential electricity rates, and AI data-center power demand is in the news with Anthropic's $3.4 billion generator buy and SpaceX's planned 748 MW gas plant at Starbase. Electricity is also a line item in today's CPI.",
-   "matters": "Electricity prices rising faster than overall inflation is where the AI power boom touches household bills. It is becoming a political issue, not just a market one.",
-   "know": "In September 2026, electricity CPI was up 4.37% from a year earlier versus 3.72% for all items. Electricity inflation was 6.95% in November 2025 and 6.09% in April 2026, and has run above headline for most of the past year. The series ends in September and skips October 2025 because of the shutdown.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=829703707",
-   "chart_n": 1
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "274 Missing the best days",
-   "title": "The cost of missing the best days in the S&P 500",
-   "image": "cotd/2026-11-10/05.png",
-   "picked": "The S&P 500 rose 2.35% on Monday to 7,549.94, its best day since April, right after last week's selloff, according to a story trending on X. Big up days tend to come right after big down days.",
-   "matters": "Investors who sold during last week's drop and waited missed Monday. Over long periods, a handful of days like that drive a large share of returns.",
-   "know": "On the tab, $10,000 in the S&P 500 from October 2006 to October 2026 grew to $58,008 fully invested, price only. Missing the 10 best days cut it to $25,828, missing 20 to $15,257, missing 30 to $9,973 and missing 50 to $4,887. The figures exclude dividends and end in October, so they do not include Monday's gain.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=860374575",
-   "chart_n": 1
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "193 Stocks vs 200-day average",
-   "title": "How stretched are stocks? S&P 500 and Nasdaq-100 vs their 200-day averages",
-   "image": "cotd/2026-11-10/06.png",
-   "picked": "Monday's rebound came after a week that pushed the Nasdaq-100 below its 200-day moving average. This chart shows how much of the summer's stretch has been worked off.",
-   "matters": "The 200-day average is the line many traders use to separate an uptrend from a correction. Whether the Nasdaq reclaims it after Monday's bounce is a key test for AI stocks.",
-   "know": "In the tab's latest weekly reading, dated Nov 6 2026, the S&P 500 was 0.71% above its 200-day average and the Nasdaq-100 was 3.55% below. That is the Nasdaq-100's first weekly reading below the line since April 2 2026, and both indexes were more than 10% above it in mid-August. The Nov 6 row is stored as an unformatted date serial on the tab and the data does not include Monday's rally.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1003143037",
-   "chart_n": 1
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "148 BTC-Nasdaq correlation",
-   "title": "Bitcoin vs the Nasdaq: 90-day correlation",
-   "image": "cotd/2026-11-10/07.png",
-   "picked": "Stocks surged on Monday while bitcoin sat near $75,000, and traders on X are complaining that bitcoin did not join the rally. This tab shows how tightly bitcoin has been moving with the Nasdaq.",
-   "matters": "When the correlation is high, bitcoin trades like a tech stock and should bounce with the Nasdaq. A day like Monday, when it does not, is the kind of break this chart can show over time.",
-   "know": "The last complete row, Oct 29 2026, has a 90-trading-day correlation of 0.408 with bitcoin at $77,938.86, up from 0.343 in early September. The tab's highest reading since 2019 is 0.667 in May 2022. A newer row dated Nov 6 (stored as a raw date serial) shows 0.512 but has no bitcoin price, so treat it as unconfirmed.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=556824671",
-   "chart_n": 1
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "04 BTC vs 200-week MA",
-   "title": "Bitcoin vs its 200-week moving average",
-   "image": "cotd/2026-11-10/08.png",
-   "picked": "Bitcoin closed the week below its 50-week moving average for the first time in two months, near $74,000, and traders on X are debating whether the bull market is over. The 200-week average is the deeper floor that long-term holders watch.",
-   "matters": "Historically, the 200-week average has marked bear-market lows. How far price sits above it is a rough measure of how much downside cushion is left.",
-   "know": "In the tab's latest weekly reading, dated Nov 6 2026, bitcoin was $75,860.14 against a 200-week average of $67,628.77, a ratio of 1.122x. In mid-August price briefly dipped below it, at 0.986x on Aug 14 ($62,968 vs $63,888). The data does not include this week's slide toward $74,000.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1810821762",
-   "chart_n": 1
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "139 BTC MVRV",
-   "title": "Bitcoin MVRV: market value vs on-chain cost basis",
-   "image": "cotd/2026-11-10/09.png",
-   "picked": "The Crypto Fear & Greed Index is at 25, extreme fear, as bitcoin trades below its 50-week average, per a trending X story. MVRV shows how much profit the average coin holder is still sitting on.",
-   "matters": "MVRV near 1 means the average holder is close to break-even, which has lined up with past cycle lows. Far above 1 means plenty of paper profit that can be sold.",
-   "know": "In the tab's latest weekly reading, dated Nov 6 2026, MVRV was 1.405 with bitcoin at $75,826.53, implying an on-chain realized price of about $53,954. MVRV was 1.575 on Oct 2 and 1.195 on Aug 14, and its high on the tab is 3.91 in February 2021. The data predates this week's move.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1810990664",
-   "chart_n": 1
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "144 BTC miners AI pivot",
-   "title": "Bitcoin miners that pivoted to AI vs MARA and bitcoin",
-   "image": "cotd/2026-11-10/11.png",
-   "picked": "MARA's sale of more than 13,000 BTC for about $1.1 billion is one of the reasons traders give for bitcoin's weak tape, and CoreWeave's results tonight will move the AI data-center names. This chart splits miners into AI pivoters and a bitcoin-only holder.",
-   "matters": "Miners that turned their power sites into AI data centers have traded like AI infrastructure stocks, not like bitcoin. MARA has stayed tied to bitcoin and is now selling coins.",
-   "know": "Indexed to Dec 29 2023 = 100, the equal-weighted IREN, CIFR and WULF basket was 311.63 in the tab's latest reading, dated Nov 6 2026, down from a peak of 917.55 on Jun 18 2026. MARA was 27.04 and bitcoin 179.92. The data predates MARA's sale announcement.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1414734123",
-   "chart_n": 1
-  },
-  {
-   "sheet": "bot experiments 2",
-   "tab": "77 Neocloud debt vs cash",
-   "title": "Neocloud debt vs cash",
-   "image": "cotd/2026-11-10/13.png",
-   "picked": "Debt worries are the main reason CoreWeave's stock has slid into tonight's earnings, per the X preview, and the Bank of England's Andrew Bailey warned this week about an AI stock bubble. This tab compares neocloud borrowing with cash on hand.",
-   "matters": "Neoclouds fund data centers with borrowed money against customer contracts. A big gap between debt and cash leaves less room if demand or pricing slips.",
-   "know": "CoreWeave had $35.6 billion of long-term debt against $5.5 billion of cash, as of Jun 30 2026. Nebius had $8.5 billion of debt and $8.0 billion of cash, IREN $7.6 billion and $5.9 billion, Applied Digital $6.3 billion and $3.0 billion, and Cipher $5.4 billion and $0.8 billion. Dates differ: Applied Digital is Aug 31 2026 and TeraWulf Mar 31 2026, and CoreWeave's lease liabilities are not shown.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1479637352",
-   "chart_n": 1
-  },
-  {
-   "sheet": "bot experiments 2",
-   "tab": "80 Neocloud stocks 2026 YTD",
-   "title": "Neocloud stocks in 2026",
-   "image": "cotd/2026-11-10/14.png",
-   "picked": "CoreWeave reports tonight with its shares around $49, per the X earnings preview, and the result is expected to move Nebius and the other neoclouds. This chart shows how far the group has fallen since the summer.",
-   "matters": "The neoclouds were among the biggest AI winners early in the year. Their slide since mid-October shows how fast sentiment on AI debt and capex has turned.",
-   "know": "Indexed to Dec 31 2025 = 100, the Oct 30 2026 closes were NBIS 184.1, WULF 102.1, CRWV 76.6, APLD 72.7, IREN 63.4 and CIFR 49.4. That is CRWV −23% and CIFR −51% year to date, while NBIS is still up 84%. The tab was last refreshed Nov 2 with Oct 30 closes, so it is about 11 days old and misses last week's moves.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=552939387",
+   "tab": "31 BTC vs S&P by year",
+   "title": "Bitcoin vs S&P 500: calendar-year returns (2026 YTD to Oct 2)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1642110491",
+   "image": "cotd/2026-11-11/02.png",
+   "kind": "chart",
    "chart_n": 1
   },
   {
    "sheet": "My Bot's Sheets",
-   "tab": "Cloud Backlog RPO",
-   "title": "Cloud provider revenue backlogs: how much is OpenAI and Anthropic",
-   "image": "cotd/2026-11-10/15.png",
-   "picked": "A story trending on X tallies $4.49 trillion of off-balance-sheet AI commitments at Alphabet, Meta, Anthropic, Microsoft, Amazon, Oracle and Nvidia. The other side of those deals shows up as cloud backlog.",
-   "matters": "A big share of cloud backlog now comes from a few AI labs. If one of them stumbles, the backlog is less solid than it looks.",
-   "know": "Microsoft's commercial RPO was $677 billion at Sep 30 2026, with $250 billion tied to OpenAI and $30 billion to Anthropic. Oracle had $664 billion at Aug 31 ($300 billion OpenAI), Amazon $578 billion at Sep 30 ($138 billion OpenAI and $100 billion Anthropic), and Google Cloud $560.8 billion with no lab amounts broken out. The AI lab figures are announced multi-year contract values, the data was pulled Nov 2, and the title says \"as of October 30\" even though Oracle's quarter ended Aug 31.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1020524065",
+   "tab": "MSTR Debt recording",
+   "title": "MSTR Amplification",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=729377719",
+   "image": "cotd/2026-11-11/03.png",
+   "kind": "chart",
+   "chart_n": 3
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "261 Fertility rates",
+   "title": "The baby bust: total fertility rate, births per woman (replacement ≈ 2.1)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=2073191161",
+   "image": "cotd/2026-11-11/04.png",
+   "kind": "chart",
    "chart_n": 1
   },
   {
    "sheet": "Bot experiments",
-   "tab": "316 SpaceX capex by segment",
-   "title": "SpaceX capex by segment: the AI build-out dwarfs rockets and Starlink",
-   "image": "cotd/2026-11-10/19.png",
-   "picked": "SpaceX is planning a $24 billion power plant and supercomputer at Starbase with 35 gas turbines for 748 MW, and SPCX rose more than 5% to $142 on Monday, per a trending X story. AI spending already dominates its capex.",
-   "matters": "Most of SpaceX's investment now goes into AI, not rockets or satellites. That makes the AI segment the main driver of how much cash the company burns.",
-   "know": "Over the 12 months to September 2026, AI (xAI and X) capex was $44.646 billion, Starlink $5.469 billion and space $4.846 billion. In 2024 the AI segment spent $5.633 billion. The chart's axis note says the TTM period runs to Jun 30 2026 while the last bar is labeled TTM Sep '26, so the label is out of date.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=501922147",
+   "tab": "145 BTC implied vs realized vol",
+   "title": "Bitcoin options: implied volatility (DVOL) vs realized volatility",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1589445755",
+   "image": "cotd/2026-11-11/05.png",
+   "kind": "chart",
    "chart_n": 1
   },
   {
    "sheet": "bot experiments 2",
-   "tab": "35 Robotaxi cost per mile",
-   "title": "Analyst estimates: robotaxi cost per mile, Tesla vs Waymo vs human drivers",
-   "image": "cotd/2026-11-10/20.png",
-   "picked": "Tesla grew its unsupervised Robotaxi coverage in Texas from 751 to 1,194 square miles with the San Antonio launch and a bigger Austin zone, and Musk said Cybertruck production will end in about eight months to make room for Cybercab, per trending X stories.",
-   "matters": "Robotaxis only pay off if each mile costs far less than a human driver. Per-mile cost is the core of the bull case for Cybercab.",
-   "know": "Morgan Stanley's estimates on the tab put a human-driven rideshare at $1.71 a mile, a 5th-gen Waymo at $1.43, a 6th-gen Waymo at about $1.04 (midpoint of $0.99–1.08), a Tesla Robotaxi Model Y at $0.81 and a 2035 Cybercab at $0.37. These are analyst estimates, not company disclosures, and they exclude Tesla's safety monitors. The tab was built Oct 9 2026.",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=983027961",
+   "tab": "15 Metaplanet BTC holdings",
+   "title": "Metaplanet's bitcoin stack: 1,762 → 44,000 BTC since Dec 2024 (Q3 2026: sold 10,000, bought 11,000)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=591025300",
+   "image": "cotd/2026-11-11/06.png",
+   "kind": "chart",
+   "chart_n": 1
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "232 Quits vs wage growth",
+   "title": "Job-hopping predicts pay raises: quits rate vs wage growth (Atlanta Fed tracker)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=748431671",
+   "image": "cotd/2026-11-11/07.png",
+   "kind": "chart",
+   "chart_n": 1
+  },
+  {
+   "sheet": "bot experiments 2",
+   "tab": "84 STRC buybacks share of volume",
+   "title": "Strategy's STRC buybacks as a share of weekly STRC volume",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=978808662",
+   "image": "cotd/2026-11-11/08.png",
+   "kind": "chart",
+   "chart_n": 1
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "133 Gold miners vs gold",
+   "title": "Gold miners vs gold: GDX ÷ gold price",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=261268035",
+   "image": "cotd/2026-11-11/09.png",
+   "kind": "chart",
+   "chart_n": 1
+  },
+  {
+   "sheet": "bot experiments 2",
+   "tab": "85 IBIT 30d avg dollar volume",
+   "title": "IBIT 30-day average daily trading volume ($)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=549787515",
+   "image": "cotd/2026-11-11/10.png",
+   "kind": "chart",
+   "chart_n": 1
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "156 Nasdaq dot-com vs AI era",
+   "title": "NASDAQ Composite: dot-com run (from Netscape IPO) vs AI run (from ChatGPT launch)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1796631140",
+   "image": "cotd/2026-11-11/11.png",
+   "kind": "chart",
+   "chart_n": 1
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "166 Tuition & childcare vs CPI",
+   "title": "College tuition and childcare vs overall inflation since 2000 (CPI, NSA)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=788240941",
+   "image": "cotd/2026-11-11/12.png",
+   "kind": "chart",
+   "chart_n": 1
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "120 Country ETF scoreboard",
+   "title": "World stock markets in US dollars: 2026 YTD and 1-year total return (iShares country ETFs)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1390301732",
+   "image": "cotd/2026-11-11/13.png",
+   "kind": "chart",
+   "chart_n": 1
+  },
+  {
+   "sheet": "My Bot's Sheets",
+   "tab": "Gold Priced in BTC",
+   "title": "Chart 2",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1536200109",
+   "image": "cotd/2026-11-11/14.png",
+   "kind": "chart",
+   "chart_n": 2
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "162 Factory construction boom",
+   "title": "Chips Act & AI fabs: real US manufacturing construction spending",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=254001772",
+   "image": "cotd/2026-11-11/15.png",
+   "kind": "chart",
+   "chart_n": 1
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "182 Real fed funds rate",
+   "title": "How tight is the Fed? Real fed funds rate (fed funds minus core PCE inflation)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=902803117",
+   "image": "cotd/2026-11-11/16.png",
+   "kind": "chart",
+   "chart_n": 1
+  },
+  {
+   "sheet": "bot experiments 2",
+   "tab": "54 Tesla vs legacy stocks 2026 YTD",
+   "title": "2026 so far: Honda +11%, Hyundai +9%, GM +2%; Tesla −15%, German carmakers −34% to −43%, Stellantis −59%",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=640768342",
+   "image": "cotd/2026-11-11/17.png",
+   "kind": "chart",
+   "chart_n": 1
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "213 Chip gross margins",
+   "title": "Who captures AI chip profits? Gross margins of Nvidia, Broadcom, AMD, Micron and Intel (trailing 4Q)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1328859831",
+   "image": "cotd/2026-11-11/18.png",
+   "kind": "chart",
+   "chart_n": 1
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "195 BTC vs NVDA vs TSLA vol",
+   "title": "Is Bitcoin now calmer than Nvidia and Tesla? 90-day realized volatility",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=477052168",
+   "image": "cotd/2026-11-11/19.png",
+   "kind": "chart",
+   "chart_n": 1
+  },
+  {
+   "sheet": "My Bot's Sheets",
+   "tab": "M0 by country and Bitcoin",
+   "title": "M0 by country and Bitcoin",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1469908655",
+   "image": "cotd/2026-11-11/20.png",
+   "kind": "table",
    "chart_n": 1
   }
- ]
+ ],
+ "random": true
 }
