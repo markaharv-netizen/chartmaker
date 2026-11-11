@@ -74,6 +74,14 @@ BY_ID = {sid: (bid, name) for bid, name, sid in BOOKS}
 # (chartId 1223359242).
 # ("bot1", 579853621) "12 Breakeven vs CPI", chart
 # "Inflation 3.35% vs market's 10-year expectation 2.29%" (chartId 905132998).
+# Mark deleted the following tabs on 2026-11-11.
+# ("bot1", 1308503061) "122 Bond vol vs stock vol", chart
+# "Bond market fear vs stock market fear: MOVE ÷ VIX" (chartId 1366682353).
+# ("bot1", 748431671) "232 Quits vs wage growth", chart
+# "Job-hopping predicts pay raises: quits rate vs wage growth (Atlanta Fed tracker)"
+# (chartId 938561994).
+# ("bot1", 254001772) "162 Factory construction boom", chart
+# "Chips Act & AI fabs: real US manufacturing construction spending" (chartId 1210694775).
 EXCLUDED_TABS = {
     ("bot1", 333185169),
     ("bot1", 1547332232),
@@ -88,7 +96,18 @@ EXCLUDED_TABS = {
     ("bot1", 1186940001),
     ("bot1", 501919598),
     ("bot1", 579853621),
+    ("bot1", 1308503061),
+    ("bot1", 748431671),
+    ("bot1", 254001772),
 }
+# Google's default name for a chart with no real title: "Chart 1", "Chart 2", ...
+# "Chart 01" is a real title some tests use and is not this placeholder.
+UNTITLED_CHART = re.compile(r"^Chart\s+[1-9]\d?$")
+
+def untitled_chart_title(title):
+    """True when a chart has no real title. Empty, or Google's "Chart N" default."""
+    text = " ".join(str(title or "").split())
+    return (not text) or bool(UNTITLED_CHART.fullmatch(text))
 
 def tab_excluded(book, gid):
     """True when a catalog or image refresh must not keep this workbook tab."""
@@ -266,6 +285,12 @@ def self_test():
                   "Are tariffs showing up in prices? Import-heavy goods CPI vs core CPI (Jan 2025 = 100)"),
             sheet("12 Breakeven vs CPI", 579853621,
                   "Inflation 3.35% vs market's 10-year expectation 2.29%"),
+            sheet("122 Bond vol vs stock vol", 1308503061,
+                  "Bond market fear vs stock market fear: MOVE ÷ VIX"),
+            sheet("232 Quits vs wage growth", 748431671,
+                  "Job-hopping predicts pay raises: quits rate vs wage growth (Atlanta Fed tracker)"),
+            sheet("162 Factory construction boom", 254001772,
+                  "Chips Act & AI fabs: real US manufacturing construction spending"),
             sheet("97 MSTR vol vs BTC vol", 1027143376,
                   "Strategy vs bitcoin: 30-day realized volatility"),
             sheet("52 Core goods vs services", 200447618,
@@ -278,14 +303,18 @@ def self_test():
     _book, tabs, hidden, excluded = one(doc)
     gids = [t["gid"] for t in tabs]
     assert gids == [1476428159, 999, 171599627, 1027143376, 200447618, 972156540], gids
-    assert hidden == 1 and excluded == 12, (hidden, excluded)
+    assert hidden == 1 and excluded == 15, (hidden, excluded)
     assert ("bot1", 333185169) in EXCLUDED_TABS
     assert tab_excluded("bot1", 1547332232) and tab_excluded("bot1", 643299192)
     assert tab_excluded("bot1", 1791345316) and tab_excluded("bot1", 1370617918)
     assert tab_excluded("bot1", 1024131985)
-    for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621):
+    for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621,
+                1308503061, 748431671, 254001772):
         assert tab_excluded("bot1", gid), gid
     assert tab_excluded("bot2", 418894352)
+    assert untitled_chart_title("") and untitled_chart_title("Chart 2") and untitled_chart_title("Chart 14")
+    assert not untitled_chart_title("Chart 01")
+    assert not untitled_chart_title("Bitcoin denominated in Gold (BTC/Gold price per oz)")
     assert not tab_excluded("bot1", 1476428159)
     assert not tab_excluded("bot1", 171599627)
     assert not tab_excluded("bot1", 1027143376)
@@ -297,6 +326,9 @@ def self_test():
     assert not tab_excluded("bot1", 1238930141)  # 153 Big Tech capex intensity
     assert not tab_excluded("bot1", 1328859831)  # 213 Chip gross margins
     assert not tab_excluded("bot1", 1459587255)  # 227 Private AI lab valuations
+    assert not tab_excluded("bot1", 727565635)   # 125 Junk vs IG spread ratio
+    assert not tab_excluded("bot1", 2092406374)  # 231 Prime-age employment rate
+    assert not tab_excluded("bot3", 1536200109)  # Gold Priced in BTC (blank chart removed, tab stays)
     assert not tab_excluded("bot2", 645072508)
     assert not tab_excluded("bot2", 530554790)   # 75 CoreWeave backlog vs revenue
     assert not tab_excluded("bot3", 978356289)   # Anthropic Revenue vs Compute
@@ -309,12 +341,12 @@ def self_test():
     for book, gid in EXCLUDED_TABS:
         assert (book, gid) not in live, (book, gid)
     for gid in (171599627, 1027143376, 200447618, 829703707, 972156540, 1167074374,
-                1254747964, 1238930141, 1328859831, 1459587255):
+                1254747964, 1238930141, 1328859831, 1459587255, 727565635, 2092406374):
         assert ("bot1", gid) in live, gid
     assert ("bot2", 645072508) in live
     assert ("bot2", 530554790) in live
     assert ("bot3", 978356289) in live
-    assert len(cat["tabs"]) == 497, len(cat["tabs"])
+    assert len(cat["tabs"]) == 494, len(cat["tabs"])
     blob = json.dumps(cat)
     assert "Nvidia valuation: price-to-sales and trailing P/E (month-end)" not in blob
     assert "Where Nvidia bills its sales: revenue share by customer billing location (quarterly)" not in blob
@@ -336,6 +368,21 @@ def self_test():
     assert "263 Tariff pass-through" not in blob
     assert "Are tariffs showing up in prices? Import-heavy goods CPI vs core CPI (Jan 2025 = 100)" not in blob
     assert "12 Breakeven vs CPI" not in blob
+    assert "122 Bond vol vs stock vol" not in blob
+    assert "Bond market fear vs stock market fear: MOVE ÷ VIX" not in blob
+    assert "232 Quits vs wage growth" not in blob
+    assert "Job-hopping predicts pay raises: quits rate vs wage growth (Atlanta Fed tracker)" not in blob
+    assert "162 Factory construction boom" not in blob
+    assert "Chips Act & AI fabs: real US manufacturing construction spending" not in blob
+    assert "Bitcoin correlation with gold" not in blob
+    gold = next(t for t in cat["tabs"] if t["book"] == "bot3" and t["gid"] == 1536200109)
+    assert [c["n"] for c in gold["chartList"]] == [1, 2]
+    assert [c["title"] for c in gold["chartList"]] == [
+        "Bitcoin denominated in Gold (BTC/Gold price per oz)",
+        "Bitcoin denominated in Gold (BTC/Gold price per oz)",
+    ]
+    assert gold["charts"] == ["Bitcoin denominated in Gold (BTC/Gold price per oz)"]
+    assert gold.get("thumb") == "sheets/thumbs/bot3/1536200109.jpg"
     names = {t["tab"] for t in cat["tabs"]}
     for keep in (
         "201 Nvidia data center revenue",
@@ -361,10 +408,13 @@ def self_test():
         assert keep in names, keep
     today = json.load(open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8"))
     today_blob = json.dumps(today)
-    assert len(today["items"]) == 13, len(today["items"])
+    assert today["date"] == "2026-11-11"
+    assert len(today["items"]) == 16, len(today["items"])
+    assert today["theme"] == "16 items drawn at random from the sheet library."
     assert "1547332232" not in today_blob and "643299192" not in today_blob
     assert "1791345316" not in today_blob and "1370617918" not in today_blob
-    for gid in (292208014, 418894352, 2119398138, 1584345646, 1186940001, 501919598, 579853621):
+    for gid in (292208014, 418894352, 2119398138, 1584345646, 1186940001, 501919598, 579853621,
+                1308503061, 748431671, 254001772, 1536200109):
         assert str(gid) not in today_blob, gid
     assert "161 Nvidia P-S and P-E" not in today_blob
     assert "202 Nvidia revenue by geography" not in today_blob
@@ -377,17 +427,20 @@ def self_test():
     assert "226 OpenAI vs Anthropic revenue" not in today_blob
     assert "263 Tariff pass-through" not in today_blob
     assert "12 Breakeven vs CPI" not in today_blob
+    assert "122 Bond vol vs stock vol" not in today_blob
+    assert "232 Quits vs wage growth" not in today_blob
+    assert "162 Factory construction boom" not in today_blob
+    assert "Chart 2" not in today_blob
+    assert "Bitcoin correlation with gold" not in today_blob
     assert "Taiwan's chip stocks surge" not in today["theme"]
     assert "October CPI is due Tuesday" not in today["theme"]
     assert "Anthropic's IPO roadshow" not in today["theme"]
     assert "Nvidia and Micron drop off BofA" not in today["theme"]
-    assert "October CPI lands this morning" in today["theme"]
-    assert "CoreWeave reports after the close" in today["theme"]
     images = [it["image"] for it in today["items"]]
-    for name in ("02.png", "03.png", "10.png", "12.png", "16.png", "17.png", "18.png"):
-        assert "cotd/2026-11-10/" + name not in images, name
-    for name in ("01.png", "04.png", "09.png", "11.png", "13.png", "15.png", "19.png", "20.png"):
-        assert "cotd/2026-11-10/" + name in images, name
+    for name in ("01.png", "07.png", "14.png", "15.png"):
+        assert "cotd/2026-11-11/" + name not in images, name
+    for name in ("02.png", "03.png", "04.png", "06.png", "08.png", "13.png", "16.png", "18.png", "19.png", "20.png"):
+        assert "cotd/2026-11-11/" + name in images, name
     for rel in (
         "static/sheets/full/bot1/1547332232.png",
         "static/sheets/full/bot1/643299192.png",
@@ -407,6 +460,26 @@ def self_test():
         assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-10", name)), name
     for name in ("01.png", "04.png", "11.png", "13.png", "15.png", "19.png", "20.png"):
         assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-10", name)), name
+    for name in ("01.png", "07.png", "14.png", "15.png"):
+        assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-11", name)), name
+    for name in ("02.png", "04.png", "08.png", "13.png", "16.png", "18.png", "20.png"):
+        assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-11", name)), name
+    for rel in (
+        "static/sheets/full/bot3/1536200109_2.png",
+        "static/sheets/full/bot3/1536200109_3.png",
+    ):
+        assert not os.path.isfile(os.path.join(repo, rel)), rel
+    for rel in (
+        "static/sheets/full/bot3/1536200109.png",
+        "static/sheets/thumbs/bot3/1536200109.jpg",
+    ):
+        assert os.path.isfile(os.path.join(repo, rel)), rel
+    import sheets_thumbs
+    from PIL import Image
+    with Image.open(os.path.join(repo, "static/sheets/full/bot3/1536200109.png")) as gold_im:
+        assert not sheets_thumbs.blank(gold_im)
+    with Image.open(os.path.join(repo, "static/sheets/thumbs/bot3/1536200109.jpg")) as gold_thumb:
+        assert not sheets_thumbs.blank(gold_thumb)
     for book, gid in EXCLUDED_TABS:
         for rel in (
             "static/sheets/full/%s/%d.png" % (book, gid),

@@ -229,11 +229,49 @@ def iter_dir(root):
     missing = [p for p in index if p not in seen]
     return files, missing
 
+def _empty_chart(rgb):
+    """True for the empty Google chart: achromatic mid-gray text, almost no color."""
+    w, h = rgb.size
+    px = rgb.load()
+    step = 2 if w * h > 200000 else 1
+    n = gray = chroma = 0
+    for y in range(0, h, step):
+        for x in range(0, w, step):
+            r, g, b = px[x, y]
+            n += 1
+            spread = max(r, g, b) - min(r, g, b)
+            if spread > 18:
+                chroma += 1
+            elif 140 <= (r + g + b) / 3.0 <= 185:
+                gray += 1
+    if not n:
+        return True
+    return chroma / n < 0.002 and gray / n > 0.02
+
 def blank(im):
+    """True for a near-uniform image, or Google's empty chart ("Add a series...").
+
+    A real line chart on a white background keeps dark axis ink. The empty chart
+    is white with a block of mid-gray placeholder text and no axis ink.
+    """
     from PIL import ImageStat
-    g = im.convert("L")
-    if ImageStat.Stat(g).stddev[0] < 5: return True
-    cols = im.convert("RGB").getcolors(max(im.size[0] * im.size[1], 1))
+    rgb = im.convert("RGB")
+    g = rgb.convert("L")
+    sd = ImageStat.Stat(g).stddev[0]
+    if sd < 5:
+        return True
+    hist = g.histogram()
+    total = sum(hist) or 1
+    ink = sum(hist[:100])
+    # Google's empty chart is mid-gray text on white, with no colored series.
+    # A real white-background chart still has a colored line, so luminance in
+    # this band alone is not enough (a blue line sits near gray).
+    if ink / total < 0.001 and _empty_chart(rgb):
+        return True
+    # A large chart with real variation is not the few-color empty export.
+    if rgb.size[0] * rgb.size[1] > 500000 and sd >= 8:
+        return False
+    cols = rgb.getcolors(max(rgb.size[0] * rgb.size[1], 1))
     return cols is not None and len(cols) < 12
 
 def compress(src, dest):
@@ -308,6 +346,22 @@ def visible_tabs(tabs):
     """Catalog rows an image refresh is allowed to publish. Excluded gids stay out."""
     return [t for t in tabs or [] if not sheets_catalog.tab_excluded(t.get("book"), t.get("gid"))]
 
+def chart1_untitled(tab):
+    """True when chart 1 has no real title. A tab with no chartList is left alone."""
+    raw = tab.get("chartList") if isinstance(tab, dict) else None
+    if not isinstance(raw, list) or not raw:
+        return False
+    for c in raw:
+        if not isinstance(c, dict):
+            continue
+        try:
+            n = int(c.get("n"))
+        except (TypeError, ValueError):
+            continue
+        if n == 1:
+            return sheets_catalog.untitled_chart_title(c.get("title"))
+    return False
+
 def publish(repo, chosen, dry):
     doc, dest = load_catalog(repo)
     tabs = visible_tabs(doc.get("tabs") or [])
@@ -322,6 +376,10 @@ def publish(repo, chosen, dry):
         key = (t["book"], int(t["gid"]))
         cands = chosen.get(key) or []
         if not cands: continue
+        if chart1_untitled(t):
+            print("skip %s / %s (untitled chart)" % (t["book"], t["tab"]))
+            skipped.append(t["tab"])
+            continue
         rel = rel_for(t["book"], t["gid"])
         if dry:
             print("match %s  %s / %s  <= %s" % (cands[0]["how"], t["book"], t["tab"], os.path.basename(cands[0]["path"])))
@@ -447,6 +505,9 @@ def self_test():
         {"book": "bot1", "tab": "226 OpenAI vs Anthropic revenue", "gid": 1186940001, "charts": []},
         {"book": "bot1", "tab": "263 Tariff pass-through", "gid": 501919598, "charts": []},
         {"book": "bot1", "tab": "12 Breakeven vs CPI", "gid": 579853621, "charts": []},
+        {"book": "bot1", "tab": "122 Bond vol vs stock vol", "gid": 1308503061, "charts": []},
+        {"book": "bot1", "tab": "232 Quits vs wage growth", "gid": 748431671, "charts": []},
+        {"book": "bot1", "tab": "162 Factory construction boom", "gid": 254001772, "charts": []},
         {"book": "bot2", "tab": "75 CoreWeave backlog vs revenue", "gid": 530554790, "charts": []},
         {"book": "bot1", "tab": "97 MSTR vol vs BTC vol", "gid": 1027143376, "charts": []},
         {"book": "bot1", "tab": "52 Core goods vs services", "gid": 200447618, "charts": []},
@@ -481,6 +542,9 @@ def self_test():
         f("/e/226 OpenAI vs Anthropic revenue.png", "", 10, None),
         f("/e/263 Tariff pass-through.png", "", 10, None),
         f("/e/12 Breakeven vs CPI.png", "", 10, None),
+        f("/e/122 Bond vol vs stock vol.png", "", 10, None),
+        f("/e/232 Quits vs wage growth.png", "", 10, None),
+        f("/e/162 Factory construction boom.png", "", 10, None),
         f("/e/75 CoreWeave backlog vs revenue.png", "bot experiments 2", 10, None),
         f("/e/97 MSTR vol vs BTC vol.png", "", 10, None),
         f("/e/52 Core goods vs services.png", "", 10, None),
@@ -523,6 +587,9 @@ def self_test():
         (1186940001, "226 OpenAI vs Anthropic revenue.png"),
         (501919598, "263 Tariff pass-through.png"),
         (579853621, "12 Breakeven vs CPI.png"),
+        (1308503061, "122 Bond vol vs stock vol.png"),
+        (748431671, "232 Quits vs wage growth.png"),
+        (254001772, "162 Factory construction boom.png"),
     ):
         book = "bot2" if gid == 418894352 else "bot1"
         assert (book, gid) not in chosen, gid
@@ -541,6 +608,24 @@ def self_test():
     files2[1]["path"] = "/e/newer/MSTR Volume 2026-10-21.png"
     chosen2, _u, _a = match_files(files2, books, tabs)
     assert chosen2[("bot3", 30)][0]["path"].startswith("/e/newer/"), chosen2[("bot3", 30)][0]["path"]
+    from PIL import Image
+    empty = Image.new("RGB", (100, 60), "white")
+    epx = empty.load()
+    for y in range(24, 40):
+        for x in range(10, 90):
+            shade = 150 + ((x + y) % 20)
+            epx[x, y] = (shade, shade, shade)
+    for i in range(20):
+        epx[i, 0] = (230 - i, 230 - i, 230 - i)
+    assert blank(empty)
+    assert blank(Image.new("RGB", (40, 20), "white"))
+    kept = Image.new("RGB", (80, 40), "white")
+    for x in range(80):
+        kept.putpixel((x, 8 + (x % 17)), (66, 133, 244))
+        kept.putpixel((x, 36), (90 + (x % 50), 40, 40))
+    for y in range(40):
+        kept.putpixel((2, y), (20, 20, 20))
+    assert not blank(kept)
     print("self-test ok")
 
 def main():

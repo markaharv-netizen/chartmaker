@@ -66,6 +66,7 @@ FAV_KEY_RE = re.compile(r"^([A-Za-z0-9][A-Za-z0-9_-]{0,24})/(\d+)/([1-9]\d?)$")
 # Strategy tab 99 (PR #34) and is in EXCLUDED_TABS as well. 1791345316 and
 # 1370617918 are the Korea/Taiwan and supercore tabs Mark deleted on 2026-11-09.
 # The 2026-11-10 gids are the tabs Mark deleted that day, including bot2 418894352.
+# 1308503061, 748431671, and 254001772 are the tabs Mark deleted on 2026-11-11.
 def _favorite_retired():
     pairs = {
         ("bot1", 1547332232),
@@ -81,6 +82,9 @@ def _favorite_retired():
         ("bot1", 1186940001),
         ("bot1", 501919598),
         ("bot1", 579853621),
+        ("bot1", 1308503061),
+        ("bot1", 748431671),
+        ("bot1", 254001772),
     }
     try:
         scripts = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts")

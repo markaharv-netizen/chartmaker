@@ -30,6 +30,7 @@ def cotd_card_count():
 RETIRED = (
     "1547332232", "643299192", "333185169", "1024131985", "1791345316", "1370617918",
     "292208014", "2119398138", "1584345646", "1186940001", "501919598", "579853621", "418894352",
+    "1308503061", "748431671", "254001772",
 )
 RETIRED_TABS = (
     "161 Nvidia P-S and P-E",
@@ -45,6 +46,9 @@ RETIRED_TABS = (
     "263 Tariff pass-through",
     "12 Breakeven vs CPI",
     "81 CoreWeave margins",
+    "122 Bond vol vs stock vol",
+    "232 Quits vs wage growth",
+    "162 Factory construction boom",
 )
 
 

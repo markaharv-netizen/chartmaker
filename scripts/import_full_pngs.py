@@ -154,6 +154,57 @@ def collect(dirs):
     return files, skipped
 
 
+def chart_list_of(tabs, book, gid):
+    """Non-empty chartList for this tab, or None when the catalog does not list charts."""
+    for t in tabs or []:
+        try:
+            if str(t.get("book")) != str(book) or int(t.get("gid")) != int(gid):
+                continue
+        except (TypeError, ValueError):
+            continue
+        raw = t.get("chartList")
+        if isinstance(raw, list) and raw:
+            return raw
+        return None
+    return None
+
+def skip_chart_image(tabs, book, gid, n):
+    """True when this export must not be copied into the library.
+
+    A chartList is the charts that still exist on the tab. An empty title, or
+    Google's "Chart N", is an untitled chart. A tab with no chartList is unchanged.
+    """
+    listed = chart_list_of(tabs, book, gid)
+    if not listed:
+        return False
+    found, title = False, ""
+    for c in listed:
+        if not isinstance(c, dict):
+            continue
+        try:
+            cn = int(c.get("n"))
+        except (TypeError, ValueError):
+            continue
+        if cn == int(n):
+            found, title = True, c.get("title")
+            break
+    if not found:
+        return True
+    return sheets_catalog.untitled_chart_title(title)
+
+def png_is_blank(data):
+    """True when the bytes are a decodable image that is blank or near-uniform.
+
+    Bytes that are not a real image (the self-test markers) are not blank.
+    """
+    try:
+        from PIL import Image
+        im = Image.open(io.BytesIO(data))
+        im.load()
+    except Exception:
+        return False
+    return sheets_thumbs.blank(im)
+
 def publish(repo, chosen, unmatched, ambiguous, optimize_png, dry):
     n = 0
     for key, cands in sorted(chosen.items(), key=lambda kv: kv[0]):
@@ -163,6 +214,10 @@ def publish(repo, chosen, unmatched, ambiguous, optimize_png, dry):
         data = open(src, "rb").read()
         if not data.startswith(PNG_MAGIC):
             print("skip %s (not a png)" % src)
+            unmatched.append(src)
+            continue
+        if png_is_blank(data):
+            print("skip %s (blank chart image)" % os.path.basename(src))
             unmatched.append(src)
             continue
         tool = "copied"
@@ -205,6 +260,9 @@ def run(repo, dirs, optimize_png, dry):
     for n, group in sorted(groups.items()):
         c, u, a = sheets_thumbs.match_files(group, books, tabs)
         for (book, gid), cands in c.items():
+            if skip_chart_image(tabs, book, gid, n):
+                unmatched.extend(cand["path"] for cand in cands)
+                continue
             chosen[(book, gid, n)] = cands
         unmatched += list(u)
         ambiguous += list(a)
@@ -323,6 +381,9 @@ def self_test():
             {"book": "bot1", "tab": "226 OpenAI vs Anthropic revenue", "gid": 1186940001, "charts": []},
             {"book": "bot1", "tab": "263 Tariff pass-through", "gid": 501919598, "charts": []},
             {"book": "bot1", "tab": "12 Breakeven vs CPI", "gid": 579853621, "charts": []},
+            {"book": "bot1", "tab": "122 Bond vol vs stock vol", "gid": 1308503061, "charts": []},
+            {"book": "bot1", "tab": "232 Quits vs wage growth", "gid": 748431671, "charts": []},
+            {"book": "bot1", "tab": "162 Factory construction boom", "gid": 254001772, "charts": []},
             {"book": "bot2", "tab": "75 CoreWeave backlog vs revenue", "gid": 530554790, "charts": []},
             {"book": "bot1", "tab": "97 MSTR vol vs BTC vol", "gid": 1027143376, "charts": []},
             {"book": "bot1", "tab": "52 Core goods vs services", "gid": 200447618, "charts": []},
@@ -341,6 +402,9 @@ def self_test():
             os.path.join(b1, "263 Tariff pass-through.png"),
             os.path.join(b1, "263 Tariff pass-through (2).png"),
             os.path.join(b1, "12 Breakeven vs CPI.png"),
+            os.path.join(b1, "122 Bond vol vs stock vol.png"),
+            os.path.join(b1, "232 Quits vs wage growth.png"),
+            os.path.join(b1, "162 Factory construction boom.png"),
         ]
         kept_new = [
             (os.path.join(mstr_dir, "75 CoreWeave backlog vs revenue.png"), "bot2", "530554790.png"),
@@ -362,8 +426,8 @@ def self_test():
         n2, u2, a2 = run(repo, [src], optimize_png=False, dry=False)
         # original five, plus data center, China/Mexico/Taiwan, the red-dot tracker, and six neighbors
         assert n2 == 14, n2
-        # prior eight unmatched, plus seven retired exports and the tariff chart-2 file
-        assert u2 == 16, u2
+        # prior eight unmatched, plus the retired exports and the tariff chart-2 file
+        assert u2 == 19, u2
         assert a2 == 0, a2
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1547332232.png"))
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "643299192.png"))
@@ -377,7 +441,8 @@ def self_test():
         assert open(os.path.join(repo, "static", "sheets", "full", "bot2", "645072508.png"), "rb").read() == old_bytes
         for gid in (418894352,):
             assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot2", "%d.png" % gid))
-        for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621):
+        for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621,
+                    1308503061, 748431671, 254001772):
             assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "%d.png" % gid)), gid
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "501919598_2.png"))
         for _path, book, name in kept_new:
@@ -386,6 +451,66 @@ def self_test():
         out, tool = optimize(tiny)
         assert out.startswith(PNG_MAGIC), tool
         assert tool in ("copied", "oxipng", "optipng", "pngquant", "pillow")
+    finally:
+        shutil.rmtree(repo, ignore_errors=True)
+        shutil.rmtree(src, ignore_errors=True)
+    from PIL import Image
+    repo = tempfile.mkdtemp(prefix="fullpng-blank-")
+    src = tempfile.mkdtemp(prefix="fullpng-blank-src-")
+    try:
+        os.makedirs(os.path.join(repo, "static", "sheets"))
+        catalog = {
+            "books": [{"id": "bot3", "name": "My Bot's Sheets", "spreadsheetId": "sheetBOT3"}],
+            "tabs": [{
+                "book": "bot3", "tab": "Gold Priced in BTC", "gid": 1536200109,
+                "charts": ["Bitcoin denominated in Gold (BTC/Gold price per oz)"],
+                "chartList": [
+                    {"n": 1, "title": "Bitcoin denominated in Gold (BTC/Gold price per oz)"},
+                    {"n": 2, "title": "Bitcoin denominated in Gold (BTC/Gold price per oz)"},
+                ],
+            }],
+        }
+        with open(os.path.join(repo, "static", "sheets", "catalog.json"), "w", encoding="utf-8") as f:
+            json.dump(catalog, f)
+        folder = os.path.join(src, "bot3")
+        os.makedirs(folder)
+        real = Image.new("RGB", (80, 40), "white")
+        for x in range(80):
+            real.putpixel((x, 8 + (x % 17)), (66, 133, 244))
+            real.putpixel((x, 36), (90 + (x % 50), 40, 40))
+        for y in range(40):
+            real.putpixel((2, y), (20, 20, 20))
+        real.save(os.path.join(folder, "Gold Priced in BTC.png"))
+        empty = Image.new("RGB", (100, 60), "white")
+        epx = empty.load()
+        for y in range(24, 40):
+            for x in range(10, 90):
+                shade = 150 + ((x + y) % 20)
+                epx[x, y] = (shade, shade, shade)
+        for i in range(20):
+            epx[i, 0] = (230 - i, 230 - i, 230 - i)
+        empty.save(os.path.join(folder, "Gold Priced in BTC (2).png"))
+        real.save(os.path.join(folder, "Gold Priced in BTC (3).png"))
+        # A chart whose catalog title is "Chart 2" is untitled even when the PNG has data.
+        catalog["tabs"].append({
+            "book": "bot3", "tab": "Untitled chart", "gid": 1536200110,
+            "charts": ["Chart 2"], "chartList": [{"n": 1, "title": "Chart 2"}],
+        })
+        with open(os.path.join(repo, "static", "sheets", "catalog.json"), "w", encoding="utf-8") as f:
+            json.dump(catalog, f)
+        real.save(os.path.join(folder, "Untitled chart.png"))
+        assert png_is_blank(open(os.path.join(folder, "Gold Priced in BTC (2).png"), "rb").read())
+        assert not png_is_blank(open(os.path.join(folder, "Gold Priced in BTC.png"), "rb").read())
+        assert not png_is_blank(PNG_MAGIC + b"OLD")
+        n, u, a = run(repo, [src], optimize_png=False, dry=False)
+        assert n == 1, (n, u, a)
+        assert u == 3, (n, u, a)
+        assert a == 0, a
+        full = os.path.join(repo, "static", "sheets", "full", "bot3")
+        assert os.path.isfile(os.path.join(full, "1536200109.png"))
+        assert not os.path.exists(os.path.join(full, "1536200109_2.png"))
+        assert not os.path.exists(os.path.join(full, "1536200109_3.png"))
+        assert not os.path.exists(os.path.join(full, "1536200110.png"))
     finally:
         shutil.rmtree(repo, ignore_errors=True)
         shutil.rmtree(src, ignore_errors=True)

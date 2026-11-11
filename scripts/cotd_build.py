@@ -42,12 +42,23 @@ COTD_EXCLUDED = {
 }
 
 def check(im, path):
-    from PIL import ImageStat
-    g = im.convert("L"); sd = ImageStat.Stat(g).stddev[0]
-    cols = im.convert("RGB").getcolors(1 << 22) or []
-    if sd < 5 or len(cols) < 12:
-        raise SystemExit(f"BLANK/empty-looking chart image: {path} (stddev {sd:.1f}, {len(cols)} colours). "
+    import sheets_thumbs
+    if sheets_thumbs.blank(im):
+        raise SystemExit(f"BLANK/empty-looking chart image: {path}. "
                          "Combo charts often export blank from Apps Script; use the fallback PNG (see README).")
+
+def file_is_blank(path):
+    """True when this library image is near-uniform or an empty Google chart."""
+    if not path or not os.path.isfile(path):
+        return False
+    try:
+        from PIL import Image
+        im = Image.open(path)
+        im.load()
+    except (OSError, ValueError):
+        return False
+    import sheets_thumbs
+    return sheets_thumbs.blank(im)
 
 def fit(src, dst):
     from PIL import Image
@@ -354,12 +365,14 @@ def try_fit(src, dst):
         return False
     return True
 
-def pool_items(catalog):
+def pool_items(catalog, repo=None):
     """Every eligible chart, plus one item per chartless table tab.
 
     Order is (book, gid, chart_n) so the dated draw does not depend on catalog order.
     EXCLUDED_TABS and COTD_EXCLUDED are not in the pool. A tab with several charts
-    contributes one item per chart, each with its own chart_n.
+    contributes one item per chart, each with its own chart_n. A chart titled
+    "Chart N" (or with no title) is left out. So is a chart whose own PNG is blank,
+    and a chart the card would title "Chart N" when that chart has no image of its own.
     """
     if not catalog:
         return []
@@ -386,6 +399,15 @@ def pool_items(catalog):
             kind = "table" if c.get("synthetic") else "chart"
             title = norm_title(tab.get("tab")) if kind == "table" else c["label"]
             if not title:
+                continue
+            if kind == "chart" and sheets_catalog.untitled_chart_title(c.get("title")):
+                continue
+            src = library_preview(repo, book, gid, c["n"]) if repo and kind == "chart" else None
+            if kind == "chart" and src and file_is_blank(src):
+                continue
+            # Duplicate real titles are labeled "Chart N". With no image of its own,
+            # that card is the blank or untitled chart and is not drawn.
+            if kind == "chart" and repo and sheets_catalog.untitled_chart_title(c.get("label")) and not src:
                 continue
             out.append({
                 "book": book,
@@ -421,7 +443,7 @@ def select_edition(repo, date, seed=None, size=None):
     if not catalog:
         sys.exit("missing static/sheets/catalog.json")
     recent = recent_charts(repo, date)
-    eligible = [it for it in pool_items(catalog) if not repeated_recent(it, recent)]
+    eligible = [it for it in pool_items(catalog, repo) if not repeated_recent(it, recent)]
     k = EDITION_SIZE if size is None else int(size)
     k = max(0, min(k, len(eligible)))
     if k < 1:
@@ -457,14 +479,17 @@ def publish(P, repo, keep_old):
     root = os.path.join(repo, "static", "cotd"); out = os.path.join(root, d)
     tmp = out + ".tmp"; shutil.rmtree(tmp, ignore_errors=True); os.makedirs(tmp)
     rows, card_items = [], []
-    for i, x in enumerate(items, 1):
+    for x in items:
         key = pick_chart_key(x)
         src = str(x.get("png") or "").strip()
         from_library = False
         if not src and key:
             src = library_preview(repo, key[0], key[1], key[2] or 1) or ""
             from_library = bool(src)
-        fn = f"{i:02d}.png"
+        if from_library and src and file_is_blank(src):
+            print(f"--  blank image, skipped  {x['sheet']} / {x['tab']}")
+            continue
+        fn = f"{len(rows) + 1:02d}.png"
         image = ""
         nbytes = 0
         if src:
@@ -530,10 +555,12 @@ def self_test():
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1370617918})
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1024131985})
     assert pick_excluded({"spreadsheetId": bot2, "gid": 645072508})
-    # Retired by Mark on 2026-11-10. Adding a gid to EXCLUDED_TABS is enough for this check.
-    for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621):
+    # Retired by Mark on 2026-11-10 and 2026-11-11. Adding a gid to EXCLUDED_TABS is enough.
+    for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621,
+                1308503061, 748431671, 254001772):
         assert pick_excluded({"spreadsheetId": bot1, "gid": gid}), gid
     assert pick_excluded({"spreadsheetId": bot2, "gid": 418894352})
+    assert not pick_excluded({"spreadsheetId": "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU", "gid": 1536200109})
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1476428159})
     # Neighbors that stay: Korea/Taiwan's neighbor, CoreWeave backlog, CPI charts, tariff rate, real yield.
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 171599627})
@@ -549,9 +576,11 @@ def self_test():
     # 1024131985 is Strategy tab 99 (MSTR BTC per share), removed in PR #34.
     # 1791345316 and 1370617918 were deleted on 2026-11-09.
     # 645072508 stays in the catalog (Charts of the day only) and is not in this list.
-    # The 2026-11-10 gids are the charts Mark deleted that day.
+    # The 2026-11-10 and 2026-11-11 gids are the charts Mark deleted on those days.
+    # 1536200109 (Gold Priced in BTC) stays in the catalog. Its blank chart image does not.
     retired_live = (1547332232, 643299192, 333185169, 1024131985, 1791345316, 1370617918,
-                    292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621, 418894352)
+                    292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621, 418894352,
+                    1308503061, 748431671, 254001772)
     for rel in ("static/cotd/today.json", "static/sheets/catalog.json"):
         with open(os.path.join(live, rel), encoding="utf-8") as f:
             blob = f.read()
@@ -566,8 +595,10 @@ def self_test():
     assert "645072508" not in today_blob
     for gid in (530554790, 200447618, 829703707, 972156540, 1167074374, 978356289, 1459587255):
         assert str(gid) in catalog_blob, gid
-    assert len(today_doc["items"]) == 13, len(today_doc["items"])
-    cards_live = json.load(open(os.path.join(live, "static/cotd/2026-11-10/cards.json"), encoding="utf-8"))
+    assert today_doc["date"] == "2026-11-11"
+    assert len(today_doc["items"]) == 16, len(today_doc["items"])
+    assert "Chart 2" not in today_blob and "1536200109" not in today_blob
+    cards_live = json.load(open(os.path.join(live, "static/cotd/2026-11-11/cards.json"), encoding="utf-8"))
     assert cards_live == cards_from_published(today_doc)
     assert all(it.get("book") and it.get("gid") for it in cards_live["items"])
     bot3 = "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU"
@@ -644,6 +675,9 @@ def self_test():
         (1186940001, "226 OpenAI vs Anthropic revenue", bot1),
         (501919598, "263 Tariff pass-through", bot1),
         (579853621, "12 Breakeven vs CPI", bot1),
+        (1308503061, "122 Bond vol vs stock vol", bot1),
+        (748431671, "232 Quits vs wage growth", bot1),
+        (254001772, "162 Factory construction boom", bot1),
     ):
         items = [item(i) for i in range(1, EDITION_MAX + 1)]
         items[4] = item(5, gid=gid, tab=tab, spreadsheetId=sid)
@@ -839,7 +873,7 @@ def random_self_test():
     for i in range(1, 21):
         catalog["tabs"].append({
             "book": "bot1", "tab": "chart %02d" % i, "gid": 920000 + i,
-            "charts": ["Chart %02d" % i], "chartList": [{"n": 1, "title": "Chart %02d" % i}],
+            "charts": ["Sample %02d" % i], "chartList": [{"n": 1, "title": "Sample %02d" % i}],
         })
     pool = pool_items(catalog)
     keys = {(it["book"], it["gid"], it["chart_n"]) for it in pool}
@@ -849,6 +883,59 @@ def random_self_test():
     assert len(tables) == 1 and tables[0]["gid"] == 910002 and tables[0]["chart_n"] == 1, tables
     assert ("bot1", 910003, 1) in keys and ("bot1", 910003, 2) in keys
     assert len(pool) == 23, len(pool)  # 20 single charts + 2 panels + 1 table
+    untitled = {
+        "books": catalog["books"],
+        "tabs": [
+            {"book": "bot1", "tab": "blank chart", "gid": 940001,
+             "charts": ["Chart 2"], "chartList": [{"n": 1, "title": "Chart 2"}]},
+            {"book": "bot1", "tab": "real", "gid": 940002,
+             "charts": ["A real title"], "chartList": [{"n": 1, "title": "A real title"}]},
+            {"book": "bot1", "tab": "padded", "gid": 940003,
+             "charts": ["Chart 01"], "chartList": [{"n": 1, "title": "Chart 01"}]},
+        ],
+    }
+    untitled_gids = {it["gid"] for it in pool_items(untitled)}
+    assert 940001 not in untitled_gids and 940002 in untitled_gids and 940003 in untitled_gids
+    from PIL import Image as _Image
+    blank_repo = tempfile.mkdtemp(prefix="cotd-blank-")
+    try:
+        full = os.path.join(blank_repo, "static", "sheets", "full", "bot1")
+        os.makedirs(full)
+        empty = _Image.new("RGB", (100, 60), "white")
+        epx = empty.load()
+        for y in range(24, 40):
+            for x in range(10, 90):
+                shade = 150 + ((x + y) % 20)
+                epx[x, y] = (shade, shade, shade)
+        for i in range(20):
+            epx[i, 0] = (230 - i, 230 - i, 230 - i)
+        empty.save(os.path.join(full, "940004.png"))
+        kept = _Image.new("RGB", (80, 40), "white")
+        for x in range(80):
+            kept.putpixel((x, 8 + (x % 17)), (66, 133, 244))
+            kept.putpixel((x, 36), (90 + (x % 50), 40, 40))
+        for y in range(40):
+            kept.putpixel((2, y), (20, 20, 20))
+        kept.save(os.path.join(full, "940005.png"))
+        kept.save(os.path.join(full, "940006.png"))
+        assert file_is_blank(os.path.join(full, "940004.png"))
+        assert not file_is_blank(os.path.join(full, "940005.png"))
+        blank_cat = {
+            "books": catalog["books"],
+            "tabs": [
+                {"book": "bot1", "tab": "empty google", "gid": 940004,
+                 "charts": ["Has a title"], "chartList": [{"n": 1, "title": "Has a title"}]},
+                {"book": "bot1", "tab": "kept line", "gid": 940005,
+                 "charts": ["Kept line"], "chartList": [{"n": 1, "title": "Kept line"}]},
+                {"book": "bot1", "tab": "dup gold", "gid": 940006, "charts": ["Same title"],
+                 "chartList": [{"n": 1, "title": "Same title"}, {"n": 2, "title": "Same title"}]},
+            ],
+        }
+        got = {(it["gid"], it["chart_n"]) for it in pool_items(blank_cat, blank_repo)}
+        assert (940004, 1) not in got and (940005, 1) in got, got
+        assert (940006, 1) in got and (940006, 2) not in got, got
+    finally:
+        shutil.rmtree(blank_repo, ignore_errors=True)
     repo = tempfile.mkdtemp(prefix="cotd-random-")
     try:
         cat_dir = os.path.join(repo, "static", "sheets")
