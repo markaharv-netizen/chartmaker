@@ -142,6 +142,24 @@ python3 scripts/paper_trading.py
 
 Then commit `static/paper_trading.json`. `python3 scripts/paper_trading.py --self-test` runs the trade tests. The stake, gross cap, and session clock are `CONFIG` at the top of `scripts/paper_trading.py`.
 
+## Daily briefing
+
+The **Daily briefing** tab is one page for the overnight changes: price targets, sentiment, BTC treasury holdings, the paper book's saved NAV, and charts of the day. It is a separate tab. The app still opens on Watchlist. Open the briefing at `/?tab=briefing`. To make that the landing page, change the final `setMode` fallback in `static/index.html` from `watch` to `briefing`.
+
+`GET /api/briefing` builds the page from the files those tabs already use. No new scheduled job. Render does not call Google or X.
+
+```
+python3 scripts/briefing.py
+python3 scripts/briefing.py --json
+python3 scripts/briefing.py --self-test
+```
+
+- **Price targets.** Current `static/price_targets.json` against `static/price_targets_history.json`, the last snapshot from before the 7-day window that ends on the file's as-of date. `scripts/price_targets.py` appends a snapshot when base, street consensus, rating, notes, or why change. Commit `static/price_targets_history.json` with the price-target file.
+- **Paper NAV.** The saved marks in `static/paper_trading.json`. This is the last marked close, not a live quote.
+- **Sentiment.** `sentiment.json` against the previous date in `sentiment_history.json` → `daily`. A name with fewer than 8 classified bull and bear items is marked thin, same cutoff as the hollow dots on Over time.
+- **BTC treasury.** Latest `btctop100.json` against the previous snapshot in `btctop100_history.json`. `scripts/refresh_btctop100.py` appends one snapshot per refresh. Commit `btctop100_history.json` with `btctop100.json`. Holding drift under 1 BTC is left out. Companies that enter or leave the top 100 are listed.
+- **Charts of the day.** `static/cotd/today.json`. Tabs in `EXCLUDED_TABS` or `COTD_EXCLUDED` are left out. The sheet catalog does not record how much each chart's underlying data moved at the weekly refresh, so the briefing does not rank charts by data change.
+
 ## Sentiment tab
 
 Ranked bull-vs-bear board (like the "analyst sentiment" boards on X). The app only reads the static

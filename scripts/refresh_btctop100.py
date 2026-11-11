@@ -392,11 +392,28 @@ def validate(doc):
 
 
 def write_doc(doc):
+    previous = None
+    if os.path.isfile(OUT):
+        try:
+            with open(OUT, encoding="utf-8") as handle:
+                previous = json.load(handle)
+        except (OSError, ValueError):
+            previous = None
     tmp = OUT + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(doc, f, indent=2, ensure_ascii=False)
         f.write("\n")
     os.replace(tmp, OUT)
+    # Keep the prior holdings so the daily briefing can diff the next refresh.
+    # The same fetchedAt is stored once. Drift under 1 BTC is ignored at read time.
+    history = os.path.join(ROOT, "btctop100_history.json")
+    try:
+        import briefing
+        if previous:
+            briefing.archive_treasury(previous, history)
+        briefing.archive_treasury(doc, history)
+    except Exception as exc:
+        print("warning: treasury history not updated:", exc, file=sys.stderr)
 
 
 def self_test():
