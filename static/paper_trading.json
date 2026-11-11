@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated": "2026-11-10T13:56:07Z",
+  "generated": "2026-11-11T13:55:20Z",
   "note": "Paper book sized by paperWeight on static/price_targets.json. paperWeight is a signed percent of NAV (10 = 10% long, -5 = 5% short, 0 or missing = cash), copied from the sheet column \"Paper weight %\". Gross exposure is capped at 100%. No leverage, no fees. After any price_targets.json update: python3 scripts/paper_trading.py",
   "config": {
     "startingCash": 100000.0,
@@ -68,8 +68,8 @@
       "entryPrice": 127.83000183105469,
       "entryDate": "2026-11-06",
       "realized": 0.0,
-      "weight": 12.0,
-      "weightRequested": 12.0
+      "weight": 16.0,
+      "weightRequested": 16.0
     },
     {
       "ticker": "NVDA",
@@ -92,8 +92,8 @@
       "entryPrice": 46.90999984741211,
       "entryDate": "2026-11-06",
       "realized": 0.0,
-      "weight": -7.0,
-      "weightRequested": -7.0
+      "weight": -4.0,
+      "weightRequested": -4.0
     },
     {
       "ticker": "MU",
@@ -116,8 +116,8 @@
       "entryPrice": 607.2750244140625,
       "entryDate": "2026-11-06",
       "realized": 0.0,
-      "weight": 14.0,
-      "weightRequested": 14.0
+      "weight": 10.0,
+      "weightRequested": 10.0
     },
     {
       "ticker": "RKLB",
@@ -207,7 +207,27 @@
     "GOOG": 20.0,
     "AGLT": 0.0
   },
-  "pending": null,
+  "pending": {
+    "executeOn": "2026-11-11",
+    "detected": "2026-11-11",
+    "detectedAt": "2026-11-11T08:55:09-05:00",
+    "weights": {
+      "SPCX": 0.0,
+      "TSLA": 0.0,
+      "MSTR": 16.0,
+      "NVDA": 0.0,
+      "CRWV": -4.0,
+      "MU": 18.0,
+      "META": 10.0,
+      "RKLB": -7.0,
+      "ASTS": -5.0,
+      "ASST": 0.0,
+      "MSFT": 12.0,
+      "GOOG": 20.0,
+      "AGLT": 0.0
+    },
+    "reason": "weight"
+  },
   "trades": [
     {
       "id": 1,
@@ -316,12 +336,17 @@
       "date": "2026-11-09",
       "nav": 98954.35,
       "spyClose": 752.6900024414062
+    },
+    {
+      "date": "2026-11-10",
+      "nav": 97976.96,
+      "spyClose": 749.9199829101562
     }
   ],
   "spyInceptionOpen": 734.8200073242188,
   "gross": {
-    "requested": 95.0,
-    "effective": 95.0,
+    "requested": 92.0,
+    "effective": 92.0,
     "scaled": false,
     "scale": 1.0,
     "cap": 100.0,
