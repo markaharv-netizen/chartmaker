@@ -18,9 +18,11 @@ Price targets compare the current sheet with the last snapshot taken before the
 7-day window that ends on the snapshot's own as-of date. That is the same 7-day
 rule the Price targets tab uses, anchored to the file rather than the clock.
 Treasury compares the latest BTCTC snapshot with the one before it and ignores
-holding drift under 1 BTC. Sentiment compares the board with the previous
-daily point in sentiment_history.json and flags a name with fewer than 8
-classified bull/bear items, the same thin cutoff as the Over time chart.
+holding drift under 1 BTC. A holding change whose company as-of date also
+changed is an updated filing, not a same-day buy or sale. Sentiment compares
+the board with the previous daily point in sentiment_history.json and flags a
+name with fewer than 8 classified bull/bear items, the same thin cutoff as
+the Over time chart.
 """
 import argparse, datetime, json, os, re, sys
 
@@ -623,6 +625,10 @@ def treasury_companies(doc):
             "btc": company.get("btc"),
             "rank": company.get("rank"),
             "change": company.get("change"),
+            "asOf": company.get("asOf"),
+            "notes": company.get("notes"),
+            "source": company.get("source"),
+            "sourceLabel": company.get("sourceLabel"),
         })
     return out
 
@@ -641,11 +647,47 @@ def archive_treasury(doc, path):
         "note": (
             "Snapshots appended by scripts/refresh_btctop100.py. "
             "The daily briefing diffs the latest snapshot against the one before it. "
+            "Each company keeps its as-of date, note, and source. "
             "Holding drift under 1 BTC is treated as sheet rounding and is not listed."
         ),
         "snapshots": snaps,
     })
     return path
+
+
+def asof_month(value):
+    """YYYY-MM for a holding as-of, or None. YYYY-MM and YYYY-MM-DD in that month match."""
+    text_value = str(value or "").strip()
+    if re.fullmatch(r"\d{4}-\d{2}(-\d{2})?", text_value):
+        return text_value[:7]
+    return None
+
+
+def asof_changed(previous, current):
+    """True when both as-of dates are known and they are not the same month."""
+    old, new = asof_month(previous), asof_month(current)
+    if not old or not new:
+        return False
+    return old != new
+
+
+def short_asof(value):
+    """'2026-11-09' -> 'Nov 9'. '2026-06' -> 'Jun 2026'. Empty stays empty."""
+    text_value = str(value or "").strip()
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", text_value):
+        day = datetime.date.fromisoformat(text_value)
+        return f"{day.strftime('%b')} {day.day}"
+    if re.fullmatch(r"\d{4}-\d{2}", text_value):
+        year, month = text_value.split("-")
+        day = datetime.date(int(year), int(month), 1)
+        return f"{day.strftime('%b')} {year}"
+    return text_value
+
+
+def holding_span(btc, asof):
+    amount = btc_text(btc) if btc is not None else "—"
+    label = short_asof(asof)
+    return f"{amount} ({label})" if label else amount
 
 
 def company_key(company):
@@ -672,6 +714,7 @@ def treasury_section(doc, snapshots):
         "source": "btctop100.json",
         "minBtc": MIN_BTC,
         "changes": [],
+        "filings": [],
         "entered": [],
         "left": [],
     }
@@ -689,6 +732,7 @@ def treasury_section(doc, snapshots):
         )
         base["previous"] = None
         base["previousLabel"] = None
+        base["filings"] = []
         return base
     previous_day = parse_day(prior.get("fetchedAt"))
     base["previous"] = prior.get("fetchedAt")
@@ -714,6 +758,7 @@ def treasury_section(doc, snapshots):
         if abs(float(company["btc"]) - float(before["btc"])) + 1e-9 < MIN_BTC:
             continue
         delta = float(company["btc"]) - float(before["btc"])
+        filing = asof_changed(before.get("asOf"), company.get("asOf"))
         changes.append({
             "ticker": company.get("ticker"),
             "name": company.get("name"),
@@ -723,6 +768,15 @@ def treasury_section(doc, snapshots):
             "rank": company.get("rank"),
             "previousRank": before.get("rank"),
             "change": company.get("change"),
+            "asOf": company.get("asOf"),
+            "previousAsOf": before.get("asOf"),
+            "asOfLabel": short_asof(company.get("asOf")),
+            "previousAsOfLabel": short_asof(before.get("asOf")),
+            "holdingLine": f"{holding_span(before.get('btc'), before.get('asOf'))} to {holding_span(company.get('btc'), company.get('asOf'))}",
+            "filingUpdate": filing,
+            "note": company.get("notes") or "",
+            "source": company.get("source") or "",
+            "sourceLabel": company.get("sourceLabel") or "",
             "href": href,
         })
     for key, company in old.items():
@@ -734,10 +788,13 @@ def treasury_section(doc, snapshots):
                 "rank": company.get("rank"),
                 "href": href,
             })
-    changes.sort(key=lambda item: abs(item["delta"]), reverse=True)
+    # Same-period moves stay above updated filings so a stale as-of replacement
+    # (MARA's June total replaced by a November derived figure) is not the headline.
+    changes.sort(key=lambda item: (item["filingUpdate"], -abs(item["delta"])))
     entered.sort(key=lambda item: item.get("rank") or 999)
     left.sort(key=lambda item: item.get("rank") or 999)
-    base["changes"] = changes
+    base["changes"] = [item for item in changes if not item["filingUpdate"]]
+    base["filings"] = [item for item in changes if item["filingUpdate"]]
     base["entered"] = entered
     base["left"] = left
     base["empty"] = not changes and not entered and not left
@@ -861,6 +918,8 @@ def summary(doc):
         lines.append("  " + tre["emptyMessage"])
     for change in tre.get("changes") or []:
         lines.append(f"  {change['ticker']} {change['delta']:+.2f} BTC")
+    for change in tre.get("filings") or []:
+        lines.append(f"  filing {change['ticker']} {change.get('holdingLine')}")
     for company in tre.get("entered") or []:
         lines.append(f"  entered {company['ticker']}")
     for company in tre.get("left") or []:
