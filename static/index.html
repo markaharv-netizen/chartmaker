@@ -109,8 +109,25 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #ctypeNote{font-size:11px;line-height:1.2;color:#6B7280;font-weight:400;white-space:nowrap}
 #ctypeNote:empty{display:none}
 #ctl > label input[type=checkbox]{margin:0}
+/* One-series color: named swatches plus a hex / native custom color. The bar stays inside the viewport on a phone. */
+label.colorlab{font-size:12px;display:flex;flex-direction:column;gap:4px;align-items:flex-start;max-width:min(460px,calc(100vw - 24px))}
+.colorline{display:flex;flex-wrap:wrap;align-items:center;gap:6px;width:100%}
+.colorline select{max-width:100%}
+.colorline .swatches{display:flex;flex-wrap:wrap;gap:4px;width:100%}
+.colorline .custom{display:flex;align-items:center;gap:4px}
+.colorline .cname{font-size:12px;color:#374151}
+.colorline button.swatch{width:26px;height:26px;padding:0;border:1px solid rgba(0,0,0,.35);border-radius:4px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28);flex:none;line-height:0}
+.colorline button.swatch[aria-pressed=true]{outline:2px solid #111;outline-offset:1px}
+.colorline input[type=color]{width:36px;height:28px;padding:0 2px;border:1px solid #767676;border-radius:4px;background:#fff;cursor:pointer;flex:none}
+.colorline input.hex{width:7.4em;border:1px solid #767676;border-radius:2px;padding:6px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+@media (max-width:640px){
+  label.colorlab{max-width:calc(100vw - 24px)}
+  .colorline button.swatch{width:36px;height:36px}
+  .colorline input[type=color]{width:44px;height:40px}
+  .colorline input.hex{min-height:40px;font-size:16px;width:8.2em}
+}
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mBrief" class="on" title="What changed across price targets, sentiment, treasuries, and charts">Daily briefing</button><button id="mWatch">Watchlist</button><button id="mPrices">Prices</button><button id="mFin">Financials</button><button id="mVal">Valuation</button><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mPaper" title="Paper book sized by Steve's paper weights">Paper trading</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mBrief" class="on" title="What changed across price targets, sentiment, treasuries, and charts">Daily briefing</button><button id="mWatch">Watchlist</button><button id="mPrices" title="Price lines, percent change, candles, and ratios">Charts</button><button id="mFin">Financials</button><button id="mVal">Valuation</button><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mPaper" title="Paper book sized by Steve's paper weights">Paper trading</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -128,7 +145,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>From year<input id="fy1" type="number" value="2019" style="width:80px"></label><label>To year<input id="fy2" type="number" placeholder="latest" style="width:80px"></label>
 <label>Chart<select id="ftype"><option value="line">Line over time</option><option value="bars">Grouped bars over time</option><option value="rank">Latest-period ranking</option></select></label>
 <label>Title<input id="ftitle" size="30" placeholder="auto"></label>
-<label>Color (1 ticker)<select id="fcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
+<label class="colorlab" title="One series. Several series keep the shared palette.">Color (1 ticker)<span class="colorline"><select id="fcolor"></select><span class="swatches" id="fcolorSwatches"></span><span class="custom"><span class="cname">Custom</span><input type="color" id="fcolorPick" value="#F7931A" aria-label="Custom series color" title="Custom color"><input class="hex" id="fcolorHex" value="#F7931A" maxlength="7" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Series color hex" placeholder="#RRGGBB"></span></span></label>
 <label><span>Watermark</span><input id="fwm" type="checkbox"></label>
 <button id="fgo">Render</button><button id="fdl">Download PNG</button><button id="fcsv">Download CSV</button>
 </div>
@@ -156,7 +173,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label id="vrangebox" style="display:none">Range<select id="vrange"><option>1Y</option><option>3Y</option><option selected>5Y</option><option>10Y</option><option>Max</option></select></label>
 <label>Sort<select id="vsort"><option value="desc">High to low</option><option value="asc">Low to high</option></select></label>
 <label>Title<input id="vtitle" size="30" placeholder="auto"></label>
-<label>Bar color<select id="vcolor"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
+<label class="colorlab" title="One series or the snapshot bars. Several series keep the shared palette.">Bar color<span class="colorline"><select id="vcolor"></select><span class="swatches" id="vcolorSwatches"></span><span class="custom"><span class="cname">Custom</span><input type="color" id="vcolorPick" value="#F7931A" aria-label="Custom bar color" title="Custom color"><input class="hex" id="vcolorHex" value="#F7931A" maxlength="7" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Bar color hex" placeholder="#RRGGBB"></span></span></label>
 <label><span>Watermark</span><input id="vwm" type="checkbox"></label>
 <button id="vgo" title="Bypass the 6h fundamentals cache">Render</button><button id="vdl">Download PNG</button><button id="vcsv" style="display:none">Download CSV</button>
 </div>
@@ -189,7 +206,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label id="typebox">Type<span class="type-line"><select id="type"><option value="line">Price line</option><option value="pct">% change comparison</option><option value="candle">Candles + volume</option><option value="bar">Bar ranking % return</option><option value="bardd">Bar ranking % drawdown</option><option value="ratio">Ratio A priced in B</option><option value="drawdown">Drawdown from peak</option></select><span id="ctypeNote"></span></span></label>
 <label id="ddbox" title="Drawdown = % below the running high of daily closes">Peak from<select id="ddbase"><option value="range">Start of range</option><option value="ath">All-time high (full history)</option></select></label>
 <label>Title<input id="title" size="34" placeholder="auto"></label>
-<label>Line color<select id="color"><option value="#F7931A">Orange</option><option value="#8B5CF6">Violet</option></select></label>
+<label class="colorlab" title="One series. Several series keep the shared palette.">Line color<span class="colorline"><select id="color"></select><span class="swatches" id="colorSwatches"></span><span class="custom"><span class="cname">Custom</span><input type="color" id="colorPick" value="#F7931A" aria-label="Custom line color" title="Custom color"><input class="hex" id="colorHex" value="#F7931A" maxlength="7" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Line color hex" placeholder="#RRGGBB"></span></span></label>
 <label><span>Watermark</span><input id="wm" type="checkbox"></label>
 <div id="smabox" title="Simple moving averages of daily closes. Price line and candles, not intraday bars."><span>SMA</span>
 <button type="button" id="smaBtn" aria-haspopup="true" aria-expanded="false" aria-controls="smaMenu">SMA: none</button>
@@ -226,7 +243,10 @@ const $=id=>document.getElementById(id);
 const chart=echarts.init($('chart'),null,{renderer:'canvas'});
 // PNG export never includes the hover crosshair/tooltip: hide them before snapshotting
 {const g=chart.getDataURL.bind(chart);chart.getDataURL=o=>{try{chart.dispatchAction({type:'hideTip'});chart.dispatchAction({type:'updateAxisPointer',currTrigger:'leave'})}catch(e){}return g(o)}}
-const PALETTE=['#F7931A','#8B5CF6','#0EA5E9','#22C55E','#EF4444','#111827','#EC4899','#14B8A6'];
+// Named series colors. Orange stays first so a one-series chart still defaults to #F7931A.
+const LINE_COLORS=[['#F7931A','Orange'],['#78350F','Brown'],['#4D7C0F','Olive'],['#22C55E','Green'],['#14B8A6','Teal'],['#0EA5E9','Sky'],['#1D4ED8','Blue'],['#8B5CF6','Violet'],['#A21CAF','Magenta'],['#EC4899','Pink'],['#EF4444','Red'],['#111827','Ink']];
+// First eight stay in this order so a multi-series chart matches charts saved before the extra hues.
+const PALETTE=['#F7931A','#8B5CF6','#0EA5E9','#22C55E','#EF4444','#111827','#EC4899','#14B8A6','#1D4ED8','#4D7C0F','#A21CAF','#78350F'];
 const DAY=86400;
 const THEMES={
  white:{name:'White',bg:'#FFFFFF',title:'#111111',text:'#374151',src:'#6B7280',wm:'#9CA3AF',grid:'#EEEEEE',axis:'#999999',dark:0},
@@ -235,9 +255,46 @@ const THEMES={
  dark:{name:'Dark',bg:'#0F1115',title:'#F3F4F6',text:'#C9CED6',src:'#8B93A1',wm:'#6B7280',grid:'#232730',axis:'#3A404C',dark:1},
  navy:{name:'Navy',bg:'#0B1A2E',title:'#F1F5F9',text:'#C3CEDD',src:'#8798B0',wm:'#5F7392',grid:'#1A2C46',axis:'#33496A',dark:1},
  black:{name:'Black (X dark)',bg:'#000000',title:'#E7E9EA',text:'#C4C9CE',src:'#8B98A5',wm:'#5B6670',grid:'#1C1F23',axis:'#333639',dark:1}};
-const BRIGHT={'#F7931A':'#FFA033','#8B5CF6':'#A78BFA','#22C55E':'#34D671','#EF4444':'#F87171','#0EA5E9':'#38BDF8','#111827':'#E5E7EB','#EC4899':'#F472B6','#14B8A6':'#2DD4BF'};
+const BRIGHT={'#F7931A':'#FFA033','#8B5CF6':'#A78BFA','#22C55E':'#34D671','#EF4444':'#F87171','#0EA5E9':'#38BDF8','#111827':'#E5E7EB','#EC4899':'#F472B6','#14B8A6':'#2DD4BF','#1D4ED8':'#6183E4','#4D7C0F':'#BEF264','#A21CAF':'#E879F9','#78350F':'#C4A484'};
+const NAMED={};LINE_COLORS.forEach(([h])=>{NAMED[h]=1});
 let T=THEMES.white;
-function bc(c){return T.dark&&BRIGHT[c]?BRIGHT[c]:c}
+function canonHex(v){if(v==null)return '';let s=String(v).trim();
+  if(/^#[0-9a-fA-F]{3}$/.test(s))s='#'+s[1]+s[1]+s[2]+s[2]+s[3]+s[3];
+  else if(/^[0-9a-fA-F]{6}$/.test(s))s='#'+s;
+  else if(/^[0-9a-fA-F]{3}$/.test(s))s='#'+s[0]+s[0]+s[1]+s[1]+s[2]+s[2];
+  return /^#[0-9a-fA-F]{6}$/.test(s)?s.toUpperCase():''}
+function hexRgb(hex){return [parseInt(hex.slice(1,3),16),parseInt(hex.slice(3,5),16),parseInt(hex.slice(5,7),16)]}
+function rgbHex(r,g,b){const h=n=>Math.max(0,Math.min(255,Math.round(n))).toString(16).padStart(2,'0').toUpperCase();return '#'+h(r)+h(g)+h(b)}
+function relLum(hex){const lin=hexRgb(hex).map(v=>{const c=v/255;return c<=0.03928?c/12.92:Math.pow((c+0.055)/1.055,2.4)});return 0.2126*lin[0]+0.7152*lin[1]+0.0722*lin[2]}
+function contrast(a,b){const L1=relLum(a),L2=relLum(b);return (Math.max(L1,L2)+0.05)/(Math.min(L1,L2)+0.05)}
+function mixHex(hex,toward,t){const x=hexRgb(hex),y=hexRgb(toward);return rgbHex(x[0]+(y[0]-x[0])*t,x[1]+(y[1]-x[1])*t,x[2]+(y[2]-x[2])*t)}
+function liftHex(hex){let c=hex;for(let i=0;i<8;i++){if(contrast(c,'#000000')>=3&&contrast(c,'#0B1A2E')>=3&&contrast(c,'#0F1115')>=3)return c;c=mixHex(c,'#FFFFFF',0.22)}return c}
+function sinkHex(hex){let c=hex;for(let i=0;i<8;i++){if(contrast(c,'#FFFFFF')>=2.4&&contrast(c,'#FAF7F2')>=2.4&&contrast(c,'#F5F6F8')>=2.4)return c;c=mixHex(c,'#111827',0.28)}return c}
+// Named colors keep their exact hex on light backgrounds and the BRIGHT map on dark ones (PNG included).
+// A custom hex is nudged only when it would disappear on the theme backgrounds.
+function bc(c){const hex=canonHex(c);if(!hex)return c;if(T.dark)return BRIGHT[hex]||liftHex(hex);if(NAMED[hex])return hex;return sinkHex(hex)}
+function colorEls(id){return {sel:$(id),pick:$(id+'Pick'),hex:$(id+'Hex'),sw:$(id+'Swatches')}}
+function lineColor(id){const sel=$(id);if(!sel)return '#F7931A';
+  if(sel.value==='__custom')return canonHex(sel.dataset.hex)||canonHex($(id+'Hex')&&$(id+'Hex').value)||'#F7931A';
+  return canonHex(sel.value)||'#F7931A'}
+function syncColorUi(id){const {sel,pick,hex,sw}=colorEls(id);if(!sel)return;const cur=lineColor(id);
+  sel.dataset.hex=cur;if(pick)pick.value=cur.toLowerCase();if(hex&&document.activeElement!==hex)hex.value=cur;
+  if(sw)sw.querySelectorAll('.swatch').forEach(b=>b.setAttribute('aria-pressed',canonHex(b.dataset.c)===cur?'true':'false'))}
+function setLineColor(id,raw){const {sel,hex}=colorEls(id);if(!sel)return false;const cur=canonHex(raw);if(!cur)return false;
+  const known=LINE_COLORS.find(([v])=>v.toUpperCase()===cur);sel.value=known?known[0]:'__custom';sel.dataset.hex=cur;if(hex)hex.value=cur;syncColorUi(id);return true}
+function pairColor(hex){const h=canonHex(hex)||'#F7931A';if(h==='#F7931A')return '#8B5CF6';if(h==='#8B5CF6')return '#F7931A';
+  const i=PALETTE.findIndex(c=>c.toUpperCase()===h);return PALETTE[i<0?0:(i+1)%PALETTE.length]}
+function installColorPickers(){const opts=LINE_COLORS.map(([v,n])=>`<option value="${v}">${n}</option>`).join('')+'<option value="__custom">Custom…</option>';
+  for(const id of ['color','fcolor','vcolor']){const {sel,sw,pick,hex}=colorEls(id);if(!sel)continue;
+    sel.innerHTML=opts;sel.value='#F7931A';
+    if(sw)sw.innerHTML=LINE_COLORS.map(([v,n])=>`<button type="button" class="swatch" data-c="${v}" aria-label="${n}" title="${n}" style="background:${v}"></button>`).join('');
+    syncColorUi(id);
+    sel.addEventListener('change',()=>{if(sel.value==='__custom'){const cur=canonHex(sel.dataset.hex)||'#F7931A';sel.dataset.hex=cur;if(hex)hex.value=cur;syncColorUi(id);if(hex){hex.focus();hex.select()}}else syncColorUi(id)});
+    if(sw)sw.addEventListener('click',e=>{const b=e.target.closest('button.swatch');if(!b)return;e.preventDefault();setLineColor(id,b.dataset.c);sel.dispatchEvent(new Event('change',{bubbles:true}))});
+    if(pick)pick.addEventListener('change',()=>{setLineColor(id,pick.value);sel.dispatchEvent(new Event('change',{bubbles:true}))});
+    const applyHex=()=>{const c=canonHex(hex.value);if(!c){hex.value=lineColor(id);return}setLineColor(id,c);sel.dispatchEvent(new Event('change',{bubbles:true}))};
+    if(hex){hex.addEventListener('change',applyHex);hex.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();applyHex()}})}}}
+installColorPickers();
 function applyTheme(){T=THEMES[$('theme').value]||THEMES.white;axLabel={fontSize:16,color:T.text};split={lineStyle:{color:T.grid}};
   $('chart').style.background=T.bg;$('tprev').style.background=T.bg;$('tprev').style.color=T.title;
   $('tprev').innerHTML=`Aa <b style="color:${bc('#F7931A')}">■</b><b style="color:${bc('#8B5CF6')}">■</b><b style="color:${bc('#22C55E')}">■</b><b style="color:${bc('#EF4444')}">■</b>`}
@@ -259,7 +316,7 @@ function rangeParams(){
 let FRESH=false;
 async function fetchSym(s,p){
   // Line charts on 1D/5D pass a Yahoo range and want extended hours. Candle mode sets prepost:false.
-  // p.fresh lets Price targets refresh one quote without the Prices-wide FRESH flag.
+  // p.fresh lets Price targets refresh one quote without the Charts-wide FRESH flag.
   const ex=p.rng?`&range=${p.rng}${p.prepost!==false?'&prepost=1':''}`:'';
   const res=await fetch(`/api/chart?symbol=${encodeURIComponent(s)}&period1=${p.p1}&period2=${p.p2}&interval=${p.iv}${ex}${(p.fresh||FRESH)?'&fresh=1':''}`,{cache:'no-store'});
   const j=await res.json(); if(!res.ok||j.error)throw Error(`${s}: ${j.error||res.status}`); return j;
@@ -493,7 +550,7 @@ function ddOpt(o,data,c,p){
         label:{position:'insideStartTop',fontSize:16,color:T.title,formatter:`${s[i].label} ${f(data[0].maxdd[1])}`},data:[{yAxis:+data[0].maxdd[1].toFixed(2)}]}}});
   o.graphic[0].style.text='Source: Yahoo Finance · daily closes · % below running high '+(p.ath?'(all-time high, full history)':'since start of range');
   return o}
-function colors(n){return n===1?[$('color').value]:PALETTE}
+function colors(n){return n===1?[lineColor('color')]:PALETTE}
 // ---------- Annotations: shared time-axis markers (earnings = first ticker, halvings, custom) ----------
 const HALVINGS=[
   {date:'2012-11-28',label:'Halving 2012',note:'1st halving · block 210,000 · reward 50→25 BTC'},
@@ -679,7 +736,7 @@ function buildOpt(type,data,title,p){
     const bp=b.points; let j=0; const out=[];
     for(const q of a.points){while(j+1<bp.length&&bp[j+1][0]<=q[0])j++; if(bp[j]&&bp[j][0]<=q[0]+DAY*1000/2)out.push([q[0],q[1]/bp[j][1]])}
     if(!out.length)throw Error('No overlapping dates for ratio');
-    return marked(lineOpt(o,[{label:`${a.label}/${b.label}`,color:$('color').value,data:out}],v=>v.toPrecision(4)),[{points:out}],p)}
+    return marked(lineOpt(o,[{label:`${a.label}/${b.label}`,color:lineColor('color'),data:out}],v=>v.toPrecision(4)),[{points:out}],p)}
   // bar ranking (% return or % drawdown); deepest/lowest on the right
   const isdd=type==='bardd';
   const rows=data.map(d=>({label:d.barLabel||d.label,v:isdd?ddNow(d,p):ret(d,p),st:!!d.since})).sort((x,y)=>y.v-x.v);
@@ -714,7 +771,7 @@ function annAdd(date,label,note=''){label=String(label||'').trim().slice(0,48);n
   if(!date||!label)return;
   ANN=ANN.filter(a=>!(a.date===date&&a.label===label));ANN.push({date,label,note});ANN.sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:0);
   if(ANN.length>40)ANN=ANN.slice(-40);annsave();if(MODE==='prices')render()}
-// Right-click on the Prices chart: small menu with "Add Annotation", snapped to the nearest plotted date.
+// Right-click on the Charts tab: small menu with "Add Annotation", snapped to the nearest plotted date.
 const ctxMenu=document.createElement('div');ctxMenu.id='ctxMenu';ctxMenu.hidden=true;
 ctxMenu.style.cssText='position:fixed;z-index:2147483000;background:#fff;color:#111;border:1px solid #ccc;border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,.18);padding:4px 0;font-size:14px;min-width:170px';
 ctxMenu.innerHTML='<div id="ctxDate" style="padding:4px 12px;color:#6B7280;font-size:12px"></div><div id="ctxAdd" role="menuitem" tabindex="0" style="padding:8px 12px;cursor:pointer">Add Annotation</div><div id="ctxDel" role="menuitem" tabindex="0" style="padding:8px 12px;cursor:pointer;color:#B91C1C" hidden>Delete annotation</div>';
@@ -1159,24 +1216,24 @@ async function frender(){
     const src='Source: SEC filings (10-K/10-Q'+(foreign?', 20-F':'')+')'+(ok.some(d=>d.rows.some(r=>(r.derived||'').includes('weighted-avg')))?' · weighted-avg basic shares':'');
     const tks=[...new Set(ok.map(d=>d.tk||d.label))];
     const titleAuto=cmp?tks.join(' vs ')+' '+m1L.toLowerCase().replace('r&d','R&D').replace('eps','EPS')+' vs '+m2L.toLowerCase().replace('r&d','R&D').replace('eps','EPS')+', '+pLabel:type==='rank'?`${mLabel}, ${pLabel} (latest)`:(ok.length>1?ok.map(d=>d.label).join(' vs ')+' ':ok[0].label+' ')+mLabel.toLowerCase().replace('r&d','R&D').replace('eps','EPS')+', '+pLabel;
-    const o=base($('ftitle').value||titleAuto,src,'fwm'), c=ok.length===1?[$('fcolor').value]:PALETTE, cur=curs.length===1?curs[0]:'USD';
+    const o=base($('ftitle').value||titleAuto,src,'fwm'), c=ok.length===1?[lineColor('fcolor')]:PALETTE, cur=curs.length===1?curs[0]:'USD';
     const F=v=>fmtFin(v,u,cur), F2=v=>fmtFin(v,u2,cur);
     if(cmp){const tc={};tks.forEach((t,i)=>tc[t]=tks.length===1?null:PALETTE[i%PALETTE.length]);
-      const alt=$('fcolor').value==='#F7931A'?'#8B5CF6':'#F7931A';
-      ok.forEach(d=>d.col=tks.length===1?(d.dash?alt:$('fcolor').value):tc[d.tk])}
+      const alt=pairColor(lineColor('fcolor'));
+      ok.forEach(d=>d.col=tks.length===1?(d.dash?alt:lineColor('fcolor')):tc[d.tk])}
     if(type==='rank'){
       const rows=ok.map(d=>({label:d.label,r:d.rows.at(-1)})).sort((a,b)=>b.r.value-a.r.value);
       o.grid={left:110,right:60,top:130,bottom:115};
       o.xAxis={type:'category',data:rows.map(x=>x.label+'\n'+x.r.label),axisLabel:{...axLabel,fontSize:18,fontWeight:'bold',interval:0,lineHeight:24},axisTick:{show:false},axisLine:{onZero:false,lineStyle:{color:T.axis}},axisLabel:{...axLabel,fontSize:18,fontWeight:'bold',interval:0,lineHeight:24,margin:14}};
       o.yAxis={type:'value',...headroom(rows.map(x=>x.r.value)),axisLabel:{...axLabel,formatter:F},splitLine:split};
-      o.series=[{type:'bar',barMaxWidth:120,data:rows.map(x=>({value:x.r.value,itemStyle:{color:bc(x.r.value>=0?$('fcolor').value:'#EF4444')},
+      o.series=[{type:'bar',barMaxWidth:120,data:rows.map(x=>({value:x.r.value,itemStyle:{color:bc(x.r.value>=0?lineColor('fcolor'):'#EF4444')},
         label:{show:true,position:x.r.value>=0?'top':'bottom',fontSize:18,fontWeight:'bold',color:T.title,formatter:p=>F(p.value)}}))}];
     }else{
       const ser=ok.map((d,i)=>{const m=Object.fromEntries(d.rows.map(r=>[r.label,r.value]));return{label:d.label,color:d.col||c[i%c.length],ax:d.ax||0,dash:!!d.dash&&tks.length>1,f:d.u===u2&&cmp&&d.m===m2?F2:F,data:cats.map(k=>k in m?m[k]:null)}});
       o.xAxis={type:'category',data:cats,axisLabel:{...axLabel,hideOverlap:true},axisLine:{lineStyle:{color:T.axis}},axisTick:{show:false}};
       o.yAxis={type:'value',axisLabel:{...axLabel,formatter:F},splitLine:split};
       if(cmp&&right){o.yAxis=[o.yAxis,{type:'value',position:'right',axisLabel:{...axLabel,margin:12,formatter:F2,color:tks.length===1?bc(ok.find(d=>d.ax)?.col||T.text):axLabel.color},splitLine:{show:false}}]}
-      if(cmp&&right&&tks.length===1)o.yAxis[0].axisLabel.color=bc($('fcolor').value);
+      if(cmp&&right&&tks.length===1)o.yAxis[0].axisLabel.color=bc(lineColor('fcolor'));
       if(cmp&&!right&&u2!==u)o.yAxis.axisLabel.formatter=v=>v;
       if(cmp)o.legend={top:80,left:60,icon:'roundRect',itemWidth:18,itemHeight:4,textStyle:{fontSize:16,color:T.text}},o.grid.top=Math.max(o.grid.top||0,130);
       if(type==='line'){o.series=ser.map(s=>({type:'line',name:s.label,yAxisIndex:s.ax,data:s.data,connectNulls:false,showSymbol:cats.length<=24||s.data.includes(null),symbolSize:7,
@@ -1401,7 +1458,7 @@ function vhdraw(){const j=vhlast,m=j.metric;
   const syms=$('vtickers').value.split(',').map(x=>x.trim().toUpperCase()).filter(Boolean),nms=[];
   const ok=j.series.filter(s=>s.points.some(p=>p[1]!=null)),nm=j.series.filter(s=>!s.points.some(p=>p[1]!=null));
   if(!ok.length){chart.clear();$('status').className='err';$('status').textContent='n/m for all: '+nm.map(s=>s.symbol+' ('+s.nm+')').join('; ');vlast=null;return}
-  const pal=ok.length===1?[$('vcolor').value]:PALETTE;
+  const pal=ok.length===1?[lineColor('vcolor')]:PALETTE;
   const lab=s=>{const i=syms.indexOf(s.symbol);return i>=0&&nms[i]?nms[i]:SHORT[s.symbol]||s.symbol};
   const fmt=v=>v==null?'':m==='mcap'?vfmt('mcap',v):(+v.toFixed(v>=100?0:v>=10?1:2))+'x';
   const series=ok.map((s,i)=>({label:lab(s),color:pal[i%pal.length],data:s.points.slice(s.points.findIndex(p=>p[1]!=null))}));
@@ -1426,7 +1483,7 @@ async function vrender(){const st=$('status');
   try{const r=await fetch(`/api/valuation?tickers=${encodeURIComponent($('vtickers').value)}&metric=${$('vmetric').value}${VFRESH?'&fresh=1':''}`,{cache:'no-store'});
     const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);vlast=j;vdraw()}
   catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing rendered, no data invented.';chart.clear();vlast=null}}
-function vdraw(){const j=vlast,m=j.metric,col=$('vcolor').value,asc=$('vsort').value==='asc';
+function vdraw(){const j=vlast,m=j.metric,col=lineColor('vcolor'),asc=$('vsort').value==='asc';
   const syms=$('vtickers').value.split(',').map(x=>x.trim().toUpperCase()).filter(Boolean),nms=[];
   const disp=s=>{const i=syms.indexOf(s);return i>=0&&nms[i]?nms[i]:SHORT[s]};
   if(!j.rows.length){chart.clear();$('status').className='err';$('status').textContent=`No ${j.label} values (n/m: ${j.nm.map(x=>x.symbol).join(', ')})`+(j.errors.length?' · '+j.errors.join('; '):'');return}
@@ -1587,7 +1644,7 @@ function hsyms(){const S=Object.keys(HS());return $('shist').value.split(/[\s,]+
 function hpick(){const S=Object.keys(HS()),on=hsyms();  // picker lists only tickers that have history
   $('shpick').innerHTML=S.map(x=>`<label style="flex-direction:row;align-items:center;gap:4px;font-weight:normal"><input type="checkbox" data-s="${sesc(x)}"${on.includes(x)?' checked':''}>${sesc(x==='BTC-USD'?'BTC':x)}</label>`).join('');
   $('shpick').querySelectorAll('input').forEach(c=>c.onchange=()=>{$('shist').value=[...$('shpick').querySelectorAll('input:checked')].map(e=>e.dataset.s).join(',');stime()})}
-async function hprice(sym,p1,p2,iv='1wk'){const k=sym+p1+iv;if(HPRICE[k])return HPRICE[k];  // weekly closes through the normal /api/chart path (same fallbacks as Prices)
+async function hprice(sym,p1,p2,iv='1wk'){const k=sym+p1+iv;if(HPRICE[k])return HPRICE[k];  // weekly closes through the normal /api/chart path (same fallbacks as Charts)
   return HPRICE[k]=fetchSym(sym,{p1,p2,iv}).then(d=>d.points).catch(e=>{delete HPRICE[k];throw e})}
 async function stime(){if(MODE!=='sent')return;const seq=++SSEQ;
   if(!HDATA&&!HBUSY)await hfetch();if(seq!==SSEQ||MODE!=='sent'||!HDATA)return;
@@ -1856,7 +1913,7 @@ $('paperGo').onclick=()=>{if(MODE==='paper')paperEnter(true)};
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
 const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fmetric2','faxis2','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','ptwm'];
 let VIEWS=[];
-function snap(name){const f={};for(const id of VFIELDS){const e=$(id);if(!e)continue;f[id]=e.type==='checkbox'?e.checked:e.value}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();if(MODE==='prices')o.ann=ANN.map(a=>({date:a.date,label:a.label,note:a.note||''}));return o}
+function snap(name){const f={};for(const id of VFIELDS){const e=$(id);if(!e)continue;f[id]=(id==='color'||id==='fcolor'||id==='vcolor')?lineColor(id):(e.type==='checkbox'?e.checked:e.value)}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();if(MODE==='prices')o.ann=ANN.map(a=>({date:a.date,label:a.label,note:a.note||''}));return o}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
 // Saved views are per tab: each view carries .mode and only shows/saves/loads in that tab.
 const VMODES=['prices','fin','heat','tre','val','watch','sent','pt'];
@@ -1884,7 +1941,7 @@ async function vload(){try{VSTORE=(await (await fetch('/api/config')).json()).vi
     const w=d.watchlist;if(w&&Array.isArray(w.list)&&w.list.length&&String(w.updated||'')>=WLUP&&JSON.stringify(w.list)!==JSON.stringify(WL)){WL=w.list.slice();WLUP=String(w.updated||'');localStorage.setItem(WLS+'_updated',WLUP);wsave(false);if(MODE==='watch')wenter()}}
   catch(e){VIEWS=loc;console.warn('views server unavailable, using browser cache',e);setTimeout(()=>vmsg('⚠ Saved views server unavailable — showing this browser’s cached copy.'),0)}
   if(!Array.isArray(VIEWS))VIEWS=[]
-  // migrate old views: anything without a valid tab goes under Prices (nothing is dropped)
+  // migrate old views: anything without a valid tab goes under Charts (nothing is dropped)
   let mig=0;for(const x of VIEWS){if(x&&typeof x==='object'&&x.mode!==vmode(x)){x.mode=vmode(x);mig++}}
   if(mig){try{await vput()}catch(e){console.warn('view migration not saved',e)}}
   vlist()}
@@ -1904,7 +1961,7 @@ function vapply(x){const m=vmode(x),own=VOWN[m];if(m==='prices'){for(const id of
   ANN=(Array.isArray(x.ann)?x.ann:[]).filter(a=>a&&a.date&&a.label).slice(0,40).map(a=>({date:String(a.date),label:String(a.label).slice(0,48),note:String(a.note||'').slice(0,80)}));annsave()}
   // Watermark defaults off. A view that omits the field keeps that default; an explicit true/false still wins.
   if(WMID[m])$(WMID[m]).checked=false;
-  for(const [id,val] of Object.entries(x.fields||{})){if(id!=='theme'&&!own.test(id))continue;const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else e.value=val}
+  for(const [id,val] of Object.entries(x.fields||{})){if(id!=='theme'&&!own.test(id))continue;const e=$(id);if(!e)continue;if(e.type==='checkbox')e.checked=!!val;else if(id==='color'||id==='fcolor'||id==='vcolor')setLineColor(id,val);else e.value=val}
   if(m==='prices')syncCustomDates();
   if(m==='watch'&&Array.isArray(x.wl)&&x.wl.length){WL=x.wl.slice();wsave()}
   applyTheme();vsync();setMode(m)}
@@ -1994,19 +2051,22 @@ async function briefEnter(){const el=$('brief'),seq=++BRIEFSEQ,E=escHtml;
     el.innerHTML=briefRender(doc);
   }catch(e){if(seq!==BRIEFSEQ||MODE!=='briefing')return;el.innerHTML='<h2>Daily briefing</h2><p class="empty">Could not load the briefing ('+E(e.message)+').</p>'}}
 // Deep link only. Absent params leave the empty default.
-// Prices: ?tickers=AAPL,MSFT. Financials: ?ftickers= . Valuation: ?vtickers= .
-// Legacy display-name params (names, fnames, vnames) are ignored.
+// Charts: ?tickers=AAPL,MSFT. Financials: ?ftickers= . Valuation: ?vtickers= .
+// Optional series colors: ?color= ?fcolor= ?vcolor= (hex). Legacy display-name params are ignored.
 function applyPriceQuery(){
   let q;try{q=new URLSearchParams(location.search)}catch(e){return}
   if(q.has('tickers'))$('tickers').value=q.get('tickers')||'';
   if(q.has('ftickers'))$('ftickers').value=q.get('ftickers')||'';
   if(q.has('vtickers'))$('vtickers').value=q.get('vtickers')||'';
   if(q.has('stickers'))$('stickers').value=q.get('stickers')||'';
+  if(q.has('color'))setLineColor('color',q.get('color')||'');
+  if(q.has('fcolor'))setLineColor('fcolor',q.get('fcolor')||'');
+  if(q.has('vcolor'))setLineColor('vcolor',q.get('vcolor')||'');
 }
 applyTheme();annDraw();vload();applyPriceQuery();
 window.__render=render; window.__frender=frender; window.__setMode=setMode;
 {let q;try{q=new URLSearchParams(location.search)}catch(e){q=new URLSearchParams()} // ?tab= keeps that tab; ticker deep links keep theirs; otherwise Daily briefing
-  const tabs={briefing:'briefing',daily:'briefing',paper:'paper',prices:'prices',fin:'fin',financials:'fin',val:'val',valuation:'val',heat:'heat',heatmap:'heat',tre:'tre',treasury:'tre',sent:'sent',sentiment:'sent',cotd:'cotd',pt:'pt',targets:'pt',sheets:'sheets',watch:'watch'};
+  const tabs={briefing:'briefing',daily:'briefing',paper:'paper',prices:'prices',charts:'prices',fin:'fin',financials:'fin',val:'val',valuation:'val',heat:'heat',heatmap:'heat',tre:'tre',treasury:'tre',sent:'sent',sentiment:'sent',cotd:'cotd',pt:'pt',targets:'pt',sheets:'sheets',watch:'watch'};
   const asked=tabs[(q.get('tab')||'').toLowerCase()];
   setMode(asked||(q.has('tickers')?'prices':q.has('ftickers')?'fin':q.has('vtickers')?'val':'briefing'))}
 </script><script>try{syncCustomDates()}catch(e){}</script></body></html>
