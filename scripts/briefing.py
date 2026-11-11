@@ -831,32 +831,62 @@ def chart_excluded(item):
     return (book, gid) in COTD_EXCLUDED
 
 
+def _chart_public(item, href):
+    if not isinstance(item, dict) or chart_excluded(item):
+        return None
+    url = item.get("sheet_url") or ""
+    safe_url = url if str(url).startswith("https://") else href
+    image = item.get("image") or ""
+    safe_image = image if _IMAGE.match(str(image)) else ""
+    return {
+        "title": item.get("title") or item.get("tab") or "Chart",
+        "sheet": item.get("sheet") or "",
+        "tab": item.get("tab") or "",
+        "image": safe_image,
+        "href": safe_url,
+        "tabHref": href,
+        "kind": item.get("kind") or "chart",
+    }
+
+
 def charts_section(doc):
     href = "/?tab=cotd"
     if not isinstance(doc, dict):
         return {
-            "href": href, "source": "static/cotd/today.json", "items": [], "empty": True,
+            "href": href, "source": "static/cotd/today.json", "items": [], "picks": [], "empty": True,
             "emptyMessage": "Charts of the day are not available (static/cotd/today.json is missing).",
         }
     day = parse_day(doc.get("date"))
-    items = []
-    for item in doc.get("items") or []:
-        if not isinstance(item, dict) or chart_excluded(item):
-            continue
-        url = item.get("sheet_url") or ""
-        safe_url = url if str(url).startswith("https://") else href
-        image = item.get("image") or ""
-        safe_image = image if _IMAGE.match(str(image)) else ""
-        items.append({
-            "title": item.get("title") or item.get("tab") or "Chart",
-            "sheet": item.get("sheet") or "",
-            "tab": item.get("tab") or "",
-            "image": safe_image,
-            "href": safe_url,
-            "tabHref": href,
-            "kind": item.get("kind") or "chart",
-        })
-    empty = not items
+    raw_items = [it for it in (doc.get("items") or []) if isinstance(it, dict)]
+    declared = doc.get("picks") if isinstance(doc.get("picks"), list) else None
+    # An empty picks array is the same as a missing one: use section on items, if any.
+    if not declared:
+        embedded = [it for it in raw_items if it.get("section") == "picks"]
+        if embedded:
+            declared = embedded
+            random_raw = [it for it in raw_items if it.get("section") != "picks"]
+        else:
+            declared = []
+            random_raw = raw_items
+    else:
+        random_raw = [it for it in raw_items if it.get("section") != "picks"]
+
+    def pack(seq, pick):
+        out = []
+        for item in seq:
+            row = _chart_public(item, href)
+            if not row:
+                continue
+            if pick:
+                row["section"] = "picks"
+                row["description"] = text(item.get("description"))
+                row["reason"] = text(item.get("reason"))
+            out.append(row)
+        return out
+
+    picks = pack(declared, True)
+    items = pack(random_raw, False)
+    empty = not items and not picks
     when = label_day(day) if day else "this edition"
     return {
         "asOf": day.isoformat() if day else None,
@@ -864,6 +894,7 @@ def charts_section(doc):
         "theme": text(doc.get("theme")),
         "href": href,
         "source": "static/cotd/today.json",
+        "picks": picks,
         "items": items,
         "empty": empty,
         "emptyMessage": f"No charts of the day for {when}." if empty else None,
@@ -925,7 +956,12 @@ def summary(doc):
     for company in tre.get("left") or []:
         lines.append(f"  left {company['ticker']}")
     charts = doc["charts"]
-    lines.append(f"Charts of the day {charts.get('asOfLabel') or '—'} ({len(charts.get('items') or [])})")
+    pick_n = len(charts.get("picks") or [])
+    item_n = len(charts.get("items") or [])
+    if pick_n:
+        lines.append(f"Charts of the day {charts.get('asOfLabel') or '—'} ({pick_n} picks, {item_n} random)")
+    else:
+        lines.append(f"Charts of the day {charts.get('asOfLabel') or '—'} ({item_n})")
     if charts.get("empty"):
         lines.append("  " + charts["emptyMessage"])
     return "\n".join(lines)

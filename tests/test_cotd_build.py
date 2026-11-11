@@ -101,7 +101,10 @@ class CotdBuildTest(unittest.TestCase):
         self.assertIn("(j.items||[]).map", body.replace(" ", ""))
         self.assertNotIn(".slice(", body)
         self.assertNotIn("nth-child", body)
-        self.assertNotIn("Why it was picked", body)
+        self.assertIn("Today's picks", body)
+        self.assertIn("Random from the library", body)
+        self.assertIn("Why it was picked", body)
+        self.assertIn("cotdSplit", body)
         self.assertNotIn("Why it matters", body)
         self.assertNotIn("What you should know", body)
         self.assertNotIn("recommended", body.lower())
@@ -213,6 +216,11 @@ class CotdDisplayTest(unittest.TestCase):
                     self.assertNotIn("picked note", shown["text"])
                     self.assertNotIn("matters note", shown["text"])
                     self.assertNotIn("know note", shown["text"])
+                    self.assertEqual(shown["headings"], [])
+                    self.assertEqual(shown["picks"], 0)
+                    self.assertEqual(shown["whys"], [])
+                    self.assertNotIn("Today's picks", shown["text"])
+                    self.assertNotIn("Random from the library", shown["text"])
                     self.assertNotIn("Why it was picked", shown["text"])
                     self.assertNotIn("Why it matters", shown["text"])
                     self.assertNotIn("What you should know", shown["text"])
@@ -236,6 +244,10 @@ class CotdDisplayTest(unittest.TestCase):
                     picked = saved["items"][0].get("picked") or ""
                     if picked:
                         self.assertNotIn(picked[:48], live["text"])
+                    self.assertEqual(live["headings"], [])
+                    self.assertEqual(live["picks"], 0)
+                    self.assertNotIn("Today's picks", live["text"])
+                    self.assertNotIn("Random from the library", live["text"])
                     self.assertNotIn("Why it was picked", live["text"])
                     self.assertNotIn("Why it matters", live["text"])
                     self.assertNotIn("What you should know", live["text"])
@@ -246,6 +258,105 @@ class CotdDisplayTest(unittest.TestCase):
                         self.assertNotIn(tab, live["text"])
                     self.assertEqual(live["titles"][0], "1. " + saved["items"][0]["title"])
                     self.assertEqual(live["titles"][-1], f"{len(saved['items'])}. " + saved["items"][-1]["title"])
+            finally:
+                server.shutdown()
+                server.server_close()
+
+    def test_picks_render_above_random_and_notes_stay_on_the_card(self):
+        chrome = shutil.which("google-chrome") or shutil.which("google-chrome-stable")
+        if not chrome:
+            self.fail("google-chrome is required to check Charts of the day layout")
+        with tempfile.TemporaryDirectory(prefix="cotd-picks-ui-") as tmp:
+            fixture = os.path.join(tmp, "fixture")
+            os.makedirs(os.path.join(fixture, "cotd"))
+            os.symlink(INDEX, os.path.join(fixture, "index.html"))
+            os.symlink(os.path.join(ROOT, "static", "echarts.min.js"), os.path.join(fixture, "echarts.min.js"))
+            os.makedirs(os.path.join(fixture, "sheets"))
+            os.symlink(os.path.join(ROOT, "static", "sheets", "catalog.json"),
+                       os.path.join(fixture, "sheets", "catalog.json"))
+            picks = []
+            for i in range(1, 6):
+                picks.append({
+                    "sheet": "Bot experiments",
+                    "tab": f"pick tab {i}",
+                    "title": f"Pick chart {i}",
+                    "kind": "chart",
+                    "chart_n": 1,
+                    "section": "picks",
+                    "description": f"Pick {i} shows the spread.",
+                    "reason": f"Pick {i} moved today.",
+                    "image": f"cotd/2099-02-02/{i:02d}.png",
+                    "sheet_url": f"https://docs.google.com/spreadsheets/d/sheet/edit#gid={800000 + i}",
+                    "picked": "old picked note must stay off the card",
+                })
+            random_items = []
+            for i in range(1, 5):
+                random_items.append({
+                    "sheet": "Bot experiments",
+                    "tab": f"random tab {i}",
+                    "title": f"Random chart {i}",
+                    "kind": "chart",
+                    "chart_n": 1,
+                    "section": "random",
+                    "image": f"cotd/2099-02-02/{i + 10:02d}.png",
+                    "picked": f"picked note {i} should stay off the card",
+                    "matters": f"matters note {i}",
+                    "know": f"know note {i} stays off the card",
+                    "sheet_url": f"https://docs.google.com/spreadsheets/d/sheet/edit#gid={810000 + i}",
+                })
+            with open(os.path.join(fixture, "cotd", "today.json"), "w", encoding="utf-8") as f:
+                json.dump({
+                    "date": "2099-02-02",
+                    "random": True,
+                    "theme": "5 picks, plus 4 items drawn at random from the sheet library.",
+                    "picks": picks,
+                    "items": random_items,
+                }, f)
+            embedded = os.path.join(tmp, "embedded")
+            os.makedirs(os.path.join(embedded, "cotd"))
+            os.symlink(INDEX, os.path.join(embedded, "index.html"))
+            os.symlink(os.path.join(ROOT, "static", "echarts.min.js"), os.path.join(embedded, "echarts.min.js"))
+            os.makedirs(os.path.join(embedded, "sheets"))
+            os.symlink(os.path.join(ROOT, "static", "sheets", "catalog.json"),
+                       os.path.join(embedded, "sheets", "catalog.json"))
+            with open(os.path.join(embedded, "cotd", "today.json"), "w", encoding="utf-8") as f:
+                json.dump({
+                    "date": "2099-02-03",
+                    "items": picks + random_items,
+                }, f)
+            server = _serve({"fixture": fixture, "embedded": embedded})
+            host = f"http://127.0.0.1:{server.server_address[1]}"
+            try:
+                with Chrome(chrome) as browser:
+                    shown = browser.cards(f"{host}/fixture/index.html")
+                    self.assertEqual(shown["headings"], ["Today's picks", "Random from the library"])
+                    self.assertEqual(shown["picks"], 5)
+                    self.assertEqual(shown["n"], 9, shown["titles"])
+                    self.assertEqual(shown["titles"][0], "1. Pick chart 1")
+                    self.assertEqual(shown["titles"][4], "5. Pick chart 5")
+                    self.assertEqual(shown["titles"][5], "1. Random chart 1")
+                    self.assertEqual(shown["titles"][8], "4. Random chart 4")
+                    self.assertEqual(shown["descs"], [f"Pick {i} shows the spread." for i in range(1, 6)])
+                    self.assertEqual(shown["whys"], [f"Why it was picked\nPick {i} moved today." for i in range(1, 6)])
+                    self.assertEqual(shown["pickTitlePx"], "20px")
+                    self.assertEqual(shown["randTitlePx"], "17px")
+                    self.assertIn("5 picks, plus 4 items drawn at random from the sheet library.", shown["text"])
+                    self.assertNotIn("old picked note", shown["text"])
+                    self.assertNotIn("picked note", shown["text"])
+                    self.assertNotIn("matters note", shown["text"])
+                    self.assertNotIn("know note", shown["text"])
+                    self.assertNotIn("Why it matters", shown["text"])
+                    narrow = browser.cards(f"{host}/fixture/index.html", width=390, height=800, mobile=True)
+                    self.assertEqual(narrow["n"], 9, narrow)
+                    self.assertEqual(narrow["headings"], ["Today's picks", "Random from the library"])
+                    self.assertEqual(narrow["hidden"], 0, narrow)
+                    old = browser.cards(f"{host}/embedded/index.html")
+                    self.assertEqual(old["headings"], ["Today's picks", "Random from the library"])
+                    self.assertEqual(old["picks"], 5)
+                    self.assertEqual(old["titles"][0], "1. Pick chart 1")
+                    self.assertEqual(old["titles"][5], "1. Random chart 1")
+                    self.assertIn("Pick 1 shows the spread.", old["text"])
+                    self.assertIn("Why it was picked", old["text"])
             finally:
                 server.shutdown()
                 server.server_close()
@@ -419,6 +530,7 @@ class CotdRandomTest(unittest.TestCase):
             with open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8") as f:
                 saved = json.load(f)
             self.assertEqual(len(saved["items"]), 5)
+            self.assertNotIn("picks", saved)
             self.assertNotIn("810002", json.dumps(saved))
             refused = subprocess.run(
                 [sys.executable, SCRIPT, os.path.join(repo, "picks.json")],
@@ -478,6 +590,34 @@ class CotdRandomTest(unittest.TestCase):
             drawn = cotd_build.select_edition(repo, "2099-11-02")
             self.assertEqual({(it["gid"], it["kind"]) for it in drawn}, {(42, "chart"), (43, "table")})
 
+    def test_history_uses_items_when_present_and_arrays_otherwise(self):
+        with tempfile.TemporaryDirectory(prefix="cotd-histshape-") as repo:
+            _write_catalog(repo, [_chart(1, "only")])
+            both = os.path.join(repo, "static", "cotd", "2099-04-01")
+            os.makedirs(both)
+            with open(os.path.join(both, "cards.json"), "w", encoding="utf-8") as f:
+                json.dump({
+                    "date": "2099-04-01",
+                    "items": [{"book": "bot1", "gid": 11, "chart_n": 1, "tab": "in items", "title": "in items"}],
+                    "picks": [{"book": "bot1", "gid": 22, "chart_n": 1, "tab": "only in array", "title": "only in array"}],
+                    "random": [{"book": "bot1", "gid": 33, "chart_n": 1, "tab": "also array", "title": "also array"}],
+                }, f)
+            arrays = os.path.join(repo, "static", "cotd", "2099-04-02")
+            os.makedirs(arrays)
+            with open(os.path.join(arrays, "cards.json"), "w", encoding="utf-8") as f:
+                json.dump({
+                    "date": "2099-04-02",
+                    "picks": [{"book": "bot1", "gid": 44, "chart_n": 2, "section": "picks", "tab": "pick", "title": "pick"}],
+                    "random": [{"book": "bot1", "gid": 55, "chart_n": 1, "section": "random", "tab": "rand", "title": "rand"}],
+                }, f)
+            recent = cotd_build.recent_charts(repo, "2099-04-03")
+            got = {(row["gid"], row["chart_n"]) for row in recent}
+            self.assertIn((11, 1), got)
+            self.assertNotIn((22, 1), got)
+            self.assertNotIn((33, 1), got)
+            self.assertIn((44, 2), got)
+            self.assertIn((55, 1), got)
+
     def test_empty_pool_publishes_an_empty_edition(self):
         with tempfile.TemporaryDirectory(prefix="cotd-empty-") as repo:
             _write_catalog(repo, [_chart(1547332232, "161 Nvidia P-S and P-E")])
@@ -485,6 +625,132 @@ class CotdRandomTest(unittest.TestCase):
             self.assertEqual(doc["items"], [])
             self.assertEqual(doc["theme"], "0 items drawn at random from the sheet library.")
             self.assertTrue(doc["random"])
+
+
+class CotdPicksTest(unittest.TestCase):
+    def test_picks_are_validated_and_kept_out_of_the_random_twenty(self):
+        tabs = [_chart(500000 + i, "Series %02d" % i) for i in range(1, 31)]
+        tabs.append({"book": "bot1", "tab": "plain table", "gid": 500060, "charts": [], "chartList": []})
+        tabs.append({"book": "bot1", "tab": "two charts", "gid": 500050, "charts": ["Alpha", "Beta"],
+                     "chartList": [{"n": 1, "title": "Alpha"}, {"n": 2, "title": "Beta"}]})
+        tabs.append(_chart(1547332232, "161 Nvidia P-S and P-E"))
+        tabs.append(_chart(500070, "Chart 2"))
+        with tempfile.TemporaryDirectory(prefix="cotd-picks-") as repo:
+            _write_catalog(repo, tabs)
+            _write_cards(repo, "2099-12-02", [
+                {"book": "bot1", "gid": 500001, "chart_n": 1, "tab": "Series 01", "title": "Series 01"},
+            ])
+            from PIL import Image
+            blank = os.path.join(repo, "static", "sheets", "full", "bot1", "500020.png")
+            os.makedirs(os.path.dirname(blank), exist_ok=True)
+            Image.new("RGB", (40, 24), "white").save(blank)
+
+            def row(gid, **kw):
+                item = {"book": "bot1", "gid": gid, "description": "Shows %s." % gid, "reason": "Chosen for %s." % gid}
+                item.update(kw)
+                return item
+
+            def five(*extra):
+                base = [row(500010), row(500011), row(500012), row(500013), row(500014)]
+                for i, item in enumerate(extra):
+                    base[i] = item
+                return base
+
+            def refuse(rows, needle):
+                path = os.path.join(repo, "bad-picks.json")
+                with open(path, "w", encoding="utf-8") as f:
+                    json.dump(rows, f)
+                with self.assertRaises(SystemExit) as caught:
+                    cotd_build.load_picks(path, repo, "2099-12-04")
+                self.assertIn(needle, str(caught.exception))
+                self.assertFalse(os.path.exists(os.path.join(repo, "static", "cotd", "today.json")))
+
+            refuse(five()[:4], "exactly 5")
+            refuse({"picks": five()[:4]}, "exactly 5")
+            refuse({"nope": True}, "JSON array")
+            refuse(five(row(1547332232)), "excluded")
+            refuse(five(row(999999)), "unknown tab")
+            refuse(five(row(1, book="no-such-book")), "unknown book")
+            refuse(five(row(500020)), "blank")
+            refuse(five(row(500070)), "no title")
+            refuse(five(row(500001)), "2099-12-02")
+            refuse(five(row(500010, description="  ")), "description")
+            refuse(five(row(500010, reason=12)), "reason")
+            refuse(five(row(500010), row(500010)), "repeats pick 1")
+            refuse(five(row(500050)), "set chart")
+            refuse(five(row(500050, chart=9)), "chart 9")
+            refuse(five(row(500010, chart="2")), "integer")
+            missing = os.path.join(repo, "missing-picks.json")
+            with self.assertRaises(SystemExit) as caught:
+                cotd_build.load_picks(missing, repo, "2099-12-04")
+            self.assertIn("could not read picks file", str(caught.exception))
+
+            good = [
+                row(500010),
+                row(500011, chart=1),
+                row(500060),
+                row(500050, chart=2),
+                row(500012, description="Series twelve in one sentence.", reason="It belongs in today's five."),
+            ]
+            path = os.path.join(repo, "picks.json")
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump({"picks": good}, f)
+            run = subprocess.run(
+                [sys.executable, SCRIPT, "--repo", repo, "--date", "2099-12-04", "--picks", path, "--keep-old", "0"],
+                capture_output=True, text=True)
+            self.assertEqual(run.returncode, 0, run.stdout + "\n" + run.stderr)
+            with open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8") as f:
+                doc = json.load(f)
+            self.assertTrue(doc["random"])
+            self.assertEqual(len(doc["picks"]), 5)
+            self.assertEqual(len(doc["items"]), 20)
+            self.assertTrue(doc["theme"].startswith("5 picks, plus 20 items"))
+            pick_keys = {(int(item["sheet_url"].rsplit("gid=", 1)[1]), item["chart_n"]) for item in doc["picks"]}
+            random_keys = {(int(item["sheet_url"].rsplit("gid=", 1)[1]), item["chart_n"]) for item in doc["items"]}
+            self.assertEqual(pick_keys, {(500010, 1), (500011, 1), (500060, 1), (500050, 2), (500012, 1)})
+            self.assertTrue(pick_keys.isdisjoint(random_keys))
+            self.assertNotIn((500001, 1), random_keys)
+            self.assertNotIn((1547332232, 1), random_keys)
+            self.assertNotIn((500020, 1), random_keys)
+            self.assertNotIn((500070, 1), random_keys)
+            table = next(item for item in doc["picks"] if item["chart_n"] == 1 and item["kind"] == "table")
+            self.assertEqual(table["title"], "plain table")
+            self.assertEqual(table["section"], "picks")
+            self.assertNotIn("image", table)
+            noted = next(item for item in doc["picks"] if "gid=500012" in item["sheet_url"])
+            self.assertEqual(noted["description"], "Series twelve in one sentence.")
+            self.assertEqual(noted["reason"], "It belongs in today's five.")
+            for item in doc["items"]:
+                self.assertEqual(item["section"], "random")
+                self.assertNotIn("description", item)
+                self.assertNotIn("reason", item)
+                self.assertNotIn("picked", item)
+            panel = next(item for item in doc["picks"] if item["chart_n"] == 2)
+            self.assertEqual(panel["title"], "Beta")
+            with open(os.path.join(repo, "static", "cotd", "2099-12-04", "cards.json"), encoding="utf-8") as f:
+                cards = json.load(f)
+            self.assertEqual(len(cards["items"]), 25)
+            self.assertEqual(len(cards["picks"]), 5)
+            self.assertEqual(len(cards["random"]), 20)
+            self.assertEqual(cards["items"][0]["section"], "picks")
+            self.assertEqual(cards["picks"][0]["description"], cards["items"][0]["description"])
+            self.assertEqual(cards["picks"][3]["chart_n"], 2)
+            self.assertEqual(cotd_build.cards_from_published(doc)["items"], cards["items"])
+            again = subprocess.run(
+                [sys.executable, SCRIPT, "--repo", repo, "--date", "2099-12-04", "--picks", path, "--keep-old", "0"],
+                capture_output=True, text=True)
+            self.assertEqual(again.returncode, 0, again.stdout + "\n" + again.stderr)
+            with open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8") as f:
+                saved = json.load(f)
+            self.assertEqual([item["title"] for item in saved["picks"]], [item["title"] for item in doc["picks"]])
+            self.assertEqual([item["title"] for item in saved["items"]], [item["title"] for item in doc["items"]])
+            later = cotd_build.select_edition(repo, "2099-12-05")
+            later_keys = {(it["gid"], it["chart_n"]) for it in later}
+            self.assertTrue(pick_keys.isdisjoint(later_keys))
+            self.assertNotIn((500001, 1), later_keys)
+            # The other panel on the picked tab stays available once chart 2 has aged out of the window,
+            # and it stays available the next day too because only chart 2 was picked.
+            self.assertIn((500050, 1), random_keys | later_keys)
 
 
 def _serve(roots):
@@ -587,6 +853,8 @@ _CARD_JS = r"""
 (() => {
   const root = document.getElementById('cotd');
   const cards = [...root.querySelectorAll('.card')];
+  const pick = root.querySelector('.card.pick h3');
+  const rand = root.querySelector('.card:not(.pick) h3');
   return {
     n: cards.length,
     display: getComputedStyle(root).display,
@@ -597,6 +865,12 @@ _CARD_JS = r"""
     tables: root.querySelectorAll('[data-kind=table]').length,
     previews: root.querySelectorAll('.tablepreview').length,
     hidden: cards.filter(c => getComputedStyle(c).display === 'none' || c.offsetHeight === 0).length,
+    headings: [...root.querySelectorAll('h3.sec')].map(h => h.textContent),
+    picks: root.querySelectorAll('.card.pick').length,
+    whys: [...root.querySelectorAll('.why')].map(n => n.innerText),
+    descs: [...root.querySelectorAll('.desc')].map(n => n.textContent),
+    pickTitlePx: pick ? getComputedStyle(pick).fontSize : '',
+    randTitlePx: rand ? getComputedStyle(rand).fontSize : '',
     text: root.innerText,
   };
 })()

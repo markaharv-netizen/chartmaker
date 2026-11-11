@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
 """Build a "Charts of the day" edition for Chartmaker. Runs on the box, not on Render.
 
-Each edition is a uniform random sample of 20 items from the sheet catalog.
-An item is one chart (a catalog chartList entry) or one chartless table tab.
-There is no ranking and no written note about why an item was chosen. When fewer
-than 20 items are eligible, the edition contains however many remain. More than
-20 is an error.
+Each edition has two sections. "Today's picks" is 5 charts or table tabs supplied
+by the curator in a picks file, each with a description and a reason. "Random from
+the library" is a uniform random sample of 20 items from the sheet catalog, and
+those 20 never repeat one of the 5 picks. An item is one chart (a catalog chartList
+entry) or one chartless table tab. When fewer than 20 items are eligible, the
+random section contains however many remain. More than 20 random items is an error.
+With no picks file, the edition is the random section only, as before.
 
-Usage:  python3 scripts/cotd_build.py [--repo /workspace/chartmaker] [--date YYYY-MM-DD] [--keep-old N]
+Usage:  python3 scripts/cotd_build.py [--picks picks.json] [--repo /workspace/chartmaker] [--date YYYY-MM-DD] [--keep-old N]
 
 The edition date defaults to today in America/New_York. The draw is seeded with
-that date, so a second run on the same day, with the same catalog and the same
-three previous editions, writes the same 20 items. Pass --seed only to reproduce
-a draw in a test.
+that date, so a second run on the same day, with the same catalog, the same picks,
+and the same three previous editions, writes the same 20 random items. Pass --seed
+only to reproduce a draw in a test.
 
 Each chosen chart or table uses a library preview when one exists:
 static/sheets/full/<book>/<gid>.png (chart n uses <gid>_n.png), otherwise the
@@ -20,8 +22,11 @@ tab thumbnail for chart 1 or a table. The image is fitted onto a white 1600x900
 canvas and written to static/cotd/<date>/NN.png. A table with no preview is still
 a card, with a link to the tab. static/cotd/today.json is then rewritten.
 The same run writes static/cotd/<date>/cards.json (book, gid, chart_n, tab, title).
-When the edition date is D, an item that appears in D-1, D-2, or D-3 is left out
-of the pool. A missing cards.json for one of those days excludes nothing.
+Picks are in that list too, with section "picks", description, and reason, and the
+file also carries picks and random arrays. An older cards.json that has only items
+still counts. When the edition date is D, an item that appears in D-1, D-2, or D-3
+is left out of the pool, including those days' picks. A missing cards.json for one
+of those days excludes nothing.
 Identity is book + gid + chart_n when both sides record chart_n, and book + gid
 when either side does not.
 """
@@ -31,9 +36,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sheets_catalog
 
 W, H = 1600, 900
-# Draw this many items. Publish fewer when the eligible pool is smaller.
+# Draw this many random items. Publish fewer when the eligible pool is smaller.
 EDITION_MAX = 20
 EDITION_SIZE = EDITION_MAX
+# Curated section. A picks file must contain exactly this many, or the build stops.
+PICKS_SIZE = 5
 # Charts of the day only. These tabs stay in the sheet catalog, full PNGs, and thumbnails.
 # ("bot2", 645072508) is BX2-069, tab "69 Mark MSTR red dot tracker", chart
 # "Mark's Red Dot Tracker: MSTR". The tab still exists. It is retired from this edition only.
@@ -122,6 +129,25 @@ def pick_chart_key(item):
 def cards_path(repo, date):
     return os.path.join(repo, "static", "cotd", date, "cards.json")
 
+def edition_card_rows(doc):
+    """Cards in one edition file.
+
+    `items` is the whole edition when it is present, including picks. A file that
+    has no items list is read from `picks` and then `random`, so either shape counts
+    toward the 3-day history. An items list wins, and the arrays are not added again.
+    """
+    if not isinstance(doc, dict):
+        return []
+    items = doc.get("items")
+    if isinstance(items, list):
+        return items
+    rows = []
+    for key in ("picks", "random"):
+        block = doc.get(key)
+        if isinstance(block, list):
+            rows.extend(block)
+    return rows
+
 def load_cards(repo, date):
     """Cards recorded for one edition. A missing or unreadable file excludes nothing."""
     path = cards_path(repo, date)
@@ -132,11 +158,8 @@ def load_cards(repo, date):
             doc = json.load(f)
     except (OSError, ValueError):
         return []
-    items = doc.get("items") if isinstance(doc, dict) else None
-    if not isinstance(items, list):
-        return []
     out = []
-    for it in items:
+    for it in edition_card_rows(doc):
         if not isinstance(it, dict):
             continue
         book = str(it.get("book") or "").strip()
@@ -173,7 +196,11 @@ def repeated_recent(item, recent):
     return None
 
 def card_record(item):
-    """One cards.json row. chart_n is omitted when this pick does not know it."""
+    """One cards.json row. chart_n is omitted when this pick does not know it.
+
+    section, description, and reason are recorded only when this edition has picks.
+    A random-only card stays book, gid, chart_n, tab, title, and kind.
+    """
     card = {}
     key = pick_chart_key(item)
     if key:
@@ -185,21 +212,54 @@ def card_record(item):
     card["title"] = item.get("title") or ""
     if item.get("kind") in ("chart", "table"):
         card["kind"] = item["kind"]
+    if item.get("section") in ("picks", "random"):
+        card["section"] = item["section"]
+    if item.get("section") == "picks":
+        card["description"] = str(item.get("description") or "").strip()
+        card["reason"] = str(item.get("reason") or "").strip()
     return card
 
+def as_recent(item, date):
+    """A history row for one item, used to block the same chart later in the run."""
+    key = pick_chart_key(item)
+    if not key:
+        return None
+    return {"date": date, "book": key[0], "gid": key[1], "chart_n": key[2], "tab": item.get("tab") or ""}
+
+def _published_card(it, section=None):
+    """One cards.json row rebuilt from a today.json card. sheet_url carries the gid."""
+    if not isinstance(it, dict):
+        return None
+    url = str(it.get("sheet_url") or "")
+    m = re.search(r"/spreadsheets/d/([^/]+)/[^#]*#gid=(\d+)", url)
+    row = {"spreadsheetId": m.group(1) if m else "", "gid": int(m.group(2)) if m else "",
+           "chart_n": it.get("chart_n"), "tab": it.get("tab") or "", "title": it.get("title") or ""}
+    if it.get("kind") in ("chart", "table"):
+        row["kind"] = it["kind"]
+    if section in ("picks", "random"):
+        row["section"] = section
+    if section == "picks":
+        row["description"] = it.get("description") or ""
+        row["reason"] = it.get("reason") or ""
+    return card_record(row)
+
 def cards_from_published(doc):
-    """Card list for an edition already stored as today.json (sheet_url carries the gid)."""
+    """Card list for an edition already stored as today.json (sheet_url carries the gid).
+
+    A today.json with no picks array is items only, the same document older editions
+    wrote. A split edition puts the picks back into items so the 3-day history sees them.
+    """
+    picks = doc.get("picks") if isinstance(doc, dict) and isinstance(doc.get("picks"), list) else None
+    if picks:
+        pick_cards = [c for c in (_published_card(it, "picks") for it in picks) if c]
+        random_raw = [it for it in (doc.get("items") or []) if not (isinstance(it, dict) and it.get("section") == "picks")]
+        random_cards = [c for c in (_published_card(it, "random") for it in random_raw) if c]
+        return {"date": doc.get("date"), "items": pick_cards + random_cards, "picks": pick_cards, "random": random_cards}
     items = []
     for it in doc.get("items") or []:
-        if not isinstance(it, dict):
-            continue
-        url = str(it.get("sheet_url") or "")
-        m = re.search(r"/spreadsheets/d/([^/]+)/[^#]*#gid=(\d+)", url)
-        row = {"spreadsheetId": m.group(1) if m else "", "gid": int(m.group(2)) if m else "",
-               "chart_n": it.get("chart_n"), "tab": it.get("tab") or "", "title": it.get("title") or ""}
-        if it.get("kind") in ("chart", "table"):
-            row["kind"] = it["kind"]
-        items.append(card_record(row))
+        card = _published_card(it)
+        if card:
+            items.append(card)
     return {"date": doc.get("date"), "items": items}
 
 def norm_title(s):
@@ -433,16 +493,175 @@ def today_et():
     from zoneinfo import ZoneInfo
     return datetime.datetime.now(ZoneInfo("America/New_York")).date().isoformat()
 
-def theme_line(n):
+def _find_tab(catalog, book, gid):
+    for tab in catalog.get("tabs") or []:
+        if not isinstance(tab, dict) or str(tab.get("book") or "").strip() != book:
+            continue
+        try:
+            if int(tab.get("gid")) == int(gid):
+                return tab
+        except (TypeError, ValueError):
+            continue
+    return None
+
+def explain_ineligible(book, gid, chart_n, catalog, repo):
+    """Why this chart is outside the pool, or None when a pick of it is allowed.
+
+    The checks match pool_items: excluded tabs, an unknown book or gid, a chart
+    index that is not on the tab, an untitled chart, and a blank library image.
+    """
+    books = {}
+    for b in catalog.get("books") or []:
+        if isinstance(b, dict) and b.get("id"):
+            books[str(b["id"])] = b
+    if book not in books:
+        return "unknown book %s" % book
+    tab = _find_tab(catalog, book, gid)
+    if tab is None:
+        return "unknown tab %s gid %s" % (book, gid)
+    name = tab.get("tab") or book
+    if sheets_catalog.tab_excluded(book, gid) or (book, gid) in COTD_EXCLUDED:
+        return "excluded tab (%s gid %s) and cannot be picked" % (name, gid)
+    charts = chart_rows(tab)
+    chosen = chart_n
+    if chosen is None:
+        if len(charts) == 1:
+            chosen = charts[0]["n"]
+        elif not charts:
+            return "tab %s (gid %s) has nothing to pick" % (name, gid)
+        else:
+            listed = ", ".join("%s (%s)" % (c["n"], c["label"]) for c in charts)
+            return "tab %s (gid %s) has more than one chart; set chart to one of: %s" % (name, gid, listed)
+    match = next((c for c in charts if c["n"] == chosen), None)
+    if match is None:
+        return "chart %s is not on %s (gid %s)" % (chosen, name, gid)
+    kind = "table" if match.get("synthetic") else "chart"
+    if kind == "chart" and sheets_catalog.untitled_chart_title(match.get("title")):
+        return "chart %s on %s (gid %s) has no title and cannot be picked" % (chosen, name, gid)
+    src = library_preview(repo, book, gid, chosen) if repo and kind == "chart" else None
+    if kind == "chart" and src and file_is_blank(src):
+        return "chart %s on %s (gid %s) is blank and cannot be picked" % (chosen, name, gid)
+    if kind == "chart" and repo and sheets_catalog.untitled_chart_title(match.get("label")) and not src:
+        return "chart %s on %s (gid %s) has no title of its own and cannot be picked" % (chosen, name, gid)
+    return None
+
+def parse_pick_gid(value):
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, float):
+        if not value.is_integer():
+            return None
+        return int(value)
+    if isinstance(value, int):
+        return value
+    if isinstance(value, str) and re.fullmatch(r"\d+", value.strip()):
+        return int(value.strip())
+    return None
+
+def parse_pick_chart(raw, index):
+    """The optional chart index, or None when the curator left it out."""
+    if "chart" not in raw or raw.get("chart") in (None, ""):
+        return None
+    n = parse_chart_n(raw.get("chart"))
+    if n in (None, "bad"):
+        sys.exit("pick %d: chart must be an integer from 1 to 99" % index)
+    return n
+
+def resolve_pick(raw, index, catalog, pool, repo):
+    """One curator pick turned into a pool item, or SystemExit with a pick-numbered reason."""
+    if not isinstance(raw, dict):
+        sys.exit("pick %d: must be an object with book, gid, description, and reason" % index)
+    book = str(raw.get("book") or "").strip()
+    if not book:
+        sys.exit("pick %d: missing book" % index)
+    gid = parse_pick_gid(raw.get("gid"))
+    if gid is None:
+        sys.exit("pick %d: gid must be an integer" % index)
+    description = raw.get("description")
+    reason = raw.get("reason")
+    if not isinstance(description, str) or not description.strip():
+        sys.exit("pick %d: description must be a non-empty string" % index)
+    if not isinstance(reason, str) or not reason.strip():
+        sys.exit("pick %d: reason must be a non-empty string" % index)
+    chart_n = parse_pick_chart(raw, index)
+    why = explain_ineligible(book, gid, chart_n, catalog, repo)
+    if why:
+        sys.exit("pick %d: %s" % (index, why))
+    hits = [it for it in pool if it["book"] == book and it["gid"] == gid]
+    if chart_n is not None:
+        hits = [it for it in hits if it["chart_n"] == chart_n]
+    if len(hits) != 1:
+        sys.exit("pick %d: %s gid %s is not eligible" % (index, book, gid))
+    item = dict(hits[0])
+    item["description"] = description.strip()
+    item["reason"] = reason.strip()
+    item["section"] = "picks"
+    return item
+
+def load_picks(path, repo, date):
+    """Read exactly 5 picks. Reject excluded, blank, unknown, and recent repeats.
+
+    The file is a JSON array of {book, gid, chart, description, reason}. chart is
+    the catalog chart number and may be omitted when the tab has one chart or is
+    a table. An object {"picks": [...]} is accepted too.
+    """
+    try:
+        with open(path, encoding="utf-8") as f:
+            doc = json.load(f)
+    except OSError as e:
+        sys.exit("could not read picks file %s: %s" % (path, e))
+    except ValueError as e:
+        sys.exit("could not read picks file %s: %s" % (path, e))
+    if isinstance(doc, dict) and isinstance(doc.get("picks"), list):
+        rows = doc["picks"]
+    elif isinstance(doc, list):
+        rows = doc
+    else:
+        sys.exit("picks file must be a JSON array of {book, gid, chart, description, reason}")
+    if len(rows) != PICKS_SIZE:
+        sys.exit("picks file must contain exactly %d picks, got %d" % (PICKS_SIZE, len(rows)))
+    catalog = load_catalog_doc(repo)
+    if not catalog:
+        sys.exit("missing static/sheets/catalog.json")
+    pool = pool_items(catalog, repo)
+    recent = recent_charts(repo, date)
+    resolved = []
+    for i, raw in enumerate(rows, 1):
+        item = resolve_pick(raw, i, catalog, pool, repo)
+        prev = repeated_recent(item, recent)
+        if prev:
+            chart = item.get("chart_n")
+            extra = (" chart %s" % chart) if chart else ""
+            sys.exit("pick %d repeats a chart from %s (%s gid %s%s) and cannot be picked"
+                     % (i, prev["date"], item.get("tab"), item.get("gid"), extra))
+        for j, earlier in enumerate(resolved, 1):
+            if repeated_recent(item, [as_recent(earlier, date)]):
+                sys.exit("pick %d repeats pick %d (%s gid %s chart %s)"
+                         % (i, j, item.get("tab"), item.get("gid"), item.get("chart_n")))
+        resolved.append(item)
+    return resolved
+
+def theme_line(n, picks=0):
     noun = "item" if n == 1 else "items"
+    if picks:
+        pick_noun = "pick" if picks == 1 else "picks"
+        return "%d %s, plus %d %s drawn at random from the sheet library." % (picks, pick_noun, n, noun)
     return "%d %s drawn at random from the sheet library." % (n, noun)
 
-def select_edition(repo, date, seed=None, size=None):
-    """Uniform sample of up to `size` eligible items. The list order is the draw order."""
+def select_edition(repo, date, seed=None, size=None, block=None):
+    """Uniform sample of up to `size` eligible items. The list order is the draw order.
+
+    block is today's picks. Those charts leave the random pool, on top of the
+    previous three editions. Omitting block keeps the draw the random-only edition uses.
+    """
     catalog = load_catalog_doc(repo)
     if not catalog:
         sys.exit("missing static/sheets/catalog.json")
     recent = recent_charts(repo, date)
+    for extra in block or []:
+        row = as_recent(extra, date)
+        if row:
+            recent.append(row)
     eligible = [it for it in pool_items(catalog, repo) if not repeated_recent(it, recent)]
     k = EDITION_SIZE if size is None else int(size)
     k = max(0, min(k, len(eligible)))
@@ -472,14 +691,44 @@ def validate(items, recent=None):
 def publish(P, repo, keep_old):
     d = P["date"]
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", d): sys.exit("date must be YYYY-MM-DD")
-    items = P["items"]
+    picks = [dict(x) for x in (P.get("picks") or [])]
+    items = [dict(x) for x in P["items"]]
     # Resolve chart_n before the repeat check so a single-chart tab matches chart 1 in history.
-    assign_chart_ns(items, load_catalog(repo))
-    validate(items, recent_charts(repo, d))
+    catalog = load_catalog(repo)
+    assign_chart_ns(picks, catalog)
+    assign_chart_ns(items, catalog)
+    recent = recent_charts(repo, d)
+    if picks and len(picks) != PICKS_SIZE:
+        sys.exit("need exactly %d picks, got %d" % (PICKS_SIZE, len(picks)))
+    for i, pick in enumerate(picks, 1):
+        if not str(pick.get("description") or "").strip() or not str(pick.get("reason") or "").strip():
+            sys.exit("pick %d needs a description and a reason" % i)
+        pick["description"] = str(pick["description"]).strip()
+        pick["reason"] = str(pick["reason"]).strip()
+        pick["section"] = "picks"
+    if picks:
+        for it in items:
+            it["section"] = "random"
+    validate(items, recent)
+    if picks:
+        validate(picks, recent)
+        seen = []
+        for i, pick in enumerate(picks, 1):
+            if repeated_recent(pick, seen):
+                sys.exit("pick %d repeats an earlier pick (%s gid %s)" % (i, pick.get("tab"), pick.get("gid")))
+            row = as_recent(pick, d)
+            if row:
+                seen.append(row)
+        blocked = [row for row in (as_recent(p, d) for p in picks) if row]
+        for i, it in enumerate(items, 1):
+            if repeated_recent(it, blocked):
+                sys.exit("item %d repeats one of today's picks (%s gid %s) and cannot be published"
+                         % (i, it.get("tab"), it.get("gid")))
+    ordered = picks + items
     root = os.path.join(repo, "static", "cotd"); out = os.path.join(root, d)
     tmp = out + ".tmp"; shutil.rmtree(tmp, ignore_errors=True); os.makedirs(tmp)
     rows, card_items = [], []
-    for x in items:
+    for x in ordered:
         key = pick_chart_key(x)
         src = str(x.get("png") or "").strip()
         from_library = False
@@ -487,6 +736,9 @@ def publish(P, repo, keep_old):
             src = library_preview(repo, key[0], key[1], key[2] or 1) or ""
             from_library = bool(src)
         if from_library and src and file_is_blank(src):
+            if x.get("section") == "picks":
+                shutil.rmtree(tmp, ignore_errors=True)
+                sys.exit("pick image is blank (%s gid %s) and cannot be published" % (x.get("tab"), x.get("gid")))
             print(f"--  blank image, skipped  {x['sheet']} / {x['tab']}")
             continue
         fn = f"{len(rows) + 1:02d}.png"
@@ -513,17 +765,33 @@ def publish(P, repo, keep_old):
             row["kind"] = x["kind"]
         if x.get("chart_n"):
             row["chart_n"] = x["chart_n"]
+        if x.get("section") == "picks":
+            row["section"] = "picks"
+            row["description"] = x.get("description") or ""
+            row["reason"] = x.get("reason") or ""
+        elif x.get("section") == "random":
+            row["section"] = "random"
         rows.append(row)
         card_items.append(card_record(x))
         if image:
             print(f"{fn}  {nbytes//1024} KB  {x['sheet']} / {x['tab']}")
         else:
             print(f"--  no preview  {x['sheet']} / {x['tab']}")
+    pick_rows = [r for r in rows if r.get("section") == "picks"]
+    random_rows = [r for r in rows if r.get("section") != "picks"]
+    cards_doc = {"date": d, "items": card_items}
+    if picks:
+        cards_doc["picks"] = [c for c in card_items if c.get("section") == "picks"]
+        cards_doc["random"] = [c for c in card_items if c.get("section") == "random"]
     with open(os.path.join(tmp, "cards.json"), "w", encoding="utf-8") as f:
-        json.dump({"date": d, "items": card_items}, f, indent=1, ensure_ascii=False)
+        json.dump(cards_doc, f, indent=1, ensure_ascii=False)
         f.write("\n")
     shutil.rmtree(out, ignore_errors=True); os.rename(tmp, out)
-    doc = {"date": d, "theme": (P.get("theme") or "").strip(), "items": rows}
+    # items stays the random list, or the whole edition when there are no picks.
+    # Older editions have no picks array and the page renders items as one list.
+    doc = {"date": d, "theme": (P.get("theme") or "").strip(), "items": random_rows if picks else rows}
+    if pick_rows:
+        doc["picks"] = pick_rows
     if P.get("random"):
         doc["random"] = True
     t = os.path.join(root, "today.json")
@@ -532,21 +800,36 @@ def publish(P, repo, keep_old):
     if keep_old:
         ed = sorted(x for x in os.listdir(root) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", x))
         for old in ed[:-keep_old]: shutil.rmtree(os.path.join(root, old)); print("removed old edition", old)
-    print("wrote", t, "(%d items)" % len(rows))
+    if picks:
+        print("wrote", t, "(%d picks, %d random)" % (len(pick_rows), len(random_rows)))
+    else:
+        print("wrote", t, "(%d items)" % len(rows))
     return doc
 
-def publish_random(repo, date, keep_old, seed=None):
-    """Draw the edition and write it. This is the daily path."""
+def publish_random(repo, date, keep_old, seed=None, picks=None):
+    """Draw the edition and write it. This is the daily path.
+
+    picks is the curator's 5 charts, already checked against the catalog. They
+    are published first and removed from the random draw. No picks file means
+    a random-only edition, with no picks section.
+    """
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
         sys.exit("date must be YYYY-MM-DD")
-    items = select_edition(repo, date, seed)
-    return publish({"date": date, "theme": theme_line(len(items)), "random": True, "items": items}, repo, keep_old)
+    picks = list(picks or [])
+    items = select_edition(repo, date, seed, block=picks)
+    return publish({
+        "date": date,
+        "theme": theme_line(len(items), len(picks)),
+        "random": True,
+        "items": items,
+        "picks": picks,
+    }, repo, keep_old)
 
 def self_test():
     import tempfile
     bot1 = "1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY"
     bot2 = "1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ"
-    assert EDITION_MAX == 20 and EDITION_SIZE == 20
+    assert EDITION_MAX == 20 and EDITION_SIZE == 20 and PICKS_SIZE == 5
     assert ("bot2", 645072508) in COTD_EXCLUDED
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1547332232})
     assert pick_excluded({"spreadsheetId": bot1, "gid": 643299192})
@@ -995,15 +1278,20 @@ def random_self_test():
 
 def main():
     here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    ap = argparse.ArgumentParser(description="Draw a Charts of the day edition at random from the sheet catalog.")
+    ap = argparse.ArgumentParser(description="Draw a Charts of the day edition from the sheet catalog.")
     ap.add_argument("--repo", default=here)
     ap.add_argument("--date", default=None, help="Edition date YYYY-MM-DD. Default: today in America/New_York.")
     ap.add_argument("--seed", default=None, help="Override the draw seed. Default: the edition date.")
+    ap.add_argument("--picks", default=None, metavar="FILE",
+                    help="JSON array of exactly 5 picks: [{book, gid, chart, description, reason}]. "
+                         "Omit for a random-only edition.")
     ap.add_argument("--keep-old", type=int, default=7, help="keep this many dated edition folders (0 = keep all)")
     ap.add_argument("--self-test", action="store_true")
     a = ap.parse_args()
     if a.self_test:
         self_test(); return
-    publish_random(a.repo, a.date or today_et(), a.keep_old, seed=a.seed)
+    date = a.date or today_et()
+    picks = load_picks(a.picks, a.repo, date) if a.picks else None
+    publish_random(a.repo, date, a.keep_old, seed=a.seed, picks=picks)
 
 if __name__ == "__main__": main()
