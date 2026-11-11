@@ -78,6 +78,16 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #brief .thinbox p{margin:0 0 6px;font-size:13px;color:#92400E;line-height:1.45}
 #brief .thinbox a{color:#92400E}
 #brief .more{margin:8px 0 0;font-size:13px;color:#6B7280}
+#brief .group{margin:12px 0 4px;font-size:12px;letter-spacing:.3px;text-transform:uppercase;color:#6B7280;font-weight:600}
+#brief .group:first-child{margin-top:0}
+#brief .tag{display:inline-block;margin-left:6px;font-size:11px;letter-spacing:.3px;text-transform:uppercase;color:#1E3A5F;background:#E8EEF5;border-radius:999px;padding:1px 7px;font-weight:600;white-space:nowrap}
+#brief .filing{border-top:1px solid #e5e7eb;padding:8px 0}
+#brief .filing .chghead{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:4px 8px;align-items:baseline}
+#brief .filing .chghead a{font-weight:700;color:#111;text-decoration:none;font-size:15px}
+#brief .filing .chghead a:hover{text-decoration:underline}
+#brief details.note{margin:2px 0 6px;font-size:13px;color:#374151;line-height:1.45}
+#brief details.note summary{cursor:pointer}
+#brief details.note p{margin:6px 0 0}
 #brief .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 #brief .card{border:1px solid #e5e7eb;border-radius:6px;overflow:hidden;background:#fff}
 #brief .card img{width:100%;height:auto;display:block;background:#f4f4f5}
@@ -1956,7 +1966,7 @@ function briefPts(n){if(n==null||!isFinite(+n))return '—';const v=+n;return (v
 function briefBull(v){if(v==null||!isFinite(+v))return '—';return (v*100).toFixed(1)+'%'}
 function briefBtc(v){if(v==null||!isFinite(+v))return '—';const n=+v;if(Math.abs(n-Math.round(n))<1e-6)return Math.round(n).toLocaleString('en-US');return n.toLocaleString('en-US',{maximumFractionDigits:4})}
 function briefDelta(v){if(v==null||!isFinite(+v))return '';const n=+v;const body=briefBtc(Math.abs(n));return (n>0?'+':n<0?'−':'')+body}
-function briefSection(title,href,asof){return `<section><h3><a href="${escHtml(href)}">${escHtml(title)}</a></h3><p class="asof">${asof}</p>`}
+function briefSection(title,href,asof,id){return `<section${id?' id="'+id+'"':''}><h3><a href="${escHtml(href)}">${escHtml(title)}</a></h3><p class="asof">${asof}</p>`}
 function briefChanges(list){return (list||[]).map(c=>`<div class="chg"><div class="chghead"><a href="${escHtml(c.href||'/?tab=pt')}">${escHtml(c.ticker)}</a><span class="when">${escHtml(c.dateLabel||'')}</span></div><ul>${(c.lines||[]).map(line=>'<li>'+escHtml(line)+'</li>').join('')}</ul></div>`).join('')}
 function briefRender(doc){const E=escHtml,pt=doc.priceTargets||{},paper=doc.paper||{},sent=doc.sentiment||{},tre=doc.treasury||{},charts=doc.charts||{};
   const ptWhen=`As of ${E(pt.asOfLabel||'—')}`+(pt.sinceLabel?` · changes since ${E(pt.sinceLabel)}`:'');
@@ -1971,11 +1981,18 @@ function briefRender(doc){const E=escHtml,pt=doc.priceTargets||{},paper=doc.pape
   const entered=(sent.entered||[]).map(s=>`<a class="row" href="${E(s.href)}"><span><b>${E(s.symbol)}</b> <span class="name">${E(s.name||'')}</span></span><span class="move">New</span></a>`).join('');
   const sentWhen=`Board as of ${E(sent.asOfLabel||'—')}`+(sent.previousLabel?` · versus ${E(sent.previousLabel)}`:'');
   const sentBody=sent.empty&&!thin&&!entered?`<div class="empty">${E(sent.emptyMessage||'No sentiment change.')}</div>`:(swings||'<div class="empty">No swings with a full enough sample.</div>')+more+entered+thinBox;
-  const holds=(tre.changes||[]).map(c=>{const cls=c.delta>0?'up':c.delta<0?'down':'';const rank=c.previousRank&&c.rank&&c.previousRank!==c.rank?` · rank ${c.previousRank} → ${c.rank}`:'';const sheet=c.change?` · sheet change ${c.change}`:'';
-    return `<a class="row" href="${E(c.href||'/?tab=tre')}"><span><b>${E(c.ticker||c.name)}</b> <span class="name">${E(c.name||'')}</span></span><span class="move ${cls}">${E(briefDelta(c.delta))} BTC</span></a><p class="meta">${E(briefBtc(c.previous))} → ${E(briefBtc(c.btc))} BTC${E(rank+sheet)}</p>`}).join('');
+  const holdRow=c=>{const cls=c.delta>0?'up':c.delta<0?'down':'';const rank=c.previousRank&&c.rank&&c.previousRank!==c.rank?` · rank ${c.previousRank} → ${c.rank}`:'';const sheet=c.change?` · sheet change ${c.change}`:'';
+    return `<a class="row" href="${E(c.href||'/?tab=tre')}"><span><b>${E(c.ticker||c.name)}</b> <span class="name">${E(c.name||'')}</span></span><span class="move ${cls}">${E(briefDelta(c.delta))} BTC</span></a><p class="meta">${E(briefBtc(c.previous))} → ${E(briefBtc(c.btc))} BTC${E(rank+sheet)}</p>`};
+  const filingNote=c=>{const bits=[c.note,c.sourceLabel&&c.source?c.sourceLabel+' · '+c.source:c.source].filter(Boolean);const full=bits.join(' — ');if(!full)return '';
+    if(full.length<=160)return `<p class="meta" title="${E(full)}">${E(full)}</p>`;
+    const clip=full.slice(0,157).trimEnd()+'…';
+    return `<details class="note"><summary title="${E(full)}">${E(clip)}</summary><p>${E(c.note||'')}</p>${c.source?`<p class="meta">${E(c.sourceLabel?c.sourceLabel+' · ':'')}${E(c.source)}</p>`:''}</details>`};
+  const filingRow=c=>`<div class="filing"><div class="chghead"><a href="${E(c.href||'/?tab=tre')}">${E(c.ticker||c.name)}</a><span class="name">${E(c.name||'')}</span><span class="tag">updated filing</span></div><p class="meta">${E(c.holdingLine||'')}</p>${filingNote(c)}</div>`;
   const flow=(list,label)=>!list||!list.length?'':`<p class="more">${E(label)}: ${list.map(c=>E((c.ticker||c.name)+' ('+briefBtc(c.btc)+' BTC)')).join(', ')}</p>`;
   const treWhen=`Holdings as of ${E(tre.asOfLabel||'—')}`+(tre.previousLabel?` · compared with ${E(tre.previousLabel)}`:'');
-  const treBody=tre.empty?`<div class="empty">${E(tre.emptyMessage||'No treasury changes.')}</div>`:holds+flow(tre.entered,'Entered the top 100')+flow(tre.left,'Left the top 100');
+  const sameBody=(tre.changes||[]).map(holdRow).join('')||'<div class="empty">No holding changes within the same as-of date.</div>';
+  const fileBody=(tre.filings||[]).length?`<p class="group">Updated filings</p>${tre.filings.map(filingRow).join('')}`:'';
+  const treBody=tre.empty?`<div class="empty">${E(tre.emptyMessage||'No treasury changes.')}</div>`:`<p class="group">Same as-of date</p>${sameBody}${fileBody}`+flow(tre.entered,'Entered the top 100')+flow(tre.left,'Left the top 100');
   const cards=(charts.items||[]).map(item=>{const img=item.image?`<a class="shot" href="${E(item.href)}"><img src="${E(item.image)}" alt="${E(item.title)}" loading="lazy"></a>`:'';
     return `<div class="card">${img}<div class="cap"><h4><a href="${E(item.href)}">${E(item.title)}</a></h4><p class="src">${E(item.sheet||'')} · ${E(item.tab||'')}${item.href&&item.href!==item.tabHref?` · <a href="${E(item.href)}">open chart</a>`:''}</p></div></div>`}).join('');
   const chWhen=`Edition ${E(charts.asOfLabel||'—')}`;
@@ -1984,7 +2001,7 @@ function briefRender(doc){const E=escHtml,pt=doc.priceTargets||{},paper=doc.pape
   return `<h2>Daily briefing</h2><p class="lede">What changed in price targets, sentiment, bitcoin treasuries, and charts of the day.</p>`
     +briefSection('Price targets',pt.href||'/?tab=pt',ptWhen)+paperLine+ptBody+'</section>'
     +briefSection('Sentiment',sent.href||'/?tab=sent',sentWhen)+sentBody+'</section>'
-    +briefSection('BTC treasury',tre.href||'/?tab=tre',treWhen)+treBody+'</section>'
+    +briefSection('BTC treasury',tre.href||'/?tab=tre',treWhen,'treasury')+treBody+'</section>'
     +briefSection('Charts of the day',charts.href||'/?tab=cotd',chWhen)+theme+chBody+'</section>';
 }
 async function briefEnter(){const el=$('brief'),seq=++BRIEFSEQ,E=escHtml;
@@ -1992,6 +2009,7 @@ async function briefEnter(){const el=$('brief'),seq=++BRIEFSEQ,E=escHtml;
   try{const r=await fetch('/api/briefing?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const doc=await r.json();if(seq!==BRIEFSEQ||MODE!=='briefing')return;
     if(doc.error)throw Error(doc.error);
     el.innerHTML=briefRender(doc);
+    if(location.hash==='#treasury'){const box=document.getElementById('treasury');if(box)box.scrollIntoView()}
   }catch(e){if(seq!==BRIEFSEQ||MODE!=='briefing')return;el.innerHTML='<h2>Daily briefing</h2><p class="empty">Could not load the briefing ('+E(e.message)+').</p>'}}
 // Deep link only. Absent params leave the empty default.
 // Prices: ?tickers=AAPL,MSFT. Financials: ?ftickers= . Valuation: ?vtickers= .

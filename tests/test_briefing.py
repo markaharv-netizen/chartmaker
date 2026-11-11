@@ -22,8 +22,11 @@ def row(ticker, **kw):
     return base
 
 
-def company(ticker, btc, rank, name=None, change=None):
-    return {"ticker": ticker, "name": name or ticker, "btc": btc, "rank": rank, "change": change}
+def company(ticker, btc, rank, name=None, change=None, as_of=None, notes=None, source=None, source_label=None):
+    return {
+        "ticker": ticker, "name": name or ticker, "btc": btc, "rank": rank, "change": change,
+        "asOf": as_of, "notes": notes, "source": source, "sourceLabel": source_label,
+    }
 
 
 class PriceTargetTest(unittest.TestCase):
@@ -133,7 +136,48 @@ class TreasuryTest(unittest.TestCase):
         self.assertAlmostEqual(section["changes"][0]["delta"], -20)
         self.assertEqual(section["entered"][0]["ticker"], "NEW")
         self.assertEqual(section["left"][0]["ticker"], "GONE")
+        self.assertEqual(section["filings"], [])
+        self.assertFalse(section["changes"][0]["filingUpdate"])
         self.assertFalse(section["empty"])
+
+    def test_filing_date_change_is_not_sorted_as_a_one_day_sale(self):
+        note = "Derived: 34,012 at 9/30 less 13,597 sold after quarter end. No updated company-stated total."
+        prior = {"fetchedAt": "2026-11-09T16:00:00Z", "companies": [
+            company("HIVE", 100, 2, as_of="2026-11-08"),
+            company("MARA", 35577, 1, name="MARA Holdings, Inc.", as_of="2026-06-30",
+                    notes="Includes 9,270 BTC loaned/pledged."),
+        ]}
+        current = {"fetchedAt": "2026-11-10T16:00:00Z", "companies": [
+            company("HIVE", 190, 2, as_of="2026-11-08", change="+90"),
+            company("MARA", 20415, 1, name="MARA Holdings, Inc.", as_of="2026-11-09",
+                    notes=note, source="SEC Form 10-Q Q3 2026 Note 18", source_label="SEC 10-Q"),
+        ]}
+        section = briefing.treasury_section(current, [prior])
+        self.assertEqual([item["ticker"] for item in section["changes"]], ["HIVE"])
+        hive = section["changes"][0]
+        self.assertFalse(hive["filingUpdate"])
+        self.assertAlmostEqual(hive["delta"], 90)
+        self.assertEqual([item["ticker"] for item in section["filings"]], ["MARA"])
+        mara = section["filings"][0]
+        self.assertTrue(mara["filingUpdate"])
+        self.assertEqual(mara["previousAsOfLabel"], "Jun 30")
+        self.assertEqual(mara["asOfLabel"], "Nov 9")
+        self.assertEqual(mara["holdingLine"], "35,577 (Jun 30) to 20,415 (Nov 9)")
+        self.assertIn("13,597 sold", mara["note"])
+        self.assertEqual(mara["sourceLabel"], "SEC 10-Q")
+        self.assertGreater(abs(mara["delta"]), abs(hive["delta"]))
+
+    def test_same_month_as_of_is_not_a_new_filing(self):
+        prior = {"fetchedAt": "2026-11-09T16:00:00Z", "companies": [
+            company("AAA", 10, 1, as_of="2026-06"),
+        ]}
+        current = {"fetchedAt": "2026-11-10T16:00:00Z", "companies": [
+            company("AAA", 20, 1, as_of="2026-06-30"),
+        ]}
+        section = briefing.treasury_section(current, [prior])
+        self.assertEqual(section["filings"], [])
+        self.assertEqual(section["changes"][0]["ticker"], "AAA")
+        self.assertFalse(section["changes"][0]["filingUpdate"])
 
     def test_no_prior_snapshot_names_the_as_of_date(self):
         current = {"fetchedAt": "2026-11-10T16:00:00Z", "companies": [company("MARA", 80, 1)]}
@@ -225,6 +269,13 @@ class LiveFilesTest(unittest.TestCase):
             self.assertTrue(section.get("href", "").startswith("/?tab="), key)
         for change in doc["treasury"]["changes"]:
             self.assertGreaterEqual(abs(change["delta"]), briefing.MIN_BTC)
+            self.assertFalse(change["filingUpdate"])
+            self.assertFalse(briefing.asof_changed(change.get("previousAsOf"), change.get("asOf")))
+        for filing in doc["treasury"]["filings"]:
+            self.assertTrue(filing["filingUpdate"])
+            self.assertTrue(briefing.asof_changed(filing["previousAsOf"], filing["asOf"]))
+            self.assertIn("to", filing["holdingLine"])
+            self.assertGreaterEqual(abs(filing["delta"]), briefing.MIN_BTC)
         for swing in doc["sentiment"]["swings"]:
             self.assertGreaterEqual(swing["classified"], briefing.THIN_ITEMS)
             self.assertFalse(swing["thin"])
