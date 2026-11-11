@@ -519,6 +519,11 @@ def main():
         seeded = False
     doc, missing = build_doc(rows, old, seeded=seeded)
     write_doc(path, doc)
+    try:
+        import briefing
+        briefing.archive_price_targets(a.repo, doc)
+    except Exception as exc:
+        print("warning: price target history not updated:", exc)
     print(f"wrote {path} ({len(rows)} tickers, seeded={seeded})")
     if skipped: print("skipped:", "; ".join(skipped))
     if missing: print("no why text for:", ", ".join(missing))

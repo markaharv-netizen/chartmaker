@@ -54,6 +54,43 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #paper table{border-collapse:collapse;width:100%;font-size:14px;background:#fff}#paper th,#paper td{padding:6px 10px;border-bottom:1px solid #e5e7eb;text-align:right;white-space:nowrap}
 #paper th:first-child,#paper td:first-child{text-align:left}#paper th{font-size:12px;color:#6B7280;font-weight:600;background:#fff}
 #paper tr:last-child td{border-bottom:0}#paper .muted{color:#6B7280}
+#brief{display:none;padding:16px 16px 48px;max-width:1100px}
+#brief h2{margin:0 0 4px;font-size:22px}#brief h3{margin:0;font-size:18px}
+#brief h3 a{color:#111;text-decoration:none}#brief h3 a:hover{text-decoration:underline}
+#brief .lede{color:#374151;margin:0 0 18px;font-size:15px;line-height:1.45}
+#brief section{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:14px 16px 16px;margin:0 0 14px}
+#brief .asof{color:#6B7280;font-size:13px;margin:4px 0 10px;line-height:1.45}
+#brief .paperline{margin:0 0 12px;font-size:14px;line-height:1.45}#brief .paperline a,#brief .asof a,#brief .more a{color:#2563eb}
+#brief .empty{background:#F9FAFB;border:1px dashed #D1D5DB;border-radius:6px;padding:12px 14px;color:#374151;font-size:14px;line-height:1.45}
+#brief .chg{border-top:1px solid #e5e7eb;padding:10px 0}#brief .chg:first-child{border-top:0;padding-top:0}
+#brief .chghead{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+#brief .chghead a{font-weight:700;color:#111;text-decoration:none;font-size:16px}#brief .chghead a:hover{text-decoration:underline}
+#brief .when{color:#6B7280;font-size:12px;white-space:nowrap}
+#brief .chg ul{margin:6px 0 0;padding-left:18px;color:#1C2430;font-size:14px;line-height:1.45}
+#brief .row{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:8px 0;border-top:1px solid #e5e7eb;text-decoration:none;color:inherit}
+#brief a.row:hover{background:#F9FAFB}
+#brief .row:first-child{border-top:0}
+#brief .row b{font-size:15px}#brief .row .name{color:#6B7280;font-weight:400;font-size:13px}
+#brief .move{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+#brief .up{color:#178A45}#brief .down{color:#D7263D}
+#brief .meta{margin:-2px 0 8px;color:#6B7280;font-size:12px;line-height:1.4}
+#brief .thinbox{margin-top:12px;background:#FFFBEB;border:1px solid #FDE68A;border-radius:6px;padding:10px 12px}
+#brief .thinbox p{margin:0 0 6px;font-size:13px;color:#92400E;line-height:1.45}
+#brief .thinbox a{color:#92400E}
+#brief .more{margin:8px 0 0;font-size:13px;color:#6B7280}
+#brief .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#brief .card{border:1px solid #e5e7eb;border-radius:6px;overflow:hidden;background:#fff}
+#brief .card img{width:100%;height:auto;display:block;background:#f4f4f5}
+#brief .card .cap{padding:8px 10px 10px}
+#brief .card h4{margin:0 0 4px;font-size:14px;line-height:1.35}
+#brief .card h4 a{color:#111;text-decoration:none}#brief .card h4 a:hover{text-decoration:underline}
+#brief .card .src{font-size:12px;color:#6B7280;margin:0}#brief .card .src a{color:#2563eb}
+@media (max-width:640px){
+  #brief{padding:12px 12px 40px}
+  #brief .grid{grid-template-columns:1fr}
+  #brief .chghead{flex-wrap:wrap}
+  #mode button{margin-bottom:6px}
+}
 #status{padding:4px 12px;font-size:13px}#status.err{color:#EF4444;font-weight:bold}
 #smabox{position:relative;z-index:30;font-size:12px;display:flex;flex-direction:column;gap:3px;align-items:flex-start}
 #smaBtn{background:#fff;color:#111;border:1px solid #767676;border-radius:2px;padding:6px 26px 6px 8px;text-align:left;min-width:9.5em;line-height:1.2;position:relative;white-space:nowrap}
@@ -73,7 +110,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #ctypeNote:empty{display:none}
 #ctl > label input[type=checkbox]{margin:0}
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mWatch" class="on">Watchlist</button><button id="mPrices">Prices</button><button id="mFin">Financials</button><button id="mVal">Valuation</button><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mPaper" title="Paper book sized by Steve's paper weights">Paper trading</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mBrief" class="on" title="What changed across price targets, sentiment, treasuries, and charts">Daily briefing</button><button id="mWatch">Watchlist</button><button id="mPrices">Prices</button><button id="mFin">Financials</button><button id="mVal">Valuation</button><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mPaper" title="Paper book sized by Steve's paper weights">Paper trading</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -168,6 +205,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 </div>
 </div>
 <div id="status"></div>
+<div id="brief"></div>
 <div id="wrap"><div id="chart"></div><canvas id="ptcanvas" width="1600" height="720" aria-label="Steve's DCF price targets"></canvas></div>
 <div id="cotd"></div>
 <div id="sheets"></div>
@@ -713,7 +751,8 @@ addEventListener('scroll',ctxHide,true);addEventListener('blur',ctxHide);
 
 // ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------
 let MODE='prices', flast=null;
-function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='paper';
+function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='paper'||m==='briefing';
+  $('mBrief').classList.toggle('on',m==='briefing');$('brief').style.display=m==='briefing'?'block':'none';
   $('mCotd').classList.toggle('on',m==='cotd');$('cotd').style.display=m==='cotd'?'block':'none';
   $('mSheets').classList.toggle('on',m==='sheets');$('sheets').style.display=m==='sheets'?'block':'none';
   $('mPaper').classList.toggle('on',m==='paper');$('paper').style.display=m==='paper'?'block':'none';
@@ -726,8 +765,8 @@ function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='p
   if(m!=='tre'&&$('chart').style.height&&$('chart').style.height!=='900px'){$('chart').style.height='900px';chart.resize()}
   if(m!=='tre'&&typeof fitChart==='function')fitChart();
   if(m!=='pt')chart.clear();$('status').textContent='';
-  if(m==='prices'){syncPriceUi();render()}else if(m==='paper')paperEnter();else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
-$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mPt').onclick=()=>setMode('pt');$('mPaper').onclick=()=>setMode('paper');
+  if(m==='prices'){syncPriceUi();render()}else if(m==='briefing')briefEnter();else if(m==='paper')paperEnter();else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
+$('mBrief').onclick=()=>setMode('briefing');$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mPt').onclick=()=>setMode('pt');$('mPaper').onclick=()=>setMode('paper');
 // ---------- Favorites: shared by everyone signed in to this Chartmaker. No per-person accounts. ----------
 // Identity is book/gid/chartNumber (chart 1 is <gid>.png, chart n is <gid>_n.png). At most FAV_MAX.
 // A tab with no chart (a table) is one favorite, book/gid/1, labeled with the tab name. That is the
@@ -1910,6 +1949,50 @@ window.__vapply=vapply;window.__snap=snap;
       else if(ev.key==='Escape'){ev.preventDefault();hide()}
       else if(ev.key==='Enter'){hide()}},true)}
 })();
+// ---------- Daily briefing: GET /api/briefing, built from the refresh files. No extra job. ----------
+let BRIEFSEQ=0;
+function briefPct(frac){if(frac==null||!isFinite(+frac))return '';const n=+frac*100;return (n>0?'+':'')+n.toFixed(1)+'%'}
+function briefPts(n){if(n==null||!isFinite(+n))return '—';const v=+n;return (v>0?'+':'')+v.toFixed(1)+' pts'}
+function briefBull(v){if(v==null||!isFinite(+v))return '—';return (v*100).toFixed(1)+'%'}
+function briefBtc(v){if(v==null||!isFinite(+v))return '—';const n=+v;if(Math.abs(n-Math.round(n))<1e-6)return Math.round(n).toLocaleString('en-US');return n.toLocaleString('en-US',{maximumFractionDigits:4})}
+function briefDelta(v){if(v==null||!isFinite(+v))return '';const n=+v;const body=briefBtc(Math.abs(n));return (n>0?'+':n<0?'−':'')+body}
+function briefSection(title,href,asof){return `<section><h3><a href="${escHtml(href)}">${escHtml(title)}</a></h3><p class="asof">${asof}</p>`}
+function briefChanges(list){return (list||[]).map(c=>`<div class="chg"><div class="chghead"><a href="${escHtml(c.href||'/?tab=pt')}">${escHtml(c.ticker)}</a><span class="when">${escHtml(c.dateLabel||'')}</span></div><ul>${(c.lines||[]).map(line=>'<li>'+escHtml(line)+'</li>').join('')}</ul></div>`).join('')}
+function briefRender(doc){const E=escHtml,pt=doc.priceTargets||{},paper=doc.paper||{},sent=doc.sentiment||{},tre=doc.treasury||{},charts=doc.charts||{};
+  const ptWhen=`As of ${E(pt.asOfLabel||'—')}`+(pt.sinceLabel?` · changes since ${E(pt.sinceLabel)}`:'');
+  const paperLine=paper.message?`<p class="paperline"><a href="${E(paper.href||'/?tab=paper')}">${E(paper.message)}</a></p>`:'';
+  const ptBody=pt.empty?`<div class="empty">${E(pt.emptyMessage||'No price target changes.')}</div>`:briefChanges(pt.changes);
+  const swings=(sent.swings||[]).map(s=>{const cls=s.points>0?'up':s.points<0?'down':'';
+    return `<a class="row" href="${E(s.href)}"><span><b>${E(s.symbol)}</b> <span class="name">${E(s.name||'')}</span></span><span class="move ${cls}">${E(briefPts(s.points))}</span></a><p class="meta">${E(briefBull(s.previous))} → ${E(briefBull(s.bull))} · ${E(String(s.classified))} classified</p>`}).join('');
+  const thin=(sent.thin||[]).map(s=>{const move=s.points==null?'new on the board':briefPts(s.points);const from=s.previous==null?'':`${briefBull(s.previous)} → ${briefBull(s.bull)} · `;
+    return `<a class="row" href="${E(s.href)}"><span><b>${E(s.symbol)}</b> <span class="name">${E(s.name||'')}</span></span><span class="move">${E(move)}</span></a><p class="meta">${E(from)}${E(String(s.classified))} classified · thin sample</p>`}).join('');
+  const thinBox=thin?`<div class="thinbox"><p>Thin samples, under ${E(String(sent.thinBelow||8))} classified bull and bear items. A large move here, including 100% from one post, is not a strong signal.</p>${thin}</div>`:'';
+  const more=sent.moreSwings?`<p class="more">${E(String(sent.moreSwings))} more names moved. <a href="${E(sent.href||'/?tab=sent')}">Open the board</a>.</p>`:'';
+  const entered=(sent.entered||[]).map(s=>`<a class="row" href="${E(s.href)}"><span><b>${E(s.symbol)}</b> <span class="name">${E(s.name||'')}</span></span><span class="move">New</span></a>`).join('');
+  const sentWhen=`Board as of ${E(sent.asOfLabel||'—')}`+(sent.previousLabel?` · versus ${E(sent.previousLabel)}`:'');
+  const sentBody=sent.empty&&!thin&&!entered?`<div class="empty">${E(sent.emptyMessage||'No sentiment change.')}</div>`:(swings||'<div class="empty">No swings with a full enough sample.</div>')+more+entered+thinBox;
+  const holds=(tre.changes||[]).map(c=>{const cls=c.delta>0?'up':c.delta<0?'down':'';const rank=c.previousRank&&c.rank&&c.previousRank!==c.rank?` · rank ${c.previousRank} → ${c.rank}`:'';const sheet=c.change?` · sheet change ${c.change}`:'';
+    return `<a class="row" href="${E(c.href||'/?tab=tre')}"><span><b>${E(c.ticker||c.name)}</b> <span class="name">${E(c.name||'')}</span></span><span class="move ${cls}">${E(briefDelta(c.delta))} BTC</span></a><p class="meta">${E(briefBtc(c.previous))} → ${E(briefBtc(c.btc))} BTC${E(rank+sheet)}</p>`}).join('');
+  const flow=(list,label)=>!list||!list.length?'':`<p class="more">${E(label)}: ${list.map(c=>E((c.ticker||c.name)+' ('+briefBtc(c.btc)+' BTC)')).join(', ')}</p>`;
+  const treWhen=`Holdings as of ${E(tre.asOfLabel||'—')}`+(tre.previousLabel?` · compared with ${E(tre.previousLabel)}`:'');
+  const treBody=tre.empty?`<div class="empty">${E(tre.emptyMessage||'No treasury changes.')}</div>`:holds+flow(tre.entered,'Entered the top 100')+flow(tre.left,'Left the top 100');
+  const cards=(charts.items||[]).map(item=>{const img=item.image?`<a class="shot" href="${E(item.href)}"><img src="${E(item.image)}" alt="${E(item.title)}" loading="lazy"></a>`:'';
+    return `<div class="card">${img}<div class="cap"><h4><a href="${E(item.href)}">${E(item.title)}</a></h4><p class="src">${E(item.sheet||'')} · ${E(item.tab||'')}${item.href&&item.href!==item.tabHref?` · <a href="${E(item.href)}">open chart</a>`:''}</p></div></div>`}).join('');
+  const chWhen=`Edition ${E(charts.asOfLabel||'—')}`;
+  const theme=charts.theme?`<p class="asof">${E(charts.theme)}</p>`:'';
+  const chBody=charts.empty?`<div class="empty">${E(charts.emptyMessage||'No charts of the day.')}</div>`:`<div class="grid">${cards}</div>`;
+  return `<h2>Daily briefing</h2><p class="lede">What changed in price targets, sentiment, bitcoin treasuries, and charts of the day.</p>`
+    +briefSection('Price targets',pt.href||'/?tab=pt',ptWhen)+paperLine+ptBody+'</section>'
+    +briefSection('Sentiment',sent.href||'/?tab=sent',sentWhen)+sentBody+'</section>'
+    +briefSection('BTC treasury',tre.href||'/?tab=tre',treWhen)+treBody+'</section>'
+    +briefSection('Charts of the day',charts.href||'/?tab=cotd',chWhen)+theme+chBody+'</section>';
+}
+async function briefEnter(){const el=$('brief'),seq=++BRIEFSEQ,E=escHtml;
+  el.innerHTML='<p class="lede">Loading…</p>';
+  try{const r=await fetch('/api/briefing?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const doc=await r.json();if(seq!==BRIEFSEQ||MODE!=='briefing')return;
+    if(doc.error)throw Error(doc.error);
+    el.innerHTML=briefRender(doc);
+  }catch(e){if(seq!==BRIEFSEQ||MODE!=='briefing')return;el.innerHTML='<h2>Daily briefing</h2><p class="empty">Could not load the briefing ('+E(e.message)+').</p>'}}
 // Deep link only. Absent params leave the empty default.
 // Prices: ?tickers=AAPL,MSFT. Financials: ?ftickers= . Valuation: ?vtickers= .
 // Legacy display-name params (names, fnames, vnames) are ignored.
@@ -1918,9 +2001,12 @@ function applyPriceQuery(){
   if(q.has('tickers'))$('tickers').value=q.get('tickers')||'';
   if(q.has('ftickers'))$('ftickers').value=q.get('ftickers')||'';
   if(q.has('vtickers'))$('vtickers').value=q.get('vtickers')||'';
+  if(q.has('stickers'))$('stickers').value=q.get('stickers')||'';
 }
 applyTheme();annDraw();vload();applyPriceQuery();
 window.__render=render; window.__frender=frender; window.__setMode=setMode;
-{let q;try{q=new URLSearchParams(location.search)}catch(e){q=new URLSearchParams()} // deep links keep their tab; otherwise open on Watchlist
-  setMode(q.get('tab')==='paper'?'paper':q.has('tickers')?'prices':q.has('ftickers')?'fin':q.has('vtickers')?'val':'watch')}
+{let q;try{q=new URLSearchParams(location.search)}catch(e){q=new URLSearchParams()} // ?tab= keeps that tab; ticker deep links keep theirs; otherwise Daily briefing
+  const tabs={briefing:'briefing',daily:'briefing',paper:'paper',prices:'prices',fin:'fin',financials:'fin',val:'val',valuation:'val',heat:'heat',heatmap:'heat',tre:'tre',treasury:'tre',sent:'sent',sentiment:'sent',cotd:'cotd',pt:'pt',targets:'pt',sheets:'sheets',watch:'watch'};
+  const asked=tabs[(q.get('tab')||'').toLowerCase()];
+  setMode(asked||(q.has('tickers')?'prices':q.has('ftickers')?'fin':q.has('vtickers')?'val':'briefing'))}
 </script><script>try{syncCustomDates()}catch(e){}</script></body></html>

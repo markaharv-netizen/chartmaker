@@ -1,0 +1,1415 @@
+{
+  "note": "Snapshots appended by scripts/refresh_btctop100.py. The daily briefing diffs the latest snapshot against the one before it. Holding drift under 1 BTC is treated as sheet rounding and is not listed.",
+  "snapshots": [
+    {
+      "fetchedAt": "2026-11-09T16:16:35Z",
+      "companies": [
+        {
+          "ticker": "MSTR",
+          "name": "Strategy",
+          "btc": 850364,
+          "rank": 1,
+          "change": "+1,037"
+        },
+        {
+          "ticker": "3350.T",
+          "name": "Metaplanet Inc.",
+          "btc": 44000,
+          "rank": 2,
+          "change": null
+        },
+        {
+          "ticker": "XXI",
+          "name": "Twenty One Capital",
+          "btc": 43514,
+          "rank": 3,
+          "change": null
+        },
+        {
+          "ticker": "ASST",
+          "name": "Strive",
+          "btc": 43153,
+          "rank": 4,
+          "change": "+29"
+        },
+        {
+          "ticker": "MARA",
+          "name": "MARA Holdings, Inc.",
+          "btc": 35577,
+          "rank": 5,
+          "change": null
+        },
+        {
+          "ticker": "SPCX",
+          "name": "SpaceX",
+          "btc": 18712,
+          "rank": 6,
+          "change": null
+        },
+        {
+          "ticker": "BLSH",
+          "name": "Bullish",
+          "btc": 18200,
+          "rank": 7,
+          "change": null
+        },
+        {
+          "ticker": "COIN",
+          "name": "Coinbase Global, Inc.",
+          "btc": 17954,
+          "rank": 8,
+          "change": null
+        },
+        {
+          "ticker": "DJT",
+          "name": "Trump Media & Technology Group Corp.",
+          "btc": 14139,
+          "rank": 9,
+          "change": null
+        },
+        {
+          "ticker": "CLSK",
+          "name": "CleanSpark, Inc.",
+          "btc": 13530,
+          "rank": 10,
+          "change": null
+        },
+        {
+          "ticker": "TSLA",
+          "name": "Tesla, Inc.",
+          "btc": 11509,
+          "rank": 11,
+          "change": null
+        },
+        {
+          "ticker": "XYZ",
+          "name": "Block, Inc.",
+          "btc": 9237,
+          "rank": 12,
+          "change": null
+        },
+        {
+          "ticker": "ABTC",
+          "name": "American Bitcoin Corp",
+          "btc": 8427,
+          "rank": 13,
+          "change": null
+        },
+        {
+          "ticker": "HUT",
+          "name": "Hut 8 Mining Corp",
+          "btc": 8360,
+          "rank": 14,
+          "change": null
+        },
+        {
+          "ticker": "GDC",
+          "name": "GD Culture Group",
+          "btc": 7500,
+          "rank": 15,
+          "change": null
+        },
+        {
+          "ticker": "GLXY",
+          "name": "Galaxy Digital Holdings Ltd",
+          "btc": 6831,
+          "rank": 16,
+          "change": null
+        },
+        {
+          "ticker": "NXTT",
+          "name": "Next Technology Holding Inc.",
+          "btc": 5833,
+          "rank": 17,
+          "change": null
+        },
+        {
+          "ticker": "GEMI",
+          "name": "Gemini Space Station Inc",
+          "btc": 5528,
+          "rank": 18,
+          "change": null
+        },
+        {
+          "ticker": "SVIA",
+          "name": "Silvia, Inc.",
+          "btc": 5130,
+          "rank": 19,
+          "change": null
+        },
+        {
+          "ticker": "0434.HK",
+          "name": "Boyaa Interactive International Limited",
+          "btc": 4468,
+          "rank": 20,
+          "change": null
+        },
+        {
+          "ticker": "NAKA",
+          "name": "Nakamoto Inc",
+          "btc": 4467,
+          "rank": 21,
+          "change": null
+        },
+        {
+          "ticker": "OBTC3.SA",
+          "name": "OranjeBTC",
+          "btc": 3950,
+          "rank": 22,
+          "change": null
+        },
+        {
+          "ticker": "ALCPB.PA",
+          "name": "Capital B",
+          "btc": 3538,
+          "rank": 23,
+          "change": null
+        },
+        {
+          "ticker": "H100",
+          "name": "H100 Group",
+          "btc": 3506,
+          "rank": 24,
+          "change": null
+        },
+        {
+          "ticker": "AMOD",
+          "name": "Alpha Modus Holdings, Inc.",
+          "btc": 3170,
+          "rank": 25,
+          "change": null
+        },
+        {
+          "ticker": "DDC",
+          "name": "DDC Enterprise Limited",
+          "btc": 2899,
+          "rank": 26,
+          "change": null
+        },
+        {
+          "ticker": "SWC.L",
+          "name": "The Smarter Web Company PLC",
+          "btc": 2850,
+          "rank": 27,
+          "change": null
+        },
+        {
+          "ticker": "DEFI.NE",
+          "name": "DeFi Technologies",
+          "btc": 2841,
+          "rank": 28,
+          "change": null
+        },
+        {
+          "ticker": "BTGO",
+          "name": "BitGo Holdings, Inc.",
+          "btc": 2523,
+          "rank": 29,
+          "change": null
+        },
+        {
+          "ticker": "RIOT",
+          "name": "Riot Platforms, Inc.",
+          "btc": 2418,
+          "rank": 30,
+          "change": null
+        },
+        {
+          "ticker": "ZBAO",
+          "name": "Zhibao Technology Inc",
+          "btc": 2380,
+          "rank": 31,
+          "change": null
+        },
+        {
+          "ticker": "IOND",
+          "name": "Ionic Digital Inc.",
+          "btc": 2217,
+          "rank": 32,
+          "change": null
+        },
+        {
+          "ticker": "CAN",
+          "name": "Canaan Inc.",
+          "btc": 1875,
+          "rank": 33,
+          "change": null
+        },
+        {
+          "ticker": "VIRT",
+          "name": "Virtu Financial, Inc.",
+          "btc": 1800,
+          "rank": 34,
+          "change": null
+        },
+        {
+          "ticker": "3659.T",
+          "name": "NEXON Co., Ltd.",
+          "btc": 1717,
+          "rank": 35,
+          "change": null
+        },
+        {
+          "ticker": "3825.T",
+          "name": "Remixpoint",
+          "btc": 1511,
+          "rank": 36,
+          "change": null
+        },
+        {
+          "ticker": "FUFU",
+          "name": "BitFuFu Inc.",
+          "btc": 1454,
+          "rank": 37,
+          "change": null
+        },
+        {
+          "ticker": "3189.T",
+          "name": "Anap Holdings Inc.",
+          "btc": 1366,
+          "rank": 38,
+          "change": null
+        },
+        {
+          "ticker": "CIMG",
+          "name": "CIMG Inc",
+          "btc": 1145,
+          "rank": 39,
+          "change": null
+        },
+        {
+          "ticker": "TRSR",
+          "name": "Treasury",
+          "btc": 1111,
+          "rank": 40,
+          "change": null
+        },
+        {
+          "ticker": "CANG",
+          "name": "Cango Inc",
+          "btc": 1056,
+          "rank": 41,
+          "change": null
+        },
+        {
+          "ticker": "ZOOZ",
+          "name": "ZOOZ Power",
+          "btc": 1047,
+          "rank": 42,
+          "change": null
+        },
+        {
+          "ticker": "USBC",
+          "name": "USBC, Inc.",
+          "btc": 1029,
+          "rank": 43,
+          "change": null
+        },
+        {
+          "ticker": "EMPD",
+          "name": "Empery Digital",
+          "btc": 1018,
+          "rank": 44,
+          "change": null
+        },
+        {
+          "ticker": "APUS",
+          "name": "Apimeds Pharmaceuticals US, Inc.",
+          "btc": 1005,
+          "rank": 45,
+          "change": null
+        },
+        {
+          "ticker": "MSW",
+          "name": "Ming Shing Group",
+          "btc": 833,
+          "rank": 46,
+          "change": null
+        },
+        {
+          "ticker": "SOS",
+          "name": "SOS Limited",
+          "btc": 803,
+          "rank": 47,
+          "change": null
+        },
+        {
+          "ticker": "AKER.OL",
+          "name": "Aker ASA",
+          "btc": 754,
+          "rank": 48,
+          "change": null
+        },
+        {
+          "ticker": "BTCT.V",
+          "name": "Bitcoin Treasury Corp",
+          "btc": 732,
+          "rank": 49,
+          "change": null
+        },
+        {
+          "ticker": "ARLP",
+          "name": "Alliance Resource Partners, L.P.",
+          "btc": 673,
+          "rank": 50,
+          "change": null
+        },
+        {
+          "ticker": "MLIZY",
+          "name": "Méliuz",
+          "btc": 605,
+          "rank": 51,
+          "change": null
+        },
+        {
+          "ticker": "EXOD",
+          "name": "Exodus Movement, Inc",
+          "btc": 600,
+          "rank": 52,
+          "change": null
+        },
+        {
+          "ticker": "PHX.AD",
+          "name": "Phoenix Group PLC",
+          "btc": 559,
+          "rank": 53,
+          "change": null
+        },
+        {
+          "ticker": "377030.KQ",
+          "name": "bitmax",
+          "btc": 551,
+          "rank": 54,
+          "change": null
+        },
+        {
+          "ticker": "UUU",
+          "name": "3U Holding AG",
+          "btc": 427,
+          "rank": 55,
+          "change": null
+        },
+        {
+          "ticker": "NDA.V",
+          "name": "Neptune Digital Assets",
+          "btc": 424,
+          "rank": 56,
+          "change": null
+        },
+        {
+          "ticker": "DMGI.V",
+          "name": "DMG Blockchain Solutions Inc.",
+          "btc": 379,
+          "rank": 57,
+          "change": null
+        },
+        {
+          "ticker": "NTHOL.IS",
+          "name": "Net Holding A.S.",
+          "btc": 353,
+          "rank": 58,
+          "change": null
+        },
+        {
+          "ticker": "NCTY",
+          "name": "The9 Limited",
+          "btc": 347,
+          "rank": 59,
+          "change": null
+        },
+        {
+          "ticker": "FIGR",
+          "name": "Figure Technology Solutions, Inc",
+          "btc": 313,
+          "rank": 60,
+          "change": null
+        },
+        {
+          "ticker": "CIFR",
+          "name": "Cipher Digital",
+          "btc": 310,
+          "rank": 61,
+          "change": null
+        },
+        {
+          "ticker": "ANGX",
+          "name": "Angel Studios, Inc.",
+          "btc": 303,
+          "rank": 62,
+          "change": null
+        },
+        {
+          "ticker": "CPOP",
+          "name": "POP Culture Group Co., Ltd.",
+          "btc": 300,
+          "rank": 63,
+          "change": null
+        },
+        {
+          "ticker": "049470.KQ",
+          "name": "Bitplanet",
+          "btc": 300,
+          "rank": 64,
+          "change": null
+        },
+        {
+          "ticker": "5721.T",
+          "name": "S-Science",
+          "btc": 296,
+          "rank": 65,
+          "change": null
+        },
+        {
+          "ticker": "RUM",
+          "name": "Rumble Inc.",
+          "btc": 293,
+          "rank": 66,
+          "change": null
+        },
+        {
+          "ticker": "DCC.AX",
+          "name": "DigitalX",
+          "btc": 283,
+          "rank": 67,
+          "change": null
+        },
+        {
+          "ticker": "LQWD.V",
+          "name": "LQWD Technologies Corp.",
+          "btc": 267,
+          "rank": 68,
+          "change": null
+        },
+        {
+          "ticker": "112040.KQ",
+          "name": "WEMADE",
+          "btc": 245,
+          "rank": 69,
+          "change": null
+        },
+        {
+          "ticker": "PNIX.AQ",
+          "name": "Phoenix Digital Assets",
+          "btc": 244,
+          "rank": 70,
+          "change": null
+        },
+        {
+          "ticker": "288330.KQ",
+          "name": "Parataxis Korea",
+          "btc": 225,
+          "rank": 71,
+          "change": null
+        },
+        {
+          "ticker": "VANA.MC",
+          "name": "Vanadi Coffee, SA",
+          "btc": 223,
+          "rank": 72,
+          "change": null
+        },
+        {
+          "ticker": "BMNR",
+          "name": "BitMine Immersion Technologies, Inc.",
+          "btc": 216,
+          "rank": 73,
+          "change": null
+        },
+        {
+          "ticker": "GPUS",
+          "name": "Hyperscale Data",
+          "btc": 211,
+          "rank": 74,
+          "change": "-8"
+        },
+        {
+          "ticker": "36C.F",
+          "name": "BTCS S.A.",
+          "btc": 202,
+          "rank": 75,
+          "change": null
+        },
+        {
+          "ticker": "HIVE",
+          "name": "HIVE Digital Technologies",
+          "btc": 190,
+          "rank": 76,
+          "change": null
+        },
+        {
+          "ticker": "COIN.AQ",
+          "name": "Coinsilium",
+          "btc": 182,
+          "rank": 77,
+          "change": null
+        },
+        {
+          "ticker": "BTCB.SE",
+          "name": "Bitcoin Treasury Capital",
+          "btc": 174,
+          "rank": 78,
+          "change": null
+        },
+        {
+          "ticker": "FIG",
+          "name": "Figma Inc",
+          "btc": 173,
+          "rank": 79,
+          "change": null
+        },
+        {
+          "ticker": "FLD",
+          "name": "Fold Holdings Inc.",
+          "btc": 171,
+          "rank": 80,
+          "change": null
+        },
+        {
+          "ticker": "MATA.V",
+          "name": "Matador Technologies Inc",
+          "btc": 168,
+          "rank": 81,
+          "change": null
+        },
+        {
+          "ticker": "K33.ST",
+          "name": "K33 AB",
+          "btc": 168,
+          "rank": 82,
+          "change": null
+        },
+        {
+          "ticker": "HODL.AQ",
+          "name": "B HODL",
+          "btc": 167,
+          "rank": 83,
+          "change": null
+        },
+        {
+          "ticker": "BTC.BK",
+          "name": "The Brooker Group",
+          "btc": 165,
+          "rank": 84,
+          "change": null
+        },
+        {
+          "ticker": "FRMO",
+          "name": "FRMO Corp.",
+          "btc": 159,
+          "rank": 85,
+          "change": null
+        },
+        {
+          "ticker": "HKHC",
+          "name": "Horizon Kinetics Holding Corp",
+          "btc": 132,
+          "rank": 86,
+          "change": null
+        },
+        {
+          "ticker": "3903.T",
+          "name": "gumi Inc.",
+          "btc": 112,
+          "rank": 87,
+          "change": null
+        },
+        {
+          "ticker": "JZXN",
+          "name": "Jiuzi Holdings Inc",
+          "btc": 100,
+          "rank": 88,
+          "change": null
+        },
+        {
+          "ticker": "V3TC.AQ",
+          "name": "Vaultz Capital",
+          "btc": 86,
+          "rank": 89,
+          "change": null
+        },
+        {
+          "ticker": "WELX",
+          "name": "Winland Holdings Corporation",
+          "btc": 83,
+          "rank": 90,
+          "change": null
+        },
+        {
+          "ticker": "XCE.AQ",
+          "name": "XCE-Connecting Excellence Group",
+          "btc": 81,
+          "rank": 91,
+          "change": null
+        },
+        {
+          "ticker": "BTC.L",
+          "name": "London BTC Company (formerly Vinanz)",
+          "btc": 80,
+          "rank": 92,
+          "change": null
+        },
+        {
+          "ticker": "CRCL",
+          "name": "Circle Internet Group, Inc.",
+          "btc": 77,
+          "rank": 93,
+          "change": null
+        },
+        {
+          "ticker": "XYZ.BK",
+          "name": "RSXYZ PCL",
+          "btc": 75,
+          "rank": 94,
+          "change": null
+        },
+        {
+          "ticker": "BTCW.V",
+          "name": "Bitcoin Well Inc",
+          "btc": 69,
+          "rank": 95,
+          "change": null
+        },
+        {
+          "ticker": "STAK",
+          "name": "Stack BTC Plc",
+          "btc": 68,
+          "rank": 96,
+          "change": null
+        },
+        {
+          "ticker": "042420.KQ",
+          "name": "NEOWIZ Holdings",
+          "btc": 64,
+          "rank": 97,
+          "change": null
+        },
+        {
+          "ticker": "PWCM",
+          "name": "PowerCompute, Inc.",
+          "btc": 64,
+          "rank": 98,
+          "change": null
+        },
+        {
+          "ticker": "SIX.CN",
+          "name": "Sixty-Six Capital Inc",
+          "btc": 57,
+          "rank": 99,
+          "change": null
+        },
+        {
+          "ticker": "BTDR",
+          "name": "Bitdeer Technologies Group",
+          "btc": 47,
+          "rank": 100,
+          "change": null
+        }
+      ]
+    },
+    {
+      "fetchedAt": "2026-11-10T16:13:56Z",
+      "companies": [
+        {
+          "ticker": "MSTR",
+          "name": "Strategy",
+          "btc": 850364,
+          "rank": 1,
+          "change": null
+        },
+        {
+          "ticker": "3350.T",
+          "name": "Metaplanet Inc.",
+          "btc": 44000,
+          "rank": 2,
+          "change": null
+        },
+        {
+          "ticker": "XXI",
+          "name": "Twenty One Capital",
+          "btc": 43514,
+          "rank": 3,
+          "change": null
+        },
+        {
+          "ticker": "ASST",
+          "name": "Strive",
+          "btc": 43153,
+          "rank": 4,
+          "change": null
+        },
+        {
+          "ticker": "MARA",
+          "name": "MARA Holdings, Inc.",
+          "btc": 20415,
+          "rank": 5,
+          "change": null
+        },
+        {
+          "ticker": "SPCX",
+          "name": "SpaceX",
+          "btc": 18712,
+          "rank": 6,
+          "change": null
+        },
+        {
+          "ticker": "BLSH",
+          "name": "Bullish",
+          "btc": 18200,
+          "rank": 7,
+          "change": null
+        },
+        {
+          "ticker": "COIN",
+          "name": "Coinbase Global, Inc.",
+          "btc": 17954,
+          "rank": 8,
+          "change": null
+        },
+        {
+          "ticker": "DJT",
+          "name": "Trump Media & Technology Group Corp.",
+          "btc": 14139,
+          "rank": 9,
+          "change": null
+        },
+        {
+          "ticker": "CLSK",
+          "name": "CleanSpark, Inc.",
+          "btc": 13530,
+          "rank": 10,
+          "change": null
+        },
+        {
+          "ticker": "TSLA",
+          "name": "Tesla, Inc.",
+          "btc": 11509,
+          "rank": 11,
+          "change": null
+        },
+        {
+          "ticker": "XYZ",
+          "name": "Block, Inc.",
+          "btc": 9237,
+          "rank": 12,
+          "change": null
+        },
+        {
+          "ticker": "ABTC",
+          "name": "American Bitcoin Corp",
+          "btc": 8427,
+          "rank": 13,
+          "change": null
+        },
+        {
+          "ticker": "HUT",
+          "name": "Hut 8 Mining Corp",
+          "btc": 8360,
+          "rank": 14,
+          "change": null
+        },
+        {
+          "ticker": "GDC",
+          "name": "GD Culture Group",
+          "btc": 7500,
+          "rank": 15,
+          "change": null
+        },
+        {
+          "ticker": "GLXY",
+          "name": "Galaxy Digital Holdings Ltd",
+          "btc": 6831,
+          "rank": 16,
+          "change": null
+        },
+        {
+          "ticker": "NXTT",
+          "name": "Next Technology Holding Inc.",
+          "btc": 5833,
+          "rank": 17,
+          "change": null
+        },
+        {
+          "ticker": "GEMI",
+          "name": "Gemini Space Station Inc",
+          "btc": 5528,
+          "rank": 18,
+          "change": null
+        },
+        {
+          "ticker": "SVIA",
+          "name": "Silvia, Inc.",
+          "btc": 5130,
+          "rank": 19,
+          "change": null
+        },
+        {
+          "ticker": "0434.HK",
+          "name": "Boyaa Interactive International Limited",
+          "btc": 4468,
+          "rank": 20,
+          "change": null
+        },
+        {
+          "ticker": "NAKA",
+          "name": "Nakamoto Inc",
+          "btc": 4467,
+          "rank": 21,
+          "change": null
+        },
+        {
+          "ticker": "OBTC3.SA",
+          "name": "OranjeBTC",
+          "btc": 3950,
+          "rank": 22,
+          "change": null
+        },
+        {
+          "ticker": "ALCPB.PA",
+          "name": "Capital B",
+          "btc": 3538,
+          "rank": 23,
+          "change": null
+        },
+        {
+          "ticker": "H100",
+          "name": "H100 Group",
+          "btc": 3506.4,
+          "rank": 24,
+          "change": null
+        },
+        {
+          "ticker": "AMOD",
+          "name": "Alpha Modus Holdings, Inc.",
+          "btc": 3170,
+          "rank": 25,
+          "change": null
+        },
+        {
+          "ticker": "DDC",
+          "name": "DDC Enterprise Limited",
+          "btc": 2899,
+          "rank": 26,
+          "change": null
+        },
+        {
+          "ticker": "SWC.L",
+          "name": "The Smarter Web Company PLC",
+          "btc": 2850,
+          "rank": 27,
+          "change": null
+        },
+        {
+          "ticker": "DEFI.NE",
+          "name": "DeFi Technologies",
+          "btc": 2841.2321,
+          "rank": 28,
+          "change": null
+        },
+        {
+          "ticker": "BTGO",
+          "name": "BitGo Holdings, Inc.",
+          "btc": 2523,
+          "rank": 29,
+          "change": null
+        },
+        {
+          "ticker": "RIOT",
+          "name": "Riot Platforms, Inc.",
+          "btc": 2418,
+          "rank": 30,
+          "change": null
+        },
+        {
+          "ticker": "ZBAO",
+          "name": "Zhibao Technology Inc",
+          "btc": 2380,
+          "rank": 31,
+          "change": null
+        },
+        {
+          "ticker": "IOND",
+          "name": "Ionic Digital Inc.",
+          "btc": 2217,
+          "rank": 32,
+          "change": null
+        },
+        {
+          "ticker": "CAN",
+          "name": "Canaan Inc.",
+          "btc": 1875,
+          "rank": 33,
+          "change": null
+        },
+        {
+          "ticker": "VIRT",
+          "name": "Virtu Financial, Inc.",
+          "btc": 1800,
+          "rank": 34,
+          "change": null
+        },
+        {
+          "ticker": "3659.T",
+          "name": "NEXON Co., Ltd.",
+          "btc": 1717,
+          "rank": 35,
+          "change": null
+        },
+        {
+          "ticker": "3825.T",
+          "name": "Remixpoint",
+          "btc": 1511.21334111,
+          "rank": 36,
+          "change": null
+        },
+        {
+          "ticker": "FUFU",
+          "name": "BitFuFu Inc.",
+          "btc": 1454,
+          "rank": 37,
+          "change": null
+        },
+        {
+          "ticker": "3189.T",
+          "name": "Anap Holdings Inc.",
+          "btc": 1366.30969994,
+          "rank": 38,
+          "change": null
+        },
+        {
+          "ticker": "CIMG",
+          "name": "CIMG Inc",
+          "btc": 1145.4,
+          "rank": 39,
+          "change": null
+        },
+        {
+          "ticker": "TRSR",
+          "name": "Treasury",
+          "btc": 1111,
+          "rank": 40,
+          "change": null
+        },
+        {
+          "ticker": "CANG",
+          "name": "Cango Inc",
+          "btc": 1056,
+          "rank": 41,
+          "change": null
+        },
+        {
+          "ticker": "ZOOZ",
+          "name": "ZOOZ Power",
+          "btc": 1047,
+          "rank": 42,
+          "change": null
+        },
+        {
+          "ticker": "USBC",
+          "name": "USBC, Inc.",
+          "btc": 1029.25,
+          "rank": 43,
+          "change": null
+        },
+        {
+          "ticker": "EMPD",
+          "name": "Empery Digital",
+          "btc": 1018,
+          "rank": 44,
+          "change": null
+        },
+        {
+          "ticker": "APUS",
+          "name": "Apimeds Pharmaceuticals US, Inc.",
+          "btc": 1004.84,
+          "rank": 45,
+          "change": null
+        },
+        {
+          "ticker": "MSW",
+          "name": "Ming Shing Group",
+          "btc": 833,
+          "rank": 46,
+          "change": null
+        },
+        {
+          "ticker": "SOS",
+          "name": "SOS Limited",
+          "btc": 802.77,
+          "rank": 47,
+          "change": null
+        },
+        {
+          "ticker": "AKER.OL",
+          "name": "Aker ASA",
+          "btc": 754,
+          "rank": 48,
+          "change": null
+        },
+        {
+          "ticker": "BTCT.V",
+          "name": "Bitcoin Treasury Corp",
+          "btc": 732.47,
+          "rank": 49,
+          "change": null
+        },
+        {
+          "ticker": "ARLP",
+          "name": "Alliance Resource Partners, L.P.",
+          "btc": 673,
+          "rank": 50,
+          "change": null
+        },
+        {
+          "ticker": "MLIZY",
+          "name": "Méliuz",
+          "btc": 604.7,
+          "rank": 51,
+          "change": null
+        },
+        {
+          "ticker": "EXOD",
+          "name": "Exodus Movement, Inc",
+          "btc": 600,
+          "rank": 52,
+          "change": null
+        },
+        {
+          "ticker": "PHX.AD",
+          "name": "Phoenix Group PLC",
+          "btc": 559,
+          "rank": 53,
+          "change": null
+        },
+        {
+          "ticker": "377030.KQ",
+          "name": "bitmax",
+          "btc": 551.2376,
+          "rank": 54,
+          "change": null
+        },
+        {
+          "ticker": "UUU",
+          "name": "3U Holding AG",
+          "btc": 427.1,
+          "rank": 55,
+          "change": null
+        },
+        {
+          "ticker": "NDA.V",
+          "name": "Neptune Digital Assets",
+          "btc": 424,
+          "rank": 56,
+          "change": null
+        },
+        {
+          "ticker": "DMGI.V",
+          "name": "DMG Blockchain Solutions Inc.",
+          "btc": 379.2,
+          "rank": 57,
+          "change": null
+        },
+        {
+          "ticker": "NTHOL.IS",
+          "name": "Net Holding A.S.",
+          "btc": 352.669738,
+          "rank": 58,
+          "change": null
+        },
+        {
+          "ticker": "NCTY",
+          "name": "The9 Limited",
+          "btc": 347,
+          "rank": 59,
+          "change": null
+        },
+        {
+          "ticker": "FIGR",
+          "name": "Figure Technology Solutions, Inc",
+          "btc": 313,
+          "rank": 60,
+          "change": null
+        },
+        {
+          "ticker": "CIFR",
+          "name": "Cipher Digital",
+          "btc": 310,
+          "rank": 61,
+          "change": null
+        },
+        {
+          "ticker": "ANGX",
+          "name": "Angel Studios, Inc.",
+          "btc": 303.1,
+          "rank": 62,
+          "change": null
+        },
+        {
+          "ticker": "CPOP",
+          "name": "POP Culture Group Co., Ltd.",
+          "btc": 300,
+          "rank": 63,
+          "change": null
+        },
+        {
+          "ticker": "049470.KQ",
+          "name": "Bitplanet",
+          "btc": 300,
+          "rank": 64,
+          "change": null
+        },
+        {
+          "ticker": "5721.T",
+          "name": "S-Science",
+          "btc": 296.2406218,
+          "rank": 65,
+          "change": null
+        },
+        {
+          "ticker": "RUM",
+          "name": "Rumble Inc.",
+          "btc": 293.14,
+          "rank": 66,
+          "change": null
+        },
+        {
+          "ticker": "DCC.AX",
+          "name": "DigitalX",
+          "btc": 283,
+          "rank": 67,
+          "change": null
+        },
+        {
+          "ticker": "HIVE",
+          "name": "HIVE Digital Technologies",
+          "btc": 269,
+          "rank": 68,
+          "change": "79"
+        },
+        {
+          "ticker": "LQWD.V",
+          "name": "LQWD Technologies Corp.",
+          "btc": 267,
+          "rank": 69,
+          "change": null
+        },
+        {
+          "ticker": "112040.KQ",
+          "name": "WEMADE",
+          "btc": 245,
+          "rank": 70,
+          "change": null
+        },
+        {
+          "ticker": "PNIX.AQ",
+          "name": "Phoenix Digital Assets",
+          "btc": 243.96,
+          "rank": 71,
+          "change": null
+        },
+        {
+          "ticker": "288330.KQ",
+          "name": "Parataxis Korea",
+          "btc": 224.7149,
+          "rank": 72,
+          "change": null
+        },
+        {
+          "ticker": "VANA.MC",
+          "name": "Vanadi Coffee, SA",
+          "btc": 223,
+          "rank": 73,
+          "change": null
+        },
+        {
+          "ticker": "BMNR",
+          "name": "BitMine Immersion Technologies, Inc.",
+          "btc": 216,
+          "rank": 74,
+          "change": null
+        },
+        {
+          "ticker": "GPUS",
+          "name": "Hyperscale Data",
+          "btc": 211.4639,
+          "rank": 75,
+          "change": null
+        },
+        {
+          "ticker": "36C.F",
+          "name": "BTCS S.A.",
+          "btc": 202.270142,
+          "rank": 76,
+          "change": null
+        },
+        {
+          "ticker": "COIN.AQ",
+          "name": "Coinsilium",
+          "btc": 182,
+          "rank": 77,
+          "change": null
+        },
+        {
+          "ticker": "BTCB.SE",
+          "name": "Bitcoin Treasury Capital",
+          "btc": 174,
+          "rank": 78,
+          "change": null
+        },
+        {
+          "ticker": "FIG",
+          "name": "Figma Inc",
+          "btc": 173,
+          "rank": 79,
+          "change": null
+        },
+        {
+          "ticker": "FLD",
+          "name": "Fold Holdings Inc.",
+          "btc": 171,
+          "rank": 80,
+          "change": null
+        },
+        {
+          "ticker": "MATA.V",
+          "name": "Matador Technologies Inc",
+          "btc": 168.16,
+          "rank": 81,
+          "change": null
+        },
+        {
+          "ticker": "K33.ST",
+          "name": "K33 AB",
+          "btc": 167.5,
+          "rank": 82,
+          "change": null
+        },
+        {
+          "ticker": "HODL.AQ",
+          "name": "B HODL",
+          "btc": 167.487,
+          "rank": 83,
+          "change": null
+        },
+        {
+          "ticker": "BTC.BK",
+          "name": "The Brooker Group",
+          "btc": 164.7,
+          "rank": 84,
+          "change": null
+        },
+        {
+          "ticker": "FRMO",
+          "name": "FRMO Corp.",
+          "btc": 159.1,
+          "rank": 85,
+          "change": null
+        },
+        {
+          "ticker": "HKHC",
+          "name": "Horizon Kinetics Holding Corp",
+          "btc": 132,
+          "rank": 86,
+          "change": null
+        },
+        {
+          "ticker": "3903.T",
+          "name": "gumi Inc.",
+          "btc": 112,
+          "rank": 87,
+          "change": null
+        },
+        {
+          "ticker": "JZXN",
+          "name": "Jiuzi Holdings Inc",
+          "btc": 100,
+          "rank": 88,
+          "change": null
+        },
+        {
+          "ticker": "V3TC.AQ",
+          "name": "Vaultz Capital",
+          "btc": 86,
+          "rank": 89,
+          "change": null
+        },
+        {
+          "ticker": "WELX",
+          "name": "Winland Holdings Corporation",
+          "btc": 83,
+          "rank": 90,
+          "change": null
+        },
+        {
+          "ticker": "XCE.AQ",
+          "name": "XCE-Connecting Excellence Group",
+          "btc": 81.157,
+          "rank": 91,
+          "change": null
+        },
+        {
+          "ticker": "BTC.L",
+          "name": "London BTC Company (formerly Vinanz)",
+          "btc": 80.2603,
+          "rank": 92,
+          "change": null
+        },
+        {
+          "ticker": "CRCL",
+          "name": "Circle Internet Group, Inc.",
+          "btc": 77,
+          "rank": 93,
+          "change": null
+        },
+        {
+          "ticker": "XYZ.BK",
+          "name": "RSXYZ PCL",
+          "btc": 74.97595122,
+          "rank": 94,
+          "change": null
+        },
+        {
+          "ticker": "BTCW.V",
+          "name": "Bitcoin Well Inc",
+          "btc": 69,
+          "rank": 95,
+          "change": null
+        },
+        {
+          "ticker": "STAK",
+          "name": "Stack BTC Plc",
+          "btc": 68.1898,
+          "rank": 96,
+          "change": null
+        },
+        {
+          "ticker": "PWCM",
+          "name": "PowerCompute, Inc.",
+          "btc": 65.7,
+          "rank": 97,
+          "change": "2"
+        },
+        {
+          "ticker": "042420.KQ",
+          "name": "NEOWIZ Holdings",
+          "btc": 64,
+          "rank": 98,
+          "change": null
+        },
+        {
+          "ticker": "SIX.CN",
+          "name": "Sixty-Six Capital Inc",
+          "btc": 57.23,
+          "rank": 99,
+          "change": null
+        },
+        {
+          "ticker": "BTDR",
+          "name": "Bitdeer Technologies Group",
+          "btc": 47,
+          "rank": 100,
+          "change": null
+        }
+      ]
+    }
+  ]
+}

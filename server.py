@@ -468,6 +468,13 @@ def paper_mod():
         spec.loader.exec_module(mod)
         _PAPER = mod
     return _PAPER
+def briefing_doc():
+    scripts = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts")
+    if scripts not in sys.path:
+        sys.path.insert(0, scripts)
+    import briefing
+    return briefing.build(os.path.dirname(os.path.abspath(__file__)))
+
 def paper_view(fresh=False):
     """Reconcile the saved book with Yahoo daily bars. Does not write the file.
 
@@ -615,6 +622,9 @@ class H(SimpleHTTPRequestHandler):
         if u.path == "/api/paper":
             try: return s.send_json(paper_view(qs.get("fresh", [""])[0] == "1"))
             except Exception as e: return s.send_json({"error": str(e)}, 502)
+        if u.path == "/api/briefing":
+            try: return s.send_json(briefing_doc())
+            except Exception as e: return s.send_json({"error": str(e)}, 500)
         if u.path == "/api/logo":
             b = heat.logo(qs.get("symbol", [""])[0])
             if not b: return s.send_json({"error": "no logo"}, 404)
