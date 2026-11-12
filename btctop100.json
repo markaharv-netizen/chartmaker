@@ -6,7 +6,7 @@
   "sheet": "BTCTC Top 100",
   "gid": 73825060,
   "description": "Top 100 corporate bitcoin holdings from the BTCTC Top 100 tab of My Bot's Sheets. USD value is BTC times a live BTC price and is not part of this file.",
-  "fetchedAt": "2026-11-11T16:17:28Z",
+  "fetchedAt": "2026-11-12T16:18:41Z",
   "supply": 21000000,
   "companies": [
     {
@@ -640,7 +640,7 @@
       "country": "CA",
       "change": null,
       "btc": 732.47,
-      "asOf": "2026-10-31",
+      "asOf": "2026-10",
       "source": "Company news release 'October Update on Normal Course Issuer Bid', 2026-11-04",
       "sourceLabel": "Press release",
       "sourceUrl": "https://btctcorp.com/bitcoin-treasury-corporation-provides-october-update-on-normal-course-issuer-bid/",
@@ -856,19 +856,6 @@
     },
     {
       "rank": 66,
-      "name": "Rumble Inc.",
-      "ticker": "RUM",
-      "country": "CA",
-      "change": null,
-      "btc": 293.14,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-10)",
-      "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1830081/000121390026087311/ea0301267-10q_rumgroup.htm",
-      "notes": null
-    },
-    {
-      "rank": 67,
       "name": "DigitalX",
       "ticker": "DCC.AX",
       "country": "AU",
@@ -881,7 +868,7 @@
       "notes": "364 BTC at 6/30/26; sold 80 afterwards, retaining 'more than 283'."
     },
     {
-      "rank": 68,
+      "rank": 67,
       "name": "HIVE Digital Technologies",
       "ticker": "HIVE",
       "country": "CA",
@@ -894,7 +881,7 @@
       "notes": "Plus options to repurchase 212 pledged BTC."
     },
     {
-      "rank": 69,
+      "rank": 68,
       "name": "LQWD Technologies Corp.",
       "ticker": "LQWD.V",
       "country": "CA",
@@ -907,7 +894,7 @@
       "notes": null
     },
     {
-      "rank": 70,
+      "rank": 69,
       "name": "WEMADE",
       "ticker": "112040.KQ",
       "country": "KR",
@@ -920,7 +907,7 @@
       "notes": "As of 3/31/26 (Q1); consolidated (parent-only 215)."
     },
     {
-      "rank": 71,
+      "rank": 70,
       "name": "Phoenix Digital Assets",
       "ticker": "PNIX.AQ",
       "country": "GI",
@@ -933,7 +920,7 @@
       "notes": "Also holds 64,038 HYPE; sold digital assets in H1 2026 to fund tax/financing obligations."
     },
     {
-      "rank": 72,
+      "rank": 71,
       "name": "Parataxis Korea",
       "ticker": "288330.KQ",
       "country": "KR",
@@ -946,7 +933,7 @@
       "notes": null
     },
     {
-      "rank": 73,
+      "rank": 72,
       "name": "Vanadi Coffee, SA",
       "ticker": "VANA.MC",
       "country": "ES",
@@ -959,7 +946,7 @@
       "notes": null
     },
     {
-      "rank": 74,
+      "rank": 73,
       "name": "BitMine Immersion Technologies, Inc.",
       "ticker": "BMNR",
       "country": "US",
@@ -972,7 +959,7 @@
       "notes": "Primarily an ETH treasury company."
     },
     {
-      "rank": 75,
+      "rank": 74,
       "name": "Hyperscale Data",
       "ticker": "GPUS",
       "country": "US",
@@ -985,7 +972,7 @@
       "notes": "Weekly update; sold ~686 BTC in Aug 2026."
     },
     {
-      "rank": 76,
+      "rank": 75,
       "name": "BTCS S.A.",
       "ticker": "36C.F",
       "country": "PL",
@@ -998,7 +985,7 @@
       "notes": null
     },
     {
-      "rank": 77,
+      "rank": 76,
       "name": "Coinsilium",
       "ticker": "COIN.AQ",
       "country": "GI",
@@ -1011,7 +998,7 @@
       "notes": null
     },
     {
-      "rank": 78,
+      "rank": 77,
       "name": "Bitcoin Treasury Capital",
       "ticker": "BTCB.SE",
       "country": "SE",
@@ -1024,7 +1011,7 @@
       "notes": null
     },
     {
-      "rank": 79,
+      "rank": 78,
       "name": "Figma Inc",
       "ticker": "FIG",
       "country": "US",
@@ -1037,7 +1024,7 @@
       "notes": "Direct BTC only; also holds a bitcoin ETF position (~$49M) not counted."
     },
     {
-      "rank": 80,
+      "rank": 79,
       "name": "Fold Holdings Inc.",
       "ticker": "FLD",
       "country": "US",
@@ -1050,7 +1037,7 @@
       "notes": "Investment treasury only (171 BTC at 9/30); a further 76 BTC in rewards treasury matched to customer liabilities (total 247)."
     },
     {
-      "rank": 81,
+      "rank": 80,
       "name": "Matador Technologies Inc",
       "ticker": "MATA.V",
       "country": "CA",
@@ -1063,7 +1050,7 @@
       "notes": "138.22 BTC pledged as collateral."
     },
     {
-      "rank": 82,
+      "rank": 81,
       "name": "K33 AB",
       "ticker": "K33.ST",
       "country": "NO",
@@ -1076,7 +1063,7 @@
       "notes": "Effective exposure' incl. look-through via ~46% stake in Sixty-Six Capital (partial double count); direct count not disclosed."
     },
     {
-      "rank": 83,
+      "rank": 82,
       "name": "B HODL",
       "ticker": "HODL.AQ",
       "country": "UK",
@@ -1089,7 +1076,7 @@
       "notes": null
     },
     {
-      "rank": 84,
+      "rank": 83,
       "name": "The Brooker Group",
       "ticker": "BTC.BK",
       "country": "TH",
@@ -1102,7 +1089,7 @@
       "notes": "Stale: latest unit table found is 6/30/25."
     },
     {
-      "rank": 85,
+      "rank": 84,
       "name": "FRMO Corp.",
       "ticker": "FRMO",
       "country": "US",
@@ -1115,7 +1102,7 @@
       "notes": "Stale (Aug 2025); direct BTC only - most BTC exposure is via Grayscale ETF shares."
     },
     {
-      "rank": 86,
+      "rank": 85,
       "name": "Horizon Kinetics Holding Corp",
       "ticker": "HKHC",
       "country": "US",
@@ -1128,7 +1115,7 @@
       "notes": "Excludes 1,912 BTC held in consolidated client investment products."
     },
     {
-      "rank": 87,
+      "rank": 86,
       "name": "gumi Inc.",
       "ticker": "3903.T",
       "country": "JP",
@@ -1141,7 +1128,7 @@
       "notes": "Group holdings excl. funds. Company plans to migrate crypto holdings toward XRP; 144.14 BTC consolidated at 4/30/26 (annual securities report)."
     },
     {
-      "rank": 88,
+      "rank": 87,
       "name": "Jiuzi Holdings Inc",
       "ticker": "JZXN",
       "country": "CN",
@@ -1154,7 +1141,7 @@
       "notes": "100 BTC received 1/12/26 as share consideration; fiscal year ends Oct 31."
     },
     {
-      "rank": 89,
+      "rank": 88,
       "name": "Vaultz Capital",
       "ticker": "V3TC.AQ",
       "country": "UK",
@@ -1167,7 +1154,7 @@
       "notes": "Sold 47 BTC to fund a £3.0M AI-infrastructure investment; company states 86 BTC held after the disposal. Shareholders approved dropping the BTC treasury policy (Jul 2026)."
     },
     {
-      "rank": 90,
+      "rank": 89,
       "name": "Winland Holdings Corporation",
       "ticker": "WELX",
       "country": "US",
@@ -1180,7 +1167,7 @@
       "notes": "OTC Pink alternative-reporting company (not an SEC filer)."
     },
     {
-      "rank": 91,
+      "rank": 90,
       "name": "XCE-Connecting Excellence Group",
       "ticker": "XCE.AQ",
       "country": "UK",
@@ -1193,7 +1180,7 @@
       "notes": "Includes 10 BTC linked to BTC-denominated convertible bond programme and 8.216 BTC acquired with James Gray Recruitment (10/5/26); a portion is held as security under a new BitGo revolving credit facility."
     },
     {
-      "rank": 92,
+      "rank": 91,
       "name": "London BTC Company (formerly Vinanz)",
       "ticker": "BTC.L",
       "country": "UK",
@@ -1206,7 +1193,7 @@
       "notes": "Stale (Mar 2026): latest stated treasury count; annual report showed 80.16 BTC at 2/28/26. Miner output since may change total."
     },
     {
-      "rank": 93,
+      "rank": 92,
       "name": "Circle Internet Group, Inc.",
       "ticker": "CRCL",
       "country": "US",
@@ -1219,7 +1206,7 @@
       "notes": "Includes Circle-wrapped bitcoin (cirBTC)."
     },
     {
-      "rank": 94,
+      "rank": 93,
       "name": "RSXYZ PCL",
       "ticker": "XYZ.BK",
       "country": "TH",
@@ -1232,7 +1219,7 @@
       "notes": "Precision refresh, not a purchase: same holding as the 74.97 BTC announced Oct 2025, now shown to 8 decimals on the company IR page."
     },
     {
-      "rank": 95,
+      "rank": 94,
       "name": "Bitcoin Well Inc",
       "ticker": "BTCW.V",
       "country": "CA",
@@ -1245,7 +1232,7 @@
       "notes": "Approximate (\"net investment of approximately 69 bitcoin\" as at 8/12/26)."
     },
     {
-      "rank": 96,
+      "rank": 95,
       "name": "Stack BTC Plc",
       "ticker": "STAK",
       "country": "UK",
@@ -1258,7 +1245,7 @@
       "notes": "Latest stated count (Apr 2026)."
     },
     {
-      "rank": 97,
+      "rank": 96,
       "name": "PowerCompute, Inc.",
       "ticker": "PWCM",
       "country": "US",
@@ -1271,7 +1258,7 @@
       "notes": "Company-stated: held 65.7 BTC at October 31, 2026."
     },
     {
-      "rank": 98,
+      "rank": 97,
       "name": "NEOWIZ Holdings",
       "ticker": "042420.KQ",
       "country": "KR",
@@ -1284,7 +1271,7 @@
       "notes": "Consolidated; down from 94 at start of 2026."
     },
     {
-      "rank": 99,
+      "rank": 98,
       "name": "Sixty-Six Capital Inc",
       "ticker": "SIX.CN",
       "country": "CA",
@@ -1297,7 +1284,7 @@
       "notes": "Direct BTC only; 'effective exposure' 257 incl. a 200-BTC call option."
     },
     {
-      "rank": 100,
+      "rank": 99,
       "name": "Bitdeer Technologies Group",
       "ticker": "BTDR",
       "country": "SG",
@@ -1308,6 +1295,19 @@
       "sourceLabel": "SEC 6-K",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1899123/000121390026110703/ea030767901ex99-1.htm",
       "notes": "Excludes customer deposits; includes BTC pledged as collateral. Moving to quarterly updates."
+    },
+    {
+      "rank": 100,
+      "name": "Core Scientific",
+      "ticker": "CORZ",
+      "country": "US",
+      "change": null,
+      "btc": 32,
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-05)",
+      "sourceLabel": "SEC 10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000030/core-20260930.htm",
+      "notes": "Self-mined BTC only (32 BTC held at 9/30)."
     }
   ]
 }
