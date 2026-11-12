@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated": "2026-11-11T13:55:20Z",
+  "generated": "2026-11-12T13:53:01Z",
   "note": "Paper book sized by paperWeight on static/price_targets.json. paperWeight is a signed percent of NAV (10 = 10% long, -5 = 5% short, 0 or missing = cash), copied from the sheet column \"Paper weight %\". Gross exposure is capped at 100%. No leverage, no fees. After any price_targets.json update: python3 scripts/paper_trading.py",
   "config": {
     "startingCash": 100000.0,
@@ -14,7 +14,7 @@
     "minTrade": 1.0,
     "summary": "Virtual $100,000. Each name is sized by its paper weight, a signed percent of NAV (10 = 10% long, -5 = 5% short, 0 = cash). Gross exposure is capped at 100%. No leverage, no fees. Weight changes trade at the next session open (09:30 America/New_York). Compared with S&P 500 (SPY). Not investment advice."
   },
-  "cash": 43000.0,
+  "cash": 39230.62,
   "started": true,
   "seenWeights": true,
   "waiting": false,
@@ -64,8 +64,8 @@
       "rating": "HOLD",
       "side": "long",
       "status": "open",
-      "shares": 93.87467596112286,
-      "entryPrice": 127.83000183105469,
+      "shares": 130.18290795566693,
+      "entryPrice": 125.79680831404134,
       "entryDate": "2026-11-06",
       "realized": 0.0,
       "weight": 16.0,
@@ -88,10 +88,10 @@
       "rating": "SELL",
       "side": "short",
       "status": "open",
-      "shares": -149.22191478937236,
+      "shares": -70.09848924049577,
       "entryPrice": 46.90999984741211,
       "entryDate": "2026-11-06",
-      "realized": 0.0,
+      "realized": -716.46,
       "weight": -4.0,
       "weightRequested": -4.0
     },
@@ -100,10 +100,10 @@
       "rating": "HOLD",
       "side": "long",
       "status": "open",
-      "shares": 25.414754677020827,
+      "shares": 22.716342604837532,
       "entryPrice": 708.25,
       "entryDate": "2026-11-06",
-      "realized": 0.0,
+      "realized": 185.89,
       "weight": 18.0,
       "weightRequested": 18.0
     },
@@ -112,10 +112,10 @@
       "rating": "HOLD",
       "side": "long",
       "status": "open",
-      "shares": 23.053805009531043,
+      "shares": 15.164757167787126,
       "entryPrice": 607.2750244140625,
       "entryDate": "2026-11-06",
-      "realized": 0.0,
+      "realized": 311.34,
       "weight": 10.0,
       "weightRequested": 10.0
     },
@@ -124,10 +124,10 @@
       "rating": "SELL",
       "side": "short",
       "status": "open",
-      "shares": -145.01760790586715,
+      "shares": -106.78734381792172,
       "entryPrice": 48.27000045776367,
       "entryDate": "2026-11-06",
-      "realized": 0.0,
+      "realized": -612.45,
       "weight": -7.0,
       "weightRequested": -7.0
     },
@@ -136,10 +136,10 @@
       "rating": "SELL",
       "side": "short",
       "status": "open",
-      "shares": -163.55904644796402,
+      "shares": -140.49069253110113,
       "entryPrice": 30.56999969482422,
       "entryDate": "2026-11-06",
-      "realized": 0.0,
+      "realized": -100.0,
       "weight": -5.0,
       "weightRequested": -5.0
     },
@@ -160,10 +160,10 @@
       "rating": "BUY",
       "side": "long",
       "status": "open",
-      "shares": 22.857142857142858,
+      "shares": 22.029773319586862,
       "entryPrice": 525.0,
       "entryDate": "2026-11-06",
-      "realized": 0.0,
+      "realized": 7.64,
       "weight": 12.0,
       "weightRequested": 12.0
     },
@@ -172,10 +172,10 @@
       "rating": "BUY",
       "side": "long",
       "status": "open",
-      "shares": 70.49700084399333,
+      "shares": 68.21174217540401,
       "entryPrice": 283.70001220703125,
       "entryDate": "2026-11-06",
-      "realized": 0.0,
+      "realized": 8.83,
       "weight": 20.0,
       "weightRequested": 20.0
     },
@@ -195,11 +195,11 @@
   "applied": {
     "SPCX": 0.0,
     "TSLA": 0.0,
-    "MSTR": 12.0,
+    "MSTR": 16.0,
     "NVDA": 0.0,
-    "CRWV": -7.0,
+    "CRWV": -4.0,
     "MU": 18.0,
-    "META": 14.0,
+    "META": 10.0,
     "RKLB": -7.0,
     "ASTS": -5.0,
     "ASST": 0.0,
@@ -207,27 +207,7 @@
     "GOOG": 20.0,
     "AGLT": 0.0
   },
-  "pending": {
-    "executeOn": "2026-11-11",
-    "detected": "2026-11-11",
-    "detectedAt": "2026-11-11T08:55:09-05:00",
-    "weights": {
-      "SPCX": 0.0,
-      "TSLA": 0.0,
-      "MSTR": 16.0,
-      "NVDA": 0.0,
-      "CRWV": -4.0,
-      "MU": 18.0,
-      "META": 10.0,
-      "RKLB": -7.0,
-      "ASTS": -5.0,
-      "ASST": 0.0,
-      "MSFT": 12.0,
-      "GOOG": 20.0,
-      "AGLT": 0.0
-    },
-    "reason": "weight"
-  },
+  "pending": null,
   "trades": [
     {
       "id": 1,
@@ -324,6 +304,102 @@
       "notional": 20000.0,
       "realized": null,
       "reason": "inception"
+    },
+    {
+      "id": 9,
+      "date": "2026-11-11",
+      "ticker": "MSTR",
+      "action": "buy",
+      "rating": "HOLD",
+      "price": 120.54000091552734,
+      "shares": 36.30823199454407,
+      "notional": 4376.59,
+      "realized": null,
+      "reason": "weight"
+    },
+    {
+      "id": 10,
+      "date": "2026-11-11",
+      "ticker": "CRWV",
+      "action": "cover",
+      "rating": "SELL",
+      "price": 55.96500015258789,
+      "shares": 79.1234255488766,
+      "notional": 4428.14,
+      "realized": -716.46,
+      "reason": "weight"
+    },
+    {
+      "id": 11,
+      "date": "2026-11-11",
+      "ticker": "MU",
+      "action": "sell",
+      "rating": "HOLD",
+      "price": 777.1400146484375,
+      "shares": 2.698412072183295,
+      "notional": 2097.04,
+      "realized": 185.89,
+      "reason": "weight"
+    },
+    {
+      "id": 12,
+      "date": "2026-11-11",
+      "ticker": "META",
+      "action": "sell",
+      "rating": "HOLD",
+      "price": 646.739990234375,
+      "shares": 7.889047841743917,
+      "notional": 5102.16,
+      "realized": 311.34,
+      "reason": "weight"
+    },
+    {
+      "id": 13,
+      "date": "2026-11-11",
+      "ticker": "RKLB",
+      "action": "cover",
+      "rating": "SELL",
+      "price": 64.29000091552734,
+      "shares": 38.23026408794543,
+      "notional": 2457.82,
+      "realized": -612.45,
+      "reason": "weight"
+    },
+    {
+      "id": 14,
+      "date": "2026-11-11",
+      "ticker": "ASTS",
+      "action": "cover",
+      "rating": "SELL",
+      "price": 34.904998779296875,
+      "shares": 23.06835391686289,
+      "notional": 805.2,
+      "realized": -100.0,
+      "reason": "weight"
+    },
+    {
+      "id": 15,
+      "date": "2026-11-11",
+      "ticker": "MSFT",
+      "action": "sell",
+      "rating": "BUY",
+      "price": 534.239990234375,
+      "shares": 0.8273695375559953,
+      "notional": 442.01,
+      "realized": 7.64,
+      "reason": "weight"
+    },
+    {
+      "id": 16,
+      "date": "2026-11-11",
+      "ticker": "GOOG",
+      "action": "sell",
+      "rating": "BUY",
+      "price": 287.56500244140625,
+      "shares": 2.2852586685893215,
+      "notional": 657.16,
+      "realized": 8.83,
+      "reason": "weight"
     }
   ],
   "marks": [
@@ -341,6 +417,11 @@
       "date": "2026-11-10",
       "nav": 97976.96,
       "spyClose": 749.9199829101562
+    },
+    {
+      "date": "2026-11-11",
+      "nav": 97959.53,
+      "spyClose": 759.8099975585938
     }
   ],
   "spyInceptionOpen": 734.8200073242188,
