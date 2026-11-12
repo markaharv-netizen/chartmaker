@@ -338,19 +338,27 @@ class LiveFilesTest(unittest.TestCase):
         for swing in doc["sentiment"]["thin"]:
             self.assertLess(swing["classified"], briefing.THIN_ITEMS)
         charts = doc["charts"]["items"]
-        self.assertEqual(len(charts), 16)
-        self.assertEqual(doc["charts"].get("picks"), [])
-        self.assertEqual(doc["charts"].get("theme"), "16 items drawn at random from the sheet library.")
-        titles = " ".join(item["title"] for item in charts)
+        picks = doc["charts"].get("picks") or []
+        self.assertEqual(len(charts), 13)
+        self.assertEqual(len(picks), 5)
+        self.assertEqual(doc["charts"].get("theme"), "5 picks, plus 13 items drawn at random from the sheet library.")
+        titles = " ".join(item["title"] for item in list(picks) + list(charts))
         for gone in (
             "MOVE ÷ VIX",
             "quits rate vs wage growth",
             "manufacturing construction spending",
             "Chart 2",
             "Bitcoin correlation with gold",
+            "capital spending as % of revenue",
+            "Nasdaq Composite ÷ S&P 500",
+            "Equal-weight vs cap-weight",
+            "Coffee and cocoa prices",
+            "continuing claims per initial claim",
+            "foreign-born vs native-born",
+            "labor force participation of Americans 55+",
         ):
             self.assertNotIn(gone, titles)
-        for item in charts:
+        for item in list(picks) + list(charts):
             self.assertFalse(briefing.chart_excluded({
                 "sheet_url": item["href"] if "gid=" in item["href"] else "",
             }))

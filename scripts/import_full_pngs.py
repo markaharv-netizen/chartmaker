@@ -384,6 +384,12 @@ def self_test():
             {"book": "bot1", "tab": "122 Bond vol vs stock vol", "gid": 1308503061, "charts": []},
             {"book": "bot1", "tab": "232 Quits vs wage growth", "gid": 748431671, "charts": []},
             {"book": "bot1", "tab": "162 Factory construction boom", "gid": 254001772, "charts": []},
+            {"book": "bot1", "tab": "153 Big Tech capex intensity", "gid": 1238930141, "charts": []},
+            {"book": "bot1", "tab": "43 Nasdaq vs S&P ratio", "gid": 1835714359, "charts": []},
+            {"book": "bot1", "tab": "109 Equal vs cap-weight S&P", "gid": 492285771, "charts": []},
+            {"book": "bot1", "tab": "135 Real coffee & cocoa", "gid": 220064271, "charts": []},
+            {"book": "bot1", "tab": "239 Foreign vs native-born jobs", "gid": 1755343475, "charts": []},
+            {"book": "bot1", "tab": "233 Older workers participation", "gid": 1067583608, "charts": []},
             {"book": "bot2", "tab": "75 CoreWeave backlog vs revenue", "gid": 530554790, "charts": []},
             {"book": "bot1", "tab": "97 MSTR vol vs BTC vol", "gid": 1027143376, "charts": []},
             {"book": "bot1", "tab": "52 Core goods vs services", "gid": 200447618, "charts": []},
@@ -405,6 +411,12 @@ def self_test():
             os.path.join(b1, "122 Bond vol vs stock vol.png"),
             os.path.join(b1, "232 Quits vs wage growth.png"),
             os.path.join(b1, "162 Factory construction boom.png"),
+            os.path.join(b1, "153 Big Tech capex intensity.png"),
+            os.path.join(b1, "43 Nasdaq vs S&P ratio.png"),
+            os.path.join(b1, "109 Equal vs cap-weight S&P.png"),
+            os.path.join(b1, "135 Real coffee & cocoa.png"),
+            os.path.join(b1, "239 Foreign vs native-born jobs.png"),
+            os.path.join(b1, "233 Older workers participation.png"),
         ]
         kept_new = [
             (os.path.join(mstr_dir, "75 CoreWeave backlog vs revenue.png"), "bot2", "530554790.png"),
@@ -426,8 +438,10 @@ def self_test():
         n2, u2, a2 = run(repo, [src], optimize_png=False, dry=False)
         # original five, plus data center, China/Mexico/Taiwan, the red-dot tracker, and six neighbors
         assert n2 == 14, n2
-        # prior eight unmatched, plus the retired exports and the tariff chart-2 file
-        assert u2 == 19, u2
+        # prior eight unmatched, plus the retired exports and the tariff chart-2 file.
+        # "173 Continuing/initial claims" stays in this fixture as gid 173, the slash-in-name
+        # example. The retired sheet is gid 79264442, so that export is not added again.
+        assert u2 == 25, u2
         assert a2 == 0, a2
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1547332232.png"))
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "643299192.png"))
@@ -442,7 +456,8 @@ def self_test():
         for gid in (418894352,):
             assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot2", "%d.png" % gid))
         for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621,
-                    1308503061, 748431671, 254001772):
+                    1308503061, 748431671, 254001772,
+                    1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608):
             assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "%d.png" % gid)), gid
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "501919598_2.png"))
         for _path, book, name in kept_new:
