@@ -45,6 +45,13 @@ RETIRED = (
     "1308503061",  # 122 Bond vol vs stock vol
     "748431671",   # 232 Quits vs wage growth
     "254001772",   # 162 Factory construction boom
+    "1238930141",  # 153 Big Tech capex intensity
+    "1835714359",  # 43 Nasdaq vs S&P ratio
+    "492285771",   # 109 Equal vs cap-weight S&P
+    "220064271",   # 135 Real coffee & cocoa
+    "79264442",    # 173 Continuing/initial claims
+    "1755343475",  # 239 Foreign vs native-born jobs
+    "1067583608",  # 233 Older workers participation
 )
 RETIRED_TABS = (
     "161 Nvidia P-S and P-E",
@@ -63,6 +70,13 @@ RETIRED_TABS = (
     "122 Bond vol vs stock vol",
     "232 Quits vs wage growth",
     "162 Factory construction boom",
+    "153 Big Tech capex intensity",
+    "43 Nasdaq vs S&P ratio",
+    "109 Equal vs cap-weight S&P",
+    "135 Real coffee & cocoa",
+    "173 Continuing/initial claims",
+    "239 Foreign vs native-born jobs",
+    "233 Older workers participation",
 )
 
 
@@ -234,21 +248,38 @@ class CotdDisplayTest(unittest.TestCase):
                     with open(os.path.join(ROOT, "static", "cotd", "today.json"), encoding="utf-8") as f:
                         saved = json.load(f)
                     live = browser.cards(f"{host}/real/index.html")
-                    self.assertEqual(live["n"], len(saved["items"]), live["titles"])
+                    picks = saved["picks"] if isinstance(saved.get("picks"), list) else []
+                    shown = (picks + saved["items"]) if picks else saved["items"]
+                    self.assertEqual(live["n"], len(shown), live["titles"])
                     self.assertEqual(live["hidden"], 0)
-                    self.assertEqual(live["imgs"], len(saved["items"]))
+                    self.assertEqual(live["imgs"], sum(1 for it in shown if it.get("image")))
                     if saved.get("random"):
                         self.assertIn(saved["theme"], live["text"])
                     else:
                         self.assertNotIn(saved["theme"][:48], live["text"])
-                    picked = saved["items"][0].get("picked") or ""
-                    if picked:
-                        self.assertNotIn(picked[:48], live["text"])
-                    self.assertEqual(live["headings"], [])
-                    self.assertEqual(live["picks"], 0)
-                    self.assertNotIn("Today's picks", live["text"])
-                    self.assertNotIn("Random from the library", live["text"])
-                    self.assertNotIn("Why it was picked", live["text"])
+                    picked_note = (shown[0].get("picked") or "") if shown else ""
+                    if picked_note:
+                        self.assertNotIn(picked_note[:48], live["text"])
+                    if picks:
+                        self.assertEqual(live["headings"], ["Today's picks", "Random from the library"])
+                        self.assertEqual(live["picks"], len(picks))
+                        self.assertIn("Today's picks", live["text"])
+                        self.assertIn("Random from the library", live["text"])
+                        self.assertIn("Why it was picked", live["text"])
+                        self.assertEqual(live["titles"][0], "1. " + picks[0]["title"])
+                        self.assertEqual(
+                            live["titles"][-1],
+                            f"{len(saved['items'])}. " + saved["items"][-1]["title"])
+                    else:
+                        self.assertEqual(live["headings"], [])
+                        self.assertEqual(live["picks"], 0)
+                        self.assertNotIn("Today's picks", live["text"])
+                        self.assertNotIn("Random from the library", live["text"])
+                        self.assertNotIn("Why it was picked", live["text"])
+                        self.assertEqual(live["titles"][0], "1. " + saved["items"][0]["title"])
+                        self.assertEqual(
+                            live["titles"][-1],
+                            f"{len(saved['items'])}. " + saved["items"][-1]["title"])
                     self.assertNotIn("Why it matters", live["text"])
                     self.assertNotIn("What you should know", live["text"])
                     self.assertTrue(any(live["favs"]), live["favs"])
@@ -256,8 +287,6 @@ class CotdDisplayTest(unittest.TestCase):
                         self.assertNotIn(gid, live["text"])
                     for tab in RETIRED_TABS:
                         self.assertNotIn(tab, live["text"])
-                    self.assertEqual(live["titles"][0], "1. " + saved["items"][0]["title"])
-                    self.assertEqual(live["titles"][-1], f"{len(saved['items'])}. " + saved["items"][-1]["title"])
             finally:
                 server.shutdown()
                 server.server_close()

@@ -26,11 +26,17 @@ ROBOTAXI = "bot2/1670158709"  # table favorite, not tied to today's edition
 def cotd_card_count():
     """How many cards today's edition actually publishes. Tests must not hard-code this."""
     with open(os.path.join(STATIC, "cotd", "today.json"), encoding="utf-8") as f:
-        return len(json.load(f)["items"])
+        doc = json.load(f)
+    n = len(doc.get("items") or [])
+    picks = doc.get("picks")
+    if isinstance(picks, list) and picks:
+        n += len(picks)
+    return n
 RETIRED = (
     "1547332232", "643299192", "333185169", "1024131985", "1791345316", "1370617918",
     "292208014", "2119398138", "1584345646", "1186940001", "501919598", "579853621", "418894352",
     "1308503061", "748431671", "254001772",
+    "1238930141", "1835714359", "492285771", "220064271", "79264442", "1755343475", "1067583608",
 )
 RETIRED_TABS = (
     "161 Nvidia P-S and P-E",
@@ -49,6 +55,13 @@ RETIRED_TABS = (
     "122 Bond vol vs stock vol",
     "232 Quits vs wage growth",
     "162 Factory construction boom",
+    "153 Big Tech capex intensity",
+    "43 Nasdaq vs S&P ratio",
+    "109 Equal vs cap-weight S&P",
+    "135 Real coffee & cocoa",
+    "173 Continuing/initial claims",
+    "239 Foreign vs native-born jobs",
+    "233 Older workers participation",
 )
 
 
@@ -308,9 +321,14 @@ class FavoritesTest(unittest.TestCase):
         })()""")
         with open(os.path.join(STATIC, "cotd", "today.json"), encoding="utf-8") as f:
             saved = json.load(f)
-        self.assertEqual(len(cards), len(saved["items"]))
-        self.assertEqual(cards[0]["title"], "1. " + saved["items"][0]["title"])
-        self.assertEqual(cards[-1]["title"], "%d. %s" % (len(saved["items"]), saved["items"][-1]["title"]))
+        self.assertEqual(len(cards), cotd_card_count())
+        picks = saved.get("picks") if isinstance(saved.get("picks"), list) else []
+        if picks:
+            self.assertEqual(cards[0]["title"], "1. " + picks[0]["title"])
+            self.assertEqual(cards[-1]["title"], "%d. %s" % (len(saved["items"]), saved["items"][-1]["title"]))
+        else:
+            self.assertEqual(cards[0]["title"], "1. " + saved["items"][0]["title"])
+            self.assertEqual(cards[-1]["title"], "%d. %s" % (len(saved["items"]), saved["items"][-1]["title"]))
         note = self.cdp.evaluate("document.getElementById('cotd').innerText")
         self.assertTrue("this browser" in note or "no separate accounts" in note, note)
         for gid in RETIRED:
