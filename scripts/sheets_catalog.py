@@ -10,7 +10,21 @@ Usage:
   python3 scripts/sheets_catalog.py --self-test
 
 Each JSON file is one spreadsheets.get response (the Google Sheets `get_spreadsheet` tool returns this shape):
-  spreadsheetId, properties.title, sheets[].properties.{sheetId,title,index,hidden}, sheets[].charts[].spec.title
+  spreadsheetId, properties.title, sheets[].properties.{sheetId,title,index,hidden},
+  sheets[].charts[].{chartId,spec.title,position}
+
+Monday's part 3 dump has to include chart position. A title-only get cannot number a tab
+that has more than one chart. Field mask:
+
+  sheets(properties,charts(chartId,spec.title,position))
+
+chartList n follows position.overlayPosition.anchorCell (rowIndex, then columnIndex,
+then the original charts[] index), the same order as the Monday exporter's
+pngChartsSorted_. Google's JSON omits a zero index; an anchorCell object still counts,
+and the missing index is 0. A tab with one chart does not need position. A multi-chart
+tab that lacks an anchor on any chart is not renumbered: this script keeps that tab's
+existing catalog entry and prints a warning. A new multi-chart tab with no anchors is
+left out until the dump includes position.
 
 The three workbooks, and the names Charts of the day already uses:
   Bot experiments      1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY
@@ -221,26 +235,86 @@ def prune_excluded_assets(repo):
                 removed.append(rel)
     return removed
 
+def _anchor_index(anchor, key):
+    """Integer anchor index. A missing key is 0 (protobuf JSON drops zeros). None if the value is unusable."""
+    if key not in anchor:
+        return 0
+    value = anchor[key]
+    if isinstance(value, bool) or not isinstance(value, int):
+        return None
+    return value
+
+def chart_anchor(chart):
+    """(rowIndex, columnIndex) from overlayPosition.anchorCell, or None when this chart has no anchor."""
+    if not isinstance(chart, dict):
+        return None
+    pos = chart.get("position")
+    if not isinstance(pos, dict):
+        return None
+    overlay = pos.get("overlayPosition")
+    if not isinstance(overlay, dict):
+        return None
+    anchor = overlay.get("anchorCell")
+    if not isinstance(anchor, dict):
+        return None
+    row = _anchor_index(anchor, "rowIndex")
+    col = _anchor_index(anchor, "columnIndex")
+    if row is None or col is None:
+        return None
+    return (row, col)
+
+def charts_sorted(sheet):
+    """Charts in pngChartsSorted_ order, or None when a multi-chart tab lacks an anchor.
+
+    Sort key is overlayPosition.anchorCell rowIndex, then columnIndex, then the
+    original index in sheets[].charts[]. A tab with one chart, or none, does not
+    need position and is returned as given.
+    """
+    charts = list(sheet.get("charts") or [])
+    if len(charts) <= 1:
+        return charts
+    keyed = []
+    for i, ch in enumerate(charts):
+        anchor = chart_anchor(ch)
+        if anchor is None:
+            return None
+        keyed.append((anchor[0], anchor[1], i, ch))
+    keyed.sort()
+    return [row[3] for row in keyed]
+
+def chart_text(ch):
+    spec = ch.get("spec") or {} if isinstance(ch, dict) else {}
+    title = spec.get("title") if isinstance(spec, dict) else ""
+    if isinstance(title, dict):
+        title = title.get("text") or ""
+    return " ".join(str(title or "").split())
+
 def chart_titles(sheet):
+    """Unique titles in the same order as chart_list, capped at 6. None when chart_list is None."""
+    charts = charts_sorted(sheet)
+    if charts is None:
+        return None
     out = []
-    for ch in sheet.get("charts") or []:
-        spec = ch.get("spec") or {}
-        title = spec.get("title") if isinstance(spec, dict) else ""
-        if isinstance(title, dict): title = title.get("text") or ""
-        title = " ".join(str(title or "").split())
-        if title and title not in out: out.append(title)
-        if len(out) >= 6: break
+    for ch in charts:
+        title = chart_text(ch)
+        if title and title not in out:
+            out.append(title)
+        if len(out) >= 6:
+            break
     return out
 
 def chart_list(sheet):
-    """Every chart in sheet order: [{"n": 1, "title": ...}]. n matches the PNG export's (n) suffix."""
-    out = []
-    for i, ch in enumerate(sheet.get("charts") or [], 1):
-        spec = ch.get("spec") or {}
-        title = spec.get("title") if isinstance(spec, dict) else ""
-        if isinstance(title, dict): title = title.get("text") or ""
-        out.append({"n": i, "title": " ".join(str(title or "").split())})
-    return out
+    """Every chart in on-sheet position order: [{"n": 1, "title": ...}].
+
+    n matches the PNG export's (n) suffix (pngChartsSorted_: anchor row, then
+    column, then the original charts[] index). None when a multi-chart tab has
+    no anchor on every chart, so the caller must not invent numbers from API order.
+    A single chart does not need a position.
+    """
+    charts = charts_sorted(sheet)
+    if charts is None:
+        return None
+    return [{"n": i, "title": chart_text(ch)} for i, ch in enumerate(charts, 1)]
 
 def one(doc):
     sid = str(doc.get("spreadsheetId") or "").strip()
@@ -261,10 +335,120 @@ def one(doc):
         if tab_excluded(bid, gid):
             excluded += 1
             continue
-        row = {"book": bid, "tab": title, "gid": int(gid), "charts": chart_titles(s), "chartList": chart_list(s)}
+        listed = chart_list(s)
+        if listed is None:
+            # Multi-chart tab with no anchors. Do not number it from API order.
+            tabs.append({
+                "book": bid, "tab": title, "gid": int(gid),
+                "_unpositioned": True, "_ncharts": len(s.get("charts") or []),
+            })
+            continue
+        row = {"book": bid, "tab": title, "gid": int(gid), "charts": chart_titles(s), "chartList": listed}
         tabs.append(row)
     return {"id": bid, "name": name, "spreadsheetId": sid,
             "url": f"https://docs.google.com/spreadsheets/d/{sid}/edit"}, tabs, hidden, excluded
+
+def load_previous_tabs(repo):
+    """(book, gid) -> catalog tab from the last catalog.json. Missing file is empty."""
+    dest = os.path.join(repo, "static", "sheets", "catalog.json")
+    try:
+        old = json.load(open(dest, encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    out = {}
+    for t in old.get("tabs") or []:
+        if not isinstance(t, dict):
+            continue
+        book, gid = t.get("book"), t.get("gid")
+        if book is None or gid is None:
+            continue
+        try:
+            out[(str(book), int(gid))] = t
+        except (TypeError, ValueError):
+            continue
+    return out
+
+def resolve_unpositioned(tabs, previous):
+    """Keep the prior catalog row when a multi-chart tab has no anchors.
+
+    A row marked _unpositioned is not given API-order numbers. When (book, gid)
+    is already in the catalog, that entry is kept (thumbnail is reattached later).
+    When it is not, the tab is left out. Returns (tabs, warnings).
+    """
+    out, warnings = [], []
+    for t in tabs:
+        if not t.get("_unpositioned"):
+            out.append(t)
+            continue
+        try:
+            key = (str(t.get("book")), int(t.get("gid")))
+        except (TypeError, ValueError):
+            warnings.append("multi-chart tab has no position data and no gid; left out")
+            continue
+        label = "%s gid %s (%s)" % (key[0], key[1], t.get("tab") or "")
+        ncharts = t.get("_ncharts")
+        prev = previous.get(key)
+        if prev:
+            row = dict(prev)
+            row.pop("thumb", None)
+            out.append(row)
+            warnings.append(
+                "%s: %s charts and no position data; kept the existing catalog entry" % (label, ncharts)
+            )
+        else:
+            warnings.append(
+                "%s: %s charts and no position data; no existing catalog entry, tab left out" % (label, ncharts)
+            )
+    return out, warnings
+
+def build_catalog(dumps, repo, allow_partial):
+    """Rewrite catalog.json from spreadsheet dumps. Returns (doc, warnings)."""
+    books, tabs = [], []
+    seen = set()
+    for path in dumps:
+        doc = json.load(open(path, encoding="utf-8"))
+        book, rows, hidden, excluded = one(doc)
+        if book["spreadsheetId"] in seen:
+            sys.exit("duplicate spreadsheet " + book["spreadsheetId"])
+        seen.add(book["spreadsheetId"])
+        books.append(book)
+        tabs.extend(rows)
+        extra = f", {excluded} excluded" if excluded else ""
+        n_hold = sum(1 for t in rows if t.get("_unpositioned"))
+        hold_s = f", {n_hold} multi-chart without position" if n_hold else ""
+        print(f"{book['name']}: {len(rows)} tabs ({hidden} hidden skipped{extra}{hold_s})")
+    missing = [name for bid, name, sid in BOOKS if sid not in seen]
+    if missing and not allow_partial:
+        sys.exit("missing workbook dumps: " + ", ".join(missing))
+    order = {bid: i for i, (bid, _, _) in enumerate(BOOKS)}
+    books.sort(key=lambda b: (order.get(b["id"], 99), b["name"]))
+    # Within each dump, tabs are already in sheet-index order. Regroup into book order.
+    grouped = []
+    for b in books:
+        grouped.extend(t for t in tabs if t["book"] == b["id"])
+    grouped, warnings = resolve_unpositioned(grouped, load_previous_tabs(repo))
+    for w in warnings:
+        print("warning: " + w)
+    kept, stamp = load_thumb_index(repo)
+    n_thumb = 0
+    for t in grouped:
+        prev = kept.get((t["book"], t["gid"]))
+        if prev:
+            t["thumb"] = prev
+            n_thumb += 1
+    generated = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    doc = {"generated": generated, "note": NOTE}
+    if stamp and n_thumb:
+        doc["thumbsGenerated"] = stamp
+    doc["books"] = books
+    doc["tabs"] = grouped
+    dest = os.path.join(repo, "static", "sheets", "catalog.json")
+    write_catalog(dest, doc)
+    dropped = prune_thumbs(repo, grouped)
+    dropped_ex = prune_excluded_assets(repo)
+    extra = f", {len(dropped_ex)} excluded assets removed" if dropped_ex else ""
+    print(f"wrote {dest} ({len(grouped)} tabs, {n_thumb} thumbs kept, {dropped} orphan thumbs removed{extra})")
+    return doc, warnings
 
 def self_test():
     import shutil, tempfile
@@ -603,6 +787,190 @@ def self_test():
             assert any(str(gid) in r for r in gone), gid
     finally:
         shutil.rmtree(scratch, ignore_errors=True)
+    debt = next(t for t in cat["tabs"] if t["book"] == "bot3" and t["gid"] == 1145735379)
+    assert [c["n"] for c in debt["chartList"]] == [1, 2, 3, 4]
+    assert [c["title"] for c in debt["chartList"]] == [
+        "Strategy bitcoin on balance sheet",
+        "Strategy BTC Holdings Q/Q Change",
+        "Strategy BTC/Share (in Sats)",
+        "MSTR mNAV",
+    ]
+    assert debt["charts"] == [c["title"] for c in debt["chartList"]]
+    rec = next(t for t in cat["tabs"] if t["book"] == "bot3" and t["gid"] == 729377719)
+    assert [c["title"] for c in rec["chartList"]] == [
+        "MSTR Amplification",
+        "MSTR Net BTC per share (sats)",
+        "mNAV = MSTR market price / Net BTC per share ($)",
+    ]
+    assert rec["charts"] == [c["title"] for c in rec["chartList"]]
+    qq = [it for it in today["items"] if it.get("title") == "Strategy BTC Holdings Q/Q Change"]
+    assert [it.get("chart_n") for it in qq] == [2], qq
+    cards = json.load(open(os.path.join(repo, "static", "cotd", "2026-11-12", "cards.json"), encoding="utf-8"))
+    card_ns = []
+    for key in ("items", "random", "picks"):
+        for it in cards.get(key) or []:
+            if isinstance(it, dict) and it.get("gid") == 1145735379 and it.get("title") == "Strategy BTC Holdings Q/Q Change":
+                card_ns.append((key, it.get("chart_n")))
+    assert card_ns == [("items", 2), ("random", 2)], card_ns
+    # Position order, not spreadsheets.get charts[] order. pngChartsSorted_ is
+    # anchor row, then column, then the original index.
+    def placed(title, row, col):
+        anchor = {}
+        if row:
+            anchor["rowIndex"] = row
+        if col:
+            anchor["columnIndex"] = col
+        return {"spec": {"title": title}, "position": {"overlayPosition": {"anchorCell": anchor}}}
+    cab = {"charts": [placed("C", 10, 0), placed("A", 1, 0), placed("B", 2, 0)]}
+    assert [c["title"] for c in chart_list(cab)] == ["A", "B", "C"]
+    assert [c["n"] for c in chart_list(cab)] == [1, 2, 3]
+    assert chart_titles(cab) == ["A", "B", "C"]
+    # Same row: column order, and a same-cell tie keeps the original index.
+    tied = {"charts": [placed("Right", 5, 4), placed("Left", 5, 0), placed("RightLater", 5, 4)]}
+    assert [c["title"] for c in chart_list(tied)] == ["Left", "Right", "RightLater"]
+    # MSTR Debt shape: the first inserted chart sits last on the sheet.
+    mstr = {"charts": [
+        placed("MSTR mNAV", 60, 0),
+        placed("Strategy bitcoin on balance sheet", 0, 0),
+        placed("Strategy BTC Holdings Q/Q Change", 20, 0),
+        placed("Strategy BTC/Share (in Sats)", 40, 0),
+    ]}
+    assert [c["title"] for c in chart_list(mstr)] == [
+        "Strategy bitcoin on balance sheet",
+        "Strategy BTC Holdings Q/Q Change",
+        "Strategy BTC/Share (in Sats)",
+        "MSTR mNAV",
+    ]
+    assert chart_titles(mstr) == [c["title"] for c in chart_list(mstr)]
+    assert chart_list({"charts": [{"spec": {"title": "Only"}}]}) == [{"n": 1, "title": "Only"}]
+    assert chart_list({"charts": []}) == []
+    missing = {"charts": [{"spec": {"title": "First"}}, {"spec": {"title": "Second"}}]}
+    assert chart_list(missing) is None and chart_titles(missing) is None
+    partial = {"charts": [placed("Has", 1, 0), {"spec": {"title": "Missing"}}]}
+    assert chart_list(partial) is None
+    # An excluded multi-chart tab is still excluded when it has no position.
+    _b, rows, _hidden, excluded_n = one({
+        "spreadsheetId": sid,
+        "properties": {"title": "Bot experiments"},
+        "sheets": [
+            {"properties": {"title": "87 TSLA beta to Nasdaq", "sheetId": 333185169, "index": 0},
+             "charts": [{"spec": {"title": "A"}}, {"spec": {"title": "B"}}]},
+            {"properties": {"title": "kept", "sheetId": 999, "index": 1},
+             "charts": [{"spec": {"title": "Only"}}]},
+        ],
+    })
+    assert excluded_n == 1 and [t["gid"] for t in rows] == [999], rows
+    assert rows[0]["chartList"] == [{"n": 1, "title": "Only"}]
+    assert not any(t.get("_unpositioned") for t in rows)
+    # Importer still skips by catalog n, which is the PNG (n) suffix. No importer change.
+    import import_full_pngs
+    listed = chart_list(mstr)
+    skip_tabs = [{"book": "bot3", "gid": 1145735379, "chartList": listed}]
+    for n in (1, 2, 3, 4):
+        assert not import_full_pngs.skip_chart_image(skip_tabs, "bot3", 1145735379, n), n
+    assert import_full_pngs.skip_chart_image(skip_tabs, "bot3", 1145735379, 5)
+    untitled = {"charts": [placed("Chart 2", 1, 0), placed("Kept", 3, 0)]}
+    utabs = [{"book": "bot3", "gid": 9, "chartList": chart_list(untitled)}]
+    assert import_full_pngs.skip_chart_image(utabs, "bot3", 9, 1)
+    assert not import_full_pngs.skip_chart_image(utabs, "bot3", 9, 2)
+    # A title-only dump must not undo a position-order catalog. A dump that
+    # carries anchors must number a wrong catalog into position order.
+    bot3 = "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU"
+    debt_titles = [c["title"] for c in listed]
+    debt_list = [{"n": i, "title": title} for i, title in enumerate(debt_titles, 1)]
+    api_titles = [
+        "MSTR mNAV",
+        "Strategy bitcoin on balance sheet",
+        "Strategy BTC Holdings Q/Q Change",
+        "Strategy BTC/Share (in Sats)",
+    ]
+    api_list = [{"n": i, "title": title} for i, title in enumerate(api_titles, 1)]
+    rec_titles = [
+        "MSTR Amplification",
+        "MSTR Net BTC per share (sats)",
+        "mNAV = MSTR market price / Net BTC per share ($)",
+    ]
+    rec_list = [{"n": i, "title": title} for i, title in enumerate(rec_titles, 1)]
+    rec_api = [
+        "mNAV = MSTR market price / Net BTC per share ($)",
+        "MSTR Net BTC per share (sats)",
+        "MSTR Amplification",
+    ]
+    def sheet_row(title, gid, charts):
+        return {"properties": {"title": title, "sheetId": gid, "index": gid}, "charts": charts}
+    bare = [
+        sheet_row("MSTR Debt", 1145735379, [{"spec": {"title": t}} for t in api_titles]),
+        sheet_row("MSTR Debt recording", 729377719, [{"spec": {"title": t}} for t in rec_api]),
+        sheet_row("Solo", 42, [{"spec": {"title": "Only chart"}}]),
+        sheet_row("New Pair", 77, [{"spec": {"title": "Right"}}, {"spec": {"title": "Left"}}]),
+    ]
+    positioned = [
+        sheet_row("MSTR Debt", 1145735379, mstr["charts"]),
+        sheet_row("MSTR Debt recording", 729377719, [
+            placed(rec_api[0], 40, 0),
+            placed(rec_api[1], 20, 0),
+            placed(rec_api[2], 0, 0),
+        ]),
+        sheet_row("Solo", 42, [{"spec": {"title": "Only chart"}}]),
+        sheet_row("New Pair", 77, [placed("Right", 1, 5), placed("Left", 1, 0)]),
+    ]
+    order_repo = tempfile.mkdtemp(prefix="chart-order-")
+    try:
+        cat_dir = os.path.join(order_repo, "static", "sheets")
+        os.makedirs(cat_dir)
+        thumb_rel = "sheets/thumbs/bot3/1145735379.jpg"
+        thumb_path = os.path.join(order_repo, "static", thumb_rel)
+        os.makedirs(os.path.dirname(thumb_path), exist_ok=True)
+        with open(thumb_path, "wb") as f:
+            f.write(b"x")
+        def write_prev(debt_rows, debt_charts, rec_rows=None, rec_charts=None):
+            prev = {
+                "books": [{"id": "bot3", "name": "My Bot's Sheets", "spreadsheetId": bot3}],
+                "tabs": [
+                    {"book": "bot3", "tab": "MSTR Debt", "gid": 1145735379,
+                     "charts": debt_charts, "chartList": debt_rows, "thumb": thumb_rel},
+                    {"book": "bot3", "tab": "MSTR Debt recording", "gid": 729377719,
+                     "charts": rec_titles if rec_charts is None else rec_charts,
+                     "chartList": rec_list if rec_rows is None else rec_rows},
+                    {"book": "bot3", "tab": "Solo", "gid": 42,
+                     "charts": ["Old"], "chartList": [{"n": 1, "title": "Old"}]},
+                ],
+            }
+            with open(os.path.join(cat_dir, "catalog.json"), "w", encoding="utf-8") as f:
+                json.dump(prev, f)
+        def write_dump(name, sheets):
+            path = os.path.join(order_repo, name)
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump({"spreadsheetId": bot3, "properties": {"title": "My Bot's Sheets"}, "sheets": sheets}, f)
+            return path
+        write_prev(debt_list, debt_titles)
+        bare_path = write_dump("bare.json", bare)
+        built, warns = build_catalog([bare_path], order_repo, allow_partial=True)
+        by_gid = {t["gid"]: t for t in built["tabs"]}
+        assert [c["title"] for c in by_gid[1145735379]["chartList"]] == debt_titles
+        assert [c["title"] for c in by_gid[729377719]["chartList"]] == rec_titles
+        assert by_gid[1145735379].get("thumb") == thumb_rel
+        assert by_gid[42]["tab"] == "Solo"
+        assert by_gid[42]["chartList"] == [{"n": 1, "title": "Only chart"}]
+        assert 77 not in by_gid
+        assert not any("_unpositioned" in t for t in built["tabs"])
+        assert any("1145735379" in w and "kept the existing catalog entry" in w for w in warns), warns
+        assert any("729377719" in w and "kept the existing catalog entry" in w for w in warns), warns
+        assert any("77" in w and "left out" in w for w in warns), warns
+        rec_api_list = [{"n": i, "title": title} for i, title in enumerate(rec_api, 1)]
+        write_prev(api_list, api_titles, rec_api_list, rec_api)
+        pos_path = write_dump("positioned.json", positioned)
+        built2, warns2 = build_catalog([pos_path], order_repo, allow_partial=True)
+        by_gid2 = {t["gid"]: t for t in built2["tabs"]}
+        assert [c["title"] for c in by_gid2[1145735379]["chartList"]] == debt_titles
+        assert [c["n"] for c in by_gid2[1145735379]["chartList"]] == [1, 2, 3, 4]
+        assert by_gid2[1145735379]["charts"] == debt_titles
+        assert [c["title"] for c in by_gid2[729377719]["chartList"]] == rec_titles
+        assert [c["title"] for c in by_gid2[77]["chartList"]] == ["Left", "Right"]
+        assert warns2 == [], warns2
+        assert by_gid2[1145735379].get("thumb") == thumb_rel
+    finally:
+        shutil.rmtree(order_repo, ignore_errors=True)
     print("self-test ok")
 
 def main():
@@ -617,39 +985,6 @@ def main():
         return
     if not a.dumps:
         ap.error("pass one or more spreadsheet dumps")
-    books, tabs = [], []
-    seen = set()
-    for path in a.dumps:
-        doc = json.load(open(path, encoding="utf-8"))
-        book, rows, hidden, excluded = one(doc)
-        if book["spreadsheetId"] in seen: sys.exit("duplicate spreadsheet " + book["spreadsheetId"])
-        seen.add(book["spreadsheetId"])
-        books.append(book); tabs.extend(rows)
-        extra = f", {excluded} excluded" if excluded else ""
-        print(f"{book['name']}: {len(rows)} tabs ({hidden} hidden skipped{extra})")
-    missing = [name for bid, name, sid in BOOKS if sid not in seen]
-    if missing and not a.allow_partial: sys.exit("missing workbook dumps: " + ", ".join(missing))
-    order = {bid: i for i, (bid, _, _) in enumerate(BOOKS)}
-    books.sort(key=lambda b: (order.get(b["id"], 99), b["name"]))
-    # Within each dump, tabs are already in sheet-index order. Regroup into book order.
-    grouped = []
-    for b in books:
-        grouped.extend(t for t in tabs if t["book"] == b["id"])
-    kept, stamp = load_thumb_index(a.repo)
-    n_thumb = 0
-    for t in grouped:
-        prev = kept.get((t["book"], t["gid"]))
-        if prev: t["thumb"] = prev; n_thumb += 1
-    generated = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    doc = {"generated": generated, "note": NOTE}
-    if stamp and n_thumb: doc["thumbsGenerated"] = stamp
-    doc["books"] = books
-    doc["tabs"] = grouped
-    dest = os.path.join(a.repo, "static", "sheets", "catalog.json")
-    write_catalog(dest, doc)
-    dropped = prune_thumbs(a.repo, grouped)
-    dropped_ex = prune_excluded_assets(a.repo)
-    extra = f", {len(dropped_ex)} excluded assets removed" if dropped_ex else ""
-    print(f"wrote {dest} ({len(grouped)} tabs, {n_thumb} thumbs kept, {dropped} orphan thumbs removed{extra})")
+    build_catalog(a.dumps, a.repo, a.allow_partial)
 
 if __name__ == "__main__": main()
