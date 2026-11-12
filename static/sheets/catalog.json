@@ -6462,27 +6462,27 @@
    "tab": "MSTR Debt",
    "gid": 1145735379,
    "charts": [
-    "MSTR mNAV",
     "Strategy bitcoin on balance sheet",
     "Strategy BTC Holdings Q/Q Change",
-    "Strategy BTC/Share (in Sats)"
+    "Strategy BTC/Share (in Sats)",
+    "MSTR mNAV"
    ],
    "chartList": [
     {
      "n": 1,
-     "title": "MSTR mNAV"
-    },
-    {
-     "n": 2,
      "title": "Strategy bitcoin on balance sheet"
     },
     {
-     "n": 3,
+     "n": 2,
      "title": "Strategy BTC Holdings Q/Q Change"
     },
     {
-     "n": 4,
+     "n": 3,
      "title": "Strategy BTC/Share (in Sats)"
+    },
+    {
+     "n": 4,
+     "title": "MSTR mNAV"
     }
    ],
    "thumb": "sheets/thumbs/bot3/1145735379.jpg"
@@ -6492,14 +6492,14 @@
    "tab": "MSTR Debt recording",
    "gid": 729377719,
    "charts": [
-    "mNAV = MSTR market price / Net BTC per share ($)",
+    "MSTR Amplification",
     "MSTR Net BTC per share (sats)",
-    "MSTR Amplification"
+    "mNAV = MSTR market price / Net BTC per share ($)"
    ],
    "chartList": [
     {
      "n": 1,
-     "title": "mNAV = MSTR market price / Net BTC per share ($)"
+     "title": "MSTR Amplification"
     },
     {
      "n": 2,
@@ -6507,7 +6507,7 @@
     },
     {
      "n": 3,
-     "title": "MSTR Amplification"
+     "title": "mNAV = MSTR market price / Net BTC per share ($)"
     }
    ],
    "thumb": "sheets/thumbs/bot3/729377719.jpg"
