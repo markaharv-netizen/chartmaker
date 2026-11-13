@@ -618,7 +618,6 @@ function ddOpt(o,data,c,p){
     if(!multi){x.areaStyle={color:col,opacity:T.dark?0.18:0.1,origin:'auto'};
       x.markLine={symbol:'none',silent:true,lineStyle:{color:col,width:1.5,type:'solid'},
         label:{position:'insideStartTop',fontSize:16,color:T.title,formatter:`${s[i].label} ${f(data[0].maxdd[1])}`},data:[{yAxis:+data[0].maxdd[1].toFixed(2)}]}}});
-  o.graphic[0].style.text='Source: Yahoo Finance · daily closes · % below running high '+(p.ath?'(all-time high, full history)':'since start of range');
   return o}
 function colors(n){return n===1?[lineColor('color')]:PALETTE}
 // ---------- Annotations: shared time-axis markers (earnings = first ticker, halvings, custom) ----------
@@ -743,7 +742,6 @@ function candleOpt(o,d,p){
   o.tooltip={trigger:'axis',confine:true,transitionDuration:0,backgroundColor:T.dark?'rgba(23,26,32,0.95)':'rgba(255,255,255,0.97)',borderColor:T.axis,
     textStyle:{color:T.text,fontSize:14},extraCssText:'box-shadow:0 2px 10px rgba(0,0,0,.25);border-radius:6px',
     axisPointer:{type:'line',lineStyle:{color:T.axis,width:1,type:'dashed'},label:{show:false}},formatter:candleTip(d.label,bars,p.iv)};
-  o.graphic[0].style.text='Source: Yahoo Finance · OHLC + volume';
   return o}
 function attachMarkers(o,data,p){
   const times=[];data.forEach(d=>(d.points||[]).forEach(pt=>times.push(pt[0])));times.sort((a,b)=>a-b);
@@ -796,7 +794,7 @@ function attachMarkers(o,data,p){
     return h+hit.map(n=>`<div style="margin-top:4px"><b style="color:${T.title}">${esc(n.text)}</b>${n.note?`<div style="color:${T.src}">${esc(n.note)}</div>`:''}</div>`).join('')}}
 function marked(o,data,p){if(p.markers&&p.markers.length)attachMarkers(o,data,p);return o}
 function buildOpt(type,data,title,p){
-  const o=base(title), c=colors(data.length);
+  const o=base(title,'\u00a0'), c=colors(data.length);
   if(type==='line')return marked(lineOpt(o,data.map((d,i)=>({label:d.label,color:c[i%c.length],data:d.points,smas:d.smas})),fmtNum),data,p);
   if(type==='pct'){const s=data.map((d,i)=>{const b=p.r==='1D'&&d.chartPreviousClose?(d.prevClose||d.chartPreviousClose):d.points[0][1];return{label:d.label,color:c[i%c.length],data:d.points.map(q=>[q[0],(q[1]/b-1)*100])}});
     const o2=lineOpt(o,s,v=>pct(v)); o2.yAxis.scale=false; return marked(o2,data,p)}
@@ -815,8 +813,6 @@ function buildOpt(type,data,title,p){
   // labels pinned to the bottom of the grid: with all-negative bars the zero line is at the top and labels used to vanish
   o.xAxis={type:'category',position:'bottom',data:AX.data,axisLabel:{...axLabel,fontSize:AX.fontSize,fontWeight:'bold',color:T.title,interval:0,margin:14,lineHeight:AX.lineHeight,rotate:AX.rotate,align:AX.rotate?'right':'center',verticalAlign:AX.rotate?'top':undefined},axisTick:{show:false},axisLine:{onZero:false,show:true,lineStyle:{color:T.axis}}};
   if(isdd){o.yAxis={type:'value',...headroom(rows.map(r=>r.v)),max:0,axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split}}
-  const base1D=p.r==='1D'?(isdd?"latest vs today's high":'vs previous close'):'';
-  o.graphic[0].style.text=`Source: Yahoo Finance · as of ${etTime(p.asOf)}`+(isdd?` · % below ${p.ath?'all-time high':p.r==='1D'?"today's high":'range high'}`:base1D?' · change vs previous close':'');
   if(!isdd)o.yAxis={type:'value',...headroom(rows.map(r=>r.v)),axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split};
   o.series=[{type:'bar',barMaxWidth:120,data:rows.map(r=>({value:+r.v.toFixed(2),itemStyle:{color:bc(r.v>=0&&!isdd?'#22C55E':'#EF4444')},
     label:{show:true,position:r.v>=0?'top':'bottom',fontSize:Math.max(11,Math.min(18,AX.fontSize+1)),fontWeight:'bold',color:T.title,formatter:q=>pct(q.value)+(r.st?'*':'')}}))}];
