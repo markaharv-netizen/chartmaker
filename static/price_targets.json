@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-11T13:54:13Z",
+  "generated": "2026-11-13T13:49:59Z",
   "seeded": false,
   "title": "Steve's DCF Base Case vs Street Consensus vs Price",
   "subtitleNote": "Base now includes probability-weighted future bets",
@@ -10,7 +10,7 @@
     "sellBelow": -0.15
   },
   "consensusLabel": "mean analyst target (StockAnalysis, Oct 21) · mean analyst target (StockAnalysis, Oct 30) · mean analyst target (StockAnalysis, Nov 9) · mean analyst target (StockAnalysis, Nov 10) · mean analyst target (StockAnalysis, Nov 3)",
-  "priceLabel": "Oct 21, 2026 close; Oct 29, 2026 close; Nov 10, 2026 close; Nov 2, 2026 close; Nov 5, 2026 ~10:01 AM ET (Yahoo Finance, IPO day)",
+  "priceLabel": "Oct 21, 2026 close; Oct 29, 2026 close; Nov 12, 2026 close; Nov 10, 2026 close; Nov 2, 2026 close; Nov 5, 2026 ~10:01 AM ET (Yahoo Finance, IPO day)",
   "source": {
     "name": "DCF price target summary",
     "spreadsheetId": "10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0",
@@ -40,7 +40,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 74.11,
-      "previousDetail": "Prev Base $74.11 -> $128.42 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans; unchanged through the Nov 11, 2026 scan",
+      "previousDetail": "Prev Base $74.11 -> $128.42 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans; unchanged through the Nov 13, 2026 scan",
       "paperWeight": 0.0,
       "why": "Even with AI bets, price high"
     },
@@ -64,7 +64,7 @@
       "baseChangedAt": "2026-11-01",
       "fromZero": false,
       "previousBase": 70.46,
-      "previousDetail": "Prev Base $70.46 (Bear $4.24, Bull $153.59, SELL) at Nov 1, 2026 v6 FSD price update -> $297.79 (Bear $4.24, Bull $513.12, SELL) at Nov 1, 2026 v7 ARK robotaxi fleet (Mark's assumption); unchanged in Nov 2 and Nov 4 scans; unchanged through the Nov 11, 2026 scan",
+      "previousDetail": "Prev Base $70.46 (Bear $4.24, Bull $153.59, SELL) at Nov 1, 2026 v6 FSD price update -> $297.79 (Bear $4.24, Bull $513.12, SELL) at Nov 1, 2026 v7 ARK robotaxi fleet (Mark's assumption); unchanged in Nov 2 and Nov 4 scans; unchanged through the Nov 13, 2026 scan",
       "paperWeight": 0.0,
       "why": "Far above bet-adjusted value"
     },
@@ -88,7 +88,7 @@
       "baseChangedAt": "2026-10-30",
       "fromZero": false,
       "previousBase": 153.35,
-      "previousDetail": "Prev Base $153.35 (Bear $89.76, Bull $266.37, HOLD) at Oct 22, 2026 future-bets update -> $149.42 (Bear $86.95, Bull $272.11, HOLD) at Oct 30, 2026 Q3 earnings refresh; drop mostly from lower BTC and MSTR prices; unchanged in Nov 2 and Nov 4 scans (Nov 4: Q3 10-Q filed Nov 2, 9M Historicals H14:I25 filled; valuation unchanged); unchanged through the Nov 11, 2026 scan (Nov 9 8-K: 850,364 BTC, $283.8M MSTR ATM, $188.3M STRC buyback)",
+      "previousDetail": "Prev Base $153.35 (Bear $89.76, Bull $266.37, HOLD) at Oct 22, 2026 future-bets update -> $149.42 (Bear $86.95, Bull $272.11, HOLD) at Oct 30, 2026 Q3 earnings refresh; drop mostly from lower BTC and MSTR prices; unchanged in Nov 2 and Nov 4 scans (Nov 4: Q3 10-Q filed Nov 2, 9M Historicals H14:I25 filled; valuation unchanged); unchanged through the Nov 13, 2026 scan (Nov 9 8-K: 850,364 BTC, $283.8M MSTR ATM, $188.3M STRC buyback)",
       "paperWeight": 16.0,
       "why": "Bets priced in; at fair value"
     },
@@ -112,31 +112,31 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 181.81,
-      "previousDetail": "Prev Base $181.81 -> $189.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans; unchanged through the Nov 11, 2026 scan (FQ3 results Nov 17)",
+      "previousDetail": "Prev Base $181.81 -> $189.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans; unchanged through the Nov 13, 2026 scan (FQ3 results Nov 17). Nov 13 scan: CEO Jensen Huang resigned Nov 11 (8-K 5.02), CFO Colette Kress interim CEO, Harvey Jones chair; board says roadmap and customer commitments continue; key-person risk flagged, no input change pending FQ3 guidance",
       "paperWeight": 0.0,
       "why": "Just inside HOLD band"
     },
     {
       "ticker": "CRWV",
-      "base": 40.88,
+      "base": 38.34,
       "bear": 0.0,
-      "bull": 278.64,
+      "bull": 268.37,
       "rating": "SELL",
       "consensus": 131.53,
       "analysts": 42,
       "consensusSource": "StockAnalysis (S&P Global), fetched Nov 9, 2026",
-      "price": 48.73,
-      "priceAsOf": "Nov 10, 2026 close, 4:00 PM ET (Yahoo Finance)",
-      "baseVsPrice": -0.161,
-      "consensusVsPrice": 1.699,
-      "baseVsConsensus": -0.689,
-      "notes": "Nov 11 v3 Q3 2026 earnings refresh: forward Base = core $1.25 + $39.63 bets (backlog/8 GW bet 20%, V = Bull - Base $198.14, now live); Bull core $199.39 + $79.26; Bear no bets. FY26 rev $13.15B (guide $13.0-13.3B), capex $38B, H2 margin 60.8%, power 3.15 GW YE27 -> 6.5 GW, rev/MW $11.5M -> $10.2M, Sep 30 balance sheet + Q3 FCF add-back $7.35B; WACC 14.74%. Q3 10-Q not yet filed (shares kept at Jul 31). Doc 165Ask6yTWX0boyDfy6HCu6Fl7NUulGM2sUOhg4MLC2I",
-      "baseChange": 17.48,
-      "baseChangePct": 0.747,
-      "baseChangedAt": "2026-11-11",
+      "price": 56.6,
+      "priceAsOf": "Nov 12, 2026 close, 4:00 PM ET (Yahoo Finance)",
+      "baseVsPrice": -0.323,
+      "consensusVsPrice": 1.324,
+      "baseVsConsensus": -0.709,
+      "notes": "Nov 13 v4 Q3 10-Q refresh: forward Base = core $0.00 + $38.34 bets (backlog/8 GW bet 20%, V = Bull - Base $191.70, live); Bull core $191.70 + $76.68; Bear no bets. Diluted shares 604.54M -> 609.13M (Oct 30 cover 556.13M + 23M options + 30M RSUs, Q3 10-Q filed Nov 12); price $48.73 -> $56.60 lifts WACC 14.74% -> 14.97%; blended core equity now slightly negative (floored at $0). Q3 release/call inputs from v3 unchanged. Doc 1qzbDZRljemvcc6srTDeSllfDlZZsveXFAtp_HF-js6w",
+      "baseChange": -2.54,
+      "baseChangePct": -0.062,
+      "baseChangedAt": "2026-11-13",
       "fromZero": false,
-      "previousBase": 23.4,
-      "previousDetail": "Prev Base $23.40 (Bear $0.00, Bull $163.77, SELL) at Oct 22, 2026 future-bets update -> $40.88 (Bear $0.00, Bull $278.64, SELL) at Nov 11, 2026 Q3 earnings refresh; rise from raised FY26 guide, $132.5B backlog, >4.6 GW contracted and higher pricing",
+      "previousBase": 40.88,
+      "previousDetail": "Prev Base $40.88 (Bear $0.00, Bull $278.64, SELL) at Nov 11, 2026 Q3 earnings refresh -> $38.34 (Bear $0.00, Bull $268.37, SELL) at Nov 13, 2026 Q3 10-Q refresh; drop from +4.6M diluted shares and a higher WACC at the higher share price",
       "paperWeight": -4.0,
       "why": "Debt still exceeds core EV"
     },
@@ -160,7 +160,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 842.81,
-      "previousDetail": "Prev Base $842.81 -> $860.87 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans; unchanged through the Nov 11, 2026 scan",
+      "previousDetail": "Prev Base $842.81 -> $860.87 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans; unchanged through the Nov 13, 2026 scan",
       "paperWeight": 18.0,
       "why": "HBM upside mostly priced in"
     },
@@ -184,7 +184,7 @@
       "baseChangedAt": "2026-10-22",
       "fromZero": false,
       "previousBase": 657.7,
-      "previousDetail": "Prev Base $657.70 -> $687.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans (Oct 30: $37.5B equity raise noted, not yet booked; est. -$1.93/sh; Nov 2: S&P 2027 capex forecast >$225B noted, capex not changed pending Q4 guide; Nov 4: $15.0B senior notes 5.85-7.53% priced Nov 3, cash/debt neutral); unchanged through the Nov 11, 2026 scan",
+      "previousDetail": "Prev Base $657.70 -> $687.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans (Oct 30: $37.5B equity raise noted, not yet booked; est. -$1.93/sh; Nov 2: S&P 2027 capex forecast >$225B noted, capex not changed pending Q4 guide; Nov 4: $15.0B senior notes 5.85-7.53% priced Nov 3, cash/debt neutral); unchanged through the Nov 13, 2026 scan (Nov 12 8-K: EUR 9.0B senior notes 4.30-6.40% due 2031-2065 closed; cash/debt neutral)",
       "paperWeight": 10.0,
       "why": "Bets priced in; near fair value"
     },
@@ -256,7 +256,7 @@
       "baseChangedAt": null,
       "fromZero": false,
       "previousBase": null,
-      "previousDetail": "New model added Nov 3, 2026 (v1). Nov 9, 2026: Q3 2026 results (8-K + 10-Q filed Nov 6) processed; the Oct 30 balance sheet (cash $490.4M, STRC $50.1M, SATA 14.03M / SATS 7.00M sh, 43,124 BTC) was already in the model from the Nov 2 8-K, so no input changed. Q3 call (Nov 13, 7 AM ET) still to be checked. Nov 11 scan: Nov 9 8-K +29 BTC to 43,153, cash $487.6M; no change",
+      "previousDetail": "New model added Nov 3, 2026 (v1). Nov 9, 2026: Q3 2026 results (8-K + 10-Q filed Nov 6) processed; the Oct 30 balance sheet (cash $490.4M, STRC $50.1M, SATA 14.03M / SATS 7.00M sh, 43,124 BTC) was already in the model from the Nov 2 8-K, so no input changed. Q3 call (Nov 13, 7 AM ET) still to be checked. Nov 11 scan: Nov 9 8-K +29 BTC to 43,153, cash $487.6M; no change. Nov 13 scan: Nov 12 8-K raises SATA dividend 13.00% -> 13.25% from Dec 1, 2026; to be applied with the Q3 call refresh on the next run (small: ~$3.5M/yr)",
       "paperWeight": 0.0,
       "why": "Price 12% above Base"
     },
@@ -280,7 +280,7 @@
       "baseChangedAt": null,
       "fromZero": false,
       "previousBase": null,
-      "previousDetail": "New model added Nov 3, 2026 (v1); no previous update; unchanged through the Nov 11, 2026 scan",
+      "previousDetail": "New model added Nov 3, 2026 (v1); no previous update; unchanged through the Nov 13, 2026 scan",
       "paperWeight": 12.0,
       "why": "Base 16% above price"
     },
@@ -304,7 +304,7 @@
       "baseChangedAt": null,
       "fromZero": false,
       "previousBase": null,
-      "previousDetail": "New model added Nov 3, 2026 (v1); no previous update; unchanged through the Nov 11, 2026 scan",
+      "previousDetail": "New model added Nov 3, 2026 (v1); no previous update; unchanged through the Nov 13, 2026 scan",
       "paperWeight": 20.0,
       "why": "Base 35% above price"
     },
@@ -328,7 +328,7 @@
       "baseChangedAt": null,
       "fromZero": false,
       "previousBase": null,
-      "previousDetail": "New model added Nov 5, 2026 (v1); unchanged through the Nov 11, 2026 scan (Q3 10-Q due Nov 16; no earnings date announced)",
+      "previousDetail": "New model added Nov 5, 2026 (v1); unchanged through the Nov 13, 2026 scan (Q3 10-Q due Nov 16; no earnings date announced)",
       "paperWeight": 0.0,
       "why": "IPO day; no street coverage"
     }
