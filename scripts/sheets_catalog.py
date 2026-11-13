@@ -111,6 +111,26 @@ BY_ID = {sid: (bid, name) for bid, name, sid in BOOKS}
 # "Immigration and jobs: employment of foreign-born vs native-born workers (12-month average, Jan 2020 = 100)".
 # ("bot1", 1067583608) "233 Older workers participation", chart
 # "Retirement wave: labor force participation of Americans 55+ vs prime-age (25–54)".
+# ("bot1", 1924976898) "57 PPI vs CPI", chart
+# "Pipeline inflation: producer prices vs consumer prices (YoY)".
+# ("bot1", 1978525586) "55 Shelter vs home prices", chart
+# "Home prices lead shelter inflation by ~1 year".
+# ("bot1", 1255387315) "115 Regional banks vs S&P", chart
+# "Regional banks vs the S&P 500 (KRE ÷ SPY, total return)".
+# ("bot1", 1522766504) "128 Long bonds vs stocks DD", chart
+# "The long-bond bear market: TLT vs SPY drawdowns (total return, month-end)".
+# ("bot1", 1163669375) "186 Sahm rule recession gauge", chart
+# "Sahm rule recession indicator (3-mo avg unemployment vs prior 12-mo low)".
+# ("bot1", 1576800449) "225 Nvidia inventory & DSO", chart
+# "Is Nvidia stuffing the channel? Inventory days and days sales outstanding (quarterly)".
+# ("bot1", 1192979444) "259 Financial conditions", chart
+# "Financial conditions are loose: Chicago Fed NFCI and St. Louis Fed stress index (month-end; 0 = average)".
+# ("bot1", 1912487083) "285 Ethereum L2s: Base leads", chart
+# "Ethereum layer-2 race: DeFi value locked on Base (Coinbase) vs Arbitrum vs Optimism (weekly)".
+# ("bot1", 664060481) "322 Microsoft quarterly FCF", chart
+# "Microsoft: operating cash flow, capex and free cash flow per quarter (USD bn)".
+# ("bot1", 1778640335) "324 Amazon quarterly FCF", chart
+# "Amazon: operating cash flow, capex and free cash flow per quarter (USD bn)".
 EXCLUDED_TABS = {
     ("bot1", 333185169),
     ("bot1", 1547332232),
@@ -135,6 +155,16 @@ EXCLUDED_TABS = {
     ("bot1", 79264442),
     ("bot1", 1755343475),
     ("bot1", 1067583608),
+    ("bot1", 1924976898),
+    ("bot1", 1978525586),
+    ("bot1", 1255387315),
+    ("bot1", 1522766504),
+    ("bot1", 1163669375),
+    ("bot1", 1576800449),
+    ("bot1", 1192979444),
+    ("bot1", 1912487083),
+    ("bot1", 664060481),
+    ("bot1", 1778640335),
 }
 # Google's default name for a chart with no real title: "Chart 1", "Chart 2", ...
 # "Chart 01" is a real title some tests use and is not this placeholder.
@@ -530,7 +560,9 @@ def self_test():
     assert tab_excluded("bot1", 1024131985)
     for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621,
                 1308503061, 748431671, 254001772,
-                1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608):
+                1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
+                1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
+                1192979444, 1912487083, 664060481, 1778640335):
         assert tab_excluded("bot1", gid), gid
     assert tab_excluded("bot2", 418894352)
     assert untitled_chart_title("") and untitled_chart_title("Chart 2") and untitled_chart_title("Chart 14")
@@ -568,7 +600,7 @@ def self_test():
     assert ("bot2", 645072508) in live
     assert ("bot2", 530554790) in live
     assert ("bot3", 978356289) in live
-    assert len(cat["tabs"]) == 487, len(cat["tabs"])
+    assert len(cat["tabs"]) == 477, len(cat["tabs"])
     blob = json.dumps(cat)
     assert "Nvidia valuation: price-to-sales and trailing P/E (month-end)" not in blob
     assert "Where Nvidia bills its sales: revenue share by customer billing location (quarterly)" not in blob
@@ -610,6 +642,26 @@ def self_test():
     assert "employment of foreign-born vs native-born workers" not in blob
     assert "233 Older workers participation" not in blob
     assert "labor force participation of Americans 55+" not in blob
+    assert "57 PPI vs CPI" not in blob
+    assert "Pipeline inflation: producer prices vs consumer prices (YoY)" not in blob
+    assert "55 Shelter vs home prices" not in blob
+    assert "Home prices lead shelter inflation by ~1 year" not in blob
+    assert "115 Regional banks vs S&P" not in blob
+    assert "Regional banks vs the S&P 500 (KRE ÷ SPY, total return)" not in blob
+    assert "128 Long bonds vs stocks DD" not in blob
+    assert "The long-bond bear market: TLT vs SPY drawdowns" not in blob
+    assert "186 Sahm rule recession gauge" not in blob
+    assert "Sahm rule recession indicator" not in blob
+    assert "225 Nvidia inventory & DSO" not in blob
+    assert "Is Nvidia stuffing the channel?" not in blob
+    assert "259 Financial conditions" not in blob
+    assert "Financial conditions are loose:" not in blob
+    assert "285 Ethereum L2s: Base leads" not in blob
+    assert "Ethereum layer-2 race:" not in blob
+    assert "322 Microsoft quarterly FCF" not in blob
+    assert "Microsoft: operating cash flow, capex and free cash flow per quarter (USD bn)" not in blob
+    assert "324 Amazon quarterly FCF" not in blob
+    assert "Amazon: operating cash flow, capex and free cash flow per quarter (USD bn)" not in blob
     assert "Bitcoin correlation with gold" not in blob
     gold = next(t for t in cat["tabs"] if t["book"] == "bot3" and t["gid"] == 1536200109)
     assert [c["n"] for c in gold["chartList"]] == [1, 2]
@@ -623,7 +675,6 @@ def self_test():
     for keep in (
         "201 Nvidia data center revenue",
         "194 Nvidia vs Cisco 2000",
-        "225 Nvidia inventory & DSO",
         "229 Nvidia vs country GDPs",
         "334 Nvidia top-customer share",
         "19 Nvidia supply commitments",
@@ -644,15 +695,17 @@ def self_test():
         assert keep in names, keep
     today = json.load(open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8"))
     today_blob = json.dumps(today)
-    assert today["date"] == "2026-11-12"
-    assert len(today["picks"]) == 5, len(today["picks"])
-    assert len(today["items"]) == 13, len(today["items"])
-    assert today["theme"] == "5 picks, plus 13 items drawn at random from the sheet library."
+    assert today["date"] == "2026-11-13"
+    assert len(today["picks"]) == 4, len(today["picks"])
+    assert len(today["items"]) == 11, len(today["items"])
+    assert today["theme"] == "4 picks, plus 11 items drawn at random from the sheet library."
     assert "1547332232" not in today_blob and "643299192" not in today_blob
     assert "1791345316" not in today_blob and "1370617918" not in today_blob
     for gid in (292208014, 418894352, 2119398138, 1584345646, 1186940001, 501919598, 579853621,
                 1308503061, 748431671, 254001772, 1536200109,
-                1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608):
+                1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
+                1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
+                1192979444, 1912487083, 664060481, 1778640335):
         assert str(gid) not in today_blob, gid
     assert "161 Nvidia P-S and P-E" not in today_blob
     assert "202 Nvidia revenue by geography" not in today_blob
@@ -675,6 +728,19 @@ def self_test():
     assert "173 Continuing/initial claims" not in today_blob
     assert "239 Foreign vs native-born jobs" not in today_blob
     assert "233 Older workers participation" not in today_blob
+    assert "57 PPI vs CPI" not in today_blob
+    assert "Pipeline inflation: producer prices vs consumer prices" not in today_blob
+    assert "55 Shelter vs home prices" not in today_blob
+    assert "Home prices lead shelter inflation" not in today_blob
+    assert "115 Regional banks vs S&P" not in today_blob
+    assert "128 Long bonds vs stocks DD" not in today_blob
+    assert "186 Sahm rule recession gauge" not in today_blob
+    assert "225 Nvidia inventory & DSO" not in today_blob
+    assert "Is Nvidia stuffing the channel?" not in today_blob
+    assert "259 Financial conditions" not in today_blob
+    assert "285 Ethereum L2s: Base leads" not in today_blob
+    assert "322 Microsoft quarterly FCF" not in today_blob
+    assert "324 Amazon quarterly FCF" not in today_blob
     assert "Chart 2" not in today_blob
     assert "Bitcoin correlation with gold" not in today_blob
     assert "Taiwan's chip stocks surge" not in today["theme"]
@@ -682,13 +748,15 @@ def self_test():
     assert "Anthropic's IPO roadshow" not in today["theme"]
     assert "Nvidia and Micron drop off BofA" not in today["theme"]
     images = [it["image"] for it in today["items"] if it.get("image")]
-    for name in ("06.png", "08.png", "10.png", "11.png", "12.png", "13.png", "18.png"):
-        assert "cotd/2026-11-12/" + name not in images, name
-    for name in ("07.png", "09.png", "14.png", "15.png", "16.png", "19.png", "20.png", "22.png", "23.png", "24.png", "25.png"):
-        assert "cotd/2026-11-12/" + name in images, name
+    for name in ("07.png", "08.png", "10.png", "13.png", "14.png", "16.png", "18.png", "21.png", "22.png"):
+        assert "cotd/2026-11-13/" + name not in images, name
+    for name in ("06.png", "09.png", "11.png", "12.png", "15.png", "17.png", "19.png", "20.png", "23.png", "24.png", "25.png"):
+        assert "cotd/2026-11-13/" + name in images, name
     pick_images = [it["image"] for it in today["picks"] if it.get("image")]
-    for name in ("01.png", "02.png", "03.png", "04.png", "05.png"):
-        assert "cotd/2026-11-12/" + name in pick_images, name
+    for name in ("01.png",):
+        assert "cotd/2026-11-13/" + name not in pick_images, name
+    for name in ("02.png", "03.png", "04.png", "05.png"):
+        assert "cotd/2026-11-13/" + name in pick_images, name
     for rel in (
         "static/sheets/full/bot1/1547332232.png",
         "static/sheets/full/bot1/643299192.png",
@@ -716,6 +784,10 @@ def self_test():
         assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-12", name)), name
     for name in ("01.png", "05.png", "07.png", "09.png", "14.png", "16.png", "19.png", "22.png", "25.png"):
         assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-12", name)), name
+    for name in ("01.png", "07.png", "08.png", "10.png", "13.png", "14.png", "16.png", "18.png", "21.png", "22.png"):
+        assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-13", name)), name
+    for name in ("02.png", "03.png", "04.png", "05.png", "06.png", "09.png", "11.png", "12.png", "15.png", "17.png", "19.png", "20.png", "23.png", "24.png", "25.png"):
+        assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-13", name)), name
     for rel in (
         "static/sheets/full/bot3/1536200109_2.png",
         "static/sheets/full/bot3/1536200109_3.png",
@@ -803,9 +875,10 @@ def self_test():
         "mNAV = MSTR market price / Net BTC per share ($)",
     ]
     assert rec["charts"] == [c["title"] for c in rec["chartList"]]
-    qq = [it for it in today["items"] if it.get("title") == "Strategy BTC Holdings Q/Q Change"]
-    assert [it.get("chart_n") for it in qq] == [2], qq
+    # That Q/Q chart was in the 2026-11-12 edition, not today's.
     cards = json.load(open(os.path.join(repo, "static", "cotd", "2026-11-12", "cards.json"), encoding="utf-8"))
+    qq = [it for it in (cards.get("items") or []) if it.get("title") == "Strategy BTC Holdings Q/Q Change"]
+    assert [it.get("chart_n") for it in qq] == [2], qq
     card_ns = []
     for key in ("items", "random", "picks"):
         for it in cards.get(key) or []:

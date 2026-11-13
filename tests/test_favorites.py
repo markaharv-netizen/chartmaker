@@ -37,6 +37,8 @@ RETIRED = (
     "292208014", "2119398138", "1584345646", "1186940001", "501919598", "579853621", "418894352",
     "1308503061", "748431671", "254001772",
     "1238930141", "1835714359", "492285771", "220064271", "79264442", "1755343475", "1067583608",
+    "1924976898", "1978525586", "1255387315", "1522766504", "1163669375", "1576800449",
+    "1192979444", "1912487083", "664060481", "1778640335",
 )
 RETIRED_TABS = (
     "161 Nvidia P-S and P-E",
@@ -62,6 +64,16 @@ RETIRED_TABS = (
     "173 Continuing/initial claims",
     "239 Foreign vs native-born jobs",
     "233 Older workers participation",
+    "57 PPI vs CPI",
+    "55 Shelter vs home prices",
+    "115 Regional banks vs S&P",
+    "128 Long bonds vs stocks DD",
+    "186 Sahm rule recession gauge",
+    "225 Nvidia inventory & DSO",
+    "259 Financial conditions",
+    "285 Ethereum L2s: Base leads",
+    "322 Microsoft quarterly FCF",
+    "324 Amazon quarterly FCF",
 )
 
 

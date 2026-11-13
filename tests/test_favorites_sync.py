@@ -140,6 +140,16 @@ class SyncStoreTest(unittest.TestCase):
             {"op": "add", "k": "bot1/79264442/1", "title": "no"},
             {"op": "add", "k": "bot1/1755343475/1", "title": "no"},
             {"op": "add", "k": "bot1/1067583608/1", "title": "no"},
+            {"op": "add", "k": "bot1/1924976898/1", "title": "no"},
+            {"op": "add", "k": "bot1/1978525586/1", "title": "no"},
+            {"op": "add", "k": "bot1/1255387315/1", "title": "no"},
+            {"op": "add", "k": "bot1/1522766504/1", "title": "no"},
+            {"op": "add", "k": "bot1/1163669375/1", "title": "no"},
+            {"op": "add", "k": "bot1/1576800449/1", "title": "no"},
+            {"op": "add", "k": "bot1/1192979444/1", "title": "no"},
+            {"op": "add", "k": "bot1/1912487083/1", "title": "no"},
+            {"op": "add", "k": "bot1/664060481/1", "title": "no"},
+            {"op": "add", "k": "bot1/1778640335/1", "title": "no"},
         ], "baseRev": 0})
         self.assertNotIn(RETIRED, self.keys(retired))
         self.assertNotIn("bot1/1024131985/1", self.keys(retired))
@@ -155,6 +165,16 @@ class SyncStoreTest(unittest.TestCase):
         self.assertNotIn("bot1/79264442/1", self.keys(retired))
         self.assertNotIn("bot1/1755343475/1", self.keys(retired))
         self.assertNotIn("bot1/1067583608/1", self.keys(retired))
+        self.assertNotIn("bot1/1924976898/1", self.keys(retired))
+        self.assertNotIn("bot1/1978525586/1", self.keys(retired))
+        self.assertNotIn("bot1/1255387315/1", self.keys(retired))
+        self.assertNotIn("bot1/1522766504/1", self.keys(retired))
+        self.assertNotIn("bot1/1163669375/1", self.keys(retired))
+        self.assertNotIn("bot1/1576800449/1", self.keys(retired))
+        self.assertNotIn("bot1/1192979444/1", self.keys(retired))
+        self.assertNotIn("bot1/1912487083/1", self.keys(retired))
+        self.assertNotIn("bot1/664060481/1", self.keys(retired))
+        self.assertNotIn("bot1/1778640335/1", self.keys(retired))
         self.assertTrue(all(row["reason"] == "retired" for row in retired["skipped"]))
         on_disk = json.dumps(json.load(open(server.VIEWS, encoding="utf-8")))
         self.assertNotIn("1547332232", on_disk)
@@ -171,6 +191,16 @@ class SyncStoreTest(unittest.TestCase):
         self.assertNotIn("79264442", on_disk)
         self.assertNotIn("1755343475", on_disk)
         self.assertNotIn("1067583608", on_disk)
+        self.assertNotIn("1924976898", on_disk)
+        self.assertNotIn("1978525586", on_disk)
+        self.assertNotIn("1255387315", on_disk)
+        self.assertNotIn("1522766504", on_disk)
+        self.assertNotIn("1163669375", on_disk)
+        self.assertNotIn("1576800449", on_disk)
+        self.assertNotIn("1192979444", on_disk)
+        self.assertNotIn("1912487083", on_disk)
+        self.assertNotIn("664060481", on_disk)
+        self.assertNotIn("1778640335", on_disk)
 
     def test_table_key_is_stored_beside_a_chart_key(self):
         table = "bot2/1714490525/1"
