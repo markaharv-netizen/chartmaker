@@ -339,9 +339,9 @@ class LiveFilesTest(unittest.TestCase):
             self.assertLess(swing["classified"], briefing.THIN_ITEMS)
         charts = doc["charts"]["items"]
         picks = doc["charts"].get("picks") or []
-        self.assertEqual(len(charts), 13)
-        self.assertEqual(len(picks), 5)
-        self.assertEqual(doc["charts"].get("theme"), "5 picks, plus 13 items drawn at random from the sheet library.")
+        self.assertEqual(len(charts), 11)
+        self.assertEqual(len(picks), 4)
+        self.assertEqual(doc["charts"].get("theme"), "4 picks, plus 11 items drawn at random from the sheet library.")
         titles = " ".join(item["title"] for item in list(picks) + list(charts))
         for gone in (
             "MOVE ÷ VIX",
@@ -356,6 +356,16 @@ class LiveFilesTest(unittest.TestCase):
             "continuing claims per initial claim",
             "foreign-born vs native-born",
             "labor force participation of Americans 55+",
+            "producer prices vs consumer prices",
+            "Home prices lead shelter inflation",
+            "KRE ÷ SPY",
+            "TLT vs SPY drawdowns",
+            "Sahm rule recession indicator",
+            "Is Nvidia stuffing the channel?",
+            "Chicago Fed NFCI",
+            "DeFi value locked on Base",
+            "Microsoft: operating cash flow, capex and free cash flow",
+            "Amazon: operating cash flow, capex and free cash flow",
         ):
             self.assertNotIn(gone, titles)
         for item in list(picks) + list(charts):

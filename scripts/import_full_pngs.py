@@ -390,6 +390,16 @@ def self_test():
             {"book": "bot1", "tab": "135 Real coffee & cocoa", "gid": 220064271, "charts": []},
             {"book": "bot1", "tab": "239 Foreign vs native-born jobs", "gid": 1755343475, "charts": []},
             {"book": "bot1", "tab": "233 Older workers participation", "gid": 1067583608, "charts": []},
+            {"book": "bot1", "tab": "57 PPI vs CPI", "gid": 1924976898, "charts": []},
+            {"book": "bot1", "tab": "55 Shelter vs home prices", "gid": 1978525586, "charts": []},
+            {"book": "bot1", "tab": "115 Regional banks vs S&P", "gid": 1255387315, "charts": []},
+            {"book": "bot1", "tab": "128 Long bonds vs stocks DD", "gid": 1522766504, "charts": []},
+            {"book": "bot1", "tab": "186 Sahm rule recession gauge", "gid": 1163669375, "charts": []},
+            {"book": "bot1", "tab": "225 Nvidia inventory & DSO", "gid": 1576800449, "charts": []},
+            {"book": "bot1", "tab": "259 Financial conditions", "gid": 1192979444, "charts": []},
+            {"book": "bot1", "tab": "285 Ethereum L2s: Base leads", "gid": 1912487083, "charts": []},
+            {"book": "bot1", "tab": "322 Microsoft quarterly FCF", "gid": 664060481, "charts": []},
+            {"book": "bot1", "tab": "324 Amazon quarterly FCF", "gid": 1778640335, "charts": []},
             {"book": "bot2", "tab": "75 CoreWeave backlog vs revenue", "gid": 530554790, "charts": []},
             {"book": "bot1", "tab": "97 MSTR vol vs BTC vol", "gid": 1027143376, "charts": []},
             {"book": "bot1", "tab": "52 Core goods vs services", "gid": 200447618, "charts": []},
@@ -417,6 +427,15 @@ def self_test():
             os.path.join(b1, "135 Real coffee & cocoa.png"),
             os.path.join(b1, "239 Foreign vs native-born jobs.png"),
             os.path.join(b1, "233 Older workers participation.png"),
+            os.path.join(b1, "057 PPI vs CPI.png"),
+            os.path.join(b1, "055 Shelter vs home prices.png"),
+            os.path.join(b1, "115 Regional banks vs S&P.png"),
+            os.path.join(b1, "128 Long bonds vs stocks DD.png"),
+            os.path.join(b1, "186 Sahm rule recession gauge.png"),
+            os.path.join(b1, "225 Nvidia inventory & DSO.png"),
+            os.path.join(b1, "259 Financial conditions.png"),
+            os.path.join(b1, "322 Microsoft quarterly FCF.png"),
+            os.path.join(b1, "324 Amazon quarterly FCF.png"),
         ]
         kept_new = [
             (os.path.join(mstr_dir, "75 CoreWeave backlog vs revenue.png"), "bot2", "530554790.png"),
@@ -441,7 +460,7 @@ def self_test():
         # prior eight unmatched, plus the retired exports and the tariff chart-2 file.
         # "173 Continuing/initial claims" stays in this fixture as gid 173, the slash-in-name
         # example. The retired sheet is gid 79264442, so that export is not added again.
-        assert u2 == 25, u2
+        assert u2 == 34, u2
         assert a2 == 0, a2
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1547332232.png"))
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "643299192.png"))
@@ -457,7 +476,9 @@ def self_test():
             assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot2", "%d.png" % gid))
         for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621,
                     1308503061, 748431671, 254001772,
-                    1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608):
+                    1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
+                    1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
+                    1192979444, 1912487083, 664060481, 1778640335):
             assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "%d.png" % gid)), gid
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "501919598_2.png"))
         for _path, book, name in kept_new:
