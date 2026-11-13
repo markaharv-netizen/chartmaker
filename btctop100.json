@@ -6,7 +6,7 @@
   "sheet": "BTCTC Top 100",
   "gid": 73825060,
   "description": "Top 100 corporate bitcoin holdings from the BTCTC Top 100 tab of My Bot's Sheets. USD value is BTC times a live BTC price and is not part of this file.",
-  "fetchedAt": "2026-11-12T16:18:41Z",
+  "fetchedAt": "2026-11-13T16:15:15Z",
   "supply": 21000000,
   "companies": [
     {
@@ -42,10 +42,10 @@
       "country": "US",
       "change": null,
       "btc": 43514,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-11)",
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-13)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2070457/000121390026087471/ea0299640-10q_twentyone.htm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2070457/000162828026073570/xxi-20260930.htm",
       "notes": null
     },
     {
@@ -232,19 +232,6 @@
     },
     {
       "rank": 18,
-      "name": "Gemini Space Station Inc",
-      "ticker": "GEMI",
-      "country": "US",
-      "change": null,
-      "btc": 5528,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-13)",
-      "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2055592/000205559226000065/gemi-20260630.htm",
-      "notes": null
-    },
-    {
-      "rank": 19,
       "name": "Silvia, Inc.",
       "ticker": "SVIA",
       "country": "US",
@@ -255,6 +242,19 @@
       "sourceLabel": "Press release",
       "sourceUrl": "https://investors.cfosilvia.com/news-releases/news-release-details/silvia-repurchases-additional-23-shares-outstanding-bringing",
       "notes": "Approximately 5,130 BTC per press release; down from 5,355 at 6/30."
+    },
+    {
+      "rank": 19,
+      "name": "Gemini Space Station Inc",
+      "ticker": "GEMI",
+      "country": "US",
+      "change": "-740",
+      "btc": 4788,
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-13)",
+      "sourceLabel": "SEC 10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2055592/000205559226000074/gemi-20260930.htm",
+      "notes": null
     },
     {
       "rank": 20,
@@ -274,13 +274,13 @@
       "name": "Nakamoto Inc",
       "ticker": "NAKA",
       "country": "US",
-      "change": null,
-      "btc": 4467,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-13)",
-      "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1946573/000149315226037603/form10-q.htm",
-      "notes": "3,805 BTC pledged as loan collateral."
+      "change": "-184",
+      "btc": 4283,
+      "asOf": "2026-09-30",
+      "source": "SEC 8-K Ex.99.1 Q3 2026 earnings release (filed 2026-11-13)",
+      "sourceLabel": "SEC 8-K",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1946573/000149315226051510/ex99-1.htm",
+      "notes": "3,030 BTC pledged as collateral for notes payable; 1,253 unencumbered."
     },
     {
       "rank": 22,
@@ -484,7 +484,7 @@
       "country": "SG",
       "change": null,
       "btc": 1454,
-      "asOf": "2026-10-31",
+      "asOf": "2026-10",
       "source": "SEC Form 6-K Ex.99.1 October 2026 update (filed 2026-11-06)",
       "sourceLabel": "SEC 6-K",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1921158/000121390026116602/ea031104401ex99-1.htm",
@@ -1108,11 +1108,11 @@
       "country": "US",
       "change": null,
       "btc": 132,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-13)",
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-12)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/88000/000119312526349320/hkhc-20260630.htm",
-      "notes": "Excludes 1,912 BTC held in consolidated client investment products."
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/88000/000119312526458442/hkhc-20260930.htm",
+      "notes": "Excludes 1,911 BTC held in consolidated client investment products."
     },
     {
       "rank": 86,
@@ -1251,7 +1251,7 @@
       "country": "US",
       "change": null,
       "btc": 65.7,
-      "asOf": "2026-10-31",
+      "asOf": "2026-10",
       "source": "SEC 8-K Ex.99.1 October 2026 production update (filed 2026-11-10)",
       "sourceLabel": "SEC 8-K",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1640384/000164038426000008/lmfa-ex99_1.htm",
