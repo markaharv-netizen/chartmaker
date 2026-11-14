@@ -525,6 +525,12 @@ def self_test():
         {"book": "bot1", "tab": "285 Ethereum L2s: Base leads", "gid": 1912487083, "charts": []},
         {"book": "bot1", "tab": "322 Microsoft quarterly FCF", "gid": 664060481, "charts": []},
         {"book": "bot1", "tab": "324 Amazon quarterly FCF", "gid": 1778640335, "charts": []},
+        {"book": "bot1", "tab": "227 Private AI lab valuations", "gid": 1459587255, "charts": []},
+        {"book": "bot1", "tab": "119 Emerging markets vs US", "gid": 687897000, "charts": []},
+        {"book": "bot1", "tab": "86 TSLA vs Toyota+GM+Ford", "gid": 546391999, "charts": []},
+        {"book": "bot1", "tab": "22 LTC & BCH in BTC", "gid": 195161343, "charts": []},
+        {"book": "bot1", "tab": "56 Food home vs away", "gid": 321339250, "charts": []},
+        {"book": "bot1", "tab": "111 Value vs growth", "gid": 2128724732, "charts": []},
         {"book": "bot2", "tab": "75 CoreWeave backlog vs revenue", "gid": 530554790, "charts": []},
         {"book": "bot1", "tab": "97 MSTR vol vs BTC vol", "gid": 1027143376, "charts": []},
         {"book": "bot1", "tab": "52 Core goods vs services", "gid": 200447618, "charts": []},
@@ -579,6 +585,12 @@ def self_test():
         f("/e/285 Ethereum L2s- Base leads.png", "", 10, None),
         f("/e/322 Microsoft quarterly FCF.png", "", 10, None),
         f("/e/324 Amazon quarterly FCF.png", "", 10, None),
+        f("/e/227 Private AI lab valuations.png", "", 10, None),
+        f("/e/119 Emerging markets vs US.png", "", 10, None),
+        f("/e/086 TSLA vs Toyota+GM+Ford.png", "", 10, None),
+        f("/e/022 LTC & BCH in BTC.png", "", 10, None),
+        f("/e/056 Food home vs away.png", "", 10, None),
+        f("/e/111 Value vs growth.png", "", 10, None),
         f("/e/75 CoreWeave backlog vs revenue.png", "bot experiments 2", 10, None),
         f("/e/97 MSTR vol vs BTC vol.png", "", 10, None),
         f("/e/52 Core goods vs services.png", "", 10, None),
@@ -603,7 +615,8 @@ def self_test():
     assert any(p.startswith("/wrong/") for p in unmatched)
     assert ("bot1", 1547332232) not in chosen
     assert any(p.endswith("161 Nvidia P-S and P-E.png") for p in unmatched)
-    assert winner(1476428159)[1] == "tab"
+    assert ("bot1", 1476428159) not in chosen
+    assert any(p.endswith("201 Nvidia data center revenue.png") for p in unmatched)
     for gid, name in (
         (1791345316, "158 Korea & Taiwan vs S&P.png"),
         (1370617918, "163 Supercore vs core CPI.png"),
@@ -641,6 +654,13 @@ def self_test():
         (1912487083, "285 Ethereum L2s- Base leads.png"),
         (664060481, "322 Microsoft quarterly FCF.png"),
         (1778640335, "324 Amazon quarterly FCF.png"),
+        (1476428159, "201 Nvidia data center revenue.png"),
+        (1459587255, "227 Private AI lab valuations.png"),
+        (687897000, "119 Emerging markets vs US.png"),
+        (546391999, "086 TSLA vs Toyota+GM+Ford.png"),
+        (195161343, "022 LTC & BCH in BTC.png"),
+        (321339250, "056 Food home vs away.png"),
+        (2128724732, "111 Value vs growth.png"),
     ):
         book = "bot2" if gid == 418894352 else "bot1"
         assert (book, gid) not in chosen, gid

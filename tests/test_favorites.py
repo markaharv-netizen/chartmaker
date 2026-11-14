@@ -39,6 +39,7 @@ RETIRED = (
     "1238930141", "1835714359", "492285771", "220064271", "79264442", "1755343475", "1067583608",
     "1924976898", "1978525586", "1255387315", "1522766504", "1163669375", "1576800449",
     "1192979444", "1912487083", "664060481", "1778640335",
+    "1476428159", "1459587255", "687897000", "546391999", "195161343", "321339250", "2128724732",
 )
 RETIRED_TABS = (
     "161 Nvidia P-S and P-E",
@@ -74,6 +75,13 @@ RETIRED_TABS = (
     "285 Ethereum L2s: Base leads",
     "322 Microsoft quarterly FCF",
     "324 Amazon quarterly FCF",
+    "201 Nvidia data center revenue",
+    "227 Private AI lab valuations",
+    "119 Emerging markets vs US",
+    "86 TSLA vs Toyota+GM+Ford",
+    "22 LTC & BCH in BTC",
+    "56 Food home vs away",
+    "111 Value vs growth",
 )
 
 
