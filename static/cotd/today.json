@@ -1,6 +1,6 @@
 {
  "date": "2026-11-14",
- "theme": "5 picks, plus 20 items drawn at random from the sheet library.",
+ "theme": "3 picks, plus 15 items drawn at random from the sheet library.",
  "items": [
   {
    "sheet": "Bot experiments",
@@ -38,16 +38,6 @@
    "title": "Reference Stock Prices",
    "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1643569414",
    "kind": "table",
-   "chart_n": 1,
-   "section": "random"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "119 Emerging markets vs US",
-   "title": "Emerging markets vs US stocks (EEM ÷ SPY, total return)",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=687897000",
-   "image": "cotd/2026-11-14/10.png",
-   "kind": "chart",
    "chart_n": 1,
    "section": "random"
   },
@@ -93,16 +83,6 @@
   },
   {
    "sheet": "Bot experiments",
-   "tab": "86 TSLA vs Toyota+GM+Ford",
-   "title": "Tesla market cap vs Toyota, GM and Ford combined",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=546391999",
-   "image": "cotd/2026-11-14/15.png",
-   "kind": "chart",
-   "chart_n": 1,
-   "section": "random"
-  },
-  {
-   "sheet": "Bot experiments",
    "tab": "07 Mortgage payment",
    "title": "Monthly mortgage payment on the median US home (20% down)",
    "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=108643996",
@@ -137,36 +117,6 @@
    "title": "Apartment building boom and bust: 5+ unit share of housing starts (12-mo avg)",
    "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1048508082",
    "image": "cotd/2026-11-14/19.png",
-   "kind": "chart",
-   "chart_n": 1,
-   "section": "random"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "22 LTC & BCH in BTC",
-   "title": "Old altcoins priced in Bitcoin: LTC/BTC and BCH/BTC",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=195161343",
-   "image": "cotd/2026-11-14/20.png",
-   "kind": "chart",
-   "chart_n": 1,
-   "section": "random"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "56 Food home vs away",
-   "title": "Groceries vs restaurants: food inflation YoY",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=321339250",
-   "image": "cotd/2026-11-14/21.png",
-   "kind": "chart",
-   "chart_n": 1,
-   "section": "random"
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "111 Value vs growth",
-   "title": "Value vs growth: Russell 1000 Value ÷ Russell 1000 Growth (total return)",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=2128724732",
-   "image": "cotd/2026-11-14/22.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "random"
@@ -238,30 +188,6 @@
    "section": "picks",
    "description": "Every Starship flight test so far: date, version, launch outcome, booster, ship and payload.",
    "reason": "Starship Flight 15 was set to fly on Nov 13; this is the track record going in."
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "201 Nvidia data center revenue",
-   "title": "Nvidia became a data-center company: quarterly revenue, data center vs everything else",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1476428159",
-   "image": "cotd/2026-11-14/04.png",
-   "kind": "chart",
-   "chart_n": 1,
-   "section": "picks",
-   "description": "Nvidia's quarterly revenue split into data center versus all other segments.",
-   "reason": "Nvidia is in the headlines over leadership turmoil ahead of its next earnings report; this shows what the business rests on."
-  },
-  {
-   "sheet": "Bot experiments",
-   "tab": "227 Private AI lab valuations",
-   "title": "Private AI lab valuations from funding rounds: OpenAI, Anthropic and xAI (post-money, as reported; log scale)",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1459587255",
-   "image": "cotd/2026-11-14/05.png",
-   "kind": "chart",
-   "chart_n": 1,
-   "section": "picks",
-   "description": "Reported post-money valuations of OpenAI, Anthropic and xAI from their funding rounds, log scale.",
-   "reason": "Anthropic's IPO is in progress, putting private AI lab valuations back in focus."
   }
  ],
  "random": true

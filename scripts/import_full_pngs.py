@@ -349,7 +349,7 @@ def self_test():
             json.dump(catalog, f)
         blocked = os.path.join(b1, "161 Nvidia P-S and P-E.png")
         blocked2 = os.path.join(b1, "202 Nvidia revenue by geography (2).png")
-        kept = os.path.join(b1, "201 Nvidia data center revenue.png")
+        kept = os.path.join(b1, "194 Nvidia vs Cisco 2000.png")
         korea = os.path.join(b1, "158 Korea & Taiwan vs S&P.png")
         korea2 = os.path.join(b1, "158 Korea & Taiwan vs S&P (2).png")
         supercore = os.path.join(b1, "163 Supercore vs core CPI.png")
@@ -362,6 +362,7 @@ def self_test():
         # Neighbor charts are not excluded; give them catalog rows and confirm they still import.
         # BX2-069 stays importable: it is Charts-of-the-day-only, not EXCLUDED_TABS.
         catalog["tabs"].extend([
+            {"book": "bot1", "tab": "194 Nvidia vs Cisco 2000", "gid": 1607076800, "charts": []},
             {"book": "bot1", "tab": "201 Nvidia data center revenue", "gid": 1476428159, "charts": []},
             {"book": "bot1", "tab": "158 Korea & Taiwan vs S&P", "gid": 1791345316,
              "charts": ["Asia's AI chip exporters: Korea (EWY) and Taiwan (EWT) vs the S&P 500"]},
@@ -400,6 +401,12 @@ def self_test():
             {"book": "bot1", "tab": "285 Ethereum L2s: Base leads", "gid": 1912487083, "charts": []},
             {"book": "bot1", "tab": "322 Microsoft quarterly FCF", "gid": 664060481, "charts": []},
             {"book": "bot1", "tab": "324 Amazon quarterly FCF", "gid": 1778640335, "charts": []},
+            {"book": "bot1", "tab": "227 Private AI lab valuations", "gid": 1459587255, "charts": []},
+            {"book": "bot1", "tab": "119 Emerging markets vs US", "gid": 687897000, "charts": []},
+            {"book": "bot1", "tab": "86 TSLA vs Toyota+GM+Ford", "gid": 546391999, "charts": []},
+            {"book": "bot1", "tab": "22 LTC & BCH in BTC", "gid": 195161343, "charts": []},
+            {"book": "bot1", "tab": "56 Food home vs away", "gid": 321339250, "charts": []},
+            {"book": "bot1", "tab": "111 Value vs growth", "gid": 2128724732, "charts": []},
             {"book": "bot2", "tab": "75 CoreWeave backlog vs revenue", "gid": 530554790, "charts": []},
             {"book": "bot1", "tab": "97 MSTR vol vs BTC vol", "gid": 1027143376, "charts": []},
             {"book": "bot1", "tab": "52 Core goods vs services", "gid": 200447618, "charts": []},
@@ -436,6 +443,13 @@ def self_test():
             os.path.join(b1, "259 Financial conditions.png"),
             os.path.join(b1, "322 Microsoft quarterly FCF.png"),
             os.path.join(b1, "324 Amazon quarterly FCF.png"),
+            os.path.join(b1, "201 Nvidia data center revenue.png"),
+            os.path.join(b1, "227 Private AI lab valuations.png"),
+            os.path.join(b1, "119 Emerging markets vs US.png"),
+            os.path.join(b1, "086 TSLA vs Toyota+GM+Ford.png"),
+            os.path.join(b1, "022 LTC & BCH in BTC.png"),
+            os.path.join(b1, "056 Food home vs away.png"),
+            os.path.join(b1, "111 Value vs growth.png"),
         ]
         kept_new = [
             (os.path.join(mstr_dir, "75 CoreWeave backlog vs revenue.png"), "bot2", "530554790.png"),
@@ -455,12 +469,12 @@ def self_test():
             with open(path, "wb") as f:
                 f.write(old_bytes)
         n2, u2, a2 = run(repo, [src], optimize_png=False, dry=False)
-        # original five, plus data center, China/Mexico/Taiwan, the red-dot tracker, and six neighbors
+        # original five, plus 194 Nvidia vs Cisco, China/Mexico/Taiwan, the red-dot tracker, and six neighbors
         assert n2 == 14, n2
         # prior eight unmatched, plus the retired exports and the tariff chart-2 file.
         # "173 Continuing/initial claims" stays in this fixture as gid 173, the slash-in-name
         # example. The retired sheet is gid 79264442, so that export is not added again.
-        assert u2 == 34, u2
+        assert u2 == 41, u2
         assert a2 == 0, a2
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1547332232.png"))
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "643299192.png"))
@@ -469,7 +483,8 @@ def self_test():
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1791345316_2.png"))
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1370617918.png"))
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1024131985.png"))
-        assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "1476428159.png"), "rb").read() == old_bytes
+        assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "1607076800.png"), "rb").read() == old_bytes
+        assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1476428159.png"))
         assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "171599627.png"), "rb").read() == old_bytes
         assert open(os.path.join(repo, "static", "sheets", "full", "bot2", "645072508.png"), "rb").read() == old_bytes
         for gid in (418894352,):
@@ -478,7 +493,8 @@ def self_test():
                     1308503061, 748431671, 254001772,
                     1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                     1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
-                    1192979444, 1912487083, 664060481, 1778640335):
+                    1192979444, 1912487083, 664060481, 1778640335,
+                    1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732):
             assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "%d.png" % gid)), gid
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "501919598_2.png"))
         for _path, book, name in kept_new:
