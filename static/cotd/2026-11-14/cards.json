@@ -1,0 +1,479 @@
+{
+ "date": "2026-11-14",
+ "items": [
+  {
+   "book": "bot3",
+   "gid": 426970761,
+   "chart_n": 1,
+   "tab": "MSTR avg purchase price",
+   "title": "MSTR average cost per Bitcoin (cost basis)",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Strategy's average cost per bitcoin against the bitcoin price since 2020.",
+   "reason": "Bitcoin slid under $68K this week, pulling it toward Strategy's average purchase cost."
+  },
+  {
+   "book": "bot1",
+   "gid": 1810821762,
+   "chart_n": 1,
+   "tab": "04 BTC vs 200-week MA",
+   "title": "Bitcoin vs its 200-week moving average",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Bitcoin's weekly price against its 200-week moving average, log scale.",
+   "reason": "With bitcoin's pullback, the gap to the long-run 200-week average is the level traders are watching."
+  },
+  {
+   "book": "bot2",
+   "gid": 746117712,
+   "chart_n": 1,
+   "tab": "41 Starship flight test history",
+   "title": "41 Starship flight test history",
+   "kind": "table",
+   "section": "picks",
+   "description": "Every Starship flight test so far: date, version, launch outcome, booster, ship and payload.",
+   "reason": "Starship Flight 15 was set to fly on Nov 13; this is the track record going in."
+  },
+  {
+   "book": "bot1",
+   "gid": 1476428159,
+   "chart_n": 1,
+   "tab": "201 Nvidia data center revenue",
+   "title": "Nvidia became a data-center company: quarterly revenue, data center vs everything else",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Nvidia's quarterly revenue split into data center versus all other segments.",
+   "reason": "Nvidia is in the headlines over leadership turmoil ahead of its next earnings report; this shows what the business rests on."
+  },
+  {
+   "book": "bot1",
+   "gid": 1459587255,
+   "chart_n": 1,
+   "tab": "227 Private AI lab valuations",
+   "title": "Private AI lab valuations from funding rounds: OpenAI, Anthropic and xAI (post-money, as reported; log scale)",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Reported post-money valuations of OpenAI, Anthropic and xAI from their funding rounds, log scale.",
+   "reason": "Anthropic's IPO is in progress, putting private AI lab valuations back in focus."
+  },
+  {
+   "book": "bot1",
+   "gid": 2000805977,
+   "chart_n": 1,
+   "tab": "288 Robinhood vs Coinbase",
+   "title": "Robinhood vs Coinbase: HOOD ÷ COIN share-price ratio (weekly)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 378380409,
+   "chart_n": 1,
+   "tab": "74 Real GDP vs GDI",
+   "title": "Two measures of growth: real GDP vs real GDI (YoY)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 739558050,
+   "chart_n": 1,
+   "tab": "24 BTC vs ETH volatility",
+   "title": "Ether vs Bitcoin: 30-day realized volatility",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot3",
+   "gid": 1643569414,
+   "chart_n": 1,
+   "tab": "Reference Stock Prices",
+   "title": "Reference Stock Prices",
+   "kind": "table",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 687897000,
+   "chart_n": 1,
+   "tab": "119 Emerging markets vs US",
+   "title": "Emerging markets vs US stocks (EEM ÷ SPY, total return)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 370876757,
+   "chart_n": 1,
+   "tab": "282 S&P annual returns spread",
+   "title": "How often stocks return X% in a year: S&P 500 annual total returns, 1928–2025",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot2",
+   "gid": 1172553519,
+   "chart_n": 1,
+   "tab": "4 MSTR preferred stack",
+   "title": "Strategy's preferred stock, Feb 2025–Oct 2026: $15.5B peak, $13.9B after STRC buybacks",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 1169775304,
+   "chart_n": 1,
+   "tab": "02 ETH-BTC ratio",
+   "title": "Ether priced in Bitcoin: ETH/BTC ratio since 2019",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot3",
+   "gid": 708256804,
+   "chart_n": 1,
+   "tab": "BTC Miner Balance Sheets",
+   "title": "BTC Miner Balance Sheets",
+   "kind": "table",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 546391999,
+   "chart_n": 1,
+   "tab": "86 TSLA vs Toyota+GM+Ford",
+   "title": "Tesla market cap vs Toyota, GM and Ford combined",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 108643996,
+   "chart_n": 1,
+   "tab": "07 Mortgage payment",
+   "title": "Monthly mortgage payment on the median US home (20% down)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot3",
+   "gid": 349949205,
+   "chart_n": 1,
+   "tab": "Cash on Balance Sheets",
+   "title": "Cash and BTC Holdings (billions)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot3",
+   "gid": 1608508815,
+   "chart_n": 1,
+   "tab": "SATA Volume",
+   "title": "SATA 30-Day Average Volume: Month-over-Month % Change",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 1048508082,
+   "chart_n": 1,
+   "tab": "175 Apartment share of starts",
+   "title": "Apartment building boom and bust: 5+ unit share of housing starts (12-mo avg)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 195161343,
+   "chart_n": 1,
+   "tab": "22 LTC & BCH in BTC",
+   "title": "Old altcoins priced in Bitcoin: LTC/BTC and BCH/BTC",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 321339250,
+   "chart_n": 1,
+   "tab": "56 Food home vs away",
+   "title": "Groceries vs restaurants: food inflation YoY",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 2128724732,
+   "chart_n": 1,
+   "tab": "111 Value vs growth",
+   "title": "Value vs growth: Russell 1000 Value ÷ Russell 1000 Growth (total return)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 1121141532,
+   "chart_n": 1,
+   "tab": "273 S&P 500 by calendar month",
+   "title": "Seasonality: S&P 500 average return by calendar month and how often each month is positive, 1971–2025",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 2090456245,
+   "chart_n": 1,
+   "tab": "130 Brent-WTI spread",
+   "title": "Brent minus WTI: the transatlantic oil spread (monthly average)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 827857247,
+   "chart_n": 1,
+   "tab": "291 Homes built per person",
+   "title": "America under-builds: new housing units completed per 1,000 people (annualized, quarterly average)",
+   "kind": "chart",
+   "section": "random"
+  }
+ ],
+ "picks": [
+  {
+   "book": "bot3",
+   "gid": 426970761,
+   "chart_n": 1,
+   "tab": "MSTR avg purchase price",
+   "title": "MSTR average cost per Bitcoin (cost basis)",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Strategy's average cost per bitcoin against the bitcoin price since 2020.",
+   "reason": "Bitcoin slid under $68K this week, pulling it toward Strategy's average purchase cost."
+  },
+  {
+   "book": "bot1",
+   "gid": 1810821762,
+   "chart_n": 1,
+   "tab": "04 BTC vs 200-week MA",
+   "title": "Bitcoin vs its 200-week moving average",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Bitcoin's weekly price against its 200-week moving average, log scale.",
+   "reason": "With bitcoin's pullback, the gap to the long-run 200-week average is the level traders are watching."
+  },
+  {
+   "book": "bot2",
+   "gid": 746117712,
+   "chart_n": 1,
+   "tab": "41 Starship flight test history",
+   "title": "41 Starship flight test history",
+   "kind": "table",
+   "section": "picks",
+   "description": "Every Starship flight test so far: date, version, launch outcome, booster, ship and payload.",
+   "reason": "Starship Flight 15 was set to fly on Nov 13; this is the track record going in."
+  },
+  {
+   "book": "bot1",
+   "gid": 1476428159,
+   "chart_n": 1,
+   "tab": "201 Nvidia data center revenue",
+   "title": "Nvidia became a data-center company: quarterly revenue, data center vs everything else",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Nvidia's quarterly revenue split into data center versus all other segments.",
+   "reason": "Nvidia is in the headlines over leadership turmoil ahead of its next earnings report; this shows what the business rests on."
+  },
+  {
+   "book": "bot1",
+   "gid": 1459587255,
+   "chart_n": 1,
+   "tab": "227 Private AI lab valuations",
+   "title": "Private AI lab valuations from funding rounds: OpenAI, Anthropic and xAI (post-money, as reported; log scale)",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Reported post-money valuations of OpenAI, Anthropic and xAI from their funding rounds, log scale.",
+   "reason": "Anthropic's IPO is in progress, putting private AI lab valuations back in focus."
+  }
+ ],
+ "random": [
+  {
+   "book": "bot1",
+   "gid": 2000805977,
+   "chart_n": 1,
+   "tab": "288 Robinhood vs Coinbase",
+   "title": "Robinhood vs Coinbase: HOOD ÷ COIN share-price ratio (weekly)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 378380409,
+   "chart_n": 1,
+   "tab": "74 Real GDP vs GDI",
+   "title": "Two measures of growth: real GDP vs real GDI (YoY)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 739558050,
+   "chart_n": 1,
+   "tab": "24 BTC vs ETH volatility",
+   "title": "Ether vs Bitcoin: 30-day realized volatility",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot3",
+   "gid": 1643569414,
+   "chart_n": 1,
+   "tab": "Reference Stock Prices",
+   "title": "Reference Stock Prices",
+   "kind": "table",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 687897000,
+   "chart_n": 1,
+   "tab": "119 Emerging markets vs US",
+   "title": "Emerging markets vs US stocks (EEM ÷ SPY, total return)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 370876757,
+   "chart_n": 1,
+   "tab": "282 S&P annual returns spread",
+   "title": "How often stocks return X% in a year: S&P 500 annual total returns, 1928–2025",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot2",
+   "gid": 1172553519,
+   "chart_n": 1,
+   "tab": "4 MSTR preferred stack",
+   "title": "Strategy's preferred stock, Feb 2025–Oct 2026: $15.5B peak, $13.9B after STRC buybacks",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 1169775304,
+   "chart_n": 1,
+   "tab": "02 ETH-BTC ratio",
+   "title": "Ether priced in Bitcoin: ETH/BTC ratio since 2019",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot3",
+   "gid": 708256804,
+   "chart_n": 1,
+   "tab": "BTC Miner Balance Sheets",
+   "title": "BTC Miner Balance Sheets",
+   "kind": "table",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 546391999,
+   "chart_n": 1,
+   "tab": "86 TSLA vs Toyota+GM+Ford",
+   "title": "Tesla market cap vs Toyota, GM and Ford combined",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 108643996,
+   "chart_n": 1,
+   "tab": "07 Mortgage payment",
+   "title": "Monthly mortgage payment on the median US home (20% down)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot3",
+   "gid": 349949205,
+   "chart_n": 1,
+   "tab": "Cash on Balance Sheets",
+   "title": "Cash and BTC Holdings (billions)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot3",
+   "gid": 1608508815,
+   "chart_n": 1,
+   "tab": "SATA Volume",
+   "title": "SATA 30-Day Average Volume: Month-over-Month % Change",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 1048508082,
+   "chart_n": 1,
+   "tab": "175 Apartment share of starts",
+   "title": "Apartment building boom and bust: 5+ unit share of housing starts (12-mo avg)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 195161343,
+   "chart_n": 1,
+   "tab": "22 LTC & BCH in BTC",
+   "title": "Old altcoins priced in Bitcoin: LTC/BTC and BCH/BTC",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 321339250,
+   "chart_n": 1,
+   "tab": "56 Food home vs away",
+   "title": "Groceries vs restaurants: food inflation YoY",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 2128724732,
+   "chart_n": 1,
+   "tab": "111 Value vs growth",
+   "title": "Value vs growth: Russell 1000 Value ÷ Russell 1000 Growth (total return)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 1121141532,
+   "chart_n": 1,
+   "tab": "273 S&P 500 by calendar month",
+   "title": "Seasonality: S&P 500 average return by calendar month and how often each month is positive, 1971–2025",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 2090456245,
+   "chart_n": 1,
+   "tab": "130 Brent-WTI spread",
+   "title": "Brent minus WTI: the transatlantic oil spread (monthly average)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 827857247,
+   "chart_n": 1,
+   "tab": "291 Homes built per person",
+   "title": "America under-builds: new housing units completed per 1,000 people (annualized, quarterly average)",
+   "kind": "chart",
+   "section": "random"
+  }
+ ]
+}
