@@ -145,9 +145,20 @@ Then commit `static/paper_trading.json`. `python3 scripts/paper_trading.py --sel
 
 ## Daily briefing
 
-The **Daily briefing** tab is the page the app opens on: price targets, sentiment, BTC treasury holdings, the paper book's saved NAV, and charts of the day. `?tab=` still opens that tab (`?tab=watch` is Watchlist, `?tab=paper` is the paper book, `?tab=prices` and `?tab=charts` are Charts, and the same for the others). `?tickers=`, `?ftickers=`, and `?vtickers=` still open Charts, Financials, and Valuation.
+The **Daily briefing** tab is the page the app opens on. It is a reverse-chronological archive of Lloyd's 9 AM ET news briefing. The newest briefing is expanded; older ones are collapsed. `?tab=` still opens that tab (`?tab=watch` is Watchlist, `?tab=paper` is the paper book, `?tab=prices` and `?tab=charts` are Charts, and the same for the others). `?tickers=`, `?ftickers=`, and `?vtickers=` still open Charts, Financials, and Valuation.
 
-`GET /api/briefing` builds the page from the files those tabs already use. No new scheduled job. Render does not call Google or X.
+`GET /api/briefing` reads `data/lloyd_briefings.json`. Render does not call Gmail. A daily routine appends today's briefing and commits the file to main:
+
+```
+python3 scripts/add_lloyd_briefing.py \
+  --subject "$SUBJECT" \
+  --sent-at "$SENT_AT" \
+  --body-file "$BODY_PATH" \
+  --message-id "$MESSAGE_ID" \
+  --commit --push
+```
+
+`--push` uses `CHARTMAKER_GITHUB_TOKEN` and never prints it. Upserts are keyed by the America/New_York calendar date of the send time: the same message is idempotent, and a later email that day replaces an earlier one. HTML is sanitized on write (no scripts, iframes, or remote images; unsubscribe and tracking links are dropped).
 
 ```
 python3 scripts/briefing.py
@@ -155,11 +166,7 @@ python3 scripts/briefing.py --json
 python3 scripts/briefing.py --self-test
 ```
 
-- **Price targets.** Current `static/price_targets.json` against `static/price_targets_history.json`, the last snapshot from before the 7-day window that ends on the file's as-of date. `scripts/price_targets.py` appends a snapshot when base, street consensus, rating, notes, or why change. Commit `static/price_targets_history.json` with the price-target file.
-- **Paper NAV.** The saved marks in `static/paper_trading.json`. This is the last marked close, not a live quote.
-- **Sentiment.** `sentiment.json` against the previous date in `sentiment_history.json` → `daily`. A name with fewer than 8 classified bull and bear items is marked thin, same cutoff as the hollow dots on Over time.
-- **BTC treasury.** Latest `btctop100.json` against the previous snapshot in `btctop100_history.json`. `scripts/refresh_btctop100.py` appends one snapshot per refresh, including each company's as-of date, note, and source. Commit `btctop100_history.json` with `btctop100.json`. Holding drift under 1 BTC is left out. A change whose as-of month also changed is listed under Updated filings, with both as-of dates and the sheet note, not as a one-day buy or sale. Same-period changes stay above that group. Companies that enter or leave the top 100 are listed.
-- **Charts of the day.** `static/cotd/today.json`. Tabs in `EXCLUDED_TABS` or `COTD_EXCLUDED` are left out. The sheet catalog does not record how much each chart's underlying data moved at the weekly refresh, so the briefing does not rank charts by data change.
+Price targets, sentiment, BTC Treasury, and Charts of the day stay on their own tabs. The refresh scripts still append `static/price_targets_history.json` and `btctop100_history.json`.
 
 ## Sentiment tab
 

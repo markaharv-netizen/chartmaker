@@ -103,6 +103,15 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #brief .card .src{font-size:12px;color:#6B7280;margin:0}#brief .card .src a{color:#2563eb}
 #brief .card .why{margin:4px 0 0;font-size:12px;line-height:1.4;color:#374151}
 #brief .card .why b{font-weight:600;color:#111}
+#brief details.lloyd{background:#fff;border:1px solid #e5e7eb;border-radius:6px;margin:0 0 12px;padding:0}
+#brief details.lloyd>summary{cursor:pointer;list-style:none;padding:12px 16px;display:flex;flex-direction:column;gap:2px}
+#brief details.lloyd>summary::-webkit-details-marker{display:none}
+#brief details.lloyd>summary .when{color:#6B7280;font-size:13px}
+#brief details.lloyd>summary .subj{font-weight:650;font-size:16px;line-height:1.35;color:#111}
+#brief .lloydbody{padding:0 16px 16px;font-size:15px;line-height:1.55;color:#1C2430}
+#brief .lloydbody h3{margin:18px 0 8px;font-size:13px;letter-spacing:.3px;text-transform:uppercase;color:#6B7280;font-weight:600}
+#brief .lloydbody p{margin:0 0 10px}
+#brief .lloydbody a{color:#2563eb;overflow-wrap:anywhere}
 @media (max-width:640px){
   #brief{padding:12px 12px 40px}
   #brief .grid{grid-template-columns:1fr}
@@ -152,7 +161,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
   .ccustom input.hex{min-height:40px;font-size:16px;width:8.2em}
 }
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mBrief" class="on" title="What changed across price targets, sentiment, treasuries, and charts">Daily briefing</button><button id="mWatch">Watchlist</button><button id="mPrices" title="Price lines, percent change, candles, and ratios">Charts</button><button id="mFin">Financials</button><button id="mVal">Valuation</button><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mPaper" title="Paper book sized by Steve's paper weights">Paper trading</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mBrief" class="on" title="Lloyd's 9 AM ET news briefing, newest first">Daily briefing</button><button id="mWatch">Watchlist</button><button id="mPrices" title="Price lines, percent change, candles, and ratios">Charts</button><button id="mFin">Financials</button><button id="mVal">Valuation</button><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mPaper" title="Paper book sized by Steve's paper weights">Paper trading</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -2086,62 +2095,22 @@ window.__vapply=vapply;window.__snap=snap;
       else if(ev.key==='Escape'){ev.preventDefault();hide()}
       else if(ev.key==='Enter'){hide()}},true)}
 })();
-// ---------- Daily briefing: GET /api/briefing, built from the refresh files. No extra job. ----------
+// ---------- Daily briefing: GET /api/briefing, Lloyd's 9 AM ET archive. ----------
 let BRIEFSEQ=0;
-function briefPct(frac){if(frac==null||!isFinite(+frac))return '';const n=+frac*100;return (n>0?'+':'')+n.toFixed(1)+'%'}
-function briefPts(n){if(n==null||!isFinite(+n))return '—';const v=+n;return (v>0?'+':'')+v.toFixed(1)+' pts'}
-function briefBull(v){if(v==null||!isFinite(+v))return '—';return (v*100).toFixed(1)+'%'}
-function briefBtc(v){if(v==null||!isFinite(+v))return '—';const n=+v;if(Math.abs(n-Math.round(n))<1e-6)return Math.round(n).toLocaleString('en-US');return n.toLocaleString('en-US',{maximumFractionDigits:4})}
-function briefDelta(v){if(v==null||!isFinite(+v))return '';const n=+v;const body=briefBtc(Math.abs(n));return (n>0?'+':n<0?'−':'')+body}
-function briefSection(title,href,asof,id){return `<section${id?' id="'+id+'"':''}><h3><a href="${escHtml(href)}">${escHtml(title)}</a></h3><p class="asof">${asof}</p>`}
-function briefChanges(list){return (list||[]).map(c=>`<div class="chg"><div class="chghead"><a href="${escHtml(c.href||'/?tab=pt')}">${escHtml(c.ticker)}</a><span class="when">${escHtml(c.dateLabel||'')}</span></div><ul>${(c.lines||[]).map(line=>'<li>'+escHtml(line)+'</li>').join('')}</ul></div>`).join('')}
-function briefRender(doc){const E=escHtml,pt=doc.priceTargets||{},paper=doc.paper||{},sent=doc.sentiment||{},tre=doc.treasury||{},charts=doc.charts||{};
-  const ptWhen=`As of ${E(pt.asOfLabel||'—')}`+(pt.sinceLabel?` · changes since ${E(pt.sinceLabel)}`:'');
-  const paperLine=paper.message?`<p class="paperline"><a href="${E(paper.href||'/?tab=paper')}">${E(paper.message)}</a></p>`:'';
-  const ptBody=pt.empty?`<div class="empty">${E(pt.emptyMessage||'No price target changes.')}</div>`:briefChanges(pt.changes);
-  const swings=(sent.swings||[]).map(s=>{const cls=s.points>0?'up':s.points<0?'down':'';
-    return `<a class="row" href="${E(s.href)}"><span><b>${E(s.symbol)}</b> <span class="name">${E(s.name||'')}</span></span><span class="move ${cls}">${E(briefPts(s.points))}</span></a><p class="meta">${E(briefBull(s.previous))} → ${E(briefBull(s.bull))} · ${E(String(s.classified))} classified</p>`}).join('');
-  const thin=(sent.thin||[]).map(s=>{const move=s.points==null?'new on the board':briefPts(s.points);const from=s.previous==null?'':`${briefBull(s.previous)} → ${briefBull(s.bull)} · `;
-    return `<a class="row" href="${E(s.href)}"><span><b>${E(s.symbol)}</b> <span class="name">${E(s.name||'')}</span></span><span class="move">${E(move)}</span></a><p class="meta">${E(from)}${E(String(s.classified))} classified · thin sample</p>`}).join('');
-  const thinBox=thin?`<div class="thinbox"><p>Thin samples, under ${E(String(sent.thinBelow||8))} classified bull and bear items. A large move here, including 100% from one post, is not a strong signal.</p>${thin}</div>`:'';
-  const more=sent.moreSwings?`<p class="more">${E(String(sent.moreSwings))} more names moved. <a href="${E(sent.href||'/?tab=sent')}">Open the board</a>.</p>`:'';
-  const entered=(sent.entered||[]).map(s=>`<a class="row" href="${E(s.href)}"><span><b>${E(s.symbol)}</b> <span class="name">${E(s.name||'')}</span></span><span class="move">New</span></a>`).join('');
-  const sentWhen=`Board as of ${E(sent.asOfLabel||'—')}`+(sent.previousLabel?` · versus ${E(sent.previousLabel)}`:'');
-  const sentBody=sent.empty&&!thin&&!entered?`<div class="empty">${E(sent.emptyMessage||'No sentiment change.')}</div>`:(swings||'<div class="empty">No swings with a full enough sample.</div>')+more+entered+thinBox;
-  const holdRow=c=>{const cls=c.delta>0?'up':c.delta<0?'down':'';const rank=c.previousRank&&c.rank&&c.previousRank!==c.rank?` · rank ${c.previousRank} → ${c.rank}`:'';const sheet=c.change?` · sheet change ${c.change}`:'';
-    return `<a class="row" href="${E(c.href||'/?tab=tre')}"><span><b>${E(c.ticker||c.name)}</b> <span class="name">${E(c.name||'')}</span></span><span class="move ${cls}">${E(briefDelta(c.delta))} BTC</span></a><p class="meta">${E(briefBtc(c.previous))} → ${E(briefBtc(c.btc))} BTC${E(rank+sheet)}</p>`};
-  const filingNote=c=>{const bits=[c.note,c.sourceLabel&&c.source?c.sourceLabel+' · '+c.source:c.source].filter(Boolean);const full=bits.join(' — ');if(!full)return '';
-    if(full.length<=160)return `<p class="meta" title="${E(full)}">${E(full)}</p>`;
-    const clip=full.slice(0,157).trimEnd()+'…';
-    return `<details class="note"><summary title="${E(full)}">${E(clip)}</summary><p>${E(c.note||'')}</p>${c.source?`<p class="meta">${E(c.sourceLabel?c.sourceLabel+' · ':'')}${E(c.source)}</p>`:''}</details>`};
-  const filingRow=c=>`<div class="filing"><div class="chghead"><a href="${E(c.href||'/?tab=tre')}">${E(c.ticker||c.name)}</a><span class="name">${E(c.name||'')}</span><span class="tag">updated filing</span></div><p class="meta">${E(c.holdingLine||'')}</p>${filingNote(c)}</div>`;
-  const flow=(list,label)=>!list||!list.length?'':`<p class="more">${E(label)}: ${list.map(c=>E((c.ticker||c.name)+' ('+briefBtc(c.btc)+' BTC)')).join(', ')}</p>`;
-  const treWhen=`Holdings as of ${E(tre.asOfLabel||'—')}`+(tre.previousLabel?` · compared with ${E(tre.previousLabel)}`:'');
-  const sameBody=(tre.changes||[]).map(holdRow).join('')||'<div class="empty">No holding changes within the same as-of date.</div>';
-  const fileBody=(tre.filings||[]).length?`<p class="group">Updated filings</p>${tre.filings.map(filingRow).join('')}`:'';
-  const treBody=tre.empty?`<div class="empty">${E(tre.emptyMessage||'No treasury changes.')}</div>`:`<p class="group">Same as-of date</p>${sameBody}${fileBody}`+flow(tre.entered,'Entered the top 100')+flow(tre.left,'Left the top 100');
-  const briefCard=(item,pick)=>{const img=item.image?`<a class="shot" href="${E(item.href)}"><img src="${E(item.image)}" alt="${E(item.title)}" loading="lazy"></a>`:'';
-    const note=pick&&(item.description||item.reason)?`<p class="why">${item.description?E(item.description):''}${item.description&&item.reason?' ':''}${item.reason?`<b>Why it was picked.</b> ${E(item.reason)}`:''}</p>`:'';
-    return `<div class="card${pick?' pick':''}">${img}<div class="cap"><h4><a href="${E(item.href)}">${E(item.title)}</a></h4><p class="src">${E(item.sheet||'')} · ${E(item.tab||'')}${item.href&&item.href!==item.tabHref?` · <a href="${E(item.href)}">open chart</a>`:''}</p>${note}</div></div>`};
-  const pickCards=(charts.picks||[]).map(item=>briefCard(item,true)).join('');
-  const cards=(charts.items||[]).map(item=>briefCard(item,false)).join('');
-  const chWhen=`Edition ${E(charts.asOfLabel||'—')}`;
-  const theme=charts.theme?`<p class="asof">${E(charts.theme)}</p>`:'';
-  const chBody=charts.empty?`<div class="empty">${E(charts.emptyMessage||'No charts of the day.')}</div>`
-    :(charts.picks||[]).length?`<p class="group">Today's picks</p><div class="grid">${pickCards}</div><p class="group">Random from the library</p><div class="grid">${cards}</div>`
-    :`<div class="grid">${cards}</div>`;
-  return `<h2>Daily briefing</h2><p class="lede">What changed in price targets, sentiment, bitcoin treasuries, and charts of the day.</p>`
-    +briefSection('Price targets',pt.href||'/?tab=pt',ptWhen)+paperLine+ptBody+'</section>'
-    +briefSection('Sentiment',sent.href||'/?tab=sent',sentWhen)+sentBody+'</section>'
-    +briefSection('BTC treasury',tre.href||'/?tab=tre',treWhen,'treasury')+treBody+'</section>'
-    +briefSection('Charts of the day',charts.href||'/?tab=cotd',chWhen)+theme+chBody+'</section>';
+function briefRender(doc){const E=escHtml,items=doc.briefings||[];
+  const lede=E(doc.lede||"Lloyd's 9 AM ET news briefing, newest first.");
+  if(!items.length)return `<h2>Daily briefing</h2><p class="lede">${lede}</p><div class="empty">No briefings have been archived yet.</div>`;
+  const cards=items.map((b,i)=>{
+    const open=i===0?' open':'';
+    return `<details class="lloyd"${open}><summary><span class="when">${E(b.sentAtEt||b.date||'')}</span><span class="subj">${E(b.subject||'')}</span></summary><div class="lloydbody">${b.bodyHtml||''}</div></details>`;
+  }).join('');
+  return `<h2>Daily briefing</h2><p class="lede">${lede}</p>`+cards;
 }
 async function briefEnter(){const el=$('brief'),seq=++BRIEFSEQ,E=escHtml;
   el.innerHTML='<p class="lede">Loading…</p>';
   try{const r=await fetch('/api/briefing?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const doc=await r.json();if(seq!==BRIEFSEQ||MODE!=='briefing')return;
     if(doc.error)throw Error(doc.error);
     el.innerHTML=briefRender(doc);
-    if(location.hash==='#treasury'){const box=document.getElementById('treasury');if(box)box.scrollIntoView()}
   }catch(e){if(seq!==BRIEFSEQ||MODE!=='briefing')return;el.innerHTML='<h2>Daily briefing</h2><p class="empty">Could not load the briefing ('+E(e.message)+').</p>'}}
 // Deep link only. Absent params leave the empty default.
 // Charts: ?tickers=AAPL,MSFT. Financials: ?ftickers= . Valuation: ?vtickers= .
