@@ -73,7 +73,7 @@ FAV_KEY_RE = re.compile(r"^([A-Za-z0-9][A-Za-z0-9_-]{0,24})/(\d+)/([1-9]\d?)$")
 # 1192979444, 1912487083, 664060481, and 1778640335 are the tabs Mark retired on 2026-11-13.
 # 1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, and
 # 2128724732 are the tabs Mark retired on 2026-11-14.
-# 189736118, 1981719475, 519508812, and 45161413 are the tabs Mark retired on 2026-11-15.
+# 189736118, 1981719475, 519508812, 45161413, 1794999542, 567489150, and 601460115 are the tabs Mark retired on 2026-11-15.
 def _favorite_retired():
     pairs = {
         ("bot1", 1547332232),
@@ -120,6 +120,9 @@ def _favorite_retired():
         ("bot1", 1981719475),
         ("bot1", 519508812),
         ("bot1", 45161413),
+        ("bot2", 1794999542),
+        ("bot1", 567489150),
+        ("bot1", 601460115),
     }
     try:
         scripts = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts")
