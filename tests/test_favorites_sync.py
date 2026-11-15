@@ -157,6 +157,13 @@ class SyncStoreTest(unittest.TestCase):
             {"op": "add", "k": "bot1/195161343/1", "title": "no"},
             {"op": "add", "k": "bot1/321339250/1", "title": "no"},
             {"op": "add", "k": "bot1/2128724732/1", "title": "no"},
+            {"op": "add", "k": "bot1/189736118/1", "title": "no"},
+            {"op": "add", "k": "bot1/1981719475/1", "title": "no"},
+            {"op": "add", "k": "bot1/519508812/1", "title": "no"},
+            {"op": "add", "k": "bot1/45161413/1", "title": "no"},
+            {"op": "add", "k": "bot2/1794999542/1", "title": "no"},
+            {"op": "add", "k": "bot1/567489150/1", "title": "no"},
+            {"op": "add", "k": "bot1/601460115/1", "title": "no"},
         ], "baseRev": 0})
         self.assertNotIn(RETIRED, self.keys(retired))
         self.assertNotIn("bot1/1024131985/1", self.keys(retired))
@@ -189,6 +196,13 @@ class SyncStoreTest(unittest.TestCase):
         self.assertNotIn("bot1/195161343/1", self.keys(retired))
         self.assertNotIn("bot1/321339250/1", self.keys(retired))
         self.assertNotIn("bot1/2128724732/1", self.keys(retired))
+        self.assertNotIn("bot1/189736118/1", self.keys(retired))
+        self.assertNotIn("bot1/1981719475/1", self.keys(retired))
+        self.assertNotIn("bot1/519508812/1", self.keys(retired))
+        self.assertNotIn("bot1/45161413/1", self.keys(retired))
+        self.assertNotIn("bot2/1794999542/1", self.keys(retired))
+        self.assertNotIn("bot1/567489150/1", self.keys(retired))
+        self.assertNotIn("bot1/601460115/1", self.keys(retired))
         self.assertTrue(all(row["reason"] == "retired" for row in retired["skipped"]))
         on_disk = json.dumps(json.load(open(server.VIEWS, encoding="utf-8")))
         self.assertNotIn("1547332232", on_disk)
@@ -222,6 +236,13 @@ class SyncStoreTest(unittest.TestCase):
         self.assertNotIn("195161343", on_disk)
         self.assertNotIn("321339250", on_disk)
         self.assertNotIn("2128724732", on_disk)
+        self.assertNotIn("189736118", on_disk)
+        self.assertNotIn("1981719475", on_disk)
+        self.assertNotIn("519508812", on_disk)
+        self.assertNotIn("45161413", on_disk)
+        self.assertNotIn("1794999542", on_disk)
+        self.assertNotIn("567489150", on_disk)
+        self.assertNotIn("601460115", on_disk)
 
     def test_table_key_is_stored_beside_a_chart_key(self):
         table = "bot2/1714490525/1"

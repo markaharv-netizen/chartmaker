@@ -838,17 +838,25 @@ def self_test():
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1370617918})
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1024131985})
     assert pick_excluded({"spreadsheetId": bot2, "gid": 645072508})
-    # Retired by Mark on 2026-11-10, 2026-11-11, 2026-11-12, 2026-11-13, and 2026-11-14. Adding a gid to EXCLUDED_TABS is enough.
+    # Retired by Mark on 2026-11-10, 2026-11-11, 2026-11-12, 2026-11-13, 2026-11-14, and 2026-11-15. Adding a gid to EXCLUDED_TABS is enough.
     for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621,
                 1308503061, 748431671, 254001772,
                 1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                 1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                 1192979444, 1912487083, 664060481, 1778640335,
-                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732):
+                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115):
         assert pick_excluded({"spreadsheetId": bot1, "gid": gid}), gid
     assert pick_excluded({"spreadsheetId": bot2, "gid": 418894352})
+    assert pick_excluded({"spreadsheetId": bot2, "gid": 1794999542})
     assert not pick_excluded({"spreadsheetId": "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU", "gid": 1536200109})
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1476428159})
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 189736118})
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1981719475})
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 519508812})
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 45161413})
+    assert pick_excluded({"spreadsheetId": bot2, "gid": 1794999542})
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 567489150})
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 601460115})
     # Neighbors that stay: Korea/Taiwan's neighbor, CoreWeave backlog, CPI charts, tariff rate, real yield.
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 171599627})
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 200447618})  # 52 Core goods vs services
@@ -858,13 +866,18 @@ def self_test():
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1027143376})  # 97 MSTR vol vs BTC vol
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 530554790})  # 75 CoreWeave backlog vs revenue
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 1713824403})  # 55 Capex intensity vs legacy
+    assert not pick_excluded({"spreadsheetId": bot2, "gid": 82966268})  # 57 EBITDA margin Tesla vs peers
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 727565635})  # 125 Junk vs IG spread ratio
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1457832817})  # 127 Private credit BDCs vs HY
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 134436208})  # 203 Cloud growth race
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 965739722})  # 205 Meta Reality Labs losses
     assert not pick_excluded({"spreadsheetId": bot1, "gid": ""})
     live = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     # Retired charts stay out of the published edition and the sheet catalog.
     # 1024131985 is Strategy tab 99 (MSTR BTC per share), removed in PR #34.
     # 1791345316 and 1370617918 were deleted on 2026-11-09.
     # 645072508 stays in the catalog (Charts of the day only) and is not in this list.
-    # The 2026-11-10, 2026-11-11, 2026-11-12, 2026-11-13, and 2026-11-14 gids are the charts Mark retired on those days.
+    # The 2026-11-10, 2026-11-11, 2026-11-12, 2026-11-13, 2026-11-14, and 2026-11-15 gids are the charts Mark retired on those days.
     # 1536200109 (Gold Priced in BTC) stays in the catalog. Its blank chart image does not.
     retired_live = (1547332232, 643299192, 333185169, 1024131985, 1791345316, 1370617918,
                     292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621, 418894352,
@@ -872,7 +885,7 @@ def self_test():
                     1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                     1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                     1192979444, 1912487083, 664060481, 1778640335,
-                    1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732)
+                    1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1794999542)
     for rel in ("static/cotd/today.json", "static/sheets/catalog.json"):
         with open(os.path.join(live, rel), encoding="utf-8") as f:
             blob = f.read()
@@ -885,13 +898,13 @@ def self_test():
         today_blob = json.dumps(today_doc)
     assert "645072508" in catalog_blob
     assert "645072508" not in today_blob
-    for gid in (530554790, 200447618, 829703707, 972156540, 1167074374, 978356289):
+    for gid in (530554790, 200447618, 829703707, 972156540, 1167074374, 978356289, 1713824403, 82966268, 727565635, 1457832817, 134436208, 965739722):
         assert str(gid) in catalog_blob, gid
-    assert today_doc["date"] == "2026-11-14"
-    assert len(today_doc["picks"]) == 3, len(today_doc["picks"])
-    assert len(today_doc["items"]) == 15, len(today_doc["items"])
+    assert today_doc["date"] == "2026-11-15"
+    assert len(today_doc["picks"]) == 5, len(today_doc["picks"])
+    assert len(today_doc["items"]) == 13, len(today_doc["items"])
     assert "Chart 2" not in today_blob and "1536200109" not in today_blob
-    cards_live = json.load(open(os.path.join(live, "static/cotd/2026-11-14/cards.json"), encoding="utf-8"))
+    cards_live = json.load(open(os.path.join(live, "static/cotd/2026-11-15/cards.json"), encoding="utf-8"))
     assert cards_live == cards_from_published(today_doc)
     assert all(it.get("book") and it.get("gid") for it in cards_live["items"])
     bot3 = "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU"

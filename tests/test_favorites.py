@@ -40,6 +40,8 @@ RETIRED = (
     "1924976898", "1978525586", "1255387315", "1522766504", "1163669375", "1576800449",
     "1192979444", "1912487083", "664060481", "1778640335",
     "1476428159", "1459587255", "687897000", "546391999", "195161343", "321339250", "2128724732",
+    "189736118", "1981719475", "519508812", "45161413",
+    "1794999542", "567489150", "601460115",
 )
 RETIRED_TABS = (
     "161 Nvidia P-S and P-E",
@@ -82,6 +84,13 @@ RETIRED_TABS = (
     "22 LTC & BCH in BTC",
     "56 Food home vs away",
     "111 Value vs growth",
+    "191 Real gold price",
+    "295 Tesla vs GM vs Ford margins",
+    "159 Uranium & nuclear vs S&P",
+    "45 Euro spreads vs Bunds",
+    "56 ROIC Tesla vs legacy and EV",
+    "126 CCC vs BB spread",
+    "204 Cloud operating margins",
 )
 
 
