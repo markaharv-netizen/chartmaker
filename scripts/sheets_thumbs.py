@@ -531,6 +531,10 @@ def self_test():
         {"book": "bot1", "tab": "22 LTC & BCH in BTC", "gid": 195161343, "charts": []},
         {"book": "bot1", "tab": "56 Food home vs away", "gid": 321339250, "charts": []},
         {"book": "bot1", "tab": "111 Value vs growth", "gid": 2128724732, "charts": []},
+        {"book": "bot1", "tab": "191 Real gold price", "gid": 189736118, "charts": []},
+        {"book": "bot1", "tab": "295 Tesla vs GM vs Ford margins", "gid": 1981719475, "charts": []},
+        {"book": "bot1", "tab": "159 Uranium & nuclear vs S&P", "gid": 519508812, "charts": []},
+        {"book": "bot1", "tab": "45 Euro spreads vs Bunds", "gid": 45161413, "charts": []},
         {"book": "bot2", "tab": "75 CoreWeave backlog vs revenue", "gid": 530554790, "charts": []},
         {"book": "bot1", "tab": "97 MSTR vol vs BTC vol", "gid": 1027143376, "charts": []},
         {"book": "bot1", "tab": "52 Core goods vs services", "gid": 200447618, "charts": []},
@@ -591,6 +595,10 @@ def self_test():
         f("/e/022 LTC & BCH in BTC.png", "", 10, None),
         f("/e/056 Food home vs away.png", "", 10, None),
         f("/e/111 Value vs growth.png", "", 10, None),
+        f("/e/191 Real gold price.png", "", 10, None),
+        f("/e/295 Tesla vs GM vs Ford margins.png", "", 10, None),
+        f("/e/159 Uranium & nuclear vs S&P.png", "", 10, None),
+        f("/e/045 Euro spreads vs Bunds.png", "", 10, None),
         f("/e/75 CoreWeave backlog vs revenue.png", "bot experiments 2", 10, None),
         f("/e/97 MSTR vol vs BTC vol.png", "", 10, None),
         f("/e/52 Core goods vs services.png", "", 10, None),
@@ -661,6 +669,10 @@ def self_test():
         (195161343, "022 LTC & BCH in BTC.png"),
         (321339250, "056 Food home vs away.png"),
         (2128724732, "111 Value vs growth.png"),
+        (189736118, "191 Real gold price.png"),
+        (1981719475, "295 Tesla vs GM vs Ford margins.png"),
+        (519508812, "159 Uranium & nuclear vs S&P.png"),
+        (45161413, "045 Euro spreads vs Bunds.png"),
     ):
         book = "bot2" if gid == 418894352 else "bot1"
         assert (book, gid) not in chosen, gid
