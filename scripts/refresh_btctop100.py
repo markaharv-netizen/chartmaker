@@ -404,7 +404,7 @@ def write_doc(doc):
         json.dump(doc, f, indent=2, ensure_ascii=False)
         f.write("\n")
     os.replace(tmp, OUT)
-    # Keep the prior holdings so the daily briefing can diff the next refresh.
+    # Keep the prior holdings in btctop100_history.json for each refresh.
     # The same fetchedAt is stored once. Drift under 1 BTC is ignored at read time.
     history = os.path.join(ROOT, "btctop100_history.json")
     try:

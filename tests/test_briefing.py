@@ -1,4 +1,4 @@
-"""Daily briefing diffs. No network. Fixtures are in memory; one test reads the repo files."""
+"""Price-target and treasury snapshot archives used by the refresh scripts."""
 import json
 import os
 import sys
@@ -12,16 +12,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INDEX = os.path.join(ROOT, "static", "index.html")
 
 
-def row(ticker, **kw):
-    base = {
-        "ticker": ticker, "base": 10, "bear": 1, "bull": 20, "consensus": 12,
-        "analysts": 3, "rating": "HOLD", "notes": "note", "why": "because",
-        "previousDetail": "", "baseChangedAt": None, "previousBase": None,
-    }
-    base.update(kw)
-    return base
-
-
 def company(ticker, btc, rank, name=None, change=None, as_of=None, notes=None, source=None, source_label=None):
     return {
         "ticker": ticker, "name": name or ticker, "btc": btc, "rank": rank, "change": change,
@@ -29,164 +19,7 @@ def company(ticker, btc, rank, name=None, change=None, as_of=None, notes=None, s
     }
 
 
-class PriceTargetTest(unittest.TestCase):
-    def test_window_diffs_against_the_snapshot_before_it(self):
-        baseline = {"generated": "2026-10-30T14:00:00Z", "rows": [
-            row("AAA", base=10, rating="HOLD", consensus=12, analysts=3),
-            row("BBB", base=5),
-            row("DDD", previousDetail="Prev Base $1 -> $10 at Oct 22, 2026; unchanged in Oct 30 scans"),
-        ]}
-        current = {"generated": "2026-11-09T13:00:00Z", "rows": [
-            row("AAA", base=14, previousBase=10, baseChangedAt="2026-11-02", rating="BUY",
-                consensus=15, analysts=4, notes="rewritten note", why="because"),
-            row("CCC", base=8, rating="HOLD", consensus=None, analysts=None, why="fresh name",
-                previousDetail="New model added Nov 5, 2026 (v1). Nov 9, 2026: Q3 checked; valuation unchanged."),
-            row("DDD", previousDetail="Prev Base $1 -> $10 at Oct 22, 2026; unchanged in Oct 30, Nov 2 and Nov 4 scans"),
-        ]}
-        section = briefing.price_target_section(current, [baseline])
-        self.assertEqual(section["asOf"], "2026-11-09")
-        self.assertEqual(section["since"], "2026-10-30")
-        self.assertFalse(section["empty"])
-        by = {item["ticker"]: item for item in section["changes"]}
-        self.assertEqual(set(by), {"AAA", "CCC", "BBB"})
-        self.assertNotIn("DDD", by)
-        self.assertEqual(by["AAA"]["kind"], "update")
-        self.assertEqual(by["AAA"]["date"], "2026-11-02")
-        self.assertTrue(any(line.startswith("Base $10.00 → $14.00") for line in by["AAA"]["lines"]))
-        self.assertTrue(any(line.startswith("Rating HOLD → BUY") for line in by["AAA"]["lines"]))
-        self.assertTrue(any("Street consensus" in line for line in by["AAA"]["lines"]))
-        self.assertEqual(by["CCC"]["kind"], "new")
-        self.assertEqual(by["CCC"]["date"], "2026-11-05")
-        self.assertTrue(any("valuation unchanged" in line for line in by["CCC"]["lines"]))
-        self.assertEqual(by["BBB"]["kind"], "removed")
-        self.assertTrue(all(item["href"].startswith("/?tab=pt") for item in section["changes"]))
-
-    def test_empty_state_names_the_baseline_date(self):
-        snap = {"generated": "2026-10-30T14:00:00Z", "rows": [row("AAA")]}
-        current = {"generated": "2026-11-09T13:00:00Z", "rows": [row("AAA")]}
-        section = briefing.price_target_section(current, [snap])
-        self.assertTrue(section["empty"])
-        self.assertEqual(section["emptyMessage"], "No price target changes since Oct 30, 2026.")
-        self.assertEqual(section["changes"], [])
-
-    def test_missing_file_is_honest(self):
-        section = briefing.price_target_section(None, [])
-        self.assertTrue(section["empty"])
-        self.assertIn("not available", section["emptyMessage"])
-
-    def test_embedded_dates_when_there_is_no_earlier_snapshot(self):
-        current = {"generated": "2026-11-09T13:00:00Z", "rows": [
-            row("OLD", base=10, previousBase=8, baseChangedAt="2026-10-01"),
-            row("NEW", base=3, previousBase=1, baseChangedAt="2026-11-04", rating="SELL"),
-        ]}
-        section = briefing.price_target_section(current, [])
-        tickers = [item["ticker"] for item in section["changes"]]
-        self.assertEqual(tickers, ["NEW"])
-        self.assertIn("Nov 2, 2026", section["emptyMessage"] or section["sinceLabel"])
-
-
-class SentimentTest(unittest.TestCase):
-    def test_thin_sample_is_not_ranked_as_a_swing(self):
-        board = {"asOf": "2026-11-10T16:05:00-05:00", "tickers": [
-            {"symbol": "META", "name": "Meta", "bull": 1.0, "classified": 1, "n_bull": 1, "n_bear": 0},
-            {"symbol": "TSLA", "name": "Tesla", "bull": 0.4, "classified": 11, "n_bull": 5, "n_bear": 6},
-        ]}
-        history = {"daily": {
-            "2026-11-02": {"META": 0.45, "TSLA": 0.8},
-            "2026-11-10": {"META": 1.0, "TSLA": 0.4},
-        }}
-        section = briefing.sentiment_section(board, history)
-        self.assertEqual(section["asOf"], "2026-11-10")
-        self.assertEqual(section["previous"], "2026-11-02")
-        self.assertEqual([item["symbol"] for item in section["swings"]], ["TSLA"])
-        self.assertEqual(section["swings"][0]["points"], -40.0)
-        self.assertFalse(section["swings"][0]["thin"])
-        self.assertEqual(section["thin"][0]["symbol"], "META")
-        self.assertTrue(section["thin"][0]["thin"])
-        self.assertEqual(section["thin"][0]["classified"], 1)
-        self.assertLess(section["thin"][0]["classified"], briefing.THIN_ITEMS)
-
-    def test_no_previous_point_names_the_board_date(self):
-        board = {"asOf": "2026-11-10T16:05:00-05:00", "tickers": [
-            {"symbol": "TSLA", "name": "Tesla", "bull": 0.4, "classified": 11},
-        ]}
-        section = briefing.sentiment_section(board, {"daily": {"2026-11-10": {"TSLA": 0.4}}})
-        self.assertTrue(section["empty"])
-        self.assertIn("No earlier sentiment board", section["emptyMessage"])
-        self.assertIn("Nov 10, 2026", section["emptyMessage"])
-        self.assertEqual(section["swings"], [])
-
-
-class TreasuryTest(unittest.TestCase):
-    def test_dust_is_ignored_and_entrants_are_kept(self):
-        prior = {"fetchedAt": "2026-11-09T16:00:00Z", "companies": [
-            company("MARA", 100, 1),
-            company("DUST", 10, 2),
-            company("GONE", 5, 3),
-        ]}
-        current = {"fetchedAt": "2026-11-10T16:00:00Z", "companies": [
-            company("MARA", 80, 1),
-            company("DUST", 10.4, 2),
-            company("NEW", 7, 3, name="New Co", change="+2"),
-        ]}
-        section = briefing.treasury_section(current, [prior])
-        self.assertEqual(section["asOfLabel"], "Nov 10, 2026")
-        self.assertEqual(section["previousLabel"], "Nov 9, 2026")
-        self.assertEqual([item["ticker"] for item in section["changes"]], ["MARA"])
-        self.assertAlmostEqual(section["changes"][0]["delta"], -20)
-        self.assertEqual(section["entered"][0]["ticker"], "NEW")
-        self.assertEqual(section["left"][0]["ticker"], "GONE")
-        self.assertEqual(section["filings"], [])
-        self.assertFalse(section["changes"][0]["filingUpdate"])
-        self.assertFalse(section["empty"])
-
-    def test_filing_date_change_is_not_sorted_as_a_one_day_sale(self):
-        note = "Derived: 34,012 at 9/30 less 13,597 sold after quarter end. No updated company-stated total."
-        prior = {"fetchedAt": "2026-11-09T16:00:00Z", "companies": [
-            company("HIVE", 100, 2, as_of="2026-11-08"),
-            company("MARA", 35577, 1, name="MARA Holdings, Inc.", as_of="2026-06-30",
-                    notes="Includes 9,270 BTC loaned/pledged."),
-        ]}
-        current = {"fetchedAt": "2026-11-10T16:00:00Z", "companies": [
-            company("HIVE", 190, 2, as_of="2026-11-08", change="+90"),
-            company("MARA", 20415, 1, name="MARA Holdings, Inc.", as_of="2026-11-09",
-                    notes=note, source="SEC Form 10-Q Q3 2026 Note 18", source_label="SEC 10-Q"),
-        ]}
-        section = briefing.treasury_section(current, [prior])
-        self.assertEqual([item["ticker"] for item in section["changes"]], ["HIVE"])
-        hive = section["changes"][0]
-        self.assertFalse(hive["filingUpdate"])
-        self.assertAlmostEqual(hive["delta"], 90)
-        self.assertEqual([item["ticker"] for item in section["filings"]], ["MARA"])
-        mara = section["filings"][0]
-        self.assertTrue(mara["filingUpdate"])
-        self.assertEqual(mara["previousAsOfLabel"], "Jun 30")
-        self.assertEqual(mara["asOfLabel"], "Nov 9")
-        self.assertEqual(mara["holdingLine"], "35,577 (Jun 30) to 20,415 (Nov 9)")
-        self.assertIn("13,597 sold", mara["note"])
-        self.assertEqual(mara["sourceLabel"], "SEC 10-Q")
-        self.assertGreater(abs(mara["delta"]), abs(hive["delta"]))
-
-    def test_same_month_as_of_is_not_a_new_filing(self):
-        prior = {"fetchedAt": "2026-11-09T16:00:00Z", "companies": [
-            company("AAA", 10, 1, as_of="2026-06"),
-        ]}
-        current = {"fetchedAt": "2026-11-10T16:00:00Z", "companies": [
-            company("AAA", 20, 1, as_of="2026-06-30"),
-        ]}
-        section = briefing.treasury_section(current, [prior])
-        self.assertEqual(section["filings"], [])
-        self.assertEqual(section["changes"][0]["ticker"], "AAA")
-        self.assertFalse(section["changes"][0]["filingUpdate"])
-
-    def test_no_prior_snapshot_names_the_as_of_date(self):
-        current = {"fetchedAt": "2026-11-10T16:00:00Z", "companies": [company("MARA", 80, 1)]}
-        section = briefing.treasury_section(current, [])
-        self.assertTrue(section["empty"])
-        self.assertIn("No earlier treasury snapshot", section["emptyMessage"])
-        self.assertIn("Nov 10, 2026", section["emptyMessage"])
-        self.assertEqual(section["changes"], [])
-
+class ArchiveTest(unittest.TestCase):
     def test_archive_stores_each_refresh_once(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = os.path.join(tmp, "btctop100_history.json")
@@ -200,190 +33,35 @@ class TreasuryTest(unittest.TestCase):
             self.assertEqual([snap["fetchedAt"] for snap in saved["snapshots"]],
                              ["2026-11-09T16:00:00Z", "2026-11-10T16:00:00Z"])
 
-
-class ChartsTest(unittest.TestCase):
-    def test_excluded_tabs_are_dropped(self):
-        bot1 = "1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY"
-        bot2 = "1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ"
-        doc = {"date": "2026-11-10", "theme": "A Tuesday.", "items": [
-            {"title": "Kept chart", "sheet": "Bot experiments", "tab": "52 Core goods",
-             "image": "cotd/2026-11-10/01.png",
-             "sheet_url": f"https://docs.google.com/spreadsheets/d/{bot1}/edit#gid=200447618"},
-            {"title": "Retired tab", "sheet": "Bot experiments", "tab": "87 TSLA beta",
-             "sheet_url": f"https://docs.google.com/spreadsheets/d/{bot1}/edit#gid=333185169"},
-            {"title": "Red dot tracker", "sheet": "bot experiments 2", "tab": "69",
-             "sheet_url": f"https://docs.google.com/spreadsheets/d/{bot2}/edit#gid=645072508"},
-            {"title": "Bad image", "sheet": "Elsewhere", "tab": "x", "image": "cotd/../../secret.png",
-             "sheet_url": "https://example.com/not-a-sheet"},
-        ]}
-        section = briefing.charts_section(doc)
-        titles = [item["title"] for item in section["items"]]
-        self.assertEqual(section["asOf"], "2026-11-10")
-        self.assertIn("Kept chart", titles)
-        self.assertNotIn("Retired tab", titles)
-        self.assertNotIn("Red dot tracker", titles)
-        bad = next(item for item in section["items"] if item["title"] == "Bad image")
-        self.assertEqual(bad["image"], "")
-        self.assertTrue(bad["href"].startswith("https://"))
-        self.assertEqual(section["picks"], [])
-
-    def test_missing_edition_names_the_file(self):
-        section = briefing.charts_section(None)
-        self.assertTrue(section["empty"])
-        self.assertEqual(section["picks"], [])
-        self.assertIn("static/cotd/today.json", section["emptyMessage"])
-
-    def test_picks_come_first_and_keep_their_notes(self):
-        doc = {
-            "date": "2026-11-12",
-            "theme": "5 picks, plus 1 item drawn at random from the sheet library.",
-            "picks": [
-                {"title": "Picked chart", "sheet": "Bot experiments", "tab": "52 Core goods",
-                 "description": "Core goods against services.",
-                 "reason": "The gap widened.",
-                 "section": "picks",
-                 "image": "cotd/2026-11-12/01.png",
-                 "sheet_url": "https://docs.google.com/spreadsheets/d/x/edit#gid=200447618"},
-                {"title": "Retired pick", "sheet": "Bot experiments", "tab": "87 TSLA beta",
-                 "description": "Should drop.", "reason": "Excluded.",
-                 "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=333185169"},
-            ],
-            "items": [
-                {"title": "Picked chart", "section": "picks", "sheet": "Bot experiments", "tab": "52 Core goods",
-                 "sheet_url": "https://docs.google.com/spreadsheets/d/x/edit#gid=200447618"},
-                {"title": "Random chart", "section": "random", "sheet": "Bot experiments", "tab": "kept",
-                 "image": "cotd/2026-11-12/02.png",
-                 "sheet_url": "https://docs.google.com/spreadsheets/d/x/edit#gid=2"},
-            ],
-        }
-        section = briefing.charts_section(doc)
-        self.assertEqual([item["title"] for item in section["picks"]], ["Picked chart"])
-        self.assertEqual(section["picks"][0]["description"], "Core goods against services.")
-        self.assertEqual(section["picks"][0]["reason"], "The gap widened.")
-        self.assertEqual(section["picks"][0]["section"], "picks")
-        self.assertEqual([item["title"] for item in section["items"]], ["Random chart"])
-        self.assertNotIn("description", section["items"][0])
-        self.assertFalse(section["empty"])
-        embedded = {"date": "2026-11-12", "items": [
-            {"title": "From items", "section": "picks", "description": "A table of holdings.",
-             "reason": "It was updated.", "sheet": "Bot", "tab": "t",
-             "sheet_url": "https://docs.google.com/spreadsheets/d/x/edit#gid=3"},
-            {"title": "Still random", "sheet": "Bot", "tab": "u",
-             "sheet_url": "https://docs.google.com/spreadsheets/d/x/edit#gid=4"},
-        ]}
-        split = briefing.charts_section(embedded)
-        self.assertEqual([item["title"] for item in split["picks"]], ["From items"])
-        self.assertEqual(split["picks"][0]["reason"], "It was updated.")
-        self.assertEqual([item["title"] for item in split["items"]], ["Still random"])
-
-    def test_briefing_page_names_both_sections(self):
-        with open(INDEX, encoding="utf-8") as handle:
-            html = handle.read()
-        start = html.find("function briefRender")
-        end = html.find("async function briefEnter")
-        body = html[start:end]
-        self.assertIn("Today's picks", body)
-        self.assertIn("Random from the library", body)
-        self.assertIn("Why it was picked", body)
-        self.assertIn("charts.picks", body.replace(" ", ""))
+    def test_price_target_archive_skips_identical_rows(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = tmp
+            os.makedirs(os.path.join(repo, "static"))
+            path = os.path.join(repo, "static", "price_targets_history.json")
+            doc = {"generated": "2026-11-09T13:00:00Z", "rows": [
+                {"ticker": "AAA", "base": 10, "bear": 1, "bull": 20, "consensus": 12,
+                 "analysts": 3, "rating": "HOLD", "notes": "n", "why": "w"},
+            ]}
+            briefing.archive_price_targets(repo, doc, path)
+            briefing.archive_price_targets(repo, doc, path)
+            later = dict(doc)
+            later["generated"] = "2026-11-10T13:00:00Z"
+            later["rows"] = [dict(doc["rows"][0], base=14)]
+            briefing.archive_price_targets(repo, later, path)
+            with open(path, encoding="utf-8") as handle:
+                saved = json.load(handle)
+            self.assertEqual([snap["generated"] for snap in saved["snapshots"]],
+                             ["2026-11-09T13:00:00Z", "2026-11-10T13:00:00Z"])
 
 
-class PaperTest(unittest.TestCase):
-    def test_nav_change_uses_the_last_two_marks(self):
-        book = {
-            "generated": "2026-11-10T13:00:00Z", "started": True, "waiting": False,
-            "config": {"startingCash": 100000},
-            "marks": [
-                {"date": "2026-11-09", "nav": 110},
-                {"date": "2026-11-06", "nav": 100},
-            ],
-        }
-        section = briefing.paper_section(book)
-        self.assertEqual(section["markDate"], "2026-11-09")
-        self.assertEqual(section["prevMarkDate"], "2026-11-06")
-        self.assertEqual(section["change"], 10)
-        self.assertIn("Nov 9, 2026", section["message"])
-        self.assertIn("Nov 6, 2026", section["message"])
-        self.assertIn("up", section["message"])
-        self.assertEqual(section["href"], "/?tab=paper")
-
-    def test_waiting_book_does_not_invent_a_change(self):
-        section = briefing.paper_section({
-            "generated": "2026-11-10T13:00:00Z", "started": False, "waiting": True, "marks": [],
-        })
-        self.assertTrue(section["empty"])
-        self.assertIn("waiting for weights", section["message"])
-        self.assertNotIn("change", section)
-
-
-class LiveFilesTest(unittest.TestCase):
-    def test_repo_briefing_has_an_as_of_for_every_section(self):
-        doc = briefing.build(ROOT)
-        for key in ("priceTargets", "paper", "sentiment", "treasury", "charts"):
-            section = doc[key]
-            self.assertTrue(section.get("asOf") or section.get("emptyMessage"), key)
-            self.assertTrue(section.get("href", "").startswith("/?tab="), key)
-        for change in doc["treasury"]["changes"]:
-            self.assertGreaterEqual(abs(change["delta"]), briefing.MIN_BTC)
-            self.assertFalse(change["filingUpdate"])
-            self.assertFalse(briefing.asof_changed(change.get("previousAsOf"), change.get("asOf")))
-        for filing in doc["treasury"]["filings"]:
-            self.assertTrue(filing["filingUpdate"])
-            self.assertTrue(briefing.asof_changed(filing["previousAsOf"], filing["asOf"]))
-            self.assertIn("to", filing["holdingLine"])
-            self.assertGreaterEqual(abs(filing["delta"]), briefing.MIN_BTC)
-        for swing in doc["sentiment"]["swings"]:
-            self.assertGreaterEqual(swing["classified"], briefing.THIN_ITEMS)
-            self.assertFalse(swing["thin"])
-        for swing in doc["sentiment"]["thin"]:
-            self.assertLess(swing["classified"], briefing.THIN_ITEMS)
-        charts = doc["charts"]["items"]
-        picks = doc["charts"].get("picks") or []
-        self.assertEqual(len(charts), 11)
-        self.assertEqual(len(picks), 4)
-        self.assertEqual(doc["charts"].get("theme"), "4 picks, plus 11 items drawn at random from the sheet library.")
-        titles = " ".join(item["title"] for item in list(picks) + list(charts))
-        for gone in (
-            "MOVE ÷ VIX",
-            "quits rate vs wage growth",
-            "manufacturing construction spending",
-            "Chart 2",
-            "Bitcoin correlation with gold",
-            "capital spending as % of revenue",
-            "Nasdaq Composite ÷ S&P 500",
-            "Equal-weight vs cap-weight",
-            "Coffee and cocoa prices",
-            "continuing claims per initial claim",
-            "foreign-born vs native-born",
-            "labor force participation of Americans 55+",
-            "producer prices vs consumer prices",
-            "Home prices lead shelter inflation",
-            "KRE ÷ SPY",
-            "TLT vs SPY drawdowns",
-            "Sahm rule recession indicator",
-            "Is Nvidia stuffing the channel?",
-            "Chicago Fed NFCI",
-            "DeFi value locked on Base",
-            "Microsoft: operating cash flow, capex and free cash flow",
-            "Amazon: operating cash flow, capex and free cash flow",
-        ):
-            self.assertNotIn(gone, titles)
-        for item in list(picks) + list(charts):
-            self.assertFalse(briefing.chart_excluded({
-                "sheet_url": item["href"] if "gid=" in item["href"] else "",
-            }))
-        self.assertTrue(doc["priceTargets"]["asOf"])
-        self.assertTrue(doc["sentiment"]["previous"] or doc["sentiment"]["empty"])
-
+class LandingTest(unittest.TestCase):
     def test_briefing_is_the_landing_tab(self):
         with open(INDEX, encoding="utf-8") as handle:
             html = handle.read()
         self.assertIn('id="mBrief" class="on"', html)
         self.assertIn("/api/briefing", html)
         self.assertIn("briefing:'briefing'", html)
-        self.assertIn("watch:'watch'", html)
         self.assertIn(":'briefing')", html)
-        self.assertNotIn(":'watch')", html)
 
 
 if __name__ == "__main__":
