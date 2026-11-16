@@ -146,6 +146,25 @@ BY_ID = {sid: (bid, name) for bid, name, sid in BOOKS}
 # "Junk-bond quality gap: CCC spread minus BB spread".
 # ("bot1", 601460115) "204 Cloud operating margins", chart
 # "Cloud profitability: operating margin of AWS vs Google Cloud (trailing 4 quarters)".
+# Mark retired the following tabs on 2026-11-16. They must not be rebuilt or shown.
+# ("bot1", 1024470894) "206 Data center chip revenue", chart
+# "The AI chip scoreboard: quarterly data-center revenue, Nvidia vs Broadcom vs AMD vs Intel (log scale)".
+# ("bot1", 1771590089) "198 Musk Inc vs mega caps", chart
+# '"Musk Inc." (Tesla + SpaceX) vs Nvidia, Apple and Microsoft: market value since the SpaceX IPO'.
+# ("bot1", 1566394978) "256 Uncle Sam's borrowing cost", chart
+# "Higher rates are feeding through: average interest rate paid on federal debt vs the 10-year yield".
+# ("bot1", 780786735) "35 S&P 500 in gold", chart
+# "The S&P 500 priced in gold (ounces per index unit)".
+# ("bot1", 248629477) "73 Bank loan-to-deposit", chart
+# "US banks: loan-to-deposit ratio and loan growth".
+# ("bot2", 971499761) "74 Neocloud quarterly revenue", chart
+# "Neocloud quarterly revenue ($M)".
+# ("bot1", 1965360503) "337 US power sales by sector", chart
+# "US electricity sales growth by sector: commercial leads (12-month totals, YoY)".
+# ("bot1", 583946273) "184 Buffett indicator", chart
+# 'The "Buffett indicator": US stock market value ÷ GDP (Fed Z.1 nonfinancial corporate equities)'.
+# ("bot1", 327679061) "131 Refining crack spread", chart
+# "Refiner margins: 3-2-1 crack spread (NY Harbor gasoline & heating oil vs WTI)".
 EXCLUDED_TABS = {
     ("bot1", 333185169),
     ("bot1", 1547332232),
@@ -194,6 +213,15 @@ EXCLUDED_TABS = {
     ("bot2", 1794999542),
     ("bot1", 567489150),
     ("bot1", 601460115),
+    ("bot1", 1024470894),
+    ("bot1", 1771590089),
+    ("bot1", 1566394978),
+    ("bot1", 780786735),
+    ("bot1", 248629477),
+    ("bot2", 971499761),
+    ("bot1", 1965360503),
+    ("bot1", 583946273),
+    ("bot1", 327679061),
 }
 # Google's default name for a chart with no real title: "Chart 1", "Chart 2", ...
 # "Chart 01" is a real title some tests use and is not this placeholder.
@@ -616,10 +644,11 @@ def self_test():
                 1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                 1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                 1192979444, 1912487083, 664060481, 1778640335,
-                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115):
+                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061):
         assert tab_excluded("bot1", gid), gid
     assert tab_excluded("bot2", 418894352)
     assert tab_excluded("bot2", 1794999542)
+    assert tab_excluded("bot2", 971499761)
     assert untitled_chart_title("") and untitled_chart_title("Chart 2") and untitled_chart_title("Chart 14")
     assert not untitled_chart_title("Chart 01")
     assert not untitled_chart_title("Bitcoin denominated in Gold (BTC/Gold price per oz)")
@@ -631,6 +660,15 @@ def self_test():
     assert tab_excluded("bot2", 1794999542)  # 56 ROIC Tesla vs legacy and EV
     assert tab_excluded("bot1", 567489150)  # 126 CCC vs BB spread
     assert tab_excluded("bot1", 601460115)  # 204 Cloud operating margins
+    assert tab_excluded("bot1", 1024470894)  # 206 Data center chip revenue
+    assert tab_excluded("bot1", 1771590089)  # 198 Musk Inc vs mega caps
+    assert tab_excluded("bot1", 1566394978)  # 256 Uncle Sam's borrowing cost
+    assert tab_excluded("bot1", 780786735)  # 35 S&P 500 in gold
+    assert tab_excluded("bot1", 248629477)  # 73 Bank loan-to-deposit
+    assert tab_excluded("bot2", 971499761)  # 74 Neocloud quarterly revenue
+    assert tab_excluded("bot1", 1965360503)  # 337 US power sales by sector
+    assert tab_excluded("bot1", 583946273)  # 184 Buffett indicator
+    assert tab_excluded("bot1", 327679061)  # 131 Refining crack spread
     assert not tab_excluded("bot1", 171599627)
     assert not tab_excluded("bot1", 1027143376)
     assert not tab_excluded("bot1", 200447618)
@@ -648,6 +686,24 @@ def self_test():
     assert not tab_excluded("bot3", 1536200109)  # Gold Priced in BTC (blank chart removed, tab stays)
     assert not tab_excluded("bot2", 645072508)
     assert not tab_excluded("bot2", 530554790)   # 75 CoreWeave backlog vs revenue
+    assert not tab_excluded("bot2", 817552047)   # 73 US ETF BTC holdings
+    assert not tab_excluded("bot2", 1793142140)  # 76 Neocloud capex vs revenue
+    assert not tab_excluded("bot1", 1672892616)  # 34 BTC supply inflation
+    assert not tab_excluded("bot1", 1415455632)  # 36 Gold vs real yield
+    assert not tab_excluded("bot1", 364521704)   # 72 Corporate debt % GDP
+    assert not tab_excluded("bot1", 378380409)   # 74 Real GDP vs GDI
+    assert not tab_excluded("bot1", 2090456245)  # 130 Brent-WTI spread
+    assert not tab_excluded("bot1", 1164178367)  # 132 Energy stocks vs oil
+    assert not tab_excluded("bot1", 595180551)   # 183 Fed net liquidity vs S&P
+    assert not tab_excluded("bot1", 1828414017)  # 185 r minus g
+    assert not tab_excluded("bot1", 345236488)   # 197 BTC 4-year rolling return
+    assert not tab_excluded("bot1", 626951791)   # 199 Margin debt vs S&P
+    assert not tab_excluded("bot1", 577053605)   # 207 Hyperscaler free cash flow
+    assert not tab_excluded("bot1", 1934181206)  # 255 2Y yield minus fed funds
+    assert not tab_excluded("bot1", 900897940)   # 257 Federal debt % of GDP
+    assert not tab_excluded("bot1", 1554167260)  # 335 Price-to-sales vs Cisco
+    assert not tab_excluded("bot1", 310431964)   # 338 Utility capex boom
+    assert not tab_excluded("bot2", 1690294676)  # 6 MSTR vs ASST leverage (kept; CotD card refreshed)
     assert not tab_excluded("bot2", 1713824403)  # 55 Capex intensity vs legacy
     assert not tab_excluded("bot2", 82966268)    # 57 EBITDA margin Tesla vs peers
     assert not tab_excluded("bot3", 978356289)   # Anthropic Revenue vs Compute
@@ -665,8 +721,11 @@ def self_test():
     assert ("bot2", 1713824403) in live  # 55 Capex intensity vs legacy
     assert ("bot2", 645072508) in live
     assert ("bot2", 530554790) in live
+    assert ("bot2", 817552047) in live  # 73 US ETF BTC holdings
+    assert ("bot2", 1793142140) in live  # 76 Neocloud capex vs revenue
+    assert ("bot2", 1690294676) in live  # 6 MSTR vs ASST leverage
     assert ("bot3", 978356289) in live
-    assert len(cat["tabs"]) == 463, len(cat["tabs"])
+    assert len(cat["tabs"]) == 459, len(cat["tabs"])
     blob = json.dumps(cat)
     assert "201 Nvidia data center revenue" not in blob
     assert "Nvidia became a data-center company" not in blob
@@ -696,6 +755,24 @@ def self_test():
     assert "Junk-bond quality gap: CCC spread minus BB spread" not in blob
     assert "204 Cloud operating margins" not in blob
     assert "Cloud profitability: operating margin of AWS vs Google Cloud" not in blob
+    assert "206 Data center chip revenue" not in blob
+    assert "The AI chip scoreboard: quarterly data-center revenue" not in blob
+    assert "198 Musk Inc vs mega caps" not in blob
+    assert "market value since the SpaceX IPO" not in blob
+    assert "256 Uncle Sam's borrowing cost" not in blob
+    assert "average interest rate paid on federal debt vs the 10-year yield" not in blob
+    assert "35 S&P 500 in gold" not in blob
+    assert "The S&P 500 priced in gold (ounces per index unit)" not in blob
+    assert "73 Bank loan-to-deposit" not in blob
+    assert "US banks: loan-to-deposit ratio and loan growth" not in blob
+    assert "74 Neocloud quarterly revenue" not in blob
+    assert "Neocloud quarterly revenue ($M)" not in blob
+    assert "337 US power sales by sector" not in blob
+    assert "US electricity sales growth by sector: commercial leads" not in blob
+    assert "184 Buffett indicator" not in blob
+    assert "US stock market value ÷ GDP" not in blob
+    assert "131 Refining crack spread" not in blob
+    assert "3-2-1 crack spread" not in blob
     assert "Nvidia valuation: price-to-sales and trailing P/E (month-end)" not in blob
     assert "Where Nvidia bills its sales: revenue share by customer billing location (quarterly)" not in blob
     assert "161 Nvidia P-S and P-E" not in blob
@@ -796,13 +873,31 @@ def self_test():
         "205 Meta Reality Labs losses",
         "213 Chip gross margins",
         "Anthropic Revenue vs Compute",
+        "34 BTC supply inflation",
+        "36 Gold vs real yield",
+        "72 Corporate debt % GDP",
+        "74 Real GDP vs GDI",
+        "130 Brent-WTI spread",
+        "132 Energy stocks vs oil",
+        "183 Fed net liquidity vs S&P",
+        "185 r minus g",
+        "197 BTC 4-year rolling return",
+        "199 Margin debt vs S&P",
+        "207 Hyperscaler free cash flow",
+        "255 2Y yield minus fed funds",
+        "257 Federal debt % of GDP",
+        "335 Price-to-sales vs Cisco",
+        "338 Utility capex boom",
+        "73 US ETF BTC holdings",
+        "76 Neocloud capex vs revenue",
+        "6 MSTR vs ASST leverage",
     ):
         assert keep in names, keep
     today = json.load(open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8"))
     today_blob = json.dumps(today)
-    assert today["date"] == "2026-11-15"
-    assert len(today["picks"]) == 5, len(today["picks"])
-    assert len(today["items"]) == 13, len(today["items"])
+    assert today["date"] == "2026-11-16"
+    assert len(today["picks"]) == 2, len(today["picks"])
+    assert len(today["items"]) == 14, len(today["items"])
     assert today["theme"] == "5 picks, plus 20 items drawn at random from the sheet library."
     assert "1547332232" not in today_blob and "643299192" not in today_blob
     assert "1791345316" not in today_blob and "1370617918" not in today_blob
@@ -811,7 +906,7 @@ def self_test():
                 1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                 1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                 1192979444, 1912487083, 664060481, 1778640335,
-                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115):
+                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 971499761):
         assert str(gid) not in today_blob, gid
     assert "161 Nvidia P-S and P-E" not in today_blob
     assert "202 Nvidia revenue by geography" not in today_blob
@@ -864,20 +959,36 @@ def self_test():
     assert "56 ROIC Tesla vs legacy and EV" not in today_blob
     assert "126 CCC vs BB spread" not in today_blob
     assert "204 Cloud operating margins" not in today_blob
-    assert "Chart 2" not in today_blob
+    assert "206 Data center chip revenue" not in today_blob
+    assert "The AI chip scoreboard" not in today_blob
+    assert "198 Musk Inc vs mega caps" not in today_blob
+    assert "256 Uncle Sam's borrowing cost" not in today_blob
+    assert "35 S&P 500 in gold" not in today_blob
+    assert "The S&P 500 priced in gold" not in today_blob
+    assert "73 Bank loan-to-deposit" not in today_blob
+    assert "74 Neocloud quarterly revenue" not in today_blob
+    assert "337 US power sales by sector" not in today_blob
+    assert "184 Buffett indicator" not in today_blob
+    assert "131 Refining crack spread" not in today_blob
+    assert "6 MSTR leverage" not in today_blob
+    assert "Strategy's leverage, Jan 2025" not in today_blob
+    assert any(it.get("tab") == "6 MSTR vs ASST leverage" for it in today["items"])
+    assert any(it.get("title") == "Strategy vs Strive leverage: Strategy 31% of its bitcoin, Strive 65%" for it in today["items"])
     assert "Bitcoin correlation with gold" not in today_blob
     assert "Taiwan's chip stocks surge" not in today["theme"]
     assert "October CPI is due Tuesday" not in today["theme"]
     assert "Anthropic's IPO roadshow" not in today["theme"]
     assert "Nvidia and Micron drop off BofA" not in today["theme"]
     images = [it["image"] for it in today["items"] if it.get("image")]
-    for name in ("06.png", "07.png", "12.png", "14.png", "18.png", "19.png", "25.png"):
-        assert "cotd/2026-11-15/" + name not in images, name
-    for name in ("08.png", "09.png", "10.png", "11.png", "13.png", "15.png", "16.png", "17.png", "20.png", "21.png", "22.png", "23.png", "24.png"):
-        assert "cotd/2026-11-15/" + name in images, name
+    for name in ("02.png", "03.png", "04.png", "07.png", "09.png", "12.png", "17.png", "18.png", "19.png"):
+        assert "cotd/2026-11-16/" + name not in images, name
+    for name in ("06.png", "08.png", "10.png", "11.png", "13.png", "14.png", "15.png", "16.png", "20.png", "21.png", "22.png", "23.png", "24.png", "25.png"):
+        assert "cotd/2026-11-16/" + name in images, name
     pick_images = [it["image"] for it in today["picks"] if it.get("image")]
-    for name in ("01.png", "02.png", "03.png", "04.png", "05.png"):
-        assert "cotd/2026-11-15/" + name in pick_images, name
+    for name in ("02.png", "03.png", "04.png"):
+        assert "cotd/2026-11-16/" + name not in pick_images, name
+    for name in ("01.png", "05.png"):
+        assert "cotd/2026-11-16/" + name in pick_images, name
     for rel in (
         "static/sheets/full/bot1/1547332232.png",
         "static/sheets/full/bot1/643299192.png",
@@ -917,6 +1028,10 @@ def self_test():
         assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-15", name)), name
     for name in ("01.png", "02.png", "03.png", "04.png", "05.png", "08.png", "09.png", "10.png", "11.png", "13.png", "15.png", "16.png", "17.png", "20.png", "21.png", "22.png", "23.png", "24.png"):
         assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-15", name)), name
+    for name in ("02.png", "03.png", "04.png", "07.png", "09.png", "12.png", "17.png", "18.png", "19.png"):
+        assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-16", name)), name
+    for name in ("01.png", "05.png", "06.png", "08.png", "10.png", "11.png", "13.png", "14.png", "15.png", "16.png", "20.png", "21.png", "22.png", "23.png", "24.png", "25.png"):
+        assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-16", name)), name
     for rel in (
         "static/sheets/full/bot3/1536200109_2.png",
         "static/sheets/full/bot3/1536200109_3.png",

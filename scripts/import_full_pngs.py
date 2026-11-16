@@ -414,6 +414,15 @@ def self_test():
             {"book": "bot2", "tab": "56 ROIC Tesla vs legacy and EV", "gid": 1794999542, "charts": []},
             {"book": "bot1", "tab": "126 CCC vs BB spread", "gid": 567489150, "charts": []},
             {"book": "bot1", "tab": "204 Cloud operating margins", "gid": 601460115, "charts": []},
+            {"book": "bot1", "tab": "206 Data center chip revenue", "gid": 1024470894, "charts": []},
+            {"book": "bot1", "tab": "198 Musk Inc vs mega caps", "gid": 1771590089, "charts": []},
+            {"book": "bot1", "tab": "256 Uncle Sam's borrowing cost", "gid": 1566394978, "charts": []},
+            {"book": "bot1", "tab": "35 S&P 500 in gold", "gid": 780786735, "charts": []},
+            {"book": "bot1", "tab": "73 Bank loan-to-deposit", "gid": 248629477, "charts": []},
+            {"book": "bot2", "tab": "74 Neocloud quarterly revenue", "gid": 971499761, "charts": []},
+            {"book": "bot1", "tab": "337 US power sales by sector", "gid": 1965360503, "charts": []},
+            {"book": "bot1", "tab": "184 Buffett indicator", "gid": 583946273, "charts": []},
+            {"book": "bot1", "tab": "131 Refining crack spread", "gid": 327679061, "charts": []},
             {"book": "bot2", "tab": "75 CoreWeave backlog vs revenue", "gid": 530554790, "charts": []},
             {"book": "bot1", "tab": "97 MSTR vol vs BTC vol", "gid": 1027143376, "charts": []},
             {"book": "bot1", "tab": "52 Core goods vs services", "gid": 200447618, "charts": []},
@@ -464,6 +473,15 @@ def self_test():
             os.path.join(mstr_dir, "056 ROIC Tesla vs legacy and EV.png"),
             os.path.join(b1, "126 CCC vs BB spread.png"),
             os.path.join(b1, "204 Cloud operating margins.png"),
+            os.path.join(b1, "206 Data center chip revenue.png"),
+            os.path.join(b1, "198 Musk Inc vs mega caps.png"),
+            os.path.join(b1, "256 Uncle Sam's borrowing cost.png"),
+            os.path.join(b1, "035 S&P 500 in gold.png"),
+            os.path.join(b1, "073 Bank loan-to-deposit.png"),
+            os.path.join(mstr_dir, "074 Neocloud quarterly revenue.png"),
+            os.path.join(b1, "337 US power sales by sector.png"),
+            os.path.join(b1, "184 Buffett indicator.png"),
+            os.path.join(b1, "131 Refining crack spread.png"),
         ]
         kept_new = [
             (os.path.join(mstr_dir, "75 CoreWeave backlog vs revenue.png"), "bot2", "530554790.png"),
@@ -488,7 +506,7 @@ def self_test():
         # prior eight unmatched, plus the retired exports and the tariff chart-2 file.
         # "173 Continuing/initial claims" stays in this fixture as gid 173, the slash-in-name
         # example. The retired sheet is gid 79264442, so that export is not added again.
-        assert u2 == 48, u2
+        assert u2 == 57, u2
         assert a2 == 0, a2
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1547332232.png"))
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "643299192.png"))
@@ -501,14 +519,14 @@ def self_test():
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1476428159.png"))
         assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "171599627.png"), "rb").read() == old_bytes
         assert open(os.path.join(repo, "static", "sheets", "full", "bot2", "645072508.png"), "rb").read() == old_bytes
-        for gid in (418894352, 1794999542):
+        for gid in (418894352, 1794999542, 971499761):
             assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot2", "%d.png" % gid))
         for gid in (292208014, 2119398138, 1584345646, 1186940001, 501919598, 579853621,
                     1308503061, 748431671, 254001772,
                     1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                     1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                     1192979444, 1912487083, 664060481, 1778640335,
-                    1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115):
+                    1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061):
             assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "%d.png" % gid)), gid
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "501919598_2.png"))
         for _path, book, name in kept_new:
