@@ -22,7 +22,7 @@ from test_cotd_build import Chrome
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ONE = "bot1/200447618/1"
-OTHER = "bot1/1965360503/1"
+OTHER = "bot1/310431964/1"  # 338 Utility capex boom; stays in the library
 RETIRED = "bot1/1547332232/1"
 
 
@@ -164,6 +164,15 @@ class SyncStoreTest(unittest.TestCase):
             {"op": "add", "k": "bot2/1794999542/1", "title": "no"},
             {"op": "add", "k": "bot1/567489150/1", "title": "no"},
             {"op": "add", "k": "bot1/601460115/1", "title": "no"},
+            {"op": "add", "k": "bot1/1024470894/1", "title": "no"},
+            {"op": "add", "k": "bot1/1771590089/1", "title": "no"},
+            {"op": "add", "k": "bot1/1566394978/1", "title": "no"},
+            {"op": "add", "k": "bot1/780786735/1", "title": "no"},
+            {"op": "add", "k": "bot1/248629477/1", "title": "no"},
+            {"op": "add", "k": "bot2/971499761/1", "title": "no"},
+            {"op": "add", "k": "bot1/1965360503/1", "title": "no"},
+            {"op": "add", "k": "bot1/583946273/1", "title": "no"},
+            {"op": "add", "k": "bot1/327679061/1", "title": "no"},
         ], "baseRev": 0})
         self.assertNotIn(RETIRED, self.keys(retired))
         self.assertNotIn("bot1/1024131985/1", self.keys(retired))
@@ -203,6 +212,15 @@ class SyncStoreTest(unittest.TestCase):
         self.assertNotIn("bot2/1794999542/1", self.keys(retired))
         self.assertNotIn("bot1/567489150/1", self.keys(retired))
         self.assertNotIn("bot1/601460115/1", self.keys(retired))
+        self.assertNotIn("bot1/1024470894/1", self.keys(retired))
+        self.assertNotIn("bot1/1771590089/1", self.keys(retired))
+        self.assertNotIn("bot1/1566394978/1", self.keys(retired))
+        self.assertNotIn("bot1/780786735/1", self.keys(retired))
+        self.assertNotIn("bot1/248629477/1", self.keys(retired))
+        self.assertNotIn("bot2/971499761/1", self.keys(retired))
+        self.assertNotIn("bot1/1965360503/1", self.keys(retired))
+        self.assertNotIn("bot1/583946273/1", self.keys(retired))
+        self.assertNotIn("bot1/327679061/1", self.keys(retired))
         self.assertTrue(all(row["reason"] == "retired" for row in retired["skipped"]))
         on_disk = json.dumps(json.load(open(server.VIEWS, encoding="utf-8")))
         self.assertNotIn("1547332232", on_disk)
@@ -243,6 +261,15 @@ class SyncStoreTest(unittest.TestCase):
         self.assertNotIn("1794999542", on_disk)
         self.assertNotIn("567489150", on_disk)
         self.assertNotIn("601460115", on_disk)
+        self.assertNotIn("1024470894", on_disk)
+        self.assertNotIn("1771590089", on_disk)
+        self.assertNotIn("1566394978", on_disk)
+        self.assertNotIn("780786735", on_disk)
+        self.assertNotIn("248629477", on_disk)
+        self.assertNotIn("971499761", on_disk)
+        self.assertNotIn("1965360503", on_disk)
+        self.assertNotIn("583946273", on_disk)
+        self.assertNotIn("327679061", on_disk)
 
     def test_table_key_is_stored_beside_a_chart_key(self):
         table = "bot2/1714490525/1"
