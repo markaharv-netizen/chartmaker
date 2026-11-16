@@ -6,7 +6,7 @@
   "sheet": "BTCTC Top 100",
   "gid": 73825060,
   "description": "Top 100 corporate bitcoin holdings from the BTCTC Top 100 tab of My Bot's Sheets. USD value is BTC times a live BTC price and is not part of this file.",
-  "fetchedAt": "2026-11-13T16:15:15Z",
+  "fetchedAt": "2026-11-16T17:21:40Z",
   "supply": 21000000,
   "companies": [
     {
@@ -14,13 +14,13 @@
       "name": "Strategy",
       "ticker": "MSTR",
       "country": "US",
-      "change": null,
-      "btc": 850364,
-      "asOf": "2026-11-08",
-      "source": "SEC Form 8-K (filed 2026-11-09)",
+      "change": "+485",
+      "btc": 850849,
+      "asOf": "2026-11-15",
+      "source": "SEC Form 8-K (filed 2026-11-16)",
       "sourceLabel": "SEC 8-K",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526452693/mstr-20261109.htm",
-      "notes": "Bought 1,036 BTC Nov 2-8, 2026 (avg ~$79,012)."
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526462151/mstr-20261116.htm",
+      "notes": "Bought 485 BTC Nov 9-15, 2026 (avg ~$68,887)."
     },
     {
       "rank": 2,
@@ -53,13 +53,13 @@
       "name": "Strive",
       "ticker": "ASST",
       "country": "US",
-      "change": null,
-      "btc": 43153,
-      "asOf": "2026-11-06",
-      "source": "SEC Form 8-K (filed 2026-11-09)",
+      "change": "+251",
+      "btc": 43404,
+      "asOf": "2026-11-13",
+      "source": "SEC Form 8-K (filed 2026-11-16)",
       "sourceLabel": "SEC 8-K",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1920406/000162828026071888/asst-20261109.htm",
-      "notes": "Company-stated total 43,153 as of Nov 6, 2026 (bought 29 BTC Oct 31-Nov 6)."
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1920406/000162828026074004/asst-20261116.htm",
+      "notes": "Company-stated total 43,404 as of Nov 13, 2026 (bought 251 BTC Nov 7-13, avg ~$69,853)."
     },
     {
       "rank": 5,
@@ -248,7 +248,7 @@
       "name": "Gemini Space Station Inc",
       "ticker": "GEMI",
       "country": "US",
-      "change": "-740",
+      "change": null,
       "btc": 4788,
       "asOf": "2026-09-30",
       "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-13)",
@@ -274,7 +274,7 @@
       "name": "Nakamoto Inc",
       "ticker": "NAKA",
       "country": "US",
-      "change": "-184",
+      "change": null,
       "btc": 4283,
       "asOf": "2026-09-30",
       "source": "SEC 8-K Ex.99.1 Q3 2026 earnings release (filed 2026-11-13)",
@@ -484,7 +484,7 @@
       "country": "SG",
       "change": null,
       "btc": 1454,
-      "asOf": "2026-10",
+      "asOf": "2026-10-31",
       "source": "SEC Form 6-K Ex.99.1 October 2026 update (filed 2026-11-06)",
       "sourceLabel": "SEC 6-K",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1921158/000121390026116602/ea031104401ex99-1.htm",
@@ -627,7 +627,7 @@
       "country": "NO",
       "change": null,
       "btc": 754,
-      "asOf": "2025-07-01",
+      "asOf": "2025-07",
       "source": "Company Q2 2025 CEO letter (akerasa.com), July 2025",
       "sourceLabel": "CEO letter",
       "sourceUrl": "https://www.akerasa.com/about/ceo-letter/2025/second-quarter-2025",
@@ -640,7 +640,7 @@
       "country": "CA",
       "change": null,
       "btc": 732.47,
-      "asOf": "2026-10",
+      "asOf": "2026-10-31",
       "source": "Company news release 'October Update on Normal Course Issuer Bid', 2026-11-04",
       "sourceLabel": "Press release",
       "sourceUrl": "https://btctcorp.com/bitcoin-treasury-corporation-provides-october-update-on-normal-course-issuer-bid/",
@@ -703,13 +703,13 @@
       "name": "bitmax",
       "ticker": "377030.KQ",
       "country": "KR",
-      "change": null,
-      "btc": 551.2376,
-      "asOf": "2026-05-15",
-      "source": "KRX/DART Q1 2026 quarterly report (bitmax)",
+      "change": "+0.2668",
+      "btc": 551.5044,
+      "asOf": "2026-11-16",
+      "source": "KRX/DART Q3 2026 quarterly report (bitmax, filed 2026-11-16)",
       "sourceLabel": "DART filing",
-      "sourceUrl": "https://kind.krx.co.kr/external/2026/05/15/001922/20260515004270/11013.htm",
-      "notes": "Held as of Q1 report filing date (May 2026)."
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/11/16/000923/20261116002231/11013.htm",
+      "notes": "Held as of Q3 report filing date (Nov 16, 2026)."
     },
     {
       "rank": 55,
@@ -804,6 +804,19 @@
     },
     {
       "rank": 62,
+      "name": "Bitplanet",
+      "ticker": "049470.KQ",
+      "country": "KR",
+      "change": "+4",
+      "btc": 304,
+      "asOf": "2026-09-30",
+      "source": "KRX/DART Q3 2026 quarterly report (Bitplanet, filed 2026-11-16)",
+      "sourceLabel": "DART filing",
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/11/16/002118/20261116005060/11013.htm",
+      "notes": "Company states approx. 304 BTC held at end of Sept 2026 (book value KRW 34,586M)."
+    },
+    {
+      "rank": 63,
       "name": "Angel Studios, Inc.",
       "ticker": "ANGX",
       "country": "US",
@@ -816,7 +829,7 @@
       "notes": null
     },
     {
-      "rank": 63,
+      "rank": 64,
       "name": "POP Culture Group Co., Ltd.",
       "ticker": "CPOP",
       "country": "CN",
@@ -827,19 +840,6 @@
       "sourceLabel": "SEC 6-K",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1807389/000121390026067098/ea0294088ex99-2.htm",
       "notes": "Stale: interim report as of 12/31/25; no later disclosure found."
-    },
-    {
-      "rank": 64,
-      "name": "Bitplanet",
-      "ticker": "049470.KQ",
-      "country": "KR",
-      "change": null,
-      "btc": 300,
-      "asOf": "2026-06-30",
-      "source": "DART half-year report (2026.06), notes - virtual asset table",
-      "sourceLabel": "DART filing",
-      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003703",
-      "notes": null
     },
     {
       "rank": 65,
@@ -900,11 +900,11 @@
       "country": "KR",
       "change": null,
       "btc": 245,
-      "asOf": "2026-03-31",
-      "source": "KRX/DART Q1 2026 quarterly report, digital asset quantity note (consolidated)",
+      "asOf": "2026-09-30",
+      "source": "KRX/DART Q3 2026 quarterly report (consolidated, filed 2026-11-13)",
       "sourceLabel": "DART filing",
-      "sourceUrl": "https://kind.krx.co.kr/external/2026/05/15/003103/20260515007084/11013.htm",
-      "notes": "As of 3/31/26 (Q1); consolidated (parent-only 215)."
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/11/13/001609/20261113003446/11013.htm",
+      "notes": "Consolidated 245 BTC at 9/30/26 (parent-only 215)."
     },
     {
       "rank": 70,
@@ -1251,7 +1251,7 @@
       "country": "US",
       "change": null,
       "btc": 65.7,
-      "asOf": "2026-10",
+      "asOf": "2026-10-31",
       "source": "SEC 8-K Ex.99.1 October 2026 production update (filed 2026-11-10)",
       "sourceLabel": "SEC 8-K",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1640384/000164038426000008/lmfa-ex99_1.htm",
@@ -1262,13 +1262,13 @@
       "name": "NEOWIZ Holdings",
       "ticker": "042420.KQ",
       "country": "KR",
-      "change": null,
-      "btc": 64,
-      "asOf": "2026-06-30",
-      "source": "DART half-year report (2026.06), consolidated notes - virtual asset quantity table",
+      "change": "-5",
+      "btc": 59,
+      "asOf": "2026-09-30",
+      "source": "KRX/DART Q3 2026 quarterly report (consolidated, filed 2026-11-13)",
       "sourceLabel": "DART filing",
-      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003736",
-      "notes": "Consolidated; down from 94 at start of 2026."
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/11/13/001463/20261113003117/11013.htm",
+      "notes": "Consolidated; 59 at 9/30/26, down from 94 at start of 2026."
     },
     {
       "rank": 98,
