@@ -1,5 +1,5 @@
 {
-  "note": "Snapshots of Steve's base, bear, bull, street consensus, rating, notes, and why. scripts/price_targets.py appends one when those fields change. The daily briefing diffs the current file against the last snapshot before its 7-day window.",
+  "note": "Snapshots of Steve's base, bear, bull, street consensus, rating, notes, and why. scripts/price_targets.py appends one when those fields change.",
   "snapshots": [
     {
       "generated": "2026-10-24T01:13:30Z",
@@ -63,7 +63,7 @@
         {
           "ticker": "CRWV",
           "base": 23.4,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 163.77,
           "consensus": 140.58,
           "analysts": 41,
@@ -72,14 +72,14 @@
           "why": "Debt still exceeds core EV",
           "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23 scan",
           "baseChangedAt": null,
-          "previousBase": 0.0
+          "previousBase": 0
         },
         {
           "ticker": "MU",
           "base": 860.87,
           "bear": 470.45,
           "bull": 1711.67,
-          "consensus": 1561.0,
+          "consensus": 1561,
           "analysts": 49,
           "rating": "HOLD",
           "notes": "Oct 22 future bets: forward Base = core $842.81 + $18.06 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. ChartMill shows $1,502.96 (58 analysts)",
@@ -119,7 +119,7 @@
         {
           "ticker": "ASTS",
           "base": 24.98,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 110.31,
           "consensus": 74.28,
           "analysts": 13,
@@ -194,7 +194,7 @@
         {
           "ticker": "CRWV",
           "base": 23.4,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 163.77,
           "consensus": 140.58,
           "analysts": 41,
@@ -203,14 +203,14 @@
           "why": "Debt still exceeds core EV",
           "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23 scan",
           "baseChangedAt": "2026-10-22",
-          "previousBase": 0.0
+          "previousBase": 0
         },
         {
           "ticker": "MU",
           "base": 860.87,
           "bear": 470.45,
           "bull": 1711.67,
-          "consensus": 1561.0,
+          "consensus": 1561,
           "analysts": 49,
           "rating": "HOLD",
           "notes": "Oct 22 future bets: forward Base = core $842.81 + $18.06 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. ChartMill shows $1,502.96 (58 analysts)",
@@ -250,7 +250,7 @@
         {
           "ticker": "ASTS",
           "base": 24.98,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 110.31,
           "consensus": 74.28,
           "analysts": 13,
@@ -325,7 +325,7 @@
         {
           "ticker": "CRWV",
           "base": 23.4,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 163.77,
           "consensus": 140.58,
           "analysts": 41,
@@ -334,14 +334,14 @@
           "why": "Debt still exceeds core EV",
           "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26 and Oct 30 scans",
           "baseChangedAt": "2026-10-22",
-          "previousBase": 0.0
+          "previousBase": 0
         },
         {
           "ticker": "MU",
           "base": 860.87,
           "bear": 470.45,
           "bull": 1711.67,
-          "consensus": 1561.0,
+          "consensus": 1561,
           "analysts": 49,
           "rating": "HOLD",
           "notes": "Oct 22 future bets: forward Base = core $842.81 + $18.06 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. ChartMill shows $1,502.96 (58 analysts)",
@@ -381,7 +381,7 @@
         {
           "ticker": "ASTS",
           "base": 24.98,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 110.31,
           "consensus": 74.28,
           "analysts": 13,
@@ -456,7 +456,7 @@
         {
           "ticker": "CRWV",
           "base": 23.4,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 163.77,
           "consensus": 140.58,
           "analysts": 41,
@@ -465,14 +465,14 @@
           "why": "Debt still exceeds core EV",
           "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans",
           "baseChangedAt": "2026-10-22",
-          "previousBase": 0.0
+          "previousBase": 0
         },
         {
           "ticker": "MU",
           "base": 860.87,
           "bear": 470.45,
           "bull": 1711.67,
-          "consensus": 1561.0,
+          "consensus": 1561,
           "analysts": 49,
           "rating": "HOLD",
           "notes": "Oct 22 future bets: forward Base = core $842.81 + $18.06 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. ChartMill shows $1,502.96 (58 analysts)",
@@ -512,7 +512,7 @@
         {
           "ticker": "ASTS",
           "base": 24.98,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 110.31,
           "consensus": 74.28,
           "analysts": 13,
@@ -587,7 +587,7 @@
         {
           "ticker": "CRWV",
           "base": 23.4,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 163.77,
           "consensus": 140.58,
           "analysts": 41,
@@ -596,14 +596,14 @@
           "why": "Debt still exceeds core EV",
           "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30 and Nov 2 scans",
           "baseChangedAt": "2026-10-22",
-          "previousBase": 0.0
+          "previousBase": 0
         },
         {
           "ticker": "MU",
           "base": 860.87,
           "bear": 470.45,
           "bull": 1711.67,
-          "consensus": 1561.0,
+          "consensus": 1561,
           "analysts": 49,
           "rating": "HOLD",
           "notes": "Oct 22 future bets: forward Base = core $842.81 + $18.06 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. ChartMill shows $1,502.96 (58 analysts)",
@@ -643,7 +643,7 @@
         {
           "ticker": "ASTS",
           "base": 24.98,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 110.31,
           "consensus": 74.28,
           "analysts": 13,
@@ -718,7 +718,7 @@
         {
           "ticker": "CRWV",
           "base": 23.4,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 163.77,
           "consensus": 140.58,
           "analysts": 41,
@@ -727,14 +727,14 @@
           "why": "Debt still exceeds core EV",
           "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans",
           "baseChangedAt": "2026-10-22",
-          "previousBase": 0.0
+          "previousBase": 0
         },
         {
           "ticker": "MU",
           "base": 860.87,
           "bear": 470.45,
           "bull": 1711.67,
-          "consensus": 1561.0,
+          "consensus": 1561,
           "analysts": 49,
           "rating": "HOLD",
           "notes": "Oct 22 future bets: forward Base = core $842.81 + $18.06 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. ChartMill shows $1,502.96 (58 analysts)",
@@ -774,7 +774,7 @@
         {
           "ticker": "ASTS",
           "base": 24.98,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 110.31,
           "consensus": 74.28,
           "analysts": 13,
@@ -790,7 +790,7 @@
           "base": 18.26,
           "bear": 1.4,
           "bull": 69.52,
-          "consensus": 41.0,
+          "consensus": 41,
           "analysts": 5,
           "rating": "HOLD",
           "notes": "Nov 3 v1 initial full model: forward Base = core $18.97 - $0.71 probability-weighted bets; Bull core $67.09 + $2.43; Bear no bets. BTC-treasury NAV roll-forward to 2030 (43,124 BTC, SATA $1.40B + SATS $0.70B prefs at stated value, ke 16.76%); bets: mNAV 1.5x, pref issuance $2B/yr, BTC bear downside. Doc 1LU4lki4I3serDsSiXKptH7ua2Iu3ztpfyJMOqwc6BQo",
@@ -891,7 +891,7 @@
         {
           "ticker": "CRWV",
           "base": 23.4,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 163.77,
           "consensus": 140.58,
           "analysts": 41,
@@ -900,14 +900,14 @@
           "why": "Debt still exceeds core EV",
           "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans",
           "baseChangedAt": "2026-10-22",
-          "previousBase": 0.0
+          "previousBase": 0
         },
         {
           "ticker": "MU",
           "base": 860.87,
           "bear": 470.45,
           "bull": 1711.67,
-          "consensus": 1561.0,
+          "consensus": 1561,
           "analysts": 49,
           "rating": "HOLD",
           "notes": "Oct 22 future bets: forward Base = core $842.81 + $18.06 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. ChartMill shows $1,502.96 (58 analysts)",
@@ -947,7 +947,7 @@
         {
           "ticker": "ASTS",
           "base": 24.98,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 110.31,
           "consensus": 74.28,
           "analysts": 13,
@@ -963,7 +963,7 @@
           "base": 18.26,
           "bear": 1.4,
           "bull": 69.52,
-          "consensus": 41.0,
+          "consensus": 41,
           "analysts": 5,
           "rating": "HOLD",
           "notes": "Nov 3 v1 initial full model: forward Base = core $18.97 - $0.71 probability-weighted bets; Bull core $67.09 + $2.43; Bear no bets. BTC-treasury NAV roll-forward to 2030 (43,124 BTC, SATA $1.40B + SATS $0.70B prefs at stated value, ke 16.76%); bets: mNAV 1.5x, pref issuance $2B/yr, BTC bear downside. Doc 1LU4lki4I3serDsSiXKptH7ua2Iu3ztpfyJMOqwc6BQo",
@@ -1078,7 +1078,7 @@
         {
           "ticker": "CRWV",
           "base": 23.4,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 163.77,
           "consensus": 140.58,
           "analysts": 41,
@@ -1087,14 +1087,14 @@
           "why": "Debt still exceeds core EV",
           "previousDetail": "Prev Base $0.00 -> $23.40 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans",
           "baseChangedAt": "2026-10-22",
-          "previousBase": 0.0
+          "previousBase": 0
         },
         {
           "ticker": "MU",
           "base": 860.87,
           "bear": 470.45,
           "bull": 1711.67,
-          "consensus": 1561.0,
+          "consensus": 1561,
           "analysts": 49,
           "rating": "HOLD",
           "notes": "Oct 22 future bets: forward Base = core $842.81 + $18.06 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. ChartMill shows $1,502.96 (58 analysts)",
@@ -1134,7 +1134,7 @@
         {
           "ticker": "ASTS",
           "base": 24.98,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 110.31,
           "consensus": 74.28,
           "analysts": 13,
@@ -1150,7 +1150,7 @@
           "base": 18.26,
           "bear": 1.4,
           "bull": 69.52,
-          "consensus": 41.0,
+          "consensus": 41,
           "analysts": 5,
           "rating": "HOLD",
           "notes": "Nov 3 v1 initial full model: forward Base = core $18.97 - $0.71 probability-weighted bets; Bull core $67.09 + $2.43; Bear no bets. BTC-treasury NAV roll-forward to 2030 (43,124 BTC, SATA $1.40B + SATS $0.70B prefs at stated value, ke 16.76%); bets: mNAV 1.5x, pref issuance $2B/yr, BTC bear downside. Doc 1LU4lki4I3serDsSiXKptH7ua2Iu3ztpfyJMOqwc6BQo",
@@ -1265,7 +1265,7 @@
         {
           "ticker": "CRWV",
           "base": 40.88,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 278.64,
           "consensus": 131.53,
           "analysts": 42,
@@ -1281,7 +1281,7 @@
           "base": 860.87,
           "bear": 470.45,
           "bull": 1711.67,
-          "consensus": 1561.0,
+          "consensus": 1561,
           "analysts": 49,
           "rating": "HOLD",
           "notes": "Oct 22 future bets: forward Base = core $842.81 + $18.06 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. ChartMill shows $1,502.96 (58 analysts)",
@@ -1321,7 +1321,7 @@
         {
           "ticker": "ASTS",
           "base": 24.13,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 110.36,
           "consensus": 66.18,
           "analysts": 13,
@@ -1337,7 +1337,7 @@
           "base": 18.26,
           "bear": 1.4,
           "bull": 69.52,
-          "consensus": 41.0,
+          "consensus": 41,
           "analysts": 5,
           "rating": "HOLD",
           "notes": "Nov 3 v1 initial full model: forward Base = core $18.97 - $0.71 probability-weighted bets; Bull core $67.09 + $2.43; Bear no bets. BTC-treasury NAV roll-forward to 2030 (43,124 BTC, SATA $1.40B + SATS $0.70B prefs at stated value, ke 16.76%); bets: mNAV 1.5x, pref issuance $2B/yr, BTC bear downside. Doc 1LU4lki4I3serDsSiXKptH7ua2Iu3ztpfyJMOqwc6BQo",
@@ -1452,7 +1452,7 @@
         {
           "ticker": "CRWV",
           "base": 38.34,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 268.37,
           "consensus": 131.53,
           "analysts": 42,
@@ -1468,7 +1468,7 @@
           "base": 860.87,
           "bear": 470.45,
           "bull": 1711.67,
-          "consensus": 1561.0,
+          "consensus": 1561,
           "analysts": 49,
           "rating": "HOLD",
           "notes": "Oct 22 future bets: forward Base = core $842.81 + $18.06 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. ChartMill shows $1,502.96 (58 analysts)",
@@ -1508,7 +1508,7 @@
         {
           "ticker": "ASTS",
           "base": 24.13,
-          "bear": 0.0,
+          "bear": 0,
           "bull": 110.36,
           "consensus": 66.18,
           "analysts": 13,
@@ -1524,7 +1524,7 @@
           "base": 18.26,
           "bear": 1.4,
           "bull": 69.52,
-          "consensus": 41.0,
+          "consensus": 41,
           "analysts": 5,
           "rating": "HOLD",
           "notes": "Nov 3 v1 initial full model: forward Base = core $18.97 - $0.71 probability-weighted bets; Bull core $67.09 + $2.43; Bear no bets. BTC-treasury NAV roll-forward to 2030 (43,124 BTC, SATA $1.40B + SATS $0.70B prefs at stated value, ke 16.76%); bets: mNAV 1.5x, pref issuance $2B/yr, BTC bear downside. Doc 1LU4lki4I3serDsSiXKptH7ua2Iu3ztpfyJMOqwc6BQo",
@@ -1574,6 +1574,193 @@
           "previousDetail": "New model added Nov 5, 2026 (v1); unchanged through the Nov 13, 2026 scan (Q3 10-Q due Nov 16; no earnings date announced)",
           "baseChangedAt": null,
           "previousBase": null
+        }
+      ]
+    },
+    {
+      "generated": "2026-11-16T13:41:06Z",
+      "rows": [
+        {
+          "ticker": "SPCX",
+          "base": 128.42,
+          "bear": -1.79,
+          "bull": 291.02,
+          "consensus": 222.71,
+          "analysts": 38,
+          "rating": "SELL",
+          "notes": "Oct 22 future bets: forward Base = core $74.11 + $54.31 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. v3 model; IPO'd mid-2026 but already has 38-analyst coverage",
+          "why": "Even with AI bets, price high",
+          "previousDetail": "Prev Base $74.11 -> $128.42 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans; unchanged through the Nov 16, 2026 scan (Nov 16: Starship Flight 15 ship caught after 14 orbits, 26 Starlink V3 deployed, booster diverted to Gulf; supports Starship/V3 path, no change)",
+          "baseChangedAt": "2026-10-22",
+          "previousBase": 74.11
+        },
+        {
+          "ticker": "TSLA",
+          "base": 307.25,
+          "bear": 4.24,
+          "bull": 522.58,
+          "consensus": 397.83,
+          "analysts": 44,
+          "rating": "SELL",
+          "notes": "Nov 14 Cybercab personal-sales bet (Mark's request): forward Base = core $41.64 + $265.60 bets (robotaxi ARK fleet $248.82, Cybercab personal sales $9.46 = 1M/yr by 2031 at $29,990 x 20% + $299/mo subscription x 80%, 15x, P 50%); Bull core $97.00 + $425.58; Bear no bets. Nov 1 v7: robotaxi bet = ARK 8.1M fleet by 2031 at 50% Base (Bull 10M at 65%). vs $386.47 Oct 21 close: -20.5%",
+          "why": "Far above bet-adjusted value",
+          "previousDetail": "Prev Base $70.46 (Bear $4.24, Bull $153.59, SELL) at Nov 1, 2026 v6 FSD price update -> $297.79 (Bear $4.24, Bull $513.12, SELL) at Nov 1, 2026 v7 ARK robotaxi fleet (Mark's assumption) -> $307.25 (Bear $4.24, Bull $522.58, SELL) at Nov 14, 2026 Cybercab personal-sales bet (Mark's request; model Summary row 69); summary row synced to the model in the Nov 16, 2026 scan. Nov 16: Musk says $299/mo Autonomy fee too high (~$115); bet still at sourced $299 (at $115: about -$1.88), no change",
+          "baseChangedAt": "2026-11-14",
+          "previousBase": 70.46
+        },
+        {
+          "ticker": "MSTR",
+          "base": 149.42,
+          "bear": 86.95,
+          "bull": 272.11,
+          "consensus": 239.27,
+          "analysts": 15,
+          "rating": "HOLD",
+          "notes": "Oct 30 Q3 2026 earnings refresh (v5): forward Base = core $140.94 + $8.48 probability-weighted bets (model Summary FUTURE BETS block); Bull core $250.30 + $21.81 bets; Bear has no bets. Funding mix reset to Q3 call guidance (Base ATM for BTC $2B/yr, new 12% preferred $3B/yr; Bear no ATM for BTC)",
+          "why": "Bets priced in; at fair value",
+          "previousDetail": "Prev Base $153.35 (Bear $89.76, Bull $266.37, HOLD) at Oct 22, 2026 future-bets update -> $149.42 (Bear $86.95, Bull $272.11, HOLD) at Oct 30, 2026 Q3 earnings refresh; drop mostly from lower BTC and MSTR prices; unchanged in Nov 2 and Nov 4 scans (Nov 4: Q3 10-Q filed Nov 2, 9M Historicals H14:I25 filled; valuation unchanged); unchanged through the Nov 16, 2026 scan (Nov 9 8-K: 850,364 BTC; Nov 16: BTC ~$64.5k vs $80,746 in model, snapshot not repriced; Saylor buy hint Nov 15, weekly 8-K due Nov 16)",
+          "baseChangedAt": "2026-10-30",
+          "previousBase": 153.35
+        },
+        {
+          "ticker": "NVDA",
+          "base": 189.36,
+          "bear": 82.17,
+          "bull": 291.33,
+          "consensus": 328.72,
+          "analysts": 62,
+          "rating": "HOLD",
+          "notes": "Oct 22 future bets: forward Base = core $181.81 + $7.55 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged.",
+          "why": "Just inside HOLD band",
+          "previousDetail": "Prev Base $181.81 -> $189.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans; unchanged through the Nov 16, 2026 scan (FQ3 results Nov 17 after close). Nov 13 scan: CEO Jensen Huang resigned Nov 11 (8-K 5.02), CFO Colette Kress interim CEO, Harvey Jones chair. Nov 16 scan: Megaspeed chip-smuggling scandal, Congress seeks Huang testimony, export-control crackdown risk flagged; no input change pending FQ3",
+          "baseChangedAt": "2026-10-22",
+          "previousBase": 181.81
+        },
+        {
+          "ticker": "CRWV",
+          "base": 38.34,
+          "bear": 0.0,
+          "bull": 268.37,
+          "consensus": 131.53,
+          "analysts": 42,
+          "rating": "SELL",
+          "notes": "Nov 13 v4 Q3 10-Q refresh: forward Base = core $0.00 + $38.34 bets (backlog/8 GW bet 20%, V = Bull - Base $191.70, live); Bull core $191.70 + $76.68; Bear no bets. Diluted shares 604.54M -> 609.13M (Oct 30 cover 556.13M + 23M options + 30M RSUs, Q3 10-Q filed Nov 12); price $48.73 -> $56.60 lifts WACC 14.74% -> 14.97%; blended core equity now slightly negative (floored at $0). Q3 release/call inputs from v3 unchanged. Doc 1qzbDZRljemvcc6srTDeSllfDlZZsveXFAtp_HF-js6w",
+          "why": "Debt still exceeds core EV",
+          "previousDetail": "Prev Base $40.88 (Bear $0.00, Bull $278.64, SELL) at Nov 11, 2026 Q3 earnings refresh -> $38.34 (Bear $0.00, Bull $268.37, SELL) at Nov 13, 2026 Q3 10-Q refresh; drop from +4.6M diluted shares and a higher WACC at the higher share price; unchanged through the Nov 16, 2026 scan (reported >=$4B equipment-backed loan talks, not signed; no change)",
+          "baseChangedAt": "2026-11-13",
+          "previousBase": 40.88
+        },
+        {
+          "ticker": "MU",
+          "base": 860.87,
+          "bear": 470.45,
+          "bull": 1711.67,
+          "consensus": 1561.0,
+          "analysts": 49,
+          "rating": "HOLD",
+          "notes": "Oct 22 future bets: forward Base = core $842.81 + $18.06 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. ChartMill shows $1,502.96 (58 analysts)",
+          "why": "HBM upside mostly priced in",
+          "previousDetail": "Prev Base $842.81 -> $860.87 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans; unchanged through the Nov 16, 2026 scan",
+          "baseChangedAt": "2026-10-22",
+          "previousBase": 842.81
+        },
+        {
+          "ticker": "META",
+          "base": 687.36,
+          "bear": 282.04,
+          "bull": 1287.03,
+          "consensus": 814.51,
+          "analysts": 63,
+          "rating": "HOLD",
+          "notes": "Oct 22 future bets: forward Base = core $657.70 + $29.66 probability-weighted bets (model Summary FUTURE BETS block); Bull widened, Bear unchanged. Q3 refresh; Class C (2-for-1-like) Jan 19, 2027 halves per-share values",
+          "why": "Bets priced in; near fair value",
+          "previousDetail": "Prev Base $657.70 -> $687.36 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans (Oct 30: $37.5B equity raise noted, not yet booked; est. -$1.93/sh; Nov 2: S&P 2027 capex forecast >$225B noted, capex not changed pending Q4 guide; Nov 4: $15.0B senior notes 5.85-7.53% priced Nov 3, cash/debt neutral); unchanged through the Nov 16, 2026 scan (Nov 12 8-K: EUR 9.0B senior notes closed, cash/debt neutral)",
+          "baseChangedAt": "2026-10-22",
+          "previousBase": 657.7
+        },
+        {
+          "ticker": "RKLB",
+          "base": 21.93,
+          "bear": 6.83,
+          "bull": 36.95,
+          "consensus": 98.25,
+          "analysts": 22,
+          "rating": "SELL",
+          "notes": "Nov 11 v4 Q3 2026 earnings refresh: forward Base = core $15.53 + $6.41 bets (Iridium 85%, Neutron beyond Base now at $64.4M ASP, own constellation, SDA/Golden Dome, space solar); Bull core $28.90 + $8.05; Bear no bets. Neutron ASP $55M -> $64.4M (8 launches ~$515M booked), FY26 rev $982.2M, Sep 30 net cash $4.70B, Q4-only stub FCF; WACC 12.63% unchanged. Doc 1xWBSTMBPYDwg5ibZZw_OlAoUMkeUorC6HOUSejSvBDU",
+          "why": "Far above bet-adjusted value",
+          "previousDetail": "Prev Base $21.02 (Bear $6.60, Bull $35.33, SELL) at Nov 2, 2026 v3 rebuild -> $21.93 (Bear $6.83, Bull $36.95, SELL) at Nov 11, 2026 Q3 earnings refresh; rise mostly from higher Neutron pricing; unchanged through the Nov 16, 2026 scan (100th Electron Nov 14 = 21st of 2026; 4 more needed for 25E)",
+          "baseChangedAt": "2026-11-11",
+          "previousBase": 21.02
+        },
+        {
+          "ticker": "ASTS",
+          "base": 24.13,
+          "bear": 0.0,
+          "bull": 110.36,
+          "consensus": 66.18,
+          "analysts": 13,
+          "rating": "SELL",
+          "notes": "Nov 11 v5 Q3 2026 earnings refresh: forward Base = core $6.17 + $17.96 bets (constellation/MNO scale bet 25%, V = Bull - Base $71.85, now live); Bull core $78.02 + $32.33; Bear no bets. Sat cost $30M -> $22M (guide $21-23M), launches 40/45 in 2027-28, H2 capex $760M, Blacklift/Firefly cash $1.35B 2027-29 + 12M shares, Sep 30 balance sheet + Q3 FCF add-back; WACC 11.20%. Doc 1_lIZIgafXsnc6SBJ9dm5dYT4BG6X711PrH6aI1f6GeA",
+          "why": "Needs full constellation",
+          "previousDetail": "Prev Base $24.98 (Bear $0.00, Bull $110.31, SELL) at Oct 22, 2026 future-bets update -> $24.13 (Bear $0.00, Bull $110.36, SELL) at Nov 11, 2026 Q3 earnings refresh (absorbs Nov 6 Firefly/Blacklift deal); Firefly costs/shares offset cheaper satellites; unchanged through the Nov 16, 2026 scan",
+          "baseChangedAt": "2026-11-11",
+          "previousBase": 24.98
+        },
+        {
+          "ticker": "ASST",
+          "base": 14.69,
+          "bear": 0.04,
+          "bull": 60.93,
+          "consensus": 41.0,
+          "analysts": 5,
+          "rating": "SELL",
+          "notes": "Nov 16 v2 (Q3 call check + SATA 13.25%): forward Base = core $15.17 - $0.48 probability-weighted bets; Bull core $58.86 + $2.07; Bear no bets ($0.04). Inputs: SATA 13.00% -> 13.25% from Dec 1 (Nov 12 8-K, -$0.08), Nov 9 8-K holdings 43,153 BTC / cash $487.6M / SATS 7.04M sh (-$0.02), BTC $77,322 -> $68,249 Nov 13 close (-$3.47). NAV/FD sh $10.89, mNAV 1.96x. No Q3 call was held (release announced none; no transcript); call_checked. Doc 1C650Fu7pb4Tw_nvMabwLIWeR-GiXpDpqo2FayAVzP50",
+          "why": "Price 12% above Base",
+          "previousDetail": "Prev Base $18.26 (Bear $1.40, Bull $69.52, HOLD) at Nov 3, 2026 v1 (unchanged through Nov 13 scan) -> $14.69 (Bear $0.04, Bull $60.93, SELL) at Nov 16, 2026 v2; drop mostly from the lower BTC price",
+          "baseChangedAt": "2026-11-16",
+          "previousBase": 18.26
+        },
+        {
+          "ticker": "MSFT",
+          "base": 588.88,
+          "bear": 295.81,
+          "bull": 948.44,
+          "consensus": 633.13,
+          "analysts": 57,
+          "rating": "BUY",
+          "notes": "Nov 3 v1 initial full model: forward Base = core $566.87 + $22.01 probability-weighted bets; Bull core $902.75 + $45.69; Bear no bets. DCF FY27-FY36, WACC 9.73%, capex 53%->16% of rev, ~45% op margin; bets: OpenAI stake above book, Azure AI beyond Base (RPO $677B), Copilot/agents, capex-overbuild downside. Doc 1JQuXS7z-SulqIj1AKA4LwkgydkmfnUSZjSzeJoicwyg",
+          "why": "Base 16% above price",
+          "previousDetail": "New model added Nov 3, 2026 (v1); no previous update; unchanged through the Nov 16, 2026 scan",
+          "baseChangedAt": null,
+          "previousBase": null
+        },
+        {
+          "ticker": "GOOG",
+          "base": 375.87,
+          "bear": 185.44,
+          "bull": 606.61,
+          "consensus": 400.37,
+          "analysts": 58,
+          "rating": "BUY",
+          "notes": "Nov 3 v1 initial full model: forward Base = core $367.86 + $8.01 probability-weighted bets; Bull core $586.65 + $19.96; Bear no bets. DCF 2027-2036, WACC 9.73%, capex 45%->14% of rev, op margin 30%->34%, $135B non-mkt stakes at book; bets: Waymo, external TPU systems, Cloud AI backlog, search-disruption downside. Doc 1D4E9NV9PnC1sxWONbtwJpsvCQPnclS-emvq0So3MTkg",
+          "why": "Base 35% above price",
+          "previousDetail": "New model added Nov 3, 2026 (v1); no previous update; unchanged through the Nov 16, 2026 scan (Anthropic IPO prices Nov 18: Google ~1.79B sh, ~$132B at $74 midpoint, vs $135.2B total non-marketable investments at book in model; revisit after pricing)",
+          "baseChangedAt": null,
+          "previousBase": null
+        },
+        {
+          "ticker": "AGLT",
+          "base": 9.9,
+          "bear": 1.48,
+          "bull": 36.84,
+          "consensus": 11.0,
+          "analysts": 1,
+          "rating": "BUY",
+          "notes": "Nov 16 v2 (first post-merger filings: 10-Q + 8-K/A Sep 30 financials, filed Nov 13): forward Base = core $9.68 + $0.23 bets; Bull core $34.61 + $2.24; Bear no bets ($1.48). Net cash $420M est. -> $350.3M (pro forma Sep 30 cash $397.99M, no debt, less $47.69M Q4E burn stub); FD shares 269.56M kept (basic 242.09M + 80.93M options/warrants incl. Amazon milestone warrant up to 26.58M); Digit 5 timing (early access H1 2027) unchanged; no call held. Rating HOLD -> BUY on price $9.40 -> $7.36. Doc 1hZ1QMk-0mExD3YD77vbzqC23GGqmNoeOrsY7Lo9rbe4",
+          "why": "IPO day; no street coverage",
+          "previousDetail": "Prev Base $10.11 (Bear $1.48, Bull $37.07, HOLD) at Nov 5, 2026 v1 (unchanged through Nov 13 scan) -> $9.90 (Bear $1.48, Bull $36.84, BUY) at Nov 16, 2026 v2; lower net cash than the launch estimate",
+          "baseChangedAt": "2026-11-16",
+          "previousBase": 10.11
         }
       ]
     }

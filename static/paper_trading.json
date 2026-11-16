@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated": "2026-11-14T13:52:32Z",
+  "generated": "2026-11-16T13:41:15Z",
   "note": "Paper book sized by paperWeight on static/price_targets.json. paperWeight is a signed percent of NAV (10 = 10% long, -5 = 5% short, 0 or missing = cash), copied from the sheet column \"Paper weight %\". Gross exposure is capped at 100%. No leverage, no fees. After any price_targets.json update: python3 scripts/paper_trading.py",
   "config": {
     "startingCash": 100000.0,
@@ -43,7 +43,7 @@
       "shares": 0.0,
       "entryPrice": null,
       "entryDate": null,
-      "realized": 0.0,
+      "realized": 0,
       "weight": 0.0,
       "weightRequested": 0.0
     },
@@ -55,7 +55,7 @@
       "shares": 0.0,
       "entryPrice": null,
       "entryDate": null,
-      "realized": 0.0,
+      "realized": 0,
       "weight": 0.0,
       "weightRequested": 0.0
     },
@@ -67,7 +67,7 @@
       "shares": 130.18290795566693,
       "entryPrice": 125.79680831404134,
       "entryDate": "2026-11-06",
-      "realized": 0.0,
+      "realized": 0,
       "weight": 16.0,
       "weightRequested": 16.0
     },
@@ -79,7 +79,7 @@
       "shares": 0.0,
       "entryPrice": null,
       "entryDate": null,
-      "realized": 0.0,
+      "realized": 0,
       "weight": 0.0,
       "weightRequested": 0.0
     },
@@ -139,19 +139,19 @@
       "shares": -140.49069253110113,
       "entryPrice": 30.56999969482422,
       "entryDate": "2026-11-06",
-      "realized": -100.0,
+      "realized": -100,
       "weight": -5.0,
       "weightRequested": -5.0
     },
     {
       "ticker": "ASST",
-      "rating": "HOLD",
+      "rating": "SELL",
       "side": "cash",
       "status": "cash",
       "shares": 0.0,
       "entryPrice": null,
       "entryDate": null,
-      "realized": 0.0,
+      "realized": 0,
       "weight": 0.0,
       "weightRequested": 0.0
     },
@@ -161,7 +161,7 @@
       "side": "long",
       "status": "open",
       "shares": 22.029773319586862,
-      "entryPrice": 525.0,
+      "entryPrice": 525,
       "entryDate": "2026-11-06",
       "realized": 7.64,
       "weight": 12.0,
@@ -181,31 +181,31 @@
     },
     {
       "ticker": "AGLT",
-      "rating": "HOLD",
+      "rating": "BUY",
       "side": "cash",
       "status": "cash",
       "shares": 0.0,
       "entryPrice": null,
       "entryDate": null,
-      "realized": 0.0,
+      "realized": 0,
       "weight": 0.0,
       "weightRequested": 0.0
     }
   ],
   "applied": {
-    "SPCX": 0.0,
-    "TSLA": 0.0,
-    "MSTR": 16.0,
-    "NVDA": 0.0,
-    "CRWV": -4.0,
-    "MU": 18.0,
-    "META": 10.0,
-    "RKLB": -7.0,
-    "ASTS": -5.0,
-    "ASST": 0.0,
-    "MSFT": 12.0,
-    "GOOG": 20.0,
-    "AGLT": 0.0
+    "SPCX": 0,
+    "TSLA": 0,
+    "MSTR": 16,
+    "NVDA": 0,
+    "CRWV": -4,
+    "MU": 18,
+    "META": 10,
+    "RKLB": -7,
+    "ASTS": -5,
+    "ASST": 0,
+    "MSFT": 12,
+    "GOOG": 20,
+    "AGLT": 0
   },
   "pending": null,
   "trades": [
@@ -217,7 +217,7 @@
       "rating": "HOLD",
       "price": 127.83000183105469,
       "shares": 93.87467596112286,
-      "notional": 12000.0,
+      "notional": 12000,
       "realized": null,
       "reason": "inception"
     },
@@ -229,7 +229,7 @@
       "rating": "SELL",
       "price": 46.90999984741211,
       "shares": 149.22191478937236,
-      "notional": 7000.0,
+      "notional": 7000,
       "realized": null,
       "reason": "inception"
     },
@@ -241,7 +241,7 @@
       "rating": "HOLD",
       "price": 708.25,
       "shares": 25.414754677020827,
-      "notional": 18000.0,
+      "notional": 18000,
       "realized": null,
       "reason": "inception"
     },
@@ -253,7 +253,7 @@
       "rating": "HOLD",
       "price": 607.2750244140625,
       "shares": 23.053805009531043,
-      "notional": 14000.0,
+      "notional": 14000,
       "realized": null,
       "reason": "inception"
     },
@@ -265,7 +265,7 @@
       "rating": "SELL",
       "price": 48.27000045776367,
       "shares": 145.01760790586715,
-      "notional": 7000.0,
+      "notional": 7000,
       "realized": null,
       "reason": "inception"
     },
@@ -277,7 +277,7 @@
       "rating": "SELL",
       "price": 30.56999969482422,
       "shares": 163.55904644796402,
-      "notional": 5000.0,
+      "notional": 5000,
       "realized": null,
       "reason": "inception"
     },
@@ -287,9 +287,9 @@
       "ticker": "MSFT",
       "action": "buy",
       "rating": "BUY",
-      "price": 525.0,
+      "price": 525,
       "shares": 22.857142857142858,
-      "notional": 12000.0,
+      "notional": 12000,
       "realized": null,
       "reason": "inception"
     },
@@ -301,7 +301,7 @@
       "rating": "BUY",
       "price": 283.70001220703125,
       "shares": 70.49700084399333,
-      "notional": 20000.0,
+      "notional": 20000,
       "realized": null,
       "reason": "inception"
     },
@@ -374,7 +374,7 @@
       "price": 34.904998779296875,
       "shares": 23.06835391686289,
       "notional": 805.2,
-      "realized": -100.0,
+      "realized": -100,
       "reason": "weight"
     },
     {
