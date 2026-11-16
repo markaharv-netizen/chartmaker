@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-09T20:35:40Z",
+ "generated": "2026-11-16T13:37:46Z",
  "note": "Offline tab list. Regenerate tabs with scripts/sheets_catalog.py. Search previews are compressed thumbnails under static/sheets/thumbs/, built by scripts/sheets_thumbs.py. The Sheets tab shows a thumbnail only while the search box has a query. View PNG and Download PNG open static/sheets/full/<book>/<gid>.png when that file is committed, and the thumbnail otherwise. Import full PNGs with scripts/import_full_pngs.py.",
- "thumbsGenerated": "2026-11-09T20:36:06Z",
+ "thumbsGenerated": "2026-11-16T13:38:30Z",
  "books": [
   {
    "id": "bot1",
@@ -4450,15 +4450,15 @@
   },
   {
    "book": "bot2",
-   "tab": "6 MSTR leverage",
+   "tab": "6 MSTR vs ASST leverage",
    "gid": 1690294676,
    "charts": [
-    "Strategy's leverage, Jan 2025–Oct 2026: debt + preferreds = 30% of its bitcoin (peak 43.5%)"
+    "Strategy vs Strive leverage: Strategy 31% of its bitcoin, Strive 65%"
    ],
    "chartList": [
     {
      "n": 1,
-     "title": "Strategy's leverage, Jan 2025–Oct 2026: debt + preferreds = 30% of its bitcoin (peak 43.5%)"
+     "title": "Strategy vs Strive leverage: Strategy 31% of its bitcoin, Strive 65%"
     }
    ],
    "thumb": "sheets/thumbs/bot2/1690294676.jpg"
@@ -5158,12 +5158,12 @@
    "tab": "63 BTC 200-week ratio",
    "gid": 1397281632,
    "charts": [
-    "The accumulation zone — Bitcoin vs its 200-week average"
+    "Bitcoin vs its 200-week average"
    ],
    "chartList": [
     {
      "n": 1,
-     "title": "The accumulation zone — Bitcoin vs its 200-week average"
+     "title": "Bitcoin vs its 200-week average"
     }
    ],
    "thumb": "sheets/thumbs/bot2/1397281632.jpg"
@@ -6766,6 +6766,81 @@
     }
    ],
    "thumb": "sheets/thumbs/bot3/1828716508.jpg"
+  },
+  {
+   "book": "bot3",
+   "tab": "BTC Missing Best Days",
+   "gid": 2096217393,
+   "charts": [
+    "The cost of missing the best days: $10,000 in Bitcoin, Nov 2016 – Nov 2026"
+   ],
+   "chartList": [
+    {
+     "n": 1,
+     "title": "The cost of missing the best days: $10,000 in Bitcoin, Nov 2016 – Nov 2026"
+    }
+   ],
+   "thumb": "sheets/thumbs/bot3/2096217393.jpg"
+  },
+  {
+   "book": "bot3",
+   "tab": "Nasdaq-100 Forward PE",
+   "gid": 922821390,
+   "charts": [
+    "Nasdaq-100 Forward P/E Ratio"
+   ],
+   "chartList": [
+    {
+     "n": 1,
+     "title": "Nasdaq-100 Forward P/E Ratio"
+    }
+   ],
+   "thumb": "sheets/thumbs/bot3/922821390.jpg"
+  },
+  {
+   "book": "bot3",
+   "tab": "YTD Performance of Bitcoin treasury companies",
+   "gid": 37354382,
+   "charts": [
+    "Bitcoin Treasury Companies: 2026 Return YTD"
+   ],
+   "chartList": [
+    {
+     "n": 1,
+     "title": "Bitcoin Treasury Companies: 2026 Return YTD"
+    }
+   ],
+   "thumb": "sheets/thumbs/bot3/37354382.jpg"
+  },
+  {
+   "book": "bot3",
+   "tab": "BTC and NASDAQ Correlation",
+   "gid": 2017231620,
+   "charts": [
+    "30-Day rolling Correlation: BTC vs NASDAQ"
+   ],
+   "chartList": [
+    {
+     "n": 1,
+     "title": "30-Day rolling Correlation: BTC vs NASDAQ"
+    }
+   ],
+   "thumb": "sheets/thumbs/bot3/2017231620.jpg"
+  },
+  {
+   "book": "bot3",
+   "tab": "BTC and Gold Correlation",
+   "gid": 1835154494,
+   "charts": [
+    "30-Day rolling Correlation: BTC vs Gold"
+   ],
+   "chartList": [
+    {
+     "n": 1,
+     "title": "30-Day rolling Correlation: BTC vs Gold"
+    }
+   ],
+   "thumb": "sheets/thumbs/bot3/1835154494.jpg"
   }
  ]
 }
