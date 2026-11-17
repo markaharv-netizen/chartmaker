@@ -6,7 +6,7 @@
   "sheet": "BTCTC Top 100",
   "gid": 73825060,
   "description": "Top 100 corporate bitcoin holdings from the BTCTC Top 100 tab of My Bot's Sheets. USD value is BTC times a live BTC price and is not part of this file.",
-  "fetchedAt": "2026-11-16T17:21:40Z",
+  "fetchedAt": "2026-11-17T16:20:10Z",
   "supply": 21000000,
   "companies": [
     {
@@ -14,7 +14,7 @@
       "name": "Strategy",
       "ticker": "MSTR",
       "country": "US",
-      "change": "+485",
+      "change": null,
       "btc": 850849,
       "asOf": "2026-11-15",
       "source": "SEC Form 8-K (filed 2026-11-16)",
@@ -53,7 +53,7 @@
       "name": "Strive",
       "ticker": "ASST",
       "country": "US",
-      "change": "+251",
+      "change": null,
       "btc": 43404,
       "asOf": "2026-11-13",
       "source": "SEC Form 8-K (filed 2026-11-16)",
@@ -118,13 +118,13 @@
       "name": "Trump Media & Technology Group Corp.",
       "ticker": "DJT",
       "country": "US",
-      "change": null,
-      "btc": 14139,
-      "asOf": "2026-07-31",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-10), subsequent-event disclosure",
+      "change": "+1510.14",
+      "btc": 15649.14,
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-09)",
       "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1849635/000143774926026777/djt20260630_10q.htm",
-      "notes": "Figure from 10-Q subsequent-events note (7/31/26); includes BTC in yield/option program."
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1849635/000143774926035884/djt20260930_10q.htm",
+      "notes": "4,263.94 BTC on balance sheet + 11,385.20 BTC pledged to bitcoin yield program (counterparty may rehypothecate); 4,260.73 BTC is collateral for convertible notes (included in the above)."
     },
     {
       "rank": 10,
@@ -531,6 +531,19 @@
     },
     {
       "rank": 41,
+      "name": "Apimeds Pharmaceuticals US, Inc.",
+      "ticker": "APUS",
+      "country": "US",
+      "change": "+102.02",
+      "btc": 1106.86,
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-16)",
+      "sourceLabel": "SEC 10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1894525/000121390026120578/ea0311125-10q_apimeds.htm",
+      "notes": null
+    },
+    {
+      "rank": 42,
       "name": "Cango Inc",
       "ticker": "CANG",
       "country": "US",
@@ -543,7 +556,7 @@
       "notes": null
     },
     {
-      "rank": 42,
+      "rank": 43,
       "name": "ZOOZ Power",
       "ticker": "ZOOZ",
       "country": "IL",
@@ -556,7 +569,7 @@
       "notes": null
     },
     {
-      "rank": 43,
+      "rank": 44,
       "name": "USBC, Inc.",
       "ticker": "USBC",
       "country": "US",
@@ -569,7 +582,7 @@
       "notes": "479 BTC pledged as loan collateral."
     },
     {
-      "rank": 44,
+      "rank": 45,
       "name": "Empery Digital",
       "ticker": "EMPD",
       "country": "US",
@@ -580,19 +593,6 @@
       "sourceLabel": "SEC 8-K",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1829794/000168316826008071/empery_ex9901.htm",
       "notes": "\"1,018 bitcoin, approximately $70 million in cash and approximately $35 million in debt\" as of October 23, 2026; company has been trimming BTC to fund AI data center investments."
-    },
-    {
-      "rank": 45,
-      "name": "Apimeds Pharmaceuticals US, Inc.",
-      "ticker": "APUS",
-      "country": "US",
-      "change": null,
-      "btc": 1004.84,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-14)",
-      "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1894525/000121390026090120/ea0300242-10q_apimeds.htm",
-      "notes": null
     },
     {
       "rank": 46,
@@ -703,7 +703,7 @@
       "name": "bitmax",
       "ticker": "377030.KQ",
       "country": "KR",
-      "change": "+0.2668",
+      "change": null,
       "btc": 551.5044,
       "asOf": "2026-11-16",
       "source": "KRX/DART Q3 2026 quarterly report (bitmax, filed 2026-11-16)",
@@ -778,19 +778,6 @@
     },
     {
       "rank": 60,
-      "name": "Figure Technology Solutions, Inc",
-      "ticker": "FIGR",
-      "country": "US",
-      "change": null,
-      "btc": 313,
-      "asOf": "2026-06-30",
-      "source": "SEC Form 10-Q Q2 2026 (filed 2026-08-14)",
-      "sourceLabel": "SEC 10-Q",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2064124/000162828026057061/figr-20260630.htm",
-      "notes": "Borrower collateral recognized on balance sheet, not a proprietary treasury."
-    },
-    {
-      "rank": 61,
       "name": "Cipher Digital",
       "ticker": "CIFR",
       "country": "US",
@@ -803,11 +790,11 @@
       "notes": "Approximately 310 BTC per 10-Q; company has been selling mined BTC."
     },
     {
-      "rank": 62,
+      "rank": 61,
       "name": "Bitplanet",
       "ticker": "049470.KQ",
       "country": "KR",
-      "change": "+4",
+      "change": null,
       "btc": 304,
       "asOf": "2026-09-30",
       "source": "KRX/DART Q3 2026 quarterly report (Bitplanet, filed 2026-11-16)",
@@ -816,7 +803,7 @@
       "notes": "Company states approx. 304 BTC held at end of Sept 2026 (book value KRW 34,586M)."
     },
     {
-      "rank": 63,
+      "rank": 62,
       "name": "Angel Studios, Inc.",
       "ticker": "ANGX",
       "country": "US",
@@ -829,20 +816,20 @@
       "notes": null
     },
     {
-      "rank": 64,
+      "rank": 63,
       "name": "POP Culture Group Co., Ltd.",
       "ticker": "CPOP",
       "country": "CN",
       "change": null,
       "btc": 300,
-      "asOf": "2025-12-31",
-      "source": "SEC Form 6-K Ex.99.2 interim report for six months ended 2025-12-31 (filed 2026-06-10)",
-      "sourceLabel": "SEC 6-K",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1807389/000121390026067098/ea0294088ex99-2.htm",
-      "notes": "Stale: interim report as of 12/31/25; no later disclosure found."
+      "asOf": "2026-06-30",
+      "source": "SEC Form 20-F FY ended 2026-06-30 (filed 2026-11-16)",
+      "sourceLabel": "SEC 20-F",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1807389/000121390026120193/ea0310079-20f_popcult.htm",
+      "notes": "300 BTC held at 6/30/26 per 20-F."
     },
     {
-      "rank": 65,
+      "rank": 64,
       "name": "S-Science",
       "ticker": "5721.T",
       "country": "JP",
@@ -855,7 +842,7 @@
       "notes": "Company renamed S-Crypto Energy; unchanged since Oct 2025."
     },
     {
-      "rank": 66,
+      "rank": 65,
       "name": "DigitalX",
       "ticker": "DCC.AX",
       "country": "AU",
@@ -868,7 +855,7 @@
       "notes": "364 BTC at 6/30/26; sold 80 afterwards, retaining 'more than 283'."
     },
     {
-      "rank": 67,
+      "rank": 66,
       "name": "HIVE Digital Technologies",
       "ticker": "HIVE",
       "country": "CA",
@@ -881,7 +868,7 @@
       "notes": "Plus options to repurchase 212 pledged BTC."
     },
     {
-      "rank": 68,
+      "rank": 67,
       "name": "LQWD Technologies Corp.",
       "ticker": "LQWD.V",
       "country": "CA",
@@ -892,6 +879,19 @@
       "sourceLabel": "Press release",
       "sourceUrl": "https://www.newsfilecorp.com/release/297167/LQWD-Technologies-Increases-Bitcoin-Treasury-and-Expands-Productive-Network-Capital-on-Lightning",
       "notes": null
+    },
+    {
+      "rank": 68,
+      "name": "Figure Technology Solutions, Inc",
+      "ticker": "FIGR",
+      "country": "US",
+      "change": "-56",
+      "btc": 257,
+      "asOf": "2026-09-30",
+      "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-16)",
+      "sourceLabel": "SEC 10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2064124/000162828026074112/figr-20260930.htm",
+      "notes": "Borrower collateral recognized on balance sheet, not a proprietary treasury."
     },
     {
       "rank": 69,
@@ -960,19 +960,6 @@
     },
     {
       "rank": 74,
-      "name": "Hyperscale Data",
-      "ticker": "GPUS",
-      "country": "US",
-      "change": null,
-      "btc": 211.4639,
-      "asOf": "2026-11-01",
-      "source": "Hyperscale Data press release (PR Newswire), 2026-11-03",
-      "sourceLabel": "Press release",
-      "sourceUrl": "https://www.prnewswire.com/news-releases/hyperscale-data-held-approximately-50-6-million-of-bitcoin-cash-and-restricted-cash-as-of-november-1--2026--302927361.html",
-      "notes": "Weekly update; sold ~686 BTC in Aug 2026."
-    },
-    {
-      "rank": 75,
       "name": "BTCS S.A.",
       "ticker": "36C.F",
       "country": "PL",
@@ -985,7 +972,7 @@
       "notes": null
     },
     {
-      "rank": 76,
+      "rank": 75,
       "name": "Coinsilium",
       "ticker": "COIN.AQ",
       "country": "GI",
@@ -998,7 +985,7 @@
       "notes": null
     },
     {
-      "rank": 77,
+      "rank": 76,
       "name": "Bitcoin Treasury Capital",
       "ticker": "BTCB.SE",
       "country": "SE",
@@ -1011,7 +998,7 @@
       "notes": null
     },
     {
-      "rank": 78,
+      "rank": 77,
       "name": "Figma Inc",
       "ticker": "FIG",
       "country": "US",
@@ -1024,7 +1011,7 @@
       "notes": "Direct BTC only; also holds a bitcoin ETF position (~$49M) not counted."
     },
     {
-      "rank": 79,
+      "rank": 78,
       "name": "Fold Holdings Inc.",
       "ticker": "FLD",
       "country": "US",
@@ -1037,7 +1024,7 @@
       "notes": "Investment treasury only (171 BTC at 9/30); a further 76 BTC in rewards treasury matched to customer liabilities (total 247)."
     },
     {
-      "rank": 80,
+      "rank": 79,
       "name": "Matador Technologies Inc",
       "ticker": "MATA.V",
       "country": "CA",
@@ -1050,7 +1037,7 @@
       "notes": "138.22 BTC pledged as collateral."
     },
     {
-      "rank": 81,
+      "rank": 80,
       "name": "K33 AB",
       "ticker": "K33.ST",
       "country": "NO",
@@ -1063,7 +1050,7 @@
       "notes": "Effective exposure' incl. look-through via ~46% stake in Sixty-Six Capital (partial double count); direct count not disclosed."
     },
     {
-      "rank": 82,
+      "rank": 81,
       "name": "B HODL",
       "ticker": "HODL.AQ",
       "country": "UK",
@@ -1076,7 +1063,7 @@
       "notes": null
     },
     {
-      "rank": 83,
+      "rank": 82,
       "name": "The Brooker Group",
       "ticker": "BTC.BK",
       "country": "TH",
@@ -1089,7 +1076,7 @@
       "notes": "Stale: latest unit table found is 6/30/25."
     },
     {
-      "rank": 84,
+      "rank": 83,
       "name": "FRMO Corp.",
       "ticker": "FRMO",
       "country": "US",
@@ -1102,7 +1089,7 @@
       "notes": "Stale (Aug 2025); direct BTC only - most BTC exposure is via Grayscale ETF shares."
     },
     {
-      "rank": 85,
+      "rank": 84,
       "name": "Horizon Kinetics Holding Corp",
       "ticker": "HKHC",
       "country": "US",
@@ -1115,7 +1102,7 @@
       "notes": "Excludes 1,911 BTC held in consolidated client investment products."
     },
     {
-      "rank": 86,
+      "rank": 85,
       "name": "gumi Inc.",
       "ticker": "3903.T",
       "country": "JP",
@@ -1128,7 +1115,7 @@
       "notes": "Group holdings excl. funds. Company plans to migrate crypto holdings toward XRP; 144.14 BTC consolidated at 4/30/26 (annual securities report)."
     },
     {
-      "rank": 87,
+      "rank": 86,
       "name": "Jiuzi Holdings Inc",
       "ticker": "JZXN",
       "country": "CN",
@@ -1141,7 +1128,7 @@
       "notes": "100 BTC received 1/12/26 as share consideration; fiscal year ends Oct 31."
     },
     {
-      "rank": 88,
+      "rank": 87,
       "name": "Vaultz Capital",
       "ticker": "V3TC.AQ",
       "country": "UK",
@@ -1154,7 +1141,7 @@
       "notes": "Sold 47 BTC to fund a £3.0M AI-infrastructure investment; company states 86 BTC held after the disposal. Shareholders approved dropping the BTC treasury policy (Jul 2026)."
     },
     {
-      "rank": 89,
+      "rank": 88,
       "name": "Winland Holdings Corporation",
       "ticker": "WELX",
       "country": "US",
@@ -1167,7 +1154,7 @@
       "notes": "OTC Pink alternative-reporting company (not an SEC filer)."
     },
     {
-      "rank": 90,
+      "rank": 89,
       "name": "XCE-Connecting Excellence Group",
       "ticker": "XCE.AQ",
       "country": "UK",
@@ -1180,7 +1167,7 @@
       "notes": "Includes 10 BTC linked to BTC-denominated convertible bond programme and 8.216 BTC acquired with James Gray Recruitment (10/5/26); a portion is held as security under a new BitGo revolving credit facility."
     },
     {
-      "rank": 91,
+      "rank": 90,
       "name": "London BTC Company (formerly Vinanz)",
       "ticker": "BTC.L",
       "country": "UK",
@@ -1193,7 +1180,7 @@
       "notes": "Stale (Mar 2026): latest stated treasury count; annual report showed 80.16 BTC at 2/28/26. Miner output since may change total."
     },
     {
-      "rank": 92,
+      "rank": 91,
       "name": "Circle Internet Group, Inc.",
       "ticker": "CRCL",
       "country": "US",
@@ -1206,7 +1193,7 @@
       "notes": "Includes Circle-wrapped bitcoin (cirBTC)."
     },
     {
-      "rank": 93,
+      "rank": 92,
       "name": "RSXYZ PCL",
       "ticker": "XYZ.BK",
       "country": "TH",
@@ -1219,7 +1206,7 @@
       "notes": "Precision refresh, not a purchase: same holding as the 74.97 BTC announced Oct 2025, now shown to 8 decimals on the company IR page."
     },
     {
-      "rank": 94,
+      "rank": 93,
       "name": "Bitcoin Well Inc",
       "ticker": "BTCW.V",
       "country": "CA",
@@ -1232,7 +1219,7 @@
       "notes": "Approximate (\"net investment of approximately 69 bitcoin\" as at 8/12/26)."
     },
     {
-      "rank": 95,
+      "rank": 94,
       "name": "Stack BTC Plc",
       "ticker": "STAK",
       "country": "UK",
@@ -1245,7 +1232,7 @@
       "notes": "Latest stated count (Apr 2026)."
     },
     {
-      "rank": 96,
+      "rank": 95,
       "name": "PowerCompute, Inc.",
       "ticker": "PWCM",
       "country": "US",
@@ -1258,11 +1245,11 @@
       "notes": "Company-stated: held 65.7 BTC at October 31, 2026."
     },
     {
-      "rank": 97,
+      "rank": 96,
       "name": "NEOWIZ Holdings",
       "ticker": "042420.KQ",
       "country": "KR",
-      "change": "-5",
+      "change": null,
       "btc": 59,
       "asOf": "2026-09-30",
       "source": "KRX/DART Q3 2026 quarterly report (consolidated, filed 2026-11-13)",
@@ -1271,7 +1258,7 @@
       "notes": "Consolidated; 59 at 9/30/26, down from 94 at start of 2026."
     },
     {
-      "rank": 98,
+      "rank": 97,
       "name": "Sixty-Six Capital Inc",
       "ticker": "SIX.CN",
       "country": "CA",
@@ -1284,7 +1271,7 @@
       "notes": "Direct BTC only; 'effective exposure' 257 incl. a 200-BTC call option."
     },
     {
-      "rank": 99,
+      "rank": 98,
       "name": "Bitdeer Technologies Group",
       "ticker": "BTDR",
       "country": "SG",
@@ -1297,7 +1284,7 @@
       "notes": "Excludes customer deposits; includes BTC pledged as collateral. Moving to quarterly updates."
     },
     {
-      "rank": 100,
+      "rank": 99,
       "name": "Core Scientific",
       "ticker": "CORZ",
       "country": "US",
@@ -1308,6 +1295,19 @@
       "sourceLabel": "SEC 10-Q",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000030/core-20260930.htm",
       "notes": "Self-mined BTC only (32 BTC held at 9/30)."
+    },
+    {
+      "rank": 100,
+      "name": "AsiaStrategy",
+      "ticker": "SORA",
+      "country": "HK",
+      "change": null,
+      "btc": 30,
+      "asOf": "2026-06-30",
+      "source": "SEC Form 6-K interim report for six months ended 2026-06-30 (filed 2026-10-06)",
+      "sourceLabel": "SEC 6-K",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2033515/000121390026107204/ea030768301ex99-2.htm",
+      "notes": "Company states 30 BTC held at 6/30/26 (pledged as collateral for borrowing facilities)."
     }
   ]
 }
