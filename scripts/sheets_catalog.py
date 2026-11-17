@@ -781,7 +781,9 @@ def self_test():
     assert ("bot2", 1793142140) in live  # 76 Neocloud capex vs revenue
     assert ("bot2", 1690294676) in live  # 6 MSTR vs ASST leverage
     assert ("bot3", 978356289) in live
-    assert len(cat["tabs"]) == 446, len(cat["tabs"])
+    assert ("bot3", 1618426207) in live  # ASST 30 Day Avg Volume
+    assert ("bot3", 1608741572) not in live  # Bitcoin ETFs Weekly Flows (Python ETF draft)
+    assert len(cat["tabs"]) == 447, len(cat["tabs"])
     blob = json.dumps(cat)
     assert "201 Nvidia data center revenue" not in blob
     assert "Nvidia became a data-center company" not in blob
