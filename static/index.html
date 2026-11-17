@@ -1367,6 +1367,10 @@ async function cotdenter(){const el=$('cotd'),E=escHtml;
 // Thumbnails are optional catalog fields (static/sheets/thumbs/...). Shown only while the search box has a query.
 // View PNG and Download PNG open sheets/full/<book>/<gid>.png (chart 1) or <gid>_n.png (chart n) when that file exists, else the thumbnail for chart 1. The grid keeps the JPEG.
 let FULL_OK=new Map(),SHSEQ=0;
+function sheetListedWithCharts(t){
+  // Pinned chartless tables (Central Bank Ranking) stay visible when "Has a chart" is on.
+  return !!(t&&(t.pin||(String(t.book)==='bot3'&&Number(t.gid)===874288811)));
+}
 function sheetThumb(t){const p=String(t&&t.thumb||'');return /^sheets\/thumbs\/[A-Za-z0-9][A-Za-z0-9_-]{0,24}\/\d+\.jpg$/.test(p)?p:''}
 function sheetFull(t,n){n=Number(n)||1;const book=String(t&&t.book||''),gid=String(t&&t.gid!=null?t.gid:'');const p='sheets/full/'+book+'/'+gid+(n>1?'_'+n:'')+'.png';return /^sheets\/full\/[A-Za-z0-9][A-Za-z0-9_-]{0,24}\/\d+(?:_(?:[2-9]|[1-9]\d))?\.png$/.test(p)?p:''}
 function sheetFile(tab,ext){const n=String(tab||'').replace(/[^\w]+/g,'_').replace(/^_+|_+$/g,'');return (n||'chart')+(ext||'.png')}
@@ -1414,7 +1418,7 @@ async function sheetsEnter(){const el=$('sheets'),E=escHtml;
           return `<div class="row" data-favrow="${E(h.item.k)}"><div class="meta"><div class="book">${E(h.book.name||'')}</div><h3>${E(h.tab.tab)}</h3><div class="chartline">${favButton(h.tab.book,h.tab.gid,h.ch)}<span>${E(h.ch.label)}</span></div>${nofile}${open||png?`<div class="acts">${open}${png}</div>`:''}</div>${img}</div>`}).join('')||(q||book?'<div class="empty"><b>No favorites match.</b><p>None of the starred charts match this search or workbook.</p></div>':(FAV_DROPPED&&!FAV.length?'<div class="empty"><b>No favorites in the library.</b><p>The charts you starred are no longer in the library. They were removed and are not shown.</p></div>':'<div class="empty"><b>No favorites yet.</b><p>Turn Favorites off and star a chart or a table, or star one on Charts of the day when that card is one chart or a table in the library. A tab with several charts is starred here, one star per chart. On Charts of the day a multi-chart tab is starred only when the card records that chart or its title matches one chart.</p></div>'));
         favPaint();return;
       }
-      const rows=tabs.filter(t=>{if(book&&t.book!==book)return false;if(need&&!sheetCharts(t).some(c=>!c.synthetic))return false;
+      const rows=tabs.filter(t=>{if(book&&t.book!==book)return false;if(need&&!sheetCharts(t).some(c=>!c.synthetic)&&!sheetListedWithCharts(t))return false;
         if(!q)return true;const blob=(t.tab+' '+(t.charts||[]).join(' ')+' '+sheetCharts(t).map(c=>c.label+' '+c.title).join(' ')+' '+(bookBy[t.book]||{}).name).toLowerCase();return blob.includes(q)});
       const withThumb=q?rows.filter(t=>sheetThumb(t)).length:0;
       $('shcount').textContent=rows.length+' tab'+(rows.length===1?'':'s')+(q?(withThumb?` · ${withThumb} with a preview`:' · no previews'):'');

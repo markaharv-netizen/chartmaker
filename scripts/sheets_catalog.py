@@ -263,6 +263,14 @@ EXCLUDED_TABS = {
     ("bot2", 2047295555),
     ("bot2", 84709656),
 }
+# Chartless table tabs that must stay in the library even when a workbook dump
+# omits them (a truncated spreadsheets.get, or a rebuild that never listed them).
+# ("bot3", 874288811) is "Central Bank Ranking" in My Bot's Sheets: no native
+# chart, PNG from Steve's twice-monthly render. Monday's exporter skips it.
+# A later catalog rebuild must not drop the tab.
+PINNED_TABS = {
+    ("bot3", 874288811): "Central Bank Ranking",
+}
 # Google's default name for a chart with no real title: "Chart 1", "Chart 2", ...
 # "Chart 01" is a real title some tests use and is not this placeholder.
 UNTITLED_CHART = re.compile(r"^Chart\s+[1-9]\d?$")
@@ -528,6 +536,54 @@ def resolve_unpositioned(tabs, previous):
             )
     return out, warnings
 
+def restore_pinned_tabs(tabs, previous):
+    """Reattach pinned table tabs omitted from a workbook dump.
+
+    Returns (tabs, warnings). A pinned gid already in tabs is left alone.
+    An excluded gid is never restored. When the previous catalog has the
+    row, that entry is kept (thumbnail is reattached later). Otherwise a
+    bare chartless catalog row is added so the tab is not left out.
+    """
+    have = set()
+    for t in tabs or []:
+        try:
+            have.add((str(t.get("book")), int(t.get("gid"))))
+        except (TypeError, ValueError):
+            continue
+    out = list(tabs or [])
+    warnings = []
+    for (book, gid), title in sorted(PINNED_TABS.items(), key=lambda kv: (kv[0][0], kv[0][1])):
+        key = (str(book), int(gid))
+        if key in have or tab_excluded(book, gid):
+            continue
+        prev = previous.get(key) if isinstance(previous, dict) else None
+        if prev:
+            row = dict(prev)
+            row.pop("thumb", None)
+            out.append(row)
+            warnings.append(
+                "%s gid %s (%s): missing from dump; kept the existing catalog entry"
+                % (key[0], key[1], row.get("tab") or title)
+            )
+        else:
+            out.append({"book": key[0], "tab": title, "gid": key[1], "charts": [], "chartList": []})
+            warnings.append(
+                "%s gid %s (%s): missing from dump and no existing catalog entry; added the pinned table tab"
+                % (key[0], key[1], title)
+            )
+    return out, warnings
+
+def apply_pinned_flags(tabs):
+    """Mark pinned table tabs so the Sheets 'Has a chart' filter still lists them."""
+    for t in tabs or []:
+        try:
+            key = (str(t.get("book")), int(t.get("gid")))
+        except (TypeError, ValueError):
+            continue
+        if key in PINNED_TABS and not tab_excluded(*key):
+            t["pin"] = True
+    return tabs
+
 def build_catalog(dumps, repo, allow_partial):
     """Rewrite catalog.json from spreadsheet dumps. Returns (doc, warnings)."""
     books, tabs = [], []
@@ -553,7 +609,11 @@ def build_catalog(dumps, repo, allow_partial):
     grouped = []
     for b in books:
         grouped.extend(t for t in tabs if t["book"] == b["id"])
-    grouped, warnings = resolve_unpositioned(grouped, load_previous_tabs(repo))
+    previous = load_previous_tabs(repo)
+    grouped, warnings = resolve_unpositioned(grouped, previous)
+    grouped, pin_warns = restore_pinned_tabs(grouped, previous)
+    warnings.extend(pin_warns)
+    grouped = apply_pinned_flags(grouped)
     for w in warnings:
         print("warning: " + w)
     kept, stamp = load_thumb_index(repo)
