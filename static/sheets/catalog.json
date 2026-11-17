@@ -5970,7 +5970,8 @@
     "Strategy bitcoin on balance sheet",
     "Strategy BTC Holdings Q/Q Change",
     "Strategy BTC/Share (in Sats)",
-    "MSTR mNAV"
+    "MSTR mNAV",
+    "MSTR Market Cap vs. BTC Reserve Value"
    ],
    "chartList": [
     {
@@ -5988,6 +5989,10 @@
     {
      "n": 4,
      "title": "MSTR mNAV"
+    },
+    {
+     "n": 5,
+     "title": "MSTR Market Cap vs. BTC Reserve Value"
     }
    ],
    "thumb": "sheets/thumbs/bot3/1145735379.jpg"
