@@ -1235,12 +1235,13 @@ def self_test():
     finally:
         shutil.rmtree(scratch, ignore_errors=True)
     debt = next(t for t in cat["tabs"] if t["book"] == "bot3" and t["gid"] == 1145735379)
-    assert [c["n"] for c in debt["chartList"]] == [1, 2, 3, 4]
+    assert [c["n"] for c in debt["chartList"]] == [1, 2, 3, 4, 5]
     assert [c["title"] for c in debt["chartList"]] == [
         "Strategy bitcoin on balance sheet",
         "Strategy BTC Holdings Q/Q Change",
         "Strategy BTC/Share (in Sats)",
         "MSTR mNAV",
+        "MSTR Market Cap vs. BTC Reserve Value",
     ]
     assert debt["charts"] == [c["title"] for c in debt["chartList"]]
     rec = next(t for t in cat["tabs"] if t["book"] == "bot3" and t["gid"] == 729377719)
