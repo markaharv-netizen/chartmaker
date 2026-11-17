@@ -1,0 +1,82 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 399190070,
+ "n": 1,
+ "chartId": 497896327,
+ "title": "SpaceX revenue by segment (USD bn): Starlink is the business",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2023",
+  "2024",
+  "2025",
+  "TTM Sep '26"
+ ],
+ "x": {
+  "title": "Period (TTM = 4 quarters to Jun 30 2026)"
+ },
+ "y": [
+  {
+   "title": "USD bn",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Space revenue (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F3A93",
+   "data": [
+    3.557,
+    3.796,
+    4.086,
+    4.157
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Connectivity (Starlink) revenue (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    3.869,
+    7.599,
+    11.387,
+    16.023
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "AI (xAI, X) revenue (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#000000",
+   "data": [
+    2.961,
+    2.62,
+    3.201,
+    11.863
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 315 SpaceX revenue by segment",
+ "tab": "315 SpaceX revenue by segment",
+ "workbook": "Bot experiments"
+}

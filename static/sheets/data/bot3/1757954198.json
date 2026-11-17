@@ -1,0 +1,62 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 1757954198,
+ "n": 1,
+ "chartId": 1259478665,
+ "title": "Mag7 + SPCX + Bitcoin = $27.36T combined (Sep 11, 2026)",
+ "subtitle": "",
+ "type": "bar",
+ "horizontal": true,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "AAPL",
+  "NVDA",
+  "MSFT",
+  "GOOG",
+  "AMZN",
+  "SPCX",
+  "META",
+  "TSLA",
+  "BTC"
+ ],
+ "x": {
+  "title": "Market Cap ($T)"
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Market Cap ($T)",
+   "type": "bar",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    5.18,
+    3.92,
+    3.89,
+    3.59,
+    2.88,
+    1.89,
+    1.64,
+    1.54,
+    1.37
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · Mag7 Plus",
+ "tab": "Mag7 Plus",
+ "workbook": "My Bot's Sheets"
+}

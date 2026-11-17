@@ -1,0 +1,76 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 35106055,
+ "n": 1,
+ "chartId": 981062164,
+ "title": "Neocloud Stocks: 2026 Return YTD",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": "stacked",
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Nebius",
+  "TeraWulf",
+  "CoreWeave",
+  "Applied Digital",
+  "IREN",
+  "Cipher Mining",
+  "Source: Yahoo Finance (aggregator); daily closes as of Nov 13, 2026 (refreshed Nov 16, 2026). YTD = close / Dec 31, 2025 close − 1."
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "percent",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Positive",
+   "type": "column",
+   "axis": "left",
+   "color": "#22C55E",
+   "data": [
+    38.43,
+    9.84,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Negative",
+   "type": "column",
+   "axis": "left",
+   "color": "#EF4444",
+   "data": [
+    null,
+    null,
+    -25.8,
+    -34.87,
+    -51.89,
+    -53.52,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 83 Neocloud stocks 2026 return YTD",
+ "tab": "83 Neocloud stocks 2026 return YTD",
+ "workbook": "bot experiments 2"
+}

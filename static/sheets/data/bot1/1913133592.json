@@ -1,0 +1,139 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 1913133592,
+ "n": 1,
+ "chartId": 352265538,
+ "title": "SpaceX vs the rest of the world: orbital launch attempts per year",
+ "subtitle": "",
+ "type": "combo",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2010.0",
+  "2011.0",
+  "2012.0",
+  "2013.0",
+  "2014.0",
+  "2015.0",
+  "2016.0",
+  "2017.0",
+  "2018.0",
+  "2019.0",
+  "2020.0",
+  "2021.0",
+  "2022.0",
+  "2023.0",
+  "2024.0",
+  "2025.0",
+  "2026 YTD"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Launches per year",
+   "format": "integer",
+   "log": false
+  },
+  {
+   "title": "SpaceX share (%)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "SpaceX launches",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F4E79",
+   "data": [
+    2,
+    0,
+    2,
+    3,
+    6,
+    7,
+    8,
+    18,
+    21,
+    13,
+    25,
+    31,
+    61,
+    96,
+    134,
+    165,
+    113
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Rest of world launches",
+   "type": "column",
+   "axis": "left",
+   "color": "#7F7F7F",
+   "data": [
+    72,
+    84,
+    76,
+    78,
+    86,
+    80,
+    77,
+    72,
+    93,
+    89,
+    89,
+    115,
+    125,
+    125,
+    125,
+    159,
+    122
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "SpaceX share of orbital launches (%)",
+   "type": "line",
+   "axis": "right",
+   "color": "#000000",
+   "data": [
+    2.7,
+    0,
+    2.6,
+    3.7,
+    6.5,
+    8,
+    9.4,
+    20,
+    18.4,
+    12.7,
+    21.9,
+    21.2,
+    32.8,
+    43.4,
+    51.7,
+    50.9,
+    48.1
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 103 SpaceX vs world launches",
+ "tab": "103 SpaceX vs world launches",
+ "workbook": "Bot experiments"
+}

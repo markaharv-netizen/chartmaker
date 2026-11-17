@@ -1,0 +1,68 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 817552047,
+ "n": 1,
+ "chartId": 777642284,
+ "title": "U.S. ETF BTC Holdings",
+ "subtitle": "",
+ "type": "bar",
+ "horizontal": true,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "BlackRock (IBIT)",
+  "Fidelity (FBTC)",
+  "Grayscale (GBTC)",
+  "Grayscale Mini (BTC)",
+  "Bitwise (BITB)",
+  "Ark/21 Shares (ARKB)",
+  "VanEck (HODL)",
+  "Morgan Stanley (MSBT)",
+  "CoinShares (BRRR)",
+  "Franklin Templeton (EZBC)",
+  "Invesco (BTCO)",
+  "WisdomTree (BTCW)"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "BTC held",
+   "type": "bar",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    803871,
+    177542,
+    125968,
+    63128,
+    37318,
+    32024,
+    14666,
+    10719,
+    5678,
+    5661,
+    5052,
+    2054
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 73 US ETF BTC holdings",
+ "tab": "73 US ETF BTC holdings",
+ "workbook": "bot experiments 2"
+}

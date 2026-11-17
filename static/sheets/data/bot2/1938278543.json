@@ -1,0 +1,92 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 1938278543,
+ "n": 1,
+ "chartId": 917932068,
+ "title": "NASA lunar lander awards: SpaceX $4.2bn (Starship HLS) vs Blue Origin $3.9bn and Dynetics $0.24bn",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": "stacked",
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "SpaceX",
+  "Blue Origin",
+  "Dynetics"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "NASA contract value (USD bn)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "2020 base period",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    0.135,
+    0.48,
+    0.24
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Option A (Artemis III)",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    2.89,
+    null,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Option B (Artemis IV)",
+   "type": "column",
+   "axis": "left",
+   "color": "#FBC77E",
+   "data": [
+    1.15,
+    null,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Sustaining Lunar Development (Artemis V)",
+   "type": "column",
+   "axis": "left",
+   "color": "#C4B0FB",
+   "data": [
+    null,
+    3.4,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 42 NASA lunar lander contracts",
+ "tab": "42 NASA lunar lander contracts",
+ "workbook": "bot experiments 2"
+}

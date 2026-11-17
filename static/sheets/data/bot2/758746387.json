@@ -1,0 +1,68 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 758746387,
+ "n": 1,
+ "chartId": 1072363570,
+ "title": "Bitcoin's daily active addresses: 636K in 2026, the lowest yearly average since 2016 (peak 990K in 2021)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2015",
+  "2016",
+  "2017",
+  "2018",
+  "2019",
+  "2020",
+  "2021",
+  "2022",
+  "2023",
+  "2024",
+  "2025",
+  "2026 (to Nov 8)"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Average daily active addresses",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Average daily active addresses",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    301076,
+    515345,
+    755832,
+    665701,
+    716083,
+    895895,
+    990065,
+    913858,
+    946237,
+    776647,
+    722885,
+    635789
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 31 BTC active addresses",
+ "tab": "31 BTC active addresses",
+ "workbook": "bot experiments 2"
+}

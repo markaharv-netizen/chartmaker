@@ -1,0 +1,82 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 906159148,
+ "n": 1,
+ "chartId": 285698028,
+ "title": "SpaceX operating income by segment (USD bn): Starlink profits vs AI and rocket losses",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2023",
+  "2024",
+  "2025",
+  "TTM Sep '26"
+ ],
+ "x": {
+  "title": "Period (TTM = 4 quarters to Jun 30 2026)"
+ },
+ "y": [
+  {
+   "title": "USD bn (negative = loss)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Space operating income (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F3A93",
+   "data": [
+    -0.001,
+    0.021,
+    -0.657,
+    -1.688
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Connectivity (Starlink) operating income (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    0.469,
+    2.006,
+    4.423,
+    6.488
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "AI (xAI, X) operating income (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#000000",
+   "data": [
+    -3.973,
+    -1.561,
+    -6.355,
+    -5.468
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 317 SpaceX segment profits",
+ "tab": "317 SpaceX segment profits",
+ "workbook": "Bot experiments"
+}

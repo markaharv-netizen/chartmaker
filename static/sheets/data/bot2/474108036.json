@@ -1,0 +1,109 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 474108036,
+ "n": 1,
+ "chartId": 1779427131,
+ "title": "Microsoft's lease liabilities hit $88.5B, more than double its $40.3B of bond debt (Jun 2026)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": "stacked",
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Jun 2022",
+  "Sep 2022",
+  "Dec 2022",
+  "Mar 2023",
+  "Jun 2023",
+  "Sep 2023",
+  "Dec 2023",
+  "Mar 2024",
+  "Jun 2024",
+  "Sep 2024",
+  "Dec 2024",
+  "Mar 2025",
+  "Jun 2025",
+  "Sep 2025",
+  "Dec 2025",
+  "Mar 2026",
+  "Jun 2026",
+  "Sep 2026"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "USD billions",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Finance leases (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    14.9,
+    14.6,
+    15.6,
+    16.5,
+    17.1,
+    18.2,
+    20.2,
+    22.9,
+    27.1,
+    31.4,
+    36.1,
+    39.2,
+    46.2,
+    54.4,
+    60.2,
+    62.9,
+    66.6,
+    71
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Operating leases (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    13.7,
+    13.9,
+    14.3,
+    14.6,
+    15.1,
+    16,
+    16.9,
+    17.9,
+    19.1,
+    20.4,
+    21.9,
+    22.9,
+    22.9,
+    22.7,
+    22.9,
+    22.2,
+    21.9,
+    27.5
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 20 Microsoft lease liabilities",
+ "tab": "20 Microsoft lease liabilities",
+ "workbook": "bot experiments 2"
+}

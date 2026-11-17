@@ -1,0 +1,66 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 1608508815,
+ "n": 1,
+ "chartId": 355737460,
+ "title": "SATA 30-Day Average Volume: Month-over-Month % Change",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "October",
+  "September",
+  "August",
+  "July",
+  "June",
+  "May",
+  "April",
+  "March",
+  "February",
+  "January",
+  "December"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "percent",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Series 1",
+   "type": "column",
+   "axis": "left",
+   "color": "#00FFFF",
+   "data": [
+    7.4463,
+    146.3137,
+    -31.7617,
+    -54.9858,
+    97.7781,
+    95.1856,
+    19.015,
+    -7.5186,
+    39.092,
+    91.2057,
+    -64.0386
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · SATA Volume",
+ "tab": "SATA Volume",
+ "workbook": "My Bot's Sheets"
+}

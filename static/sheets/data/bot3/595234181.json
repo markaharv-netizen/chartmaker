@@ -1,0 +1,67 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 595234181,
+ "n": 1,
+ "chartId": 73462098,
+ "title": "BTC Holdings as a Percentage of Market Cap",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "MARA",
+  "CAN",
+  "ABTC",
+  "FUFU",
+  "CLSK",
+  "RIOT",
+  "KEEL",
+  "HUT",
+  "HIVE",
+  "CORZ",
+  "CIFR"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "% Market Cap",
+   "format": "percent",
+   "log": false,
+   "max": 70
+  }
+ ],
+ "series": [
+  {
+   "name": "% Market Cap",
+   "type": "column",
+   "axis": "left",
+   "color": "#A78BFA",
+   "data": [
+    93.173,
+    83.0048,
+    115.4938,
+    52.4559,
+    48.3694,
+    16.6468,
+    10.3308,
+    9.8458,
+    2.0728,
+    1.3701,
+    1.4722
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · BTC Miner BTC/market cap",
+ "tab": "BTC Miner BTC/market cap",
+ "workbook": "My Bot's Sheets"
+}

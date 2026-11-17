@@ -1,0 +1,82 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 501922147,
+ "n": 1,
+ "chartId": 1446706960,
+ "title": "SpaceX capex by segment (USD bn): the AI build-out dwarfs rockets and Starlink",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": "stacked",
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2023",
+  "2024",
+  "2025",
+  "TTM Sep '26"
+ ],
+ "x": {
+  "title": "Period (TTM = 4 quarters to Sep 30 2026)"
+ },
+ "y": [
+  {
+   "title": "USD bn",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Space capex (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F3A93",
+   "data": [
+    1.497,
+    2.032,
+    3.832,
+    4.846
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Connectivity (Starlink) capex (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    2.455,
+    3.498,
+    4.178,
+    5.469
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "AI (xAI, X) capex (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#000000",
+   "data": [
+    0.463,
+    5.633,
+    12.727,
+    44.646
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 316 SpaceX capex by segment",
+ "tab": "316 SpaceX capex by segment",
+ "workbook": "Bot experiments"
+}

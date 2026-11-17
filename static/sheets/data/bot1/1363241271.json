@@ -1,0 +1,142 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 1363241271,
+ "n": 1,
+ "chartId": 837259880,
+ "title": "Capex as % of operating cash flow, each quarter: Alphabet and Amazon top 100%",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2023-06-30",
+  "2023-09-30",
+  "2023-12-31",
+  "2024-03-31",
+  "2024-06-30",
+  "2024-09-30",
+  "2024-12-31",
+  "2025-03-31",
+  "2025-06-30",
+  "2025-09-30",
+  "2025-12-31",
+  "2026-03-31",
+  "2026-06-30"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Capex ÷ operating cash flow (%)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Microsoft",
+   "type": "column",
+   "axis": "left",
+   "color": "#00A4EF",
+   "data": [
+    31.1,
+    32.4,
+    51.6,
+    34.3,
+    37.3,
+    43.7,
+    70.9,
+    45.2,
+    40,
+    43,
+    83.6,
+    66.1,
+    64.6
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Alphabet",
+   "type": "column",
+   "axis": "left",
+   "color": "#2CA02C",
+   "data": [
+    24,
+    26.3,
+    58.3,
+    41.6,
+    49.5,
+    42.5,
+    36.5,
+    47.6,
+    80.9,
+    49.5,
+    53.1,
+    77.9,
+    115
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Amazon",
+   "type": "column",
+   "axis": "left",
+   "color": "#FF9900",
+   "data": [
+    69.5,
+    58.8,
+    34.4,
+    78.6,
+    69.7,
+    87.1,
+    61,
+    147,
+    99,
+    98.8,
+    72.6,
+    169.8,
+    119.4
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Meta",
+   "type": "column",
+   "axis": "left",
+   "color": "#9467BD",
+   "data": [
+    35.4,
+    31.8,
+    39.1,
+    33.3,
+    42.2,
+    33.4,
+    51.5,
+    53.9,
+    64.7,
+    62.8,
+    59,
+    58.9,
+    94.5
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 321 Capex % of cash flow, qtrly",
+ "tab": "321 Capex % of cash flow, qtrly",
+ "workbook": "Bot experiments"
+}

@@ -1,0 +1,60 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 2073270825,
+ "n": 1,
+ "chartId": 1011640451,
+ "title": "Q3 2026 EV deliveries: BYD 762K battery-electric cars, Tesla 487K; XPeng, NIO, Li Auto 100–118K each; Rivian 19K, Lucid 4K",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "BYD (BEV only)",
+  "Tesla",
+  "XPeng",
+  "NIO",
+  "Li Auto*",
+  "Rivian",
+  "Polestar",
+  "Lucid"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Vehicles delivered, Q3 2026",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Vehicles delivered, Q3 2026",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    762478,
+    486532,
+    118390,
+    109178,
+    99964,
+    19248,
+    14371,
+    3806
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 44 EV deliveries Q3 2026",
+ "tab": "44 EV deliveries Q3 2026",
+ "workbook": "bot experiments 2"
+}

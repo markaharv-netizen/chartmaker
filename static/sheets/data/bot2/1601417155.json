@@ -1,0 +1,62 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 1601417155,
+ "n": 1,
+ "chartId": 1875042639,
+ "title": "Tesla Cybercabs on the Texas robotaxi registry: 45 → 319 in 38 days",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Aug 31 2026",
+  "Sep 23 2026",
+  "Sep 28 2026",
+  "Oct 2 2026",
+  "Oct 8 2026",
+  "Oct 15 2026",
+  "Oct 23 2026",
+  "Oct 27 2026",
+  "Oct 31 2026"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Cybercabs registered in Texas",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Cybercabs registered",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    45,
+    69,
+    126,
+    169,
+    319,
+    349,
+    420,
+    544,
+    573
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 25 Cybercab registrations",
+ "tab": "25 Cybercab registrations",
+ "workbook": "bot experiments 2"
+}

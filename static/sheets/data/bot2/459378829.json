@@ -1,0 +1,50 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 459378829,
+ "n": 1,
+ "chartId": 953163309,
+ "title": "Starlink capacity per launch: Falcon 9 (27 V2) ~2.6 Tbps vs Starship Flight 14 (26 V3) ~26 Tbps vs a full Starship (60 V3) ~61 Tbps",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Falcon 9, 27 V2 Mini",
+  "Starship Flight 14, 26 V3 (actual load)",
+  "Starship full load, 60 V3 (PLAN)"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Downlink capacity added (Tbps)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Downlink capacity added per launch (Tbps)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    2.6,
+    26,
+    61
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 43 Starlink capacity per launch",
+ "tab": "43 Starlink capacity per launch",
+ "workbook": "bot experiments 2"
+}

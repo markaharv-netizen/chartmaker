@@ -1,0 +1,66 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 370876757,
+ "n": 1,
+ "chartId": 127391892,
+ "title": "How often stocks return X% in a year: S&P 500 annual total returns, 1928–2025",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "−60 to −40%",
+  "−40 to −30%",
+  "−30 to −20%",
+  "−20 to −10%",
+  "−10 to 0%",
+  "0 to 10%",
+  "10 to 20%",
+  "20 to 30%",
+  "30 to 40%",
+  "40 to 50%",
+  "50%+"
+ ],
+ "x": {
+  "title": "Annual total return"
+ },
+ "y": [
+  {
+   "title": "Number of years",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Number of years, 1928–2025",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    1,
+    2,
+    3,
+    6,
+    14,
+    15,
+    21,
+    18,
+    13,
+    4,
+    1
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 282 S&P annual returns spread",
+ "tab": "282 S&P annual returns spread",
+ "workbook": "Bot experiments"
+}

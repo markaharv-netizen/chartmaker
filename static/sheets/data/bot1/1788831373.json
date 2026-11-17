@@ -1,0 +1,91 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 1788831373,
+ "n": 1,
+ "chartId": 619271448,
+ "title": "Bitcoin's average return by calendar month (2015–Sep 2026)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "%",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Avg monthly return (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    -1.73,
+    10.59,
+    0.71,
+    10.3,
+    7.66,
+    -0.26,
+    8.85,
+    2.3,
+    -1.19,
+    19.07,
+    6.73,
+    9.72
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Median monthly return (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#666666",
+   "data": [
+    -3.97,
+    11.79,
+    0.6,
+    10.66,
+    3.13,
+    -1.62,
+    7.72,
+    -6.81,
+    -0.14,
+    14.44,
+    6.57,
+    0.28
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 03 BTC by month",
+ "tab": "03 BTC by month",
+ "workbook": "Bot experiments"
+}

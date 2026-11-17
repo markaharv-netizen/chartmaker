@@ -1,0 +1,56 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 1913107481,
+ "n": 1,
+ "chartId": 222692364,
+ "title": "Strive bitcoin on balance sheet",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Q3-25",
+  "Q4-25",
+  "Q1-26",
+  "Q2-26",
+  "Q3-26",
+  "QTD"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "BTC on balance Sheet",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    5886,
+    7626.8,
+    13627.9,
+    19863.9,
+    28000,
+    43404
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · ASST BTC per share",
+ "tab": "ASST BTC per share",
+ "workbook": "My Bot's Sheets"
+}

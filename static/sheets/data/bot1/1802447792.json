@@ -1,0 +1,91 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 1802447792,
+ "n": 1,
+ "chartId": 1303567811,
+ "title": "Currencies vs the US dollar: 2026 YTD and 1-year change (to Sep 25 2026)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Korean won",
+  "Brazilian real",
+  "Australian dollar",
+  "Chinese yuan",
+  "Mexican peso",
+  "Japanese yen",
+  "British pound",
+  "NZ dollar",
+  "Euro",
+  "Canadian dollar",
+  "Swiss franc",
+  "Indian rupee"
+ ],
+ "x": {
+  "title": "Currency"
+ },
+ "y": [
+  {
+   "title": "% change vs USD (+ = stronger than USD)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "2026 YTD vs USD (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    6.49,
+    5.49,
+    5.46,
+    4.2,
+    1.77,
+    -0.24,
+    -1.47,
+    -1.53,
+    -2.86,
+    -3.03,
+    -4.18,
+    -6.23
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "1-year vs USD (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#7F7F7F",
+   "data": [
+    3.85,
+    2.92,
+    7.37,
+    6.3,
+    4.23,
+    -4.71,
+    -0.76,
+    -1.9,
+    -2.34,
+    -1.53,
+    -3.33,
+    -7.42
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 180 FX vs dollar scoreboard",
+ "tab": "180 FX vs dollar scoreboard",
+ "workbook": "Bot experiments"
+}

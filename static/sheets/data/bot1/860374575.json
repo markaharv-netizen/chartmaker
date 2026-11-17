@@ -1,0 +1,54 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 860374575,
+ "n": 1,
+ "chartId": 498933446,
+ "title": "The cost of missing the best days: $10,000 in the S&P 500, Oct 2006 – Oct 2026 (price only)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Fully invested",
+  "Missed 10 best days",
+  "Missed 20 best days",
+  "Missed 30 best days",
+  "Missed 50 best days"
+ ],
+ "x": {
+  "title": "Scenario"
+ },
+ "y": [
+  {
+   "title": "Ending value (USD)",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Value of $10,000 (USD)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    58008,
+    25828,
+    15257,
+    9973,
+    4887
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 274 Missing the best days",
+ "tab": "274 Missing the best days",
+ "workbook": "Bot experiments"
+}

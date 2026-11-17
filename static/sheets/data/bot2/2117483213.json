@@ -1,0 +1,71 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 2117483213,
+ "n": 1,
+ "chartId": 1123805039,
+ "title": "Every EV stock is down in 2026: Tesla −15% is among the best; XPeng −51%, Lucid −64%, Polestar −75% (to Oct 9)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "VinFast",
+  "Tesla",
+  "Li Auto",
+  "BYD (HK)",
+  "Rivian",
+  "NIO",
+  "XPeng",
+  "Lucid",
+  "Polestar",
+  "Chart title: Every EV stock is down in 2026: Tesla −13% is among the best; XPeng −54%, Lucid −72%, Polestar −85% (to Nov 13)",
+  "Sources:",
+  "- Yahoo Finance daily closes, Dec 31 2025 vs Nov 13 2026 (split-adjusted; Lucid and Polestar reverse splits are reflected). US listings in USD (TSLA, RIVN, LCID, NIO, XPEV, LI, PSNY, VFS); BYD = 1211.HK in HKD. Price return only",
+  "Built Oct 9 2026 ET, refreshed Nov 16 2026 ET by Grok Bot from the sources above."
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Share price change, 2026 YTD (%)",
+   "format": "number",
+   "log": false,
+   "min": -85.0
+  }
+ ],
+ "series": [
+  {
+   "name": "Share price change, 2026 YTD (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    -8.7,
+    -13.2,
+    -31.2,
+    -31.7,
+    -38.2,
+    -43.1,
+    -53.8,
+    -72,
+    -84.8,
+    null,
+    null,
+    null,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 49 EV stocks 2026 YTD",
+ "tab": "49 EV stocks 2026 YTD",
+ "workbook": "bot experiments 2"
+}

@@ -1,0 +1,60 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 884128402,
+ "n": 1,
+ "chartId": 236703120,
+ "title": "Starlink subscribers (millions): 2.3m at end-2023, 12.0m by June 2026",
+ "subtitle": "",
+ "type": "line",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2023-12-31",
+  "2024-12-31",
+  "2025-03-31",
+  "2025-06-30",
+  "2025-12-31",
+  "2026-03-31",
+  "2026-06-30",
+  "2026-09-30"
+ ],
+ "x": {
+  "title": "End of period"
+ },
+ "y": [
+  {
+   "title": "Subscribers (millions)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Starlink subscribers (millions, end of period)",
+   "type": "line",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    2.3,
+    4.4,
+    5,
+    6,
+    8.9,
+    10.3,
+    12,
+    13.6
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 313 Starlink subscribers",
+ "tab": "313 Starlink subscribers",
+ "workbook": "Bot experiments"
+}

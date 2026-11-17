@@ -1,7 +1,747 @@
 {
- "generated": "2026-11-17T13:11:14Z",
+ "generated": "2026-11-17T13:57:49Z",
  "note": "Interactive chart data for the Sheets library. Built by scripts/sheets_data.py from a spreadsheets.get plus values.batchGet dump. The browser draws these files. View PNG still uses static/sheets/full/. Retired tabs in EXCLUDED_TABS are omitted.",
  "charts": [
+  {
+   "book": "bot1",
+   "gid": 100216645,
+   "n": 1,
+   "type": "line",
+   "title": "Crypto since the Nov 5 2024 US election: Bitcoin vs Ether, Solana and XRP (weekly, Nov 5 2024 = 100)",
+   "tab": "283 Crypto since 2024 election",
+   "supported": true,
+   "file": "sheets/data/bot1/100216645.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1003143037,
+   "n": 1,
+   "type": "line",
+   "title": "How stretched are stocks? S&P 500 and Nasdaq-100: % above/below their 200-day moving average",
+   "tab": "193 Stocks vs 200-day average",
+   "supported": true,
+   "file": "sheets/data/bot1/1003143037.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 100580780,
+   "n": 1,
+   "type": "line",
+   "title": "Nvidia's biggest direct customers, % of revenue (blank = no customer ≥10% disclosed)",
+   "tab": "334 Nvidia top-customer share",
+   "supported": true,
+   "file": "sheets/data/bot1/100580780.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 100750083,
+   "n": 1,
+   "type": "line",
+   "title": "VIX term structure: 3-month vs 1-month implied vol",
+   "tab": "41 VIX term structure",
+   "supported": true,
+   "file": "sheets/data/bot1/100750083.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1011438506,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla net income with and without regulatory-credit revenue, trailing four quarters",
+   "tab": "302 Tesla profit ex credits",
+   "supported": true,
+   "file": "sheets/data/bot1/1011438506.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1019005330,
+   "n": 1,
+   "type": "line",
+   "title": "Households are all-in on stocks: equities as % of household financial assets (Fed Z.1, quarterly)",
+   "tab": "246 Households all-in on stocks",
+   "supported": true,
+   "file": "sheets/data/bot1/1019005330.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 102043516,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin vs real yields: 52-week rolling correlation",
+   "tab": "27 BTC vs real yield corr",
+   "supported": true,
+   "file": "sheets/data/bot1/102043516.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1027143376,
+   "n": 1,
+   "type": "line",
+   "title": "Strategy vs bitcoin: 30-day realized volatility",
+   "tab": "97 MSTR vol vs BTC vol",
+   "supported": true,
+   "file": "sheets/data/bot1/1027143376.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1030630302,
+   "n": 1,
+   "type": "line",
+   "title": "Aussie dollar vs copper: the link broke",
+   "tab": "48 AUD vs copper",
+   "supported": true,
+   "file": "sheets/data/bot1/1030630302.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1039927709,
+   "n": 1,
+   "type": "line",
+   "title": "Tech jobs since ChatGPT: programming services vs data-center/hosting vs all jobs (Nov 2022 = 100)",
+   "tab": "188 Tech jobs since ChatGPT",
+   "supported": true,
+   "file": "sheets/data/bot1/1039927709.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1048508082,
+   "n": 1,
+   "type": "line",
+   "title": "Apartment building boom and bust: 5+ unit share of housing starts (12-mo avg)",
+   "tab": "175 Apartment share of starts",
+   "supported": true,
+   "file": "sheets/data/bot1/1048508082.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1049400644,
+   "n": 1,
+   "type": "line",
+   "title": "The Strategic Petroleum Reserve vs commercial crude inventories (month-end)",
+   "tab": "265 SPR vs commercial crude",
+   "supported": true,
+   "file": "sheets/data/bot1/1049400644.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1070970002,
+   "n": 1,
+   "type": "line",
+   "title": "Silver in today's dollars: monthly average price, CPI-adjusted to Aug 2026",
+   "tab": "269 Silver in today's dollars",
+   "supported": true,
+   "file": "sheets/data/bot1/1070970002.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1070995885,
+   "n": 1,
+   "type": "line",
+   "title": "AI and coders: software-developer job postings vs all postings (Indeed)",
+   "tab": "76 Software job postings",
+   "supported": true,
+   "file": "sheets/data/bot1/1070995885.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1081306527,
+   "n": 1,
+   "type": "line",
+   "title": "REITs vs the S&P 500 (VNQ ÷ SPY) and the 10-year yield (inverted)",
+   "tab": "116 REITs vs S&P vs 10Y",
+   "supported": true,
+   "file": "sheets/data/bot1/1081306527.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1085148301,
+   "n": 1,
+   "type": "line",
+   "title": "Cloud revenue per USD 1 of capex (trailing 4 quarters): the payback ratio is falling",
+   "tab": "328 Cloud revenue per capex $",
+   "supported": true,
+   "file": "sheets/data/bot1/1085148301.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 108643996,
+   "n": 1,
+   "type": "combo",
+   "title": "Monthly mortgage payment on the median US home (20% down)",
+   "tab": "07 Mortgage payment",
+   "supported": true,
+   "file": "sheets/data/bot1/108643996.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1097159598,
+   "n": 1,
+   "type": "column",
+   "title": "Real (after-inflation) annualized returns by decade: stocks vs bonds vs gold",
+   "tab": "300 Real returns by decade",
+   "supported": true,
+   "file": "sheets/data/bot1/1097159598.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1112919588,
+   "n": 1,
+   "type": "line",
+   "title": "Utilities' cash squeeze: capex as % of operating cash flow, 7 large utilities (TTM)",
+   "tab": "339 Utility capex % cash flow",
+   "supported": true,
+   "file": "sheets/data/bot1/1112919588.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1114766401,
+   "n": 1,
+   "type": "combo",
+   "title": "AI capex: information-processing equipment investment, % of GDP",
+   "tab": "20 AI equipment capex",
+   "supported": true,
+   "file": "sheets/data/bot1/1114766401.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1121141532,
+   "n": 1,
+   "type": "combo",
+   "title": "Seasonality: S&P 500 average return by calendar month and how often each month is positive, 1971–2025",
+   "tab": "273 S&P 500 by calendar month",
+   "supported": true,
+   "file": "sheets/data/bot1/1121141532.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1133267954,
+   "n": 1,
+   "type": "line",
+   "title": "Real (inflation-adjusted) house prices: US vs Canada vs Germany vs UK vs Japan",
+   "tab": "178 Real home prices by country",
+   "supported": true,
+   "file": "sheets/data/bot1/1133267954.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1136586665,
+   "n": 1,
+   "type": "line",
+   "title": "Software & R&D investment as a share of GDP",
+   "tab": "78 Software & IP investment",
+   "supported": true,
+   "file": "sheets/data/bot1/1136586665.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1138005522,
+   "n": 1,
+   "type": "line",
+   "title": "R&D intensity: research & development spending as % of revenue (trailing 4Q)",
+   "tab": "216 R&D intensity",
+   "supported": true,
+   "file": "sheets/data/bot1/1138005522.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1144375750,
+   "n": 1,
+   "type": "line",
+   "title": "Stablecoin market share: Tether (USDT) vs USD Coin (USDC)",
+   "tab": "146 USDT vs USDC share",
+   "supported": true,
+   "file": "sheets/data/bot1/1144375750.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1161030254,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla capital expenditures per quarter: USD 4.7bn in Q3 2026",
+   "tab": "304 Tesla quarterly capex",
+   "supported": true,
+   "file": "sheets/data/bot1/1161030254.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1164178367,
+   "n": 1,
+   "type": "line",
+   "title": "Energy stocks vs the oil price (XLE total return ÷ WTI futures)",
+   "tab": "132 Energy stocks vs oil",
+   "supported": true,
+   "file": "sheets/data/bot1/1164178367.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1166817037,
+   "n": 1,
+   "type": "line",
+   "title": "Gold-to-oil ratio: barrels of WTI crude one ounce of gold buys (month-end)",
+   "tab": "270 Gold-to-oil ratio",
+   "supported": true,
+   "file": "sheets/data/bot1/1166817037.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1167074374,
+   "n": 1,
+   "type": "line",
+   "title": "What drives the 10-year yield: real yield (TIPS) vs breakeven inflation (month-end)",
+   "tab": "299 Real yield vs breakeven",
+   "supported": true,
+   "file": "sheets/data/bot1/1167074374.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1169775304,
+   "n": 1,
+   "type": "line",
+   "title": "Ether priced in Bitcoin: ETH/BTC ratio since 2019",
+   "tab": "02 ETH-BTC ratio",
+   "supported": true,
+   "file": "sheets/data/bot1/1169775304.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 117148574,
+   "n": 1,
+   "type": "line",
+   "title": "Sticky vs flexible core inflation (Atlanta Fed)",
+   "tab": "53 Sticky vs flexible CPI",
+   "supported": true,
+   "file": "sheets/data/bot1/117148574.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1173797512,
+   "n": 1,
+   "type": "line",
+   "title": "The asset base to be depreciated: net property & equipment (USD bn)",
+   "tab": "333 Big Tech net PP&E",
+   "supported": true,
+   "file": "sheets/data/bot1/1173797512.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1212802436,
+   "n": 1,
+   "type": "line",
+   "title": "Temp help jobs as a leading indicator: temporary help employment vs total payrolls (YoY)",
+   "tab": "236 Temp jobs lead payrolls",
+   "supported": true,
+   "file": "sheets/data/bot1/1212802436.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1220281045,
+   "n": 1,
+   "type": "line",
+   "title": "S&P 500 rolling 10-year annualized total return: nominal vs after inflation",
+   "tab": "192 S&P 10-yr real returns",
+   "supported": true,
+   "file": "sheets/data/bot1/1220281045.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1224590616,
+   "n": 1,
+   "type": "line",
+   "title": "Loonie and oil: USD/CAD vs WTI crude",
+   "tab": "47 USDCAD vs oil",
+   "supported": true,
+   "file": "sheets/data/bot1/1224590616.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1226066028,
+   "n": 1,
+   "type": "line",
+   "title": "Non-mortgage interest paid by households as % of disposable income",
+   "tab": "169 Non-mortgage interest",
+   "supported": true,
+   "file": "sheets/data/bot1/1226066028.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1229759147,
+   "n": 1,
+   "type": "line",
+   "title": "The Treasury yield curve now vs one and two years ago",
+   "tab": "298 Treasury yield curve",
+   "supported": true,
+   "file": "sheets/data/bot1/1229759147.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 123795134,
+   "n": 1,
+   "type": "line",
+   "title": "Nikkei 225 in yen vs in dollars",
+   "tab": "50 Nikkei in USD",
+   "supported": true,
+   "file": "sheets/data/bot1/123795134.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 125248111,
+   "n": 1,
+   "type": "line",
+   "title": "Big Tech 4: quarterly capex has overtaken free cash flow (USD bn)",
+   "tab": "326 Big Tech capex vs FCF",
+   "supported": true,
+   "file": "sheets/data/bot1/125248111.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1254747964,
+   "n": 1,
+   "type": "line",
+   "title": "AI capex is eating cash flow: capex as % of operating cash flow (trailing 4Q)",
+   "tab": "152 Capex as % of cash flow",
+   "supported": true,
+   "file": "sheets/data/bot1/1254747964.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1266156625,
+   "n": 1,
+   "type": "line",
+   "title": "Gilts vs Treasuries: UK–US 10-year spread and the pound",
+   "tab": "46 UK-US spread vs GBP",
+   "supported": true,
+   "file": "sheets/data/bot1/1266156625.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1274887805,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin miners squeezed: hashprice vs hash rate",
+   "tab": "28 BTC hashprice",
+   "supported": true,
+   "file": "sheets/data/bot1/1274887805.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1284986570,
+   "n": 1,
+   "type": "line",
+   "title": "Strategy's beta to bitcoin (52 weeks of weekly returns)",
+   "tab": "95 MSTR beta to BTC",
+   "supported": true,
+   "file": "sheets/data/bot1/1284986570.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1286532189,
+   "n": 1,
+   "type": "line",
+   "title": "Coinbase stock vs bitcoin: relative price and 52-week beta",
+   "tab": "143 Coinbase vs BTC",
+   "supported": true,
+   "file": "sheets/data/bot1/1286532189.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1303544197,
+   "n": 1,
+   "type": "line",
+   "title": "Household debt service: mortgages vs consumer debt (% of disposable income)",
+   "tab": "168 Debt service split",
+   "supported": true,
+   "file": "sheets/data/bot1/1303544197.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1307998812,
+   "n": 1,
+   "type": "column",
+   "title": "Borrowing for AI: total debt at each fiscal year end vs the latest quarter",
+   "tab": "211 Big Tech debt for AI",
+   "supported": true,
+   "file": "sheets/data/bot1/1307998812.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 131301263,
+   "n": 1,
+   "type": "line",
+   "title": "From buybacks to data centers: Microsoft+Alphabet+Amazon+Meta capex vs share repurchases (trailing 4Q)",
+   "tab": "212 Big Tech capex vs buybacks",
+   "supported": true,
+   "file": "sheets/data/bot1/131301263.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1324255202,
+   "n": 1,
+   "type": "line",
+   "title": "The pandemic goods binge and the services catch-up: real consumer spending (Feb 2020 = 100)",
+   "tab": "242 Goods vs services spending",
+   "supported": true,
+   "file": "sheets/data/bot1/1324255202.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1324885807,
+   "n": 1,
+   "type": "line",
+   "title": "Hidden slack: involuntary part-time workers and multiple jobholders as % of employment",
+   "tab": "234 Part-time & second jobs",
+   "supported": true,
+   "file": "sheets/data/bot1/1324885807.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1328859831,
+   "n": 1,
+   "type": "line",
+   "title": "Who captures AI chip profits? Gross margins of Nvidia, Broadcom, AMD, Micron and Intel (trailing 4Q)",
+   "tab": "213 Chip gross margins",
+   "supported": true,
+   "file": "sheets/data/bot1/1328859831.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1340091746,
+   "n": 1,
+   "type": "line",
+   "title": "Semiconductor producer prices relative to consumer prices (PPI ÷ CPI)",
+   "tab": "157 Real chip prices",
+   "supported": true,
+   "file": "sheets/data/bot1/1340091746.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 134436208,
+   "n": 1,
+   "type": "line",
+   "title": "The cloud race: AWS vs Microsoft Cloud vs Google Cloud, quarterly revenue growth (YoY)",
+   "tab": "203 Cloud growth race",
+   "supported": true,
+   "file": "sheets/data/bot1/134436208.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1358538622,
+   "n": 1,
+   "type": "line",
+   "title": "The depreciation bill for AI data centers: depreciation as % of revenue (trailing 4 quarters)",
+   "tab": "208 Depreciation vs revenue",
+   "supported": true,
+   "file": "sheets/data/bot1/1358538622.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1363241271,
+   "n": 1,
+   "type": "column",
+   "title": "Capex as % of operating cash flow, each quarter: Alphabet and Amazon top 100%",
+   "tab": "321 Capex % of cash flow, qtrly",
+   "supported": true,
+   "file": "sheets/data/bot1/1363241271.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1390301732,
+   "n": 1,
+   "type": "column",
+   "title": "World stock markets in US dollars: 2026 YTD and 1-year total return (iShares country ETFs)",
+   "tab": "120 Country ETF scoreboard",
+   "supported": true,
+   "file": "sheets/data/bot1/1390301732.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1413634477,
+   "n": 1,
+   "type": "combo",
+   "title": "Falcon booster reuse: share of launches on flown boosters and record flights per booster",
+   "tab": "104 Falcon booster reuse",
+   "supported": true,
+   "file": "sheets/data/bot1/1413634477.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1414734123,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin miners that pivoted to AI data centers vs MARA and bitcoin (Dec 29 2023 = 100)",
+   "tab": "144 BTC miners AI pivot",
+   "supported": true,
+   "file": "sheets/data/bot1/1414734123.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1415455632,
+   "n": 1,
+   "type": "line",
+   "title": "Gold broke away from real yields (real yield axis inverted)",
+   "tab": "36 Gold vs real yield",
+   "supported": true,
+   "file": "sheets/data/bot1/1415455632.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1421725187,
+   "n": 1,
+   "type": "line",
+   "title": "SpaceX since its IPO vs Tesla and the Nasdaq-100 (IPO price = 100)",
+   "tab": "100 SPCX vs TSLA & Nasdaq",
+   "supported": true,
+   "file": "sheets/data/bot1/1421725187.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1424667465,
+   "n": 1,
+   "type": "line",
+   "title": "US natural gas in storage vs the 5-year average (Lower 48, weekly)",
+   "tab": "268 Gas storage vs 5-yr avg",
+   "supported": true,
+   "file": "sheets/data/bot1/1424667465.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1425972109,
+   "n": 1,
+   "type": "line",
+   "title": "Berkshire vs the S&P 500: BRK-B ÷ SPY total return (Buffett stepped down as CEO at end-2025)",
+   "tab": "276 Berkshire vs S&P 500",
+   "supported": true,
+   "file": "sheets/data/bot1/1425972109.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1435363732,
+   "n": 1,
+   "type": "line",
+   "title": "Homeownership rate vs rental vacancy rate (quarterly)",
+   "tab": "250 Homeownership vs vacancy",
+   "supported": true,
+   "file": "sheets/data/bot1/1435363732.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1438475208,
+   "n": 1,
+   "type": "combo",
+   "title": "Starlink: satellites launched, re-entered and still in orbit each year",
+   "tab": "105 Starlink sats in orbit",
+   "supported": true,
+   "file": "sheets/data/bot1/1438475208.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1444647589,
+   "n": 1,
+   "type": "line",
+   "title": "The Musk trade: Dogecoin vs Tesla stock (weekly, Jan 2020 = 100, log)",
+   "tab": "289 Dogecoin vs Tesla",
+   "supported": true,
+   "file": "sheets/data/bot1/1444647589.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1450839973,
+   "n": 1,
+   "type": "line",
+   "title": "Home prices vs household income (Case-Shiller ÷ median income)",
+   "tab": "65 Price-to-income",
+   "supported": true,
+   "file": "sheets/data/bot1/1450839973.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1457832817,
+   "n": 1,
+   "type": "line",
+   "title": "Private-credit stress? BDC stocks (BIZD) ÷ high-yield bonds (HYG), total return",
+   "tab": "127 Private credit BDCs vs HY",
+   "supported": true,
+   "file": "sheets/data/bot1/1457832817.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 145827481,
+   "n": 1,
+   "type": "line",
+   "title": "Energy storage & solar's share of Tesla gross profit, trailing four quarters",
+   "tab": "307 Tesla energy profit share",
+   "supported": true,
+   "file": "sheets/data/bot1/145827481.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1465433288,
+   "n": 1,
+   "type": "line",
+   "title": "Gold/silver ratio (ounces of silver per ounce of gold)",
+   "tab": "37 Gold-silver ratio",
+   "supported": true,
+   "file": "sheets/data/bot1/1465433288.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1470936556,
+   "n": 1,
+   "type": "line",
+   "title": "Cash leaving banks? Money market fund assets as % of bank deposits",
+   "tab": "171 Money funds vs deposits",
+   "supported": true,
+   "file": "sheets/data/bot1/1470936556.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 14803985,
+   "n": 1,
+   "type": "line",
+   "title": "Entry-level squeeze: unemployment of young college grads vs all workers (12-month averages)",
+   "tab": "187 Young grads jobless rate",
+   "supported": true,
+   "file": "sheets/data/bot1/14803985.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1483938898,
+   "n": 1,
+   "type": "line",
+   "title": "Dow theory check: Dow Transports ÷ Dow Industrials",
+   "tab": "112 Transports vs Industrials",
+   "supported": true,
+   "file": "sheets/data/bot1/1483938898.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1522447490,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla gross margin by segment: automotive vs energy generation & storage",
+   "tab": "306 Tesla auto vs energy margin",
+   "supported": true,
+   "file": "sheets/data/bot1/1522447490.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1527784059,
+   "n": 1,
+   "type": "line",
+   "title": "DOGE and the jobs market: federal vs state & local vs private payrolls (Jan 2025 = 100)",
+   "tab": "237 Federal job cuts",
+   "supported": true,
+   "file": "sheets/data/bot1/1527784059.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1538787023,
+   "n": 1,
+   "type": "line",
+   "title": "One sector is carrying hiring: 12-month job gains in health care & social assistance vs everything else",
+   "tab": "238 Health care job gains",
+   "supported": true,
+   "file": "sheets/data/bot1/1538787023.json"
+  },
   {
    "book": "bot1",
    "gid": 1540677114,
@@ -24,6 +764,366 @@
   },
   {
    "book": "bot1",
+   "gid": 1554167260,
+   "n": 1,
+   "type": "line",
+   "title": "Price-to-sales then and now: Cisco from 1998 vs Nvidia and Palantir from 2023",
+   "tab": "335 Price-to-sales vs Cisco",
+   "supported": true,
+   "file": "sheets/data/bot1/1554167260.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1584116198,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin Lightning Network capacity, Jan 2018–Oct 2026: 36% below Dec 2025 record",
+   "tab": "341 Lightning capacity",
+   "supported": true,
+   "file": "sheets/data/bot1/1584116198.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1589445755,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin options: implied volatility (DVOL) vs realized volatility",
+   "tab": "145 BTC implied vs realized vol",
+   "supported": true,
+   "file": "sheets/data/bot1/1589445755.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1597166284,
+   "n": 1,
+   "type": "line",
+   "title": "Is AI hitting entry-level jobs? Youth (16–24) vs overall unemployment rate",
+   "tab": "249 Youth unemployment",
+   "supported": true,
+   "file": "sheets/data/bot1/1597166284.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1607076800,
+   "n": 1,
+   "type": "line",
+   "title": "Is Nvidia the new Cisco? NVDA since ChatGPT vs CSCO in the dot-com era (start = 100)",
+   "tab": "194 Nvidia vs Cisco 2000",
+   "supported": true,
+   "file": "sheets/data/bot1/1607076800.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1617027486,
+   "n": 1,
+   "type": "line",
+   "title": "Are paychecks beating inflation? Real average hourly earnings growth (production & nonsupervisory workers)",
+   "tab": "189 Real wage growth",
+   "supported": true,
+   "file": "sheets/data/bot1/1617027486.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1628691761,
+   "n": 1,
+   "type": "line",
+   "title": "SpaceX vs other listed space stocks since the SPCX IPO (rebased to 100)",
+   "tab": "108 SPCX vs space stocks",
+   "supported": true,
+   "file": "sheets/data/bot1/1628691761.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1635736949,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla cash & short-term investments vs debt, quarter ends",
+   "tab": "311 Tesla cash vs debt",
+   "supported": true,
+   "file": "sheets/data/bot1/1635736949.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1636664411,
+   "n": 1,
+   "type": "line",
+   "title": "The midterm-year pattern: S&P 500 path in 2026 vs the average midterm year since 1974 (prior year end = 100)",
+   "tab": "272 Midterm-year S&P path",
+   "supported": true,
+   "file": "sheets/data/bot1/1636664411.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1640277307,
+   "n": 1,
+   "type": "line",
+   "title": "Eating out vs eating in: restaurant & bar sales ÷ grocery store sales (monthly)",
+   "tab": "243 Eating out vs eating in",
+   "supported": true,
+   "file": "sheets/data/bot1/1640277307.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1642110491,
+   "n": 1,
+   "type": "column",
+   "title": "Bitcoin vs S&P 500: calendar-year returns (2026 YTD to Oct 2)",
+   "tab": "31 BTC vs S&P by year",
+   "supported": true,
+   "file": "sheets/data/bot1/1642110491.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1652000524,
+   "n": 1,
+   "type": "line",
+   "title": "Circle (USDC issuer) since its Jun 5 2025 IPO vs Coinbase and Bitcoin (daily, first close = 100)",
+   "tab": "290 Circle since its IPO",
+   "supported": true,
+   "file": "sheets/data/bot1/1652000524.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1659539939,
+   "n": 1,
+   "type": "line",
+   "title": "Platinum priced in gold: platinum ÷ gold",
+   "tab": "134 Platinum vs gold",
+   "supported": true,
+   "file": "sheets/data/bot1/1659539939.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1672892616,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin's supply inflation rate after each halving",
+   "tab": "34 BTC supply inflation",
+   "supported": true,
+   "file": "sheets/data/bot1/1672892616.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1690203185,
+   "n": 1,
+   "type": "line",
+   "title": "Europe pays a multiple of US natural gas prices",
+   "tab": "40 Europe vs US natgas",
+   "supported": true,
+   "file": "sheets/data/bot1/1690203185.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1692929819,
+   "n": 1,
+   "type": "line",
+   "title": "Meta: operating cash flow, capex and free cash flow per quarter (USD bn)",
+   "tab": "325 Meta quarterly FCF",
+   "supported": true,
+   "file": "sheets/data/bot1/1692929819.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1694432360,
+   "n": 1,
+   "type": "line",
+   "title": "Tech vs banks: Technology Select Sector (XLK) ÷ Financial Select Sector (XLF), total return (month-end)",
+   "tab": "275 Tech vs financials",
+   "supported": true,
+   "file": "sheets/data/bot1/1694432360.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1697134713,
+   "n": 1,
+   "type": "line",
+   "title": "Retail sales: nominal vs inflation-adjusted growth",
+   "tab": "60 Real retail sales",
+   "supported": true,
+   "file": "sheets/data/bot1/1697134713.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1701983428,
+   "n": 1,
+   "type": "line",
+   "title": "Strategy premium to its bitcoin: market cap ÷ value of BTC held (mNAV)",
+   "tab": "93 MSTR mNAV premium",
+   "supported": true,
+   "file": "sheets/data/bot1/1701983428.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1708270675,
+   "n": 1,
+   "type": "line",
+   "title": "Price-to-sales of Palantir, Nvidia, Broadcom, AMD and Microsoft (weekly, log scale)",
+   "tab": "218 AI stocks price-to-sales",
+   "supported": true,
+   "file": "sheets/data/bot1/1708270675.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1715540423,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla inventory days: inventory ÷ trailing four-quarter cost of revenue × 365",
+   "tab": "312 Tesla inventory days",
+   "supported": true,
+   "file": "sheets/data/bot1/1715540423.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 171599627,
+   "n": 1,
+   "type": "line",
+   "title": "Where US imports come from: China, Mexico and Taiwan (AI servers) shares, rolling 12 months",
+   "tab": "160 China vs Mexico vs Taiwan",
+   "supported": true,
+   "file": "sheets/data/bot1/171599627.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1718545259,
+   "n": 1,
+   "type": "line",
+   "title": "Underlying inflation: Dallas Fed trimmed-mean PCE vs core PCE",
+   "tab": "54 Trimmed vs core PCE",
+   "supported": true,
+   "file": "sheets/data/bot1/1718545259.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1720888818,
+   "n": 1,
+   "type": "line",
+   "title": "DeFi total value locked, measured in ether vs in dollars",
+   "tab": "147 DeFi TVL in ETH terms",
+   "supported": true,
+   "file": "sheets/data/bot1/1720888818.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1747865584,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla market value per vehicle delivered in the past year (USD thousands)",
+   "tab": "309 Tesla value per car sold",
+   "supported": true,
+   "file": "sheets/data/bot1/1747865584.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1754119588,
+   "n": 1,
+   "type": "line",
+   "title": "US crude oil production vs the WTI price (monthly averages)",
+   "tab": "271 US oil output vs price",
+   "supported": true,
+   "file": "sheets/data/bot1/1754119588.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1763497571,
+   "n": 1,
+   "type": "column",
+   "title": "Starlink revenue per subscriber (ARPU, USD per month) keeps falling",
+   "tab": "314 Starlink ARPU",
+   "supported": true,
+   "file": "sheets/data/bot1/1763497571.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1770579175,
+   "n": 1,
+   "type": "line",
+   "title": "Paid in stock: stock-based compensation as % of revenue (trailing 4Q)",
+   "tab": "217 Stock comp % of revenue",
+   "supported": true,
+   "file": "sheets/data/bot1/1770579175.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1778759744,
+   "n": 1,
+   "type": "column",
+   "title": "Crypto majors vs stocks and gold: 2026 YTD and 1-year returns (to Oct 2 2026)",
+   "tab": "142 Crypto vs stocks scoreboard",
+   "supported": true,
+   "file": "sheets/data/bot1/1778759744.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1786290992,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin on-chain activity",
+   "tab": "32 BTC transactions vs price",
+   "supported": true,
+   "file": "sheets/data/bot1/1786290992.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1788831373,
+   "n": 1,
+   "type": "column",
+   "title": "Bitcoin's average return by calendar month (2015–Sep 2026)",
+   "tab": "03 BTC by month",
+   "supported": true,
+   "file": "sheets/data/bot1/1788831373.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 179437664,
+   "n": 1,
+   "type": "line",
+   "title": "Wealth concentration: share held by the top 1% vs the bottom 50% of US households",
+   "tab": "247 Top 1% vs bottom 50% wealth",
+   "supported": true,
+   "file": "sheets/data/bot1/179437664.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1796631140,
+   "n": 1,
+   "type": "line",
+   "title": "NASDAQ Composite: dot-com run (from Netscape IPO) vs AI run (from ChatGPT launch)",
+   "tab": "156 Nasdaq dot-com vs AI era",
+   "supported": true,
+   "file": "sheets/data/bot1/1796631140.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1798867607,
+   "n": 1,
+   "type": "line",
+   "title": "US home prices: nominal vs inflation-adjusted (Jan 2000=100)",
+   "tab": "08 Real home prices",
+   "supported": true,
+   "file": "sheets/data/bot1/1798867607.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1802447792,
+   "n": 1,
+   "type": "column",
+   "title": "Currencies vs the US dollar: 2026 YTD and 1-year change (to Sep 25 2026)",
+   "tab": "180 FX vs dollar scoreboard",
+   "supported": true,
+   "file": "sheets/data/bot1/1802447792.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1809420114,
+   "n": 1,
+   "type": "line",
+   "title": "Credit is waking up: high-yield spread vs VIX",
+   "tab": "11 HY spread vs VIX",
+   "supported": true,
+   "file": "sheets/data/bot1/1809420114.json"
+  },
+  {
+   "book": "bot1",
    "gid": 1810821762,
    "n": 1,
    "type": "line",
@@ -31,6 +1131,1876 @@
    "tab": "04 BTC vs 200-week MA",
    "supported": true,
    "file": "sheets/data/bot1/1810821762.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1810990664,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin MVRV: market value ÷ realized value (on-chain cost basis)",
+   "tab": "139 BTC MVRV",
+   "supported": true,
+   "file": "sheets/data/bot1/1810990664.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1834386145,
+   "n": 1,
+   "type": "line",
+   "title": "Homeowners' equity as % of household real estate value (Fed Z.1, quarterly)",
+   "tab": "293 Home equity share",
+   "supported": true,
+   "file": "sheets/data/bot1/1834386145.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1836327978,
+   "n": 1,
+   "type": "combo",
+   "title": "Tesla quarterly deliveries vs its share price",
+   "tab": "85 TSLA deliveries vs price",
+   "supported": true,
+   "file": "sheets/data/bot1/1836327978.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1846413225,
+   "n": 1,
+   "type": "line",
+   "title": "Risk-adjusted returns: 1-year rolling Sharpe ratio, bitcoin vs S&P 500 vs gold",
+   "tab": "149 BTC vs S&P vs gold Sharpe",
+   "supported": true,
+   "file": "sheets/data/bot1/1846413225.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1856724711,
+   "n": 1,
+   "type": "line",
+   "title": "Euro vs the US–German 10-year yield gap",
+   "tab": "17 EURUSD vs US-DE spread",
+   "supported": true,
+   "file": "sheets/data/bot1/1856724711.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1864361152,
+   "n": 1,
+   "type": "line",
+   "title": "Stablecoins vs the T-bill market: USD stablecoin supply as % of Treasury bills outstanding (month-end)",
+   "tab": "200 Stablecoins vs T-bills",
+   "supported": true,
+   "file": "sheets/data/bot1/1864361152.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 187474099,
+   "n": 1,
+   "type": "line",
+   "title": "Strategy (MSTR) priced in bitcoin: satoshis per share",
+   "tab": "92 MSTR priced in BTC",
+   "supported": true,
+   "file": "sheets/data/bot1/187474099.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1884314136,
+   "n": 1,
+   "type": "line",
+   "title": "Ether supply since the Merge (Sep 15 2022): \"ultrasound money\" check",
+   "tab": "140 ETH supply since Merge",
+   "supported": true,
+   "file": "sheets/data/bot1/1884314136.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1892662496,
+   "n": 1,
+   "type": "line",
+   "title": "US trade balance as % of GDP (goods & services)",
+   "tab": "68 Trade balance % GDP",
+   "supported": true,
+   "file": "sheets/data/bot1/1892662496.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1902100886,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin priced in gold: ounces per BTC",
+   "tab": "21 BTC in gold",
+   "supported": true,
+   "file": "sheets/data/bot1/1902100886.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1913133592,
+   "n": 1,
+   "type": "combo",
+   "title": "SpaceX vs the rest of the world: orbital launch attempts per year",
+   "tab": "103 SpaceX vs world launches",
+   "supported": true,
+   "file": "sheets/data/bot1/1913133592.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1918411046,
+   "n": 1,
+   "type": "line",
+   "title": "Ground beef prices: nominal vs inflation-adjusted (US city average, USD/lb)",
+   "tab": "137 Real ground beef price",
+   "supported": true,
+   "file": "sheets/data/bot1/1918411046.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1923977933,
+   "n": 1,
+   "type": "line",
+   "title": "Getting stuck: long-term unemployed share and median weeks out of work",
+   "tab": "235 Long-term unemployment",
+   "supported": true,
+   "file": "sheets/data/bot1/1923977933.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 192458593,
+   "n": 1,
+   "type": "column",
+   "title": "Bitcoin is calmer: share of days by size of daily move",
+   "tab": "33 BTC daily move distribution",
+   "supported": true,
+   "file": "sheets/data/bot1/192458593.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1924940296,
+   "n": 1,
+   "type": "combo",
+   "title": "The AI foundry: TSMC monthly revenue in US dollars and year-over-year growth",
+   "tab": "222 TSMC monthly revenue",
+   "supported": true,
+   "file": "sheets/data/bot1/1924940296.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1925440514,
+   "n": 1,
+   "type": "line",
+   "title": "Defense stocks vs the market: iShares US Aerospace & Defense (ITA) ÷ SPY, total return (month-end)",
+   "tab": "278 Defense stocks vs S&P",
+   "supported": true,
+   "file": "sheets/data/bot1/1925440514.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1927664203,
+   "n": 1,
+   "type": "line",
+   "title": "What consumers expect vs actual inflation",
+   "tab": "59 Inflation expectations",
+   "supported": true,
+   "file": "sheets/data/bot1/1927664203.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1931780454,
+   "n": 1,
+   "type": "line",
+   "title": "High-beta vs low-volatility S&P 500 stocks (SPHB ÷ SPLV, total return)",
+   "tab": "114 High beta vs low vol",
+   "supported": true,
+   "file": "sheets/data/bot1/1931780454.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1934181206,
+   "n": 1,
+   "type": "line",
+   "title": "What the bond market expects from the Fed: 2-year Treasury yield minus the effective fed funds rate (month-end)",
+   "tab": "255 2Y yield minus fed funds",
+   "supported": true,
+   "file": "sheets/data/bot1/1934181206.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1943923593,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla vs the Nasdaq: relative performance (TSLA ÷ Nasdaq Composite, Jan 2019=100)",
+   "tab": "81 TSLA vs Nasdaq",
+   "supported": true,
+   "file": "sheets/data/bot1/1943923593.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1948267700,
+   "n": 1,
+   "type": "line",
+   "title": "SPCX price-to-sales since the June 2026 IPO (market cap ÷ trailing 4-quarter revenue)",
+   "tab": "318 SPCX price-to-sales",
+   "supported": true,
+   "file": "sheets/data/bot1/1948267700.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1958436869,
+   "n": 1,
+   "type": "line",
+   "title": "The diesel premium: US retail diesel minus regular gasoline price (month-end, weekly survey)",
+   "tab": "264 Diesel premium",
+   "supported": true,
+   "file": "sheets/data/bot1/1958436869.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1959457920,
+   "n": 1,
+   "type": "line",
+   "title": "What $1 invested at the start of 1928 became: stocks vs bonds, bills, gold and housing (nominal, log scale)",
+   "tab": "281 $1 invested since 1928",
+   "supported": true,
+   "file": "sheets/data/bot1/1959457920.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1966044875,
+   "n": 1,
+   "type": "line",
+   "title": "Productivity vs real pay: nonfarm business output per hour vs real compensation per hour",
+   "tab": "179 Productivity vs pay gap",
+   "supported": true,
+   "file": "sheets/data/bot1/1966044875.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1973681990,
+   "n": 1,
+   "type": "line",
+   "title": "Foreigners own a shrinking share of US federal debt",
+   "tab": "70 Foreign share of US debt",
+   "supported": true,
+   "file": "sheets/data/bot1/1973681990.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1973893486,
+   "n": 1,
+   "type": "line",
+   "title": "Milei's Argentina: the Merval stock index in US dollars at the official exchange rate (weekly, log scale)",
+   "tab": "260 Argentina stocks in USD",
+   "supported": true,
+   "file": "sheets/data/bot1/1973893486.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1983689450,
+   "n": 1,
+   "type": "line",
+   "title": "The AI build-out: quarterly capex of Amazon, Alphabet, Microsoft, Meta and Oracle",
+   "tab": "230 Hyperscaler capex by co",
+   "supported": true,
+   "file": "sheets/data/bot1/1983689450.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2000805977,
+   "n": 1,
+   "type": "line",
+   "title": "Robinhood vs Coinbase: HOOD ÷ COIN share-price ratio (weekly)",
+   "tab": "288 Robinhood vs Coinbase",
+   "supported": true,
+   "file": "sheets/data/bot1/2000805977.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 200447618,
+   "n": 1,
+   "type": "line",
+   "title": "Core goods vs core services inflation (CPI, YoY)",
+   "tab": "52 Core goods vs services",
+   "supported": true,
+   "file": "sheets/data/bot1/200447618.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2007650510,
+   "n": 1,
+   "type": "line",
+   "title": "A recession indicator the NBER watches: real personal income excluding government transfers (YoY)",
+   "tab": "241 Real income ex transfers",
+   "supported": true,
+   "file": "sheets/data/bot1/2007650510.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2014366922,
+   "n": 1,
+   "type": "line",
+   "title": "Oil vs US natural gas: price ratio (energy parity ≈ 5.8)",
+   "tab": "39 Oil-to-gas ratio",
+   "supported": true,
+   "file": "sheets/data/bot1/2014366922.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2017265191,
+   "n": 1,
+   "type": "line",
+   "title": "Freight recession? Cass shipments vs industrial production (YoY)",
+   "tab": "75 Freight vs industry",
+   "supported": true,
+   "file": "sheets/data/bot1/2017265191.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2026015579,
+   "n": 1,
+   "type": "line",
+   "title": "Profit machines: operating margins of Nvidia vs Microsoft, Meta, Alphabet, Apple and Amazon (trailing 4Q)",
+   "tab": "214 Big Tech operating margins",
+   "supported": true,
+   "file": "sheets/data/bot1/2026015579.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2032880030,
+   "n": 1,
+   "type": "line",
+   "title": "Stocks vs yields: 52-week correlation flipped negative",
+   "tab": "10 Stock-bond corr",
+   "supported": true,
+   "file": "sheets/data/bot1/2032880030.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2037404230,
+   "n": 1,
+   "type": "line",
+   "title": "Disruptive innovation vs the Nasdaq-100: ARKK vs QQQ, total return (Jan 2017 = 100, log)",
+   "tab": "277 ARKK vs Nasdaq-100",
+   "supported": true,
+   "file": "sheets/data/bot1/2037404230.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2061031585,
+   "n": 1,
+   "type": "line",
+   "title": "Chip stocks vs the S&P 500 (SOXX ÷ SPY, total return)",
+   "tab": "154 Semis vs S&P 500",
+   "supported": true,
+   "file": "sheets/data/bot1/2061031585.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2073191161,
+   "n": 1,
+   "type": "line",
+   "title": "The baby bust: total fertility rate, births per woman (replacement ≈ 2.1)",
+   "tab": "261 Fertility rates",
+   "supported": true,
+   "file": "sheets/data/bot1/2073191161.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 208477863,
+   "n": 1,
+   "type": "line",
+   "title": "Tariff shock in the news: US trade policy uncertainty vs overall economic policy uncertainty (log scale)",
+   "tab": "258 Trade policy uncertainty",
+   "supported": true,
+   "file": "sheets/data/bot1/208477863.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2090456245,
+   "n": 1,
+   "type": "line",
+   "title": "Brent minus WTI: the transatlantic oil spread (monthly average)",
+   "tab": "130 Brent-WTI spread",
+   "supported": true,
+   "file": "sheets/data/bot1/2090456245.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2092406374,
+   "n": 1,
+   "type": "line",
+   "title": "Prime-age employment rate vs the unemployment rate (monthly)",
+   "tab": "231 Prime-age employment rate",
+   "supported": true,
+   "file": "sheets/data/bot1/2092406374.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2093913364,
+   "n": 1,
+   "type": "line",
+   "title": "Where the dollar stablecoins live: USD-pegged stablecoin supply by blockchain (month-end)",
+   "tab": "286 Stablecoins by chain",
+   "supported": true,
+   "file": "sheets/data/bot1/2093913364.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2125842791,
+   "n": 1,
+   "type": "line",
+   "title": "Solana priced in ether and bitcoin (SOL/ETH and SOL/BTC×1000)",
+   "tab": "141 SOL vs ETH ratio",
+   "supported": true,
+   "file": "sheets/data/bot1/2125842791.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2132226252,
+   "n": 1,
+   "type": "combo",
+   "title": "Auto loan rates vs car sales",
+   "tab": "63 Auto loans vs sales",
+   "supported": true,
+   "file": "sheets/data/bot1/2132226252.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 2133126570,
+   "n": 1,
+   "type": "line",
+   "title": "Strategy vs the iShares Bitcoin ETF since ETF launch (rebased to 100)",
+   "tab": "96 MSTR vs IBIT",
+   "supported": true,
+   "file": "sheets/data/bot1/2133126570.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 239048982,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla's regulatory-credit revenue is drying up: USD m per quarter, Q1 2019–Q3 2026",
+   "tab": "301 Tesla regulatory credits",
+   "supported": true,
+   "file": "sheets/data/bot1/239048982.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 259576402,
+   "n": 1,
+   "type": "line",
+   "title": "The median US home priced in bitcoin and in gold (quarterly, log scale)",
+   "tab": "294 Median home in BTC & gold",
+   "supported": true,
+   "file": "sheets/data/bot1/259576402.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 261268035,
+   "n": 1,
+   "type": "line",
+   "title": "Gold miners vs gold: GDX ÷ gold price",
+   "tab": "133 Gold miners vs gold",
+   "supported": true,
+   "file": "sheets/data/bot1/261268035.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 281767151,
+   "n": 1,
+   "type": "line",
+   "title": "Farm squeeze: urea fertilizer price ÷ corn price",
+   "tab": "136 Fertilizer vs corn",
+   "supported": true,
+   "file": "sheets/data/bot1/281767151.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 29052839,
+   "n": 1,
+   "type": "line",
+   "title": "The US now spends more on interest than on defense",
+   "tab": "167 Interest vs defense",
+   "supported": true,
+   "file": "sheets/data/bot1/29052839.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 300777512,
+   "n": 1,
+   "type": "line",
+   "title": "AI capex squeezes cash returns: Big Tech free cash flow yield vs the 10-year Treasury yield",
+   "tab": "219 Big Tech FCF yield vs 10Y",
+   "supported": true,
+   "file": "sheets/data/bot1/300777512.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 300951275,
+   "n": 1,
+   "type": "column",
+   "title": "Bitcoin by day of week: average daily return (2016–Oct 2026)",
+   "tab": "23 BTC by weekday",
+   "supported": true,
+   "file": "sheets/data/bot1/300951275.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 309995467,
+   "n": 1,
+   "type": "combo",
+   "title": "Selling AI servers is a low-margin game: Super Micro quarterly revenue vs gross margin",
+   "tab": "224 Supermicro rev vs margin",
+   "supported": true,
+   "file": "sheets/data/bot1/309995467.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 310431964,
+   "n": 1,
+   "type": "line",
+   "title": "The grid build-out: capex vs operating cash flow of 7 large US utilities (TTM)",
+   "tab": "338 Utility capex boom",
+   "supported": true,
+   "file": "sheets/data/bot1/310431964.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 322752733,
+   "n": 1,
+   "type": "bar",
+   "title": "Nvidia's market value ($5.6tn) vs annual GDP of the largest economies (2025, excluding the US)",
+   "tab": "229 Nvidia vs country GDPs",
+   "supported": true,
+   "file": "sheets/data/bot1/322752733.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 324128550,
+   "n": 1,
+   "type": "line",
+   "title": "The US became a net petroleum exporter: net imports of crude oil and products (negative = net exports)",
+   "tab": "266 US net oil exporter",
+   "supported": true,
+   "file": "sheets/data/bot1/324128550.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 345236488,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin's rolling 4-year annualized return vs Nasdaq-100, S&P 500 and gold",
+   "tab": "197 BTC 4-year rolling return",
+   "supported": true,
+   "file": "sheets/data/bot1/345236488.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 347162127,
+   "n": 1,
+   "type": "line",
+   "title": "A third of federal revenue now goes to interest",
+   "tab": "14 Federal interest burden",
+   "supported": true,
+   "file": "sheets/data/bot1/347162127.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 358971003,
+   "n": 1,
+   "type": "line",
+   "title": "Does AI eat software? Software (IGV) vs chips (SOXX) since ChatGPT",
+   "tab": "155 Software vs semis",
+   "supported": true,
+   "file": "sheets/data/bot1/358971003.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 364521704,
+   "n": 1,
+   "type": "line",
+   "title": "US nonfinancial corporate debt as % of GDP",
+   "tab": "72 Corporate debt % GDP",
+   "supported": true,
+   "file": "sheets/data/bot1/364521704.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 370876757,
+   "n": 1,
+   "type": "column",
+   "title": "How often stocks return X% in a year: S&P 500 annual total returns, 1928–2025",
+   "tab": "282 S&P annual returns spread",
+   "supported": true,
+   "file": "sheets/data/bot1/370876757.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 378380409,
+   "n": 1,
+   "type": "line",
+   "title": "Two measures of growth: real GDP vs real GDI (YoY)",
+   "tab": "74 Real GDP vs GDI",
+   "supported": true,
+   "file": "sheets/data/bot1/378380409.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 386604193,
+   "n": 1,
+   "type": "line",
+   "title": "The AI power trade: utilities vs the S&P 500 (XLU ÷ SPY, total return)",
+   "tab": "138 Utilities vs S&P (AI power)",
+   "supported": true,
+   "file": "sheets/data/bot1/386604193.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 391793469,
+   "n": 1,
+   "type": "line",
+   "title": "Homebuilders vs the S&P 500 (ITB ÷ SPY) and the 10-year yield (inverted)",
+   "tab": "117 Homebuilders vs S&P",
+   "supported": true,
+   "file": "sheets/data/bot1/391793469.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 397488583,
+   "n": 1,
+   "type": "line",
+   "title": "The depreciation bill: D&A per quarter at Microsoft, Alphabet, Amazon, Meta",
+   "tab": "331 Big Tech D&A per quarter",
+   "supported": true,
+   "file": "sheets/data/bot1/397488583.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 399190070,
+   "n": 1,
+   "type": "column",
+   "title": "SpaceX revenue by segment (USD bn): Starlink is the business",
+   "tab": "315 SpaceX revenue by segment",
+   "supported": true,
+   "file": "sheets/data/bot1/399190070.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 406126240,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla R&D spending as a share of revenue, trailing four quarters",
+   "tab": "303 Tesla R&D intensity",
+   "supported": true,
+   "file": "sheets/data/bot1/406126240.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 418716759,
+   "n": 1,
+   "type": "combo",
+   "title": "SpaceX share of all payload mass launched to space each year",
+   "tab": "106 SpaceX share of mass",
+   "supported": true,
+   "file": "sheets/data/bot1/418716759.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 426431229,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla automotive sales revenue per vehicle delivered (USD thousands)",
+   "tab": "308 Tesla revenue per car",
+   "supported": true,
+   "file": "sheets/data/bot1/426431229.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 434267729,
+   "n": 1,
+   "type": "line",
+   "title": "Ether's 90-day beta and correlation to Bitcoin",
+   "tab": "25 ETH beta to BTC",
+   "supported": true,
+   "file": "sheets/data/bot1/434267729.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 440691485,
+   "n": 1,
+   "type": "line",
+   "title": "AI payback gap: cloud revenue vs capex, Amazon + Alphabet + Microsoft (TTM)",
+   "tab": "327 Cloud revenue vs capex",
+   "supported": true,
+   "file": "sheets/data/bot1/440691485.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 441584127,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla free cash flow (operating cash flow minus capex), trailing four quarters",
+   "tab": "305 Tesla free cash flow",
+   "supported": true,
+   "file": "sheets/data/bot1/441584127.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 448314317,
+   "n": 1,
+   "type": "line",
+   "title": "Household net worth vs disposable income",
+   "tab": "71 Net worth to income",
+   "supported": true,
+   "file": "sheets/data/bot1/448314317.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 450495048,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla drawdowns from its record close vs the Nasdaq-100",
+   "tab": "83 TSLA drawdown",
+   "supported": true,
+   "file": "sheets/data/bot1/450495048.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 467293370,
+   "n": 1,
+   "type": "column",
+   "title": "SpaceX free cash flow (operating cash flow minus capex, USD bn)",
+   "tab": "319 SpaceX free cash flow",
+   "supported": true,
+   "file": "sheets/data/bot1/467293370.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 473417358,
+   "n": 1,
+   "type": "line",
+   "title": "Quantitative tightening: the Fed's Treasury vs mortgage-backed securities holdings (weekly)",
+   "tab": "253 Fed Treasuries vs MBS",
+   "supported": true,
+   "file": "sheets/data/bot1/473417358.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 477052168,
+   "n": 1,
+   "type": "line",
+   "title": "Is Bitcoin now calmer than Nvidia and Tesla? 90-day realized volatility",
+   "tab": "195 BTC vs NVDA vs TSLA vol",
+   "supported": true,
+   "file": "sheets/data/bot1/477052168.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 477622448,
+   "n": 1,
+   "type": "line",
+   "title": "The federal minimum wage in today's dollars (unchanged at $7.25 since July 2009; deflated by CPI to Aug 2026)",
+   "tab": "240 Real federal minimum wage",
+   "supported": true,
+   "file": "sheets/data/bot1/477622448.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 496113047,
+   "n": 1,
+   "type": "line",
+   "title": "Do stocks always beat bonds? Rolling 10-year return of the S&P 500 minus Treasuries, 1937–2025",
+   "tab": "296 Stocks vs bonds, 10-yr",
+   "supported": true,
+   "file": "sheets/data/bot1/496113047.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 497665546,
+   "n": 1,
+   "type": "line",
+   "title": "Is Bitcoin digital gold? 52-week correlation of weekly returns",
+   "tab": "26 BTC vs gold correlation",
+   "supported": true,
+   "file": "sheets/data/bot1/497665546.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 499197860,
+   "n": 1,
+   "type": "line",
+   "title": "Households have deleveraged: mortgage, auto/student and credit-card debt as % of disposable income",
+   "tab": "245 Household debt vs income",
+   "supported": true,
+   "file": "sheets/data/bot1/499197860.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 501922147,
+   "n": 1,
+   "type": "column",
+   "title": "SpaceX capex by segment (USD bn): the AI build-out dwarfs rockets and Starlink",
+   "tab": "316 SpaceX capex by segment",
+   "supported": true,
+   "file": "sheets/data/bot1/501922147.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 505091898,
+   "n": 1,
+   "type": "line",
+   "title": "Bonds stopped hedging stocks: rolling 1-year correlation of S&P 500 (SPY) and long Treasury (TLT) weekly returns",
+   "tab": "297 Stock-bond correlation",
+   "supported": true,
+   "file": "sheets/data/bot1/505091898.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 509379210,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla gross margin vs share price (quarterly)",
+   "tab": "90 TSLA gross margin vs price",
+   "supported": true,
+   "file": "sheets/data/bot1/509379210.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 520996938,
+   "n": 1,
+   "type": "line",
+   "title": "Owning vs renting: home price-to-rent ratio",
+   "tab": "64 Price-to-rent",
+   "supported": true,
+   "file": "sheets/data/bot1/520996938.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 525849373,
+   "n": 1,
+   "type": "line",
+   "title": "Housing inventory back above pre-pandemic? Active listings vs 2017–19 and price cuts",
+   "tab": "174 Home listings vs pre-COVID",
+   "supported": true,
+   "file": "sheets/data/bot1/525849373.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 539321674,
+   "n": 1,
+   "type": "line",
+   "title": "US federal budget balance, rolling 12 months, % of GDP",
+   "tab": "69 Federal deficit % GDP",
+   "supported": true,
+   "file": "sheets/data/bot1/539321674.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 543385142,
+   "n": 1,
+   "type": "line",
+   "title": "Credit cards: interest rates vs delinquencies",
+   "tab": "62 Credit card APR vs delinq",
+   "supported": true,
+   "file": "sheets/data/bot1/543385142.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 550839420,
+   "n": 1,
+   "type": "line",
+   "title": "Car insurance vs overall prices since 2019 (CPI, Jan 2019 = 100)",
+   "tab": "164 Car insurance vs CPI",
+   "supported": true,
+   "file": "sheets/data/bot1/550839420.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 556824671,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin vs the Nasdaq: 90-trading-day correlation of daily returns",
+   "tab": "148 BTC-Nasdaq correlation",
+   "supported": true,
+   "file": "sheets/data/bot1/556824671.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 557813776,
+   "n": 1,
+   "type": "line",
+   "title": "60/40 portfolio: rolling 3-year annualized return vs stocks and bonds",
+   "tab": "129 60-40 rolling returns",
+   "supported": true,
+   "file": "sheets/data/bot1/557813776.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 558277085,
+   "n": 1,
+   "type": "line",
+   "title": "Capex vs depreciation (TTM): spending at 2–5x D&A means a bigger D&A wave ahead",
+   "tab": "332 Capex to depreciation",
+   "supported": true,
+   "file": "sheets/data/bot1/558277085.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 571274868,
+   "n": 1,
+   "type": "line",
+   "title": "Building for AI: US construction spending on data centers vs electric power",
+   "tab": "340 Data center vs power build",
+   "supported": true,
+   "file": "sheets/data/bot1/571274868.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 577053605,
+   "n": 1,
+   "type": "line",
+   "title": "AI capex vs cash: free cash flow (operating cash flow minus capex), trailing 4 quarters",
+   "tab": "207 Hyperscaler free cash flow",
+   "supported": true,
+   "file": "sheets/data/bot1/577053605.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 594760140,
+   "n": 1,
+   "type": "line",
+   "title": "China internet stocks vs US tech: KWEB ÷ QQQ total return (month-end, start = 100)",
+   "tab": "262 China tech vs Nasdaq",
+   "supported": true,
+   "file": "sheets/data/bot1/594760140.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 595180551,
+   "n": 1,
+   "type": "line",
+   "title": "\"Net liquidity\": Fed balance sheet minus Treasury cash (TGA) and reverse repo vs the S&P 500",
+   "tab": "183 Fed net liquidity vs S&P",
+   "supported": true,
+   "file": "sheets/data/bot1/595180551.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 602735567,
+   "n": 1,
+   "type": "line",
+   "title": "US corporate profits hit a record 13.1% of GDP",
+   "tab": "15 Profits share of GDP",
+   "supported": true,
+   "file": "sheets/data/bot1/602735567.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 603612019,
+   "n": 1,
+   "type": "line",
+   "title": "New-home inventory vs single-family housing starts",
+   "tab": "66 New-home supply vs starts",
+   "supported": true,
+   "file": "sheets/data/bot1/603612019.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 609140004,
+   "n": 1,
+   "type": "line",
+   "title": "Small caps vs large caps: Russell 2000 (IWM) ÷ S&P 500 (SPY), total return",
+   "tab": "110 Small caps vs S&P 500",
+   "supported": true,
+   "file": "sheets/data/bot1/609140004.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 611082842,
+   "n": 1,
+   "type": "line",
+   "title": "Stablecoin \"dry powder\": stablecoin supply as % of bitcoin + ether market value",
+   "tab": "150 Stablecoin dry powder ratio",
+   "supported": true,
+   "file": "sheets/data/bot1/611082842.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 614337209,
+   "n": 1,
+   "type": "line",
+   "title": "India vs China stocks in US dollars (INDA ÷ MCHI, total return)",
+   "tab": "121 India vs China stocks",
+   "supported": true,
+   "file": "sheets/data/bot1/614337209.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 619315429,
+   "n": 1,
+   "type": "line",
+   "title": "The AI backlog: remaining performance obligations (contracted, not yet recognized revenue)",
+   "tab": "210 AI backlog RPO",
+   "supported": true,
+   "file": "sheets/data/bot1/619315429.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 620817139,
+   "n": 1,
+   "type": "line",
+   "title": "International vs US stocks (ACWX ÷ SPY, total return) and the dollar (inverted)",
+   "tab": "118 Intl vs US stocks & dollar",
+   "supported": true,
+   "file": "sheets/data/bot1/620817139.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 62435828,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla price-to-sales (market cap ÷ trailing 4-quarter revenue), weekly since 2019",
+   "tab": "310 Tesla price-to-sales",
+   "supported": true,
+   "file": "sheets/data/bot1/62435828.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 626951791,
+   "n": 1,
+   "type": "line",
+   "title": "Leverage check: FINRA margin debt growth vs the S&P 500 (YoY) and real margin debt",
+   "tab": "199 Margin debt vs S&P",
+   "supported": true,
+   "file": "sheets/data/bot1/626951791.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 639374194,
+   "n": 1,
+   "type": "line",
+   "title": "Oil in today's dollars (WTI, CPI-adjusted)",
+   "tab": "13 Real oil price",
+   "supported": true,
+   "file": "sheets/data/bot1/639374194.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 64933222,
+   "n": 1,
+   "type": "line",
+   "title": "Sun Belt housing cool-down: Case-Shiller prices, Sun Belt vs Northeast & Midwest (Jun 2022 = 100)",
+   "tab": "292 Sun Belt vs Northeast homes",
+   "supported": true,
+   "file": "sheets/data/bot1/64933222.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 676384624,
+   "n": 1,
+   "type": "column",
+   "title": "SpaceX R&D spending by segment (USD bn): Starship vs Starlink vs AI",
+   "tab": "320 SpaceX R&D by segment",
+   "supported": true,
+   "file": "sheets/data/bot1/676384624.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 700703307,
+   "n": 1,
+   "type": "line",
+   "title": "Corporate credit quality spread: Moody's Baa minus Aaa",
+   "tab": "44 Baa-Aaa quality spread",
+   "supported": true,
+   "file": "sheets/data/bot1/700703307.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 701983699,
+   "n": 1,
+   "type": "line",
+   "title": "How ample are reserves? Bank reserves held at the Fed as % of nominal GDP (quarterly average)",
+   "tab": "252 Bank reserves % of GDP",
+   "supported": true,
+   "file": "sheets/data/bot1/701983699.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 709718897,
+   "n": 1,
+   "type": "line",
+   "title": "Electric power generation output vs total industry (YoY)",
+   "tab": "77 Power output vs industry",
+   "supported": true,
+   "file": "sheets/data/bot1/709718897.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 711603553,
+   "n": 1,
+   "type": "line",
+   "title": "Alphabet: operating cash flow, capex and free cash flow per quarter (USD bn)",
+   "tab": "323 Alphabet quarterly FCF",
+   "supported": true,
+   "file": "sheets/data/bot1/711603553.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 714704640,
+   "n": 1,
+   "type": "line",
+   "title": "Minutes of work needed to buy a gallon of gas and a dozen eggs (typical worker)",
+   "tab": "190 Work minutes gas & eggs",
+   "supported": true,
+   "file": "sheets/data/bot1/714704640.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 719011886,
+   "n": 1,
+   "type": "line",
+   "title": "The yield curve: 10Y minus 2Y and 10Y minus 3M Treasury spreads (month-end)",
+   "tab": "181 Yield curve 10Y-2Y 10Y-3M",
+   "supported": true,
+   "file": "sheets/data/bot1/719011886.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 722028700,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla volatility vs Mag 7 peers and the Nasdaq-100 (30-day realized, annualized)",
+   "tab": "84 TSLA volatility vs peers",
+   "supported": true,
+   "file": "sheets/data/bot1/722028700.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 723841577,
+   "n": 1,
+   "type": "line",
+   "title": "The GLP-1 race: Eli Lilly vs Novo Nordisk total return (weekly, Jan 2022 = 100)",
+   "tab": "279 Lilly vs Novo",
+   "supported": true,
+   "file": "sheets/data/bot1/723841577.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 727384462,
+   "n": 1,
+   "type": "line",
+   "title": "Misery index (jobless rate + inflation) vs consumer sentiment (inverted)",
+   "tab": "176 Misery index vs sentiment",
+   "supported": true,
+   "file": "sheets/data/bot1/727384462.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 730955080,
+   "n": 1,
+   "type": "line",
+   "title": "ECB real deposit rate (deposit rate minus euro-area inflation)",
+   "tab": "51 ECB real rate",
+   "supported": true,
+   "file": "sheets/data/bot1/730955080.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 733691549,
+   "n": 1,
+   "type": "line",
+   "title": "AI productivity boom? Nonfarm productivity vs unit labor costs (YoY)",
+   "tab": "80 Productivity vs labor costs",
+   "supported": true,
+   "file": "sheets/data/bot1/733691549.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 735148827,
+   "n": 1,
+   "type": "line",
+   "title": "AI chip boom: semiconductor output vs total US industry (YoY)",
+   "tab": "19 Semis vs industry",
+   "supported": true,
+   "file": "sheets/data/bot1/735148827.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 739558050,
+   "n": 1,
+   "type": "line",
+   "title": "Ether vs Bitcoin: 30-day realized volatility",
+   "tab": "24 BTC vs ETH volatility",
+   "supported": true,
+   "file": "sheets/data/bot1/739558050.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 745450763,
+   "n": 1,
+   "type": "line",
+   "title": "Transaction fees' share of Bitcoin miner revenue (monthly)",
+   "tab": "29 BTC fee share of revenue",
+   "supported": true,
+   "file": "sheets/data/bot1/745450763.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 747711957,
+   "n": 1,
+   "type": "line",
+   "title": "The yen has stopped following rate spreads",
+   "tab": "16 USDJPY vs US-JP spread",
+   "supported": true,
+   "file": "sheets/data/bot1/747711957.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 757588511,
+   "n": 1,
+   "type": "line",
+   "title": "Ethereum's DeFi dominance: share of total value locked, Ethereum vs Solana vs Tron (month-end)",
+   "tab": "287 DeFi market share by chain",
+   "supported": true,
+   "file": "sheets/data/bot1/757588511.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 762190162,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla vs the rest of the Magnificent 7 since end-2022 (rebased to 100)",
+   "tab": "82 TSLA vs Mag 7",
+   "supported": true,
+   "file": "sheets/data/bot1/762190162.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 770432496,
+   "n": 1,
+   "type": "combo",
+   "title": "CoreWeave, the AI neocloud: quarterly revenue vs capex, and debt outstanding",
+   "tab": "221 CoreWeave rev capex debt",
+   "supported": true,
+   "file": "sheets/data/bot1/770432496.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 779854179,
+   "n": 1,
+   "type": "line",
+   "title": "Strategy: bitcoin held vs its average purchase cost",
+   "tab": "94 MSTR BTC holdings & cost",
+   "supported": true,
+   "file": "sheets/data/bot1/779854179.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 78031299,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin vs the dollar: 52-week rolling correlation",
+   "tab": "05 BTC vs dollar corr",
+   "supported": true,
+   "file": "sheets/data/bot1/78031299.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 788240941,
+   "n": 1,
+   "type": "line",
+   "title": "College tuition and childcare vs overall inflation since 2000 (CPI, NSA)",
+   "tab": "166 Tuition & childcare vs CPI",
+   "supported": true,
+   "file": "sheets/data/bot1/788240941.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 792345439,
+   "n": 1,
+   "type": "combo",
+   "title": "The US LNG export boom: LNG exports in Bcf/day and as % of dry gas production (monthly)",
+   "tab": "267 LNG export boom",
+   "supported": true,
+   "file": "sheets/data/bot1/792345439.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 792488210,
+   "n": 1,
+   "type": "line",
+   "title": "Used vs new car prices vs overall inflation (CPI, Jan 2019 = 100)",
+   "tab": "165 Used vs new car prices",
+   "supported": true,
+   "file": "sheets/data/bot1/792488210.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 794507932,
+   "n": 1,
+   "type": "line",
+   "title": "Mortgage rates vs the 10-year: the spread",
+   "tab": "06 Mortgage-10Y spread",
+   "supported": true,
+   "file": "sheets/data/bot1/794507932.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 827857247,
+   "n": 1,
+   "type": "line",
+   "title": "America under-builds: new housing units completed per 1,000 people (annualized, quarterly average)",
+   "tab": "291 Homes built per person",
+   "supported": true,
+   "file": "sheets/data/bot1/827857247.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 829703707,
+   "n": 1,
+   "type": "line",
+   "title": "Power bills vs inflation: electricity CPI YoY vs headline",
+   "tab": "18 Electricity vs CPI",
+   "supported": true,
+   "file": "sheets/data/bot1/829703707.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 838233664,
+   "n": 1,
+   "type": "line",
+   "title": "Stablecoin supply keeps climbing while Bitcoin lags",
+   "tab": "30 Stablecoins vs BTC",
+   "supported": true,
+   "file": "sheets/data/bot1/838233664.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 847095656,
+   "n": 1,
+   "type": "line",
+   "title": "Fear premium: VIX vs actual S&P 500 volatility",
+   "tab": "42 VIX vs realized vol",
+   "supported": true,
+   "file": "sheets/data/bot1/847095656.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 852521452,
+   "n": 1,
+   "type": "line",
+   "title": "Credit card (revolving) debt growth: nominal vs inflation-adjusted",
+   "tab": "170 Real credit card debt",
+   "supported": true,
+   "file": "sheets/data/bot1/852521452.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 854627153,
+   "n": 1,
+   "type": "column",
+   "title": "SpaceX valuation: private tenders → xAI merger → IPO → market",
+   "tab": "102 SpaceX valuation path",
+   "supported": true,
+   "file": "sheets/data/bot1/854627153.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 856959974,
+   "n": 1,
+   "type": "line",
+   "title": "The quantum computing mania: IonQ, Rigetti and D-Wave vs the Nasdaq-100 (weekly, Jan 2024 = 100, log)",
+   "tab": "280 Quantum computing stocks",
+   "supported": true,
+   "file": "sheets/data/bot1/856959974.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 860374575,
+   "n": 1,
+   "type": "column",
+   "title": "The cost of missing the best days: $10,000 in the S&P 500, Oct 2006 – Oct 2026 (price only)",
+   "tab": "274 Missing the best days",
+   "supported": true,
+   "file": "sheets/data/bot1/860374575.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 868062827,
+   "n": 1,
+   "type": "line",
+   "title": "Job openings per unemployed person (below 1 = more job seekers than jobs)",
+   "tab": "172 Job openings per jobless",
+   "supported": true,
+   "file": "sheets/data/bot1/868062827.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 868237201,
+   "n": 1,
+   "type": "line",
+   "title": "Commercial real estate: bank CRE lending vs office construction (YoY)",
+   "tab": "49 CRE loans vs office build",
+   "supported": true,
+   "file": "sheets/data/bot1/868237201.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 875924121,
+   "n": 1,
+   "type": "line",
+   "title": "Import prices vs the dollar (YoY)",
+   "tab": "58 Import prices vs dollar",
+   "supported": true,
+   "file": "sheets/data/bot1/875924121.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 877453467,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla energy storage (GWh) vs vehicle deliveries, trailing four quarters",
+   "tab": "91 TSLA storage vs cars",
+   "supported": true,
+   "file": "sheets/data/bot1/877453467.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 881312954,
+   "n": 1,
+   "type": "line",
+   "title": "Online shopping keeps taking share: e-commerce as % of total US retail sales (quarterly)",
+   "tab": "244 E-commerce share of retail",
+   "supported": true,
+   "file": "sheets/data/bot1/881312954.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 884128402,
+   "n": 1,
+   "type": "line",
+   "title": "Starlink subscribers (millions): 2.3m at end-2023, 12.0m by June 2026",
+   "tab": "313 Starlink subscribers",
+   "supported": true,
+   "file": "sheets/data/bot1/884128402.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 88726790,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin bear markets compared: decline from each cycle peak, by days since the peak",
+   "tab": "284 Bitcoin bear markets",
+   "supported": true,
+   "file": "sheets/data/bot1/88726790.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 895253454,
+   "n": 1,
+   "type": "line",
+   "title": "Real disposable income growth vs the saving rate",
+   "tab": "61 Real income vs saving",
+   "supported": true,
+   "file": "sheets/data/bot1/895253454.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 900897940,
+   "n": 1,
+   "type": "line",
+   "title": "Federal debt held by the public as % of GDP (quarterly)",
+   "tab": "257 Federal debt % of GDP",
+   "supported": true,
+   "file": "sheets/data/bot1/900897940.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 906159148,
+   "n": 1,
+   "type": "column",
+   "title": "SpaceX operating income by segment (USD bn): Starlink profits vs AI and rocket losses",
+   "tab": "317 SpaceX segment profits",
+   "supported": true,
+   "file": "sheets/data/bot1/906159148.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 917876394,
+   "n": 1,
+   "type": "line",
+   "title": "S&P 500 P/E: trailing vs Shiller CAPE",
+   "tab": "342 S&P 500 P/E",
+   "supported": true,
+   "file": "sheets/data/bot1/917876394.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 919949704,
+   "n": 1,
+   "type": "column",
+   "title": "Revenue and operating profit per employee, latest fiscal year (Nvidia vs Big Tech)",
+   "tab": "228 Revenue per employee",
+   "supported": true,
+   "file": "sheets/data/bot1/919949704.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 924884708,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla vs BYD in US dollars since 2020 (weekly, rebased to 100)",
+   "tab": "88 TSLA vs BYD",
+   "supported": true,
+   "file": "sheets/data/bot1/924884708.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 925046515,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin after each halving: price since halving day (halving = 100)",
+   "tab": "196 BTC halving cycles",
+   "supported": true,
+   "file": "sheets/data/bot1/925046515.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 928247042,
+   "n": 1,
+   "type": "line",
+   "title": "The Fed's accumulated operating losses: its 'deferred asset' (weekly)",
+   "tab": "251 Fed deferred asset",
+   "supported": true,
+   "file": "sheets/data/bot1/928247042.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 962992394,
+   "n": 1,
+   "type": "line",
+   "title": "Tesla trailing P/E vs the rest of the Magnificent 7 (month-end)",
+   "tab": "89 TSLA P-E vs Mag 7",
+   "supported": true,
+   "file": "sheets/data/bot1/962992394.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 965739722,
+   "n": 1,
+   "type": "combo",
+   "title": "Meta's Reality Labs (metaverse/AR glasses): quarterly operating losses and the running total since Q2 2023",
+   "tab": "205 Meta Reality Labs losses",
+   "supported": true,
+   "file": "sheets/data/bot1/965739722.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 972156540,
+   "n": 1,
+   "type": "combo",
+   "title": "US effective tariff rate: customs duties as % of goods imports",
+   "tab": "67 Effective tariff rate",
+   "supported": true,
+   "file": "sheets/data/bot1/972156540.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 97827248,
+   "n": 1,
+   "type": "line",
+   "title": "Chip plants vs all industry: capacity utilization",
+   "tab": "79 Chip capacity utilization",
+   "supported": true,
+   "file": "sheets/data/bot1/97827248.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 978859168,
+   "n": 1,
+   "type": "line",
+   "title": "Cloud profits vs capex: AWS and Google Cloud operating income vs capex (TTM)",
+   "tab": "329 Cloud profit vs capex",
+   "supported": true,
+   "file": "sheets/data/bot1/978859168.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 992343092,
+   "n": 1,
+   "type": "line",
+   "title": "The depreciation wave: D&A growing faster than revenue (MSFT+AMZN+META, TTM YoY)",
+   "tab": "330 D&A vs revenue growth",
+   "supported": true,
+   "file": "sheets/data/bot1/992343092.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 995219650,
+   "n": 1,
+   "type": "line",
+   "title": "The \"low-hire, low-fire\" labor market: JOLTS hires rate vs layoffs rate",
+   "tab": "248 Low-hire, low-fire",
+   "supported": true,
+   "file": "sheets/data/bot1/995219650.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1048971421,
+   "n": 1,
+   "type": "line",
+   "title": "Since the COVID low (16 Mar 2020): Bitcoin up, altcoins down in BTC (16 Mar 2020 = 100)",
+   "tab": "64 BTC vs altcoins in BTC",
+   "supported": true,
+   "file": "sheets/data/bot2/1048971421.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1078237833,
+   "n": 1,
+   "type": "line",
+   "title": "Average acquisition cost: spot ETFs vs. companies",
+   "tab": "13 BTC cost basis by holder",
+   "supported": true,
+   "file": "sheets/data/bot2/1078237833.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1078237833,
+   "n": 2,
+   "type": "line",
+   "title": "Average acquisition cost: treasury companies vs. miners",
+   "tab": "13 BTC cost basis by holder",
+   "supported": true,
+   "file": "sheets/data/bot2/1078237833_2.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1095486377,
+   "n": 1,
+   "type": "column",
+   "title": "How Strategy raised $69.5B since 2024: 67% from new MSTR shares (Q1 2024–Q3 2026)",
+   "tab": "3 MSTR capital raised",
+   "supported": true,
+   "file": "sheets/data/bot2/1095486377.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1135406116,
+   "n": 1,
+   "type": "column",
+   "title": "US interest expense on federal debt ($B, fiscal year)",
+   "tab": "89 US interest expense",
+   "supported": true,
+   "file": "sheets/data/bot2/1135406116.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1146906291,
+   "n": 1,
+   "type": "line",
+   "title": "Price changes since Jan. 2000 (%)",
+   "tab": "91 Price changes since 2000",
+   "supported": true,
+   "file": "sheets/data/bot2/1146906291.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1149583871,
+   "n": 1,
+   "type": "column",
+   "title": "Toyota returned $31B to shareholders in the last 12 months, GM $7.4B; Tesla and Stellantis returned nothing",
+   "tab": "53 Dividends and buybacks vs legacy",
+   "supported": true,
+   "file": "sheets/data/bot2/1149583871.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1172553519,
+   "n": 1,
+   "type": "area",
+   "title": "Strategy's preferred stock, Feb 2025–Oct 2026: $15.5B peak, $13.9B after STRC buybacks",
+   "tab": "4 MSTR preferred stack",
+   "supported": true,
+   "file": "sheets/data/bot2/1172553519.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1188646727,
+   "n": 1,
+   "type": "column",
+   "title": "Q2 2026 free cash flow: Lucid −$1.48B on $405M of revenue; Tesla −$1.09B as capex hit $5.8B; Rivian −$849M; Li Auto −$192M",
+   "tab": "45 EV free cash flow Q2 2026",
+   "supported": true,
+   "file": "sheets/data/bot2/1188646727.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1193697114,
+   "n": 1,
+   "type": "bar",
+   "title": "Data Center Capacity (operational, GW)",
+   "tab": "92 Data center capacity",
+   "supported": true,
+   "file": "sheets/data/bot2/1193697114.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1229225245,
+   "n": 1,
+   "type": "column",
+   "title": "Nvidia's supply commitments: $279B, up 9x from $30.8B in Jan 2025 (fiscal quarter ends)",
+   "tab": "19 Nvidia supply commitments",
+   "supported": true,
+   "file": "sheets/data/bot2/1229225245.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1254733482,
+   "n": 1,
+   "type": "line",
+   "title": "SATA: 30-day average daily volume",
+   "tab": "66 SATA 30d avg volume",
+   "supported": true,
+   "file": "sheets/data/bot2/1254733482.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1268488619,
+   "n": 1,
+   "type": "line",
+   "title": "Strategy's preferreds yield 9.7–13.7% vs 8.1% for US junk bonds (Feb 2025–Oct 2026)",
+   "tab": "7 MSTR preferred yields",
+   "supported": true,
+   "file": "sheets/data/bot2/1268488619.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1285597519,
+   "n": 1,
+   "type": "line",
+   "title": "Aggregate cost basis: US spot ETFs vs. public companies",
+   "tab": "12 ETF vs company BTC cost basis",
+   "supported": true,
+   "file": "sheets/data/bot2/1285597519.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1333746591,
+   "n": 1,
+   "type": "line",
+   "title": "STRC: 30-day average daily volume",
+   "tab": "67 STRC 30d avg volume",
+   "supported": true,
+   "file": "sheets/data/bot2/1333746591.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1373480110,
+   "n": 1,
+   "type": "line",
+   "title": "VIX vs S&P 500 (10Y)",
+   "tab": "VIX vs S&P 500",
+   "supported": true,
+   "file": "sheets/data/bot2/1373480110.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1379690938,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin on exchanges: 13.3% of supply, down from 16.8% in Aug 2021 (Apr 2026 low was the lowest since May 2018)",
+   "tab": "29 BTC on exchanges",
+   "supported": true,
+   "file": "sheets/data/bot2/1379690938.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1397281632,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin vs its 200-week average",
+   "tab": "63 BTC 200-week ratio",
+   "supported": true,
+   "file": "sheets/data/bot2/1397281632.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1412260375,
+   "n": 1,
+   "type": "column",
+   "title": "Goldman's 2025 robotaxi costs: insurance $0.50 + remote operators $0.49 + depreciation $0.35 a mile, vs $0.61 for a human rideshare car before driver pay",
+   "tab": "36 Robotaxi cost components",
+   "supported": true,
+   "file": "sheets/data/bot2/1412260375.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1452925484,
+   "n": 1,
+   "type": "column",
+   "title": "Not just cars: software & services are 31% of Rivian's revenue, energy + services 27% of Tesla's, 6–14% at XPeng, NIO, Li Auto (Q2 2026)",
+   "tab": "46 EV revenue mix Q2 2026",
+   "supported": true,
+   "file": "sheets/data/bot2/1452925484.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1457451809,
+   "n": 1,
+   "type": "column",
+   "title": "MSTR and STRC ATM proceeds",
+   "tab": "70 MSTR and STRC ATM proceeds",
+   "supported": true,
+   "file": "sheets/data/bot2/1457451809.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1479637352,
+   "n": 1,
+   "type": "column",
+   "title": "Neocloud debt vs cash ($B)",
+   "tab": "77 Neocloud debt vs cash",
+   "supported": true,
+   "file": "sheets/data/bot2/1479637352.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1497466824,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin in midterm years",
+   "tab": "1 BTC midterm year",
+   "supported": true,
+   "file": "sheets/data/bot2/1497466824.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1543869427,
+   "n": 1,
+   "type": "column",
+   "title": "Who holds the 20.1M bitcoin: ETFs 1.30M and public companies 1.30M nearly match exchanges' 2.66M combined (Oct 2026)",
+   "tab": "30 Who holds bitcoin",
+   "supported": true,
+   "file": "sheets/data/bot2/1543869427.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1601417155,
+   "n": 1,
+   "type": "column",
+   "title": "Tesla Cybercabs on the Texas robotaxi registry: 45 → 319 in 38 days",
+   "tab": "25 Cybercab registrations",
+   "supported": true,
+   "file": "sheets/data/bot2/1601417155.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1639210623,
+   "n": 1,
+   "type": "area",
+   "title": "Bitcoin Dominance (ex-Stablecoins)",
+   "tab": "72 BTC dominance ex-stables",
+   "supported": true,
+   "file": "sheets/data/bot2/1639210623.json"
   },
   {
    "book": "bot2",
@@ -44,6 +3014,176 @@
   },
   {
    "book": "bot2",
+   "gid": 1713824403,
+   "n": 1,
+   "type": "column",
+   "title": "Tesla spends 12.5% of revenue on capex, more than any legacy carmaker; Toyota 9.6%, BMW 7.3%, Ford 5.1%, GM 4.7%",
+   "tab": "55 Capex intensity vs legacy",
+   "supported": true,
+   "file": "sheets/data/bot2/1713824403.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1793142140,
+   "n": 1,
+   "type": "column",
+   "title": "Neocloud capex vs revenue, Q2 2026 ($M)",
+   "tab": "76 Neocloud capex vs revenue",
+   "supported": true,
+   "file": "sheets/data/bot2/1793142140.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 184640583,
+   "n": 1,
+   "type": "column",
+   "title": "Ford's EV unit lost about $33K per vehicle shipped in Q2 2026, tying its worst quarter (Q4 2025) as volumes fell to 28K",
+   "tab": "51 Ford Model e loss per EV",
+   "supported": true,
+   "file": "sheets/data/bot2/184640583.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 185222515,
+   "n": 1,
+   "type": "bar",
+   "title": "Neocloud debt as % of market cap",
+   "tab": "87 Neocloud debt vs market cap",
+   "supported": true,
+   "file": "sheets/data/bot2/185222515.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1901004927,
+   "n": 1,
+   "type": "column",
+   "title": "Tesla, Toyota, BYD, BMW and Mercedes made a profit in all 20 quarters since Q3 2021; Rivian and Lucid in none, NIO and XPeng in one",
+   "tab": "58 Profitable quarters since 2021",
+   "supported": true,
+   "file": "sheets/data/bot2/1901004927.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1913607487,
+   "n": 1,
+   "type": "bar",
+   "title": "Cost to insure AI borrowers' debt: 5-year CDS (bps), late Sep–Oct 9 2026",
+   "tab": "61 AI borrower CDS",
+   "supported": true,
+   "file": "sheets/data/bot2/1913607487.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1936535169,
+   "n": 1,
+   "type": "column",
+   "title": "Tesla's active FSD subscriptions: 1.74M, up 67% in a year (Q3 2026)",
+   "tab": "26 Tesla FSD subscriptions",
+   "supported": true,
+   "file": "sheets/data/bot2/1936535169.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1938278543,
+   "n": 1,
+   "type": "column",
+   "title": "NASA lunar lander awards: SpaceX $4.2bn (Starship HLS) vs Blue Origin $3.9bn and Dynetics $0.24bn",
+   "tab": "42 NASA lunar lander contracts",
+   "supported": true,
+   "file": "sheets/data/bot2/1938278543.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1953355223,
+   "n": 1,
+   "type": "column",
+   "title": "Bitcoin treasury amplification",
+   "tab": "88 BTC treasury amplification",
+   "supported": true,
+   "file": "sheets/data/bot2/1953355223.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 2055282175,
+   "n": 1,
+   "type": "column",
+   "title": "Signed, not yet on the books: data-center leases at Microsoft, Meta, Amazon and Alphabet reached $830B (Jun 2026)",
+   "tab": "22 Big Tech unbooked leases by co",
+   "supported": true,
+   "file": "sheets/data/bot2/2055282175.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 2073270825,
+   "n": 1,
+   "type": "column",
+   "title": "Q3 2026 EV deliveries: BYD 762K battery-electric cars, Tesla 487K; XPeng, NIO, Li Auto 100–118K each; Rivian 19K, Lucid 4K",
+   "tab": "44 EV deliveries Q3 2026",
+   "supported": true,
+   "file": "sheets/data/bot2/2073270825.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 2117483213,
+   "n": 1,
+   "type": "column",
+   "title": "Every EV stock is down in 2026: Tesla −15% is among the best; XPeng −51%, Lucid −64%, Polestar −75% (to Oct 9)",
+   "tab": "49 EV stocks 2026 YTD",
+   "supported": true,
+   "file": "sheets/data/bot2/2117483213.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 35106055,
+   "n": 1,
+   "type": "column",
+   "title": "Neocloud Stocks: 2026 Return YTD",
+   "tab": "83 Neocloud stocks 2026 return YTD",
+   "supported": true,
+   "file": "sheets/data/bot2/35106055.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 445573214,
+   "n": 1,
+   "type": "column",
+   "title": "Cost to launch 1 kg to low Earth orbit: Shuttle $61,700, Falcon 9 $2,700, Falcon Heavy $1,400; Starship target ~$100",
+   "tab": "39 Cost per kg to LEO",
+   "supported": true,
+   "file": "sheets/data/bot2/445573214.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 452099803,
+   "n": 1,
+   "type": "bar",
+   "title": "Cobalt mine production 2025 (metric tons): Congo mines 74% of the world's cobalt",
+   "tab": "62 Cobalt mine output 2025",
+   "supported": true,
+   "file": "sheets/data/bot2/452099803.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 459378829,
+   "n": 1,
+   "type": "column",
+   "title": "Starlink capacity per launch: Falcon 9 (27 V2) ~2.6 Tbps vs Starship Flight 14 (26 V3) ~26 Tbps vs a full Starship (60 V3) ~61 Tbps",
+   "tab": "43 Starlink capacity per launch",
+   "supported": true,
+   "file": "sheets/data/bot2/459378829.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 474108036,
+   "n": 1,
+   "type": "column",
+   "title": "Microsoft's lease liabilities hit $88.5B, more than double its $40.3B of bond debt (Jun 2026)",
+   "tab": "20 Microsoft lease liabilities",
+   "supported": true,
+   "file": "sheets/data/bot2/474108036.json"
+  },
+  {
+   "book": "bot2",
    "gid": 49428948,
    "n": 1,
    "type": "line",
@@ -51,6 +3191,376 @@
    "tab": "5 MSTR USD reserve vs dividends",
    "supported": true,
    "file": "sheets/data/bot2/49428948.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 503606624,
+   "n": 1,
+   "type": "column",
+   "title": "Oracle's share count jumped 5% in one quarter to 3.02B after a $20B stock sale (Sep 2026)",
+   "tab": "21 Oracle share count",
+   "supported": true,
+   "file": "sheets/data/bot2/503606624.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 530554790,
+   "n": 1,
+   "type": "column",
+   "title": "CoreWeave: backlog vs quarterly revenue ($B)",
+   "tab": "75 CoreWeave backlog vs revenue",
+   "supported": true,
+   "file": "sheets/data/bot2/530554790.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 536596317,
+   "n": 1,
+   "type": "line",
+   "title": "VIX vs S&P 500 (10Y, daily)",
+   "tab": "VIX vs S&P 500 Daily",
+   "supported": true,
+   "file": "sheets/data/bot2/536596317.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 54674006,
+   "n": 1,
+   "type": "column",
+   "title": "US robotaxi fleets by state, Oct 2026",
+   "tab": "65 US robotaxi fleets by state",
+   "supported": true,
+   "file": "sheets/data/bot2/54674006.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 549787515,
+   "n": 1,
+   "type": "line",
+   "title": "IBIT 30-day average daily trading volume ($)",
+   "tab": "85 IBIT 30d avg dollar volume",
+   "supported": true,
+   "file": "sheets/data/bot2/549787515.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 552939387,
+   "n": 1,
+   "type": "line",
+   "title": "Neocloud stocks in 2026 (Dec 31, 2025 = 100)",
+   "tab": "80 Neocloud stocks 2026 YTD",
+   "supported": true,
+   "file": "sheets/data/bot2/552939387.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 557289630,
+   "n": 1,
+   "type": "column",
+   "title": "Strategy's bitcoin profit/loss by quarter: +$20.9B est. in Q3 2026, its best ever, after 3 losing quarters (−$40.2B)",
+   "tab": "14 MSTR quarterly BTC gains",
+   "supported": true,
+   "file": "sheets/data/bot2/557289630.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 560255331,
+   "n": 1,
+   "type": "column",
+   "title": "Strategy's weekly bitcoin buys vs sales, Jan 2025–Oct 2026: 6,948 BTC sold",
+   "tab": "2 MSTR BTC buys & sales",
+   "supported": true,
+   "file": "sheets/data/bot2/560255331.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 591025300,
+   "n": 1,
+   "type": "column",
+   "title": "Metaplanet's bitcoin stack: 1,762 → 44,000 BTC since Dec 2024 (Q3 2026: sold 10,000, bought 11,000)",
+   "tab": "15 Metaplanet BTC holdings",
+   "supported": true,
+   "file": "sheets/data/bot2/591025300.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 617854800,
+   "n": 1,
+   "type": "column",
+   "title": "Waymo paid rides per week: 10,000 (May 2023) to 500,000 (Mar 2026); target 1 million by end-2026",
+   "tab": "37 Waymo paid rides per week",
+   "supported": true,
+   "file": "sheets/data/bot2/617854800.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 63526413,
+   "n": 1,
+   "type": "column",
+   "title": "BTC vs Gold ETF Weekly Net Flows",
+   "tab": "71 BTC vs Gold ETF flows",
+   "supported": true,
+   "file": "sheets/data/bot2/63526413.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 640768342,
+   "n": 1,
+   "type": "column",
+   "title": "2026 so far: Honda +11%, Hyundai +9%, GM +2%; Tesla −15%, German carmakers −34% to −43%, Stellantis −59%",
+   "tab": "54 Tesla vs legacy stocks 2026 YTD",
+   "supported": true,
+   "file": "sheets/data/bot2/640768342.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 645072508,
+   "n": 1,
+   "type": "line",
+   "title": "Mark's Red Dot Tracker: MSTR",
+   "tab": "69 Mark MSTR red dot tracker",
+   "supported": true,
+   "file": "sheets/data/bot2/645072508.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 73869283,
+   "n": 1,
+   "type": "column",
+   "title": "Bitcoin treasury companies: weekly BTC bought vs sold, Nov 2023 – Nov 2026",
+   "tab": "93 BTC treasury buys vs sales",
+   "supported": true,
+   "file": "sheets/data/bot2/73869283.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 73869283,
+   "n": 2,
+   "type": "line",
+   "title": "4-week rolling ratio: BTC bought ÷ BTC sold (blank = no sales)",
+   "tab": "93 BTC treasury buys vs sales",
+   "supported": true,
+   "file": "sheets/data/bot2/73869283_2.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 751548644,
+   "n": 1,
+   "type": "column",
+   "title": "Texas robotaxi registrations: Tesla 1,080 (573 Cybercabs) vs Waymo 1,207 (Oct 28 2026)",
+   "tab": "24 Texas robotaxi fleets",
+   "supported": true,
+   "file": "sheets/data/bot2/751548644.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 757276361,
+   "n": 1,
+   "type": "column",
+   "title": "Strategy owns 65% of all bitcoin held by public companies: 848,000 of 1.30M BTC (Oct 7 2026)",
+   "tab": "16 Strategy vs other corp BTC",
+   "supported": true,
+   "file": "sheets/data/bot2/757276361.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 758746387,
+   "n": 1,
+   "type": "column",
+   "title": "Bitcoin's daily active addresses: 636K in 2026, the lowest yearly average since 2016 (peak 990K in 2021)",
+   "tab": "31 BTC active addresses",
+   "supported": true,
+   "file": "sheets/data/bot2/758746387.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 817552047,
+   "n": 1,
+   "type": "bar",
+   "title": "U.S. ETF BTC Holdings",
+   "tab": "73 US ETF BTC holdings",
+   "supported": true,
+   "file": "sheets/data/bot2/817552047.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 820312065,
+   "n": 1,
+   "type": "line",
+   "title": "SATA vs STRC: ratio of 30-day average volume",
+   "tab": "68 SATA-STRC volume ratio",
+   "supported": true,
+   "file": "sheets/data/bot2/820312065.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 82966268,
+   "n": 1,
+   "type": "column",
+   "title": "EBITDA margin: BYD 15.2%, BMW and Toyota 10.8%, Tesla 10.4%; Rivian −46%, Polestar −36% (Lucid −232% not shown)",
+   "tab": "57 EBITDA margin Tesla vs peers",
+   "supported": true,
+   "file": "sheets/data/bot2/82966268.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 847213730,
+   "n": 1,
+   "type": "combo",
+   "title": "What Strategy paid for its bitcoin, by year: 2025's $99,819 average is 14% underwater",
+   "tab": "8 MSTR BTC cost by year",
+   "supported": true,
+   "file": "sheets/data/bot2/847213730.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 947227357,
+   "n": 1,
+   "type": "column",
+   "title": "FDA novel drug approvals by year",
+   "tab": "86 FDA novel drug approvals",
+   "supported": true,
+   "file": "sheets/data/bot2/947227357.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 956514556,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin held: public companies vs US spot ETFs",
+   "tab": "90 Public cos vs US ETFs BTC",
+   "supported": true,
+   "file": "sheets/data/bot2/956514556.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 978808662,
+   "n": 1,
+   "type": "column",
+   "title": "Strategy's STRC buybacks as a share of weekly STRC volume",
+   "tab": "84 STRC buybacks share of volume",
+   "supported": true,
+   "file": "sheets/data/bot2/978808662.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 983027961,
+   "n": 1,
+   "type": "column",
+   "title": "Analyst estimates: a Tesla Robotaxi costs ~$0.81 a mile to run vs Waymo $1.43 and human rideshare $1.71 (Morgan Stanley)",
+   "tab": "35 Robotaxi cost per mile",
+   "supported": true,
+   "file": "sheets/data/bot2/983027961.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1012263553,
+   "n": 1,
+   "type": "line",
+   "title": "Money market funds",
+   "tab": "Money market funds",
+   "supported": true,
+   "file": "sheets/data/bot3/1012263553.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1020524065,
+   "n": 1,
+   "type": "bar",
+   "title": "Cloud provider revenue backlogs (RPO) as of October 30, 2026 (US$B)",
+   "tab": "Cloud Backlog RPO",
+   "supported": true,
+   "file": "sheets/data/bot3/1020524065.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1045685066,
+   "n": 1,
+   "type": "line",
+   "title": "Strive denominated in BTC (ASST/BTC)",
+   "tab": "ASST Priced in BTC",
+   "supported": true,
+   "file": "sheets/data/bot3/1045685066.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1045685066,
+   "n": 2,
+   "type": "line",
+   "title": "Strive denominated in BTC (ASST/BTC)",
+   "tab": "ASST Priced in BTC",
+   "supported": true,
+   "file": "sheets/data/bot3/1045685066_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1096550447,
+   "n": 1,
+   "type": "column",
+   "title": "Sharpe Ratio (09/17/26)",
+   "tab": "Pref sharpes",
+   "supported": true,
+   "file": "sheets/data/bot3/1096550447.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1099402183,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin Power Law",
+   "tab": "Power Law",
+   "supported": true,
+   "file": "sheets/data/bot3/1099402183.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1099402183,
+   "n": 2,
+   "type": "line",
+   "title": "Bitcoin power law",
+   "tab": "Power Law",
+   "supported": true,
+   "file": "sheets/data/bot3/1099402183_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1099402183,
+   "n": 3,
+   "type": "area",
+   "title": "Bitcoin Deviation from Power Law Trend",
+   "tab": "Power Law",
+   "supported": true,
+   "file": "sheets/data/bot3/1099402183_3.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 110478647,
+   "n": 1,
+   "type": "column",
+   "title": "Volatility by Timeframe",
+   "tab": "Prev vol by timeframe",
+   "supported": true,
+   "file": "sheets/data/bot3/110478647.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1120646409,
+   "n": 1,
+   "type": "column",
+   "title": "Hyperscaler Net Cash ($B, latest quarter)",
+   "tab": "Hyperscaler Net Cash",
+   "supported": true,
+   "file": "sheets/data/bot3/1120646409.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1137793313,
+   "n": 1,
+   "type": "area",
+   "title": "Purchasing Power of $1 (1913–Present)",
+   "tab": "USD Purchasing Power",
+   "supported": true,
+   "file": "sheets/data/bot3/1137793313.json"
   },
   {
    "book": "bot3",
@@ -91,6 +3601,716 @@
    "tab": "MSTR Debt",
    "supported": true,
    "file": "sheets/data/bot3/1145735379_4.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1187650332,
+   "n": 1,
+   "type": "area",
+   "title": "MSTR 30-Day Average Daily Trading Volume (billions)",
+   "tab": "MSTR Volume",
+   "supported": true,
+   "file": "sheets/data/bot3/1187650332.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1187650332,
+   "n": 2,
+   "type": "area",
+   "title": "STRC/MSTR volume",
+   "tab": "MSTR Volume",
+   "supported": true,
+   "file": "sheets/data/bot3/1187650332_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1210324154,
+   "n": 1,
+   "type": "line",
+   "title": "IBIT 30-Day Average Daily Trading Volume",
+   "tab": "IBIT Volume",
+   "supported": true,
+   "file": "sheets/data/bot3/1210324154.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1223238712,
+   "n": 1,
+   "type": "line",
+   "title": "Hash Rate of the Bitcoin Network (30 day mean)",
+   "tab": "Bitcoin 30 Day Mean Hash Rate",
+   "supported": true,
+   "file": "sheets/data/bot3/1223238712.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1310881550,
+   "n": 1,
+   "type": "bar",
+   "title": "Bitcoin Market Cap vs. Top Companies (Trillions USD)",
+   "tab": "BTC Company Flipping",
+   "supported": true,
+   "file": "sheets/data/bot3/1310881550.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1390662132,
+   "n": 1,
+   "type": "line",
+   "title": "ETH/BTC",
+   "tab": "ETH Priced in BTC",
+   "supported": true,
+   "file": "sheets/data/bot3/1390662132.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1396309136,
+   "n": 1,
+   "type": "line",
+   "title": "MSTR vs IBIT Bitcoin holdings",
+   "tab": "MSTR vs IBIT",
+   "supported": true,
+   "file": "sheets/data/bot3/1396309136.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1491835473,
+   "n": 1,
+   "type": "line",
+   "title": "30-Day rolling Correlation: TSLA vs SPCX",
+   "tab": "SPCX and TSLA Correlation",
+   "supported": true,
+   "file": "sheets/data/bot3/1491835473.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1535698560,
+   "n": 1,
+   "type": "column",
+   "title": "U.S. M2 YoY percentage change",
+   "tab": "M2 money supply",
+   "supported": true,
+   "file": "sheets/data/bot3/1535698560.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1536200109,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin denominated in Gold (BTC/Gold price per oz)",
+   "tab": "Gold Priced in BTC",
+   "supported": true,
+   "file": "sheets/data/bot3/1536200109.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1536200109,
+   "n": 2,
+   "type": "line",
+   "title": "Bitcoin denominated in Gold (BTC/Gold price per oz)",
+   "tab": "Gold Priced in BTC",
+   "supported": true,
+   "file": "sheets/data/bot3/1536200109_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1608508815,
+   "n": 1,
+   "type": "column",
+   "title": "SATA 30-Day Average Volume: Month-over-Month % Change",
+   "tab": "SATA Volume",
+   "supported": true,
+   "file": "sheets/data/bot3/1608508815.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1608508815,
+   "n": 2,
+   "type": "area",
+   "title": "SATA 30-Day Average Daily Trading Volume",
+   "tab": "SATA Volume",
+   "supported": true,
+   "file": "sheets/data/bot3/1608508815_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1608508815,
+   "n": 3,
+   "type": "area",
+   "title": "SATA Market Cap (millions)",
+   "tab": "SATA Volume",
+   "supported": true,
+   "file": "sheets/data/bot3/1608508815_3.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1608508815,
+   "n": 4,
+   "type": "column",
+   "title": "SATA daily trading volume (millions)",
+   "tab": "SATA Volume",
+   "supported": true,
+   "file": "sheets/data/bot3/1608508815_4.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1608508815,
+   "n": 5,
+   "type": "line",
+   "title": "SATA Volume/Market cap",
+   "tab": "SATA Volume",
+   "supported": true,
+   "file": "sheets/data/bot3/1608508815_5.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 161117315,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin market cap (billions)",
+   "tab": "BTC Market Cap",
+   "supported": true,
+   "file": "sheets/data/bot3/161117315.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1638568075,
+   "n": 1,
+   "type": "line",
+   "title": "US Treasury Yields: 2Y, 10Y & 30Y (1980–2026)",
+   "tab": "US Bond Yields",
+   "supported": true,
+   "file": "sheets/data/bot3/1638568075.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1638568075,
+   "n": 2,
+   "type": "line",
+   "title": "10-Year U.S. Treasury Yield",
+   "tab": "US Bond Yields",
+   "supported": true,
+   "file": "sheets/data/bot3/1638568075_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1738538915,
+   "n": 1,
+   "type": "line",
+   "title": "The S&P 500",
+   "tab": "A25. S&P 500",
+   "supported": true,
+   "file": "sheets/data/bot3/1738538915.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1757954198,
+   "n": 1,
+   "type": "bar",
+   "title": "Mag7 + SPCX + Bitcoin = $27.36T combined (Sep 11, 2026)",
+   "tab": "Mag7 Plus",
+   "supported": true,
+   "file": "sheets/data/bot3/1757954198.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1770358701,
+   "n": 1,
+   "type": "column",
+   "title": "STRC 30-day average trading volume",
+   "tab": "STRC Volume",
+   "supported": true,
+   "file": "sheets/data/bot3/1770358701.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1770358701,
+   "n": 2,
+   "type": "area",
+   "title": "STRC 30-Day Average Daily Trading Volume",
+   "tab": "STRC Volume",
+   "supported": true,
+   "file": "sheets/data/bot3/1770358701_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1770358701,
+   "n": 3,
+   "type": "area",
+   "title": "STRC Market Cap (billions)",
+   "tab": "STRC Volume",
+   "supported": true,
+   "file": "sheets/data/bot3/1770358701_3.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1770358701,
+   "n": 4,
+   "type": "column",
+   "title": "STRC daily volume (millions)",
+   "tab": "STRC Volume",
+   "supported": true,
+   "file": "sheets/data/bot3/1770358701_4.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1795571477,
+   "n": 1,
+   "type": "line",
+   "title": "ASST average cost per Bitcoin (cost basis)",
+   "tab": "ASST Avg Purchase Price",
+   "supported": true,
+   "file": "sheets/data/bot3/1795571477.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1802341250,
+   "n": 1,
+   "type": "column",
+   "title": "US Trade Balance (Exports - Imports)",
+   "tab": "US Trade Balance",
+   "supported": true,
+   "file": "sheets/data/bot3/1802341250.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1828716508,
+   "n": 1,
+   "type": "line",
+   "title": "Meta Family Daily Active People (billions, quarterly)",
+   "tab": "Meta Active Users",
+   "supported": true,
+   "file": "sheets/data/bot3/1828716508.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1832638460,
+   "n": 1,
+   "type": "line",
+   "title": "10-Year Government Bond Yields",
+   "tab": "Global 10-Year Bonds",
+   "supported": true,
+   "file": "sheets/data/bot3/1832638460.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1832638460,
+   "n": 2,
+   "type": "line",
+   "title": "France 10 Year Bond: 5.07%",
+   "tab": "Global 10-Year Bonds",
+   "supported": true,
+   "file": "sheets/data/bot3/1832638460_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1835154494,
+   "n": 1,
+   "type": "line",
+   "title": "30-Day rolling Correlation: BTC vs Gold",
+   "tab": "BTC and Gold Correlation",
+   "supported": true,
+   "file": "sheets/data/bot3/1835154494.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1843894178,
+   "n": 1,
+   "type": "line",
+   "title": "YoY Change in National Rent Index",
+   "tab": "US Rents",
+   "supported": true,
+   "file": "sheets/data/bot3/1843894178.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1898876351,
+   "n": 1,
+   "type": "column",
+   "title": "US Spot Bitcoin ETF Daily Net Flows ($ millions)",
+   "tab": "Bitcoin ETF Inflows and Outflows",
+   "supported": true,
+   "file": "sheets/data/bot3/1898876351.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1913107481,
+   "n": 1,
+   "type": "column",
+   "title": "Strive bitcoin on balance sheet",
+   "tab": "ASST BTC per share",
+   "supported": true,
+   "file": "sheets/data/bot3/1913107481.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1913107481,
+   "n": 2,
+   "type": "column",
+   "title": "Strive BTC Holdings Q/Q change",
+   "tab": "ASST BTC per share",
+   "supported": true,
+   "file": "sheets/data/bot3/1913107481_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1936154568,
+   "n": 1,
+   "type": "line",
+   "title": "Federal tax receipts vs. spending growth since 1971",
+   "tab": "US Income vs Outlays",
+   "supported": true,
+   "file": "sheets/data/bot3/1936154568.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1936154568,
+   "n": 2,
+   "type": "line",
+   "title": "United States Income From Tax vs Spending Items (1971 - 2022)",
+   "tab": "US Income vs Outlays",
+   "supported": true,
+   "file": "sheets/data/bot3/1936154568_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 194766241,
+   "n": 1,
+   "type": "column",
+   "title": "Magnificent 7 — 2026 YTD Returns",
+   "tab": "Mag 7",
+   "supported": true,
+   "file": "sheets/data/bot3/194766241.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 200127853,
+   "n": 1,
+   "type": "area",
+   "title": "SATA as % of STRC Trading Volume (30-Day Average)",
+   "tab": "Preferred volumes comparison",
+   "supported": true,
+   "file": "sheets/data/bot3/200127853.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 2017072406,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin Cycle Drawdowns: Peak-to-Trough Recovery Patterns",
+   "tab": "Major Bitcoin Cycles",
+   "supported": true,
+   "file": "sheets/data/bot3/2017072406.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 2017231620,
+   "n": 1,
+   "type": "line",
+   "title": "30-Day rolling Correlation: BTC vs NASDAQ",
+   "tab": "BTC and NASDAQ Correlation",
+   "supported": true,
+   "file": "sheets/data/bot3/2017231620.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 2081496397,
+   "n": 1,
+   "type": "column",
+   "title": "Tether's U.S. Treasury Holdings",
+   "tab": "Tether Reserves",
+   "supported": true,
+   "file": "sheets/data/bot3/2081496397.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 2081496397,
+   "n": 2,
+   "type": "line",
+   "title": "Tether Market Cap",
+   "tab": "Tether Reserves",
+   "supported": true,
+   "file": "sheets/data/bot3/2081496397_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 2081496397,
+   "n": 3,
+   "type": "column",
+   "title": "Tether BTC holdings",
+   "tab": "Tether Reserves",
+   "supported": true,
+   "file": "sheets/data/bot3/2081496397_3.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 2096217393,
+   "n": 1,
+   "type": "column",
+   "title": "The cost of missing the best days: $10,000 in Bitcoin, Nov 2016 – Nov 2026",
+   "tab": "BTC Missing Best Days",
+   "supported": true,
+   "file": "sheets/data/bot3/2096217393.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 222613956,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin vs 200-Week Moving Average",
+   "tab": "A3. Bitcoin Return Data",
+   "supported": true,
+   "file": "sheets/data/bot3/222613956.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 222613956,
+   "n": 2,
+   "type": "line",
+   "title": "Bitcoin: Rolling 4-Year compound annual growth rate (CAGR)",
+   "tab": "A3. Bitcoin Return Data",
+   "supported": true,
+   "file": "sheets/data/bot3/222613956_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 222613956,
+   "n": 3,
+   "type": "line",
+   "title": "Bitcoin: Rolling 5-Year compound annual growth rate (CAGR)",
+   "tab": "A3. Bitcoin Return Data",
+   "supported": true,
+   "file": "sheets/data/bot3/222613956_3.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 247561209,
+   "n": 1,
+   "type": "column",
+   "title": "SATA Daily Volume: Traded Above $100 for 33 consecutive trading days",
+   "tab": "SATA Volume Over 100",
+   "supported": true,
+   "file": "sheets/data/bot3/247561209.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 248451829,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin's 4-year cycle: same clock, shrinking payoff",
+   "tab": "Cycle Comparisons",
+   "supported": true,
+   "file": "sheets/data/bot3/248451829.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 30369989,
+   "n": 1,
+   "type": "line",
+   "title": "Interest Payments on US Public Debt",
+   "tab": "US Interest Payments",
+   "supported": true,
+   "file": "sheets/data/bot3/30369989.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 349949205,
+   "n": 1,
+   "type": "bar",
+   "title": "Cash and BTC Holdings (billions)",
+   "tab": "Cash on Balance Sheets",
+   "supported": true,
+   "file": "sheets/data/bot3/349949205.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 37354382,
+   "n": 1,
+   "type": "column",
+   "title": "Bitcoin Treasury Companies: 2026 Return YTD",
+   "tab": "YTD Performance of Bitcoin treasury companies",
+   "supported": true,
+   "file": "sheets/data/bot3/37354382.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 375370705,
+   "n": 1,
+   "type": "line",
+   "title": "BlackRock's IBIT Dominates Spot Bitcoin ETF Holdings",
+   "tab": "Bitcoin in ETFs",
+   "supported": true,
+   "file": "sheets/data/bot3/375370705.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 394809130,
+   "n": 1,
+   "type": "line",
+   "title": "30-Year Fixed Mortgage Rate",
+   "tab": "30 Fixed Mortgage Rate",
+   "supported": true,
+   "file": "sheets/data/bot3/394809130.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 41300134,
+   "n": 1,
+   "type": "column",
+   "title": "The Scale of the AI Buildout",
+   "tab": "AI Buildout Scale",
+   "supported": true,
+   "file": "sheets/data/bot3/41300134.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 426970761,
+   "n": 1,
+   "type": "line",
+   "title": "MSTR average cost per Bitcoin (cost basis)",
+   "tab": "MSTR avg purchase price",
+   "supported": true,
+   "file": "sheets/data/bot3/426970761.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 454282423,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin vs Global M2 — YoY %",
+   "tab": "BTC vs Global M2",
+   "supported": true,
+   "file": "sheets/data/bot3/454282423.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 481801781,
+   "n": 1,
+   "type": "column",
+   "title": "Tesla quarterly revenue, millions",
+   "tab": "TSLA Sales",
+   "supported": true,
+   "file": "sheets/data/bot3/481801781.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 586475330,
+   "n": 1,
+   "type": "line",
+   "title": "Share of U.S. government spending going to interest payments",
+   "tab": "Spending on Interest",
+   "supported": true,
+   "file": "sheets/data/bot3/586475330.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 595234181,
+   "n": 1,
+   "type": "column",
+   "title": "BTC Holdings as a Percentage of Market Cap",
+   "tab": "BTC Miner BTC/market cap",
+   "supported": true,
+   "file": "sheets/data/bot3/595234181.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 628026316,
+   "n": 1,
+   "type": "line",
+   "title": "Foreign U.S. Treasury Holdings Since Jan 2020",
+   "tab": "Foreign Holders of US Treasuries",
+   "supported": true,
+   "file": "sheets/data/bot3/628026316.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 644674451,
+   "n": 1,
+   "type": "line",
+   "title": "Strategy denominated in BTC (MSTR/BTC)",
+   "tab": "MSTR priced in BTC",
+   "supported": true,
+   "file": "sheets/data/bot3/644674451.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 729377719,
+   "n": 1,
+   "type": "line",
+   "title": "MSTR Amplification",
+   "tab": "MSTR Debt recording",
+   "supported": true,
+   "file": "sheets/data/bot3/729377719.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 729377719,
+   "n": 2,
+   "type": "line",
+   "title": "MSTR Net BTC per share (sats)",
+   "tab": "MSTR Debt recording",
+   "supported": true,
+   "file": "sheets/data/bot3/729377719_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 729377719,
+   "n": 3,
+   "type": "area",
+   "title": "mNAV = MSTR market price / Net BTC per share ($)",
+   "tab": "MSTR Debt recording",
+   "supported": true,
+   "file": "sheets/data/bot3/729377719_3.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 731953139,
+   "n": 1,
+   "type": "area",
+   "title": "Bitcoin Year-over-Year Performance",
+   "tab": "Bitcoin YoY",
+   "supported": true,
+   "file": "sheets/data/bot3/731953139.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 885856590,
+   "n": 1,
+   "type": "line",
+   "title": "Total assets on Fed balance sheet (trillions)",
+   "tab": "Fed Balance Sheet",
+   "supported": true,
+   "file": "sheets/data/bot3/885856590.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 922821390,
+   "n": 1,
+   "type": "line",
+   "title": "Nasdaq-100 Forward P/E Ratio",
+   "tab": "Nasdaq-100 Forward PE",
+   "supported": true,
+   "file": "sheets/data/bot3/922821390.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 943655962,
+   "n": 1,
+   "type": "column",
+   "title": "Free cash flow ($bn) — 2026–2030 estimates",
+   "tab": "Hyperscaler FCF",
+   "supported": true,
+   "file": "sheets/data/bot3/943655962.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 978356289,
+   "n": 1,
+   "type": "column",
+   "title": "Anthropic Q3: $17bn of revenue on $9.9bn of compute.. 1.72x, from 2.08x in Q2",
+   "tab": "Anthropic Revenue vs Compute",
+   "supported": true,
+   "file": "sheets/data/bot3/978356289.json"
   }
  ]
 }

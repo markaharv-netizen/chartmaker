@@ -1,0 +1,91 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 1390301732,
+ "n": 1,
+ "chartId": 1956425102,
+ "title": "World stock markets in US dollars: 2026 YTD and 1-year total return (iShares country ETFs)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "South Korea (EWY)",
+  "Taiwan (EWT)",
+  "Japan (EWJ)",
+  "Brazil (EWZ)",
+  "United States (SPY)",
+  "Australia (EWA)",
+  "Canada (EWC)",
+  "United Kingdom (EWU)",
+  "Mexico (EWW)",
+  "Germany (EWG)",
+  "India (INDA)",
+  "China (MCHI)"
+ ],
+ "x": {
+  "title": "Market"
+ },
+ "y": [
+  {
+   "title": "Total return in USD (%)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "2026 YTD total return, USD (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    97.37,
+    83.11,
+    23.18,
+    21.35,
+    13.75,
+    9.65,
+    9.39,
+    6.51,
+    4.05,
+    -0.87,
+    -13.93,
+    -14.13
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "1-year total return, USD (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#7F7F7F",
+   "data": [
+    134.87,
+    90.12,
+    28.73,
+    31.96,
+    16.25,
+    7.46,
+    17.65,
+    12.98,
+    9.9,
+    -0.8,
+    -11.05,
+    -22.06
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 120 Country ETF scoreboard",
+ "tab": "120 Country ETF scoreboard",
+ "workbook": "Bot experiments"
+}

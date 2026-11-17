@@ -1,0 +1,91 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 956514556,
+ "n": 1,
+ "chartId": 568764918,
+ "title": "Bitcoin held: public companies vs US spot ETFs",
+ "subtitle": "",
+ "type": "line",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "3/31/24",
+  "6/30/24",
+  "9/30/24",
+  "12/31/24",
+  "3/31/25",
+  "6/30/25",
+  "9/30/25",
+  "12/31/25",
+  "3/31/26",
+  "6/30/26",
+  "9/30/26",
+  "Today (10/18/26)"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "US spot ETFs (BTC)",
+   "type": "line",
+   "axis": "left",
+   "color": "#4285F4",
+   "data": [
+    837279,
+    866154,
+    931634,
+    1125628,
+    1124660,
+    1246994,
+    1321032,
+    1297900,
+    1289599,
+    1210299,
+    1291904,
+    1283680
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Public companies (BTC)",
+   "type": "line",
+   "axis": "left",
+   "color": "#EA4335",
+   "data": [
+    308039,
+    325823,
+    363101,
+    624338,
+    754001,
+    896444,
+    1060822,
+    1133341,
+    1188980,
+    1282273,
+    1296686,
+    1304885
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 90 Public cos vs US ETFs BTC",
+ "tab": "90 Public cos vs US ETFs BTC",
+ "workbook": "bot experiments 2"
+}

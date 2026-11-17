@@ -1,0 +1,108 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 877453467,
+ "n": 1,
+ "chartId": 1646942567,
+ "title": "Tesla energy storage (GWh) vs vehicle deliveries, trailing four quarters",
+ "subtitle": "",
+ "type": "line",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2022-10-01",
+  "2023-01-01",
+  "2023-04-01",
+  "2023-07-01",
+  "2023-10-01",
+  "2024-01-01",
+  "2024-04-01",
+  "2024-07-01",
+  "2024-10-01",
+  "2025-01-01",
+  "2025-04-01",
+  "2025-07-01",
+  "2025-10-01",
+  "2026-01-01",
+  "2026-04-01",
+  "2026-07-01"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Storage deployed TTM (GWh)",
+   "format": "number",
+   "log": false
+  },
+  {
+   "title": "Deliveries TTM (millions)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Energy storage deployed, trailing 4Q (GWh)",
+   "type": "line",
+   "axis": "left",
+   "color": "#2CA02C",
+   "data": [
+    6.541,
+    9.584,
+    12.104,
+    14.004,
+    14.744,
+    14.908,
+    20.655,
+    23.555,
+    31.353,
+    37.7,
+    37.9,
+    43.5,
+    46.7,
+    45.1,
+    49,
+    50.2
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Vehicle deliveries, trailing 4Q (millions)",
+   "type": "line",
+   "axis": "right",
+   "color": "#CC0000",
+   "data": [
+    1.314,
+    1.427,
+    1.638,
+    1.729,
+    1.809,
+    1.773,
+    1.75,
+    1.778,
+    1.789,
+    1.739,
+    1.679,
+    1.713,
+    1.636,
+    1.657,
+    1.753,
+    1.743
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 91 TSLA storage vs cars",
+ "tab": "91 TSLA storage vs cars",
+ "workbook": "Bot experiments"
+}

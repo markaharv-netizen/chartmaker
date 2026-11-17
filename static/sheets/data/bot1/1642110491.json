@@ -1,0 +1,85 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 1642110491,
+ "n": 1,
+ "chartId": 1290463653,
+ "title": "Bitcoin vs S&P 500: calendar-year returns (2026 YTD to Oct 2)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2017.0",
+  "2018.0",
+  "2019.0",
+  "2020.0",
+  "2021.0",
+  "2022.0",
+  "2023.0",
+  "2024.0",
+  "2025.0",
+  "2026 YTD"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Return (%)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Bitcoin (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    1324.24,
+    -73.37,
+    94.1,
+    304.57,
+    59.4,
+    -64.23,
+    155.82,
+    120.76,
+    -6.27,
+    -3.42
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "S&P 500 price (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    19.42,
+    -6.24,
+    28.88,
+    16.26,
+    26.89,
+    -19.44,
+    24.23,
+    23.31,
+    16.39,
+    12.81
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 31 BTC vs S&P by year",
+ "tab": "31 BTC vs S&P by year",
+ "workbook": "Bot experiments"
+}

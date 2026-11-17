@@ -1,0 +1,62 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 1913607487,
+ "n": 1,
+ "chartId": 18215803,
+ "title": "Cost to insure AI borrowers' debt: 5-year CDS (bps), late Sep–Oct 9 2026",
+ "subtitle": "",
+ "type": "bar",
+ "horizontal": true,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Oracle",
+  "SpaceX",
+  "Broadcom",
+  "Meta",
+  "Nvidia",
+  "Amazon",
+  "Alphabet",
+  "US IG CDS index (CDX IG)",
+  "Microsoft"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "5Y CDS (bps)",
+   "type": "bar",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    261,
+    197,
+    136,
+    95,
+    89,
+    73,
+    72,
+    55,
+    52
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 61 AI borrower CDS",
+ "tab": "61 AI borrower CDS",
+ "workbook": "bot experiments 2"
+}

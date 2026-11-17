@@ -1,0 +1,52 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 467293370,
+ "n": 1,
+ "chartId": 412510316,
+ "title": "SpaceX free cash flow (operating cash flow minus capex, USD bn)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2023",
+  "2024",
+  "2025",
+  "TTM Sep '26"
+ ],
+ "x": {
+  "title": "Period (TTM = 4 quarters to Jun 30 2026)"
+ },
+ "y": [
+  {
+   "title": "USD bn (negative = cash burn)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Free cash flow = operating cash flow − capex (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F3A93",
+   "data": [
+    0.105,
+    -5.387,
+    -13.952,
+    -39.198
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 319 SpaceX free cash flow",
+ "tab": "319 SpaceX free cash flow",
+ "workbook": "Bot experiments"
+}

@@ -1,0 +1,76 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 300951275,
+ "n": 1,
+ "chartId": 1155297382,
+ "title": "Bitcoin by day of week: average daily return (2016–Oct 2026)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat",
+  "Sun"
+ ],
+ "x": {
+  "title": "Weekday"
+ },
+ "y": [
+  {
+   "title": "Return (%)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Avg daily return (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    0.426,
+    0.063,
+    0.372,
+    -0.041,
+    0.206,
+    0.278,
+    0.07
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Median daily return (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    0.096,
+    0.026,
+    0.206,
+    -0.067,
+    0.261,
+    0.156,
+    0.029
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 23 BTC by weekday",
+ "tab": "23 BTC by weekday",
+ "workbook": "Bot experiments"
+}

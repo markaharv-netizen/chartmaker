@@ -1,0 +1,62 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 854627153,
+ "n": 1,
+ "chartId": 1623032179,
+ "title": "SpaceX valuation: private tenders → xAI merger → IPO → market",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Jul 2024 tender",
+  "Dec 2024 tender",
+  "Jul 2025 tender",
+  "Dec 2025 insider sale",
+  "Feb 2026 xAI merger (SpaceX only)",
+  "Jun 2026 IPO ($135)",
+  "Peak close Jun 16 2026",
+  "Low close Aug 5 2026",
+  "Oct 20 2026 close"
+ ],
+ "x": {
+  "title": "Event"
+ },
+ "y": [
+  {
+   "title": "USD bn",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Valuation / market cap (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#000000",
+   "data": [
+    210,
+    350,
+    400,
+    800,
+    1000,
+    1770,
+    2786,
+    1427,
+    1948
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 102 SpaceX valuation path",
+ "tab": "102 SpaceX valuation path",
+ "workbook": "Bot experiments"
+}

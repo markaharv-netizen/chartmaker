@@ -1,0 +1,117 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 2055282175,
+ "n": 1,
+ "chartId": 1739131682,
+ "title": "Signed, not yet on the books: data-center leases at Microsoft, Meta, Amazon and Alphabet reached $830B (Jun 2026)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": "stacked",
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Dec 2024",
+  "Mar 2025",
+  "Jun 2025",
+  "Sep 2025",
+  "Dec 2025",
+  "Mar 2026",
+  "Jun 2026",
+  "Sep 2026"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "USD billions",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Microsoft",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    105.4,
+    99.2,
+    92.7,
+    106.2,
+    155.1,
+    196.6,
+    329.1,
+    364.6
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Meta",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    34.12,
+    35.27,
+    52.56,
+    58.14,
+    103.77,
+    182.88,
+    278.99,
+    355.73
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Amazon",
+   "type": "column",
+   "axis": "left",
+   "color": "#FBC77E",
+   "data": [
+    61.63,
+    67.2,
+    68.88,
+    75.02,
+    96.37,
+    106.35,
+    137.21,
+    164.92
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Alphabet",
+   "type": "column",
+   "axis": "left",
+   "color": "#C4B0FB",
+   "data": [
+    7.27,
+    17.3,
+    23.9,
+    42.6,
+    58.5,
+    75.6,
+    85.2,
+    130.5
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 22 Big Tech unbooked leases by co",
+ "tab": "22 Big Tech unbooked leases by co",
+ "workbook": "bot experiments 2"
+}

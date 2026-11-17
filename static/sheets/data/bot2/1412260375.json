@@ -1,0 +1,87 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 1412260375,
+ "n": 1,
+ "chartId": 1574273478,
+ "title": "Goldman's 2025 robotaxi costs: insurance $0.50 + remote operators $0.49 + depreciation $0.35 a mile, vs $0.61 for a human rideshare car before driver pay",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": "stacked",
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Robotaxi 2025 (Goldman est.)",
+  "Human rideshare car (excl. driver pay)"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "USD per mile (estimate)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Insurance",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    0.5,
+    0.3
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Remote operators",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    0.49,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Depreciation",
+   "type": "column",
+   "axis": "left",
+   "color": "#FBC77E",
+   "data": [
+    0.35,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Car operating costs (fuel, maintenance, cleaning, depreciation)",
+   "type": "column",
+   "axis": "left",
+   "color": "#C4B0FB",
+   "data": [
+    null,
+    0.31
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 36 Robotaxi cost components",
+ "tab": "36 Robotaxi cost components",
+ "workbook": "bot experiments 2"
+}

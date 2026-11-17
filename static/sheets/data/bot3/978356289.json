@@ -1,0 +1,76 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 978356289,
+ "n": 1,
+ "chartId": 506911651,
+ "title": "Anthropic Q3: $17bn of revenue on $9.9bn of compute.. 1.72x, from 2.08x in Q2",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Q1 25",
+  "Q2 25",
+  "Q3 25",
+  "Q4 25",
+  "Q1 26",
+  "Q2 26",
+  "Q3 26"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Revenue, $bn",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    0.376,
+    0.787,
+    1.382,
+    2.04,
+    4.731,
+    11.555,
+    16.956
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Compute & infrastructure expense, $bn",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    0.944,
+    1.39,
+    2.047,
+    2.945,
+    3.387,
+    5.558,
+    9.863
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · Anthropic Revenue vs Compute",
+ "tab": "Anthropic Revenue vs Compute",
+ "workbook": "My Bot's Sheets"
+}

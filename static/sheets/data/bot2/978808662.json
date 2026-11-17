@@ -1,0 +1,78 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 978808662,
+ "n": 1,
+ "chartId": 1525325373,
+ "title": "Strategy's STRC buybacks as a share of weekly STRC volume",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Jul 20",
+  "Jul 27",
+  "Aug 3",
+  "Aug 10",
+  "Aug 17",
+  "Aug 24",
+  "Aug 31",
+  "Sep 8",
+  "Sep 14",
+  "Sep 21",
+  "Sep 28",
+  "Oct 5",
+  "Oct 12",
+  "Oct 19",
+  "Oct 26",
+  "Nov 2",
+  "Nov 9"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Buyback share",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    0.055,
+    0.139,
+    0.146,
+    0.236,
+    0.203,
+    0.19,
+    0.224,
+    0.279,
+    0.228,
+    0.215,
+    0.186,
+    0.296,
+    0.195,
+    0.277,
+    0.239,
+    0.184,
+    0.253
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 84 STRC buybacks share of volume",
+ "tab": "84 STRC buybacks share of volume",
+ "workbook": "bot experiments 2"
+}

@@ -1,0 +1,56 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 1120646409,
+ "n": 1,
+ "chartId": 552440716,
+ "title": "Hyperscaler Net Cash ($B, latest quarter)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Alphabet",
+  "SpaceX",
+  "Microsoft",
+  "Meta",
+  "Amazon",
+  "Oracle"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Net cash ($B)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    139,
+    52,
+    29,
+    -1.3,
+    -66.1,
+    -88.2
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · Hyperscaler Net Cash",
+ "tab": "Hyperscaler Net Cash",
+ "workbook": "My Bot's Sheets"
+}

@@ -1,0 +1,62 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 1135406116,
+ "n": 1,
+ "chartId": 713613574,
+ "title": "US interest expense on federal debt ($B, fiscal year)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "FY2018",
+  "FY2019",
+  "FY2020",
+  "FY2021",
+  "FY2022",
+  "FY2023",
+  "FY2024",
+  "FY2025",
+  "FY2026"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "$B",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    523,
+    574.6,
+    522.8,
+    562.4,
+    718.8,
+    882.6,
+    1133,
+    1220,
+    1360.4
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 89 US interest expense",
+ "tab": "89 US interest expense",
+ "workbook": "bot experiments 2"
+}

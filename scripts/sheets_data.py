@@ -380,6 +380,21 @@ def _bounds(src, cells):
     return sid, r0, c0, int(r1), c1
 
 
+
+def _src_shape(src, cells):
+    """Return ('row'|'col'|None, sid, r0, c0, r1, c1)."""
+    b = _bounds(src, cells)
+    if not b:
+        return None
+    sid, r0, c0, r1, c1 = b
+    rows, cols = r1 - r0, c1 - c0
+    if rows <= 0 or cols <= 0:
+        return None
+    if rows == 1 and cols > 1:
+        return ("row", sid, r0, c0, r1, c1)
+    return ("col", sid, r0, c0, r1, c1)
+
+
 def _first_source(data):
     sources = ((data or {}).get("sourceRange") or {}).get("sources") or []
     for src in sources:
@@ -496,6 +511,40 @@ def unsupported(chart_id, kind, reason):
     }
 
 
+
+def _parse_category_date(label):
+    text = " ".join(str(label or "").split())
+    if not text:
+        return None
+    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%m/%d/%y", "%Y-%m", "%b %Y", "%b %d, %Y"):
+        try:
+            return datetime.datetime.strptime(text, fmt)
+        except ValueError:
+            continue
+    m = re.fullmatch(r"Q([1-4])(?:-|'')?\s*(\d{2,4})", text, re.I)
+    if m:
+        year = int(m.group(2))
+        if year < 100:
+            year += 2000
+        return datetime.datetime(year, int(m.group(1)) * 3, 1)
+    if text.upper() == "QTD":
+        return datetime.datetime(2099, 12, 31)
+    return None
+
+
+def _categories_are_descending(categories):
+    """True when labels are a time series stored newest-first."""
+    dates = []
+    for lab in categories or []:
+        d = _parse_category_date(lab)
+        if d:
+            dates.append(d)
+    if len(dates) < 3:
+        return False
+    decreasing = all(dates[i] >= dates[i + 1] for i in range(len(dates) - 1))
+    return decreasing and dates[0] > dates[-1]
+
+
 def convert_chart(chart, cells, formatted_cells, sheet_title):
     spec = (chart or {}).get("spec") or {}
     chart_id = chart.get("chartId") if isinstance(chart, dict) else None
@@ -516,31 +565,47 @@ def convert_chart(chart, cells, formatted_cells, sheet_title):
     bounds = _bounds(domain_src, cells)
     if not bounds:
         return unsupported(chart_id, SERIES_TYPE.get(chart_type, "unknown"), "chart domain sheet is missing")
-    sid, r0, c0, r1, _c1 = bounds
+    sid, r0, c0, r1, c1 = bounds
     try:
         header = int(basic.get("headerCount") or 0)
     except (TypeError, ValueError):
         header = 0
     if header < 0:
         header = 0
-    data_r0 = r0 + header
-    if data_r0 >= r1:
-        return unsupported(chart_id, SERIES_TYPE.get(chart_type, "unknown"), "chart has no data rows")
+    row_oriented = (r1 - r0) == 1 and (c1 - c0) > 1
+    if not row_oriented:
+        data_r0 = r0 + header
+        if data_r0 >= r1:
+            return unsupported(chart_id, SERIES_TYPE.get(chart_type, "unknown"), "chart has no data rows")
     axes = _axis_by_position(basic)
     cat_pos = _category_position(chart_type)
     cat_axis = axes.get(cat_pos) or {}
     categories = []
     rows = []
-    for r in range(data_r0, r1):
-        raw = cells.get((sid, r, c0))
-        fmt = formatted_cells.get((sid, r, c0))
-        label = _category_label(raw, fmt, cat_axis)
-        if not label:
-            continue
-        categories.append(label)
-        rows.append(r)
-    if not categories:
-        return unsupported(chart_id, SERIES_TYPE.get(chart_type, "unknown"), "chart has no category labels")
+    cat_cols = []
+    if row_oriented:
+        # Categories across a single row (Sheets often lays a small column chart this way).
+        for c in range(c0, c1):
+            raw = cells.get((sid, r0, c))
+            fmt = formatted_cells.get((sid, r0, c))
+            label = _category_label(raw, fmt, cat_axis)
+            if not label:
+                continue
+            categories.append(label)
+            cat_cols.append(c)
+        if not categories:
+            return unsupported(chart_id, SERIES_TYPE.get(chart_type, "unknown"), "chart has no category labels")
+    else:
+        for r in range(data_r0, r1):
+            raw = cells.get((sid, r, c0))
+            fmt = formatted_cells.get((sid, r, c0))
+            label = _category_label(raw, fmt, cat_axis)
+            if not label:
+                continue
+            categories.append(label)
+            rows.append(r)
+        if not categories:
+            return unsupported(chart_id, SERIES_TYPE.get(chart_type, "unknown"), "chart has no category labels")
     raw_series = []
     for s in basic.get("series") or []:
         if not isinstance(s, dict):
@@ -551,15 +616,23 @@ def convert_chart(chart, cells, formatted_cells, sheet_title):
         sb = _bounds(src, cells)
         if not sb:
             continue
-        _ssid, sr0, sc0, _sr1, sc1 = sb
-        width = max(1, sc1 - sc0)
-        for offset in range(width):
-            raw_series.append((s, sc0 + offset, sr0, offset == 0))
+        _ssid, sr0, sc0, sr1, sc1 = sb
+        if row_oriented or ((sr1 - sr0) == 1 and (sc1 - sc0) > 1):
+            raw_series.append((s, "row", sr0, sc0, sr1, sc1, True))
+        else:
+            width = max(1, sc1 - sc0)
+            for offset in range(width):
+                raw_series.append((s, "col", sr0, sc0 + offset, sr1, sc1, offset == 0))
     if not raw_series:
         return unsupported(chart_id, SERIES_TYPE.get(chart_type, "unknown"), "chart has no series range")
     built = []
-    for i, (s, col, sr0, primary) in enumerate(raw_series):
-        name = _header_name(cells, sid, col, sr0) if header else ""
+    for i, (s, orient, sr0, sc0, sr1, sc1, primary) in enumerate(raw_series):
+        if orient == "row":
+            name = _header_name(cells, sid, sc0 - 1, sr0) if sc0 > 0 else ""
+            if not name:
+                name = _header_name(cells, sid, sc0, sr0) if header else ""
+        else:
+            name = _header_name(cells, sid, sc0, sr0) if header else ""
         if not name:
             name = "Series %d" % (i + 1)
         stype = str(s.get("type") or chart_type).upper()
@@ -573,21 +646,36 @@ def convert_chart(chart, cells, formatted_cells, sheet_title):
         percent = _number_format_type(value_axis) == "PERCENT"
         data = []
         saw_percent_text = False
-        for r in rows:
-            raw = cells.get((sid, r, col))
-            fmt = formatted_cells.get((sid, r, col))
-            if isinstance(raw, str) and raw.strip().endswith("%"):
-                saw_percent_text = True
-            if isinstance(fmt, str) and fmt.strip().endswith("%"):
-                saw_percent_text = True
-            data.append(_series_number(raw, fmt, percent))
+        if orient == "row":
+            for c in cat_cols:
+                raw = cells.get((sid, sr0, c))
+                fmt = formatted_cells.get((sid, sr0, c))
+                if isinstance(raw, str) and raw.strip().endswith("%"):
+                    saw_percent_text = True
+                if isinstance(fmt, str) and fmt.strip().endswith("%"):
+                    saw_percent_text = True
+                data.append(_series_number(raw, fmt, percent))
+        else:
+            col = sc0
+            for r in rows:
+                raw = cells.get((sid, r, col))
+                fmt = formatted_cells.get((sid, r, col))
+                if isinstance(raw, str) and raw.strip().endswith("%"):
+                    saw_percent_text = True
+                if isinstance(fmt, str) and fmt.strip().endswith("%"):
+                    saw_percent_text = True
+                data.append(_series_number(raw, fmt, percent))
         if not any(v is not None for v in data):
             continue
         if saw_percent_text and not percent:
             percent = True
             data = []
-            for r in rows:
-                data.append(_series_number(cells.get((sid, r, col)), formatted_cells.get((sid, r, col)), True))
+            if orient == "row":
+                for c in cat_cols:
+                    data.append(_series_number(cells.get((sid, sr0, c)), formatted_cells.get((sid, sr0, c)), True))
+            else:
+                for r in rows:
+                    data.append(_series_number(cells.get((sid, r, sc0)), formatted_cells.get((sid, r, sc0)), True))
         built.append({
             "name": name,
             "type": mapped,
@@ -673,6 +761,10 @@ def convert_chart(chart, cells, formatted_cells, sheet_title):
     x_title = "" if cat_pos else ""
     x_title = strip_category_title((axes.get(cat_pos) or {}).get("title"))
     legend = str(basic.get("legendPosition") or "").upper()
+    if _categories_are_descending(categories):
+        categories = list(reversed(categories))
+        for s in built:
+            s["data"] = list(reversed(s.get("data") or []))
     return {
         "supported": True,
         "chartId": chart_id,

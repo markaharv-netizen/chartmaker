@@ -1,0 +1,79 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 1778759744,
+ "n": 1,
+ "chartId": 744476558,
+ "title": "Crypto majors vs stocks and gold: 2026 YTD and 1-year returns (to Oct 2 2026)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Bitcoin",
+  "Ether",
+  "Solana",
+  "XRP",
+  "Dogecoin",
+  "Nasdaq Composite",
+  "S&P 500 (SPY, TR)",
+  "Gold (GLD)"
+ ],
+ "x": {
+  "title": "Asset"
+ },
+ "y": [
+  {
+   "title": "Return (%)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "2026 YTD return (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    -3.44,
+    -10.07,
+    -4.71,
+    -19.29,
+    -20.74,
+    16.99,
+    13.75,
+    -4.08
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "1-year return (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#7F7F7F",
+   "data": [
+    -29.98,
+    -40.55,
+    -49.49,
+    -51.14,
+    -64.51,
+    19.03,
+    16.25,
+    7.15
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 142 Crypto vs stocks scoreboard",
+ "tab": "142 Crypto vs stocks scoreboard",
+ "workbook": "Bot experiments"
+}

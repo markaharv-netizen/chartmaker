@@ -1,0 +1,78 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 2081496397,
+ "n": 1,
+ "chartId": 307617377,
+ "title": "Tether's U.S. Treasury Holdings",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2022-06-30",
+  "2022-09-30",
+  "2022-12-31",
+  "2023-03-31",
+  "2023-06-30",
+  "2023-09-30",
+  "2023-12-31",
+  "2024-03-31",
+  "2024-06-30",
+  "2024-09-30",
+  "2024-12-31",
+  "2025-03-31",
+  "2025-06-30",
+  "2025-09-30",
+  "2025-12-31",
+  "2026-03-31",
+  "2026-06-30"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Value of U.S. Treasury Bills (USD bn)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Value of U.S. Treasury Bills",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    28.8564,
+    39.6785,
+    39.2303,
+    53.0448,
+    55.8097,
+    56.6616,
+    63.086,
+    74.0453,
+    80.9486,
+    84.548,
+    94.4717,
+    98.5237,
+    105.519,
+    112.417,
+    122.3257,
+    117.0357,
+    114.961
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · Tether Reserves",
+ "tab": "Tether Reserves",
+ "workbook": "My Bot's Sheets"
+}

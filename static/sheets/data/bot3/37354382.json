@@ -1,0 +1,72 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 37354382,
+ "n": 1,
+ "chartId": 1408819537,
+ "title": "Bitcoin Treasury Companies: 2026 Return YTD",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Strive",
+  "The Smarter Web Company",
+  "MARA",
+  "H100 Group",
+  "Strategy",
+  "Capital B",
+  "Oranjebtc",
+  "Bullish",
+  "Twenty One Capital",
+  "Metaplanet",
+  "Nakamoto",
+  "Trump Media",
+  "American Bitcoin",
+  "DDC Enterprise"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "percent",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "YTD %Chg",
+   "type": "column",
+   "axis": "left",
+   "color": "#FF0000",
+   "data": [
+    44.72,
+    16.62,
+    -22.16,
+    -21.53,
+    -26.54,
+    -31.59,
+    -35.34,
+    -40.61,
+    -43.49,
+    -45.93,
+    -64.39,
+    -64.95,
+    -80.12,
+    -93.66
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · YTD Performance of Bitcoin treasury companies",
+ "tab": "YTD Performance of Bitcoin treasury companies",
+ "workbook": "My Bot's Sheets"
+}
