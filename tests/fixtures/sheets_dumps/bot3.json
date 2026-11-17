@@ -1,0 +1,961 @@
+{
+ "sample": true,
+ "note": "Pilot sample transcribed from the committed chart PNGs so the page renders without Google credentials. The Monday export replaces it.",
+ "spreadsheet": {
+  "spreadsheetId": "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU",
+  "properties": {
+   "title": "My Bot's Sheets"
+  },
+  "sheets": [
+   {
+    "properties": {
+     "sheetId": 1145735379,
+     "title": "MSTR Debt",
+     "index": 0
+    },
+    "charts": [
+     {
+      "chartId": 501,
+      "spec": {
+       "title": "Strategy bitcoin on balance sheet",
+       "basicChart": {
+        "chartType": "COLUMN",
+        "legendPosition": "NO_LEGEND",
+        "headerCount": 1,
+        "interpolateNulls": false,
+        "lineSmoothing": false,
+        "axis": [
+         {
+          "position": "BOTTOM_AXIS",
+          "title": "Date"
+         },
+         {
+          "position": "LEFT_AXIS",
+          "title": "",
+          "viewWindowOptions": {
+           "viewWindowMode": "EXPLICIT",
+           "viewWindowMin": 0
+          }
+         }
+        ],
+        "domains": [
+         {
+          "domain": {
+           "sourceRange": {
+            "sources": [
+             {
+              "sheetId": 1145735379,
+              "startRowIndex": 0,
+              "endRowIndex": 27,
+              "startColumnIndex": 0,
+              "endColumnIndex": 1
+             }
+            ]
+           }
+          }
+         }
+        ],
+        "series": [
+         {
+          "series": {
+           "sourceRange": {
+            "sources": [
+             {
+              "sheetId": 1145735379,
+              "startRowIndex": 0,
+              "endRowIndex": 27,
+              "startColumnIndex": 1,
+              "endColumnIndex": 2
+             }
+            ]
+           }
+          },
+          "targetAxis": "LEFT_AXIS",
+          "color": {
+           "red": 0.9686274509803922,
+           "green": 0.5764705882352941,
+           "blue": 0.10196078431372549
+          },
+          "dataLabel": {
+           "type": "DATA"
+          }
+         }
+        ],
+        "stackedType": "NOT_STACKED"
+       }
+      },
+      "position": {
+       "overlayPosition": {
+        "anchorCell": {
+         "rowIndex": 0,
+         "columnIndex": 0
+        }
+       }
+      }
+     },
+     {
+      "chartId": 502,
+      "spec": {
+       "title": "Strategy BTC Holdings Q/Q Change",
+       "basicChart": {
+        "chartType": "COLUMN",
+        "legendPosition": "NO_LEGEND",
+        "headerCount": 1,
+        "interpolateNulls": false,
+        "lineSmoothing": false,
+        "axis": [
+         {
+          "position": "BOTTOM_AXIS",
+          "title": ""
+         },
+         {
+          "position": "LEFT_AXIS",
+          "title": "",
+          "format": {
+           "numberFormat": {
+            "type": "PERCENT"
+           }
+          },
+          "viewWindowOptions": {
+           "viewWindowMode": "EXPLICIT",
+           "viewWindowMin": 0,
+           "viewWindowMax": 1
+          }
+         }
+        ],
+        "domains": [
+         {
+          "domain": {
+           "sourceRange": {
+            "sources": [
+             {
+              "sheetId": 1145735379,
+              "startRowIndex": 0,
+              "endRowIndex": 26,
+              "startColumnIndex": 3,
+              "endColumnIndex": 4
+             }
+            ]
+           }
+          }
+         }
+        ],
+        "series": [
+         {
+          "series": {
+           "sourceRange": {
+            "sources": [
+             {
+              "sheetId": 1145735379,
+              "startRowIndex": 0,
+              "endRowIndex": 26,
+              "startColumnIndex": 4,
+              "endColumnIndex": 5
+             }
+            ]
+           }
+          },
+          "targetAxis": "LEFT_AXIS",
+          "color": {
+           "red": 0.12549019607843137,
+           "green": 0.12941176470588237,
+           "blue": 0.1411764705882353
+          },
+          "dataLabel": {
+           "type": "DATA"
+          }
+         }
+        ],
+        "stackedType": "NOT_STACKED"
+       }
+      },
+      "position": {
+       "overlayPosition": {
+        "anchorCell": {
+         "rowIndex": 28,
+         "columnIndex": 0
+        }
+       }
+      }
+     },
+     {
+      "chartId": 503,
+      "spec": {
+       "title": "Strategy BTC/Share (in Sats)",
+       "basicChart": {
+        "chartType": "COLUMN",
+        "legendPosition": "NO_LEGEND",
+        "headerCount": 1,
+        "interpolateNulls": false,
+        "lineSmoothing": false,
+        "axis": [
+         {
+          "position": "BOTTOM_AXIS",
+          "title": ""
+         },
+         {
+          "position": "LEFT_AXIS",
+          "title": "",
+          "viewWindowOptions": {
+           "viewWindowMode": "EXPLICIT",
+           "viewWindowMin": 0
+          }
+         }
+        ],
+        "domains": [
+         {
+          "domain": {
+           "sourceRange": {
+            "sources": [
+             {
+              "sheetId": 1145735379,
+              "startRowIndex": 0,
+              "endRowIndex": 14,
+              "startColumnIndex": 6,
+              "endColumnIndex": 7
+             }
+            ]
+           }
+          }
+         }
+        ],
+        "series": [
+         {
+          "series": {
+           "sourceRange": {
+            "sources": [
+             {
+              "sheetId": 1145735379,
+              "startRowIndex": 0,
+              "endRowIndex": 14,
+              "startColumnIndex": 7,
+              "endColumnIndex": 8
+             }
+            ]
+           }
+          },
+          "targetAxis": "LEFT_AXIS",
+          "color": {
+           "red": 0.9686274509803922,
+           "green": 0.5764705882352941,
+           "blue": 0.10196078431372549
+          },
+          "dataLabel": {
+           "type": "DATA"
+          }
+         }
+        ],
+        "stackedType": "NOT_STACKED"
+       }
+      },
+      "position": {
+       "overlayPosition": {
+        "anchorCell": {
+         "rowIndex": 56,
+         "columnIndex": 0
+        }
+       }
+      }
+     },
+     {
+      "chartId": 504,
+      "spec": {
+       "title": "MSTR mNAV",
+       "basicChart": {
+        "chartType": "AREA",
+        "legendPosition": "NO_LEGEND",
+        "headerCount": 1,
+        "interpolateNulls": false,
+        "lineSmoothing": false,
+        "axis": [
+         {
+          "position": "BOTTOM_AXIS",
+          "title": "Date"
+         },
+         {
+          "position": "LEFT_AXIS",
+          "title": "",
+          "viewWindowOptions": {
+           "viewWindowMode": "EXPLICIT",
+           "viewWindowMin": 0.8,
+           "viewWindowMax": 1.8
+          }
+         }
+        ],
+        "domains": [
+         {
+          "domain": {
+           "sourceRange": {
+            "sources": [
+             {
+              "sheetId": 1145735379,
+              "startRowIndex": 0,
+              "endRowIndex": 53,
+              "startColumnIndex": 9,
+              "endColumnIndex": 10
+             }
+            ]
+           }
+          }
+         }
+        ],
+        "series": [
+         {
+          "series": {
+           "sourceRange": {
+            "sources": [
+             {
+              "sheetId": 1145735379,
+              "startRowIndex": 0,
+              "endRowIndex": 53,
+              "startColumnIndex": 10,
+              "endColumnIndex": 11
+             }
+            ]
+           }
+          },
+          "targetAxis": "LEFT_AXIS",
+          "color": {
+           "red": 0.6039215686274509,
+           "green": 0.6274509803921569,
+           "blue": 0.6509803921568628
+          }
+         }
+        ],
+        "stackedType": "NOT_STACKED"
+       },
+       "subtitle": "Before Jul 27: mNAV = (Enterprise value) / (BTC NAV); After Jul 27: mNAV = (MSTR market price) / (Net BTC per share ($))"
+      },
+      "position": {
+       "overlayPosition": {
+        "anchorCell": {
+         "rowIndex": 84,
+         "columnIndex": 0
+        }
+       }
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "values": {
+  "spreadsheetId": "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU",
+  "valueRanges": [
+   {
+    "range": "'MSTR Debt'!A1:B27",
+    "values": [
+     [
+      "Date",
+      "Bitcoin"
+     ],
+     [
+      "9/30/20",
+      38250
+     ],
+     [
+      "12/31/20",
+      70469
+     ],
+     [
+      "3/31/21",
+      91326
+     ],
+     [
+      "6/30/21",
+      105085
+     ],
+     [
+      "9/30/21",
+      114042
+     ],
+     [
+      "12/31/21",
+      124391
+     ],
+     [
+      "3/31/22",
+      129218
+     ],
+     [
+      "6/30/22",
+      129699
+     ],
+     [
+      "9/30/22",
+      130000
+     ],
+     [
+      "12/31/22",
+      132500
+     ],
+     [
+      "3/31/23",
+      140006
+     ],
+     [
+      "6/30/23",
+      152800
+     ],
+     [
+      "9/30/23",
+      158245
+     ],
+     [
+      "12/31/23",
+      189150
+     ],
+     [
+      "3/31/24",
+      214278
+     ],
+     [
+      "6/30/24",
+      226331
+     ],
+     [
+      "9/30/24",
+      252220
+     ],
+     [
+      "12/31/24",
+      447470
+     ],
+     [
+      "3/31/25",
+      528185
+     ],
+     [
+      "6/30/25",
+      597325
+     ],
+     [
+      "9/30/25",
+      640031
+     ],
+     [
+      "12/31/25",
+      672500
+     ],
+     [
+      "3/31/26",
+      762099
+     ],
+     [
+      "6/30/26",
+      846000
+     ],
+     [
+      "9/30/26",
+      847666
+     ],
+     [
+      "11/16/26",
+      850364
+     ]
+    ]
+   },
+   {
+    "range": "'MSTR Debt'!D1:E26",
+    "values": [
+     [
+      "Quarter",
+      "Q/Q change"
+     ],
+     [
+      "Q4'20",
+      0.8420000000000001
+     ],
+     [
+      "Q1'21",
+      0.29600000000000004
+     ],
+     [
+      "Q2'21",
+      0.151
+     ],
+     [
+      "Q3'21",
+      0.085
+     ],
+     [
+      "Q4'21",
+      0.091
+     ],
+     [
+      "Q1'22",
+      0.039
+     ],
+     [
+      "Q2'22",
+      0.004
+     ],
+     [
+      "Q3'22",
+      0.002
+     ],
+     [
+      "Q4'22",
+      0.019
+     ],
+     [
+      "Q1'23",
+      0.057
+     ],
+     [
+      "Q2'23",
+      0.091
+     ],
+     [
+      "Q3'23",
+      0.036000000000000004
+     ],
+     [
+      "Q4'23",
+      0.195
+     ],
+     [
+      "Q1'24",
+      0.133
+     ],
+     [
+      "Q2'24",
+      0.055999999999999994
+     ],
+     [
+      "Q3'24",
+      0.114
+     ],
+     [
+      "Q4'24",
+      0.774
+     ],
+     [
+      "Q1'25",
+      0.18
+     ],
+     [
+      "Q2'25",
+      0.131
+     ],
+     [
+      "Q3'25",
+      0.071
+     ],
+     [
+      "Q4'25",
+      0.051
+     ],
+     [
+      "Q1'26",
+      0.133
+     ],
+     [
+      "Q2'26",
+      0.01
+     ],
+     [
+      "Q3'26",
+      0.002
+     ],
+     [
+      "QTD",
+      0.005
+     ]
+    ]
+   },
+   {
+    "range": "'MSTR Debt'!G1:H14",
+    "values": [
+     [
+      "Shares",
+      "Sats per share"
+     ],
+     [
+      "112,135",
+      91097
+     ],
+     [
+      "121,425",
+      98443
+     ],
+     [
+      "118,703",
+      102102
+     ],
+     [
+      "124,470",
+      107273
+     ],
+     [
+      "182,063",
+      158827
+     ],
+     [
+      "198,433",
+      176266
+     ],
+     [
+      "212,603",
+      190100
+     ],
+     [
+      "222,923",
+      199985
+     ],
+     [
+      "215,502",
+      194986
+     ],
+     [
+      "220,118",
+      201170
+     ],
+     [
+      "227,656",
+      210818
+     ],
+     [
+      "200,879",
+      187712
+     ],
+     [
+      "201,340",
+      186826
+     ]
+    ]
+   },
+   {
+    "range": "'MSTR Debt'!J1:K53",
+    "values": [
+     [
+      "Date",
+      "mNAV"
+     ],
+     [
+      "2025-10-06",
+      1.51
+     ],
+     [
+      "2025-10-13",
+      1.46
+     ],
+     [
+      "2025-10-20",
+      1.41
+     ],
+     [
+      "2025-10-27",
+      1.36
+     ],
+     [
+      "2025-11-03",
+      1.31
+     ],
+     [
+      "2025-11-10",
+      1.25
+     ],
+     [
+      "2025-11-17",
+      1.19
+     ],
+     [
+      "2025-11-24",
+      1.18
+     ],
+     [
+      "2025-12-01",
+      1.17
+     ],
+     [
+      "2025-12-08",
+      1.15
+     ],
+     [
+      "2025-12-15",
+      1.14
+     ],
+     [
+      "2025-12-22",
+      1.13
+     ],
+     [
+      "2025-12-29",
+      1.09
+     ],
+     [
+      "2026-01-05",
+      1.06
+     ],
+     [
+      "2026-01-12",
+      1.03
+     ],
+     [
+      "2026-01-19",
+      1.05
+     ],
+     [
+      "2026-01-26",
+      1.07
+     ],
+     [
+      "2026-02-02",
+      1.11
+     ],
+     [
+      "2026-02-09",
+      1.16
+     ],
+     [
+      "2026-02-16",
+      1.21
+     ],
+     [
+      "2026-02-23",
+      1.2
+     ],
+     [
+      "2026-03-02",
+      1.19
+     ],
+     [
+      "2026-03-09",
+      1.19
+     ],
+     [
+      "2026-03-16",
+      1.18
+     ],
+     [
+      "2026-03-23",
+      1.17
+     ],
+     [
+      "2026-03-30",
+      1.17
+     ],
+     [
+      "2026-04-06",
+      1.14
+     ],
+     [
+      "2026-04-13",
+      1.11
+     ],
+     [
+      "2026-04-20",
+      1.16
+     ],
+     [
+      "2026-04-27",
+      1.2
+     ],
+     [
+      "2026-05-04",
+      1.25
+     ],
+     [
+      "2026-05-11",
+      1.31
+     ],
+     [
+      "2026-05-18",
+      1.29
+     ],
+     [
+      "2026-05-25",
+      1.26
+     ],
+     [
+      "2026-06-01",
+      1.25
+     ],
+     [
+      "2026-06-08",
+      1.2
+     ],
+     [
+      "2026-06-15",
+      1.15
+     ],
+     [
+      "2026-06-22",
+      1.11
+     ],
+     [
+      "2026-06-29",
+      1.08
+     ],
+     [
+      "2026-07-06",
+      1.05
+     ],
+     [
+      "2026-07-13",
+      1.02
+     ],
+     [
+      "2026-07-20",
+      1.01
+     ],
+     [
+      "2026-07-27",
+      1.05
+     ],
+     [
+      "2026-08-03",
+      1.04
+     ],
+     [
+      "2026-08-10",
+      1.03
+     ],
+     [
+      "2026-08-17",
+      1.03
+     ],
+     [
+      "2026-08-24",
+      1.06
+     ],
+     [
+      "2026-08-31",
+      1.09
+     ],
+     [
+      "2026-09-07",
+      1.13
+     ],
+     [
+      "2026-09-14",
+      1.15
+     ],
+     [
+      "2026-09-21",
+      1.16
+     ],
+     [
+      "2026-09-28",
+      1.18
+     ]
+    ]
+   }
+  ]
+ },
+ "formatted": {
+  "spreadsheetId": "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU",
+  "valueRanges": [
+   {
+    "range": "'MSTR Debt'!D1:E26",
+    "values": [
+     [
+      "Quarter",
+      "Q/Q change"
+     ],
+     [
+      "Q4'20",
+      "84.2%"
+     ],
+     [
+      "Q1'21",
+      "29.6%"
+     ],
+     [
+      "Q2'21",
+      "15.1%"
+     ],
+     [
+      "Q3'21",
+      "8.5%"
+     ],
+     [
+      "Q4'21",
+      "9.1%"
+     ],
+     [
+      "Q1'22",
+      "3.9%"
+     ],
+     [
+      "Q2'22",
+      "0.4%"
+     ],
+     [
+      "Q3'22",
+      "0.2%"
+     ],
+     [
+      "Q4'22",
+      "1.9%"
+     ],
+     [
+      "Q1'23",
+      "5.7%"
+     ],
+     [
+      "Q2'23",
+      "9.1%"
+     ],
+     [
+      "Q3'23",
+      "3.6%"
+     ],
+     [
+      "Q4'23",
+      "19.5%"
+     ],
+     [
+      "Q1'24",
+      "13.3%"
+     ],
+     [
+      "Q2'24",
+      "5.6%"
+     ],
+     [
+      "Q3'24",
+      "11.4%"
+     ],
+     [
+      "Q4'24",
+      "77.4%"
+     ],
+     [
+      "Q1'25",
+      "18.0%"
+     ],
+     [
+      "Q2'25",
+      "13.1%"
+     ],
+     [
+      "Q3'25",
+      "7.1%"
+     ],
+     [
+      "Q4'25",
+      "5.1%"
+     ],
+     [
+      "Q1'26",
+      "13.3%"
+     ],
+     [
+      "Q2'26",
+      "1.0%"
+     ],
+     [
+      "Q3'26",
+      "0.2%"
+     ],
+     [
+      "QTD",
+      "0.5%"
+     ]
+    ]
+   }
+  ]
+ }
+}

@@ -186,6 +186,13 @@ def _norm(d):
     return {"views": v if isinstance(v, list) else [],
             "watchlist": w if isinstance(w, dict) and isinstance(w.get("list"), list) else None,
             "favorites": _norm_fav(d.get("favorites"))}
+def _sheets_data():
+    """Interactive chart export. Imported on request so a missing optional path cannot break startup."""
+    scripts = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts")
+    if scripts not in sys.path:
+        sys.path.insert(0, scripts)
+    import sheets_data
+    return sheets_data
 def favorites_mode():
     """Where a successful write actually lives. file is the server disk; github survives a redeploy."""
     if VIEWS_STORE == "browser": return "off"
@@ -661,7 +668,13 @@ class H(SimpleHTTPRequestHandler):
         if PASSWORD and u.path == "/login": return s.redirect("/") if s.authed() else s.send_login()
         if PASSWORD and u.path == "/logout": return s.redirect("/", f"{COOKIE}=; Max-Age=0; Path=/; HttpOnly; Secure; SameSite=Lax")
         if not s.gate(u.path): return
-        if u.path == "/api/config": return s.send_json({"viewsStore": VIEWS_STORE, "auth": bool(PASSWORD), "favoritesSync": favorites_mode()})
+        if u.path == "/api/config":
+            live = False
+            try:
+                live = bool(_sheets_data().live_enabled())
+            except Exception:
+                live = False
+            return s.send_json({"viewsStore": VIEWS_STORE, "auth": bool(PASSWORD), "favoritesSync": favorites_mode(), "sheetsLive": live})
         if u.path == "/api/favorites": return s.favorites_get()
         if u.path in ("/api/views", "/api/views/all"):
             if VIEWS_STORE == "browser": return s.send_json([] if u.path == "/api/views" else _norm({}))
@@ -669,6 +682,12 @@ class H(SimpleHTTPRequestHandler):
             except Exception as e: return s.send_json({"error": "storage unavailable: " + str(e)}, 502)
             return s.send_json(d["views"] if u.path == "/api/views" else d)
         qs = urllib.parse.parse_qs(u.query)
+        if u.path == "/api/sheets/chart":
+            try:
+                obj, code = _sheets_data().live_chart_response(qs.get("book", [""])[0], qs.get("gid", [""])[0], qs.get("n", ["1"])[0])
+            except Exception as e:
+                obj, code = {"error": str(e)[:300], "fallback": "static", "live": False}, 500
+            return s.send_json(obj, code)
         if u.path == "/api/search": return s.send_json(ysearch(qs.get("q", [""])[0]))
         if u.path == "/api/earnings": return s.send_json(yahoo_earnings(qs.get("symbol", [""])[0]))
         if u.path == "/api/paper":
