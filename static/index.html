@@ -29,7 +29,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #cotd .card .why b{display:block;font-size:12px;color:#6B7280;font-weight:600;margin-bottom:2px}
 #sheets{display:none;padding:16px 16px 48px;max-width:1100px}#sheets h2{margin:0 0 4px;font-size:22px}#sheets .theme{color:#374151;margin:0 0 14px;font-size:15px;line-height:1.45}
 #sheets .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}#sheets .count{font-size:13px;color:#6B7280;margin:0 0 10px}
-#sheets .row{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start}
+#sheets .row{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;margin-bottom:8px;display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start}
 #sheets .row .meta{flex:1;min-width:0}#sheets .book{font-size:11px;letter-spacing:.4px;text-transform:uppercase;color:#6B7280}
 #sheets .row h3{margin:2px 0 4px;font-size:16px}#sheets .charts{font-size:13px;color:#374151;line-height:1.4}
 #sheets .row a.open{color:#2563eb;font-size:14px;white-space:nowrap}#sheets .row img{width:240px;max-width:42%;height:auto;border:1px solid #f0f0f0;border-radius:4px;background:#fff;cursor:zoom-in}
@@ -46,6 +46,16 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #sheets button.fav:hover,#cotd button.fav:hover{background:#F3F4F6}
 #sheets button.fav:disabled,#cotd button.fav:disabled{opacity:.45;cursor:not-allowed}
 #sheets button.chip:focus-visible,#sheets button.fav:focus-visible,#cotd button.fav:focus-visible{outline:2px solid #111;outline-offset:2px}
+#sheets button.live,#cotd button.live{background:transparent;color:#2563eb;border:0;padding:0;margin:0;font-size:14px;font-weight:600;cursor:pointer;min-height:0;line-height:1.3}
+#sheets button.live[aria-pressed=true],#cotd button.live[aria-pressed=true]{color:#111}
+#sheets .pngline button.live,#sheets .acts button.live{margin-left:0}
+#sheets .acts [data-multi]{flex:1 0 100%}
+#sheets button.live:focus-visible,#cotd button.live:focus-visible{outline:2px solid #111;outline-offset:2px}
+#sheets .livebox,#cotd .livebox{flex:1 0 100%;margin-top:8px;background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:8px 8px 4px}
+#sheets .lvtitle,#cotd .lvtitle{font-size:16px;font-weight:650;margin:2px 8px 0;line-height:1.35;color:#111}
+#sheets .livebox .lv,#cotd .livebox .lv{width:100%;height:440px}
+#sheets .lvnote,#cotd .lvnote{font-size:12px;color:#6B7280;margin:4px 8px 6px;line-height:1.45}
+#cotd .acts{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin:8px 0 0}
 @media (max-width:640px){
   #sheets .row{flex-direction:column}
   #sheets .row img{width:100%;max-width:none}
@@ -1147,6 +1157,171 @@ async function sheetsCatalog(){
   }
   return SHEETS_P;
 }
+// ---------- Interactive Sheets charts: static/sheets/data/<book>/<gid>[_n].json ----------
+// Drawn with the vendored ECharts build (same library as the rest of Chartmaker).
+// A chart with no snapshot, or a type this page does not draw, keeps View PNG.
+let LIVE_SET=new Set(),SHEETS_LIVE=false,LIVE_READY=null;
+function sheetLiveKey(book,gid,n){return String(book)+'/'+Number(gid)+'/'+Number(n)}
+function sheetDataRel(book,gid,n){
+  n=Number(n)||1;const p='sheets/data/'+book+'/'+gid+(n>1?'_'+n:'')+'.json';
+  return /^sheets\/data\/[A-Za-z0-9][A-Za-z0-9_-]{0,24}\/\d+(?:_(?:[2-9]|[1-9]\d))?\.json$/.test(p)?p:'';
+}
+async function sheetLivePrepare(){
+  if(LIVE_READY)return LIVE_READY;
+  LIVE_READY=(async()=>{
+    try{const r=await fetch('sheets/data/index.json?t='+Date.now(),{cache:'no-store'});
+      if(r.ok){const j=await r.json();LIVE_SET=new Set((j.charts||[]).filter(c=>c&&c.supported!==false&&c.book!=null).map(c=>sheetLiveKey(c.book,c.gid,c.n)))}
+    }catch(e){}
+    try{const r=await fetch('/api/config',{cache:'no-store'});if(r.ok){const j=await r.json();SHEETS_LIVE=!!j.sheetsLive}}catch(e){}
+  })();
+  try{await LIVE_READY}catch(e){}
+  return LIVE_READY;
+}
+function sheetLiveOffer(tab,ch){
+  if(!tab||!ch||ch.synthetic)return false;
+  if(SHEETS_LIVE)return true;
+  return LIVE_SET.has(sheetLiveKey(tab.book,tab.gid,ch.n));
+}
+function sheetLiveBtn(tab,ch){
+  if(!sheetLiveOffer(tab,ch))return '';
+  const key=tab.book+'/'+tab.gid+'/'+ch.n;
+  return '<button type="button" class="live" data-live="'+escHtml(key)+'" aria-pressed="false">Interactive</button>';
+}
+function sheetLiveBtns(tab,charts){
+  const rows=(charts||[]).filter(ch=>sheetLiveOffer(tab,ch));
+  if(!rows.length)return '';
+  return rows.map(ch=>'<div class="pngline">'+(rows.length>1?escHtml(ch.label)+': ':'')+sheetLiveBtn(tab,ch)+'</div>').join('');
+}
+function liveNum(v,fmt){
+  if(v==null||v==='')return '';
+  const n=+v;if(!isFinite(n))return '';
+  if(fmt==='percent'){const d=Math.abs(n)>=100||Math.abs(n-Math.round(n))<1e-6&&Math.abs(n)>=10?0:1;
+    return n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d})+'%'}
+  if(fmt==='integer')return Math.round(n).toLocaleString('en-US');
+  const a=Math.abs(n),d=a>=100?1:2;
+  return n.toLocaleString('en-US',{maximumFractionDigits:d});
+}
+function liveCaption(doc){
+  const src=doc.source?('Source: '+doc.source+'. '):'';
+  const sub=doc.subtitle?(doc.subtitle+' '):'';
+  const axes=(doc.y||[]).map(a=>a&&a.title).filter(t=>t&&t.length>32);
+  const axisNote=axes.length?axes.join(' · ')+'. ':'';
+  const sample=doc.sample?'Pilot sample transcribed from the sheet PNG. The Monday export replaces it with Sheets values. ':'';
+  return sub+axisNote+src+sample+'Scroll to zoom. Drag to pan. Hover for values.';
+}
+function sheetLiveClear(root){
+  if(!root)return;
+  root.querySelectorAll('.lv').forEach(el=>{if(el._ec){try{el._ec.dispose()}catch(e){}}});
+}
+function renderSheetChart(el,doc){
+  if(!el||!doc||typeof echarts==='undefined')return null;
+  if(doc.supported===false){el.innerHTML='<p class="lvnote">'+(escHtml(doc.reason||'This chart type is not interactive yet.'))+' View PNG still works.</p>';return null}
+  const ok={line:1,area:1,column:1,bar:1,combo:1,scatter:1};
+  if(!ok[doc.type]){el.innerHTML='<p class="lvnote">This chart type is not interactive yet ('+escHtml(doc.type||'unknown')+'). View PNG still works.</p>';return null}
+  const cats=doc.categories||[],series=doc.series||[],axes=Array.isArray(doc.y)&&doc.y.length?doc.y:[{title:'',format:'number'}];
+  if(!cats.length||!series.length){el.innerHTML='<p class="lvnote">No interactive data for this chart. View PNG still works.</p>';return null}
+  const horiz=!!doc.horizontal||doc.type==='bar';
+  const showLegend=doc.legend!==false&&series.length>1;
+  const fmtFor=s=>{const i=s.axis==='right'&&axes[1]?1:0;return (axes[i]||{}).format||'number'};
+  const points=(s,log)=> (s.data||[]).map(v=>{if(v==null||v==='')return null;const n=+v;if(!isFinite(n))return null;if(log&&n<=0)return null;return n});
+  const ecType=t=>t==='column'||t==='bar'?'bar':t==='scatter'?'scatter':'line';
+  const built=series.map(s=>{
+    const ai=s.axis==='right'&&axes[1]?1:0;
+    const log=!!(axes[ai]&&axes[ai].log);
+    const kind=s.type||(doc.type==='combo'?'line':doc.type);
+    const item={name:s.name||'',type:ecType(kind),data:points(s,log),yAxisIndex:horiz?0:ai,xAxisIndex:horiz?ai:0,
+      itemStyle:{color:s.color||'#F7931A'},connectNulls:!!doc.connectNulls,
+      showSymbol:cats.length<=36&&ecType(kind)==='line',symbolSize:6,smooth:!!s.smooth};
+    if(kind==='area'){item.type='line';item.areaStyle={color:s.color||'#9AA0A6',opacity:.35}}
+    if(ecType(kind)==='line')item.lineStyle={width:2,color:s.color||'#F7931A',type:s.step?'solid':'solid'};
+    if(s.step)item.step='end';
+    if(doc.stacked&&(kind==='column'||kind==='bar'))item.stack='s'+ai;
+    if(s.labels&&cats.length<=16)item.label={show:true,position:horiz?'right':'top',fontSize:11,fontFamily:'Inter, Arial, sans-serif',color:s.color||'#374151',formatter:p=>liveNum(p.value,fmtFor(s))};
+    if(ecType(kind)==='bar')item.barMaxWidth=48;
+    return item;
+  });
+  const axisLabel={color:'#6B7280',fontSize:12,fontFamily:'Inter, Arial, sans-serif',hideOverlap:true};
+  const valueAxis=(src,extra)=>({type:src&&src.log?'log':'value',name:src&&src.title&&src.title.length<=32?src.title:'',nameLocation:'middle',nameRotate:90,nameGap:src&&src.title&&src.title.length<=32?36:8,
+    nameTextStyle:{color:'#374151',fontSize:12,fontFamily:'Inter, Arial, sans-serif'},
+    min:src&&src.min!=null?src.min:undefined,max:src&&src.max!=null?src.max:undefined,
+    scale:!(src&&src.min!=null)&&!built.some(s=>s.type==='bar'&&((extra&&extra.right)?s.yAxisIndex===1:s.yAxisIndex===0)),
+    axisLabel:Object.assign({},axisLabel,{formatter:v=>liveNum(v,src&&src.format)}),
+    splitLine:{lineStyle:{color:'#E5E7EB'}},axisLine:{lineStyle:{color:'#E5E7EB'}}});
+  const catAxis={type:'category',data:cats,name:doc.x&&doc.x.title?doc.x.title:'',nameLocation:'middle',nameGap:doc.x&&doc.x.title?28:8,
+    nameTextStyle:{color:'#374151',fontSize:12,fontFamily:'Inter, Arial, sans-serif'},
+    axisLabel:Object.assign({},axisLabel,{rotate:cats.length>14?40:0}),axisTick:{show:false},axisLine:{lineStyle:{color:'#E5E7EB'}},
+    boundaryGap:built.some(s=>s.type==='bar')};
+  const opt={animation:false,textStyle:{fontFamily:'Inter, Arial, sans-serif'},
+    grid:{containLabel:true,left:8,right:axes[1]?12:8,top:12,bottom:(showLegend?36:8)+(cats.length>12?36:16)+(doc.x&&doc.x.title?16:0)},
+    legend:showLegend?{type:'scroll',bottom:28,textStyle:{color:'#374151',fontSize:12,fontFamily:'Inter, Arial, sans-serif'}}:{show:false},
+    tooltip:{trigger:doc.type==='scatter'?'item':'axis',confine:true,backgroundColor:'#fff',borderColor:'#E5E7EB',
+      textStyle:{color:'#111827',fontFamily:'Inter, Arial, sans-serif',fontSize:13},
+      formatter:ps=>{ps=[].concat(ps);const head=ps[0]&&(ps[0].axisValueLabel||ps[0].name)||'';
+        const rows=ps.filter(p=>p&&p.value!=null&&p.value!=='');
+        if(!rows.length)return escHtml(head);
+        return '<b>'+escHtml(head)+'</b>'+rows.map(p=>{const s=series[p.seriesIndex]||{};return '<div>'+(p.marker||'')+escHtml(s.name||p.seriesName||'')+': <b>'+escHtml(liveNum(p.value,fmtFor(s)))+'</b></div>'}).join('')}},
+    dataZoom:horiz?[
+      {type:'inside',yAxisIndex:0,filterMode:'none',zoomOnMouseWheel:true,moveOnMouseMove:true,moveOnMouseWheel:false},
+      {type:'slider',yAxisIndex:0,width:16,right:6,filterMode:'none'}
+    ]:[
+      {type:'inside',xAxisIndex:0,filterMode:'none',zoomOnMouseWheel:true,moveOnMouseMove:true,moveOnMouseWheel:false},
+      {type:'slider',xAxisIndex:0,height:18,bottom:6,filterMode:'none'}
+    ],
+    xAxis:horiz?valueAxis(axes[0]):catAxis,
+    yAxis:horiz?catAxis:(axes[1]?[valueAxis(axes[0]),valueAxis(axes[1],{right:1})]:valueAxis(axes[0])),
+    series:built};
+  if(horiz){opt.series.forEach(s=>{s.xAxisIndex=0;s.yAxisIndex=0})}
+  else built.forEach((item,i)=>{item.yAxisIndex=series[i]&&series[i].axis==='right'&&axes[1]?1:0});
+  try{
+    const chart=echarts.init(el,null,{renderer:'canvas'});
+    chart.setOption(opt,true);
+    requestAnimationFrame(()=>{try{chart.resize()}catch(e){}});
+    return chart;
+  }catch(err){
+    window.__liveErr=String(err&&err.message||err);
+    el.innerHTML='<p class="lvnote">Could not draw this chart ('+escHtml(window.__liveErr)+'). View PNG still works.</p>';
+    return null;
+  }
+}
+window.__sheetLiveRender=renderSheetChart;
+async function sheetLiveDoc(book,gid,n){
+  const rel=sheetDataRel(book,gid,n);
+  if(rel){try{const r=await fetch(rel+'?t='+Date.now(),{cache:'no-store'});if(r.ok){const j=await r.json();if(j&&typeof j==='object')return j}}catch(e){}}
+  if(!SHEETS_LIVE)return null;
+  try{const r=await fetch('/api/sheets/chart?book='+encodeURIComponent(book)+'&gid='+encodeURIComponent(gid)+'&n='+encodeURIComponent(n),{cache:'no-store'});
+    if(!r.ok)return null;return await r.json()}catch(e){return null}
+}
+async function sheetLiveToggle(btn){
+  const host=btn.closest('.row')||btn.closest('.card');
+  if(!host)return;
+  const key=btn.getAttribute('data-live')||'';
+  const was=btn.getAttribute('aria-pressed')==='true';
+  host.querySelectorAll('button.live').forEach(b=>{b.setAttribute('aria-pressed','false');b.textContent='Interactive'});
+  const old=host.querySelector('[data-livebox]');
+  if(old){const el=old.querySelector('.lv');if(el&&el._ec){try{el._ec.dispose()}catch(e){}}old.remove()}
+  if(was)return;
+  btn.setAttribute('aria-pressed','true');btn.textContent='Hide chart';
+  const box=document.createElement('div');
+  box.className='livebox';box.setAttribute('data-livebox',key);
+  box.innerHTML='<p class="lvnote">Loading…</p><div class="lv" role="img"></div>';
+  host.appendChild(box);
+  const parts=key.split('/');
+  const doc=await sheetLiveDoc(parts[0],parts[1],parts[2]);
+  if(!box.isConnected)return;
+  const note=box.querySelector('.lvnote'),lv=box.querySelector('.lv');
+  if(!doc||doc.supported===false||!doc.series){
+    note.textContent=((doc&&doc.reason)||(doc&&doc.error)||'No interactive data for this chart.')+' View PNG still works.';
+    if(lv)lv.remove();return;
+  }
+  const title=document.createElement('div');title.className='lvtitle';title.textContent=doc.title||'';
+  box.insertBefore(title,note);
+  if(lv)lv.setAttribute('aria-label',doc.title||'Interactive chart');
+  note.textContent=liveCaption(doc);
+  try{const chart=renderSheetChart(lv,doc);if(chart)lv._ec=chart}catch(e){note.textContent='Could not draw this chart. View PNG still works.';}
+}
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('button.live');if(!b)return;e.preventDefault();sheetLiveToggle(b)});
+window.addEventListener('resize',()=>{document.querySelectorAll('.lv').forEach(el=>{if(el._ec){try{el._ec.resize()}catch(e){}}})});
+function cotdLiveBtn(x,cat){const hit=cat&&cotdChart(x,cat);return hit?sheetLiveBtn(hit.tab,hit.ch):''}
 // ---------- Charts of the day: static/cotd/today.json (scripts/cotd_build.py) ----------
 // A picks array is "Today's picks", then items are "Random from the library".
 // An edition with only items (no picks) stays one list. Render every card.
@@ -1158,7 +1333,8 @@ function cotdCard(x,i,cat,pick){
   const badge=table&&img?'<div class="kindline">Table</div>':'';
   const bare=!img?`<div class="tablepreview"><span class="kind">${table?'Table':'Chart'}</span><p>${E(x.tab||x.title||'')}</p>${url?`<a href="${E(url)}" target="_blank" rel="noopener">${table?'Open this table':'open in sheet'}</a>`:''}</div>`:'';
   const about=pick?`${x.description?`<p class="desc">${E(x.description)}</p>`:''}${x.reason?`<p class="why"><b>Why it was picked</b>${E(x.reason)}</p>`:''}`:'';
-  return `<div class="card${pick?' pick':''}" data-kind="${kind}"><div class="cardtop"><h3>${i+1}. ${E(x.title||'')}</h3>${cotdFavBtn(x,cat)}</div>${badge}${img}${bare}
+  const live=cotdLiveBtn(x,cat);
+  return `<div class="card${pick?' pick':''}" data-kind="${kind}"><div class="cardtop"><h3>${i+1}. ${E(x.title||'')}</h3>${cotdFavBtn(x,cat)}</div>${badge}${img}${live?`<div class="acts">${live}</div>`:''}${bare}
 ${about}<div class="src">${E(x.sheet||'')} · ${E(x.tab||'')}${sheetLink?` · ${sheetLink}`:''}</div></div>`;
 }
 function cotdSplit(j){
@@ -1170,9 +1346,11 @@ function cotdSplit(j){
   return {split:false,picks:[],random:items};
 }
 async function cotdenter(){const el=$('cotd'),E=escHtml;
+  sheetLiveClear(el);
   el.innerHTML='<p>Loading…</p>';
   try{const r=await fetch('cotd/today.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const j=await r.json();if(MODE!=='cotd')return;
     let cat=null;try{cat=await sheetsCatalog()}catch(e){cat=null}
+    try{await sheetLivePrepare()}catch(e){}
     if(MODE!=='cotd')return;
     const d=j.date?new Date(j.date+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'}):'';
     const parts=cotdSplit(j);
@@ -1205,7 +1383,8 @@ async function sheetsEnter(){const el=$('sheets'),E=escHtml;
     const books=cat.books||[],tabs=cat.tabs||[];
     const bookBy=Object.fromEntries(books.map(b=>[b.id,b]));
     const when=cat.generated?new Date(cat.generated).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'';
-    el.innerHTML=`<h2>Sheets library</h2><p class="theme">Search ${tabs.length} tabs across ${books.map(b=>E(b.name)).join(', ')}. Opens the Google Sheet. Type a search to see a chart preview beside each result that has one. View PNG and Download PNG open the full-size chart when it is in the library, and the thumbnail when it is not. The preview stays the small thumbnail. The full list stays text-only, and a tab with no thumbnail is still listed. Star a chart to keep it under Favorites. Each chart on a tab has its own star. A tab with no chart, such as a table, has one star, labeled with the tab name.${when?' Catalog '+E(when)+'.':''}</p>
+    try{await sheetLivePrepare()}catch(e){}
+    el.innerHTML=`<h2>Sheets library</h2><p class="theme">Search ${tabs.length} tabs across ${books.map(b=>E(b.name)).join(', ')}. Opens the Google Sheet. Type a search to see a chart preview beside each result that has one. View PNG and Download PNG open the full-size chart when it is in the library, and the thumbnail when it is not. The preview stays the small thumbnail. Charts with interactive data have an Interactive button beside View PNG, and on the text list. Hover shows the value. Scroll zooms and drag pans. The PNG buttons stay for posting on X. The full list stays text-only aside from that button, and a tab with no thumbnail is still listed. Star a chart to keep it under Favorites. Each chart on a tab has its own star. A tab with no chart, such as a table, has one star, labeled with the tab name.${when?' Catalog '+E(when)+'.':''}</p>
 <div class="bar"><input id="shq" type="search" size="28" placeholder="Search tabs or chart titles" aria-label="Search tabs or chart titles" autocomplete="off">
 <select id="shbook" aria-label="Workbook"><option value="">All workbooks</option>${books.map(b=>`<option value="${E(b.id)}">${E(b.name)}</option>`).join('')}</select>
 <label style="display:flex;flex-direction:row;align-items:center;gap:4px;font-size:13px"><input id="shcharts" type="checkbox"> Has a chart</label>
@@ -1214,6 +1393,7 @@ async function sheetsEnter(){const el=$('sheets'),E=escHtml;
 <p id="favmsg" data-favmsg role="status" aria-live="polite"></p>
 <p class="count" id="shcount" aria-live="polite"></p><div id="shlist"></div>`;
     const draw=async()=>{const seq=++SHSEQ,q=($('shq').value||'').trim().toLowerCase(),book=$('shbook').value,need=$('shcharts').checked,favOnly=FAV_VIEW;
+      sheetLiveClear($('shlist'));
       if(favOnly){
         let picks=[];
         for(const item of FAV){const hit=favResolve(item,cat);if(hit)picks.push(hit)}
@@ -1225,7 +1405,8 @@ async function sheetsEnter(){const el=$('sheets'),E=escHtml;
         $('shlist').innerHTML=ready.map(({h,file})=>{
           const openUrl=sheetOpen(h.book,h.tab);
           const open=openUrl?`<a class="open" href="${E(openUrl)}" target="_blank" rel="noopener">Open in Sheets</a>`:'';
-          const png=file?`<a class="open" href="${E(file.href)}" target="_blank" rel="noopener">View PNG</a><a class="open" href="${E(file.href)}" download="${E(sheetFile(h.tab.tab+(h.ch.n>1?' '+h.ch.n:''),file.ext))}">Download PNG</a>`:'';
+          const live=sheetLiveBtn(h.tab,h.ch);
+          const png=file?`<a class="open" href="${E(file.href)}" target="_blank" rel="noopener">View PNG</a><a class="open" href="${E(file.href)}" download="${E(sheetFile(h.tab.tab+(h.ch.n>1?' '+h.ch.n:''),file.ext))}">Download PNG</a>${live}`:live;
           const nofile=file?'':'<div class="charts">No PNG in the library for this chart.</div>';
           const preview=h.ch.n===1?sheetThumb(h.tab):'';
           const href=file?file.href:(preview||'');
@@ -1247,8 +1428,11 @@ async function sheetsEnter(){const el=$('sheets'),E=escHtml;
         const open=openUrl?`<a class="open" href="${E(openUrl)}" target="_blank" rel="noopener">Open in Sheets</a>`:'';
         const lines=sheetCharts(t);
         const charts=lines.length?`<div class="charts">${lines.map(ch=>`<div class="chartline">${favButton(t.book,t.gid,ch)}<span>${E(ch.label)}</span></div>`).join('')}</div>`:'';
-        const png=!im?'':pairs.length>1?`<span data-png>${pairs.map(c=>`<div class="pngline">${E(c.label)}: <a class="open" href="${E(c.href)}" target="_blank" rel="noopener">View PNG</a> <a class="open" href="${E(c.href)}" download="${E(sheetFile(t.tab+(c.n>1?' '+c.n:''),c.ext))}">Download PNG</a></div>`).join('')}</span>`:`<span data-png><a class="open" href="${E(href)}" target="_blank" rel="noopener">View PNG</a> <a class="open" href="${E(href)}" download="${E(sheetFile(t.tab,ext))}">Download PNG</a></span>`;
-        return `<div class="row"><div class="meta"><div class="book">${E(b.name)}</div><h3>${E(t.tab)}</h3>${charts}${open||png?`<div class="acts">${open}${png}</div>`:''}</div>${im?`<a href="${E(href)}" target="_blank" rel="noopener"><img src="${E(im)}" alt="${E(t.tab)}" loading="lazy" onerror="var row=this.closest('.row');var a=this.closest('a');if(a)a.remove();var x=row&&row.querySelector('[data-png]');if(x)x.remove()"></a>`:''}</div>`}).join('')||'<p>No tabs match.</p>';
+        const liveOnPng=n=>{const ch=lines.find(c=>c.n===n);return ch?sheetLiveBtn(t,ch):''};
+        const png=!im?'':pairs.length>1?`<span data-png data-multi>${pairs.map(c=>`<div class="pngline">${E(c.label)}: <a class="open" href="${E(c.href)}" target="_blank" rel="noopener">View PNG</a> <a class="open" href="${E(c.href)}" download="${E(sheetFile(t.tab+(c.n>1?' '+c.n:''),c.ext))}">Download PNG</a> ${liveOnPng(c.n)}</div>`).join('')}</span>`:`<span data-png><a class="open" href="${E(href)}" target="_blank" rel="noopener">View PNG</a> <a class="open" href="${E(href)}" download="${E(sheetFile(t.tab,ext))}">Download PNG</a> ${liveOnPng((lines.find(c=>!c.synthetic)||lines[0]||{}).n||1)}</span>`;
+        const covered=im?(pairs.length>1?new Set(pairs.map(c=>c.n)):new Set([(lines.find(c=>!c.synthetic)||lines[0]||{}).n||1])):new Set();
+        const liveOnly=sheetLiveBtns(t,lines.filter(ch=>!covered.has(ch.n)));
+        return `<div class="row"><div class="meta"><div class="book">${E(b.name)}</div><h3>${E(t.tab)}</h3>${charts}${open||png||liveOnly?`<div class="acts">${open}${png}${liveOnly}</div>`:''}</div>${im?`<a href="${E(href)}" target="_blank" rel="noopener"><img src="${E(im)}" alt="${E(t.tab)}" loading="lazy" onerror="var row=this.closest('.row');var a=this.closest('a');if(a)a.remove();var x=row&&row.querySelector('[data-png]');if(x)x.remove()"></a>`:''}</div>`}).join('')||'<p>No tabs match.</p>';
       favPaint()};
     window.__sheetsDraw=draw;
     $('shfav').onclick=()=>{FAV_VIEW=$('shfav').getAttribute('aria-pressed')!=='true';$('shfav').setAttribute('aria-pressed',FAV_VIEW?'true':'false');draw()};

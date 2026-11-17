@@ -1,0 +1,72 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:11:14Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 1145735379,
+ "n": 3,
+ "chartId": 503,
+ "title": "Strategy BTC/Share (in Sats)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": false,
+ "categories": [
+  "112,135",
+  "121,425",
+  "118,703",
+  "124,470",
+  "182,063",
+  "198,433",
+  "212,603",
+  "222,923",
+  "215,502",
+  "220,118",
+  "227,656",
+  "200,879",
+  "201,340"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "integer",
+   "log": false,
+   "min": 0
+  }
+ ],
+ "series": [
+  {
+   "name": "Sats per share",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    91097,
+    98443,
+    102102,
+    107273,
+    158827,
+    176266,
+    190100,
+    199985,
+    194986,
+    201170,
+    210818,
+    187712,
+    186826
+   ],
+   "labels": true,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · MSTR Debt",
+ "tab": "MSTR Debt",
+ "workbook": "My Bot's Sheets",
+ "sample": true
+}

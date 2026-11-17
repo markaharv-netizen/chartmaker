@@ -1,0 +1,96 @@
+{
+ "generated": "2026-11-17T13:11:14Z",
+ "note": "Interactive chart data for the Sheets library. Built by scripts/sheets_data.py from a spreadsheets.get plus values.batchGet dump. The browser draws these files. View PNG still uses static/sheets/full/. Retired tabs in EXCLUDED_TABS are omitted.",
+ "charts": [
+  {
+   "book": "bot1",
+   "gid": 1540677114,
+   "n": 1,
+   "type": "line",
+   "title": "The S&P 500 in today's dollars (CPI-adjusted)",
+   "tab": "09 Real S&P 500",
+   "supported": true,
+   "file": "sheets/data/bot1/1540677114.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1546024641,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin is ~2.4x as volatile as stocks (BTC 30-day realized vol vs VIX)",
+   "tab": "01 BTC vol vs VIX",
+   "supported": true,
+   "file": "sheets/data/bot1/1546024641.json"
+  },
+  {
+   "book": "bot1",
+   "gid": 1810821762,
+   "n": 1,
+   "type": "line",
+   "title": "Bitcoin vs its 200-week moving average",
+   "tab": "04 BTC vs 200-week MA",
+   "supported": true,
+   "file": "sheets/data/bot1/1810821762.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 1690294676,
+   "n": 1,
+   "type": "line",
+   "title": "Strategy vs Strive leverage: Strategy 31% of its bitcoin, Strive 65%",
+   "tab": "6 MSTR vs ASST leverage",
+   "supported": true,
+   "file": "sheets/data/bot2/1690294676.json"
+  },
+  {
+   "book": "bot2",
+   "gid": 49428948,
+   "n": 1,
+   "type": "line",
+   "title": "Strategy's USD reserve covers 37 months of dividends, vs 6 in May (Dec 2025–Oct 2026)",
+   "tab": "5 MSTR USD reserve vs dividends",
+   "supported": true,
+   "file": "sheets/data/bot2/49428948.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1145735379,
+   "n": 1,
+   "type": "column",
+   "title": "Strategy bitcoin on balance sheet",
+   "tab": "MSTR Debt",
+   "supported": true,
+   "file": "sheets/data/bot3/1145735379.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1145735379,
+   "n": 2,
+   "type": "column",
+   "title": "Strategy BTC Holdings Q/Q Change",
+   "tab": "MSTR Debt",
+   "supported": true,
+   "file": "sheets/data/bot3/1145735379_2.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1145735379,
+   "n": 3,
+   "type": "column",
+   "title": "Strategy BTC/Share (in Sats)",
+   "tab": "MSTR Debt",
+   "supported": true,
+   "file": "sheets/data/bot3/1145735379_3.json"
+  },
+  {
+   "book": "bot3",
+   "gid": 1145735379,
+   "n": 4,
+   "type": "area",
+   "title": "MSTR mNAV",
+   "tab": "MSTR Debt",
+   "supported": true,
+   "file": "sheets/data/bot3/1145735379_4.json"
+  }
+ ]
+}

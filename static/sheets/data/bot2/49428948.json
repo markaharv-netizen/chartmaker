@@ -1,0 +1,108 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:11:14Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 49428948,
+ "n": 1,
+ "chartId": 602,
+ "title": "Strategy's USD reserve covers 37 months of dividends, vs 6 in May (Dec 2025–Oct 2026)",
+ "subtitle": "",
+ "type": "line",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2025-12-01",
+  "2026-01-01",
+  "2026-02-01",
+  "2026-03-01",
+  "2026-04-01",
+  "2026-04-20",
+  "2026-05-10",
+  "2026-05-25",
+  "2026-06-05",
+  "2026-06-20",
+  "2026-07-01",
+  "2026-07-20",
+  "2026-08-10",
+  "2026-08-25",
+  "2026-09-15",
+  "2026-09-28",
+  "2026-10-05"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "USD millions",
+   "format": "integer",
+   "log": false,
+   "min": 0
+  }
+ ],
+ "series": [
+  {
+   "name": "USD Reserve, USD m",
+   "type": "line",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    1450,
+    2200,
+    2250,
+    2250,
+    2250,
+    2250,
+    2250,
+    2250,
+    900,
+    1400,
+    2500,
+    3750,
+    4600,
+    5100,
+    4900,
+    null,
+    4850
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Annual preferred dividends + interest, USD m",
+   "type": "line",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    820,
+    850,
+    880,
+    920,
+    1100,
+    1480,
+    1500,
+    1700,
+    1720,
+    1750,
+    1780,
+    1760,
+    1720,
+    1680,
+    1600,
+    null,
+    1520
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 5 MSTR USD reserve vs dividends",
+ "tab": "5 MSTR USD reserve vs dividends",
+ "workbook": "bot experiments 2",
+ "sample": true
+}

@@ -104,6 +104,77 @@ Until that export is on the machine, seed only the tabs that overlap today's Cha
 
 Workbooks: Bot experiments `1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY`, bot experiments 2 `1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ`, My Bot's Sheets `1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU`. All three dumps are required unless you pass `--allow-partial`. The weekly PNG folders feed the sheet library, which Charts of the day copies previews from: `1SwZgYGwwHsoL_DXQUuQAYS6lhq5KxFe9`, `1mMUKaB_RbeZhtn5ntuKJV5xZOeo6LzGH`, `1AVfHRo2mJgBhbJoszHhe5vgOscfKhbzT`.
 
+## Interactive Sheets charts
+
+The Sheets library can draw a chart in the browser from the workbook's own values: hover shows the point, and the date range zooms and pans. **View PNG** and **Download PNG** stay, including on Charts of the day, because a post on X still wants the flat image. A chart with no data file, or a type that is not supported yet, keeps the PNG and does not invent a picture.
+
+This pilot uses a **data snapshot** (option A), not a fetch on every open. Render's service has no Google credential, and the page already does not call Google. The Monday routine writes JSON under `static/sheets/data/`. The browser reads that. A live fetch (option B) is implemented behind `SHEETS_LIVE` and is off unless that variable is set. Credentials were not configured in this environment, so the pilot ships sample dumps transcribed from the committed PNGs. Those samples are marked `sample: true`. The Monday export replaces them.
+
+Files:
+
+- `static/sheets/data/<book>/<gid>.json` for chart 1, and `<gid>_2.json`, `<gid>_3.json`, … for the rest. The number is the catalog `chartList` `n`, the same number as the PNG.
+- `static/sheets/data/index.json` lists the charts the Interactive button offers.
+- `tests/fixtures/sheets_dumps/bot1.json`, `bot2.json`, and `bot3.json` are the saved `spreadsheets.get` + `values.batchGet` dumps the exporter reads with no credentials.
+
+**Supported now:** line, area, stepped area, column, bar (horizontal), scatter, and combo, including a second axis and stacked or percent-stacked columns. The house palette is orange `#F7931A` then violet `#8B5CF6` when the sheet does not set a color. A series whose name is Bitcoin or BTC gets orange unless the spec has its own color. Fonts are Inter, Arial, sans-serif. An x-axis title of Date, Year, Years, or Time is dropped.
+
+**Not supported yet:** pie, bubble, candlestick, histogram, waterfall, treemap, org, scorecard, and 3D charts. Those stay on the PNG. A native Sheets log scale is not in the public chart axis spec; the exporter honors `logScale: true` or `scaleType: LOG` on the axis when the dump includes it.
+
+`sheets_catalog.EXCLUDED_TABS` never gets a data file. A file already on disk for one of those tabs is deleted. A multi-chart tab whose dump has no anchor on every chart is left unchanged, same rule as the catalog.
+
+### Monday routine, part 3
+
+Part 3 already saves each workbook with `spreadsheets.get`. Widen that field mask so the chart spec is included. `scripts/sheets_catalog.py` still only reads the title and position, so the same file can feed the catalog.
+
+```
+sheets(properties,charts(chartId,spec,position))
+```
+
+Then `values.batchGet` every domain and series source range. Use `valueRenderOption=UNFORMATTED_VALUE` for the numbers, and a second call with `FORMATTED_VALUE` when the axis labels are dates or percents the sheet formats for display. Save one bundle per workbook:
+
+```json
+{
+  "spreadsheet": "<the spreadsheets.get response>",
+  "values": "<the UNFORMATTED_VALUE batchGet response>",
+  "formatted": "<the FORMATTED_VALUE batchGet response, optional>"
+}
+```
+
+Or keep the get response and the batchGet as two files. Then, on the same machine that already runs the catalog (not on Render):
+
+```
+python3 scripts/sheets_catalog.py bot1.json bot2.json bot3.json
+python3 scripts/sheets_data.py bot1.bundle.json bot2.bundle.json bot3.bundle.json
+python3 scripts/sheets_data.py bot1.json --values bot1.values.json --formatted bot1.formatted.json
+```
+
+Commit `static/sheets/data/` with the catalog and the PNGs. `python3 scripts/sheets_data.py --check` confirms the snapshot and refuses a retired gid. The pilot samples are regenerated with `python3 scripts/sheets_data.py --write-samples`.
+
+### Live on open (option B)
+
+Leave this off until the Render service has a Google credential. Set `SHEETS_LIVE=1` and exactly one of these (never commit the values):
+
+- `GOOGLE_ACCESS_TOKEN` or `CHARTMAKER_GOOGLE_TOKEN`
+- `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, and `GOOGLE_REFRESH_TOKEN` (`CHARTMAKER_GOOGLE_CLIENT_ID`, `CHARTMAKER_GOOGLE_CLIENT_SECRET`, and `CHARTMAKER_GOOGLE_REFRESH_TOKEN` work too)
+- `GOOGLE_APPLICATION_CREDENTIALS` or `CHARTMAKER_GOOGLE_CREDENTIALS`, a service-account JSON file
+
+The token is requested with scope `https://www.googleapis.com/auth/spreadsheets.readonly`. `GET /api/sheets/chart?book=bot3&gid=1145735379&n=1` reads that chart and caches it for five minutes. The page tries the static file first and calls this route only when `SHEETS_LIVE` is on and the file is missing or the index has no entry. A missing credential, a failed fetch, or an unsupported type falls back to the snapshot and then to the PNG. The response never includes the token. Retired tabs return 410 and are not fetched.
+
+With the flag on, every non-table chart shows Interactive, because the server can read the sheet on demand. With the flag off, the button appears only for charts in `index.json`.
+
+### Pilot tabs
+
+Nine charts, chosen from the catalog. The numbers are a transcription of the committed PNGs so the page renders without Google:
+
+| Workbook | Tab | What it exercises |
+| --- | --- | --- |
+| My Bot's Sheets | MSTR Debt (`1145735379`) | four charts: columns, a percent column, sats per share, an area chart |
+| bot experiments 2 | 6 MSTR vs ASST leverage (`1690294676`) | two lines; also on Charts of the day |
+| bot experiments 2 | 5 MSTR USD reserve vs dividends (`49428948`) | two lines, violet and orange, with a gap |
+| Bot experiments | 01 BTC vol vs VIX (`1546024641`) | two lines |
+| Bot experiments | 04 BTC vs 200-week MA (`1810821762`) | two lines, log y-axis |
+| Bot experiments | 09 Real S&P 500 (`1540677114`) | two lines |
+
 ## Charts of the day
 
 The **Charts of the day** tab reads `static/cotd/today.json` and shows every item in that file. Each edition is a uniform random draw of 20 catalog items: every chart, and every chartless table tab. A tab with several charts contributes one item per chart. `scripts/cotd_build.py` writes up to 20 cards, fewer when fewer items are eligible, and does not pad. It refuses a gid in `sheets_catalog.EXCLUDED_TABS` or in `COTD_EXCLUDED` (bot experiments 2 gid 645072508, BX2-069, "69 Mark MSTR red dot tracker"). It also leaves out a chart titled `Chart N` or with no title, a blank or near-uniform PNG, and a `Chart N` card that has no image of its own. It writes `static/cotd/<date>/cards.json` and leaves out an item that appeared in any of the previous 3 days (book, gid, and `chart_n` when both sides have it; book and gid when either side does not). A missing `cards.json` for one of those days excludes nothing. Every card stores `chart_n` (1-based, catalog `chartList` order). A table is `chart_n` 1. The card shows the title and the source workbook, plus a chart image or a table preview when the library has one, and a link to the tab. It does not include a reason the item was chosen. The daily command is `python3 scripts/cotd_build.py`. The steps are in `scripts/COTD_README.md`.
