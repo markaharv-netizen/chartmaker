@@ -45,17 +45,6 @@ BOOKS = {
     "bot2": ("bot experiments 2", "1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ"),
     "bot3": ("My Bot's Sheets", "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU"),
 }
-# In-flight retirements (not necessarily in EXCLUDED_TABS yet). Never export these.
-RETIRING = {
-    ("bot1", 909478550),   # 215 Most profitable companies
-    ("bot1", 1828414017),  # 185 r minus g
-    ("bot1", 902803117),   # 182 Real fed funds rate
-    ("bot1", 949971563),   # 209 Oracle cash burn
-    ("bot1", 1234832613),  # 113 Discretionary vs Staples
-    ("bot1", 727565635),   # 125 Junk vs IG spread ratio
-    ("bot1", 673256883),   # 38 Copper-gold vs 10Y
-    ("bot1", 254194955),   # 177 Real GDP US vs EU vs Japan
-}
 # Python ETF draft: native chart is not the published image.
 PYTHON_ETF = {("bot3", 1608741572)}
 
@@ -783,7 +772,8 @@ def assign_chart_ids(xlsx_charts, inventory_charts):
 def load_excluded(catalog_py_hint):
     sys.path.insert(0, catalog_py_hint)
     import sheets_catalog
-    return set(sheets_catalog.EXCLUDED_TABS), sheets_catalog
+    import sheets_data
+    return set(sheets_catalog.EXCLUDED_TABS), sheets_catalog, set(sheets_data.RETIRED_2026_11_17)
 
 
 def main(argv=None):
@@ -798,8 +788,8 @@ def main(argv=None):
     xlsx = dict(x.split("=", 1) for x in args.xlsx)
     meta = dict(x.split("=", 1) for x in args.meta)
     catalog = json.load(open(args.catalog, encoding="utf-8"))
-    excluded, sc = load_excluded(args.scripts_dir)
-    skip_gids = set(excluded) | set(RETIRING) | set(PYTHON_ETF)
+    excluded, sc, retiring = load_excluded(args.scripts_dir)
+    skip_gids = set(excluded) | set(retiring) | set(PYTHON_ETF)
 
     os.makedirs(args.out_dir, exist_ok=True)
     report = {"books": {}, "generated": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
@@ -846,7 +836,7 @@ def main(argv=None):
                 sheets_out.append(rec)
                 continue
             if pair in skip_gids:
-                reason = "retiring" if pair in RETIRING else ("python_etf" if pair in PYTHON_ETF else "excluded")
+                reason = "retiring" if pair in retiring else ("python_etf" if pair in PYTHON_ETF else "excluded")
                 n_inv = len(sh.get("charts") or [])
                 stats[reason + "_tabs"] += 1
                 stats[reason + "_charts"] += n_inv or len(xcharts.get(xname) or [])

@@ -44,8 +44,9 @@ Output:
   static/sheets/data/<book>/<gid>_<n>.json    (chart 2 and later)
   static/sheets/data/index.json
 
-Tabs in sheets_catalog.EXCLUDED_TABS are never written. A data file already
-on disk for one of those tabs is deleted.
+Tabs in sheets_catalog.EXCLUDED_TABS or RETIRED_2026_11_17 are never written.
+A data file already on disk for one of those tabs is deleted. The 2026-11-17
+list lives in this file (not EXCLUDED_TABS) so it does not conflict with PR #63.
 
 Supported basic charts: line, area, stepped area, column, bar (horizontal),
 scatter, and combo (including a second axis). Pie, bubble, candlestick,
@@ -112,8 +113,37 @@ SERIES_TYPE = {
 INDEX_NOTE = (
     "Interactive chart data for the Sheets library. Built by scripts/sheets_data.py "
     "from a spreadsheets.get plus values.batchGet dump. The browser draws these files. "
-    "View PNG still uses static/sheets/full/. Retired tabs in EXCLUDED_TABS are omitted."
+    "View PNG still uses static/sheets/full/. Retired tabs in EXCLUDED_TABS and "
+    "RETIRED_2026_11_17 are omitted."
 )
+# 2026-11-17 retirements. Kept here, not in sheets_catalog.EXCLUDED_TABS, so this
+# branch does not conflict with PR #63. Monday's export must keep skipping these.
+RETIRED_2026_11_17 = {
+    ("bot1", 909478550),   # 215 Most profitable companies
+    ("bot1", 1828414017),  # 185 r minus g
+    ("bot1", 902803117),   # 182 Real fed funds rate
+    ("bot1", 949971563),   # 209 Oracle cash burn
+    ("bot1", 1234832613),  # 113 Discretionary vs Staples
+    ("bot1", 727565635),   # 125 Junk vs IG spread ratio
+    ("bot1", 673256883),   # 38 Copper-gold vs 10Y
+    ("bot1", 254194955),   # 177 Real GDP US vs EU vs Japan
+    ("bot1", 626951791),   # 199 Margin debt vs S&P
+    ("bot1", 711603553),   # 323 Alphabet quarterly FCF
+    ("bot2", 1149583871),  # 53 Dividends and buybacks vs legacy
+    ("bot2", 2047295555),  # table tab retired 2026-11-17
+    ("bot2", 84709656),    # table tab retired 2026-11-17
+}
+
+def tab_skipped(book, gid):
+    """True for EXCLUDED_TABS or the 2026-11-17 retirement skip list."""
+    try:
+        gid = int(gid)
+    except (TypeError, ValueError):
+        return False
+    if sheets_catalog.tab_excluded(book, gid):
+        return True
+    return (str(book), gid) in RETIRED_2026_11_17
+
 LIVE_TTL = 300
 _LIVE_CACHE = {}
 
@@ -820,7 +850,7 @@ def convert_bundle(bundle):
             gid = int(props.get("sheetId"))
         except (TypeError, ValueError):
             continue
-        if sheets_catalog.tab_excluded(book, gid):
+        if tab_skipped(book, gid):
             warnings.append("excluded %s %s (%s)" % (book, gid, tab))
             charts.append({
                 "supported": False, "book": book, "gid": gid, "excluded": True,
@@ -889,7 +919,8 @@ def clear_gid(repo, book, gid):
 
 def prune_excluded(repo):
     removed = []
-    for book, gid in sorted(sheets_catalog.EXCLUDED_TABS):
+    skipped = set(sheets_catalog.EXCLUDED_TABS) | set(RETIRED_2026_11_17)
+    for book, gid in sorted(skipped):
         removed.extend(clear_gid(repo, book, gid))
     return removed
 
@@ -933,7 +964,7 @@ def rebuild_index(repo, generated=None):
                 if not parsed:
                     continue
                 gid, n = int(parsed.group(1)), int(parsed.group(2) or 1)
-                if sheets_catalog.tab_excluded(book, gid):
+                if tab_skipped(book, gid):
                     os.remove(os.path.join(folder, fn))
                     continue
                 path = os.path.join(folder, fn)
@@ -1477,7 +1508,7 @@ def check_data(repo):
     seen = set()
     for row in index.get("charts") or []:
         book, gid, n = row.get("book"), row.get("gid"), row.get("n")
-        if sheets_catalog.tab_excluded(book, gid):
+        if tab_skipped(book, gid):
             problems.append("index lists retired %s %s" % (book, gid))
         rel = row.get("file") or ""
         path = os.path.realpath(os.path.join(repo, "static", rel))
@@ -1494,7 +1525,8 @@ def check_data(repo):
         if doc.get("x", {}).get("title", "").lower() in {"date", "year", "years"}:
             problems.append(rel + " still titles the x axis Date or Year")
         seen.add((book, int(gid), int(n)))
-    for book, gid in sheets_catalog.EXCLUDED_TABS:
+    skipped = set(sheets_catalog.EXCLUDED_TABS) | set(RETIRED_2026_11_17)
+    for book, gid in skipped:
         folder = os.path.join(root, book)
         if not os.path.isdir(folder):
             continue
@@ -1631,7 +1663,7 @@ def live_chart_response(book, gid, n, fetch=None):
         return {"error": "gid and n must be integers"}, 400
     if not BOOK_RE.fullmatch(book) or n_i < 1 or n_i > 99:
         return {"error": "book or chart number is not valid"}, 400
-    if sheets_catalog.tab_excluded(book, gid_i):
+    if tab_skipped(book, gid_i):
         return {"live": False, "error": "retired tab", "fallback": "png"}, 410
     sid = _sid_for(book)
     if not sid:

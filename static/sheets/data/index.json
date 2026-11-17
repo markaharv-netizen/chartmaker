@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-17T13:57:49Z",
- "note": "Interactive chart data for the Sheets library. Built by scripts/sheets_data.py from a spreadsheets.get plus values.batchGet dump. The browser draws these files. View PNG still uses static/sheets/full/. Retired tabs in EXCLUDED_TABS are omitted.",
+ "generated": "2026-11-17T14:05:56Z",
+ "note": "Interactive chart data for the Sheets library. Built by scripts/sheets_data.py from a spreadsheets.get plus values.batchGet dump. The browser draws these files. View PNG still uses static/sheets/full/. Retired tabs in EXCLUDED_TABS and RETIRED_2026_11_17 are omitted.",
  "charts": [
   {
    "book": "bot1",
@@ -2164,16 +2164,6 @@
   },
   {
    "book": "bot1",
-   "gid": 626951791,
-   "n": 1,
-   "type": "line",
-   "title": "Leverage check: FINRA margin debt growth vs the S&P 500 (YoY) and real margin debt",
-   "tab": "199 Margin debt vs S&P",
-   "supported": true,
-   "file": "sheets/data/bot1/626951791.json"
-  },
-  {
-   "book": "bot1",
    "gid": 639374194,
    "n": 1,
    "type": "line",
@@ -2231,16 +2221,6 @@
    "tab": "77 Power output vs industry",
    "supported": true,
    "file": "sheets/data/bot1/709718897.json"
-  },
-  {
-   "book": "bot1",
-   "gid": 711603553,
-   "n": 1,
-   "type": "line",
-   "title": "Alphabet: operating cash flow, capex and free cash flow per quarter (USD bn)",
-   "tab": "323 Alphabet quarterly FCF",
-   "supported": true,
-   "file": "sheets/data/bot1/711603553.json"
   },
   {
    "book": "bot1",
@@ -2801,16 +2781,6 @@
    "tab": "91 Price changes since 2000",
    "supported": true,
    "file": "sheets/data/bot2/1146906291.json"
-  },
-  {
-   "book": "bot2",
-   "gid": 1149583871,
-   "n": 1,
-   "type": "column",
-   "title": "Toyota returned $31B to shareholders in the last 12 months, GM $7.4B; Tesla and Stellantis returned nothing",
-   "tab": "53 Dividends and buybacks vs legacy",
-   "supported": true,
-   "file": "sheets/data/bot2/1149583871.json"
   },
   {
    "book": "bot2",

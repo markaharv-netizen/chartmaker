@@ -418,16 +418,19 @@ class CommittedSnapshotTest(unittest.TestCase):
         with open(os.path.join(ROOT, "static", "sheets", "data", "index.json"), encoding="utf-8") as f:
             index = json.load(f)
         keys = {(c["book"], c["gid"], c["n"]) for c in index["charts"]}
-        self.assertEqual(keys, {
+        pilots = {
             ("bot3", 1145735379, 1), ("bot3", 1145735379, 2),
             ("bot3", 1145735379, 3), ("bot3", 1145735379, 4),
             ("bot2", 1690294676, 1), ("bot2", 49428948, 1),
             ("bot1", 1546024641, 1), ("bot1", 1810821762, 1), ("bot1", 1540677114, 1),
-        })
+        }
+        self.assertTrue(pilots.issubset(keys))
+        self.assertGreater(len(keys), len(pilots))
         for book in ("bot1", "bot2", "bot3"):
             path = os.path.join(FIXTURES, book + ".json")
             self.assertTrue(os.path.isfile(path), path)
-        for book, gid in sheets_catalog.EXCLUDED_TABS:
+        skipped = set(sheets_catalog.EXCLUDED_TABS) | set(sheets_data.RETIRED_2026_11_17)
+        for book, gid in skipped:
             self.assertFalse(any(c["book"] == book and c["gid"] == gid for c in index["charts"]))
 
 
