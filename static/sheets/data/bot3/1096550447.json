@@ -1,0 +1,54 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 1096550447,
+ "n": 1,
+ "chartId": 300494551,
+ "title": "Sharpe Ratio (09/17/26)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "SATA",
+  "STRC",
+  "STRD",
+  "STRF",
+  "STRK"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Sharpe",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    0.8117,
+    0.4716,
+    0.1399,
+    0.0822,
+    -0.301
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · Pref sharpes",
+ "tab": "Pref sharpes",
+ "workbook": "My Bot's Sheets"
+}

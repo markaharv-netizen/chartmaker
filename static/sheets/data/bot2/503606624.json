@@ -1,0 +1,73 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 503606624,
+ "n": 1,
+ "chartId": 939473674,
+ "title": "Oracle's share count jumped 5% in one quarter to 3.02B after a $20B stock sale (Sep 2026)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Jun 12 2023",
+  "Sep 7 2023",
+  "Dec 7 2023",
+  "Mar 7 2024",
+  "Jun 13 2024",
+  "Sep 6 2024",
+  "Dec 6 2024",
+  "Mar 7 2025",
+  "Jun 13 2025",
+  "Sep 5 2025",
+  "Dec 5 2025",
+  "Mar 5 2026",
+  "Jun 12 2026",
+  "Sep 7 2026"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Shares outstanding (millions)",
+   "format": "integer",
+   "log": false,
+   "min": 2600.0
+  }
+ ],
+ "series": [
+  {
+   "name": "Oracle shares outstanding (millions)",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    2714,
+    2740,
+    2749,
+    2749,
+    2756,
+    2771,
+    2797,
+    2804,
+    2809,
+    2842,
+    2873,
+    2876,
+    2880,
+    3024
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 21 Oracle share count",
+ "tab": "21 Oracle share count",
+ "workbook": "bot experiments 2"
+}

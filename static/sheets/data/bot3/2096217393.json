@@ -1,0 +1,54 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 2096217393,
+ "n": 1,
+ "chartId": 1778024035,
+ "title": "The cost of missing the best days: $10,000 in Bitcoin, Nov 2016 – Nov 2026",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Fully invested",
+  "Missed 10 best days",
+  "Missed 20 best days",
+  "Missed 30 best days",
+  "Missed 50 best days"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Value of $10,000 (USD)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    1040038.0959,
+    192059.1323,
+    56842.3329,
+    19082.7302,
+    2668.5599
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · BTC Missing Best Days",
+ "tab": "BTC Missing Best Days",
+ "workbook": "My Bot's Sheets"
+}

@@ -1,0 +1,58 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 194766241,
+ "n": 1,
+ "chartId": 1742848686,
+ "title": "Magnificent 7 — 2026 YTD Returns",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "AAPL",
+  "AMZN",
+  "MSFT",
+  "META",
+  "GOOGL",
+  "NVDA",
+  "TSLA"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "YTD return (%)",
+   "format": "percent",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "YTD Return",
+   "type": "column",
+   "axis": "left",
+   "color": "#14B8A6",
+   "data": [
+    31.5,
+    15.5,
+    9,
+    -2.5,
+    -5.3,
+    -12.5,
+    -13.2
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · Mag 7",
+ "tab": "Mag 7",
+ "workbook": "My Bot's Sheets"
+}

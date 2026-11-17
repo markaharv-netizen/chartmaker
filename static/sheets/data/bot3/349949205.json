@@ -1,0 +1,94 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 349949205,
+ "n": 1,
+ "chartId": 1009526295,
+ "title": "Cash and BTC Holdings (billions)",
+ "subtitle": "",
+ "type": "bar",
+ "horizontal": true,
+ "stacked": "stacked",
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Berkshire Hathaway",
+  "Alphabet",
+  "TSMC",
+  "Amazon",
+  "SpaceX",
+  "Meta",
+  "Strategy",
+  "Microsoft",
+  "Apple",
+  "Nvidia",
+  "Tesla",
+  "American Express",
+  "Oracle"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Cash",
+   "type": "bar",
+   "axis": "left",
+   "color": "#999999",
+   "data": [
+    372.769,
+    265.098,
+    126.121,
+    114.226,
+    89.855,
+    82.449,
+    4.916,
+    64.509,
+    56.722,
+    56.586,
+    45.447,
+    43.203,
+    37.077
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Bitcoin",
+   "type": "bar",
+   "axis": "left",
+   "color": "#FF9900",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    1.2153,
+    0,
+    55.2303,
+    0,
+    0,
+    0,
+    0.7475,
+    0,
+    0
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · Cash on Balance Sheets",
+ "tab": "Cash on Balance Sheets",
+ "workbook": "My Bot's Sheets"
+}

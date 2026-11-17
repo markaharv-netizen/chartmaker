@@ -1,0 +1,154 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 375370705,
+ "n": 1,
+ "chartId": 811608385,
+ "title": "BlackRock's IBIT Dominates Spot Bitcoin ETF Holdings",
+ "subtitle": "",
+ "type": "line",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2024-03-31",
+  "2024-06-30",
+  "2024-09-30",
+  "2024-12-31",
+  "2025-03-31",
+  "2025-06-30",
+  "2025-09-30",
+  "2025-12-31",
+  "2026-03-31",
+  "2026-06-30",
+  "2026-10-16"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Series 1",
+   "type": "line",
+   "axis": "left",
+   "color": "#4285F4",
+   "data": [
+    252011,
+    306979,
+    366448,
+    551918,
+    576038,
+    696875,
+    770011,
+    770792,
+    783744,
+    734261,
+    803871
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Series 2",
+   "type": "line",
+   "axis": "left",
+   "color": "#EA4335",
+   "data": [
+    144704,
+    167463,
+    180345,
+    201556,
+    196933,
+    201347,
+    203794,
+    201684,
+    188144,
+    174383,
+    177542
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Series 3",
+   "type": "line",
+   "axis": "left",
+   "color": "#FBBC04",
+   "data": [
+    335933,
+    275735,
+    221191,
+    205399,
+    193442,
+    185099,
+    176564,
+    165591,
+    154704,
+    138506,
+    125962
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Series 4",
+   "type": "line",
+   "axis": "left",
+   "color": "#34A853",
+   "data": [
+    null,
+    null,
+    33752,
+    38013,
+    40595,
+    44025,
+    47736,
+    48475,
+    51673,
+    54280,
+    63035
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Series 5",
+   "type": "line",
+   "axis": "left",
+   "color": "#FF6D01",
+   "data": [
+    104631,
+    115977,
+    129898,
+    128742,
+    117652,
+    119648,
+    122927,
+    111358,
+    111334,
+    108869,
+    113172
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · Bitcoin in ETFs",
+ "tab": "Bitcoin in ETFs",
+ "workbook": "My Bot's Sheets"
+}

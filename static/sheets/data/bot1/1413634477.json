@@ -1,0 +1,96 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 1413634477,
+ "n": 1,
+ "chartId": 77294978,
+ "title": "Falcon booster reuse: share of launches on flown boosters and record flights per booster",
+ "subtitle": "",
+ "type": "combo",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2015.0",
+  "2016.0",
+  "2017.0",
+  "2018.0",
+  "2019.0",
+  "2020.0",
+  "2021.0",
+  "2022.0",
+  "2023.0",
+  "2024.0",
+  "2025.0",
+  "2026 YTD"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "% of Falcon launches",
+   "format": "number",
+   "log": false
+  },
+  {
+   "title": "Max flights by one booster",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Share flown on a reused booster (%)",
+   "type": "line",
+   "axis": "left",
+   "color": "#1F4E79",
+   "data": [
+    0,
+    0,
+    27.8,
+    52.4,
+    61.5,
+    80,
+    93.5,
+    91.8,
+    90.6,
+    94.8,
+    95.2,
+    95.6
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Highest booster flight number that year",
+   "type": "column",
+   "axis": "right",
+   "color": "#FF7F0E",
+   "data": [
+    1,
+    1,
+    2,
+    3,
+    4,
+    7,
+    11,
+    15,
+    19,
+    24,
+    32,
+    37
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 104 Falcon booster reuse",
+ "tab": "104 Falcon booster reuse",
+ "workbook": "Bot experiments"
+}

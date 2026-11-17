@@ -1,0 +1,82 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 751548644,
+ "n": 1,
+ "chartId": 1729689985,
+ "title": "Texas robotaxi registrations: Tesla 1,080 (573 Cybercabs) vs Waymo 1,207 (Oct 28 2026)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": "stacked",
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Tesla",
+  "Waymo",
+  "Avride",
+  "Zoox"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Vehicles registered",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Tesla Model Y",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    729,
+    null,
+    null,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Tesla Cybercab",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    573,
+    null,
+    null,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Other operators' vehicles",
+   "type": "column",
+   "axis": "left",
+   "color": "#FBC77E",
+   "data": [
+    null,
+    1297,
+    344,
+    63
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 24 Texas robotaxi fleets",
+ "tab": "24 Texas robotaxi fleets",
+ "workbook": "bot experiments 2"
+}

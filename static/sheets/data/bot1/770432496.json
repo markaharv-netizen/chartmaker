@@ -1,0 +1,111 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 770432496,
+ "n": 1,
+ "chartId": 839047529,
+ "title": "CoreWeave, the AI neocloud: quarterly revenue vs capex, and debt outstanding",
+ "subtitle": "",
+ "type": "combo",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2024-03-31",
+  "2024-06-30",
+  "2024-09-30",
+  "2024-12-31",
+  "2025-03-31",
+  "2025-06-30",
+  "2025-09-30",
+  "2025-12-31",
+  "2026-03-31",
+  "2026-06-30"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "USD bn per quarter",
+   "format": "number",
+   "log": false
+  },
+  {
+   "title": "Total debt (USD bn)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Revenue per quarter (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#2741E7",
+   "data": [
+    0.19,
+    0.4,
+    0.58,
+    0.75,
+    0.98,
+    1.21,
+    1.36,
+    1.57,
+    2.08,
+    2.58
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Capex per quarter (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#FF7F0E",
+   "data": [
+    1.74,
+    2.25,
+    1.22,
+    3.5,
+    1.41,
+    2.45,
+    2.39,
+    4.06,
+    7.7,
+    6.42
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Total debt, end of quarter (USD bn)",
+   "type": "line",
+   "axis": "right",
+   "color": "#000000",
+   "data": [
+    null,
+    null,
+    null,
+    8.03,
+    8.81,
+    11.17,
+    14.21,
+    21.62,
+    25.15,
+    35.55
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 221 CoreWeave rev capex debt",
+ "tab": "221 CoreWeave rev capex debt",
+ "workbook": "Bot experiments"
+}

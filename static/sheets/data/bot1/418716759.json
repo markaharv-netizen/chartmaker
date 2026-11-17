@@ -1,0 +1,131 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 418716759,
+ "n": 1,
+ "chartId": 1767397196,
+ "title": "SpaceX share of all payload mass launched to space each year",
+ "subtitle": "",
+ "type": "combo",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2012.0",
+  "2013.0",
+  "2014.0",
+  "2015.0",
+  "2016.0",
+  "2017.0",
+  "2018.0",
+  "2019.0",
+  "2020.0",
+  "2021.0",
+  "2022.0",
+  "2023.0",
+  "2024.0",
+  "2025.0",
+  "2026 H1"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Tonnes of payload",
+   "format": "number",
+   "log": false
+  },
+  {
+   "title": "SpaceX share (%)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "SpaceX payload mass (tonnes)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F4E79",
+   "data": [
+    10.2,
+    10.2,
+    27.2,
+    26.6,
+    33.3,
+    101.8,
+    106.3,
+    96.5,
+    284.6,
+    350.4,
+    635.8,
+    1185.9,
+    1771.7,
+    2244.2,
+    1033.1
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Rest of world payload mass (tonnes)",
+   "type": "column",
+   "axis": "left",
+   "color": "#7F7F7F",
+   "data": [
+    311.4,
+    288.7,
+    269.4,
+    279.9,
+    252.5,
+    237.7,
+    218.8,
+    235.6,
+    211.4,
+    347.9,
+    320.6,
+    212.5,
+    256.4,
+    449.4,
+    269.9
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "SpaceX share of payload mass launched (%)",
+   "type": "line",
+   "axis": "right",
+   "color": "#000000",
+   "data": [
+    3.2,
+    3.4,
+    9.2,
+    8.7,
+    11.6,
+    30,
+    32.7,
+    29.1,
+    57.4,
+    50.2,
+    66.5,
+    84.8,
+    87.4,
+    83.3,
+    79.3
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 106 SpaceX share of mass",
+ "tab": "106 SpaceX share of mass",
+ "workbook": "Bot experiments"
+}

@@ -1,0 +1,82 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 1020524065,
+ "n": 1,
+ "chartId": 1168031667,
+ "title": "Cloud provider revenue backlogs (RPO) as of October 30, 2026 (US$B)",
+ "subtitle": "",
+ "type": "bar",
+ "horizontal": true,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Microsoft",
+  "Oracle",
+  "Google (Alphabet)",
+  "Amazon"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "OpenAI commitment ($B)",
+   "type": "bar",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    250,
+    300,
+    0,
+    138
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Anthropic commitment ($B)",
+   "type": "bar",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    30,
+    0,
+    0,
+    100
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Other backlog ($B)",
+   "type": "bar",
+   "axis": "left",
+   "color": "#0EA5E9",
+   "data": [
+    397,
+    364,
+    560.8,
+    340
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · Cloud Backlog RPO",
+ "tab": "Cloud Backlog RPO",
+ "workbook": "My Bot's Sheets"
+}

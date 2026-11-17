@@ -1,0 +1,68 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 452099803,
+ "n": 1,
+ "chartId": 1604316458,
+ "title": "Cobalt mine production 2025 (metric tons): Congo mines 74% of the world's cobalt",
+ "subtitle": "",
+ "type": "bar",
+ "horizontal": true,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Congo (Kinshasa)",
+  "Indonesia",
+  "Russia",
+  "Madagascar",
+  "Australia",
+  "Philippines",
+  "Canada",
+  "Papua New Guinea",
+  "China",
+  "Cuba",
+  "Turkey",
+  "United States"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "2025 mine production (metric tons, est.)",
+   "type": "bar",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    230000,
+    44000,
+    7700,
+    3900,
+    3700,
+    3700,
+    3500,
+    2800,
+    2000,
+    2000,
+    1900,
+    300
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 62 Cobalt mine output 2025",
+ "tab": "62 Cobalt mine output 2025",
+ "workbook": "bot experiments 2"
+}

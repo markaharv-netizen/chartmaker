@@ -1,0 +1,65 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 640768342,
+ "n": 1,
+ "chartId": 649116858,
+ "title": "2026 so far: Honda +11%, Hyundai +9%, GM +2%; Tesla −15%, German carmakers −34% to −43%, Stellantis −59%",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Honda",
+  "GM",
+  "Toyota",
+  "Hyundai Motor",
+  "Ford",
+  "Tesla",
+  "Mercedes-Benz",
+  "VW Group",
+  "BMW",
+  "Stellantis"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Share price change, 2026 YTD (%)",
+   "format": "number",
+   "log": false,
+   "min": -68.0
+  }
+ ],
+ "series": [
+  {
+   "name": "Share price change, 2026 YTD (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    16.4,
+    5.8,
+    -0.8,
+    -9.1,
+    -9.2,
+    -13.2,
+    -32.2,
+    -34.8,
+    -38.2,
+    -64.9
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 54 Tesla vs legacy stocks 2026 YTD",
+ "tab": "54 Tesla vs legacy stocks 2026 YTD",
+ "workbook": "bot experiments 2"
+}

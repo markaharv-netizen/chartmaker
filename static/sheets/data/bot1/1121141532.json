@@ -1,0 +1,96 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 1121141532,
+ "n": 1,
+ "chartId": 1952406599,
+ "title": "Seasonality: S&P 500 average return by calendar month and how often each month is positive, 1971–2025",
+ "subtitle": "",
+ "type": "combo",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec"
+ ],
+ "x": {
+  "title": "Month"
+ },
+ "y": [
+  {
+   "title": "Average return (%)",
+   "format": "number",
+   "log": false
+  },
+  {
+   "title": "% of years positive",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Average monthly return (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    1.24,
+    0.07,
+    0.96,
+    1.44,
+    0.73,
+    0.55,
+    0.89,
+    0.09,
+    -0.9,
+    0.97,
+    1.71,
+    1.28
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Share of years the month was positive (%)",
+   "type": "line",
+   "axis": "right",
+   "color": "#7F7F7F",
+   "data": [
+    60,
+    54.55,
+    63.64,
+    69.09,
+    65.45,
+    60,
+    54.55,
+    56.36,
+    43.64,
+    58.18,
+    70.91,
+    70.91
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 273 S&P 500 by calendar month",
+ "tab": "273 S&P 500 by calendar month",
+ "workbook": "Bot experiments"
+}

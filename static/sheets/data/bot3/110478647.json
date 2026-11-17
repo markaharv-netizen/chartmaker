@@ -1,0 +1,68 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 110478647,
+ "n": 1,
+ "chartId": 1920360918,
+ "title": "Volatility by Timeframe",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "90D",
+  "30D",
+  "7D",
+  "3D"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "percent",
+   "log": false,
+   "min": 0
+  }
+ ],
+ "series": [
+  {
+   "name": "STRC",
+   "type": "column",
+   "axis": "left",
+   "color": "#3B82F6",
+   "data": [
+    25.6633,
+    8.2827,
+    7.7236,
+    11.9892
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "SATA",
+   "type": "column",
+   "axis": "left",
+   "color": "#A855F7",
+   "data": [
+    16.5578,
+    11.7459,
+    20.3493,
+    32.0123
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · Prev vol by timeframe",
+ "tab": "Prev vol by timeframe",
+ "workbook": "My Bot's Sheets"
+}

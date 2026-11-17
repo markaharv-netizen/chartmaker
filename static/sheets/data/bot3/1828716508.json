@@ -1,0 +1,87 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 1828716508,
+ "n": 1,
+ "chartId": 338847147,
+ "title": "Meta Family Daily Active People (billions, quarterly)",
+ "subtitle": "",
+ "type": "line",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Q3 2021",
+  "Q4 2021",
+  "Q1 2022",
+  "Q2 2022",
+  "Q3 2022",
+  "Q4 2022",
+  "Q1 2023",
+  "Q2 2023",
+  "Q3 2023",
+  "Q4 2023",
+  "Q1 2024",
+  "Q2 2024",
+  "Q3 2024",
+  "Q4 2024",
+  "Q1 2025",
+  "Q2 2025",
+  "Q3 2025",
+  "Q4 2025",
+  "Q1 2026",
+  "Q2 2026",
+  "Q3 2026"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false,
+   "min": 2.75
+  }
+ ],
+ "series": [
+  {
+   "name": "Family DAP (billions)",
+   "type": "line",
+   "axis": "left",
+   "color": "#000000",
+   "data": [
+    2.81,
+    2.82,
+    2.87,
+    2.88,
+    2.93,
+    2.96,
+    3.02,
+    3.07,
+    3.14,
+    3.19,
+    3.24,
+    3.27,
+    3.29,
+    3.35,
+    3.43,
+    3.48,
+    3.54,
+    3.58,
+    3.56,
+    3.6,
+    3.64
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · Meta Active Users",
+ "tab": "Meta Active Users",
+ "workbook": "My Bot's Sheets"
+}

@@ -1,0 +1,54 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 1770358701,
+ "n": 1,
+ "chartId": 1597027652,
+ "title": "STRC 30-day average trading volume",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2025-11-28",
+  "2025-12-31",
+  "2026-01-30",
+  "2026-02-27",
+  "2026-05-29"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "percent",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Series 1",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    null,
+    null,
+    31.6941,
+    27.4289,
+    162.555
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · STRC Volume",
+ "tab": "STRC Volume",
+ "workbook": "My Bot's Sheets"
+}

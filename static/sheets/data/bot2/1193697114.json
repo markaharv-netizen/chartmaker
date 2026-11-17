@@ -1,0 +1,74 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 1193697114,
+ "n": 1,
+ "chartId": 209151687,
+ "title": "Data Center Capacity (operational, GW)",
+ "subtitle": "",
+ "type": "bar",
+ "horizontal": true,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "United States",
+  "China",
+  "Japan",
+  "United Kingdom",
+  "India",
+  "Canada",
+  "Australia",
+  "Germany",
+  "Malaysia",
+  "Ireland",
+  "Netherlands",
+  "South Korea",
+  "France",
+  "Brazil",
+  "Indonesia"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Operational today (GW)",
+   "type": "bar",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    31.97,
+    5.49,
+    1.94,
+    1.76,
+    1.58,
+    1.55,
+    1.49,
+    1.4,
+    1.29,
+    1.27,
+    1.18,
+    0.94,
+    0.92,
+    0.51,
+    0.39
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 92 Data center capacity",
+ "tab": "92 Data center capacity",
+ "workbook": "bot experiments 2"
+}

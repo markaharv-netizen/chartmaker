@@ -1,0 +1,54 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 983027961,
+ "n": 1,
+ "chartId": 386313160,
+ "title": "Analyst estimates: a Tesla Robotaxi costs ~$0.81 a mile to run vs Waymo $1.43 and human rideshare $1.71 (Morgan Stanley)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Human-driven rideshare",
+  "Waymo (5th gen, Jaguar)",
+  "Waymo (6th gen, midpoint of $0.99–1.08)",
+  "Tesla Robotaxi (Model Y)",
+  "Tesla Cybercab 2035 (MS forecast)"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Estimated cost per mile (USD)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Estimated operating cost per mile (USD)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    1.71,
+    1.43,
+    1.035,
+    0.81,
+    0.37
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 35 Robotaxi cost per mile",
+ "tab": "35 Robotaxi cost per mile",
+ "workbook": "bot experiments 2"
+}

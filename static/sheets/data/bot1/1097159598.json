@@ -1,0 +1,106 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 1097159598,
+ "n": 1,
+ "chartId": 695076699,
+ "title": "Real (after-inflation) annualized returns by decade: stocks vs bonds vs gold",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "1930s",
+  "1940s",
+  "1950s",
+  "1960s",
+  "1970s",
+  "1980s",
+  "1990s",
+  "2000s",
+  "2010s",
+  "2020–25"
+ ],
+ "x": {
+  "title": "Decade"
+ },
+ "y": [
+  {
+   "title": "Real return, % per year",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Stocks (S&P 500)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    1.18,
+    2.82,
+    17.07,
+    5.29,
+    -1.07,
+    11.22,
+    14.61,
+    -3.43,
+    11.47,
+    10.59
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "10-year Treasuries",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F3A93",
+   "data": [
+    6.17,
+    -2.86,
+    -1.23,
+    0.1,
+    -1.54,
+    6.12,
+    4.25,
+    3.6,
+    2.32,
+    -4.37
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Gold",
+   "type": "column",
+   "axis": "left",
+   "color": "#C9A227",
+   "data": [
+    7.49,
+    -6.01,
+    -1,
+    -0.67,
+    20.15,
+    -7.56,
+    -5.94,
+    11.27,
+    1.63,
+    14.58
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 300 Real returns by decade",
+ "tab": "300 Real returns by decade",
+ "workbook": "Bot experiments"
+}

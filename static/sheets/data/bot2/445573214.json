@@ -1,0 +1,64 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 445573214,
+ "n": 1,
+ "chartId": 751082262,
+ "title": "Cost to launch 1 kg to low Earth orbit: Shuttle $61,700, Falcon 9 $2,700, Falcon Heavy $1,400; Starship target ~$100",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Space Shuttle (1981)",
+  "Titan IV (1989)",
+  "Atlas IIA (1991)",
+  "Delta II (1989)",
+  "Ariane 5G (1996)",
+  "Soyuz (1966)",
+  "Saturn V (1968)",
+  "Falcon 9 (2010)",
+  "Falcon Heavy (2018)",
+  "Starship TARGET"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Launch cost per kg to LEO (USD)",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Cost per kg to LEO (USD)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    61700,
+    24700,
+    19800,
+    15300,
+    13100,
+    7600,
+    5200,
+    2700,
+    1400,
+    100
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 39 Cost per kg to LEO",
+ "tab": "39 Cost per kg to LEO",
+ "workbook": "bot experiments 2"
+}

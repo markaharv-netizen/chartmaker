@@ -1,0 +1,76 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 557289630,
+ "n": 1,
+ "chartId": 110651313,
+ "title": "Strategy's bitcoin profit/loss by quarter: +$20.9B est. in Q3 2026, its best ever, after 3 losing quarters (−$40.2B)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": "stacked",
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Q1 2025",
+  "Q2 2025",
+  "Q3 2025",
+  "Q4 2025",
+  "Q1 2026",
+  "Q2 2026",
+  "Q3 2026"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "USD billions",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Gain (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    null,
+    14.05,
+    3.89,
+    null,
+    null,
+    null,
+    20.91
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Loss (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    -5.91,
+    null,
+    null,
+    -17.44,
+    -14.455,
+    -8.315,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 14 MSTR quarterly BTC gains",
+ "tab": "14 MSTR quarterly BTC gains",
+ "workbook": "bot experiments 2"
+}

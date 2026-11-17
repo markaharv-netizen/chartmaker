@@ -1,0 +1,118 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 134436208,
+ "n": 1,
+ "chartId": 1272706208,
+ "title": "The cloud race: AWS vs Microsoft Cloud vs Google Cloud, quarterly revenue growth (YoY)",
+ "subtitle": "",
+ "type": "line",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2023-06-30",
+  "2023-09-30",
+  "2023-12-31",
+  "2024-03-31",
+  "2024-06-30",
+  "2024-09-30",
+  "2024-12-31",
+  "2025-03-31",
+  "2025-06-30",
+  "2025-09-30",
+  "2025-12-31",
+  "2026-03-31",
+  "2026-06-30"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Revenue growth, YoY (%)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "AWS revenue YoY (%)",
+   "type": "line",
+   "axis": "left",
+   "color": "#FF9900",
+   "data": [
+    12.16,
+    12.27,
+    13.22,
+    17.25,
+    18.7,
+    19.05,
+    18.93,
+    16.89,
+    17.47,
+    20.23,
+    23.6,
+    28.43,
+    36.79
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Microsoft Cloud revenue YoY (%)",
+   "type": "line",
+   "axis": "left",
+   "color": "#00A4EF",
+   "data": [
+    20.72,
+    24.12,
+    24.35,
+    23.51,
+    21.78,
+    21.94,
+    21.36,
+    20.45,
+    26.56,
+    26.22,
+    25.92,
+    28.54,
+    26.98
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Google Cloud revenue YoY (%)",
+   "type": "line",
+   "axis": "left",
+   "color": "#4285F4",
+   "data": [
+    27.96,
+    22.47,
+    25.66,
+    28.44,
+    28.84,
+    34.98,
+    30.06,
+    28.06,
+    31.67,
+    33.51,
+    47.75,
+    63.36,
+    81.8
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 203 Cloud growth race",
+ "tab": "203 Cloud growth race",
+ "workbook": "Bot experiments"
+}

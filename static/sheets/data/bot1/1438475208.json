@@ -1,0 +1,98 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 1438475208,
+ "n": 1,
+ "chartId": 552174839,
+ "title": "Starlink: satellites launched, re-entered and still in orbit each year",
+ "subtitle": "",
+ "type": "combo",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2019.0",
+  "2020.0",
+  "2021.0",
+  "2022.0",
+  "2023.0",
+  "2024.0",
+  "2025.0",
+  "2026 YTD"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Satellites",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Starlink satellites launched",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    120,
+    833,
+    989,
+    1722,
+    1984,
+    1982,
+    3174,
+    2169
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Starlink satellites re-entered",
+   "type": "column",
+   "axis": "left",
+   "color": "#D62728",
+   "data": [
+    0,
+    61,
+    90,
+    108,
+    89,
+    334,
+    679,
+    403
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Starlink satellites in orbit (end of period)",
+   "type": "line",
+   "axis": "left",
+   "color": "#1F4E79",
+   "data": [
+    120,
+    892,
+    1791,
+    3405,
+    5300,
+    6948,
+    9443,
+    11209
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 105 Starlink sats in orbit",
+ "tab": "105 Starlink sats in orbit",
+ "workbook": "Bot experiments"
+}

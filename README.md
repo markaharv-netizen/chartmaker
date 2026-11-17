@@ -108,7 +108,7 @@ Workbooks: Bot experiments `1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY`, bot e
 
 The Sheets library can draw a chart in the browser from the workbook's own values: hover shows the point, and the date range zooms and pans. **View PNG** and **Download PNG** stay, including on Charts of the day, because a post on X still wants the flat image. A chart with no data file, or a type that is not supported yet, keeps the PNG and does not invent a picture.
 
-This pilot uses a **data snapshot** (option A), not a fetch on every open. Render's service has no Google credential, and the page already does not call Google. The Monday routine writes JSON under `static/sheets/data/`. The browser reads that. A live fetch (option B) is implemented behind `SHEETS_LIVE` and is off unless that variable is set. Credentials were not configured in this environment, so the pilot ships sample dumps transcribed from the committed PNGs. Those samples are marked `sample: true`. The Monday export replaces them.
+Chartmaker uses a **data snapshot** (option A), not a fetch on every open. Render's service has no Google credential, and the page already does not call Google. The Monday routine writes JSON under `static/sheets/data/`. The browser reads that. A live fetch (option B) is implemented behind `SHEETS_LIVE` and is off unless that variable is set. Files in `static/sheets/data/` are a snapshot of the workbooks (not the `sample: true` transcriptions from the pilot). Monday's export replaces them.
 
 Files:
 
@@ -124,31 +124,26 @@ Files:
 
 ### Monday routine, part 3
 
-Part 3 already saves each workbook with `spreadsheets.get`. Widen that field mask so the chart spec is included. `scripts/sheets_catalog.py` still only reads the title and position, so the same file can feed the catalog.
+The Sheets connector `get_spreadsheet` returns only chart titles (and can truncate a large workbook). It cannot supply the field mask `sheets(properties,charts(chartId,spec,position))`. Drive `export_file` also caps xlsx at 10 MB, which is below My Bot's Sheets.
+
+The working no-browser path is: download each workbook as xlsx with Cursor `DownloadFile` (`connection: user-Google-drive`; this export is not 10 MB capped), keep the title-only inventory dump Part 3 already saves (complete `meta_bot1.json` / `meta_bot2.json` / `meta_bot3.json`, or last week's if this week's is truncated), then build bundles and the snapshot on the same machine that already runs the catalog (not on Render):
 
 ```
-sheets(properties,charts(chartId,spec,position))
-```
+python3 scripts/xlsx_to_bundles.py \
+  --xlsx bot1=bot1.xlsx bot2=bot2.xlsx bot3=bot3.xlsx \
+  --meta bot1=meta_bot1.json bot2=meta_bot2.json bot3=meta_bot3.json \
+  --catalog static/sheets/catalog.json \
+  --out-dir dumps \
+  --scripts-dir scripts
 
-Then `values.batchGet` every domain and series source range. Use `valueRenderOption=UNFORMATTED_VALUE` for the numbers, and a second call with `FORMATTED_VALUE` when the axis labels are dates or percents the sheet formats for display. Save one bundle per workbook:
-
-```json
-{
-  "spreadsheet": "<the spreadsheets.get response>",
-  "values": "<the UNFORMATTED_VALUE batchGet response>",
-  "formatted": "<the FORMATTED_VALUE batchGet response, optional>"
-}
-```
-
-Or keep the get response and the batchGet as two files. Then, on the same machine that already runs the catalog (not on Render):
-
-```
 python3 scripts/sheets_catalog.py bot1.json bot2.json bot3.json
-python3 scripts/sheets_data.py bot1.bundle.json bot2.bundle.json bot3.bundle.json
-python3 scripts/sheets_data.py bot1.json --values bot1.values.json --formatted bot1.formatted.json
+python3 scripts/sheets_data.py dumps/bot1.bundle.json dumps/bot2.bundle.json dumps/bot3.bundle.json
+python3 scripts/sheets_data.py --check
 ```
 
-Commit `static/sheets/data/` with the catalog and the PNGs. `python3 scripts/sheets_data.py --check` confirms the snapshot and refuses a retired gid. The pilot samples are regenerated with `python3 scripts/sheets_data.py --write-samples`.
+`xlsx_to_bundles.py` is read-only. It honors `EXCLUDED_TABS` and skips the Python ETF draft (My Bot's Sheets gid `1608741572`). A Google chart that the xlsx export turned into a raster image, or a type that is not supported, is omitted and the PNG stays.
+
+Commit `static/sheets/data/` with the catalog and the PNGs only when all three bundles exist, `--check` passes, and the export report is complete. If the export fails, keep last week's data files and report. `python3 scripts/sheets_data.py --write-samples` still regenerates the small fixture dumps under `tests/fixtures/`.
 
 ### Live on open (option B)
 

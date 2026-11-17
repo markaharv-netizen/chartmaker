@@ -1,0 +1,76 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 1310881550,
+ "n": 1,
+ "chartId": 277770537,
+ "title": "Bitcoin Market Cap vs. Top Companies (Trillions USD)",
+ "subtitle": "",
+ "type": "bar",
+ "horizontal": true,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Company",
+  "1. NVIDIA",
+  "2. Apple",
+  "3. Alphabet (Google)",
+  "4. Microsoft",
+  "5. Amazon",
+  "6. SpaceX",
+  "7. TSMC",
+  "8. Broadcom",
+  "9. Saudi Aramco",
+  "10. Meta Platforms",
+  "11. Tesla",
+  "12. Samsung",
+  "13. Bitcoin",
+  "14. Micron",
+  "15. Berkshire Hathaway"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Series 1",
+   "type": "bar",
+   "axis": "left",
+   "color": "#000000",
+   "data": [
+    null,
+    5.45,
+    4.614,
+    4.101,
+    3.667,
+    2.771,
+    2.08,
+    2.068,
+    1.753,
+    1.677,
+    1.562,
+    1.542,
+    1.322,
+    1.2917,
+    1.129,
+    1.082
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · BTC Company Flipping",
+ "tab": "BTC Company Flipping",
+ "workbook": "My Bot's Sheets"
+}

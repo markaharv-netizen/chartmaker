@@ -1,0 +1,90 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 426431229,
+ "n": 1,
+ "chartId": 1618949499,
+ "title": "Tesla automotive sales revenue per vehicle delivered (USD thousands)",
+ "subtitle": "",
+ "type": "line",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2021-03-31",
+  "2021-06-30",
+  "2021-09-30",
+  "2021-12-31",
+  "2022-03-31",
+  "2022-06-30",
+  "2022-09-30",
+  "2022-12-31",
+  "2023-03-31",
+  "2023-06-30",
+  "2023-09-30",
+  "2023-12-31",
+  "2024-03-31",
+  "2024-06-30",
+  "2024-09-30",
+  "2024-12-31",
+  "2025-03-31",
+  "2025-06-30",
+  "2025-09-30",
+  "2025-12-31",
+  "2026-03-31",
+  "2026-06-30",
+  "2026-09-30"
+ ],
+ "x": {
+  "title": "Quarter"
+ },
+ "y": [
+  {
+   "title": "USD thousands per vehicle",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Automotive sales revenue per vehicle delivered (USD thousands)",
+   "type": "line",
+   "axis": "left",
+   "color": "#CC0000",
+   "data": [
+    47.09,
+    49.05,
+    48.35,
+    44.95,
+    50.04,
+    53.67,
+    51.73,
+    49.94,
+    44.64,
+    43.8,
+    42.71,
+    42.58,
+    42.55,
+    41.74,
+    40.68,
+    37.65,
+    38.39,
+    41.1,
+    40.96,
+    40.05,
+    43.22,
+    41.67,
+    41.3
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 308 Tesla revenue per car",
+ "tab": "308 Tesla revenue per car",
+ "workbook": "Bot experiments"
+}

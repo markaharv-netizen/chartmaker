@@ -1,0 +1,60 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 1763497571,
+ "n": 1,
+ "chartId": 748319481,
+ "title": "Starlink revenue per subscriber (ARPU, USD per month) keeps falling",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "FY 2023",
+  "FY 2024",
+  "Q1 2025",
+  "Q2 2025",
+  "FY 2025",
+  "Q1 2026",
+  "Q2 2026",
+  "Q3 2026"
+ ],
+ "x": {
+  "title": "Period"
+ },
+ "y": [
+  {
+   "title": "USD per subscriber per month",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Starlink subscriber ARPU (USD per month)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    99,
+    91,
+    86,
+    85,
+    81,
+    66,
+    66,
+    69
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 314 Starlink ARPU",
+ "tab": "314 Starlink ARPU",
+ "workbook": "Bot experiments"
+}

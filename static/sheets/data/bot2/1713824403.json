@@ -1,0 +1,64 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 1713824403,
+ "n": 1,
+ "chartId": 1927497416,
+ "title": "Tesla spends 12.5% of revenue on capex, more than any legacy carmaker; Toyota 9.6%, BMW 7.3%, Ford 5.1%, GM 4.7%",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Tesla",
+  "Toyota",
+  "BMW",
+  "Ford",
+  "GM",
+  "Honda",
+  "VW Group",
+  "Mercedes-Benz",
+  "Hyundai Motor",
+  "Stellantis"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Capex as % of revenue, last 12 months",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Capex as % of revenue, last 12 months",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    12.5,
+    9.6,
+    7.3,
+    5.1,
+    4.7,
+    4.7,
+    4.5,
+    4.5,
+    4.5,
+    3.9
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 55 Capex intensity vs legacy",
+ "tab": "55 Capex intensity vs legacy",
+ "workbook": "bot experiments 2"
+}

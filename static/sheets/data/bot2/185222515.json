@@ -1,0 +1,56 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 185222515,
+ "n": 1,
+ "chartId": 225668808,
+ "title": "Neocloud debt as % of market cap",
+ "subtitle": "",
+ "type": "bar",
+ "horizontal": true,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Cipher",
+  "Applied Digital",
+  "CoreWeave",
+  "TeraWulf",
+  "IREN",
+  "Nebius"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Debt/Mkt cap %",
+   "type": "bar",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    187.5,
+    119.2,
+    130.5,
+    89,
+    83.1,
+    30.4
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 87 Neocloud debt vs market cap",
+ "tab": "87 Neocloud debt vs market cap",
+ "workbook": "bot experiments 2"
+}

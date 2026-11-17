@@ -1,0 +1,91 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 322752733,
+ "n": 1,
+ "chartId": 1367198633,
+ "title": "Nvidia's market value ($5.6tn) vs annual GDP of the largest economies (2025, excluding the US)",
+ "subtitle": "",
+ "type": "bar",
+ "horizontal": true,
+ "stacked": "stacked",
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "China",
+  "Nvidia (Oct 2 2026)",
+  "Germany",
+  "Japan",
+  "United Kingdom",
+  "India",
+  "France",
+  "Russia",
+  "Italy",
+  "Canada",
+  "Brazil",
+  "South Korea"
+ ],
+ "x": {
+  "title": "USD trillions"
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "2025 GDP (USD trillions)",
+   "type": "bar",
+   "axis": "left",
+   "color": "#7F7F7F",
+   "data": [
+    19.5,
+    0,
+    5.05,
+    4.44,
+    4,
+    3.96,
+    3.37,
+    2.56,
+    2.55,
+    2.32,
+    2.28,
+    1.87
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Nvidia market cap (USD trillions)",
+   "type": "bar",
+   "axis": "left",
+   "color": "#76B900",
+   "data": [
+    0,
+    5.64,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 229 Nvidia vs country GDPs",
+ "tab": "229 Nvidia vs country GDPs",
+ "workbook": "Bot experiments"
+}

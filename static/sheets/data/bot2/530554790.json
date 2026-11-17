@@ -1,0 +1,73 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 530554790,
+ "n": 1,
+ "chartId": 1988881937,
+ "title": "CoreWeave: backlog vs quarterly revenue ($B)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Q1 2025",
+  "Q2 2025",
+  "Q3 2025",
+  "Q4 2025",
+  "Q1 2026",
+  "Q2 2026"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Backlog (RPO)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    14.7,
+    30.1,
+    50,
+    60.7,
+    98.8,
+    103.7
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Quarterly revenue",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    0.98,
+    1.21,
+    1.37,
+    1.57,
+    2.08,
+    2.58
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 75 CoreWeave backlog vs revenue",
+ "tab": "75 CoreWeave backlog vs revenue",
+ "workbook": "bot experiments 2"
+}

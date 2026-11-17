@@ -1,0 +1,141 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 1307998812,
+ "n": 1,
+ "chartId": 144339580,
+ "title": "Borrowing for AI: total debt at each fiscal year end vs the latest quarter",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "FY 2021",
+  "FY 2022",
+  "FY 2023",
+  "FY 2024",
+  "FY 2025",
+  "Latest (Jun 2026)"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Total debt, USD bn",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Oracle (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#C74634",
+   "data": [
+    84.2,
+    75.9,
+    90.5,
+    86.9,
+    92.6,
+    129.5
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Meta (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#0866FF",
+   "data": [
+    0,
+    9.9,
+    18.4,
+    28.8,
+    58.7,
+    83.7
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Amazon (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#FF9900",
+   "data": [
+    50.6,
+    70.5,
+    67.2,
+    58,
+    68.8,
+    133
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Microsoft (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#00A4EF",
+   "data": [
+    58.1,
+    49.8,
+    47.2,
+    44.9,
+    43.2,
+    40.3
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Alphabet (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#34A853",
+   "data": [
+    15.4,
+    15.3,
+    13,
+    12,
+    49.1,
+    101.1
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "CoreWeave (USD bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#7B2CBF",
+   "data": [
+    null,
+    null,
+    null,
+    8,
+    21.6,
+    35.6
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 211 Big Tech debt for AI",
+ "tab": "211 Big Tech debt for AI",
+ "workbook": "Bot experiments"
+}

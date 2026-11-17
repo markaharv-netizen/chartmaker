@@ -1,0 +1,82 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot1",
+ "gid": 919949704,
+ "n": 1,
+ "chartId": 667893753,
+ "title": "Revenue and operating profit per employee, latest fiscal year (Nvidia vs Big Tech)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Nvidia",
+  "Meta",
+  "Apple",
+  "Alphabet",
+  "Microsoft",
+  "AMD",
+  "Palantir",
+  "Oracle",
+  "Amazon"
+ ],
+ "x": {
+  "title": "Company"
+ },
+ "y": [
+  {
+   "title": "USD thousands per employee",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Revenue per employee (USD thousands)",
+   "type": "column",
+   "axis": "left",
+   "color": "#1F77B4",
+   "data": [
+    5141,
+    2548,
+    2507,
+    2111,
+    1488,
+    1117,
+    1010,
+    478,
+    455
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Operating income per employee (USD thousands)",
+   "type": "column",
+   "axis": "left",
+   "color": "#2CA02C",
+   "data": [
+    3104,
+    1056,
+    802,
+    676,
+    696,
+    119,
+    319,
+    146,
+    51
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "Bot experiments · 228 Revenue per employee",
+ "tab": "228 Revenue per employee",
+ "workbook": "Bot experiments"
+}

@@ -1,0 +1,56 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 1936535169,
+ "n": 1,
+ "chartId": 873777776,
+ "title": "Tesla's active FSD subscriptions: 1.74M, up 67% in a year (Q3 2026)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Q2 2025",
+  "Q3 2025",
+  "Q4 2025",
+  "Q1 2026",
+  "Q2 2026",
+  "Q3 2026"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Active FSD subscriptions (millions)",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Active FSD subscriptions (millions)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    0.95,
+    1.04,
+    1.1,
+    1.28,
+    1.48,
+    1.74
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 26 Tesla FSD subscriptions",
+ "tab": "26 Tesla FSD subscriptions",
+ "workbook": "bot experiments 2"
+}

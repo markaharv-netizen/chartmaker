@@ -1,0 +1,166 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 54674006,
+ "n": 1,
+ "chartId": 544384769,
+ "title": "US robotaxi fleets by state, Oct 2026",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": "stacked",
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Waymo",
+  "Tesla",
+  "Avride",
+  "Zoox",
+  "Motional",
+  "Nuro",
+  "Others (MOIA, May Mobility, WeRide, Tensor, Wayve)"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Robotaxis",
+   "format": "integer",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "California",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    1906,
+    164,
+    null,
+    25,
+    null,
+    53,
+    13
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Texas",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    1185,
+    739,
+    344,
+    15,
+    null,
+    47,
+    12
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Arizona",
+   "type": "column",
+   "axis": "left",
+   "color": "#FBC98A",
+   "data": [
+    723,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Florida",
+   "type": "column",
+   "axis": "left",
+   "color": "#C4B5FD",
+   "data": [
+    250,
+    18,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Georgia",
+   "type": "column",
+   "axis": "left",
+   "color": "#B86A0C",
+   "data": [
+    200,
+    null,
+    null,
+    null,
+    null,
+    null,
+    6
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Nevada",
+   "type": "column",
+   "axis": "left",
+   "color": "#5B34C4",
+   "data": [
+    60,
+    null,
+    null,
+    65,
+    109,
+    null,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Other states / unassigned",
+   "type": "column",
+   "axis": "left",
+   "color": "#D9D9D9",
+   "data": [
+    125,
+    null,
+    null,
+    19,
+    null,
+    null,
+    12
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 65 US robotaxi fleets by state",
+ "tab": "65 US robotaxi fleets by state",
+ "workbook": "bot experiments 2"
+}

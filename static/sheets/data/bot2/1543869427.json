@@ -1,0 +1,112 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 1543869427,
+ "n": 1,
+ "chartId": 343704669,
+ "title": "Who holds the 20.1M bitcoin: ETFs 1.30M and public companies 1.30M nearly match exchanges' 2.66M combined (Oct 2026)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": "stacked",
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2020",
+  "2021",
+  "2022",
+  "2023",
+  "2024",
+  "2025",
+  "Oct 14 2026"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Million BTC",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Exchanges (M BTC)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    2.767,
+    3.066,
+    2.8,
+    2.899,
+    2.945,
+    2.675,
+    2.676
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "US spot ETFs (M BTC)",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    1.128,
+    1.305,
+    1.297
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Public companies (M BTC)",
+   "type": "column",
+   "axis": "left",
+   "color": "#FBC77E",
+   "data": [
+    0.084,
+    0.215,
+    0.205,
+    0.274,
+    0.624,
+    1.133,
+    1.304
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Governments (M BTC)",
+   "type": "column",
+   "axis": "left",
+   "color": "#C4B0FB",
+   "data": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    0.599
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 30 Who holds bitcoin",
+ "tab": "30 Who holds bitcoin",
+ "workbook": "bot experiments 2"
+}

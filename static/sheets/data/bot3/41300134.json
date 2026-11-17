@@ -1,0 +1,73 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 41300134,
+ "n": 1,
+ "chartId": 674895461,
+ "title": "The Scale of the AI Buildout",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Canals",
+  "Electrification",
+  "Highways",
+  "Telecom & fiber",
+  "Railroads",
+  "AI buildout"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "percent",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Avg % of GDP",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    0.66,
+    0.5,
+    1.13,
+    1.1,
+    2.24,
+    3.63
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Peak % of GDP",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    0.9,
+    0.96,
+    1.32,
+    1.39,
+    4,
+    5.1
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · AI Buildout Scale",
+ "tab": "AI Buildout Scale",
+ "workbook": "My Bot's Sheets"
+}

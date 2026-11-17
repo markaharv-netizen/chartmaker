@@ -1,0 +1,78 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 847213730,
+ "n": 1,
+ "chartId": 1208280612,
+ "title": "What Strategy paid for its bitcoin, by year: 2025's $99,819 average is 14% underwater",
+ "subtitle": "",
+ "type": "combo",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2020",
+  "2021",
+  "2022",
+  "2023",
+  "2024",
+  "2025",
+  "2026 YTD"
+ ],
+ "x": {
+  "title": "Year Strategy bought the bitcoin"
+ },
+ "y": [
+  {
+   "title": "USD thousands per bitcoin",
+   "format": "number",
+   "log": false,
+   "min": 0.0,
+   "max": 120.0
+  }
+ ],
+ "series": [
+  {
+   "name": "Avg price paid per BTC (USD thousands)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    15.964,
+    48.71,
+    34.047,
+    33.58,
+    85.412,
+    99.819,
+    78.318
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "BTC price, Oct 6 2026 close (USD thousands)",
+   "type": "line",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    85.5576,
+    85.5576,
+    85.5576,
+    85.5576,
+    85.5576,
+    85.5576,
+    85.5576
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 8 MSTR BTC cost by year",
+ "tab": "8 MSTR BTC cost by year",
+ "workbook": "bot experiments 2"
+}

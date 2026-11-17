@@ -1,0 +1,103 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 1901004927,
+ "n": 1,
+ "chartId": 89879913,
+ "title": "Tesla, Toyota, BYD, BMW and Mercedes made a profit in all 20 quarters since Q3 2021; Rivian and Lucid in none, NIO and XPeng in one",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": "stacked",
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Tesla",
+  "Toyota",
+  "BMW",
+  "Mercedes-Benz",
+  "BYD",
+  "VW Group",
+  "Honda",
+  "Hyundai Motor",
+  "GM",
+  "Stellantis",
+  "Ford",
+  "Li Auto",
+  "NIO",
+  "XPeng",
+  "Rivian",
+  "Lucid"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Quarters, Q3 2021–Q2 2026",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Profitable quarters",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    19,
+    19,
+    18,
+    18,
+    14,
+    14,
+    13,
+    1,
+    1,
+    0,
+    0
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Loss-making quarters",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    2,
+    6,
+    6,
+    7,
+    19,
+    19,
+    20,
+    20
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 58 Profitable quarters since 2021",
+ "tab": "58 Profitable quarters since 2021",
+ "workbook": "bot experiments 2"
+}

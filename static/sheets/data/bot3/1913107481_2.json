@@ -1,0 +1,56 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 1913107481,
+ "n": 2,
+ "chartId": 1640353355,
+ "title": "Strive BTC Holdings Q/Q change",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Q3-25",
+  "Q4-25",
+  "Q1-26",
+  "Q2-26",
+  "Q3-26",
+  "QTD"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "percent",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Q/Q change",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    null,
+    29.5753,
+    78.6844,
+    45.7591,
+    40.9592,
+    55.0143
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · ASST BTC per share",
+ "tab": "ASST BTC per share",
+ "workbook": "My Bot's Sheets"
+}

@@ -1,0 +1,57 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 184640583,
+ "n": 1,
+ "chartId": 1298442576,
+ "title": "Ford's EV unit lost about $33K per vehicle shipped in Q2 2026, tying its worst quarter (Q4 2025) as volumes fell to 28K",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "Q1 2025",
+  "Q2 2025",
+  "Q3 2025",
+  "Q4 2025",
+  "Q1 2026",
+  "Q2 2026"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "Model e EBIT per vehicle wholesaled (USD)",
+   "format": "integer",
+   "log": false,
+   "min": -38000.0
+  }
+ ],
+ "series": [
+  {
+   "name": "Model e EBIT per vehicle wholesaled (USD)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    -27387,
+    -22150,
+    -28200,
+    -32919,
+    -22853,
+    -32821
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 51 Ford Model e loss per EV",
+ "tab": "51 Ford Model e loss per EV",
+ "workbook": "bot experiments 2"
+}

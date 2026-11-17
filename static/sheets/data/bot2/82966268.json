@@ -1,0 +1,77 @@
+{
+ "version": 1,
+ "generated": "2026-11-17T13:57:49Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 82966268,
+ "n": 1,
+ "chartId": 770576002,
+ "title": "EBITDA margin: BYD 15.2%, BMW and Toyota 10.8%, Tesla 10.4%; Rivian −46%, Polestar −36% (Lucid −232% not shown)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "BYD",
+  "Toyota",
+  "BMW",
+  "Tesla",
+  "Mercedes-Benz",
+  "GM",
+  "Hyundai Motor",
+  "VW Group",
+  "Honda",
+  "Ford",
+  "NIO",
+  "Stellantis",
+  "Li Auto",
+  "XPeng",
+  "Polestar",
+  "Rivian"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "EBITDA margin, last 12 months (%)",
+   "format": "number",
+   "log": false,
+   "min": -52.0
+  }
+ ],
+ "series": [
+  {
+   "name": "EBITDA margin, last 12 months (%)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    15.15,
+    10.78,
+    10.77,
+    10.38,
+    9.27,
+    8.87,
+    6.98,
+    6,
+    5.69,
+    4.07,
+    2.99,
+    -0.19,
+    -1.07,
+    -1.76,
+    -35.83,
+    -46.13
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 57 EBITDA margin Tesla vs peers",
+ "tab": "57 EBITDA margin Tesla vs peers",
+ "workbook": "bot experiments 2"
+}
