@@ -44,7 +44,7 @@ Output:
   static/sheets/data/<book>/<gid>_<n>.json    (chart 2 and later)
   static/sheets/data/index.json
 
-Tabs in sheets_catalog.EXCLUDED_TABS or RETIRED_2026_11_17 are never written.
+Tabs in sheets_catalog.EXCLUDED_TABS, RETIRED_2026_11_17 or RETIRED_2026_11_18 are never written.
 A data file already on disk for one of those tabs is deleted. The 2026-11-17
 list lives in this file (not EXCLUDED_TABS) so it does not conflict with PR #63.
 
@@ -133,16 +133,31 @@ RETIRED_2026_11_17 = {
     ("bot2", 2047295555),  # table tab retired 2026-11-17
     ("bot2", 84709656),    # table tab retired 2026-11-17
 }
+# 2026-11-18 retirements. Also added to EXCLUDED_TABS. Kept here so Monday's
+# interactive export skips them even if a rebuild uses an older catalog module.
+RETIRED_2026_11_18 = {
+    ("bot1", 1328859831),  # 213 Chip gross margins
+    ("bot1", 125248111),   # 326 Big Tech capex vs FCF
+    ("bot1", 208477863),   # 258 Trade policy uncertainty
+    ("bot1", 1834386145),  # 293 Home equity share
+    ("bot1", 1635736949),  # 311 Tesla cash vs debt
+    ("bot1", 747711957),   # 16 USDJPY vs US-JP spread
+    ("bot1", 378380409),   # 74 Real GDP vs GDI
+    ("bot2", 4940912),     # 79 Neocloud valuation table
+    ("bot2", 1188646727),  # 45 EV free cash flow Q2 2026
+    ("bot1", 847095656),   # 42 VIX vs realized vol
+    ("bot1", 1694432360),  # 275 Tech vs financials
+}
 
 def tab_skipped(book, gid):
-    """True for EXCLUDED_TABS or the 2026-11-17 retirement skip list."""
+    """True for EXCLUDED_TABS or the 2026-11-17 / 2026-11-18 retirement skip lists."""
     try:
         gid = int(gid)
     except (TypeError, ValueError):
         return False
     if sheets_catalog.tab_excluded(book, gid):
         return True
-    return (str(book), gid) in RETIRED_2026_11_17
+    return (str(book), gid) in RETIRED_2026_11_17 or (str(book), gid) in RETIRED_2026_11_18
 
 LIVE_TTL = 300
 _LIVE_CACHE = {}
@@ -919,7 +934,7 @@ def clear_gid(repo, book, gid):
 
 def prune_excluded(repo):
     removed = []
-    skipped = set(sheets_catalog.EXCLUDED_TABS) | set(RETIRED_2026_11_17)
+    skipped = set(sheets_catalog.EXCLUDED_TABS) | set(RETIRED_2026_11_17) | set(RETIRED_2026_11_18)
     for book, gid in sorted(skipped):
         removed.extend(clear_gid(repo, book, gid))
     return removed
@@ -1525,7 +1540,7 @@ def check_data(repo):
         if doc.get("x", {}).get("title", "").lower() in {"date", "year", "years"}:
             problems.append(rel + " still titles the x axis Date or Year")
         seen.add((book, int(gid), int(n)))
-    skipped = set(sheets_catalog.EXCLUDED_TABS) | set(RETIRED_2026_11_17)
+    skipped = set(sheets_catalog.EXCLUDED_TABS) | set(RETIRED_2026_11_17) | set(RETIRED_2026_11_18)
     for book, gid in skipped:
         folder = os.path.join(root, book)
         if not os.path.isdir(folder):

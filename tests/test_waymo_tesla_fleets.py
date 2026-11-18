@@ -61,7 +61,7 @@ class WaymoTeslaFleetsTest(unittest.TestCase):
         self.assertTrue(os.path.isfile(os.path.join(ROOT, "static", "sheets", "full", "bot3", "%d.png" % GID)))
         self.assertTrue(os.path.isfile(os.path.join(ROOT, "static", "sheets", "thumbs", "bot3", "%d.jpg" % GID)))
         bot3 = [t for t in cat["tabs"] if t.get("book") == "bot3"]
-        self.assertEqual(len(cat["tabs"]), 448)
+        self.assertEqual(len(cat["tabs"]), 437)
         self.assertEqual(len(bot3), 88)
 
     def test_generator_keeps_the_native_chart_from_the_dump(self):
