@@ -263,13 +263,17 @@ EXCLUDED_TABS = {
     ("bot2", 2047295555),
     ("bot2", 84709656),
 }
-# Chartless table tabs that must stay in the library even when a workbook dump
-# omits them (a truncated spreadsheets.get, or a rebuild that never listed them).
+# Tabs that must stay in the library even when a workbook dump omits them
+# (a truncated spreadsheets.get, or a rebuild that never listed them).
 # ("bot3", 874288811) is "Central Bank Ranking" in My Bot's Sheets: no native
 # chart, PNG from Steve's twice-monthly render. Monday's exporter skips it.
-# A later catalog rebuild must not drop the tab.
+# ("bot3", 197035552) is "Waymo vs Tesla Robotaxi Fleets": it has a native
+# Sheets chart, but the library PNG is Steve's weekly Python render.
+# import_full_pngs.KEEP_MANUAL_PNGS blocks Monday from overwriting that PNG
+# with the native-chart export. A later catalog rebuild must not drop these.
 PINNED_TABS = {
     ("bot3", 874288811): "Central Bank Ranking",
+    ("bot3", 197035552): "Waymo vs Tesla Robotaxi Fleets",
 }
 # Google's default name for a chart with no real title: "Chart 1", "Chart 2", ...
 # "Chart 01" is a real title some tests use and is not this placeholder.
@@ -842,8 +846,10 @@ def self_test():
     assert ("bot2", 1690294676) in live  # 6 MSTR vs ASST leverage
     assert ("bot3", 978356289) in live
     assert ("bot3", 1618426207) in live  # ASST 30 Day Avg Volume
+    assert ("bot3", 197035552) in live  # Waymo vs Tesla Robotaxi Fleets
     assert ("bot3", 1608741572) not in live  # Bitcoin ETFs Weekly Flows (Python ETF draft)
-    assert len(cat["tabs"]) == 447, len(cat["tabs"])
+    assert len(cat["tabs"]) == 448, len(cat["tabs"])
+    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 88
     blob = json.dumps(cat)
     assert "201 Nvidia data center revenue" not in blob
     assert "Nvidia became a data-center company" not in blob

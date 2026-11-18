@@ -48,6 +48,13 @@ PNG_MAGIC = b"\x89PNG\r\n\x1a\n"
 FULL_REL = re.compile(r"^sheets/full/([A-Za-z0-9][A-Za-z0-9_-]{0,24})/(\d+)(?:_([2-9]|[1-9]\d))?\.png$")
 # The export names extra charts on a tab "<tab> (2).png", "<tab> (3).png", ... (before any date).
 CHART_SUFFIX = re.compile(r"\s+\((\d{1,2})\)(?=(?:\s+\d{4}-\d{2}-\d{2})?\.png$)", re.I)
+# Steve's Python-rendered library PNGs. Monday's native Sheets export must not
+# overwrite these. Central Bank Ranking is chartless, so the exporter already
+# skips it; this tab has a native chart that would otherwise replace the
+# weekly render at static/sheets/full/bot3/197035552.png.
+KEEP_MANUAL_PNGS = {
+    ("bot3", 197035552),  # Waymo vs Tesla Robotaxi Fleets
+}
 
 
 def split_chart_n(name):
@@ -173,7 +180,13 @@ def skip_chart_image(tabs, book, gid, n):
 
     A chartList is the charts that still exist on the tab. An empty title, or
     Google's "Chart N", is an untitled chart. A tab with no chartList is unchanged.
+    Tabs in KEEP_MANUAL_PNGS keep their committed Python render.
     """
+    try:
+        if (str(book), int(gid)) in KEEP_MANUAL_PNGS:
+            return True
+    except (TypeError, ValueError):
+        pass
     listed = chart_list_of(tabs, book, gid)
     if not listed:
         return False
