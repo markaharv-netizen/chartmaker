@@ -1080,10 +1080,12 @@ def self_test():
         assert keep in names, keep
     today = json.load(open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8"))
     today_blob = json.dumps(today)
-    assert today["date"] == "2026-11-17"
-    assert len(today["picks"]) == 4, len(today["picks"])
-    assert len(today["items"]) == 8, len(today["items"])
-    assert today["theme"] == "5 picks, plus 20 items drawn at random from the sheet library."
+    # today.json is whatever edition is committed, not a frozen calendar date.
+    edition = str(today.get("date") or "")
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", edition), edition
+    assert isinstance(today.get("picks"), list) and isinstance(today.get("items"), list)
+    import cotd_build
+    assert today.get("theme") == cotd_build.theme_line(len(today["items"]), len(today["picks"])), today.get("theme")
     assert "1547332232" not in today_blob and "643299192" not in today_blob
     assert "1791345316" not in today_blob and "1370617918" not in today_blob
     for gid in (292208014, 418894352, 2119398138, 1584345646, 1186940001, 501919598, 579853621,
@@ -1178,15 +1180,11 @@ def self_test():
     assert "Anthropic's IPO roadshow" not in today["theme"]
     assert "Nvidia and Micron drop off BofA" not in today["theme"]
     images = [it["image"] for it in today["items"] if it.get("image")]
-    for name in ("06.png", "07.png", "09.png", "10.png", "12.png", "14.png", "16.png", "18.png", "20.png", "22.png", "23.png", "24.png"):
-        assert "cotd/2026-11-17/" + name not in images, name
-    for name in ("08.png", "11.png", "13.png", "15.png", "17.png", "19.png", "21.png", "25.png"):
-        assert "cotd/2026-11-17/" + name in images, name
     pick_images = [it["image"] for it in today["picks"] if it.get("image")]
-    for name in ("02.png",):
-        assert "cotd/2026-11-17/" + name not in pick_images, name
-    for name in ("01.png", "03.png", "04.png", "05.png"):
-        assert "cotd/2026-11-17/" + name in pick_images, name
+    prefix = "cotd/%s/" % edition
+    for name in images + pick_images:
+        assert str(name).startswith(prefix), name
+        assert os.path.isfile(os.path.join(repo, "static", name)), name
     for rel in (
         "static/sheets/full/bot1/1547332232.png",
         "static/sheets/full/bot1/643299192.png",
@@ -1202,38 +1200,39 @@ def self_test():
         "static/cotd/2026-11-09/20.png",
     ):
         assert not os.path.isfile(os.path.join(repo, rel)), rel
-    for name in ("02.png", "03.png", "10.png", "12.png", "16.png", "17.png", "18.png"):
-        assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-10", name)), name
-    for name in ("01.png", "04.png", "11.png", "13.png", "15.png", "19.png", "20.png"):
-        assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-10", name)), name
-    for name in ("01.png", "07.png", "14.png", "15.png"):
-        assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-11", name)), name
-    for name in ("02.png", "04.png", "08.png", "13.png", "16.png", "18.png", "20.png"):
-        assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-11", name)), name
-    for name in ("06.png", "08.png", "10.png", "11.png", "12.png", "13.png", "18.png"):
-        assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-12", name)), name
-    for name in ("01.png", "05.png", "07.png", "09.png", "14.png", "16.png", "19.png", "22.png", "25.png"):
-        assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-12", name)), name
-    for name in ("01.png", "07.png", "08.png", "10.png", "13.png", "14.png", "16.png", "18.png", "21.png", "22.png"):
-        assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-13", name)), name
-    for name in ("02.png", "03.png", "04.png", "05.png", "06.png", "09.png", "11.png", "12.png", "15.png", "17.png", "19.png", "20.png", "23.png", "24.png", "25.png"):
-        assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-13", name)), name
-    for name in ("04.png", "05.png", "10.png", "15.png", "20.png", "21.png", "22.png"):
-        assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-14", name)), name
-    for name in ("01.png", "02.png", "03.png", "06.png", "07.png", "08.png", "11.png", "12.png", "13.png", "14.png", "16.png", "17.png", "18.png", "19.png", "23.png", "24.png", "25.png"):
-        assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-14", name)), name
-    for name in ("06.png", "07.png", "12.png", "14.png", "18.png", "19.png", "25.png"):
-        assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-15", name)), name
-    for name in ("01.png", "02.png", "03.png", "04.png", "05.png", "08.png", "09.png", "10.png", "11.png", "13.png", "15.png", "16.png", "17.png", "20.png", "21.png", "22.png", "23.png", "24.png"):
-        assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-15", name)), name
-    for name in ("02.png", "03.png", "04.png", "07.png", "09.png", "12.png", "17.png", "18.png", "19.png"):
-        assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-16", name)), name
-    for name in ("01.png", "05.png", "06.png", "08.png", "10.png", "11.png", "13.png", "14.png", "15.png", "16.png", "20.png", "21.png", "22.png", "23.png", "24.png", "25.png"):
-        assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-16", name)), name
-    for name in ("02.png", "06.png", "07.png", "09.png", "10.png", "12.png", "14.png", "16.png", "18.png", "20.png", "22.png", "23.png", "24.png"):
-        assert not os.path.isfile(os.path.join(repo, "static/cotd/2026-11-17", name)), name
-    for name in ("01.png", "03.png", "04.png", "05.png", "08.png", "11.png", "13.png", "15.png", "17.png", "19.png", "21.png", "25.png"):
-        assert os.path.isfile(os.path.join(repo, "static/cotd/2026-11-17", name)), name
+    def edition_pngs(date, absent, present):
+        # Older editions are deleted as new days are published. Check a day only while its folder is still committed.
+        folder = os.path.join(repo, "static", "cotd", date)
+        if not os.path.isdir(folder):
+            return
+        for name in absent:
+            assert not os.path.isfile(os.path.join(folder, name)), (date, name)
+        for name in present:
+            assert os.path.isfile(os.path.join(folder, name)), (date, name)
+    edition_pngs("2026-11-10",
+                 ("02.png", "03.png", "10.png", "12.png", "16.png", "17.png", "18.png"),
+                 ("01.png", "04.png", "11.png", "13.png", "15.png", "19.png", "20.png"))
+    edition_pngs("2026-11-11",
+                 ("01.png", "07.png", "14.png", "15.png"),
+                 ("02.png", "04.png", "08.png", "13.png", "16.png", "18.png", "20.png"))
+    edition_pngs("2026-11-12",
+                 ("06.png", "08.png", "10.png", "11.png", "12.png", "13.png", "18.png"),
+                 ("01.png", "05.png", "07.png", "09.png", "14.png", "16.png", "19.png", "22.png", "25.png"))
+    edition_pngs("2026-11-13",
+                 ("01.png", "07.png", "08.png", "10.png", "13.png", "14.png", "16.png", "18.png", "21.png", "22.png"),
+                 ("02.png", "03.png", "04.png", "05.png", "06.png", "09.png", "11.png", "12.png", "15.png", "17.png", "19.png", "20.png", "23.png", "24.png", "25.png"))
+    edition_pngs("2026-11-14",
+                 ("04.png", "05.png", "10.png", "15.png", "20.png", "21.png", "22.png"),
+                 ("01.png", "02.png", "03.png", "06.png", "07.png", "08.png", "11.png", "12.png", "13.png", "14.png", "16.png", "17.png", "18.png", "19.png", "23.png", "24.png", "25.png"))
+    edition_pngs("2026-11-15",
+                 ("06.png", "07.png", "12.png", "14.png", "18.png", "19.png", "25.png"),
+                 ("01.png", "02.png", "03.png", "04.png", "05.png", "08.png", "09.png", "10.png", "11.png", "13.png", "15.png", "16.png", "17.png", "20.png", "21.png", "22.png", "23.png", "24.png"))
+    edition_pngs("2026-11-16",
+                 ("02.png", "03.png", "04.png", "07.png", "09.png", "12.png", "17.png", "18.png", "19.png"),
+                 ("01.png", "05.png", "06.png", "08.png", "10.png", "11.png", "13.png", "14.png", "15.png", "16.png", "20.png", "21.png", "22.png", "23.png", "24.png", "25.png"))
+    edition_pngs("2026-11-17",
+                 ("02.png", "06.png", "07.png", "09.png", "10.png", "12.png", "14.png", "16.png", "18.png", "20.png", "22.png", "23.png", "24.png"),
+                 ("01.png", "03.png", "04.png", "05.png", "08.png", "11.png", "13.png", "15.png", "17.png", "19.png", "21.png", "25.png"))
     for rel in (
         "static/sheets/full/bot3/1536200109_2.png",
         "static/sheets/full/bot3/1536200109_3.png",
@@ -1322,16 +1321,18 @@ def self_test():
         "mNAV = MSTR market price / Net BTC per share ($)",
     ]
     assert rec["charts"] == [c["title"] for c in rec["chartList"]]
-    # That Q/Q chart was in the 2026-11-12 edition, not today's.
-    cards = json.load(open(os.path.join(repo, "static", "cotd", "2026-11-12", "cards.json"), encoding="utf-8"))
-    qq = [it for it in (cards.get("items") or []) if it.get("title") == "Strategy BTC Holdings Q/Q Change"]
-    assert [it.get("chart_n") for it in qq] == [2], qq
-    card_ns = []
-    for key in ("items", "random", "picks"):
-        for it in cards.get(key) or []:
-            if isinstance(it, dict) and it.get("gid") == 1145735379 and it.get("title") == "Strategy BTC Holdings Q/Q Change":
-                card_ns.append((key, it.get("chart_n")))
-    assert card_ns == [("items", 2), ("random", 2)], card_ns
+    # That Q/Q chart was in the 2026-11-12 edition. Skip once that edition has been pruned.
+    cards_path = os.path.join(repo, "static", "cotd", "2026-11-12", "cards.json")
+    if os.path.isfile(cards_path):
+        cards = json.load(open(cards_path, encoding="utf-8"))
+        qq = [it for it in (cards.get("items") or []) if it.get("title") == "Strategy BTC Holdings Q/Q Change"]
+        assert [it.get("chart_n") for it in qq] == [2], qq
+        card_ns = []
+        for key in ("items", "random", "picks"):
+            for it in cards.get(key) or []:
+                if isinstance(it, dict) and it.get("gid") == 1145735379 and it.get("title") == "Strategy BTC Holdings Q/Q Change":
+                    card_ns.append((key, it.get("chart_n")))
+        assert card_ns == [("items", 2), ("random", 2)], card_ns
     # Position order, not spreadsheets.get charts[] order. pngChartsSorted_ is
     # anchor row, then column, then the original index.
     def placed(title, row, col):
@@ -1487,7 +1488,13 @@ def self_test():
         assert by_gid2[1145735379]["charts"] == debt_titles
         assert [c["title"] for c in by_gid2[729377719]["chartList"]] == rec_titles
         assert [c["title"] for c in by_gid2[77]["chartList"]] == ["Left", "Right"]
-        assert warns2 == [], warns2
+        # The fixture dump is bot3-only and does not include the pinned tabs.
+        # Restoring them warns; that is the pinned-tab behavior, not a bad rebuild.
+        pinned_warns = {
+            "bot3 gid 197035552 (Waymo vs Tesla Robotaxi Fleets): missing from dump and no existing catalog entry; added the pinned table tab",
+            "bot3 gid 874288811 (Central Bank Ranking): missing from dump and no existing catalog entry; added the pinned table tab",
+        }
+        assert set(warns2) == pinned_warns, warns2
         assert by_gid2[1145735379].get("thumb") == thumb_rel
     finally:
         shutil.rmtree(order_repo, ignore_errors=True)
