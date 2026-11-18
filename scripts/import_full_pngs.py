@@ -373,7 +373,7 @@ def self_test():
             with open(path, "wb") as f:
                 f.write(new_bytes)
         # Neighbor charts are not excluded; give them catalog rows and confirm they still import.
-        # BX2-069 stays importable: it is Charts-of-the-day-only, not EXCLUDED_TABS.
+        # BX2-069 stays importable: scope "cotd" in config/retired_charts.json, not a library retirement.
         catalog["tabs"].extend([
             {"book": "bot1", "tab": "194 Nvidia vs Cisco 2000", "gid": 1607076800, "charts": []},
             {"book": "bot1", "tab": "201 Nvidia data center revenue", "gid": 1476428159, "charts": []},

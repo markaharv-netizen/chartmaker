@@ -61,79 +61,18 @@ _VS = {"doc": None, "sha": None, "at": 0}; _VLOCK = threading.Lock()
 # every signed-in browser sees the same stars. There are no per-person accounts.
 FAV_MAX, FAV_TOMBSTONES = 200, 500
 FAV_KEY_RE = re.compile(r"^([A-Za-z0-9][A-Za-z0-9_-]{0,24})/(\d+)/([1-9]\d?)$")
-# Permanent retired charts. These stay rejected even if sheets_catalog cannot be
-# imported. EXCLUDED_TABS is unioned in when that module loads. 1024131985 is
-# Strategy tab 99 (PR #34) and is in EXCLUDED_TABS as well. 1791345316 and
-# 1370617918 are the Korea/Taiwan and supercore tabs Mark deleted on 2026-11-09.
-# The 2026-11-10 gids are the tabs Mark deleted that day, including bot2 418894352.
-# 1308503061, 748431671, and 254001772 are the tabs Mark deleted on 2026-11-11.
-# 1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, and
-# 1067583608 are the tabs Mark retired on 2026-11-12.
-# 1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
-# 1192979444, 1912487083, 664060481, and 1778640335 are the tabs Mark retired on 2026-11-13.
-# 1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, and
-# 2128724732 are the tabs Mark retired on 2026-11-14.
-# 189736118, 1981719475, 519508812, 45161413, 1794999542, 567489150, and 601460115 are the tabs Mark retired on 2026-11-15.
-# 1024470894, 1771590089, 1566394978, 780786735, 248629477, 971499761, 1965360503, 583946273, and 327679061 are the tabs Mark retired on 2026-11-16.
+# Permanent retired charts. Loaded from config/retired_charts.json so a
+# retirement still rejects a favorite when sheets_catalog cannot be imported.
+# EXCLUDED_TABS is unioned in when that module loads (it is the same library set).
 def _favorite_retired():
-    pairs = {
-        ("bot1", 1547332232),
-        ("bot1", 643299192),
-        ("bot1", 333185169),
-        ("bot1", 1024131985),
-        ("bot1", 1791345316),
-        ("bot1", 1370617918),
-        ("bot2", 418894352),
-        ("bot1", 292208014),
-        ("bot1", 2119398138),
-        ("bot1", 1584345646),
-        ("bot1", 1186940001),
-        ("bot1", 501919598),
-        ("bot1", 579853621),
-        ("bot1", 1308503061),
-        ("bot1", 748431671),
-        ("bot1", 254001772),
-        ("bot1", 1238930141),
-        ("bot1", 1835714359),
-        ("bot1", 492285771),
-        ("bot1", 220064271),
-        ("bot1", 79264442),
-        ("bot1", 1755343475),
-        ("bot1", 1067583608),
-        ("bot1", 1924976898),
-        ("bot1", 1978525586),
-        ("bot1", 1255387315),
-        ("bot1", 1522766504),
-        ("bot1", 1163669375),
-        ("bot1", 1576800449),
-        ("bot1", 1192979444),
-        ("bot1", 1912487083),
-        ("bot1", 664060481),
-        ("bot1", 1778640335),
-        ("bot1", 1476428159),
-        ("bot1", 1459587255),
-        ("bot1", 687897000),
-        ("bot1", 546391999),
-        ("bot1", 195161343),
-        ("bot1", 321339250),
-        ("bot1", 2128724732),
-        ("bot1", 189736118),
-        ("bot1", 1981719475),
-        ("bot1", 519508812),
-        ("bot1", 45161413),
-        ("bot2", 1794999542),
-        ("bot1", 567489150),
-        ("bot1", 601460115),
-        ("bot1", 1024470894),
-        ("bot1", 1771590089),
-        ("bot1", 1566394978),
-        ("bot1", 780786735),
-        ("bot1", 248629477),
-        ("bot2", 971499761),
-        ("bot1", 1965360503),
-        ("bot1", 583946273),
-        ("bot1", 327679061),
-    }
+    pairs = set()
+    try:
+        scripts = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts")
+        if scripts not in sys.path: sys.path.insert(0, scripts)
+        import retired_charts
+        pairs.update(retired_charts.library_pairs())
+    except Exception:
+        pass
     try:
         scripts = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts")
         if scripts not in sys.path: sys.path.insert(0, scripts)

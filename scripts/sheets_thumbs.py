@@ -343,7 +343,12 @@ def cotd_files(repo, books, tabs):
     return files
 
 def visible_tabs(tabs):
-    """Catalog rows an image refresh is allowed to publish. Excluded gids stay out."""
+    """Catalog rows an image refresh is allowed to publish.
+
+    Excluded gids stay out. sheets_catalog.tab_excluded reads
+    config/retired_charts.json (library scope). A Charts-of-the-day-only row
+    is not excluded here.
+    """
     return [t for t in tabs or [] if not sheets_catalog.tab_excluded(t.get("book"), t.get("gid"))]
 
 def chart1_untitled(tab):

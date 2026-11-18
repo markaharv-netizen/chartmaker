@@ -42,11 +42,11 @@ EDITION_SIZE = EDITION_MAX
 # Curated section. A picks file must contain exactly this many, or the build stops.
 PICKS_SIZE = 5
 # Charts of the day only. These tabs stay in the sheet catalog, full PNGs, and thumbnails.
+# The rows live in config/retired_charts.json with scope "cotd" (not a retirement).
 # ("bot2", 645072508) is BX2-069, tab "69 Mark MSTR red dot tracker", chart
-# "Mark's Red Dot Tracker: MSTR". The tab still exists. It is retired from this edition only.
-COTD_EXCLUDED = {
-    ("bot2", 645072508),
-}
+# "Mark's Red Dot Tracker: MSTR". The tab still exists. It is left out of this edition only.
+import retired_charts
+COTD_EXCLUDED = retired_charts.cotd_pairs()
 
 def check(im, path):
     import sheets_thumbs
