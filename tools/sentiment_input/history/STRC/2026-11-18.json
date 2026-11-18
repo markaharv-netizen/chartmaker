@@ -1,0 +1,850 @@
+{
+ "symbol": "STRC",
+ "start": "2026-11-11T12:00:00Z",
+ "end": "2026-11-18T12:00:00Z",
+ "src": "x-rolling7",
+ "labeler": "rules (tools/sentiment_lexicon.py)",
+ "queries": [
+  "STRC -is:retweet -is:reply lang:en",
+  "STRC (bullish OR bearish OR bull OR bear OR upside OR downside OR overvalued OR undervalued OR par OR yield) -whatsapp -telegram -airdrop -is:retweet -is:reply lang:en"
+ ],
+ "items": [
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "fluxneterc20",
+   "url": "https://x.com/fluxneterc20/status/2122052651127042438",
+   "date": "2026-11-15",
+   "text": "🚀 Saturn Foundation reveals $STRC airdrop  \nRegister wallet &amp; Discord to earn $STRC, as seamless as $AVAX.  \nReward Path:  \n🌐 Open portal now  \n🔗 Link EVM wallet  \n💰 Secure your $STRC  \n🔗 https://t.co/EpSGD1nSPj  \n#L2 #AI #Airdrop https://t.co/wfyqI8cP41"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Julieannlic",
+   "url": "https://x.com/Julieannlic/status/2121398013260169585",
+   "date": "2026-11-14",
+   "text": "🚀 Saturn Foundation unveils $STRC rewards  \nEarn $STRC by linking wallet &amp; Discord, as smooth as $RNDR.  \nDrop Flow:  \n🌐 Open portal now  \n🔗 Connect EVM wallet  \n💰 Claim $STRC tokens  \n🔗 https://t.co/OK0VJqbrZo  \n#EVM #AIart https://t.co/fNb0OoPK5F"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "poplawski_x",
+   "url": "https://x.com/poplawski_x/status/2121985727378448724",
+   "date": "2026-11-15",
+   "text": "@Strategy changed how they calculate mNAV in July. Still, $MSTR trades at $100 on HL, so mNAV is around 1.05. On the Q3 earnings call they said they only issue $MSTR above 1.0. \n\n@Saylor spent $2B in 3 months to try to get $STRC to $100 but it's trading at $98.8. USD Cash is only https://t.co/loNtOhcrV3"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "Julieannlic",
+   "url": "https://x.com/Julieannlic/status/2122074577547444526",
+   "date": "2026-11-15",
+   "text": "🚀 Saturn Foundation ignites $STRC distribution!  \nCelebrating TGE registration, we’re airdropping $STRC—speed comparable to $ARB.  \nReward Path:  \n🌐 Open portal now  \n🔗 Connect EVM wallet  \n🪙 Claim $STRC drop  \n🔗 https://t.co/OK0VJqbZOW  \n#L2 #AI #Airdrop https://t.co/ZVyqmLcu2b"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "aeko2049",
+   "url": "https://x.com/aeko2049/status/2121934635663831367",
+   "date": "2026-11-15",
+   "text": "Last time BTC traded around $62k (June), STRC fell to $89, then as low as $71. Strategy paused issuance and sold BTC to pay dividends.\n\nThe $57.8k summer low came a few days after STRC bottomed.\n\nToday BTC went to $62k, STRC is still sitting at $99.89 (STRC doesn't trade on"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 4,
+   "user": "Fox_Looper",
+   "url": "https://x.com/Fox_Looper/status/2121906495231328739",
+   "date": "2026-11-15",
+   "text": "🚀 Saturn Foundation unveils $STRC reward  \nEarn $STRC by linking ETH wallet &amp; Discord—smooth as $LDO.  \nQuick Steps:  \n🔗 Open portal now  \n🟦 Connect EVM wallet  \n💰 Claim $STRC now  \n🔗 https://t.co/d3uCKGBGYI  \n#AI #DePIN #Airdrop https://t.co/izwKlI8U3U"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "LiLiHadid",
+   "url": "https://x.com/LiLiHadid/status/2121782029121708416",
+   "date": "2026-11-15",
+   "text": "🚀 Saturn Foundation Unveils $STRC Rewards\n\nRegister ETH wallet &amp; Discord to earn $STRC, as seamless as $AVAX.\n\nDrop Path:\n🪐 Open the portal\n🔗 Connect wallet &amp; verify\n🎁 Claim $STRC now\n\n🌐 https://t.co/HhcH7ptaEF\n\n#DePIN #L2 #Airdrop https://t.co/yZBVpi7WYI"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Julieannlic",
+   "url": "https://x.com/Julieannlic/status/2121287732383056100",
+   "date": "2026-11-13",
+   "text": "🚀 Saturn Foundation ignites $STRC reward wave!  \nEarn $STRC for registering—tech as pioneering as $HNT's rollout.  \nReward Path:  \n🌐 Open portal now  \n🔗 Connect wallet &amp; verify  \n🎁 Claim your $STRC  \n📎 https://t.co/OK0VJqbrZo  \n#EVM #DePIN https://t.co/Auevjwp1GM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "fluxneterc20",
+   "url": "https://x.com/fluxneterc20/status/2121950995966296076",
+   "date": "2026-11-15",
+   "text": "🚀 Saturn Foundation unveils $STRC airdrop  \nRegistration locks early EVM points, scaling like $RNDR’s GPU network.  \nReward path:  \n🪐 Visit portal now  \n🔗 Connect EVM wallet  \n📥 Claim $STRC now  \n🔗 https://t.co/EpSGD1nSPj  \n#DePIN #EVM #Airdrop https://t.co/0cHgtjJ2N0"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Fox_Looper",
+   "url": "https://x.com/Fox_Looper/status/2121836744815591918",
+   "date": "2026-11-15",
+   "text": "🚀 Saturn Foundation rolls out $STRC Airdrop!  \nWe reward early EVM users, a scale rivaling $RNDR's GPU network.  \nReward Path:  \n🔗 Open portal now  \n🟢 Connect EVM wallet  \n🎁 Lock $STRC tokens  \n🔗 https://t.co/d3uCKGBGYI  \n#EVM #DePIN #Airdrop https://t.co/d2Id00QGni"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Julieannlic",
+   "url": "https://x.com/Julieannlic/status/2121507993611084275",
+   "date": "2026-11-14",
+   "text": "🚀 Saturn Foundation fuels $STRC airdrop\n\nEarn $STRC by linking wallet &amp; Discord—smooth as $RNDR’s tech.\n\nReward Path:\n🔗 Open portal now\n🪙 Connect wallet &amp; verify\n📥 Claim $STRC drop\n\n🔗 https://t.co/OK0VJqbrZo\n\n#DePIN #EVManufacturing https://t.co/9Ea65z4iMd"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "Bill00961456",
+   "url": "https://x.com/Bill00961456/status/2122052359333507385",
+   "date": "2026-11-15",
+   "text": "bitcoin -17.3% in a month and $STRC holders still made 1% with dividends. price barely moved\n\nover a year it's even wilder, BTC -29.8% vs STRC +13.4% on Saylor's own chart\n\nso who's really the dumb money, the folks who bought the boring preferred? https://t.co/zUiSOVGpaf"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Julieannlic",
+   "url": "https://x.com/Julieannlic/status/2121519937277571426",
+   "date": "2026-11-14",
+   "text": "🚀 Saturn Foundation ignites $STRC rewards!\n\nEarn $STRC by registering for TGE, as groundbreaking as Helium’s IoT.\n\nReward Path:\n🌐 Open Saturn portal\n🔗 Connect EVM wallet\n🎁 Claim $STRC now\n\n🔗 https://t.co/OK0VJqbrZo\n\n#DePIN #EVM https://t.co/VxL22OKGTE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "Julieannlic",
+   "url": "https://x.com/Julieannlic/status/2121420121096736993",
+   "date": "2026-11-14",
+   "text": "🚀 Saturn Foundation ignites $STRC rewards\n\nEarn $STRC by registering – a gasless drop as massive as $RNDR’s art airdrop.\n\nReward Path:\n🔗 Visit Saturn portal\n🪙 Connect EVM wallet\n🚀 Claim $STRC now\n\n🌐 https://t.co/OK0VJqbrZo\n\n#EVM #DePIN https://t.co/jeq8BHDYlS"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 6,
+   "user": "Fox_Looper",
+   "url": "https://x.com/Fox_Looper/status/2122052239565156434",
+   "date": "2026-11-15",
+   "text": "🚀 Saturn Foundation ignites $STRC rewards!\n\nRewarding early TGE sign‑ups, a boost as bold as $MATIC.\n\nReward Path:\n🚀 Open portal now\n🔗 Connect EVM wallet\n💎 Claim $STRC drop\n\n🔗 https://t.co/d3uCKGBGYI\n\n#EVM #DePIN #Airdrop https://t.co/3PL9GrFg9o"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "Julieannlic",
+   "url": "https://x.com/Julieannlic/status/2122040294090940455",
+   "date": "2026-11-15",
+   "text": "🚀 Saturn Foundation rolls out $STRC airdrop!  \nRewarding early registrants, a push as massive as $SOL’s DeFi surge.  \nDrop Blueprint:  \n🔎 Open portal now  \n🔗 Connect EVM wallet  \n💰 Claim $STRC tokens  \n🔗 https://t.co/OK0VJqbZOW  \n#EVM #DePIN #Airdrop https://t.co/zcNSX3Edsh"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "Fox_Looper",
+   "url": "https://x.com/Fox_Looper/status/2122007670572142991",
+   "date": "2026-11-15",
+   "text": "🚀 Saturn Foundation rolls out $STRC airdrop!\n\nWe’re rewarding early EVM users, a scale rivaling $RNDR’s tech rollout.\n\nReward Path:\n🪐 Open Saturn portal\n🔗 Connect EVM wallet\n🎁 Claim $STRC now\n\n🌐 https://t.co/d3uCKGBGYI\n\n#EVM #L2 #Airdrop https://t.co/APK76Qaoje"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 4,
+   "user": "Fox_Looper",
+   "url": "https://x.com/Fox_Looper/status/2121747803357511923",
+   "date": "2026-11-14",
+   "text": "🚀 Saturn Foundation unveils $STRC airdrop\n\nRewarding registrants after our gas‑less sign‑in, as seamless as $GMX swaps.\n\nReward Path:\n\n🌐 Open portal now\n\n🔗 Connect EVM wallet\n\n🪙 Claim $STRC drop\n\n🔗 https://t.co/d3uCKGB99a\n\n#AI #DePIN #Airdrop https://t.co/V4Zri2MUSZ"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "MallG2x0",
+   "url": "https://x.com/MallG2x0/status/2121695169099481360",
+   "date": "2026-11-14",
+   "text": "🚀 Saturn Foundation unveils $STRC airdrop!\n\nRewarding registrants for TGE sign‑up, as bold as $AVAX’s cross‑chain.\n\nReward Path:\n🌐 Open portal now\n🔗 Connect EVM wallet\n🪙 Claim $STRC tokens\n\n🔗 https://t.co/2rHDMS0rrD\n\n#DePIN #AI https://t.co/bUysPRf5ss"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 2,
+   "user": "fluxneterc20",
+   "url": "https://x.com/fluxneterc20/status/2121531489598804338",
+   "date": "2026-11-14",
+   "text": "🚀 Saturn Foundation unveils $STRC reward  \n\nWe’re rewarding early EVM users, a scale rivaling $RNDR’s GPU network.  \n\nReward Path:  \n🌐 Open registration portal  \n🔗 Connect EVM wallet  \n💎 Claim $STRC now  \n\n🔗 https://t.co/EpSGD1nkZL  \n\n#EVM #AIart https://t.co/4xLaUm71FK"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "LiLiHadid",
+   "url": "https://x.com/LiLiHadid/status/2121564682301436190",
+   "date": "2026-11-14",
+   "text": "🚀 Saturn Foundation ignites $STRC airdrop!  \nRegister now for $STRC, a drop as massive as $RNDR.  \nReward Flow:  \n🌐 Open registration portal  \n🔗 Connect EVM wallet  \n💰 Claim $STRC now  \n🔗 https://t.co/HhcH7psCP7  \n#EVM #AI短剧 https://t.co/8qpG1x8cnz"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 27,
+   "user": "Shilllin",
+   "url": "https://x.com/Shilllin/status/2121728216172052491",
+   "date": "2026-11-14",
+   "text": "STRC TESTING $98 AGAIN\n\nshorting $STRC https://t.co/gUVeBHmLhm"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Julieannlic",
+   "url": "https://x.com/Julieannlic/status/2121950185236332678",
+   "date": "2026-11-15",
+   "text": "🚀 Saturn Foundation ignites $STRC airdrop!  \nRegister now for TGE rewards, tech as robust as $RNDR.  \nReward Path:  \n🔗 Visit the portal  \n🟢 Connect EVM wallet  \n🎁 Claim $STRC now  \n🌐 https://t.co/OK0VJqbrZo  \n#AI #L2 #Airdrop https://t.co/Z2Yb4ZREBW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "fluxneterc20",
+   "url": "https://x.com/fluxneterc20/status/2121825784209785088",
+   "date": "2026-11-15",
+   "text": "🚀 Saturn Foundation rolls out $STRC airdrop!\n\nRewarding early EVM adopters, as bold as $ARB’s roll‑up.\n\nAirdrop Flow:\n🔎 Visit portal now\n🔗 Connect wallet &amp; verify\n🪙 Claim $STRC tokens\n\n🌐 https://t.co/EpSGD1nkZL\n\n#EVM #L2 #Airdrop https://t.co/jQHpJjSX2y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "TOrangeStandard",
+   "url": "https://x.com/TOrangeStandard/status/2121774258917417164",
+   "date": "2026-11-15",
+   "text": "Bitcoin fell again. STRC and SATA didn’t. Same 20-day window as the June drop, when they fell with it. What changed? https://t.co/KcwXzkViSO\n\n$STRC $SATA $MSTR $ASST"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 4,
+   "user": "Silverbark3",
+   "url": "https://x.com/Silverbark3/status/2121202569586348208",
+   "date": "2026-11-13",
+   "text": "Silver / $STRC - looks almost like the dollar price chart. Last November is when STRC completely fell apart. And here we are again. \n\"Did someone create a ponzi token system to provide liquidity to aid in keeping a lid on precious metals? Saylor, I'm looking in your direction.\"😂 https://t.co/0IigF7Gxd6 https://t.co/SDenuvj1XL"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 42,
+   "user": "MSTR_simulator",
+   "url": "https://x.com/MSTR_simulator/status/2121280684002345153",
+   "date": "2026-11-13",
+   "text": "Notice something, guys? The daily trading volume on STRC is steadily climbing again.\n\nThis is yesterday's volume measured against the 30D average.\n\nThe average was in the low $100M range in the summer.\n\nIt's climbing back precisely as the price of STRC has been RISING and https://t.co/2AwXMXiGGx"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "MallG2x0",
+   "url": "https://x.com/MallG2x0/status/2121256175345819979",
+   "date": "2026-11-13",
+   "text": "🚀 Saturn Foundation Unveils $STRC Airdrop  \nRewarding verified EVM wallets—scale that rivals SUI’s fast rollout.  \nAirdrop Path:  \n🪐 Open portal now  \n🔗 Connect EVM wallet  \n📥 Claim $STRC tokens  \n🔗 https://t.co/2rHDMS0rrD  \n#EVM #L2 https://t.co/naxTxZVlN7"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 3,
+   "user": "Fox_Looper",
+   "url": "https://x.com/Fox_Looper/status/2121277932169822254",
+   "date": "2026-11-13",
+   "text": "🚀 Saturn Foundation Unveils $STRC Grant  \nRewarding early EVM users via gas‑less, Discord‑verified TGE, as slick as $RNDR.  \nReward Steps:  \n🌐 Open portal now  \n🔗 Connect wallet &amp; verify  \n🪙 Claim $STRC drop  \n🔗 https://t.co/d3uCKGBGYI  \n#EVM #AIart https://t.co/Apb3uNf8e7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 9,
+   "user": "poplawski_x",
+   "url": "https://x.com/poplawski_x/status/2121183152664179012",
+   "date": "2026-11-13",
+   "text": "1) Michael Saylor is making a mistake by buying back STRC in the $95–99 range. The right time to do so was when STRC dropped to around $70. He could have made substantial purchases and established a solid price floor. He would have effectively sold at $100 and bought back at $70."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 29,
+   "user": "Shilllin",
+   "url": "https://x.com/Shilllin/status/2121252212802261467",
+   "date": "2026-11-13",
+   "text": "Pay attention to $MSTR AND $STRC \n\nSTRC depegged last time Bitcoin touched 62k\n\nThis is the weakest point of the market imo\n\n@grok verify"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 86,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2121232048153051323",
+   "date": "2026-11-13",
+   "text": "Using buybacks to force $STRC to trade at par while Bitcoin is down 55% is a fool’s errand.\n\nSTRC will trade at par organically once Bitcoin recovers.\n\nBuybacks should be reserved for when STRC trades below $95."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "StockTickerZone",
+   "url": "https://x.com/StockTickerZone/status/2121216870078632295",
+   "date": "2026-11-13",
+   "text": "$STRC Michael Saylor’s Strategy Buys 1,036 Bitcoin, Repurchases STRC Stock - CoinGape #stocks #news https://t.co/9YlhgXRAPN"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "PreferredBot",
+   "url": "https://x.com/PreferredBot/status/2121238055541498238",
+   "date": "2026-11-13",
+   "text": "Bitcoin treasury companies are starting to hold each other's preferred shares, That creates anew form of linked risk\n\nEarlier this year, @Strive bought $50m of @Strategy's $STRC and included it in its $SATA dividend reserve (12 months cash + 6 months STRC)\n\nAs of the 30th"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "satscryption",
+   "url": "https://x.com/satscryption/status/2121242507249877020",
+   "date": "2026-11-13",
+   "text": "Bitcoin treasury preferreds are moving to daily pay (filings, 2 Nov).\n\nStrategy's STRC has had daily record dates since 1 Nov. Daily record dates for STRF, STRK and STRD are expected from 1 Jan 2027, rates unchanged (Q3 10-Q).\n\n$MSTR $STRC #Bitcoin\n\nResearch, not advice. https://t.co/QqKBTlucn7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "DigitalCreditMx",
+   "url": "https://x.com/DigitalCreditMx/status/2121052571116728428",
+   "date": "2026-11-13",
+   "text": "STRC is second in line on the Preferred Stack with a coverage ratio of 5.6x meaning Strategy has 5.6 dollars for every dollar outstanding of STRC https://t.co/WSZTJEn5W3"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 2,
+   "user": "StrategyMaxi",
+   "url": "https://x.com/StrategyMaxi/status/2120629539361714470",
+   "date": "2026-11-11",
+   "text": "$STRC will hit par when @MSTR_simulator goes bearish on $STRC Growth.\n\nLet $MSTR influencers that hold zero $STRC cook. https://t.co/w4TeS8qk4N https://t.co/6yfeFT8UkV"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 1,
+   "user": "WorldWideWill1_",
+   "url": "https://x.com/WorldWideWill1_/status/2121287568054772198",
+   "date": "2026-11-13",
+   "text": "$STRC is about to crash again, just wait for a $30 $MSTR"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "kadercalls",
+   "url": "https://x.com/kadercalls/status/2121274930436178075",
+   "date": "2026-11-13",
+   "text": "Is Strategy's $STRC paying daily dividends now? I've got dividends everyday now?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "CryptoBro_4alls",
+   "url": "https://x.com/CryptoBro_4alls/status/2121272878670942338",
+   "date": "2026-11-13",
+   "text": "Strategy's STRC preferred pays 12% a year, and BTC is down 18.93% in 2026. A dividend needs cash, from financing or asset sales. Strategy disclosed about $431.8M of bitcoin sales this year to fund part of its preferred dividends and STRC buybacks."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "StrategyMaxi",
+   "url": "https://x.com/StrategyMaxi/status/2121251401548669019",
+   "date": "2026-11-13",
+   "text": "How is $STRC a iPhone moment? https://t.co/k2EsWBII3P"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Shilllin",
+   "url": "https://x.com/Shilllin/status/2121256756131377412",
+   "date": "2026-11-13",
+   "text": "This will be the first thing that is deleveraged\n\nSTRC https://t.co/ePrUJViFJM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 51,
+   "user": "MSTR_simulator",
+   "url": "https://x.com/MSTR_simulator/status/2120555402266083421",
+   "date": "2026-11-11",
+   "text": "STRC buybacks are not \"dilutive\" to MSTR shareholders.\n\nSTRC issuance is not \"accretive\" to MSTR shareholders.\n\nBuybacks are *de-amplifying* and issuance is *amplifying* for MSTR.\n\nThe amount of STRC issued simply changes the common stock's sensitivity to changes in the value of"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "VincentNat7904",
+   "url": "https://x.com/VincentNat7904/status/2121125318694158594",
+   "date": "2026-11-13",
+   "text": "You can't fake this. $MSTR $STRC is the greatest @saylor - ponzi scheme ever created."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "JamesChristoph",
+   "url": "https://x.com/JamesChristoph/status/2121214628445495397",
+   "date": "2026-11-13",
+   "text": "Hate to be a prick but it’s probably time to short STRC again. \n\nWould short strc and long sata"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 18,
+   "user": "RealbitcoinMD",
+   "url": "https://x.com/RealbitcoinMD/status/2121256411946795052",
+   "date": "2026-11-13",
+   "text": "I agree at least one Bitcoin treasury company should be buying bitcoin:native with $STRC…..\n\n$ASST https://t.co/HOMzln3V5O"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 7,
+   "user": "cheekyaustinn",
+   "url": "https://x.com/cheekyaustinn/status/2121240632416944625",
+   "date": "2026-11-13",
+   "text": "$MSTR $STRC \n\nYou can’t make this shit up 😂 https://t.co/DDiLXSKRTA"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 24,
+   "user": "hillery_dan",
+   "url": "https://x.com/hillery_dan/status/2121242643875189184",
+   "date": "2026-11-13",
+   "text": "How STRC Is Perpetual AND Short-Duration https://t.co/nvqbhBipl7"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "Rescennsse",
+   "url": "https://x.com/Rescennsse/status/2121209415345094722",
+   "date": "2026-11-13",
+   "text": "@ColeMacro it's time to resell the $STRC to Saylor, thanks for the yield we'll be back later ......"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "RRobbertp",
+   "url": "https://x.com/RRobbertp/status/2121236596749897967",
+   "date": "2026-11-13",
+   "text": "$STRC nice day to switch on the ATM"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 49,
+   "user": "BTCoptioneer",
+   "url": "https://x.com/BTCoptioneer/status/2120520420642234635",
+   "date": "2026-11-11",
+   "text": "Raising $STRC dividends would send the wrong message.\n\nInvestors would think Strategy is desperate.\n\nBut buying back $200M worth of STRC every week is highly dilutive for common shareholders. \n\nThe truth is we need Bitcoin to go up if we want STRC to trade at par more"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "StrategyMaxi",
+   "url": "https://x.com/StrategyMaxi/status/2120528295284580754",
+   "date": "2026-11-11",
+   "text": "Are they buying $STRC?\n\nNo?\n\nTell me!\n\nTell me!\n\nTell me!\n\nYOU SAID $STRC IS BEST CREDIT https://t.co/i2EiPkCWiH"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 47,
+   "user": "StrategyMaxi",
+   "url": "https://x.com/StrategyMaxi/status/2120542063183692170",
+   "date": "2026-11-11",
+   "text": "Imagine $MSTR had expanded their operations. They would have avoided exclusion from all MSCI indexes and been included in the S&amp;P 500. \n\n$STRC! $STRC! $STRC! \n\n\"iPhone Moment!\" \n\n\"Who wants a bank account that pays them 10%? Everybody.\" \n\n\"It's like a money market.\" https://t.co/qi6b3EAZRq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 81,
+   "user": "TFTC21",
+   "url": "https://x.com/TFTC21/status/2120539860398153921",
+   "date": "2026-11-11",
+   "text": "Strategy raised $283.8M selling its common stock last week, and only $81.9M of it went to bitcoin.\n\n$188.3M went to buying back its own STRC preferred shares, more than twice what went into the coins.\n\n• 1,036 bitcoin bought between November 2 and November 8, at an average of https://t.co/PTociIIgGF"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 1,
+   "user": "STRCAccumulator",
+   "url": "https://x.com/STRCAccumulator/status/2120529329436144098",
+   "date": "2026-11-11",
+   "text": "Day 2 of $STRC Accumulator\n\n$0.01 in dividends! \n\nReinvestment of 0.0001 shares https://t.co/9hL8TSaNr1"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "ScottAWolfe",
+   "url": "https://x.com/ScottAWolfe/status/2120533531940032864",
+   "date": "2026-11-11",
+   "text": "With launch on Nov 23, 2026 — first in the U.S. and then internationally — this means 24/7 access to $STRC and a larger liquidity pool. This should go a significant way to helping @Strategy maintain STRC near/at $100 and to use it as a vehicle for future purchases of $BTC and https://t.co/cuiwVooZrq"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "altols",
+   "url": "https://x.com/altols/status/2120518479686050012",
+   "date": "2026-11-11",
+   "text": "$STRC is a bitcoin derivative\nIf the most influential factor in the price of STRC is the price of Bitcoin and the price of Bitcoin remains flat, I would expect Strategy to have to conduct some form of buybacks to maintain the stated price of $100. \n\nLet’s call this X.\n\nIf the"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "TSFX_forex",
+   "url": "https://x.com/TSFX_forex/status/2120498078352363657",
+   "date": "2026-11-11",
+   "text": "#Strategy #STRC #Bitcoin\n\nStrategy shifts capital focus, spending more on STRC buybacks than Bitcoin as the firm contends with rising funding pressures.\n\nJoin for forex, crypto, index analysis and market news:\n\nhttps://t.co/UmeNUgJhh1 https://t.co/6gguHSwSxE"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 33,
+   "user": "crimsonpill21",
+   "url": "https://x.com/crimsonpill21/status/2120553558374555993",
+   "date": "2026-11-11",
+   "text": "$STRC \nclose 💯 https://t.co/ZmSRmq2wqW"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 60,
+   "user": "hillery_dan",
+   "url": "https://x.com/hillery_dan/status/2120518253969621474",
+   "date": "2026-11-11",
+   "text": "How STRC at Par Amplifies MSTR\n\nSTRC trading at $100 lets Strategy ATM-issue, buy more Bitcoin, and amplify the common. https://t.co/6lt7VRuMq2"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 3,
+   "user": "BitDecoder",
+   "url": "https://x.com/BitDecoder/status/2120488976616489250",
+   "date": "2026-11-11",
+   "text": "Back to par today! $STRC https://t.co/g7NNYkQlsG"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "phogmelter",
+   "url": "https://x.com/phogmelter/status/2120542386233229372",
+   "date": "2026-11-11",
+   "text": "BLACKROT will stop strc hitting 100"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 17,
+   "user": "BTDenominator",
+   "url": "https://x.com/BTDenominator/status/2120555350575247746",
+   "date": "2026-11-11",
+   "text": "Almost there... $MSTR $STRC https://t.co/Eab3A3XYJ4"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 12,
+   "user": "ms2capital",
+   "url": "https://x.com/ms2capital/status/2120523210579927181",
+   "date": "2026-11-11",
+   "text": "$MSTR | MSCI Deletion\n\nToday's MSCI DATs decision could confirm what its Oct 15 list forecasted - selling is scheduled, but has the market priced this in already?\n\nExclusion Decision | Priced In or Not\n○ Oct 15 list: \"Deleted\"\n○ Today: 5 PM (EST) \n○ JPM impact: $2.8B, up to https://t.co/31ohOu3XDG https://t.co/8m8GEu4q7y"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 142,
+   "user": "scottmelker",
+   "url": "https://x.com/scottmelker/status/2120505858761109906",
+   "date": "2026-11-11",
+   "text": "$STRC will be tokenized on OKXICE.\n\n“Bitcoin is Digital Capital. Strategy’s preferred stocks, such as STRC, transform that capital into Digital Credit, with high yield and deep liquidity. Tokenization on the OKXICE TSV is a natural next step toward making Digital Credit"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "CaptainB_hodl",
+   "url": "https://x.com/CaptainB_hodl/status/2120496137513869776",
+   "date": "2026-11-11",
+   "text": "The quality of these new credit instruments is just amazing 🤩 $STRC $SATA https://t.co/T73hZmTTbC"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 80,
+   "user": "_StrategyDude",
+   "url": "https://x.com/_StrategyDude/status/2120541652553023724",
+   "date": "2026-11-11",
+   "text": "$STRC back to par today. \n\n$MSTR is severely undervalued when viewed through a 5 year lens, NFA."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 351,
+   "user": "martypartymusic",
+   "url": "https://x.com/martypartymusic/status/2120526038660735241",
+   "date": "2026-11-11",
+   "text": "Wonder if @saylor knows @binance can manipulate his $MSTR and $STRC at will using their order book. 🤫"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 35,
+   "user": "PaulBGong",
+   "url": "https://x.com/PaulBGong/status/2122034861259288799",
+   "date": "2026-11-15",
+   "text": "\"Bank adoption will drive the next bull run.\"\nHere is a summary of Michael Saylor’s (@saylor) latest keynote on November 14, highlighting the key takeaways for investors.\n\n1. Major Banks Joining In Will Spark the Next Rally\n- Major banks like JPMorgan and Bank of America, which https://t.co/2jgz7lp8Sl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "PaulBGong",
+   "url": "https://x.com/PaulBGong/status/2122034566206718106",
+   "date": "2026-11-15",
+   "text": "\"Bank adoption will drive the next bull run.\"Here is a summary of Michael Saylor’s (@saylor) latest keynote on November 14, highlighting the key takeaways for investors.\nMajor Banks Joining In Will Spark the Next Rally\n- Major banks like JPMorgan and Bank of America, which once https://t.co/1icMg3sKvS"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "PaulBGong",
+   "url": "https://x.com/PaulBGong/status/2122034810550116850",
+   "date": "2026-11-15",
+   "text": "\"Bank adoption will drive the next bull run.\"\nHere is a summary of Michael Saylor’s (@saylor) latest keynote on November 14, highlighting the key takeaways for investors.\n\n1. Major Banks Joining In Will Spark the Next Rally\n- Major banks like JPMorgan and Bank of America, which https://t.co/2jgz7lp8Sl"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 10,
+   "user": "LiquidityLogic",
+   "url": "https://x.com/LiquidityLogic/status/2122915263490466301",
+   "date": "2026-11-18",
+   "text": "1/2🧵With $MSTR hitting $100 and BTC near $65K, the company’s equity-printing flywheel has broken into a dilutive loop where common stock is sold to defend senior preferred shares rather than accumulate #Bitcoin.\n\n1. Strategy’s November 16, 2026 Disclosure\n\nIn its weekly Form 8-K https://t.co/uPxqaGRZzC"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 33,
+   "user": "mstrinvestor",
+   "url": "https://x.com/mstrinvestor/status/2120592474322473041",
+   "date": "2026-11-11",
+   "text": "Strategy just suffered unrealized losses on its Bitcoin position.\n\nAll you newbies think I'm spreading FUD.\n\nROOKIES!\n\nThis is exactly what needs to happen so we can LOAD THE MOUTHAFUCKIN BOAT and increase the number of shares in our portfolio + buy LEAPS.\n\nEveryone who follows"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 0,
+   "user": "ikermrtin",
+   "url": "https://x.com/ikermrtin/status/2122708062179844244",
+   "date": "2026-11-17",
+   "text": "Bullish on @Strategy. The market obsesses over mNAV, but the real edge is BTC Yield: issuing equity and digital credit to grow Bitcoin per share. STRC holding near par through this drawdown proves the capital stack works. Digital credit is the endgame, @saylor."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 5,
+   "user": "almadelcapital",
+   "url": "https://x.com/almadelcapital/status/2120595934539080046",
+   "date": "2026-11-11",
+   "text": "🚨 $HIMS leadership @AndrewDudum:\n Here's a way to make ~$712M in liquidity work harder.\n\nAllocate just 5% (~$36M) of surplus cash:\n\n2% in bitcoin:native  — asymmetric upside\n2% in $STRC  — ~12% yield\n1% in $SATA  — ~12.75% yield\n\n95% stays in traditional liquidity. \nZero"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 46,
+   "user": "PeoplesReserve",
+   "url": "https://x.com/PeoplesReserve/status/2121984322991194282",
+   "date": "2026-11-15",
+   "text": "Adam has $100K and a 5-year horizon.\n\nHe's choosing between Digital Credit and a Bitcoin Bond.\n\nHere's the honest, illustrative math.\n\nOption A: Digital Credit\n$STRC currently pays a 12% variable dividend. It's perpetual, resets monthly, and targets $100.\n\nIf the rate held at 12% https://t.co/OQiXpYfN2A"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 69,
+   "user": "TNorth",
+   "url": "https://x.com/TNorth/status/2120954788041150672",
+   "date": "2026-11-12",
+   "text": "Parker White used to deny Bitcoin's four-year cycle. Now he says the next top comes in Sept 2029.\n\n@TheOtherParker_ is back with @IIICapital on The Income Show to talk $STRC's return to par, the Bitcoin cycle, and where Digital Credit goes next.\n\nTimestamps:\n0:00 - Intro\n1:24 - https://t.co/G7YAatcLXy"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 6,
+   "user": "PreferredBot",
+   "url": "https://x.com/PreferredBot/status/2122725444239716709",
+   "date": "2026-11-17",
+   "text": "\"Some sly roundabout way to introduce something that they can't stop\"\n\nIs this what @saylor is doing for Bitcoin with his Preferreds???\n\n@Strategy's preferreds give traditional capital a yield product it already knows how to underwrite - senioritym documentation, and a stated https://t.co/pzM6igEote"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 92,
+   "user": "OneChairPod",
+   "url": "https://x.com/OneChairPod/status/2120948803964465484",
+   "date": "2026-11-12",
+   "text": "Why can Strive $ASST pay higher dividends on $SATA than Strategy $MSTR does on $STRC? And more importantly, why does it work?\n\nStrategy and Strive are playing two very different games.\n\nIn this episode, we're joined by @AlexandreLaizet (Capital B) and @YChoueifaty (TOBAM) to https://t.co/f9V8n3NjRw"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "BobClawblaw",
+   "url": "https://x.com/BobClawblaw/status/2122512673166311555",
+   "date": "2026-11-17",
+   "text": "Title: BobClawblaw's Bitcoin News Digest - 2026-11-16 (Evening Edition)\n\n**Published:** 2026-11-16 08:09 PM CT\n\nBitcoin has clawed back to roughly $64,700 after a weekend dip to nearly $62,000, but the bounce is being carried by futures positioning rather than fresh spot demand,"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 407,
+   "user": "ZynxBTC",
+   "url": "https://x.com/ZynxBTC/status/2122139643684528246",
+   "date": "2026-11-16",
+   "text": "Saylor just announced $STRC will stay at 12% for December. \n\nI say this as a $MSTR shareholder. I think this is a mistake.\n\nMarkets expect the Fed to keep raising rates, so the risk-free rate keeps climbing. As it rises, any fixed-yield product becomes relatively less attractive. https://t.co/uKmTbfdX1s"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 0,
+   "user": "iQhealthwealth",
+   "url": "https://x.com/iQhealthwealth/status/2121758597650792755",
+   "date": "2026-11-15",
+   "text": "Where's the Bottom on #BTC Fear of tech stock downside\n• $ANT IPO draining capital\n• Thin volume between $65K and $78K\n• Disappointment with U.S. BTC Reserves\n• Return of $STRC FUD\n• Miner sell pressure to fund AI\n• $⬆️ strength despite Treasury yield spike"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "topend_j",
+   "url": "https://x.com/topend_j/status/2121496144970961063",
+   "date": "2026-11-14",
+   "text": "Most people who borrow against Bitcoin do one of two things. They loop it straight back into more Bitcoin, or they treat the loan like a personal line of credit and hope price keeps rising. Both leave you one bad wick from scrambling for outside capital.The Bitcoin Yield Reserve https://t.co/albeNZB2MD"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 8,
+   "user": "marketpessimist",
+   "url": "https://x.com/marketpessimist/status/2121265456682332353",
+   "date": "2026-11-13",
+   "text": "$STRK with basically no volume, is at 11.96% fixed yield, and an embedded upside option. \n$STRC is at 12.03% yield, variable rate, and no upside. But it does have the volume. \nThe lack of liquidity is a problem."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 28,
+   "user": "OffshoreHODL",
+   "url": "https://x.com/OffshoreHODL/status/2122678238153465918",
+   "date": "2026-11-17",
+   "text": "Michael @saylor isn’t asking TradFi to believe in Bitcoin by offering Digital Credit. \n\nHe’s giving it securities it already knows how to buy. $STRC $MSTR $STRF\n\nSTRC sells yield. MSTR sells upside. Both help channel traditional capital into more Bitcoin.\n\nHe's using the TradFi"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 15,
+   "user": "incomeetfguy",
+   "url": "https://x.com/incomeetfguy/status/2122792783518093423",
+   "date": "2026-11-17",
+   "text": "150k in @XMoney at 6%\n150k in $STRC at 12%\n150k in $GPIX at 8.5%\n150k in $SATA at 13%\n\n600k with little to no volatility and some potential upside at about 10% yield producing 60k per year.\n\nWould you be comfortable here!?"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Trader_9Al",
+   "url": "https://x.com/Trader_9Al/status/2122323397644316676",
+   "date": "2026-11-16",
+   "text": "Strategy's weekly filing landed at 8 a.m. ET. Last week it spent $228.1M buying back its STRC preferred and $33.4M on bitcoin. That's the clearest answer yet to the question hanging over this market: who is the marginal buyer under $65K? Right now, nobody big.\n\nData as of 8:12 https://t.co/4WDcn7QMpl"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "FuturesWire",
+   "url": "https://x.com/FuturesWire/status/2122329261545599473",
+   "date": "2026-11-16",
+   "text": "🚨 TOP 5 MARKET NEWS\n\n1. $BTC — Strategy buys $33M in Bitcoin, spends $228M on STRC buybacks\n🟢 55% Bullish · 🔴 45% Bearish\n🔗 https://t.co/38MWFTgf3z\n\n2. $ETH — Bitmine's ETH Holdings Reach 6.08 Million, with 5.23 Million ETH Staked\n🟢 85% Bullish · 🔴 15% Bearish\n🔗"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 2,
+   "user": "Berinando",
+   "url": "https://x.com/Berinando/status/2120953345078620336",
+   "date": "2026-11-12",
+   "text": "How to print $3,000 Monthly With $35,000 margin (Risky strategy) \n\nTLDR: Go Long $Strc in Variational \n\n35K Margin x 14 Max leverage = $500,000 Position \n\nIf you are patient you can enter at $99.5 after a $Btc dip to reduce your risk position\n\n$Strc dividends are 12% paid almost"
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 0,
+   "user": "ricardo_jorge",
+   "url": "https://x.com/ricardo_jorge/status/2121580233031594347",
+   "date": "2026-11-14",
+   "text": "$STRC — POSITIVE HOLDS: A TIGHT $99.30 TO $100.01 RANGE, STILL ABOVE ITS 20- AND 50-DAY, JUST UNDER THE 4 OCT HIGH\n\nSTRC (stock perpetual, xyz:STRC on Hyperliquid) closed at $99.78 on Fri 13 Nov 2026, down 0.11% on the session on 1.0x its 20-day volume and 1.3% below its $101.06 https://t.co/9j37fm9cNF"
+  },
+  {
+   "kind": "post",
+   "label": "bear",
+   "eng": 3,
+   "user": "Tiggersdad2",
+   "url": "https://x.com/Tiggersdad2/status/2120524322938712297",
+   "date": "2026-11-11",
+   "text": "Saylor turned $MSTR into a bitcoin treasury when $BTC was under $12k. BTC is up over 6x since, yet MSTR is down almost 3% on its position. Double when including dividends paid on preferreds like $STRC. The only \"value\" Saylor's \"created\" has come from selling overvalued stock."
+  },
+  {
+   "kind": "post",
+   "label": "neutral",
+   "eng": 1,
+   "user": "modelteji",
+   "url": "https://x.com/modelteji/status/2120495784575848486",
+   "date": "2026-11-11",
+   "text": "Say $STRC is forced off MSCI tmrw, would the same happen to Bitmine, $BMNR , Bc of MAVAN and the staking yield wouldn’t they classify as having operating revenue ? Would they be in position to absorb a lot of the funds that do get moved off Strategy? How does all of this work?"
+  },
+  {
+   "kind": "post",
+   "label": "bull",
+   "eng": 20,
+   "user": "Zen_Arlo0",
+   "url": "https://x.com/Zen_Arlo0/status/2120489542809776620",
+   "date": "2026-11-11",
+   "text": "Bitcoin and altcoins could be ready to explode!\n\nTrump's reported BTC buying, falling oil prices, $STRC nearing $100, and recovering stocks are fueling bullish hopes.\n\n$BTC and altcoins could be next for a massive rally!"
+  }
+ ]
+}
