@@ -1,0 +1,37 @@
+name: Deploy check
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check the live deploy
+        env:
+          CHARTMAKER_APP_PASSWORD: ${{ secrets.CHARTMAKER_APP_PASSWORD }}
+          RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+          RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
+        run: |
+          set -eu
+          if [ -z "${CHARTMAKER_APP_PASSWORD}" ]; then
+            echo "CHARTMAKER_APP_PASSWORD is not set; skipping deploy verification"
+            exit 0
+          fi
+          args=(
+            --base-url "https://chartmaker-8pwa.onrender.com"
+            --expect-sha "${GITHUB_SHA}"
+            --timeout 1200
+          )
+          if [ -n "${RENDER_API_KEY}" ] && [ -n "${RENDER_SERVICE_ID}" ]; then
+            args+=(--service-id "${RENDER_SERVICE_ID}")
+          else
+            echo "RENDER_API_KEY or RENDER_SERVICE_ID is not set; skipping the Render API"
+          fi
+          python3 scripts/check_deploy.py "${args[@]}"
