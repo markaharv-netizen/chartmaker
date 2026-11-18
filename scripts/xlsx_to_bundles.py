@@ -771,9 +771,16 @@ def assign_chart_ids(xlsx_charts, inventory_charts):
 
 def load_excluded(catalog_py_hint):
     sys.path.insert(0, catalog_py_hint)
+    import retired_charts
     import sheets_catalog
     import sheets_data
-    return set(sheets_catalog.EXCLUDED_TABS), sheets_catalog, set(sheets_data.RETIRED_2026_11_17)
+    # Library retirements come from config/retired_charts.json. The derived sets
+    # are unioned so a caller that still imports either name cannot drop a gid.
+    library = set(retired_charts.library_pairs())
+    library |= set(sheets_catalog.EXCLUDED_TABS)
+    library |= set(getattr(sheets_data, "RETIRED_2026_11_17", ()))
+    library |= set(getattr(sheets_data, "RETIRED_2026_11_18", ()))
+    return library, sheets_catalog, set(sheets_data.RETIRED_2026_11_17)
 
 
 def main(argv=None):

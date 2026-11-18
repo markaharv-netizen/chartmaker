@@ -1,0 +1,1011 @@
+{
+ "note": "Source of truth for charts that must not be republished. scope library is out of the catalog, full PNGs, thumbnails, interactive data, favorites, and Charts of the day. reason retired is a tab Mark retired or deleted. reason excluded with scope library is kept out of the library without treating the sheet tab as deleted (bot1 333185169 still has columns; its only chart was deleted). scope cotd stays in the library and is left out of Charts of the day only; it is not a retirement. EXCLUDED_TABS, RETIRED_2026_11_17, RETIRED_2026_11_18, and COTD_EXCLUDED are derived from this file.",
+ "charts": [
+  {
+   "book": "bot1",
+   "gid": 333185169,
+   "chartId": 1193590693,
+   "tab": "87 TSLA beta to Nasdaq",
+   "chartTitle": null,
+   "retiredOn": "2026-11-06",
+   "reason": "excluded",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 643299192,
+   "chartId": 2093032125,
+   "tab": "202 Nvidia revenue by geography",
+   "chartTitle": "Where Nvidia bills its sales: revenue share by customer billing location (quarterly)",
+   "retiredOn": "2026-11-07",
+   "reason": "retired",
+   "drivePngs": [
+    "202 Nvidia revenue by geography.png",
+    "202 Nvidia revenue by geography (2).png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1547332232,
+   "chartId": 727606877,
+   "tab": "161 Nvidia P-S and P-E",
+   "chartTitle": "Nvidia valuation: price-to-sales and trailing P/E (month-end)",
+   "retiredOn": "2026-11-07",
+   "reason": "retired",
+   "drivePngs": [
+    "161 Nvidia P-S and P-E.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1024131985,
+   "chartId": 878632585,
+   "tab": "99 MSTR BTC per share",
+   "chartTitle": "Strategy: bitcoin per diluted share vs share count (at each 8-K)",
+   "retiredOn": "2026-11-09",
+   "reason": "retired",
+   "drivePngs": [
+    "99 MSTR BTC per share.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1370617918,
+   "chartId": 1771336871,
+   "tab": "163 Supercore vs core CPI",
+   "chartTitle": "The Fed's 'supercore': services ex-shelter inflation vs core and headline CPI",
+   "retiredOn": "2026-11-09",
+   "reason": "retired",
+   "drivePngs": [
+    "163 Supercore vs core CPI.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1791345316,
+   "chartId": 1633932513,
+   "tab": "158 Korea & Taiwan vs S&P",
+   "chartTitle": "Asia's AI chip exporters: Korea (EWY) and Taiwan (EWT) vs the S&P 500",
+   "retiredOn": "2026-11-09",
+   "reason": "retired",
+   "drivePngs": [
+    "158 Korea & Taiwan vs S&P.png",
+    "158 Korea & Taiwan vs S&P (2).png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 292208014,
+   "chartId": 1252176570,
+   "tab": "98 MSTR vs BTC drawdowns",
+   "chartTitle": "Strategy vs bitcoin: drawdown from record close",
+   "retiredOn": "2026-11-10",
+   "reason": "retired",
+   "drivePngs": [
+    "98 MSTR vs BTC drawdowns.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 501919598,
+   "chartId": 1223359242,
+   "tab": "263 Tariff pass-through",
+   "chartTitle": "Are tariffs showing up in prices? Import-heavy goods CPI vs core CPI (Jan 2025 = 100)",
+   "retiredOn": "2026-11-10",
+   "reason": "retired",
+   "drivePngs": [
+    "263 Tariff pass-through.png",
+    "263 Tariff pass-through (2).png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 579853621,
+   "chartId": 905132998,
+   "tab": "12 Breakeven vs CPI",
+   "chartTitle": "Inflation 3.35% vs market's 10-year expectation 2.29%",
+   "retiredOn": "2026-11-10",
+   "reason": "retired",
+   "drivePngs": [
+    "12 Breakeven vs CPI.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1186940001,
+   "chartId": 118363695,
+   "tab": "226 OpenAI vs Anthropic revenue",
+   "chartTitle": "Reported revenue run-rates: OpenAI vs Anthropic (company statements & media; log scale)",
+   "retiredOn": "2026-11-10",
+   "reason": "retired",
+   "drivePngs": [
+    "226 OpenAI vs Anthropic revenue.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1584345646,
+   "chartId": 1400358015,
+   "tab": "223 Micron revenue & margin",
+   "chartTitle": "The AI memory boom (HBM): Micron quarterly revenue and gross margin",
+   "retiredOn": "2026-11-10",
+   "reason": "retired",
+   "drivePngs": [
+    "223 Micron revenue & margin.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 2119398138,
+   "chartId": 140779756,
+   "tab": "151 Big Tech capex vs Nvidia",
+   "chartTitle": "AI spending loop: Microsoft+Alphabet+Amazon+Meta capex vs Nvidia revenue (trailing 4 quarters)",
+   "retiredOn": "2026-11-10",
+   "reason": "retired",
+   "drivePngs": [
+    "151 Big Tech capex vs Nvidia.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot2",
+   "gid": 418894352,
+   "chartId": 1921376754,
+   "tab": "81 CoreWeave margins",
+   "chartTitle": "CoreWeave margins (%)",
+   "retiredOn": "2026-11-10",
+   "reason": "retired",
+   "drivePngs": [
+    "81 CoreWeave margins.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 254001772,
+   "chartId": 1210694775,
+   "tab": "162 Factory construction boom",
+   "chartTitle": "Chips Act & AI fabs: real US manufacturing construction spending",
+   "retiredOn": "2026-11-11",
+   "reason": "retired",
+   "drivePngs": [
+    "162 Factory construction boom.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 748431671,
+   "chartId": 938561994,
+   "tab": "232 Quits vs wage growth",
+   "chartTitle": "Job-hopping predicts pay raises: quits rate vs wage growth (Atlanta Fed tracker)",
+   "retiredOn": "2026-11-11",
+   "reason": "retired",
+   "drivePngs": [
+    "232 Quits vs wage growth.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1308503061,
+   "chartId": 1366682353,
+   "tab": "122 Bond vol vs stock vol",
+   "chartTitle": "Bond market fear vs stock market fear: MOVE ÷ VIX",
+   "retiredOn": "2026-11-11",
+   "reason": "retired",
+   "drivePngs": [
+    "122 Bond vol vs stock vol.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 79264442,
+   "chartId": null,
+   "tab": "173 Continuing/initial claims",
+   "chartTitle": "Hard to find a new job: continuing claims per initial claim (4-week averages)",
+   "retiredOn": "2026-11-12",
+   "reason": "retired",
+   "drivePngs": [
+    "173 Continuing-initial claims.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 220064271,
+   "chartId": null,
+   "tab": "135 Real coffee & cocoa",
+   "chartTitle": "Coffee and cocoa prices adjusted for inflation (Aug 2026 dollars)",
+   "retiredOn": "2026-11-12",
+   "reason": "retired",
+   "drivePngs": [
+    "135 Real coffee & cocoa.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 492285771,
+   "chartId": null,
+   "tab": "109 Equal vs cap-weight S&P",
+   "chartTitle": "Equal-weight vs cap-weight S&P 500: relative total return (RSP ÷ SPY)",
+   "retiredOn": "2026-11-12",
+   "reason": "retired",
+   "drivePngs": [
+    "109 Equal vs cap-weight S&P.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1067583608,
+   "chartId": null,
+   "tab": "233 Older workers participation",
+   "chartTitle": "Retirement wave: labor force participation of Americans 55+ vs prime-age (25–54)",
+   "retiredOn": "2026-11-12",
+   "reason": "retired",
+   "drivePngs": [
+    "233 Older workers participation.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1238930141,
+   "chartId": null,
+   "tab": "153 Big Tech capex intensity",
+   "chartTitle": "Capex intensity: Big Tech capital spending as % of revenue (trailing 4Q)",
+   "retiredOn": "2026-11-12",
+   "reason": "retired",
+   "drivePngs": [
+    "153 Big Tech capex intensity.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1755343475,
+   "chartId": null,
+   "tab": "239 Foreign vs native-born jobs",
+   "chartTitle": "Immigration and jobs: employment of foreign-born vs native-born workers (12-month average, Jan 2020 = 100)",
+   "retiredOn": "2026-11-12",
+   "reason": "retired",
+   "drivePngs": [
+    "239 Foreign vs native-born jobs.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1835714359,
+   "chartId": null,
+   "tab": "43 Nasdaq vs S&P ratio",
+   "chartTitle": "Tech leadership: Nasdaq Composite ÷ S&P 500",
+   "retiredOn": "2026-11-12",
+   "reason": "retired",
+   "drivePngs": [
+    "43 Nasdaq vs S&P ratio.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 664060481,
+   "chartId": null,
+   "tab": "322 Microsoft quarterly FCF",
+   "chartTitle": "Microsoft: operating cash flow, capex and free cash flow per quarter (USD bn)",
+   "retiredOn": "2026-11-13",
+   "reason": "retired",
+   "drivePngs": [
+    "322 Microsoft quarterly FCF.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1163669375,
+   "chartId": null,
+   "tab": "186 Sahm rule recession gauge",
+   "chartTitle": "Sahm rule recession indicator (3-mo avg unemployment vs prior 12-mo low)",
+   "retiredOn": "2026-11-13",
+   "reason": "retired",
+   "drivePngs": [
+    "186 Sahm rule recession gauge.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1192979444,
+   "chartId": null,
+   "tab": "259 Financial conditions",
+   "chartTitle": "Financial conditions are loose: Chicago Fed NFCI and St. Louis Fed stress index (month-end; 0 = average)",
+   "retiredOn": "2026-11-13",
+   "reason": "retired",
+   "drivePngs": [
+    "259 Financial conditions.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1255387315,
+   "chartId": null,
+   "tab": "115 Regional banks vs S&P",
+   "chartTitle": "Regional banks vs the S&P 500 (KRE ÷ SPY, total return)",
+   "retiredOn": "2026-11-13",
+   "reason": "retired",
+   "drivePngs": [
+    "115 Regional banks vs S&P.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1522766504,
+   "chartId": null,
+   "tab": "128 Long bonds vs stocks DD",
+   "chartTitle": "The long-bond bear market: TLT vs SPY drawdowns (total return, month-end)",
+   "retiredOn": "2026-11-13",
+   "reason": "retired",
+   "drivePngs": [
+    "128 Long bonds vs stocks DD.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1576800449,
+   "chartId": null,
+   "tab": "225 Nvidia inventory & DSO",
+   "chartTitle": "Is Nvidia stuffing the channel? Inventory days and days sales outstanding (quarterly)",
+   "retiredOn": "2026-11-13",
+   "reason": "retired",
+   "drivePngs": [
+    "225 Nvidia inventory & DSO.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1778640335,
+   "chartId": null,
+   "tab": "324 Amazon quarterly FCF",
+   "chartTitle": "Amazon: operating cash flow, capex and free cash flow per quarter (USD bn)",
+   "retiredOn": "2026-11-13",
+   "reason": "retired",
+   "drivePngs": [
+    "324 Amazon quarterly FCF.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1912487083,
+   "chartId": null,
+   "tab": "285 Ethereum L2s: Base leads",
+   "chartTitle": "Ethereum layer-2 race: DeFi value locked on Base (Coinbase) vs Arbitrum vs Optimism (weekly)",
+   "retiredOn": "2026-11-13",
+   "reason": "retired",
+   "drivePngs": [
+    "285 Ethereum L2s- Base leads.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1924976898,
+   "chartId": null,
+   "tab": "57 PPI vs CPI",
+   "chartTitle": "Pipeline inflation: producer prices vs consumer prices (YoY)",
+   "retiredOn": "2026-11-13",
+   "reason": "retired",
+   "drivePngs": [
+    "057 PPI vs CPI.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1978525586,
+   "chartId": null,
+   "tab": "55 Shelter vs home prices",
+   "chartTitle": "Home prices lead shelter inflation by ~1 year",
+   "retiredOn": "2026-11-13",
+   "reason": "retired",
+   "drivePngs": [
+    "055 Shelter vs home prices.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 195161343,
+   "chartId": null,
+   "tab": "22 LTC & BCH in BTC",
+   "chartTitle": "Old altcoins priced in Bitcoin: LTC/BTC and BCH/BTC",
+   "retiredOn": "2026-11-14",
+   "reason": "retired",
+   "drivePngs": [
+    "022 LTC & BCH in BTC.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 321339250,
+   "chartId": null,
+   "tab": "56 Food home vs away",
+   "chartTitle": "Groceries vs restaurants: food inflation YoY",
+   "retiredOn": "2026-11-14",
+   "reason": "retired",
+   "drivePngs": [
+    "056 Food home vs away.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 546391999,
+   "chartId": null,
+   "tab": "86 TSLA vs Toyota+GM+Ford",
+   "chartTitle": "Tesla market cap vs Toyota, GM and Ford combined",
+   "retiredOn": "2026-11-14",
+   "reason": "retired",
+   "drivePngs": [
+    "086 TSLA vs Toyota+GM+Ford.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 687897000,
+   "chartId": null,
+   "tab": "119 Emerging markets vs US",
+   "chartTitle": "Emerging markets vs US stocks (EEM ÷ SPY, total return)",
+   "retiredOn": "2026-11-14",
+   "reason": "retired",
+   "drivePngs": [
+    "119 Emerging markets vs US.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1459587255,
+   "chartId": null,
+   "tab": "227 Private AI lab valuations",
+   "chartTitle": "Private AI lab valuations from funding rounds: OpenAI, Anthropic and xAI (post-money, as reported; log scale)",
+   "retiredOn": "2026-11-14",
+   "reason": "retired",
+   "drivePngs": [
+    "227 Private AI lab valuations.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1476428159,
+   "chartId": null,
+   "tab": "201 Nvidia data center revenue",
+   "chartTitle": "Nvidia became a data-center company: quarterly revenue, data center vs everything else",
+   "retiredOn": "2026-11-14",
+   "reason": "retired",
+   "drivePngs": [
+    "201 Nvidia data center revenue.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 2128724732,
+   "chartId": null,
+   "tab": "111 Value vs growth",
+   "chartTitle": "Value vs growth: Russell 1000 Value ÷ Russell 1000 Growth (total return)",
+   "retiredOn": "2026-11-14",
+   "reason": "retired",
+   "drivePngs": [
+    "111 Value vs growth.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 45161413,
+   "chartId": null,
+   "tab": "45 Euro spreads vs Bunds",
+   "chartTitle": "Euro-area 10-year spreads over Germany: Italy, Spain, France",
+   "retiredOn": "2026-11-15",
+   "reason": "retired",
+   "drivePngs": [
+    "045 Euro spreads vs Bunds.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 189736118,
+   "chartId": null,
+   "tab": "191 Real gold price",
+   "chartTitle": "Gold in today's dollars: inflation-adjusted price vs the 1980 peak (Aug 2026 USD)",
+   "retiredOn": "2026-11-15",
+   "reason": "retired",
+   "drivePngs": [
+    "191 Real gold price.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 519508812,
+   "chartId": null,
+   "tab": "159 Uranium & nuclear vs S&P",
+   "chartTitle": "Nuclear for AI power: uranium stocks vs the S&P 500 (Jan 2020 = 100)",
+   "retiredOn": "2026-11-15",
+   "reason": "retired",
+   "drivePngs": [
+    "159 Uranium & nuclear vs S&P.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 567489150,
+   "chartId": null,
+   "tab": "126 CCC vs BB spread",
+   "chartTitle": "Junk-bond quality gap: CCC spread minus BB spread",
+   "retiredOn": "2026-11-15",
+   "reason": "retired",
+   "drivePngs": [
+    "126 CCC vs BB spread.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 601460115,
+   "chartId": null,
+   "tab": "204 Cloud operating margins",
+   "chartTitle": "Cloud profitability: operating margin of AWS vs Google Cloud (trailing 4 quarters)",
+   "retiredOn": "2026-11-15",
+   "reason": "retired",
+   "drivePngs": [
+    "204 Cloud operating margins.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1981719475,
+   "chartId": null,
+   "tab": "295 Tesla vs GM vs Ford margins",
+   "chartTitle": "Tesla's margin edge is gone: operating margin vs GM and Ford (trailing 4 quarters)",
+   "retiredOn": "2026-11-15",
+   "reason": "retired",
+   "drivePngs": [
+    "295 Tesla vs GM vs Ford margins.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot2",
+   "gid": 1794999542,
+   "chartId": null,
+   "tab": "56 ROIC Tesla vs legacy and EV",
+   "chartTitle": "Return on invested capital: BYD 12.4%, GM 6.1%, Tesla 5.5%, Toyota 4.2%; every pure-play EV maker is negative, down to Polestar −51%",
+   "retiredOn": "2026-11-15",
+   "reason": "retired",
+   "drivePngs": [
+    "056 ROIC Tesla vs legacy and EV.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 248629477,
+   "chartId": null,
+   "tab": "73 Bank loan-to-deposit",
+   "chartTitle": "US banks: loan-to-deposit ratio and loan growth",
+   "retiredOn": "2026-11-16",
+   "reason": "retired",
+   "drivePngs": [
+    "073 Bank loan-to-deposit.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 327679061,
+   "chartId": null,
+   "tab": "131 Refining crack spread",
+   "chartTitle": "Refiner margins: 3-2-1 crack spread (NY Harbor gasoline & heating oil vs WTI)",
+   "retiredOn": "2026-11-16",
+   "reason": "retired",
+   "drivePngs": [
+    "131 Refining crack spread.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 583946273,
+   "chartId": null,
+   "tab": "184 Buffett indicator",
+   "chartTitle": "The \"Buffett indicator\": US stock market value ÷ GDP (Fed Z.1 nonfinancial corporate equities)",
+   "retiredOn": "2026-11-16",
+   "reason": "retired",
+   "drivePngs": [
+    "184 Buffett indicator.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 780786735,
+   "chartId": null,
+   "tab": "35 S&P 500 in gold",
+   "chartTitle": "The S&P 500 priced in gold (ounces per index unit)",
+   "retiredOn": "2026-11-16",
+   "reason": "retired",
+   "drivePngs": [
+    "035 S&P 500 in gold.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1024470894,
+   "chartId": null,
+   "tab": "206 Data center chip revenue",
+   "chartTitle": "The AI chip scoreboard: quarterly data-center revenue, Nvidia vs Broadcom vs AMD vs Intel (log scale)",
+   "retiredOn": "2026-11-16",
+   "reason": "retired",
+   "drivePngs": [
+    "206 Data center chip revenue.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1566394978,
+   "chartId": null,
+   "tab": "256 Uncle Sam's borrowing cost",
+   "chartTitle": "Higher rates are feeding through: average interest rate paid on federal debt vs the 10-year yield",
+   "retiredOn": "2026-11-16",
+   "reason": "retired",
+   "drivePngs": [
+    "256 Uncle Sam's borrowing cost.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1771590089,
+   "chartId": null,
+   "tab": "198 Musk Inc vs mega caps",
+   "chartTitle": "\"Musk Inc.\" (Tesla + SpaceX) vs Nvidia, Apple and Microsoft: market value since the SpaceX IPO",
+   "retiredOn": "2026-11-16",
+   "reason": "retired",
+   "drivePngs": [
+    "198 Musk Inc vs mega caps.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1965360503,
+   "chartId": null,
+   "tab": "337 US power sales by sector",
+   "chartTitle": "US electricity sales growth by sector: commercial leads (12-month totals, YoY)",
+   "retiredOn": "2026-11-16",
+   "reason": "retired",
+   "drivePngs": [
+    "337 US power sales by sector.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot2",
+   "gid": 971499761,
+   "chartId": null,
+   "tab": "74 Neocloud quarterly revenue",
+   "chartTitle": "Neocloud quarterly revenue ($M)",
+   "retiredOn": "2026-11-16",
+   "reason": "retired",
+   "drivePngs": [
+    "074 Neocloud quarterly revenue.png"
+   ],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 254194955,
+   "chartId": null,
+   "tab": "177 Real GDP US vs EU vs Japan",
+   "chartTitle": "Real GDP since the pandemic: US vs euro area, Japan and UK (Q4 2019 = 100)",
+   "retiredOn": "2026-11-17",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 626951791,
+   "chartId": null,
+   "tab": "199 Margin debt vs S&P",
+   "chartTitle": "Leverage check: FINRA margin debt growth vs the S&P 500 (YoY) and real margin debt",
+   "retiredOn": "2026-11-17",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 673256883,
+   "chartId": null,
+   "tab": "38 Copper-gold vs 10Y",
+   "chartTitle": "Copper/gold ratio vs the 10-year yield",
+   "retiredOn": "2026-11-17",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 711603553,
+   "chartId": null,
+   "tab": "323 Alphabet quarterly FCF",
+   "chartTitle": "Alphabet: operating cash flow, capex and free cash flow per quarter (USD bn)",
+   "retiredOn": "2026-11-17",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 727565635,
+   "chartId": null,
+   "tab": "125 Junk vs IG spread ratio",
+   "chartTitle": "Credit compression: high-yield spread ÷ investment-grade spread",
+   "retiredOn": "2026-11-17",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 902803117,
+   "chartId": null,
+   "tab": "182 Real fed funds rate",
+   "chartTitle": "How tight is the Fed? Real fed funds rate (fed funds minus core PCE inflation)",
+   "retiredOn": "2026-11-17",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 909478550,
+   "chartId": null,
+   "tab": "215 Most profitable companies",
+   "chartTitle": "The world's biggest profit engine: quarterly operating income, Nvidia vs Apple, Microsoft, Alphabet, Meta",
+   "retiredOn": "2026-11-17",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 949971563,
+   "chartId": null,
+   "tab": "209 Oracle cash burn",
+   "chartTitle": "Oracle's AI build-out: operating cash flow vs capex and free cash flow (trailing 4 quarters)",
+   "retiredOn": "2026-11-17",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1234832613,
+   "chartId": null,
+   "tab": "113 Discretionary vs Staples",
+   "chartTitle": "Risk appetite: consumer discretionary ÷ consumer staples (XLY ÷ XLP)",
+   "retiredOn": "2026-11-17",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1828414017,
+   "chartId": null,
+   "tab": "185 r minus g",
+   "chartTitle": "Debt math: 10-year Treasury yield (r) vs nominal GDP growth (g)",
+   "retiredOn": "2026-11-17",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot2",
+   "gid": 84709656,
+   "chartId": null,
+   "tab": "50 BEV share H1 2026",
+   "chartTitle": null,
+   "retiredOn": "2026-11-17",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot2",
+   "gid": 1149583871,
+   "chartId": null,
+   "tab": "53 Dividends and buybacks vs legacy",
+   "chartTitle": "Toyota returned $31B to shareholders in the last 12 months, GM $7.4B; Tesla and Stellantis returned nothing",
+   "retiredOn": "2026-11-17",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot2",
+   "gid": 2047295555,
+   "chartId": null,
+   "tab": "23 Nvidia commitments table",
+   "chartTitle": null,
+   "retiredOn": "2026-11-17",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1328859831,
+   "chartId": null,
+   "tab": "213 Chip gross margins",
+   "chartTitle": "Who captures AI chip profits? Gross margins of Nvidia, Broadcom, AMD, Micron and Intel (trailing 4Q)",
+   "retiredOn": "2026-11-18",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 125248111,
+   "chartId": null,
+   "tab": "326 Big Tech capex vs FCF",
+   "chartTitle": "Big Tech 4: quarterly capex has overtaken free cash flow (USD bn)",
+   "retiredOn": "2026-11-18",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 208477863,
+   "chartId": null,
+   "tab": "258 Trade policy uncertainty",
+   "chartTitle": "Tariff shock in the news: US trade policy uncertainty vs overall economic policy uncertainty (log scale)",
+   "retiredOn": "2026-11-18",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1834386145,
+   "chartId": null,
+   "tab": "293 Home equity share",
+   "chartTitle": "Homeowners' equity as % of household real estate value (Fed Z.1, quarterly)",
+   "retiredOn": "2026-11-18",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1635736949,
+   "chartId": null,
+   "tab": "311 Tesla cash vs debt",
+   "chartTitle": "Tesla cash & short-term investments vs debt, quarter ends",
+   "retiredOn": "2026-11-18",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 747711957,
+   "chartId": null,
+   "tab": "16 USDJPY vs US-JP spread",
+   "chartTitle": "The yen has stopped following rate spreads",
+   "retiredOn": "2026-11-18",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 378380409,
+   "chartId": null,
+   "tab": "74 Real GDP vs GDI",
+   "chartTitle": "Two measures of growth: real GDP vs real GDI (YoY)",
+   "retiredOn": "2026-11-18",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot2",
+   "gid": 4940912,
+   "chartId": null,
+   "tab": "79 Neocloud valuation table",
+   "chartTitle": null,
+   "retiredOn": "2026-11-18",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot2",
+   "gid": 1188646727,
+   "chartId": null,
+   "tab": "45 EV free cash flow Q2 2026",
+   "chartTitle": "Q2 2026 free cash flow: Lucid −$1.48B on $405M of revenue; Tesla −$1.09B as capex hit $5.8B; Rivian −$849M; Li Auto −$192M",
+   "retiredOn": "2026-11-18",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 847095656,
+   "chartId": null,
+   "tab": "42 VIX vs realized vol",
+   "chartTitle": "Fear premium: VIX vs actual S&P 500 volatility",
+   "retiredOn": "2026-11-18",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot1",
+   "gid": 1694432360,
+   "chartId": null,
+   "tab": "275 Tech vs financials",
+   "chartTitle": "Tech vs banks: Technology Select Sector (XLK) ÷ Financial Select Sector (XLF), total return (month-end)",
+   "retiredOn": "2026-11-18",
+   "reason": "retired",
+   "drivePngs": [],
+   "scope": "library"
+  },
+  {
+   "book": "bot2",
+   "gid": 645072508,
+   "chartId": null,
+   "tab": "69 Mark MSTR red dot tracker",
+   "chartTitle": "Mark's Red Dot Tracker: MSTR",
+   "retiredOn": null,
+   "reason": "excluded",
+   "drivePngs": [
+    "69 Mark MSTR red dot tracker.png"
+   ],
+   "scope": "cotd"
+  }
+ ]
+}

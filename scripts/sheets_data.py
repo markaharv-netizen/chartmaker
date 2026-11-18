@@ -44,9 +44,9 @@ Output:
   static/sheets/data/<book>/<gid>_<n>.json    (chart 2 and later)
   static/sheets/data/index.json
 
-Tabs in sheets_catalog.EXCLUDED_TABS, RETIRED_2026_11_17 or RETIRED_2026_11_18 are never written.
-A data file already on disk for one of those tabs is deleted. The 2026-11-17
-list lives in this file (not EXCLUDED_TABS) so it does not conflict with PR #63.
+Tabs in config/retired_charts.json (library scope) are never written. A data
+file already on disk for one of those tabs is deleted. EXCLUDED_TABS and the
+dated RETIRED_* sets are views of that file.
 
 Supported basic charts: line, area, stepped area, column, bar (horizontal),
 scatter, and combo (including a second axis). Pie, bubble, candlestick,
@@ -77,6 +77,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 import sheets_catalog
+import retired_charts
 
 ROOT = os.path.dirname(SCRIPT_DIR)
 DATA_DIRNAME = os.path.join("static", "sheets", "data")
@@ -113,51 +114,26 @@ SERIES_TYPE = {
 INDEX_NOTE = (
     "Interactive chart data for the Sheets library. Built by scripts/sheets_data.py "
     "from a spreadsheets.get plus values.batchGet dump. The browser draws these files. "
-    "View PNG still uses static/sheets/full/. Retired tabs in EXCLUDED_TABS and "
-    "RETIRED_2026_11_17 are omitted."
+    "View PNG still uses static/sheets/full/. Retired tabs in "
+    "config/retired_charts.json are omitted."
 )
-# 2026-11-17 retirements. Kept here, not in sheets_catalog.EXCLUDED_TABS, so this
-# branch does not conflict with PR #63. Monday's export must keep skipping these.
-RETIRED_2026_11_17 = {
-    ("bot1", 909478550),   # 215 Most profitable companies
-    ("bot1", 1828414017),  # 185 r minus g
-    ("bot1", 902803117),   # 182 Real fed funds rate
-    ("bot1", 949971563),   # 209 Oracle cash burn
-    ("bot1", 1234832613),  # 113 Discretionary vs Staples
-    ("bot1", 727565635),   # 125 Junk vs IG spread ratio
-    ("bot1", 673256883),   # 38 Copper-gold vs 10Y
-    ("bot1", 254194955),   # 177 Real GDP US vs EU vs Japan
-    ("bot1", 626951791),   # 199 Margin debt vs S&P
-    ("bot1", 711603553),   # 323 Alphabet quarterly FCF
-    ("bot2", 1149583871),  # 53 Dividends and buybacks vs legacy
-    ("bot2", 2047295555),  # table tab retired 2026-11-17
-    ("bot2", 84709656),    # table tab retired 2026-11-17
-}
-# 2026-11-18 retirements. Also added to EXCLUDED_TABS. Kept here so Monday's
-# interactive export skips them even if a rebuild uses an older catalog module.
-RETIRED_2026_11_18 = {
-    ("bot1", 1328859831),  # 213 Chip gross margins
-    ("bot1", 125248111),   # 326 Big Tech capex vs FCF
-    ("bot1", 208477863),   # 258 Trade policy uncertainty
-    ("bot1", 1834386145),  # 293 Home equity share
-    ("bot1", 1635736949),  # 311 Tesla cash vs debt
-    ("bot1", 747711957),   # 16 USDJPY vs US-JP spread
-    ("bot1", 378380409),   # 74 Real GDP vs GDI
-    ("bot2", 4940912),     # 79 Neocloud valuation table
-    ("bot2", 1188646727),  # 45 EV free cash flow Q2 2026
-    ("bot1", 847095656),   # 42 VIX vs realized vol
-    ("bot1", 1694432360),  # 275 Tech vs financials
-}
+# Dated views of config/retired_charts.json. Library scope is already covered by
+# sheets_catalog.EXCLUDED_TABS; these names stay so older callers can import them.
+RETIRED_2026_11_17 = retired_charts.pairs_on("2026-11-17")
+RETIRED_2026_11_18 = retired_charts.pairs_on("2026-11-18")
+
+def _dated_retired():
+    return set(RETIRED_2026_11_17) | set(RETIRED_2026_11_18)
 
 def tab_skipped(book, gid):
-    """True for EXCLUDED_TABS or the 2026-11-17 / 2026-11-18 retirement skip lists."""
+    """True for a library retirement in config/retired_charts.json."""
     try:
         gid = int(gid)
     except (TypeError, ValueError):
         return False
     if sheets_catalog.tab_excluded(book, gid):
         return True
-    return (str(book), gid) in RETIRED_2026_11_17 or (str(book), gid) in RETIRED_2026_11_18
+    return (str(book), gid) in _dated_retired()
 
 LIVE_TTL = 300
 _LIVE_CACHE = {}
@@ -934,7 +910,7 @@ def clear_gid(repo, book, gid):
 
 def prune_excluded(repo):
     removed = []
-    skipped = set(sheets_catalog.EXCLUDED_TABS) | set(RETIRED_2026_11_17) | set(RETIRED_2026_11_18)
+    skipped = set(sheets_catalog.EXCLUDED_TABS) | _dated_retired()
     for book, gid in sorted(skipped):
         removed.extend(clear_gid(repo, book, gid))
     return removed
@@ -1540,7 +1516,7 @@ def check_data(repo):
         if doc.get("x", {}).get("title", "").lower() in {"date", "year", "years"}:
             problems.append(rel + " still titles the x axis Date or Year")
         seen.add((book, int(gid), int(n)))
-    skipped = set(sheets_catalog.EXCLUDED_TABS) | set(RETIRED_2026_11_17) | set(RETIRED_2026_11_18)
+    skipped = set(sheets_catalog.EXCLUDED_TABS) | _dated_retired()
     for book, gid in skipped:
         folder = os.path.join(root, book)
         if not os.path.isdir(folder):
