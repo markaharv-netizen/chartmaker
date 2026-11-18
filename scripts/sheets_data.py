@@ -142,6 +142,11 @@ RETIRED_2026_11_18 = {
     ("bot1", 1834386145),  # 293 Home equity share
     ("bot1", 1635736949),  # 311 Tesla cash vs debt
     ("bot1", 747711957),   # 16 USDJPY vs US-JP spread
+    ("bot1", 378380409),   # 74 Real GDP vs GDI
+    ("bot2", 4940912),     # 79 Neocloud valuation table
+    ("bot2", 1188646727),  # 45 EV free cash flow Q2 2026
+    ("bot1", 847095656),   # 42 VIX vs realized vol
+    ("bot1", 1694432360),  # 275 Tech vs financials
 }
 
 def tab_skipped(book, gid):

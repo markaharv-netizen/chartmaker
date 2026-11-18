@@ -844,7 +844,7 @@ def self_test():
                 1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                 1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                 1192979444, 1912487083, 664060481, 1778640335,
-                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957):
+                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 847095656, 1694432360):
         assert pick_excluded({"spreadsheetId": bot1, "gid": gid}), gid
     assert pick_excluded({"spreadsheetId": bot2, "gid": 418894352})
     assert pick_excluded({"spreadsheetId": bot2, "gid": 1794999542})
@@ -889,6 +889,11 @@ def self_test():
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1834386145})  # 293 Home equity share
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1635736949})  # 311 Tesla cash vs debt
     assert pick_excluded({"spreadsheetId": bot1, "gid": 747711957})  # 16 USDJPY vs US-JP spread
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 378380409})  # 74 Real GDP vs GDI
+    assert pick_excluded({"spreadsheetId": bot2, "gid": 4940912})  # 79 Neocloud valuation table
+    assert pick_excluded({"spreadsheetId": bot2, "gid": 1188646727})  # 45 EV free cash flow Q2 2026
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 847095656})  # 42 VIX vs realized vol
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1694432360})  # 275 Tech vs financials
     # Neighbors that stay: Korea/Taiwan's neighbor, CoreWeave backlog, CPI charts, tariff rate, real yield.
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 171599627})
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 200447618})  # 52 Core goods vs services
@@ -902,7 +907,7 @@ def self_test():
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 1690294676})  # 6 MSTR vs ASST leverage
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1672892616})  # 34 BTC supply inflation
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1415455632})  # 36 Gold vs real yield
-    assert not pick_excluded({"spreadsheetId": bot1, "gid": 378380409})  # 74 Real GDP vs GDI
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 378380409})  # 74 Real GDP vs GDI (retired 2026-11-18)
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 1713824403})  # 55 Capex intensity vs legacy
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 82966268})  # 57 EBITDA margin Tesla vs peers
     assert pick_excluded({"spreadsheetId": bot1, "gid": 727565635})  # 125 Junk vs IG spread ratio
@@ -923,7 +928,7 @@ def self_test():
                     1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                     1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                     1192979444, 1912487083, 664060481, 1778640335,
-                    1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1794999542, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 971499761, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1149583871, 2047295555, 84709656, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957)
+                    1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1794999542, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 971499761, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1149583871, 2047295555, 84709656, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 4940912, 1188646727, 847095656, 1694432360)
     for rel in ("static/cotd/today.json", "static/sheets/catalog.json"):
         with open(os.path.join(live, rel), encoding="utf-8") as f:
             blob = f.read()
