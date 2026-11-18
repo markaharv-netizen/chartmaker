@@ -429,7 +429,7 @@ class CommittedSnapshotTest(unittest.TestCase):
         for book in ("bot1", "bot2", "bot3"):
             path = os.path.join(FIXTURES, book + ".json")
             self.assertTrue(os.path.isfile(path), path)
-        skipped = set(sheets_catalog.EXCLUDED_TABS) | set(sheets_data.RETIRED_2026_11_17)
+        skipped = set(sheets_catalog.EXCLUDED_TABS) | set(sheets_data.RETIRED_2026_11_17) | set(sheets_data.RETIRED_2026_11_18)
         for book, gid in skipped:
             self.assertFalse(any(c["book"] == book and c["gid"] == gid for c in index["charts"]))
 

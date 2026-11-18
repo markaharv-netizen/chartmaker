@@ -192,6 +192,19 @@ BY_ID = {sid: (bid, name) for bid, name, sid in BOOKS}
 # "Nvidia has $366B of future commitments, $279B of it for supply and capacity (Jul 26 2026)".
 # ("bot2", 84709656) "50 BEV share H1 2026", table
 # "Tesla sold 838K battery-electric cars in H1 2026, more than VW, BMW and Mercedes combined…".
+# Mark retired the following tabs on 2026-11-18. They must not be rebuilt or shown.
+# ("bot1", 1328859831) "213 Chip gross margins", chart
+# "Who captures AI chip profits? Gross margins of Nvidia, Broadcom, AMD, Micron and Intel (trailing 4Q)".
+# ("bot1", 125248111) "326 Big Tech capex vs FCF", chart
+# "Big Tech 4: quarterly capex has overtaken free cash flow (USD bn)".
+# ("bot1", 208477863) "258 Trade policy uncertainty", chart
+# "Tariff shock in the news: US trade policy uncertainty vs overall economic policy uncertainty (log scale)".
+# ("bot1", 1834386145) "293 Home equity share", chart
+# "Homeowners' equity as % of household real estate value (Fed Z.1, quarterly)".
+# ("bot1", 1635736949) "311 Tesla cash vs debt", chart
+# "Tesla cash & short-term investments vs debt, quarter ends".
+# ("bot1", 747711957) "16 USDJPY vs US-JP spread", chart
+# "The yen has stopped following rate spreads".
 EXCLUDED_TABS = {
     ("bot1", 333185169),
     ("bot1", 1547332232),
@@ -262,6 +275,12 @@ EXCLUDED_TABS = {
     ("bot2", 1149583871),
     ("bot2", 2047295555),
     ("bot2", 84709656),
+    ("bot1", 1328859831),
+    ("bot1", 125248111),
+    ("bot1", 208477863),
+    ("bot1", 1834386145),
+    ("bot1", 1635736949),
+    ("bot1", 747711957),
 }
 # Tabs that must stay in the library even when a workbook dump omits them
 # (a truncated spreadsheets.get, or a rebuild that never listed them).
@@ -748,7 +767,7 @@ def self_test():
                 1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                 1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                 1192979444, 1912487083, 664060481, 1778640335,
-                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955):
+                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957):
         assert tab_excluded("bot1", gid), gid
     assert tab_excluded("bot2", 418894352)
     assert tab_excluded("bot2", 1794999542)
@@ -789,6 +808,12 @@ def self_test():
     assert tab_excluded("bot2", 1149583871)  # 53 Dividends and buybacks vs legacy
     assert tab_excluded("bot2", 2047295555)  # 23 Nvidia commitments table
     assert tab_excluded("bot2", 84709656)  # 50 BEV share H1 2026
+    assert tab_excluded("bot1", 1328859831)  # 213 Chip gross margins
+    assert tab_excluded("bot1", 125248111)  # 326 Big Tech capex vs FCF
+    assert tab_excluded("bot1", 208477863)  # 258 Trade policy uncertainty
+    assert tab_excluded("bot1", 1834386145)  # 293 Home equity share
+    assert tab_excluded("bot1", 1635736949)  # 311 Tesla cash vs debt
+    assert tab_excluded("bot1", 747711957)  # 16 USDJPY vs US-JP spread
     assert not tab_excluded("bot1", 171599627)
     assert not tab_excluded("bot1", 1027143376)
     assert not tab_excluded("bot1", 200447618)
@@ -796,7 +821,7 @@ def self_test():
     assert not tab_excluded("bot1", 972156540)
     assert not tab_excluded("bot1", 1167074374)  # 299 Real yield vs breakeven
     assert not tab_excluded("bot1", 1254747964)  # 152 Capex as % of cash flow
-    assert not tab_excluded("bot1", 1328859831)  # 213 Chip gross margins
+    assert tab_excluded("bot1", 1328859831)  # 213 Chip gross margins (retired 2026-11-18)
     assert tab_excluded("bot1", 1459587255)  # 227 Private AI lab valuations
     assert tab_excluded("bot1", 727565635)  # 125 Junk vs IG spread ratio
     assert not tab_excluded("bot1", 1457832817)  # 127 Private credit BDCs vs HY
@@ -836,7 +861,7 @@ def self_test():
     for book, gid in EXCLUDED_TABS:
         assert (book, gid) not in live, (book, gid)
     for gid in (171599627, 1027143376, 200447618, 829703707, 972156540, 1167074374,
-                1254747964, 1328859831, 2092406374):
+                1254747964, 2092406374):
         assert ("bot1", gid) in live, gid
     assert ("bot2", 1713824403) in live  # 55 Capex intensity vs legacy
     assert ("bot2", 645072508) in live
@@ -848,7 +873,7 @@ def self_test():
     assert ("bot3", 1618426207) in live  # ASST 30 Day Avg Volume
     assert ("bot3", 197035552) in live  # Waymo vs Tesla Robotaxi Fleets
     assert ("bot3", 1608741572) not in live  # Bitcoin ETFs Weekly Flows (Python ETF draft)
-    assert len(cat["tabs"]) == 448, len(cat["tabs"])
+    assert len(cat["tabs"]) == 442, len(cat["tabs"])
     assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 88
     blob = json.dumps(cat)
     assert "201 Nvidia data center revenue" not in blob
@@ -916,6 +941,18 @@ def self_test():
     assert "226 OpenAI vs Anthropic revenue" not in blob
     assert "263 Tariff pass-through" not in blob
     assert "Are tariffs showing up in prices? Import-heavy goods CPI vs core CPI (Jan 2025 = 100)" not in blob
+    assert "213 Chip gross margins" not in blob
+    assert "Who captures AI chip profits?" not in blob
+    assert "326 Big Tech capex vs FCF" not in blob
+    assert "Big Tech 4: quarterly capex has overtaken free cash flow" not in blob
+    assert "258 Trade policy uncertainty" not in blob
+    assert "Tariff shock in the news" not in blob
+    assert "293 Home equity share" not in blob
+    assert "Homeowners' equity as % of household real estate value" not in blob
+    assert "311 Tesla cash vs debt" not in blob
+    assert "Tesla cash & short-term investments vs debt, quarter ends" not in blob
+    assert "16 USDJPY vs US-JP spread" not in blob
+    assert "The yen has stopped following rate spreads" not in blob
     assert "12 Breakeven vs CPI" not in blob
     assert "122 Bond vol vs stock vol" not in blob
     assert "Bond market fear vs stock market fear: MOVE ÷ VIX" not in blob
@@ -993,7 +1030,6 @@ def self_test():
         "57 EBITDA margin Tesla vs peers",
         "203 Cloud growth race",
         "205 Meta Reality Labs losses",
-        "213 Chip gross margins",
         "Anthropic Revenue vs Compute",
         "34 BTC supply inflation",
         "36 Gold vs real yield",
@@ -1026,7 +1062,7 @@ def self_test():
                 1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                 1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                 1192979444, 1912487083, 664060481, 1778640335,
-                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 971499761, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1149583871, 2047295555, 84709656):
+                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 971499761, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1149583871, 2047295555, 84709656, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957):
         assert str(gid) not in today_blob, gid
     assert "161 Nvidia P-S and P-E" not in today_blob
     assert "202 Nvidia revenue by geography" not in today_blob
