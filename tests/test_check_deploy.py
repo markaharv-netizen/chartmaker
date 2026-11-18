@@ -46,8 +46,12 @@ class Clock:
 class FallbackTest(unittest.TestCase):
     def test_missing_config_uses_excluded_tabs(self):
         import sheets_catalog
-        pairs = check_deploy.retired_pairs(ROOT)
-        self.assertEqual(pairs, sorted((str(book), int(gid)) for book, gid in sheets_catalog.EXCLUDED_TABS))
+        # A checkout that has config/retired_charts.json must still exercise the
+        # fallback. Point at a tree with the scripts and no config file.
+        with tempfile.TemporaryDirectory() as tmp:
+            os.symlink(os.path.join(ROOT, "scripts"), os.path.join(tmp, "scripts"))
+            pairs = check_deploy.retired_pairs(tmp)
+        self.assertEqual(set(pairs), {(str(book), int(gid)) for book, gid in sheets_catalog.EXCLUDED_TABS})
         self.assertNotIn(("bot2", 645072508), pairs)
         self.assertIn(("bot1", 333185169), pairs)
 

@@ -230,7 +230,7 @@ def retired_pairs(repo):
                 pairs.append((str(row["book"]), int(row["gid"])))
             except (KeyError, TypeError, ValueError):
                 continue
-        return pairs
+        return sorted(set(pairs))
     scripts = os.path.join(repo, "scripts")
     if scripts not in sys.path:
         sys.path.insert(0, scripts)
