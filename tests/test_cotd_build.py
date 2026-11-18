@@ -595,16 +595,23 @@ class CotdRandomTest(unittest.TestCase):
             self.assertNotIn(("bot2", int(gid)), pairs)
         self.assertTrue(any(it["kind"] == "table" for it in pool))
         self.assertGreaterEqual(len(pool), 20)
-        items = cotd_build.select_edition(ROOT, "2026-11-11")
+        with open(os.path.join(ROOT, "static", "cotd", "today.json"), encoding="utf-8") as f:
+            edition = json.load(f)["date"]
+        items = cotd_build.select_edition(ROOT, edition)
         self.assertEqual(len(items), 20)
-        recent = cotd_build.recent_charts(ROOT, "2026-11-11")
-        self.assertTrue(recent)
+        recent = cotd_build.recent_charts(ROOT, edition)
+        day = cotd_build.datetime.date.fromisoformat(edition)
+        history_on_disk = any(
+            os.path.isfile(os.path.join(ROOT, "static", "cotd", (day - cotd_build.datetime.timedelta(days=delta)).isoformat(), "cards.json"))
+            for delta in (1, 2, 3))
+        if history_on_disk:
+            self.assertTrue(recent)
         for it in items:
             self.assertIsNone(cotd_build.repeated_recent(it, recent))
             self.assertFalse(cotd_build.pick_excluded(it))
             self.assertIn(it["kind"], ("chart", "table"))
             self.assertGreaterEqual(it["chart_n"], 1)
-        self.assertEqual(items, cotd_build.select_edition(ROOT, "2026-11-11"))
+        self.assertEqual(items, cotd_build.select_edition(ROOT, edition))
 
     def test_unreadable_history_excludes_nothing(self):
         with tempfile.TemporaryDirectory(prefix="cotd-badhist-") as repo:

@@ -943,14 +943,24 @@ def self_test():
     assert "645072508" not in today_blob
     for gid in (530554790, 200447618, 829703707, 972156540, 1167074374, 978356289, 1713824403, 82966268, 1457832817, 134436208, 965739722):
         assert str(gid) in catalog_blob, gid
-    assert today_doc["date"] == "2026-11-17"
-    assert len(today_doc["picks"]) == 4, len(today_doc["picks"])
-    assert len(today_doc["items"]) == 8, len(today_doc["items"])
+    # The published edition moves every day. Check its shape against that date,
+    # not against the edition that happened to be current when this test was written.
+    edition = str(today_doc.get("date") or "")
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", edition), edition
+    picks = today_doc.get("picks") if isinstance(today_doc.get("picks"), list) else []
+    items = today_doc.get("items") if isinstance(today_doc.get("items"), list) else None
+    assert isinstance(items, list)
+    assert today_doc.get("theme") == theme_line(len(items), len(picks)), today_doc.get("theme")
     assert "1536200109" not in today_blob
     assert "6 MSTR leverage" not in today_blob
     assert "Strategy vs Strive leverage: Strategy 31% of its bitcoin, Strive 65%" not in today_blob
-    assert "Strategy's STRC buybacks as a share of weekly STRC volume" in today_blob
-    cards_live = json.load(open(os.path.join(live, "static/cotd/2026-11-17/cards.json"), encoding="utf-8"))
+    for card in list(items) + list(picks):
+        image = card.get("image") if isinstance(card, dict) else None
+        if not image:
+            continue
+        assert str(image).startswith("cotd/%s/" % edition), image
+        assert os.path.isfile(os.path.join(live, "static", image)), image
+    cards_live = json.load(open(os.path.join(live, "static", "cotd", edition, "cards.json"), encoding="utf-8"))
     assert cards_live == cards_from_published(today_doc)
     assert all(it.get("book") and it.get("gid") for it in cards_live["items"])
     bot3 = "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU"
