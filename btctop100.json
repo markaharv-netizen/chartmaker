@@ -6,7 +6,7 @@
   "sheet": "BTCTC Top 100",
   "gid": 73825060,
   "description": "Top 100 corporate bitcoin holdings from the BTCTC Top 100 tab of My Bot's Sheets. USD value is BTC times a live BTC price and is not part of this file.",
-  "fetchedAt": "2026-11-17T16:20:10Z",
+  "fetchedAt": "2026-11-18T16:18:38Z",
   "supply": 21000000,
   "companies": [
     {
@@ -94,11 +94,11 @@
       "country": "US",
       "change": null,
       "btc": 18200,
-      "asOf": "2026-06-30",
-      "source": "Bullish 2Q 2026 earnings presentation (IR), 'Digital Asset Balances' units table",
-      "sourceLabel": "Earnings release",
-      "sourceUrl": "https://investors.bullish.com/static-files/265a2005-84a9-4e2a-9e9a-690ee43c19ab",
-      "notes": "Treasury-only figure (BTC held as intangible assets). Total BTC incl. inventory, receivables and ETF investments is 23,800."
+      "asOf": "2026-09-30",
+      "source": "Bullish 3Q 2026 earnings presentation (6-K Ex.99.3, filed 2026-11-18), 'Digital asset balances' units table",
+      "sourceLabel": "Q3 presentation",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1872195/000143774926037471/slide12.jpg",
+      "notes": "Treasury-only figure (BTC held as intangible assets, 18.2k units). Total BTC incl. inventory, receivables and ETF investments is 23,400."
     },
     {
       "rank": 8,
@@ -118,7 +118,7 @@
       "name": "Trump Media & Technology Group Corp.",
       "ticker": "DJT",
       "country": "US",
-      "change": "+1510.14",
+      "change": null,
       "btc": 15649.14,
       "asOf": "2026-09-30",
       "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-09)",
@@ -336,6 +336,19 @@
     },
     {
       "rank": 26,
+      "name": "The Smarter Web Company PLC",
+      "ticker": "SWC.L",
+      "country": "UK",
+      "change": "+55",
+      "btc": 2905,
+      "asOf": "2026-11-17",
+      "source": "Company RNS 'Bitcoin Purchase and MORE Weekly Dividend' (2026-11-17)",
+      "sourceLabel": "RNS",
+      "sourceUrl": "https://www.investegate.co.uk/announcement/rns/the-smarter-web-company-plc--swc/bitcoin-purchase-and-more-weekly-dividend/9878237",
+      "notes": null
+    },
+    {
+      "rank": 27,
       "name": "DDC Enterprise Limited",
       "ticker": "DDC",
       "country": "US",
@@ -345,19 +358,6 @@
       "source": "SEC Form 6-K Ex.99.1 1H2026 results press release (filed 2026-09-02)",
       "sourceLabel": "SEC 6-K",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1808110/000121390026096455/ea030422501ex99-1.htm",
-      "notes": null
-    },
-    {
-      "rank": 27,
-      "name": "The Smarter Web Company PLC",
-      "ticker": "SWC.L",
-      "country": "UK",
-      "change": null,
-      "btc": 2850,
-      "asOf": "2026-10-23",
-      "source": "Company RNS 'Bitcoin Purchase' (2026-10-23)",
-      "sourceLabel": "RNS",
-      "sourceUrl": "https://www.investegate.co.uk/announcement/rns/the-smarter-web-company-plc--swc/bitcoin-purchase/9837639",
       "notes": null
     },
     {
@@ -534,7 +534,7 @@
       "name": "Apimeds Pharmaceuticals US, Inc.",
       "ticker": "APUS",
       "country": "US",
-      "change": "+102.02",
+      "change": null,
       "btc": 1106.86,
       "asOf": "2026-09-30",
       "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-16)",
@@ -885,7 +885,7 @@
       "name": "Figure Technology Solutions, Inc",
       "ticker": "FIGR",
       "country": "US",
-      "change": "-56",
+      "change": null,
       "btc": 257,
       "asOf": "2026-09-30",
       "source": "SEC Form 10-Q Q3 2026 (filed 2026-11-16)",
@@ -1025,6 +1025,19 @@
     },
     {
       "rank": 79,
+      "name": "B HODL",
+      "ticker": "HODL.AQ",
+      "country": "UK",
+      "change": "+1",
+      "btc": 168.487,
+      "asOf": "2026-11-18",
+      "source": "B HODL RNS 'Bitcoin Purchase' (2026-11-18)",
+      "sourceLabel": "RNS",
+      "sourceUrl": "https://www.investegate.co.uk/announcement/rns/b-hodl-plc--hodl/bitcoin-purchase/9880561",
+      "notes": null
+    },
+    {
+      "rank": 80,
       "name": "Matador Technologies Inc",
       "ticker": "MATA.V",
       "country": "CA",
@@ -1037,7 +1050,7 @@
       "notes": "138.22 BTC pledged as collateral."
     },
     {
-      "rank": 80,
+      "rank": 81,
       "name": "K33 AB",
       "ticker": "K33.ST",
       "country": "NO",
@@ -1047,20 +1060,7 @@
       "source": "K33 AB Q2 2026 interim report (MFN)",
       "sourceLabel": "MFN release",
       "sourceUrl": "https://storage.mfn.se/048117ec-4723-42f4-9f33-f5373db0938d/q2-report-2026-k33-ab-publ.pdf",
-      "notes": "Effective exposure' incl. look-through via ~46% stake in Sixty-Six Capital (partial double count); direct count not disclosed."
-    },
-    {
-      "rank": 81,
-      "name": "B HODL",
-      "ticker": "HODL.AQ",
-      "country": "UK",
-      "change": null,
-      "btc": 167.487,
-      "asOf": "2026-10-27",
-      "source": "B HODL RNS 'Annual Results and Notice of AGM' (2026-10-28)",
-      "sourceLabel": "RNS",
-      "sourceUrl": "https://www.investegate.co.uk/announcement/rns/b-hodl-plc--hodl/annual-results-and-notice-of-agm/9844604",
-      "notes": null
+      "notes": "'Effective exposure' incl. look-through via ~46% stake in Sixty-Six Capital (partial double count); direct count not disclosed."
     },
     {
       "rank": 82,
