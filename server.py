@@ -11,6 +11,12 @@ PORT = _port()
 CACHE = {}
 VIEWS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "views.json")
 PASSWORD = os.environ.get("APP_PASSWORD") or ""
+def version_info():
+    """Public deploy identity for GET /version. Commit sha only; no secrets."""
+    return {
+        "commit": os.environ.get("RENDER_GIT_COMMIT") or None,
+        "service": os.environ.get("RENDER_SERVICE_NAME") or None,
+    }
 SECRET = (os.environ.get("SECRET_KEY") or secrets.token_hex(32)).encode()
 VIEWS_STORE = "browser" if os.environ.get("VIEWS_STORE", "").lower() == "browser" else "server"
 COOKIE, MAX_AGE = "cm_session", 30 * 86400
@@ -667,6 +673,7 @@ class H(SimpleHTTPRequestHandler):
         u = urllib.parse.urlparse(s.path)
         if PASSWORD and u.path == "/login": return s.redirect("/") if s.authed() else s.send_login()
         if PASSWORD and u.path == "/logout": return s.redirect("/", f"{COOKIE}=; Max-Age=0; Path=/; HttpOnly; Secure; SameSite=Lax")
+        if u.path == "/version": return s.send_json(version_info())
         if not s.gate(u.path): return
         if u.path == "/api/config":
             live = False
