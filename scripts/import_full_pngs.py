@@ -54,9 +54,12 @@ CHART_SUFFIX = re.compile(r"\s+\((\d{1,2})\)(?=(?:\s+\d{4}-\d{2}-\d{2})?\.png$)"
 # weekly render at static/sheets/full/bot3/197035552.png.
 # bot2 855902063 has an unstyled native chart; its library PNG is Steve's
 # monthly Python render at static/sheets/full/bot2/855902063.png.
+# bot3 1408701012 ("Waymo vs Tesla Texas") has a plain native chart; its
+# library PNG is Steve's Python render at static/sheets/full/bot3/1408701012.png.
 KEEP_MANUAL_PNGS = {
     ("bot3", 197035552),  # Waymo vs Tesla Robotaxi Fleets
     ("bot2", 855902063),  # 94 BTC treasury monthly flows (Python render)
+    ("bot3", 1408701012),  # Waymo vs Tesla Texas (Python render)
 }
 
 

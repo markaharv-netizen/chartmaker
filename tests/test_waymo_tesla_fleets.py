@@ -60,9 +60,11 @@ class WaymoTeslaFleetsTest(unittest.TestCase):
         self.assertEqual(hit.get("thumb"), "sheets/thumbs/bot3/%d.jpg" % GID)
         self.assertTrue(os.path.isfile(os.path.join(ROOT, "static", "sheets", "full", "bot3", "%d.png" % GID)))
         self.assertTrue(os.path.isfile(os.path.join(ROOT, "static", "sheets", "thumbs", "bot3", "%d.jpg" % GID)))
-        bot3 = [t for t in cat["tabs"] if t.get("book") == "bot3"]
-        self.assertEqual(len(cat["tabs"]), 428)
-        self.assertEqual(len(bot3), 87)
+        # Count-free on purpose: retirements and new tabs change the total, and
+        # sheets_catalog.self_test pins the exact count. Here: no duplicate tabs.
+        keys = {(t.get("book"), t.get("gid")) for t in cat["tabs"]}
+        self.assertEqual(len(keys), len(cat["tabs"]))
+        self.assertIn(("bot3", GID), keys)
 
     def test_generator_keeps_the_native_chart_from_the_dump(self):
         book, rows, hidden, excluded = sheets_catalog.one({

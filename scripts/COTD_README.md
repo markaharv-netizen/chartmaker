@@ -38,6 +38,7 @@ The build rejects a pick that is excluded, blank, untitled, unknown, already in 
 Suggested `description` for charts whose library PNG is a Python render (the builder has no caption field, so the curator copies this into the pick):
 
 - `bot2` gid `855902063` (94 BTC treasury monthly flows, "Monthly net bitcoin flows of public treasury companies"): Monthly net BTC change per company (Strategy, MARA, Riot, Metaplanet, Strive incl. Semler, Trump Media, Nakamoto, plus other companies) from company filings, with the BTC price line.
+- `bot3` gid `1408701012` (Waymo vs Tesla Texas, "Waymo vs Tesla in Texas"): Driverless vehicles registered with the Texas DMV, May 28 to Nov 18, 2026, from the same registry for both companies. Tesla passed Waymo in Texas on Nov 17.
 
 ## Daily steps (on the box)
 
