@@ -70,12 +70,27 @@ EXCLUDED_TABS = retired_charts.library_pairs()
 # chart "Waymo vs Tesla in Texas" is plain, so the library PNG is Steve's
 # Python render (Texas DMV driverless registrations). KEEP_MANUAL_PNGS blocks
 # the native export here too.
+# ("bot3", 9000000001) is "Tesla Robotaxi service area (sq mi)": Steve's weekly
+# Python render of Tesla Robotaxi geofence size. There is no Google Sheet tab.
+# The gid is reserved above Google's int32 sheetId max (SYNTHETIC_GID_MIN), so
+# it cannot collide with a real tab. KEEP_MANUAL_PNGS blocks any import from
+# overwriting the PNG. The catalog row is sheetless so Open in Sheets is hidden.
 # A later catalog rebuild must not drop these.
 PINNED_TABS = {
     ("bot3", 874288811): "Central Bank Ranking",
     ("bot3", 197035552): "Waymo vs Tesla Robotaxi Fleets",
     ("bot2", 855902063): "94 BTC treasury monthly flows",
     ("bot3", 1408701012): "Waymo vs Tesla Texas",
+    ("bot3", 9000000001): "Tesla Robotaxi service area (sq mi)",
+}
+# Google Sheets sheetId is a non-negative int32 (max 2,147,483,647). A library
+# gid at or above this value is synthetic and can never collide with a real tab.
+SYNTHETIC_GID_MIN = 2147483648
+# PNG-only pins with no Sheet tab. restore_pinned_tabs and apply_pinned_flags
+# attach a chartList (so Charts of the day treats the row as a chart) and a
+# sheetless flag (so Open in Sheets is hidden). The value is the chart title.
+SHEETLESS_TABS = {
+    ("bot3", 9000000001): "Tesla Robotaxi service area (sq mi)",
 }
 # Google's default name for a chart with no real title: "Chart 1", "Chart 2", ...
 # "Chart 01" is a real title some tests use and is not this placeholder.
@@ -366,13 +381,28 @@ def restore_pinned_tabs(tabs, previous):
         if prev:
             row = dict(prev)
             row.pop("thumb", None)
+            if key in SHEETLESS_TABS and not tab_excluded(*key):
+                chart_title = SHEETLESS_TABS[key]
+                row["sheetless"] = True
+                if not row.get("tab"):
+                    row["tab"] = title
+                if not row.get("charts"):
+                    row["charts"] = [chart_title]
+                if not row.get("chartList"):
+                    row["chartList"] = [{"n": 1, "title": chart_title}]
             out.append(row)
             warnings.append(
                 "%s gid %s (%s): missing from dump; kept the existing catalog entry"
                 % (key[0], key[1], row.get("tab") or title)
             )
         else:
-            out.append({"book": key[0], "tab": title, "gid": key[1], "charts": [], "chartList": []})
+            row = {"book": key[0], "tab": title, "gid": key[1], "charts": [], "chartList": []}
+            if key in SHEETLESS_TABS:
+                chart_title = SHEETLESS_TABS[key]
+                row["charts"] = [chart_title]
+                row["chartList"] = [{"n": 1, "title": chart_title}]
+                row["sheetless"] = True
+            out.append(row)
             warnings.append(
                 "%s gid %s (%s): missing from dump and no existing catalog entry; added the pinned table tab"
                 % (key[0], key[1], title)
@@ -388,6 +418,13 @@ def apply_pinned_flags(tabs):
             continue
         if key in PINNED_TABS and not tab_excluded(*key):
             t["pin"] = True
+        if key in SHEETLESS_TABS and not tab_excluded(*key):
+            t["sheetless"] = True
+            chart_title = SHEETLESS_TABS[key]
+            if not t.get("charts"):
+                t["charts"] = [chart_title]
+            if not t.get("chartList"):
+                t["chartList"] = [{"n": 1, "title": chart_title}]
     return tabs
 
 def build_catalog(dumps, repo, allow_partial):
@@ -662,9 +699,10 @@ def self_test():
     assert ("bot3", 197035552) in live  # Waymo vs Tesla Robotaxi Fleets
     assert ("bot2", 855902063) in live  # 94 BTC treasury monthly flows
     assert ("bot3", 1408701012) in live  # Waymo vs Tesla Texas
+    assert ("bot3", 9000000001) in live  # Tesla Robotaxi service area (sq mi)
     assert ("bot3", 1608741572) not in live  # Bitcoin ETFs Weekly Flows (Python ETF draft)
-    assert len(cat["tabs"]) == 429, len(cat["tabs"])
-    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 88
+    assert len(cat["tabs"]) == 430, len(cat["tabs"])
+    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 89
     assert sum(1 for t in cat["tabs"] if t.get("book") == "bot2") == 86
     blob = json.dumps(cat)
     assert "201 Nvidia data center revenue" not in blob
@@ -1266,6 +1304,7 @@ def self_test():
             "bot3 gid 197035552 (Waymo vs Tesla Robotaxi Fleets): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 1408701012 (Waymo vs Tesla Texas): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 874288811 (Central Bank Ranking): missing from dump and no existing catalog entry; added the pinned table tab",
+            "bot3 gid 9000000001 (Tesla Robotaxi service area (sq mi)): missing from dump and no existing catalog entry; added the pinned table tab",
         }
         assert set(warns2) == pinned_warns, warns2
         assert by_gid2[1145735379].get("thumb") == thumb_rel
