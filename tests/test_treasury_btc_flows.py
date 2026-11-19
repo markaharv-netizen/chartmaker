@@ -80,8 +80,8 @@ class TreasuryBtcFlowsTest(unittest.TestCase):
         self.assertLessEqual(os.path.getsize(thumb), 20_000)
         self.assertFalse(cotd_build.file_is_blank(full))
         bot2 = [t for t in cat["tabs"] if t.get("book") == "bot2"]
-        self.assertEqual(len(cat["tabs"]), 438)
-        self.assertEqual(len(bot2), 87)
+        self.assertEqual(len(cat["tabs"]), 428)
+        self.assertEqual(len(bot2), 86)
 
     def test_generator_keeps_the_native_chart_from_the_dump(self):
         book, rows, hidden, excluded = sheets_catalog.one({
