@@ -66,11 +66,16 @@ EXCLUDED_TABS = retired_charts.library_pairs()
 # native chart "Monthly net bitcoin flows of public treasury companies" is
 # unstyled, so the library PNG is Steve's Python render (re-rendered on the
 # 3rd of each month). KEEP_MANUAL_PNGS blocks the native export here too.
+# ("bot3", 1408701012) is "Waymo vs Tesla Texas" in My Bot's Sheets: native
+# chart "Waymo vs Tesla in Texas" is plain, so the library PNG is Steve's
+# Python render (Texas DMV driverless registrations). KEEP_MANUAL_PNGS blocks
+# the native export here too.
 # A later catalog rebuild must not drop these.
 PINNED_TABS = {
     ("bot3", 874288811): "Central Bank Ranking",
     ("bot3", 197035552): "Waymo vs Tesla Robotaxi Fleets",
     ("bot2", 855902063): "94 BTC treasury monthly flows",
+    ("bot3", 1408701012): "Waymo vs Tesla Texas",
 }
 # Google's default name for a chart with no real title: "Chart 1", "Chart 2", ...
 # "Chart 01" is a real title some tests use and is not this placeholder.
@@ -656,9 +661,10 @@ def self_test():
     assert ("bot3", 1618426207) in live  # ASST 30 Day Avg Volume
     assert ("bot3", 197035552) in live  # Waymo vs Tesla Robotaxi Fleets
     assert ("bot2", 855902063) in live  # 94 BTC treasury monthly flows
+    assert ("bot3", 1408701012) in live  # Waymo vs Tesla Texas
     assert ("bot3", 1608741572) not in live  # Bitcoin ETFs Weekly Flows (Python ETF draft)
-    assert len(cat["tabs"]) == 428, len(cat["tabs"])
-    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 87
+    assert len(cat["tabs"]) == 429, len(cat["tabs"])
+    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 88
     assert sum(1 for t in cat["tabs"] if t.get("book") == "bot2") == 86
     blob = json.dumps(cat)
     assert "201 Nvidia data center revenue" not in blob
@@ -1258,6 +1264,7 @@ def self_test():
         pinned_warns = {
             "bot2 gid 855902063 (94 BTC treasury monthly flows): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 197035552 (Waymo vs Tesla Robotaxi Fleets): missing from dump and no existing catalog entry; added the pinned table tab",
+            "bot3 gid 1408701012 (Waymo vs Tesla Texas): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 874288811 (Central Bank Ranking): missing from dump and no existing catalog entry; added the pinned table tab",
         }
         assert set(warns2) == pinned_warns, warns2

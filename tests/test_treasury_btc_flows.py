@@ -79,9 +79,11 @@ class TreasuryBtcFlowsTest(unittest.TestCase):
             self.assertEqual(f.read(8), b"\x89PNG\r\n\x1a\n")
         self.assertLessEqual(os.path.getsize(thumb), 20_000)
         self.assertFalse(cotd_build.file_is_blank(full))
-        bot2 = [t for t in cat["tabs"] if t.get("book") == "bot2"]
-        self.assertEqual(len(cat["tabs"]), 428)
-        self.assertEqual(len(bot2), 86)
+        # Count-free on purpose: retirements and new tabs change the total, and
+        # sheets_catalog.self_test pins the exact count. Here: no duplicate tabs.
+        keys = {(t.get("book"), t.get("gid")) for t in cat["tabs"]}
+        self.assertEqual(len(keys), len(cat["tabs"]))
+        self.assertIn(("bot2", GID), keys)
 
     def test_generator_keeps_the_native_chart_from_the_dump(self):
         book, rows, hidden, excluded = sheets_catalog.one({
