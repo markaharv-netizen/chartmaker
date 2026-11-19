@@ -61,10 +61,16 @@ EXCLUDED_TABS = retired_charts.library_pairs()
 # ("bot3", 197035552) is "Waymo vs Tesla Robotaxi Fleets": it has a native
 # Sheets chart, but the library PNG is Steve's weekly Python render.
 # import_full_pngs.KEEP_MANUAL_PNGS blocks Monday from overwriting that PNG
-# with the native-chart export. A later catalog rebuild must not drop these.
+# with the native-chart export.
+# ("bot2", 855902063) is "94 BTC treasury monthly flows" in bot experiments 2:
+# native chart "Monthly net bitcoin flows of public treasury companies" is
+# unstyled, so the library PNG is Steve's Python render (re-rendered on the
+# 3rd of each month). KEEP_MANUAL_PNGS blocks the native export here too.
+# A later catalog rebuild must not drop these.
 PINNED_TABS = {
     ("bot3", 874288811): "Central Bank Ranking",
     ("bot3", 197035552): "Waymo vs Tesla Robotaxi Fleets",
+    ("bot2", 855902063): "94 BTC treasury monthly flows",
 }
 # Google's default name for a chart with no real title: "Chart 1", "Chart 2", ...
 # "Chart 01" is a real title some tests use and is not this placeholder.
@@ -649,9 +655,11 @@ def self_test():
     assert ("bot3", 978356289) in live
     assert ("bot3", 1618426207) in live  # ASST 30 Day Avg Volume
     assert ("bot3", 197035552) in live  # Waymo vs Tesla Robotaxi Fleets
+    assert ("bot2", 855902063) in live  # 94 BTC treasury monthly flows
     assert ("bot3", 1608741572) not in live  # Bitcoin ETFs Weekly Flows (Python ETF draft)
-    assert len(cat["tabs"]) == 437, len(cat["tabs"])
+    assert len(cat["tabs"]) == 438, len(cat["tabs"])
     assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 88
+    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot2") == 87
     blob = json.dumps(cat)
     assert "201 Nvidia data center revenue" not in blob
     assert "Nvidia became a data-center company" not in blob
@@ -1248,6 +1256,7 @@ def self_test():
         # The fixture dump is bot3-only and does not include the pinned tabs.
         # Restoring them warns; that is the pinned-tab behavior, not a bad rebuild.
         pinned_warns = {
+            "bot2 gid 855902063 (94 BTC treasury monthly flows): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 197035552 (Waymo vs Tesla Robotaxi Fleets): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 874288811 (Central Bank Ranking): missing from dump and no existing catalog entry; added the pinned table tab",
         }

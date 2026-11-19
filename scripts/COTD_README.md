@@ -35,6 +35,10 @@ The snippet is one object so the fields are visible. The file needs five objects
 
 The build rejects a pick that is excluded, blank, untitled, unknown, already in the previous 3 editions, or duplicated inside the file. The message names the pick number and the reason.
 
+Suggested `description` for charts whose library PNG is a Python render (the builder has no caption field, so the curator copies this into the pick):
+
+- `bot2` gid `855902063` (94 BTC treasury monthly flows, "Monthly net bitcoin flows of public treasury companies"): Monthly net BTC change per company (Strategy, MARA, Riot, Metaplanet, Strive incl. Semler, Trump Media, Nakamoto, plus other companies) from company filings, with the BTC price line.
+
 ## Daily steps (on the box)
 
 1. **Sync:** `cd /workspace/chartmaker && timeout 30 git fetch origin && git reset --hard origin/main`

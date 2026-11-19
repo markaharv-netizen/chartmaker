@@ -52,8 +52,11 @@ CHART_SUFFIX = re.compile(r"\s+\((\d{1,2})\)(?=(?:\s+\d{4}-\d{2}-\d{2})?\.png$)"
 # overwrite these. Central Bank Ranking is chartless, so the exporter already
 # skips it; this tab has a native chart that would otherwise replace the
 # weekly render at static/sheets/full/bot3/197035552.png.
+# bot2 855902063 has an unstyled native chart; its library PNG is Steve's
+# monthly Python render at static/sheets/full/bot2/855902063.png.
 KEEP_MANUAL_PNGS = {
     ("bot3", 197035552),  # Waymo vs Tesla Robotaxi Fleets
+    ("bot2", 855902063),  # 94 BTC treasury monthly flows (Python render)
 }
 
 
