@@ -555,7 +555,7 @@ def self_test():
         {"book": "bot2", "tab": "75 CoreWeave backlog vs revenue", "gid": 530554790, "charts": []},
         {"book": "bot1", "tab": "97 MSTR vol vs BTC vol", "gid": 1027143376, "charts": []},
         {"book": "bot1", "tab": "52 Core goods vs services", "gid": 200447618, "charts": []},
-        {"book": "bot1", "tab": "67 Effective tariff rate", "gid": 972156540, "charts": []},
+        {"book": "bot1", "tab": "68 Trade balance % GDP", "gid": 1892662496, "charts": []},
         {"book": "bot1", "tab": "299 Real yield vs breakeven", "gid": 1167074374, "charts": []},
         {"book": "bot1", "tab": "18 Electricity vs CPI", "gid": 829703707, "charts": []},
     ]
@@ -631,7 +631,7 @@ def self_test():
         f("/e/75 CoreWeave backlog vs revenue.png", "bot experiments 2", 10, None),
         f("/e/97 MSTR vol vs BTC vol.png", "", 10, None),
         f("/e/52 Core goods vs services.png", "", 10, None),
-        f("/e/67 Effective tariff rate.png", "", 10, None),
+        f("/e/68 Trade balance % GDP.png", "", 10, None),
         f("/e/299 Real yield vs breakeven.png", "", 10, None),
         f("/e/18 Electricity vs CPI.png", "", 10, None),
     ]
@@ -721,7 +721,7 @@ def self_test():
     assert winner(530554790)[1] == "tab"
     assert winner(1027143376)[1] == "tab"
     assert winner(200447618)[1] == "tab"
-    assert winner(972156540)[1] == "tab"
+    assert winner(1892662496)[1] == "tab"
     assert winner(1167074374)[1] == "tab"
     assert winner(829703707)[1] == "tab"
     # Newest mtime when the date is the same.

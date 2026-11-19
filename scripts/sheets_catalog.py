@@ -503,8 +503,8 @@ def self_test():
                   "Strategy vs bitcoin: 30-day realized volatility"),
             sheet("52 Core goods vs services", 200447618,
                   "Core goods vs core services inflation (CPI, YoY)"),
-            sheet("67 Effective tariff rate", 972156540,
-                  "US effective tariff rate: customs duties as % of goods imports"),
+            sheet("68 Trade balance % GDP", 1892662496,
+                  "US trade balance as % of GDP (goods & services)"),
             sheet("227 Private AI lab valuations", 1459587255,
                   "Private AI lab valuations from funding rounds: OpenAI, Anthropic and xAI (post-money, as reported; log scale)"),
             sheet("119 Emerging markets vs US", 687897000,
@@ -534,7 +534,7 @@ def self_test():
     }
     _book, tabs, hidden, excluded = one(doc)
     gids = [t["gid"] for t in tabs]
-    assert gids == [999, 171599627, 1027143376, 200447618, 972156540], gids
+    assert gids == [999, 171599627, 1027143376, 200447618, 1892662496], gids
     assert hidden == 1 and excluded == 35, (hidden, excluded)
     assert ("bot1", 333185169) in EXCLUDED_TABS
     assert tab_excluded("bot1", 1547332232) and tab_excluded("bot1", 643299192)
@@ -601,13 +601,13 @@ def self_test():
     assert not tab_excluded("bot1", 1027143376)
     assert not tab_excluded("bot1", 200447618)
     assert not tab_excluded("bot1", 829703707)   # 18 Electricity vs CPI
-    assert not tab_excluded("bot1", 972156540)
+    assert not tab_excluded("bot1", 1892662496)
     assert not tab_excluded("bot1", 1167074374)  # 299 Real yield vs breakeven
     assert not tab_excluded("bot1", 1254747964)  # 152 Capex as % of cash flow
     assert tab_excluded("bot1", 1328859831)  # 213 Chip gross margins (retired 2026-11-18)
     assert tab_excluded("bot1", 1459587255)  # 227 Private AI lab valuations
     assert tab_excluded("bot1", 727565635)  # 125 Junk vs IG spread ratio
-    assert not tab_excluded("bot1", 1457832817)  # 127 Private credit BDCs vs HY
+    assert not tab_excluded("bot1", 557813776)  # 129 60-40 rolling returns
     assert not tab_excluded("bot1", 134436208)   # 203 Cloud growth race
     assert not tab_excluded("bot1", 965739722)   # 205 Meta Reality Labs losses
     assert not tab_excluded("bot1", 2092406374)  # 231 Prime-age employment rate
@@ -643,7 +643,7 @@ def self_test():
     live = {(t["book"], t["gid"]) for t in cat["tabs"]}
     for book, gid in EXCLUDED_TABS:
         assert (book, gid) not in live, (book, gid)
-    for gid in (171599627, 1027143376, 200447618, 829703707, 972156540, 1167074374,
+    for gid in (171599627, 1027143376, 200447618, 829703707, 1892662496, 1167074374,
                 1254747964, 2092406374):
         assert ("bot1", gid) in live, gid
     assert ("bot2", 1713824403) in live  # 55 Capex intensity vs legacy
@@ -657,9 +657,9 @@ def self_test():
     assert ("bot3", 197035552) in live  # Waymo vs Tesla Robotaxi Fleets
     assert ("bot2", 855902063) in live  # 94 BTC treasury monthly flows
     assert ("bot3", 1608741572) not in live  # Bitcoin ETFs Weekly Flows (Python ETF draft)
-    assert len(cat["tabs"]) == 438, len(cat["tabs"])
-    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 88
-    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot2") == 87
+    assert len(cat["tabs"]) == 428, len(cat["tabs"])
+    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 87
+    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot2") == 86
     blob = json.dumps(cat)
     assert "201 Nvidia data center revenue" not in blob
     assert "Nvidia became a data-center company" not in blob
@@ -803,13 +803,13 @@ def self_test():
         "194 Nvidia vs Cisco 2000",
         "229 Nvidia vs country GDPs",
         "334 Nvidia top-customer share",
-        "19 Nvidia supply commitments",
+        "20 Microsoft lease liabilities",
         "75 CoreWeave backlog vs revenue",
         "97 MSTR vol vs BTC vol",
         "92 MSTR priced in BTC",
         "52 Core goods vs services",
         "18 Electricity vs CPI",
-        "67 Effective tariff rate",
+        "68 Trade balance % GDP",
         "299 Real yield vs breakeven",
         "190 Work minutes gas & eggs",
         "192 S&P 10-yr real returns",
@@ -819,7 +819,7 @@ def self_test():
         "160 China vs Mexico vs Taiwan",
         "44 Baa-Aaa quality spread",
         "46 UK-US spread vs GBP",
-        "127 Private credit BDCs vs HY",
+        "129 60-40 rolling returns",
         "152 Capex as % of cash flow",
         "55 Capex intensity vs legacy",
         "57 EBITDA margin Tesla vs peers",
@@ -1035,7 +1035,7 @@ def self_test():
         "static/sheets/full/bot1/1027143376.png",
         "static/sheets/full/bot1/200447618.png",
         "static/sheets/full/bot1/829703707.png",
-        "static/sheets/full/bot1/972156540.png",
+        "static/sheets/full/bot1/1892662496.png",
         "static/sheets/full/bot1/1167074374.png",
         "static/sheets/full/bot3/978356289.png",
     ):
@@ -1045,7 +1045,7 @@ def self_test():
         keep_rels = [
             "static/sheets/full/bot1/1607076800.png",
             "static/sheets/full/bot1/171599627.png",
-            "static/sheets/full/bot1/972156540.png",
+            "static/sheets/full/bot1/1892662496.png",
             "static/sheets/full/bot1/1167074374.png",
             "static/sheets/full/bot2/645072508.png",
             "static/sheets/full/bot2/530554790.png",

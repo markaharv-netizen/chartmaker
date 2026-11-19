@@ -894,11 +894,11 @@ def self_test():
     assert pick_excluded({"spreadsheetId": bot2, "gid": 1188646727})  # 45 EV free cash flow Q2 2026
     assert pick_excluded({"spreadsheetId": bot1, "gid": 847095656})  # 42 VIX vs realized vol
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1694432360})  # 275 Tech vs financials
-    # Neighbors that stay: Korea/Taiwan's neighbor, CoreWeave backlog, CPI charts, tariff rate, real yield.
+    # Neighbors that stay: Korea/Taiwan's neighbor, CoreWeave backlog, CPI charts, trade balance, real yield.
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 171599627})
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 200447618})  # 52 Core goods vs services
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 829703707})  # 18 Electricity vs CPI
-    assert not pick_excluded({"spreadsheetId": bot1, "gid": 972156540})  # 67 Effective tariff rate
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1892662496})  # 68 Trade balance % GDP
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1167074374})  # 299 Real yield vs breakeven
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1027143376})  # 97 MSTR vol vs BTC vol
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 530554790})  # 75 CoreWeave backlog vs revenue
@@ -911,7 +911,7 @@ def self_test():
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 1713824403})  # 55 Capex intensity vs legacy
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 82966268})  # 57 EBITDA margin Tesla vs peers
     assert pick_excluded({"spreadsheetId": bot1, "gid": 727565635})  # 125 Junk vs IG spread ratio
-    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1457832817})  # 127 Private credit BDCs vs HY
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 557813776})  # 129 60-40 rolling returns
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 134436208})  # 203 Cloud growth race
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 965739722})  # 205 Meta Reality Labs losses
     assert not pick_excluded({"spreadsheetId": bot1, "gid": ""})
@@ -941,7 +941,7 @@ def self_test():
         today_blob = json.dumps(today_doc)
     assert "645072508" in catalog_blob
     assert "645072508" not in today_blob
-    for gid in (530554790, 200447618, 829703707, 972156540, 1167074374, 978356289, 1713824403, 82966268, 1457832817, 134436208, 965739722):
+    for gid in (530554790, 200447618, 829703707, 1892662496, 1167074374, 978356289, 1713824403, 82966268, 557813776, 134436208, 965739722):
         assert str(gid) in catalog_blob, gid
     # The published edition moves every day. Check its shape against that date,
     # not against the edition that happened to be current when this test was written.
@@ -1056,7 +1056,7 @@ def self_test():
     validate(neighbor)
     kept_cpi = [item(i) for i in range(1, 4)]
     kept_cpi[0] = item(1, gid=200447618, tab="52 Core goods vs services", spreadsheetId=bot1)
-    kept_cpi[1] = item(2, gid=972156540, tab="67 Effective tariff rate", spreadsheetId=bot1)
+    kept_cpi[1] = item(2, gid=1892662496, tab="68 Trade balance % GDP", spreadsheetId=bot1)
     kept_cpi[2] = item(3, gid=1167074374, tab="299 Real yield vs breakeven", spreadsheetId=bot1)
     validate(kept_cpi)
 
