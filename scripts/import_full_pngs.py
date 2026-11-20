@@ -49,8 +49,9 @@ FULL_REL = re.compile(r"^sheets/full/([A-Za-z0-9][A-Za-z0-9_-]{0,24})/(\d+)(?:_(
 # The export names extra charts on a tab "<tab> (2).png", "<tab> (3).png", ... (before any date).
 CHART_SUFFIX = re.compile(r"\s+\((\d{1,2})\)(?=(?:\s+\d{4}-\d{2}-\d{2})?\.png$)", re.I)
 # Steve's Python-rendered library PNGs. Monday's native Sheets export must not
-# overwrite these. Central Bank Ranking (bot3 874288811) and NASDAQ Returns
-# by Year (bot3 797114604) are chartless, so the exporter already skips them;
+# overwrite these. Central Bank Ranking (bot3 874288811), NASDAQ Returns
+# by Year (bot3 797114604), and BTC Returns by Year (bot3 819961031) are
+# chartless, so the exporter already skips them;
 # this tab has a native chart that would otherwise replace the
 # weekly render at static/sheets/full/bot3/197035552.png.
 # bot2 855902063 has an unstyled native chart; its library PNG is Steve's
