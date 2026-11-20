@@ -6,7 +6,7 @@
   "sheet": "BTCTC Top 100",
   "gid": 73825060,
   "description": "Top 100 corporate bitcoin holdings from the BTCTC Top 100 tab of My Bot's Sheets. USD value is BTC times a live BTC price and is not part of this file.",
-  "fetchedAt": "2026-11-19T16:14:58Z",
+  "fetchedAt": "2026-11-20T16:14:15Z",
   "supply": 21000000,
   "companies": [
     {
@@ -313,13 +313,13 @@
       "name": "H100 Group",
       "ticker": "H100",
       "country": "SE",
-      "change": null,
-      "btc": 3506.4,
-      "asOf": "2026-08-10",
-      "source": "Company press release via MFN (2026-08-10)",
-      "sourceLabel": "MFN release",
-      "sourceUrl": "https://storage.mfn.se/7768a89c-b5a3-45e0-984f-f3fce221f90a/h100-completes-acquisition-increasing-bitcoin-holdings-to-3-506-bitcoin.pdf",
-      "notes": null
+      "change": "-29.6",
+      "btc": 3476.8,
+      "asOf": "2026-09-30",
+      "source": "H100 Group Q3 interim report (MFN, 2026-11-19)",
+      "sourceLabel": "MFN report",
+      "sourceUrl": "https://mfn.se/a/h100-group/interim-report-january-1-september-30-2026",
+      "notes": "Total incl. 233.42 BTC active pool (net open positions); long-term treasury 3,243.38."
     },
     {
       "rank": 25,
