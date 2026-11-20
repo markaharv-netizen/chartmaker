@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T13:46:33Z",
+  "generated": "2026-11-20T13:42:01Z",
   "seeded": false,
   "title": "Steve's DCF Base Case vs Street Consensus vs Price",
   "subtitleNote": "Base now includes probability-weighted future bets",
@@ -9,8 +9,8 @@
     "buyAbove": 0.15,
     "sellBelow": -0.15
   },
-  "consensusLabel": "mean analyst target (StockAnalysis, Oct 21) · mean analyst target (StockAnalysis, Nov 18) · mean analyst target (StockAnalysis, Nov 9) · mean analyst target (StockAnalysis, Nov 10) · mean analyst target (StockAnalysis, Nov 3) · mean analyst target (JPMorgan initiation)",
-  "priceLabel": "Oct 21, 2026 close; Nov 17, 2026 close; Nov 12, 2026 close; Nov 10, 2026 close; Nov 13, 2026 close; Nov 2, 2026 close",
+  "consensusLabel": "mean analyst target (StockAnalysis, Oct 21) · mean analyst target (StockAnalysis, Nov 18) · mean analyst target (StockAnalysis, Nov 9) · mean analyst target (StockAnalysis, Nov 10) · mean analyst target (StockAnalysis, Nov 3) · mean analyst target (JPMorgan initiation) · mean analyst target (Morningstar fair value estimate)",
+  "priceLabel": "Oct 21, 2026 close; Nov 17, 2026 close; Nov 12, 2026 close; Nov 10, 2026 close; Nov 13, 2026 close; Nov 2, 2026 close; Nov 19, 2026 close",
   "source": {
     "name": "DCF price target summary",
     "spreadsheetId": "10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0",
@@ -304,7 +304,7 @@
       "baseChangedAt": null,
       "fromZero": false,
       "previousBase": null,
-      "previousDetail": "New model added Nov 3, 2026 (v1); no previous update; unchanged through the Nov 16, 2026 scan (Anthropic IPO prices Nov 18: Google ~1.79B sh, ~$132B at $74 midpoint, vs $135.2B total non-marketable investments at book in model; revisit after pricing)",
+      "previousDetail": "New model added Nov 3, 2026 (v1); no previous update; unchanged through the Nov 20, 2026 scan (Anthropic listed Nov 19, closed $97.17: Google's 1,774.96M Class N shares = $172.5B vs $135.2B total non-marketable investments at book in model, at least +$37B / ~+$3.0 per GOOG share before tax and lock-up; value not changed pending Q4 10-K mark, Anthropic carrying value not disclosed)",
       "paperWeight": 20.0,
       "why": "Base 35% above price"
     },
@@ -331,6 +331,30 @@
       "previousDetail": "Prev Base $10.11 (Bear $1.48, Bull $37.07, HOLD) at Nov 5, 2026 v1 (unchanged through Nov 13 scan) -> $9.90 (Bear $1.48, Bull $36.84, BUY) at Nov 16, 2026 v2; lower net cash than the launch estimate",
       "paperWeight": 0.0,
       "why": "IPO day; no street coverage"
+    },
+    {
+      "ticker": "ANT",
+      "base": 105.06,
+      "bear": 31.49,
+      "bull": 212.48,
+      "rating": "HOLD",
+      "consensus": 92.0,
+      "analysts": 1,
+      "consensusSource": "Morningstar fair value estimate (Benzinga), Nov 18, 2026; only known coverage (underwriter research in quiet period)",
+      "price": 97.17,
+      "priceAsOf": "Nov 19, 2026 close, 4:00 PM ET (Yahoo Finance; first trading day, IPO $83.00)",
+      "baseVsPrice": 0.081,
+      "consensusVsPrice": -0.053,
+      "baseVsConsensus": 0.142,
+      "notes": "Nov 19 v1 initial full model (IPO day; 424B4 filed Nov 19): forward Base = core $97.02 + $8.03 probability-weighted bets (agentic Powerful AI beyond Base, compute efficiency, life sciences, physical AI/robotics, price-war and policy/safety downsides); Bull core $191.93 + $20.55; Bear no bets ($31.49). DCF 2027-2036, WACC 12.35%, revenue $55.2B 2026E -> $415B 2031 -> $645B 2036 (bot), compute 52%->40% of rev floored at disclosed ~$900.9B commitments, FD shares 18,137.6M, PF cash $232.4B, no debt. Nov 20 v2 first-close update: price $83.00 IPO -> $97.17 Nov 19 close (+17.1%); values unchanged; rating BUY -> HOLD (+8.1%). Doc 1TPZ8IibyL-WfKQ8NNkvaHvXnE6dorGoglqtrzRrtdV0 (v1 1cxF4fgku-QZ8OXl8mf2TvMPNOOzFi1XWIOn2FpdQkYs not trashed: shared)",
+      "baseChange": 0.0,
+      "baseChangePct": null,
+      "baseChangedAt": null,
+      "fromZero": false,
+      "previousBase": null,
+      "previousDetail": "New model added Nov 19, 2026 (v1) at $83.00 IPO price (BUY, +26.6%); Nov 20, 2026 first-close update: values unchanged, price $97.17 -> HOLD (+8.1%)",
+      "paperWeight": 0.0,
+      "why": "Base 8% above price"
     }
   ]
 }
