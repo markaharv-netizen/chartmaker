@@ -1371,7 +1371,7 @@ async function cotdenter(){const el=$('cotd'),E=escHtml;
 let FULL_OK=new Map(),SHSEQ=0;
 function sheetListedWithCharts(t){
   // Pinned tabs (Central Bank Ranking, Waymo vs Tesla Robotaxi Fleets, 94 BTC treasury monthly flows, Waymo vs Tesla Texas, Tesla Robotaxi service area (sq mi), Strategy's accretive swaps, week by week) stay visible when "Has a chart" is on.
-  return !!(t&&(t.pin||(String(t.book)==='bot3'&&(Number(t.gid)===874288811||Number(t.gid)===197035552))||(String(t.book)==='bot2'&&Number(t.gid)===855902063)||(String(t.book)==='bot3'&&Number(t.gid)===1408701012)||(String(t.book)==='bot3'&&Number(t.gid)===9000000001)||(String(t.book)==='bot3'&&Number(t.gid)===9000000002)));
+  return !!(t&&(t.pin||(String(t.book)==='bot3'&&(Number(t.gid)===874288811||Number(t.gid)===197035552))||(String(t.book)==='bot2'&&Number(t.gid)===855902063)||(String(t.book)==='bot3'&&Number(t.gid)===1408701012)||(String(t.book)==='bot3'&&Number(t.gid)===9000000001)||(String(t.book)==='bot3'&&Number(t.gid)===9000000002)||(String(t.book)==='bot3'&&Number(t.gid)===9000000003)));
 }
 function sheetThumb(t){const p=String(t&&t.thumb||'');return /^sheets\/thumbs\/[A-Za-z0-9][A-Za-z0-9_-]{0,24}\/\d+\.jpg$/.test(p)?p:''}
 function sheetFull(t,n){n=Number(n)||1;const book=String(t&&t.book||''),gid=String(t&&t.gid!=null?t.gid:'');const p='sheets/full/'+book+'/'+gid+(n>1?'_'+n:'')+'.png';return /^sheets\/full\/[A-Za-z0-9][A-Za-z0-9_-]{0,24}\/\d+(?:_(?:[2-9]|[1-9]\d))?\.png$/.test(p)?p:''}

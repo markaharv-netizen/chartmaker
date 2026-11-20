@@ -41,6 +41,7 @@ Suggested `description` for charts whose library PNG is a Python render (the bui
 - `bot3` gid `1408701012` (Waymo vs Tesla Texas, "Waymo vs Tesla in Texas"): Driverless vehicles registered with the Texas DMV, May 28 to Nov 18, 2026, from the same registry for both companies. Tesla passed Waymo in Texas on Nov 17.
 - `bot3` gid `9000000001` (Tesla Robotaxi service area (sq mi), "Tesla Robotaxi service area (sq mi)"): Total Tesla Robotaxi service area across eight cities in Texas and Florida: 1,305 sq mi as of November 19, 2026, up from 18 sq mi at the June 22, 2025 Austin launch. Bay Area supervised ride-hailing is not included.
 - `bot3` gid `9000000002` (Strategy's accretive swaps, week by week, "Strategy's accretive swaps, week by week"): +576.6 sats of Net BTC per MSTR share across 12 weekly 8-K updates through November 16, 2026, from selling MSTR above its Net BTC value and buying STRC below $100.
+- `bot3` gid `9000000003` (Hyperscaler free cash flow (incl. SpaceX), "Hyperscaler free cash flow (incl. SpaceX)"): Alphabet, Meta, Microsoft, Amazon and SpaceX free cash flow, 2014–2030E. Combined FCF is estimated to trough around –$408bn in 2027 (SpaceX, incl. xAI & X, –$315bn) before rebounding in 2030. Actuals from SEC 10-Ks; estimates from S&P Global consensus, company capex guidance and Steve's DCF (updated Nov 20, 2026).
 
 ## Daily steps (on the box)
 
