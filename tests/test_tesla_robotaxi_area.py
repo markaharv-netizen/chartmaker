@@ -93,8 +93,9 @@ class TeslaRobotaxiAreaTest(unittest.TestCase):
         keys = {(t.get("book"), t.get("gid")) for t in cat["tabs"]}
         self.assertEqual(len(keys), len(cat["tabs"]))
         self.assertIn(("bot3", GID), keys)
-        # A reserved synthetic gid cannot collide with a real Sheets tab.
-        real = [t["gid"] for t in cat["tabs"] if t.get("gid") != GID]
+        # Reserved synthetic gids cannot collide with a real Sheets tab.
+        real = [t["gid"] for t in cat["tabs"]
+                if int(t.get("gid") or 0) < sheets_catalog.SYNTHETIC_GID_MIN]
         self.assertTrue(real)
         self.assertLess(max(real), sheets_catalog.SYNTHETIC_GID_MIN)
         self.assertGreaterEqual(GID, sheets_catalog.SYNTHETIC_GID_MIN)

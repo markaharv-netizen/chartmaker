@@ -40,6 +40,7 @@ Suggested `description` for charts whose library PNG is a Python render (the bui
 - `bot2` gid `855902063` (94 BTC treasury monthly flows, "Monthly net bitcoin flows of public treasury companies"): Monthly net BTC change per company (Strategy, MARA, Riot, Metaplanet, Strive incl. Semler, Trump Media, Nakamoto, plus other companies) from company filings, with the BTC price line.
 - `bot3` gid `1408701012` (Waymo vs Tesla Texas, "Waymo vs Tesla in Texas"): Driverless vehicles registered with the Texas DMV, May 28 to Nov 18, 2026, from the same registry for both companies. Tesla passed Waymo in Texas on Nov 17.
 - `bot3` gid `9000000001` (Tesla Robotaxi service area (sq mi), "Tesla Robotaxi service area (sq mi)"): Total Tesla Robotaxi service area across eight cities in Texas and Florida: 1,305 sq mi as of November 19, 2026, up from 18 sq mi at the June 22, 2025 Austin launch. Bay Area supervised ride-hailing is not included.
+- `bot3` gid `9000000002` (Strategy's accretive swaps, week by week, "Strategy's accretive swaps, week by week"): +576.6 sats of Net BTC per MSTR share across 12 weekly 8-K updates through November 16, 2026, from selling MSTR above its Net BTC value and buying STRC below $100.
 
 ## Daily steps (on the box)
 

@@ -75,6 +75,12 @@ EXCLUDED_TABS = retired_charts.library_pairs()
 # The gid is reserved above Google's int32 sheetId max (SYNTHETIC_GID_MIN), so
 # it cannot collide with a real tab. KEEP_MANUAL_PNGS blocks any import from
 # overwriting the PNG. The catalog row is sheetless so Open in Sheets is hidden.
+# ("bot3", 9000000002) is "Strategy's accretive swaps, week by week": Steve's
+# weekly Python render of Strategy's Net BTC per Share accretion from 8-K-
+# reported swaps. There is no Google Sheet tab. The gid is reserved above
+# Google's int32 sheetId max (SYNTHETIC_GID_MIN), so it cannot collide with a
+# real tab. KEEP_MANUAL_PNGS blocks any import from overwriting the PNG. The
+# catalog row is sheetless so Open in Sheets is hidden.
 # A later catalog rebuild must not drop these.
 PINNED_TABS = {
     ("bot3", 874288811): "Central Bank Ranking",
@@ -82,6 +88,7 @@ PINNED_TABS = {
     ("bot2", 855902063): "94 BTC treasury monthly flows",
     ("bot3", 1408701012): "Waymo vs Tesla Texas",
     ("bot3", 9000000001): "Tesla Robotaxi service area (sq mi)",
+    ("bot3", 9000000002): "Strategy's accretive swaps, week by week",
 }
 # Google Sheets sheetId is a non-negative int32 (max 2,147,483,647). A library
 # gid at or above this value is synthetic and can never collide with a real tab.
@@ -91,6 +98,7 @@ SYNTHETIC_GID_MIN = 2147483648
 # sheetless flag (so Open in Sheets is hidden). The value is the chart title.
 SHEETLESS_TABS = {
     ("bot3", 9000000001): "Tesla Robotaxi service area (sq mi)",
+    ("bot3", 9000000002): "Strategy's accretive swaps, week by week",
 }
 # Google's default name for a chart with no real title: "Chart 1", "Chart 2", ...
 # "Chart 01" is a real title some tests use and is not this placeholder.
@@ -700,9 +708,10 @@ def self_test():
     assert ("bot2", 855902063) in live  # 94 BTC treasury monthly flows
     assert ("bot3", 1408701012) in live  # Waymo vs Tesla Texas
     assert ("bot3", 9000000001) in live  # Tesla Robotaxi service area (sq mi)
+    assert ("bot3", 9000000002) in live  # Strategy's accretive swaps, week by week
     assert ("bot3", 1608741572) not in live  # Bitcoin ETFs Weekly Flows (Python ETF draft)
-    assert len(cat["tabs"]) == 430, len(cat["tabs"])
-    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 89
+    assert len(cat["tabs"]) == 431, len(cat["tabs"])
+    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 90
     assert sum(1 for t in cat["tabs"] if t.get("book") == "bot2") == 86
     blob = json.dumps(cat)
     assert "201 Nvidia data center revenue" not in blob
@@ -1305,6 +1314,7 @@ def self_test():
             "bot3 gid 1408701012 (Waymo vs Tesla Texas): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 874288811 (Central Bank Ranking): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 9000000001 (Tesla Robotaxi service area (sq mi)): missing from dump and no existing catalog entry; added the pinned table tab",
+            "bot3 gid 9000000002 (Strategy's accretive swaps, week by week): missing from dump and no existing catalog entry; added the pinned table tab",
         }
         assert set(warns2) == pinned_warns, warns2
         assert by_gid2[1145735379].get("thumb") == thumb_rel
