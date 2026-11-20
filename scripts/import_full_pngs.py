@@ -381,7 +381,7 @@ def self_test():
             json.dump(catalog, f)
         blocked = os.path.join(b1, "161 Nvidia P-S and P-E.png")
         blocked2 = os.path.join(b1, "202 Nvidia revenue by geography (2).png")
-        kept = os.path.join(b1, "194 Nvidia vs Cisco 2000.png")
+        kept = os.path.join(b1, "156 Nasdaq dot-com vs AI era.png")
         korea = os.path.join(b1, "158 Korea & Taiwan vs S&P.png")
         korea2 = os.path.join(b1, "158 Korea & Taiwan vs S&P (2).png")
         supercore = os.path.join(b1, "163 Supercore vs core CPI.png")
@@ -394,7 +394,7 @@ def self_test():
         # Neighbor charts are not excluded; give them catalog rows and confirm they still import.
         # BX2-069 stays importable: scope "cotd" in config/retired_charts.json, not a library retirement.
         catalog["tabs"].extend([
-            {"book": "bot1", "tab": "194 Nvidia vs Cisco 2000", "gid": 1607076800, "charts": []},
+            {"book": "bot1", "tab": "156 Nasdaq dot-com vs AI era", "gid": 1796631140, "charts": []},
             {"book": "bot1", "tab": "201 Nvidia data center revenue", "gid": 1476428159, "charts": []},
             {"book": "bot1", "tab": "158 Korea & Taiwan vs S&P", "gid": 1791345316,
              "charts": ["Asia's AI chip exporters: Korea (EWY) and Taiwan (EWT) vs the S&P 500"]},
@@ -533,7 +533,7 @@ def self_test():
             with open(path, "wb") as f:
                 f.write(old_bytes)
         n2, u2, a2 = run(repo, [src], optimize_png=False, dry=False)
-        # original five, plus 194 Nvidia vs Cisco, China/Mexico/Taiwan, the red-dot tracker, and six neighbors
+        # original five, plus 156 Nasdaq dot-com vs AI era, China/Mexico/Taiwan, the red-dot tracker, and six neighbors
         assert n2 == 14, n2
         # prior eight unmatched, plus the retired exports and the tariff chart-2 file.
         # "173 Continuing/initial claims" stays in this fixture as gid 173, the slash-in-name
@@ -547,7 +547,7 @@ def self_test():
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1791345316_2.png"))
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1370617918.png"))
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1024131985.png"))
-        assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "1607076800.png"), "rb").read() == old_bytes
+        assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "1796631140.png"), "rb").read() == old_bytes
         assert not os.path.exists(os.path.join(repo, "static", "sheets", "full", "bot1", "1476428159.png"))
         assert open(os.path.join(repo, "static", "sheets", "full", "bot1", "171599627.png"), "rb").read() == old_bytes
         assert open(os.path.join(repo, "static", "sheets", "full", "bot2", "645072508.png"), "rb").read() == old_bytes
