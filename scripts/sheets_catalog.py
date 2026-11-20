@@ -58,6 +58,10 @@ EXCLUDED_TABS = retired_charts.library_pairs()
 # (a truncated spreadsheets.get, or a rebuild that never listed them).
 # ("bot3", 874288811) is "Central Bank Ranking" in My Bot's Sheets: no native
 # chart, PNG from Steve's twice-monthly render. Monday's exporter skips it.
+# ("bot3", 797114604) is "NASDAQ Returns by Year" in My Bot's Sheets: no native
+# chart, PNG from Steve's Python render of the C7:F25 table (navy header,
+# alternating rows, green/red % change, @thepowerfulHRV). Monday's exporter
+# skips it because the tab is chartless. Script: /workspace/nasdaq_returns/render.py.
 # ("bot3", 197035552) is "Waymo vs Tesla Robotaxi Fleets": it has a native
 # Sheets chart, but the library PNG is Steve's weekly Python render.
 # import_full_pngs.KEEP_MANUAL_PNGS blocks Monday from overwriting that PNG
@@ -90,6 +94,7 @@ EXCLUDED_TABS = retired_charts.library_pairs()
 # A later catalog rebuild must not drop these.
 PINNED_TABS = {
     ("bot3", 874288811): "Central Bank Ranking",
+    ("bot3", 797114604): "NASDAQ Returns by Year",
     ("bot3", 197035552): "Waymo vs Tesla Robotaxi Fleets",
     ("bot2", 855902063): "94 BTC treasury monthly flows",
     ("bot3", 1408701012): "Waymo vs Tesla Texas",
@@ -718,9 +723,10 @@ def self_test():
     assert ("bot3", 9000000001) in live  # Tesla Robotaxi service area (sq mi)
     assert ("bot3", 9000000002) in live  # Strategy's accretive swaps, week by week
     assert ("bot3", 9000000003) in live  # Hyperscaler free cash flow (incl. SpaceX)
+    assert ("bot3", 797114604) in live  # NASDAQ Returns by Year
     assert ("bot3", 1608741572) not in live  # Bitcoin ETFs Weekly Flows (Python ETF draft)
-    assert len(cat["tabs"]) == 432, len(cat["tabs"])
-    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 91
+    assert len(cat["tabs"]) == 433, len(cat["tabs"])
+    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 92
     assert sum(1 for t in cat["tabs"] if t.get("book") == "bot2") == 86
     blob = json.dumps(cat)
     assert "201 Nvidia data center revenue" not in blob
@@ -1322,6 +1328,7 @@ def self_test():
             "bot3 gid 197035552 (Waymo vs Tesla Robotaxi Fleets): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 1408701012 (Waymo vs Tesla Texas): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 874288811 (Central Bank Ranking): missing from dump and no existing catalog entry; added the pinned table tab",
+            "bot3 gid 797114604 (NASDAQ Returns by Year): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 9000000001 (Tesla Robotaxi service area (sq mi)): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 9000000002 (Strategy's accretive swaps, week by week): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 9000000003 (Hyperscaler free cash flow (incl. SpaceX)): missing from dump and no existing catalog entry; added the pinned table tab",
