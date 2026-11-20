@@ -608,7 +608,7 @@ def self_test():
                 1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                 1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                 1192979444, 1912487083, 664060481, 1778640335,
-                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 847095656, 1694432360):
+                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 847095656, 1694432360, 1421725187, 1607076800, 1924940296, 1966044875, 1161030254):
         assert tab_excluded("bot1", gid), gid
     assert tab_excluded("bot2", 418894352)
     assert tab_excluded("bot2", 1794999542)
@@ -660,6 +660,14 @@ def self_test():
     assert tab_excluded("bot2", 1188646727)  # 45 EV free cash flow Q2 2026
     assert tab_excluded("bot1", 847095656)  # 42 VIX vs realized vol
     assert tab_excluded("bot1", 1694432360)  # 275 Tech vs financials
+    assert tab_excluded("bot1", 1421725187)  # 100 SPCX vs TSLA & Nasdaq (retired 2026-11-20)
+    assert tab_excluded("bot1", 1607076800)  # 194 Nvidia vs Cisco 2000 (retired 2026-11-20)
+    assert tab_excluded("bot1", 1924940296)  # 222 TSMC monthly revenue (retired 2026-11-20)
+    assert tab_excluded("bot1", 1966044875)  # 179 Productivity vs pay gap (retired 2026-11-20)
+    assert tab_excluded("bot1", 1161030254)  # 304 Tesla quarterly capex (retired 2026-11-20)
+    assert tab_excluded("bot2", 841222865)  # 18 Big Tech unbooked DC leases (retired 2026-11-20)
+    assert not tab_excluded("bot1", 733691549)  # 80 Productivity vs labor costs (kept)
+    assert not tab_excluded("bot2", 2055282175)  # 22 Big Tech unbooked leases by co (kept)
     assert not tab_excluded("bot1", 171599627)
     assert not tab_excluded("bot1", 1027143376)
     assert not tab_excluded("bot1", 200447618)
@@ -725,9 +733,9 @@ def self_test():
     assert ("bot3", 9000000003) in live  # Hyperscaler free cash flow (incl. SpaceX)
     assert ("bot3", 797114604) in live  # NASDAQ Returns by Year
     assert ("bot3", 1608741572) not in live  # Bitcoin ETFs Weekly Flows (Python ETF draft)
-    assert len(cat["tabs"]) == 433, len(cat["tabs"])
+    assert len(cat["tabs"]) == 427, len(cat["tabs"])
     assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 92
-    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot2") == 86
+    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot2") == 85
     blob = json.dumps(cat)
     assert "201 Nvidia data center revenue" not in blob
     assert "Nvidia became a data-center company" not in blob
@@ -868,7 +876,7 @@ def self_test():
     assert gold.get("thumb") == "sheets/thumbs/bot3/1536200109.jpg"
     names = {t["tab"] for t in cat["tabs"]}
     for keep in (
-        "194 Nvidia vs Cisco 2000",
+        "156 Nasdaq dot-com vs AI era",
         "229 Nvidia vs country GDPs",
         "334 Nvidia top-customer share",
         "20 Microsoft lease liabilities",
@@ -911,6 +919,7 @@ def self_test():
         "6 MSTR vs ASST leverage",
     ):
         assert keep in names, keep
+    assert tab_excluded("bot2", 841222865)  # 18 Big Tech unbooked DC leases (retired 2026-11-20)
     today = json.load(open(os.path.join(repo, "static", "cotd", "today.json"), encoding="utf-8"))
     today_blob = json.dumps(today)
     # today.json is whatever edition is committed, not a frozen calendar date.
@@ -926,7 +935,7 @@ def self_test():
                 1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                 1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                 1192979444, 1912487083, 664060481, 1778640335,
-                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 971499761, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1149583871, 2047295555, 84709656, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 4940912, 1188646727, 847095656, 1694432360):
+                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 971499761, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1149583871, 2047295555, 84709656, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 4940912, 1188646727, 847095656, 1694432360, 1421725187, 1607076800, 1924940296, 1966044875, 1161030254, 841222865):
         assert str(gid) not in today_blob, gid
     assert "161 Nvidia P-S and P-E" not in today_blob
     assert "202 Nvidia revenue by geography" not in today_blob
@@ -1111,7 +1120,7 @@ def self_test():
     scratch = tempfile.mkdtemp(prefix="excluded-assets-")
     try:
         keep_rels = [
-            "static/sheets/full/bot1/1607076800.png",
+            "static/sheets/full/bot1/1796631140.png",
             "static/sheets/full/bot1/171599627.png",
             "static/sheets/full/bot1/1892662496.png",
             "static/sheets/full/bot1/1167074374.png",
