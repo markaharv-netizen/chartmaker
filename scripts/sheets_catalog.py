@@ -698,7 +698,29 @@ def self_test():
     assert tab_excluded("bot1", 1966044875)  # 179 Productivity vs pay gap (retired 2026-11-20)
     assert tab_excluded("bot1", 1161030254)  # 304 Tesla quarterly capex (retired 2026-11-20)
     assert tab_excluded("bot2", 841222865)  # 18 Big Tech unbooked DC leases (retired 2026-11-20)
+    assert tab_excluded("bot1", 1540677114)  # 09 Real S&P 500 (retired 2026-11-21)
+    assert tab_excluded("bot1", 100750083)  # 41 VIX term structure (retired 2026-11-21)
+    assert tab_excluded("bot1", 1266156625)  # 46 UK-US spread vs GBP (retired 2026-11-21)
+    assert tab_excluded("bot1", 2132226252)  # 63 Auto loans vs sales (retired 2026-11-21)
+    assert tab_excluded("bot1", 722028700)  # 84 TSLA volatility vs peers (retired 2026-11-21)
+    assert tab_excluded("bot1", 1483938898)  # 112 Transports vs Industrials (retired 2026-11-21)
+    assert tab_excluded("bot1", 965739722)  # 205 Meta Reality Labs losses (retired 2026-11-21)
+    assert tab_excluded("bot1", 1708270675)  # 218 AI stocks price-to-sales (retired 2026-11-21)
+    assert tab_excluded("bot1", 995219650)  # 248 Low-hire, low-fire (retired 2026-11-21)
+    assert tab_excluded("bot1", 1173797512)  # 333 Big Tech net PP&E (retired 2026-11-21)
     assert not tab_excluded("bot1", 733691549)  # 80 Productivity vs labor costs (kept)
+    assert not tab_excluded("bot1", 1798867607)  # 08 Real home prices (kept)
+    assert not tab_excluded("bot1", 639374194)  # 13 Real oil price (kept)
+    assert not tab_excluded("bot1", 1220281045)  # 192 S&P 10-yr real returns (kept)
+    assert not tab_excluded("bot1", 762190162)  # 82 TSLA vs Mag 7 (kept)
+    assert not tab_excluded("bot1", 450495048)  # 83 TSLA drawdown (kept)
+    assert not tab_excluded("bot1", 477052168)  # 195 BTC vs NVDA vs TSLA vol (kept)
+    assert not tab_excluded("bot1", 62435828)  # 310 Tesla price-to-sales (kept)
+    assert not tab_excluded("bot1", 1554167260)  # 335 Price-to-sales vs Cisco (kept)
+    assert not tab_excluded("bot1", 1692929819)  # 325 Meta quarterly FCF (kept)
+    assert not tab_excluded("bot3", 1828716508)  # Meta Active Users (kept)
+    assert not tab_excluded("bot1", 868062827)  # 172 Job openings per jobless (kept)
+    assert not tab_excluded("bot1", 1597166284)  # 249 Youth unemployment (kept)
     assert not tab_excluded("bot2", 2055282175)  # 22 Big Tech unbooked leases by co (kept)
     assert not tab_excluded("bot1", 171599627)
     assert not tab_excluded("bot1", 1027143376)
@@ -712,7 +734,7 @@ def self_test():
     assert tab_excluded("bot1", 727565635)  # 125 Junk vs IG spread ratio
     assert not tab_excluded("bot1", 557813776)  # 129 60-40 rolling returns
     assert not tab_excluded("bot1", 134436208)   # 203 Cloud growth race
-    assert not tab_excluded("bot1", 965739722)   # 205 Meta Reality Labs losses
+    assert tab_excluded("bot1", 965739722)  # 205 Meta Reality Labs losses (retired 2026-11-21)
     assert not tab_excluded("bot1", 2092406374)  # 231 Prime-age employment rate
     assert not tab_excluded("bot3", 1536200109)  # Gold Priced in BTC (blank chart removed, tab stays)
     assert not tab_excluded("bot2", 645072508)
@@ -770,10 +792,20 @@ def self_test():
     assert ("bot3", 1921102868) in live  # Share Count Change
     assert ("bot3", 970035917) in live  # Buybacks TTM
     assert ("bot3", 1608741572) not in live  # Bitcoin ETFs Weekly Flows (Python ETF draft)
-    assert len(cat["tabs"]) == 431, len(cat["tabs"])
+    assert len(cat["tabs"]) == 421, len(cat["tabs"])
     assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 96
     assert sum(1 for t in cat["tabs"] if t.get("book") == "bot2") == 85
     blob = json.dumps(cat)
+    assert "09 Real S&P 500" not in blob
+    assert "41 VIX term structure" not in blob
+    assert "46 UK-US spread vs GBP" not in blob
+    assert "63 Auto loans vs sales" not in blob
+    assert "84 TSLA volatility vs peers" not in blob
+    assert "112 Transports vs Industrials" not in blob
+    assert "205 Meta Reality Labs losses" not in blob
+    assert "218 AI stocks price-to-sales" not in blob
+    assert "248 Low-hire, low-fire" not in blob
+    assert "333 Big Tech net PP&E" not in blob
     assert "201 Nvidia data center revenue" not in blob
     assert "Nvidia became a data-center company" not in blob
     assert "227 Private AI lab valuations" not in blob
@@ -931,13 +963,11 @@ def self_test():
         "157 Real chip prices",
         "160 China vs Mexico vs Taiwan",
         "44 Baa-Aaa quality spread",
-        "46 UK-US spread vs GBP",
         "129 60-40 rolling returns",
         "152 Capex as % of cash flow",
         "55 Capex intensity vs legacy",
         "57 EBITDA margin Tesla vs peers",
         "203 Cloud growth race",
-        "205 Meta Reality Labs losses",
         "Anthropic Revenue vs Compute",
         "34 BTC supply inflation",
         "36 Gold vs real yield",

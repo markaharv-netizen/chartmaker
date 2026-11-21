@@ -1422,14 +1422,14 @@ def sample_bundles():
         if d in real_map:
             last = real_map[d]
         sp_r.append(last)
-    g_vol, g_ma, g_sp = 1546024641, 1810821762, 1540677114
+    g_vol, g_ma, g_sp = 1546024641, 1810821762, 639374194
     bot1_values = [
         _range("01 BTC vol vs VIX", 0, 0, 2, 1 + len(vol_labels), _rows(
             ["Date", "BTC 30d realized vol (% ann.)", "VIX"], [vol_labels, vol_btc, vol_vix])),
         _range("04 BTC vs 200-week MA", 0, 0, 2, 1 + len(px_labels), _rows(
             ["Date", "BTC price (USD)", "200-week moving avg (USD)"], [px_labels, px, px_ma])),
-        _range("09 Real S&P 500", 0, 0, 2, 1 + len(sp_labels), _rows(
-            ["Date", "S&P 500 nominal (monthly avg)", "S&P 500 real (Aug 2026 dollars)"], [sp_labels, sp_n, sp_r])),
+        _range("13 Real oil price", 0, 0, 2, 1 + len(sp_labels), _rows(
+            ["Date", "WTI nominal (monthly avg)", "WTI real (Aug 2026 dollars)"], [sp_labels, sp_n, sp_r])),
     ]
     bot1_sheets = [
         {"properties": {"sheetId": g_vol, "title": "01 BTC vol vs VIX", "index": 0}, "charts": [_chart(
@@ -1444,14 +1444,14 @@ def sample_bundles():
             [_series(_grid(g_ma, 0, 1, 1 + len(px_labels), 2), blue), _series(_grid(g_ma, 0, 2, 1 + len(px_labels), 3), red)],
             0, [{"position": "BOTTOM_AXIS", "title": "Year"}, {"position": "LEFT_AXIS", "title": "BTC price (USD) / 200-week moving avg (USD)", "logScale": True}],
         )]},
-        {"properties": {"sheetId": g_sp, "title": "09 Real S&P 500", "index": 8}, "charts": [_chart(
-            703, "The S&P 500 in today's dollars (CPI-adjusted)", "LINE",
+        {"properties": {"sheetId": g_sp, "title": "13 Real oil price", "index": 12}, "charts": [_chart(
+            703, "Oil in today's dollars (WTI, CPI-adjusted)", "LINE",
             _grid(g_sp, 0, 0, 1 + len(sp_labels), 1),
             [
                 _series(_grid(g_sp, 0, 1, 1 + len(sp_labels), 2), blue),
                 _series(_grid(g_sp, 0, 2, 1 + len(sp_labels), 3), red),
             ],
-            0, [{"position": "BOTTOM_AXIS", "title": "Date"}, {"position": "LEFT_AXIS", "title": "S&P 500 nominal (monthly avg) / S&P 500 real (Aug 2026 dollars)", "viewWindowOptions": {"viewWindowMode": "EXPLICIT", "viewWindowMin": 0}}],
+            0, [{"position": "BOTTOM_AXIS", "title": "Date"}, {"position": "LEFT_AXIS", "title": "WTI nominal (monthly avg) / WTI real (Aug 2026 dollars)", "viewWindowOptions": {"viewWindowMode": "EXPLICIT", "viewWindowMin": 0}}],
         )]},
     ]
     def bundle(sid, title, sheets, values, formatted=None):

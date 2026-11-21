@@ -22,7 +22,7 @@ PILOT = [
     ("usd-reserve", "sheets/data/bot2/49428948.json", "sheets/full/bot2/49428948.png", ""),
     ("btc-vol-vix", "sheets/data/bot1/1546024641.json", "sheets/full/bot1/1546024641.png", ""),
     ("btc-200wma", "sheets/data/bot1/1810821762.json", "sheets/full/bot1/1810821762.png", ""),
-    ("real-sp500", "sheets/data/bot1/1540677114.json", "sheets/full/bot1/1540677114.png", ""),
+    ("real-oil", "sheets/data/bot1/639374194.json", "sheets/full/bot1/639374194.png", ""),
 ]
 
 
