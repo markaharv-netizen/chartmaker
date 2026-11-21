@@ -206,63 +206,63 @@
  "picks": [
   {
    "sheet": "My Bot's Sheets",
-   "tab": "Major Bitcoin Cycles",
-   "title": "Bitcoin Cycle Drawdowns: Peak-to-Trough Recovery Patterns",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=2017072406",
+   "tab": "Bitcoin ETF Inflows and Outflows",
+   "title": "US Spot Bitcoin ETF Daily Net Flows ($ millions)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1898876351",
    "image": "cotd/2026-11-21/01.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "picks",
-   "description": "Bitcoin's peak-to-trough drawdowns in each cycle since 2011, plotted by days since the peak, with the current cycle from the Oct 6, 2025 high.",
-   "reason": "Bitcoin slid to about $62K this week, down about 29% in under two months, so this shows where the current drawdown sits against past cycles."
+   "description": "Daily net flows into and out of US spot bitcoin ETFs in $ millions (Farside data), green for inflow days and red for outflow days, since late July 2026.",
+   "reason": "Bitcoin fell to about $55K overnight, its lowest since September 2024, after US spot bitcoin ETFs lost about $1.25B from Tuesday through Friday, including $582M on Thursday."
   },
   {
-   "sheet": "My Bot's Sheets",
-   "tab": "YTD Performance of Bitcoin treasury companies",
-   "title": "Bitcoin Treasury Companies: 2026 Return YTD",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=37354382",
+   "sheet": "bot experiments 2",
+   "tab": "4 MSTR preferred stack",
+   "title": "Strategy's preferred stock, Feb 2025–Oct 2026: $15.5B peak, $13.9B after STRC buybacks",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1172553519",
    "image": "cotd/2026-11-21/02.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "picks",
-   "description": "2026 year-to-date share-price returns of public bitcoin treasury companies, from Strive and The Smarter Web Company to Strategy, Twenty One, Metaplanet and others.",
-   "reason": "MSTR has dropped sharply from its October highs while Twenty One just added 172 BTC, so the treasury-company scoreboard is in focus."
+   "description": "Strategy's preferred stock outstanding by series (STRF, STRC, STRE, STRK, STRD) at stated amount, weekly since February 2025: a $15.5B peak, with STRC shrinking from $10.5B as Strategy buys it back.",
+   "reason": "At Thursday's investor Q&A, Strategy said it has bought back about $3B of STRC at $95 to $99, and Saylor put natural demand at $5B to $7.5B, with STRC closing Friday at $93.60, below its $100 par."
   },
   {
-   "sheet": "Bot experiments",
-   "tab": "335 Price-to-sales vs Cisco",
-   "title": "Price-to-sales then and now: Cisco from 1998 vs Nvidia and Palantir from 2023",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1554167260",
+   "sheet": "bot experiments 2",
+   "tab": "26 Tesla FSD subscriptions",
+   "title": "Tesla's active FSD subscriptions: 1.74M, up 67% in a year (Q3 2026)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1936535169",
    "image": "cotd/2026-11-21/03.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "picks",
-   "description": "Price-to-sales then and now: Cisco from January 1998 against Nvidia and Palantir from January 2023, aligned by weeks since start.",
-   "reason": "Nvidia is down more than 40% since early October and the Nasdaq erased its 2026 gains, which revives the Cisco 2000 comparison."
+   "description": "Tesla's active FSD subscriptions (upfront purchases plus monthly subscriptions, excluding free trials) by quarter from Tesla's updates: 0.95M in Q2 2025 to 1.74M in Q3 2026.",
+   "reason": "Musk said this morning that FSD V15 goes to wide release in December with the holiday update."
   },
   {
-   "sheet": "Bot experiments",
-   "tab": "193 Stocks vs 200-day average",
-   "title": "How stretched are stocks? S&P 500 and Nasdaq-100: % above/below their 200-day moving average",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1003143037",
+   "sheet": "My Bot's Sheets",
+   "tab": "Hyperscaler free cash flow (incl. SpaceX)",
+   "title": "Hyperscaler free cash flow (incl. SpaceX)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=9000000003",
    "image": "cotd/2026-11-21/04.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "picks",
-   "description": "How far the S&P 500 and Nasdaq-100 sit above or below their 200-day moving averages, weekly since 2019.",
-   "reason": "The S&P 500 and Nasdaq entered correction territory on Friday's AI-led selloff, and this shows how quickly the cushion over the 200-day has shrunk."
+   "description": "Alphabet, Meta, Microsoft, Amazon and SpaceX free cash flow, 2014–2030E. Combined FCF is estimated to trough around –$408bn in 2027 (SpaceX, incl. xAI & X, –$315bn) before rebounding in 2030. Actuals from SEC 10-Ks; estimates from S&P Global consensus, company capex guidance and Steve's DCF (updated Nov 20, 2026).",
+   "reason": "SpaceX priced about $44B of GPU financing led by Apollo and Goldman, including $32B of bonds whose largest tranche yields 8.259%, as AI stocks sold off."
   },
   {
-   "sheet": "bot experiments 2",
-   "tab": "43 Starlink capacity per launch",
-   "title": "Starlink capacity per launch: Falcon 9 (27 V2) ~2.6 Tbps vs Starship Flight 14 (26 V3) ~26 Tbps vs a full Starship (60 V3) ~61 Tbps",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=459378829",
+   "sheet": "Bot experiments",
+   "tab": "41 VIX term structure",
+   "title": "VIX term structure: 3-month vs 1-month implied vol",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=100750083",
    "image": "cotd/2026-11-21/05.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "picks",
-   "description": "Starlink downlink capacity added per launch: Falcon 9 with 27 V2 Minis (~2.6 Tbps) vs Starship Flight 14 with 26 V3s (~26 Tbps) vs a planned full Starship load of 60 V3s (~61 Tbps).",
-   "reason": "Starship Flight 15 reached orbit, deployed 26 Starlink V3 satellites and had its upper stage caught by the tower for the first time."
+   "description": "The VIX term structure: 3-month implied volatility (VIX3M) divided by the 1-month VIX, weekly since July 2019, with the VIX itself. A ratio below 1 means near-term fear is higher than longer-term.",
+   "reason": "The VIX jumped about 37% on Friday to 38.83, its highest close since April 2025, as the S&P 500 and Dow closed in correction."
   }
  ],
  "random": true
