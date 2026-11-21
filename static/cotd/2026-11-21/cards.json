@@ -46,14 +46,14 @@
    "reason": "SpaceX priced about $44B of GPU financing led by Apollo and Goldman, including $32B of bonds whose largest tranche yields 8.259%, as AI stocks sold off."
   },
   {
-   "book": "bot1",
-   "gid": 100750083,
+   "book": "bot2",
+   "gid": 1373480110,
    "chart_n": 1,
-   "tab": "41 VIX term structure",
-   "title": "VIX term structure: 3-month vs 1-month implied vol",
+   "tab": "VIX vs S&P 500",
+   "title": "VIX vs S&P 500 (10Y)",
    "kind": "chart",
    "section": "picks",
-   "description": "The VIX term structure: 3-month implied volatility (VIX3M) divided by the 1-month VIX, weekly since July 2019, with the VIX itself. A ratio below 1 means near-term fear is higher than longer-term.",
+   "description": "The VIX (right axis) against the S&P 500 (left axis) over the past 10 years. Volatility spikes line up with equity drawdowns, including 2020, 2022 and April 2025.",
    "reason": "The VIX jumped about 37% on Friday to 38.83, its highest close since April 2025, as the S&P 500 and Dow closed in correction."
   },
   {
@@ -76,15 +76,6 @@
   },
   {
    "book": "bot1",
-   "gid": 1266156625,
-   "chart_n": 1,
-   "tab": "46 UK-US spread vs GBP",
-   "title": "Gilts vs Treasuries: UK–US 10-year spread and the pound",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
    "gid": 1836327978,
    "chart_n": 1,
    "tab": "85 TSLA deliveries vs price",
@@ -98,24 +89,6 @@
    "chart_n": 1,
    "tab": "237 Federal job cuts",
    "title": "DOGE and the jobs market: federal vs state & local vs private payrolls (Jan 2025 = 100)",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
-   "gid": 2132226252,
-   "chart_n": 1,
-   "tab": "63 Auto loans vs sales",
-   "title": "Auto loan rates vs car sales",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
-   "gid": 965739722,
-   "chart_n": 1,
-   "tab": "205 Meta Reality Labs losses",
-   "title": "Meta's Reality Labs (metaverse/AR glasses): quarterly operating losses and the running total since Q2 2023",
    "kind": "chart",
    "section": "random"
   },
@@ -139,15 +112,6 @@
   },
   {
    "book": "bot1",
-   "gid": 1708270675,
-   "chart_n": 1,
-   "tab": "218 AI stocks price-to-sales",
-   "title": "Price-to-sales of Palantir, Nvidia, Broadcom, AMD and Microsoft (weekly, log scale)",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
    "gid": 1438475208,
    "chart_n": 1,
    "tab": "105 Starlink sats in orbit",
@@ -166,55 +130,10 @@
   },
   {
    "book": "bot1",
-   "gid": 722028700,
-   "chart_n": 1,
-   "tab": "84 TSLA volatility vs peers",
-   "title": "Tesla volatility vs Mag 7 peers and the Nasdaq-100 (30-day realized, annualized)",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
-   "gid": 1483938898,
-   "chart_n": 1,
-   "tab": "112 Transports vs Industrials",
-   "title": "Dow theory check: Dow Transports ÷ Dow Industrials",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
    "gid": 917876394,
    "chart_n": 1,
    "tab": "342 S&P 500 P/E",
    "title": "S&P 500 P/E: trailing vs Shiller CAPE",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
-   "gid": 1173797512,
-   "chart_n": 1,
-   "tab": "333 Big Tech net PP&E",
-   "title": "The asset base to be depreciated: net property & equipment (USD bn)",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
-   "gid": 995219650,
-   "chart_n": 1,
-   "tab": "248 Low-hire, low-fire",
-   "title": "The \"low-hire, low-fire\" labor market: JOLTS hires rate vs layoffs rate",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
-   "gid": 1540677114,
-   "chart_n": 1,
-   "tab": "09 Real S&P 500",
-   "title": "The S&P 500 in today's dollars (CPI-adjusted)",
    "kind": "chart",
    "section": "random"
   },
@@ -283,14 +202,14 @@
    "reason": "SpaceX priced about $44B of GPU financing led by Apollo and Goldman, including $32B of bonds whose largest tranche yields 8.259%, as AI stocks sold off."
   },
   {
-   "book": "bot1",
-   "gid": 100750083,
+   "book": "bot2",
+   "gid": 1373480110,
    "chart_n": 1,
-   "tab": "41 VIX term structure",
-   "title": "VIX term structure: 3-month vs 1-month implied vol",
+   "tab": "VIX vs S&P 500",
+   "title": "VIX vs S&P 500 (10Y)",
    "kind": "chart",
    "section": "picks",
-   "description": "The VIX term structure: 3-month implied volatility (VIX3M) divided by the 1-month VIX, weekly since July 2019, with the VIX itself. A ratio below 1 means near-term fear is higher than longer-term.",
+   "description": "The VIX (right axis) against the S&P 500 (left axis) over the past 10 years. Volatility spikes line up with equity drawdowns, including 2020, 2022 and April 2025.",
    "reason": "The VIX jumped about 37% on Friday to 38.83, its highest close since April 2025, as the S&P 500 and Dow closed in correction."
   }
  ],
@@ -315,15 +234,6 @@
   },
   {
    "book": "bot1",
-   "gid": 1266156625,
-   "chart_n": 1,
-   "tab": "46 UK-US spread vs GBP",
-   "title": "Gilts vs Treasuries: UK–US 10-year spread and the pound",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
    "gid": 1836327978,
    "chart_n": 1,
    "tab": "85 TSLA deliveries vs price",
@@ -337,24 +247,6 @@
    "chart_n": 1,
    "tab": "237 Federal job cuts",
    "title": "DOGE and the jobs market: federal vs state & local vs private payrolls (Jan 2025 = 100)",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
-   "gid": 2132226252,
-   "chart_n": 1,
-   "tab": "63 Auto loans vs sales",
-   "title": "Auto loan rates vs car sales",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
-   "gid": 965739722,
-   "chart_n": 1,
-   "tab": "205 Meta Reality Labs losses",
-   "title": "Meta's Reality Labs (metaverse/AR glasses): quarterly operating losses and the running total since Q2 2023",
    "kind": "chart",
    "section": "random"
   },
@@ -378,15 +270,6 @@
   },
   {
    "book": "bot1",
-   "gid": 1708270675,
-   "chart_n": 1,
-   "tab": "218 AI stocks price-to-sales",
-   "title": "Price-to-sales of Palantir, Nvidia, Broadcom, AMD and Microsoft (weekly, log scale)",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
    "gid": 1438475208,
    "chart_n": 1,
    "tab": "105 Starlink sats in orbit",
@@ -405,55 +288,10 @@
   },
   {
    "book": "bot1",
-   "gid": 722028700,
-   "chart_n": 1,
-   "tab": "84 TSLA volatility vs peers",
-   "title": "Tesla volatility vs Mag 7 peers and the Nasdaq-100 (30-day realized, annualized)",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
-   "gid": 1483938898,
-   "chart_n": 1,
-   "tab": "112 Transports vs Industrials",
-   "title": "Dow theory check: Dow Transports ÷ Dow Industrials",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
    "gid": 917876394,
    "chart_n": 1,
    "tab": "342 S&P 500 P/E",
    "title": "S&P 500 P/E: trailing vs Shiller CAPE",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
-   "gid": 1173797512,
-   "chart_n": 1,
-   "tab": "333 Big Tech net PP&E",
-   "title": "The asset base to be depreciated: net property & equipment (USD bn)",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
-   "gid": 995219650,
-   "chart_n": 1,
-   "tab": "248 Low-hire, low-fire",
-   "title": "The \"low-hire, low-fire\" labor market: JOLTS hires rate vs layoffs rate",
-   "kind": "chart",
-   "section": "random"
-  },
-  {
-   "book": "bot1",
-   "gid": 1540677114,
-   "chart_n": 1,
-   "tab": "09 Real S&P 500",
-   "title": "The S&P 500 in today's dollars (CPI-adjusted)",
    "kind": "chart",
    "section": "random"
   },

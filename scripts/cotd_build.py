@@ -844,7 +844,7 @@ def self_test():
                 1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                 1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                 1192979444, 1912487083, 664060481, 1778640335,
-                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 847095656, 1694432360, 1421725187, 1607076800, 1924940296, 1966044875, 1161030254):
+                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 847095656, 1694432360, 1421725187, 1607076800, 1924940296, 1966044875, 1161030254, 1540677114, 100750083, 1266156625, 2132226252, 722028700, 1483938898, 965739722, 1708270675, 995219650, 1173797512):
         assert pick_excluded({"spreadsheetId": bot1, "gid": gid}), gid
     assert pick_excluded({"spreadsheetId": bot2, "gid": 418894352})
     assert pick_excluded({"spreadsheetId": bot2, "gid": 1794999542})
@@ -901,7 +901,29 @@ def self_test():
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1966044875})  # 179 Productivity vs pay gap (retired 2026-11-20)
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1161030254})  # 304 Tesla quarterly capex (retired 2026-11-20)
     assert pick_excluded({"spreadsheetId": bot2, "gid": 841222865})  # 18 Big Tech unbooked DC leases (retired 2026-11-20)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1540677114})  # 09 Real S&P 500 (retired 2026-11-21)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 100750083})  # 41 VIX term structure (retired 2026-11-21)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1266156625})  # 46 UK-US spread vs GBP (retired 2026-11-21)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 2132226252})  # 63 Auto loans vs sales (retired 2026-11-21)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 722028700})  # 84 TSLA volatility vs peers (retired 2026-11-21)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1483938898})  # 112 Transports vs Industrials (retired 2026-11-21)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 965739722})  # 205 Meta Reality Labs losses (retired 2026-11-21)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1708270675})  # 218 AI stocks price-to-sales (retired 2026-11-21)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 995219650})  # 248 Low-hire, low-fire (retired 2026-11-21)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1173797512})  # 333 Big Tech net PP&E (retired 2026-11-21)
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 733691549})  # 80 Productivity vs labor costs (kept)
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1798867607})  # 08 Real home prices (kept)
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 639374194})  # 13 Real oil price (kept)
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1220281045})  # 192 S&P 10-yr real returns (kept)
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 762190162})  # 82 TSLA vs Mag 7 (kept)
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 450495048})  # 83 TSLA drawdown (kept)
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 477052168})  # 195 BTC vs NVDA vs TSLA vol (kept)
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 62435828})  # 310 Tesla price-to-sales (kept)
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1554167260})  # 335 Price-to-sales vs Cisco (kept)
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1692929819})  # 325 Meta quarterly FCF (kept)
+    assert not pick_excluded({"spreadsheetId": "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU", "gid": 1828716508})  # Meta Active Users (kept)
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 868062827})  # 172 Job openings per jobless (kept)
+    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1597166284})  # 249 Youth unemployment (kept)
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 2055282175})  # 22 Big Tech unbooked leases by co (kept)
     # Neighbors that stay: Korea/Taiwan's neighbor, CoreWeave backlog, CPI charts, trade balance, real yield.
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 171599627})
@@ -922,7 +944,7 @@ def self_test():
     assert pick_excluded({"spreadsheetId": bot1, "gid": 727565635})  # 125 Junk vs IG spread ratio
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 557813776})  # 129 60-40 rolling returns
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 134436208})  # 203 Cloud growth race
-    assert not pick_excluded({"spreadsheetId": bot1, "gid": 965739722})  # 205 Meta Reality Labs losses
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 965739722})  # 205 Meta Reality Labs losses (retired 2026-11-21)
     assert not pick_excluded({"spreadsheetId": bot1, "gid": ""})
     live = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     # Retired charts stay out of the published edition and the sheet catalog.
@@ -950,7 +972,7 @@ def self_test():
         today_blob = json.dumps(today_doc)
     assert "645072508" in catalog_blob
     assert "645072508" not in today_blob
-    for gid in (530554790, 200447618, 829703707, 1892662496, 1167074374, 978356289, 1713824403, 82966268, 557813776, 134436208, 965739722):
+    for gid in (530554790, 200447618, 829703707, 1892662496, 1167074374, 978356289, 1713824403, 82966268, 557813776, 134436208):
         assert str(gid) in catalog_blob, gid
     # The published edition moves every day. Check its shape against that date,
     # not against the edition that happened to be current when this test was written.

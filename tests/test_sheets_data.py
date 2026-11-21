@@ -111,8 +111,8 @@ class ExportDumpTest(unittest.TestCase):
         self.assertTrue(ma["y"][0]["log"])
         self.assertEqual(ma["x"]["title"], "")
         self.assertGreater(min(ma["series"][0]["data"]), 0)
-        sp = by_gid[1540677114]
-        self.assertEqual(sp["title"], "The S&P 500 in today's dollars (CPI-adjusted)")
+        sp = by_gid[639374194]
+        self.assertEqual(sp["title"], "Oil in today's dollars (WTI, CPI-adjusted)")
         self.assertEqual(len(sp["series"]), 2)
         self.assertEqual(sp["x"]["title"], "")
 
@@ -422,7 +422,7 @@ class CommittedSnapshotTest(unittest.TestCase):
             ("bot3", 1145735379, 1), ("bot3", 1145735379, 2),
             ("bot3", 1145735379, 3), ("bot3", 1145735379, 4),
             ("bot2", 1690294676, 1), ("bot2", 49428948, 1),
-            ("bot1", 1546024641, 1), ("bot1", 1810821762, 1), ("bot1", 1540677114, 1),
+            ("bot1", 1546024641, 1), ("bot1", 1810821762, 1), ("bot1", 639374194, 1),
         }
         self.assertTrue(pilots.issubset(keys))
         self.assertGreater(len(keys), len(pilots))
