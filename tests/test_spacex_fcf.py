@@ -7,6 +7,7 @@ cannot drop it, list it when "Has a chart" is on, keep Monday's importer
 from overwriting the Python PNG with the native-chart export, and leave
 Open in Sheets on because the tab is real (not sheetless).
 """
+import hashlib
 import json
 import os
 import shutil
@@ -72,8 +73,15 @@ class SpacexFreeCashFlowTest(unittest.TestCase):
         self.assertTrue(os.path.isfile(full))
         self.assertTrue(os.path.isfile(thumb))
         with open(full, "rb") as f:
-            self.assertEqual(f.read(8), b"\x89PNG\r\n\x1a\n")
+            data = f.read()
+        self.assertEqual(data[:8], b"\x89PNG\r\n\x1a\n")
+        self.assertEqual(len(data), 55819)
+        self.assertEqual(
+            hashlib.sha256(data).hexdigest(),
+            "d821d469d0d73a0793d7b90eb1285ca1f0af5f7dec20928a1c92150b2f8dcf49",
+        )
         self.assertLessEqual(os.path.getsize(thumb), 20_000)
+        self.assertEqual(os.path.getsize(thumb), 6362)
         keys = {(t.get("book"), t.get("gid")) for t in cat["tabs"]}
         self.assertEqual(len(keys), len(cat["tabs"]))
         self.assertIn(("bot3", GID), keys)
