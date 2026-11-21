@@ -45,10 +45,7 @@ class ChartsSourceFootnoteTest(unittest.TestCase):
         val = fn(src, "async function vhrender()", "function wdraw(")
         self.assertIn("Source: Yahoo Finance closes × SEC XBRL", val)
         self.assertIn("Source: ${srcs}", val)
-        self.assertIn("const src='Source: '+WSRC", fn(src, "function wdraw(", "function senter("))
-        sent = fn(src, "function senter(", "async function ptenter(")
-        self.assertIn("Source: '+(SDATA.source", sent)
-        self.assertIn("Source: X posts only", sent)
+        self.assertIn("const src='Source: '+WSRC", fn(src, "function wdraw(", "function ptMoney("))
 
 
 if __name__ == "__main__":

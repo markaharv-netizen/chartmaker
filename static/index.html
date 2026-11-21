@@ -171,7 +171,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
   .ccustom input.hex{min-height:40px;font-size:16px;width:8.2em}
 }
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mBrief" class="on" title="Lloyd's 9 AM ET news briefing, newest first">Daily briefing</button><button id="mWatch">Watchlist</button><button id="mPrices" title="Price lines, percent change, candles, and ratios">Charts</button><button id="mFin">Financials</button><button id="mVal">Valuation</button><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mSent">Sentiment</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mPaper" title="Paper book sized by Steve's paper weights">Paper trading</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mBrief" class="on" title="Lloyd's 9 AM ET news briefing, newest first">Daily briefing</button><button id="mWatch">Watchlist</button><button id="mPrices" title="Price lines, percent change, candles, and ratios">Charts</button><button id="mFin">Financials</button><button id="mVal">Valuation</button><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mPaper" title="Paper book sized by Steve's paper weights">Paper trading</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -228,16 +228,6 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <label>Title<input id="wtitle" size="24" placeholder="Watchlist"></label>
 <label><span>Watermark</span><input id="wwm" type="checkbox"></label>
 <button id="wrefresh" title="Fetch fresh quotes for every ticker (the only time data updates)">Refresh</button><button id="wdl">Download PNG</button>
-</div>
-<div id="sctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
-<label>View<select id="sview"><option value="board">Board</option><option value="time">Over time</option></select></label>
-<label id="sbl">Tickers (comma, blank = all in sentiment.json)<input id="stickers" size="30" placeholder="all"></label>
-<label id="shl" style="display:none">History tickers<span id="shpick" style="display:flex;gap:8px;flex-wrap:wrap;padding:4px 0"></span><input id="shist" type="hidden" value="MSTR"></label>
-<label id="sgl" style="display:none">Points<select id="shgran"><option value="weekly">Weekly (7-day windows)</option><option value="daily">Daily (1 UTC day)</option></select></label>
-<label id="spl" style="display:none"><span>Price line</span><input id="sprice" type="checkbox" checked></label>
-<label>Title<input id="stitle" size="28" placeholder="Bull vs bear sentiment"></label>
-<label><span>Watermark</span><input id="swm" type="checkbox"></label>
-<button id="sgo">Render</button><button id="sreload" title="Re-read sentiment.json from the server">Reload data</button><button id="sdl">Download PNG</button>
 </div>
 <div id="ptctl" style="display:none;flex-wrap:wrap;gap:10px;padding:12px;background:#fff;border-bottom:1px solid #ddd;align-items:end">
 <label><span>Watermark</span><input id="ptwm" type="checkbox"></label>
@@ -387,7 +377,7 @@ installColorPickers();
 function applyTheme(){T=THEMES[$('theme').value]||THEMES.white;axLabel={fontSize:16,color:T.text};split={lineStyle:{color:T.grid}};
   $('chart').style.background=T.bg;$('tprev').style.background=T.bg;$('tprev').style.color=T.title;
   $('tprev').innerHTML=`Aa <b style="color:${bc('#F7931A')}">■</b><b style="color:${bc('#8B5CF6')}">■</b><b style="color:${bc('#22C55E')}">■</b><b style="color:${bc('#EF4444')}">■</b>`}
-function rerender(){return MODE==='paper'?paperDraw():MODE==='sheets'||MODE==='cotd'?null:MODE==='pt'?ptdraw():MODE==='sent'?sdraw():MODE==='watch'?wdraw():MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
+function rerender(){return MODE==='paper'?paperDraw():MODE==='sheets'||MODE==='cotd'?null:MODE==='pt'?ptdraw():MODE==='watch'?wdraw():MODE==='val'?vrender():MODE==='tre'?trender():MODE==='fin'?frender():MODE==='heat'?hrender():render()}
 
 function rangeParams(){
   const r=$('range').value, now=Math.floor(Date.now()/1000), d=new Date();
@@ -901,14 +891,14 @@ function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='p
   $('mPt').classList.toggle('on',m==='pt');$('ptctl').style.display=m==='pt'?'flex':'none';
   $('chart').style.display=m==='pt'?'none':'';$('ptcanvas').style.display=m==='pt'?'block':'none';
   $('wrap').style.display=lib?'none':'';$('vbar').style.display=lib?'none':'flex';if(!lib&&m!=='pt'){try{chart.resize()}catch(e){}}if(typeof vlist==='function')try{vlist()}catch(e){}
-  $('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';$('mSent').classList.toggle('on',m==='sent');$('sctl').style.display=m==='sent'?'flex':'none';
+  $('mVal').classList.toggle('on',m==='val');$('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';$('mPrices').classList.toggle('on',m==='prices');$('mFin').classList.toggle('on',m==='fin');$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';
   $('ctl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
   $('ftable').innerHTML='';$('fnote').textContent='';
   if(m!=='tre'&&$('chart').style.height&&$('chart').style.height!=='900px'){$('chart').style.height='900px';chart.resize()}
   if(m!=='tre'&&typeof fitChart==='function')fitChart();
   if(m!=='pt')chart.clear();$('status').textContent='';
-  if(m==='prices'){syncPriceUi();render()}else if(m==='briefing')briefEnter();else if(m==='paper')paperEnter();else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='sent')senter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
-$('mBrief').onclick=()=>setMode('briefing');$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mSent').onclick=()=>setMode('sent');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mPt').onclick=()=>setMode('pt');$('mPaper').onclick=()=>setMode('paper');
+  if(m==='prices'){syncPriceUi();render()}else if(m==='briefing')briefEnter();else if(m==='paper')paperEnter();else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
+$('mBrief').onclick=()=>setMode('briefing');$('mPrices').onclick=()=>setMode('prices');$('mVal').onclick=()=>setMode('val');$('mTre').onclick=()=>setMode('tre');$('mFin').onclick=()=>setMode('fin');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mPt').onclick=()=>setMode('pt');$('mPaper').onclick=()=>setMode('paper');
 // ---------- Favorites: shared by everyone signed in to this Chartmaker. No per-person accounts. ----------
 // Identity is book/gid/chartNumber (chart 1 is <gid>.png, chart n is <gid>_n.png). At most FAV_MAX.
 // A tab with no chart (a table) is one favorite, book/gid/1, labeled with the tab name. That is the
@@ -1871,112 +1861,6 @@ $('wrefresh').onclick=()=>{if(!WBUSY&&WL.length)wfetch(WL,true)};$('wtitle').oni
 $('wdl').onclick=()=>{if(MODE!=='watch')return;const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('wtitle').value||'watchlist').replace(/[^\w]+/g,'_')+'.png';a.click()};
 window.__wdraw=wdraw;window.__wl=()=>WL;
 
-// ---------- Sentiment mode: static sentiment.json via /api/sentiment (built offline by tools/build_sentiment.py; no live scraping) ----------
-let SDATA=null,SBUSY=false,SSEQ=0,SHATCH={};
-async function sfetch(){SBUSY=true;const st=$('status');st.className='';st.textContent='Loading sentiment…';
-  try{const r=await fetch('/api/sentiment',{cache:'no-store'});const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);SDATA=j}
-  catch(e){st.className='err';st.textContent='Error: '+e.message+' — nothing invented.'}SBUSY=false;sdraw()}
-function senter(){if(!SDATA&&!SBUSY)sfetch();else sdraw()}
-function shatch(col){if(SHATCH[col+T.bg])return SHATCH[col+T.bg];const c=document.createElement('canvas');c.width=c.height=8;const g=c.getContext('2d');
-  g.strokeStyle=col;g.lineWidth=2;g.beginPath();g.moveTo(0,8);g.lineTo(8,0);g.moveTo(-2,2);g.lineTo(2,-2);g.moveTo(6,10);g.lineTo(10,6);g.stroke();return SHATCH[col+T.bg]=c}
-const sDate=t=>{const d=new Date(t);return isNaN(d)?String(t||''):d.toLocaleDateString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',year:'numeric'})};
-const sesc=x=>String(x??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-async function sdraw(){wtipHide();if(MODE!=='sent')return;const tv=$('sview').value==='time';
-  $('sbl').style.display=tv?'none':'';$('shl').style.display=$('spl').style.display=$('sgl').style.display=tv?'':'none';
-  if(tv)return stime();const seq=++SSEQ;
-  if(!SDATA){chart.clear();return}
-  const all=SDATA.tickers||[],want=$('stickers').value.split(/[\s,]+/).map(x=>x.trim().toUpperCase()).filter(Boolean);
-  const rows=want.length?all.filter(r=>want.includes(r.symbol)||want.includes(r.display)):all.slice(),miss=want.filter(t=>!all.some(r=>r.symbol===t||r.display===t));
-  rows.sort((a,b)=>(b.bull??-1)-(a.bull??-1));// always rank by bull share, high to low
-  const logos={};await Promise.all(rows.map(async r=>{try{logos[r.symbol]=await circLogo(r.logoKey||r.symbol)}catch(e){}}));if(seq!==SSEQ||MODE!=='sent')return;
-  const n=Math.max(1,rows.length),top=n>12?96:110,bot=n>12?60:70,rh=Math.min(110,(900-top-bot)/n),G=[],up=bc('#22C55E'),dn=bc('#EF4444');
-  const X0=440,X1=1540,BW=X1-X0,fs=Math.round(Math.max(14,Math.min(20,rh*0.24))),cmp=rh<60,bh=Math.max(6,Math.round(rh*0.11)),lg=Math.round(Math.min(40,rh*0.42));
-  rows.forEach((r,i)=>{const y0=top+i*rh,ym=y0+rh*0.5;
-    if(i<n-1)G.push({type:'line',shape:{x1:60,y1:y0+rh,x2:X1,y2:y0+rh},style:{stroke:T.grid,lineWidth:1}});
-    G.push({type:'text',x:60,y:ym-rh*0.12,style:{text:String(i+1),fontSize:fs,fill:T.src,textAlign:'left',textVerticalAlign:'middle'}});
-    if(logos[r.symbol])G.push({type:'image',style:{image:logos[r.symbol],x:92,y:ym-rh*0.12-lg/2,width:lg,height:lg}});
-    const tx=92+lg+12;
-    G.push({type:'text',x:tx,y:cmp?ym-rh*0.18:ym-rh*0.22,style:{text:r.display||r.symbol,fontSize:fs+2,fontWeight:'bold',fill:T.title,textAlign:'left',textVerticalAlign:'middle'}});
-    if(!cmp)G.push({type:'text',x:tx,y:ym+rh*0.02,style:{text:r.kind==='crypto'?r.name:shortName(r.name,r.symbol),fontSize:fs-4,fill:T.src,textAlign:'left',textVerticalAlign:'middle',width:X0-tx-20,overflow:'truncate'}});
-    const sx=X0+BW*(1-r.bull),by=y0+rh*0.72;  // red (bear) on the left, green (bull) on the right; split at bear share
-    G.push({type:'rect',shape:{x:X0,y:by,width:Math.max(0,sx-X0),height:bh},style:{fill:dn}});
-    G.push({type:'rect',shape:{x:sx,y:by,width:Math.max(0,X1-sx),height:bh},style:{fill:up}});
-    const hx0=X0+BW*(1-r.hi),hx1=X0+BW*(1-r.lo);  // uncertainty band around the split, hatched
-    if(hx1-hx0>1)G.push({type:'rect',shape:{x:hx0,y:by,width:hx1-hx0,height:bh},style:{fill:{image:shatch(T.dark?'rgba(255,255,255,.75)':'rgba(255,255,255,.85)'),repeat:'repeat'}}});
-    // headlines sit around the split; anchor clamped so both sides keep room; dominant side bolder + larger
-    const minW=360,ax=Math.max(X0+minW,Math.min(X1-minW,sx)),bullDom=r.bull>=0.5,big=fs,small=Math.max(11,fs-4),ty=by-5;
-    const bearTxt=r.bear_headline||(cmp?'No dominant bearish consensus':'No dominant bearish consensus — analysts hold a range of individual views.');
-    G.push({type:'text',x:ax-8,y:ty,style:{text:bearTxt,fontSize:r.bear_headline&&!bullDom?big:small,fontWeight:r.bear_headline&&!bullDom?'bold':'normal',fill:dn,textAlign:'right',textVerticalAlign:'bottom',width:ax-8-X0,overflow:'break',lineHeight:Math.round(small*1.25)}});
-    G.push({type:'text',x:ax+8,y:ty,style:{text:r.bull_headline||'No dominant bullish consensus',fontSize:bullDom?big:small,fontWeight:bullDom?'bold':'normal',fill:up,textAlign:'left',textVerticalAlign:'bottom',width:X1-ax-8,overflow:'break',lineHeight:Math.round(small*1.25)}});
-    const tip=`<b>${sesc(r.display||r.symbol)}</b> · ${sesc(r.name)}<br>Bull ${(r.bull*100).toFixed(1)}% · bear ${((1-r.bull)*100).toFixed(1)}%<br>95% band: ${(r.lo*100).toFixed(0)}–${(r.hi*100).toFixed(0)}% bull<br>${r.posts} posts + ${r.news} news scanned · ${r.classified} classified (${r.n_bull} bull / ${r.n_bear} bear)`;
-    G.push({type:'rect',shape:{x:X0,y:by-8,width:BW,height:bh+16},style:{fill:'rgba(0,0,0,0)'},z:200,onmousemove:e=>wtipShow(e,tip),onmouseout:wtipHide})});
-  const src='Source: '+(SDATA.source||'X posts & news')+', '+sDate(SDATA.asOf)+' · bar = engagement-weighted bull share, hatched = 95% band';
-  const o=base($('stitle').value||'Bull vs bear sentiment',src,'swm');o.graphic.push(...G);chart.clear();chart.setOption(o,true);
-  const st=$('status');st.className=miss.length?'err':'';st.textContent='Data as of '+sDate(SDATA.asOf)+' ('+all.length+' tickers in sentiment.json). Hover a bar for exact numbers.'+(miss.length?' Not in dataset: '+miss.join(', '):'')}
-$('sgo').onclick=()=>sdraw();$('sreload').onclick=()=>{if(!SBUSY)sfetch()};$('stitle').oninput=$('swm').onchange=()=>sdraw();
-$('stickers').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();sdraw()}});
-$('sdl').onclick=()=>{if(MODE!=='sent')return;wtipHide();const a=document.createElement('a');a.href=chart.getDataURL({type:'png',pixelRatio:1,backgroundColor:T.bg});a.download=($('stitle').value||'sentiment').replace(/[^\w]+/g,'_')+'.png';a.click()};
-window.__sdraw=sdraw;
-// ---------- Sentiment "Over time": weekly / rolling-7-day bull share per ticker from sentiment_history.json ----------
-let HDATA=null,HBUSY=false;const HPRICE={};
-const HDAY=()=>$('shgran').value==='daily',HS=()=>(HDATA&&(HDAY()?HDATA.series_daily:HDATA.series))||{};
-async function hfetch(){HBUSY=true;try{const r=await fetch('/api/sentiment_history',{cache:'no-store'});const j=await r.json();if(!r.ok||j.error)throw Error(j.error||r.status);HDATA=j}
-  catch(e){const st=$('status');st.className='err';st.textContent='Error: '+e.message+' — nothing invented.'}HBUSY=false}
-function hsyms(){const S=Object.keys(HS());return $('shist').value.split(/[\s,]+/).map(x=>x.trim().toUpperCase()).filter(x=>S.includes(x))}
-function hpick(){const S=Object.keys(HS()),on=hsyms();  // picker lists only tickers that have history
-  $('shpick').innerHTML=S.map(x=>`<label style="flex-direction:row;align-items:center;gap:4px;font-weight:normal"><input type="checkbox" data-s="${sesc(x)}"${on.includes(x)?' checked':''}>${sesc(x==='BTC-USD'?'BTC':x)}</label>`).join('');
-  $('shpick').querySelectorAll('input').forEach(c=>c.onchange=()=>{$('shist').value=[...$('shpick').querySelectorAll('input:checked')].map(e=>e.dataset.s).join(',');stime()})}
-async function hprice(sym,p1,p2,iv='1wk'){const k=sym+p1+iv;if(HPRICE[k])return HPRICE[k];  // weekly closes through the normal /api/chart path (same fallbacks as Charts)
-  return HPRICE[k]=fetchSym(sym,{p1,p2,iv}).then(d=>d.points).catch(e=>{delete HPRICE[k];throw e})}
-async function stime(){if(MODE!=='sent')return;const seq=++SSEQ;
-  if(!HDATA&&!HBUSY)await hfetch();if(seq!==SSEQ||MODE!=='sent'||!HDATA)return;
-  hpick();let syms=hsyms();if(!syms.length){syms=['MSTR'].filter(x=>HS()[x]);$('shist').value=syms.join(',');hpick()}
-  const DAYMS=864e5,t=x=>Date.parse(x+'T16:00:00Z'),ser=syms.map((x,i)=>({sym:x,label:x==='BTC-USD'?'BTC':x,col:bc(PALETTE[i%PALETTE.length]),pts:HS()[x]})),day=HDAY(),W=day?0.6*DAYMS:4*DAYMS;
-  const t0=Math.min(...ser.map(s=>t(s.pts[0].start))),t1=Math.max(...ser.map(s=>t(s.pts[s.pts.length-1].t)));
-  const wantP=$('sprice').checked,single=ser.length===1,pmiss=[];
-  if(wantP)await Promise.all(ser.map(async s=>{try{const P=await hprice(s.sym,Math.floor(t0/1e3)-7*86400,Math.floor(t1/1e3)+7*86400,day?'1d':'1wk');
-      s.price=P.filter(q=>q[0]>=t0-7*DAYMS&&q[0]<=t1+DAYMS);if(!s.price.length)throw 0;if(!single){const b=s.price[0][1];s.price=s.price.map(q=>[q[0],(q[1]/b-1)*100])}}
-    catch(e){pmiss.push(s.label)}}));
-  if(seq!==SSEQ||MODE!=='sent')return;
-  const pct0=v=>v.toFixed(0)+'%',pfmt=v=>single?'$'+fmtNum(v):(v>=0?'+':'')+v.toFixed(1)+'%';
-  const S=[];ser.forEach((s,i)=>{
-    S.push({type:'line',name:s.label+'~lo',stack:'b'+i,data:s.pts.map(p=>[t(p.t),p.lo*100]),lineStyle:{opacity:0},showSymbol:false,silent:true,z:1});
-    S.push({type:'line',name:s.label+'~band',stack:'b'+i,data:s.pts.map(p=>[t(p.t),(p.hi-p.lo)*100]),lineStyle:{opacity:0},showSymbol:false,silent:true,z:1,
-      areaStyle:{color:s.col,opacity:T.dark?(single?0.22:0.12):(single?0.16:0.08)}});
-    S.push({type:'line',name:s.label,z:3,showSymbol:true,symbolSize:7,lineStyle:{width:3,color:s.col},
-      itemStyle:{color:s.col,borderColor:s.col},  // thin weeks (<8 bull+bear posts) drawn hollow
-      data:s.pts.map(p=>({value:[t(p.t),p.bull*100],symbol:p.thin?'emptyCircle':'circle'})),
-      endLabel:{show:true,fontSize:17,fontWeight:'bold',color:s.col,formatter:q=>s.label+' '+pct0(q.value[1])},labelLayout:{moveOverlap:'shiftY'},
-      ...(i===0?{markLine:{symbol:'none',silent:true,lineStyle:{color:T.axis,width:1.5,type:'dashed'},label:{position:'insideStartTop',color:T.src,fontSize:14,formatter:'50% = even'},data:[{yAxis:50}]}}:{})});
-    if(s.price)S.push({type:'line',name:s.label+' price',yAxisIndex:1,data:s.price,showSymbol:false,z:2,lineStyle:{width:1.8,color:s.col,type:[6,4],opacity:0.85},itemStyle:{color:s.col},
-      endLabel:{show:true,fontSize:14,color:s.col,formatter:q=>s.label+' '+pfmt(q.value[1])},labelLayout:{moveOverlap:'shiftY'}})});
-  const anyP=ser.some(s=>s.price),fmtD=ms=>new Date(ms).toLocaleDateString('en-US',{timeZone:'UTC',month:'short',day:'numeric',year:'numeric'});
-  const src='Source: X posts only (no news), '+fmtD(t0)+' – '+fmtD(t1)+' · '+(day?'daily':'weekly')+' bull share (engagement-weighted) · shaded = 95% band · hollow = thin '+(day?'day':'week')+(day?' · gaps = no data collected':'')+(anyP?' · dashed = '+(day?'daily':'weekly')+' close'+(single?'':', % from start')+' (Yahoo)':'');
-  const o=base($('stitle').value||('Bull share over time: '+ser.map(s=>s.label).join(', ')),src,'swm');
-  o.grid={left:90,right:anyP?230:190,top:120,bottom:80};
-  o.xAxis={type:'time',min:t0,max:t1,axisLabel:{...axLabel,hideOverlap:true},axisLine:{lineStyle:{color:T.axis}},splitLine:{show:false}};
-  o.yAxis=[{type:'value',min:0,max:100,interval:25,axisLabel:{...axLabel,formatter:v=>v+'%'},splitLine:split,name:'Bull share',nameTextStyle:{color:T.src,fontSize:14}},
-    ...(anyP?[{type:'value',scale:true,position:'right',offset:anyP?0:0,axisLabel:{...axLabel,formatter:pfmt},splitLine:{show:false},name:single?'Price':'Price, % from start',nameTextStyle:{color:T.src,fontSize:14}}]:[])];
-  o.series=S;
-  o.tooltip={trigger:'axis',confine:true,transitionDuration:0,backgroundColor:T.dark?'rgba(23,26,32,0.95)':'rgba(255,255,255,0.97)',borderColor:T.axis,textStyle:{color:T.text,fontSize:14},
-    extraCssText:'box-shadow:0 2px 10px rgba(0,0,0,.25);border-radius:6px',axisPointer:{type:'line',lineStyle:{color:T.axis,width:1,type:'dashed'},label:{show:false}},
-    formatter:ps=>{const x=[].concat(ps)[0];if(!x)return'';const at=x.axisValue;let h='',hd='';
-      ser.forEach(s=>{let b=null;for(const p of s.pts){const d=Math.abs(t(p.t)-at);if(d<=W&&(!b||d<b.d))b={p,d}}
-        let pr=null;if(s.price)for(const q of s.price){const d=Math.abs(q[0]-at);if(d<=W&&(!pr||d<pr.d))pr={v:q[1],d}}
-        if(!b&&!pr)return;if(b&&!hd)hd=fmtD(t(b.p.start))+' – '+fmtD(t(b.p.t));
-        h+=`<div style="line-height:1.5;margin-top:3px"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${s.col};margin-right:6px"></span><b>${sesc(s.label)}</b>`+
-          (b?` bull <b style="color:${T.title}">${(b.p.bull*100).toFixed(0)}%</b> <span style="color:${T.src}">(band ${(b.p.lo*100).toFixed(0)}–${(b.p.hi*100).toFixed(0)}% · ${b.p.n_bull} bull / ${b.p.n_bear} bear of ${b.p.posts} posts${b.p.thin?' · thin':''})</span>`:'')+
-          (pr?` · ${single?'close':'price'} <b style="color:${T.title}">${pfmt(pr.v)}</b>`:'')+'</div>'});
-      return h?`<div style="font-weight:600;color:${T.title}">${sesc(hd||fmtD(at))}</div>`+h:''}};
-  chart.clear();chart.setOption(o,true);
-  const st=$('status'),notes=[];if(day){const G=(HDATA.daily_gaps||{});const g=syms.filter(x=>G[x]&&G[x].length);if(g.length)notes.push('Gaps (no daily data collected yet): '+g.map(x=>x+' '+G[x].length+'d').join(', '))}
-  else if(syms.includes('SPCX'))notes.push('SPCX listed on Nasdaq Jun 12 2026: its history starts with the Jun 7–14 week');
-  if(pmiss.length)notes.push('No price data for '+pmiss.join(', ')+' — price line skipped, nothing invented');
-  st.className=pmiss.length?'err':'';st.textContent=ser.map(s=>s.label+': '+s.pts.length+' points').join(' · ')+'. X posts only. Hover for exact numbers.'+(notes.length?' '+notes.join('. ')+'.':'')}
-$('sview').onchange=$('sprice').onchange=()=>sdraw();
-$('shgran').onchange=()=>{hpick();sdraw()};
-$('sreload').addEventListener('click',()=>{if($('sview').value==='time'&&!HBUSY){HDATA=null;stime()}});
-
 // ---------- Price targets: static/price_targets.json (scripts/price_targets.py). Live prices use /api/chart. ----------
 const PTC={navy:'#0B1F3A',orange:'#F7931A',green:'#178A45',red:'#D7263D',hold:'#E08A00',text:'#1C2430',muted:'#6B7280',alt:'#F4F6F8',line:'#E6E9EE'};
 let PTDOC=null,PTLIVE={},PTSEQ=0;
@@ -2193,15 +2077,15 @@ async function paperEnter(fresh){if(MODE!=='paper')return;const seq=++PAPERSEQ,s
 $('paperGo').onclick=()=>{if(MODE==='paper')paperEnter(true)};
 
 // ---------- Themes + saved views (server views.json, or browser localStorage when VIEWS_STORE=browser) ----------
-const VFIELDS=['sview','shgran','shist','sprice','stickers','stitle','swm','wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fmetric2','faxis2','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','ptwm'];
+const VFIELDS=['wtitle','wwm','hsize','hshow','vview','vrange','vtickers','vmetric','vsort','vnames','vtitle','vcolor','vwm','tmetric','ttitle','twm','tickers','names','range','start','end','type','title','color','wm','ftickers','fnames','fmetric','fmetric2','faxis2','fperiod','fy1','fy2','ftype','ftitle','fcolor','fwm','theme','huni','htickers','hrange','hsector','hstable','htitle','hwm','sma20','sma50','sma100','sma200','sma200w','smac','ddbase','ptwm'];
 let VIEWS=[];
 function snap(name){const f={};for(const id of VFIELDS){const e=$(id);if(!e)continue;f[id]=(id==='color'||id==='fcolor'||id==='vcolor')?lineColor(id):(e.type==='checkbox'?e.checked:e.value)}const now=new Date().toISOString(),o={name,mode:MODE,fields:f,saved:now,updated:now};if(MODE==='watch')o.wl=WL.slice();if(MODE==='prices')o.ann=ANN.map(a=>({date:a.date,label:a.label,note:a.note||''}));return o}
 let VSTORE='server';const VLS='chartmaker_views',VLAST='chartmaker_lastview';
 // Saved views are per tab: each view carries .mode and only shows/saves/loads in that tab.
-const VMODES=['prices','fin','heat','tre','val','watch','sent','pt'];
-const vmode=x=>VMODES.includes(x&&x.mode)?x.mode:'prices';
+const VMODES=['prices','fin','heat','tre','val','watch','pt'];
+const vmode=x=>VMODES.includes(x&&x.mode)?x.mode:(x&&x.mode==='sent'?'sent':'prices');
 // Fields each tab owns; applying a view only touches its own tab's fields (+ theme), so other tabs are left alone.
-const VOWN={sent:/^(sview|shist|sprice|stickers|stitle|swm)$/,watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase)$/,pt:/^ptwm$/};
+const VOWN={watch:/^(wtitle|wwm)$/,heat:/^h/,val:/^v/,tre:/^t(?!itle$|ype$|ickers$|heme$)/,fin:/^f/,prices:/^(tickers|names|range|start|end|type|title|color|wm|sma.*|ddbase)$/,pt:/^ptwm$/};
 // Session-only memory of each tab's selected view: a page load/refresh always starts every tab at "— pick a view —".
 const VLASTM={};try{localStorage.removeItem(VLAST)}catch(e){}
 function vremember(name){if(name)VLASTM[MODE]=name;else delete VLASTM[MODE]}
@@ -2231,14 +2115,14 @@ function vlist(){try{wlpicklist()}catch(e){}const v=$('views');if(!v)return;cons
   v.innerHTML='<option value="">— pick a view —</option>'+own.map(([x,i])=>`<option value="${i}">${String(x.name).replace(/</g,'&lt;')}</option>`).join('');
   const i=VLASTM[MODE]?vfind(VLASTM[MODE]):-1;v.value=i>=0?String(i):''}
 // "Load from Watchlist": copies a Watchlist view's tickers into this tab's ticker box. Read-only; never adds to this tab's saved views.
-const WLIN={prices:'tickers',fin:'ftickers',heat:'htickers',val:'vtickers',sent:'stickers'};
+const WLIN={prices:'tickers',fin:'ftickers',heat:'htickers',val:'vtickers'};
 function wlpicklist(){const p=$('wlpick');if(!p)return;const box=$('wlpickbox');box.style.display=WLIN[MODE]?'':'none';
   const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   p.innerHTML='<option value="">— watchlist view —</option><option value="cur">Current watchlist ('+WL.length+')</option>'+VIEWS.map((x,i)=>[x,i]).filter(([x])=>vmode(x)==='watch').map(([x,i])=>Array.isArray(x.wl)&&x.wl.length?`<option value="${i}">${esc(x.name)} (${x.wl.length})</option>`:`<option value="${i}" disabled>${esc(x.name)} (no tickers saved — re-save on Watchlist)</option>`).join('');p.value=''}
 $('wlpick').onchange=()=>{const p=$('wlpick'),v=p.value,id=WLIN[MODE];p.value='';if(!v||!id)return;
   const x=v==='cur'?{wl:WL}:VIEWS[v];if(!x||!Array.isArray(x.wl)||!x.wl.length)return;
   $(id).value=x.wl.join(',');if(MODE==='heat')$('huni').value='custom';if(MODE==='prices'&&$('names'))$('names').value='';if(MODE==='fin'&&$('fnames'))$('fnames').value='';if(MODE==='val'&&$('vnames'))$('vnames').value='';rerender()};
-const WMID={prices:'wm',fin:'fwm',heat:'hwm',tre:'twm',val:'vwm',watch:'wwm',sent:'swm',pt:'ptwm'};
+const WMID={prices:'wm',fin:'fwm',heat:'hwm',tre:'twm',val:'vwm',watch:'wwm',pt:'ptwm'};
 function vapply(x){const m=vmode(x),own=VOWN[m];if(m==='prices'){for(const id of ['sma20','sma50','sma100','sma200','sma200w'])$(id).checked=false;$('smac').value='';$('ddbase').value='range';
   ANN=(Array.isArray(x.ann)?x.ann:[]).filter(a=>a&&a.date&&a.label).slice(0,40).map(a=>({date:String(a.date),label:String(a.label).slice(0,48),note:String(a.note||'').slice(0,80)}));annsave()}
   // Watermark defaults off. A view that omits the field keeps that default; an explicit true/false still wins.
@@ -2266,7 +2150,7 @@ $('theme').onchange=()=>{applyTheme();rerender()};
 window.__vapply=vapply;window.__snap=snap;
 
 // ---------- Ticker autocomplete: suggestions for the token being typed in comma-separated ticker inputs ----------
-(function(){const IDS=['tickers','ftickers','htickers','vtickers','stickers','wadd'];
+(function(){const IDS=['tickers','ftickers','htickers','vtickers','wadd'];
   const box=document.createElement('div');box.id='acbox';box.style.cssText='position:absolute;z-index:9999;background:#fff;border:1px solid #d1d5db;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,.15);font:13px system-ui,sans-serif;display:none;min-width:260px;max-width:420px';document.body.appendChild(box);
   let inp=null,items=[],sel=-1,timer=null,seq=0;const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const tok=e=>{const v=e.value,c=e.selectionStart??v.length,a=v.lastIndexOf(',',c-1)+1,bi=v.indexOf(',',c),b=bi<0?v.length:bi;return{a,b,t:v.slice(a,b).trim()}};
@@ -2313,7 +2197,6 @@ function applyPriceQuery(){
   if(q.has('tickers'))$('tickers').value=q.get('tickers')||'';
   if(q.has('ftickers'))$('ftickers').value=q.get('ftickers')||'';
   if(q.has('vtickers'))$('vtickers').value=q.get('vtickers')||'';
-  if(q.has('stickers'))$('stickers').value=q.get('stickers')||'';
   if(q.has('color'))setLineColor('color',q.get('color')||'');
   if(q.has('fcolor'))setLineColor('fcolor',q.get('fcolor')||'');
   if(q.has('vcolor'))setLineColor('vcolor',q.get('vcolor')||'');
@@ -2321,7 +2204,7 @@ function applyPriceQuery(){
 applyTheme();annDraw();vload();applyPriceQuery();
 window.__render=render; window.__frender=frender; window.__setMode=setMode;
 {let q;try{q=new URLSearchParams(location.search)}catch(e){q=new URLSearchParams()} // ?tab= keeps that tab; ticker deep links keep theirs; otherwise Daily briefing
-  const tabs={briefing:'briefing',daily:'briefing',paper:'paper',prices:'prices',charts:'prices',fin:'fin',financials:'fin',val:'val',valuation:'val',heat:'heat',heatmap:'heat',tre:'tre',treasury:'tre',sent:'sent',sentiment:'sent',cotd:'cotd',pt:'pt',targets:'pt',sheets:'sheets',watch:'watch'};
+  const tabs={briefing:'briefing',daily:'briefing',paper:'paper',prices:'prices',charts:'prices',fin:'fin',financials:'fin',val:'val',valuation:'val',heat:'heat',heatmap:'heat',tre:'tre',treasury:'tre',cotd:'cotd',pt:'pt',targets:'pt',sheets:'sheets',watch:'watch'};
   const asked=tabs[(q.get('tab')||'').toLowerCase()];
   setMode(asked||(q.has('tickers')?'prices':q.has('ftickers')?'fin':q.has('vtickers')?'val':'briefing'))}
 </script><script>try{syncCustomDates()}catch(e){}</script></body></html>
