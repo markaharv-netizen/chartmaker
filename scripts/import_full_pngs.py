@@ -73,6 +73,12 @@ CHART_SUFFIX = re.compile(r"\s+\((\d{1,2})\)(?=(?:\s+\d{4}-\d{2}-\d{2})?\.png$)"
 # bot3 1027111563 ("SpaceX Capex") has a native column chart; its library PNG
 # is Steve's quarterly Python render at
 # static/sheets/full/bot3/1027111563.png.
+# bot3 1921102868 ("Share Count Change") has two native line charts; its
+# library PNG is Steve's Python render at
+# static/sheets/full/bot3/1921102868.png.
+# bot3 970035917 ("Buybacks TTM") has a native column chart; its library PNG
+# is Steve's Python render at
+# static/sheets/full/bot3/970035917.png.
 KEEP_MANUAL_PNGS = {
     ("bot3", 197035552),  # Waymo vs Tesla Robotaxi Fleets
     ("bot2", 855902063),  # 94 BTC treasury monthly flows (Python render)
@@ -82,6 +88,8 @@ KEEP_MANUAL_PNGS = {
     ("bot3", 9000000003),  # Hyperscaler free cash flow (incl. SpaceX) (Python render)
     ("bot3", 318084443),  # SpaceX Free Cash Flow (Python render)
     ("bot3", 1027111563),  # SpaceX Capex (Python render)
+    ("bot3", 1921102868),  # Share Count Change (Python render)
+    ("bot3", 970035917),  # Buybacks TTM (Python render)
 }
 
 
