@@ -102,6 +102,12 @@ EXCLUDED_TABS = retired_charts.library_pairs()
 # blocks Monday's native export from overwriting that PNG. The tab is real, so
 # the catalog row is not sheetless and Open in Sheets stays on.
 # Script: /workspace/fcf/plot_spcx_only.py.
+# ("bot3", 1027111563) is "SpaceX Capex" in My Bot's Sheets: it has a native
+# column chart, but the library PNG is Steve's quarterly Python render (cream
+# background, purple bars, shaded estimates band, no subtitle). KEEP_MANUAL_PNGS
+# blocks Monday's native export from overwriting that PNG. The tab is real, so
+# the catalog row is not sheetless and Open in Sheets stays on.
+# Script: /workspace/fcf/plot_spcx_capex.py.
 # A later catalog rebuild must not drop these.
 PINNED_TABS = {
     ("bot3", 874288811): "Central Bank Ranking",
@@ -114,6 +120,7 @@ PINNED_TABS = {
     ("bot3", 9000000002): "Strategy's accretive swaps, week by week",
     ("bot3", 9000000003): "Hyperscaler free cash flow (incl. SpaceX)",
     ("bot3", 318084443): "SpaceX Free Cash Flow",
+    ("bot3", 1027111563): "SpaceX Capex",
 }
 # Google Sheets sheetId is a non-negative int32 (max 2,147,483,647). A library
 # gid at or above this value is synthetic and can never collide with a real tab.
@@ -747,9 +754,10 @@ def self_test():
     assert ("bot3", 797114604) in live  # NASDAQ Returns by Year
     assert ("bot3", 819961031) in live  # BTC Returns by Year
     assert ("bot3", 318084443) in live  # SpaceX Free Cash Flow
+    assert ("bot3", 1027111563) in live  # SpaceX Capex
     assert ("bot3", 1608741572) not in live  # Bitcoin ETFs Weekly Flows (Python ETF draft)
-    assert len(cat["tabs"]) == 428, len(cat["tabs"])
-    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 93
+    assert len(cat["tabs"]) == 429, len(cat["tabs"])
+    assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 94
     assert sum(1 for t in cat["tabs"] if t.get("book") == "bot2") == 85
     blob = json.dumps(cat)
     assert "201 Nvidia data center revenue" not in blob
@@ -1358,6 +1366,7 @@ def self_test():
             "bot3 gid 9000000002 (Strategy's accretive swaps, week by week): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 9000000003 (Hyperscaler free cash flow (incl. SpaceX)): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 318084443 (SpaceX Free Cash Flow): missing from dump and no existing catalog entry; added the pinned table tab",
+            "bot3 gid 1027111563 (SpaceX Capex): missing from dump and no existing catalog entry; added the pinned table tab",
         }
         assert set(warns2) == pinned_warns, warns2
         assert by_gid2[1145735379].get("thumb") == thumb_rel
