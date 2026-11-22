@@ -187,14 +187,14 @@ class CotdDisplayTest(unittest.TestCase):
             })
             items.append({
                 "sheet": "bot experiments 2",
-                "tab": "9 MSTR preferreds table",
-                "title": "9 MSTR preferreds table",
+                "tab": "10 MSTR convertibles table",
+                "title": "10 MSTR convertibles table",
                 "kind": "table",
                 "chart_n": 1,
                 "picked": "picked note bare table should stay off the card",
                 "matters": "matters note bare",
                 "know": "know note bare stays off the card",
-                "sheet_url": "https://docs.google.com/spreadsheets/d/%s/edit#gid=1714490525" % BOT2,
+                "sheet_url": "https://docs.google.com/spreadsheets/d/%s/edit#gid=1132545646" % BOT2,
             })
             with open(os.path.join(fixture, "cotd", "today.json"), "w", encoding="utf-8") as f:
                 json.dump({
@@ -217,7 +217,7 @@ class CotdDisplayTest(unittest.TestCase):
                     self.assertEqual(shown["titles"][9], "10. Fixture chart 10")
                     self.assertEqual(shown["titles"][17], "18. Average acquisition cost: treasury companies vs. miners")
                     self.assertEqual(shown["titles"][18], "19. Sample table with preview")
-                    self.assertEqual(shown["titles"][19], "20. 9 MSTR preferreds table")
+                    self.assertEqual(shown["titles"][19], "20. 10 MSTR convertibles table")
                     self.assertEqual(shown["imgs"], 19, shown)
                     self.assertEqual(shown["tables"], 2, shown)
                     self.assertEqual(shown["previews"], 1, shown)
@@ -241,7 +241,7 @@ class CotdDisplayTest(unittest.TestCase):
                     self.assertNotIn("recommended", shown["text"].lower())
                     self.assertNotIn("curated", shown["text"].lower())
                     self.assertEqual(shown["favs"][17], "bot2/1078237833/2")
-                    self.assertEqual(shown["favs"][19], "bot2/1714490525/1")
+                    self.assertEqual(shown["favs"][19], "bot2/1132545646/1")
                     narrow = browser.cards(f"{host}/fixture/index.html", width=390, height=800, mobile=True)
                     self.assertEqual(narrow["n"], 20, narrow)
                     self.assertEqual(narrow["hidden"], 0, narrow)

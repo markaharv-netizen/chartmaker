@@ -21,7 +21,7 @@ import server
 from test_cotd_build import Chrome
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ONE = "bot1/200447618/1"
+ONE = "bot1/1718545259/1"
 OTHER = "bot1/310431964/1"  # 338 Utility capex boom; stays in the library
 RETIRED = "bot1/1547332232/1"
 
@@ -272,9 +272,9 @@ class SyncStoreTest(unittest.TestCase):
         self.assertNotIn("327679061", on_disk)
 
     def test_table_key_is_stored_beside_a_chart_key(self):
-        table = "bot2/1714490525/1"
+        table = "bot2/1132545646/1"
         out = server.favorites_write({"ops": [
-            {"op": "add", "k": table, "title": "9 MSTR preferreds table"},
+            {"op": "add", "k": table, "title": "10 MSTR convertibles table"},
             {"op": "add", "k": ONE, "title": "OpenAI"},
         ], "baseRev": 0})
         self.assertEqual(self.keys(out), [table, ONE])
@@ -282,7 +282,7 @@ class SyncStoreTest(unittest.TestCase):
         on_disk = json.load(open(server.VIEWS, encoding="utf-8"))
         items = on_disk["favorites"]["items"]
         self.assertEqual([(x["k"], x["title"]) for x in items], [
-            (table, "9 MSTR preferreds table"),
+            (table, "10 MSTR convertibles table"),
             (ONE, "OpenAI"),
         ])
         again = server.favorites_read()
@@ -427,7 +427,7 @@ class TwoBrowserSyncTest(unittest.TestCase):
     def open_chart(self, cdp):
         cdp.evaluate("document.getElementById('mSheets').click()")
         self.wait(cdp, "document.getElementById('favlocal') && document.getElementById('favlocal').dataset.sync", lambda v: v == "file")
-        cdp.evaluate("""(()=>{const i=document.getElementById('shq');i.value='52 Core goods vs services';i.dispatchEvent(new Event('input'));})()""")
+        cdp.evaluate("""(()=>{const i=document.getElementById('shq');i.value='54 Trimmed vs core PCE';i.dispatchEvent(new Event('input'));})()""")
         self.wait(cdp, "!!document.querySelector('button.fav[data-fav=%s]')" % json.dumps(ONE), lambda v: v is True)
 
     def test_star_on_a_shows_on_b_and_unstar_comes_back(self):

@@ -18,8 +18,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC = os.path.join(ROOT, "static")
 FAVK = "chartmaker_sheet_favs"
 MULTI = "bot2/1078237833"  # 13 BTC cost basis by holder, two charts
-ONE = "bot1/200447618"  # 52 Core goods vs services, one chart that stays in the library
-TABLE = "bot2/1714490525"  # 9 MSTR preferreds table, no charts
+ONE = "bot1/1718545259"  # 54 Trimmed vs core PCE, one chart that stays in the library
+TABLE = "bot2/1132545646"  # 10 MSTR convertibles table, no charts
 ROBOTAXI = "bot2/1670158709"  # table favorite, not tied to today's edition
 
 
@@ -213,16 +213,16 @@ class FavoritesTest(unittest.TestCase):
         self.assertIn("this browser", self.cdp.evaluate("document.getElementById('favlocal').textContent"))
         self.cdp.evaluate("document.getElementById('shfav').click()")
         self.wait("document.querySelectorAll('#shlist .row').length", lambda n: isinstance(n, int) and n > 400)
-        rows = self.search("9 MSTR preferreds table")
-        self.assertEqual(rows, [{"tab": "9 MSTR preferreds table", "keys": [TABLE + "/1"]}])
+        rows = self.search("10 MSTR convertibles table")
+        self.assertEqual(rows, [{"tab": "10 MSTR convertibles table", "keys": [TABLE + "/1"]}])
         label = self.cdp.evaluate("document.querySelector('button.fav').getAttribute('aria-label')")
         self.assertTrue(label.startswith("Add to favorites"))
-        self.assertIn("9 MSTR preferreds table", label)
+        self.assertIn("10 MSTR convertibles table", label)
         self.cdp.evaluate("document.querySelector('button.fav').click()")
         self.wait("localStorage.getItem(%s)||''" % json.dumps(FAVK), lambda raw: TABLE in (raw or ""))
         stored = json.loads(self.cdp.evaluate("localStorage.getItem(%s)" % json.dumps(FAVK)))
         self.assertEqual(stored["items"][0]["k"], TABLE + "/1")
-        self.assertEqual(stored["items"][0]["title"], "9 MSTR preferreds table")
+        self.assertEqual(stored["items"][0]["title"], "10 MSTR convertibles table")
         self.show_favorites()
         fav = self.cdp.evaluate(r"""(() => {
           const r = document.querySelector('#shlist .row');
@@ -232,8 +232,8 @@ class FavoritesTest(unittest.TestCase):
             href: png ? png.getAttribute('href') : ''};
         })()""")
         self.assertEqual(fav["key"], TABLE + "/1")
-        self.assertIn("9 MSTR preferreds table", fav["label"])
-        self.assertIn("1714490525.png", fav["href"])
+        self.assertIn("10 MSTR convertibles table", fav["label"])
+        self.assertIn("1132545646.png", fav["href"])
         self.assertNotIn("_2", fav["href"])
         self.cdp.evaluate("document.getElementById('shfav').click()")
         self.wait("document.querySelectorAll('#shlist .row').length", lambda n: n == 1)
@@ -272,17 +272,17 @@ class FavoritesTest(unittest.TestCase):
           const n=hit=>hit&&hit.ch.n;
           const multi=url(bot2,1078237833);
           const table=cotdChart({title:'editorial table',sheet_url:url(bot2,1670158709)}, SHEETS);
-          const pref=SHEETS.tabs.find(t=>t.book==='bot2'&&t.gid===1714490525);
+          const pref=SHEETS.tabs.find(t=>t.book==='bot2'&&t.gid===1132545646);
           const prefCharts=sheetCharts(pref);
           const held=sheetCharts(SHEETS.tabs.find(t=>t.gid===1078237833)).map(c=>c.n);
           return {
-            one: n(cotdChart({title:'editorial title',sheet_url:url(bot1,200447618)}, SHEETS)),
+            one: n(cotdChart({title:'editorial title',sheet_url:url(bot1,1718545259)}, SHEETS)),
             editorial: cotdChart({title:"Bitcoin's price versus what ETFs, companies and Strategy paid",sheet_url:multi}, SHEETS),
             byN: n(cotdChart({title:"Bitcoin's price versus what ETFs, companies and Strategy paid",chart_n:1,sheet_url:multi}, SHEETS)),
             byN2: n(cotdChart({title:'not a chart title',chart_n:2,sheet_url:multi}, SHEETS)),
             missN: cotdChart({title:'not a chart title',chart_n:9,sheet_url:multi}, SHEETS),
             missNTitle: n(cotdChart({title:'Average acquisition cost: treasury companies vs. miners',chart_n:9,sheet_url:multi}, SHEETS)),
-            missOnSingle: cotdChart({title:'editorial title',chart_n:9,sheet_url:url(bot1,200447618)}, SHEETS),
+            missOnSingle: cotdChart({title:'editorial title',chart_n:9,sheet_url:url(bot1,1718545259)}, SHEETS),
             exact: n(cotdChart({title:'Average acquisition cost: treasury companies vs. miners',sheet_url:multi}, SHEETS)),
             exactOverridden: n(cotdChart({title:'Average acquisition cost: treasury companies vs. miners',chart_n:1,sheet_url:multi}, SHEETS)),
             missing: n(cotdChart({title:'Anthropic',sheet_url:url(bot3,978356289)}, SHEETS)),
@@ -314,7 +314,7 @@ class FavoritesTest(unittest.TestCase):
         self.assertEqual(ident["tableLabel"], "27 Robotaxi coverage table")
         self.assertEqual(ident["tableKey"], ROBOTAXI + "/1")
         self.assertEqual(ident["prefN"], 1)
-        self.assertEqual(ident["prefLabel"], "9 MSTR preferreds table")
+        self.assertEqual(ident["prefLabel"], "10 MSTR convertibles table")
         self.assertTrue(ident["prefSynthetic"])
         self.assertEqual(ident["held"], [1, 2])
 
@@ -401,7 +401,7 @@ class FavoritesTest(unittest.TestCase):
     def test_missing_retired_and_retitled_charts_are_not_shown(self):
         self.open_sheets()
         title = self.cdp.evaluate(
-            "sheetCharts(SHEETS.tabs.find(t=>t.book==='bot1'&&t.gid===200447618))[0].title")
+            "sheetCharts(SHEETS.tabs.find(t=>t.book==='bot1'&&t.gid===1718545259))[0].title")
         payload = {
             "v": 1,
             "items": [
@@ -455,7 +455,7 @@ class FavoritesTest(unittest.TestCase):
         self.cdp.call("Page.reload", {"ignoreCache": True})
         self.wait("document.readyState==='complete' && typeof setMode==='function'", lambda v: v is True)
         self.open_sheets()
-        self.search("52 Core goods vs services")
+        self.search("54 Trimmed vs core PCE")
         self.assertEqual(self.cdp.evaluate(
             "document.querySelector('button.fav').getAttribute('aria-pressed')"), "true")
         stored = json.loads(self.cdp.evaluate("localStorage.getItem(%s)" % json.dumps(FAVK)))
@@ -483,7 +483,7 @@ class FavoritesTest(unittest.TestCase):
         self.cdp.call("Page.reload", {"ignoreCache": True})
         self.wait("document.readyState==='complete' && typeof setMode==='function'", lambda v: v is True)
         self.open_sheets()
-        self.search("52 Core goods vs services")
+        self.search("54 Trimmed vs core PCE")
         state = self.cdp.evaluate(r"""(() => {
           const b=document.querySelector('button.fav');
           return {disabled:b.disabled, pressed:b.getAttribute('aria-pressed'), msg:document.getElementById('favmsg').textContent, raw:localStorage.getItem('chartmaker_sheet_favs')};
@@ -499,7 +499,7 @@ class FavoritesTest(unittest.TestCase):
         self.cdp.call("Page.reload", {"ignoreCache": True})
         self.wait("document.readyState==='complete' && typeof setMode==='function'", lambda v: v is True)
         self.open_sheets()
-        self.search("52 Core goods vs services")
+        self.search("54 Trimmed vs core PCE")
         self.cdp.evaluate(r"""(() => {
           const proto=Storage.prototype, orig=proto.setItem;
           proto.setItem=function(){throw new Error('blocked')};
@@ -521,7 +521,7 @@ class FavoritesTest(unittest.TestCase):
             self.open_sheets()
             msg = self.cdp.evaluate("document.getElementById('favmsg').textContent")
             self.assertIn("blocked storage", msg)
-            self.search("52 Core goods vs services")
+            self.search("54 Trimmed vs core PCE")
             self.assertTrue(self.cdp.evaluate("document.querySelector('button.fav').disabled"))
         finally:
             ident = added.get("identifier")
@@ -530,7 +530,7 @@ class FavoritesTest(unittest.TestCase):
 
     def test_keyboard_and_narrow_layout(self):
         self.open_sheets()
-        self.search("52 Core goods vs services")
+        self.search("54 Trimmed vs core PCE")
         self.cdp.evaluate("document.querySelector('button.fav').focus()")
         self.assertEqual(self.cdp.evaluate("document.activeElement.className"), "fav")
         for kind, text in (("rawKeyDown", ""), ("keyDown", ""), ("char", "\r"), ("keyUp", "")):
