@@ -29,6 +29,31 @@ def crumb(force=False):
         return _crumb[0]
 SHARES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "shares.json")
 SHARES_LIVE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache", "shares_live.json")
+# Weekly share-count refresh commits shares.json (there is no in-repo script for it).
+# After that job adds a ticker, `python3 scripts/refresh_sectors.py --missing` fills
+# static/sectors.json. It fails soft: a Yahoo miss keeps the previous file and exits 0.
+SECTORS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "sectors.json")
+UNCLASSIFIED = "Unclassified"
+_SECDB = [None]
+def sector_map():
+    """{ticker: sector} from static/sectors.json. Empty when the file cannot be read."""
+    if _SECDB[0] is None:
+        try:
+            with open(SECTORS_FILE, encoding="utf-8") as f: _SECDB[0] = json.load(f).get("sectors") or {}
+        except Exception: _SECDB[0] = {}
+    return _SECDB[0]
+def sector_of(sym):
+    """Yahoo assetProfile sector for a stock. Anything missing is Unclassified (no network)."""
+    name = sector_map().get(sym)
+    if isinstance(name, str):
+        name = " ".join(name.split())
+        if name and name.lower() not in ("unclassified", "other", "n/a", "na", "none", "null"): return name
+    return UNCLASSIFIED
+def assign_sector(d):
+    """Set d['sector'] from the static map. Crypto rows keep Crypto."""
+    if d.get("crypto"): d["sector"] = d.get("sector") or "Crypto"
+    else: d["sector"] = sector_of(d.get("symbol") or "")
+    return d
 _SH = [None]
 def shares_db():
     """{sym: [shares, asof, source]}: committed shares.json, overlaid by counts seen in successful v7 quotes (cache/shares_live.json)."""
@@ -315,7 +340,7 @@ def _heatmap(universe, tickers, rng, fresh=False):
     else:
         with ThreadPoolExecutor(8) as ex: res = list(ex.map(lambda d: _safe(range_ret, d["symbol"], rng, fresh), rows))
         for d, v in zip(rows, res): d["chg"] = v; d["since"] = SINCE.get((d["symbol"], rng)); d["stitched"] = STITCH.get((d["symbol"], rng)) or None
-    for d in rows: d["sector"] = SECTOR.get(d["symbol"], "Other")
+    for d in rows: assign_sector(d)
     rows = sorted(rows + crypto, key=lambda d: -(d.get("marketCap") or 0))
     src = "Yahoo Finance" if not crypto else ("CoinGecko" if not syms else "Yahoo Finance, CoinGecko")
     return {"notes": notes, "eq": [d["symbol"] for d in rows if d.get("eqSize")], "sharesAsOf": sorted({d["sharesAsOf"] for d in rows if d.get("sharesAsOf")}), "est": [d["symbol"] + (f" (shares via {d['sharesSrc']})" if d.get("sharesSrc") else "") for d in rows if d.get("mcapEst")], "source": src, "cryptoMixed": bool(crypto and syms), "rows": [d for d in rows if d.get("chg") is not None], "missing": errs + [d["symbol"] for d in rows if d.get("chg") is None],
