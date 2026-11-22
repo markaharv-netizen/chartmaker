@@ -596,8 +596,8 @@ def self_test():
                   "Retirement wave: labor force participation of Americans 55+ vs prime-age (25–54)"),
             sheet("97 MSTR vol vs BTC vol", 1027143376,
                   "Strategy vs bitcoin: 30-day realized volatility"),
-            sheet("52 Core goods vs services", 200447618,
-                  "Core goods vs core services inflation (CPI, YoY)"),
+            sheet("54 Trimmed vs core PCE", 1718545259,
+                  "Underlying inflation: Dallas Fed trimmed-mean PCE vs core PCE"),
             sheet("68 Trade balance % GDP", 1892662496,
                   "US trade balance as % of GDP (goods & services)"),
             sheet("227 Private AI lab valuations", 1459587255,
@@ -629,7 +629,7 @@ def self_test():
     }
     _book, tabs, hidden, excluded = one(doc)
     gids = [t["gid"] for t in tabs]
-    assert gids == [999, 171599627, 1027143376, 200447618, 1892662496], gids
+    assert gids == [999, 171599627, 1027143376, 1718545259, 1892662496], gids
     assert hidden == 1 and excluded == 35, (hidden, excluded)
     assert ("bot1", 333185169) in EXCLUDED_TABS
     assert tab_excluded("bot1", 1547332232) and tab_excluded("bot1", 643299192)
@@ -708,6 +708,28 @@ def self_test():
     assert tab_excluded("bot1", 1708270675)  # 218 AI stocks price-to-sales (retired 2026-11-21)
     assert tab_excluded("bot1", 995219650)  # 248 Low-hire, low-fire (retired 2026-11-21)
     assert tab_excluded("bot1", 1173797512)  # 333 Big Tech net PP&E (retired 2026-11-21)
+    assert tab_excluded("bot1", 2026015579)  # 214 Big Tech operating margins (retired 2026-11-22)
+    assert tab_excluded("bot1", 1254747964)  # 152 Capex as % of cash flow (retired 2026-11-22)
+    assert tab_excluded("bot2", 1714490525)  # 9 MSTR preferreds table (retired 2026-11-22)
+    assert tab_excluded("bot1", 440691485)  # 327 Cloud revenue vs capex (retired 2026-11-22)
+    assert tab_excluded("bot1", 200447618)  # 52 Core goods vs services (retired 2026-11-22)
+    assert tab_excluded("bot1", 895253454)  # 61 Real income vs saving (retired 2026-11-22)
+    assert tab_excluded("bot1", 441584127)  # 305 Tesla free cash flow (retired 2026-11-22)
+    assert tab_excluded("bot1", 1770579175)  # 217 Stock comp % of revenue (retired 2026-11-22)
+    assert tab_excluded("bot1", 117148574)  # 53 Sticky vs flexible CPI (retired 2026-11-22)
+    assert tab_excluded("bot2", 1152913412)  # 48 EV Q2 2026 scoreboard (retired 2026-11-22)
+    assert tab_excluded("bot1", 730955080)  # 51 ECB real rate (retired 2026-11-22)
+    assert tab_excluded("bot1", 700703307)  # 44 Baa-Aaa quality spread (retired 2026-11-22)
+    assert not tab_excluded("bot1", 1718545259)  # 54 Trimmed vs core PCE (kept)
+    assert not tab_excluded("bot1", 1363241271)  # 321 Capex % of cash flow, qtrly (kept)
+    assert not tab_excluded("bot1", 1085148301)  # 328 Cloud revenue per capex $ (kept)
+    assert not tab_excluded("bot1", 978859168)  # 329 Cloud profit vs capex (kept)
+    assert not tab_excluded("bot1", 577053605)  # 207 Hyperscaler free cash flow (kept)
+    assert not tab_excluded("bot2", 1172553519)  # 4 MSTR preferred stack (kept)
+    assert not tab_excluded("bot2", 1268488619)  # 7 MSTR preferred yields (kept)
+    assert not tab_excluded("bot2", 1132545646)  # 10 MSTR convertibles table (kept)
+    assert not tab_excluded("bot2", 2073270825)  # 44 EV deliveries Q3 2026 (kept)
+    assert not tab_excluded("bot1", 1809420114)  # 11 HY spread vs VIX (kept)
     assert not tab_excluded("bot1", 733691549)  # 80 Productivity vs labor costs (kept)
     assert not tab_excluded("bot1", 1798867607)  # 08 Real home prices (kept)
     assert not tab_excluded("bot1", 639374194)  # 13 Real oil price (kept)
@@ -724,11 +746,11 @@ def self_test():
     assert not tab_excluded("bot2", 2055282175)  # 22 Big Tech unbooked leases by co (kept)
     assert not tab_excluded("bot1", 171599627)
     assert not tab_excluded("bot1", 1027143376)
-    assert not tab_excluded("bot1", 200447618)
+    assert not tab_excluded("bot1", 1718545259)  # 54 Trimmed vs core PCE
     assert not tab_excluded("bot1", 829703707)   # 18 Electricity vs CPI
     assert not tab_excluded("bot1", 1892662496)
     assert not tab_excluded("bot1", 1167074374)  # 299 Real yield vs breakeven
-    assert not tab_excluded("bot1", 1254747964)  # 152 Capex as % of cash flow
+    assert not tab_excluded("bot1", 1363241271)  # 321 Capex % of cash flow, qtrly
     assert tab_excluded("bot1", 1328859831)  # 213 Chip gross margins (retired 2026-11-18)
     assert tab_excluded("bot1", 1459587255)  # 227 Private AI lab valuations
     assert tab_excluded("bot1", 727565635)  # 125 Junk vs IG spread ratio
@@ -768,8 +790,8 @@ def self_test():
     live = {(t["book"], t["gid"]) for t in cat["tabs"]}
     for book, gid in EXCLUDED_TABS:
         assert (book, gid) not in live, (book, gid)
-    for gid in (171599627, 1027143376, 200447618, 829703707, 1892662496, 1167074374,
-                1254747964, 2092406374):
+    for gid in (171599627, 1027143376, 1718545259, 829703707, 1892662496, 1167074374,
+                1363241271, 2092406374):
         assert ("bot1", gid) in live, gid
     assert ("bot2", 1713824403) in live  # 55 Capex intensity vs legacy
     assert ("bot2", 645072508) in live
@@ -952,7 +974,7 @@ def self_test():
         "75 CoreWeave backlog vs revenue",
         "97 MSTR vol vs BTC vol",
         "92 MSTR priced in BTC",
-        "52 Core goods vs services",
+        "54 Trimmed vs core PCE",
         "18 Electricity vs CPI",
         "68 Trade balance % GDP",
         "299 Real yield vs breakeven",
@@ -962,9 +984,9 @@ def self_test():
         "296 Stocks vs bonds, 10-yr",
         "157 Real chip prices",
         "160 China vs Mexico vs Taiwan",
-        "44 Baa-Aaa quality spread",
+        "11 HY spread vs VIX",
         "129 60-40 rolling returns",
-        "152 Capex as % of cash flow",
+        "321 Capex % of cash flow, qtrly",
         "55 Capex intensity vs legacy",
         "57 EBITDA margin Tesla vs peers",
         "203 Cloud growth race",
@@ -1177,7 +1199,7 @@ def self_test():
         "static/sheets/thumbs/bot2/530554790.jpg",
         "static/sheets/full/bot1/171599627.png",
         "static/sheets/full/bot1/1027143376.png",
-        "static/sheets/full/bot1/200447618.png",
+        "static/sheets/full/bot1/1718545259.png",
         "static/sheets/full/bot1/829703707.png",
         "static/sheets/full/bot1/1892662496.png",
         "static/sheets/full/bot1/1167074374.png",

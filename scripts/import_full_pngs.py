@@ -474,7 +474,7 @@ def self_test():
             {"book": "bot1", "tab": "131 Refining crack spread", "gid": 327679061, "charts": []},
             {"book": "bot2", "tab": "75 CoreWeave backlog vs revenue", "gid": 530554790, "charts": []},
             {"book": "bot1", "tab": "97 MSTR vol vs BTC vol", "gid": 1027143376, "charts": []},
-            {"book": "bot1", "tab": "52 Core goods vs services", "gid": 200447618, "charts": []},
+            {"book": "bot1", "tab": "54 Trimmed vs core PCE", "gid": 1718545259, "charts": []},
             {"book": "bot1", "tab": "68 Trade balance % GDP", "gid": 1892662496, "charts": []},
             {"book": "bot1", "tab": "299 Real yield vs breakeven", "gid": 1167074374, "charts": []},
             {"book": "bot1", "tab": "18 Electricity vs CPI", "gid": 829703707, "charts": []},
@@ -535,7 +535,7 @@ def self_test():
         kept_new = [
             (os.path.join(mstr_dir, "75 CoreWeave backlog vs revenue.png"), "bot2", "530554790.png"),
             (os.path.join(b1, "97 MSTR vol vs BTC vol.png"), "bot1", "1027143376.png"),
-            (os.path.join(b1, "52 Core goods vs services.png"), "bot1", "200447618.png"),
+            (os.path.join(b1, "54 Trimmed vs core PCE.png"), "bot1", "1718545259.png"),
             (os.path.join(b1, "68 Trade balance % GDP.png"), "bot1", "1892662496.png"),
             (os.path.join(b1, "299 Real yield vs breakeven.png"), "bot1", "1167074374.png"),
             (os.path.join(b1, "18 Electricity vs CPI.png"), "bot1", "829703707.png"),
