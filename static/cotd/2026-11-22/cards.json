@@ -2,59 +2,59 @@
  "date": "2026-11-22",
  "items": [
   {
-   "book": "bot1",
-   "gid": 1274887805,
-   "chart_n": 1,
-   "tab": "28 BTC hashprice",
-   "title": "Bitcoin miners squeezed: hashprice vs hash rate",
-   "kind": "chart",
-   "section": "picks",
-   "description": "Bitcoin hashprice (USD per PH/s per day, 7-day average) against network hash rate since 2019: hash rate keeps climbing while miner revenue per unit of hash stays near its lows.",
-   "reason": "Bitcoin's slide has put miner economics in focus, with analyst estimates of all-in mining cost well above the spot price."
-  },
-  {
    "book": "bot2",
-   "gid": 1078237833,
-   "chart_n": 2,
-   "tab": "13 BTC cost basis by holder",
-   "title": "Average acquisition cost: treasury companies vs. miners",
-   "kind": "chart",
-   "section": "picks",
-   "description": "Average bitcoin acquisition cost of treasury companies, all public companies and public miners, plotted against the BTC price.",
-   "reason": "With bitcoin trading lower, the question is how close the price is to what corporate holders paid."
-  },
-  {
-   "book": "bot1",
-   "gid": 1003143037,
+   "gid": 1379690938,
    "chart_n": 1,
-   "tab": "193 Stocks vs 200-day average",
-   "title": "How stretched are stocks? S&P 500 and Nasdaq-100: % above/below their 200-day moving average",
+   "tab": "29 BTC on exchanges",
+   "title": "Bitcoin on exchanges: 13.3% of supply, down from 16.8% in Aug 2021 (Apr 2026 low was the lowest since May 2018)",
    "kind": "chart",
    "section": "picks",
-   "description": "How far the S&P 500 and Nasdaq-100 sit above or below their 200-day moving averages, weekly since 2019.",
-   "reason": "Tech had one of its worst weeks on record, pulling both indexes back toward their 200-day lines."
-  },
-  {
-   "book": "bot1",
-   "gid": 577053605,
-   "chart_n": 1,
-   "tab": "207 Hyperscaler free cash flow",
-   "title": "AI capex vs cash: free cash flow (operating cash flow minus capex), trailing 4 quarters",
-   "kind": "chart",
-   "section": "picks",
-   "description": "Free cash flow (operating cash flow minus capex, trailing four quarters) for Microsoft, Alphabet, Amazon and Meta. As of Q2 2026, Amazon's trailing FCF was -$11.6bn, while Microsoft, Alphabet and Meta were still positive.",
-   "reason": "Musk warned of an AI cash crunch next year, and this shows how much free cash the hyperscalers have left after the build-out."
+   "description": "Share of all bitcoin held on exchange wallets, monthly since January 2018: 13.3% of supply in October 2026, down from a 16.8% peak in August 2021, with the April 2026 low the lowest since May 2018.",
+   "reason": "On-chain trackers (Lookonchain, EmberCN) flagged Abraxas Capital pulling about 17,597 BTC (~$1.04B, average ~$59,206) off Binance and Kraken during the dip below $60,000, the latest drain on exchange balances."
   },
   {
    "book": "bot3",
-   "gid": 2017072406,
+   "gid": 644674451,
    "chart_n": 1,
-   "tab": "Major Bitcoin Cycles",
-   "title": "Bitcoin Cycle Drawdowns: Peak-to-Trough Recovery Patterns",
+   "tab": "MSTR priced in BTC",
+   "title": "Strategy denominated in BTC (MSTR/BTC)",
    "kind": "chart",
    "section": "picks",
-   "description": "Bitcoin's peak-to-trough drawdowns by cycle, by days since each peak, with the current cycle from October 2025 overlaid.",
-   "reason": "Crypto fear hit extreme levels this weekend; this puts the current drawdown next to past cycles."
+   "description": "Strategy's share price measured in bitcoin (MSTR/BTC) since August 2020: about 0.0016 BTC per share in mid-November 2026, roughly a third of the 0.005 peak in November 2024.",
+   "reason": "Saylor posted his \"dots aren't done\" buy chart this morning, hinting at another purchase on Monday while Strategy's coins sit below their reported ~$75K average cost; this shows how the stock has fared against the bitcoin it holds."
+  },
+  {
+   "book": "bot1",
+   "gid": 1307998812,
+   "chart_n": 1,
+   "tab": "211 Big Tech debt for AI",
+   "title": "Borrowing for AI: total debt at each fiscal year end vs the latest quarter",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Total debt at Oracle, Amazon, Meta, Alphabet, Microsoft and CoreWeave at each fiscal year end since 2021 vs June 2026: Alphabet went from $12bn (FY2024) to $101bn, Amazon from $58bn to $133bn and Meta from $29bn to $84bn, while Microsoft fell to $40bn.",
+   "reason": "Musk warned that the AI build-out could hit a working-capital crunch next year because hardware is paid for up front while revenue lags, and server makers are now repricing signed AI-server contracts. This chart shows how much of the build-out is already being borrowed."
+  },
+  {
+   "book": "bot1",
+   "gid": 406126240,
+   "chart_n": 1,
+   "tab": "303 Tesla R&D intensity",
+   "title": "Tesla R&D spending as a share of revenue, trailing four quarters",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Tesla research and development spending as a share of revenue, trailing four quarters, 2017 to Q3 2026: 8.56% in Q3 2026, up from a 3.46% low in 2023 and the highest since mid-2018.",
+   "reason": "Musk said on Sunday that Tesla's next AI5 chip (roughly 12x the compute of AI4) is going to Optimus while cars stay on AI4. The chip and robot push is showing up in Tesla's rising R&D intensity."
+  },
+  {
+   "book": "bot1",
+   "gid": 860374575,
+   "chart_n": 1,
+   "tab": "274 Missing the best days",
+   "title": "The cost of missing the best days: $10,000 in the S&P 500, Oct 2006 – Oct 2026 (price only)",
+   "kind": "chart",
+   "section": "picks",
+   "description": "What $10,000 in the S&P 500 became from October 2006 to October 2026 (price only): $58,008 fully invested, $25,828 after missing the 10 best days, and $9,973 after missing the 30 best days.",
+   "reason": "After the S&P 500's worst week since April 2025 pushed it into a correction, with PCE and GDP data due in a short Thanksgiving week, this shows what sitting out just a handful of the best days has cost a long-term holder."
   },
   {
    "book": "bot3",
@@ -75,6 +75,15 @@
    "section": "random"
   },
   {
+   "book": "bot3",
+   "gid": 1092720424,
+   "chart_n": 1,
+   "tab": "M1 by country and Bitcoin",
+   "title": "M1 by country and Bitcoin",
+   "kind": "table",
+   "section": "random"
+  },
+  {
    "book": "bot1",
    "gid": 497665546,
    "chart_n": 1,
@@ -84,11 +93,38 @@
    "section": "random"
   },
   {
+   "book": "bot2",
+   "gid": 1397281632,
+   "chart_n": 1,
+   "tab": "63 BTC 200-week ratio",
+   "title": "Bitcoin vs its 200-week average",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
    "book": "bot1",
    "gid": 29052839,
    "chart_n": 1,
    "tab": "167 Interest vs defense",
    "title": "The US now spends more on interest than on defense",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 509379210,
+   "chart_n": 1,
+   "tab": "90 TSLA gross margin vs price",
+   "title": "Tesla gross margin vs share price (quarterly)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 1628691761,
+   "chart_n": 1,
+   "tab": "108 SPCX vs space stocks",
+   "title": "SpaceX vs other listed space stocks since the SPCX IPO (rebased to 100)",
    "kind": "chart",
    "section": "random"
   },
@@ -112,10 +148,37 @@
   },
   {
    "book": "bot1",
+   "gid": 347162127,
+   "chart_n": 1,
+   "tab": "14 Federal interest burden",
+   "title": "A third of federal revenue now goes to interest",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
    "gid": 1144375750,
    "chart_n": 1,
    "tab": "146 USDT vs USDC share",
    "title": "Stablecoin market share: Tether (USDT) vs USD Coin (USDC)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 792345439,
+   "chart_n": 1,
+   "tab": "267 LNG export boom",
+   "title": "The US LNG export boom: LNG exports in Bcf/day and as % of dry gas production (monthly)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot2",
+   "gid": 1333746591,
+   "chart_n": 1,
+   "tab": "67 STRC 30d avg volume",
+   "title": "STRC: 30-day average daily volume",
    "kind": "chart",
    "section": "random"
   },
@@ -130,69 +193,105 @@
   },
   {
    "book": "bot1",
+   "gid": 1470936556,
+   "chart_n": 1,
+   "tab": "171 Money funds vs deposits",
+   "title": "Cash leaving banks? Money market fund assets as % of bank deposits",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot3",
+   "gid": 1832638460,
+   "chart_n": 1,
+   "tab": "Global 10-Year Bonds",
+   "title": "10-Year Government Bond Yields",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot2",
+   "gid": 549787515,
+   "chart_n": 1,
+   "tab": "85 IBIT 30d avg dollar volume",
+   "title": "IBIT 30-day average daily trading volume ($)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
    "gid": 473417358,
    "chart_n": 1,
    "tab": "253 Fed Treasuries vs MBS",
    "title": "Quantitative tightening: the Fed's Treasury vs mortgage-backed securities holdings (weekly)",
    "kind": "chart",
    "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 1892662496,
+   "chart_n": 1,
+   "tab": "68 Trade balance % GDP",
+   "title": "US trade balance as % of GDP (goods & services)",
+   "kind": "chart",
+   "section": "random"
   }
  ],
  "picks": [
   {
-   "book": "bot1",
-   "gid": 1274887805,
-   "chart_n": 1,
-   "tab": "28 BTC hashprice",
-   "title": "Bitcoin miners squeezed: hashprice vs hash rate",
-   "kind": "chart",
-   "section": "picks",
-   "description": "Bitcoin hashprice (USD per PH/s per day, 7-day average) against network hash rate since 2019: hash rate keeps climbing while miner revenue per unit of hash stays near its lows.",
-   "reason": "Bitcoin's slide has put miner economics in focus, with analyst estimates of all-in mining cost well above the spot price."
-  },
-  {
    "book": "bot2",
-   "gid": 1078237833,
-   "chart_n": 2,
-   "tab": "13 BTC cost basis by holder",
-   "title": "Average acquisition cost: treasury companies vs. miners",
-   "kind": "chart",
-   "section": "picks",
-   "description": "Average bitcoin acquisition cost of treasury companies, all public companies and public miners, plotted against the BTC price.",
-   "reason": "With bitcoin trading lower, the question is how close the price is to what corporate holders paid."
-  },
-  {
-   "book": "bot1",
-   "gid": 1003143037,
+   "gid": 1379690938,
    "chart_n": 1,
-   "tab": "193 Stocks vs 200-day average",
-   "title": "How stretched are stocks? S&P 500 and Nasdaq-100: % above/below their 200-day moving average",
+   "tab": "29 BTC on exchanges",
+   "title": "Bitcoin on exchanges: 13.3% of supply, down from 16.8% in Aug 2021 (Apr 2026 low was the lowest since May 2018)",
    "kind": "chart",
    "section": "picks",
-   "description": "How far the S&P 500 and Nasdaq-100 sit above or below their 200-day moving averages, weekly since 2019.",
-   "reason": "Tech had one of its worst weeks on record, pulling both indexes back toward their 200-day lines."
-  },
-  {
-   "book": "bot1",
-   "gid": 577053605,
-   "chart_n": 1,
-   "tab": "207 Hyperscaler free cash flow",
-   "title": "AI capex vs cash: free cash flow (operating cash flow minus capex), trailing 4 quarters",
-   "kind": "chart",
-   "section": "picks",
-   "description": "Free cash flow (operating cash flow minus capex, trailing four quarters) for Microsoft, Alphabet, Amazon and Meta. As of Q2 2026, Amazon's trailing FCF was -$11.6bn, while Microsoft, Alphabet and Meta were still positive.",
-   "reason": "Musk warned of an AI cash crunch next year, and this shows how much free cash the hyperscalers have left after the build-out."
+   "description": "Share of all bitcoin held on exchange wallets, monthly since January 2018: 13.3% of supply in October 2026, down from a 16.8% peak in August 2021, with the April 2026 low the lowest since May 2018.",
+   "reason": "On-chain trackers (Lookonchain, EmberCN) flagged Abraxas Capital pulling about 17,597 BTC (~$1.04B, average ~$59,206) off Binance and Kraken during the dip below $60,000, the latest drain on exchange balances."
   },
   {
    "book": "bot3",
-   "gid": 2017072406,
+   "gid": 644674451,
    "chart_n": 1,
-   "tab": "Major Bitcoin Cycles",
-   "title": "Bitcoin Cycle Drawdowns: Peak-to-Trough Recovery Patterns",
+   "tab": "MSTR priced in BTC",
+   "title": "Strategy denominated in BTC (MSTR/BTC)",
    "kind": "chart",
    "section": "picks",
-   "description": "Bitcoin's peak-to-trough drawdowns by cycle, by days since each peak, with the current cycle from October 2025 overlaid.",
-   "reason": "Crypto fear hit extreme levels this weekend; this puts the current drawdown next to past cycles."
+   "description": "Strategy's share price measured in bitcoin (MSTR/BTC) since August 2020: about 0.0016 BTC per share in mid-November 2026, roughly a third of the 0.005 peak in November 2024.",
+   "reason": "Saylor posted his \"dots aren't done\" buy chart this morning, hinting at another purchase on Monday while Strategy's coins sit below their reported ~$75K average cost; this shows how the stock has fared against the bitcoin it holds."
+  },
+  {
+   "book": "bot1",
+   "gid": 1307998812,
+   "chart_n": 1,
+   "tab": "211 Big Tech debt for AI",
+   "title": "Borrowing for AI: total debt at each fiscal year end vs the latest quarter",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Total debt at Oracle, Amazon, Meta, Alphabet, Microsoft and CoreWeave at each fiscal year end since 2021 vs June 2026: Alphabet went from $12bn (FY2024) to $101bn, Amazon from $58bn to $133bn and Meta from $29bn to $84bn, while Microsoft fell to $40bn.",
+   "reason": "Musk warned that the AI build-out could hit a working-capital crunch next year because hardware is paid for up front while revenue lags, and server makers are now repricing signed AI-server contracts. This chart shows how much of the build-out is already being borrowed."
+  },
+  {
+   "book": "bot1",
+   "gid": 406126240,
+   "chart_n": 1,
+   "tab": "303 Tesla R&D intensity",
+   "title": "Tesla R&D spending as a share of revenue, trailing four quarters",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Tesla research and development spending as a share of revenue, trailing four quarters, 2017 to Q3 2026: 8.56% in Q3 2026, up from a 3.46% low in 2023 and the highest since mid-2018.",
+   "reason": "Musk said on Sunday that Tesla's next AI5 chip (roughly 12x the compute of AI4) is going to Optimus while cars stay on AI4. The chip and robot push is showing up in Tesla's rising R&D intensity."
+  },
+  {
+   "book": "bot1",
+   "gid": 860374575,
+   "chart_n": 1,
+   "tab": "274 Missing the best days",
+   "title": "The cost of missing the best days: $10,000 in the S&P 500, Oct 2006 – Oct 2026 (price only)",
+   "kind": "chart",
+   "section": "picks",
+   "description": "What $10,000 in the S&P 500 became from October 2006 to October 2026 (price only): $58,008 fully invested, $25,828 after missing the 10 best days, and $9,973 after missing the 30 best days.",
+   "reason": "After the S&P 500's worst week since April 2025 pushed it into a correction, with PCE and GDP data due in a short Thanksgiving week, this shows what sitting out just a handful of the best days has cost a long-term holder."
   }
  ],
  "random": [
@@ -215,6 +314,15 @@
    "section": "random"
   },
   {
+   "book": "bot3",
+   "gid": 1092720424,
+   "chart_n": 1,
+   "tab": "M1 by country and Bitcoin",
+   "title": "M1 by country and Bitcoin",
+   "kind": "table",
+   "section": "random"
+  },
+  {
    "book": "bot1",
    "gid": 497665546,
    "chart_n": 1,
@@ -224,11 +332,38 @@
    "section": "random"
   },
   {
+   "book": "bot2",
+   "gid": 1397281632,
+   "chart_n": 1,
+   "tab": "63 BTC 200-week ratio",
+   "title": "Bitcoin vs its 200-week average",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
    "book": "bot1",
    "gid": 29052839,
    "chart_n": 1,
    "tab": "167 Interest vs defense",
    "title": "The US now spends more on interest than on defense",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 509379210,
+   "chart_n": 1,
+   "tab": "90 TSLA gross margin vs price",
+   "title": "Tesla gross margin vs share price (quarterly)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 1628691761,
+   "chart_n": 1,
+   "tab": "108 SPCX vs space stocks",
+   "title": "SpaceX vs other listed space stocks since the SPCX IPO (rebased to 100)",
    "kind": "chart",
    "section": "random"
   },
@@ -252,10 +387,37 @@
   },
   {
    "book": "bot1",
+   "gid": 347162127,
+   "chart_n": 1,
+   "tab": "14 Federal interest burden",
+   "title": "A third of federal revenue now goes to interest",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
    "gid": 1144375750,
    "chart_n": 1,
    "tab": "146 USDT vs USDC share",
    "title": "Stablecoin market share: Tether (USDT) vs USD Coin (USDC)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 792345439,
+   "chart_n": 1,
+   "tab": "267 LNG export boom",
+   "title": "The US LNG export boom: LNG exports in Bcf/day and as % of dry gas production (monthly)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot2",
+   "gid": 1333746591,
+   "chart_n": 1,
+   "tab": "67 STRC 30d avg volume",
+   "title": "STRC: 30-day average daily volume",
    "kind": "chart",
    "section": "random"
   },
@@ -270,10 +432,46 @@
   },
   {
    "book": "bot1",
+   "gid": 1470936556,
+   "chart_n": 1,
+   "tab": "171 Money funds vs deposits",
+   "title": "Cash leaving banks? Money market fund assets as % of bank deposits",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot3",
+   "gid": 1832638460,
+   "chart_n": 1,
+   "tab": "Global 10-Year Bonds",
+   "title": "10-Year Government Bond Yields",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot2",
+   "gid": 549787515,
+   "chart_n": 1,
+   "tab": "85 IBIT 30d avg dollar volume",
+   "title": "IBIT 30-day average daily trading volume ($)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
    "gid": 473417358,
    "chart_n": 1,
    "tab": "253 Fed Treasuries vs MBS",
    "title": "Quantitative tightening: the Fed's Treasury vs mortgage-backed securities holdings (weekly)",
+   "kind": "chart",
+   "section": "random"
+  },
+  {
+   "book": "bot1",
+   "gid": 1892662496,
+   "chart_n": 1,
+   "tab": "68 Trade balance % GDP",
+   "title": "US trade balance as % of GDP (goods & services)",
    "kind": "chart",
    "section": "random"
   }
