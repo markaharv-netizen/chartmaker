@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "generated": "2026-11-17T13:57:49Z",
+  "supported": true,
+  "book": "bot1",
+  "gid": 1214530761,
+  "n": 1,
+  "chartId": 1802784037,
+  "title": "SpaceX R&D spending by segment (USD bn): Starship vs Starlink vs AI",
+  "subtitle": "",
+  "type": "column",
+  "horizontal": false,
+  "stacked": "stacked",
+  "connectNulls": false,
+  "legend": true,
+  "categories": [
+    "2023",
+    "2024",
+    "2025",
+    "TTM Sep '26"
+  ],
+  "x": {
+    "title": "Period (TTM = 4 quarters to Jun 30 2026)"
+  },
+  "y": [
+    {
+      "title": "USD bn",
+      "format": "number",
+      "log": false
+    }
+  ],
+  "series": [
+    {
+      "name": "Space R&D (USD bn)",
+      "type": "column",
+      "axis": "left",
+      "color": "#1F3A93",
+      "data": [
+        1.538,
+        1.835,
+        3.004,
+        4.167
+      ],
+      "labels": false,
+      "smooth": false,
+      "step": false
+    },
+    {
+      "name": "Connectivity (Starlink) R&D (USD bn)",
+      "type": "column",
+      "axis": "left",
+      "color": "#1F77B4",
+      "data": [
+        0.381,
+        0.453,
+        0.575,
+        0.855
+      ],
+      "labels": false,
+      "smooth": false,
+      "step": false
+    },
+    {
+      "name": "AI (xAI, X) R&D (USD bn)",
+      "type": "column",
+      "axis": "left",
+      "color": "#000000",
+      "data": [
+        0.186,
+        1.176,
+        5.064,
+        9.473
+      ],
+      "labels": false,
+      "smooth": false,
+      "step": false
+    }
+  ],
+  "source": "Bot experiments \u00b7 320 SpaceX R&D by segment",
+  "tab": "320 SpaceX R&D by segment",
+  "workbook": "Bot experiments"
+}

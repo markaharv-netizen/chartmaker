@@ -844,7 +844,7 @@ def self_test():
                 1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                 1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                 1192979444, 1912487083, 664060481, 1778640335,
-                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 847095656, 1694432360, 1421725187, 1607076800, 1924940296, 1966044875, 1161030254, 1540677114, 100750083, 1266156625, 2132226252, 722028700, 1483938898, 965739722, 1708270675, 995219650, 1173797512, 2026015579, 1254747964, 440691485, 200447618, 895253454, 441584127, 1770579175, 117148574, 730955080, 700703307):
+                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 847095656, 1694432360, 1421725187, 1607076800, 1924940296, 1966044875, 1161030254, 1540677114, 100750083, 1266156625, 2132226252, 722028700, 1483938898, 965739722, 1708270675, 995219650, 1173797512, 2026015579, 1254747964, 440691485, 200447618, 895253454, 441584127, 1770579175, 117148574, 730955080, 700703307, 992343092, 609140004, 1809420114, 829703707, 557813776, 1444647589, 1754119588):
         assert pick_excluded({"spreadsheetId": bot1, "gid": gid}), gid
     assert pick_excluded({"spreadsheetId": bot2, "gid": 418894352})
     assert pick_excluded({"spreadsheetId": bot2, "gid": 1794999542})
@@ -855,6 +855,8 @@ def self_test():
     assert pick_excluded({"spreadsheetId": bot2, "gid": 841222865})  # 18 Big Tech unbooked DC leases (retired 2026-11-20)
     assert pick_excluded({"spreadsheetId": bot2, "gid": 1714490525})  # 9 MSTR preferreds table (retired 2026-11-22)
     assert pick_excluded({"spreadsheetId": bot2, "gid": 1152913412})  # 48 EV Q2 2026 scoreboard (retired 2026-11-22)
+    assert pick_excluded({"spreadsheetId": bot2, "gid": 474108036})  # 20 Microsoft lease liabilities (retired 2026-11-23)
+    assert pick_excluded({"spreadsheetId": bot2, "gid": 1901004927})  # 58 Profitable quarters since 2021 (retired 2026-11-23)
     assert not pick_excluded({"spreadsheetId": "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU", "gid": 1536200109})
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1476428159})
     assert pick_excluded({"spreadsheetId": bot1, "gid": 189736118})
@@ -930,7 +932,7 @@ def self_test():
     # Neighbors that stay: Korea/Taiwan's neighbor, CoreWeave backlog, CPI charts, trade balance, real yield.
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 171599627})
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1718545259})  # 54 Trimmed vs core PCE
-    assert not pick_excluded({"spreadsheetId": bot1, "gid": 829703707})  # 18 Electricity vs CPI
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 829703707})  # 18 Electricity vs CPI (retired 2026-11-23)
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1892662496})  # 68 Trade balance % GDP
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1167074374})  # 299 Real yield vs breakeven
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1027143376})  # 97 MSTR vol vs BTC vol
@@ -944,7 +946,7 @@ def self_test():
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 1713824403})  # 55 Capex intensity vs legacy
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 82966268})  # 57 EBITDA margin Tesla vs peers
     assert pick_excluded({"spreadsheetId": bot1, "gid": 727565635})  # 125 Junk vs IG spread ratio
-    assert not pick_excluded({"spreadsheetId": bot1, "gid": 557813776})  # 129 60-40 rolling returns
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 557813776})  # 129 60-40 rolling returns (retired 2026-11-23)
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 134436208})  # 203 Cloud growth race
     assert pick_excluded({"spreadsheetId": bot1, "gid": 965739722})  # 205 Meta Reality Labs losses (retired 2026-11-21)
     assert not pick_excluded({"spreadsheetId": bot1, "gid": ""})
@@ -974,7 +976,7 @@ def self_test():
         today_blob = json.dumps(today_doc)
     assert "645072508" in catalog_blob
     assert "645072508" not in today_blob
-    for gid in (530554790, 1718545259, 829703707, 1892662496, 1167074374, 978356289, 1713824403, 82966268, 557813776, 134436208):
+    for gid in (530554790, 1718545259, 397488583, 1892662496, 1167074374, 978356289, 1713824403, 82966268, 1546024641, 134436208):
         assert str(gid) in catalog_blob, gid
     # The published edition moves every day. Check its shape against that date,
     # not against the edition that happened to be current when this test was written.
