@@ -175,7 +175,7 @@ class TreasuryBtcFlowsTest(unittest.TestCase):
         with open(os.path.join(ROOT, "static", "index.html"), encoding="utf-8") as fh:
             html = fh.read()
         self.assertIn("function sheetListedWithCharts(t){", html)
-        self.assertIn("(String(t.book)==='bot2'&&Number(t.gid)===855902063)", html)
+        self.assertIn("(String(t.book)==='bot2'&&(Number(t.gid)===855902063||Number(t.gid)===978808662))", html)
         self.assertIn(
             "if(need&&!sheetCharts(t).some(c=>!c.synthetic)&&!sheetListedWithCharts(t))return false;",
             html,

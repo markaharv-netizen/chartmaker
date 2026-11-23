@@ -118,6 +118,12 @@ EXCLUDED_TABS = retired_charts.library_pairs()
 # subtitle). KEEP_MANUAL_PNGS blocks Monday's native export from overwriting
 # that PNG. The tab is real, so the catalog row is not sheetless and Open in
 # Sheets stays on. Script: /workspace/buybacks/plot_buybacks.py.
+# ("bot2", 978808662) is "84 STRC buybacks share of volume" in bot
+# experiments 2: it has a native column chart, but the library PNG is Steve's
+# Python render (orange bars, 0-100% axis, end labels, @thepowerfulHRV).
+# KEEP_MANUAL_PNGS blocks Monday's native export from overwriting that PNG.
+# The tab is real, so the catalog row is not sheetless and Open in Sheets
+# stays on. Script: /workspace/strc_buyback_share/plot_strc_buyback_share.py.
 # A later catalog rebuild must not drop these.
 PINNED_TABS = {
     ("bot3", 874288811): "Central Bank Ranking",
@@ -133,6 +139,7 @@ PINNED_TABS = {
     ("bot3", 1027111563): "SpaceX Capex",
     ("bot3", 1921102868): "Share Count Change",
     ("bot3", 970035917): "Buybacks TTM",
+    ("bot2", 978808662): "84 STRC buybacks share of volume",
 }
 # Google Sheets sheetId is a non-negative int32 (max 2,147,483,647). A library
 # gid at or above this value is synthetic and can never collide with a real tab.
@@ -1425,6 +1432,7 @@ def self_test():
         # Restoring them warns; that is the pinned-tab behavior, not a bad rebuild.
         pinned_warns = {
             "bot2 gid 855902063 (94 BTC treasury monthly flows): missing from dump and no existing catalog entry; added the pinned table tab",
+            "bot2 gid 978808662 (84 STRC buybacks share of volume): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 197035552 (Waymo vs Tesla Robotaxi Fleets): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 1408701012 (Waymo vs Tesla Texas): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 874288811 (Central Bank Ranking): missing from dump and no existing catalog entry; added the pinned table tab",
