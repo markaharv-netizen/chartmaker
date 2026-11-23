@@ -477,7 +477,7 @@ def self_test():
             {"book": "bot1", "tab": "54 Trimmed vs core PCE", "gid": 1718545259, "charts": []},
             {"book": "bot1", "tab": "68 Trade balance % GDP", "gid": 1892662496, "charts": []},
             {"book": "bot1", "tab": "299 Real yield vs breakeven", "gid": 1167074374, "charts": []},
-            {"book": "bot1", "tab": "18 Electricity vs CPI", "gid": 829703707, "charts": []},
+            {"book": "bot1", "tab": "331 Big Tech D&A per quarter", "gid": 397488583, "charts": []},
         ])
         with open(os.path.join(repo, "static", "sheets", "catalog.json"), "w", encoding="utf-8") as f:
             json.dump(catalog, f)
@@ -538,7 +538,7 @@ def self_test():
             (os.path.join(b1, "54 Trimmed vs core PCE.png"), "bot1", "1718545259.png"),
             (os.path.join(b1, "68 Trade balance % GDP.png"), "bot1", "1892662496.png"),
             (os.path.join(b1, "299 Real yield vs breakeven.png"), "bot1", "1167074374.png"),
-            (os.path.join(b1, "18 Electricity vs CPI.png"), "bot1", "829703707.png"),
+            (os.path.join(b1, "331 Big Tech D&A per quarter.png"), "bot1", "397488583.png"),
         ]
         for path in (kept, china, red_dot):
             with open(path, "wb") as f:

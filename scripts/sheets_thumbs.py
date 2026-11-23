@@ -557,7 +557,7 @@ def self_test():
         {"book": "bot1", "tab": "54 Trimmed vs core PCE", "gid": 1718545259, "charts": []},
         {"book": "bot1", "tab": "68 Trade balance % GDP", "gid": 1892662496, "charts": []},
         {"book": "bot1", "tab": "299 Real yield vs breakeven", "gid": 1167074374, "charts": []},
-        {"book": "bot1", "tab": "18 Electricity vs CPI", "gid": 829703707, "charts": []},
+        {"book": "bot1", "tab": "331 Big Tech D&A per quarter", "gid": 397488583, "charts": []},
     ]
     def f(path, parent, mtime, explicit=None):
         return {"path": path, "name": os.path.basename(path), "parent": parent, "mtime": mtime, "explicit": explicit}
@@ -633,7 +633,7 @@ def self_test():
         f("/e/54 Trimmed vs core PCE.png", "", 10, None),
         f("/e/68 Trade balance % GDP.png", "", 10, None),
         f("/e/299 Real yield vs breakeven.png", "", 10, None),
-        f("/e/18 Electricity vs CPI.png", "", 10, None),
+        f("/e/331 Big Tech D&A per quarter.png", "", 10, None),
     ]
     # The second MSTR file is a different path; basename collides in this list on purpose.
     files[5]["path"] = "/wrong/MSTR Volume.png"
@@ -723,7 +723,7 @@ def self_test():
     assert winner(1718545259)[1] == "tab"
     assert winner(1892662496)[1] == "tab"
     assert winner(1167074374)[1] == "tab"
-    assert winner(829703707)[1] == "tab"
+    assert winner(397488583)[1] == "tab"
     # Newest mtime when the date is the same.
     files2 = [
         f("/e/MSTR Volume 2026-10-21.png", "", 10, None),
