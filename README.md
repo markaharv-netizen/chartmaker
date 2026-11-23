@@ -8,7 +8,7 @@ Use: tickers (comma-separated, e.g. `NBIS,CRWV,BTC-USD`), optional display names
 type (price line, % change indexed to start, candles + volume for one ticker, bar ranking of % return, ratio A/B with exactly two tickers), title, color, watermark toggle.
 Line color on Charts, the one-series color on Financials, and bar color on Valuation share one list. Orange (`#F7931A`) is still the default and violet (`#8B5CF6`) is still the second choice. The list also includes the comparison palette (sky, green, red, ink, pink, teal) plus blue, olive, magenta, and brown. The control is one dropdown; Custom shows a color input and hex field only after that option is chosen. One series uses the picked color. Several series keep the old palette order for the first eight, then the extra hues. A saved view stores the hex, so an older orange or violet choice still applies. `?color=`, `?fcolor=`, and `?vcolor=` set the same hex. Dark themes brighten the named colors, and a custom hex is lightened or darkened only when it would vanish. Download PNG uses the color on screen.
 "Download PNG" exports 1600x900 at 2x (3200x1800). Status bar shows "data as of" (ET); fetch failures show an error and render nothing.
-Render on Price, Heatmap, Treasury, and Valuation fetches fresh data (the separate Refresh button is gone). Price, Financials, and Valuation are in the Chart type dropdown on the same top row as the other tabs (default label Chart type...; the page still opens on Daily briefing). Price is the old Charts/Prices view: `?tab=price`, `?tab=prices`, and `?tab=charts` all open it, and `?tickers=` still does too.
+Render on Price, Heatmap, Treasury, and Valuation fetches fresh data (the separate Refresh button is gone). The top row is Daily briefing, a Chart dropdown, a Views dropdown, Charts of the day, and Sheets (the page still opens on Daily briefing). Chart (placeholder label Chart) holds Price, Financials, Valuation, and Watchlist. Views (placeholder label Views) holds Heatmap, BTC Treasury, Price targets, and Paper trading. Price is the old Charts/Prices view: `?tab=price`, `?tab=prices`, and `?tab=charts` all open it, and `?tickers=` still does too. `?tab=watch` and `?tab=watchlist` open Watchlist.
 
 ## Treasury tab
 
@@ -30,7 +30,7 @@ Notes: YTD baseline = last close of prior year. 5Y uses weekly bars, Max monthly
 Re-run samples: `python3 shoot.py` (uses /usr/bin/google-chrome).
 
 ## Financials mode (v2)
-Pick Financials from the Chart type dropdown. Data: SEC EDGAR XBRL companyfacts (primary source), ticker→CIK via company_tickers.json,
+Pick Financials from the Chart dropdown. Data: SEC EDGAR XBRL companyfacts (primary source), ticker→CIK via company_tickers.json,
 cached in `cache/` for 24h (User-Agent `Chartmaker mark.a.harv@gmail.com`). Code in `fin.py`, endpoint `/api/fin?symbol=&metric=&period=quarterly|annual|ttm&y1=&y2=`.
 Metrics: revenue, gross/operating/net income, EPS diluted, OCF, capex, FCF (OCF−capex), cash, total debt, shares, R&D, gross/operating/net margin %.
 Quarterly values missing from filings are derived from YTD differences (Q4 = FY − 9M); TTM = sum of 4 consecutive quarters. Derived cells are marked `*` in the table (hover for tag/form/derivation).
@@ -211,7 +211,7 @@ Then commit `static/paper_trading.json`. `python3 scripts/paper_trading.py --sel
 
 ## Daily briefing
 
-The **Daily briefing** tab is the page the app opens on. It is a reverse-chronological archive of Lloyd's 9 AM ET news briefing. The newest briefing is expanded; older ones are collapsed. `?tab=` still opens that tab (`?tab=watch` is Watchlist, `?tab=paper` is the paper book, `?tab=price`, `?tab=prices`, and `?tab=charts` are Price, and the same for the others). `?tickers=`, `?ftickers=`, and `?vtickers=` still open Price, Financials, and Valuation.
+The **Daily briefing** tab is the page the app opens on. It is a reverse-chronological archive of Lloyd's 9 AM ET news briefing. The newest briefing is expanded; older ones are collapsed. `?tab=` still opens that view (`?tab=watch` and `?tab=watchlist` are Watchlist in the Chart dropdown, `?tab=paper` is Paper trading in the Views dropdown, `?tab=price`, `?tab=prices`, and `?tab=charts` are Price, and the same for the others). `?tickers=`, `?ftickers=`, and `?vtickers=` still open Price, Financials, and Valuation.
 
 `GET /api/briefing` reads `data/lloyd_briefings.json`. Render does not call Gmail. A daily routine appends today's briefing and commits the file to main:
 
@@ -232,7 +232,7 @@ python3 scripts/briefing.py --json
 python3 scripts/briefing.py --self-test
 ```
 
-Price targets, BTC Treasury, and Charts of the day stay on their own tabs. The refresh scripts still append `static/price_targets_history.json` and `btctop100_history.json`.
+Price targets and BTC Treasury live in the Views dropdown; Charts of the day stays on its own tab. The refresh scripts still append `static/price_targets_history.json` and `btctop100_history.json`.
 
 ## Sentiment tab (retired)
 
