@@ -1,4 +1,4 @@
-"""Line colors and the Charts tab name.
+"""Line colors and the Chart type dropdown (Price was Charts).
 
 The palette, the custom hex, saved orange/violet values, and ?tab=prices stay
 compatible. Download PNG uses the color the chart actually draws.
@@ -115,10 +115,19 @@ class LineColorSourceTest(unittest.TestCase):
 
     def test_charts_tab_keeps_the_prices_link(self):
         html = _html()
-        self.assertIn('id="mPrices" title="Price lines, percent change, candles, and ratios">Charts</button>', html)
+        self.assertIn('id="mChartType"', html)
+        self.assertIn(">Chart type...</option>", html)
+        self.assertIn('<option value="prices">Price</option>', html)
+        self.assertIn('<option value="fin">Financials</option>', html)
+        self.assertIn('<option value="val">Valuation</option>', html)
+        self.assertNotIn('id="mPrices"', html)
+        self.assertNotIn('id="mFin"', html)
+        self.assertNotIn('id="mVal"', html)
+        self.assertNotIn(">Charts</button>", html)
         self.assertNotIn(">Prices</button>", html)
         self.assertIn("prices:'prices'", html)
         self.assertIn("charts:'prices'", html)
+        self.assertIn("price:'prices'", html)
         self.assertIn("q.has('tickers')?'prices'", html)
         self.assertNotIn("colorSwatches", html)
         self.assertNotIn('class="swatches"', html)
@@ -166,8 +175,10 @@ class LineColorBrowserTest(unittest.TestCase):
   const menu = document.getElementById('colorMenu');
   const opts = [...menu.querySelectorAll('[role=option]')].map(o => [o.dataset.c, o.textContent.trim(), !!o.querySelector('.chip')]);
   return {
-    tab: document.getElementById('mPrices').textContent,
-    on: document.getElementById('mPrices').classList.contains('on'),
+    tab: document.getElementById('mChartType').options[document.getElementById('mChartType').selectedIndex].text,
+    chartValue: document.getElementById('mChartType').value,
+    on: document.getElementById('mChartType').classList.contains('on'),
+    placeholder: document.getElementById('mChartType').options[0].text,
     ctl: getComputedStyle(document.getElementById('ctl')).display,
     fin: getComputedStyle(document.getElementById('fctl')).display,
     value: lineColor('color'),
@@ -184,7 +195,9 @@ class LineColorBrowserTest(unittest.TestCase):
   };
 })()
 """)
-        self.assertEqual(ui["tab"], "Charts")
+        self.assertEqual(ui["tab"], "Price")
+        self.assertEqual(ui["chartValue"], "prices")
+        self.assertEqual(ui["placeholder"], "Chart type...")
         self.assertTrue(ui["on"])
         self.assertEqual(ui["ctl"], "flex")
         self.assertEqual(ui["fin"], "none")
@@ -359,10 +372,11 @@ class LineColorBrowserTest(unittest.TestCase):
     menuLeft: mr.left, menuRight: mr.right, opened, optH: opt.height, keyed,
     afterCustom: lineColor('color'), customShown: !document.getElementById('colorCustom').hidden,
     menuClosed: menu.hidden, hex: document.getElementById('colorHex').getBoundingClientRect().height,
-    tab: document.getElementById('mPrices').textContent};
+    tab: document.getElementById('mChartType').options[document.getElementById('mChartType').selectedIndex].text, chartValue: document.getElementById('mChartType').value};
 })()
 """)
-        self.assertEqual(box["tab"], "Charts")
+        self.assertEqual(box["tab"], "Price")
+        self.assertEqual(box["chartValue"], "prices")
         self.assertGreaterEqual(box["left"], -1)
         self.assertLessEqual(box["right"], box["inner"] + 1, box)
         self.assertTrue(box["opened"])
@@ -376,19 +390,108 @@ class LineColorBrowserTest(unittest.TestCase):
         self.assertGreaterEqual(box["hex"], 36)
 
         self.open("?tab=prices")
-        self.assertEqual(self.ev("document.getElementById('mPrices').textContent"), "Charts")
-        self.assertTrue(self.ev("document.getElementById('mPrices').classList.contains('on')"))
+        self.assertEqual(self.ev("document.getElementById('mChartType').options[document.getElementById('mChartType').selectedIndex].text"), "Price")
+        self.assertEqual(self.ev("document.getElementById('mChartType').value"), "prices")
+        self.assertTrue(self.ev("document.getElementById('mChartType').classList.contains('on')"))
         self.assertEqual(self.ev("getComputedStyle(document.getElementById('ctl')).display"), "flex")
 
         self.open("?tab=charts&color=8B5CF6&fcolor=%234D7C0F")
         self.assertEqual(self.ev("lineColor('color')"), "#8B5CF6")
         self.assertEqual(self.ev("lineColor('fcolor')"), "#4D7C0F")
-        self.assertTrue(self.ev("document.getElementById('mPrices').classList.contains('on')"))
+        self.assertTrue(self.ev("document.getElementById('mChartType').classList.contains('on')"))
+        self.assertEqual(self.ev("document.getElementById('mChartType').value"), "prices")
 
         self.open("?tickers=ZZZTEST&color=nope")
-        self.assertTrue(self.ev("document.getElementById('mPrices').classList.contains('on')"))
+        self.assertTrue(self.ev("document.getElementById('mChartType').classList.contains('on')"))
+        self.assertEqual(self.ev("document.getElementById('mChartType').value"), "prices")
         self.assertEqual(self.ev("lineColor('color')"), "#F7931A")
         self.assertEqual(self.ev("document.getElementById('tickers').value"), "ZZZTEST")
+
+
+    def test_chart_type_dropdown_placeholder_and_views(self):
+        self.open("")
+        ui = self.ev(r"""
+(() => {
+  const s = document.getElementById('mChartType');
+  const brief = document.getElementById('mBrief');
+  return {
+    value: s.value,
+    label: s.options[s.selectedIndex].text,
+    placeholder: s.options[0].text,
+    on: s.classList.contains('on'),
+    briefOn: brief.classList.contains('on'),
+    briefShown: getComputedStyle(document.getElementById('brief')).display,
+    ctl: getComputedStyle(document.getElementById('ctl')).display,
+    options: [...s.options].map(o => [o.value, o.text])
+  };
+})()
+""")
+        self.assertEqual(ui["label"], "Chart type...")
+        self.assertEqual(ui["value"], "")
+        self.assertEqual(ui["placeholder"], "Chart type...")
+        self.assertFalse(ui["on"])
+        self.assertTrue(ui["briefOn"])
+        self.assertNotEqual(ui["briefShown"], "none")
+        self.assertEqual(ui["ctl"], "none")
+        self.assertEqual(ui["options"][1:], [["prices", "Price"], ["fin", "Financials"], ["val", "Valuation"]])
+
+        fin = self.ev(r"""
+(() => {
+  const s = document.getElementById('mChartType');
+  s.value = 'fin';
+  s.dispatchEvent(new Event('change', {bubbles:true}));
+  return {
+    value: s.value,
+    label: s.options[s.selectedIndex].text,
+    on: s.classList.contains('on'),
+    briefOn: document.getElementById('mBrief').classList.contains('on'),
+    fctl: getComputedStyle(document.getElementById('fctl')).display,
+    ctl: getComputedStyle(document.getElementById('ctl')).display,
+    vctl: getComputedStyle(document.getElementById('vctl')).display
+  };
+})()
+""")
+        self.assertEqual(fin["value"], "fin")
+        self.assertEqual(fin["label"], "Financials")
+        self.assertTrue(fin["on"])
+        self.assertFalse(fin["briefOn"])
+        self.assertEqual(fin["fctl"], "flex")
+        self.assertEqual(fin["ctl"], "none")
+        self.assertEqual(fin["vctl"], "none")
+
+        heat = self.ev(r"""
+(() => {
+  document.getElementById('mHeat').click();
+  const s = document.getElementById('mChartType');
+  return {
+    value: s.value,
+    label: s.options[s.selectedIndex].text,
+    on: s.classList.contains('on'),
+    heatOn: document.getElementById('mHeat').classList.contains('on'),
+    hctl: getComputedStyle(document.getElementById('hctl')).display
+  };
+})()
+""")
+        self.assertEqual(heat["value"], "")
+        self.assertEqual(heat["label"], "Chart type...")
+        self.assertFalse(heat["on"])
+        self.assertTrue(heat["heatOn"])
+        self.assertEqual(heat["hctl"], "flex")
+
+        self.open("?tab=price")
+        self.assertEqual(self.ev("document.getElementById('mChartType').value"), "prices")
+        self.assertEqual(self.ev("getComputedStyle(document.getElementById('ctl')).display"), "flex")
+
+        self.open("?tab=financials")
+        self.assertEqual(self.ev("document.getElementById('mChartType').value"), "fin")
+        self.assertEqual(self.ev("getComputedStyle(document.getElementById('fctl')).display"), "flex")
+
+        self.open("?vtickers=AAPL")
+        self.assertEqual(self.ev("document.getElementById('mChartType').value"), "val")
+        self.assertEqual(self.ev("getComputedStyle(document.getElementById('vctl')).display"), "flex")
+        self.assertEqual(self.ev("document.getElementById('vtickers').value"), "AAPL")
+
+
 
 
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ async def main():
         await pg.select_option("#type",typ); await pg.wait_for_timeout(2500)
         print(t,typ,await pg.inner_text("#status")); await shot(pg,f"theme_{t}_{typ}")
     # financials sample on dark + navy
-    await pg.click("#mFin"); await pg.wait_for_timeout(4000)
+    await pg.select_option("#mChartType","fin"); await pg.wait_for_timeout(4000)
     for t in ["dark","black","white"]:
       await pg.select_option("#theme",t); await pg.wait_for_timeout(3000)
       print("fin",t,await pg.inner_text("#status")); await shot(pg,f"theme_{t}_fin")
@@ -26,7 +26,7 @@ async def main():
     await pg.select_option("#theme","navy"); await pg.select_option("#fmetric","fcf"); await pg.wait_for_timeout(3000)
     pg._ans="Test FCF navy"; await pg.click("#vsave"); await pg.wait_for_timeout(800)
     v=V(); print("saved:",[(x['name'],x['mode'],x['fields']['theme'],x['fields']['fmetric']) for x in v])
-    await pg.click("#mPrices"); await pg.select_option("#theme","white"); await pg.wait_for_timeout(2500)
+    await pg.select_option("#mChartType","prices"); await pg.select_option("#theme","white"); await pg.wait_for_timeout(2500)
     await pg.select_option("#views",label="Test FCF navy"); await pg.wait_for_timeout(4000)
     print("reloaded mode/theme/metric:",await pg.evaluate("[MODE,$('theme').value,$('fmetric').value,T.bg]"), await pg.inner_text("#status"))
     await pg.select_option("#fperiod","annual"); await pg.select_option("#theme","black"); await pg.wait_for_timeout(2500)

@@ -8,7 +8,7 @@ Use: tickers (comma-separated, e.g. `NBIS,CRWV,BTC-USD`), optional display names
 type (price line, % change indexed to start, candles + volume for one ticker, bar ranking of % return, ratio A/B with exactly two tickers), title, color, watermark toggle.
 Line color on Charts, the one-series color on Financials, and bar color on Valuation share one list. Orange (`#F7931A`) is still the default and violet (`#8B5CF6`) is still the second choice. The list also includes the comparison palette (sky, green, red, ink, pink, teal) plus blue, olive, magenta, and brown. The control is one dropdown; Custom shows a color input and hex field only after that option is chosen. One series uses the picked color. Several series keep the old palette order for the first eight, then the extra hues. A saved view stores the hex, so an older orange or violet choice still applies. `?color=`, `?fcolor=`, and `?vcolor=` set the same hex. Dark themes brighten the named colors, and a custom hex is lightened or darkened only when it would vanish. Download PNG uses the color on screen.
 "Download PNG" exports 1600x900 at 2x (3200x1800). Status bar shows "data as of" (ET); fetch failures show an error and render nothing.
-Render on Charts, Heatmap, Treasury, and Valuation fetches fresh data (the separate Refresh button is gone). The Charts tab is the old Prices tab: `?tab=prices` and `?tab=charts` both open it, and `?tickers=` still does too.
+Render on Price, Heatmap, Treasury, and Valuation fetches fresh data (the separate Refresh button is gone). Price, Financials, and Valuation are in the Chart type dropdown on the same top row as the other tabs (default label Chart type...; the page still opens on Daily briefing). Price is the old Charts/Prices view: `?tab=price`, `?tab=prices`, and `?tab=charts` all open it, and `?tickers=` still does too.
 
 ## Treasury tab
 
@@ -24,13 +24,13 @@ python3 scripts/refresh_btctop100.py --check
 
 Credentials, first match: `GOOGLE_ACCESS_TOKEN` or `CHARTMAKER_GOOGLE_TOKEN`; or `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, and `GOOGLE_REFRESH_TOKEN` (`CHARTMAKER_GOOGLE_*` names work too); or a service-account JSON in `GOOGLE_APPLICATION_CREDENTIALS` or `CHARTMAKER_GOOGLE_CREDENTIALS`. The sheet is private. `--csv` or `BTCTC_CSV` is the fallback.
 
-Watchlist still updates only from its Refresh button. Financials has no quote-cache bypass. Financials and Valuation open with an empty ticker box and a blank chart until tickers are entered. Deep links: `?tickers=` and `&names=` (Charts), `?ftickers=` and `&fnames=` (Financials), `?vtickers=` and `&vnames=` (Valuation). Charts SMA is a multi-select menu (20, 50, 100, 200, 200W, plus a custom length).
+Watchlist still updates only from its Refresh button. Financials has no quote-cache bypass. Financials and Valuation open with an empty ticker box and a blank chart until tickers are entered. Deep links: `?tickers=` and `&names=` (Price), `?ftickers=` and `&fnames=` (Financials), `?vtickers=` and `&vnames=` (Valuation). Charts SMA is a multi-select menu (20, 50, 100, 200, 200W, plus a custom length).
 
 Notes: YTD baseline = last close of prior year. 5Y uses weekly bars, Max monthly. Ratio aligns A to the latest B bar at or before each date.
 Re-run samples: `python3 shoot.py` (uses /usr/bin/google-chrome).
 
 ## Financials mode (v2)
-Toggle "Financials" at top. Data: SEC EDGAR XBRL companyfacts (primary source), ticker→CIK via company_tickers.json,
+Pick Financials from the Chart type dropdown. Data: SEC EDGAR XBRL companyfacts (primary source), ticker→CIK via company_tickers.json,
 cached in `cache/` for 24h (User-Agent `Chartmaker mark.a.harv@gmail.com`). Code in `fin.py`, endpoint `/api/fin?symbol=&metric=&period=quarterly|annual|ttm&y1=&y2=`.
 Metrics: revenue, gross/operating/net income, EPS diluted, OCF, capex, FCF (OCF−capex), cash, total debt, shares, R&D, gross/operating/net margin %.
 Quarterly values missing from filings are derived from YTD differences (Q4 = FY − 9M); TTM = sum of 4 consecutive quarters. Derived cells are marked `*` in the table (hover for tag/form/derivation).
@@ -211,7 +211,7 @@ Then commit `static/paper_trading.json`. `python3 scripts/paper_trading.py --sel
 
 ## Daily briefing
 
-The **Daily briefing** tab is the page the app opens on. It is a reverse-chronological archive of Lloyd's 9 AM ET news briefing. The newest briefing is expanded; older ones are collapsed. `?tab=` still opens that tab (`?tab=watch` is Watchlist, `?tab=paper` is the paper book, `?tab=prices` and `?tab=charts` are Charts, and the same for the others). `?tickers=`, `?ftickers=`, and `?vtickers=` still open Charts, Financials, and Valuation.
+The **Daily briefing** tab is the page the app opens on. It is a reverse-chronological archive of Lloyd's 9 AM ET news briefing. The newest briefing is expanded; older ones are collapsed. `?tab=` still opens that tab (`?tab=watch` is Watchlist, `?tab=paper` is the paper book, `?tab=price`, `?tab=prices`, and `?tab=charts` are Price, and the same for the others). `?tickers=`, `?ftickers=`, and `?vtickers=` still open Price, Financials, and Valuation.
 
 `GET /api/briefing` reads `data/lloyd_briefings.json`. Render does not call Gmail. A daily routine appends today's briefing and commits the file to main:
 
