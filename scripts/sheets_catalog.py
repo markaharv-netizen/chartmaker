@@ -124,6 +124,12 @@ EXCLUDED_TABS = retired_charts.library_pairs()
 # KEEP_MANUAL_PNGS blocks Monday's native export from overwriting that PNG.
 # The tab is real, so the catalog row is not sheetless and Open in Sheets
 # stays on. Script: /workspace/strc_buyback_share/plot_strc_buyback_share.py.
+# ("bot3", 922821390) is "Nasdaq-100 Forward PE" in My Bot's Sheets: it has a
+# native line chart, but the library PNG is Steve's Python render (black
+# background, right-hand axis with x suffixes, current-level dashed line).
+# KEEP_MANUAL_PNGS blocks Monday's native export from overwriting that PNG.
+# The tab is real, so the catalog row is not sheetless and Open in Sheets
+# stays on. Script: /workspace/ndx_fwd_pe/render.py.
 # A later catalog rebuild must not drop these.
 PINNED_TABS = {
     ("bot3", 874288811): "Central Bank Ranking",
@@ -140,6 +146,7 @@ PINNED_TABS = {
     ("bot3", 1921102868): "Share Count Change",
     ("bot3", 970035917): "Buybacks TTM",
     ("bot2", 978808662): "84 STRC buybacks share of volume",
+    ("bot3", 922821390): "Nasdaq-100 Forward PE",
 }
 # Google Sheets sheetId is a non-negative int32 (max 2,147,483,647). A library
 # gid at or above this value is synthetic and can never collide with a real tab.
@@ -826,6 +833,7 @@ def self_test():
     assert ("bot3", 1027111563) in live  # SpaceX Capex
     assert ("bot3", 1921102868) in live  # Share Count Change
     assert ("bot3", 970035917) in live  # Buybacks TTM
+    assert ("bot3", 922821390) in live  # Nasdaq-100 Forward PE
     assert ("bot3", 1608741572) not in live  # Bitcoin ETFs Weekly Flows (Python ETF draft)
     assert len(cat["tabs"]) == 421, len(cat["tabs"])
     assert sum(1 for t in cat["tabs"] if t.get("book") == "bot3") == 96
@@ -1445,6 +1453,7 @@ def self_test():
             "bot3 gid 1027111563 (SpaceX Capex): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 1921102868 (Share Count Change): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 970035917 (Buybacks TTM): missing from dump and no existing catalog entry; added the pinned table tab",
+            "bot3 gid 922821390 (Nasdaq-100 Forward PE): missing from dump and no existing catalog entry; added the pinned table tab",
         }
         assert set(warns2) == pinned_warns, warns2
         assert by_gid2[1145735379].get("thumb") == thumb_rel
