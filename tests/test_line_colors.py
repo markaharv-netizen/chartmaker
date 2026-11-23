@@ -443,7 +443,8 @@ class LineColorBrowserTest(unittest.TestCase):
     ctl: getComputedStyle(document.getElementById('ctl')).display,
     options: [...s.options].map(o => [o.value, o.text]),
     viewOptions: [...v.options].map(o => [o.value, o.text]),
-    pills: [...document.querySelectorAll('#mode button')].map(b => [b.id, b.textContent])
+    pills: [...document.querySelectorAll('#mode button')].map(b => [b.id, b.textContent]),
+    modeOrder: [...document.getElementById('mode').children].map(el => el.id)
   };
 })()
 """)
@@ -461,6 +462,7 @@ class LineColorBrowserTest(unittest.TestCase):
         self.assertEqual(ui["options"][1:], [["prices", "Price"], ["fin", "Financials"], ["val", "Valuation"], ["watch", "Watchlist"]])
         self.assertEqual(ui["viewOptions"][1:], [["heat", "Heatmap"], ["tre", "BTC Treasury"], ["pt", "Price targets"], ["paper", "Paper trading"]])
         self.assertEqual(ui["pills"], [["mBrief", "Daily briefing"], ["mCotd", "Charts of the day"], ["mSheets", "Sheets"]])
+        self.assertEqual(ui["modeOrder"], ["mBrief", "mCotd", "mSheets", "mChartType", "mViews"])
 
         fin = self.ev(r"""
 (() => {
