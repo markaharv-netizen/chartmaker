@@ -180,7 +180,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
   .hseg button{flex:1 1 0;min-height:44px;font-size:15px;padding:8px 10px}
 }
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mBrief" class="on" title="Lloyd's 9 AM ET news briefing, newest first">Daily briefing</button><button id="mWatch">Watchlist</button><select id="mChartType" aria-label="Chart type" title="Price lines, percent change, candles, and ratios, plus financials and valuation"><option value="" disabled selected hidden>Chart type...</option><option value="prices">Price</option><option value="fin">Financials</option><option value="val">Valuation</option></select><button id="mHeat">Heatmap</button><button id="mTre">BTC Treasury</button><button id="mCotd">Charts of the day</button><button id="mPt" title="Steve's DCF base vs street consensus vs price">Price targets</button><button id="mPaper" title="Paper book sized by Steve's paper weights">Paper trading</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mBrief" class="on" title="Lloyd's 9 AM ET news briefing, newest first">Daily briefing</button><select id="mChartType" aria-label="Chart" title="Price, financials, valuation, and watchlist"><option value="" disabled selected hidden>Chart</option><option value="prices">Price</option><option value="fin">Financials</option><option value="val">Valuation</option><option value="watch">Watchlist</option></select><select id="mViews" aria-label="Views" title="Heatmap, BTC treasury, price targets, and paper trading"><option value="" disabled selected hidden>Views</option><option value="heat">Heatmap</option><option value="tre">BTC Treasury</option><option value="pt">Price targets</option><option value="paper">Paper trading</option></select><button id="mCotd">Charts of the day</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -897,11 +897,11 @@ function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='p
   $('mBrief').classList.toggle('on',m==='briefing');$('brief').style.display=m==='briefing'?'block':'none';
   $('mCotd').classList.toggle('on',m==='cotd');$('cotd').style.display=m==='cotd'?'block':'none';
   $('mSheets').classList.toggle('on',m==='sheets');$('sheets').style.display=m==='sheets'?'block':'none';
-  $('mPaper').classList.toggle('on',m==='paper');$('paper').style.display=m==='paper'?'block':'none';
-  $('mPt').classList.toggle('on',m==='pt');$('ptctl').style.display=m==='pt'?'flex':'none';
+  $('paper').style.display=m==='paper'?'block':'none';
+  $('ptctl').style.display=m==='pt'?'flex':'none';
   $('chart').style.display=m==='pt'?'none':'';$('ptcanvas').style.display=m==='pt'?'block':'none';
   $('wrap').style.display=lib?'none':'';$('vbar').style.display=lib?'none':'flex';if(!lib&&m!=='pt'){try{chart.resize()}catch(e){}}if(typeof vlist==='function')try{vlist()}catch(e){}
-  $('vctl').style.display=m==='val'?'flex':'none';$('mTre').classList.toggle('on',m==='tre');$('tctl').style.display=m==='tre'?'flex':'none';const ct=$('mChartType');if(ct){const chart=m==='prices'||m==='fin'||m==='val';ct.value=chart?m:'';ct.classList.toggle('on',chart)}$('mHeat').classList.toggle('on',m==='heat');$('mWatch').classList.toggle('on',m==='watch');$('wctl').style.display=m==='watch'?'flex':'none';
+  $('vctl').style.display=m==='val'?'flex':'none';$('tctl').style.display=m==='tre'?'flex':'none';const ct=$('mChartType');if(ct){const chart=m==='prices'||m==='fin'||m==='val'||m==='watch';ct.value=chart?m:'';ct.classList.toggle('on',chart)}const vw=$('mViews');if(vw){const view=m==='heat'||m==='tre'||m==='pt'||m==='paper';vw.value=view?m:'';vw.classList.toggle('on',view)}$('wctl').style.display=m==='watch'?'flex':'none';
   $('ctl').style.display=m==='prices'?'flex':'none';$('fctl').style.display=m==='fin'?'flex':'none';$('hctl').style.display=m==='heat'?'flex':'none';
   $('ftable').innerHTML='';$('fnote').textContent='';
   if(m!=='tre'&&$('chart').style.height&&$('chart').style.height!=='900px'){$('chart').style.height='900px';chart.resize()}
@@ -909,7 +909,7 @@ function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='p
   if(m!=='pt')chart.clear();$('status').textContent='';
   if(m==='heat')try{hgroupSync()}catch(e){}
   if(m==='prices'){syncPriceUi();render()}else if(m==='briefing')briefEnter();else if(m==='paper')paperEnter();else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
-$('mBrief').onclick=()=>setMode('briefing');$('mChartType').onchange=()=>{const v=$('mChartType').value;if(v)setMode(v)};$('mTre').onclick=()=>setMode('tre');$('mHeat').onclick=()=>setMode('heat');$('mWatch').onclick=()=>setMode('watch');$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mPt').onclick=()=>setMode('pt');$('mPaper').onclick=()=>setMode('paper');
+$('mBrief').onclick=()=>setMode('briefing');$('mChartType').onchange=()=>{const v=$('mChartType').value;if(v)setMode(v)};$('mViews').onchange=()=>{const v=$('mViews').value;if(v)setMode(v)};$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');
 // ---------- Favorites: shared by everyone signed in to this Chartmaker. No per-person accounts. ----------
 // Identity is book/gid/chartNumber (chart 1 is <gid>.png, chart n is <gid>_n.png). At most FAV_MAX.
 // A tab with no chart (a table) is one favorite, book/gid/1, labeled with the tab name. That is the
@@ -2243,7 +2243,7 @@ function applyPriceQuery(){
 applyTheme();annDraw();vload();applyPriceQuery();hgroupInit();
 window.__render=render; window.__frender=frender; window.__setMode=setMode;
 {let q;try{q=new URLSearchParams(location.search)}catch(e){q=new URLSearchParams()} // ?tab= keeps that tab; ticker deep links keep theirs; otherwise Daily briefing
-  const tabs={briefing:'briefing',daily:'briefing',paper:'paper',prices:'prices',charts:'prices',price:'prices',fin:'fin',financials:'fin',val:'val',valuation:'val',heat:'heat',heatmap:'heat',tre:'tre',treasury:'tre',cotd:'cotd',pt:'pt',targets:'pt',sheets:'sheets',watch:'watch'};
+  const tabs={briefing:'briefing',daily:'briefing',paper:'paper',prices:'prices',charts:'prices',price:'prices',fin:'fin',financials:'fin',val:'val',valuation:'val',heat:'heat',heatmap:'heat',tre:'tre',treasury:'tre',cotd:'cotd',pt:'pt',targets:'pt',sheets:'sheets',watch:'watch',watchlist:'watch'};
   const asked=tabs[(q.get('tab')||'').toLowerCase()];
   setMode(asked||(q.has('tickers')?'prices':q.has('ftickers')?'fin':q.has('vtickers')?'val':'briefing'))}
 </script><script>try{syncCustomDates()}catch(e){}</script></body></html>
