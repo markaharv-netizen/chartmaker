@@ -1,0 +1,60 @@
+{
+ "version": 1,
+ "generated": "2026-11-23T16:07:48Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 970035917,
+ "n": 1,
+ "chartId": 40339378,
+ "title": "Buybacks, trailing 12 months ($bn)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "AAPL",
+  "NVDA",
+  "MSFT",
+  "GOOGL",
+  "SPCX",
+  "META",
+  "ORCL",
+  "AMZN"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "TTM buybacks ($B)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    86.39,
+    64.981,
+    21,
+    5.899,
+    5.026,
+    0,
+    0,
+    0
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · Buybacks TTM",
+ "tab": "Buybacks TTM",
+ "workbook": "My Bot's Sheets"
+}

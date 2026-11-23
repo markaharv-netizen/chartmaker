@@ -1,0 +1,60 @@
+{
+ "version": 1,
+ "generated": "2026-11-23T16:07:48Z",
+ "supported": true,
+ "book": "bot3",
+ "gid": 1027111563,
+ "n": 1,
+ "chartId": 1186811924,
+ "title": "SpaceX capex ($bn)",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2023.0",
+  "2024.0",
+  "2025.0",
+  "2026.0",
+  "2027.0",
+  "2028.0",
+  "2029.0",
+  "2030.0"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "SpaceX Capex ($bn)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    4.42,
+    11.16,
+    20.74,
+    85.76,
+    398.16,
+    205.14,
+    182.37,
+    174.42
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "My Bot's Sheets · SpaceX Capex",
+ "tab": "SpaceX Capex",
+ "workbook": "My Bot's Sheets"
+}

@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generated": "2026-11-17T13:57:49Z",
+ "generated": "2026-11-23T16:07:48Z",
  "supported": true,
  "book": "bot2",
  "gid": 35106055,
@@ -18,9 +18,9 @@
   "TeraWulf",
   "CoreWeave",
   "Applied Digital",
-  "IREN",
   "Cipher Mining",
-  "Source: Yahoo Finance (aggregator); daily closes as of Nov 13, 2026 (refreshed Nov 16, 2026). YTD = close / Dec 31, 2025 close − 1."
+  "IREN",
+  "Source: Yahoo Finance (aggregator); daily closes as of Nov 20, 2026 (refreshed Nov 23, 2026). YTD = close / Dec 31, 2025 close − 1."
  ],
  "x": {
   "title": ""
@@ -34,35 +34,17 @@
  ],
  "series": [
   {
-   "name": "Positive",
-   "type": "column",
-   "axis": "left",
-   "color": "#22C55E",
-   "data": [
-    38.43,
-    9.84,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "labels": false,
-   "smooth": false,
-   "step": false
-  },
-  {
    "name": "Negative",
    "type": "column",
    "axis": "left",
-   "color": "#EF4444",
+   "color": "#8B5CF6",
    "data": [
-    null,
-    null,
-    -25.8,
-    -34.87,
-    -51.89,
-    -53.52,
+    -2.86,
+    -14.27,
+    -44.83,
+    -53.14,
+    -63.18,
+    -68.71,
     null
    ],
    "labels": false,
