@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-17T14:58:09Z",
+ "generated": "2026-11-23T13:36:47Z",
  "note": "Offline tab list. Regenerate tabs with scripts/sheets_catalog.py. Search previews are compressed thumbnails under static/sheets/thumbs/, built by scripts/sheets_thumbs.py. The Sheets tab shows a thumbnail only while the search box has a query. View PNG and Download PNG open static/sheets/full/<book>/<gid>.png when that file is committed, and the thumbnail otherwise. Import full PNGs with scripts/import_full_pngs.py.",
- "thumbsGenerated": "2026-11-17T14:58:34Z",
+ "thumbsGenerated": "2026-11-23T13:43:13Z",
  "books": [
   {
    "id": "bot1",
@@ -433,12 +433,12 @@
    "tab": "32 BTC transactions vs price",
    "gid": 1786290992,
    "charts": [
-    "Bitcoin on-chain activity vs price"
+    "Bitcoin on-chain activity"
    ],
    "chartList": [
     {
      "n": 1,
-     "title": "Bitcoin on-chain activity vs price"
+     "title": "Bitcoin on-chain activity"
     }
    ],
    "thumb": "sheets/thumbs/bot1/1786290992.jpg"
@@ -4602,6 +4602,7 @@
      "title": "Monthly net bitcoin flows of public treasury companies"
     }
    ],
+   "pin": true,
    "thumb": "sheets/thumbs/bot2/855902063.jpg"
   },
   {
@@ -5707,6 +5708,27 @@
   },
   {
    "book": "bot3",
+   "tab": "TSLA Largest Shareholders",
+   "gid": 55678636,
+   "charts": [],
+   "chartList": []
+  },
+  {
+   "book": "bot3",
+   "tab": "SPCX Largest Shareholders",
+   "gid": 1088933824,
+   "charts": [],
+   "chartList": []
+  },
+  {
+   "book": "bot3",
+   "tab": "BTC ETF Largest Holders",
+   "gid": 723768963,
+   "charts": [],
+   "chartList": []
+  },
+  {
+   "book": "bot3",
    "tab": "Waymo vs Tesla Robotaxi Fleets",
    "gid": 197035552,
    "charts": [
@@ -5718,6 +5740,7 @@
      "title": "Waymo vs Tesla: Fully Autonomous Taxi Fleets"
     }
    ],
+   "pin": true,
    "thumb": "sheets/thumbs/bot3/197035552.jpg"
   },
   {
@@ -5726,6 +5749,7 @@
    "gid": 874288811,
    "charts": [],
    "chartList": [],
+   "pin": true,
    "thumb": "sheets/thumbs/bot3/874288811.jpg"
   },
   {
@@ -5787,6 +5811,21 @@
     }
    ],
    "thumb": "sheets/thumbs/bot3/978356289.jpg"
+  },
+  {
+   "book": "bot3",
+   "tab": "Bitcoin ETFs Weekly Flows",
+   "gid": 1608741572,
+   "charts": [
+    "Bitcoin ETFs Weekly Flows"
+   ],
+   "chartList": [
+    {
+     "n": 1,
+     "title": "Bitcoin ETFs Weekly Flows"
+    }
+   ],
+   "thumb": "sheets/thumbs/bot3/1608741572.jpg"
   },
   {
    "book": "bot3",
@@ -5891,58 +5930,8 @@
      "title": "Waymo vs Tesla in Texas"
     }
    ],
+   "pin": true,
    "thumb": "sheets/thumbs/bot3/1408701012.jpg"
-  },
-  {
-   "book": "bot3",
-   "tab": "Tesla Robotaxi service area (sq mi)",
-   "gid": 9000000001,
-   "charts": [
-    "Tesla Robotaxi service area (sq mi)"
-   ],
-   "chartList": [
-    {
-     "n": 1,
-     "title": "Tesla Robotaxi service area (sq mi)"
-    }
-   ],
-   "pin": true,
-   "sheetless": true,
-   "thumb": "sheets/thumbs/bot3/9000000001.jpg"
-  },
-  {
-   "book": "bot3",
-   "tab": "Strategy's accretive swaps, week by week",
-   "gid": 9000000002,
-   "charts": [
-    "Strategy's accretive swaps, week by week"
-   ],
-   "chartList": [
-    {
-     "n": 1,
-     "title": "Strategy's accretive swaps, week by week"
-    }
-   ],
-   "pin": true,
-   "sheetless": true,
-   "thumb": "sheets/thumbs/bot3/9000000002.jpg"
-  },
-  {
-   "book": "bot3",
-   "tab": "Hyperscaler free cash flow (incl. SpaceX)",
-   "gid": 9000000003,
-   "charts": [
-    "Hyperscaler free cash flow (incl. SpaceX)"
-   ],
-   "chartList": [
-    {
-     "n": 1,
-     "title": "Hyperscaler free cash flow (incl. SpaceX)"
-    }
-   ],
-   "pin": true,
-   "sheetless": true,
-   "thumb": "sheets/thumbs/bot3/9000000003.jpg"
   },
   {
    "book": "bot3",
@@ -6021,6 +6010,72 @@
    ],
    "pin": true,
    "thumb": "sheets/thumbs/bot3/970035917.jpg"
+  },
+  {
+   "book": "bot3",
+   "tab": "GPU Rental Prices",
+   "gid": 564681563,
+   "charts": [
+    "GPU rental prices, on-demand ($/GPU-hour)"
+   ],
+   "chartList": [
+    {
+     "n": 1,
+     "title": "GPU rental prices, on-demand ($/GPU-hour)"
+    }
+   ],
+   "thumb": "sheets/thumbs/bot3/564681563.jpg"
+  },
+  {
+   "book": "bot3",
+   "tab": "Tesla Robotaxi service area (sq mi)",
+   "gid": 9000000001,
+   "charts": [
+    "Tesla Robotaxi service area (sq mi)"
+   ],
+   "chartList": [
+    {
+     "n": 1,
+     "title": "Tesla Robotaxi service area (sq mi)"
+    }
+   ],
+   "pin": true,
+   "sheetless": true,
+   "thumb": "sheets/thumbs/bot3/9000000001.jpg"
+  },
+  {
+   "book": "bot3",
+   "tab": "Strategy's accretive swaps, week by week",
+   "gid": 9000000002,
+   "charts": [
+    "Strategy's accretive swaps, week by week"
+   ],
+   "chartList": [
+    {
+     "n": 1,
+     "title": "Strategy's accretive swaps, week by week"
+    }
+   ],
+   "pin": true,
+   "sheetless": true,
+   "thumb": "sheets/thumbs/bot3/9000000002.jpg"
+  },
+  {
+   "book": "bot3",
+   "tab": "Hyperscaler free cash flow (incl. SpaceX)",
+   "gid": 9000000003,
+   "charts": [
+    "Hyperscaler free cash flow (incl. SpaceX)"
+   ],
+   "chartList": [
+    {
+     "n": 1,
+     "title": "Hyperscaler free cash flow (incl. SpaceX)"
+    }
+   ],
+   "pin": true,
+   "sheetless": true,
+   "thumb": "sheets/thumbs/bot3/9000000003.jpg"
   }
  ]
 }
