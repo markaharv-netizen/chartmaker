@@ -1,6 +1,6 @@
 {
  "date": "2026-11-24",
- "theme": "4 picks, plus 12 items drawn at random from the sheet library.",
+ "theme": "5 picks, plus 20 items drawn at random from the sheet library.",
  "items": [
   {
    "sheet": "bot experiments 2",
@@ -33,6 +33,16 @@
    "section": "random"
   },
   {
+   "sheet": "Bot experiments",
+   "tab": "47 USDCAD vs oil",
+   "title": "Loonie and oil: USD/CAD vs WTI crude",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1224590616",
+   "image": "cotd/2026-11-24/09.png",
+   "kind": "chart",
+   "chart_n": 1,
+   "section": "random"
+  },
+  {
    "sheet": "My Bot's Sheets",
    "tab": "BTC Missing Best Days",
    "title": "The cost of missing the best days: $10,000 in Bitcoin, Nov 2016 – Nov 2026",
@@ -53,6 +63,36 @@
    "section": "random"
   },
   {
+   "sheet": "bot experiments 2",
+   "tab": "34 SF robotaxi fares table",
+   "title": "34 SF robotaxi fares table",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=40739930",
+   "image": "cotd/2026-11-24/12.png",
+   "kind": "table",
+   "chart_n": 1,
+   "section": "random"
+  },
+  {
+   "sheet": "bot experiments 2",
+   "tab": "75 CoreWeave backlog vs revenue",
+   "title": "CoreWeave: backlog vs quarterly revenue ($B)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=530554790",
+   "image": "cotd/2026-11-24/13.png",
+   "kind": "chart",
+   "chart_n": 1,
+   "section": "random"
+  },
+  {
+   "sheet": "bot experiments 2",
+   "tab": "59 Net income per vehicle 2025",
+   "title": "59 Net income per vehicle 2025",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=495672401",
+   "image": "cotd/2026-11-24/14.png",
+   "kind": "table",
+   "chart_n": 1,
+   "section": "random"
+  },
+  {
    "sheet": "My Bot's Sheets",
    "tab": "Prev vol by timeframe",
    "title": "Volatility by Timeframe",
@@ -68,6 +108,36 @@
    "title": "Strategy vs the iShares Bitcoin ETF since ETF launch (rebased to 100)",
    "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=2133126570",
    "image": "cotd/2026-11-24/16.png",
+   "kind": "chart",
+   "chart_n": 1,
+   "section": "random"
+  },
+  {
+   "sheet": "My Bot's Sheets",
+   "tab": "Anthropic Revenue vs Compute",
+   "title": "Anthropic Q3: $17bn of revenue on $9.9bn of compute.. 1.72x, from 2.08x in Q2",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=978356289",
+   "image": "cotd/2026-11-24/17.png",
+   "kind": "chart",
+   "chart_n": 1,
+   "section": "random"
+  },
+  {
+   "sheet": "My Bot's Sheets",
+   "tab": "SPCX and TSLA Correlation",
+   "title": "30-Day rolling Correlation: TSLA vs SPCX",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1491835473",
+   "image": "cotd/2026-11-24/18.png",
+   "kind": "chart",
+   "chart_n": 1,
+   "section": "random"
+  },
+  {
+   "sheet": "My Bot's Sheets",
+   "tab": "Cash on Balance Sheets",
+   "title": "Cash and BTC Holdings (billions)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=349949205",
+   "image": "cotd/2026-11-24/19.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "random"
@@ -104,6 +174,16 @@
   },
   {
    "sheet": "Bot experiments",
+   "tab": "268 Gas storage vs 5-yr avg",
+   "title": "US natural gas in storage vs the 5-year average (Lower 48, weekly)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1424667465",
+   "image": "cotd/2026-11-24/23.png",
+   "kind": "chart",
+   "chart_n": 1,
+   "section": "random"
+  },
+  {
+   "sheet": "Bot experiments",
    "tab": "156 Nasdaq dot-com vs AI era",
    "title": "NASDAQ Composite: dot-com run (from Netscape IPO) vs AI run (from ChatGPT launch)",
    "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1796631140",
@@ -125,52 +205,64 @@
  ],
  "picks": [
   {
-   "sheet": "bot experiments 2",
-   "tab": "93 BTC treasury buys vs sales",
-   "title": "Bitcoin treasury companies: weekly net BTC flows (last 3 months)",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=73869283",
+   "sheet": "Bot experiments",
+   "tab": "139 BTC MVRV",
+   "title": "Bitcoin MVRV: market value ÷ realized value (on-chain cost basis)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1810990664",
    "image": "cotd/2026-11-24/01.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "picks",
-   "description": "Weekly net bitcoin bought or sold by public treasury companies over the last 3 months (CoinGecko treasury data, weeks ending Sunday): net selling of 9,255 BTC and 13,863 BTC in the weeks to Nov 8 and Nov 15, then +485 BTC in the week to Nov 22.",
-   "reason": "Strategy disclosed only 457 BTC bought in the week to Nov 22 while spending $212M on STRC buybacks, so treasury buying is still a trickle."
+   "description": "Bitcoin's MVRV ratio (market value divided by realized value, the on-chain cost basis of all coins) since 2019, with the BTC price. In the chart's latest weekly reading (Nov 6) MVRV was 1.41 with BTC near $75.8K, far below the 3.9 peak of 2021.",
+   "reason": "Bitcoin fell back below $60,000 this morning, about 52% under its record, and the Fear & Greed index reads 11 (extreme fear). MVRV shows how close the market is getting to its average cost basis, the zone near 1 that marked the 2022 bottom."
   },
   {
    "sheet": "My Bot's Sheets",
-   "tab": "Bitcoin ETFs Weekly Flows",
-   "title": "Bitcoin ETFs Weekly Flows",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1608741572",
+   "tab": "MSTR Debt",
+   "title": "MSTR mNAV",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1145735379",
    "image": "cotd/2026-11-24/02.png",
    "kind": "chart",
-   "chart_n": 1,
+   "chart_n": 4,
    "section": "picks",
-   "description": "US spot bitcoin ETF weekly net flows with the BTC price, Aug 2025 to Nov 20, 2026; the latest week shows -$1.79bn of outflows with BTC at $58,815.",
-   "reason": "ETFs lost another ~$570M on Monday Nov 23 and BTC slipped back toward $60K even as stocks ripped."
+   "description": "Strategy's mNAV (MSTR market price divided by net BTC per share) since October 2025. It slid to 0.97 on Nov 19, the lowest reading on the chart, down from about 1.5 in early October 2025.",
+   "reason": "Strategy's Monday 8-K showed it sold 1.93M MSTR shares to buy 457 BTC and spend $211.8M buying back STRC, and this morning Monness cut its MSTR target to $59, the lowest on the Street. With MSTR trading around its bitcoin value, mNAV is the number everyone is arguing about."
   },
   {
-   "sheet": "My Bot's Sheets",
-   "tab": "BTC and NASDAQ Correlation",
-   "title": "30-Day rolling Correlation: BTC vs NASDAQ",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=2017231620",
+   "sheet": "Bot experiments",
+   "tab": "154 Semis vs S&P 500",
+   "title": "Chip stocks vs the S&P 500 (SOXX ÷ SPY, total return)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=2061031585",
    "image": "cotd/2026-11-24/03.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "picks",
-   "description": "30-day rolling correlation of daily bitcoin and Nasdaq returns since Nov 2024; it recently climbed back near 0.7, among its highest readings in two years.",
-   "reason": "Monday broke the pattern: the Nasdaq had its best day since April 2025 while bitcoin ended roughly flat."
+   "description": "Chip stocks relative to the S&P 500 (SOXX divided by SPY, total return, Jul 2001 = 100) with SOXX's drawdown from its high. In the latest reading (Nov 6) the ratio was 212, down from a 328 peak, and SOXX was 36% below its high.",
+   "reason": "Semis swung wildly: the Philadelphia chip index jumped about 14% on Monday when Nvidia reinstated Jensen Huang, then chip stocks gave back 5-7% this morning and Nvidia fell about 7%. This chart puts the whipsaw in its 25-year context."
   },
   {
    "sheet": "Bot experiments",
-   "tab": "81 TSLA vs Nasdaq",
-   "title": "Tesla vs the Nasdaq: relative performance (TSLA ÷ Nasdaq Composite, Jan 2019=100)",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1943923593",
+   "tab": "255 2Y yield minus fed funds",
+   "title": "What the bond market expects from the Fed: 2-year Treasury yield minus the effective fed funds rate (month-end)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1934181206",
+   "image": "cotd/2026-11-24/04.png",
+   "kind": "chart",
+   "chart_n": 1,
+   "section": "picks",
+   "description": "The 2-year Treasury yield minus the effective fed funds rate, month-end, since 2000. A positive gap means the bond market is pricing rate hikes; it has been positive every month since March 2026, peaked at 1.0 point at end-September and was 0.58 in early November.",
+   "reason": "Markets still expect the Fed to raise rates by a quarter point in December, and October PCE inflation lands tomorrow morning before Thanksgiving. This is the cleanest picture of how much tightening the bond market is pricing."
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "310 Tesla price-to-sales",
+   "title": "Tesla price-to-sales (market cap ÷ trailing 4-quarter revenue), weekly since 2019",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=62435828",
    "image": "cotd/2026-11-24/05.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "picks",
-   "description": "Tesla's share price and its performance relative to the Nasdaq Composite (Jan 2019 = 100), weekly since 2019.",
-   "reason": "Tesla rose about 11% Monday in the tech relief rally, beating the Nasdaq's 6.5% gain."
+   "description": "Tesla's price-to-sales ratio (market cap divided by trailing four-quarter revenue), weekly since 2019. It peaked near 30x in 2020 and sat in the low-to-mid teens through autumn 2026 (13.7x on Nov 6).",
+   "reason": "Tesla jumped 11.5% on Monday to $385.46 in the Nvidia-led rebound while it rolled out a major FSD update. After that move, this chart shows how rich the stock is against its own history."
   }
  ],
  "random": true
