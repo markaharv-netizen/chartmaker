@@ -103,7 +103,7 @@ class TeslaRevenueByYearTest(unittest.TestCase):
         keys = {(t.get("book"), t.get("gid")) for t in cat["tabs"]}
         self.assertEqual(len(keys), len(cat["tabs"]))
         self.assertIn(("bot2", GID), keys)
-        self.assertEqual(len(cat["tabs"]), 407)
+        self.assertEqual(len(cat["tabs"]), 408)
 
     def test_data_json_covers_2010_through_2028(self):
         path = os.path.join(ROOT, "static", "sheets", "data", "bot2", "%d.json" % GID)
@@ -271,7 +271,7 @@ class TeslaRevenueByYearTest(unittest.TestCase):
         self.assertIn("function sheetListedWithCharts(t){", html)
         self.assertIn("Number(t.gid)===572335799", html)
         self.assertIn(
-            "(String(t.book)==='bot2'&&(Number(t.gid)===855902063||Number(t.gid)===978808662||Number(t.gid)===73869283||Number(t.gid)===572335799))",
+            "(String(t.book)==='bot2'&&(Number(t.gid)===855902063||Number(t.gid)===978808662||Number(t.gid)===73869283||Number(t.gid)===572335799||Number(t.gid)===818663135))",
             html,
         )
         self.assertIn(

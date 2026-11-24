@@ -1,0 +1,73 @@
+{
+ "version": 1,
+ "generated": "2026-11-24T15:32:56Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 818663135,
+ "n": 1,
+ "chartId": 354143861,
+ "title": "SpaceX revenue by year",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2023",
+  "2024",
+  "2025",
+  "2026",
+  "2027",
+  "2028"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Actual ($B)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    10.387,
+    14.015,
+    18.674,
+    null,
+    null,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Estimate ($B)",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    null,
+    null,
+    null,
+    49.06,
+    181.86,
+    335.81
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 96 SpaceX revenue by year",
+ "tab": "96 SpaceX revenue by year",
+ "workbook": "bot experiments 2"
+}
