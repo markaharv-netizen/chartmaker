@@ -88,6 +88,9 @@ CHART_SUFFIX = re.compile(r"\s+\((\d{1,2})\)(?=(?:\s+\d{4}-\d{2}-\d{2})?\.png$)"
 # bot2 73869283 ("93 BTC treasury buys vs sales") has two native charts;
 # its library PNG is Steve's Python render of 3-month weekly net BTC flows
 # at static/sheets/full/bot2/73869283.png.
+# bot2 572335799 ("95 Tesla revenue by year") has a native column chart;
+# its library PNG is Steve's Python render at
+# static/sheets/full/bot2/572335799.png.
 KEEP_MANUAL_PNGS = {
     ("bot3", 197035552),  # Waymo vs Tesla Robotaxi Fleets
     ("bot2", 855902063),  # 94 BTC treasury monthly flows (Python render)
@@ -102,6 +105,7 @@ KEEP_MANUAL_PNGS = {
     ("bot2", 978808662),  # 84 STRC buybacks share of volume (Python render)
     ("bot3", 922821390),  # Nasdaq-100 Forward PE (Python render)
     ("bot2", 73869283),  # 93 BTC treasury buys vs sales (Python render)
+    ("bot2", 572335799),  # 95 Tesla revenue by year (Python render)
 }
 
 
