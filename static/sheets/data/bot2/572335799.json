@@ -1,0 +1,112 @@
+{
+ "version": 1,
+ "generated": "2026-11-24T15:21:44Z",
+ "supported": true,
+ "book": "bot2",
+ "gid": 572335799,
+ "n": 1,
+ "chartId": 992936962,
+ "title": "Tesla revenue by year",
+ "subtitle": "",
+ "type": "column",
+ "horizontal": false,
+ "stacked": null,
+ "connectNulls": false,
+ "legend": true,
+ "categories": [
+  "2010",
+  "2011",
+  "2012",
+  "2013",
+  "2014",
+  "2015",
+  "2016",
+  "2017",
+  "2018",
+  "2019",
+  "2020",
+  "2021",
+  "2022",
+  "2023",
+  "2024",
+  "2025",
+  "2026",
+  "2027",
+  "2028"
+ ],
+ "x": {
+  "title": ""
+ },
+ "y": [
+  {
+   "title": "",
+   "format": "number",
+   "log": false
+  }
+ ],
+ "series": [
+  {
+   "name": "Actual ($B)",
+   "type": "column",
+   "axis": "left",
+   "color": "#F7931A",
+   "data": [
+    0.1167,
+    0.2042,
+    0.4133,
+    2.0135,
+    3.1984,
+    4.046,
+    7.0001,
+    11.759,
+    21.461,
+    24.578,
+    31.536,
+    53.823,
+    81.462,
+    96.773,
+    97.69,
+    94.827,
+    null,
+    null,
+    null
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  },
+  {
+   "name": "Estimate ($B)",
+   "type": "column",
+   "axis": "left",
+   "color": "#8B5CF6",
+   "data": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    107.83,
+    122.38,
+    146.04
+   ],
+   "labels": false,
+   "smooth": false,
+   "step": false
+  }
+ ],
+ "source": "bot experiments 2 · 95 Tesla revenue by year",
+ "tab": "95 Tesla revenue by year",
+ "workbook": "bot experiments 2"
+}
