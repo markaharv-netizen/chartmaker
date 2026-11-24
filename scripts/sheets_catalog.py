@@ -765,10 +765,17 @@ def self_test():
     assert tab_excluded("bot1", 557813776)  # 129 60-40 rolling returns (retired 2026-11-23)
     assert tab_excluded("bot1", 1444647589)  # 289 Dogecoin vs Tesla (retired 2026-11-23)
     assert tab_excluded("bot1", 1754119588)  # 271 US oil output vs price (retired 2026-11-23)
+    assert tab_excluded("bot1", 1554167260)  # 335 Price-to-sales vs Cisco (retired 2026-11-24)
+    assert tab_excluded("bot1", 978859168)  # 329 Cloud profit vs capex (retired 2026-11-24)
+    assert tab_excluded("bot1", 1085148301)  # 328 Cloud revenue per capex $ (retired 2026-11-24)
+    assert tab_excluded("bot1", 1112919588)  # 339 Utility capex % cash flow (retired 2026-11-24)
+    assert tab_excluded("bot1", 100580780)  # 334 Nvidia top-customer share (retired 2026-11-24)
+    assert tab_excluded("bot1", 300777512)  # 219 Big Tech FCF yield vs 10Y (retired 2026-11-24)
+    assert tab_excluded("bot1", 550839420)  # 164 Car insurance vs CPI (retired 2026-11-24)
+    assert tab_excluded("bot1", 102043516)  # 27 BTC vs real yield corr (retired 2026-11-24)
+    assert tab_excluded("bot2", 1942752546)  # 17 Treasury stocks 2026 YTD (retired 2026-11-24)
     assert not tab_excluded("bot1", 1718545259)  # 54 Trimmed vs core PCE (kept)
     assert not tab_excluded("bot1", 1363241271)  # 321 Capex % of cash flow, qtrly (kept)
-    assert not tab_excluded("bot1", 1085148301)  # 328 Cloud revenue per capex $ (kept)
-    assert not tab_excluded("bot1", 978859168)  # 329 Cloud profit vs capex (kept)
     assert not tab_excluded("bot1", 577053605)  # 207 Hyperscaler free cash flow (kept)
     assert not tab_excluded("bot2", 1172553519)  # 4 MSTR preferred stack (kept)
     assert not tab_excluded("bot2", 1268488619)  # 7 MSTR preferred yields (kept)
@@ -782,7 +789,7 @@ def self_test():
     assert not tab_excluded("bot1", 450495048)  # 83 TSLA drawdown (kept)
     assert not tab_excluded("bot1", 477052168)  # 195 BTC vs NVDA vs TSLA vol (kept)
     assert not tab_excluded("bot1", 62435828)  # 310 Tesla price-to-sales (kept)
-    assert not tab_excluded("bot1", 1554167260)  # 335 Price-to-sales vs Cisco (kept)
+    assert tab_excluded("bot1", 1554167260)  # 335 Price-to-sales vs Cisco (retired 2026-11-24)
     assert not tab_excluded("bot1", 1692929819)  # 325 Meta quarterly FCF (kept)
     assert not tab_excluded("bot3", 1828716508)  # Meta Active Users (kept)
     assert not tab_excluded("bot1", 868062827)  # 172 Job openings per jobless (kept)
@@ -818,7 +825,7 @@ def self_test():
     assert not tab_excluded("bot1", 577053605)   # 207 Hyperscaler free cash flow
     assert not tab_excluded("bot1", 1934181206)  # 255 2Y yield minus fed funds
     assert not tab_excluded("bot1", 900897940)   # 257 Federal debt % of GDP
-    assert not tab_excluded("bot1", 1554167260)  # 335 Price-to-sales vs Cisco
+    assert tab_excluded("bot1", 1554167260)  # 335 Price-to-sales vs Cisco (retired 2026-11-24)
     assert not tab_excluded("bot1", 310431964)   # 338 Utility capex boom
     assert not tab_excluded("bot2", 1690294676)  # 6 MSTR vs ASST leverage (kept; CotD card refreshed)
     assert not tab_excluded("bot2", 1713824403)  # 55 Capex intensity vs legacy
@@ -1013,7 +1020,6 @@ def self_test():
     for keep in (
         "156 Nasdaq dot-com vs AI era",
         "229 Nvidia vs country GDPs",
-        "334 Nvidia top-customer share",
         "75 CoreWeave backlog vs revenue",
         "97 MSTR vol vs BTC vol",
         "92 MSTR priced in BTC",
@@ -1041,7 +1047,6 @@ def self_test():
         "207 Hyperscaler free cash flow",
         "255 2Y yield minus fed funds",
         "257 Federal debt % of GDP",
-        "335 Price-to-sales vs Cisco",
         "338 Utility capex boom",
         "73 US ETF BTC holdings",
         "76 Neocloud capex vs revenue",
@@ -1064,7 +1069,7 @@ def self_test():
                 1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                 1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                 1192979444, 1912487083, 664060481, 1778640335,
-                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 971499761, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1149583871, 2047295555, 84709656, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 4940912, 1188646727, 847095656, 1694432360, 1421725187, 1607076800, 1924940296, 1966044875, 1161030254, 841222865):
+                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 971499761, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1149583871, 2047295555, 84709656, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 4940912, 1188646727, 847095656, 1694432360, 1421725187, 1607076800, 1924940296, 1966044875, 1161030254, 841222865, 1554167260, 978859168, 1085148301, 1112919588, 100580780, 300777512, 550839420, 102043516, 1942752546):
         assert str(gid) not in today_blob, gid
     assert "161 Nvidia P-S and P-E" not in today_blob
     assert "202 Nvidia revenue by geography" not in today_blob
