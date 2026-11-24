@@ -97,7 +97,7 @@ class BtcTreasuryNet3mTest(unittest.TestCase):
         keys = {(t.get("book"), t.get("gid")) for t in cat["tabs"]}
         self.assertEqual(len(keys), len(cat["tabs"]))
         self.assertIn(("bot2", GID), keys)
-        self.assertEqual(len(cat["tabs"]), 407)
+        self.assertEqual(len(cat["tabs"]), 408)
 
     def test_data_json_runs_through_nov_22(self):
         path = os.path.join(ROOT, "static", "sheets", "data", "bot2", "%d.json" % GID)
