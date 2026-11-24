@@ -181,6 +181,22 @@ SHEETLESS_TABS = {
     ("bot3", 9000000002): "Strategy's accretive swaps, week by week",
     ("bot3", 9000000003): "Hyperscaler free cash flow (incl. SpaceX)",
 }
+# Python-rendered tables that sit on a tab next to its native charts. Monday's
+# native export only sees embedded charts, so a cell-range table on such a tab
+# never reaches the library by itself. Each entry here is appended to that
+# tab's chartList on every catalog rebuild, as its own item with its own
+# static/sheets/full/<book>/<gid>_<n>.png. n is fixed and kept high so a
+# native chart added later (exported as "(4).png", "(5).png", ...) never
+# lands on the same file; import_full_pngs skips these (book, gid, n) keys.
+# ("bot3", 1099402183) is "Power Law" in My Bot's Sheets: three native charts
+# plus the "Bitcoin Return to Power-Law Estimate" table at P86:T98 (live
+# TODAY()/GOOGLEFINANCE formulas). PNG is the Python render from
+# /workspace/power_law_table/render.py, refreshed by sync.py (requested by
+# Mark 2026-11-24).
+TAB_EXTRA_ITEMS = {
+    ("bot3", 1099402183): [{"n": 9, "title": "Bitcoin Return to Power-Law Estimate"}],
+}
+
 # Google's default name for a chart with no real title: "Chart 1", "Chart 2", ...
 # "Chart 01" is a real title some tests use and is not this placeholder.
 UNTITLED_CHART = re.compile(r"^Chart\s+[1-9]\d?$")
@@ -516,6 +532,43 @@ def apply_pinned_flags(tabs):
                 t["chartList"] = [{"n": 1, "title": chart_title}]
     return tabs
 
+def apply_tab_extra_items(tabs):
+    """Append TAB_EXTRA_ITEMS (Python-rendered tables) to their tab's chartList.
+
+    Idempotent: an item whose n is already listed with the same title is left
+    alone. A native chart already holding that n is never replaced; the extra
+    item is skipped with a warning so the clash gets fixed by hand. Returns
+    (tabs, warnings).
+    """
+    warnings = []
+    for t in tabs or []:
+        try:
+            key = (str(t.get("book")), int(t.get("gid")))
+        except (TypeError, ValueError):
+            continue
+        extras = TAB_EXTRA_ITEMS.get(key)
+        if not extras or tab_excluded(*key) or t.get("_unpositioned"):
+            continue
+        listed = t.get("chartList") if isinstance(t.get("chartList"), list) else []
+        charts = t.get("charts") if isinstance(t.get("charts"), list) else []
+        if not listed and charts:
+            listed = [{"n": i, "title": c} for i, c in enumerate(charts, 1)]
+        listed, charts = [dict(c) for c in listed], list(charts)
+        for item in extras:
+            n, title = int(item["n"]), str(item["title"])
+            have = next((c for c in listed if isinstance(c, dict) and c.get("n") == n), None)
+            if have is not None:
+                if " ".join(str(have.get("title") or "").split()) != title:
+                    warnings.append(
+                        "%s gid %s (%s): chart %d already exists (%r); extra item %r not added"
+                        % (key[0], key[1], t.get("tab") or "", n, have.get("title"), title)
+                    )
+                continue
+            listed.append({"n": n, "title": title})
+            charts.append(title)
+        t["chartList"], t["charts"] = listed, charts
+    return tabs, warnings
+
 def build_catalog(dumps, repo, allow_partial):
     """Rewrite catalog.json from spreadsheet dumps. Returns (doc, warnings)."""
     books, tabs = [], []
@@ -546,6 +599,8 @@ def build_catalog(dumps, repo, allow_partial):
     grouped, pin_warns = restore_pinned_tabs(grouped, previous)
     warnings.extend(pin_warns)
     grouped = apply_pinned_flags(grouped)
+    grouped, extra_warns = apply_tab_extra_items(grouped)
+    warnings.extend(extra_warns)
     for w in warnings:
         print("warning: " + w)
     kept, stamp = load_thumb_index(repo)

@@ -113,6 +113,16 @@ KEEP_MANUAL_PNGS = {
 }
 
 
+# Python-rendered extra items on a tab with native charts (a table next to
+# the charts). sheets_catalog.TAB_EXTRA_ITEMS owns the list; the PNG at
+# <gid>_<n>.png is never replaced by an export.
+KEEP_MANUAL_ITEMS = {
+    (book, int(gid), int(item["n"]))
+    for (book, gid), items in sheets_catalog.TAB_EXTRA_ITEMS.items()
+    for item in items
+}
+
+
 def split_chart_n(name):
     """Return (name without ' (n)', n). n is 1 when there is no suffix."""
     m = CHART_SUFFIX.search(name)
@@ -240,6 +250,8 @@ def skip_chart_image(tabs, book, gid, n):
     """
     try:
         if (str(book), int(gid)) in KEEP_MANUAL_PNGS:
+            return True
+        if (str(book), int(gid), int(n)) in KEEP_MANUAL_ITEMS:
             return True
     except (TypeError, ValueError):
         pass
