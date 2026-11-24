@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated": "2026-11-21T13:40:53Z",
+  "generated": "2026-11-24T13:37:34Z",
   "note": "Paper book sized by paperWeight on static/price_targets.json. paperWeight is a signed percent of NAV (10 = 10% long, -5 = 5% short, 0 or missing = cash), copied from the sheet column \"Paper weight %\". Gross exposure is capped at 100%. No leverage, no fees. After any price_targets.json update: python3 scripts/paper_trading.py",
   "config": {
     "startingCash": 100000.0,
@@ -578,6 +578,11 @@
       "date": "2026-11-20",
       "nav": 86118.21,
       "spyClose": 689.8099975585938
+    },
+    {
+      "date": "2026-11-23",
+      "nav": 93270.37,
+      "spyClose": 722.2899780273438
     }
   ],
   "spyInceptionOpen": 734.8200073242188,
