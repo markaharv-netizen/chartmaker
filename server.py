@@ -520,6 +520,38 @@ def paper_view(fresh=False):
     updated = mod.update_book(book, rows, prices, mod.now_et())
     return {"book": mod.export_book(updated), "prices": last}
 
+# ---------- X Bookmarks (Mark's private bookmarks; sealed bundle, signed-in only) ----------
+# The repo is public, so the bundle lives encrypted on branch x-bookmarks-data (or XB_FILE locally)
+# and is decrypted here with APP_PASSWORD (XB_KEY overrides). See scripts/refresh_x_bookmarks.py.
+XB_FILE = os.environ.get("XB_FILE") or ""
+_XB = {"bundle": None, "at": 0, "err": None}; _XBLOCK = threading.Lock()
+def _xb_mod():
+    scripts = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts")
+    if scripts not in sys.path: sys.path.insert(0, scripts)
+    import x_bookmarks
+    return x_bookmarks
+def _xb_fetch_blob(xb):
+    if XB_FILE:
+        with open(XB_FILE, "rb") as f: return f.read()
+    if GH_TOKEN:
+        url = f"https://api.github.com/repos/{VIEWS_REPO}/contents/{xb.DATA_PATH}?ref={urllib.parse.quote(xb.DATA_BRANCH)}"
+        hdr = {"Authorization": "Bearer " + GH_TOKEN, "Accept": "application/vnd.github.raw", "User-Agent": "chartmaker"}
+    else:
+        url = f"https://raw.githubusercontent.com/{VIEWS_REPO}/{xb.DATA_BRANCH}/{xb.DATA_PATH}"
+        hdr = {"User-Agent": "chartmaker"}
+    with urllib.request.urlopen(urllib.request.Request(url, headers=hdr), timeout=30) as r: return r.read(60_000_000)
+def xbookmarks_bundle(fresh=False):
+    """Decrypted bundle, cached 10 minutes. Raises LookupError when there is none yet."""
+    with _XBLOCK:
+        if fresh or _XB["bundle"] is None or time.time() - _XB["at"] > 600:
+            xb = _xb_mod()
+            try: blob = _xb_fetch_blob(xb)
+            except urllib.error.HTTPError as e:
+                if e.code == 404: raise LookupError("no bookmarks pulled yet")
+                raise
+            except FileNotFoundError: raise LookupError("no bookmarks pulled yet")
+            _XB["bundle"] = xb.open_sealed(blob, os.environ.get("XB_KEY") or PASSWORD); _XB["at"] = time.time()
+        return _XB["bundle"]
 class H(SimpleHTTPRequestHandler):
     def __init__(s, *a, **k): super().__init__(*a, directory=ROOT, **k)
     def log_message(s, *a): pass
@@ -555,6 +587,22 @@ class H(SimpleHTTPRequestHandler):
         if not origin: return True
         host = (s.headers.get("Host") or "").split(",")[0].strip()
         return urllib.parse.urlparse(origin).netloc == host
+    def xbookmarks_get(s, qs):
+        if not PASSWORD and not os.environ.get("XB_KEY"): return s.send_json({"error": "X bookmarks need APP_PASSWORD (it is the decryption key)"}, 503)
+        try: b = xbookmarks_bundle(qs.get("fresh", [""])[0] == "1")
+        except LookupError as e: return s.send_json({"error": str(e), "items": [], "count": 0}, 404)
+        except Exception as e: return s.send_json({"error": "bookmarks unavailable: " + type(e).__name__ + ": " + str(e)[:200]}, 502)
+        body = json.dumps(_xb_mod().public_doc(b)).encode(); s.send_response(200)
+        s.send_header("Content-Type", "application/json"); s.send_header("Cache-Control", "private, no-store"); s.send_header("Content-Length", len(body)); s.end_headers(); s.wfile.write(body)
+    def xbookmarks_thumb(s, qs):
+        pid = qs.get("id", [""])[0]
+        if not pid.isdigit(): return s.send_json({"error": "bad id"}, 400)
+        try: b = xbookmarks_bundle()
+        except Exception: return s.send_json({"error": "bookmarks unavailable"}, 502)
+        img = _xb_mod().thumb_bytes(b, pid)
+        if not img: return s.send_json({"error": "no thumbnail"}, 404)
+        s.send_response(200); s.send_header("Content-Type", "image/jpeg"); s.send_header("Cache-Control", "private, max-age=86400")
+        s.send_header("Content-Length", len(img)); s.end_headers(); s.wfile.write(img)
     def favorites_get(s):
         if favorites_mode() == "off":
             return s.send_json({"error": "favorites stay in the browser on this server", "sync": "off", "shared": False, "scope": FAV_SCOPE["off"]}, 410)
@@ -622,6 +670,8 @@ class H(SimpleHTTPRequestHandler):
                 live = False
             return s.send_json({"viewsStore": VIEWS_STORE, "auth": bool(PASSWORD), "favoritesSync": favorites_mode(), "sheetsLive": live})
         if u.path == "/api/favorites": return s.favorites_get()
+        if u.path == "/api/x-bookmarks": return s.xbookmarks_get(urllib.parse.parse_qs(u.query))
+        if u.path == "/api/x-bookmarks/thumb": return s.xbookmarks_thumb(urllib.parse.parse_qs(u.query))
         if u.path in ("/api/views", "/api/views/all"):
             if VIEWS_STORE == "browser": return s.send_json([] if u.path == "/api/views" else _norm({}))
             try: d = store_read(fresh=u.path == "/api/views/all")

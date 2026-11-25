@@ -70,6 +70,20 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 #paper table{border-collapse:collapse;width:100%;font-size:14px;background:#fff}#paper th,#paper td{padding:6px 10px;border-bottom:1px solid #e5e7eb;text-align:right;white-space:nowrap}
 #paper th:first-child,#paper td:first-child{text-align:left}#paper th{font-size:12px;color:#6B7280;font-weight:600;background:#fff}
 #paper tr:last-child td{border-bottom:0}#paper .muted{color:#6B7280}
+#xbm{display:none;padding:16px 16px 48px;max-width:1100px}#xbm h2{margin:0 0 4px;font-size:22px}
+#xbm .lede{color:#6B7280;margin:0 0 12px;font-size:13px;line-height:1.45}
+#xbm .xctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
+#xbm .xctl input{flex:1 1 260px;padding:7px 10px;border:1px solid #d1d5db;border-radius:4px;font:inherit;font-size:14px}
+#xbm .xctl select{padding:6px 8px;border:1px solid #d1d5db;border-radius:4px;font:inherit;font-size:14px;background:#fff}
+#xbm .xcard{display:flex;gap:14px;background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:12px 14px;margin:0 0 10px}
+#xbm .xbody{flex:1;min-width:0}#xbm .xhead{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline;font-size:14px}
+#xbm .xhead b{color:#111}#xbm .xhead .h,#xbm .xhead .d{color:#6B7280}#xbm .xhead a{color:#2563eb;margin-left:auto;text-decoration:none}#xbm .xhead a:hover{text-decoration:underline}
+#xbm .xtext{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px;line-height:1.45;margin:6px 0 8px;color:#111}#xbm .xtext a{color:#2563eb}
+#xbm .xm{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:#6B7280;font-variant-numeric:tabular-nums}#xbm .xm b{color:#374151;font-weight:600}
+#xbm .xthumb{flex:0 0 160px;position:relative}#xbm .xthumb img{width:160px;max-height:200px;object-fit:cover;border-radius:6px;border:1px solid #e5e7eb;display:block;background:#f3f4f6}
+#xbm .xthumb span{position:absolute;left:6px;bottom:6px;background:#111c;color:#fff;font-size:11px;padding:1px 6px;border-radius:3px}
+#xbm .empty{background:#F9FAFB;border:1px dashed #D1D5DB;border-radius:6px;padding:12px 14px;color:#374151;font-size:14px}
+@media (max-width:640px){#xbm .xcard{flex-direction:column}#xbm .xthumb{flex-basis:auto}#xbm .xthumb img{width:100%}}
 #brief{display:none;padding:16px 16px 48px;max-width:1100px}
 #brief h2{margin:0 0 4px;font-size:22px}#brief h3{margin:0;font-size:18px}
 #brief h3 a{color:#111;text-decoration:none}#brief h3 a:hover{text-decoration:underline}
@@ -180,7 +194,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
   .hseg button{flex:1 1 0;min-height:44px;font-size:15px;padding:8px 10px}
 }
 </style></head><body>
-<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mBrief" class="on" title="Lloyd's 9 AM ET news briefing, newest first">Daily briefing</button><button id="mCotd">Charts of the day</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button><select id="mChartType" aria-label="Chart" title="Price, financials, valuation, and watchlist"><option value="" disabled selected hidden>Chart</option><option value="prices">Price</option><option value="fin">Financials</option><option value="val">Valuation</option><option value="watch">Watchlist</option></select><select id="mViews" aria-label="Views" title="Heatmap, BTC treasury, price targets, and paper trading"><option value="" disabled selected hidden>Views</option><option value="heat">Heatmap</option><option value="tre">BTC Treasury</option><option value="pt">Price targets</option><option value="paper">Paper trading</option></select></div>
+<div id="mode" style="padding:10px 12px 0;background:#fff"><button id="mBrief" class="on" title="Lloyd's 9 AM ET news briefing, newest first">Daily briefing</button><button id="mCotd">Charts of the day</button><button id="mSheets" title="Browse the chart-sheet workbooks">Sheets</button><button id="mXbm" title="Mark's X bookmarks (signed-in only)">X Bookmarks</button><select id="mChartType" aria-label="Chart" title="Price, financials, valuation, and watchlist"><option value="" disabled selected hidden>Chart</option><option value="prices">Price</option><option value="fin">Financials</option><option value="val">Valuation</option><option value="watch">Watchlist</option></select><select id="mViews" aria-label="Views" title="Heatmap, BTC treasury, price targets, and paper trading"><option value="" disabled selected hidden>Views</option><option value="heat">Heatmap</option><option value="tre">BTC Treasury</option><option value="pt">Price targets</option><option value="paper">Paper trading</option></select></div>
 <div id="vbar" style="display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#fff;border-bottom:1px solid #ddd;align-items:center;font-size:13px">
 <label style="flex-direction:row;align-items:center;gap:6px;display:flex">Theme<select id="theme"><option value="white">White</option><option value="cream">Off-white / cream</option><option value="gray">Light gray</option><option value="dark">Dark</option><option value="navy">Navy</option><option value="black">Black (X dark)</option></select></label>
 <span id="tprev" style="padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-weight:bold;letter-spacing:2px"></span>
@@ -270,6 +284,7 @@ button{background:#F7931A;color:#fff;border:0;border-radius:4px;cursor:pointer}
 <div id="wrap"><div id="chart"></div><canvas id="ptcanvas" width="1600" height="720" aria-label="Steve's DCF price targets"></canvas></div>
 <div id="cotd"></div>
 <div id="sheets"></div>
+<div id="xbm"></div>
 <div id="paper">
 <div class="head"><div><h2>Paper trading</h2><p class="theme" id="paperBlurb"></p></div><button id="paperGo" type="button" title="Fetch fresh quotes">Refresh prices</button></div>
 <p class="pending" id="paperPending"></p>
@@ -893,11 +908,12 @@ addEventListener('scroll',ctxHide,true);addEventListener('blur',ctxHide);
 
 // ---------- Financials mode (SEC EDGAR XBRL via /api/fin) ----------
 let MODE='prices', flast=null;
-function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='paper'||m==='briefing';
+function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='paper'||m==='briefing'||m==='xbm';
   $('mBrief').classList.toggle('on',m==='briefing');$('brief').style.display=m==='briefing'?'block':'none';
   $('mCotd').classList.toggle('on',m==='cotd');$('cotd').style.display=m==='cotd'?'block':'none';
   $('mSheets').classList.toggle('on',m==='sheets');$('sheets').style.display=m==='sheets'?'block':'none';
   $('paper').style.display=m==='paper'?'block':'none';
+  $('mXbm').classList.toggle('on',m==='xbm');$('xbm').style.display=m==='xbm'?'block':'none';
   $('ptctl').style.display=m==='pt'?'flex':'none';
   $('chart').style.display=m==='pt'?'none':'';$('ptcanvas').style.display=m==='pt'?'block':'none';
   $('wrap').style.display=lib?'none':'';$('vbar').style.display=lib?'none':'flex';if(!lib&&m!=='pt'){try{chart.resize()}catch(e){}}if(typeof vlist==='function')try{vlist()}catch(e){}
@@ -908,8 +924,8 @@ function setMode(m){MODE=m;wtipHide();const lib=m==='cotd'||m==='sheets'||m==='p
   if(m!=='tre'&&typeof fitChart==='function')fitChart();
   if(m!=='pt')chart.clear();$('status').textContent='';
   if(m==='heat')try{hgroupSync()}catch(e){}
-  if(m==='prices'){syncPriceUi();render()}else if(m==='briefing')briefEnter();else if(m==='paper')paperEnter();else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
-$('mBrief').onclick=()=>setMode('briefing');$('mChartType').onchange=()=>{const v=$('mChartType').value;if(v)setMode(v)};$('mViews').onchange=()=>{const v=$('mViews').value;if(v)setMode(v)};$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');
+  if(m==='prices'){syncPriceUi();render()}else if(m==='briefing')briefEnter();else if(m==='paper')paperEnter();else if(m==='xbm')xbmEnter();else if(m==='pt')ptenter();else if(m==='sheets')sheetsEnter();else if(m==='cotd')cotdenter();else if(m==='watch')wenter();else if(m==='val')vrender();else if(m==='tre')trender();else if(m==='heat')hrender();else frender()}
+$('mBrief').onclick=()=>setMode('briefing');$('mChartType').onchange=()=>{const v=$('mChartType').value;if(v)setMode(v)};$('mViews').onchange=()=>{const v=$('mViews').value;if(v)setMode(v)};$('mCotd').onclick=()=>setMode('cotd');$('mSheets').onclick=()=>setMode('sheets');$('mXbm').onclick=()=>setMode('xbm');
 // ---------- Favorites: shared by everyone signed in to this Chartmaker. No per-person accounts. ----------
 // Identity is book/gid/chartNumber (chart 1 is <gid>.png, chart n is <gid>_n.png). At most FAV_MAX.
 // A tab with no chart (a table) is one favorite, book/gid/1, labeled with the tab name. That is the
@@ -2229,6 +2245,31 @@ function briefRender(doc){const E=escHtml,items=doc.briefings||[];
   }).join('');
   return `<h2>Daily briefing</h2><p class="lede">${lede}</p>`+cards;
 }
+// ---------- X Bookmarks: Mark's bookmarks, pulled on demand (scripts/refresh_x_bookmarks.py). Signed-in only. ----------
+let XBM=null,XBMSEQ=0;
+function xbmNum(n){return n==null?'–':n>=1e6?(n/1e6).toFixed(n>=1e7?0:1)+'M':n>=1e4?Math.round(n/1e3)+'K':n>=1e3?(n/1e3).toFixed(1)+'K':String(n)}
+function xbmEng(x){const m=x.metrics||{};return (m.like_count||0)+(m.repost_count||0)+(m.reply_count||0)+(m.quote_count||0)+(m.bookmark_count||0)}
+function xbmLinkify(t){return escHtml(t).replace(/https?:\/\/[^\s<]+/g,u=>'<a href="'+u+'" target="_blank" rel="noopener noreferrer">'+u+'</a>')}
+function xbmFilter(doc,q,sort){q=(q||'').trim().toLowerCase();let rows=(doc.items||[]).map((x,i)=>({x,i}));
+  if(q)rows=rows.filter(({x})=>(x.text||'').toLowerCase().includes(q)||(x.author&&((x.author.name||'').toLowerCase().includes(q)||('@'+(x.author.username||'')).toLowerCase().includes(q.startsWith('@')?q:'@'+q))));
+  const k={new:(a,b)=>(b.x.created_at||'').localeCompare(a.x.created_at||''),old:(a,b)=>(a.x.created_at||'').localeCompare(b.x.created_at||''),saved:(a,b)=>a.i-b.i,
+    eng:(a,b)=>xbmEng(b.x)-xbmEng(a.x),likes:(a,b)=>((b.x.metrics||{}).like_count||0)-((a.x.metrics||{}).like_count||0),views:(a,b)=>((b.x.metrics||{}).impression_count||0)-((a.x.metrics||{}).impression_count||0)}[sort]||null;
+  if(k)rows.sort(k);return rows.map(r=>r.x)}
+function xbmCard(x){const E=escHtml,a=x.author||{},m=x.metrics||{},lab={video:'Video',animated_gif:'GIF',photo:''}[x.media_type]||'';
+  const th=x.thumb?'<a class="xthumb" href="'+E(x.url)+'" target="_blank" rel="noopener noreferrer"><img loading="lazy" alt="" src="/api/x-bookmarks/thumb?id='+E(x.id)+'">'+(lab?'<span>'+lab+'</span>':'')+'</a>':'';
+  const mm=[['like_count','likes'],['repost_count','reposts'],['reply_count','replies'],['quote_count','quotes'],['bookmark_count','bookmarks'],['impression_count','views']].filter(([k])=>m[k]!=null).map(([k,l])=>'<span><b>'+xbmNum(m[k])+'</b> '+l+'</span>').join('');
+  return '<div class="xcard">'+th+'<div class="xbody"><div class="xhead"><b>'+E(a.name||'')+'</b><span class="h">@'+E(a.username||'')+'</span><span class="d">· '+E(x.created_et||'')+'</span><a href="'+E(x.url)+'" target="_blank" rel="noopener noreferrer">Open on X ↗</a></div><div class="xtext">'+xbmLinkify(x.text||'')+'</div><div class="xm">'+mm+'</div></div></div>'}
+function xbmList(){const el=$('xbmlist');if(!el||!XBM)return;const rows=xbmFilter(XBM,$('xbmq').value,$('xbmsort').value);
+  $('xbmshown').textContent=rows.length===XBM.count?XBM.count+' bookmarks':rows.length+' of '+XBM.count+' bookmarks';
+  el.innerHTML=rows.length?rows.map(xbmCard).join(''):'<p class="empty">No bookmarks match.</p>'}
+async function xbmEnter(){const el=$('xbm'),seq=++XBMSEQ,E=escHtml;
+  if(!XBM)el.innerHTML='<h2>X Bookmarks</h2><p class="lede">Loading…</p>';
+  try{const r=await fetch('/api/x-bookmarks',{cache:'no-store'});const doc=await r.json().catch(()=>({}));if(seq!==XBMSEQ||MODE!=='xbm')return;
+    if(!r.ok)throw Error(doc.error||('HTTP '+r.status));XBM=doc;
+    el.innerHTML='<h2>X Bookmarks</h2><p class="lede">'+E(String(doc.count))+' bookmarks from @'+E((doc.user||{}).username||'')+' ('+E(String(doc.with_media))+' with media). Last pulled '+E(doc.pulled_et||'?')+'. Pulled on demand only; X returns at most the ~800 most recent bookmarks.'+(doc.complete===false?' <b>This pull stopped before the last page.</b>':'')+'</p>'
+      +'<div class="xctl"><input id="xbmq" type="search" placeholder="Search text or author (@handle)" aria-label="Search bookmarks"><select id="xbmsort" aria-label="Sort"><option value="saved">Recently bookmarked</option><option value="new">Newest post</option><option value="old">Oldest post</option><option value="eng">Most engagement</option><option value="likes">Most likes</option><option value="views">Most views</option></select><span id="xbmshown" class="muted" style="font-size:13px;color:#6B7280"></span></div><div id="xbmlist"></div>';
+    $('xbmq').oninput=xbmList;$('xbmsort').onchange=xbmList;xbmList();
+  }catch(e){if(seq!==XBMSEQ||MODE!=='xbm')return;el.innerHTML='<h2>X Bookmarks</h2><p class="empty">Could not load bookmarks ('+E(e.message)+').</p>'}}
 async function briefEnter(){const el=$('brief'),seq=++BRIEFSEQ,E=escHtml;
   el.innerHTML='<p class="lede">Loading…</p>';
   try{const r=await fetch('/api/briefing?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const doc=await r.json();if(seq!==BRIEFSEQ||MODE!=='briefing')return;
@@ -2250,7 +2291,7 @@ function applyPriceQuery(){
 applyTheme();annDraw();vload();applyPriceQuery();hgroupInit();
 window.__render=render; window.__frender=frender; window.__setMode=setMode;
 {let q;try{q=new URLSearchParams(location.search)}catch(e){q=new URLSearchParams()} // ?tab= keeps that tab; ticker deep links keep theirs; otherwise Daily briefing
-  const tabs={briefing:'briefing',daily:'briefing',paper:'paper',prices:'prices',charts:'prices',price:'prices',fin:'fin',financials:'fin',val:'val',valuation:'val',heat:'heat',heatmap:'heat',tre:'tre',treasury:'tre',cotd:'cotd',pt:'pt',targets:'pt',sheets:'sheets',watch:'watch',watchlist:'watch'};
+  const tabs={briefing:'briefing',daily:'briefing',paper:'paper',prices:'prices',charts:'prices',price:'prices',fin:'fin',financials:'fin',val:'val',valuation:'val',heat:'heat',heatmap:'heat',tre:'tre',treasury:'tre',cotd:'cotd',pt:'pt',targets:'pt',sheets:'sheets',watch:'watch',watchlist:'watch',xbm:'xbm',bookmarks:'xbm','x-bookmarks':'xbm',xbookmarks:'xbm'};
   const asked=tabs[(q.get('tab')||'').toLowerCase()];
   setMode(asked||(q.has('tickers')?'prices':q.has('ftickers')?'fin':q.has('vtickers')?'val':'briefing'))}
 </script><script>try{syncCustomDates()}catch(e){}</script></body></html>
