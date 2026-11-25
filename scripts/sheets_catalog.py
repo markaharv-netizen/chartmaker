@@ -845,13 +845,16 @@ def self_test():
     assert not tab_excluded("bot1", 477052168)  # 195 BTC vs NVDA vs TSLA vol (kept)
     assert not tab_excluded("bot1", 62435828)  # 310 Tesla price-to-sales (kept)
     assert tab_excluded("bot1", 1554167260)  # 335 Price-to-sales vs Cisco (retired 2026-11-24)
-    assert not tab_excluded("bot1", 1692929819)  # 325 Meta quarterly FCF (kept)
+    assert tab_excluded("bot1", 1692929819)  # 325 Meta quarterly FCF (retired 2026-11-25)
+    assert tab_excluded("bot1", 924884708)  # 88 TSLA vs BYD (retired 2026-11-25)
+    assert tab_excluded("bot1", 2000805977)  # 288 Robinhood vs Coinbase (retired 2026-11-25)
+    assert tab_excluded("bot1", 1652000524)  # 290 Circle since its IPO (retired 2026-11-25)
     assert not tab_excluded("bot3", 1828716508)  # Meta Active Users (kept)
     assert not tab_excluded("bot1", 868062827)  # 172 Job openings per jobless (kept)
     assert not tab_excluded("bot1", 1597166284)  # 249 Youth unemployment (kept)
     assert not tab_excluded("bot2", 2055282175)  # 22 Big Tech unbooked leases by co (kept)
     assert not tab_excluded("bot1", 171599627)
-    assert not tab_excluded("bot1", 1027143376)
+    assert tab_excluded("bot1", 1027143376)  # 97 MSTR vol vs BTC vol (retired 2026-11-25)
     assert not tab_excluded("bot1", 1718545259)  # 54 Trimmed vs core PCE
     assert not tab_excluded("bot1", 1892662496)
     assert not tab_excluded("bot1", 1167074374)  # 299 Real yield vs breakeven
@@ -894,7 +897,7 @@ def self_test():
     live = {(t["book"], t["gid"]) for t in cat["tabs"]}
     for book, gid in EXCLUDED_TABS:
         assert (book, gid) not in live, (book, gid)
-    for gid in (171599627, 1027143376, 1718545259, 397488583, 1892662496, 1167074374,
+    for gid in (171599627, 1718545259, 397488583, 1892662496, 1167074374,
                 1363241271, 2092406374):
         assert ("bot1", gid) in live, gid
     assert ("bot2", 1713824403) in live  # 55 Capex intensity vs legacy
@@ -1076,7 +1079,6 @@ def self_test():
         "156 Nasdaq dot-com vs AI era",
         "229 Nvidia vs country GDPs",
         "75 CoreWeave backlog vs revenue",
-        "97 MSTR vol vs BTC vol",
         "92 MSTR priced in BTC",
         "54 Trimmed vs core PCE",
         "68 Trade balance % GDP",
@@ -1124,7 +1126,7 @@ def self_test():
                 1238930141, 1835714359, 492285771, 220064271, 79264442, 1755343475, 1067583608,
                 1924976898, 1978525586, 1255387315, 1522766504, 1163669375, 1576800449,
                 1192979444, 1912487083, 664060481, 1778640335,
-                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 971499761, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1149583871, 2047295555, 84709656, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 4940912, 1188646727, 847095656, 1694432360, 1421725187, 1607076800, 1924940296, 1966044875, 1161030254, 841222865, 1554167260, 978859168, 1085148301, 1112919588, 100580780, 300777512, 550839420, 102043516, 1942752546):
+                1476428159, 1459587255, 687897000, 546391999, 195161343, 321339250, 2128724732, 189736118, 1981719475, 519508812, 45161413, 567489150, 601460115, 1024470894, 1771590089, 1566394978, 780786735, 248629477, 1965360503, 583946273, 327679061, 971499761, 909478550, 1828414017, 902803117, 949971563, 1234832613, 727565635, 626951791, 673256883, 711603553, 254194955, 1149583871, 2047295555, 84709656, 1328859831, 125248111, 208477863, 1834386145, 1635736949, 747711957, 378380409, 4940912, 1188646727, 847095656, 1694432360, 1421725187, 1607076800, 1924940296, 1966044875, 1161030254, 841222865, 1554167260, 978859168, 1085148301, 1112919588, 100580780, 300777512, 550839420, 102043516, 1942752546, 924884708, 2000805977, 1652000524, 1692929819, 1027143376):
         assert str(gid) not in today_blob, gid
     assert "161 Nvidia P-S and P-E" not in today_blob
     assert "202 Nvidia revenue by geography" not in today_blob
@@ -1298,7 +1300,6 @@ def self_test():
         "static/sheets/full/bot2/530554790.png",
         "static/sheets/thumbs/bot2/530554790.jpg",
         "static/sheets/full/bot1/171599627.png",
-        "static/sheets/full/bot1/1027143376.png",
         "static/sheets/full/bot1/1718545259.png",
         "static/sheets/full/bot1/397488583.png",
         "static/sheets/full/bot1/1892662496.png",
