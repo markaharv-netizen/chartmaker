@@ -43,6 +43,7 @@ Suggested `description` for charts whose library PNG is a Python render (the bui
 - `bot3` gid `9000000002` (Strategy's accretive swaps, week by week, "Strategy's accretive swaps, week by week"): +576.6 sats of Net BTC per MSTR share across 12 weekly 8-K updates through November 16, 2026, from selling MSTR above its Net BTC value and buying STRC below $100.
 - `bot3` gid `9000000003` (Hyperscaler free cash flow (incl. SpaceX), "Hyperscaler free cash flow (incl. SpaceX)"): Alphabet, Meta, Microsoft, Amazon and SpaceX free cash flow, 2014–2030E. Combined FCF is estimated to trough around –$408bn in 2027 (SpaceX, incl. xAI & X, –$315bn) before rebounding in 2030. Actuals from SEC 10-Ks; estimates from S&P Global consensus, company capex guidance and Steve's DCF (updated Nov 20, 2026).
 
+- `bot3` gid `9000000004` (Founder-CEO Tier List, "Founder-CEO Tier List"): static founder-CEO tier-list card. Portraits from Wikimedia Commons (CC licenses; attribution in `static/sheets/full/bot3/9000000004.SOURCES.md`). Not in Monday data refreshes.
 ## Daily steps (on the box)
 
 1. **Sync:** `cd /workspace/chartmaker && timeout 30 git fetch origin && git reset --hard origin/main`

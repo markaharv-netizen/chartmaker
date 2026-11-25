@@ -96,6 +96,13 @@ EXCLUDED_TABS = retired_charts.library_pairs()
 # reserved above Google's int32 sheetId max (SYNTHETIC_GID_MIN), so it cannot
 # collide with a real tab. KEEP_MANUAL_PNGS blocks any import from
 # overwriting the PNG. The catalog row is sheetless so Open in Sheets is hidden.
+# ("bot3", 9000000004) is "Founder-CEO Tier List": a static Python-rendered
+# card (no Google Sheet tab, not in Monday data refreshes). The gid is reserved
+# above Google's int32 sheetId max (SYNTHETIC_GID_MIN), so it cannot collide
+# with a real tab. KEEP_MANUAL_PNGS blocks any import from overwriting the PNG.
+# The catalog row is sheetless so Open in Sheets is hidden. Photo credits sit
+# beside the PNG at static/sheets/full/bot3/9000000004.SOURCES.md and on the
+# catalog row (notes + Photo credits link). Script: /workspace/ceo_tier/make_ceo_tier_card.py.
 # ("bot3", 318084443) is "SpaceX Free Cash Flow" in My Bot's Sheets: it has a
 # native column chart, but the library PNG is Steve's quarterly Python render
 # (cream background, purple bars, shaded estimates band). KEEP_MANUAL_PNGS
@@ -160,6 +167,7 @@ PINNED_TABS = {
     ("bot3", 9000000001): "Tesla Robotaxi service area (sq mi)",
     ("bot3", 9000000002): "Strategy's accretive swaps, week by week",
     ("bot3", 9000000003): "Hyperscaler free cash flow (incl. SpaceX)",
+    ("bot3", 9000000004): "Founder-CEO Tier List",
     ("bot3", 318084443): "SpaceX Free Cash Flow",
     ("bot3", 1027111563): "SpaceX Capex",
     ("bot3", 1921102868): "Share Count Change",
@@ -180,6 +188,19 @@ SHEETLESS_TABS = {
     ("bot3", 9000000001): "Tesla Robotaxi service area (sq mi)",
     ("bot3", 9000000002): "Strategy's accretive swaps, week by week",
     ("bot3", 9000000003): "Hyperscaler free cash flow (incl. SpaceX)",
+    ("bot3", 9000000004): "Founder-CEO Tier List",
+}
+# Optional library notes / credit file for sheetless rows. apply_pinned_flags
+# writes these onto the catalog row so a rebuild cannot drop the attribution.
+SHEETLESS_NOTES = {
+    ("bot3", 9000000004): (
+        "Portraits from Wikimedia Commons (CC BY, CC BY-SA, and CC0; "
+        "attribution requested). Abel Avellan is a silhouette placeholder "
+        "because no freely licensed portrait was found."
+    ),
+}
+SHEETLESS_CREDITS = {
+    ("bot3", 9000000004): "sheets/full/bot3/9000000004.SOURCES.md",
 }
 # Python-rendered tables that sit on a tab next to its native charts. Monday's
 # native export only sees embedded charts, so a cell-range table on such a tab
@@ -530,6 +551,10 @@ def apply_pinned_flags(tabs):
                 t["charts"] = [chart_title]
             if not t.get("chartList"):
                 t["chartList"] = [{"n": 1, "title": chart_title}]
+            if key in SHEETLESS_NOTES:
+                t["notes"] = SHEETLESS_NOTES[key]
+            if key in SHEETLESS_CREDITS:
+                t["credits"] = SHEETLESS_CREDITS[key]
     return tabs
 
 def apply_tab_extra_items(tabs):
@@ -914,6 +939,7 @@ def self_test():
     assert ("bot3", 9000000001) in live  # Tesla Robotaxi service area (sq mi)
     assert ("bot3", 9000000002) in live  # Strategy's accretive swaps, week by week
     assert ("bot3", 9000000003) in live  # Hyperscaler free cash flow (incl. SpaceX)
+    assert ("bot3", 9000000004) in live  # Founder-CEO Tier List
     assert ("bot3", 797114604) in live  # NASDAQ Returns by Year
     assert ("bot3", 819961031) in live  # BTC Returns by Year
     assert ("bot3", 318084443) in live  # SpaceX Free Cash Flow
@@ -1539,6 +1565,9 @@ def self_test():
             "bot3 gid 970035917 (Buybacks TTM): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot3 gid 922821390 (Nasdaq-100 Forward PE): missing from dump and no existing catalog entry; added the pinned table tab",
             "bot2 gid 73869283 (93 BTC treasury buys vs sales): missing from dump and no existing catalog entry; added the pinned table tab",
+            "bot2 gid 572335799 (95 Tesla revenue by year): missing from dump and no existing catalog entry; added the pinned table tab",
+            "bot2 gid 818663135 (96 SpaceX revenue by year): missing from dump and no existing catalog entry; added the pinned table tab",
+            "bot3 gid 9000000004 (Founder-CEO Tier List): missing from dump and no existing catalog entry; added the pinned table tab",
         }
         assert set(warns2) == pinned_warns, warns2
         assert by_gid2[1145735379].get("thumb") == thumb_rel
