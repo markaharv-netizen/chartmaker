@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T13:42:01Z",
+  "generated": "2026-11-25T13:41:48Z",
   "seeded": false,
   "title": "Steve's DCF Base Case vs Street Consensus vs Price",
   "subtitleNote": "Base now includes probability-weighted future bets",
@@ -9,8 +9,8 @@
     "buyAbove": 0.15,
     "sellBelow": -0.15
   },
-  "consensusLabel": "mean analyst target (StockAnalysis, Oct 21) · mean analyst target (StockAnalysis, Nov 18) · mean analyst target (StockAnalysis, Nov 9) · mean analyst target (StockAnalysis, Nov 10) · mean analyst target (StockAnalysis, Nov 3) · mean analyst target (JPMorgan initiation) · mean analyst target (Morningstar fair value estimate)",
-  "priceLabel": "Oct 21, 2026 close; Nov 17, 2026 close; Nov 12, 2026 close; Nov 10, 2026 close; Nov 13, 2026 close; Nov 2, 2026 close; Nov 19, 2026 close",
+  "consensusLabel": "mean analyst target (StockAnalysis, Oct 21) · mean analyst target (StockAnalysis, Nov 25) · mean analyst target (StockAnalysis, Nov 18) · mean analyst target (StockAnalysis, Nov 9) · mean analyst target (StockAnalysis, Nov 10) · mean analyst target (StockAnalysis, Nov 3) · mean analyst target (JPMorgan initiation) · mean analyst target (Morningstar fair value estimate)",
+  "priceLabel": "Oct 21, 2026 close; Nov 24, 2026 close; Nov 17, 2026 close; Nov 12, 2026 close; Nov 10, 2026 close; Nov 13, 2026 close; Nov 2, 2026 close; Nov 19, 2026 close",
   "source": {
     "name": "DCF price target summary",
     "spreadsheetId": "10rRnxxpVrv5A2kUWrxiGSysG--S_wJmmBvckjtprnj0",
@@ -70,25 +70,25 @@
     },
     {
       "ticker": "MSTR",
-      "base": 112.13,
-      "bear": 63.38,
-      "bull": 212.95,
+      "base": 102.69,
+      "bear": 57.48,
+      "bull": 197.63,
       "rating": "BUY",
       "consensus": 233.27,
       "analysts": 16,
-      "consensusSource": "StockAnalysis (S&P Global), fetched Nov 18, 2026",
-      "price": 96.5,
-      "priceAsOf": "Nov 17, 2026 close, 4:00 PM ET (strategy.com)",
-      "baseVsPrice": 0.162,
-      "consensusVsPrice": 1.417,
-      "baseVsConsensus": -0.519,
-      "notes": "Nov 18 v6 BTC repricing (weekly 8-Ks Nov 2/9/16; scenario inputs unchanged from Q3 call guidance): forward Base = core $105.44 + $6.68 probability-weighted bets (bets re-sized from the rebuilt grid, P unchanged); Bull core $195.82 + $17.13 bets; Bear no bets ($63.38). BTC $80,746 -> $63,914 (-21%, -$35.71/sh); MSTR price/mkt cap/date -$1.22; holdings 850,849 BTC, STRC buybacks (notional $7,765M, prefs $12,709M), USD Reserve $4.75B / Cash $151.2M +$1.43. EV mNAV 1.03x. Rating HOLD -> BUY (+16.2%, borderline) because MSTR fell 32% vs BTC 21%. Doc 1zubvmWKWLudjAv-3f5Aw3JDzYzrpX4poAVH3kibqOk8",
-      "baseChange": -37.29,
-      "baseChangePct": -0.25,
-      "baseChangedAt": "2026-11-18",
+      "consensusSource": "StockAnalysis (S&P Global), fetched Nov 25, 2026",
+      "price": 77.55,
+      "priceAsOf": "Nov 24, 2026 close, 4:00 PM ET (strategy.com)",
+      "baseVsPrice": 0.324,
+      "consensusVsPrice": 2.008,
+      "baseVsConsensus": -0.56,
+      "notes": "Nov 25 v7 BTC repricing (weekly 8-K Nov 23; scenario inputs unchanged from Q3 call guidance): forward Base = core $96.44 + $6.24 probability-weighted bets (bets re-sized from the rebuilt grid, P unchanged); Bull core $181.67 + $15.96 bets; Bear no bets ($57.48). BTC $63,914 -> $59,662 (-6.7%, -$9.01/sh); MSTR price/mkt cap/date -$0.38; holdings 851,305 BTC, STRC buybacks (notional $7,547M, prefs $12,486M), USD Reserve $3.73B / Cash $1.09B +$0.40. EV mNAV 0.94x. Rating BUY -> BUY (+32.4%) because MSTR fell 19.6% vs BTC 6.7%. Doc 1AArHGTTUipdbDL7hxiXhDCxmiMvHEUxD7u81XOdtrSE",
+      "baseChange": -9.44,
+      "baseChangePct": -0.084,
+      "baseChangedAt": "2026-11-25",
       "fromZero": false,
       "previousBase": 149.42,
-      "previousDetail": "Prev Base $149.42 (Bear $86.95, Bull $272.11, HOLD) at Oct 30, 2026 Q3 earnings refresh (unchanged through the Nov 16, 2026 scan) -> $112.13 (Bear $63.38, Bull $212.95, BUY) at Nov 18, 2026 BTC repricing; drop from lower BTC (-$35.71 core) and smaller bet values (-$1.80)",
+      "previousDetail": "Prev Base $149.42 (Bear $86.95, Bull $272.11, HOLD) at Oct 30, 2026 Q3 earnings refresh -> $112.13 (Bear $63.38, Bull $212.95, BUY) at Nov 18, 2026 BTC repricing (unchanged in Nov 20 and Nov 23 scans) -> $102.69 (Bear $57.48, Bull $197.63, BUY) at Nov 25, 2026 BTC repricing; drop from lower BTC (-$9.01 core), MSTR price/date (-$0.38), stack/holdings (+$0.40) and smaller bet values (-$0.44)",
       "paperWeight": 16.0,
       "why": "Bets priced in; at fair value"
     },
@@ -113,7 +113,7 @@
       "fromZero": false,
       "previousBase": 189.36,
       "previousDetail": "Prev Base $189.36 (Bear $82.17, Bull $291.33, HOLD) at Oct 22, 2026 future-bets update (unchanged through the Nov 16, 2026 scan) -> $231.64 (Bear $92.11, Bull $369.54, BUY) at Nov 18, 2026 Q3 FY27 earnings refresh; rise from the FY28 ~75% growth guide (+$33.67), Q4 guide (+$4.33) and Q3 actuals/balance sheet (+$4.27)",
-      "paperWeight": 14.0,
+      "paperWeight": 17.0,
       "why": "Just inside HOLD band"
     },
     {
@@ -137,7 +137,7 @@
       "fromZero": false,
       "previousBase": 40.88,
       "previousDetail": "Prev Base $40.88 (Bear $0.00, Bull $278.64, SELL) at Nov 11, 2026 Q3 earnings refresh -> $38.34 (Bear $0.00, Bull $268.37, SELL) at Nov 13, 2026 Q3 10-Q refresh; drop from +4.6M diluted shares and a higher WACC at the higher share price; unchanged through the Nov 16, 2026 scan (reported >=$4B equipment-backed loan talks, not signed; no change)",
-      "paperWeight": -4.0,
+      "paperWeight": -2.0,
       "why": "Debt still exceeds core EV"
     },
     {
@@ -161,7 +161,7 @@
       "fromZero": false,
       "previousBase": 842.81,
       "previousDetail": "Prev Base $842.81 -> $860.87 at Oct 22, 2026 future-bets update; unchanged in Oct 23, Oct 26, Oct 30, Nov 2 and Nov 4 scans; unchanged through the Nov 16, 2026 scan",
-      "paperWeight": 18.0,
+      "paperWeight": 20.0,
       "why": "HBM upside mostly priced in"
     },
     {
@@ -233,7 +233,7 @@
       "fromZero": false,
       "previousBase": 24.98,
       "previousDetail": "Prev Base $24.98 (Bear $0.00, Bull $110.31, SELL) at Oct 22, 2026 future-bets update -> $24.13 (Bear $0.00, Bull $110.36, SELL) at Nov 11, 2026 Q3 earnings refresh (absorbs Nov 6 Firefly/Blacklift deal); Firefly costs/shares offset cheaper satellites; unchanged through the Nov 16, 2026 scan",
-      "paperWeight": -3.0,
+      "paperWeight": 0.0,
       "why": "Needs full constellation"
     },
     {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated": "2026-11-24T13:37:34Z",
+  "generated": "2026-11-25T13:41:56Z",
   "note": "Paper book sized by paperWeight on static/price_targets.json. paperWeight is a signed percent of NAV (10 = 10% long, -5 = 5% short, 0 or missing = cash), copied from the sheet column \"Paper weight %\". Gross exposure is capped at 100%. No leverage, no fees. After any price_targets.json update: python3 scripts/paper_trading.py",
   "config": {
     "startingCash": 100000.0,
@@ -81,8 +81,8 @@
       "entryPrice": 159.19000244140625,
       "entryDate": "2026-11-18",
       "realized": 0,
-      "weight": 14.0,
-      "weightRequested": 14.0
+      "weight": 17.0,
+      "weightRequested": 17.0
     },
     {
       "ticker": "CRWV",
@@ -93,8 +93,8 @@
       "entryPrice": 47.112802936667215,
       "entryDate": "2026-11-06",
       "realized": -716.46,
-      "weight": -4.0,
-      "weightRequested": -4.0
+      "weight": -2.0,
+      "weightRequested": -2.0
     },
     {
       "ticker": "MU",
@@ -105,8 +105,8 @@
       "entryPrice": 708.6213783890266,
       "entryDate": "2026-11-06",
       "realized": 185.89,
-      "weight": 18.0,
-      "weightRequested": 18.0
+      "weight": 20.0,
+      "weightRequested": 20.0
     },
     {
       "ticker": "META",
@@ -141,8 +141,8 @@
       "entryPrice": 30.56999969482422,
       "entryDate": "2026-11-06",
       "realized": -1.09,
-      "weight": -3.0,
-      "weightRequested": -3.0
+      "weight": 0.0,
+      "weightRequested": 0.0
     },
     {
       "ticker": "ASST",
@@ -220,7 +220,28 @@
     "GOOG": 20.0,
     "AGLT": 0.0
   },
-  "pending": null,
+  "pending": {
+    "executeOn": "2026-11-25",
+    "detected": "2026-11-25",
+    "detectedAt": "2026-11-25T08:41:55-05:00",
+    "weights": {
+      "SPCX": 0.0,
+      "TSLA": 0.0,
+      "MSTR": 16.0,
+      "NVDA": 17.0,
+      "CRWV": -2.0,
+      "MU": 20.0,
+      "META": 6.0,
+      "RKLB": -7.0,
+      "ASTS": 0.0,
+      "ASST": 0.0,
+      "MSFT": 12.0,
+      "GOOG": 20.0,
+      "AGLT": 0.0,
+      "ANT": 0.0
+    },
+    "reason": "weight"
+  },
   "trades": [
     {
       "id": 1,
@@ -583,6 +604,11 @@
       "date": "2026-11-23",
       "nav": 93270.37,
       "spyClose": 722.2899780273438
+    },
+    {
+      "date": "2026-11-24",
+      "nav": 90420.22,
+      "spyClose": 718.780029296875
     }
   ],
   "spyInceptionOpen": 734.8200073242188,
