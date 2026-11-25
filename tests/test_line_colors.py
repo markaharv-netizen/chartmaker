@@ -461,8 +461,8 @@ class LineColorBrowserTest(unittest.TestCase):
         self.assertEqual(ui["ctl"], "none")
         self.assertEqual(ui["options"][1:], [["prices", "Price"], ["fin", "Financials"], ["val", "Valuation"], ["watch", "Watchlist"]])
         self.assertEqual(ui["viewOptions"][1:], [["heat", "Heatmap"], ["tre", "BTC Treasury"], ["pt", "Price targets"], ["paper", "Paper trading"]])
-        self.assertEqual(ui["pills"], [["mBrief", "Daily briefing"], ["mCotd", "Charts of the day"], ["mSheets", "Sheets"]])
-        self.assertEqual(ui["modeOrder"], ["mBrief", "mCotd", "mSheets", "mChartType", "mViews"])
+        self.assertEqual(ui["pills"], [["mBrief", "Daily briefing"], ["mCotd", "Charts of the day"], ["mSheets", "Sheets"], ["mXbm", "X Bookmarks"]])
+        self.assertEqual(ui["modeOrder"], ["mBrief", "mCotd", "mSheets", "mXbm", "mChartType", "mViews"])
 
         fin = self.ev(r"""
 (() => {
