@@ -1,0 +1,1 @@
+Data-only branch for Chartmaker's X Bookmarks tab. x_bookmarks.enc is encrypted with a key derived from the app password; it is not readable without it. Written by scripts/refresh_x_bookmarks.py on main.
