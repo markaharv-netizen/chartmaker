@@ -67,6 +67,9 @@ CHART_SUFFIX = re.compile(r"\s+\((\d{1,2})\)(?=(?:\s+\d{4}-\d{2}-\d{2})?\.png$)"
 # bot3 9000000003 ("Hyperscaler free cash flow (incl. SpaceX)") is PNG-only, with
 # no Sheet tab. Its library PNG is Steve's quarterly Python render at
 # static/sheets/full/bot3/9000000003.png.
+# bot3 9000000004 ("Founder-CEO Tier List") is PNG-only, with no Sheet tab.
+# Its library PNG is a static Python card at
+# static/sheets/full/bot3/9000000004.png. It is not part of Monday data refreshes.
 # bot3 318084443 ("SpaceX Free Cash Flow") has a native column chart; its
 # library PNG is Steve's quarterly Python render at
 # static/sheets/full/bot3/318084443.png.
@@ -101,6 +104,7 @@ KEEP_MANUAL_PNGS = {
     ("bot3", 9000000001),  # Tesla Robotaxi service area (sq mi) (Python render)
     ("bot3", 9000000002),  # Strategy's accretive swaps, week by week (Python render)
     ("bot3", 9000000003),  # Hyperscaler free cash flow (incl. SpaceX) (Python render)
+    ("bot3", 9000000004),  # Founder-CEO Tier List (static Python card)
     ("bot3", 318084443),  # SpaceX Free Cash Flow (Python render)
     ("bot3", 1027111563),  # SpaceX Capex (Python render)
     ("bot3", 1921102868),  # Share Count Change (Python render)
