@@ -932,7 +932,10 @@ def self_test():
     assert pick_excluded({"spreadsheetId": bot1, "gid": 550839420})  # 164 Car insurance vs CPI (retired 2026-11-24)
     assert pick_excluded({"spreadsheetId": bot1, "gid": 102043516})  # 27 BTC vs real yield corr (retired 2026-11-24)
     assert pick_excluded({"spreadsheetId": bot2, "gid": 1942752546})  # 17 Treasury stocks 2026 YTD (retired 2026-11-24)
-    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1692929819})  # 325 Meta quarterly FCF (kept)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1692929819})  # 325 Meta quarterly FCF (retired 2026-11-25)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 924884708})  # 88 TSLA vs BYD (retired 2026-11-25)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 2000805977})  # 288 Robinhood vs Coinbase (retired 2026-11-25)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1652000524})  # 290 Circle since its IPO (retired 2026-11-25)
     assert not pick_excluded({"spreadsheetId": "1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU", "gid": 1828716508})  # Meta Active Users (kept)
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 868062827})  # 172 Job openings per jobless (kept)
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1597166284})  # 249 Youth unemployment (kept)
@@ -943,7 +946,7 @@ def self_test():
     assert pick_excluded({"spreadsheetId": bot1, "gid": 829703707})  # 18 Electricity vs CPI (retired 2026-11-23)
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1892662496})  # 68 Trade balance % GDP
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1167074374})  # 299 Real yield vs breakeven
-    assert not pick_excluded({"spreadsheetId": bot1, "gid": 1027143376})  # 97 MSTR vol vs BTC vol
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1027143376})  # 97 MSTR vol vs BTC vol (retired 2026-11-25)
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 530554790})  # 75 CoreWeave backlog vs revenue
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 817552047})  # 73 US ETF BTC holdings
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 1793142140})  # 76 Neocloud capex vs revenue
