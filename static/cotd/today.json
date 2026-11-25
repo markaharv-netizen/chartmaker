@@ -1,6 +1,6 @@
 {
  "date": "2026-11-25",
- "theme": "5 picks, plus 15 items drawn at random from the sheet library.",
+ "theme": "5 picks, plus 20 items drawn at random from the sheet library.",
  "items": [
   {
    "sheet": "Bot experiments",
@@ -39,6 +39,16 @@
    "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1082237727",
    "image": "cotd/2026-11-25/09.png",
    "kind": "table",
+   "chart_n": 1,
+   "section": "random"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "121 India vs China stocks",
+   "title": "India vs China stocks in US dollars (INDA ÷ MCHI, total return)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=614337209",
+   "image": "cotd/2026-11-25/10.png",
+   "kind": "chart",
    "chart_n": 1,
    "section": "random"
   },
@@ -83,6 +93,16 @@
    "section": "random"
   },
   {
+   "sheet": "bot experiments 2",
+   "tab": "38 Robotaxi utilization scenarios",
+   "title": "38 Robotaxi utilization scenarios",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1231932444",
+   "image": "cotd/2026-11-25/15.png",
+   "kind": "table",
+   "chart_n": 1,
+   "section": "random"
+  },
+  {
    "sheet": "My Bot's Sheets",
    "tab": "MSTR Debt recording",
    "title": "MSTR Amplification",
@@ -103,11 +123,41 @@
    "section": "random"
   },
   {
+   "sheet": "Bot experiments",
+   "tab": "89 TSLA P-E vs Mag 7",
+   "title": "Tesla trailing P/E vs the rest of the Magnificent 7 (month-end)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=962992394",
+   "image": "cotd/2026-11-25/18.png",
+   "kind": "chart",
+   "chart_n": 1,
+   "section": "random"
+  },
+  {
    "sheet": "My Bot's Sheets",
    "tab": "TSLA Sales",
    "title": "Tesla quarterly revenue, millions",
    "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=481801781",
    "image": "cotd/2026-11-25/19.png",
+   "kind": "chart",
+   "chart_n": 1,
+   "section": "random"
+  },
+  {
+   "sheet": "Bot experiments",
+   "tab": "188 Tech jobs since ChatGPT",
+   "title": "Tech jobs since ChatGPT: programming services vs data-center/hosting vs all jobs (Nov 2022 = 100)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=1039927709",
+   "image": "cotd/2026-11-25/20.png",
+   "kind": "chart",
+   "chart_n": 1,
+   "section": "random"
+  },
+  {
+   "sheet": "My Bot's Sheets",
+   "tab": "US Interest Payments",
+   "title": "Interest Payments on US Public Debt",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=30369989",
+   "image": "cotd/2026-11-25/21.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "random"
@@ -155,64 +205,64 @@
  ],
  "picks": [
   {
-   "sheet": "My Bot's Sheets",
-   "tab": "Major Bitcoin Cycles",
-   "title": "Bitcoin Cycle Drawdowns: Peak-to-Trough Recovery Patterns",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=2017072406",
+   "sheet": "Bot experiments",
+   "tab": "94 MSTR BTC holdings & cost",
+   "title": "Strategy: bitcoin held vs its average purchase cost",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=779854179",
    "image": "cotd/2026-11-25/01.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "picks",
-   "description": "Bitcoin's peak-to-trough drawdowns by cycle, plotted by days since each cycle's peak: 2011, 2013, 2017 and 2021 cycles against the current cycle that began at the Oct 6, 2025 high.",
-   "reason": "Bitcoin slipped back to about $59,000 this morning after failing to hold $60,000, so the current cycle's drawdown is deepening. This shows how it compares with past bear markets."
+   "description": "Strategy's bitcoin holdings and its average purchase cost per BTC against the bitcoin price, weekly since August 2020. In the latest data (Oct 30, 2026) Strategy held 848,500 BTC at an average cost of $75,446, with bitcoin at $77,191.",
+   "reason": "Bitcoin fell to about $57,500 this morning, well below Strategy's $75,446 average cost, and MSTR dropped about 8% ahead of its Nov 30 MSCI index removal. This shows how far underwater the stack now is."
   },
   {
-   "sheet": "bot experiments 2",
-   "tab": "13 BTC cost basis by holder",
-   "title": "Average acquisition cost: spot ETFs vs. companies",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1078237833",
+   "sheet": "Bot experiments",
+   "tab": "342 S&P 500 P/E",
+   "title": "S&P 500 P/E: trailing vs Shiller CAPE",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=917876394",
    "image": "cotd/2026-11-25/02.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "picks",
-   "description": "Average acquisition cost of bitcoin for US spot ETFs, iShares IBIT, all public companies and Strategy, against the BTC price.",
-   "reason": "With BTC near $59,000, the price sits below the average cost of ETFs and treasury companies. Strategy's own average is $75,446 per coin after this week's 457 BTC buy."
+   "description": "S&P 500 trailing P/E and Shiller CAPE, monthly since 1950. As of Nov 20, 2026 the trailing P/E was 23.6 and the CAPE 36.4, down from 26.2 and 40.6 in October; the CAPE peaked at 44.2 in December 1999.",
+   "reason": "The Nasdaq fell about 4% and the S&P 500 about 3% this morning on the AI selloff, a hotter core PCE print and new tariff proposals. This shows how much the correction has already taken off valuations and how rich they still are."
   },
   {
    "sheet": "My Bot's Sheets",
-   "tab": "Waymo vs Tesla Texas",
-   "title": "Waymo vs Tesla in Texas",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=1408701012",
+   "tab": "Hyperscaler FCF",
+   "title": "Free cash flow ($bn) — 2026–2030 estimates",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=943655962",
    "image": "cotd/2026-11-25/03.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "picks",
-   "description": "Driverless vehicles registered with the Texas DMV for Waymo and Tesla since late May 2026. In the chart's latest data Tesla had 1,507 (Nov 17) vs Waymo's 1,328 (Nov 18).",
-   "reason": "Tesla registered 49 more Cybercabs in Texas overnight, taking its reported fleet to 1,556 vs Waymo's 1,405, widening the lead it took last week."
+   "description": "Annual free cash flow of Alphabet, Meta, Microsoft and Amazon from 2006 with estimates for 2026–2030. Alphabet goes from $73.3bn in 2025 to an estimated –$77.1bn in 2027, Amazon from $7.7bn to –$74.3bn and Meta from $46.1bn to –$50.5bn, while Microsoft stays positive at $32bn.",
+   "reason": "Nvidia sank more than 8% and Micron and AMD more than 9% this morning as doubts about returns on AI spending resurfaced. This is the cash cost of that spending at the hyperscalers."
   },
   {
    "sheet": "Bot experiments",
-   "tab": "102 SpaceX valuation path",
-   "title": "SpaceX valuation: private tenders → xAI merger → IPO → market",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=854627153",
+   "tab": "316 SpaceX capex by segment",
+   "title": "SpaceX capex by segment (USD bn): the AI build-out dwarfs rockets and Starlink",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY/edit#gid=501922147",
    "image": "cotd/2026-11-25/04.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "picks",
-   "description": "SpaceX's valuation path from 2024 private tenders through the Feb 2026 xAI merger, the June 2026 IPO, its peak and low closes, and the Oct 20, 2026 close.",
-   "reason": "Reports today say Tesla and SpaceX have named board members and banks to weigh a potential merger, putting SpaceX's valuation back in focus."
+   "description": "SpaceX capital spending by segment. AI (xAI, X) capex reached $44.6bn in the four quarters to Sep 30, 2026, against $5.5bn for Starlink and $4.8bn for the launch business; AI capex was $12.7bn in 2025 and $0.5bn in 2023.",
+   "reason": "The FCC authorized SpaceX this morning to deploy up to 1 million satellites as orbital data centers, while SPCX fell about 8% early on Tesla merger dilution worries. This shows how much of SpaceX's spending is already going to AI."
   },
   {
-   "sheet": "My Bot's Sheets",
-   "tab": "GPU Rental Prices",
-   "title": "GPU rental prices, on-demand ($/GPU-hour)",
-   "sheet_url": "https://docs.google.com/spreadsheets/d/1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU/edit#gid=564681563",
+   "sheet": "bot experiments 2",
+   "tab": "26 Tesla FSD subscriptions",
+   "title": "Tesla's active FSD subscriptions: 1.74M, up 67% in a year (Q3 2026)",
+   "sheet_url": "https://docs.google.com/spreadsheets/d/1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ/edit#gid=1936535169",
    "image": "cotd/2026-11-25/05.png",
    "kind": "chart",
    "chart_n": 1,
    "section": "picks",
-   "description": "On-demand GPU rental prices in dollars per GPU-hour for Nvidia B200, H200 SXM, H100 SXM, H100 PCIe and A100 SXM 80GB, since August 2026.",
-   "reason": "New reports say SpaceX's AI unit now earns more than half its revenue renting compute to rivals like Anthropic and Google, so the price of renting a GPU matters."
+   "description": "Tesla's active Full Self-Driving subscriptions by quarter: 1.74 million in Q3 2026, up from 1.04 million in Q3 2025 (+67%) and 0.95 million in Q2 2025.",
+   "reason": "Tesla fell more than 5% today after Reuters reported the EU pushed back its vote on Tesla's self-driving system from Dec 1. Europe-wide approval is the next leg for this subscription base."
   }
  ],
  "random": true
