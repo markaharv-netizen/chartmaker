@@ -889,6 +889,7 @@ def self_test():
     assert tab_excluded("bot1", 1747865584)  # 309 Tesla value per car sold (retired 2026-11-26)
     assert tab_excluded("bot2", 270617286)  # 78 Neocloud big AI contracts (retired 2026-11-26)
     assert tab_excluded("bot1", 1425972109)  # 276 Berkshire vs S&P 500 (retired 2026-11-26)
+    assert tab_excluded("bot1", 1846413225)  # 149 BTC vs S&P vs gold Sharpe (retired 2026-11-26)
     assert not tab_excluded("bot3", 1828716508)  # Meta Active Users (kept)
     assert not tab_excluded("bot1", 868062827)  # 172 Job openings per jobless (kept)
     assert not tab_excluded("bot1", 1597166284)  # 249 Youth unemployment (kept)
