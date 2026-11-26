@@ -45,6 +45,7 @@ Suggested `description` for charts whose library PNG is a Python render (the bui
 
 - `bot3` gid `9000000004` (Founder-CEO Tier List, "Founder-CEO Tier List"): static founder-CEO tier-list card. Portraits from Wikimedia Commons (CC licenses; attribution in `static/sheets/full/bot3/9000000004.SOURCES.md`). Not in Monday data refreshes.
 - `bot3` gid `19854586` (Options OI % of Market Cap, "Options open interest as a % of market cap"): US-listed stocks with the highest options open interest notional as a % of market cap (Strategy.com definition: total call + put contracts × 100 × share price ÷ market cap), plus MSTR in orange. As of the 25 November 2026 close, IREN leads at 97.2% and MSTR is 61.2%. Re-screened monthly.
+- `bot3` gid `1642407363` (Tesla Delivery Growth, "Tesla Delivery Growth (YoY %)"): Tesla annual vehicle delivery growth, 2014–2025, from Tesla 10-K filings and Q4 production & deliveries releases. Growth turned negative in 2024 (−1.1%) and 2025 (−8.6%). Static annual Python render; Monday must not overwrite the library PNG.
 ## Daily steps (on the box)
 
 1. **Sync:** `cd /workspace/chartmaker && timeout 30 git fetch origin && git reset --hard origin/main`

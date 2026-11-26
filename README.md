@@ -119,6 +119,17 @@ Some library images are Steve's Python renders, not Monday's native Sheets expor
 
 Methodology and sources for the current image: `static/sheets/full/bot3/19854586.SOURCES.md`.
 
+**Tesla Delivery Growth (YoY %)** (My Bot's Sheets, bot3 gid `1642407363`). Steve's static annual Python render of Tesla vehicle delivery growth, 2014–2025, from Tesla 10-K filings and Q4 production & deliveries releases (cream background, teal positive bars, terracotta negative bars for 2024 −1.1% and 2025 −8.6%). The native Sheets chart cannot color negative bars red, so the library serves this PNG. There is no refresh routine. Monday's 6:15am importer must not overwrite `static/sheets/full/bot3/1642407363.png` (`KEEP_MANUAL_PNGS` already skips this gid). To replace the image after a later annual update:
+
+1. Copy the new PNG over `static/sheets/full/bot3/1642407363.png`.
+2. Rebuild the search thumbnail from that file. Put it in a folder as `1642407363.png` (or under a `bot3` subfolder) and run:
+   `python3 scripts/sheets_thumbs.py --from-dir /path/to/folder`
+3. Update the years and figures in `static/sheets/full/bot3/1642407363.SOURCES.md`.
+4. Do not import a native-chart export for this gid. Monday's importer already skips it.
+5. Commit, open a PR, squash-merge to main once tests pass, and verify the live Render deploy with `python3 scripts/check_deploy.py`.
+
+Methodology and sources for the current image: `static/sheets/full/bot3/1642407363.SOURCES.md`.
+
 ## Interactive Sheets charts
 
 The Sheets library can draw a chart in the browser from the workbook's own values: hover shows the point, and the date range zooms and pans. **View PNG** and **Download PNG** stay, including on Charts of the day, because a post on X still wants the flat image. A chart with no data file, or a type that is not supported yet, keeps the PNG and does not invent a picture.

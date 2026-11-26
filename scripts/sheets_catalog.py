@@ -163,6 +163,14 @@ EXCLUDED_TABS = retired_charts.library_pairs()
 # the catalog row is not sheetless and Open in Sheets stays on.
 # Script: /workspace/options_oi/make_png.py. Steve re-screens on the 5th of
 # each month and sends a new PNG; swap steps are in README.md.
+# ("bot3", 1642407363) is "Tesla Delivery Growth" in My Bot's Sheets: it has a
+# native column chart, but the library PNG is Steve's static annual Python
+# render (cream background, teal positive bars, terracotta negative bars for
+# 2024 and 2025). The native chart cannot color negative bars red.
+# KEEP_MANUAL_PNGS blocks Monday's native export from overwriting that PNG.
+# The tab is real, so the catalog row is not sheetless and Open in Sheets
+# stays on. There is no refresh routine. Script:
+# /workspace/tesla_deliveries/tesla_delivery_growth.py.
 # A later catalog rebuild must not drop these.
 PINNED_TABS = {
     ("bot3", 874288811): "Central Bank Ranking",
@@ -185,6 +193,7 @@ PINNED_TABS = {
     ("bot2", 572335799): "95 Tesla revenue by year",
     ("bot2", 818663135): "96 SpaceX revenue by year",
     ("bot3", 19854586): "Options OI % of Market Cap",
+    ("bot3", 1642407363): "Tesla Delivery Growth",
 }
 # Google Sheets sheetId is a non-negative int32 (max 2,147,483,647). A library
 # gid at or above this value is synthetic and can never collide with a real tab.

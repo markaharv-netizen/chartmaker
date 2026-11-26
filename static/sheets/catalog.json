@@ -1,7 +1,7 @@
 {
  "generated": "2026-11-23T13:36:47Z",
  "note": "Offline tab list. Regenerate tabs with scripts/sheets_catalog.py. Search previews are compressed thumbnails under static/sheets/thumbs/, built by scripts/sheets_thumbs.py. The Sheets tab shows a thumbnail only while the search box has a query. View PNG and Download PNG open static/sheets/full/<book>/<gid>.png when that file is committed, and the thumbnail otherwise. Import full PNGs with scripts/import_full_pngs.py.",
- "thumbsGenerated": "2026-11-23T15:59:20Z",
+ "thumbsGenerated": "2026-11-26T20:19:27Z",
  "books": [
   {
    "id": "bot1",
@@ -5715,6 +5715,22 @@
    ],
    "pin": true,
    "thumb": "sheets/thumbs/bot3/19854586.jpg"
+  },
+  {
+   "book": "bot3",
+   "tab": "Tesla Delivery Growth",
+   "gid": 1642407363,
+   "charts": [
+    "Tesla Delivery Growth (YoY %)"
+   ],
+   "chartList": [
+    {
+     "n": 1,
+     "title": "Tesla Delivery Growth (YoY %)"
+    }
+   ],
+   "pin": true,
+   "thumb": "sheets/thumbs/bot3/1642407363.jpg"
   }
  ]
 }

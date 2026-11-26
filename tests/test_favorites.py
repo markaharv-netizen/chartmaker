@@ -169,7 +169,7 @@ class FavoritesTest(unittest.TestCase):
         self.cdp.evaluate("document.getElementById('mSheets').click()")
         self.wait(
             "document.querySelectorAll('#shlist .row').length",
-            lambda n: isinstance(n, int) and n == 388)
+            lambda n: isinstance(n, int) and n == 389)
         self.wait(
             "(document.getElementById('favlocal')||{}).textContent||''",
             lambda t: "this browser" in t and "not stored on the server" in t)
@@ -212,7 +212,7 @@ class FavoritesTest(unittest.TestCase):
         self.assertIn("No favorites yet", empty)
         self.assertIn("this browser", self.cdp.evaluate("document.getElementById('favlocal').textContent"))
         self.cdp.evaluate("document.getElementById('shfav').click()")
-        self.wait("document.querySelectorAll('#shlist .row').length", lambda n: isinstance(n, int) and n == 388)
+        self.wait("document.querySelectorAll('#shlist .row').length", lambda n: isinstance(n, int) and n == 389)
         rows = self.search("10 MSTR convertibles table")
         self.assertEqual(rows, [{"tab": "10 MSTR convertibles table", "keys": [TABLE + "/1"]}])
         label = self.cdp.evaluate("document.querySelector('button.fav').getAttribute('aria-label')")
