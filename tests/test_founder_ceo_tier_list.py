@@ -84,7 +84,7 @@ class FounderCeoTierListTest(unittest.TestCase):
         self.assertEqual(hit.get("notes"), NOTES)
         self.assertEqual(hit.get("credits"), CREDITS)
         self.assertEqual(hit.get("thumb"), "sheets/thumbs/bot3/%d.jpg" % GID)
-        self.assertEqual(len(cat["tabs"]), 396)
+        self.assertEqual(len(cat["tabs"]), 389)
         self.assertTrue(any(t.get("book") == "bot3" and t.get("gid") == GID for t in cat["tabs"]))
         full = os.path.join(ROOT, "static", "sheets", "full", "bot3", "%d.png" % GID)
         thumb = os.path.join(ROOT, "static", "sheets", "thumbs", "bot3", "%d.jpg" % GID)

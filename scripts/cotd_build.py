@@ -947,6 +947,13 @@ def self_test():
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1892662496})  # 68 Trade balance % GDP
     assert not pick_excluded({"spreadsheetId": bot1, "gid": 1167074374})  # 299 Real yield vs breakeven
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1027143376})  # 97 MSTR vol vs BTC vol (retired 2026-11-25)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 477622448})  # 240 Real federal minimum wage (retired 2026-11-26)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1856724711})  # 17 EURUSD vs US-DE spread (retired 2026-11-26)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 281767151})  # 136 Fertilizer vs corn (retired 2026-11-26)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1720888818})  # 147 DeFi TVL in ETH terms (retired 2026-11-26)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1747865584})  # 309 Tesla value per car sold (retired 2026-11-26)
+    assert pick_excluded({"spreadsheetId": bot2, "gid": 270617286})  # 78 Neocloud big AI contracts (retired 2026-11-26)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1425972109})  # 276 Berkshire vs S&P 500 (retired 2026-11-26)
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 530554790})  # 75 CoreWeave backlog vs revenue
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 817552047})  # 73 US ETF BTC holdings
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 1793142140})  # 76 Neocloud capex vs revenue
