@@ -1,10 +1,11 @@
 """X Bookmarks for Chartmaker: normalize X API bookmark pages and seal them.
 
-The repo is public, so bookmark data never goes into it in plain form.
-refresh_x_bookmarks.py builds one bundle (posts + compressed thumbnails),
-encrypts it with a key derived from the Chartmaker app password, and stores the
-ciphertext on the data-only branch x-bookmarks-data. The server decrypts it in
-memory and serves it only to signed-in browsers.
+The repository is private and the tab is login-gated. Bookmark data still
+never goes into the repo in plain form: refresh_x_bookmarks.py builds one
+bundle (posts + compressed thumbnails), encrypts it with a key derived from
+the Chartmaker app password, and stores the ciphertext on the data-only
+branch x-bookmarks-data. The server decrypts it in memory and serves it only
+to signed-in browsers.
 
 Stdlib only (server side). Cipher: PBKDF2-HMAC-SHA256 key derivation, a
 SHAKE-256 keystream (key || random nonce) XORed with the zlib'd JSON, and an
