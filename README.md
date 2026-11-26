@@ -244,10 +244,16 @@ The Sentiment tab (bull-vs-bear board and history) was removed on 2026-11-21 at 
 
 Privacy: the repository is private and the tab is served only to signed-in browsers. Bookmark data is still never committed in plain form. `scripts/refresh_x_bookmarks.py` seals the whole bundle (posts + thumbnails) with a key derived from the app password (`scripts/x_bookmarks.py`: PBKDF2-SHA256, SHAKE-256 keystream, HMAC-SHA256 tag) and commits only `x_bookmarks.enc` to the data-only branch `x-bookmarks-data`. The server decrypts it in memory with `APP_PASSWORD` (or `XB_KEY`), caches it for 10 minutes, and serves `GET /api/x-bookmarks` and `GET /api/x-bookmarks/thumb?id=<post id>` only to signed-in browsers (401 otherwise). If the app password changes, re-run the refresh so the bundle is sealed with the new one. `XB_FILE=/path/x_bookmarks.enc` reads a local bundle instead of GitHub (dev and tests).
 
-Refresh (on demand only; each pull spends Mark's X API credits, so no routine and no polling): an agent pulls through the user-X connector's `get_users_bookmarks` (id `127712777`, `max_results` 100, expansions `attachments.media_keys,author_id`, `media.fields` `url,preview_image_url,type`, `user.fields` `username,name,profile_image_url`, `tweet.fields` `created_at,public_metrics,attachments,author_id,note_post,entities`), following `meta.next_token` as `pagination_token` until it is absent, and saves each page to `/workspace/x-bookmarks/raw/pageNN.json`. Then:
+Refresh (on demand only; each pull spends Mark's X API credits, so no routine and no polling). An agent pulls through the user-X connector (signed in as Mark, id `127712777`):
+
+1. `get_users_bookmarks` with `max_results` 100, expansions `attachments.media_keys,author_id`, `media.fields` `url,preview_image_url,type`, `user.fields` `username,name,profile_image_url`, `tweet.fields` `created_at,public_metrics,attachments,author_id,note_post,entities`. Follow `meta.next_token` as `pagination_token` until it is absent (X stops at ~800). Save pages in order as `/workspace/x-bookmarks/raw/pageNN.json`. The script refuses a chain whose last page still has a `next_token` (`--allow-partial` overrides), so a refresh always paginates to the end.
+2. Posts filed in a bookmark folder do not appear in that main list. `get_users_bookmark_folders` -> `raw/folders.json`, then `get_users_bookmarks_by_folder_id` per folder -> `raw/folders/<folder id>.json` (`<id>_2.json` for further pages). That call returns post ids only, and has returned at most 20 per folder with no `next_token`; the tab names any folder that hit 20.
+3. Hydrate the folder-only ids with `get_posts_by_ids` (100 ids per call, same fields; the built-in public X reads work and do not spend Mark's credits) -> `raw/hydrateNN.json`. Deleted or private posts come back as errors and are counted as unavailable.
 
 ```
-python3 scripts/refresh_x_bookmarks.py --raw /workspace/x-bookmarks/raw/page*.json --api-calls <N> --publish
+python3 scripts/refresh_x_bookmarks.py --raw /workspace/x-bookmarks/raw/page*.json \
+  --folders-list /workspace/x-bookmarks/raw/folders.json --folder-dir /workspace/x-bookmarks/raw/folders \
+  --hydrated /workspace/x-bookmarks/raw/hydrate*.json --api-calls <N> --publish
 ```
 
-That needs `CHARTMAKER_APP_PASSWORD` and `CHARTMAKER_GITHUB_TOKEN` in the environment (never printed). No redeploy is needed; the server picks the new bundle up within 10 minutes (or `GET /api/x-bookmarks?fresh=1`). X only returns the ~800 most recent bookmarks; older ones are not reachable through the API. Bookmark folders are not pulled.
+That needs `CHARTMAKER_APP_PASSWORD` and `CHARTMAKER_GITHUB_TOKEN` in the environment (never printed). No redeploy is needed; the server picks the new bundle up within 10 minutes (or `GET /api/x-bookmarks?fresh=1`). Cards show their folder names, and a folder dropdown filters by folder (or "Not in a folder").

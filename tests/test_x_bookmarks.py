@@ -177,6 +177,38 @@ class FetchBlobAuthTest(unittest.TestCase):
         finally:
             server.XB_FILE, server.GH_TOKEN = saved
 
+class FolderAndChainTest(unittest.TestCase):
+    def test_chain_errors(self):
+        self.assertEqual(xb.page_chain_errors([PAGE]), [])
+        self.assertTrue(xb.page_chain_errors([{"meta": {"next_token": "a"}}]))
+        self.assertTrue(xb.page_chain_errors([{"meta": {}}, PAGE]))
+        self.assertEqual(xb.page_chain_errors([{"meta": {"next_token": "a"}}, PAGE]), [])
+
+    def test_folders_merge_and_cap(self):
+        folder_list = {"data": [{"id": "9", "name": "Funny"}, {"id": "8", "name": "Empty"}]}
+        ids = [{"id": "300"}, {"id": "200"}] + [{"id": str(1000 + i)} for i in range(18)]
+        hydrated = {"data": [{"id": "300", "author_id": "1", "created_at": "2024-01-01T00:00:00.000Z", "text": "in a folder"}],
+                    "includes": {"users": [{"id": "1", "name": "Alice", "username": "alice"}]}}
+        bundle, _ = rx.build([PAGE], fetch=lambda s: png_bytes(), hydrated=[hydrated], folder_list=folder_list,
+                             folder_pages={"9": [{"data": ids}], "8": [{"data": []}]})
+        by = {x["id"]: x for x in bundle["items"]}
+        self.assertEqual([x["id"] for x in bundle["items"]], ["200", "100", "300"])
+        self.assertEqual(by["300"]["folders"], ["Funny"])
+        self.assertEqual(by["200"]["folders"], ["Funny"])
+        self.assertEqual(by["100"]["folders"], [])
+        self.assertEqual(bundle["folder_capped"], ["Funny"])
+        self.assertEqual(bundle["unavailable"], 18)
+        self.assertEqual(xb.public_doc(bundle)["folders"], ["Funny", "Empty"])
+
+    def test_cli_refuses_partial_chain(self):
+        tmp = tempfile.mkdtemp(prefix="xbm-cli-")
+        page = os.path.join(tmp, "page01.json")
+        with open(page, "w") as f:
+            json.dump({**PAGE, "meta": {"next_token": "more"}}, f)
+        with self.assertRaises(SystemExit) as cm:
+            rx.main(["--raw", page, "--out", os.path.join(tmp, "x.enc")])
+        self.assertIn("incomplete pull", str(cm.exception))
+
 
 if __name__ == "__main__":
     unittest.main()

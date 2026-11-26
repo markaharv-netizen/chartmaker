@@ -1,24 +1,39 @@
 #!/usr/bin/env python3
 """Rebuild the Chartmaker X Bookmarks bundle from raw X API pages.
 
-The pull itself is done by an agent through the user-X connector
-(get_users_bookmarks, signed in as Mark, id 127712777), never by calling
-api.x.com from this script. Each response page is saved as JSON, then:
+The pull itself is done by an agent through the user-X connector (signed in
+as Mark, id 127712777), never by calling api.x.com from this script. A full
+pull is:
+
+1. get_users_bookmarks, max_results 100, following meta.next_token as
+   pagination_token until it is absent (X stops at ~800). Save each page in
+   order as /workspace/x-bookmarks/raw/pageNN.json. This script refuses a
+   chain whose last page still has a next_token (pass --allow-partial to
+   override), so a refresh always paginates to the end.
+2. get_users_bookmark_folders -> raw/folders.json, then
+   get_users_bookmarks_by_folder_id for each folder -> raw/folders/<id>.json
+   (more pages: <id>_2.json ...). Posts filed in a folder do not appear in
+   the main list, and the folder call returns ids only.
+3. Hydrate the folder-only ids with get_posts_by_ids (100 ids per call; the
+   built-in public X reads work and do not spend Mark's credits), same
+   fields as step 1 -> raw/hydrateNN.json.
 
   python3 scripts/refresh_x_bookmarks.py --raw /workspace/x-bookmarks/raw/page*.json \
-      --api-calls 1 --out /workspace/x-bookmarks/x_bookmarks.enc --publish
+      --folders-list /workspace/x-bookmarks/raw/folders.json \
+      --folder-dir /workspace/x-bookmarks/raw/folders \
+      --hydrated /workspace/x-bookmarks/raw/hydrate*.json --api-calls N --publish
 
-Steps: merge pages -> download each post's first image (photo url, or
+Steps: merge -> download each post's first image (photo url, or
 preview_image_url for video/GIF) from pbs.twimg.com -> compress to a small
 JPEG -> seal everything with the app password -> optionally commit the sealed
 file to the data-only branch x-bookmarks-data. Plain bookmark data and
-thumbnails never go into the repo in plain form. Pulls spend Mark's X API credits:
-pull on demand only, no polling.
+thumbnails never go into the repo in plain form. Pulls spend Mark's X API credits: pull
+on demand only, no polling.
 
 Env: CHARTMAKER_APP_PASSWORD (or XB_KEY) for the key; CHARTMAKER_GITHUB_TOKEN
 for --publish. Neither is printed.
 """
-import argparse, base64, datetime, io, json, os, sys, time, urllib.error, urllib.parse, urllib.request
+import argparse, base64, datetime, glob, io, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -101,8 +116,26 @@ def publish(blob, token, message):
     return commit
 
 
-def build(pages, api_calls=None, user=None, fetch=fetch_image, now=None):
-    items, sources = xb.normalize(pages)
+FOLDER_PAGE_CAP = 20  # the folder endpoint has returned at most 20 ids with no next_token
+
+
+def load_folder_dir(path):
+    """folder id -> [pages], from <id>.json, <id>_2.json, ... in path."""
+    out = {}
+    for f in sorted(glob.glob(os.path.join(path, "*.json"))):
+        m = re.fullmatch(r"(\d+)(?:_(\d+))?\.json", os.path.basename(f))
+        if m:
+            out.setdefault(m.group(1), []).append((int(m.group(2) or 1), load_page(f)))
+    return {k: [p for _, p in sorted(v, key=lambda x: x[0])] for k, v in out.items()}
+
+
+def build(pages, api_calls=None, user=None, fetch=fetch_image, now=None, hydrated=None, folder_list=None, folder_pages=None):
+    fmap = xb.folder_map(folder_list, folder_pages)
+    items, sources = xb.normalize(list(pages) + list(hydrated or []), fmap)
+    have = {x["id"] for x in items}
+    names = {str(f.get("id")): f.get("name") for f in (folder_list or {}).get("data") or []}
+    capped = sorted(names.get(fid) or fid for fid, ps in (folder_pages or {}).items()
+                    if ps and len(ps[-1].get("data") or []) >= FOLDER_PAGE_CAP and not (ps[-1].get("meta") or {}).get("next_token"))
     thumbs, failed = {}, []
     for it in items:
         src = sources.get(it["id"])
@@ -121,6 +154,9 @@ def build(pages, api_calls=None, user=None, fetch=fetch_image, now=None):
         "user": user or {"id": "127712777", "username": "thepowerfulhrv"},
         "api_calls": api_calls if api_calls is not None else len(pages),
         "complete": xb.page_chain_complete(pages),
+        "folders": [f.get("name") for f in (folder_list or {}).get("data") or []],
+        "unavailable": len(set(fmap) - have),
+        "folder_capped": capped,
         "items": items,
         "thumbs": thumbs,
     }
@@ -130,13 +166,23 @@ def build(pages, api_calls=None, user=None, fetch=fetch_image, now=None):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--raw", nargs="+", required=True, help="raw get_users_bookmarks page files, in pull order")
+    ap.add_argument("--allow-partial", action="store_true", help="accept a page chain that still has a next_token")
+    ap.add_argument("--folders-list", help="get_users_bookmark_folders response")
+    ap.add_argument("--folder-dir", help="dir of get_users_bookmarks_by_folder_id pages named <folder id>[_N].json")
+    ap.add_argument("--hydrated", nargs="*", default=[], help="get_posts_by_ids responses for folder-only posts")
     ap.add_argument("--api-calls", type=int, default=None, help="X API calls the pull used (default: page count)")
     ap.add_argument("--out", default="/workspace/x-bookmarks/x_bookmarks.enc")
     ap.add_argument("--publish", action="store_true", help="commit the sealed file to branch x-bookmarks-data")
     a = ap.parse_args(argv)
     key = os.environ.get("XB_KEY") or os.environ.get("CHARTMAKER_APP_PASSWORD") or ""
-    pages = [load_page(p) for p in a.raw]
-    bundle, failed = build(pages, a.api_calls)
+    pages = [load_page(p) for p in sorted(a.raw)]
+    errs = xb.page_chain_errors(pages)
+    if errs and not a.allow_partial:
+        raise SystemExit("incomplete pull: " + "; ".join(errs) + " (fetch the remaining pages, or --allow-partial)")
+    hydrated = [load_page(p) for p in sorted(a.hydrated)]
+    folder_list = load_page(a.folders_list) if a.folders_list else None
+    folder_pages = load_folder_dir(a.folder_dir) if a.folder_dir else None
+    bundle, failed = build(pages, a.api_calls, hydrated=hydrated, folder_list=folder_list, folder_pages=folder_pages)
     blob = xb.seal(bundle, key)
     if xb.open_sealed(blob, key)["items"] != bundle["items"]:
         raise SystemExit("round-trip check failed")
@@ -145,7 +191,8 @@ def main(argv=None):
         f.write(blob)
     n = len(bundle["items"])
     print(f"bookmarks={n} with_media={sum(1 for x in bundle['items'] if x['media'])} thumbs={len(bundle['thumbs'])} "
-          f"thumb_failures={len(failed)} complete={bundle['complete']} sealed_bytes={len(blob)} out={a.out}")
+          f"thumb_failures={len(failed)} complete={bundle['complete']} in_folders={sum(1 for x in bundle['items'] if x['folders'])} "
+          f"unavailable={bundle['unavailable']} folder_capped={bundle['folder_capped']} sealed_bytes={len(blob)} out={a.out}")
     for pid, err in failed:
         print(f"  no thumbnail for {pid}: {err}")
     if a.publish:
