@@ -2,59 +2,59 @@
  "date": "2026-11-26",
  "items": [
   {
-   "book": "bot2",
-   "gid": 817552047,
+   "book": "bot3",
+   "gid": 644674451,
    "chart_n": 1,
-   "tab": "73 US ETF BTC holdings",
-   "title": "U.S. ETF BTC Holdings",
+   "tab": "MSTR priced in BTC",
+   "title": "Strategy denominated in BTC (MSTR/BTC)",
    "kind": "chart",
    "section": "picks",
-   "description": "Bitcoin held by each U.S. spot bitcoin ETF, largest to smallest. BlackRock's IBIT holds far more than any other fund; Fidelity's FBTC is second at about 177,500 BTC.",
-   "reason": "U.S. bitcoin ETFs just logged record November outflows of over $5 billion, led by IBIT. This shows who holds the coins that are leaving."
+   "description": "Strategy's share price measured in bitcoin (MSTR/BTC) since August 2020. It peaked at 0.005 BTC per share in November 2024 and was back to 0.0013 on November 20, 2026, closer to the 2022 low of 0.0006 than to the peak.",
+   "reason": "Strategy now trades below the value of its 851,305 BTC and faces removal from the MSCI USA Index after November 30. This shows how much ground the stock has lost against bitcoin itself."
   },
   {
    "book": "bot1",
-   "gid": 88726790,
+   "gid": 719011886,
    "chart_n": 1,
-   "tab": "284 Bitcoin bear markets",
-   "title": "Bitcoin bear markets compared: decline from each cycle peak, by days since the peak",
+   "tab": "181 Yield curve 10Y-2Y 10Y-3M",
+   "title": "The yield curve: 10Y minus 2Y and 10Y minus 3M Treasury spreads (month-end)",
    "kind": "chart",
    "section": "picks",
-   "description": "Bitcoin's decline from each cycle peak by days since the peak: Dec 2017, Nov 2021 and the Oct 6 2025 peak ($124,753). The current drawdown sits near -37%, much shallower than the -75% to -80% troughs of past cycles at the same point.",
-   "reason": "Bitcoin is stuck near $60K with sentiment at multi-year lows. This puts the current bear market next to the last two."
-  },
-  {
-   "book": "bot1",
-   "gid": 854627153,
-   "chart_n": 1,
-   "tab": "102 SpaceX valuation path",
-   "title": "SpaceX valuation: private tenders → xAI merger → IPO → market",
-   "kind": "chart",
-   "section": "picks",
-   "description": "SpaceX's valuation path from the July 2024 private tender through the xAI merger, the June 2026 IPO, the June 16 peak close, the Aug 5 low and the Oct 20 2026 close (about $1.9 trillion).",
-   "reason": "Tesla and SpaceX have formed board committees to negotiate a potential merger, which puts SpaceX's valuation back in focus."
-  },
-  {
-   "book": "bot1",
-   "gid": 1307998812,
-   "chart_n": 1,
-   "tab": "211 Big Tech debt for AI",
-   "title": "Borrowing for AI: total debt at each fiscal year end vs the latest quarter",
-   "kind": "chart",
-   "section": "picks",
-   "description": "Total debt of Oracle, Meta, Amazon, Microsoft, Alphabet and CoreWeave at each fiscal year end since FY2021 vs the latest quarter (June 2026). Oracle and Amazon are each near $130 billion, and Alphabet passed $100 billion.",
-   "reason": "The AI stock selloff has investors questioning the debt behind the data center build-out. This shows how fast that borrowing grew."
+   "description": "The 10-year minus 2-year and 10-year minus 3-month Treasury spreads at each month end since 1992. In early November 2026 the 10Y-2Y spread was 0.38 points and the 10Y-3M spread 0.67 points, down from 1.09 at the end of September.",
+   "reason": "Hot October core PCE has a December Fed hike all but priced in, and the 2s10s curve is near its flattest since March 2025. This puts today's curve in 30 years of context."
   },
   {
    "book": "bot3",
-   "gid": 564681563,
+   "gid": 1027111563,
    "chart_n": 1,
-   "tab": "GPU Rental Prices",
-   "title": "GPU rental prices, on-demand ($/GPU-hour)",
+   "tab": "SpaceX Capex",
+   "title": "SpaceX capex ($bn)",
    "kind": "chart",
    "section": "picks",
-   "description": "On-demand GPU rental prices in dollars per GPU-hour for H100 SXM, H100 PCIe, H200 SXM, B200 and A100 since August 2026. B200 rents for roughly $8.50 to $9 an hour, H200 for about $6.50, and H100 SXM for about $4.",
-   "reason": "With AI chip stocks selling off on demand worries, rental prices are a live read on compute demand, and they are holding up or rising."
+   "description": "SpaceX capital spending by year: $4.4bn in 2023, $11.2bn in 2024 and $20.7bn in 2025, with estimates of $85.8bn in 2026 and a peak of $398.2bn in 2027 before easing to $174.4bn by 2030.",
+   "reason": "The FCC just authorized SpaceX to deploy up to 1 million Starmind satellites for orbital AI data centers. This is the spending bill behind that kind of ambition."
+  },
+  {
+   "book": "bot1",
+   "gid": 450495048,
+   "chart_n": 1,
+   "tab": "83 TSLA drawdown",
+   "title": "Tesla drawdowns from its record close vs the Nasdaq-100",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Tesla's drawdown from its record close next to the Nasdaq-100's, weekly since 2019. As of November 6, 2026, Tesla was 26.9% below its record and the Nasdaq-100 13.6% below; Tesla's worst was -72.4% in January 2023 and the Nasdaq-100's -35.5% in October 2022.",
+   "reason": "The Nasdaq-100 briefly fell 20% from its record on Wednesday before a late rally. This shows how Tesla's drawdowns usually run far deeper than the index's."
+  },
+  {
+   "book": "bot2",
+   "gid": 2055282175,
+   "chart_n": 1,
+   "tab": "22 Big Tech unbooked leases by co",
+   "title": "Signed, not yet on the books: data-center leases at Microsoft, Meta, Amazon and Alphabet reached $830B (Jun 2026)",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Data-center leases signed but not yet on the balance sheet at Microsoft, Meta, Amazon and Alphabet. The total reached $830bn in June 2026, and by September Microsoft had $364.6bn, Meta $355.7bn, Amazon $164.9bn and Alphabet $130.5bn, up from about $208bn combined in December 2024.",
+   "reason": "With Nvidia down again and on S&P credit watch, the AI selloff has investors asking what Big Tech is locked into. These off-balance-sheet commitments keep growing."
   },
   {
    "book": "bot2",
@@ -167,59 +167,59 @@
  ],
  "picks": [
   {
-   "book": "bot2",
-   "gid": 817552047,
+   "book": "bot3",
+   "gid": 644674451,
    "chart_n": 1,
-   "tab": "73 US ETF BTC holdings",
-   "title": "U.S. ETF BTC Holdings",
+   "tab": "MSTR priced in BTC",
+   "title": "Strategy denominated in BTC (MSTR/BTC)",
    "kind": "chart",
    "section": "picks",
-   "description": "Bitcoin held by each U.S. spot bitcoin ETF, largest to smallest. BlackRock's IBIT holds far more than any other fund; Fidelity's FBTC is second at about 177,500 BTC.",
-   "reason": "U.S. bitcoin ETFs just logged record November outflows of over $5 billion, led by IBIT. This shows who holds the coins that are leaving."
+   "description": "Strategy's share price measured in bitcoin (MSTR/BTC) since August 2020. It peaked at 0.005 BTC per share in November 2024 and was back to 0.0013 on November 20, 2026, closer to the 2022 low of 0.0006 than to the peak.",
+   "reason": "Strategy now trades below the value of its 851,305 BTC and faces removal from the MSCI USA Index after November 30. This shows how much ground the stock has lost against bitcoin itself."
   },
   {
    "book": "bot1",
-   "gid": 88726790,
+   "gid": 719011886,
    "chart_n": 1,
-   "tab": "284 Bitcoin bear markets",
-   "title": "Bitcoin bear markets compared: decline from each cycle peak, by days since the peak",
+   "tab": "181 Yield curve 10Y-2Y 10Y-3M",
+   "title": "The yield curve: 10Y minus 2Y and 10Y minus 3M Treasury spreads (month-end)",
    "kind": "chart",
    "section": "picks",
-   "description": "Bitcoin's decline from each cycle peak by days since the peak: Dec 2017, Nov 2021 and the Oct 6 2025 peak ($124,753). The current drawdown sits near -37%, much shallower than the -75% to -80% troughs of past cycles at the same point.",
-   "reason": "Bitcoin is stuck near $60K with sentiment at multi-year lows. This puts the current bear market next to the last two."
-  },
-  {
-   "book": "bot1",
-   "gid": 854627153,
-   "chart_n": 1,
-   "tab": "102 SpaceX valuation path",
-   "title": "SpaceX valuation: private tenders → xAI merger → IPO → market",
-   "kind": "chart",
-   "section": "picks",
-   "description": "SpaceX's valuation path from the July 2024 private tender through the xAI merger, the June 2026 IPO, the June 16 peak close, the Aug 5 low and the Oct 20 2026 close (about $1.9 trillion).",
-   "reason": "Tesla and SpaceX have formed board committees to negotiate a potential merger, which puts SpaceX's valuation back in focus."
-  },
-  {
-   "book": "bot1",
-   "gid": 1307998812,
-   "chart_n": 1,
-   "tab": "211 Big Tech debt for AI",
-   "title": "Borrowing for AI: total debt at each fiscal year end vs the latest quarter",
-   "kind": "chart",
-   "section": "picks",
-   "description": "Total debt of Oracle, Meta, Amazon, Microsoft, Alphabet and CoreWeave at each fiscal year end since FY2021 vs the latest quarter (June 2026). Oracle and Amazon are each near $130 billion, and Alphabet passed $100 billion.",
-   "reason": "The AI stock selloff has investors questioning the debt behind the data center build-out. This shows how fast that borrowing grew."
+   "description": "The 10-year minus 2-year and 10-year minus 3-month Treasury spreads at each month end since 1992. In early November 2026 the 10Y-2Y spread was 0.38 points and the 10Y-3M spread 0.67 points, down from 1.09 at the end of September.",
+   "reason": "Hot October core PCE has a December Fed hike all but priced in, and the 2s10s curve is near its flattest since March 2025. This puts today's curve in 30 years of context."
   },
   {
    "book": "bot3",
-   "gid": 564681563,
+   "gid": 1027111563,
    "chart_n": 1,
-   "tab": "GPU Rental Prices",
-   "title": "GPU rental prices, on-demand ($/GPU-hour)",
+   "tab": "SpaceX Capex",
+   "title": "SpaceX capex ($bn)",
    "kind": "chart",
    "section": "picks",
-   "description": "On-demand GPU rental prices in dollars per GPU-hour for H100 SXM, H100 PCIe, H200 SXM, B200 and A100 since August 2026. B200 rents for roughly $8.50 to $9 an hour, H200 for about $6.50, and H100 SXM for about $4.",
-   "reason": "With AI chip stocks selling off on demand worries, rental prices are a live read on compute demand, and they are holding up or rising."
+   "description": "SpaceX capital spending by year: $4.4bn in 2023, $11.2bn in 2024 and $20.7bn in 2025, with estimates of $85.8bn in 2026 and a peak of $398.2bn in 2027 before easing to $174.4bn by 2030.",
+   "reason": "The FCC just authorized SpaceX to deploy up to 1 million Starmind satellites for orbital AI data centers. This is the spending bill behind that kind of ambition."
+  },
+  {
+   "book": "bot1",
+   "gid": 450495048,
+   "chart_n": 1,
+   "tab": "83 TSLA drawdown",
+   "title": "Tesla drawdowns from its record close vs the Nasdaq-100",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Tesla's drawdown from its record close next to the Nasdaq-100's, weekly since 2019. As of November 6, 2026, Tesla was 26.9% below its record and the Nasdaq-100 13.6% below; Tesla's worst was -72.4% in January 2023 and the Nasdaq-100's -35.5% in October 2022.",
+   "reason": "The Nasdaq-100 briefly fell 20% from its record on Wednesday before a late rally. This shows how Tesla's drawdowns usually run far deeper than the index's."
+  },
+  {
+   "book": "bot2",
+   "gid": 2055282175,
+   "chart_n": 1,
+   "tab": "22 Big Tech unbooked leases by co",
+   "title": "Signed, not yet on the books: data-center leases at Microsoft, Meta, Amazon and Alphabet reached $830B (Jun 2026)",
+   "kind": "chart",
+   "section": "picks",
+   "description": "Data-center leases signed but not yet on the balance sheet at Microsoft, Meta, Amazon and Alphabet. The total reached $830bn in June 2026, and by September Microsoft had $364.6bn, Meta $355.7bn, Amazon $164.9bn and Alphabet $130.5bn, up from about $208bn combined in December 2024.",
+   "reason": "With Nvidia down again and on S&P credit watch, the AI selloff has investors asking what Big Tech is locked into. These off-balance-sheet commitments keep growing."
   }
  ],
  "random": [
