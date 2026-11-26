@@ -44,6 +44,7 @@ Suggested `description` for charts whose library PNG is a Python render (the bui
 - `bot3` gid `9000000003` (Hyperscaler free cash flow (incl. SpaceX), "Hyperscaler free cash flow (incl. SpaceX)"): Alphabet, Meta, Microsoft, Amazon and SpaceX free cash flow, 2014–2030E. Combined FCF is estimated to trough around –$408bn in 2027 (SpaceX, incl. xAI & X, –$315bn) before rebounding in 2030. Actuals from SEC 10-Ks; estimates from S&P Global consensus, company capex guidance and Steve's DCF (updated Nov 20, 2026).
 
 - `bot3` gid `9000000004` (Founder-CEO Tier List, "Founder-CEO Tier List"): static founder-CEO tier-list card. Portraits from Wikimedia Commons (CC licenses; attribution in `static/sheets/full/bot3/9000000004.SOURCES.md`). Not in Monday data refreshes.
+- `bot3` gid `19854586` (Options OI % of Market Cap, "Options open interest as a % of market cap"): US-listed stocks with the highest options open interest notional as a % of market cap (Strategy.com definition: total call + put contracts × 100 × share price ÷ market cap), plus MSTR in orange. As of the 25 November 2026 close, IREN leads at 97.2% and MSTR is 61.2%. Re-screened monthly.
 ## Daily steps (on the box)
 
 1. **Sync:** `cd /workspace/chartmaker && timeout 30 git fetch origin && git reset --hard origin/main`
