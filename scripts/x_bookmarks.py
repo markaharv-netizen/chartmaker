@@ -92,12 +92,30 @@ def et_label(iso):
 METRICS = ("like_count", "repost_count", "reply_count", "quote_count", "bookmark_count", "impression_count")
 
 
-def normalize(pages):
-    """Merge raw get_users_bookmarks pages into an ordered list of display rows.
+def folder_map(folder_list, folder_pages):
+    """post id -> [folder names], from get_users_bookmark_folders + get_users_bookmarks_by_folder_id.
 
-    Order is X's bookmark order (most recently bookmarked first). Duplicate ids keep the first.
+    folder_pages maps folder id -> list of response pages for that folder."""
+    names = {str(f.get("id")): f.get("name") or "" for f in (folder_list or {}).get("data") or []}
+    out = {}
+    for fid, pages in (folder_pages or {}).items():
+        name = names.get(str(fid)) or str(fid)
+        for p in pages:
+            for post in p.get("data") or []:
+                pid = str(post.get("id") or "")
+                if pid.isdigit() and name not in out.setdefault(pid, []):
+                    out[pid].append(name)
+    return out
+
+
+def normalize(pages, folders=None):
+    """Merge raw get_users_bookmarks pages (then any hydrated folder-only posts) into display rows.
+
+    Order is X's bookmark order (most recently bookmarked first), then folder-only posts in the
+    order given. Duplicate ids keep the first. folders maps post id -> [folder names].
     Returns (items, media_sources) where media_sources maps post id -> thumbnail source URL.
     """
+    folders = folders or {}
     users, media = {}, {}
     for p in pages:
         inc = p.get("includes") or {}
@@ -141,6 +159,7 @@ def normalize(pages):
                 "media": [{"type": x["type"]} for x in mlist],
                 "media_type": mlist[0]["type"] if mlist else "",
                 "thumb": False,
+                "folders": list(folders.get(pid) or []),
             })
     return items, sources
 
@@ -148,6 +167,17 @@ def normalize(pages):
 def page_chain_complete(pages):
     """True when the last page has no next_token (the pull reached the end)."""
     return bool(pages) and not ((pages[-1].get("meta") or {}).get("next_token"))
+
+
+def page_chain_errors(pages):
+    """Problems with a paginated pull: every page but the last must carry a next_token."""
+    errs = []
+    for i, p in enumerate(pages[:-1]):
+        if not (p.get("meta") or {}).get("next_token"):
+            errs.append(f"page {i + 1} has no next_token but more pages follow")
+    if pages and (pages[-1].get("meta") or {}).get("next_token"):
+        errs.append("last page still has a next_token: the pull stopped early")
+    return errs
 
 
 def public_doc(bundle):
@@ -160,6 +190,9 @@ def public_doc(bundle):
         "with_media": sum(1 for x in bundle.get("items") or [] if x.get("media")),
         "complete": bundle.get("complete", True),
         "api_calls": bundle.get("api_calls"),
+        "folders": bundle.get("folders") or [],
+        "unavailable": bundle.get("unavailable") or 0,
+        "folder_capped": bundle.get("folder_capped") or [],
         "items": bundle.get("items") or [],
     }
 
