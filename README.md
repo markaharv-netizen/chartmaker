@@ -104,6 +104,21 @@ Until that export is on the machine, seed only the tabs that overlap today's Cha
 
 Workbooks: Bot experiments `1m_YlKV3YiOLy4b94xcBu04wkqlc7dBeUhlufw9f6mGY`, bot experiments 2 `1wlWT_RRprgy3KrvWuBR49xr_LVxZAZCxSLZ_bBolbdQ`, My Bot's Sheets `1BiV5QZti6uHTK1xBFDrTxcY9pimy0tR9o5YZb2fIqNU`. All three dumps are required unless you pass `--allow-partial`. The weekly PNG folders feed the sheet library, which Charts of the day copies previews from: `1SwZgYGwwHsoL_DXQUuQAYS6lhq5KxFe9`, `1mMUKaB_RbeZhtn5ntuKJV5xZOeo6LzGH`, `1AVfHRo2mJgBhbJoszHhe5vgOscfKhbzT`.
 
+### Python-rendered library PNGs (KEEP_MANUAL_PNGS)
+Some library images are Steve's Python renders, not Monday's native Sheets export. Those gids are listed in `import_full_pngs.KEEP_MANUAL_PNGS`, so the Monday 6:15am importer will not overwrite them. Pin the tab in `sheets_catalog.PINNED_TABS` so a truncated dump cannot drop it. Leave the catalog row un-sheetless (Open in Sheets stays on) when the Google Sheet tab is real.
+
+**Options OI % of Market Cap** (My Bot's Sheets, bot3 gid `19854586`). Steve re-screens the universe monthly on the 5th and sends a new PNG (typically `options_oi_pct_mcap_<as-of>.png`). To swap it in:
+
+1. Copy the new PNG over `static/sheets/full/bot3/19854586.png`.
+2. Rebuild the search thumbnail from that file. Put it in a folder as `19854586.png` (or under a `bot3` subfolder) and run:
+   `python3 scripts/sheets_thumbs.py --from-dir /path/to/folder`
+3. Update the as-of date in `static/sheets/full/bot3/19854586.SOURCES.md` if the methodology notes still mention the prior close.
+4. If you want the catalog chart title to include the new as-of date, edit that title in `static/sheets/catalog.json`. Otherwise the next Monday catalog rebuild will pick up the native chart title from the workbook dump.
+5. Do not import a native-chart export for this gid. Monday's importer already skips it.
+6. Commit, open a PR, squash-merge to main once tests pass, and verify the live Render deploy with `python3 scripts/check_deploy.py`.
+
+Methodology and sources for the current image: `static/sheets/full/bot3/19854586.SOURCES.md`.
+
 ## Interactive Sheets charts
 
 The Sheets library can draw a chart in the browser from the workbook's own values: hover shows the point, and the date range zooms and pans. **View PNG** and **Download PNG** stay, including on Charts of the day, because a post on X still wants the flat image. A chart with no data file, or a type that is not supported yet, keeps the PNG and does not invent a picture.

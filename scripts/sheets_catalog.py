@@ -156,6 +156,13 @@ EXCLUDED_TABS = retired_charts.library_pairs()
 # KEEP_MANUAL_PNGS blocks Monday's native export from overwriting that PNG.
 # The tab is real, so the catalog row is not sheetless and Open in Sheets
 # stays on. Script: /workspace/spcx_revenue/plot_spcx_revenue.py.
+# ("bot3", 19854586) is "Options OI % of Market Cap" in My Bot's Sheets: it has a
+# native column chart, but the library PNG is Steve's monthly Python render
+# (black / X-dark background, grey bars, MSTR in orange). KEEP_MANUAL_PNGS
+# blocks Monday's native export from overwriting that PNG. The tab is real, so
+# the catalog row is not sheetless and Open in Sheets stays on.
+# Script: /workspace/options_oi/make_png.py. Steve re-screens on the 5th of
+# each month and sends a new PNG; swap steps are in README.md.
 # A later catalog rebuild must not drop these.
 PINNED_TABS = {
     ("bot3", 874288811): "Central Bank Ranking",
@@ -177,6 +184,7 @@ PINNED_TABS = {
     ("bot2", 73869283): "93 BTC treasury buys vs sales",
     ("bot2", 572335799): "95 Tesla revenue by year",
     ("bot2", 818663135): "96 SpaceX revenue by year",
+    ("bot3", 19854586): "Options OI % of Market Cap",
 }
 # Google Sheets sheetId is a non-negative int32 (max 2,147,483,647). A library
 # gid at or above this value is synthetic and can never collide with a real tab.
