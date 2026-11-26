@@ -994,7 +994,7 @@ function favSave(){
 function favScopeText(){
   if(!FAV_OK)return 'Favorites are unavailable because this browser blocked storage. They are not stored on the server.';
   const tail=' A saved favorite is removed for everyone when that chart is no longer in the library, or when a different chart now occupies that same chart number.';
-  if(FAV_MODE==='github')return 'Favorites are shared by everyone who signs in to this Chartmaker. There are no separate accounts. They are stored with saved views on the private GitHub branch views-data, so a redeploy does not erase them, and every signed-in browser sees the same stars. Up to '+FAV_MAX+'.'+tail;
+  if(FAV_MODE==='github')return 'Favorites are shared by everyone who signs in to this Chartmaker. There are no separate accounts. They are stored with saved views in this private GitHub repository (branch views-data), so a redeploy does not erase them, and every signed-in browser sees the same stars. Up to '+FAV_MAX+'.'+tail;
   if(FAV_MODE==='file')return 'Favorites are shared by everyone using this server. There are no separate accounts. They are stored in views.json on this server. That file survives a restart when the disk does. A redeploy on a host with an ephemeral disk loses them unless GITHUB_TOKEN is set. Up to '+FAV_MAX+'.'+tail;
   if(FAV_MODE==='off')return 'Favorites stay in this browser only. They are not stored on the server and do not sync to other browsers or devices. Up to '+FAV_MAX+'.';
   if(FAV_MODE==='down')return 'Favorites could not sync. This list is the copy in this browser and is not stored on the server until sync works again.';

@@ -144,7 +144,7 @@ def favorites_mode():
     if GH_TOKEN: return "github"
     return "file"
 FAV_SCOPE = {
-    "github": "Favorites are shared by everyone who signs in to this Chartmaker. There are no separate accounts. They are stored with saved views on the private GitHub branch views-data, so a redeploy does not erase them.",
+    "github": "Favorites are shared by everyone who signs in to this Chartmaker. There are no separate accounts. They are stored with saved views in this private GitHub repository (branch views-data), so a redeploy does not erase them.",
     "file": "Favorites are shared by everyone using this server. There are no separate accounts. They are stored in views.json on this server's disk. That survives a restart when the disk does. A host whose disk is wiped on deploy loses them unless GITHUB_TOKEN is set.",
     "off": "Favorites stay in this browser only. They are not stored on the server and do not sync to other browsers.",
 }
@@ -521,8 +521,9 @@ def paper_view(fresh=False):
     return {"book": mod.export_book(updated), "prices": last}
 
 # ---------- X Bookmarks (Mark's private bookmarks; sealed bundle, signed-in only) ----------
-# The repo is public, so the bundle lives encrypted on branch x-bookmarks-data (or XB_FILE locally)
-# and is decrypted here with APP_PASSWORD (XB_KEY overrides). See scripts/refresh_x_bookmarks.py.
+# The repo is private and the tab is login-gated. The bundle is still sealed (defense in depth)
+# on branch x-bookmarks-data (or XB_FILE locally) and decrypted here with APP_PASSWORD
+# (XB_KEY overrides). See scripts/refresh_x_bookmarks.py.
 XB_FILE = os.environ.get("XB_FILE") or ""
 _XB = {"bundle": None, "at": 0, "err": None}; _XBLOCK = threading.Lock()
 def _xb_mod():
@@ -533,12 +534,10 @@ def _xb_mod():
 def _xb_fetch_blob(xb):
     if XB_FILE:
         with open(XB_FILE, "rb") as f: return f.read()
-    if GH_TOKEN:
-        url = f"https://api.github.com/repos/{VIEWS_REPO}/contents/{xb.DATA_PATH}?ref={urllib.parse.quote(xb.DATA_BRANCH)}"
-        hdr = {"Authorization": "Bearer " + GH_TOKEN, "Accept": "application/vnd.github.raw", "User-Agent": "chartmaker"}
-    else:
-        url = f"https://raw.githubusercontent.com/{VIEWS_REPO}/{xb.DATA_BRANCH}/{xb.DATA_PATH}"
-        hdr = {"User-Agent": "chartmaker"}
+    if not GH_TOKEN:
+        raise RuntimeError("X bookmarks need GITHUB_TOKEN (or XB_FILE) to load the sealed bundle from the private repo")
+    url = f"https://api.github.com/repos/{VIEWS_REPO}/contents/{xb.DATA_PATH}?ref={urllib.parse.quote(xb.DATA_BRANCH)}"
+    hdr = {"Authorization": "Bearer " + GH_TOKEN, "Accept": "application/vnd.github.raw", "User-Agent": "chartmaker"}
     with urllib.request.urlopen(urllib.request.Request(url, headers=hdr), timeout=30) as r: return r.read(60_000_000)
 def xbookmarks_bundle(fresh=False):
     """Decrypted bundle, cached 10 minutes. Raises LookupError when there is none yet."""

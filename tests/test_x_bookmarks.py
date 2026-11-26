@@ -165,5 +165,18 @@ class NoPlainDataInRepoTest(unittest.TestCase):
                 self.assertFalse(f.endswith(".enc") or f in ("bookmarks.json", "x_bookmarks.json"), os.path.join(dirpath, f))
 
 
+class FetchBlobAuthTest(unittest.TestCase):
+    def test_requires_token_when_no_local_file(self):
+        saved = (server.XB_FILE, server.GH_TOKEN)
+        try:
+            server.XB_FILE = ""
+            server.GH_TOKEN = ""
+            with self.assertRaises(RuntimeError) as caught:
+                server._xb_fetch_blob(xb)
+            self.assertIn("GITHUB_TOKEN", str(caught.exception))
+        finally:
+            server.XB_FILE, server.GH_TOKEN = saved
+
+
 if __name__ == "__main__":
     unittest.main()

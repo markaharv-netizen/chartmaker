@@ -12,7 +12,7 @@ Steps: merge pages -> download each post's first image (photo url, or
 preview_image_url for video/GIF) from pbs.twimg.com -> compress to a small
 JPEG -> seal everything with the app password -> optionally commit the sealed
 file to the data-only branch x-bookmarks-data. Plain bookmark data and
-thumbnails never go into the public repo. Pulls spend Mark's X API credits:
+thumbnails never go into the repo in plain form. Pulls spend Mark's X API credits:
 pull on demand only, no polling.
 
 Env: CHARTMAKER_APP_PASSWORD (or XB_KEY) for the key; CHARTMAKER_GITHUB_TOKEN
