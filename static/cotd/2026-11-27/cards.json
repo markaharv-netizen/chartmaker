@@ -3,58 +3,58 @@
  "items": [
   {
    "book": "bot1",
-   "gid": 1701983428,
+   "gid": 1121141532,
    "chart_n": 1,
-   "tab": "93 MSTR mNAV premium",
-   "title": "Strategy premium to its bitcoin: market cap ÷ value of BTC held (mNAV)",
+   "tab": "273 S&P 500 by calendar month",
+   "title": "Seasonality: S&P 500 average return by calendar month and how often each month is positive, 1971–2025",
    "kind": "chart",
    "section": "picks",
-   "description": "Strategy's mNAV, diluted market cap divided by the value of its bitcoin, weekly since Jan 2025. It fell from about 2.2x to below 1x and was 0.90x on Oct 30, 2026.",
-   "reason": "Bloomberg reports Strategy's enterprise value is now below its bitcoin holdings, and JPMorgan calls it a capitulation signal."
+   "description": "S&P 500 average return by calendar month, 1971–2025, with the share of years each month finished positive. November has been the best month on average (+1.71%) and was up in 70.9% of years.",
+   "reason": "The S&P 500 and Nasdaq are bouncing on Black Friday but are still on course for their worst November since 2008, in what is usually the strongest month of the year."
+  },
+  {
+   "book": "bot1",
+   "gid": 906159148,
+   "chart_n": 1,
+   "tab": "317 SpaceX segment profits",
+   "title": "SpaceX operating income by segment (USD bn): Starlink profits vs AI and rocket losses",
+   "kind": "chart",
+   "section": "picks",
+   "description": "SpaceX operating income by segment. In the latest trailing 12 months Starlink earned $6.5bn while the AI segment (xAI, X) lost $5.5bn and the space/rocket segment lost $1.7bn.",
+   "reason": "The FCC just cleared SpaceX to launch up to 1 million satellites as orbital AI data centers, and this chart shows Starlink profits are what pay for the AI and rocket losses."
   },
   {
    "book": "bot2",
-   "gid": 73869283,
+   "gid": 1193697114,
    "chart_n": 1,
-   "tab": "93 BTC treasury buys vs sales",
-   "title": "Bitcoin treasury companies: weekly net BTC flows (last 3 months)",
+   "tab": "92 Data center capacity",
+   "title": "Data Center Capacity (operational, GW)",
    "kind": "chart",
    "section": "picks",
-   "description": "Weekly BTC bought vs sold by public bitcoin treasury companies. Treasuries were net sellers in the weeks of Nov 8 (10,520 BTC sold) and Nov 15 (15,162 BTC sold).",
-   "reason": "Bitcoin is back near $61K, and treasury companies trading below their bitcoin value are selling coins."
+   "description": "Operational data center capacity by country, in gigawatts. The US has 32.0 GW, almost six times China's 5.5 GW; Japan (1.9), the UK (1.8) and India (1.6) follow, with Malaysia at 1.3 GW and Indonesia at 0.4 GW.",
+   "reason": "Nvidia told server partners to halt shipments to Malaysia, Singapore, Thailand and Indonesia as US curbs on Chinese access to AI chips tighten, while chip stocks led today's rebound."
   },
   {
-   "book": "bot1",
-   "gid": 1465433288,
+   "book": "bot2",
+   "gid": 978808662,
    "chart_n": 1,
-   "tab": "37 Gold-silver ratio",
-   "title": "Gold/silver ratio (ounces of silver per ounce of gold)",
+   "tab": "84 STRC buybacks share of volume",
+   "title": "Strategy's STRC buybacks as a share of weekly STRC volume",
    "kind": "chart",
    "section": "picks",
-   "description": "Gold/silver ratio, ounces of silver per ounce of gold, monthly since 1995. It fell from about 101 in early 2025 to 66.9 in Sep 2026.",
-   "reason": "Silver jumped about 7% and gold 2.7% this morning."
+   "description": "Strategy's STRC repurchases as a share of weekly STRC trading volume, from 8-K filings: between 6% and 30% of each week's volume since mid-July, and 12% in the week of Nov 16.",
+   "reason": "Strategy's latest 8-K showed $212M of STRC bought back against just $29.6M of bitcoin, and today's coverage is asking why its share sales now go to defending STRC instead of buying BTC."
   },
   {
    "book": "bot3",
-   "gid": 41300134,
+   "gid": 1835154494,
    "chart_n": 1,
-   "tab": "AI Buildout Scale",
-   "title": "The Scale of the AI Buildout",
+   "tab": "BTC and Gold Correlation",
+   "title": "30-Day rolling Correlation: BTC vs Gold",
    "kind": "chart",
    "section": "picks",
-   "description": "Big US build-outs as a share of GDP: the AI build-out averages 3.63% of GDP at a 5.1% peak, above railroads (2.24% avg, 4% peak), telecom and fiber, highways, electrification and canals.",
-   "reason": "Nasdaq futures are up about 3% as investors move back into AI stocks after a bruising November."
-  },
-  {
-   "book": "bot1",
-   "gid": 854627153,
-   "chart_n": 1,
-   "tab": "102 SpaceX valuation path",
-   "title": "SpaceX valuation: private tenders → xAI merger → IPO → market",
-   "kind": "chart",
-   "section": "picks",
-   "description": "SpaceX valuation path from a $210B tender in Jul 2024 to the $1.77T IPO, a $2.79T peak close on Jun 16, 2026, a $1.43T low on Aug 5 and $1.95T on Oct 20, 2026.",
-   "reason": "Tesla-SpaceX merger talks are moving forward, and Musk has pledged two SpaceX shares to every US child's Trump Account."
+   "description": "30-day rolling correlation of daily bitcoin and gold returns since late 2024. It peaked at 0.72 in September 2026, fell to about 0.23 in late October, and was back at 0.49 on Nov 20.",
+   "reason": "Gold and silver rallied sharply this morning while bitcoin slipped back below $60,000, a fresh test of the digital-gold link."
   },
   {
    "book": "bot1",
@@ -222,58 +222,58 @@
  "picks": [
   {
    "book": "bot1",
-   "gid": 1701983428,
+   "gid": 1121141532,
    "chart_n": 1,
-   "tab": "93 MSTR mNAV premium",
-   "title": "Strategy premium to its bitcoin: market cap ÷ value of BTC held (mNAV)",
+   "tab": "273 S&P 500 by calendar month",
+   "title": "Seasonality: S&P 500 average return by calendar month and how often each month is positive, 1971–2025",
    "kind": "chart",
    "section": "picks",
-   "description": "Strategy's mNAV, diluted market cap divided by the value of its bitcoin, weekly since Jan 2025. It fell from about 2.2x to below 1x and was 0.90x on Oct 30, 2026.",
-   "reason": "Bloomberg reports Strategy's enterprise value is now below its bitcoin holdings, and JPMorgan calls it a capitulation signal."
+   "description": "S&P 500 average return by calendar month, 1971–2025, with the share of years each month finished positive. November has been the best month on average (+1.71%) and was up in 70.9% of years.",
+   "reason": "The S&P 500 and Nasdaq are bouncing on Black Friday but are still on course for their worst November since 2008, in what is usually the strongest month of the year."
+  },
+  {
+   "book": "bot1",
+   "gid": 906159148,
+   "chart_n": 1,
+   "tab": "317 SpaceX segment profits",
+   "title": "SpaceX operating income by segment (USD bn): Starlink profits vs AI and rocket losses",
+   "kind": "chart",
+   "section": "picks",
+   "description": "SpaceX operating income by segment. In the latest trailing 12 months Starlink earned $6.5bn while the AI segment (xAI, X) lost $5.5bn and the space/rocket segment lost $1.7bn.",
+   "reason": "The FCC just cleared SpaceX to launch up to 1 million satellites as orbital AI data centers, and this chart shows Starlink profits are what pay for the AI and rocket losses."
   },
   {
    "book": "bot2",
-   "gid": 73869283,
+   "gid": 1193697114,
    "chart_n": 1,
-   "tab": "93 BTC treasury buys vs sales",
-   "title": "Bitcoin treasury companies: weekly net BTC flows (last 3 months)",
+   "tab": "92 Data center capacity",
+   "title": "Data Center Capacity (operational, GW)",
    "kind": "chart",
    "section": "picks",
-   "description": "Weekly BTC bought vs sold by public bitcoin treasury companies. Treasuries were net sellers in the weeks of Nov 8 (10,520 BTC sold) and Nov 15 (15,162 BTC sold).",
-   "reason": "Bitcoin is back near $61K, and treasury companies trading below their bitcoin value are selling coins."
+   "description": "Operational data center capacity by country, in gigawatts. The US has 32.0 GW, almost six times China's 5.5 GW; Japan (1.9), the UK (1.8) and India (1.6) follow, with Malaysia at 1.3 GW and Indonesia at 0.4 GW.",
+   "reason": "Nvidia told server partners to halt shipments to Malaysia, Singapore, Thailand and Indonesia as US curbs on Chinese access to AI chips tighten, while chip stocks led today's rebound."
   },
   {
-   "book": "bot1",
-   "gid": 1465433288,
+   "book": "bot2",
+   "gid": 978808662,
    "chart_n": 1,
-   "tab": "37 Gold-silver ratio",
-   "title": "Gold/silver ratio (ounces of silver per ounce of gold)",
+   "tab": "84 STRC buybacks share of volume",
+   "title": "Strategy's STRC buybacks as a share of weekly STRC volume",
    "kind": "chart",
    "section": "picks",
-   "description": "Gold/silver ratio, ounces of silver per ounce of gold, monthly since 1995. It fell from about 101 in early 2025 to 66.9 in Sep 2026.",
-   "reason": "Silver jumped about 7% and gold 2.7% this morning."
+   "description": "Strategy's STRC repurchases as a share of weekly STRC trading volume, from 8-K filings: between 6% and 30% of each week's volume since mid-July, and 12% in the week of Nov 16.",
+   "reason": "Strategy's latest 8-K showed $212M of STRC bought back against just $29.6M of bitcoin, and today's coverage is asking why its share sales now go to defending STRC instead of buying BTC."
   },
   {
    "book": "bot3",
-   "gid": 41300134,
+   "gid": 1835154494,
    "chart_n": 1,
-   "tab": "AI Buildout Scale",
-   "title": "The Scale of the AI Buildout",
+   "tab": "BTC and Gold Correlation",
+   "title": "30-Day rolling Correlation: BTC vs Gold",
    "kind": "chart",
    "section": "picks",
-   "description": "Big US build-outs as a share of GDP: the AI build-out averages 3.63% of GDP at a 5.1% peak, above railroads (2.24% avg, 4% peak), telecom and fiber, highways, electrification and canals.",
-   "reason": "Nasdaq futures are up about 3% as investors move back into AI stocks after a bruising November."
-  },
-  {
-   "book": "bot1",
-   "gid": 854627153,
-   "chart_n": 1,
-   "tab": "102 SpaceX valuation path",
-   "title": "SpaceX valuation: private tenders → xAI merger → IPO → market",
-   "kind": "chart",
-   "section": "picks",
-   "description": "SpaceX valuation path from a $210B tender in Jul 2024 to the $1.77T IPO, a $2.79T peak close on Jun 16, 2026, a $1.43T low on Aug 5 and $1.95T on Oct 20, 2026.",
-   "reason": "Tesla-SpaceX merger talks are moving forward, and Musk has pledged two SpaceX shares to every US child's Trump Account."
+   "description": "30-day rolling correlation of daily bitcoin and gold returns since late 2024. It peaked at 0.72 in September 2026, fell to about 0.23 in late October, and was back at 0.49 on Nov 20.",
+   "reason": "Gold and silver rallied sharply this morning while bitcoin slipped back below $60,000, a fresh test of the digital-gold link."
   }
  ],
  "random": [
