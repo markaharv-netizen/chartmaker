@@ -955,6 +955,8 @@ def self_test():
     assert pick_excluded({"spreadsheetId": bot2, "gid": 270617286})  # 78 Neocloud big AI contracts (retired 2026-11-26)
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1425972109})  # 276 Berkshire vs S&P 500 (retired 2026-11-26)
     assert pick_excluded({"spreadsheetId": bot1, "gid": 1846413225})  # 149 BTC vs S&P vs gold Sharpe (retired 2026-11-26)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 1363241271})  # 321 Capex % of cash flow, qtrly (retired 2026-11-27)
+    assert pick_excluded({"spreadsheetId": bot1, "gid": 928247042})  # 251 Fed deferred asset (retired 2026-11-27)
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 530554790})  # 75 CoreWeave backlog vs revenue
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 817552047})  # 73 US ETF BTC holdings
     assert not pick_excluded({"spreadsheetId": bot2, "gid": 1793142140})  # 76 Neocloud capex vs revenue

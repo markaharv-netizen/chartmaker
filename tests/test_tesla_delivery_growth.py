@@ -73,7 +73,7 @@ class TeslaDeliveryGrowthTest(unittest.TestCase):
         self.assertTrue(hit.get("pin"))
         self.assertFalse(hit.get("sheetless"))
         self.assertEqual(hit.get("thumb"), "sheets/thumbs/bot3/%d.jpg" % GID)
-        self.assertEqual(len(cat["tabs"]), 389)
+        self.assertEqual(len(cat["tabs"]), 387)
         full = os.path.join(ROOT, "static", "sheets", "full", "bot3", "%d.png" % GID)
         thumb = os.path.join(ROOT, "static", "sheets", "thumbs", "bot3", "%d.jpg" % GID)
         sources = os.path.join(ROOT, "static", "sheets", "full", "bot3", "%d.SOURCES.md" % GID)

@@ -872,7 +872,7 @@ def self_test():
     assert tab_excluded("bot1", 102043516)  # 27 BTC vs real yield corr (retired 2026-11-24)
     assert tab_excluded("bot2", 1942752546)  # 17 Treasury stocks 2026 YTD (retired 2026-11-24)
     assert not tab_excluded("bot1", 1718545259)  # 54 Trimmed vs core PCE (kept)
-    assert not tab_excluded("bot1", 1363241271)  # 321 Capex % of cash flow, qtrly (kept)
+    assert tab_excluded("bot1", 1363241271)  # 321 Capex % of cash flow, qtrly (retired 2026-11-27)
     assert not tab_excluded("bot1", 577053605)  # 207 Hyperscaler free cash flow (kept)
     assert not tab_excluded("bot2", 1172553519)  # 4 MSTR preferred stack (kept)
     assert not tab_excluded("bot2", 1268488619)  # 7 MSTR preferred yields (kept)
@@ -899,6 +899,8 @@ def self_test():
     assert tab_excluded("bot2", 270617286)  # 78 Neocloud big AI contracts (retired 2026-11-26)
     assert tab_excluded("bot1", 1425972109)  # 276 Berkshire vs S&P 500 (retired 2026-11-26)
     assert tab_excluded("bot1", 1846413225)  # 149 BTC vs S&P vs gold Sharpe (retired 2026-11-26)
+    assert tab_excluded("bot1", 1363241271)  # 321 Capex % of cash flow, qtrly (retired 2026-11-27)
+    assert tab_excluded("bot1", 928247042)  # 251 Fed deferred asset (retired 2026-11-27)
     assert not tab_excluded("bot3", 1828716508)  # Meta Active Users (kept)
     assert not tab_excluded("bot1", 868062827)  # 172 Job openings per jobless (kept)
     assert not tab_excluded("bot1", 1597166284)  # 249 Youth unemployment (kept)
@@ -908,7 +910,7 @@ def self_test():
     assert not tab_excluded("bot1", 1718545259)  # 54 Trimmed vs core PCE
     assert not tab_excluded("bot1", 1892662496)
     assert not tab_excluded("bot1", 1167074374)  # 299 Real yield vs breakeven
-    assert not tab_excluded("bot1", 1363241271)  # 321 Capex % of cash flow, qtrly
+    assert tab_excluded("bot1", 1363241271)  # 321 Capex % of cash flow, qtrly (retired 2026-11-27)
     assert tab_excluded("bot1", 1328859831)  # 213 Chip gross margins (retired 2026-11-18)
     assert tab_excluded("bot1", 1459587255)  # 227 Private AI lab valuations
     assert tab_excluded("bot1", 727565635)  # 125 Junk vs IG spread ratio
@@ -948,7 +950,7 @@ def self_test():
     for book, gid in EXCLUDED_TABS:
         assert (book, gid) not in live, (book, gid)
     for gid in (171599627, 1718545259, 397488583, 1892662496, 1167074374,
-                1363241271, 2092406374):
+                2092406374):
         assert ("bot1", gid) in live, gid
     assert ("bot2", 1713824403) in live  # 55 Capex intensity vs legacy
     assert ("bot2", 645072508) in live
@@ -1140,7 +1142,6 @@ def self_test():
         "296 Stocks vs bonds, 10-yr",
         "157 Real chip prices",
         "160 China vs Mexico vs Taiwan",
-        "321 Capex % of cash flow, qtrly",
         "55 Capex intensity vs legacy",
         "57 EBITDA margin Tesla vs peers",
         "203 Cloud growth race",
