@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated": "2026-11-26T13:41:44Z",
+  "generated": "2026-11-27T13:42:19Z",
   "note": "Paper book sized by paperWeight on static/price_targets.json. paperWeight is a signed percent of NAV (10 = 10% long, -5 = 5% short, 0 or missing = cash), copied from the sheet column \"Paper weight %\". Gross exposure is capped at 100%. No leverage, no fees. After any price_targets.json update: python3 scripts/paper_trading.py",
   "config": {
     "startingCash": 100000.0,
@@ -194,7 +194,7 @@
     },
     {
       "ticker": "ANT",
-      "rating": "HOLD",
+      "rating": "BUY",
       "side": "cash",
       "status": "cash",
       "shares": 0.0,
